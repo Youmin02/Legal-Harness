@@ -105,8 +105,8 @@ class LocalOllamaSkillExecutor:
             "%s did not produce a valid %s result after %d attempts: %s"
             % (skill_name, entry_point, self.max_attempts, "; ".join(errors))
         )
-    @staticmethod
     def _normalize_harness_owned_fields(
+        self,
         skill_name: str,
         entry_point: str,
         skill_input: Mapping[str, Any],
@@ -125,6 +125,23 @@ class LocalOllamaSkillExecutor:
         for index, request in enumerate(requests, start=1):
             if isinstance(request, dict):
                 request["request_id"] = "%s%d" % (prefix, index)
+        if entry_point == "INITIAL_PLAN":
+            issues_by_id = {
+                issue.get("issue_id"): issue
+                for issue in self._list(normalized, "legal_issues")
+                if isinstance(issue, Mapping)
+            }
+            emitted_queries = set()
+            for index, request in enumerate(requests, start=1):
+                if not isinstance(request, dict):
+                    continue
+                query = request.get("query_text")
+                if not isinstance(query, str) or self._normalized_query(query) in emitted_queries:
+                    issue = issues_by_id.get(request.get("issue_id"), {})
+                    query = self._fallback_initial_query(issue, index, emitted_queries)
+                    request["query_text"] = query
+                emitted_queries.add(self._normalized_query(query))
+
         if entry_point == "GAP_QUERY_PLAN":
             unresolved = [item.get("evidence_item_id") for key in ("missing_evidence_items", "evidence_conflicts") for item in self._list(skill_input, key) if isinstance(item, Mapping)]
             evidence_by_id = {item.get("evidence_item_id"): item for item in self._list(skill_input, "required_evidence_items") if isinstance(item, Mapping)}
@@ -157,6 +174,13 @@ class LocalOllamaSkillExecutor:
     @staticmethod
     def _normalized_query(query: str) -> str:
         return " ".join(query.lower().split())
+
+    def _fallback_initial_query(self, issue: Mapping[str, Any], index: int, seen: set) -> str:
+        base = issue.get("decision_question") or issue.get("issue_statement") or "관련 법률"
+        candidate = "%s 법률 조문" % base
+        if self._normalized_query(candidate) in seen:
+            candidate = "%s 법률 조문 %d" % (base, index)
+        return candidate
 
     def _fallback_gap_query(self, evidence: Mapping[str, Any], index: int, seen: set) -> str:
         base = evidence.get("completion_criteria") or evidence.get("description")

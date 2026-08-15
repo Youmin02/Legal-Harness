@@ -195,3 +195,53 @@ class LocalOllamaExecutorTests(unittest.TestCase):
             },
         )
         self.assertEqual(answer["claim_citations"], [{"claim_id": "C1", "provision_ids": ["P1"]}])
+
+    def test_s1_normalizes_initial_and_gap_queries(self):
+        initial = self.executor._normalize_harness_owned_fields(
+            "legal_issue_and_query_planning",
+            "INITIAL_PLAN",
+            {"run_id": "run-1"},
+            {
+                "legal_issues": [
+                    {"issue_id": "I1", "decision_question": "도박죄 처벌"},
+                    {"issue_id": "I2", "decision_question": "도박죄 성립 요건"},
+                ],
+                "retrieval_requests": [
+                    {"issue_id": "I1", "query_text": "도박죄 처벌 규정"},
+                    {"issue_id": "I2", "query_text": "도박죄 처벌 규정"},
+                ],
+            },
+        )
+        initial_requests = initial["retrieval_requests"]
+        self.assertEqual([item["request_id"] for item in initial_requests], ["RQ1", "RQ2"])
+        self.assertNotEqual(initial_requests[0]["query_text"], initial_requests[1]["query_text"])
+
+        gap = self.executor._normalize_harness_owned_fields(
+            "legal_issue_and_query_planning",
+            "GAP_QUERY_PLAN",
+            {
+                "run_id": "run-1",
+                "required_evidence_items": [
+                    {
+                        "evidence_item_id": "E1",
+                        "issue_id": "I1",
+                        "description": "도박죄 처벌 규정",
+                        "completion_criteria": "처벌 조문",
+                    }
+                ],
+                "missing_evidence_items": [{"evidence_item_id": "E1"}],
+                "evidence_conflicts": [],
+                "query_history": [{"query_text": "기존 질의"}],
+            },
+            {
+                "gap_retrieval_requests": [
+                    {"issue_id": None, "evidence_item_id": None, "query_text": "기존 질의"}
+                ]
+            },
+        )
+        gap_request = gap["gap_retrieval_requests"][0]
+        self.assertEqual(gap_request["request_id"], "GRQ1")
+        self.assertEqual(gap_request["issue_id"], "I1")
+        self.assertEqual(gap_request["evidence_item_id"], "E1")
+        self.assertNotEqual(gap_request["query_text"], "기존 질의")
+        self.assertEqual(gap["target_evidence_item_ids"], ["E1"])

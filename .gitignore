@@ -4,7 +4,12 @@ models/
 .cache/
 
 # Downloaded benchmark data and derived indexes
-data/
+data/*
+!data/koblex/
+data/koblex/*
+!data/koblex/manifests/
+data/koblex/manifests/*
+!data/koblex/manifests/*.json
 runs/
 
 # Paper artifacts are intentionally versionable; select completed runs explicitly.

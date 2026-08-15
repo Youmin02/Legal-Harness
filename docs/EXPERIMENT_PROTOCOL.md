@@ -41,6 +41,21 @@ Use the same question IDs, seeds, conditions, prompts, and budgets in both
 phases. Treat retriever family as an explicit experimental factor; never
 attribute a retrieval change to the harness policy.
 
+## Frozen 20-item engineering pilot
+
+The preflight pilot is fixed in
+`data/koblex/manifests/bm25_bge_pilot_20_seed_20260815.json`. It comprises
+5 one-hop, 11 two-hop, and 4 three-hop items, with `qa_92_1hop_149` as the
+already completed anchor and 19 remaining items. The selection seed, source
+dataset SHA-256, IDs, execution order, and all BM25+BGE settings are in that
+manifest.
+
+Run the remaining entries sequentially through
+`scripts/run_bm25_bge_pilot_batch.py` in a tmux session. This pilot is an
+engineering preflight: report it separately from the held-out 226-item paper
+evaluation, preserve all outcomes including abstentions and failures, and do
+not alter the frozen harness from its outcomes before the full benchmark.
+
 ## Metrics
 
 Primary metrics:

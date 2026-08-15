@@ -126,10 +126,45 @@ class LocalOllamaSkillExecutor:
             if isinstance(request, dict):
                 request["request_id"] = "%s%d" % (prefix, index)
         if entry_point == "GAP_QUERY_PLAN":
+            unresolved = [item.get("evidence_item_id") for key in ("missing_evidence_items", "evidence_conflicts") for item in self._list(skill_input, key) if isinstance(item, Mapping)]
+            evidence_by_id = {item.get("evidence_item_id"): item for item in self._list(skill_input, "required_evidence_items") if isinstance(item, Mapping)}
+            prior_queries = {
+                self._normalized_query(item.get("query_text") or item.get("normalized_query"))
+                for item in self._list(skill_input, "query_history")
+                if isinstance(item, Mapping) and isinstance(item.get("query_text") or item.get("normalized_query"), str)
+            }
+            emitted_queries = set(prior_queries)
+            for index, request in enumerate(requests, start=1):
+                if not isinstance(request, dict):
+                    continue
+                evidence_id = request.get("evidence_item_id")
+                if evidence_id not in unresolved and len(unresolved) == 1:
+                    evidence_id = unresolved[0]
+                    request["evidence_item_id"] = evidence_id
+                evidence = evidence_by_id.get(evidence_id)
+                if not isinstance(evidence, Mapping):
+                    continue
+                request["issue_id"] = evidence.get("issue_id")
+                query = request.get("query_text")
+                if not isinstance(query, str) or self._normalized_query(query) in emitted_queries:
+                    query = self._fallback_gap_query(evidence, index, emitted_queries)
+                    request["query_text"] = query
+                emitted_queries.add(self._normalized_query(query))
             normalized["target_evidence_item_ids"] = list(dict.fromkeys(
                 request.get("evidence_item_id") for request in requests if isinstance(request, dict)
             ))
         return normalized
+    @staticmethod
+    def _normalized_query(query: str) -> str:
+        return " ".join(query.lower().split())
+
+    def _fallback_gap_query(self, evidence: Mapping[str, Any], index: int, seen: set) -> str:
+        base = evidence.get("completion_criteria") or evidence.get("description")
+        candidate = "%s 법률 조문" % base
+        if self._normalized_query(candidate) in seen:
+            candidate = "%s 적용 요건 조문 %d" % (base, index)
+        return candidate
+
 
 
     @staticmethod

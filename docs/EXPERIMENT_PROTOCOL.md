@@ -29,10 +29,17 @@ format fixed.  Add these controlled ablations:
 | A1 | M without BGE reranking |
 | A2 | M forced to use the maximum retrieval budget |
 
-Run each condition separately for the BM25+BGE and KURE+BGE retrieval families,
-or select one retrieval family on development data and keep it fixed for the
-confirmatory comparison.  Never attribute a retrieval change to the harness
-policy.
+Run retrieval experiments in this fixed order:
+
+1. Complete all 226 questions for every selected condition with **BM25+BGE**.
+   Freeze the source corpus, BM25 index, BGE reranker, model, skill hashes, and
+   all harness budgets for this phase.
+2. After the BM25+BGE phase is complete and its aggregate results are frozen,
+   repeat the identical 226-question condition matrix with **KURE+BGE**.
+
+Use the same question IDs, seeds, conditions, prompts, and budgets in both
+phases. Treat retriever family as an explicit experimental factor; never
+attribute a retrieval change to the harness policy.
 
 ## Metrics
 

@@ -77,6 +77,9 @@ class LocalOllamaSkillExecutor:
             try:
                 raw_text = self._generate(prompt, self._max_tokens(skill_name))
                 skill_output = self._parse_json_object(raw_text)
+                skill_output = self._normalize_harness_owned_fields(
+                    skill_name, entry_point, skill_input, skill_output
+                )
                 validation_errors = self._validators[skill_name](skill_output, skill_input)
                 if validation_errors:
                     errors = validation_errors
@@ -102,6 +105,32 @@ class LocalOllamaSkillExecutor:
             "%s did not produce a valid %s result after %d attempts: %s"
             % (skill_name, entry_point, self.max_attempts, "; ".join(errors))
         )
+    @staticmethod
+    def _normalize_harness_owned_fields(
+        skill_name: str,
+        entry_point: str,
+        skill_input: Mapping[str, Any],
+        output: Dict[str, Any],
+    ) -> Dict[str, Any]:
+        """Assign run and request IDs; their values carry no legal judgment."""
+        normalized = dict(output)
+        normalized["run_id"] = skill_input["run_id"]
+        if skill_name != "legal_issue_and_query_planning":
+            return normalized
+        request_key = "gap_retrieval_requests" if entry_point == "GAP_QUERY_PLAN" else "retrieval_requests"
+        requests = normalized.get(request_key)
+        if not isinstance(requests, list):
+            return normalized
+        prefix = "GRQ" if entry_point == "GAP_QUERY_PLAN" else "RQ"
+        for index, request in enumerate(requests, start=1):
+            if isinstance(request, dict):
+                request["request_id"] = "%s%d" % (prefix, index)
+        if entry_point == "GAP_QUERY_PLAN":
+            normalized["target_evidence_item_ids"] = list(dict.fromkeys(
+                request.get("evidence_item_id") for request in requests if isinstance(request, dict)
+            ))
+        return normalized
+
 
     @staticmethod
     def _max_tokens(skill_name: str) -> int:
@@ -331,6 +360,8 @@ FINAL OUTPUT INVARIANTS:
             output_invariants=self._output_invariants(skill_name, skill_input),
         )
     def _output_invariants(self, skill_name: str, skill_input: Mapping[str, Any]) -> str:
+        if skill_name == "legal_issue_and_query_planning":
+            return self._s1_output_invariants(skill_input)
         if skill_name != "provision_coverage_assessment":
             return "Use only the identifiers and fields supplied in INPUT."
         evidence_ledger = [
@@ -350,6 +381,28 @@ FINAL OUTPUT INVARIANTS:
                 json.dumps(candidate_ids),
                 json.dumps(evidence_ledger, ensure_ascii=False, separators=(",", ":")),
 
+            )
+        )
+    def _s1_output_invariants(self, skill_input: Mapping[str, Any]) -> str:
+        if skill_input.get("mode") != "GAP_QUERY_PLAN":
+            return "Copy run_id exactly from INPUT. Use only the identifiers and fields supplied in INPUT."
+        prior_queries = []
+        for item in self._list(skill_input, "query_history"):
+            if isinstance(item, Mapping):
+                query = item.get("query_text") or item.get("normalized_query")
+                if isinstance(query, str):
+                    prior_queries.append(query)
+        unresolved = [
+            item.get("evidence_item_id")
+            for key in ("missing_evidence_items", "evidence_conflicts")
+            for item in self._list(skill_input, key)
+            if isinstance(item, Mapping)
+        ]
+        return (
+            "For S1 GAP_QUERY_PLAN, target only these unresolved evidence IDs: %s. Every gap query must be genuinely new and must not equal any of these prior queries after lowercase and whitespace normalization: %s. Use the exact input run_id. Use GRQ-style request IDs, never a mode name."
+            % (
+                json.dumps(unresolved),
+                json.dumps(prior_queries, ensure_ascii=False),
             )
         )
 

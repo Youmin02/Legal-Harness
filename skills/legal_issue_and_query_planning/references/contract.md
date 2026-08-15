@@ -46,6 +46,7 @@ Use one of: `definition`, `element`, `rule`, `exception`, `procedure`, `remedy`,
 Return `status: "error"` with:
 
 ```json
+- `run_id` and request IDs are transport fields: copy the input `run_id`; use the mode-appropriate ID prefix. The harness may canonicalize their values before semantic validation.
 {
   "schema_version": "1.0",
   "skill_id": "S1",

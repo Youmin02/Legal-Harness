@@ -16,6 +16,7 @@ Read [references/contract.md](references/contract.md) before executing. Conform 
 
 ## Execute
 
+7. Copy `run_id` from input. Use `RQ`/`GRQ` request IDs, never a mode name; the harness canonicalizes these transport identifiers, but the target evidence and query text remain your responsibility.
 1. Preserve the question's meaning. Do not perform a legal rewrite in place of deterministic input normalization.
 2. Decompose by legal issue and required evidence, not by a hard statute-domain route and not by a fixed hop count.
 3. Mark an evidence item `critical: true` only when the core conclusion cannot be justified without it.

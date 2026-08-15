@@ -110,6 +110,7 @@ def validate_initial_plan(
             evidence_type=_string(raw, "evidence_type"),
             description=_string(raw, "description"),
             critical=_boolean(raw, "critical"),
+            completion_criteria=raw.get("completion_criteria", "") or _string(raw, "description"),
         )
         for raw in _items(payload, "required_evidence_items")
     ]

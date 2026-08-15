@@ -1,0 +1,70 @@
+{
+  "pack_name": "provision-coverage-skill-pack",
+  "pack_version": "1.0.0",
+  "contract_version": "1.0",
+  "control_owner": "harness",
+  "target_runtime": {
+    "environment": "external_h200_experiment_harness",
+    "accelerator": "NVIDIA H200",
+    "model_binding_owner": "experiment_harness",
+    "expected_model": "Qwen3.6-27B",
+    "codex_installation": false,
+    "note": "Load each SKILL.md and its JSON contracts from the experiment harness. Do not install this pack into Codex skill discovery."
+  },
+  "skills": [
+    {
+      "skill_id": "S1",
+      "folder": "legal_issue_and_query_planning",
+      "modes": ["INITIAL_PLAN", "GAP_QUERY_PLAN"],
+      "input_schema": "legal_issue_and_query_planning/references/input.schema.json",
+      "output_schema": "legal_issue_and_query_planning/references/output.schema.json",
+      "semantic_validator": "legal_issue_and_query_planning/scripts/validate_output.py"
+    },
+    {
+      "skill_id": "S2",
+      "folder": "provision_coverage_assessment",
+      "modes": ["ASSESS_COVERAGE"],
+      "input_schema": "provision_coverage_assessment/references/input.schema.json",
+      "output_schema": "provision_coverage_assessment/references/output.schema.json",
+      "semantic_validator": "provision_coverage_assessment/scripts/validate_output.py"
+    },
+    {
+      "skill_id": "S3",
+      "folder": "grounded_legal_answer_generation",
+      "modes": ["GENERATE_ANSWER"],
+      "input_schema": "grounded_legal_answer_generation/references/input.schema.json",
+      "output_schema": "grounded_legal_answer_generation/references/output.schema.json",
+      "semantic_validator": "grounded_legal_answer_generation/scripts/validate_output.py"
+    }
+  ],
+  "external_tools": [
+    {
+      "tool_id": "T-R",
+      "name": "retrieve_provisions",
+      "input_fields": ["retrieval_requests[] or gap_retrieval_requests[]"],
+      "output_fields": ["candidate_provisions[]"],
+      "note": "The harness fixes the retriever, Top-k, fusion, and reranker profile per experiment."
+    },
+    {
+      "tool_id": "T-C",
+      "name": "validate_citation_integrity",
+      "input_fields": ["answer", "claims[]", "claim_citations[]", "accepted_provision_ids[]", "source_snapshot_id"],
+      "output_fields": ["PASS or FAIL", "validation_errors[]"],
+      "note": "This deterministic tool checks citation identity and linkage, not legal interpretation or entailment."
+    }
+  ],
+  "policy_actions": ["RETRIEVE_GAP", "GENERATE", "ABSTAIN"],
+  "runtime_error_path": "EXECUTION_FAILURE",
+  "state_reducer": {
+    "accepted_provision_ids": "Derive from validated S2 evidence_links whose relation is supports or partially_supports and whose evidence assessment is not conflicting; never accept a provision absent from candidate_provisions.",
+    "next_action": "Choose only in the harness policy from validated RunState, critical blockers, remaining budget, duplicate-query checks, and no-progress state."
+  },
+  "invariants": [
+    "Skills never call one another or tools directly.",
+    "S1 never assesses coverage or chooses a policy action.",
+    "S2 never retrieves, generates an answer, emits accepted_provision_ids, or chooses a policy action.",
+    "S3 runs only after GENERATE authorization and cites accepted provisions only.",
+    "ABSTAIN bypasses S3 and citation integrity checking and returns a structured withholding reason.",
+    "Execution and contract failures use EXECUTION_FAILURE rather than a coverage-policy action."
+  ]
+}

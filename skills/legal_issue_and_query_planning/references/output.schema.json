@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/legal-evidence-planning/output.schema.json",
+  "title": "S1 legal evidence planning output",
+  "oneOf": [
+    {"$ref": "#/$defs/initial"},
+    {"$ref": "#/$defs/gap"},
+    {"$ref": "#/$defs/error"}
+  ],
+  "$defs": {
+    "issue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["issue_id", "issue_statement", "decision_question", "importance"],
+      "properties": {
+        "issue_id": {"type": "string", "pattern": "^I[1-9][0-9]*$"},
+        "issue_statement": {"type": "string", "minLength": 1},
+        "decision_question": {"type": "string", "minLength": 1},
+        "importance": {"enum": ["critical", "supporting"]}
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_item_id", "issue_id", "evidence_type", "description", "critical", "completion_criteria"],
+      "properties": {
+        "evidence_item_id": {"type": "string", "pattern": "^E[1-9][0-9]*$"},
+        "issue_id": {"type": "string", "pattern": "^I[1-9][0-9]*$"},
+        "evidence_type": {"enum": ["definition", "element", "rule", "exception", "procedure", "remedy", "limitation", "relationship", "other"]},
+        "description": {"type": "string", "minLength": 1},
+        "critical": {"type": "boolean"},
+        "completion_criteria": {"type": "string", "minLength": 1}
+      }
+    },
+    "initialRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["request_id", "issue_id", "evidence_item_id", "query_channel", "query_text", "query_terms", "statute_hints", "rationale"],
+      "properties": {
+        "request_id": {"type": "string", "pattern": "^RQ[1-9][0-9]*$"},
+        "issue_id": {"type": "string", "pattern": "^I[1-9][0-9]*$"},
+        "evidence_item_id": {"type": "string", "pattern": "^E[1-9][0-9]*$"},
+        "query_channel": {"enum": ["provision_style", "sparse_keywords", "statute_aware"]},
+        "query_text": {"type": "string", "minLength": 1},
+        "query_terms": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+        "statute_hints": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+        "rationale": {"type": "string", "minLength": 1}
+      }
+    },
+    "gapRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["request_id", "issue_id", "evidence_item_id", "query_channel", "query_text", "query_terms", "statute_hints", "rationale", "gap_reason", "source_assessment_status"],
+      "properties": {
+        "request_id": {"type": "string", "pattern": "^GRQ[1-9][0-9]*$"},
+        "issue_id": {"type": "string", "pattern": "^I[1-9][0-9]*$"},
+        "evidence_item_id": {"type": "string", "pattern": "^E[1-9][0-9]*$"},
+        "query_channel": {"enum": ["provision_style", "sparse_keywords", "statute_aware"]},
+        "query_text": {"type": "string", "minLength": 1},
+        "query_terms": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+        "statute_hints": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+        "rationale": {"type": "string", "minLength": 1},
+        "gap_reason": {"type": "string", "minLength": 1},
+        "source_assessment_status": {"enum": ["partially_covered", "uncovered", "conflicting"]}
+      }
+    },
+    "initial": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "skill_id", "mode", "status", "run_id", "legal_issues", "required_evidence_items", "retrieval_requests"],
+      "properties": {
+        "schema_version": {"const": "1.0"},
+        "skill_id": {"const": "S1"},
+        "mode": {"const": "INITIAL_PLAN"},
+        "status": {"const": "ok"},
+        "run_id": {"type": "string", "minLength": 1},
+        "legal_issues": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/issue"}},
+        "required_evidence_items": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidence"}},
+        "retrieval_requests": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/initialRequest"}}
+      }
+    },
+    "gap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "skill_id", "mode", "status", "run_id", "target_evidence_item_ids", "gap_retrieval_requests"],
+      "properties": {
+        "schema_version": {"const": "1.0"},
+        "skill_id": {"const": "S1"},
+        "mode": {"const": "GAP_QUERY_PLAN"},
+        "status": {"const": "ok"},
+        "run_id": {"type": "string", "minLength": 1},
+        "target_evidence_item_ids": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^E[1-9][0-9]*$"}, "uniqueItems": true},
+        "gap_retrieval_requests": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/gapRequest"}}
+      }
+    },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "skill_id", "mode", "status", "run_id", "error"],
+      "properties": {
+        "schema_version": {"const": "1.0"},
+        "skill_id": {"const": "S1"},
+        "mode": {"enum": ["INITIAL_PLAN", "GAP_QUERY_PLAN"]},
+        "status": {"const": "error"},
+        "run_id": {"type": "string", "minLength": 1},
+        "error": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["code", "message", "details"],
+          "properties": {
+            "code": {"enum": ["INVALID_INPUT", "BUDGET_EXHAUSTED", "CONTRACT_UNSATISFIABLE"]},
+            "message": {"type": "string", "minLength": 1},
+            "details": {"type": "array"}
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/provision-coverage-assessment/input.schema.json",
+  "title": "S2 provision coverage assessment input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "mode", "run_id", "normalized_question", "legal_issues", "required_evidence_items", "candidate_provisions"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "mode": {"const": "ASSESS_COVERAGE"},
+    "run_id": {"type": "string", "minLength": 1},
+    "normalized_question": {"type": "string", "minLength": 1},
+    "legal_issues": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "required_evidence_items": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidence"}},
+    "candidate_provisions": {"type": "array", "items": {"$ref": "#/$defs/provision"}},
+    "prior_coverage_assessments": {"type": "array", "items": {"type": "object"}}
+  },
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "required": ["evidence_item_id", "issue_id", "description", "critical", "completion_criteria"],
+      "properties": {
+        "evidence_item_id": {"type": "string", "pattern": "^E[1-9][0-9]*$"},
+        "issue_id": {"type": "string", "pattern": "^I[1-9][0-9]*$"},
+        "description": {"type": "string", "minLength": 1},
+        "critical": {"type": "boolean"},
+        "completion_criteria": {"type": "string", "minLength": 1}
+      }
+    },
+    "provision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["provision_id", "statute_name", "article_label", "text", "source_snapshot_id"],
+      "properties": {
+        "provision_id": {"type": "string", "minLength": 1},
+        "statute_name": {"type": "string", "minLength": 1},
+        "article_label": {"type": "string", "minLength": 1},
+        "heading": {"type": "string"},
+        "text": {"type": "string", "minLength": 1},
+        "source_snapshot_id": {"type": "string", "minLength": 1},
+        "retrieval_metadata": {"type": "object"}
+      }
+    }
+  }
+}

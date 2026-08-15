@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/grounded-legal-answer-generation/output.schema.json",
+  "title": "S3 grounded legal answer output",
+  "oneOf": [
+    {"$ref": "#/$defs/success"},
+    {"$ref": "#/$defs/error"}
+  ],
+  "$defs": {
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id", "text", "claim_type", "applicability", "citation_required"],
+      "properties": {
+        "claim_id": {"type": "string", "pattern": "^C[1-9][0-9]*$"},
+        "text": {"type": "string", "minLength": 1},
+        "claim_type": {"enum": ["legal_rule", "factual_premise", "application", "exception", "procedure", "remedy", "limitation"]},
+        "applicability": {"enum": ["direct", "conditional"]},
+        "citation_required": {"type": "boolean"}
+      }
+    },
+    "citation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["citation_id", "claim_id", "provision_id", "quoted_text", "support_description", "answer_marker"],
+      "properties": {
+        "citation_id": {"type": "string", "pattern": "^CT[1-9][0-9]*$"},
+        "claim_id": {"type": "string", "pattern": "^C[1-9][0-9]*$"},
+        "provision_id": {"type": "string", "minLength": 1},
+        "quoted_text": {"type": "string", "minLength": 1},
+        "support_description": {"type": "string", "minLength": 1},
+        "answer_marker": {"type": "string", "pattern": "^\\[CT[1-9][0-9]*\\]$"}
+      }
+    },
+    "note": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "message"],
+      "properties": {
+        "code": {"type": "string", "minLength": 1},
+        "message": {"type": "string", "minLength": 1}
+      }
+    },
+    "success": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "skill_id", "mode", "status", "run_id", "answer", "claims", "claim_citations", "assumptions", "limitations"],
+      "properties": {
+        "schema_version": {"const": "1.0"},
+        "skill_id": {"const": "S3"},
+        "mode": {"const": "GENERATE_ANSWER"},
+        "status": {"const": "ok"},
+        "run_id": {"type": "string", "minLength": 1},
+        "answer": {"type": "string", "minLength": 1},
+        "claims": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/claim"}},
+        "claim_citations": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/citation"}},
+        "assumptions": {"type": "array", "items": {"$ref": "#/$defs/note"}},
+        "limitations": {"type": "array", "items": {"$ref": "#/$defs/note"}}
+      }
+    },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "skill_id", "mode", "status", "run_id", "error"],
+      "properties": {
+        "schema_version": {"const": "1.0"},
+        "skill_id": {"const": "S3"},
+        "mode": {"const": "GENERATE_ANSWER"},
+        "status": {"const": "error"},
+        "run_id": {"type": "string", "minLength": 1},
+        "error": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["code", "message", "details"],
+          "properties": {
+            "code": {"enum": ["INVALID_INPUT", "GENERATION_NOT_AUTHORIZED", "UNCOVERED_CRITICAL_EVIDENCE", "CONTRACT_UNSATISFIABLE"]},
+            "message": {"type": "string", "minLength": 1},
+            "details": {"type": "array"}
+          }
+        }
+      }
+    }
+  }
+}

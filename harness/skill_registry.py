@@ -6,10 +6,10 @@ from typing import Dict, List
 
 REQUIRED_SKILL_FILES = (
     "SKILL.md",
-    "prompt_template.jinja",
-    "input.schema.json",
-    "output.schema.json",
-    "failure_contract.json",
+    "references/contract.md",
+    "references/input.schema.json",
+    "references/output.schema.json",
+    "scripts/validate_output.py",
 )
 
 SKILL_DIRECTORIES: Dict[str, str] = {

@@ -111,6 +111,7 @@ class HarnessRunner:
                 S1,
                 "INITIAL_PLAN",
                 {
+                    "run_id": state.run_id,
                     "question": state.question,
                     "normalized_question": state.normalized_question,
                     "query_history": [],
@@ -271,32 +272,54 @@ class HarnessRunner:
 
     def _coverage_payload(self, state: RunState) -> Dict[str, Any]:
         return {
+            "run_id": state.run_id,
             "normalized_question": state.normalized_question,
             "legal_issues": to_primitive(state.legal_issues),
             "required_evidence_items": to_primitive(state.required_evidence_items),
             "candidate_provisions": to_primitive(state.candidate_provisions),
+            "prior_coverage_assessments": to_primitive(state.coverage_assessments),
         }
 
     def _gap_payload(self, state: RunState) -> Dict[str, Any]:
         return {
+            "run_id": state.run_id,
             "normalized_question": state.normalized_question,
+            "legal_issues": to_primitive(state.legal_issues),
+            "required_evidence_items": to_primitive(state.required_evidence_items),
+            "coverage_assessments": to_primitive(state.coverage_assessments),
             "missing_evidence_items": to_primitive(state.missing_critical_items),
             "evidence_conflicts": to_primitive(state.unresolved_critical_conflicts()),
             "accepted_provision_ids": sorted(state.accepted_provision_ids),
             "query_history": to_primitive(state.query_history),
             "seen_provision_ids": sorted(state.seen_provision_ids),
+            "remaining_request_budget": state.remaining_request_budget,
         }
 
     def _answer_payload(self, state: RunState) -> Dict[str, Any]:
-        accepted = [
-            candidate
-            for candidate in state.candidate_provisions
-            if candidate.provision_id in state.accepted_provision_ids
-        ]
+        supported_evidence_by_provision: Dict[str, List[str]] = {}
+        for link in state.evidence_links:
+            if link.assessment == "accepted":
+                supported_evidence_by_provision.setdefault(link.provision_id, []).append(
+                    link.evidence_item_id
+                )
+        accepted = []
+        for candidate in state.candidate_provisions:
+            if candidate.provision_id not in state.accepted_provision_ids:
+                continue
+            payload = to_primitive(candidate)
+            payload["supported_evidence_item_ids"] = sorted(
+                set(supported_evidence_by_provision.get(candidate.provision_id, []))
+            )
+            accepted.append(payload)
         return {
+            "run_id": state.run_id,
             "question": state.question,
+            "normalized_question": state.normalized_question,
             "legal_issues": to_primitive(state.legal_issues),
+            "required_evidence_items": to_primitive(state.required_evidence_items),
+            "coverage_assessments": to_primitive(state.coverage_assessments),
             "accepted_provisions": to_primitive(accepted),
+            "state_version": len(state.action_trace),
         }
 
     def _trace(self, event: str, state: RunState, **details: object) -> None:

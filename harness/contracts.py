@@ -75,6 +75,7 @@ class RequiredEvidenceItem:
     description: str
     critical: bool
 
+    completion_criteria: str = ""
 
 @dataclass(frozen=True)
 class RetrievalRequest:

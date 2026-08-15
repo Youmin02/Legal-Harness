@@ -12,11 +12,13 @@ Read [references/contract.md](references/contract.md) before executing. Conform 
 ## Execute
 
 1. Assess every `required_evidence_item` exactly once against only the supplied `candidate_provisions`.
-2. Create evidence links only for operational support, partial support, or a real unresolved conflict. Copy `quoted_text` exactly from the supplied provision text.
-3. Apply the four status definitions in the contract. Base the judgment on each item's `completion_criteria`, not retrieval score or topical similarity alone.
-4. Emit one `missing_evidence_item` for every non-covered assessment. Emit a conflict object only for `conflicting` assessments.
-5. Explain what is satisfied and what remains missing; do not conceal uncertainty behind a high-level relevance statement.
-6. Return JSON only. On invalid input, return the error envelope.
+2. Create evidence links only for operational support, partial support, or a real unresolved conflict. Use only the short candidate IDs supplied as `candidate_provisions[].provision_id` (for example `C001`); never recreate a source statute ID.
+3. Set every evidence link's `quoted_text` to the literal string `[FULL_TEXT]`. The harness deterministically replaces this token with the complete immutable candidate text, preventing paraphrased or mistyped quotations.
+4. Construct `evidence_links` first. For each assessment, copy `linked_provision_ids` from that evidence item's links exactly; use `[]` only for `uncovered`.
+5. Apply the four status definitions in the contract. Base the judgment on each item's `completion_criteria`, not retrieval score or topical similarity alone.
+6. Emit one `missing_evidence_item` for every non-covered assessment. Emit a conflict object only for `conflicting` assessments.
+7. Explain what is satisfied and what remains missing; do not conceal uncertainty behind a high-level relevance statement.
+8. Return JSON only. On invalid input, return the error envelope.
 
 ## Preserve the control boundary
 

@@ -86,7 +86,9 @@ def validate(output, input_data):
             errors.append(f"link references unknown candidate provision: {provision_id}")
         else:
             quote = link.get("quoted_text")
-            if not isinstance(quote, str) or quote not in provision.get("text", ""):
+            if quote != "[FULL_TEXT]" and (
+                not isinstance(quote, str) or quote not in provision.get("text", "")
+            ):
                 errors.append(f"quoted_text is not exact source text: {link.get('link_id')}")
         if link.get("relation") not in {"supports", "partially_supports", "conflicts"}:
             errors.append(f"invalid link relation: {link.get('link_id')}")

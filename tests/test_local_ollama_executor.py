@@ -71,9 +71,9 @@ class LocalOllamaExecutorTests(unittest.TestCase):
                         {
                             "link_id": "L1",
                             "evidence_item_id": "E1",
-                            "provision_id": "P1",
+                            "provision_id": "C001",
                             "relation": "supports",
-                            "quoted_text": "손해를 배상한다",
+                            "quoted_text": "[FULL_TEXT]",
                             "rationale": "책임을 정한다",
                         }
                     ],
@@ -81,7 +81,7 @@ class LocalOllamaExecutorTests(unittest.TestCase):
                         {
                             "evidence_item_id": "E1",
                             "status": "covered",
-                            "linked_provision_ids": ["P1"],
+                            "linked_provision_ids": ["C001"],
                             "rationale": "책임 규정이 있다",
                             "satisfied_aspects": ["책임"],
                             "missing_aspects": [],
@@ -176,7 +176,8 @@ class LocalOllamaExecutorTests(unittest.TestCase):
             },
         )
         self.assertEqual(coverage["evidence_links"][0]["assessment"], "accepted")
-        self.assertEqual(coverage["evidence_links"][0]["support_spans"], [{"start_char": 10, "end_char": 18}])
+        self.assertEqual(coverage["evidence_links"][0]["provision_id"], "P1")
+        self.assertEqual(coverage["evidence_links"][0]["support_spans"], [{"start_char": 0, "end_char": len(self._candidate()["provision_text"])}])
 
         answer = self.executor.execute(
             "grounded_legal_answer_generation",

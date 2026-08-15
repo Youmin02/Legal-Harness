@@ -80,7 +80,13 @@ class LocalOllamaSkillExecutor:
                 validation_errors = self._validators[skill_name](skill_output, skill_input)
                 if validation_errors:
                     errors = validation_errors
-                    repair_note = "Your previous JSON failed validation: " + "; ".join(validation_errors)
+                    repair_note = (
+                        "Your previous JSON failed validation: "
+                        + "; ".join(validation_errors)
+                        + ". Return a corrected replacement JSON. Preserve valid fields and rebuild "
+                        "linked_provision_ids from evidence_links. Previous JSON: "
+                        + json.dumps(skill_output, ensure_ascii=False, separators=(",", ":"))
+                    )
                     continue
                 if skill_output.get("status") == "error":
                     error = skill_output.get("error", {})
@@ -253,12 +259,13 @@ class LocalOllamaSkillExecutor:
         accepted: bool = False,
     ) -> List[Dict[str, Any]]:
         provisions: List[Dict[str, Any]] = []
-        for candidate in candidates:
+        for index, candidate in enumerate(candidates, start=1):
             if not isinstance(candidate, Mapping):
                 raise SkillExecutionError("candidate provisions must contain objects")
             text = self._string(candidate, "provision_text")
+            source_provision_id = self._string(candidate, "provision_id")
             provision = {
-                "provision_id": self._string(candidate, "provision_id"),
+                "provision_id": source_provision_id if accepted else "C%03d" % index,
                 "statute_name": self._string(candidate, "statute_name"),
                 "article_label": self._string(candidate, "statute_name"),
                 "text": text,
@@ -270,6 +277,7 @@ class LocalOllamaSkillExecutor:
                     supported = [self._string(candidate, "issue_id")]
                 provision["supported_evidence_item_ids"] = supported
             else:
+                provision["source_provision_id"] = source_provision_id
                 provision["retrieval_metadata"] = {
                     "run_id": run_id,
                     "source_request_id": candidate.get("source_request_id"),
@@ -309,6 +317,9 @@ ENTRY POINT: {entry_point}
 
 INPUT:
 {input_json}
+
+FINAL OUTPUT INVARIANTS:
+{output_invariants}
 """.format(
             instructions=resources["instructions"],
             contract=resources["contract"],
@@ -317,6 +328,29 @@ INPUT:
             entry_point=entry_point,
             repair_note=repair_note,
             input_json=json.dumps(skill_input, ensure_ascii=False, separators=(",", ":")),
+            output_invariants=self._output_invariants(skill_name, skill_input),
+        )
+    def _output_invariants(self, skill_name: str, skill_input: Mapping[str, Any]) -> str:
+        if skill_name != "provision_coverage_assessment":
+            return "Use only the identifiers and fields supplied in INPUT."
+        evidence_ledger = [
+            {"evidence_item_id": item.get("evidence_item_id"), "issue_id": item.get("issue_id"), "critical": item.get("critical")}
+            for item in self._list(skill_input, "required_evidence_items")
+            if isinstance(item, Mapping)
+        ]
+        candidate_ids = [
+            item.get("provision_id")
+            for item in self._list(skill_input, "candidate_provisions")
+            if isinstance(item, Mapping)
+        ]
+        return (
+            "For S2, use only these evidence_item_id values: %s. Use only these candidate provision_id values: %s. Never invent an ID. Each evidence item appears in exactly one coverage assessment. For every non-covered item, copy issue_id and critical exactly from this evidence ledger: %s. Every evidence link must use quoted_text exactly '[FULL_TEXT]'."
+            % (
+                json.dumps([item["evidence_item_id"] for item in evidence_ledger]),
+                json.dumps(candidate_ids),
+                json.dumps(evidence_ledger, ensure_ascii=False, separators=(",", ":")),
+
+            )
         )
 
     def _generate(self, prompt: str, max_tokens: int) -> str:
@@ -450,6 +484,8 @@ INPUT:
             if source is None:
                 raise SkillExecutionError("S2 cited a provision outside the supplied candidates")
             quote = self._string(link, "quoted_text")
+            if quote == "[FULL_TEXT]":
+                quote = self._string(source, "text")
             start = source["text"].find(quote)
             if start < 0:
                 raise SkillExecutionError("S2 quote is not in the supplied provision")
@@ -457,7 +493,7 @@ INPUT:
                 {
                     "issue_id": evidence_by_id[evidence_id]["issue_id"],
                     "evidence_item_id": evidence_id,
-                    "provision_id": provision_id,
+                    "provision_id": self._source_provision_id(provisions, provision_id),
                     "support_spans": [{"start_char": start, "end_char": start + len(quote)}],
                     "assessment": "conflicting" if link.get("relation") == "conflicts" else "accepted",
                 }
@@ -470,7 +506,10 @@ INPUT:
                 {
                     "evidence_item_id": self._string(assessment, "evidence_item_id"),
                     "status": self._string(assessment, "status"),
-                    "linked_provision_ids": self._list(assessment, "linked_provision_ids"),
+                    "linked_provision_ids": [
+                        self._source_provision_id(provisions, provision_id)
+                        for provision_id in self._list(assessment, "linked_provision_ids")
+                    ],
                     "rationale": self._string(assessment, "rationale"),
                 }
             )
@@ -481,7 +520,10 @@ INPUT:
             conflicts.append(
                 {
                     "evidence_item_id": self._string(conflict, "evidence_item_id"),
-                    "provision_ids": self._list(conflict, "provision_ids"),
+                    "provision_ids": [
+                        self._source_provision_id(provisions, provision_id)
+                        for provision_id in self._list(conflict, "provision_ids")
+                    ],
                     "description": self._string(conflict, "description"),
                     "resolved": False,
                 }
@@ -491,6 +533,16 @@ INPUT:
             "coverage_assessments": assessments,
             "evidence_conflicts": conflicts,
         }
+
+    def _source_provision_id(
+        self, provisions: Mapping[str, Mapping[str, Any]], provision_id: Any
+    ) -> str:
+        if not isinstance(provision_id, str):
+            raise SkillExecutionError("S2 provision_id must be a non-empty string")
+        source = provisions.get(provision_id)
+        if source is None:
+            raise SkillExecutionError("S2 cited a provision outside the supplied candidates")
+        return self._string(source, "source_provision_id")
 
     def _adapt_s3(self, output: Mapping[str, Any]) -> Dict[str, Any]:
         claims = []

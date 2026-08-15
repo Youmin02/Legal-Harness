@@ -30,9 +30,10 @@
     "provision": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["provision_id", "statute_name", "article_label", "text", "source_snapshot_id"],
+      "required": ["provision_id", "source_provision_id", "statute_name", "article_label", "text", "source_snapshot_id"],
       "properties": {
-        "provision_id": {"type": "string", "minLength": 1},
+        "provision_id": {"type": "string", "pattern": "^C[0-9]{3}$"},
+        "source_provision_id": {"type": "string", "minLength": 1},
         "statute_name": {"type": "string", "minLength": 1},
         "article_label": {"type": "string", "minLength": 1},
         "heading": {"type": "string"},

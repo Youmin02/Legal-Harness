@@ -9,7 +9,7 @@
 
 ## Output sets
 
-- `evidence_links[]`: item-to-provision links with exact excerpts and one of `supports`, `partially_supports`, or `conflicts`.
+- `evidence_links[]`: item-to-provision links with one of `supports`, `partially_supports`, or `conflicts`.
 - `coverage_assessments[]`: exactly one assessment for every required evidence item.
 - `missing_evidence_items[]`: exactly the evidence items whose status is not `covered`.
 - `evidence_conflicts[]`: exactly the evidence items whose status is `conflicting`.
@@ -20,8 +20,8 @@
 - A `partially_covered` item must have at least one linked provision and at least one `missing_aspect`.
 - An `uncovered` item must have no linked provisions and no satisfied aspects.
 - A `conflicting` item must have linked provisions and a conflict object.
-- All link and assessment provision IDs must occur in `candidate_provisions[]`.
-- Every quote must be an exact substring of the corresponding candidate provision text.
+- All link and assessment provision IDs must be the short IDs in `candidate_provisions[]` (for example `C001`), never a reconstructed statute ID.
+- Set every `quoted_text` value to `[FULL_TEXT]`. The deterministic adapter expands it to the entire immutable candidate text, which is the exact source span retained in the harness state.
 
 The harness state reducer may derive `accepted_provision_ids[]` after validation. S2 must not emit that field and must not choose the next action.
 

@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+import uuid
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -19,6 +20,7 @@ from retrieval.corpus import InMemoryProvisionCorpus
 from retrieval.persistent import KureExactIndexSearcher, SqliteFts5Bm25Searcher
 from retrieval.pipeline import RetrievalPipeline
 from retrieval.reranker import LocalBgeCrossEncoderReranker
+from runtime.experiment_record import ExperimentRecord
 from runtime.local_ollama_executor import LocalOllamaSkillExecutor
 from tools.validate_citation_integrity import CitationIntegrityChecker
 
@@ -34,6 +36,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--num-ctx", type=int, default=32768)
     parser.add_argument("--rounds", type=int, default=3)
     parser.add_argument("--requests", type=int, default=9)
+    parser.add_argument("--record-dir", type=Path, default=PROJECT_ROOT / "records/runs")
+    parser.add_argument("--question-id", help="stable benchmark item ID, for example qa_19_1hop_28")
+    parser.add_argument("--condition", default="M", help="frozen experimental condition ID")
+    parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--result-file", type=Path, help="write the complete run result as JSON")
     return parser.parse_args()
 
@@ -59,6 +65,26 @@ def build_retriever(args: argparse.Namespace) -> RetrievalPipeline:
 
 def main() -> int:
     args = parse_args()
+    run_id = str(uuid.uuid4())
+    configuration = {
+        "condition": args.condition,
+        "seed": args.seed,
+        "retriever": args.retriever,
+        "model": args.model,
+        "ollama_endpoint": args.ollama_endpoint,
+        "num_ctx": args.num_ctx,
+        "total_retrieval_rounds": args.rounds,
+        "total_retrieval_requests": args.requests,
+    }
+    record = ExperimentRecord(
+        record_root=args.record_dir,
+        run_id=run_id,
+        project_root=PROJECT_ROOT,
+        skills_root=args.skills_root,
+        configuration=configuration,
+        question=args.question,
+        question_id=args.question_id,
+    )
     assert_skill_layout_complete(args.skills_root)
     corpus = InMemoryProvisionCorpus.from_jsonl(
         PROJECT_ROOT / "data/koblex/normalized/statute.jsonl"
@@ -76,10 +102,17 @@ def main() -> int:
             total_retrieval_rounds=args.rounds,
             total_retrieval_requests=args.requests,
         ),
+        trace_sink=record.trace_sink,
     )
-    outcome = runner.run(args.question)
+    outcome = runner.run(args.question, run_id=run_id)
+    record_result_path = record.finalize(outcome)
     summary = {
         "status": outcome.status.value,
+        "record_directory": str(record.directory),
+        "record_result_file": str(record_result_path),
+        "condition": args.condition,
+        "seed": args.seed,
+        "question_id": args.question_id,
         "termination_reason": outcome.termination_reason.value if outcome.termination_reason else None,
         "abstention_reason": outcome.abstention_reason.value if outcome.abstention_reason else None,
         "run_id": outcome.state.run_id,

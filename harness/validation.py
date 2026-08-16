@@ -70,6 +70,18 @@ def _boolean(raw: Mapping[str, Any], key: str) -> bool:
     return value
 
 
+def _string_list(raw: Mapping[str, Any], key: str) -> List[str]:
+    value = raw.get(key, [])
+    if not isinstance(value, list) or not all(
+        isinstance(item, str) and item.strip() for item in value
+    ):
+        raise ValidationError("%s must be a list of non-empty strings" % key)
+    normalized = [normalize_question(item) for item in value]
+    if len(normalized) != len(set(normalized)):
+        raise ValidationError("%s must not contain duplicates" % key)
+    return normalized
+
+
 def _unique(values: Iterable[str], label: str) -> None:
     values = list(values)
     if len(values) != len(set(values)):
@@ -91,6 +103,8 @@ def _parse_request(raw: Mapping[str, Any]) -> RetrievalRequest:
         query_channel=channel,
         query_text=normalize_question(_string(raw, "query_text")),
         top_k=top_k,
+        query_terms=_string_list(raw, "query_terms"),
+        statute_hints=_string_list(raw, "statute_hints"),
     )
 
 

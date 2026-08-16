@@ -78,6 +78,35 @@ class RunState:
                 return True
         return False
 
+    def can_generate_conditionally(self) -> bool:
+        """Allow only evidence-linked partial critical items, never uncovered ones."""
+        if self.unresolved_critical_conflicts():
+            return False
+        coverage = self.coverage_by_evidence_id()
+        accepted_by_evidence = {
+            link.evidence_item_id
+            for link in self.evidence_links
+            if link.assessment == "accepted"
+        }
+        has_partial = False
+        for item in self.required_evidence_items:
+            if not item.critical:
+                continue
+            assessment = coverage.get(item.evidence_item_id)
+            if assessment is None:
+                return False
+            if assessment.status is CoverageStatus.COVERED:
+                continue
+            if (
+                assessment.status is CoverageStatus.PARTIALLY_COVERED
+                and assessment.linked_provision_ids
+                and item.evidence_item_id in accepted_by_evidence
+            ):
+                has_partial = True
+                continue
+            return False
+        return has_partial
+
     def refresh_derived_fields(self) -> None:
         """Rebuild fields that must never be independently authored."""
         evidence = self.evidence_by_id()

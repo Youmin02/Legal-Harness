@@ -83,6 +83,12 @@ _CRITICAL_IMPROVEMENTS = {
     (CoverageStatus.CONFLICTING, CoverageStatus.COVERED),
 }
 
+_MONOTONIC_STATUS_RANK = {
+    CoverageStatus.UNCOVERED: 0,
+    CoverageStatus.PARTIALLY_COVERED: 1,
+    CoverageStatus.COVERED: 2,
+}
+
 
 def apply_coverage_assessment(
     state: RunState,
@@ -91,7 +97,33 @@ def apply_coverage_assessment(
     evidence_conflicts: Sequence[EvidenceConflict],
 ) -> bool:
     previous = state.coverage_by_evidence_id()
-    current = {assessment.evidence_item_id: assessment for assessment in coverage_assessments}
+    incoming = {
+        assessment.evidence_item_id: assessment
+        for assessment in coverage_assessments
+    }
+    unresolved_conflict_ids = {
+        conflict.evidence_item_id
+        for conflict in evidence_conflicts
+        if not conflict.resolved
+    }
+    current = {}
+    preserved_ids = set()
+    for item in state.required_evidence_items:
+        evidence_id = item.evidence_item_id
+        assessment = incoming[evidence_id]
+        prior = previous.get(evidence_id)
+        if (
+            prior is not None
+            and evidence_id not in unresolved_conflict_ids
+            and prior.status in _MONOTONIC_STATUS_RANK
+            and assessment.status in _MONOTONIC_STATUS_RANK
+            and _MONOTONIC_STATUS_RANK[prior.status]
+            > _MONOTONIC_STATUS_RANK[assessment.status]
+        ):
+            current[evidence_id] = prior
+            preserved_ids.add(evidence_id)
+        else:
+            current[evidence_id] = assessment
     critical_ids = {
         item.evidence_item_id
         for item in state.required_evidence_items
@@ -104,8 +136,22 @@ def apply_coverage_assessment(
         for evidence_id, assessment in current.items()
     )
     progress = state.last_retrieval_new_provision_count > 0 or status_improved
-    state.evidence_links = list(evidence_links)
-    state.coverage_assessments = list(coverage_assessments)
+    incoming_links = list(evidence_links)
+    retained_links = [
+        link
+        for link in state.evidence_links
+        if link.evidence_item_id in preserved_ids
+        and link.provision_id in current[link.evidence_item_id].linked_provision_ids
+    ]
+    link_by_key = {
+        (link.evidence_item_id, link.provision_id, link.assessment): link
+        for link in retained_links + incoming_links
+        if link.evidence_item_id not in preserved_ids or link in retained_links
+    }
+    state.evidence_links = list(link_by_key.values())
+    state.coverage_assessments = [
+        current[item.evidence_item_id] for item in state.required_evidence_items
+    ]
     state.evidence_conflicts = list(evidence_conflicts)
     state.no_progress_rounds = 0 if progress else state.no_progress_rounds + 1
     state.phase = Phase.ASSESSING_COVERAGE

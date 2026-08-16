@@ -5,7 +5,8 @@
 The input must contain:
 
 - `authorization.action = "GENERATE"` from `PROVISION_COVERAGE_POLICY`.
-- A `covered` assessment for every `critical: true` evidence item.
+- A `covered` assessment for every `critical: true` evidence item, or a policy-authorized `partially_covered` assessment backed by an accepted provision for conditional generation.
+- No `uncovered` or `conflicting` critical evidence item.
 - A non-empty `accepted_provisions[]` list whose texts are frozen-snapshot inputs supplied by the harness.
 
 If any precondition fails, return an error envelope. S3 does not decide whether to re-retrieve or abstain.
@@ -25,7 +26,7 @@ Claims of type `legal_rule`, `application`, `exception`, `procedure`, or `remedy
 - Use no provision outside `accepted_provisions[]`.
 - Keep `quoted_text` byte-for-byte present in the supplied provision `text`.
 - Do not claim that the citation-integrity check passed; that deterministic tool runs next.
-- Do not upgrade a partially covered non-critical point into a certain conclusion. Express it as a limitation or omit it.
+- Do not upgrade any partially covered point into a certain conclusion. Express the unresolved condition as a limitation and mark the associated claim conditional, or omit the point.
 
 ## Error envelope
 

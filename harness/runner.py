@@ -156,8 +156,22 @@ class HarnessRunner:
                 return self._failure(state, TerminationReason.INVALID_SKILL_OUTPUT, exc)
 
             if not gap_requests:
+                if state.can_generate_conditionally():
+                    record_policy_decision(
+                        state,
+                        PolicyAction.GENERATE.value,
+                        explanation="No valid new gap query exists; generate a conditional answer from citable partial support.",
+                    )
+                    return self._generate_and_validate(state)
                 return self._abstain(state, TerminationReason.NO_VALID_GAP_QUERY)
             if len(gap_requests) > state.remaining_request_budget:
+                if state.can_generate_conditionally():
+                    record_policy_decision(
+                        state,
+                        PolicyAction.GENERATE.value,
+                        explanation="The next gap plan exceeds the budget; generate a conditional answer from citable partial support.",
+                    )
+                    return self._generate_and_validate(state)
                 return self._abstain(state, TerminationReason.RETRIEVAL_BUDGET_EXHAUSTED)
             retrieval_error = self._retrieve(state, gap_requests, is_gap=True)
             if retrieval_error:

@@ -21,7 +21,8 @@ DEFAULT_RECORD_ROOT = PROJECT_ROOT / "records/runs"
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
-    parser.add_argument("--start-ordinal", type=int, default=2)
+    parser.add_argument("--start-ordinal", type=int, default=1)
+    parser.add_argument("--batch-name")
     parser.add_argument("--python", type=Path, default=PROJECT_ROOT / ".venv/bin/python")
     parser.add_argument("--record-root", type=Path, default=DEFAULT_RECORD_ROOT)
     parser.add_argument("--batch-log-root", type=Path, default=PROJECT_ROOT / "records/batches")
@@ -96,7 +97,8 @@ def main() -> int:
     if not entries:
         raise RuntimeError("no pilot entries remain at or after ordinal %d" % args.start_ordinal)
 
-    batch_id = "bm25-bge-pilot-19-%s" % uuid.uuid4()
+    batch_name = args.batch_name or manifest.get("name", "bm25-bge-batch")
+    batch_id = "%s-%s" % (batch_name, uuid.uuid4())
     batch_dir = args.batch_log_root / batch_id
     batch_dir.mkdir(parents=True, exist_ok=False)
     (batch_dir / "manifest.json").write_text(
@@ -139,6 +141,8 @@ def main() -> int:
                 "--question-id", question_id,
                 "--condition", configuration["condition"],
                 "--seed", str(configuration["seed"]),
+                "--rerank-pool-k", str(configuration.get("rerank_pool_k", 100)),
+                "--final-top-k", str(configuration.get("final_top_k", 10)),
             ]
             before = record_directories(args.record_root)
             started_at = utc_now()

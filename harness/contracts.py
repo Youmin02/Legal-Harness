@@ -85,6 +85,8 @@ class RetrievalRequest:
     query_channel: QueryChannel
     query_text: str
     top_k: int = 100
+    query_terms: List[str] = field(default_factory=list)
+    statute_hints: List[str] = field(default_factory=list)
 
 
 @dataclass(frozen=True)

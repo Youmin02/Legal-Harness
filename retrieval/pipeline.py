@@ -1,4 +1,4 @@
-"""Frozen BM25-or-KURE -> within-retriever RRF -> rerank Top-10 pipeline."""
+"""BM25-or-KURE -> within-retriever RRF -> broad-pool BGE reranking."""
 
 from collections import defaultdict
 from typing import Dict, List, Protocol, Sequence
@@ -27,16 +27,20 @@ class RetrievalPipeline:
         first_stage: FirstStageSearcher,
         reranker: Reranker = None,
         rrf_k: int = 60,
-        rerank_top_k: int = 10,
+        rerank_pool_k: int = 100,
+        final_top_k: int = 10,
     ):
-        if rerank_top_k != 10:
-            raise ValueError("the frozen rerank cutoff is Top-10")
+        if rerank_pool_k < 1 or final_top_k < 1:
+            raise ValueError("rerank pool and final cutoff must be positive")
+        if final_top_k > rerank_pool_k:
+            raise ValueError("final cutoff cannot exceed the rerank pool")
         self.first_stage = first_stage
         if reranker is None:
             raise ValueError("a BGE-compatible reranker must be configured")
         self.reranker = reranker
         self.rrf_k = rrf_k
-        self.rerank_top_k = rerank_top_k
+        self.rerank_pool_k = rerank_pool_k
+        self.final_top_k = final_top_k
 
     def retrieve(
         self,
@@ -51,11 +55,16 @@ class RetrievalPipeline:
             ranked_lists = [self.first_stage.search(request) for request in issue_requests]
             fused_hits = reciprocal_rank_fusion(ranked_lists, k=self.rrf_k)
             query_text = " ".join(request.query_text for request in issue_requests)
-            rerank_scores = self.reranker.rerank(query_text, fused_hits, self.rerank_top_k)
-            reranked = sorted(
-                zip(fused_hits[: self.rerank_top_k], rerank_scores),
-                key=lambda pair: (-pair[1], pair[0].document.provision_id),
+            rerank_pool = fused_hits[: self.rerank_pool_k]
+            rerank_scores = self.reranker.rerank(
+                query_text, rerank_pool, len(rerank_pool)
             )
+            if len(rerank_scores) != len(rerank_pool):
+                raise ValueError("reranker must score every hit in the rerank pool")
+            reranked = sorted(
+                zip(rerank_pool, rerank_scores),
+                key=lambda pair: (-pair[1], pair[0].document.provision_id),
+            )[: self.final_top_k]
             for rerank_rank, (hit, rerank_score) in enumerate(reranked, start=1):
                 candidates.append(
                     CandidateProvision(

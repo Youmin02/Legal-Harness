@@ -1,6 +1,6 @@
 ---
 name: grounded-legal-answer-generation
-description: Generate a Korean statutory answer and claim-level provision citations using only harness-accepted provision texts. Use for S3 GENERATE_ANSWER only after the provision-coverage policy has authorized GENERATE and all critical evidence items are covered; do not use it to retrieve evidence, assess coverage, choose abstention, or validate citations against the corpus.
+description: Generate a Korean statutory answer and claim-level provision citations using only harness-accepted provision texts. Use for S3 GENERATE_ANSWER after the provision-coverage policy authorizes a fully supported or explicitly conditional answer; do not use it to retrieve evidence, assess coverage, choose abstention, or validate citations against the corpus.
 ---
 
 # Grounded Legal Answer Generation
@@ -12,7 +12,7 @@ Read [references/contract.md](references/contract.md) before executing. Conform 
 ## Check the preconditions
 
 1. Require a harness authorization with action `GENERATE`.
-2. Require every critical evidence item's coverage assessment to be `covered`.
+2. Require every critical evidence item to be `covered`, or `partially_covered` with an accepted supporting provision when the policy authorizes an explicitly conditional answer. Never proceed with an `uncovered` or `conflicting` critical item.
 3. Require at least one accepted provision with full text.
 4. Return a structured error instead of answering when a precondition fails. Do not choose `ABSTAIN`; that remains a harness action.
 
@@ -24,7 +24,8 @@ Read [references/contract.md](references/contract.md) before executing. Conform 
 4. Represent every substantive legal claim in `claims[]`. Make each claim text an exact substring of `answer`.
 5. Attach at least one citation to every claim that requires statutory support. Put each citation marker such as `[CT1]` in the answer.
 6. State assumptions and material limitations explicitly.
-7. Return JSON only.
+7. For every partially covered critical item, state the unresolved condition in `limitations[]` and phrase the corresponding claim with `applicability: "conditional"`. Do not turn the missing factual premise into a fact.
+8. Return JSON only.
 
 ## Preserve the control boundary
 

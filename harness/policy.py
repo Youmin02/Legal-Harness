@@ -35,6 +35,11 @@ def decide_next_action(
         )
 
     if state.no_progress_rounds >= 2:
+        if state.can_generate_conditionally():
+            return PolicyDecision(
+                action=PolicyAction.GENERATE,
+                explanation="Retrieval stalled, but every critical item has citable partial support; generate a conditional answer.",
+            )
         return PolicyDecision(
             action=PolicyAction.ABSTAIN,
             termination_reason=TerminationReason.NO_RETRIEVAL_PROGRESS,
@@ -42,6 +47,11 @@ def decide_next_action(
         )
 
     if state.remaining_round_budget <= 0:
+        if state.can_generate_conditionally():
+            return PolicyDecision(
+                action=PolicyAction.GENERATE,
+                explanation="The round budget is exhausted, but every critical item has citable partial support; generate a conditional answer.",
+            )
         return PolicyDecision(
             action=PolicyAction.ABSTAIN,
             termination_reason=TerminationReason.MAX_RETRIEVAL_ROUNDS_REACHED,
@@ -49,6 +59,11 @@ def decide_next_action(
         )
 
     if state.remaining_request_budget <= 0:
+        if state.can_generate_conditionally():
+            return PolicyDecision(
+                action=PolicyAction.GENERATE,
+                explanation="The request budget is exhausted, but every critical item has citable partial support; generate a conditional answer.",
+            )
         return PolicyDecision(
             action=PolicyAction.ABSTAIN,
             termination_reason=TerminationReason.RETRIEVAL_BUDGET_EXHAUSTED,

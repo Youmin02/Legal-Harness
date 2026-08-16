@@ -29,9 +29,20 @@ def validate_preconditions(input_data, errors):
         errors.append("generation is not authorized by the provision coverage policy")
     evidence = {x.get("evidence_item_id"): x for x in input_data.get("required_evidence_items", [])}
     assessments = {x.get("evidence_item_id"): x for x in input_data.get("coverage_assessments", [])}
+    supported = {
+        evidence_id
+        for provision in input_data.get("accepted_provisions", [])
+        for evidence_id in provision.get("supported_evidence_item_ids", [])
+    }
     for evidence_id, item in evidence.items():
-        if item.get("critical") is True and assessments.get(evidence_id, {}).get("status") != "covered":
-            errors.append(f"critical evidence is not covered: {evidence_id}")
+        if item.get("critical") is not True:
+            continue
+        status = assessments.get(evidence_id, {}).get("status")
+        if status == "covered":
+            continue
+        if status == "partially_covered" and evidence_id in supported:
+            continue
+        errors.append(f"critical evidence lacks citable support: {evidence_id}")
     if not input_data.get("accepted_provisions"):
         errors.append("accepted_provisions must not be empty")
 
@@ -109,6 +120,22 @@ def validate(output, input_data):
     for claim_id in citations_by_claim:
         if claim_id not in claim_by_id:
             errors.append(f"citations contain unknown claim: {claim_id}")
+
+    statuses = {
+        item.get("evidence_item_id"): item.get("status")
+        for item in input_data.get("coverage_assessments", [])
+    }
+    partial_critical = {
+        item.get("evidence_item_id")
+        for item in input_data.get("required_evidence_items", [])
+        if item.get("critical") is True
+        and statuses.get(item.get("evidence_item_id")) == "partially_covered"
+    }
+    if partial_critical:
+        if not any(claim.get("applicability") == "conditional" for claim in claims):
+            errors.append("conditional generation requires at least one conditional claim")
+        if not output.get("limitations"):
+            errors.append("conditional generation requires an explicit limitation")
     return errors
 
 

@@ -115,6 +115,8 @@ class LocalOllamaSkillExecutor:
         """Assign run and request IDs; their values carry no legal judgment."""
         normalized = dict(output)
         normalized["run_id"] = skill_input["run_id"]
+        if skill_name == "provision_coverage_assessment":
+            return self._normalize_s2_output(normalized, skill_input)
         if skill_name != "legal_issue_and_query_planning":
             return normalized
         request_key = "gap_retrieval_requests" if entry_point == "GAP_QUERY_PLAN" else "retrieval_requests"
@@ -171,6 +173,129 @@ class LocalOllamaSkillExecutor:
                 request.get("evidence_item_id") for request in requests if isinstance(request, dict)
             ))
         return normalized
+
+    def _normalize_s2_output(
+        self,
+        output: Dict[str, Any],
+        skill_input: Mapping[str, Any],
+    ) -> Dict[str, Any]:
+        """Canonicalize S2 transport structure without making legal judgments."""
+        if output.get("status") != "ok":
+            return output
+        evidence = [
+            item
+            for item in self._list(skill_input, "required_evidence_items")
+            if isinstance(item, Mapping)
+        ]
+        evidence_by_id = {item.get("evidence_item_id"): item for item in evidence}
+        candidate_ids = {
+            item.get("provision_id")
+            for item in self._list(skill_input, "candidate_provisions")
+            if isinstance(item, Mapping)
+        }
+
+        links = []
+        seen_links = set()
+        for raw in self._list(output, "evidence_links", required=False):
+            if not isinstance(raw, Mapping):
+                continue
+            key = (
+                raw.get("evidence_item_id"),
+                raw.get("provision_id"),
+                raw.get("relation"),
+            )
+            if key in seen_links:
+                continue
+            seen_links.add(key)
+            link = dict(raw)
+            link["link_id"] = "L%d" % (len(links) + 1)
+            if key[0] in evidence_by_id and key[1] in candidate_ids:
+                link["quoted_text"] = "[FULL_TEXT]"
+            links.append(link)
+        output["evidence_links"] = links
+
+        links_by_evidence: Dict[str, List[str]] = {}
+        for link in links:
+            evidence_id = link.get("evidence_item_id")
+            provision_id = link.get("provision_id")
+            if isinstance(evidence_id, str) and isinstance(provision_id, str):
+                links_by_evidence.setdefault(evidence_id, []).append(provision_id)
+
+        first_assessment: Dict[str, Dict[str, Any]] = {}
+        for raw in self._list(output, "coverage_assessments", required=False):
+            if not isinstance(raw, Mapping):
+                continue
+            evidence_id = raw.get("evidence_item_id")
+            if evidence_id in evidence_by_id and evidence_id not in first_assessment:
+                assessment = dict(raw)
+                assessment["linked_provision_ids"] = list(
+                    dict.fromkeys(links_by_evidence.get(evidence_id, []))
+                )
+                first_assessment[evidence_id] = assessment
+        output["coverage_assessments"] = [
+            first_assessment[evidence_id]
+            for evidence_id in evidence_by_id
+            if evidence_id in first_assessment
+        ]
+
+        prior_missing = {
+            item.get("evidence_item_id"): item
+            for item in self._list(output, "missing_evidence_items", required=False)
+            if isinstance(item, Mapping)
+        }
+        missing = []
+        for evidence_id, assessment in first_assessment.items():
+            if assessment.get("status") == "covered":
+                continue
+            source = dict(prior_missing.get(evidence_id, {}))
+            ledger = evidence_by_id[evidence_id]
+            aspects = assessment.get("missing_aspects")
+            if not isinstance(aspects, list) or not aspects:
+                aspects = [
+                    assessment.get("rationale") or ledger.get("completion_criteria")
+                ]
+            source.update(
+                {
+                    "evidence_item_id": evidence_id,
+                    "issue_id": ledger.get("issue_id"),
+                    "critical": ledger.get("critical"),
+                    "missing_description": source.get("missing_description")
+                    or "; ".join(str(item) for item in aspects),
+                    "search_focus": source.get("search_focus")
+                    or [str(item) for item in aspects if str(item).strip()],
+                }
+            )
+            missing.append(source)
+        output["missing_evidence_items"] = missing
+
+        prior_conflicts = {
+            item.get("evidence_item_id"): item
+            for item in self._list(output, "evidence_conflicts", required=False)
+            if isinstance(item, Mapping)
+        }
+        conflicts = []
+        for evidence_id, assessment in first_assessment.items():
+            if assessment.get("status") != "conflicting":
+                continue
+            source = dict(prior_conflicts.get(evidence_id, {}))
+            source.update(
+                {
+                    "conflict_id": "CF%d" % (len(conflicts) + 1),
+                    "evidence_item_id": evidence_id,
+                    "provision_ids": list(
+                        dict.fromkeys(links_by_evidence.get(evidence_id, []))
+                    ),
+                    "description": source.get("description")
+                    or assessment.get("rationale")
+                    or "후보 조문 간 적용 충돌",
+                    "unresolved_question": source.get("unresolved_question")
+                    or "어느 조문이 질문의 사실관계에 적용되는가",
+                }
+            )
+            conflicts.append(source)
+        output["evidence_conflicts"] = conflicts
+        return output
+
     @staticmethod
     def _normalized_query(query: str) -> str:
         return " ".join(query.lower().split())
@@ -421,6 +546,21 @@ FINAL OUTPUT INVARIANTS:
     def _output_invariants(self, skill_name: str, skill_input: Mapping[str, Any]) -> str:
         if skill_name == "legal_issue_and_query_planning":
             return self._s1_output_invariants(skill_input)
+        if skill_name == "grounded_legal_answer_generation":
+            partial_ids = [
+                item.get("evidence_item_id")
+                for item in self._list(skill_input, "coverage_assessments")
+                if isinstance(item, Mapping)
+                and item.get("status") == "partially_covered"
+            ]
+            if partial_ids:
+                return (
+                    "Use only accepted provision IDs supplied in INPUT. Critical partial evidence IDs are %s. "
+                    "Do not assert their missing facts. Include at least one conditional claim and a non-empty "
+                    "limitations array that states each unresolved condition."
+                    % json.dumps(partial_ids)
+                )
+            return "Use only accepted provision IDs supplied in INPUT and cite every substantive claim."
         if skill_name != "provision_coverage_assessment":
             return "Use only the identifiers and fields supplied in INPUT."
         evidence_ledger = [
@@ -541,6 +681,16 @@ FINAL OUTPUT INVARIANTS:
                     "query_channel": INTERNAL_CHANNELS.get(channel, channel),
                     "query_text": self._string(request, "query_text"),
                     "top_k": 100,
+                    "query_terms": [
+                        item.strip()
+                        for item in request.get("query_terms", [])
+                        if isinstance(item, str) and item.strip()
+                    ],
+                    "statute_hints": [
+                        item.strip()
+                        for item in request.get("statute_hints", [])
+                        if isinstance(item, str) and item.strip()
+                    ],
                 }
             )
         if entry_point == "GAP_QUERY_PLAN":

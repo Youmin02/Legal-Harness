@@ -153,6 +153,7 @@ class LocalOllamaExecutorTests(unittest.TestCase):
 
         self.assertEqual(result["retrieval_requests"][0]["query_channel"], "sparse_keyword")
         self.assertEqual(result["retrieval_requests"][0]["top_k"], 100)
+        self.assertEqual(result["retrieval_requests"][0]["query_terms"], ["손해배상"])
         self.assertEqual(result["required_evidence_items"][0]["completion_criteria"], "책임의 근거 조문이 있다")
 
     def test_s2_and_s3_map_rich_skill_contracts_to_harness_contracts(self):
@@ -195,6 +196,153 @@ class LocalOllamaExecutorTests(unittest.TestCase):
             },
         )
         self.assertEqual(answer["claim_citations"], [{"claim_id": "C1", "provision_ids": ["P1"]}])
+
+    def test_s2_deduplicates_repeated_evidence_assessments(self):
+        raw = {
+            "schema_version": "1.0",
+            "skill_id": "S2",
+            "mode": "ASSESS_COVERAGE",
+            "status": "ok",
+            "run_id": "wrong",
+            "evidence_links": [
+                {
+                    "link_id": "L1",
+                    "evidence_item_id": "E1",
+                    "provision_id": "C001",
+                    "relation": "supports",
+                    "quoted_text": "[FULL_TEXT]",
+                    "rationale": "근거",
+                },
+                {
+                    "link_id": "L1",
+                    "evidence_item_id": "E1",
+                    "provision_id": "C001",
+                    "relation": "supports",
+                    "quoted_text": "[FULL_TEXT]",
+                    "rationale": "중복 근거",
+                },
+            ],
+            "coverage_assessments": [
+                {
+                    "evidence_item_id": "E1",
+                    "status": "covered",
+                    "linked_provision_ids": ["C001"],
+                    "rationale": "충족",
+                    "satisfied_aspects": ["책임"],
+                    "missing_aspects": [],
+                },
+                {
+                    "evidence_item_id": "E1",
+                    "status": "covered",
+                    "linked_provision_ids": ["C001"],
+                    "rationale": "중복",
+                    "satisfied_aspects": ["책임"],
+                    "missing_aspects": [],
+                },
+            ],
+            "missing_evidence_items": [],
+            "evidence_conflicts": [],
+        }
+        executor = LocalOllamaSkillExecutor(
+            skills_root=PROJECT_ROOT / "skills",
+            model="test-model",
+            generator=lambda prompt: json.dumps(raw, ensure_ascii=False),
+        )
+        evidence = {
+            "evidence_item_id": "E1",
+            "issue_id": "I1",
+            "evidence_type": "rule",
+            "description": "손해배상 규정",
+            "critical": True,
+            "completion_criteria": "책임의 근거 조문이 있다",
+        }
+
+        result = executor.execute(
+            "provision_coverage_assessment",
+            "ASSESS_COVERAGE",
+            {
+                "run_id": "run-1",
+                "normalized_question": "손해배상 책임은 무엇인가",
+                "legal_issues": [{"issue_id": "I1", "description": "손해배상"}],
+                "required_evidence_items": [evidence],
+                "candidate_provisions": [self._candidate()],
+            },
+        )
+
+        self.assertEqual(len(result["evidence_links"]), 1)
+        self.assertEqual(len(result["coverage_assessments"]), 1)
+
+    def test_s3_accepts_cited_partial_critical_evidence_only_conditionally(self):
+        skill_input = {
+            "schema_version": "1.0",
+            "mode": "GENERATE_ANSWER",
+            "run_id": "run-1",
+            "normalized_question": "비용은 누가 부담하는가",
+            "legal_issues": [{"issue_id": "I1"}],
+            "required_evidence_items": [
+                {"evidence_item_id": "E1", "issue_id": "I1", "critical": True}
+            ],
+            "coverage_assessments": [
+                {"evidence_item_id": "E1", "status": "partially_covered"}
+            ],
+            "accepted_provisions": [
+                {
+                    "provision_id": "P1",
+                    "statute_name": "예시법",
+                    "article_label": "제1조",
+                    "text": "중대한 과실이면 비용을 부담한다.",
+                    "source_snapshot_id": "sha256:test",
+                    "supported_evidence_item_ids": ["E1"],
+                }
+            ],
+            "authorization": {
+                "action": "GENERATE",
+                "authorized_by": "PROVISION_COVERAGE_POLICY",
+                "validated_state_version": 3,
+            },
+            "generation_constraints": {
+                "language": "ko",
+                "max_answer_chars": 6000,
+                "citation_marker_style": "citation_id",
+            },
+        }
+        output = {
+            "schema_version": "1.0",
+            "skill_id": "S3",
+            "mode": "GENERATE_ANSWER",
+            "status": "ok",
+            "run_id": "run-1",
+            "answer": "중대한 과실이면 비용을 부담합니다.[CT1]",
+            "claims": [
+                {
+                    "claim_id": "C1",
+                    "text": "중대한 과실이면 비용을 부담합니다.",
+                    "claim_type": "legal_rule",
+                    "applicability": "conditional",
+                    "citation_required": True,
+                }
+            ],
+            "claim_citations": [
+                {
+                    "citation_id": "CT1",
+                    "claim_id": "C1",
+                    "provision_id": "P1",
+                    "quoted_text": "중대한 과실이면 비용을 부담한다.",
+                    "support_description": "조건부 비용 부담",
+                    "answer_marker": "[CT1]",
+                }
+            ],
+            "assumptions": [],
+            "limitations": [
+                {"code": "FACT_CONDITION", "message": "중대한 과실인지는 추가 확인이 필요합니다."}
+            ],
+        }
+
+        errors = self.executor._validators[
+            "grounded_legal_answer_generation"
+        ](output, skill_input)
+
+        self.assertEqual(errors, [])
 
     def test_s1_normalizes_initial_and_gap_queries(self):
         initial = self.executor._normalize_harness_owned_fields(

@@ -1,5 +1,6 @@
 """Search adapters for the on-disk KoBLEX BM25 and KURE exact indexes."""
 
+import re
 import sqlite3
 from pathlib import Path
 from typing import Dict, List, Sequence
@@ -20,9 +21,11 @@ class SqliteFts5Bm25Searcher:
         self.database_path = database_path
 
     def search(self, request: RetrievalRequest) -> List[RetrievalHit]:
-        terms = baseline_korean_tokenize(request.query_text)
+        focused_query = " ".join(request.query_terms).strip()
+        terms = baseline_korean_tokenize(focused_query or request.query_text)
         if not terms:
             return []
+        terms = list(dict.fromkeys(terms))
         # Tokenizer output is restricted to letters and numbers, making each
         # quoted literal safe for FTS5. OR implements the frozen multi-channel
         # recall-first Top-100 stage rather than requiring every keyword.
@@ -35,6 +38,9 @@ class SqliteFts5Bm25Searcher:
                 "ORDER BY score DESC, provision_id ASC LIMIT ?",
                 (match_expression, request.top_k),
             ).fetchall()
+            rows = self._merge_statute_hint_hits(
+                connection, rows, request.statute_hints, terms, request.top_k
+            )
         finally:
             connection.close()
         return [
@@ -45,6 +51,50 @@ class SqliteFts5Bm25Searcher:
             )
             for provision_id, statute_name, provision_text, score in rows
         ]
+
+    @staticmethod
+    def _statute_prefix(hint: str) -> str:
+        prefix = re.split(r"\s+제?\d+\s*조", hint, maxsplit=1)[0].strip()
+        return prefix or hint.strip()
+
+    def _merge_statute_hint_hits(
+        self,
+        connection: sqlite3.Connection,
+        lexical_rows: Sequence[tuple],
+        statute_hints: Sequence[str],
+        query_terms: Sequence[str],
+        top_k: int,
+    ) -> List[tuple]:
+        """Add high-recall hits from an exact statute-name prefix channel.
+
+        The FTS artifact indexes provision text but stores statute names as
+        UNINDEXED metadata. A bounded metadata scan lets reliable S1 hints
+        contribute candidates without mutating the index.
+        """
+        if not statute_hints:
+            return list(lexical_rows)
+        merged = {row[0]: row for row in lexical_rows}
+        best_lexical = max((float(row[3]) for row in lexical_rows), default=0.0)
+        token_set = set(query_terms)
+        for raw_hint in statute_hints:
+            prefix = self._statute_prefix(raw_hint)
+            if len(prefix) < 2:
+                continue
+            hinted_rows = connection.execute(
+                "SELECT provision_id, statute_name, provision_text "
+                "FROM provision_fts WHERE statute_name = ? OR statute_name LIKE ? LIMIT 2000",
+                (prefix, prefix + " %"),
+            ).fetchall()
+            for provision_id, statute_name, provision_text in hinted_rows:
+                overlap = len(token_set.intersection(baseline_korean_tokenize(provision_text)))
+                if overlap == 0:
+                    continue
+                score = best_lexical + 1.0 + float(overlap)
+                previous = merged.get(provision_id)
+                row = (provision_id, statute_name, provision_text, score)
+                if previous is None or score > float(previous[3]):
+                    merged[provision_id] = row
+        return sorted(merged.values(), key=lambda row: (-float(row[3]), row[0]))[:top_k]
 
 
 class KureExactIndexSearcher:

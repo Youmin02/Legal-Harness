@@ -19,9 +19,9 @@ Read [references/contract.md](references/contract.md) before executing. Conform 
 7. Copy `run_id` from input. Use `RQ`/`GRQ` request IDs, never a mode name; the harness canonicalizes these transport identifiers, but the target evidence and query text remain your responsibility.
 1. Preserve the question's meaning. Do not perform a legal rewrite in place of deterministic input normalization.
 2. Decompose by legal issue and required evidence, not by a hard statute-domain route and not by a fixed hop count.
-3. Mark an evidence item `critical: true` only when the core conclusion cannot be justified without it.
-4. In `INITIAL_PLAN`, create at least one retrieval request for every critical evidence item. Use only the allowed channels and treat statute/article hints as hypotheses, never as found evidence.
-5. In `GAP_QUERY_PLAN`, target only unresolved evidence items. Avoid any normalized query already present in `query_history`; respect `remaining_request_budget`.
+3. Mark an evidence item `critical: true` only when the core conclusion cannot be justified without it. Do not split details that one governing provision can ordinarily establish into separate critical items. Create a separate critical item only for an independently necessary legal conclusion.
+4. In `INITIAL_PLAN`, create at least one retrieval request for every critical evidence item. Use only the allowed channels and treat statute/article hints as hypotheses, never as found evidence. Put 2-8 concise, particle-free Korean legal nouns or phrases in `query_terms`. Keep `query_text` focused on the conduct, legal effect, exception, procedure, or penalty being sought. Put a statute name in `statute_hints` only when the question strongly supports that hypothesis.
+5. In `GAP_QUERY_PLAN`, target only unresolved evidence items. Avoid any normalized query already present in `query_history`; respect `remaining_request_budget`. Change the lexical angle: prefer the missing legal effect, actor, condition, exception, penalty, or a reliable statute-name hypothesis rather than paraphrasing the prior query.
 6. Return JSON only. On an invalid or incomplete input, return the error envelope defined by the output schema.
 
 ## Preserve the control boundary

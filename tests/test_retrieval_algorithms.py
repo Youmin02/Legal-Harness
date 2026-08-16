@@ -10,6 +10,20 @@ from retrieval.rrf import reciprocal_rank_fusion
 from retrieval.types import RetrievalHit
 
 
+class RecordingReranker:
+    def __init__(self):
+        self.scored_ids = []
+
+    def rerank(self, query_text, hits, top_k):
+        del query_text
+        selected = list(hits[:top_k])
+        self.scored_ids = [hit.document.provision_id for hit in selected]
+        return [
+            100.0 if hit.document.provision_id == "P9" else hit.rrf_score
+            for hit in selected
+        ]
+
+
 class RetrievalAlgorithmTests(unittest.TestCase):
     def setUp(self):
         self.documents = [
@@ -58,3 +72,30 @@ class RetrievalAlgorithmTests(unittest.TestCase):
         hits = retriever.search(self.request)
 
         self.assertEqual(hits[0].document.provision_id, "P1")
+
+    def test_bge_scores_full_pool_before_final_top_ten_cutoff(self):
+        documents = [
+            ProvisionDocument("P%d" % index, "테스트법", "공통어 조문 %d" % index)
+            for index in range(1, 13)
+        ]
+        reranker = RecordingReranker()
+        pipeline = RetrievalPipeline(
+            Bm25Retriever(InMemoryProvisionCorpus(documents)),
+            reranker,
+            rerank_pool_k=100,
+            final_top_k=10,
+        )
+        request = RetrievalRequest(
+            request_id="RQ1",
+            issue_id="I1",
+            evidence_item_id="E1",
+            query_channel=QueryChannel.SPARSE_KEYWORD,
+            query_text="공통어",
+            top_k=100,
+        )
+
+        candidates = pipeline.retrieve([request], retrieval_round=1)
+
+        self.assertEqual(len(reranker.scored_ids), 12)
+        self.assertEqual(candidates[0].provision_id, "P9")
+        self.assertEqual(len(candidates), 10)

@@ -81,7 +81,11 @@ def read_result(created: Iterable[Path]) -> Dict[str, Any]:
 
 def main() -> int:
     args = parse_args()
-    manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
+    manifest_path = args.manifest
+    if not manifest_path.is_absolute():
+        manifest_path = PROJECT_ROOT / manifest_path
+    manifest_path = manifest_path.resolve()
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     source = manifest["source_dataset"]
     dataset_path = PROJECT_ROOT / source["path"]
     if sha256(dataset_path) != source["sha256"]:
@@ -107,8 +111,8 @@ def main() -> int:
     batch_metadata = {
         "batch_id": batch_id,
         "started_at_utc": utc_now(),
-        "manifest": str(args.manifest.relative_to(PROJECT_ROOT)),
-        "manifest_sha256": sha256(args.manifest),
+        "manifest": str(manifest_path.relative_to(PROJECT_ROOT)),
+        "manifest_sha256": sha256(manifest_path),
         "start_ordinal": args.start_ordinal,
         "entry_count": len(entries),
         "configuration": configuration,

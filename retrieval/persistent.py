@@ -12,6 +12,67 @@ from .corpus import InMemoryProvisionCorpus, ProvisionDocument
 from .types import RetrievalHit
 
 
+# The SQLite unicode61 tokenizer keeps Korean particles and endings attached to
+# nouns (for example, ``운송인의`` and ``인도일로부터``). These endings occur
+# frequently in both natural-language questions and statutory prose, so exact
+# token matching alone can miss the relevant provision entirely. Keep this
+# list deliberately small and deterministic: it is a recall channel, while the
+# BGE cross-encoder remains responsible for final Top-k precision.
+_KOREAN_QUERY_SUFFIXES = (
+    "으로부터",
+    "로부터",
+    "에서부터",
+    "하는가",
+    "하여야",
+    "해야",
+    "에게서",
+    "에게",
+    "으로",
+    "에서",
+    "부터",
+    "까지",
+    "로",
+    "은",
+    "는",
+    "이",
+    "가",
+    "을",
+    "를",
+    "의",
+    "과",
+    "와",
+)
+
+
+def _deduplicate(values: Sequence[str]) -> List[str]:
+    return list(dict.fromkeys(value for value in values if value))
+
+
+def _korean_prefix_roots(token: str) -> List[str]:
+    """Return conservative FTS prefix roots for one normalized token."""
+    roots: List[str] = []
+    for suffix in _KOREAN_QUERY_SUFFIXES:
+        if token.endswith(suffix) and len(token) - len(suffix) >= 2:
+            stem = token[: -len(suffix)]
+            roots.append(stem)
+            # Legal time expressions commonly compound an event with 일/날,
+            # while the statute uses a conjugated verb: 인도일 ↔ 인도한 날.
+            if stem.endswith(("일", "날")) and len(stem) >= 3:
+                roots.append(stem[:-1])
+            break
+    return _deduplicate(roots)
+
+
+def _query_terms_and_prefixes(request: RetrievalRequest) -> tuple[List[str], List[str]]:
+    planned_terms = baseline_korean_tokenize(" ".join(request.query_terms))
+    query_text_terms = baseline_korean_tokenize(request.query_text)
+    exact_terms = _deduplicate(planned_terms or query_text_terms)
+    prefix_terms: List[str] = []
+    for term in query_text_terms:
+        prefix_terms.extend(_korean_prefix_roots(term))
+    return exact_terms, _deduplicate(term for term in prefix_terms if len(term) >= 2)
+
+
 class SqliteFts5Bm25Searcher:
     """Read-only BM25 search over the reproducible SQLite FTS5 artifact."""
 
@@ -21,15 +82,16 @@ class SqliteFts5Bm25Searcher:
         self.database_path = database_path
 
     def search(self, request: RetrievalRequest) -> List[RetrievalHit]:
-        focused_query = " ".join(request.query_terms).strip()
-        terms = baseline_korean_tokenize(focused_query or request.query_text)
+        terms, prefix_terms = _query_terms_and_prefixes(request)
         if not terms:
             return []
-        terms = list(dict.fromkeys(terms))
         # Tokenizer output is restricted to letters and numbers, making each
-        # quoted literal safe for FTS5. OR implements the frozen multi-channel
-        # recall-first Top-100 stage rather than requiring every keyword.
-        match_expression = " OR ".join('"%s"' % term for term in terms)
+        # quoted literal safe for FTS5. Prefix literals bridge Korean
+        # particles/endings without changing the fixed BM25 -> BGE design.
+        # OR implements the recall-first Top-100 stage.
+        exact_literals = ['"%s"' % term for term in terms]
+        prefix_literals = ['"%s"*' % term for term in prefix_terms]
+        match_expression = " OR ".join(_deduplicate(exact_literals + prefix_literals))
         connection = sqlite3.connect("file:%s?mode=ro" % self.database_path, uri=True)
         try:
             rows = connection.execute(
@@ -39,7 +101,11 @@ class SqliteFts5Bm25Searcher:
                 (match_expression, request.top_k),
             ).fetchall()
             rows = self._merge_statute_hint_hits(
-                connection, rows, request.statute_hints, terms, request.top_k
+                connection,
+                rows,
+                request.statute_hints,
+                prefix_terms,
+                request.top_k,
             )
         finally:
             connection.close()
@@ -62,7 +128,7 @@ class SqliteFts5Bm25Searcher:
         connection: sqlite3.Connection,
         lexical_rows: Sequence[tuple],
         statute_hints: Sequence[str],
-        query_terms: Sequence[str],
+        query_prefixes: Sequence[str],
         top_k: int,
     ) -> List[tuple]:
         """Add high-recall hits from an exact statute-name prefix channel.
@@ -71,30 +137,59 @@ class SqliteFts5Bm25Searcher:
         UNINDEXED metadata. A bounded metadata scan lets reliable S1 hints
         contribute candidates without mutating the index.
         """
-        if not statute_hints:
+        if not statute_hints or not query_prefixes:
             return list(lexical_rows)
-        merged = {row[0]: row for row in lexical_rows}
-        best_lexical = max((float(row[3]) for row in lexical_rows), default=0.0)
-        token_set = set(query_terms)
+        hinted_candidates = {}
         for raw_hint in statute_hints:
-            prefix = self._statute_prefix(raw_hint)
-            if len(prefix) < 2:
+            statute_prefix = self._statute_prefix(raw_hint)
+            if len(statute_prefix) < 2:
                 continue
             hinted_rows = connection.execute(
                 "SELECT provision_id, statute_name, provision_text "
                 "FROM provision_fts WHERE statute_name = ? OR statute_name LIKE ? LIMIT 2000",
-                (prefix, prefix + " %"),
+                (statute_prefix, statute_prefix + " %"),
             ).fetchall()
             for provision_id, statute_name, provision_text in hinted_rows:
-                overlap = len(token_set.intersection(baseline_korean_tokenize(provision_text)))
+                document_terms = baseline_korean_tokenize(
+                    "%s %s" % (statute_name, provision_text)
+                )
+                overlap = sum(
+                    1
+                    for query_prefix in query_prefixes
+                    if any(term.startswith(query_prefix) for term in document_terms)
+                )
                 if overlap == 0:
                     continue
-                score = best_lexical + 1.0 + float(overlap)
-                previous = merged.get(provision_id)
-                row = (provision_id, statute_name, provision_text, score)
-                if previous is None or score > float(previous[3]):
-                    merged[provision_id] = row
-        return sorted(merged.values(), key=lambda row: (-float(row[3]), row[0]))[:top_k]
+                row = (provision_id, statute_name, provision_text, float(overlap))
+                previous = hinted_candidates.get(provision_id)
+                if previous is None or overlap > float(previous[3]):
+                    hinted_candidates[provision_id] = row
+
+        # Keep most of the lexical ranking intact and reserve a bounded 20%
+        # quota for the statute-hint recall channel. Previously every hinted
+        # row was boosted above BM25, which could evict relevant lexical hits
+        # before the BGE reranker saw them.
+        hint_quota = min(top_k, max(1, top_k // 5))
+        lexical_quota = max(0, top_k - hint_quota)
+        selected = list(lexical_rows[:lexical_quota])
+        seen = {row[0] for row in selected}
+        ranked_hints = sorted(
+            hinted_candidates.values(),
+            key=lambda row: (-float(row[3]), row[0]),
+        )
+        for row in ranked_hints:
+            if row[0] not in seen:
+                selected.append(row)
+                seen.add(row[0])
+            if len(selected) >= top_k:
+                return selected
+        for row in lexical_rows[lexical_quota:]:
+            if row[0] not in seen:
+                selected.append(row)
+                seen.add(row[0])
+            if len(selected) >= top_k:
+                break
+        return selected
 
 
 class KureExactIndexSearcher:

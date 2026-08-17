@@ -1,10 +1,14 @@
+import sqlite3
+import tempfile
 import unittest
+from pathlib import Path
 
 from harness.contracts import QueryChannel, RetrievalRequest
 from retrieval.bm25 import Bm25Retriever
 from retrieval.corpus import InMemoryProvisionCorpus, ProvisionDocument
 from retrieval.kure import KureExactVectorRetriever
 from retrieval.pipeline import RetrievalPipeline
+from retrieval.persistent import SqliteFts5Bm25Searcher
 from retrieval.reranker import PassThroughReranker
 from retrieval.rrf import reciprocal_rank_fusion
 from retrieval.types import RetrievalHit
@@ -99,3 +103,67 @@ class RetrievalAlgorithmTests(unittest.TestCase):
         self.assertEqual(len(reranker.scored_ids), 12)
         self.assertEqual(candidates[0].provision_id, "P9")
         self.assertEqual(len(candidates), 10)
+
+    def test_sqlite_bm25_bridges_korean_legal_endings(self):
+        with tempfile.TemporaryDirectory() as directory:
+            database_path = Path(directory) / "test.sqlite3"
+            connection = sqlite3.connect(database_path)
+            connection.execute(
+                "CREATE VIRTUAL TABLE provision_fts USING fts5("
+                "provision_id UNINDEXED, statute_name, provision_text)"
+            )
+            connection.execute(
+                "INSERT INTO provision_fts VALUES (?, ?, ?)",
+                (
+                    "GOLD",
+                    "상법 814조 운송인의 채권ㆍ채무의 소멸 1항",
+                    "운송인이 운송물을 인도한 날부터 1년 이내에 재판상 청구가 없으면 소멸한다.",
+                ),
+            )
+            connection.commit()
+            connection.close()
+            request = RetrievalRequest(
+                request_id="RQ1",
+                issue_id="I1",
+                evidence_item_id="E1",
+                query_channel=QueryChannel.PROVISION_STYLE,
+                query_text="운송인의 책임은 상품 인도일로부터 언제까지 행사해야 소멸하는가",
+                query_terms=["운송인"],
+                top_k=100,
+            )
+
+            hits = SqliteFts5Bm25Searcher(database_path).search(request)
+
+            self.assertEqual([hit.document.provision_id for hit in hits], ["GOLD"])
+
+    def test_statute_hint_channel_cannot_evict_lexical_top_eighty_percent(self):
+        with tempfile.TemporaryDirectory() as directory:
+            database_path = Path(directory) / "test.sqlite3"
+            connection = sqlite3.connect(database_path)
+            connection.execute(
+                "CREATE VIRTUAL TABLE provision_fts USING fts5("
+                "provision_id UNINDEXED, statute_name, provision_text)"
+            )
+            connection.executemany(
+                "INSERT INTO provision_fts VALUES (?, ?, ?)",
+                [
+                    ("H%d" % index, "상법 %d조" % index, "운송인의 책임")
+                    for index in range(10)
+                ],
+            )
+            connection.commit()
+            lexical_rows = [
+                ("L%d" % index, "일반법", "lexical", float(100 - index))
+                for index in range(10)
+            ]
+            searcher = SqliteFts5Bm25Searcher(database_path)
+
+            merged = searcher._merge_statute_hint_hits(
+                connection,
+                lexical_rows,
+                ["상법"],
+                ["운송인"],
+                10,
+            )
+
+            self.assertEqual([row[0] for row in merged[:8]], ["L%d" % i for i in range(8)])

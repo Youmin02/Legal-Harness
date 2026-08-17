@@ -123,6 +123,8 @@ class CoverageAssessment:
     status: CoverageStatus
     linked_provision_ids: List[str]
     rationale: str
+    partial_kind: str = "not_applicable"
+    missing_aspects: List[str] = field(default_factory=list)
 
 
 @dataclass(frozen=True)

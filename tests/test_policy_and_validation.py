@@ -46,6 +46,8 @@ class PolicyAndValidationTests(unittest.TestCase):
                 CoverageStatus.PARTIALLY_COVERED,
                 ["P1"],
                 "사실 조건만 미확정",
+                partial_kind="factual_condition",
+                missing_aspects=["중대한 과실 해당 여부"],
             )
         ]
         state.evidence_links = [

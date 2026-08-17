@@ -99,6 +99,7 @@ class RunState:
                 continue
             if (
                 assessment.status is CoverageStatus.PARTIALLY_COVERED
+                and assessment.partial_kind == "factual_condition"
                 and assessment.linked_provision_ids
                 and item.evidence_item_id in accepted_by_evidence
             ):

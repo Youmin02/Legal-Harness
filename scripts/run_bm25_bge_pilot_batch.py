@@ -22,6 +22,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
     parser.add_argument("--start-ordinal", type=int, default=1)
+    parser.add_argument("--end-ordinal", type=int)
     parser.add_argument("--batch-name")
     parser.add_argument("--python", type=Path, default=PROJECT_ROOT / ".venv/bin/python")
     parser.add_argument("--record-root", type=Path, default=DEFAULT_RECORD_ROOT)
@@ -46,8 +47,20 @@ def load_questions(dataset_path: Path) -> Dict[str, Mapping[str, Any]]:
         import pyarrow.parquet as pq
     except ImportError as exc:
         raise RuntimeError("install pyarrow in the project environment to run the pilot batch") from exc
-    rows = pq.read_table(dataset_path, columns=["id", "question", "n_hops"]).to_pylist()
+    rows = pq.read_table(
+        dataset_path, columns=["id", "background", "question", "n_hops"]
+    ).to_pylist()
     return {str(row["id"]): row for row in rows}
+
+
+def format_benchmark_input(question: Mapping[str, Any]) -> str:
+    background = str(question.get("background") or "").strip()
+    prompt = str(question.get("question") or "").strip()
+    if not prompt:
+        raise RuntimeError("benchmark question text is empty")
+    if not background:
+        return "[질문]\n%s" % prompt
+    return "[배경 시나리오]\n%s\n\n[질문]\n%s" % (background, prompt)
 
 
 def record_directories(root: Path) -> Set[Path]:
@@ -95,8 +108,16 @@ def main() -> int:
 
     questions = load_questions(dataset_path)
     configuration = manifest["frozen_configuration"]
+    if args.end_ordinal is not None and args.end_ordinal < args.start_ordinal:
+        raise RuntimeError("end ordinal cannot be smaller than start ordinal")
     entries: List[Mapping[str, Any]] = [
-        entry for entry in manifest["entries"] if int(entry["ordinal"]) >= args.start_ordinal
+        entry
+        for entry in manifest["entries"]
+        if int(entry["ordinal"]) >= args.start_ordinal
+        and (
+            args.end_ordinal is None
+            or int(entry["ordinal"]) <= args.end_ordinal
+        )
     ]
     if not entries:
         raise RuntimeError("no pilot entries remain at or after ordinal %d" % args.start_ordinal)
@@ -114,6 +135,7 @@ def main() -> int:
         "manifest": str(manifest_path.relative_to(PROJECT_ROOT)),
         "manifest_sha256": sha256(manifest_path),
         "start_ordinal": args.start_ordinal,
+        "end_ordinal": args.end_ordinal,
         "entry_count": len(entries),
         "configuration": configuration,
     }
@@ -133,10 +155,11 @@ def main() -> int:
             if int(question["n_hops"]) != int(entry["n_hops"]):
                 raise RuntimeError("hop count mismatch for %s" % question_id)
             log_path = batch_dir / ("%02d_%s.log" % (ordinal, question_id))
+            benchmark_input = format_benchmark_input(question)
             command = [
                 str(args.python),
                 str(PROJECT_ROOT / "scripts/run_local_harness.py"),
-                str(question["question"]),
+                benchmark_input,
                 "--retriever", configuration["retriever"],
                 "--model", configuration["model"],
                 "--num-ctx", str(configuration["num_ctx"]),
@@ -147,6 +170,11 @@ def main() -> int:
                 "--seed", str(configuration["seed"]),
                 "--rerank-pool-k", str(configuration.get("rerank_pool_k", 100)),
                 "--final-top-k", str(configuration.get("final_top_k", 10)),
+                "--input-format", str(
+                    configuration.get(
+                        "input_format", "koblex_background_plus_question"
+                    )
+                ),
             ]
             before = record_directories(args.record_root)
             started_at = utc_now()

@@ -23,10 +23,11 @@
     "assessment": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["evidence_item_id", "status", "linked_provision_ids", "rationale", "satisfied_aspects", "missing_aspects"],
+      "required": ["evidence_item_id", "status", "partial_kind", "linked_provision_ids", "rationale", "satisfied_aspects", "missing_aspects"],
       "properties": {
         "evidence_item_id": {"type": "string", "pattern": "^E[1-9][0-9]*$"},
         "status": {"enum": ["covered", "partially_covered", "uncovered", "conflicting"]},
+        "partial_kind": {"enum": ["not_applicable", "factual_condition", "legal_support_gap"]},
         "linked_provision_ids": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
         "rationale": {"type": "string", "minLength": 1},
         "satisfied_aspects": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},

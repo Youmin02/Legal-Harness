@@ -220,12 +220,31 @@ def validate_coverage_assessment(
             raise ValidationError("linked_provision_ids must be a list of strings")
         if any(provision_id not in candidate_by_id for provision_id in linked_ids):
             raise ValidationError("coverage assessment references provision outside candidates")
+        partial_kind = raw.get(
+            "partial_kind",
+            "legal_support_gap"
+            if status is CoverageStatus.PARTIALLY_COVERED
+            else "not_applicable",
+        )
+        allowed_partial_kinds = {"factual_condition", "legal_support_gap"}
+        if status is CoverageStatus.PARTIALLY_COVERED:
+            if partial_kind not in allowed_partial_kinds:
+                raise ValidationError("partial coverage requires a valid partial_kind")
+        elif partial_kind != "not_applicable":
+            raise ValidationError("non-partial coverage must use partial_kind=not_applicable")
+        missing_aspects = raw.get("missing_aspects", [])
+        if not isinstance(missing_aspects, list) or not all(
+            isinstance(value, str) and value.strip() for value in missing_aspects
+        ):
+            raise ValidationError("missing_aspects must be a list of non-empty strings")
         assessments.append(
             CoverageAssessment(
                 evidence_item_id=evidence_item_id,
                 status=status,
                 linked_provision_ids=list(linked_ids),
                 rationale=_string(raw, "rationale"),
+                partial_kind=partial_kind,
+                missing_aspects=list(missing_aspects),
             )
         )
     _unique([assessment.evidence_item_id for assessment in assessments], "coverage_assessments")

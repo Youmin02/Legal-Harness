@@ -38,6 +38,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--requests", type=int, default=9)
     parser.add_argument("--rerank-pool-k", type=int, default=100)
     parser.add_argument("--final-top-k", type=int, default=10)
+    parser.add_argument("--input-format", default="question_only")
     parser.add_argument("--record-dir", type=Path, default=PROJECT_ROOT / "records/runs")
     parser.add_argument("--question-id", help="stable benchmark item ID, for example qa_19_1hop_28")
     parser.add_argument("--condition", default="M", help="frozen experimental condition ID")
@@ -84,8 +85,9 @@ def main() -> int:
         "total_retrieval_requests": args.requests,
         "rerank_pool_k": args.rerank_pool_k,
         "final_top_k": args.final_top_k,
-        "conditional_generation": True,
+        "conditional_generation": "factual_condition_only",
         "monotonic_coverage": True,
+        "input_format": args.input_format,
     }
     record = ExperimentRecord(
         record_root=args.record_dir,

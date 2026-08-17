@@ -228,6 +228,14 @@ class LocalOllamaSkillExecutor:
             evidence_id = raw.get("evidence_item_id")
             if evidence_id in evidence_by_id and evidence_id not in first_assessment:
                 assessment = dict(raw)
+                if assessment.get("status") == "partially_covered":
+                    if assessment.get("partial_kind") not in {
+                        "factual_condition",
+                        "legal_support_gap",
+                    }:
+                        assessment["partial_kind"] = "legal_support_gap"
+                else:
+                    assessment["partial_kind"] = "not_applicable"
                 assessment["linked_provision_ids"] = list(
                     dict.fromkeys(links_by_evidence.get(evidence_id, []))
                 )
@@ -773,6 +781,11 @@ FINAL OUTPUT INVARIANTS:
                         for provision_id in self._list(assessment, "linked_provision_ids")
                     ],
                     "rationale": self._string(assessment, "rationale"),
+                    "partial_kind": self._string(assessment, "partial_kind"),
+                    "missing_aspects": [
+                        self._string({"value": item}, "value")
+                        for item in self._list(assessment, "missing_aspects")
+                    ],
                 }
             )
         conflicts = []

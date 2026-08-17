@@ -107,6 +107,12 @@ def validate(output, input_data):
             errors.append(f"assessment uses non-candidate provision: {evidence_id}")
         satisfied = assessment.get("satisfied_aspects", [])
         missing_aspects = assessment.get("missing_aspects", [])
+        partial_kind = assessment.get("partial_kind")
+        if status == "partially_covered":
+            if partial_kind not in {"factual_condition", "legal_support_gap"}:
+                errors.append(f"partially_covered requires a valid partial_kind: {evidence_id}")
+        elif partial_kind != "not_applicable":
+            errors.append(f"non-partial status requires partial_kind=not_applicable: {evidence_id}")
         if status == "covered":
             if not linked or missing_aspects or evidence_id in conflict_id_set:
                 errors.append(f"covered consistency failure: {evidence_id}")

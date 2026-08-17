@@ -454,3 +454,49 @@ class LocalOllamaExecutorTests(unittest.TestCase):
         self.assertEqual(gap_request["evidence_item_id"], "E1")
         self.assertNotEqual(gap_request["query_text"], "기존 질의")
         self.assertEqual(gap["target_evidence_item_ids"], ["E1"])
+
+    def test_gap_fallback_deduplicates_after_context_is_attached(self):
+        source = (
+            "상품이 인도되었다. [질문] 손해배상청구권은 언제까지 행사하는가?"
+        )
+        completion = "운송인의 손해배상청구권 기간과 기산점"
+        skill_input = {
+            "run_id": "run-1",
+            "normalized_question": source,
+            "required_evidence_items": [
+                {
+                    "evidence_item_id": "E1",
+                    "issue_id": "I1",
+                    "description": completion,
+                    "completion_criteria": completion,
+                }
+            ],
+            "missing_evidence_items": [{"evidence_item_id": "E1"}],
+            "evidence_conflicts": [],
+        }
+        prior_query = self.executor._with_source_context(
+            completion + " 법률 조문", skill_input
+        )
+        skill_input["query_history"] = [{"query_text": prior_query}]
+
+        result = self.executor._normalize_harness_owned_fields(
+            "legal_issue_and_query_planning",
+            "GAP_QUERY_PLAN",
+            skill_input,
+            {
+                "gap_retrieval_requests": [
+                    {
+                        "issue_id": "I1",
+                        "evidence_item_id": "E1",
+                        "query_text": prior_query,
+                    }
+                ]
+            },
+        )
+
+        emitted = result["gap_retrieval_requests"][0]["query_text"]
+        self.assertNotEqual(
+            self.executor._normalized_query(emitted),
+            self.executor._normalized_query(prior_query),
+        )
+        self.assertIn("[원문 맥락]", emitted)

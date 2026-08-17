@@ -141,7 +141,7 @@ class LocalOllamaSkillExecutor:
                 contextual_query = self._with_source_context(query, skill_input)
                 if not isinstance(query, str) or self._normalized_query(contextual_query) in emitted_queries:
                     issue = issues_by_id.get(request.get("issue_id"), {})
-                    query = self._fallback_initial_query(issue, index, emitted_queries)
+                    query = self._fallback_initial_query(issue, index, emitted_queries, skill_input)
                     contextual_query = self._with_source_context(query, skill_input)
                 request["query_text"] = contextual_query
                 emitted_queries.add(self._normalized_query(contextual_query))
@@ -169,7 +169,7 @@ class LocalOllamaSkillExecutor:
                 query = request.get("query_text")
                 contextual_query = self._with_source_context(query, skill_input)
                 if not isinstance(query, str) or self._normalized_query(contextual_query) in emitted_queries:
-                    query = self._fallback_gap_query(evidence, index, emitted_queries)
+                    query = self._fallback_gap_query(evidence, index, emitted_queries, skill_input)
                     contextual_query = self._with_source_context(query, skill_input)
                 request["query_text"] = contextual_query
                 emitted_queries.add(self._normalized_query(contextual_query))
@@ -336,19 +336,56 @@ class LocalOllamaSkillExecutor:
             return query
         return "%s\n[원문 맥락]\n%s" % (query.strip(), excerpt)
 
-    def _fallback_initial_query(self, issue: Mapping[str, Any], index: int, seen: set) -> str:
+    def _fallback_initial_query(
+        self,
+        issue: Mapping[str, Any],
+        index: int,
+        seen: set,
+        skill_input: Mapping[str, Any],
+    ) -> str:
         base = issue.get("decision_question") or issue.get("issue_statement") or "관련 법률"
-        candidate = "%s 법률 조문" % base
-        if self._normalized_query(candidate) in seen:
-            candidate = "%s 법률 조문 %d" % (base, index)
-        return candidate
+        return self._first_unique_contextual_query(
+            ["%s 법률 조문" % base, "%s 적용 요건 조문" % base],
+            base,
+            index,
+            seen,
+            skill_input,
+        )
 
-    def _fallback_gap_query(self, evidence: Mapping[str, Any], index: int, seen: set) -> str:
+    def _fallback_gap_query(
+        self,
+        evidence: Mapping[str, Any],
+        index: int,
+        seen: set,
+        skill_input: Mapping[str, Any],
+    ) -> str:
         base = evidence.get("completion_criteria") or evidence.get("description")
-        candidate = "%s 법률 조문" % base
-        if self._normalized_query(candidate) in seen:
-            candidate = "%s 적용 요건 조문 %d" % (base, index)
-        return candidate
+        return self._first_unique_contextual_query(
+            ["%s 법률 조문" % base, "%s 적용 요건 조문" % base],
+            base,
+            index,
+            seen,
+            skill_input,
+        )
+
+    def _first_unique_contextual_query(
+        self,
+        candidates: List[str],
+        base: str,
+        index: int,
+        seen: set,
+        skill_input: Mapping[str, Any],
+    ) -> str:
+        for candidate in candidates:
+            contextual = self._with_source_context(candidate, skill_input)
+            if self._normalized_query(contextual) not in seen:
+                return candidate
+        for serial in range(1, 101):
+            candidate = "%s 보완 검색 조문 %d-%d" % (base, index, serial)
+            contextual = self._with_source_context(candidate, skill_input)
+            if self._normalized_query(contextual) not in seen:
+                return candidate
+        raise SkillExecutionError("could not construct a unique contextual retrieval query")
 
 
 

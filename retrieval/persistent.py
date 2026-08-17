@@ -62,6 +62,8 @@ _QUERY_PREFIX_STOPWORDS = {
     "해당",
 }
 
+_PLANNED_ACTOR_SUFFIXES = ("인", "자", "주", "기관", "위원회")
+
 
 def _deduplicate(values: Sequence[str]) -> List[str]:
     return list(dict.fromkeys(value for value in values if value))
@@ -100,6 +102,10 @@ def _query_terms_and_prefixes(request: RetrievalRequest) -> tuple[List[str], Lis
             and not _korean_prefix_roots(term)
         ):
             prefix_terms.append(term)
+    for term in planned_terms:
+        if 2 <= len(term) <= 6 and term.endswith(_PLANNED_ACTOR_SUFFIXES):
+            prefix_terms.append(term)
+
     return exact_terms, _deduplicate(term for term in prefix_terms if len(term) >= 2)
 
 

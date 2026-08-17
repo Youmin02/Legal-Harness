@@ -146,7 +146,7 @@ class RetrievalAlgorithmTests(unittest.TestCase):
                 "운송계약 소멸시효 기간 "
                 "[원문 맥락] 상품이 인도된 날부터 고민하게 되었다"
             ),
-            query_terms=["운송계약", "소멸시효"],
+            query_terms=["운송계약", "운송인", "소멸시효"],
             top_k=100,
         )
 
@@ -154,6 +154,7 @@ class RetrievalAlgorithmTests(unittest.TestCase):
 
         self.assertIn("기간", prefixes)
         self.assertNotIn("고민하게", prefixes)
+        self.assertIn("운송인", prefixes)
 
     def test_statute_hint_channel_cannot_evict_lexical_top_eighty_percent(self):
         with tempfile.TemporaryDirectory() as directory:

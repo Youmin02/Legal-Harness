@@ -8,7 +8,7 @@ from retrieval.bm25 import Bm25Retriever
 from retrieval.corpus import InMemoryProvisionCorpus, ProvisionDocument
 from retrieval.kure import KureExactVectorRetriever
 from retrieval.pipeline import RetrievalPipeline
-from retrieval.persistent import SqliteFts5Bm25Searcher
+from retrieval.persistent import SqliteFts5Bm25Searcher, _query_terms_and_prefixes
 from retrieval.reranker import PassThroughReranker
 from retrieval.rrf import reciprocal_rank_fusion
 from retrieval.types import RetrievalHit
@@ -135,6 +135,25 @@ class RetrievalAlgorithmTests(unittest.TestCase):
             hits = SqliteFts5Bm25Searcher(database_path).search(request)
 
             self.assertEqual([hit.document.provision_id for hit in hits], ["GOLD"])
+
+    def test_bare_focus_term_becomes_prefix_without_expanding_source_noise(self):
+        request = RetrievalRequest(
+            request_id="RQ1",
+            issue_id="I1",
+            evidence_item_id="E1",
+            query_channel=QueryChannel.PROVISION_STYLE,
+            query_text=(
+                "운송계약 소멸시효 기간 "
+                "[원문 맥락] 상품이 인도된 날부터 고민하게 되었다"
+            ),
+            query_terms=["운송계약", "소멸시효"],
+            top_k=100,
+        )
+
+        _, prefixes = _query_terms_and_prefixes(request)
+
+        self.assertIn("기간", prefixes)
+        self.assertNotIn("고민하게", prefixes)
 
     def test_statute_hint_channel_cannot_evict_lexical_top_eighty_percent(self):
         with tempfile.TemporaryDirectory() as directory:

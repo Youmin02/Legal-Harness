@@ -50,6 +50,18 @@ _KOREAN_QUERY_SUFFIXES = (
     "와",
 )
 
+_QUERY_PREFIX_STOPWORDS = {
+    "관련",
+    "경우",
+    "대한",
+    "따라",
+    "어느",
+    "무엇",
+    "위한",
+    "인한",
+    "해당",
+}
+
 
 def _deduplicate(values: Sequence[str]) -> List[str]:
     return list(dict.fromkeys(value for value in values if value))
@@ -73,10 +85,21 @@ def _korean_prefix_roots(token: str) -> List[str]:
 def _query_terms_and_prefixes(request: RetrievalRequest) -> tuple[List[str], List[str]]:
     planned_terms = baseline_korean_tokenize(" ".join(request.query_terms))
     query_text_terms = baseline_korean_tokenize(request.query_text)
+    focus_text = request.query_text.partition("[원문 맥락]")[0]
+    focus_terms = baseline_korean_tokenize(focus_text)
     exact_terms = _deduplicate(planned_terms or query_text_terms)
     prefix_terms: List[str] = []
     for term in query_text_terms:
         prefix_terms.extend(_korean_prefix_roots(term))
+    planned_set = set(planned_terms)
+    for term in focus_terms:
+        if (
+            term not in planned_set
+            and term not in _QUERY_PREFIX_STOPWORDS
+            and 2 <= len(term) <= 4
+            and not _korean_prefix_roots(term)
+        ):
+            prefix_terms.append(term)
     return exact_terms, _deduplicate(term for term in prefix_terms if len(term) >= 2)
 
 

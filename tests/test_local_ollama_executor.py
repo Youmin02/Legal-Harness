@@ -156,7 +156,7 @@ class LocalOllamaExecutorTests(unittest.TestCase):
         self.assertEqual(result["retrieval_requests"][0]["query_terms"], ["손해배상"])
         self.assertEqual(
             result["retrieval_requests"][0]["query_text"],
-            "손해배상 책임\n손해배상 책임은 무엇인가",
+            "손해배상 책임\n[원문 맥락]\n손해배상 책임은 무엇인가",
         )
         self.assertEqual(result["required_evidence_items"][0]["completion_criteria"], "책임의 근거 조문이 있다")
 

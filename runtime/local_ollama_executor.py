@@ -334,7 +334,7 @@ class LocalOllamaSkillExecutor:
         source_normalized = self._normalized_query(excerpt)
         if source_normalized in query_normalized:
             return query
-        return "%s\n%s" % (query.strip(), excerpt)
+        return "%s\n[원문 맥락]\n%s" % (query.strip(), excerpt)
 
     def _fallback_initial_query(self, issue: Mapping[str, Any], index: int, seen: set) -> str:
         base = issue.get("decision_question") or issue.get("issue_statement") or "관련 법률"

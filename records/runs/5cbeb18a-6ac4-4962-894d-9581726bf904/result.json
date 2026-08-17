@@ -1,0 +1,462 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "completed_at_utc": "2026-08-17T13:26:10.129530+00:00",
+  "end_to_end_latency_ms": 200931.496,
+  "errors": [
+    "grounded_legal_answer_generation did not produce a valid GENERATE_ANSWER result after 2 attempts: answer is missing citation marker: CT3"
+  ],
+  "record_schema_version": "1.0",
+  "run_id": "5cbeb18a-6ac4-4962-894d-9581726bf904",
+  "state": {
+    "accepted_provision_ids": [
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008844",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 20,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "explanation": "All critical evidence items are covered without conflict.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "error": "grounded_legal_answer_generation did not produce a valid GENERATE_ANSWER result after 2 attempts: answer is missing citation marker: CT3",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 20.705422344002702,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "대기환경보전법 92조  벌칙#KOBLEX-009164",
+        "provision_text": "10. 제60조제1항에 따라 인증받은 내용과 다르게 결함이 있는 배출가스저감장치 또는 저공해엔진을 제조 또는 수입하는 자",
+        "rerank_score": 0.9999991655349731,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "대기환경보전법 92조  벌칙 12호"
+      },
+      {
+        "first_stage_score": 30.013987793393657,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "폐기물관리법 13조 5 재활용 제품 또는 물질에 관한 유해성기준#KOBLEX-173820",
+        "provision_text": "⑤ 환경부장관은 제3항에 따른 시험ㆍ분석 또는 실태 조사 결과 유해성기준을 위반한 제품 또는 물질을 제조 또는 유통한 자에 대하여 해당 제품 또는 물질의 회수, 파기 등 필요한 조치를 명할 수 있다.",
+        "rerank_score": 0.9999991655349731,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "폐기물관리법 13조 5 재활용 제품 또는 물질에 관한 유해성기준 5항"
+      },
+      {
+        "first_stage_score": 32.59748579208325,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008836",
+        "provision_text": "제60조(배출가스저감장치 및 공회전제한장치의 인증 등)",
+        "rerank_score": 0.9999990463256836,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등"
+      },
+      {
+        "first_stage_score": 43.8674927161743,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843",
+        "provision_text": "⑦ 환경부장관은 제1항에 따른 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 제조, 수입, 공급 또는 판매하려는 자에게 환경부령으로 정하는 바에 따라 일정한 기간을 정하여 제품의 회수, 폐기 등의 필요한 조치를 명할 수 있다. <신설 2023.8.16>",
+        "rerank_score": 0.9999990463256836,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등 7항"
+      },
+      {
+        "first_stage_score": 24.117479794715692,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "대기환경보전법 60조 2 배출가스저감장치 등의 관리#KOBLEX-008847",
+        "provision_text": "제60조의2(배출가스저감장치 등의 관리)",
+        "rerank_score": 0.9999990463256836,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "대기환경보전법 60조 2 배출가스저감장치 등의 관리"
+      },
+      {
+        "first_stage_score": 23.542515147155235,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "대기환경보전법 60조 3 배출가스저감장치 등의 저감효율 확인검사#KOBLEX-008854",
+        "provision_text": "제60조의3(배출가스저감장치 등의 저감효율 확인검사)",
+        "rerank_score": 0.9999990463256836,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "대기환경보전법 60조 3 배출가스저감장치 등의 저감효율 확인검사"
+      },
+      {
+        "first_stage_score": 24.117479794715692,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "대기환경보전법 60조 4 배출가스저감장치 등의 수시검사#KOBLEX-008857",
+        "provision_text": "제60조의4(배출가스저감장치 등의 수시검사)",
+        "rerank_score": 0.9999990463256836,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "대기환경보전법 60조 4 배출가스저감장치 등의 수시검사"
+      },
+      {
+        "first_stage_score": 7.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "대기환경보전법 75조  자동차연료ㆍ첨가제 또는 촉매제의 제조ㆍ공급ㆍ판매 중지 및 회수#KOBLEX-008944",
+        "provision_text": "②환경부장관은 제74조제6항에 따라 공급ㆍ판매 또는 사용이 금지되는 자동차연료ㆍ첨가제 또는 촉매제를 공급하거나 판매한 자에 대하여는 공급이나 판매의 중지를 명할 수 있다. <개정 2008.12.31, 2012.5.23, 2013.7.16, 2020.12.29>",
+        "rerank_score": 0.9999990463256836,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "대기환경보전법 75조  자동차연료ㆍ첨가제 또는 촉매제의 제조ㆍ공급ㆍ판매 중지 및 회수 2항"
+      },
+      {
+        "first_stage_score": 19.959470617688567,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "대기환경보전법 89조  벌칙#KOBLEX-009097",
+        "provision_text": "8의2. 제60조제6항을 위반하여 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 공급ㆍ판매하거나 공급ㆍ판매의 목적으로 진열ㆍ보관 또는 저장한 자",
+        "rerank_score": 0.9999990463256836,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "대기환경보전법 89조  벌칙 13호"
+      },
+      {
+        "first_stage_score": 24.117479794715692,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "대기환경보전법 시행규칙 79조 4 배출가스저감장치 등의 관리#KOBLEX-189447",
+        "provision_text": "제79조의4(배출가스저감장치 등의 관리)",
+        "rerank_score": 0.9999990463256836,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "대기환경보전법 시행규칙 79조 4 배출가스저감장치 등의 관리"
+      },
+      {
+        "first_stage_score": 29.359580534054878,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008842",
+        "provision_text": "⑥ 누구든지 제1항에 따른 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 공급ㆍ판매하거나 공급ㆍ판매의 목적으로 진열ㆍ보관 또는 저장하여서는 아니 된다. <신설 2023.8.16>",
+        "rerank_score": 0.999968409538269,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등 6항"
+      },
+      {
+        "first_stage_score": 30.226159364402083,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "출입국관리법 18조  외국인 고용의 제한#KOBLEX-053542",
+        "provision_text": "④ 누구든지 제1항에 따른 체류자격을 가지지 아니한 사람의 고용을 알선하거나 권유하여서는 아니 된다.",
+        "rerank_score": 0.9999643564224243,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "출입국관리법 18조  외국인 고용의 제한 4항"
+      },
+      {
+        "first_stage_score": 26.333702445173934,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "보험사기방지 특별법 5조 2 보험사기행위의 알선ㆍ권유 등의 금지#KOBLEX-063507",
+        "provision_text": "제5조의2(보험사기행위의 알선ㆍ권유 등의 금지) 누구든지 보험사기행위를 알선ㆍ유인ㆍ권유 또는 광고하는 행위를 하여서는 아니 된다.",
+        "rerank_score": 0.9999510049819946,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "보험사기방지 특별법 5조 2 보험사기행위의 알선ㆍ권유 등의 금지"
+      },
+      {
+        "first_stage_score": 23.559106276134816,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "세무사법 2조 2 세무대리의 소개ㆍ알선 금지#KOBLEX-177256",
+        "provision_text": "제2조의2(세무대리의 소개ㆍ알선 금지) 누구든지 세무사나 그 사무직원, 세무법인이나 그 사원ㆍ직원에게 제2조의 세무대리를 소개ㆍ알선하고 그 대가를 받거나 요구하여서는 아니 된다.",
+        "rerank_score": 0.9999406337738037,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "세무사법 2조 2 세무대리의 소개ㆍ알선 금지"
+      },
+      {
+        "first_stage_score": 32.96573447973295,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 11조 2 알선ㆍ중개행위 금지#KOBLEX-134894",
+        "provision_text": "제11조의2(알선ㆍ중개행위 금지) 누구든지 제11조에 따른 무인가 영업행위를 목적으로 계좌의 대여를 알선하거나 중개하여서는 아니 된다.",
+        "rerank_score": 0.999904990196228,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "자본시장과 금융투자업에 관한 법률 11조 2 알선ㆍ중개행위 금지"
+      },
+      {
+        "first_stage_score": 24.29997146674752,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "약사법 62조  제조 등의 금지#KOBLEX-182329",
+        "provision_text": "제62조(제조 등의 금지) 누구든지 다음 각 호의 어느 하나에 해당하는 의약품을 판매하거나 판매할 목적으로 제조ㆍ수입ㆍ저장 또는 진열하여서는 아니 된다. <개정 2007.10.17, 2011.6.7, 2013.3.23, 2018.12.11, 2024.2.20>",
+        "rerank_score": 0.9998821020126343,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "약사법 62조  제조 등의 금지"
+      },
+      {
+        "first_stage_score": 31.943021708057383,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008845",
+        "provision_text": "⑨ 누구든지 제1항에 따른 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 사용하여서는 아니 된다. <신설 2023.8.16>",
+        "rerank_score": 0.9998656511306763,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등 9항"
+      },
+      {
+        "first_stage_score": 26.333702445173934,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "농지법 7조 2 금지 행위#KOBLEX-172968",
+        "provision_text": "제7조의2(금지 행위) 누구든지 다음 각 호의 어느 하나에 해당하는 행위를 하여서는 아니 된다.",
+        "rerank_score": 0.9998518228530884,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "농지법 7조 2 금지 행위"
+      },
+      {
+        "first_stage_score": 35.42753969654332,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008844",
+        "provision_text": "⑧ 배출가스저감장치, 저공해엔진 또는 공회전제한장치의 판매를 중개하거나 구매를 대행하는 자는 제1항에 따른 인증을 받지 아니한 제품의 판매를 중개(「전자상거래 등에서의 소비자보호에 관한 법률」에 따른 통신판매중개자가 자신이 운영하는 사이버몰에서 해당 제품을 발견하는 즉시 삭제하고, 소비자가 이러한 정보를 확인할 수 있도록 기술적 조치를 한 경우는 제외한다. 이하 같다)하거나 구매를 대행하여서는 아니 된다. <신설 2023.8.16>",
+        "rerank_score": 0.9998292922973633,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등 8항"
+      },
+      {
+        "first_stage_score": 25.33896473243304,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "전자금융거래법 21조 4 전자적 침해행위 등의 금지#KOBLEX-186741",
+        "provision_text": "제21조의4(전자적 침해행위 등의 금지) 누구든지 다음 각 호의 어느 하나에 해당하는 행위를 하여서는 아니 된다.",
+        "rerank_score": 0.9998262524604797,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "전자금융거래법 21조 4 전자적 침해행위 등의 금지"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "농지법 7조 2 금지 행위#KOBLEX-172968": "제7조의2(금지 행위) 누구든지 다음 각 호의 어느 하나에 해당하는 행위를 하여서는 아니 된다.",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008836": "제60조(배출가스저감장치 및 공회전제한장치의 인증 등)",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008842": "⑥ 누구든지 제1항에 따른 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 공급ㆍ판매하거나 공급ㆍ판매의 목적으로 진열ㆍ보관 또는 저장하여서는 아니 된다. <신설 2023.8.16>",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843": "⑦ 환경부장관은 제1항에 따른 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 제조, 수입, 공급 또는 판매하려는 자에게 환경부령으로 정하는 바에 따라 일정한 기간을 정하여 제품의 회수, 폐기 등의 필요한 조치를 명할 수 있다. <신설 2023.8.16>",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008844": "⑧ 배출가스저감장치, 저공해엔진 또는 공회전제한장치의 판매를 중개하거나 구매를 대행하는 자는 제1항에 따른 인증을 받지 아니한 제품의 판매를 중개(「전자상거래 등에서의 소비자보호에 관한 법률」에 따른 통신판매중개자가 자신이 운영하는 사이버몰에서 해당 제품을 발견하는 즉시 삭제하고, 소비자가 이러한 정보를 확인할 수 있도록 기술적 조치를 한 경우는 제외한다. 이하 같다)하거나 구매를 대행하여서는 아니 된다. <신설 2023.8.16>",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008845": "⑨ 누구든지 제1항에 따른 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 사용하여서는 아니 된다. <신설 2023.8.16>",
+      "대기환경보전법 60조 2 배출가스저감장치 등의 관리#KOBLEX-008847": "제60조의2(배출가스저감장치 등의 관리)",
+      "대기환경보전법 60조 3 배출가스저감장치 등의 저감효율 확인검사#KOBLEX-008854": "제60조의3(배출가스저감장치 등의 저감효율 확인검사)",
+      "대기환경보전법 60조 4 배출가스저감장치 등의 수시검사#KOBLEX-008857": "제60조의4(배출가스저감장치 등의 수시검사)",
+      "대기환경보전법 75조  자동차연료ㆍ첨가제 또는 촉매제의 제조ㆍ공급ㆍ판매 중지 및 회수#KOBLEX-008944": "②환경부장관은 제74조제6항에 따라 공급ㆍ판매 또는 사용이 금지되는 자동차연료ㆍ첨가제 또는 촉매제를 공급하거나 판매한 자에 대하여는 공급이나 판매의 중지를 명할 수 있다. <개정 2008.12.31, 2012.5.23, 2013.7.16, 2020.12.29>",
+      "대기환경보전법 89조  벌칙#KOBLEX-009097": "8의2. 제60조제6항을 위반하여 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 공급ㆍ판매하거나 공급ㆍ판매의 목적으로 진열ㆍ보관 또는 저장한 자",
+      "대기환경보전법 92조  벌칙#KOBLEX-009164": "10. 제60조제1항에 따라 인증받은 내용과 다르게 결함이 있는 배출가스저감장치 또는 저공해엔진을 제조 또는 수입하는 자",
+      "대기환경보전법 시행규칙 79조 4 배출가스저감장치 등의 관리#KOBLEX-189447": "제79조의4(배출가스저감장치 등의 관리)",
+      "보험사기방지 특별법 5조 2 보험사기행위의 알선ㆍ권유 등의 금지#KOBLEX-063507": "제5조의2(보험사기행위의 알선ㆍ권유 등의 금지) 누구든지 보험사기행위를 알선ㆍ유인ㆍ권유 또는 광고하는 행위를 하여서는 아니 된다.",
+      "세무사법 2조 2 세무대리의 소개ㆍ알선 금지#KOBLEX-177256": "제2조의2(세무대리의 소개ㆍ알선 금지) 누구든지 세무사나 그 사무직원, 세무법인이나 그 사원ㆍ직원에게 제2조의 세무대리를 소개ㆍ알선하고 그 대가를 받거나 요구하여서는 아니 된다.",
+      "약사법 62조  제조 등의 금지#KOBLEX-182329": "제62조(제조 등의 금지) 누구든지 다음 각 호의 어느 하나에 해당하는 의약품을 판매하거나 판매할 목적으로 제조ㆍ수입ㆍ저장 또는 진열하여서는 아니 된다. <개정 2007.10.17, 2011.6.7, 2013.3.23, 2018.12.11, 2024.2.20>",
+      "자본시장과 금융투자업에 관한 법률 11조 2 알선ㆍ중개행위 금지#KOBLEX-134894": "제11조의2(알선ㆍ중개행위 금지) 누구든지 제11조에 따른 무인가 영업행위를 목적으로 계좌의 대여를 알선하거나 중개하여서는 아니 된다.",
+      "전자금융거래법 21조 4 전자적 침해행위 등의 금지#KOBLEX-186741": "제21조의4(전자적 침해행위 등의 금지) 누구든지 다음 각 호의 어느 하나에 해당하는 행위를 하여서는 아니 된다.",
+      "출입국관리법 18조  외국인 고용의 제한#KOBLEX-053542": "④ 누구든지 제1항에 따른 체류자격을 가지지 아니한 사람의 고용을 알선하거나 권유하여서는 아니 된다.",
+      "폐기물관리법 13조 5 재활용 제품 또는 물질에 관한 유해성기준#KOBLEX-173820": "⑤ 환경부장관은 제3항에 따른 시험ㆍ분석 또는 실태 조사 결과 유해성기준을 위반한 제품 또는 물질을 제조 또는 유통한 자에 대하여 해당 제품 또는 물질의 회수, 파기 등 필요한 조치를 명할 수 있다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C004(대기환경보전법 제60조 제7항)는 인증 미비 배출가스저감장치 관련 행위에 대해 환경부장관이 명할 수 있는 조치의 종류(회수·폐기 등)와 법적 근거를 명확히 규정하므로 E1의 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [
+          "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008844"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C019(대기환경보전법 제60조 제8항)는 인증 미비 배출가스저감장치 판매 중개 금지의 적용 요건과 예외를 명시하여 E2의 완료 기준을 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843",
+        "support_spans": [
+          {
+            "end_char": 154,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008844",
+        "support_spans": [
+          {
+            "end_char": 243,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 20,
+    "last_validated_event": "S2.ASSESS_COVERAGE",
+    "legal_issues": [
+      {
+        "description": "환경부장관은 인증받지 않은 배출가스저감장치의 제조·수입·공급·판매 행위에 대해 어떤 행정조치를 명할 수 있는가",
+        "issue_id": "I1"
+      },
+      {
+        "description": "인증받지 않은 배출가스저감장치의 판매 중개 행위가 금지되는 법적 조건은 무엇인가",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 자동차 부품 회사의 사장으로, 저공해엔진 및 배출가스저감장치를 제조하여 판매하고 있다. 그러나 최근, 을이라는 경쟁 회사는 인증받지 않은 배출가스저감장치를 제조하여 시중에 판매하고 있다는 소문이 돌고 있다. 이에 갑은 을의 행위가 불법적인지를 확인하고자 한다. 특히, 을의 인증 없는 제품에 대한 환경부장관의 조치 가능성과 해당 제품의 판매 중개 금지 여부를 알고 싶어 한다. [질문] 환경부장관은 을이 인증받지 않은 배출가스저감장치를 제조, 수입, 공급 또는 판매하려는 경우에 어떤 조치를 명할 수 있으며, 을의 인증받지 않은 제품의 판매 중개는 어떤 조건에서 금지되는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "환경부장관",
+          "배출가스저감장치",
+          "인증",
+          "제조중지",
+          "수입중지",
+          "공급중지",
+          "판매중지"
+        ],
+        "query_text": "환경부장관은 인증받지 않은 배출가스저감장치를 제조하거나 수입하거나 공급하거나 판매하려는 자에 대하여 제조중지 또는 수입중지 또는 공급중지 또는 판매중지를 명할 수 있다 [원문 맥락] 특히, 을의 인증 없는 제품에 대한 환경부장관의 조치 가능성과 해당 제품의 판매 중개 금지 여부를 알고 싶어 한다. 환경부장관은 을이 인증받지 않은 배출가스저감장치를 제조, 수입, 공급 또는 판매하려는 경우에 어떤 조치를 명할 수 있으며, 을의 인증받지 않은 제품의 판매 중개는 어떤 조건에서 금지되는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "대기환경보전법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "배출가스저감장치",
+          "인증",
+          "판매중개",
+          "판매알선",
+          "판매권유",
+          "금지"
+        ],
+        "query_text": "누구든지 인증받지 않은 배출가스저감장치를 판매하거나 판매를 중개하거나 판매를 알선하거나 판매를 권유하여서는 아니 된다 [원문 맥락] 특히, 을의 인증 없는 제품에 대한 환경부장관의 조치 가능성과 해당 제품의 판매 중개 금지 여부를 알고 싶어 한다. 환경부장관은 을이 인증받지 않은 배출가스저감장치를 제조, 수입, 공급 또는 판매하려는 경우에 어떤 조치를 명할 수 있으며, 을의 인증받지 않은 제품의 판매 중개는 어떤 조건에서 금지되는가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "대기환경보전법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 자동차 부품 회사의 사장으로, 저공해엔진 및 배출가스저감장치를 제조하여 판매하고 있다. 그러나 최근, 을이라는 경쟁 회사는 인증받지 않은 배출가스저감장치를 제조하여 시중에 판매하고 있다는 소문이 돌고 있다. 이에 갑은 을의 행위가 불법적인지를 확인하고자 한다. 특히, 을의 인증 없는 제품에 대한 환경부장관의 조치 가능성과 해당 제품의 판매 중개 금지 여부를 알고 싶어 한다.\n\n[질문]\n환경부장관은 을이 인증받지 않은 배출가스저감장치를 제조, 수입, 공급 또는 판매하려는 경우에 어떤 조치를 명할 수 있으며, 을의 인증받지 않은 제품의 판매 중개는 어떤 조건에서 금지되는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "환경부장관이 인증 미비 배출가스저감장치 관련 행위에 대해 명할 수 있는 조치의 종류와 법적 근거가 확인됨",
+        "critical": true,
+        "description": "환경부장관이 인증받지 않은 배출가스저감장치 제조·수입·공급·판매자에 대해 명할 수 있는 조치의 종류와 요건",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "인증받지 않은 배출가스저감장치 판매 중개 금지의 적용 요건과 법적 근거가 확인됨",
+        "critical": true,
+        "description": "인증받지 않은 배출가스저감장치 판매 중개 금지의 적용 요건과 법적 근거",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "5cbeb18a-6ac4-4962-894d-9581726bf904",
+    "seen_provision_ids": [
+      "대기환경보전법 60조 4 배출가스저감장치 등의 수시검사#KOBLEX-008857",
+      "대기환경보전법 89조  벌칙#KOBLEX-009097",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008836",
+      "보험사기방지 특별법 5조 2 보험사기행위의 알선ㆍ권유 등의 금지#KOBLEX-063507",
+      "대기환경보전법 60조 2 배출가스저감장치 등의 관리#KOBLEX-008847",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843",
+      "대기환경보전법 60조 3 배출가스저감장치 등의 저감효율 확인검사#KOBLEX-008854",
+      "출입국관리법 18조  외국인 고용의 제한#KOBLEX-053542",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008845",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008844",
+      "전자금융거래법 21조 4 전자적 침해행위 등의 금지#KOBLEX-186741",
+      "폐기물관리법 13조 5 재활용 제품 또는 물질에 관한 유해성기준#KOBLEX-173820",
+      "약사법 62조  제조 등의 금지#KOBLEX-182329",
+      "대기환경보전법 92조  벌칙#KOBLEX-009164",
+      "대기환경보전법 75조  자동차연료ㆍ첨가제 또는 촉매제의 제조ㆍ공급ㆍ판매 중지 및 회수#KOBLEX-008944",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008842",
+      "자본시장과 금융투자업에 관한 법률 11조 2 알선ㆍ중개행위 금지#KOBLEX-134894",
+      "세무사법 2조 2 세무대리의 소개ㆍ알선 금지#KOBLEX-177256",
+      "농지법 7조 2 금지 행위#KOBLEX-172968",
+      "대기환경보전법 시행규칙 79조 4 배출가스저감장치 등의 관리#KOBLEX-189447"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

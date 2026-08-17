@@ -1,0 +1,1061 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-17T13:43:35.194203+00:00",
+  "end_to_end_latency_ms": 316031.309,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "a862ed78-dff1-4acc-8736-0bc4a7c9c068",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 3,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 20,
+          "request_count": 3,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 3,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 17,
+          "request_count": 3,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 3,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 14,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 3,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 19.070661707899202,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 274조  고소의 취소#KOBLEX-093042",
+        "provision_text": "③ 피해자가 명시한 의사에 반하여 죄를 물을 수 없는 사건에서 처벌을 희망하는 의사표시의 철회에 관하여도 제1항과 제2항을 준용한다.",
+        "rerank_score": 0.9999829530715942,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "군사법원법 274조  고소의 취소 3항"
+      },
+      {
+        "first_stage_score": 19.070661707899202,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 274조  고소의 취소#KOBLEX-159007",
+        "provision_text": "③ 피해자가 명시한 의사에 반하여 죄를 물을 수 없는 사건에서 처벌을 희망하는 의사표시의 철회에 관하여도 제1항과 제2항을 준용한다.",
+        "rerank_score": 0.9999829530715942,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "군사법원법 274조  고소의 취소 3항"
+      },
+      {
+        "first_stage_score": 19.682259890430593,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 382조  공소기각의 판결#KOBLEX-093422",
+        "provision_text": "6. 피해자가 명시한 의사에 반하여 공소를 제기할 수 없는 사건에 대하여 처벌을 희망하지 아니하는 의사 표시가 있거나 처벌을 희망하는 의사 표시가 철회되었을 때",
+        "rerank_score": 0.9999819993972778,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "군사법원법 382조  공소기각의 판결 6호"
+      },
+      {
+        "first_stage_score": 19.682259890430593,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 382조  공소기각의 판결#KOBLEX-159387",
+        "provision_text": "6. 피해자가 명시한 의사에 반하여 공소를 제기할 수 없는 사건에 대하여 처벌을 희망하지 아니하는 의사 표시가 있거나 처벌을 희망하는 의사 표시가 철회되었을 때",
+        "rerank_score": 0.9999819993972778,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "군사법원법 382조  공소기각의 판결 6호"
+      },
+      {
+        "first_stage_score": 20.572262564569925,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 327조  공소기각의 판결#KOBLEX-232632",
+        "provision_text": "6. 피해자의 명시한 의사에 반하여 공소를 제기할 수 없는 사건에서 처벌을 원하지 아니하는 의사표시를 하거나 처벌을 원하는 의사표시를 철회하였을 때",
+        "rerank_score": 0.9999802112579346,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "형사소송법 327조  공소기각의 판결 6호"
+      },
+      {
+        "first_stage_score": 19.070661707899202,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 232조  고소의 취소#KOBLEX-232193",
+        "provision_text": "③ 피해자의 명시한 의사에 반하여 공소를 제기할 수 없는 사건에서 처벌을 원하는 의사표시를 철회한 경우에도 제1항과 제2항을 준용한다.",
+        "rerank_score": 0.9999771118164062,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "형사소송법 232조  고소의 취소 3항"
+      },
+      {
+        "first_stage_score": 4.0,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 24조  피해자의 신원과 사생활 비밀 누설 금지#KOBLEX-157608",
+        "provision_text": "② 누구든지 제1항에 따른 피해자의 주소, 성명, 나이, 직업, 학교, 용모, 그 밖에 피해자를 특정하여 파악할 수 있는 인적사항이나 사진 등을 피해자의 동의를 받지 아니하고 신문 등 인쇄물에 싣거나 「방송법」 제2조제1호에 따른 방송 또는 정보통신망을 통하여 공개하여서는 아니 된다.",
+        "rerank_score": 0.9999904632568359,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 24조  피해자의 신원과 사생활 비밀 누설 금지 2항"
+      },
+      {
+        "first_stage_score": 37.05697649476438,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 29조  수사 및 재판절차에서의 배려#KOBLEX-157625",
+        "provision_text": "② 수사기관과 법원은 성폭력범죄의 피해자를 조사하거나 심리ㆍ재판할 때 피해자가 편안한 상태에서 진술할 수 있는 환경을 조성하여야 하며, 조사 및 심리ㆍ재판 횟수는 필요한 범위에서 최소한으로 하여야 한다.",
+        "rerank_score": 0.9999960660934448,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 29조  수사 및 재판절차에서의 배려 2항"
+      },
+      {
+        "first_stage_score": 23.999530980615774,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "스토킹범죄의 처벌 등에 관한 법률 1조  목적#KOBLEX-130418",
+        "provision_text": "제1조(목적) 이 법은 스토킹범죄의 처벌 및 그 절차에 관한 특례와 스토킹범죄 피해자에 대한 보호절차를 규정함으로써 피해자를 보호하고 건강한 사회질서의 확립에 이바지함을 목적으로 한다.",
+        "rerank_score": 0.9999949932098389,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "스토킹범죄의 처벌 등에 관한 법률 1조  목적"
+      },
+      {
+        "first_stage_score": 20.939470494024985,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "장애인복지법 59조 16 진술조력인의 참여 등#KOBLEX-188533",
+        "provision_text": "① 검사, 사법경찰관 또는 법원은 범죄사건의 피해자인 장애인(이하 이 조에서 \"피해자\"라 한다)이 의사소통이나 의사표현에 어려움이 있는 경우 피해자에 대한 형사사법절차에서의 조력과 원활한 조사ㆍ검증 또는 증인 신문을 위하여 직권이나 피해자 또는 제59조의8제1항에 따른 보조인(이하 이 조에서 \"보조인\"이라 한다)의 신청에 따라 「성폭력범죄의 처벌 등에 관한 특례법」 제35조제1항에 따른 진술조력인으로 하여금 조사과정, 검증 또는 증인 신문에 참여하여 의사소통을 중개하거나 보조하게 할 수 있다.",
+        "rerank_score": 0.9999377727508545,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "장애인복지법 59조 16 진술조력인의 참여 등 1항"
+      },
+      {
+        "first_stage_score": 21.323319829848977,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형법 286조  미수범#KOBLEX-193266",
+        "provision_text": "제286조(미수범) 전3조의 미수범은 처벌한다.",
+        "rerank_score": 0.7962239384651184,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "형법 286조  미수범"
+      },
+      {
+        "first_stage_score": 21.323319829848977,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "아동복지법 73조  미수범#KOBLEX-171206",
+        "provision_text": "제73조(미수범) 제71조제1항제1호의 미수범은 처벌한다.",
+        "rerank_score": 0.7711660265922546,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "아동복지법 73조  미수범"
+      },
+      {
+        "first_stage_score": 21.323319829848977,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "형법 149조  미수범#KOBLEX-192992",
+        "provision_text": "제149조(미수범) 전4조의 미수범은 처벌한다.",
+        "rerank_score": 0.7578184604644775,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "형법 149조  미수범"
+      },
+      {
+        "first_stage_score": 21.323319829848977,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "형법 202조  미수범#KOBLEX-193097",
+        "provision_text": "제202조(미수범) 전4조의 미수범은 처벌한다.",
+        "rerank_score": 0.7352754473686218,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "형법 202조  미수범"
+      },
+      {
+        "first_stage_score": 21.323319829848977,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "형법 100조  미수범#KOBLEX-192892",
+        "provision_text": "제100조(미수범) 전8조의 미수범은 처벌한다.",
+        "rerank_score": 0.7008312940597534,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "형법 100조  미수범"
+      },
+      {
+        "first_stage_score": 21.323319829848977,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "형법 280조  미수범#KOBLEX-193254",
+        "provision_text": "제280조(미수범) 전4조의 미수범은 처벌한다.",
+        "rerank_score": 0.6960079073905945,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "형법 280조  미수범"
+      },
+      {
+        "first_stage_score": 20.576330054067903,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "보험업법 205조  미수범#KOBLEX-022640",
+        "provision_text": "제205조(미수범) 제197조 및 제198조의 미수범은 처벌한다.",
+        "rerank_score": 0.6942921280860901,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "보험업법 205조  미수범"
+      },
+      {
+        "first_stage_score": 20.223297992038905,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "형법 254조  미수범#KOBLEX-193187",
+        "provision_text": "제254조(미수범) 제250조, 제252조 및 제253조의 미수범은 처벌한다.",
+        "rerank_score": 0.6716223359107971,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "형법 254조  미수범"
+      },
+      {
+        "first_stage_score": 21.323319829848977,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "형법 89조  미수범#KOBLEX-192870",
+        "provision_text": "제89조(미수범) 전2조의 미수범은 처벌한다.",
+        "rerank_score": 0.634042501449585,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "형법 89조  미수범"
+      },
+      {
+        "first_stage_score": 21.323319829848977,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "형법 162조  미수범#KOBLEX-193018",
+        "provision_text": "제162조(미수범) 전2조의 미수범은 처벌한다.",
+        "rerank_score": 0.6281876564025879,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "형법 162조  미수범"
+      },
+      {
+        "first_stage_score": 40.972565011797265,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 1조  목적#KOBLEX-157519",
+        "provision_text": "제1조(목적) 이 법은 성폭력범죄의 처벌 및 그 절차에 관한 특례를 규정함으로써 성폭력범죄 피해자의 생명과 신체의 안전을 보장하고 건강한 사회질서의 확립에 이바지함을 목적으로 한다.",
+        "rerank_score": 0.9999945163726807,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 1조  목적"
+      },
+      {
+        "first_stage_score": 26.49827369029353,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 27조  성폭력범죄 피해자에 대한 변호사 선임의 특례#KOBLEX-157616",
+        "provision_text": "① 성폭력범죄의 피해자 및 그 법정대리인(이하 \"피해자등\"이라 한다)은 형사절차상 입을 수 있는 피해를 방어하고 법률적 조력을 보장하기 위하여 변호사를 선임할 수 있다.",
+        "rerank_score": 0.9999936819076538,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 27조  성폭력범죄 피해자에 대한 변호사 선임의 특례 1항"
+      },
+      {
+        "first_stage_score": 28.46986400919096,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 35조  진술조력인 양성 등#KOBLEX-157661",
+        "provision_text": "① 법무부장관은 의사소통 및 의사표현에 어려움이 있는 성폭력범죄의 피해자에 대한 형사사법절차에서의 조력을 위하여 진술조력인을 양성하여야 한다.",
+        "rerank_score": 0.9999936819076538,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 35조  진술조력인 양성 등 1항"
+      },
+      {
+        "first_stage_score": 4.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 26조  성폭력범죄의 피해자에 대한 전담조사제#KOBLEX-157611",
+        "provision_text": "① 검찰총장은 각 지방검찰청 검사장으로 하여금 성폭력범죄 전담 검사를 지정하도록 하여 특별한 사정이 없으면 이들로 하여금 피해자를 조사하게 하여야 한다.",
+        "rerank_score": 0.999993085861206,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 26조  성폭력범죄의 피해자에 대한 전담조사제 1항"
+      },
+      {
+        "first_stage_score": 5.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 34조  신뢰관계에 있는 사람의 동석#KOBLEX-157658",
+        "provision_text": "② 제1항은 수사기관이 같은 항 각 호의 피해자를 조사하는 경우에 관하여 준용한다. <개정 2023.7.11>",
+        "rerank_score": 0.9999914169311523,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 34조  신뢰관계에 있는 사람의 동석 2항"
+      },
+      {
+        "first_stage_score": 26.901058102218766,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 23조  피해자, 신고인 등에 대한 보호조치#KOBLEX-157605",
+        "provision_text": "제23조(피해자, 신고인 등에 대한 보호조치) 법원 또는 수사기관이 성폭력범죄의 피해자, 성폭력범죄를 신고(고소ㆍ고발을 포함한다)한 사람을 증인으로 신문하거나 조사하는 경우에는 「특정범죄신고자 등 보호법」 제5조 및 제7조부터 제13조까지의 규정을 준용한다. 이 경우 「특정범죄신고자 등 보호법」 제9조와 제13조를 제외하고는 보복을 당할 우려가 있음을 요하지 아니한다.",
+        "rerank_score": 0.9999910593032837,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 23조  피해자, 신고인 등에 대한 보호조치"
+      },
+      {
+        "first_stage_score": 32.209503447113114,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 26조  성폭력범죄의 피해자에 대한 전담조사제#KOBLEX-157610",
+        "provision_text": "제26조(성폭력범죄의 피해자에 대한 전담조사제)",
+        "rerank_score": 0.9999895095825195,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 26조  성폭력범죄의 피해자에 대한 전담조사제"
+      },
+      {
+        "first_stage_score": 44.74734711668883,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "장애인활동 지원에 관한 법률 29조  활동지원인력의 결격 사유#KOBLEX-074510",
+        "provision_text": "5. 「성폭력범죄의 처벌 등에 관한 특례법」 제3조부터 제10조까지 및 제15조(같은 법 제3조부터 제9조까지의 미수범으로 한정한다)에 규정된 죄로 금고 이상의 형을 선고받은 사람",
+        "rerank_score": 0.15473654866218567,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "장애인활동 지원에 관한 법률 29조  활동지원인력의 결격 사유 6호"
+      },
+      {
+        "first_stage_score": 54.7639040260202,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "범죄수익은닉의 규제 및 처벌 등에 관한 법률 10조 4 범죄수익등의 추정#KOBLEX-048160",
+        "provision_text": "2. 「성폭력범죄의 처벌 등에 관한 특례법」 제14조 및 제14조의2의 죄",
+        "rerank_score": 0.012351959012448788,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "범죄수익은닉의 규제 및 처벌 등에 관한 법률 10조 4 범죄수익등의 추정 2호"
+      },
+      {
+        "first_stage_score": 57.301289051470846,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "사립학교법 시행령 24조 5 직위해제 대상 비위행위#KOBLEX-190053",
+        "provision_text": "3. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위",
+        "rerank_score": 0.012213900685310364,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "사립학교법 시행령 24조 5 직위해제 대상 비위행위 3호"
+      },
+      {
+        "first_stage_score": 56.205985317856,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 18조  교육활동 침해행위 관련 보고 사항#KOBLEX-219361",
+        "provision_text": "2. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조제1항에 따른 성폭력범죄 행위인 경우",
+        "rerank_score": 0.005769869778305292,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 18조  교육활동 침해행위 관련 보고 사항 2호"
+      },
+      {
+        "first_stage_score": 24.1306227248403,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "신탁법 141조  특별배임죄의 미수#KOBLEX-107604",
+        "provision_text": "제141조(특별배임죄의 미수) 제140조의 미수범은 처벌한다.",
+        "rerank_score": 0.00527622876688838,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "신탁법 141조  특별배임죄의 미수"
+      },
+      {
+        "first_stage_score": 33.59026635581186,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "부정경쟁방지 및 영업비밀보호에 관한 법률 18조 2 미수#KOBLEX-033907",
+        "provision_text": "제18조의2(미수) 제18조제1항 및 제2항의 미수범은 처벌한다.",
+        "rerank_score": 0.13285386562347412,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "부정경쟁방지 및 영업비밀보호에 관한 법률 18조 2 미수"
+      },
+      {
+        "first_stage_score": 33.59026635581186,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "부정경쟁방지 및 영업비밀보호에 관한 법률 18조 2 미수#KOBLEX-171359",
+        "provision_text": "제18조의2(미수) 제18조제1항 및 제2항의 미수범은 처벌한다.",
+        "rerank_score": 0.13285386562347412,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "부정경쟁방지 및 영업비밀보호에 관한 법률 18조 2 미수"
+      },
+      {
+        "first_stage_score": 44.58413974038304,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 3조#KOBLEX-157523",
+        "provision_text": "제2장 성폭력범죄의 처벌 및 절차에 관한 특례",
+        "rerank_score": 0.003759676357731223,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 3조"
+      },
+      {
+        "first_stage_score": 24.1306227248403,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "상법 624조  특별배임죄의 미수#KOBLEX-115862",
+        "provision_text": "제624조(특별배임죄의 미수) 전2조의 미수범은 처벌한다.",
+        "rerank_score": 0.0033829454332590103,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "상법 624조  특별배임죄의 미수"
+      },
+      {
+        "first_stage_score": 38.017576579081776,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 18조  정신건강전문요원의 결격사유#KOBLEX-039616",
+        "provision_text": "3. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 또는 「아동ㆍ청소년의 성보호에 관한 법률」 제2조제2호에 따른 아동ㆍ청소년대상 성범죄를 저질러 금고 이상의 실형 또는 치료감호를 선고받고 그 집행이 끝나거나(집행이 끝난 것으로 보는 경우를 포함한다) 집행이 면제되지 아니한 사람",
+        "rerank_score": 0.0007680616690777242,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 18조  정신건강전문요원의 결격사유 4호"
+      },
+      {
+        "first_stage_score": 15.766659159720069,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 294조 4 피해자 등의 공판기록 열람ㆍ등사#KOBLEX-232521",
+        "provision_text": "①소송계속 중인 사건의 피해자(피해자가 사망하거나 그 심신에 중대한 장애가 있는 경우에는 그 배우자ㆍ직계친족 및 형제자매를 포함한다), 피해자 본인의 법정대리인 또는 이들로부터 위임을 받은 피해자 본인의 배우자ㆍ직계친족ㆍ형제자매ㆍ변호사는 소송기록의 열람 또는 등사를 재판장에게 신청할 수 있다.",
+        "rerank_score": 0.9903379678726196,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "형사소송법 294조 4 피해자 등의 공판기록 열람ㆍ등사 1항"
+      },
+      {
+        "first_stage_score": 16.55968795983751,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 338조 3 피해자 등의 공판기록 열람ㆍ복사#KOBLEX-093286",
+        "provision_text": "① 소송이 계속되어 있는 사건의 피해자(피해자가 사망하거나 심신에 중대한 장애가 있는 경우에는 배우자, 직계친족 및 형제자매를 포함한다), 피해자 본인의 법정대리인 또는 이들로부터 위임을 받은 피해자 본인의 배우자ㆍ직계친족ㆍ형제자매ㆍ변호사는 소송기록의 열람 또는 복사를 재판장에게 신청할 수 있다.",
+        "rerank_score": 0.9865113496780396,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "군사법원법 338조 3 피해자 등의 공판기록 열람ㆍ복사 1항"
+      },
+      {
+        "first_stage_score": 16.55968795983751,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 338조 3 피해자 등의 공판기록 열람ㆍ복사#KOBLEX-159251",
+        "provision_text": "① 소송이 계속되어 있는 사건의 피해자(피해자가 사망하거나 심신에 중대한 장애가 있는 경우에는 배우자, 직계친족 및 형제자매를 포함한다), 피해자 본인의 법정대리인 또는 이들로부터 위임을 받은 피해자 본인의 배우자ㆍ직계친족ㆍ형제자매ㆍ변호사는 소송기록의 열람 또는 복사를 재판장에게 신청할 수 있다.",
+        "rerank_score": 0.9865113496780396,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "군사법원법 338조 3 피해자 등의 공판기록 열람ㆍ복사 1항"
+      },
+      {
+        "first_stage_score": 16.065728667525534,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 30조  19세미만피해자등 진술 내용 등의 영상녹화 및 보존 등#KOBLEX-157629",
+        "provision_text": "② 검사 또는 사법경찰관은 19세미만피해자등을 조사하기 전에 다음 각 호의 사실을 피해자의 나이, 인지적 발달 단계, 심리 상태, 장애 정도 등을 고려한 적절한 방식으로 피해자에게 설명하여야 한다. 1. 조사 과정이 영상녹화된다는 사실 2. 영상녹화된 영상녹화물이 증거로 사용될 수 있다는 사실",
+        "rerank_score": 0.9856609106063843,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 30조  19세미만피해자등 진술 내용 등의 영상녹화 및 보존 등 2항"
+      },
+      {
+        "first_stage_score": 16.567588047999962,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "가정폭력범죄의 처벌 등에 관한 특례법 9조  가정보호사건의 처리#KOBLEX-016685",
+        "provision_text": "② 다음 각 호의 경우에는 제1항을 적용할 수 있다. 1. 피해자의 고소가 있어야 공소를 제기할 수 있는 가정폭력범죄에서 고소가 없거나 취소된 경우 2. 피해자의 명시적인 의사에 반하여 공소를 제기할 수 없는 가정폭력범죄에서 피해자가 처벌을 희망하지 아니한다는 명시적 의사표시를 하였거나 처벌을 희망하는 의사표시를 철회한 경우",
+        "rerank_score": 0.9818273186683655,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "가정폭력범죄의 처벌 등에 관한 특례법 9조  가정보호사건의 처리 2항"
+      },
+      {
+        "first_stage_score": 18.60975752359972,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "국민의 형사재판 참여에 관한 법률 11조  통상절차 회부#KOBLEX-219873",
+        "provision_text": "① 법원은 피고인의 질병 등으로 공판절차가 장기간 정지되거나 피고인에 대한 구속기간의 만료, 성폭력범죄 피해자의 보호, 그 밖에 심리의 제반 사정에 비추어 국민참여재판을 계속 진행하는 것이 부적절하다고 인정하는 경우에는 직권 또는 검사·피고인·변호인이나 성폭력범죄 피해자 또는 법정대리인의 신청에 따라 결정으로 사건을 지방법원 본원 합의부가 국민참여재판에 의하지 아니하고 심판하게 할 수 있다. <개정 2012.1.17>",
+        "rerank_score": 0.9770539402961731,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "국민의 형사재판 참여에 관한 법률 11조  통상절차 회부 1항"
+      },
+      {
+        "first_stage_score": 19.779211609967412,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "남북 주민 사이의 가족관계와 상속 등에 관한 특례법 22조  (벌칙)#KOBLEX-162160",
+        "provision_text": "③ 제1항의 미수범은 처벌한다.",
+        "rerank_score": 0.31768882274627686,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "남북 주민 사이의 가족관계와 상속 등에 관한 특례법 22조  (벌칙) 3항"
+      },
+      {
+        "first_stage_score": 19.779211609967412,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "마약류 불법거래 방지에 관한 특례법 7조  불법수익등의 은닉 및 가장#KOBLEX-006515",
+        "provision_text": "② 제1항의 미수범은 처벌한다.",
+        "rerank_score": 0.3067435920238495,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "마약류 불법거래 방지에 관한 특례법 7조  불법수익등의 은닉 및 가장 2항"
+      },
+      {
+        "first_stage_score": 19.779211609967412,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "마약류 불법거래 방지에 관한 특례법 7조  불법수익등의 은닉 및 가장#KOBLEX-045265",
+        "provision_text": "② 제1항의 미수범은 처벌한다.",
+        "rerank_score": 0.3067435920238495,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "마약류 불법거래 방지에 관한 특례법 7조  불법수익등의 은닉 및 가장 2항"
+      },
+      {
+        "first_stage_score": 19.779211609967412,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "군사기지 및 군사시설 보호법 24조  벌칙#KOBLEX-118649",
+        "provision_text": "⑧ 제1항의 미수범은 처벌한다.",
+        "rerank_score": 0.2365100383758545,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "군사기지 및 군사시설 보호법 24조  벌칙 8항"
+      },
+      {
+        "first_stage_score": 20.274360077478107,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "국가보안법 4조  목적수행#KOBLEX-076947",
+        "provision_text": "②제1항의 미수범은 처벌한다.",
+        "rerank_score": 0.15464454889297485,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "국가보안법 4조  목적수행 2항"
+      },
+      {
+        "first_stage_score": 20.274360077478107,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "산림법 116조  산림절도죄#KOBLEX-008348",
+        "provision_text": "②제1항의 미수범은 처벌한다.",
+        "rerank_score": 0.15464454889297485,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "산림법 116조  산림절도죄 2항"
+      },
+      {
+        "first_stage_score": 19.779211609967412,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "미수복지등에서귀순한의약업자에관한특별조치법 6조  벌칙#KOBLEX-086764",
+        "provision_text": "②전항의 미수범은 이를 처벌한다.",
+        "rerank_score": 0.10604825615882874,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "미수복지등에서귀순한의약업자에관한특별조치법 6조  벌칙 2항"
+      },
+      {
+        "first_stage_score": 20.274360077478107,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "형법 111조  외국에 대한 사전#KOBLEX-192916",
+        "provision_text": "②전항의 미수범은 처벌한다.",
+        "rerank_score": 0.09667638689279556,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "형법 111조  외국에 대한 사전 2항"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "가정폭력범죄의 처벌 등에 관한 특례법 9조  가정보호사건의 처리#KOBLEX-016685": "② 다음 각 호의 경우에는 제1항을 적용할 수 있다. 1. 피해자의 고소가 있어야 공소를 제기할 수 있는 가정폭력범죄에서 고소가 없거나 취소된 경우 2. 피해자의 명시적인 의사에 반하여 공소를 제기할 수 없는 가정폭력범죄에서 피해자가 처벌을 희망하지 아니한다는 명시적 의사표시를 하였거나 처벌을 희망하는 의사표시를 철회한 경우",
+      "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 18조  교육활동 침해행위 관련 보고 사항#KOBLEX-219361": "2. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조제1항에 따른 성폭력범죄 행위인 경우",
+      "국가보안법 4조  목적수행#KOBLEX-076947": "②제1항의 미수범은 처벌한다.",
+      "국민의 형사재판 참여에 관한 법률 11조  통상절차 회부#KOBLEX-219873": "① 법원은 피고인의 질병 등으로 공판절차가 장기간 정지되거나 피고인에 대한 구속기간의 만료, 성폭력범죄 피해자의 보호, 그 밖에 심리의 제반 사정에 비추어 국민참여재판을 계속 진행하는 것이 부적절하다고 인정하는 경우에는 직권 또는 검사·피고인·변호인이나 성폭력범죄 피해자 또는 법정대리인의 신청에 따라 결정으로 사건을 지방법원 본원 합의부가 국민참여재판에 의하지 아니하고 심판하게 할 수 있다. <개정 2012.1.17>",
+      "군사기지 및 군사시설 보호법 24조  벌칙#KOBLEX-118649": "⑧ 제1항의 미수범은 처벌한다.",
+      "군사법원법 274조  고소의 취소#KOBLEX-093042": "③ 피해자가 명시한 의사에 반하여 죄를 물을 수 없는 사건에서 처벌을 희망하는 의사표시의 철회에 관하여도 제1항과 제2항을 준용한다.",
+      "군사법원법 274조  고소의 취소#KOBLEX-159007": "③ 피해자가 명시한 의사에 반하여 죄를 물을 수 없는 사건에서 처벌을 희망하는 의사표시의 철회에 관하여도 제1항과 제2항을 준용한다.",
+      "군사법원법 338조 3 피해자 등의 공판기록 열람ㆍ복사#KOBLEX-093286": "① 소송이 계속되어 있는 사건의 피해자(피해자가 사망하거나 심신에 중대한 장애가 있는 경우에는 배우자, 직계친족 및 형제자매를 포함한다), 피해자 본인의 법정대리인 또는 이들로부터 위임을 받은 피해자 본인의 배우자ㆍ직계친족ㆍ형제자매ㆍ변호사는 소송기록의 열람 또는 복사를 재판장에게 신청할 수 있다.",
+      "군사법원법 338조 3 피해자 등의 공판기록 열람ㆍ복사#KOBLEX-159251": "① 소송이 계속되어 있는 사건의 피해자(피해자가 사망하거나 심신에 중대한 장애가 있는 경우에는 배우자, 직계친족 및 형제자매를 포함한다), 피해자 본인의 법정대리인 또는 이들로부터 위임을 받은 피해자 본인의 배우자ㆍ직계친족ㆍ형제자매ㆍ변호사는 소송기록의 열람 또는 복사를 재판장에게 신청할 수 있다.",
+      "군사법원법 382조  공소기각의 판결#KOBLEX-093422": "6. 피해자가 명시한 의사에 반하여 공소를 제기할 수 없는 사건에 대하여 처벌을 희망하지 아니하는 의사 표시가 있거나 처벌을 희망하는 의사 표시가 철회되었을 때",
+      "군사법원법 382조  공소기각의 판결#KOBLEX-159387": "6. 피해자가 명시한 의사에 반하여 공소를 제기할 수 없는 사건에 대하여 처벌을 희망하지 아니하는 의사 표시가 있거나 처벌을 희망하는 의사 표시가 철회되었을 때",
+      "남북 주민 사이의 가족관계와 상속 등에 관한 특례법 22조  (벌칙)#KOBLEX-162160": "③ 제1항의 미수범은 처벌한다.",
+      "마약류 불법거래 방지에 관한 특례법 7조  불법수익등의 은닉 및 가장#KOBLEX-006515": "② 제1항의 미수범은 처벌한다.",
+      "마약류 불법거래 방지에 관한 특례법 7조  불법수익등의 은닉 및 가장#KOBLEX-045265": "② 제1항의 미수범은 처벌한다.",
+      "미수복지등에서귀순한의약업자에관한특별조치법 6조  벌칙#KOBLEX-086764": "②전항의 미수범은 이를 처벌한다.",
+      "범죄수익은닉의 규제 및 처벌 등에 관한 법률 10조 4 범죄수익등의 추정#KOBLEX-048160": "2. 「성폭력범죄의 처벌 등에 관한 특례법」 제14조 및 제14조의2의 죄",
+      "보험업법 205조  미수범#KOBLEX-022640": "제205조(미수범) 제197조 및 제198조의 미수범은 처벌한다.",
+      "부정경쟁방지 및 영업비밀보호에 관한 법률 18조 2 미수#KOBLEX-033907": "제18조의2(미수) 제18조제1항 및 제2항의 미수범은 처벌한다.",
+      "부정경쟁방지 및 영업비밀보호에 관한 법률 18조 2 미수#KOBLEX-171359": "제18조의2(미수) 제18조제1항 및 제2항의 미수범은 처벌한다.",
+      "사립학교법 시행령 24조 5 직위해제 대상 비위행위#KOBLEX-190053": "3. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위",
+      "산림법 116조  산림절도죄#KOBLEX-008348": "②제1항의 미수범은 처벌한다.",
+      "상법 624조  특별배임죄의 미수#KOBLEX-115862": "제624조(특별배임죄의 미수) 전2조의 미수범은 처벌한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 1조  목적#KOBLEX-157519": "제1조(목적) 이 법은 성폭력범죄의 처벌 및 그 절차에 관한 특례를 규정함으로써 성폭력범죄 피해자의 생명과 신체의 안전을 보장하고 건강한 사회질서의 확립에 이바지함을 목적으로 한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 23조  피해자, 신고인 등에 대한 보호조치#KOBLEX-157605": "제23조(피해자, 신고인 등에 대한 보호조치) 법원 또는 수사기관이 성폭력범죄의 피해자, 성폭력범죄를 신고(고소ㆍ고발을 포함한다)한 사람을 증인으로 신문하거나 조사하는 경우에는 「특정범죄신고자 등 보호법」 제5조 및 제7조부터 제13조까지의 규정을 준용한다. 이 경우 「특정범죄신고자 등 보호법」 제9조와 제13조를 제외하고는 보복을 당할 우려가 있음을 요하지 아니한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 24조  피해자의 신원과 사생활 비밀 누설 금지#KOBLEX-157608": "② 누구든지 제1항에 따른 피해자의 주소, 성명, 나이, 직업, 학교, 용모, 그 밖에 피해자를 특정하여 파악할 수 있는 인적사항이나 사진 등을 피해자의 동의를 받지 아니하고 신문 등 인쇄물에 싣거나 「방송법」 제2조제1호에 따른 방송 또는 정보통신망을 통하여 공개하여서는 아니 된다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 26조  성폭력범죄의 피해자에 대한 전담조사제#KOBLEX-157610": "제26조(성폭력범죄의 피해자에 대한 전담조사제)",
+      "성폭력범죄의 처벌 등에 관한 특례법 26조  성폭력범죄의 피해자에 대한 전담조사제#KOBLEX-157611": "① 검찰총장은 각 지방검찰청 검사장으로 하여금 성폭력범죄 전담 검사를 지정하도록 하여 특별한 사정이 없으면 이들로 하여금 피해자를 조사하게 하여야 한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 27조  성폭력범죄 피해자에 대한 변호사 선임의 특례#KOBLEX-157616": "① 성폭력범죄의 피해자 및 그 법정대리인(이하 \"피해자등\"이라 한다)은 형사절차상 입을 수 있는 피해를 방어하고 법률적 조력을 보장하기 위하여 변호사를 선임할 수 있다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 29조  수사 및 재판절차에서의 배려#KOBLEX-157625": "② 수사기관과 법원은 성폭력범죄의 피해자를 조사하거나 심리ㆍ재판할 때 피해자가 편안한 상태에서 진술할 수 있는 환경을 조성하여야 하며, 조사 및 심리ㆍ재판 횟수는 필요한 범위에서 최소한으로 하여야 한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 30조  19세미만피해자등 진술 내용 등의 영상녹화 및 보존 등#KOBLEX-157629": "② 검사 또는 사법경찰관은 19세미만피해자등을 조사하기 전에 다음 각 호의 사실을 피해자의 나이, 인지적 발달 단계, 심리 상태, 장애 정도 등을 고려한 적절한 방식으로 피해자에게 설명하여야 한다. 1. 조사 과정이 영상녹화된다는 사실 2. 영상녹화된 영상녹화물이 증거로 사용될 수 있다는 사실",
+      "성폭력범죄의 처벌 등에 관한 특례법 34조  신뢰관계에 있는 사람의 동석#KOBLEX-157658": "② 제1항은 수사기관이 같은 항 각 호의 피해자를 조사하는 경우에 관하여 준용한다. <개정 2023.7.11>",
+      "성폭력범죄의 처벌 등에 관한 특례법 35조  진술조력인 양성 등#KOBLEX-157661": "① 법무부장관은 의사소통 및 의사표현에 어려움이 있는 성폭력범죄의 피해자에 대한 형사사법절차에서의 조력을 위하여 진술조력인을 양성하여야 한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 3조#KOBLEX-157523": "제2장 성폭력범죄의 처벌 및 절차에 관한 특례",
+      "스토킹범죄의 처벌 등에 관한 법률 1조  목적#KOBLEX-130418": "제1조(목적) 이 법은 스토킹범죄의 처벌 및 그 절차에 관한 특례와 스토킹범죄 피해자에 대한 보호절차를 규정함으로써 피해자를 보호하고 건강한 사회질서의 확립에 이바지함을 목적으로 한다.",
+      "신탁법 141조  특별배임죄의 미수#KOBLEX-107604": "제141조(특별배임죄의 미수) 제140조의 미수범은 처벌한다.",
+      "아동복지법 73조  미수범#KOBLEX-171206": "제73조(미수범) 제71조제1항제1호의 미수범은 처벌한다.",
+      "장애인복지법 59조 16 진술조력인의 참여 등#KOBLEX-188533": "① 검사, 사법경찰관 또는 법원은 범죄사건의 피해자인 장애인(이하 이 조에서 \"피해자\"라 한다)이 의사소통이나 의사표현에 어려움이 있는 경우 피해자에 대한 형사사법절차에서의 조력과 원활한 조사ㆍ검증 또는 증인 신문을 위하여 직권이나 피해자 또는 제59조의8제1항에 따른 보조인(이하 이 조에서 \"보조인\"이라 한다)의 신청에 따라 「성폭력범죄의 처벌 등에 관한 특례법」 제35조제1항에 따른 진술조력인으로 하여금 조사과정, 검증 또는 증인 신문에 참여하여 의사소통을 중개하거나 보조하게 할 수 있다.",
+      "장애인활동 지원에 관한 법률 29조  활동지원인력의 결격 사유#KOBLEX-074510": "5. 「성폭력범죄의 처벌 등에 관한 특례법」 제3조부터 제10조까지 및 제15조(같은 법 제3조부터 제9조까지의 미수범으로 한정한다)에 규정된 죄로 금고 이상의 형을 선고받은 사람",
+      "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 18조  정신건강전문요원의 결격사유#KOBLEX-039616": "3. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 또는 「아동ㆍ청소년의 성보호에 관한 법률」 제2조제2호에 따른 아동ㆍ청소년대상 성범죄를 저질러 금고 이상의 실형 또는 치료감호를 선고받고 그 집행이 끝나거나(집행이 끝난 것으로 보는 경우를 포함한다) 집행이 면제되지 아니한 사람",
+      "형법 100조  미수범#KOBLEX-192892": "제100조(미수범) 전8조의 미수범은 처벌한다.",
+      "형법 111조  외국에 대한 사전#KOBLEX-192916": "②전항의 미수범은 처벌한다.",
+      "형법 149조  미수범#KOBLEX-192992": "제149조(미수범) 전4조의 미수범은 처벌한다.",
+      "형법 162조  미수범#KOBLEX-193018": "제162조(미수범) 전2조의 미수범은 처벌한다.",
+      "형법 202조  미수범#KOBLEX-193097": "제202조(미수범) 전4조의 미수범은 처벌한다.",
+      "형법 254조  미수범#KOBLEX-193187": "제254조(미수범) 제250조, 제252조 및 제253조의 미수범은 처벌한다.",
+      "형법 280조  미수범#KOBLEX-193254": "제280조(미수범) 전4조의 미수범은 처벌한다.",
+      "형법 286조  미수범#KOBLEX-193266": "제286조(미수범) 전3조의 미수범은 처벌한다.",
+      "형법 89조  미수범#KOBLEX-192870": "제89조(미수범) 전2조의 미수범은 처벌한다.",
+      "형사소송법 232조  고소의 취소#KOBLEX-232193": "③ 피해자의 명시한 의사에 반하여 공소를 제기할 수 없는 사건에서 처벌을 원하는 의사표시를 철회한 경우에도 제1항과 제2항을 준용한다.",
+      "형사소송법 294조 4 피해자 등의 공판기록 열람ㆍ등사#KOBLEX-232521": "①소송계속 중인 사건의 피해자(피해자가 사망하거나 그 심신에 중대한 장애가 있는 경우에는 그 배우자ㆍ직계친족 및 형제자매를 포함한다), 피해자 본인의 법정대리인 또는 이들로부터 위임을 받은 피해자 본인의 배우자ㆍ직계친족ㆍ형제자매ㆍ변호사는 소송기록의 열람 또는 등사를 재판장에게 신청할 수 있다.",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232632": "6. 피해자의 명시한 의사에 반하여 공소를 제기할 수 없는 사건에서 처벌을 원하지 아니하는 의사표시를 하거나 처벌을 원하는 의사표시를 철회하였을 때"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "Statutory provision defining indecent assault using a victim’s unconscious state as an offense under the Special Act on Punishment of Sexual Violence"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The completion criteria require a provision stating that indecent acts using a victim’s unconscious state constitute aggravated indecent assault under the Special Act on Punishment of Sexual Violence. None of the supplied provisions define the offense elements or incorporate unconsciousness as an aggravating factor; C007 and C008 concern victim privacy and procedural care, not offense elements.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "Provision explicitly permitting punishment of attempted aggravated indecent assault under the Special Act on Punishment of Sexual Violence"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The completion criteria require a provision explicitly permitting punishment of attempted aggravated indecent assault. The supplied attempt provisions (C011–C020) are generic or statute-specific but none reference the Special Act’s aggravated indecent assault offense or its attempt; therefore no provision satisfies the criteria.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E3",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "Statutory penalty provision for aggravated indecent assault under the Special Act on Punishment of Sexual Violence"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The completion criteria require a provision specifying the statutory penalty (imprisonment/fine) for aggravated indecent assault. None of the supplied provisions set penalties for this offense; they address procedural dismissal, victim privacy, or unrelated attempt rules.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 14,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "심신상실 상태의 피해자를 이용한 추행 시도 행위가 성폭력범죄의 처벌 등에 관한 특례법상 강제추행죄의 구성요건에 해당하는지 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "추행 행위가 저지되어 완결되지 않은 경우 미수범으로 처벌되는지 여부",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "피해자의 심신상실 상태를 이용한 추행 행위가 강제추행죄로 처벌되는지 명시하는 조항을 확인",
+        "critical": true,
+        "description": "피해자의 심신상실 상태를 이용한 추행 행위가 강제추행죄의 구성요건에 해당하는지 규정한 법조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "element",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "강제추행죄의 미수범 처벌 가능 여부를 명시하는 조항을 확인",
+        "critical": true,
+        "description": "강제추행죄의 미수범 처벌 규정을 규정한 법조항",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      },
+      {
+        "completion_criteria": "강제추행죄에 대한 법정형(징역 또는 벌금 등)을 명시하는 조항을 확인",
+        "critical": true,
+        "description": "강제추행죄에 대한 법정형(처벌 내용)을 규정한 법조항",
+        "evidence_item_id": "E3",
+        "evidence_type": "remedy",
+        "issue_id": "I1"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을과 함께 술자리에 갔다. 을이 술에 취해 정신을 잃자, 갑은 을의 상태를 이용해 추행을 시도하려 했지만, 이를 목격한 다른 친구 병에 의해 저지되었다. 이 사건이 경찰에 신고되어 조사가 시작되었다. [질문] 갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "심신상실",
+          "추행",
+          "강제추행",
+          "성폭력범죄",
+          "처벌"
+        ],
+        "query_text": "피해자가 심신상실 상태에 있는 것을 이용하여 추행한 자에 대한 처벌 규정 [원문 맥락] 이 사건이 경찰에 신고되어 조사가 시작되었다. 갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "강제추행",
+          "미수",
+          "처벌",
+          "형법"
+        ],
+        "query_text": "강제추행죄의 미수범 처벌 규정 [원문 맥락] 이 사건이 경찰에 신고되어 조사가 시작되었다. 갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "형법",
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "강제추행",
+          "법정형",
+          "징역",
+          "벌금",
+          "처벌"
+        ],
+        "query_text": "강제추행죄에 대한 법정형 규정 [원문 맥락] 이 사건이 경찰에 신고되어 조사가 시작되었다. 갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ3",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "심신상실",
+          "추행",
+          "강제추행",
+          "성폭력범죄의 처벌 등에 관한 특례법",
+          "구성요건"
+        ],
+        "query_text": "성폭력범죄의 처벌 등에 관한 특례법상 심신상실 상태의 피해자를 이용한 추행죄 구성요건 [원문 맥락] 이 사건이 경찰에 신고되어 조사가 시작되었다. 갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ1",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "강제추행",
+          "미수",
+          "처벌",
+          "성폭력범죄의 처벌 등에 관한 특례법",
+          "미수범"
+        ],
+        "query_text": "성폭력범죄의 처벌 등에 관한 특례법상 강제추행죄 미수범 처벌 규정 [원문 맥락] 이 사건이 경찰에 신고되어 조사가 시작되었다. 갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ2",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법",
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "강제추행",
+          "법정형",
+          "징역",
+          "벌금",
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "query_text": "성폭력범죄의 처벌 등에 관한 특례법상 강제추행죄 법정형 [원문 맥락] 이 사건이 경찰에 신고되어 조사가 시작되었다. 갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ3",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "심신상실",
+          "추행",
+          "강제추행",
+          "성폭력범죄",
+          "구성요건"
+        ],
+        "query_text": "심신상실 상태 피해자 추행 강제추행죄 구성요건 [원문 맥락] 이 사건이 경찰에 신고되어 조사가 시작되었다. 갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ1",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "강제추행",
+          "미수",
+          "처벌",
+          "형법",
+          "성폭력범죄"
+        ],
+        "query_text": "강제추행 미수범 처벌 가능 여부 [원문 맥락] 이 사건이 경찰에 신고되어 조사가 시작되었다. 갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ2",
+        "statute_hints": [
+          "형법",
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "강제추행",
+          "법정형",
+          "징역",
+          "벌금",
+          "성폭력범죄"
+        ],
+        "query_text": "강제추행 법정형 징역 벌금 [원문 맥락] 이 사건이 경찰에 신고되어 조사가 시작되었다. 갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ3",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을과 함께 술자리에 갔다. 을이 술에 취해 정신을 잃자, 갑은 을의 상태를 이용해 추행을 시도하려 했지만, 이를 목격한 다른 친구 병에 의해 저지되었다. 이 사건이 경찰에 신고되어 조사가 시작되었다.\n\n[질문]\n갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+    "remaining_request_budget": 0,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "피해자의 심신상실 상태를 이용한 추행 행위가 강제추행죄로 처벌되는지 명시하는 조항을 확인",
+        "critical": true,
+        "description": "피해자의 심신상실 상태를 이용한 추행 행위가 강제추행죄의 구성요건에 해당하는지 규정한 법조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "element",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "강제추행죄의 미수범 처벌 가능 여부를 명시하는 조항을 확인",
+        "critical": true,
+        "description": "강제추행죄의 미수범 처벌 규정을 규정한 법조항",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      },
+      {
+        "completion_criteria": "강제추행죄에 대한 법정형(징역 또는 벌금 등)을 명시하는 조항을 확인",
+        "critical": true,
+        "description": "강제추행죄에 대한 법정형(처벌 내용)을 규정한 법조항",
+        "evidence_item_id": "E3",
+        "evidence_type": "remedy",
+        "issue_id": "I1"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "a862ed78-dff1-4acc-8736-0bc4a7c9c068",
+    "seen_provision_ids": [
+      "스토킹범죄의 처벌 등에 관한 법률 1조  목적#KOBLEX-130418",
+      "형법 162조  미수범#KOBLEX-193018",
+      "범죄수익은닉의 규제 및 처벌 등에 관한 법률 10조 4 범죄수익등의 추정#KOBLEX-048160",
+      "형법 149조  미수범#KOBLEX-192992",
+      "형법 89조  미수범#KOBLEX-192870",
+      "가정폭력범죄의 처벌 등에 관한 특례법 9조  가정보호사건의 처리#KOBLEX-016685",
+      "성폭력범죄의 처벌 등에 관한 특례법 24조  피해자의 신원과 사생활 비밀 누설 금지#KOBLEX-157608",
+      "국민의 형사재판 참여에 관한 법률 11조  통상절차 회부#KOBLEX-219873",
+      "군사법원법 338조 3 피해자 등의 공판기록 열람ㆍ복사#KOBLEX-093286",
+      "장애인활동 지원에 관한 법률 29조  활동지원인력의 결격 사유#KOBLEX-074510",
+      "성폭력범죄의 처벌 등에 관한 특례법 26조  성폭력범죄의 피해자에 대한 전담조사제#KOBLEX-157611",
+      "형법 111조  외국에 대한 사전#KOBLEX-192916",
+      "성폭력범죄의 처벌 등에 관한 특례법 35조  진술조력인 양성 등#KOBLEX-157661",
+      "형사소송법 232조  고소의 취소#KOBLEX-232193",
+      "형법 100조  미수범#KOBLEX-192892",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232632",
+      "성폭력범죄의 처벌 등에 관한 특례법 23조  피해자, 신고인 등에 대한 보호조치#KOBLEX-157605",
+      "상법 624조  특별배임죄의 미수#KOBLEX-115862",
+      "장애인복지법 59조 16 진술조력인의 참여 등#KOBLEX-188533",
+      "군사법원법 382조  공소기각의 판결#KOBLEX-159387",
+      "군사기지 및 군사시설 보호법 24조  벌칙#KOBLEX-118649",
+      "형법 254조  미수범#KOBLEX-193187",
+      "군사법원법 338조 3 피해자 등의 공판기록 열람ㆍ복사#KOBLEX-159251",
+      "남북 주민 사이의 가족관계와 상속 등에 관한 특례법 22조  (벌칙)#KOBLEX-162160",
+      "성폭력범죄의 처벌 등에 관한 특례법 26조  성폭력범죄의 피해자에 대한 전담조사제#KOBLEX-157610",
+      "산림법 116조  산림절도죄#KOBLEX-008348",
+      "마약류 불법거래 방지에 관한 특례법 7조  불법수익등의 은닉 및 가장#KOBLEX-045265",
+      "성폭력범죄의 처벌 등에 관한 특례법 29조  수사 및 재판절차에서의 배려#KOBLEX-157625",
+      "아동복지법 73조  미수범#KOBLEX-171206",
+      "성폭력범죄의 처벌 등에 관한 특례법 27조  성폭력범죄 피해자에 대한 변호사 선임의 특례#KOBLEX-157616",
+      "보험업법 205조  미수범#KOBLEX-022640",
+      "부정경쟁방지 및 영업비밀보호에 관한 법률 18조 2 미수#KOBLEX-171359",
+      "성폭력범죄의 처벌 등에 관한 특례법 30조  19세미만피해자등 진술 내용 등의 영상녹화 및 보존 등#KOBLEX-157629",
+      "형법 286조  미수범#KOBLEX-193266",
+      "사립학교법 시행령 24조 5 직위해제 대상 비위행위#KOBLEX-190053",
+      "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 18조  교육활동 침해행위 관련 보고 사항#KOBLEX-219361",
+      "마약류 불법거래 방지에 관한 특례법 7조  불법수익등의 은닉 및 가장#KOBLEX-006515",
+      "부정경쟁방지 및 영업비밀보호에 관한 법률 18조 2 미수#KOBLEX-033907",
+      "형법 202조  미수범#KOBLEX-193097",
+      "형사소송법 294조 4 피해자 등의 공판기록 열람ㆍ등사#KOBLEX-232521",
+      "형법 280조  미수범#KOBLEX-193254",
+      "신탁법 141조  특별배임죄의 미수#KOBLEX-107604",
+      "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 18조  정신건강전문요원의 결격사유#KOBLEX-039616",
+      "군사법원법 274조  고소의 취소#KOBLEX-093042",
+      "성폭력범죄의 처벌 등에 관한 특례법 3조#KOBLEX-157523",
+      "성폭력범죄의 처벌 등에 관한 특례법 34조  신뢰관계에 있는 사람의 동석#KOBLEX-157658",
+      "성폭력범죄의 처벌 등에 관한 특례법 1조  목적#KOBLEX-157519",
+      "군사법원법 274조  고소의 취소#KOBLEX-159007",
+      "국가보안법 4조  목적수행#KOBLEX-076947",
+      "미수복지등에서귀순한의약업자에관한특별조치법 6조  벌칙#KOBLEX-086764",
+      "군사법원법 382조  공소기각의 판결#KOBLEX-093422"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

@@ -1,0 +1,754 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-17T14:06:38.828598+00:00",
+  "end_to_end_latency_ms": 284901.487,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "e9680ba8-6003-41ce-9d71-aece3d2aff2c",
+  "state": {
+    "accepted_provision_ids": [
+      "군사법원법 380조  무죄의 판결#KOBLEX-093410",
+      "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위#KOBLEX-020990",
+      "군사법원법 380조  무죄의 판결#KOBLEX-159375",
+      "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위#KOBLEX-039418"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 18.67156581032398,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "간접투자자산 운용업법 110조  (해산사유)#KOBLEX-082155",
+        "provision_text": "5. 법원의 명령 또는 판결",
+        "rerank_score": 0.9999977350234985,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "간접투자자산 운용업법 110조  (해산사유) 5호"
+      },
+      {
+        "first_stage_score": 18.67156581032398,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "상법 227조  해산원인#KOBLEX-114119",
+        "provision_text": "6. 법원의 명령 또는 판결",
+        "rerank_score": 0.9999977350234985,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "상법 227조  해산원인 6호"
+      },
+      {
+        "first_stage_score": 17.821815824691058,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "공익신고자 보호법 시행령 21조  보상금의 지급사유#KOBLEX-120529",
+        "provision_text": "3. 손해배상 또는 부당이득 반환 등의 판결",
+        "rerank_score": 0.9999974966049194,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "공익신고자 보호법 시행령 21조  보상금의 지급사유 3호"
+      },
+      {
+        "first_stage_score": 19.127570200187655,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 37조  판결, 결정, 명령#KOBLEX-231526",
+        "provision_text": "제37조(판결, 결정, 명령)",
+        "rerank_score": 0.9999974966049194,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "형사소송법 37조  판결, 결정, 명령"
+      },
+      {
+        "first_stage_score": 18.67156581032398,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 257조  변론 없이 하는 판결#KOBLEX-064208",
+        "provision_text": "제257조(변론 없이 하는 판결)",
+        "rerank_score": 0.9999972581863403,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "민사소송법 257조  변론 없이 하는 판결"
+      },
+      {
+        "first_stage_score": 18.23679758473856,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 454조 2 판결 전의 결정에 대한 항고#KOBLEX-093594",
+        "provision_text": "제454조의2(판결 전의 결정에 대한 항고)",
+        "rerank_score": 0.9999971389770508,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "군사법원법 454조 2 판결 전의 결정에 대한 항고"
+      },
+      {
+        "first_stage_score": 18.23679758473856,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 454조 2 판결 전의 결정에 대한 항고#KOBLEX-159559",
+        "provision_text": "제454조의2(판결 전의 결정에 대한 항고)",
+        "rerank_score": 0.9999971389770508,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "군사법원법 454조 2 판결 전의 결정에 대한 항고"
+      },
+      {
+        "first_stage_score": 22.145213121685572,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "항만법 28조  금지행위 등#KOBLEX-089559",
+        "provision_text": "① 누구든지 정당한 사유 없이 항만에서 다음 각 호의 행위를 해서는 아니 된다. 1. 유독물이나 동물의 사체를 버리는 행위 2. 다량의 토석(土石)이나 쓰레기를 버리는 등 항만의 깊이에 영향을 줄 우려가 있는 행위 3. 그 밖에 항만의 보전 또는 그 사용에 지장을 줄 우려가 있는 행위로서 대통령령으로 정하는 행위",
+        "rerank_score": 0.9999971389770508,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "항만법 28조  금지행위 등 1항"
+      },
+      {
+        "first_stage_score": 29.435366870903476,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075693",
+        "provision_text": "3. 정당한 사유 없이 작업ㆍ교육ㆍ교화프로그램 등을 거부하거나 태만히 하는 행위",
+        "rerank_score": 0.9999971389770508,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌 3호"
+      },
+      {
+        "first_stage_score": 29.435366870903476,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213880",
+        "provision_text": "3. 정당한 사유 없이 작업ㆍ교육ㆍ교화프로그램 등을 거부하거나 태만히 하는 행위",
+        "rerank_score": 0.9999971389770508,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌 3호"
+      },
+      {
+        "first_stage_score": 22.60043444440753,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 42조  재판의 정지 등#KOBLEX-188024",
+        "provision_text": "② 제1항 본문에 따른 재판정지기간은 「형사소송법」 제92조제1항ㆍ제2항 및 「군사법원법」 제132조제1항ㆍ제2항의 구속기간과 「민사소송법」 제199조의 판결 선고기간에 산입하지 아니한다.",
+        "rerank_score": 0.999974250793457,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "헌법재판소법 42조  재판의 정지 등 2항"
+      },
+      {
+        "first_stage_score": 20.140038821535448,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "국적법 13조  대한민국 국적의 선택 절차#KOBLEX-067961",
+        "provision_text": "④ 제1항부터 제3항까지의 규정에 따른 신고의 수리(受理) 요건, 신고 절차, 그 밖에 필요한 사항은 대통령령으로 정한다. <개정 2010.5.4>",
+        "rerank_score": 0.9999722242355347,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "국적법 13조  대한민국 국적의 선택 절차 4항"
+      },
+      {
+        "first_stage_score": 21.239665585965582,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "산업안전보건법 140조  자격 등에 의한 취업 제한 등#KOBLEX-004841",
+        "provision_text": "③ 제1항에 따른 자격ㆍ면허ㆍ경험ㆍ기능, 제2항에 따른 교육기관의 지정 요건 및 지정 절차, 그 밖에 필요한 사항은 고용노동부령으로 정한다.",
+        "rerank_score": 0.9999699592590332,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "산업안전보건법 140조  자격 등에 의한 취업 제한 등 3항"
+      },
+      {
+        "first_stage_score": 20.860019906058884,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "의료법 21조 3 진료기록의 전송등 요청#KOBLEX-180103",
+        "provision_text": "④ 그 밖에 전송등 요청의 방법ㆍ절차, 전송등의 절차 및 기한, 대리인의 요건 등 진료기록의 전송등에 필요한 사항은 보건복지부령으로 정한다.",
+        "rerank_score": 0.9999699592590332,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "의료법 21조 3 진료기록의 전송등 요청 4항"
+      },
+      {
+        "first_stage_score": 19.798369644972425,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "국가기술자격법 24조 3 국가기술자격 검정 시설 등의 확보#KOBLEX-079166",
+        "provision_text": "③ 제2항 후단에 따른 비용의 지원 요건, 지원 금액 및 지원 절차 등에 관하여 필요한 사항은 고용노동부령으로 정한다. <개정 2010.6.4>",
+        "rerank_score": 0.9999690055847168,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "국가기술자격법 24조 3 국가기술자격 검정 시설 등의 확보 3항"
+      },
+      {
+        "first_stage_score": 22.907286705254794,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 426조 2 지급정지#KOBLEX-137346",
+        "provision_text": "⑧ 제1항부터 제7항까지에 따른 지급정지의 대상, 요건, 절차, 통지 등에 필요한 사항은 대통령령으로 정한다.",
+        "rerank_score": 0.9999686479568481,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "자본시장과 금융투자업에 관한 법률 426조 2 지급정지 8항"
+      },
+      {
+        "first_stage_score": 21.239665585965582,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "보험업법 시행령 56조 3 금리인하 요구#KOBLEX-121519",
+        "provision_text": "④ 제1항부터 제3항까지에서 규정한 사항 외에 금리인하 요구의 요건 및 절차 등에 관하여 필요한 사항은 금융위원회가 정하여 고시한다.",
+        "rerank_score": 0.999968409538269,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "보험업법 시행령 56조 3 금리인하 요구 4항"
+      },
+      {
+        "first_stage_score": 22.46630420470061,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "종합금융회사에 관한 법률 9조  자금중개회사의 설립#KOBLEX-046298",
+        "provision_text": "②제1항의 규정에 의한 승인의 요건·절차 기타 필요한 사항은 대통령령으로 정한다.<개정 1999.2.5>",
+        "rerank_score": 0.9999672174453735,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "종합금융회사에 관한 법률 9조  자금중개회사의 설립 2항"
+      },
+      {
+        "first_stage_score": 23.843309112696723,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "농지법 시행령 77조  규제의 재검토#KOBLEX-199850",
+        "provision_text": "2. 제28조에 따른 농업진흥지역 등의 변경ㆍ해제 요건 및 절차: 2023년 1월 1일",
+        "rerank_score": 0.9999669790267944,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "농지법 시행령 77조  규제의 재검토 2호"
+      },
+      {
+        "first_stage_score": 22.467998061230517,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "형의 실효 등에 관한 법률 9조  벌칙#KOBLEX-031323",
+        "provision_text": "① 전과기록이나 수사경력자료를 관리하는 사람이 부정한 청탁을 받고 다음 각 호의 어느 하나에 해당하는 행위를 하였을 때에는 1년 이상의 유기징역에 처한다. 1. 전과기록 또는 수사경력자료를 손상시키거나 은닉(隱匿)하거나 그 밖의 방법으로 그 효용을 해친 행위 2. 전과기록 또는 수사경력자료의 내용을 거짓으로 기재하거나 정당한 사유 없이 그 내용을 변경한 행위 3. 전과기록 또는 수사경력자료에 의한 증명사항의 내용을 거짓으로 기재한 행위",
+        "rerank_score": 0.9999669790267944,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "형의 실효 등에 관한 법률 9조  벌칙 1항"
+      },
+      {
+        "first_stage_score": 23.13997341885168,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "감염병의 예방 및 관리에 관한 법률 18조  역학조사#KOBLEX-230783",
+        "provision_text": "③ 누구든지 질병관리청장, 시ㆍ도지사 또는 시장ㆍ군수ㆍ구청장이 실시하는 역학조사에서 다음 각 호의 행위를 하여서는 아니 된다. <개정 2015.7.6, 2020.8.11> 1. 정당한 사유 없이 역학조사를 거부ㆍ방해 또는 회피하는 행위 2. 거짓으로 진술하거나 거짓 자료를 제출하는 행위 3. 고의적으로 사실을 누락ㆍ은폐하는 행위",
+        "rerank_score": 0.8014853000640869,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "감염병의 예방 및 관리에 관한 법률 18조  역학조사 3항"
+      },
+      {
+        "first_stage_score": 17.71248343255269,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 447조  판결의 효력#KOBLEX-232921",
+        "provision_text": "제447조(판결의 효력) 비상상고의 판결은 전조제1호 단행의 규정에 의한 판결 외에는 그 효력이 피고인에게 미치지 아니한다.",
+        "rerank_score": 0.7902664542198181,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "형사소송법 447조  판결의 효력"
+      },
+      {
+        "first_stage_score": 31.30605713977315,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위#KOBLEX-020990",
+        "provision_text": "제116조(법령에 따른 정당한 행위) 이 법은 사업자 또는 사업자단체가 다른 법령에 따라 하는 정당한 행위에 대해서는 적용하지 아니한다.",
+        "rerank_score": 0.7723531723022461,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위"
+      },
+      {
+        "first_stage_score": 31.30605713977315,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위#KOBLEX-039418",
+        "provision_text": "제116조(법령에 따른 정당한 행위) 이 법은 사업자 또는 사업자단체가 다른 법령에 따라 하는 정당한 행위에 대해서는 적용하지 아니한다.",
+        "rerank_score": 0.7723531723022461,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위"
+      },
+      {
+        "first_stage_score": 17.027193860184376,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 380조  무죄의 판결#KOBLEX-093410",
+        "provision_text": "제380조(무죄의 판결) 피고사건이 범죄가 되지 아니하거나 범죄사실이 증명되지 아니할 때에는 판결로 무죄를 선고하여야 한다.",
+        "rerank_score": 0.7658401131629944,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "군사법원법 380조  무죄의 판결"
+      },
+      {
+        "first_stage_score": 17.027193860184376,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 380조  무죄의 판결#KOBLEX-159375",
+        "provision_text": "제380조(무죄의 판결) 피고사건이 범죄가 되지 아니하거나 범죄사실이 증명되지 아니할 때에는 판결로 무죄를 선고하여야 한다.",
+        "rerank_score": 0.7658401131629944,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "군사법원법 380조  무죄의 판결"
+      },
+      {
+        "first_stage_score": 20.78253975970539,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "은행법 15조 5 기관전용 사모집합투자기구등의 의무#KOBLEX-143570",
+        "provision_text": "2. 비금융회사의 주식 또는 지분에 투자함으로써 「자본시장과 금융투자업에 관한 법률」 제249조의7제5항제1호 또는 제2호의 요건을 충족하게 되는 행위",
+        "rerank_score": 0.732833743095398,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "은행법 15조 5 기관전용 사모집합투자기구등의 의무 2호"
+      },
+      {
+        "first_stage_score": 23.44303032196401,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 134조  출석의무 위반 등#KOBLEX-075819",
+        "provision_text": "2. 귀휴ㆍ외부통근, 그 밖의 사유로 소장의 허가를 받아 교도관의 계호 없이 교정시설 밖으로 나간 후에 정당한 사유 없이 기한까지 돌아오지 아니하는 행위",
+        "rerank_score": 0.7257672548294067,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 134조  출석의무 위반 등 2호"
+      },
+      {
+        "first_stage_score": 23.44303032196401,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 134조  출석의무 위반 등#KOBLEX-214006",
+        "provision_text": "2. 귀휴ㆍ외부통근, 그 밖의 사유로 소장의 허가를 받아 교도관의 계호 없이 교정시설 밖으로 나간 후에 정당한 사유 없이 기한까지 돌아오지 아니하는 행위",
+        "rerank_score": 0.7257672548294067,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 134조  출석의무 위반 등 2호"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "간접투자자산 운용업법 110조  (해산사유)#KOBLEX-082155": "5. 법원의 명령 또는 판결",
+      "감염병의 예방 및 관리에 관한 법률 18조  역학조사#KOBLEX-230783": "③ 누구든지 질병관리청장, 시ㆍ도지사 또는 시장ㆍ군수ㆍ구청장이 실시하는 역학조사에서 다음 각 호의 행위를 하여서는 아니 된다. <개정 2015.7.6, 2020.8.11> 1. 정당한 사유 없이 역학조사를 거부ㆍ방해 또는 회피하는 행위 2. 거짓으로 진술하거나 거짓 자료를 제출하는 행위 3. 고의적으로 사실을 누락ㆍ은폐하는 행위",
+      "공익신고자 보호법 시행령 21조  보상금의 지급사유#KOBLEX-120529": "3. 손해배상 또는 부당이득 반환 등의 판결",
+      "국가기술자격법 24조 3 국가기술자격 검정 시설 등의 확보#KOBLEX-079166": "③ 제2항 후단에 따른 비용의 지원 요건, 지원 금액 및 지원 절차 등에 관하여 필요한 사항은 고용노동부령으로 정한다. <개정 2010.6.4>",
+      "국적법 13조  대한민국 국적의 선택 절차#KOBLEX-067961": "④ 제1항부터 제3항까지의 규정에 따른 신고의 수리(受理) 요건, 신고 절차, 그 밖에 필요한 사항은 대통령령으로 정한다. <개정 2010.5.4>",
+      "군사법원법 380조  무죄의 판결#KOBLEX-093410": "제380조(무죄의 판결) 피고사건이 범죄가 되지 아니하거나 범죄사실이 증명되지 아니할 때에는 판결로 무죄를 선고하여야 한다.",
+      "군사법원법 380조  무죄의 판결#KOBLEX-159375": "제380조(무죄의 판결) 피고사건이 범죄가 되지 아니하거나 범죄사실이 증명되지 아니할 때에는 판결로 무죄를 선고하여야 한다.",
+      "군사법원법 454조 2 판결 전의 결정에 대한 항고#KOBLEX-093594": "제454조의2(판결 전의 결정에 대한 항고)",
+      "군사법원법 454조 2 판결 전의 결정에 대한 항고#KOBLEX-159559": "제454조의2(판결 전의 결정에 대한 항고)",
+      "농지법 시행령 77조  규제의 재검토#KOBLEX-199850": "2. 제28조에 따른 농업진흥지역 등의 변경ㆍ해제 요건 및 절차: 2023년 1월 1일",
+      "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위#KOBLEX-020990": "제116조(법령에 따른 정당한 행위) 이 법은 사업자 또는 사업자단체가 다른 법령에 따라 하는 정당한 행위에 대해서는 적용하지 아니한다.",
+      "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위#KOBLEX-039418": "제116조(법령에 따른 정당한 행위) 이 법은 사업자 또는 사업자단체가 다른 법령에 따라 하는 정당한 행위에 대해서는 적용하지 아니한다.",
+      "민사소송법 257조  변론 없이 하는 판결#KOBLEX-064208": "제257조(변론 없이 하는 판결)",
+      "보험업법 시행령 56조 3 금리인하 요구#KOBLEX-121519": "④ 제1항부터 제3항까지에서 규정한 사항 외에 금리인하 요구의 요건 및 절차 등에 관하여 필요한 사항은 금융위원회가 정하여 고시한다.",
+      "산업안전보건법 140조  자격 등에 의한 취업 제한 등#KOBLEX-004841": "③ 제1항에 따른 자격ㆍ면허ㆍ경험ㆍ기능, 제2항에 따른 교육기관의 지정 요건 및 지정 절차, 그 밖에 필요한 사항은 고용노동부령으로 정한다.",
+      "상법 227조  해산원인#KOBLEX-114119": "6. 법원의 명령 또는 판결",
+      "은행법 15조 5 기관전용 사모집합투자기구등의 의무#KOBLEX-143570": "2. 비금융회사의 주식 또는 지분에 투자함으로써 「자본시장과 금융투자업에 관한 법률」 제249조의7제5항제1호 또는 제2호의 요건을 충족하게 되는 행위",
+      "의료법 21조 3 진료기록의 전송등 요청#KOBLEX-180103": "④ 그 밖에 전송등 요청의 방법ㆍ절차, 전송등의 절차 및 기한, 대리인의 요건 등 진료기록의 전송등에 필요한 사항은 보건복지부령으로 정한다.",
+      "자본시장과 금융투자업에 관한 법률 426조 2 지급정지#KOBLEX-137346": "⑧ 제1항부터 제7항까지에 따른 지급정지의 대상, 요건, 절차, 통지 등에 필요한 사항은 대통령령으로 정한다.",
+      "종합금융회사에 관한 법률 9조  자금중개회사의 설립#KOBLEX-046298": "②제1항의 규정에 의한 승인의 요건·절차 기타 필요한 사항은 대통령령으로 정한다.<개정 1999.2.5>",
+      "항만법 28조  금지행위 등#KOBLEX-089559": "① 누구든지 정당한 사유 없이 항만에서 다음 각 호의 행위를 해서는 아니 된다. 1. 유독물이나 동물의 사체를 버리는 행위 2. 다량의 토석(土石)이나 쓰레기를 버리는 등 항만의 깊이에 영향을 줄 우려가 있는 행위 3. 그 밖에 항만의 보전 또는 그 사용에 지장을 줄 우려가 있는 행위로서 대통령령으로 정하는 행위",
+      "헌법재판소법 42조  재판의 정지 등#KOBLEX-188024": "② 제1항 본문에 따른 재판정지기간은 「형사소송법」 제92조제1항ㆍ제2항 및 「군사법원법」 제132조제1항ㆍ제2항의 구속기간과 「민사소송법」 제199조의 판결 선고기간에 산입하지 아니한다.",
+      "형사소송법 37조  판결, 결정, 명령#KOBLEX-231526": "제37조(판결, 결정, 명령)",
+      "형사소송법 447조  판결의 효력#KOBLEX-232921": "제447조(판결의 효력) 비상상고의 판결은 전조제1호 단행의 규정에 의한 판결 외에는 그 효력이 피고인에게 미치지 아니한다.",
+      "형의 실효 등에 관한 법률 9조  벌칙#KOBLEX-031323": "① 전과기록이나 수사경력자료를 관리하는 사람이 부정한 청탁을 받고 다음 각 호의 어느 하나에 해당하는 행위를 하였을 때에는 1년 이상의 유기징역에 처한다. 1. 전과기록 또는 수사경력자료를 손상시키거나 은닉(隱匿)하거나 그 밖의 방법으로 그 효용을 해친 행위 2. 전과기록 또는 수사경력자료의 내용을 거짓으로 기재하거나 정당한 사유 없이 그 내용을 변경한 행위 3. 전과기록 또는 수사경력자료에 의한 증명사항의 내용을 거짓으로 기재한 행위",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075693": "3. 정당한 사유 없이 작업ㆍ교육ㆍ교화프로그램 등을 거부하거나 태만히 하는 행위",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213880": "3. 정당한 사유 없이 작업ㆍ교육ㆍ교화프로그램 등을 거부하거나 태만히 하는 행위",
+      "형의 집행 및 수용자의 처우에 관한 법률 134조  출석의무 위반 등#KOBLEX-075819": "2. 귀휴ㆍ외부통근, 그 밖의 사유로 소장의 허가를 받아 교도관의 계호 없이 교정시설 밖으로 나간 후에 정당한 사유 없이 기한까지 돌아오지 아니하는 행위",
+      "형의 집행 및 수용자의 처우에 관한 법률 134조  출석의무 위반 등#KOBLEX-214006": "2. 귀휴ㆍ외부통근, 그 밖의 사유로 소장의 허가를 받아 교도관의 계호 없이 교정시설 밖으로 나간 후에 정당한 사유 없이 기한까지 돌아오지 아니하는 행위"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위#KOBLEX-020990",
+          "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위#KOBLEX-039418"
+        ],
+        "missing_aspects": [
+          "General criminal law elements for lawful act pursuant to statute",
+          "Substantive legal basis for acquittal on that ground"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C023 and C024 illustrate the concept of lawful acts pursuant to statute but are limited to competition law. The completion criteria require the general criminal law elements for lawful acts pursuant to statute and the substantive legal basis for acquittal on that ground, which are absent from the candidate set.",
+        "status": "partially_covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [
+          "군사법원법 380조  무죄의 판결#KOBLEX-093410",
+          "군사법원법 380조  무죄의 판결#KOBLEX-159375"
+        ],
+        "missing_aspects": [
+          "General criminal procedure rules governing acquittal judgments",
+          "Procedural requirements and standards for acquittal under the Criminal Procedure Act"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C025 and C026 provide the rule for acquittal judgments in military courts but do not supply the general criminal procedure rules governing acquittal under the Criminal Procedure Act required by the completion criteria.",
+        "status": "partially_covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위#KOBLEX-020990",
+        "support_spans": [
+          {
+            "end_char": 76,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위#KOBLEX-039418",
+        "support_spans": [
+          {
+            "end_char": 76,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "provision_id": "군사법원법 380조  무죄의 판결#KOBLEX-093410",
+        "support_spans": [
+          {
+            "end_char": 69,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "provision_id": "군사법원법 380조  무죄의 판결#KOBLEX-159375",
+        "support_spans": [
+          {
+            "end_char": 69,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 9,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "법령에 의한 정당한 행위 인정과 무죄 판결 절차",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "법령에 의한 정당한 행위의 요건과 무죄 판결 근거 규정을 확인한다.",
+        "critical": true,
+        "description": "법령에 의한 정당한 행위 인정 기준",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "형사소송법상 무죄 판결을 위한 절차적 요건을 확인한다.",
+        "critical": true,
+        "description": "무죄 판결을 위한 소송 절차",
+        "evidence_item_id": "E2",
+        "evidence_type": "procedure",
+        "issue_id": "I1"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 최근 경찰서에서 압수수색 영장을 받은 후 을의 집에서 불법적으로 보관된 문서를 발견하고 이를 손괴하여 조사했다. 을은 이에 대해 재물손괴로 고소했으나, 갑의 행위는 법령에 따른 정당한 행위로 인정되었다. [질문] 갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "법령",
+          "정당한 행위",
+          "무죄",
+          "재물손괴",
+          "정당화 사유"
+        ],
+        "query_text": "법령에 의한 정당한 행위로 인정되는 요건과 무죄 판결 근거 [원문 맥락] 을은 이에 대해 재물손괴로 고소했으나, 갑의 행위는 법령에 따른 정당한 행위로 인정되었다. 갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "형사소송법",
+          "무죄 판결",
+          "절차",
+          "재판",
+          "판결"
+        ],
+        "query_text": "형사소송법상 무죄 판결을 위한 절차적 요건 [원문 맥락] 을은 이에 대해 재물손괴로 고소했으나, 갑의 행위는 법령에 따른 정당한 행위로 인정되었다. 갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형법",
+          "법령",
+          "정당한 행위",
+          "정당화 사유",
+          "무죄",
+          "죄책"
+        ],
+        "query_text": "형법상 법령에 의한 정당한 행위 요건과 무죄 판결 근거 [원문 맥락] 을은 이에 대해 재물손괴로 고소했으나, 갑의 행위는 법령에 따른 정당한 행위로 인정되었다. 갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+        "request_id": "GRQ1",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사소송법",
+          "무죄 판결",
+          "판결 요건",
+          "증거 불충분",
+          "죄 없음",
+          "절차"
+        ],
+        "query_text": "형사소송법상 무죄 판결 요건과 절차 [원문 맥락] 을은 이에 대해 재물손괴로 고소했으나, 갑의 행위는 법령에 따른 정당한 행위로 인정되었다. 갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+        "request_id": "GRQ2",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "형법",
+          "정당화 사유",
+          "법령",
+          "정당한 행위",
+          "무죄",
+          "죄책"
+        ],
+        "query_text": "형법상 정당화 사유 법령에 의한 행위 요건 [원문 맥락] 을은 이에 대해 재물손괴로 고소했으나, 갑의 행위는 법령에 따른 정당한 행위로 인정되었다. 갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+        "request_id": "GRQ1",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "형사소송법",
+          "무죄 판결",
+          "증거 불충분",
+          "죄 없음",
+          "판결 요건"
+        ],
+        "query_text": "형사소송법 무죄 판결 요건 증거 불충분 [원문 맥락] 을은 이에 대해 재물손괴로 고소했으나, 갑의 행위는 법령에 따른 정당한 행위로 인정되었다. 갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+        "request_id": "GRQ2",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 최근 경찰서에서 압수수색 영장을 받은 후 을의 집에서 불법적으로 보관된 문서를 발견하고 이를 손괴하여 조사했다. 을은 이에 대해 재물손괴로 고소했으나, 갑의 행위는 법령에 따른 정당한 행위로 인정되었다.\n\n[질문]\n갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "법령에 의한 정당한 행위의 요건과 무죄 판결 근거 규정을 확인한다.",
+        "critical": true,
+        "description": "법령에 의한 정당한 행위 인정 기준",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "형사소송법상 무죄 판결을 위한 절차적 요건을 확인한다.",
+        "critical": true,
+        "description": "무죄 판결을 위한 소송 절차",
+        "evidence_item_id": "E2",
+        "evidence_type": "procedure",
+        "issue_id": "I1"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "e9680ba8-6003-41ce-9d71-aece3d2aff2c",
+    "seen_provision_ids": [
+      "군사법원법 380조  무죄의 판결#KOBLEX-093410",
+      "의료법 21조 3 진료기록의 전송등 요청#KOBLEX-180103",
+      "감염병의 예방 및 관리에 관한 법률 18조  역학조사#KOBLEX-230783",
+      "보험업법 시행령 56조 3 금리인하 요구#KOBLEX-121519",
+      "형의 실효 등에 관한 법률 9조  벌칙#KOBLEX-031323",
+      "형의 집행 및 수용자의 처우에 관한 법률 134조  출석의무 위반 등#KOBLEX-214006",
+      "형사소송법 37조  판결, 결정, 명령#KOBLEX-231526",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213880",
+      "국가기술자격법 24조 3 국가기술자격 검정 시설 등의 확보#KOBLEX-079166",
+      "형의 집행 및 수용자의 처우에 관한 법률 134조  출석의무 위반 등#KOBLEX-075819",
+      "농지법 시행령 77조  규제의 재검토#KOBLEX-199850",
+      "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위#KOBLEX-020990",
+      "상법 227조  해산원인#KOBLEX-114119",
+      "헌법재판소법 42조  재판의 정지 등#KOBLEX-188024",
+      "군사법원법 380조  무죄의 판결#KOBLEX-159375",
+      "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위#KOBLEX-039418",
+      "공익신고자 보호법 시행령 21조  보상금의 지급사유#KOBLEX-120529",
+      "민사소송법 257조  변론 없이 하는 판결#KOBLEX-064208",
+      "군사법원법 454조 2 판결 전의 결정에 대한 항고#KOBLEX-159559",
+      "종합금융회사에 관한 법률 9조  자금중개회사의 설립#KOBLEX-046298",
+      "은행법 15조 5 기관전용 사모집합투자기구등의 의무#KOBLEX-143570",
+      "간접투자자산 운용업법 110조  (해산사유)#KOBLEX-082155",
+      "국적법 13조  대한민국 국적의 선택 절차#KOBLEX-067961",
+      "자본시장과 금융투자업에 관한 법률 426조 2 지급정지#KOBLEX-137346",
+      "산업안전보건법 140조  자격 등에 의한 취업 제한 등#KOBLEX-004841",
+      "군사법원법 454조 2 판결 전의 결정에 대한 항고#KOBLEX-093594",
+      "항만법 28조  금지행위 등#KOBLEX-089559",
+      "형사소송법 447조  판결의 효력#KOBLEX-232921",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075693"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

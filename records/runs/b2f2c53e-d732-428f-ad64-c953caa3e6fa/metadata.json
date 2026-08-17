@@ -1,0 +1,73 @@
+{
+  "configuration": {
+    "condition": "bm25-bge-factualbranch-01",
+    "conditional_generation": "factual_condition_only",
+    "final_top_k": 10,
+    "input_format": "koblex_background_plus_question",
+    "model": "legal-harness-qwen",
+    "monotonic_coverage": true,
+    "num_ctx": 32768,
+    "ollama_endpoint": "http://127.0.0.1:11434/api/generate",
+    "rerank_pool_k": 100,
+    "retriever": "bm25",
+    "seed": 0,
+    "total_retrieval_requests": 9,
+    "total_retrieval_rounds": 3
+  },
+  "git_commit": "d1611e7a2625dcaac339b9c52e7d24e7be2685d1",
+  "index_metadata": {
+    "bm25": {
+      "database": "data/koblex/indexes/bm25/statute_fts5.sqlite3",
+      "type": "SQLite FTS5"
+    },
+    "documents": 233544,
+    "identity": {
+      "provision_id": "{KoBLEX index}#KOBLEX-{one-based source row number}",
+      "source_index": "original KoBLEX index value retained in normalized corpus"
+    },
+    "kure": {
+      "dimensions": 1024,
+      "model": "nlpai-lab/KURE-v1",
+      "provision_ids": "data/koblex/indexes/kure-v1/provision_ids.txt",
+      "similarity": "exact cosine similarity; float32 memory-mapped matrix",
+      "vector_file": "data/koblex/indexes/kure-v1/vectors.f32.npy"
+    },
+    "source": "JihyungL/KoBLEX-statute",
+    "source_file": "data/koblex/statute/corpus-00000-of-00001.parquet",
+    "source_sha256": "6323f7d024ec504f4b2346cd3ab67aa709aac49a5340c9f3d8372ad6bd5f9b8b"
+  },
+  "model_artifact": "/root/.ollama/models/blobs/sha256-8440f2a076f149f65bf16975f3a08359936ba2658fc1827b51a30b717de49acb",
+  "question": "[배경 시나리오]\n갑은 최근에 해양 운송업에 종사하기 위해 선원수첩을 발급받고자 해양항만관청에 신청을 하였습니다. 그러나 갑은 과거 병역법 제76조제1항 각호에 해당하는 사유로 병역의무를 이행하지 않았습니다. 또한, 을은 선원수첩을 받았으나, 해양항만관청은 을에게 수첩의 유효기간을 제한하였습니다. 이에 을은 해양항만관청의 결정에 대해 이의를 제기하려고 합니다.\n\n[질문]\n해양항만관청이 갑에게 선원수첩을 발급하지 않을 수 있는 법적 근거는 무엇이며, 을의 선원수첩 유효기간을 제한한 것은 어떤 법적 근거에서 이루어졌는가?",
+  "question_id": "qa_83_2hop_325_rand",
+  "record_schema_version": "1.0",
+  "run_id": "b2f2c53e-d732-428f-ad64-c953caa3e6fa",
+  "runtime": {
+    "packages": {
+      "pyarrow": "18.1.0",
+      "sentence-transformers": "5.1.2",
+      "torch": "2.7.1+cu128",
+      "transformers": "4.57.6"
+    },
+    "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.35",
+    "python": "3.9.25 (main, Nov  7 2025, 18:07:57) \n[GCC 11.4.0]"
+  },
+  "skill_sha256": {
+    "grounded_legal_answer_generation/SKILL.md": "c63a196114ad37439c55d2cb7f5a27ad6e6e96af1a159e5119589d792b8930f5",
+    "grounded_legal_answer_generation/references/contract.md": "1cfe5249780e83d0232c77a98ceab01ad0f988a4e606ca81a0493ef5e7fa6a21",
+    "grounded_legal_answer_generation/references/input.schema.json": "031eea346a105571f0da9786807dccc7262e5b8c2996c3d246cacf37c539e511",
+    "grounded_legal_answer_generation/references/output.schema.json": "2914ddb5850167b91fb46621014766b53ed41182c95bdd180931afe72143fef7",
+    "grounded_legal_answer_generation/scripts/validate_output.py": "df50229efaa4bf76fbb3cc5c913ec09ec463146bda67d94db5d44f276a03176f",
+    "legal_issue_and_query_planning/SKILL.md": "8f47d609a0c0b052e1aa90b35cea68dd0b5a940de57b012e3ed805457f0d1716",
+    "legal_issue_and_query_planning/references/contract.md": "a201d0bfe6d992b53d9745dc6241a844060b98f446d037670c0f63279f8879d9",
+    "legal_issue_and_query_planning/references/input.schema.json": "c617df2974228906e34838ef5f42058e2e6f909d5358fc3a05448cb36774172b",
+    "legal_issue_and_query_planning/references/output.schema.json": "c2aef4f05b14fe584f48a2f13e3de15085b1774ca289f258751e156f636444d1",
+    "legal_issue_and_query_planning/scripts/validate_output.py": "53be62712d579692b0660331a68f3405de3c668c5ca84ae2f80725fa96a8dbd1",
+    "provision_coverage_assessment/SKILL.md": "35f0b7df5e2db6b6beb189e9694415109b0ecd1049729ed02865b2da0c04ca55",
+    "provision_coverage_assessment/references/contract.md": "fd5448ea7a265524c29dd1ce6ddb13dc74bd4ceda1ab04563172e4c1958bd9fa",
+    "provision_coverage_assessment/references/input.schema.json": "6cd352a71e7343f9578da5d1f56d2f41839b35a9f84d297449b74d29e71989b2",
+    "provision_coverage_assessment/references/output.schema.json": "d6636749e032454b36c7a9c41edd31b0eb6865b762373ff3944ea5449f385a08",
+    "provision_coverage_assessment/scripts/validate_output.py": "083e9011d42d1b99f95b7a55793c7b0fb0285e2169d659b79b9d6d803f67c9cb",
+    "skill-pack-manifest.json": "204d144927400952d4d9146313434e5f5ab62dd49bd5c43e63c1ca0aa5d01a95"
+  },
+  "started_at_utc": "2026-08-17T13:59:57.194045+00:00"
+}

@@ -1,0 +1,668 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-17T14:24:44.658541+00:00",
+  "end_to_end_latency_ms": 293905.411,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "5549a9ad-4657-4a03-95e5-c2b9fdac6700",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 14,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 11,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 2,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 26.20814934772922,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "장애인활동 지원에 관한 법률 29조  활동지원인력의 결격 사유#KOBLEX-074510",
+        "provision_text": "5. 「성폭력범죄의 처벌 등에 관한 특례법」 제3조부터 제10조까지 및 제15조(같은 법 제3조부터 제9조까지의 미수범으로 한정한다)에 규정된 죄로 금고 이상의 형을 선고받은 사람",
+        "rerank_score": 0.9999980926513672,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "장애인활동 지원에 관한 법률 29조  활동지원인력의 결격 사유 6호"
+      },
+      {
+        "first_stage_score": 47.400217230336736,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 18조  교육활동 침해행위 관련 보고 사항#KOBLEX-219361",
+        "provision_text": "2. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조제1항에 따른 성폭력범죄 행위인 경우",
+        "rerank_score": 0.9999979734420776,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 18조  교육활동 침해행위 관련 보고 사항 2호"
+      },
+      {
+        "first_stage_score": 34.02380815560707,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "범죄수익은닉의 규제 및 처벌 등에 관한 법률 10조 4 범죄수익등의 추정#KOBLEX-048160",
+        "provision_text": "2. 「성폭력범죄의 처벌 등에 관한 특례법」 제14조 및 제14조의2의 죄",
+        "rerank_score": 0.9999978542327881,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "범죄수익은닉의 규제 및 처벌 등에 관한 법률 10조 4 범죄수익등의 추정 2호"
+      },
+      {
+        "first_stage_score": 48.30794877573035,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "사립학교법 시행령 24조 5 직위해제 대상 비위행위#KOBLEX-190053",
+        "provision_text": "3. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위",
+        "rerank_score": 0.9999978542327881,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "사립학교법 시행령 24조 5 직위해제 대상 비위행위 3호"
+      },
+      {
+        "first_stage_score": 28.550420377831877,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조  목적#KOBLEX-107704",
+        "provision_text": "제1조(목적) 이 영은 「성폭력범죄의 처벌 등에 관한 특례법」에서 위임된 사항과 그 시행에 필요한 사항을 규정함을 목적으로 한다.",
+        "rerank_score": 0.9999978542327881,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조  목적"
+      },
+      {
+        "first_stage_score": 21.592336544331264,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조 2 성적 목적을 위한 공공장소 침입행위#KOBLEX-107705",
+        "provision_text": "제1조의2(성적 목적을 위한 공공장소 침입행위) 「성폭력범죄의 처벌 등에 관한 특례법」(이하 \"법\"이라 한다) 제12조에서 \"「공중화장실 등에 관한 법률」 제2조제1호부터 제5호까지에 따른 공중화장실 등 및 「공중위생관리법」 제2조제1항제3호에 따른 목욕장업의 목욕장 등 대통령령으로 정하는 공공장소\"란 다음 각 호의 어느 하나에 해당하는 장소를 말한다.",
+        "rerank_score": 0.9999977350234985,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조 2 성적 목적을 위한 공공장소 침입행위"
+      },
+      {
+        "first_stage_score": 25.39957473693843,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "아동학대범죄의 처벌 등에 관한 특례법 3조  다른 법률과의 관계#KOBLEX-124230",
+        "provision_text": "제3조(다른 법률과의 관계) 아동학대범죄에 대하여는 이 법을 우선 적용한다. 다만, 「성폭력범죄의 처벌 등에 관한 특례법」, 「아동ㆍ청소년의 성보호에 관한 법률」에서 가중처벌되는 경우에는 그 법에서 정한 바에 따른다.",
+        "rerank_score": 0.9999977350234985,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "아동학대범죄의 처벌 등에 관한 특례법 3조  다른 법률과의 관계"
+      },
+      {
+        "first_stage_score": 31.98017344274691,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "장애인복지법 59조 15 피해장애인에 대한 변호사 선임의 특례#KOBLEX-188531",
+        "provision_text": "② 제1항에 따른 변호사에 관하여는 「성폭력범죄의 처벌 등에 관한 특례법」 제27조제2항부터 제6항까지를 준용한다.",
+        "rerank_score": 0.9999977350234985,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "장애인복지법 59조 15 피해장애인에 대한 변호사 선임의 특례 2항"
+      },
+      {
+        "first_stage_score": 32.384134054586944,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 18조  정신건강전문요원의 결격사유#KOBLEX-039616",
+        "provision_text": "3. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 또는 「아동ㆍ청소년의 성보호에 관한 법률」 제2조제2호에 따른 아동ㆍ청소년대상 성범죄를 저질러 금고 이상의 실형 또는 치료감호를 선고받고 그 집행이 끝나거나(집행이 끝난 것으로 보는 경우를 포함한다) 집행이 면제되지 아니한 사람",
+        "rerank_score": 0.9999977350234985,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 18조  정신건강전문요원의 결격사유 4호"
+      },
+      {
+        "first_stage_score": 24.97860534325692,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "공중위생관리법 5조  공중위생영업자의 불법카메라 설치 금지#KOBLEX-164278",
+        "provision_text": "제5조(공중위생영업자의 불법카메라 설치 금지) 공중위생영업자는 영업소에 「성폭력범죄의 처벌 등에 관한 특례법」 제14조제1항에 위반되는 행위에 이용되는 카메라나 그 밖에 이와 유사한 기능을 갖춘 기계장치를 설치해서는 아니 된다.",
+        "rerank_score": 0.9999972581863403,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "공중위생관리법 5조  공중위생영업자의 불법카메라 설치 금지"
+      },
+      {
+        "first_stage_score": 32.0043166658989,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "영유아보육법 21조 2 어린이집의 원장 또는 보육교사 자격 취득의 결격사유#KOBLEX-046589",
+        "provision_text": "3. 성인에 대한 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위로 100만원 이상의 벌금형이나 그 이상의 형 또는 치료감호를 선고받아 그 형 또는 치료감호가 확정된 사람(집행유예를 선고받고 그 집행유예기간이 경과한 사람을 포함한다)",
+        "rerank_score": 0.9974793791770935,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "영유아보육법 21조 2 어린이집의 원장 또는 보육교사 자격 취득의 결격사유 3호"
+      },
+      {
+        "first_stage_score": 31.59786733924995,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "유아교육법 22조 2 교사 자격 취득의 결격사유#KOBLEX-226263",
+        "provision_text": "3. 성인에 대한 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위로 100만원 이상의 벌금형이나 그 이상의 형 또는 치료감호를 선고받아 그 형 또는 치료감호가 확정된 사람(집행유예를 선고받은 후 그 집행유예기간이 경과한 사람을 포함한다)",
+        "rerank_score": 0.9971734285354614,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "유아교육법 22조 2 교사 자격 취득의 결격사유 3호"
+      },
+      {
+        "first_stage_score": 31.59786733924995,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "초ㆍ중등교육법 21조 2 교사 자격 취득의 결격사유#KOBLEX-164863",
+        "provision_text": "3. 성인에 대한 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위로 100만원 이상의 벌금형이나 그 이상의 형 또는 치료감호를 선고받아 그 형 또는 치료감호가 확정된 사람(집행유예를 선고받은 후 그 집행유예기간이 경과한 사람을 포함한다)",
+        "rerank_score": 0.9971734285354614,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "초ㆍ중등교육법 21조 2 교사 자격 취득의 결격사유 3호"
+      },
+      {
+        "first_stage_score": 32.37474652000285,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "교육공무원법 10조 4 결격사유#KOBLEX-217975",
+        "provision_text": "3. 성인에 대한 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위로 파면ㆍ해임되거나 100만원 이상의 벌금형이나 그 이상의 형 또는 치료감호를 선고받아 그 형 또는 치료감호가 확정된 사람(집행유예를 선고받은 후 그 집행유예기간이 지난 사람을 포함한다)",
+        "rerank_score": 0.9996289014816284,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "교육공무원법 10조 4 결격사유 3호"
+      },
+      {
+        "first_stage_score": 30.110601581138873,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "장애인복지법 59조 16 진술조력인의 참여 등#KOBLEX-188535",
+        "provision_text": "③ 그 밖에 진술조력인의 수사ㆍ재판과정의 참여와 의무 등에 관하여는 「성폭력범죄의 처벌 등에 관한 특례법」 제36조부터 제39조까지의 규정을 준용한다.",
+        "rerank_score": 0.999702513217926,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "장애인복지법 59조 16 진술조력인의 참여 등 3항"
+      },
+      {
+        "first_stage_score": 19.632029285631482,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "군사기밀 보호법 16조  신고ㆍ제출ㆍ삭제의 불이행#KOBLEX-194077",
+        "provision_text": "제16조(신고ㆍ제출ㆍ삭제의 불이행)",
+        "rerank_score": 0.7269274592399597,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "군사기밀 보호법 16조  신고ㆍ제출ㆍ삭제의 불이행"
+      },
+      {
+        "first_stage_score": 14.112390472356633,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "선원법 162조  벌칙#KOBLEX-067811",
+        "provision_text": "제162조(벌칙) 제12조 본문을 위반한 사람은 다음 각 호의 구분에 따라 처벌한다.",
+        "rerank_score": 0.6925930380821228,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "선원법 162조  벌칙"
+      },
+      {
+        "first_stage_score": 13.278777045652284,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "가족관계의 등록 등에 관한 법률 122조  과태료#KOBLEX-127713",
+        "provision_text": "제122조(과태료) 이 법에 따른 신고의 의무가 있는 사람이 정당한 사유 없이 기간 내에 하여야 할 신고 또는 신청을 하지 아니한 때에는 5만원 이하의 과태료를 부과한다.",
+        "rerank_score": 0.6812262535095215,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "가족관계의 등록 등에 관한 법률 122조  과태료"
+      },
+      {
+        "first_stage_score": 14.406729603399274,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "선원법 161조  벌칙#KOBLEX-067806",
+        "provision_text": "제161조(벌칙) 제11조를 위반한 사람은 다음 각 호의 구분에 따라 처벌한다.",
+        "rerank_score": 0.6724998354911804,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "선원법 161조  벌칙"
+      },
+      {
+        "first_stage_score": 13.045389026215261,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 43조  신상정보의 제출 의무#KOBLEX-157715",
+        "provision_text": "제43조(신상정보의 제출 의무)",
+        "rerank_score": 0.49869734048843384,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 43조  신상정보의 제출 의무"
+      },
+      {
+        "first_stage_score": 13.922967702319239,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "군사기밀 보호법 10조  군사기밀 보호조치의 불이행 등#KOBLEX-194061",
+        "provision_text": "제10조(군사기밀 보호조치의 불이행 등)",
+        "rerank_score": 0.4572676420211792,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "군사기밀 보호법 10조  군사기밀 보호조치의 불이행 등"
+      },
+      {
+        "first_stage_score": 14.062784388123898,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "가족관계의 등록 등에 관한 법률 121조  과태료#KOBLEX-127712",
+        "provision_text": "제121조(과태료) 시ㆍ읍ㆍ면의 장이 제38조 또는 제108조에 따라 기간을 정하여 신고 또는 신청의 최고를 한 경우에 정당한 사유 없이 그 기간 내에 신고 또는 신청을 하지 아니한 사람에게는 10만원 이하의 과태료를 부과한다.",
+        "rerank_score": 0.45252862572669983,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "가족관계의 등록 등에 관한 법률 121조  과태료"
+      },
+      {
+        "first_stage_score": 13.045389026215261,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 시행령 5조  신상정보의 등록 등#KOBLEX-107725",
+        "provision_text": "제5조(신상정보의 등록 등)",
+        "rerank_score": 0.4052227735519409,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 시행령 5조  신상정보의 등록 등"
+      },
+      {
+        "first_stage_score": 27.099820307943776,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 45조 3 신상정보 등록의 종료#KOBLEX-157750",
+        "provision_text": "제45조의3(신상정보 등록의 종료)",
+        "rerank_score": 0.39973536133766174,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 45조 3 신상정보 등록의 종료"
+      },
+      {
+        "first_stage_score": 13.922967702319239,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "병역법 84조  신상변동 통보 불이행 등#KOBLEX-035707",
+        "provision_text": "제84조(신상변동 통보 불이행 등)",
+        "rerank_score": 0.39746373891830444,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "병역법 84조  신상변동 통보 불이행 등"
+      },
+      {
+        "first_stage_score": 34.45197953410143,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "국가공무원법 33조  결격사유#KOBLEX-073479",
+        "provision_text": "6의4. 미성년자에 대하여 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 또는 「아동ㆍ청소년의 성보호에 관한 법률」 제2조제2호에 따른 아동ㆍ청소년대상 성범죄를 범한 사람으로서 다음 각 목의 어느 하나에 해당하는 날부터 20년이 지나지 아니한 사람",
+        "rerank_score": 0.9792760610580444,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "국가공무원법 33조  결격사유 9호"
+      },
+      {
+        "first_stage_score": 34.45197953410143,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "지방공무원법 31조  결격사유#KOBLEX-207828",
+        "provision_text": "6의4. 미성년자에 대하여 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 또는 「아동ㆍ청소년의 성보호에 관한 법률」 제2조제2호에 따른 아동ㆍ청소년대상 성범죄를 범한 사람으로서 다음 각 목의 어느 하나에 해당하는 날부터 20년이 지나지 아니한 사람",
+        "rerank_score": 0.9792760610580444,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "지방공무원법 31조  결격사유 9호"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "가족관계의 등록 등에 관한 법률 121조  과태료#KOBLEX-127712": "제121조(과태료) 시ㆍ읍ㆍ면의 장이 제38조 또는 제108조에 따라 기간을 정하여 신고 또는 신청의 최고를 한 경우에 정당한 사유 없이 그 기간 내에 신고 또는 신청을 하지 아니한 사람에게는 10만원 이하의 과태료를 부과한다.",
+      "가족관계의 등록 등에 관한 법률 122조  과태료#KOBLEX-127713": "제122조(과태료) 이 법에 따른 신고의 의무가 있는 사람이 정당한 사유 없이 기간 내에 하여야 할 신고 또는 신청을 하지 아니한 때에는 5만원 이하의 과태료를 부과한다.",
+      "공중위생관리법 5조  공중위생영업자의 불법카메라 설치 금지#KOBLEX-164278": "제5조(공중위생영업자의 불법카메라 설치 금지) 공중위생영업자는 영업소에 「성폭력범죄의 처벌 등에 관한 특례법」 제14조제1항에 위반되는 행위에 이용되는 카메라나 그 밖에 이와 유사한 기능을 갖춘 기계장치를 설치해서는 아니 된다.",
+      "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 18조  교육활동 침해행위 관련 보고 사항#KOBLEX-219361": "2. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조제1항에 따른 성폭력범죄 행위인 경우",
+      "교육공무원법 10조 4 결격사유#KOBLEX-217975": "3. 성인에 대한 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위로 파면ㆍ해임되거나 100만원 이상의 벌금형이나 그 이상의 형 또는 치료감호를 선고받아 그 형 또는 치료감호가 확정된 사람(집행유예를 선고받은 후 그 집행유예기간이 지난 사람을 포함한다)",
+      "국가공무원법 33조  결격사유#KOBLEX-073479": "6의4. 미성년자에 대하여 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 또는 「아동ㆍ청소년의 성보호에 관한 법률」 제2조제2호에 따른 아동ㆍ청소년대상 성범죄를 범한 사람으로서 다음 각 목의 어느 하나에 해당하는 날부터 20년이 지나지 아니한 사람",
+      "군사기밀 보호법 10조  군사기밀 보호조치의 불이행 등#KOBLEX-194061": "제10조(군사기밀 보호조치의 불이행 등)",
+      "군사기밀 보호법 16조  신고ㆍ제출ㆍ삭제의 불이행#KOBLEX-194077": "제16조(신고ㆍ제출ㆍ삭제의 불이행)",
+      "범죄수익은닉의 규제 및 처벌 등에 관한 법률 10조 4 범죄수익등의 추정#KOBLEX-048160": "2. 「성폭력범죄의 처벌 등에 관한 특례법」 제14조 및 제14조의2의 죄",
+      "병역법 84조  신상변동 통보 불이행 등#KOBLEX-035707": "제84조(신상변동 통보 불이행 등)",
+      "사립학교법 시행령 24조 5 직위해제 대상 비위행위#KOBLEX-190053": "3. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위",
+      "선원법 161조  벌칙#KOBLEX-067806": "제161조(벌칙) 제11조를 위반한 사람은 다음 각 호의 구분에 따라 처벌한다.",
+      "선원법 162조  벌칙#KOBLEX-067811": "제162조(벌칙) 제12조 본문을 위반한 사람은 다음 각 호의 구분에 따라 처벌한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 43조  신상정보의 제출 의무#KOBLEX-157715": "제43조(신상정보의 제출 의무)",
+      "성폭력범죄의 처벌 등에 관한 특례법 45조 3 신상정보 등록의 종료#KOBLEX-157750": "제45조의3(신상정보 등록의 종료)",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조  목적#KOBLEX-107704": "제1조(목적) 이 영은 「성폭력범죄의 처벌 등에 관한 특례법」에서 위임된 사항과 그 시행에 필요한 사항을 규정함을 목적으로 한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조 2 성적 목적을 위한 공공장소 침입행위#KOBLEX-107705": "제1조의2(성적 목적을 위한 공공장소 침입행위) 「성폭력범죄의 처벌 등에 관한 특례법」(이하 \"법\"이라 한다) 제12조에서 \"「공중화장실 등에 관한 법률」 제2조제1호부터 제5호까지에 따른 공중화장실 등 및 「공중위생관리법」 제2조제1항제3호에 따른 목욕장업의 목욕장 등 대통령령으로 정하는 공공장소\"란 다음 각 호의 어느 하나에 해당하는 장소를 말한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 5조  신상정보의 등록 등#KOBLEX-107725": "제5조(신상정보의 등록 등)",
+      "아동학대범죄의 처벌 등에 관한 특례법 3조  다른 법률과의 관계#KOBLEX-124230": "제3조(다른 법률과의 관계) 아동학대범죄에 대하여는 이 법을 우선 적용한다. 다만, 「성폭력범죄의 처벌 등에 관한 특례법」, 「아동ㆍ청소년의 성보호에 관한 법률」에서 가중처벌되는 경우에는 그 법에서 정한 바에 따른다.",
+      "영유아보육법 21조 2 어린이집의 원장 또는 보육교사 자격 취득의 결격사유#KOBLEX-046589": "3. 성인에 대한 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위로 100만원 이상의 벌금형이나 그 이상의 형 또는 치료감호를 선고받아 그 형 또는 치료감호가 확정된 사람(집행유예를 선고받고 그 집행유예기간이 경과한 사람을 포함한다)",
+      "유아교육법 22조 2 교사 자격 취득의 결격사유#KOBLEX-226263": "3. 성인에 대한 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위로 100만원 이상의 벌금형이나 그 이상의 형 또는 치료감호를 선고받아 그 형 또는 치료감호가 확정된 사람(집행유예를 선고받은 후 그 집행유예기간이 경과한 사람을 포함한다)",
+      "장애인복지법 59조 15 피해장애인에 대한 변호사 선임의 특례#KOBLEX-188531": "② 제1항에 따른 변호사에 관하여는 「성폭력범죄의 처벌 등에 관한 특례법」 제27조제2항부터 제6항까지를 준용한다.",
+      "장애인복지법 59조 16 진술조력인의 참여 등#KOBLEX-188535": "③ 그 밖에 진술조력인의 수사ㆍ재판과정의 참여와 의무 등에 관하여는 「성폭력범죄의 처벌 등에 관한 특례법」 제36조부터 제39조까지의 규정을 준용한다.",
+      "장애인활동 지원에 관한 법률 29조  활동지원인력의 결격 사유#KOBLEX-074510": "5. 「성폭력범죄의 처벌 등에 관한 특례법」 제3조부터 제10조까지 및 제15조(같은 법 제3조부터 제9조까지의 미수범으로 한정한다)에 규정된 죄로 금고 이상의 형을 선고받은 사람",
+      "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 18조  정신건강전문요원의 결격사유#KOBLEX-039616": "3. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 또는 「아동ㆍ청소년의 성보호에 관한 법률」 제2조제2호에 따른 아동ㆍ청소년대상 성범죄를 저질러 금고 이상의 실형 또는 치료감호를 선고받고 그 집행이 끝나거나(집행이 끝난 것으로 보는 경우를 포함한다) 집행이 면제되지 아니한 사람",
+      "지방공무원법 31조  결격사유#KOBLEX-207828": "6의4. 미성년자에 대하여 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 또는 「아동ㆍ청소년의 성보호에 관한 법률」 제2조제2호에 따른 아동ㆍ청소년대상 성범죄를 범한 사람으로서 다음 각 목의 어느 하나에 해당하는 날부터 20년이 지나지 아니한 사람",
+      "초ㆍ중등교육법 21조 2 교사 자격 취득의 결격사유#KOBLEX-164863": "3. 성인에 대한 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위로 100만원 이상의 벌금형이나 그 이상의 형 또는 치료감호를 선고받아 그 형 또는 치료감호가 확정된 사람(집행유예를 선고받은 후 그 집행유예기간이 경과한 사람을 포함한다)"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "Existence of a reporting obligation for overseas stays of 6 months or more",
+          "Specific information items required to be reported"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The completion criteria require a provision that explicitly establishes a pre-departure reporting obligation for sex crime personal information registrants planning to stay abroad for 6 months or more, and specifies the exact information items to be reported. None of the supplied candidate provisions (C001-C027) contain such a rule. C020 (Special Act on Punishment, etc. of Sexual Violence Crimes Art. 43) and C023 (Enforcement Decree Art. 5) are titled regarding personal information submission/registration but their text fields contain only the article titles without operative content, so they do not establish the obligation or list the required information items. All other provisions concern disqualification criteria, definitions, or unrelated reporting obligations.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "Specific penalty (imprisonment term or fine amount) for failure to report"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The completion criteria require a provision that specifies the concrete penalty (imprisonment term or fine amount) for failing to fulfill the personal information reporting obligation. None of the supplied candidate provisions (C001-C027) contain such a penalty provision. C016, C017, C019, C021, and C025 are penalty or non-compliance provisions but they belong to unrelated statutes (Military Secrets Protection Act, Seamen Act, Military Service Act) and do not apply to the sex crime personal information reporting obligation. C018 and C022 are penalty provisions for the Family Relations Registration Act, which is also unrelated. No candidate provision provides the penalty for non-compliance with the sex crime personal information reporting obligation.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 2,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "성폭력범죄 신상정보 등록대상자가 6개월 이상 국외 체류 시 사전 신고 의무의 존재와 신고 대상 정보 범위",
+        "issue_id": "I1"
+      },
+      {
+        "description": "신상정보 신고 의무 불이행 시 적용되는 처벌 규정",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "6개월 이상 국외 체류 시 신고 의무 존재와 신고해야 할 구체적 정보 항목이 명시된 조항 확인",
+        "critical": true,
+        "description": "성폭력범죄 신상정보 등록대상자의 국외 체류(6개월 이상) 사전 신고 의무 및 신고 대상 정보 항목",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "신고 의무 불이행 시 적용되는 구체적 처벌 규정(형량 또는 과태료 금액) 확인",
+        "critical": true,
+        "description": "신상정보 신고 의무 불이행 시 적용되는 벌칙(형벌 또는 과태료)",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 을은 성폭력 범죄로 인해 신상정보 등록대상자가 되었고, 현재 기본신상정보를 관할 경찰관서에 등록 중이다. 최근 을은 외국 유학을 이유로 6개월 이상 해외에 체류할 계획을 세우고 있다. 출국을 앞둔 을은 관련 법령상 어떤 정보들을 신고해야 하는지, 그리고 이를 이행하지 않을 경우 어떤 처벌을 받을 수 있는지에 대해 경찰에 문의하였다. [질문] 성폭력범죄로 인해 신상정보 등록대상자가 된 을이 6개월 이상 국외에 체류하려는 경우, 사전에 어떤 신상정보를 관할 경찰관서에 신고해야 하며, 이를 정당한 사유 없이 이행하지 않았을 경우 어떤 처벌을 받게 되는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "성폭력범죄",
+          "신상정보 등록대상자",
+          "국외 체류",
+          "6개월 이상",
+          "사전 신고"
+        ],
+        "query_text": "성폭력범죄의 처벌 등에 관한 특례법 신상정보 등록대상자 국외 체류 6개월 이상 사전 신고 의무 [원문 맥락] 출국을 앞둔 을은 관련 법령상 어떤 정보들을 신고해야 하는지, 그리고 이를 이행하지 않을 경우 어떤 처벌을 받을 수 있는지에 대해 경찰에 문의하였다. 성폭력범죄로 인해 신상정보 등록대상자가 된 을이 6개월 이상 국외에 체류하려는 경우, 사전에 어떤 신상정보를 관할 경찰관서에 신고해야 하며, 이를 정당한 사유 없이 이행하지 않았을 경우 어떤 처벌을 받게 되는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "신상정보 신고",
+          "의무 불이행",
+          "벌칙",
+          "처벌"
+        ],
+        "query_text": "성폭력범죄의 처벌 등에 관한 특례법 신상정보 신고 의무 불이행 벌칙 [원문 맥락] 출국을 앞둔 을은 관련 법령상 어떤 정보들을 신고해야 하는지, 그리고 이를 이행하지 않을 경우 어떤 처벌을 받을 수 있는지에 대해 경찰에 문의하였다. 성폭력범죄로 인해 신상정보 등록대상자가 된 을이 6개월 이상 국외에 체류하려는 경우, 사전에 어떤 신상정보를 관할 경찰관서에 신고해야 하며, 이를 정당한 사유 없이 이행하지 않았을 경우 어떤 처벌을 받게 되는가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "성폭력범죄",
+          "신상정보",
+          "등록대상자",
+          "국외체류",
+          "신고사항"
+        ],
+        "query_text": "성폭력범죄의 처벌 등에 관한 특례법 신상정보 등록대상자 국외체류 신고사항 [원문 맥락] 출국을 앞둔 을은 관련 법령상 어떤 정보들을 신고해야 하는지, 그리고 이를 이행하지 않을 경우 어떤 처벌을 받을 수 있는지에 대해 경찰에 문의하였다. 성폭력범죄로 인해 신상정보 등록대상자가 된 을이 6개월 이상 국외에 체류하려는 경우, 사전에 어떤 신상정보를 관할 경찰관서에 신고해야 하며, 이를 정당한 사유 없이 이행하지 않았을 경우 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ1",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "신상정보",
+          "신고",
+          "불이행",
+          "벌칙"
+        ],
+        "query_text": "신상정보 신고 불이행 벌칙 [원문 맥락] 출국을 앞둔 을은 관련 법령상 어떤 정보들을 신고해야 하는지, 그리고 이를 이행하지 않을 경우 어떤 처벌을 받을 수 있는지에 대해 경찰에 문의하였다. 성폭력범죄로 인해 신상정보 등록대상자가 된 을이 6개월 이상 국외에 체류하려는 경우, 사전에 어떤 신상정보를 관할 경찰관서에 신고해야 하며, 이를 정당한 사유 없이 이행하지 않았을 경우 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ2",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "성폭력범죄",
+          "신상정보",
+          "등록대상자",
+          "국외체류",
+          "신고의무",
+          "신고사항"
+        ],
+        "query_text": "성폭력범죄의 처벌 등에 관한 특례법 시행령 신상정보 등록대상자 국외체류 신고의무 신고사항 [원문 맥락] 출국을 앞둔 을은 관련 법령상 어떤 정보들을 신고해야 하는지, 그리고 이를 이행하지 않을 경우 어떤 처벌을 받을 수 있는지에 대해 경찰에 문의하였다. 성폭력범죄로 인해 신상정보 등록대상자가 된 을이 6개월 이상 국외에 체류하려는 경우, 사전에 어떤 신상정보를 관할 경찰관서에 신고해야 하며, 이를 정당한 사유 없이 이행하지 않았을 경우 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ1",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법",
+          "성폭력범죄의 처벌 등에 관한 특례법 시행령"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "성폭력범죄",
+          "신상정보",
+          "제출",
+          "신고",
+          "의무",
+          "불이행",
+          "벌칙"
+        ],
+        "query_text": "성폭력범죄의 처벌 등에 관한 특례법 신상정보 제출 또는 신고 의무 불이행 시 벌칙 [원문 맥락] 출국을 앞둔 을은 관련 법령상 어떤 정보들을 신고해야 하는지, 그리고 이를 이행하지 않을 경우 어떤 처벌을 받을 수 있는지에 대해 경찰에 문의하였다. 성폭력범죄로 인해 신상정보 등록대상자가 된 을이 6개월 이상 국외에 체류하려는 경우, 사전에 어떤 신상정보를 관할 경찰관서에 신고해야 하며, 이를 정당한 사유 없이 이행하지 않았을 경우 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ2",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n을은 성폭력 범죄로 인해 신상정보 등록대상자가 되었고, 현재 기본신상정보를 관할 경찰관서에 등록 중이다. 최근 을은 외국 유학을 이유로 6개월 이상 해외에 체류할 계획을 세우고 있다. 출국을 앞둔 을은 관련 법령상 어떤 정보들을 신고해야 하는지, 그리고 이를 이행하지 않을 경우 어떤 처벌을 받을 수 있는지에 대해 경찰에 문의하였다.\n\n[질문]\n성폭력범죄로 인해 신상정보 등록대상자가 된 을이 6개월 이상 국외에 체류하려는 경우, 사전에 어떤 신상정보를 관할 경찰관서에 신고해야 하며, 이를 정당한 사유 없이 이행하지 않았을 경우 어떤 처벌을 받게 되는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "6개월 이상 국외 체류 시 신고 의무 존재와 신고해야 할 구체적 정보 항목이 명시된 조항 확인",
+        "critical": true,
+        "description": "성폭력범죄 신상정보 등록대상자의 국외 체류(6개월 이상) 사전 신고 의무 및 신고 대상 정보 항목",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "신고 의무 불이행 시 적용되는 구체적 처벌 규정(형량 또는 과태료 금액) 확인",
+        "critical": true,
+        "description": "신상정보 신고 의무 불이행 시 적용되는 벌칙(형벌 또는 과태료)",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "5549a9ad-4657-4a03-95e5-c2b9fdac6700",
+    "seen_provision_ids": [
+      "아동학대범죄의 처벌 등에 관한 특례법 3조  다른 법률과의 관계#KOBLEX-124230",
+      "가족관계의 등록 등에 관한 법률 121조  과태료#KOBLEX-127712",
+      "가족관계의 등록 등에 관한 법률 122조  과태료#KOBLEX-127713",
+      "군사기밀 보호법 10조  군사기밀 보호조치의 불이행 등#KOBLEX-194061",
+      "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 18조  교육활동 침해행위 관련 보고 사항#KOBLEX-219361",
+      "교육공무원법 10조 4 결격사유#KOBLEX-217975",
+      "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 18조  정신건강전문요원의 결격사유#KOBLEX-039616",
+      "영유아보육법 21조 2 어린이집의 원장 또는 보육교사 자격 취득의 결격사유#KOBLEX-046589",
+      "병역법 84조  신상변동 통보 불이행 등#KOBLEX-035707",
+      "사립학교법 시행령 24조 5 직위해제 대상 비위행위#KOBLEX-190053",
+      "유아교육법 22조 2 교사 자격 취득의 결격사유#KOBLEX-226263",
+      "군사기밀 보호법 16조  신고ㆍ제출ㆍ삭제의 불이행#KOBLEX-194077",
+      "범죄수익은닉의 규제 및 처벌 등에 관한 법률 10조 4 범죄수익등의 추정#KOBLEX-048160",
+      "초ㆍ중등교육법 21조 2 교사 자격 취득의 결격사유#KOBLEX-164863",
+      "장애인복지법 59조 15 피해장애인에 대한 변호사 선임의 특례#KOBLEX-188531",
+      "지방공무원법 31조  결격사유#KOBLEX-207828",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 5조  신상정보의 등록 등#KOBLEX-107725",
+      "국가공무원법 33조  결격사유#KOBLEX-073479",
+      "선원법 161조  벌칙#KOBLEX-067806",
+      "성폭력범죄의 처벌 등에 관한 특례법 43조  신상정보의 제출 의무#KOBLEX-157715",
+      "장애인활동 지원에 관한 법률 29조  활동지원인력의 결격 사유#KOBLEX-074510",
+      "장애인복지법 59조 16 진술조력인의 참여 등#KOBLEX-188535",
+      "성폭력범죄의 처벌 등에 관한 특례법 45조 3 신상정보 등록의 종료#KOBLEX-157750",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조  목적#KOBLEX-107704",
+      "공중위생관리법 5조  공중위생영업자의 불법카메라 설치 금지#KOBLEX-164278",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조 2 성적 목적을 위한 공공장소 침입행위#KOBLEX-107705",
+      "선원법 162조  벌칙#KOBLEX-067811"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

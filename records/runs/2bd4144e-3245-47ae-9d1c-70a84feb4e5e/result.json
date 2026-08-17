@@ -1,0 +1,793 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-17T12:54:20.791328+00:00",
+  "end_to_end_latency_ms": 356745.383,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "2bd4144e-3245-47ae-9d1c-70a84feb4e5e",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 18,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 3,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 7,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 34.19406418334965,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 342조  위임계약#KOBLEX-032633",
+        "provision_text": "제342조(위임계약) 위임자가 파산선고를 받은 경우 수임자가 파산선고의 통지를 받지 아니하고 파산선고의 사실도 알지 못하고 위임사무를 처리한 때에는 이로 인하여 파산선고를 받은 자에게 생긴 채권에 관하여 수임자는 파산채권자로서 그 권리를 행사할 수 있다.",
+        "rerank_score": 0.9972532391548157,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "채무자 회생 및 파산에 관한 법률 342조  위임계약"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "건설폐기물의 재활용촉진에 관한 법률 5조  발주자의 의무#KOBLEX-062016",
+        "provision_text": "제5조(발주자의 의무)",
+        "rerank_score": 0.8304963707923889,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "건설폐기물의 재활용촉진에 관한 법률 5조  발주자의 의무"
+      },
+      {
+        "first_stage_score": 20.82875741173018,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "도로법 시행령 62조  도로관리심의회의 설치 등#KOBLEX-179345",
+        "provision_text": "① 도로굴착에 관한 사항을 심의ㆍ조정하기 위하여 도로관리청(도로관리청이 도로점용허가에 관한 권한을 위임하거나 대행시킨 경우에는 그 수임자 또는 대행자를 말한다. 이하 제63조에서 같다)에 도로관리심의회(이하 \"관리심의회\"라 한다)를 둔다.",
+        "rerank_score": 0.7575845122337341,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "도로법 시행령 62조  도로관리심의회의 설치 등 1항"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "상법 168조 4 공급자의 의무#KOBLEX-113956",
+        "provision_text": "제168조의4(공급자의 의무)",
+        "rerank_score": 0.6756172776222229,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "상법 168조 4 공급자의 의무"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "입양특례법 21조  입양기관의 의무#KOBLEX-189026",
+        "provision_text": "제21조(입양기관의 의무)",
+        "rerank_score": 0.6745911240577698,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "입양특례법 21조  입양기관의 의무"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 40조  보호의무자의 의무#KOBLEX-039727",
+        "provision_text": "제40조(보호의무자의 의무)",
+        "rerank_score": 0.6602380275726318,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 40조  보호의무자의 의무"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "액화석유가스의 안전관리 및 사업법 30조  공급자의 의무#KOBLEX-056468",
+        "provision_text": "제30조(공급자의 의무)",
+        "rerank_score": 0.6557924151420593,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "액화석유가스의 안전관리 및 사업법 30조  공급자의 의무"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "의료법 22조#KOBLEX-180104",
+        "provision_text": "제2절 권리와 의무",
+        "rerank_score": 0.6546006202697754,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "의료법 22조"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "수도법 39조  급수 의무#KOBLEX-015706",
+        "provision_text": "제39조(급수 의무)",
+        "rerank_score": 0.650127112865448,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "수도법 39조  급수 의무"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "공인회계사법 12조#KOBLEX-003974",
+        "provision_text": "제4장 권리와 의무",
+        "rerank_score": 0.999998927116394,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "공인회계사법 12조"
+      },
+      {
+        "first_stage_score": 25.07892927838175,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "금융위원회의 설치 등에 관한 법률 14조  긴급조치#KOBLEX-219458",
+        "provision_text": "제14조(긴급조치)",
+        "rerank_score": 0.999998927116394,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "금융위원회의 설치 등에 관한 법률 14조  긴급조치"
+      },
+      {
+        "first_stage_score": 15.770475875083505,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "법원조직법 55조 2 법원보안관리대#KOBLEX-177840",
+        "provision_text": "④ 제2항에 따른 조치를 할 때에는 미리 그 행위자에게 경고하여야 한다. 다만, 긴급한 상황으로서 경고를 할 만한 시간적 여유가 없는 경우에는 그러하지 아니하다.",
+        "rerank_score": 0.048768576234579086,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "법원조직법 55조 2 법원보안관리대 4항"
+      },
+      {
+        "first_stage_score": 14.982126833204276,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "의료법 시행규칙 35조  의료기관의 안전관리시설#KOBLEX-007380",
+        "provision_text": "1. 화재나 그 밖의 긴급한 상황에 대처하기 위하여 필요한 시설",
+        "rerank_score": 0.041339557617902756,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "의료법 시행규칙 35조  의료기관의 안전관리시설 1호"
+      },
+      {
+        "first_stage_score": 1.0,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "민법 266조  공유물의 부담#KOBLEX-058934",
+        "provision_text": "①공유자는 그 지분의 비율로 공유물의 관리비용 기타 의무를 부담한다.",
+        "rerank_score": 0.030156174674630165,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "민법 266조  공유물의 부담 1항"
+      },
+      {
+        "first_stage_score": 14.774414208241897,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "변호사법 88조#KOBLEX-087163",
+        "provision_text": "제9장 법조윤리협의회 및 수임자료 제출 <개정 2008.3.28>",
+        "rerank_score": 0.029775718227028847,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "변호사법 88조"
+      },
+      {
+        "first_stage_score": 23.853954152010772,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "예비군법 8조  긴급조치 및 보상#KOBLEX-050981",
+        "provision_text": "제8조(긴급조치 및 보상)",
+        "rerank_score": 0.0284772627055645,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "예비군법 8조  긴급조치 및 보상"
+      },
+      {
+        "first_stage_score": 23.853954152010772,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "예비군법 8조  긴급조치 및 보상#KOBLEX-118891",
+        "provision_text": "제8조(긴급조치 및 보상)",
+        "rerank_score": 0.0284772627055645,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "예비군법 8조  긴급조치 및 보상"
+      },
+      {
+        "first_stage_score": 14.81891131676667,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "국제사법 14조  보전처분의 관할#KOBLEX-127767",
+        "provision_text": "② 제1항에도 불구하고 당사자는 긴급히 필요한 경우에는 대한민국에서만 효력을 가지는 보전처분을 법원에 신청할 수 있다.",
+        "rerank_score": 0.026536034420132637,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "국제사법 14조  보전처분의 관할 2항"
+      },
+      {
+        "first_stage_score": 25.60825731209774,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "양육비 이행확보 및 지원에 관한 법률 14조 2 긴급지원 종료 등#KOBLEX-150218",
+        "provision_text": "제14조의2(긴급지원 종료 등)",
+        "rerank_score": 0.9999837875366211,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "양육비 이행확보 및 지원에 관한 법률 14조 2 긴급지원 종료 등"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "최저임금법 시행령 11조  주지 의무#KOBLEX-111460",
+        "provision_text": "제11조(주지 의무)",
+        "rerank_score": 0.9999823570251465,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "최저임금법 시행령 11조  주지 의무"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "외국환거래법 10조  업무상의 의무#KOBLEX-003758",
+        "provision_text": "제10조(업무상의 의무)",
+        "rerank_score": 0.9999818801879883,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "외국환거래법 10조  업무상의 의무"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "외국환거래법 10조  업무상의 의무#KOBLEX-080804",
+        "provision_text": "제10조(업무상의 의무)",
+        "rerank_score": 0.9999818801879883,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "외국환거래법 10조  업무상의 의무"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "국가공무원법 59조 2 종교중립의 의무#KOBLEX-073603",
+        "provision_text": "제59조의2(종교중립의 의무)",
+        "rerank_score": 0.9999816417694092,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "국가공무원법 59조 2 종교중립의 의무"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "지방공무원법 51조 2 종교중립의 의무#KOBLEX-207935",
+        "provision_text": "제51조의2(종교중립의 의무)",
+        "rerank_score": 0.9999815225601196,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "지방공무원법 51조 2 종교중립의 의무"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "보험업법 시행령 41조  보험중개사의 의무#KOBLEX-121409",
+        "provision_text": "제41조(보험중개사의 의무)",
+        "rerank_score": 0.9999812841415405,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "보험업법 시행령 41조  보험중개사의 의무"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "지방자치법 시행령 50조  주의 의무#KOBLEX-196863",
+        "provision_text": "제50조(주의 의무)",
+        "rerank_score": 0.9999812841415405,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "지방자치법 시행령 50조  주의 의무"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "감염병의 예방 및 관리에 관한 법률 51조  소독 의무#KOBLEX-231038",
+        "provision_text": "제51조(소독 의무)",
+        "rerank_score": 0.999998927116394,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "감염병의 예방 및 관리에 관한 법률 51조  소독 의무"
+      },
+      {
+        "first_stage_score": 20.178931015355786,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "건축법 시행령 63조 4 건축자재등 품질 유지ㆍ관리 의무 위반에 따른 조치#KOBLEX-012824",
+        "provision_text": "제63조의4(건축자재등 품질 유지ㆍ관리 의무 위반에 따른 조치)",
+        "rerank_score": 0.999998927116394,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "건축법 시행령 63조 4 건축자재등 품질 유지ㆍ관리 의무 위반에 따른 조치"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "공공기관의 정보공개에 관한 법률 6조  공공기관의 의무#KOBLEX-130104",
+        "provision_text": "제6조(공공기관의 의무)",
+        "rerank_score": 0.999998927116394,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "공공기관의 정보공개에 관한 법률 6조  공공기관의 의무"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "공공기관의 정보공개에 관한 법률 6조  공공기관의 의무#KOBLEX-217164",
+        "provision_text": "제6조(공공기관의 의무)",
+        "rerank_score": 0.999998927116394,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "공공기관의 정보공개에 관한 법률 6조  공공기관의 의무"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "국가공무원법 61조  청렴의 의무#KOBLEX-073607",
+        "provision_text": "제61조(청렴의 의무)",
+        "rerank_score": 0.999998927116394,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "국가공무원법 61조  청렴의 의무"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "국가유공자 등 예우 및 지원에 관한 법률 23조  취학시킬 의무#KOBLEX-044611",
+        "provision_text": "제23조(취학시킬 의무)",
+        "rerank_score": 0.999998927116394,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "국가유공자 등 예우 및 지원에 관한 법률 23조  취학시킬 의무"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "국가유공자 등 예우 및 지원에 관한 법률 23조  취학시킬 의무#KOBLEX-163934",
+        "provision_text": "제23조(취학시킬 의무)",
+        "rerank_score": 0.999998927116394,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "국가유공자 등 예우 및 지원에 관한 법률 23조  취학시킬 의무"
+      },
+      {
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "농지의보전및이용에관한법률 8조  성실경작의 의무#KOBLEX-130550",
+        "provision_text": "제8조 (성실경작의 의무)",
+        "rerank_score": 0.999998927116394,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "농지의보전및이용에관한법률 8조  성실경작의 의무"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "감염병의 예방 및 관리에 관한 법률 51조  소독 의무#KOBLEX-231038": "제51조(소독 의무)",
+      "건설폐기물의 재활용촉진에 관한 법률 5조  발주자의 의무#KOBLEX-062016": "제5조(발주자의 의무)",
+      "건축법 시행령 63조 4 건축자재등 품질 유지ㆍ관리 의무 위반에 따른 조치#KOBLEX-012824": "제63조의4(건축자재등 품질 유지ㆍ관리 의무 위반에 따른 조치)",
+      "공공기관의 정보공개에 관한 법률 6조  공공기관의 의무#KOBLEX-130104": "제6조(공공기관의 의무)",
+      "공공기관의 정보공개에 관한 법률 6조  공공기관의 의무#KOBLEX-217164": "제6조(공공기관의 의무)",
+      "공인회계사법 12조#KOBLEX-003974": "제4장 권리와 의무",
+      "국가공무원법 59조 2 종교중립의 의무#KOBLEX-073603": "제59조의2(종교중립의 의무)",
+      "국가공무원법 61조  청렴의 의무#KOBLEX-073607": "제61조(청렴의 의무)",
+      "국가유공자 등 예우 및 지원에 관한 법률 23조  취학시킬 의무#KOBLEX-044611": "제23조(취학시킬 의무)",
+      "국가유공자 등 예우 및 지원에 관한 법률 23조  취학시킬 의무#KOBLEX-163934": "제23조(취학시킬 의무)",
+      "국제사법 14조  보전처분의 관할#KOBLEX-127767": "② 제1항에도 불구하고 당사자는 긴급히 필요한 경우에는 대한민국에서만 효력을 가지는 보전처분을 법원에 신청할 수 있다.",
+      "금융위원회의 설치 등에 관한 법률 14조  긴급조치#KOBLEX-219458": "제14조(긴급조치)",
+      "농지의보전및이용에관한법률 8조  성실경작의 의무#KOBLEX-130550": "제8조 (성실경작의 의무)",
+      "도로법 시행령 62조  도로관리심의회의 설치 등#KOBLEX-179345": "① 도로굴착에 관한 사항을 심의ㆍ조정하기 위하여 도로관리청(도로관리청이 도로점용허가에 관한 권한을 위임하거나 대행시킨 경우에는 그 수임자 또는 대행자를 말한다. 이하 제63조에서 같다)에 도로관리심의회(이하 \"관리심의회\"라 한다)를 둔다.",
+      "민법 266조  공유물의 부담#KOBLEX-058934": "①공유자는 그 지분의 비율로 공유물의 관리비용 기타 의무를 부담한다.",
+      "법원조직법 55조 2 법원보안관리대#KOBLEX-177840": "④ 제2항에 따른 조치를 할 때에는 미리 그 행위자에게 경고하여야 한다. 다만, 긴급한 상황으로서 경고를 할 만한 시간적 여유가 없는 경우에는 그러하지 아니하다.",
+      "변호사법 88조#KOBLEX-087163": "제9장 법조윤리협의회 및 수임자료 제출 <개정 2008.3.28>",
+      "보험업법 시행령 41조  보험중개사의 의무#KOBLEX-121409": "제41조(보험중개사의 의무)",
+      "상법 168조 4 공급자의 의무#KOBLEX-113956": "제168조의4(공급자의 의무)",
+      "수도법 39조  급수 의무#KOBLEX-015706": "제39조(급수 의무)",
+      "액화석유가스의 안전관리 및 사업법 30조  공급자의 의무#KOBLEX-056468": "제30조(공급자의 의무)",
+      "양육비 이행확보 및 지원에 관한 법률 14조 2 긴급지원 종료 등#KOBLEX-150218": "제14조의2(긴급지원 종료 등)",
+      "예비군법 8조  긴급조치 및 보상#KOBLEX-050981": "제8조(긴급조치 및 보상)",
+      "예비군법 8조  긴급조치 및 보상#KOBLEX-118891": "제8조(긴급조치 및 보상)",
+      "외국환거래법 10조  업무상의 의무#KOBLEX-003758": "제10조(업무상의 의무)",
+      "외국환거래법 10조  업무상의 의무#KOBLEX-080804": "제10조(업무상의 의무)",
+      "의료법 22조#KOBLEX-180104": "제2절 권리와 의무",
+      "의료법 시행규칙 35조  의료기관의 안전관리시설#KOBLEX-007380": "1. 화재나 그 밖의 긴급한 상황에 대처하기 위하여 필요한 시설",
+      "입양특례법 21조  입양기관의 의무#KOBLEX-189026": "제21조(입양기관의 의무)",
+      "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 40조  보호의무자의 의무#KOBLEX-039727": "제40조(보호의무자의 의무)",
+      "지방공무원법 51조 2 종교중립의 의무#KOBLEX-207935": "제51조의2(종교중립의 의무)",
+      "지방자치법 시행령 50조  주의 의무#KOBLEX-196863": "제50조(주의 의무)",
+      "채무자 회생 및 파산에 관한 법률 342조  위임계약#KOBLEX-032633": "제342조(위임계약) 위임자가 파산선고를 받은 경우 수임자가 파산선고의 통지를 받지 아니하고 파산선고의 사실도 알지 못하고 위임사무를 처리한 때에는 이로 인하여 파산선고를 받은 자에게 생긴 채권에 관하여 수임자는 파산채권자로서 그 권리를 행사할 수 있다.",
+      "최저임금법 시행령 11조  주지 의무#KOBLEX-111460": "제11조(주지 의무)"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "위임계약 종료 후 위임자 연락 불능 시 수임자의 긴급 조치 의무 존재 여부와 요건을 명시하는 조항"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The completion criteria require a provision specifying the existence and conditions of an agent's emergency action duty after termination of a mandate contract when the principal is unreachable. None of the supplied candidate provisions address post-termination emergency duties of an agent in a mandate contract. C001 concerns bankruptcy-related mandate rights, not emergency duties after termination. C011, C012, C013, C016, C017, and C018 concern emergency measures in financial regulation, court security, medical facilities, reserve forces, or provisional remedies, none of which govern the agent's duty under a terminated mandate contract. Therefore, no provision supports E1.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "위임계약 종료 후 수임자의 긴급 조치 법적 근거와 한계를 명시하는 조항"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The completion criteria require a provision specifying the legal basis and limits of an agent's emergency actions after termination of a mandate contract. None of the supplied candidate provisions provide such a basis or limits for an agent in this context. C001 addresses bankruptcy-related mandate rights, not post-termination emergency action authority. Other candidates concern unrelated regulatory or procedural emergency measures. Therefore, no provision supports E2.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 7,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "위임계약 종료 후 위임자 연락 불능 상황에서 수임자의 긴급 조치 의무 존재 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "위임계약 종료 후 수임자의 조치 근거 및 한계",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "위임계약 종료 후 위임자 연락 불능 시 수임자의 긴급 조치 의무 존재 여부와 요건을 명시하는 조항 확인",
+        "critical": true,
+        "description": "위임계약 종료 후 수임자의 긴급 조치 의무에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을에게 부동산 거래를 위임했습니다. 그러나 계약 기간 중 갑이 해외로 장기 출장을 떠나게 되어 을에게 계약 종료를 알렸습니다. 출장 중 갑의 부동산에 예상치 못한 홍수가 발생했고, 부동산에 대한 긴급 조치가 필요해졌습니다. 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. [질문] 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "위임계약",
+          "계약종료",
+          "수임자",
+          "긴급조치",
+          "의무",
+          "연락불능"
+        ],
+        "query_text": "위임계약 종료 후 위임자 연락 불능 시 수임자의 긴급 조치 의무 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "위임계약",
+          "계약종료",
+          "수임자",
+          "긴급조치",
+          "법적근거",
+          "한계"
+        ],
+        "query_text": "위임계약 종료 후 수임자 긴급조치 법적근거 한계 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "위임계약",
+          "계약종료",
+          "수임자",
+          "긴급조치",
+          "의무",
+          "연락불능"
+        ],
+        "query_text": "위임계약 종료 후 위임자 연락불능 시 수임자의 긴급조치 의무 요건 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "GRQ1",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "위임계약",
+          "종료",
+          "수임자",
+          "긴급조치",
+          "의무",
+          "연락불능"
+        ],
+        "query_text": "위임계약이 종료된 후 위임자와 연락이 닿지 아니하는 경우 수임자는 긴급한 조치를 취할 의무가 있다 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "GRQ2",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "위임계약",
+          "계약종료",
+          "수임자",
+          "긴급조치",
+          "의무"
+        ],
+        "query_text": "위임계약 종료 후 수임자 긴급조치 의무 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "GRQ3",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "위임계약",
+          "계약종료",
+          "수임자",
+          "긴급조치",
+          "의무",
+          "위임자부재"
+        ],
+        "query_text": "위임계약 종료 후 위임자 부재 시 수임자의 긴급조치 의무 및 요건 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "GRQ1",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "위임계약",
+          "종료",
+          "수임자",
+          "긴급조치",
+          "의무",
+          "위임자부재"
+        ],
+        "query_text": "위임계약이 종료된 후 위임자가 부재하여 연락이 불가능한 경우 수임자는 긴급한 조치를 취하여야 한다 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "GRQ2",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "위임계약",
+          "계약종료",
+          "수임자",
+          "긴급조치",
+          "의무",
+          "위임자부재"
+        ],
+        "query_text": "위임계약 종료 후 수임자 긴급조치 의무 위임자부재 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "GRQ3",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을에게 부동산 거래를 위임했습니다. 그러나 계약 기간 중 갑이 해외로 장기 출장을 떠나게 되어 을에게 계약 종료를 알렸습니다. 출장 중 갑의 부동산에 예상치 못한 홍수가 발생했고, 부동산에 대한 긴급 조치가 필요해졌습니다. 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다.\n\n[질문]\n갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+    "remaining_request_budget": 1,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "위임계약 종료 후 위임자 연락 불능 시 수임자의 긴급 조치 의무 존재 여부와 요건을 명시하는 조항 확인",
+        "critical": true,
+        "description": "위임계약 종료 후 수임자의 긴급 조치 의무에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "위임계약 종료 후 수임자의 긴급 조치 법적 근거와 한계를 명시하는 조항 확인",
+        "critical": false,
+        "description": "위임계약 종료 후 수임자의 조치 근거 및 한계에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "2bd4144e-3245-47ae-9d1c-70a84feb4e5e",
+    "seen_provision_ids": [
+      "채무자 회생 및 파산에 관한 법률 342조  위임계약#KOBLEX-032633",
+      "국가유공자 등 예우 및 지원에 관한 법률 23조  취학시킬 의무#KOBLEX-163934",
+      "공인회계사법 12조#KOBLEX-003974",
+      "국가유공자 등 예우 및 지원에 관한 법률 23조  취학시킬 의무#KOBLEX-044611",
+      "지방공무원법 51조 2 종교중립의 의무#KOBLEX-207935",
+      "국가공무원법 59조 2 종교중립의 의무#KOBLEX-073603",
+      "국제사법 14조  보전처분의 관할#KOBLEX-127767",
+      "수도법 39조  급수 의무#KOBLEX-015706",
+      "예비군법 8조  긴급조치 및 보상#KOBLEX-050981",
+      "상법 168조 4 공급자의 의무#KOBLEX-113956",
+      "보험업법 시행령 41조  보험중개사의 의무#KOBLEX-121409",
+      "액화석유가스의 안전관리 및 사업법 30조  공급자의 의무#KOBLEX-056468",
+      "공공기관의 정보공개에 관한 법률 6조  공공기관의 의무#KOBLEX-217164",
+      "민법 266조  공유물의 부담#KOBLEX-058934",
+      "법원조직법 55조 2 법원보안관리대#KOBLEX-177840",
+      "의료법 22조#KOBLEX-180104",
+      "도로법 시행령 62조  도로관리심의회의 설치 등#KOBLEX-179345",
+      "감염병의 예방 및 관리에 관한 법률 51조  소독 의무#KOBLEX-231038",
+      "입양특례법 21조  입양기관의 의무#KOBLEX-189026",
+      "외국환거래법 10조  업무상의 의무#KOBLEX-003758",
+      "예비군법 8조  긴급조치 및 보상#KOBLEX-118891",
+      "지방자치법 시행령 50조  주의 의무#KOBLEX-196863",
+      "농지의보전및이용에관한법률 8조  성실경작의 의무#KOBLEX-130550",
+      "공공기관의 정보공개에 관한 법률 6조  공공기관의 의무#KOBLEX-130104",
+      "건설폐기물의 재활용촉진에 관한 법률 5조  발주자의 의무#KOBLEX-062016",
+      "변호사법 88조#KOBLEX-087163",
+      "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 40조  보호의무자의 의무#KOBLEX-039727",
+      "의료법 시행규칙 35조  의료기관의 안전관리시설#KOBLEX-007380",
+      "양육비 이행확보 및 지원에 관한 법률 14조 2 긴급지원 종료 등#KOBLEX-150218",
+      "금융위원회의 설치 등에 관한 법률 14조  긴급조치#KOBLEX-219458",
+      "건축법 시행령 63조 4 건축자재등 품질 유지ㆍ관리 의무 위반에 따른 조치#KOBLEX-012824",
+      "최저임금법 시행령 11조  주지 의무#KOBLEX-111460",
+      "외국환거래법 10조  업무상의 의무#KOBLEX-080804",
+      "국가공무원법 61조  청렴의 의무#KOBLEX-073607"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

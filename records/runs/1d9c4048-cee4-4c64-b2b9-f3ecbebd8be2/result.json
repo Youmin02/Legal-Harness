@@ -1,0 +1,717 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-17T12:59:33.906918+00:00",
+  "end_to_end_latency_ms": 311993.593,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "1d9c4048-cee4-4c64-b2b9-f3ecbebd8be2",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 3,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 17.50744499087778,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 3조 2 재판권 쟁의에 대한 재정의 신청#KOBLEX-092078",
+        "provision_text": "③ 상소권자가 제1항의 신청을 할 때에는 그 이유를 갖춘 신청서를 해당 사건이 계속되어 있는 법원 또는 군사법원에 제출하고, 신청서를 받은 법원 또는 군사법원은 이를 받은 날부터 7일 이내에 신청서와 해당 사건의 기록을 대법원에 보내야 한다.",
+        "rerank_score": 0.9982276558876038,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "군사법원법 3조 2 재판권 쟁의에 대한 재정의 신청 3항"
+      },
+      {
+        "first_stage_score": 17.50744499087778,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 3조 2 재판권 쟁의에 대한 재정의 신청#KOBLEX-158043",
+        "provision_text": "③ 상소권자가 제1항의 신청을 할 때에는 그 이유를 갖춘 신청서를 해당 사건이 계속되어 있는 법원 또는 군사법원에 제출하고, 신청서를 받은 법원 또는 군사법원은 이를 받은 날부터 7일 이내에 신청서와 해당 사건의 기록을 대법원에 보내야 한다.",
+        "rerank_score": 0.9982276558876038,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "군사법원법 3조 2 재판권 쟁의에 대한 재정의 신청 3항"
+      },
+      {
+        "first_stage_score": 17.64270308079898,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 3조 2 재판권 쟁의에 대한 재정의 신청#KOBLEX-092077",
+        "provision_text": "② 사건이 계속된 법원 또는 군사법원은 제1항의 신청을 하는 경우에 이유를 갖춘 신청서와 해당 사건의 기록을 대법원에 제출한다.",
+        "rerank_score": 0.9979376792907715,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "군사법원법 3조 2 재판권 쟁의에 대한 재정의 신청 2항"
+      },
+      {
+        "first_stage_score": 17.64270308079898,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 3조 2 재판권 쟁의에 대한 재정의 신청#KOBLEX-158042",
+        "provision_text": "② 사건이 계속된 법원 또는 군사법원은 제1항의 신청을 하는 경우에 이유를 갖춘 신청서와 해당 사건의 기록을 대법원에 제출한다.",
+        "rerank_score": 0.9979376792907715,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "군사법원법 3조 2 재판권 쟁의에 대한 재정의 신청 2항"
+      },
+      {
+        "first_stage_score": 16.131722277481654,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "축산물 위생관리법 40조 2 가축 외의 동물 등의 검사#KOBLEX-094851",
+        "provision_text": "⑤ 제1항에 따른 검사의 신청절차, 신청요건, 검사의 방법ㆍ기준 및 검사 결과의 표시방법 등에 관하여 필요한 사항은 총리령으로 정한다. <개정 2013.3.23>",
+        "rerank_score": 0.9974794983863831,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "축산물 위생관리법 40조 2 가축 외의 동물 등의 검사 5항"
+      },
+      {
+        "first_stage_score": 16.131722277481654,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "축산물 위생관리법 40조 2 가축 외의 동물 등의 검사#KOBLEX-166456",
+        "provision_text": "⑤ 제1항에 따른 검사의 신청절차, 신청요건, 검사의 방법ㆍ기준 및 검사 결과의 표시방법 등에 관하여 필요한 사항은 총리령으로 정한다. <개정 2013.3.23>",
+        "rerank_score": 0.9974794983863831,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "축산물 위생관리법 40조 2 가축 외의 동물 등의 검사 5항"
+      },
+      {
+        "first_stage_score": 16.131722277481654,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "축산물 위생관리법 40조 2 가축 외의 동물 등의 검사#KOBLEX-194986",
+        "provision_text": "⑤ 제1항에 따른 검사의 신청절차, 신청요건, 검사의 방법ㆍ기준 및 검사 결과의 표시방법 등에 관하여 필요한 사항은 총리령으로 정한다. <개정 2013.3.23>",
+        "rerank_score": 0.9974794983863831,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "축산물 위생관리법 40조 2 가축 외의 동물 등의 검사 5항"
+      },
+      {
+        "first_stage_score": 15.912855677762833,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "국세기본법 시행령 63조  항고소송 제기사건의 통지#KOBLEX-029890",
+        "provision_text": "1. 항고소송이 제기된 사건 목록과 해당 사건의 처리 상황 및 결과",
+        "rerank_score": 0.9973130822181702,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "국세기본법 시행령 63조  항고소송 제기사건의 통지 1호"
+      },
+      {
+        "first_stage_score": 4.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 266조 11 피고인 또는 변호인이 보관하고 있는 서류등의 열람ㆍ등사#KOBLEX-232382",
+        "provision_text": "①검사는 피고인 또는 변호인이 공판기일 또는 공판준비절차에서 현장부재ㆍ심신상실 또는 심신미약 등 법률상ㆍ사실상의 주장을 한 때에는 피고인 또는 변호인에게 다음 서류등의 열람ㆍ등사 또는 서면의 교부를 요구할 수 있다. 1. 피고인 또는 변호인이 증거로 신청할 서류등 2. 피고인 또는 변호인이 증인으로 신청할 사람의 성명, 사건과의 관계 등을 기재한 서면 3. 제1호의 서류등 또는 제2호의 서면의 증명력과 관련된 서류등 4. 피고인 또는 변호인이 행한 법률상ㆍ사실상의 주장과 관련된 서류등",
+        "rerank_score": 0.9991222023963928,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "형사소송법 266조 11 피고인 또는 변호인이 보관하고 있는 서류등의 열람ㆍ등사 1항"
+      },
+      {
+        "first_stage_score": 20.856494557156356,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "마약류 불법거래 방지에 관한 특례법 43조  몰수보전명령의 실효#KOBLEX-006635",
+        "provision_text": "② 「형사소송법」 제327조제2호에 따른 공소기각(公訴棄却)의 판결이 있는 경우 그 판결이 확정된 날부터 30일 이내에 그 사건에 대하여 공소가 제기되지 아니한 때에는 몰수보전명령은 그 효력을 잃는다.",
+        "rerank_score": 0.9962599277496338,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "마약류 불법거래 방지에 관한 특례법 43조  몰수보전명령의 실효 2항"
+      },
+      {
+        "first_stage_score": 21.197687288161863,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민사소송 등 인지법 9조  그 밖의 신청서#KOBLEX-106999",
+        "provision_text": "⑤ 다음 각 호의 신청을 위한 신청서에는 1천원의 인지를 붙여야 한다. <개정 2011.7.18> 1. 「민사소송법」 제475조에 따른 공시최고(公示催告)의 신청 2. 「비송사건절차법」에 따라 재판을 구하는 신청 3. 재산명시신청이나 채무불이행자명부 등재(登載)신청 또는 그 말소(抹消)신청 4. 그 밖에 대법원규칙으로 정하는 각종 사건부에 등재할 신청(제1항부터 제3항까지의 신청은 제외한다)",
+        "rerank_score": 0.999028205871582,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "민사소송 등 인지법 9조  그 밖의 신청서 5항"
+      },
+      {
+        "first_stage_score": 4.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 266조 3 공소제기 후 검사가 보관하고 있는 서류 등의 열람ㆍ등사#KOBLEX-232342",
+        "provision_text": "①피고인 또는 변호인은 검사에게 공소제기된 사건에 관한 서류 또는 물건(이하 \"서류등\"이라 한다)의 목록과 공소사실의 인정 또는 양형에 영향을 미칠 수 있는 다음 서류등의 열람ㆍ등사 또는 서면의 교부를 신청할 수 있다. 다만, 피고인에게 변호인이 있는 경우에는 피고인은 열람만을 신청할 수 있다. 1. 검사가 증거로 신청할 서류등 2. 검사가 증인으로 신청할 사람의 성명ㆍ사건과의 관계 등을 기재한 서면 또는 그 사람이 공판기일 전에 행한 진술을 기재한 서류등 3. 제1호 또는 제2호의 서면 또는 서류등의 증명력과 관련된 서류등 4. 피고인 또는 변호인이 행한 법률상ㆍ사실상 주장과 관련된 서류등(관련 형사재판확정기록, 불기소처분기록 등을 포함한다)",
+        "rerank_score": 0.9984037280082703,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "형사소송법 266조 3 공소제기 후 검사가 보관하고 있는 서류 등의 열람ㆍ등사 1항"
+      },
+      {
+        "first_stage_score": 25.332042332595787,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "보호관찰 등에 관한 법률 57조  「형사소송법」의 준용#KOBLEX-212971",
+        "provision_text": "제57조(「형사소송법」의 준용) 보호관찰에 관하여 이 법에 특별한 규정이 있는 경우를 제외하고는 그 성질에 반하지 아니하는 범위에서 「형사소송법」을 준용한다.",
+        "rerank_score": 0.9973018169403076,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "보호관찰 등에 관한 법률 57조  「형사소송법」의 준용"
+      },
+      {
+        "first_stage_score": 18.407272022456006,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 294조 4 피해자 등의 공판기록 열람ㆍ등사#KOBLEX-232521",
+        "provision_text": "①소송계속 중인 사건의 피해자(피해자가 사망하거나 그 심신에 중대한 장애가 있는 경우에는 그 배우자ㆍ직계친족 및 형제자매를 포함한다), 피해자 본인의 법정대리인 또는 이들로부터 위임을 받은 피해자 본인의 배우자ㆍ직계친족ㆍ형제자매ㆍ변호사는 소송기록의 열람 또는 등사를 재판장에게 신청할 수 있다.",
+        "rerank_score": 0.9970480799674988,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "형사소송법 294조 4 피해자 등의 공판기록 열람ㆍ등사 1항"
+      },
+      {
+        "first_stage_score": 20.5265522287944,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "부패재산의 몰수 및 회복에 관한 특례법 20조  「형사소송법」의 준용 등#KOBLEX-073102",
+        "provision_text": "제20조(「형사소송법」의 준용 등)",
+        "rerank_score": 0.9968475699424744,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "부패재산의 몰수 및 회복에 관한 특례법 20조  「형사소송법」의 준용 등"
+      },
+      {
+        "first_stage_score": 4.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 245조 7 고소인 등의 이의신청#KOBLEX-232251",
+        "provision_text": "② 사법경찰관은 제1항의 신청이 있는 때에는 지체 없이 검사에게 사건을 송치하고 관계 서류와 증거물을 송부하여야 하며, 처리결과와 그 이유를 제1항의 신청인에게 통지하여야 한다.",
+        "rerank_score": 0.9967798590660095,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "형사소송법 245조 7 고소인 등의 이의신청 2항"
+      },
+      {
+        "first_stage_score": 5.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 294조 2 피해자등의 진술권#KOBLEX-232512",
+        "provision_text": "①법원은 범죄로 인한 피해자 또는 그 법정대리인(피해자가 사망한 경우에는 배우자ㆍ직계친족ㆍ형제자매를 포함한다. 이하 이 조에서 \"피해자등\"이라 한다)의 신청이 있는 때에는 그 피해자등을 증인으로 신문하여야 한다. 다만, 다음 각 호의 어느 하나에 해당하는 경우에는 그러하지 아니하다. <개정 2007.6.1> 1. 삭제 <2007.6.1> 2. 피해자등 이미 당해 사건에 관하여 공판절차에서 충분히 진술하여 다시 진술할 필요가 없다고 인정되는 경우 3. 피해자등의 진술로 인하여 공판절차가 현저하게 지연될 우려가 있는 경우",
+        "rerank_score": 0.9967355132102966,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "형사소송법 294조 2 피해자등의 진술권 1항"
+      },
+      {
+        "first_stage_score": 20.368243082435487,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "마약류 불법거래 방지에 관한 특례법 58조  추징보전명령의 실효#KOBLEX-006696",
+        "provision_text": "② 「형사소송법」 제327조제2호에 따른 공소기각의 판결이 있는 경우 추징보전명령의 효력에 관하여는 제43조제2항을 준용한다.",
+        "rerank_score": 0.9966193437576294,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "마약류 불법거래 방지에 관한 특례법 58조  추징보전명령의 실효 2항"
+      },
+      {
+        "first_stage_score": 20.368243082435487,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "마약류 불법거래 방지에 관한 특례법 58조  추징보전명령의 실효#KOBLEX-045446",
+        "provision_text": "② 「형사소송법」 제327조제2호에 따른 공소기각의 판결이 있는 경우 추징보전명령의 효력에 관하여는 제43조제2항을 준용한다.",
+        "rerank_score": 0.9966193437576294,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "마약류 불법거래 방지에 관한 특례법 58조  추징보전명령의 실효 2항"
+      },
+      {
+        "first_stage_score": 19.478790979634603,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "공무원범죄에 관한 몰수 특례법 17조  증거#KOBLEX-038576",
+        "provision_text": "① 참가인의 참가는 「형사소송법」 제310조의2, 제311조부터 제318조까지, 제318조의2 및 제318조의3을 적용하는 데에 영향을 미치지 아니한다.",
+        "rerank_score": 0.9971790313720703,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "공무원범죄에 관한 몰수 특례법 17조  증거 1항"
+      },
+      {
+        "first_stage_score": 19.478790979634603,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "마약류 불법거래 방지에 관한 특례법 27조  증거#KOBLEX-006570",
+        "provision_text": "① 참가인의 참가는 「형사소송법」 제310조의2, 제311조부터 제318조까지, 제318조의2 및 제318조의3을 적용하는 데 영향을 미치지 아니한다.",
+        "rerank_score": 0.9970033764839172,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "마약류 불법거래 방지에 관한 특례법 27조  증거 1항"
+      },
+      {
+        "first_stage_score": 31.443480550033286,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "상법 564조  업무집행의 결정, 이사와 회사간의 거래#KOBLEX-115702",
+        "provision_text": "제564조(업무집행의 결정, 이사와 회사간의 거래)",
+        "rerank_score": 0.9965106844902039,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "상법 564조  업무집행의 결정, 이사와 회사간의 거래"
+      },
+      {
+        "first_stage_score": 34.67292262197367,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 564조  면책허가#KOBLEX-033203",
+        "provision_text": "제564조(면책허가)",
+        "rerank_score": 0.9955612421035767,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "채무자 회생 및 파산에 관한 법률 564조  면책허가"
+      },
+      {
+        "first_stage_score": 33.804928242878425,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "민법 564조  매매의 일방예약#KOBLEX-059519",
+        "provision_text": "제564조(매매의 일방예약)",
+        "rerank_score": 0.9940277338027954,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "민법 564조  매매의 일방예약"
+      },
+      {
+        "first_stage_score": 4.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 102조  보석조건의 변경과 취소 등#KOBLEX-231741",
+        "provision_text": "②법원은 피고인이 다음 각 호의 어느 하나에 해당하는 경우에는 직권 또는 검사의 청구에 따라 결정으로 보석 또는 구속의 집행정지를 취소할 수 있다. 다만, 제101조제4항에 따른 구속영장의 집행정지는 그 회기 중 취소하지 못한다. 1. 도망한 때 2. 도망하거나 죄증을 인멸할 염려가 있다고 믿을 만한 충분한 이유가 있는 때 3. 소환을 받고 정당한 사유 없이 출석하지 아니한 때 4. 피해자, 당해 사건의 재판에 필요한 사실을 알고 있다고 인정되는 자 또는 그 친족의 생명ㆍ신체ㆍ재산에 해를 가하거나 가할 염려가 있다고 믿을 만한 충분한 이유가 있는 때 5. 법원이 정한 조건을 위반한 때",
+        "rerank_score": 0.9907201528549194,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "형사소송법 102조  보석조건의 변경과 취소 등 2항"
+      },
+      {
+        "first_stage_score": 20.813479100626996,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "조세특례제한법 100조 4 부양자녀의 요건과 판정시기#KOBLEX-099990",
+        "provision_text": "⑥ 제1항부터 제5항까지의 규정에도 불구하고 반기 신청이 있는 경우에는 해당 요건에 해당하는지 여부의 판정은 해당 소득세 직전 과세기간 종료일 현재의 상황에 따른다. <신설 2018.12.24, 2019.12.31>",
+        "rerank_score": 0.9902770519256592,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "조세특례제한법 100조 4 부양자녀의 요건과 판정시기 6항"
+      },
+      {
+        "first_stage_score": 20.813479100626996,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "조세특례제한법 100조 4 부양자녀의 요건과 판정시기#KOBLEX-151971",
+        "provision_text": "⑥ 제1항부터 제5항까지의 규정에도 불구하고 반기 신청이 있는 경우에는 해당 요건에 해당하는지 여부의 판정은 해당 소득세 직전 과세기간 종료일 현재의 상황에 따른다. <신설 2018.12.24, 2019.12.31>",
+        "rerank_score": 0.9902770519256592,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "조세특례제한법 100조 4 부양자녀의 요건과 판정시기 6항"
+      },
+      {
+        "first_stage_score": 19.48728769760151,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "지방세기본법 116조  「형사소송법」의 준용#KOBLEX-121048",
+        "provision_text": "제116조(「형사소송법」의 준용) 압수 또는 수색과 압수ㆍ수색영장에 관하여 이 법에서 규정한 것을 제외하고는 「형사소송법」 중 압수 또는 수색과 압수ㆍ수색영장에 관한 규정을 준용한다.",
+        "rerank_score": 0.9875882267951965,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "지방세기본법 116조  「형사소송법」의 준용"
+      },
+      {
+        "first_stage_score": 20.1881673080954,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "변호사법 101조 2 「형사소송법」 등의 준용#KOBLEX-087293",
+        "provision_text": "제101조의2(「형사소송법」 등의 준용) 서류의 송달, 기일의 지정이나 변경 및 증인·감정인의 선서와 급여에 관한 사항에 대하여는 「형사소송법」과 「형사소송비용 등에 관한 법률」의 규정을 준용한다.",
+        "rerank_score": 0.9863009452819824,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "변호사법 101조 2 「형사소송법」 등의 준용"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공무원범죄에 관한 몰수 특례법 17조  증거#KOBLEX-038576": "① 참가인의 참가는 「형사소송법」 제310조의2, 제311조부터 제318조까지, 제318조의2 및 제318조의3을 적용하는 데에 영향을 미치지 아니한다.",
+      "국세기본법 시행령 63조  항고소송 제기사건의 통지#KOBLEX-029890": "1. 항고소송이 제기된 사건 목록과 해당 사건의 처리 상황 및 결과",
+      "군사법원법 3조 2 재판권 쟁의에 대한 재정의 신청#KOBLEX-092077": "② 사건이 계속된 법원 또는 군사법원은 제1항의 신청을 하는 경우에 이유를 갖춘 신청서와 해당 사건의 기록을 대법원에 제출한다.",
+      "군사법원법 3조 2 재판권 쟁의에 대한 재정의 신청#KOBLEX-092078": "③ 상소권자가 제1항의 신청을 할 때에는 그 이유를 갖춘 신청서를 해당 사건이 계속되어 있는 법원 또는 군사법원에 제출하고, 신청서를 받은 법원 또는 군사법원은 이를 받은 날부터 7일 이내에 신청서와 해당 사건의 기록을 대법원에 보내야 한다.",
+      "군사법원법 3조 2 재판권 쟁의에 대한 재정의 신청#KOBLEX-158042": "② 사건이 계속된 법원 또는 군사법원은 제1항의 신청을 하는 경우에 이유를 갖춘 신청서와 해당 사건의 기록을 대법원에 제출한다.",
+      "군사법원법 3조 2 재판권 쟁의에 대한 재정의 신청#KOBLEX-158043": "③ 상소권자가 제1항의 신청을 할 때에는 그 이유를 갖춘 신청서를 해당 사건이 계속되어 있는 법원 또는 군사법원에 제출하고, 신청서를 받은 법원 또는 군사법원은 이를 받은 날부터 7일 이내에 신청서와 해당 사건의 기록을 대법원에 보내야 한다.",
+      "마약류 불법거래 방지에 관한 특례법 27조  증거#KOBLEX-006570": "① 참가인의 참가는 「형사소송법」 제310조의2, 제311조부터 제318조까지, 제318조의2 및 제318조의3을 적용하는 데 영향을 미치지 아니한다.",
+      "마약류 불법거래 방지에 관한 특례법 43조  몰수보전명령의 실효#KOBLEX-006635": "② 「형사소송법」 제327조제2호에 따른 공소기각(公訴棄却)의 판결이 있는 경우 그 판결이 확정된 날부터 30일 이내에 그 사건에 대하여 공소가 제기되지 아니한 때에는 몰수보전명령은 그 효력을 잃는다.",
+      "마약류 불법거래 방지에 관한 특례법 58조  추징보전명령의 실효#KOBLEX-006696": "② 「형사소송법」 제327조제2호에 따른 공소기각의 판결이 있는 경우 추징보전명령의 효력에 관하여는 제43조제2항을 준용한다.",
+      "마약류 불법거래 방지에 관한 특례법 58조  추징보전명령의 실효#KOBLEX-045446": "② 「형사소송법」 제327조제2호에 따른 공소기각의 판결이 있는 경우 추징보전명령의 효력에 관하여는 제43조제2항을 준용한다.",
+      "민법 564조  매매의 일방예약#KOBLEX-059519": "제564조(매매의 일방예약)",
+      "민사소송 등 인지법 9조  그 밖의 신청서#KOBLEX-106999": "⑤ 다음 각 호의 신청을 위한 신청서에는 1천원의 인지를 붙여야 한다. <개정 2011.7.18> 1. 「민사소송법」 제475조에 따른 공시최고(公示催告)의 신청 2. 「비송사건절차법」에 따라 재판을 구하는 신청 3. 재산명시신청이나 채무불이행자명부 등재(登載)신청 또는 그 말소(抹消)신청 4. 그 밖에 대법원규칙으로 정하는 각종 사건부에 등재할 신청(제1항부터 제3항까지의 신청은 제외한다)",
+      "변호사법 101조 2 「형사소송법」 등의 준용#KOBLEX-087293": "제101조의2(「형사소송법」 등의 준용) 서류의 송달, 기일의 지정이나 변경 및 증인·감정인의 선서와 급여에 관한 사항에 대하여는 「형사소송법」과 「형사소송비용 등에 관한 법률」의 규정을 준용한다.",
+      "보호관찰 등에 관한 법률 57조  「형사소송법」의 준용#KOBLEX-212971": "제57조(「형사소송법」의 준용) 보호관찰에 관하여 이 법에 특별한 규정이 있는 경우를 제외하고는 그 성질에 반하지 아니하는 범위에서 「형사소송법」을 준용한다.",
+      "부패재산의 몰수 및 회복에 관한 특례법 20조  「형사소송법」의 준용 등#KOBLEX-073102": "제20조(「형사소송법」의 준용 등)",
+      "상법 564조  업무집행의 결정, 이사와 회사간의 거래#KOBLEX-115702": "제564조(업무집행의 결정, 이사와 회사간의 거래)",
+      "조세특례제한법 100조 4 부양자녀의 요건과 판정시기#KOBLEX-099990": "⑥ 제1항부터 제5항까지의 규정에도 불구하고 반기 신청이 있는 경우에는 해당 요건에 해당하는지 여부의 판정은 해당 소득세 직전 과세기간 종료일 현재의 상황에 따른다. <신설 2018.12.24, 2019.12.31>",
+      "조세특례제한법 100조 4 부양자녀의 요건과 판정시기#KOBLEX-151971": "⑥ 제1항부터 제5항까지의 규정에도 불구하고 반기 신청이 있는 경우에는 해당 요건에 해당하는지 여부의 판정은 해당 소득세 직전 과세기간 종료일 현재의 상황에 따른다. <신설 2018.12.24, 2019.12.31>",
+      "지방세기본법 116조  「형사소송법」의 준용#KOBLEX-121048": "제116조(「형사소송법」의 준용) 압수 또는 수색과 압수ㆍ수색영장에 관하여 이 법에서 규정한 것을 제외하고는 「형사소송법」 중 압수 또는 수색과 압수ㆍ수색영장에 관한 규정을 준용한다.",
+      "채무자 회생 및 파산에 관한 법률 564조  면책허가#KOBLEX-033203": "제564조(면책허가)",
+      "축산물 위생관리법 40조 2 가축 외의 동물 등의 검사#KOBLEX-094851": "⑤ 제1항에 따른 검사의 신청절차, 신청요건, 검사의 방법ㆍ기준 및 검사 결과의 표시방법 등에 관하여 필요한 사항은 총리령으로 정한다. <개정 2013.3.23>",
+      "축산물 위생관리법 40조 2 가축 외의 동물 등의 검사#KOBLEX-166456": "⑤ 제1항에 따른 검사의 신청절차, 신청요건, 검사의 방법ㆍ기준 및 검사 결과의 표시방법 등에 관하여 필요한 사항은 총리령으로 정한다. <개정 2013.3.23>",
+      "축산물 위생관리법 40조 2 가축 외의 동물 등의 검사#KOBLEX-194986": "⑤ 제1항에 따른 검사의 신청절차, 신청요건, 검사의 방법ㆍ기준 및 검사 결과의 표시방법 등에 관하여 필요한 사항은 총리령으로 정한다. <개정 2013.3.23>",
+      "형사소송법 102조  보석조건의 변경과 취소 등#KOBLEX-231741": "②법원은 피고인이 다음 각 호의 어느 하나에 해당하는 경우에는 직권 또는 검사의 청구에 따라 결정으로 보석 또는 구속의 집행정지를 취소할 수 있다. 다만, 제101조제4항에 따른 구속영장의 집행정지는 그 회기 중 취소하지 못한다. 1. 도망한 때 2. 도망하거나 죄증을 인멸할 염려가 있다고 믿을 만한 충분한 이유가 있는 때 3. 소환을 받고 정당한 사유 없이 출석하지 아니한 때 4. 피해자, 당해 사건의 재판에 필요한 사실을 알고 있다고 인정되는 자 또는 그 친족의 생명ㆍ신체ㆍ재산에 해를 가하거나 가할 염려가 있다고 믿을 만한 충분한 이유가 있는 때 5. 법원이 정한 조건을 위반한 때",
+      "형사소송법 245조 7 고소인 등의 이의신청#KOBLEX-232251": "② 사법경찰관은 제1항의 신청이 있는 때에는 지체 없이 검사에게 사건을 송치하고 관계 서류와 증거물을 송부하여야 하며, 처리결과와 그 이유를 제1항의 신청인에게 통지하여야 한다.",
+      "형사소송법 266조 11 피고인 또는 변호인이 보관하고 있는 서류등의 열람ㆍ등사#KOBLEX-232382": "①검사는 피고인 또는 변호인이 공판기일 또는 공판준비절차에서 현장부재ㆍ심신상실 또는 심신미약 등 법률상ㆍ사실상의 주장을 한 때에는 피고인 또는 변호인에게 다음 서류등의 열람ㆍ등사 또는 서면의 교부를 요구할 수 있다. 1. 피고인 또는 변호인이 증거로 신청할 서류등 2. 피고인 또는 변호인이 증인으로 신청할 사람의 성명, 사건과의 관계 등을 기재한 서면 3. 제1호의 서류등 또는 제2호의 서면의 증명력과 관련된 서류등 4. 피고인 또는 변호인이 행한 법률상ㆍ사실상의 주장과 관련된 서류등",
+      "형사소송법 266조 3 공소제기 후 검사가 보관하고 있는 서류 등의 열람ㆍ등사#KOBLEX-232342": "①피고인 또는 변호인은 검사에게 공소제기된 사건에 관한 서류 또는 물건(이하 \"서류등\"이라 한다)의 목록과 공소사실의 인정 또는 양형에 영향을 미칠 수 있는 다음 서류등의 열람ㆍ등사 또는 서면의 교부를 신청할 수 있다. 다만, 피고인에게 변호인이 있는 경우에는 피고인은 열람만을 신청할 수 있다. 1. 검사가 증거로 신청할 서류등 2. 검사가 증인으로 신청할 사람의 성명ㆍ사건과의 관계 등을 기재한 서면 또는 그 사람이 공판기일 전에 행한 진술을 기재한 서류등 3. 제1호 또는 제2호의 서면 또는 서류등의 증명력과 관련된 서류등 4. 피고인 또는 변호인이 행한 법률상ㆍ사실상 주장과 관련된 서류등(관련 형사재판확정기록, 불기소처분기록 등을 포함한다)",
+      "형사소송법 294조 2 피해자등의 진술권#KOBLEX-232512": "①법원은 범죄로 인한 피해자 또는 그 법정대리인(피해자가 사망한 경우에는 배우자ㆍ직계친족ㆍ형제자매를 포함한다. 이하 이 조에서 \"피해자등\"이라 한다)의 신청이 있는 때에는 그 피해자등을 증인으로 신문하여야 한다. 다만, 다음 각 호의 어느 하나에 해당하는 경우에는 그러하지 아니하다. <개정 2007.6.1> 1. 삭제 <2007.6.1> 2. 피해자등 이미 당해 사건에 관하여 공판절차에서 충분히 진술하여 다시 진술할 필요가 없다고 인정되는 경우 3. 피해자등의 진술로 인하여 공판절차가 현저하게 지연될 우려가 있는 경우",
+      "형사소송법 294조 4 피해자 등의 공판기록 열람ㆍ등사#KOBLEX-232521": "①소송계속 중인 사건의 피해자(피해자가 사망하거나 그 심신에 중대한 장애가 있는 경우에는 그 배우자ㆍ직계친족 및 형제자매를 포함한다), 피해자 본인의 법정대리인 또는 이들로부터 위임을 받은 피해자 본인의 배우자ㆍ직계친족ㆍ형제자매ㆍ변호사는 소송기록의 열람 또는 등사를 재판장에게 신청할 수 있다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "Criminal Procedure Act provisions on requirements for applying for a criminal compensation order",
+          "Any statutory restriction or prohibition on applying for a criminal compensation order while a civil lawsuit is pending"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The completion criteria require Criminal Procedure Act provisions specifying the requirements for applying for a criminal compensation order and any restriction or prohibition on applying while a civil lawsuit is pending. None of the supplied candidate provisions (C001–C029) contain such rules. C009, C012, C014, C016, C017 are from the Criminal Procedure Act but concern document inspection, victim rights, or objection procedures, not criminal compensation orders. C010, C018, C019 concern lapse of seizure/recovery preservation orders under a special narcotics law. The remaining provisions relate to military court jurisdiction disputes, livestock inspection procedures, tax litigation notifications, or general application of the Criminal Procedure Act, none of which address criminal compensation orders or their interaction with pending civil suits.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "Exception or concurrent-permission rule allowing application for a criminal compensation order while a civil lawsuit is pending"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The completion criteria require an exception or concurrent-permission rule allowing application for a criminal compensation order while a civil lawsuit is pending. None of the supplied candidate provisions (C001–C029) contain such an exception or permission. Therefore, this evidence item is not supported by the current candidate set.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "민사소송 계속 중 형사배상명령 신청 가능 여부",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "형사소송법상 형사배상명령 신청 요건과 민사소송 계속 중 신청 제한 또는 금지 규정이 명시되어 있는지 확인",
+        "critical": true,
+        "description": "형사배상명령 신청 요건 및 민사소송 계속 중 신청 제한 여부",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을에게 폭행을 당해 부상을 입었고, 이에 대한 손해배상을 요구하고자 을을 상대로 민사소송을 제기하였다. 민사소송이 법원에 계류 중인 상황에서, 갑은 같은 사건으로 형사소송이 진행 중인 을에게 형사배상명령을 신청할 수 있는지 고민하고 있다. [질문] 갑은 을의 범죄행위로 인해 발생한 피해에 관하여 민사소송이 법원에 계속 중일 때, 형사소송에서 형사배상명령을 신청할 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "형사배상명령",
+          "신청요건",
+          "민사소송계속",
+          "신청제한"
+        ],
+        "query_text": "형사소송 계속 중 형사배상명령 신청 요건 및 민사소송 계속 중 신청 제한 규정 [원문 맥락] 민사소송이 법원에 계류 중인 상황에서, 갑은 같은 사건으로 형사소송이 진행 중인 을에게 형사배상명령을 신청할 수 있는지 고민하고 있다. 갑은 을의 범죄행위로 인해 발생한 피해에 관하여 민사소송이 법원에 계속 중일 때, 형사소송에서 형사배상명령을 신청할 수 있는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사배상명령",
+          "신청제한예외",
+          "민사소송병행",
+          "형사소송법"
+        ],
+        "query_text": "형사배상명령 신청 제한 예외 규정 또는 민사소송 병행 허용 조항 [원문 맥락] 민사소송이 법원에 계류 중인 상황에서, 갑은 같은 사건으로 형사소송이 진행 중인 을에게 형사배상명령을 신청할 수 있는지 고민하고 있다. 갑은 을의 범죄행위로 인해 발생한 피해에 관하여 민사소송이 법원에 계속 중일 때, 형사소송에서 형사배상명령을 신청할 수 있는가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사배상명령",
+          "신청요건",
+          "민사소송계속",
+          "신청금지",
+          "형사소송법"
+        ],
+        "query_text": "형사소송법 형사배상명령 신청 요건 및 민사소송 계속 중 신청 금지 규정 [원문 맥락] 민사소송이 법원에 계류 중인 상황에서, 갑은 같은 사건으로 형사소송이 진행 중인 을에게 형사배상명령을 신청할 수 있는지 고민하고 있다. 갑은 을의 범죄행위로 인해 발생한 피해에 관하여 민사소송이 법원에 계속 중일 때, 형사소송에서 형사배상명령을 신청할 수 있는가?",
+        "request_id": "GRQ1",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "형사배상명령",
+          "피해자신청",
+          "민사소송계속",
+          "신청제한없음",
+          "형사소송법"
+        ],
+        "query_text": "형사배상명령은 형사소송 계속 중 피해자가 신청할 수 있으며 민사소송 계속 중에도 신청을 제한하지 아니한다 [원문 맥락] 민사소송이 법원에 계류 중인 상황에서, 갑은 같은 사건으로 형사소송이 진행 중인 을에게 형사배상명령을 신청할 수 있는지 고민하고 있다. 갑은 을의 범죄행위로 인해 발생한 피해에 관하여 민사소송이 법원에 계속 중일 때, 형사소송에서 형사배상명령을 신청할 수 있는가?",
+        "request_id": "GRQ2",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "형사배상명령",
+          "신청",
+          "민사소송",
+          "계속",
+          "제한"
+        ],
+        "query_text": "형사배상명령 신청 민사소송 계속 중 제한 [원문 맥락] 민사소송이 법원에 계류 중인 상황에서, 갑은 같은 사건으로 형사소송이 진행 중인 을에게 형사배상명령을 신청할 수 있는지 고민하고 있다. 갑은 을의 범죄행위로 인해 발생한 피해에 관하여 민사소송이 법원에 계속 중일 때, 형사소송에서 형사배상명령을 신청할 수 있는가?",
+        "request_id": "GRQ3",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사배상명령",
+          "형사소송법",
+          "제557조",
+          "제564조",
+          "신청요건",
+          "민사소송계속"
+        ],
+        "query_text": "형사소송법 제557조부터 제564조까지 형사배상명령 신청 요건 및 민사소송 계속 중 신청 가능 여부 [원문 맥락] 민사소송이 법원에 계류 중인 상황에서, 갑은 같은 사건으로 형사소송이 진행 중인 을에게 형사배상명령을 신청할 수 있는지 고민하고 있다. 갑은 을의 범죄행위로 인해 발생한 피해에 관하여 민사소송이 법원에 계속 중일 때, 형사소송에서 형사배상명령을 신청할 수 있는가?",
+        "request_id": "GRQ1",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "형사배상명령",
+          "피해자",
+          "형사소송계속",
+          "민사소송계속",
+          "신청요건",
+          "영향없음"
+        ],
+        "query_text": "피해자는 형사소송 계속 중 형사배상명령을 신청할 수 있으며 민사소송 계속 여부는 신청 요건에 영향을 주지 아니한다 [원문 맥락] 민사소송이 법원에 계류 중인 상황에서, 갑은 같은 사건으로 형사소송이 진행 중인 을에게 형사배상명령을 신청할 수 있는지 고민하고 있다. 갑은 을의 범죄행위로 인해 발생한 피해에 관하여 민사소송이 법원에 계속 중일 때, 형사소송에서 형사배상명령을 신청할 수 있는가?",
+        "request_id": "GRQ2",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "형사배상명령",
+          "형사소송법",
+          "제557조",
+          "제558조",
+          "제559조",
+          "제560조"
+        ],
+        "query_text": "형사배상명령 형사소송법 제557조 제558조 제559조 제560조 [원문 맥락] 민사소송이 법원에 계류 중인 상황에서, 갑은 같은 사건으로 형사소송이 진행 중인 을에게 형사배상명령을 신청할 수 있는지 고민하고 있다. 갑은 을의 범죄행위로 인해 발생한 피해에 관하여 민사소송이 법원에 계속 중일 때, 형사소송에서 형사배상명령을 신청할 수 있는가?",
+        "request_id": "GRQ3",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을에게 폭행을 당해 부상을 입었고, 이에 대한 손해배상을 요구하고자 을을 상대로 민사소송을 제기하였다. 민사소송이 법원에 계류 중인 상황에서, 갑은 같은 사건으로 형사소송이 진행 중인 을에게 형사배상명령을 신청할 수 있는지 고민하고 있다.\n\n[질문]\n갑은 을의 범죄행위로 인해 발생한 피해에 관하여 민사소송이 법원에 계속 중일 때, 형사소송에서 형사배상명령을 신청할 수 있는가?",
+    "remaining_request_budget": 1,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "형사소송법상 형사배상명령 신청 요건과 민사소송 계속 중 신청 제한 또는 금지 규정이 명시되어 있는지 확인",
+        "critical": true,
+        "description": "형사배상명령 신청 요건 및 민사소송 계속 중 신청 제한 여부",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "민사소송 계속 중에도 형사배상명령 신청이 허용되는 예외 규정 또는 병행 허용 조항이 존재하는지 확인",
+        "critical": false,
+        "description": "형사배상명령 신청 제한 예외 또는 병행 허용 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "exception",
+        "issue_id": "I1"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "1d9c4048-cee4-4c64-b2b9-f3ecbebd8be2",
+    "seen_provision_ids": [
+      "변호사법 101조 2 「형사소송법」 등의 준용#KOBLEX-087293",
+      "채무자 회생 및 파산에 관한 법률 564조  면책허가#KOBLEX-033203",
+      "상법 564조  업무집행의 결정, 이사와 회사간의 거래#KOBLEX-115702",
+      "조세특례제한법 100조 4 부양자녀의 요건과 판정시기#KOBLEX-151971",
+      "형사소송법 102조  보석조건의 변경과 취소 등#KOBLEX-231741",
+      "마약류 불법거래 방지에 관한 특례법 27조  증거#KOBLEX-006570",
+      "형사소송법 245조 7 고소인 등의 이의신청#KOBLEX-232251",
+      "형사소송법 266조 11 피고인 또는 변호인이 보관하고 있는 서류등의 열람ㆍ등사#KOBLEX-232382",
+      "부패재산의 몰수 및 회복에 관한 특례법 20조  「형사소송법」의 준용 등#KOBLEX-073102",
+      "축산물 위생관리법 40조 2 가축 외의 동물 등의 검사#KOBLEX-194986",
+      "국세기본법 시행령 63조  항고소송 제기사건의 통지#KOBLEX-029890",
+      "민법 564조  매매의 일방예약#KOBLEX-059519",
+      "지방세기본법 116조  「형사소송법」의 준용#KOBLEX-121048",
+      "민사소송 등 인지법 9조  그 밖의 신청서#KOBLEX-106999",
+      "형사소송법 294조 4 피해자 등의 공판기록 열람ㆍ등사#KOBLEX-232521",
+      "군사법원법 3조 2 재판권 쟁의에 대한 재정의 신청#KOBLEX-092077",
+      "형사소송법 294조 2 피해자등의 진술권#KOBLEX-232512",
+      "군사법원법 3조 2 재판권 쟁의에 대한 재정의 신청#KOBLEX-158042",
+      "군사법원법 3조 2 재판권 쟁의에 대한 재정의 신청#KOBLEX-158043",
+      "공무원범죄에 관한 몰수 특례법 17조  증거#KOBLEX-038576",
+      "조세특례제한법 100조 4 부양자녀의 요건과 판정시기#KOBLEX-099990",
+      "형사소송법 266조 3 공소제기 후 검사가 보관하고 있는 서류 등의 열람ㆍ등사#KOBLEX-232342",
+      "군사법원법 3조 2 재판권 쟁의에 대한 재정의 신청#KOBLEX-092078",
+      "마약류 불법거래 방지에 관한 특례법 58조  추징보전명령의 실효#KOBLEX-045446",
+      "보호관찰 등에 관한 법률 57조  「형사소송법」의 준용#KOBLEX-212971",
+      "마약류 불법거래 방지에 관한 특례법 43조  몰수보전명령의 실효#KOBLEX-006635",
+      "축산물 위생관리법 40조 2 가축 외의 동물 등의 검사#KOBLEX-166456",
+      "축산물 위생관리법 40조 2 가축 외의 동물 등의 검사#KOBLEX-094851",
+      "마약류 불법거래 방지에 관한 특례법 58조  추징보전명령의 실효#KOBLEX-006696"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

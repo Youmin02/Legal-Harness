@@ -1,0 +1,828 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "completed_at_utc": "2026-08-17T13:22:47.802796+00:00",
+  "end_to_end_latency_ms": 528091.893,
+  "errors": [
+    "grounded_legal_answer_generation did not produce a valid GENERATE_ANSWER result after 2 attempts: answer is missing citation marker: CT1; answer is missing citation marker: CT2; answer is missing citation marker: CT3; answer is missing citation marker: CT4; answer is missing citation marker: CT5; answer is missing citation marker: CT6; answer is missing citation marker: CT7; claim text must be an exact substring of answer: C5; claim text must be an exact substring of answer: C6"
+  ],
+  "record_schema_version": "1.0",
+  "run_id": "f978bb62-bbda-42a9-bfb6-c867c6273786",
+  "state": {
+    "accepted_provision_ids": [
+      "농어촌정비법 52조  농어촌 생활환경 정비 원칙#KOBLEX-025540",
+      "농어촌정비법 130조  벌칙#KOBLEX-025939",
+      "농어촌정비법 15조 2 도서지역 등의 농어촌용수 실태조사 등#KOBLEX-025379",
+      "농어촌정비법 71조  기술지원 등#KOBLEX-025680",
+      "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025677"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 19,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 6,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "explanation": "All critical evidence items are covered without conflict.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "error": "grounded_legal_answer_generation did not produce a valid GENERATE_ANSWER result after 2 attempts: answer is missing citation marker: CT1; answer is missing citation marker: CT2; answer is missing citation marker: CT3; answer is missing citation marker: CT4; answer is missing citation marker: CT5; answer is missing citation marker: CT6; answer is missing citation marker: CT7; claim text must be an exact substring of answer: C5; claim text must be an exact substring of answer: C6",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 25.807852157143042,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "농어촌정비법 130조  벌칙#KOBLEX-025939",
+        "provision_text": "② 제70조를 위반하여 조성용지를 전매한 자는 3년 이하의 징역 또는 1억원 이하의 벌금에 처한다.",
+        "rerank_score": 0.9883579611778259,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "농어촌정비법 130조  벌칙 2항"
+      },
+      {
+        "first_stage_score": 30.901842164643572,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025677",
+        "provision_text": "② 제1항을 위반하여 조성용지를 전매하는 경우 해당 법률행위는 무효로 하며, 사업시행자는 조성용지의 공급 당시 가액과 「은행법」에 따른 은행의 1년 만기 정기예금 평균이자율을 합산한 금액을 지급하고 그 조성용지를 환매할 수 있다. <개정 2010.5.17>",
+        "rerank_score": 0.9866399168968201,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "농어촌정비법 70조  조성용지의 전매행위 제한 등 2항"
+      },
+      {
+        "first_stage_score": 24.99479292549595,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "공공주택 특별법 57조 2 벌칙#KOBLEX-058322",
+        "provision_text": "2. 전매가 금지됨을 알면서 제32조의3제1항 또는 제2항을 위반하여(제40조의17에 따라 준용되는 경우를 포함한다) 토지 또는 토지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등을 전매 받은 자",
+        "rerank_score": 0.9090028405189514,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "공공주택 특별법 57조 2 벌칙 2호"
+      },
+      {
+        "first_stage_score": 24.99479292549595,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "공공주택 특별법 57조 2 벌칙#KOBLEX-140353",
+        "provision_text": "2. 전매가 금지됨을 알면서 제32조의3제1항 또는 제2항을 위반하여(제40조의17에 따라 준용되는 경우를 포함한다) 토지 또는 토지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등을 전매 받은 자",
+        "rerank_score": 0.9090028405189514,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "공공주택 특별법 57조 2 벌칙 2호"
+      },
+      {
+        "first_stage_score": 24.99479292549595,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "공공주택 특별법 57조 2 벌칙#KOBLEX-221678",
+        "provision_text": "2. 전매가 금지됨을 알면서 제32조의3제1항 또는 제2항을 위반하여(제40조의17에 따라 준용되는 경우를 포함한다) 토지 또는 토지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등을 전매 받은 자",
+        "rerank_score": 0.9090028405189514,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "공공주택 특별법 57조 2 벌칙 2호"
+      },
+      {
+        "first_stage_score": 26.402499695707796,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025675",
+        "provision_text": "제70조(조성용지의 전매행위 제한 등)",
+        "rerank_score": 0.889875590801239,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "농어촌정비법 70조  조성용지의 전매행위 제한 등"
+      },
+      {
+        "first_stage_score": 16.899628431326697,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "주택법 101조  벌칙#KOBLEX-133637",
+        "provision_text": "2. 제64조제1항을 위반하여 주택을 전매하거나 이의 전매를 알선한 자",
+        "rerank_score": 0.8845435976982117,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "주택법 101조  벌칙 3호"
+      },
+      {
+        "first_stage_score": 16.899628431326697,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "주택법 101조  벌칙#KOBLEX-205149",
+        "provision_text": "2. 제64조제1항을 위반하여 주택을 전매하거나 이의 전매를 알선한 자",
+        "rerank_score": 0.8845435976982117,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "주택법 101조  벌칙 3호"
+      },
+      {
+        "first_stage_score": 3.0,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 15조 2 도서지역 등의 농어촌용수 실태조사 등#KOBLEX-025379",
+        "provision_text": "② 농림축산식품부장관은 제1항에 따른 조사 결과 농어촌용수의 공급이 현저하게 부족한 지역에 대하여는 공급 향상을 위하여 필요한 조치 및 예산의 범위에서 특별한 지원을 할 수 있다.",
+        "rerank_score": 0.9949038028717041,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "농어촌정비법 15조 2 도서지역 등의 농어촌용수 실태조사 등 2항"
+      },
+      {
+        "first_stage_score": 17.6679237292194,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "택지개발촉진법 31조 2 벌칙#KOBLEX-185428",
+        "provision_text": "2. 전매가 금지됨을 알면서 제19조의2제1항 또는 제2항을 위반하여 택지 또는 택지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등을 전매받은 자",
+        "rerank_score": 0.872728168964386,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "택지개발촉진법 31조 2 벌칙 2호"
+      },
+      {
+        "first_stage_score": 17.244495481126464,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "농수산물 유통 및 가격안정에 관한 법률 12조  유통명령 이행자에 대한 지원 등#KOBLEX-010718",
+        "provision_text": "② 농림축산식품부장관 또는 해양수산부장관은 제11조제2항에 따라 유통명령 집행업무의 일부를 수행하는 생산자등의 조직이나 생산자단체에 필요한 지원을 할 수 있다. <개정 2013.3.23>",
+        "rerank_score": 0.9986045956611633,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "농수산물 유통 및 가격안정에 관한 법률 12조  유통명령 이행자에 대한 지원 등 2항"
+      },
+      {
+        "first_stage_score": 20.315421567728634,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 52조  농어촌 생활환경 정비 원칙#KOBLEX-025540",
+        "provision_text": "제52조(농어촌 생활환경 정비 원칙) 농림축산식품부장관은 생활환경정비사업을 시행할 때 지역개발 여건과 소득원 확충 등을 고려하여 필요하다고 인정하면 생활환경정비사업과 농업생산기반 정비사업, 농어촌 관광휴양자원 개발, 한계농지등의 정비사업을 병행하여야 한다. <개정 2013.3.23>",
+        "rerank_score": 0.9985402822494507,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "농어촌정비법 52조  농어촌 생활환경 정비 원칙"
+      },
+      {
+        "first_stage_score": 19.198692771991283,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "가축전염병 예방법 22조  사체의 처분제한#KOBLEX-184629",
+        "provision_text": "⑥ 농림축산식품부장관 및 환경부장관은 제3항에 따른 조치에 필요한 지원을 할 수 있다. <신설 2017.10.31>",
+        "rerank_score": 0.9974741339683533,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "가축전염병 예방법 22조  사체의 처분제한 6항"
+      },
+      {
+        "first_stage_score": 33.22848001023418,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "농어업경영체 육성 및 지원에 관한 법률 27조  농어업인재개발전문기관의 지정 등#KOBLEX-217478",
+        "provision_text": "② 농림축산식품부장관 또는 해양수산부장관은 농어업인재개발전문기관의 사업수행을 위하여 필요한 자금의 전부 또는 일부를 지원할 수 있다. <개정 2013.3.23>",
+        "rerank_score": 0.9999865293502808,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "농어업경영체 육성 및 지원에 관한 법률 27조  농어업인재개발전문기관의 지정 등 2항"
+      },
+      {
+        "first_stage_score": 18.02189086916853,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "국가균형발전 특별법 21조 3 국가균형발전을 위한 국제적 교류협력 촉진 등#KOBLEX-168150",
+        "provision_text": "1. 지역 간 경제적 교류협력 활동 지원",
+        "rerank_score": 0.9945160746574402,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "국가균형발전 특별법 21조 3 국가균형발전을 위한 국제적 교류협력 촉진 등 1호"
+      },
+      {
+        "first_stage_score": 27.29537433190906,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 58조  생활환경정비사업 기본계획의 수립#KOBLEX-025574",
+        "provision_text": "제58조(생활환경정비사업 기본계획의 수립)",
+        "rerank_score": 0.9929547905921936,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "농어촌정비법 58조  생활환경정비사업 기본계획의 수립"
+      },
+      {
+        "first_stage_score": 19.95238038067173,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "동물보호법 37조  민간동물보호시설의 신고 등#KOBLEX-224873",
+        "provision_text": "⑦ 농림축산식품부장관 또는 특별자치시장ㆍ특별자치도지사ㆍ시장ㆍ군수ㆍ구청장은 보호시설의 환경개선 및 운영에 드는 비용의 일부를 지원할 수 있다.",
+        "rerank_score": 0.9928709864616394,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "동물보호법 37조  민간동물보호시설의 신고 등 7항"
+      },
+      {
+        "first_stage_score": 27.978680776932613,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 56조  생활환경정비사업 시행자#KOBLEX-025564",
+        "provision_text": "제56조(생활환경정비사업 시행자)",
+        "rerank_score": 0.9927216172218323,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "농어촌정비법 56조  생활환경정비사업 시행자"
+      },
+      {
+        "first_stage_score": 18.16919905309413,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "농수산물 유통 및 가격안정에 관한 법률 70조 2 농수산물 전자거래의 촉진 등#KOBLEX-010999",
+        "provision_text": "② 농림축산식품부장관 또는 해양수산부장관은 농수산물 전자거래를 활성화하기 위하여 예산의 범위에서 필요한 지원을 할 수 있다. <개정 2013.3.23>",
+        "rerank_score": 0.9920750856399536,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "농수산물 유통 및 가격안정에 관한 법률 70조 2 농수산물 전자거래의 촉진 등 2항"
+      },
+      {
+        "first_stage_score": 29.861227618277013,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "말산업 육성법 28조  권한ㆍ업무의 위임ㆍ위탁#KOBLEX-108867",
+        "provision_text": "② 농림축산식품부장관은 제1항에 따라 위탁한 업무의 수행에 필요한 비용의 전부 또는 일부를 지원할 수 있다. <개정 2013.3.23>",
+        "rerank_score": 0.9999898672103882,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "말산업 육성법 28조  권한ㆍ업무의 위임ㆍ위탁 2항"
+      },
+      {
+        "first_stage_score": 29.76104240166588,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "택지개발촉진법 28조  자금의 지원#KOBLEX-185419",
+        "provision_text": "제28조(자금의 지원) 국가 또는 지방자치단체는 시행자에게 그 소요 자금의 전부 또는 일부를 보조하거나 융자할 수 있다.",
+        "rerank_score": 0.99998939037323,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "택지개발촉진법 28조  자금의 지원"
+      },
+      {
+        "first_stage_score": 25.862206112981042,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "토양환경보전법 10조 10 토양환경센터의 설치ㆍ운영 등#KOBLEX-123750",
+        "provision_text": "② 환경부장관은 제1항에 따른 업무의 수행에 필요한 비용의 전부 또는 일부를 지원할 수 있다.",
+        "rerank_score": 0.9999768733978271,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "토양환경보전법 10조 10 토양환경센터의 설치ㆍ운영 등 2항"
+      },
+      {
+        "first_stage_score": 25.11221512616259,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "초지법 13조  자금지원#KOBLEX-029209",
+        "provision_text": "② 농림축산식품부장관은 필요하다고 인정할 때에는 제1항에 따라 지원하는 자금의 전부 또는 일부를 사업 완료 전이라도 사업시행자에게 지급할 수 있다.",
+        "rerank_score": 0.9999767541885376,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "초지법 13조  자금지원 2항"
+      },
+      {
+        "first_stage_score": 26.118668394629477,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "동물보호법 93조  권한의 위임ㆍ위탁#KOBLEX-225141",
+        "provision_text": "⑤ 농림축산식품부장관은 제2항에 따라 업무를 위탁한 기관에 필요한 비용의 전부 또는 일부를 예산의 범위에서 출연 또는 보조할 수 있다.",
+        "rerank_score": 0.9999758005142212,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "동물보호법 93조  권한의 위임ㆍ위탁 5항"
+      },
+      {
+        "first_stage_score": 26.54272103517151,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "물환경보전법 57조  예산 등의 지원#KOBLEX-109392",
+        "provision_text": "제57조(예산 등의 지원) 환경부장관은 시행계획의 수립ㆍ시행에 필요한 경비의 전부 또는 일부를 예산의 범위에서 지원할 수 있다.",
+        "rerank_score": 0.9999696016311646,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "물환경보전법 57조  예산 등의 지원"
+      },
+      {
+        "first_stage_score": 24.88527885374656,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "중소기업기본법 시행령 10조 4 중소기업빅데이터플랫폼 전담기구의 지정 및 운영#KOBLEX-183084",
+        "provision_text": "③ 중소벤처기업부장관은 운영기관의 운영에 필요한 비용의 전부 또는 일부를 지원할 수 있다. <개정 2017.7.26>",
+        "rerank_score": 0.9999634027481079,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "중소기업기본법 시행령 10조 4 중소기업빅데이터플랫폼 전담기구의 지정 및 운영 3항"
+      },
+      {
+        "first_stage_score": 24.37389473028907,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "신문 등의 진흥에 관한 법률 20조  디지털 뉴스 분류체계 표준화 등#KOBLEX-215652",
+        "provision_text": "③ 문화체육관광부장관은 제2항에 따라 지정한 기관 또는 단체에 표준의 제정에 필요한 비용의 전부 또는 일부를 지원할 수 있다.",
+        "rerank_score": 0.9999551773071289,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "신문 등의 진흥에 관한 법률 20조  디지털 뉴스 분류체계 표준화 등 3항"
+      },
+      {
+        "first_stage_score": 28.527186372930327,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "동물보호법 35조  동물보호센터의 설치 등#KOBLEX-224855",
+        "provision_text": "④ 농림축산식품부장관은 제1항에 따라 시ㆍ도지사 또는 시장ㆍ군수ㆍ구청장이 설치ㆍ운영하는 동물보호센터의 설치ㆍ운영에 드는 비용의 전부 또는 일부를 지원할 수 있다.",
+        "rerank_score": 0.999940037727356,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "동물보호법 35조  동물보호센터의 설치 등 4항"
+      },
+      {
+        "first_stage_score": 33.53763169418367,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "건강가정기본법 21조 4 위기가족긴급지원에 대한 비용의 지원#KOBLEX-016565",
+        "provision_text": "제21조의4(위기가족긴급지원에 대한 비용의 지원) 국가와 지방자치단체는 위기가족긴급지원에 필요한 비용의 전부 또는 일부를 지원할 수 있다.",
+        "rerank_score": 0.9997175335884094,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "건강가정기본법 21조 4 위기가족긴급지원에 대한 비용의 지원"
+      },
+      {
+        "first_stage_score": 25.299099466979566,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 58조  생활환경정비사업 기본계획의 수립#KOBLEX-025575",
+        "provision_text": "① 시장ㆍ군수ㆍ구청장은 생활환경정비계획에 포함된 사항을 추진하기 위하여 필요한 경우 세부 사업별로 생활환경정비사업 기본계획을 수립할 수 있다.",
+        "rerank_score": 0.9988574981689453,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "농어촌정비법 58조  생활환경정비사업 기본계획의 수립 1항"
+      },
+      {
+        "first_stage_score": 25.444226598881773,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "산지관리법 시행령 11조  산지전용ㆍ일시사용제한지역지정의 해제#KOBLEX-090490",
+        "provision_text": "2. 「농어촌정비법」 제2조제10호에 따른 생활환경정비사업 또는 「임업 및 산촌 진흥 촉진에 관한 법률」 제25조에 따른 산촌개발사업을 위하여 필요한 경우로서 사업계획부지에 편입되는 면적이 100분의 30 미만인 경우",
+        "rerank_score": 0.998066246509552,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "산지관리법 시행령 11조  산지전용ㆍ일시사용제한지역지정의 해제 2호"
+      },
+      {
+        "first_stage_score": 36.15990112611949,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 71조  기술지원 등#KOBLEX-025680",
+        "provision_text": "① 농림축산식품부장관은 생활환경정비사업의 생활환경정비계획, 생활환경정비사업 기본계획, 농어촌마을정비계획 및 생활환경정비사업 시행계획의 수립과 조사ㆍ설계 등 사업의 원활한 추진과 생활환경정비사업으로 조성되는 시설물의 품질관리를 위하여 기획ㆍ기술지원을 하여야 하며, 이에 필요한 경비를 예산의 범위에서 지원할 수 있다. <개정 2013.3.23>",
+        "rerank_score": 0.9978534579277039,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "농어촌정비법 71조  기술지원 등 1항"
+      },
+      {
+        "first_stage_score": 27.055292107710997,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 6조  기술개발의 추진 등#KOBLEX-176772",
+        "provision_text": "② 정부는 제1항에 따라 연구개발 등의 사업을 하는 연구기관에는 그 사업에 드는 비용의 전부 또는 일부를 지원할 수 있다.",
+        "rerank_score": 0.9976369142532349,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 6조  기술개발의 추진 등 2항"
+      },
+      {
+        "first_stage_score": 27.29537433190906,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 59조  생활환경정비사업 시행계획의 수립#KOBLEX-025578",
+        "provision_text": "제59조(생활환경정비사업 시행계획의 수립)",
+        "rerank_score": 0.9974285960197449,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "농어촌정비법 59조  생활환경정비사업 시행계획의 수립"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "가축전염병 예방법 22조  사체의 처분제한#KOBLEX-184629": "⑥ 농림축산식품부장관 및 환경부장관은 제3항에 따른 조치에 필요한 지원을 할 수 있다. <신설 2017.10.31>",
+      "건강가정기본법 21조 4 위기가족긴급지원에 대한 비용의 지원#KOBLEX-016565": "제21조의4(위기가족긴급지원에 대한 비용의 지원) 국가와 지방자치단체는 위기가족긴급지원에 필요한 비용의 전부 또는 일부를 지원할 수 있다.",
+      "공공주택 특별법 57조 2 벌칙#KOBLEX-058322": "2. 전매가 금지됨을 알면서 제32조의3제1항 또는 제2항을 위반하여(제40조의17에 따라 준용되는 경우를 포함한다) 토지 또는 토지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등을 전매 받은 자",
+      "공공주택 특별법 57조 2 벌칙#KOBLEX-140353": "2. 전매가 금지됨을 알면서 제32조의3제1항 또는 제2항을 위반하여(제40조의17에 따라 준용되는 경우를 포함한다) 토지 또는 토지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등을 전매 받은 자",
+      "공공주택 특별법 57조 2 벌칙#KOBLEX-221678": "2. 전매가 금지됨을 알면서 제32조의3제1항 또는 제2항을 위반하여(제40조의17에 따라 준용되는 경우를 포함한다) 토지 또는 토지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등을 전매 받은 자",
+      "국가균형발전 특별법 21조 3 국가균형발전을 위한 국제적 교류협력 촉진 등#KOBLEX-168150": "1. 지역 간 경제적 교류협력 활동 지원",
+      "농수산물 유통 및 가격안정에 관한 법률 12조  유통명령 이행자에 대한 지원 등#KOBLEX-010718": "② 농림축산식품부장관 또는 해양수산부장관은 제11조제2항에 따라 유통명령 집행업무의 일부를 수행하는 생산자등의 조직이나 생산자단체에 필요한 지원을 할 수 있다. <개정 2013.3.23>",
+      "농수산물 유통 및 가격안정에 관한 법률 70조 2 농수산물 전자거래의 촉진 등#KOBLEX-010999": "② 농림축산식품부장관 또는 해양수산부장관은 농수산물 전자거래를 활성화하기 위하여 예산의 범위에서 필요한 지원을 할 수 있다. <개정 2013.3.23>",
+      "농어업경영체 육성 및 지원에 관한 법률 27조  농어업인재개발전문기관의 지정 등#KOBLEX-217478": "② 농림축산식품부장관 또는 해양수산부장관은 농어업인재개발전문기관의 사업수행을 위하여 필요한 자금의 전부 또는 일부를 지원할 수 있다. <개정 2013.3.23>",
+      "농어촌정비법 130조  벌칙#KOBLEX-025939": "② 제70조를 위반하여 조성용지를 전매한 자는 3년 이하의 징역 또는 1억원 이하의 벌금에 처한다.",
+      "농어촌정비법 15조 2 도서지역 등의 농어촌용수 실태조사 등#KOBLEX-025379": "② 농림축산식품부장관은 제1항에 따른 조사 결과 농어촌용수의 공급이 현저하게 부족한 지역에 대하여는 공급 향상을 위하여 필요한 조치 및 예산의 범위에서 특별한 지원을 할 수 있다.",
+      "농어촌정비법 52조  농어촌 생활환경 정비 원칙#KOBLEX-025540": "제52조(농어촌 생활환경 정비 원칙) 농림축산식품부장관은 생활환경정비사업을 시행할 때 지역개발 여건과 소득원 확충 등을 고려하여 필요하다고 인정하면 생활환경정비사업과 농업생산기반 정비사업, 농어촌 관광휴양자원 개발, 한계농지등의 정비사업을 병행하여야 한다. <개정 2013.3.23>",
+      "농어촌정비법 56조  생활환경정비사업 시행자#KOBLEX-025564": "제56조(생활환경정비사업 시행자)",
+      "농어촌정비법 58조  생활환경정비사업 기본계획의 수립#KOBLEX-025574": "제58조(생활환경정비사업 기본계획의 수립)",
+      "농어촌정비법 58조  생활환경정비사업 기본계획의 수립#KOBLEX-025575": "① 시장ㆍ군수ㆍ구청장은 생활환경정비계획에 포함된 사항을 추진하기 위하여 필요한 경우 세부 사업별로 생활환경정비사업 기본계획을 수립할 수 있다.",
+      "농어촌정비법 59조  생활환경정비사업 시행계획의 수립#KOBLEX-025578": "제59조(생활환경정비사업 시행계획의 수립)",
+      "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025675": "제70조(조성용지의 전매행위 제한 등)",
+      "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025677": "② 제1항을 위반하여 조성용지를 전매하는 경우 해당 법률행위는 무효로 하며, 사업시행자는 조성용지의 공급 당시 가액과 「은행법」에 따른 은행의 1년 만기 정기예금 평균이자율을 합산한 금액을 지급하고 그 조성용지를 환매할 수 있다. <개정 2010.5.17>",
+      "농어촌정비법 71조  기술지원 등#KOBLEX-025680": "① 농림축산식품부장관은 생활환경정비사업의 생활환경정비계획, 생활환경정비사업 기본계획, 농어촌마을정비계획 및 생활환경정비사업 시행계획의 수립과 조사ㆍ설계 등 사업의 원활한 추진과 생활환경정비사업으로 조성되는 시설물의 품질관리를 위하여 기획ㆍ기술지원을 하여야 하며, 이에 필요한 경비를 예산의 범위에서 지원할 수 있다. <개정 2013.3.23>",
+      "동물보호법 35조  동물보호센터의 설치 등#KOBLEX-224855": "④ 농림축산식품부장관은 제1항에 따라 시ㆍ도지사 또는 시장ㆍ군수ㆍ구청장이 설치ㆍ운영하는 동물보호센터의 설치ㆍ운영에 드는 비용의 전부 또는 일부를 지원할 수 있다.",
+      "동물보호법 37조  민간동물보호시설의 신고 등#KOBLEX-224873": "⑦ 농림축산식품부장관 또는 특별자치시장ㆍ특별자치도지사ㆍ시장ㆍ군수ㆍ구청장은 보호시설의 환경개선 및 운영에 드는 비용의 일부를 지원할 수 있다.",
+      "동물보호법 93조  권한의 위임ㆍ위탁#KOBLEX-225141": "⑤ 농림축산식품부장관은 제2항에 따라 업무를 위탁한 기관에 필요한 비용의 전부 또는 일부를 예산의 범위에서 출연 또는 보조할 수 있다.",
+      "말산업 육성법 28조  권한ㆍ업무의 위임ㆍ위탁#KOBLEX-108867": "② 농림축산식품부장관은 제1항에 따라 위탁한 업무의 수행에 필요한 비용의 전부 또는 일부를 지원할 수 있다. <개정 2013.3.23>",
+      "물환경보전법 57조  예산 등의 지원#KOBLEX-109392": "제57조(예산 등의 지원) 환경부장관은 시행계획의 수립ㆍ시행에 필요한 경비의 전부 또는 일부를 예산의 범위에서 지원할 수 있다.",
+      "산지관리법 시행령 11조  산지전용ㆍ일시사용제한지역지정의 해제#KOBLEX-090490": "2. 「농어촌정비법」 제2조제10호에 따른 생활환경정비사업 또는 「임업 및 산촌 진흥 촉진에 관한 법률」 제25조에 따른 산촌개발사업을 위하여 필요한 경우로서 사업계획부지에 편입되는 면적이 100분의 30 미만인 경우",
+      "신문 등의 진흥에 관한 법률 20조  디지털 뉴스 분류체계 표준화 등#KOBLEX-215652": "③ 문화체육관광부장관은 제2항에 따라 지정한 기관 또는 단체에 표준의 제정에 필요한 비용의 전부 또는 일부를 지원할 수 있다.",
+      "정보통신망 이용촉진 및 정보보호 등에 관한 법률 6조  기술개발의 추진 등#KOBLEX-176772": "② 정부는 제1항에 따라 연구개발 등의 사업을 하는 연구기관에는 그 사업에 드는 비용의 전부 또는 일부를 지원할 수 있다.",
+      "주택법 101조  벌칙#KOBLEX-133637": "2. 제64조제1항을 위반하여 주택을 전매하거나 이의 전매를 알선한 자",
+      "주택법 101조  벌칙#KOBLEX-205149": "2. 제64조제1항을 위반하여 주택을 전매하거나 이의 전매를 알선한 자",
+      "중소기업기본법 시행령 10조 4 중소기업빅데이터플랫폼 전담기구의 지정 및 운영#KOBLEX-183084": "③ 중소벤처기업부장관은 운영기관의 운영에 필요한 비용의 전부 또는 일부를 지원할 수 있다. <개정 2017.7.26>",
+      "초지법 13조  자금지원#KOBLEX-029209": "② 농림축산식품부장관은 필요하다고 인정할 때에는 제1항에 따라 지원하는 자금의 전부 또는 일부를 사업 완료 전이라도 사업시행자에게 지급할 수 있다.",
+      "택지개발촉진법 28조  자금의 지원#KOBLEX-185419": "제28조(자금의 지원) 국가 또는 지방자치단체는 시행자에게 그 소요 자금의 전부 또는 일부를 보조하거나 융자할 수 있다.",
+      "택지개발촉진법 31조 2 벌칙#KOBLEX-185428": "2. 전매가 금지됨을 알면서 제19조의2제1항 또는 제2항을 위반하여 택지 또는 택지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등을 전매받은 자",
+      "토양환경보전법 10조 10 토양환경센터의 설치ㆍ운영 등#KOBLEX-123750": "② 환경부장관은 제1항에 따른 업무의 수행에 필요한 비용의 전부 또는 일부를 지원할 수 있다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025677",
+          "농어촌정비법 130조  벌칙#KOBLEX-025939"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C002는 조성용지 전매제한 위반 시 법률행위가 무효임을 명시하고, C001은 위반 시 형사처벌을 규정하여 전매제한 규정과 위반 시 효력을 모두 확인한다. 이는 E1의 완료 기준인 조성용지 전매제한 조항과 전매제한 위반 시 법률행위가 무효인지 또는 다른 효력인지 명시된 규정을 확인하는 것을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [
+          "농어촌정비법 71조  기술지원 등#KOBLEX-025680",
+          "농어촌정비법 52조  농어촌 생활환경 정비 원칙#KOBLEX-025540",
+          "농어촌정비법 15조 2 도서지역 등의 농어촌용수 실태조사 등#KOBLEX-025379"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C032는 농림축산식품부장관이 생활환경정비사업의 계획 수립, 조사·설계 등 사업 추진과 품질관리를 위해 기획·기술지원을 하여야 하며 필요한 경비를 예산 범위에서 지원할 수 있음을 명시하여 지원 근거와 유형을 제공한다. C012는 사업 시행 원칙과 지원 방향을 제시하고, C009는 농어촌용수 공급 부족 지역에 대한 특별한 지원을 규정한다. 이는 E2의 완료 기준인 농림축산식품부장관이 생활환경정비사업에 대해 지원할 수 있는 근거 조항과 지원 유형을 확인하는 것을 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025677",
+        "support_spans": [
+          {
+            "end_char": 143,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "농어촌정비법 130조  벌칙#KOBLEX-025939",
+        "support_spans": [
+          {
+            "end_char": 55,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 71조  기술지원 등#KOBLEX-025680",
+        "support_spans": [
+          {
+            "end_char": 191,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 52조  농어촌 생활환경 정비 원칙#KOBLEX-025540",
+        "support_spans": [
+          {
+            "end_char": 158,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 15조 2 도서지역 등의 농어촌용수 실태조사 등#KOBLEX-025379",
+        "support_spans": [
+          {
+            "end_char": 100,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 6,
+    "last_validated_event": "S2.ASSESS_COVERAGE",
+    "legal_issues": [
+      {
+        "description": "농어촌정비법상 전매제한 대상 조성용지의 전매행위 효력",
+        "issue_id": "I1"
+      },
+      {
+        "description": "농림축산식품부장관의 생활환경정비사업 지원 권한과 범위",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 생활환경정비사업시행자인 을로부터 특정 조성용지를 매입했으나, 매입 후 해당 용지를 병에게 전매하였다. 갑은 농어촌정비법에 따라 전매가 제한된 사실을 알지 못했다. 이 사건이 발생한 지역에서는 생활환경정비사업이 진행 중이며, 주민들은 정부의 지원이 필요하다고 주장하고 있다. [질문] 갑이 을로부터 매입한 조성용지를 병에게 전매한 경우, 해당 법률행위의 효력은 어떻게 되며, 이 지역의 생활환경정비사업에서 농림축산식품부장관은 어떤 지원을 할 수 있는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "농어촌정비법",
+          "조성용지",
+          "전매제한",
+          "전매",
+          "무효"
+        ],
+        "query_text": "농어촌정비법 조성용지 전매제한 위반 법률행위 효력 [원문 맥락] 이 사건이 발생한 지역에서는 생활환경정비사업이 진행 중이며, 주민들은 정부의 지원이 필요하다고 주장하고 있다. 갑이 을로부터 매입한 조성용지를 병에게 전매한 경우, 해당 법률행위의 효력은 어떻게 되며, 이 지역의 생활환경정비사업에서 농림축산식품부장관은 어떤 지원을 할 수 있는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "농어촌정비법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "농림축산식품부장관",
+          "생활환경정비사업",
+          "지원",
+          "농어촌정비법"
+        ],
+        "query_text": "농림축산식품부장관 생활환경정비사업 지원 근거 [원문 맥락] 이 사건이 발생한 지역에서는 생활환경정비사업이 진행 중이며, 주민들은 정부의 지원이 필요하다고 주장하고 있다. 갑이 을로부터 매입한 조성용지를 병에게 전매한 경우, 해당 법률행위의 효력은 어떻게 되며, 이 지역의 생활환경정비사업에서 농림축산식품부장관은 어떤 지원을 할 수 있는가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "농어촌정비법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "농림축산식품부장관",
+          "생활환경정비사업",
+          "비용지원",
+          "지원",
+          "농어촌정비법"
+        ],
+        "query_text": "농림축산식품부장관은 생활환경정비사업 시행자에게 필요한 비용의 전부 또는 일부를 지원할 수 있다 [원문 맥락] 이 사건이 발생한 지역에서는 생활환경정비사업이 진행 중이며, 주민들은 정부의 지원이 필요하다고 주장하고 있다. 갑이 을로부터 매입한 조성용지를 병에게 전매한 경우, 해당 법률행위의 효력은 어떻게 되며, 이 지역의 생활환경정비사업에서 농림축산식품부장관은 어떤 지원을 할 수 있는가?",
+        "request_id": "GRQ1",
+        "statute_hints": [
+          "농어촌정비법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "생활환경정비사업",
+          "지원",
+          "지원유형",
+          "지원범위",
+          "농림축산식품부장관"
+        ],
+        "query_text": "생활환경정비사업 지원 유형 범위 [원문 맥락] 이 사건이 발생한 지역에서는 생활환경정비사업이 진행 중이며, 주민들은 정부의 지원이 필요하다고 주장하고 있다. 갑이 을로부터 매입한 조성용지를 병에게 전매한 경우, 해당 법률행위의 효력은 어떻게 되며, 이 지역의 생활환경정비사업에서 농림축산식품부장관은 어떤 지원을 할 수 있는가?",
+        "request_id": "GRQ2",
+        "statute_hints": [
+          "농어촌정비법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "농림축산식품부장관",
+          "생활환경정비사업",
+          "지원",
+          "농어촌정비법"
+        ],
+        "query_text": "농림축산식품부장관 생활환경정비사업 지원 근거 농어촌정비법 [원문 맥락] 이 사건이 발생한 지역에서는 생활환경정비사업이 진행 중이며, 주민들은 정부의 지원이 필요하다고 주장하고 있다. 갑이 을로부터 매입한 조성용지를 병에게 전매한 경우, 해당 법률행위의 효력은 어떻게 되며, 이 지역의 생활환경정비사업에서 농림축산식품부장관은 어떤 지원을 할 수 있는가?",
+        "request_id": "GRQ1",
+        "statute_hints": [
+          "농어촌정비법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "농림축산식품부장관",
+          "생활환경정비사업",
+          "비용지원",
+          "지원"
+        ],
+        "query_text": "농림축산식품부장관은 생활환경정비사업에 필요한 비용의 전부 또는 일부를 지원할 수 있다 [원문 맥락] 이 사건이 발생한 지역에서는 생활환경정비사업이 진행 중이며, 주민들은 정부의 지원이 필요하다고 주장하고 있다. 갑이 을로부터 매입한 조성용지를 병에게 전매한 경우, 해당 법률행위의 효력은 어떻게 되며, 이 지역의 생활환경정비사업에서 농림축산식품부장관은 어떤 지원을 할 수 있는가?",
+        "request_id": "GRQ2",
+        "statute_hints": [
+          "농어촌정비법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "생활환경정비사업",
+          "지원",
+          "지원유형",
+          "지원범위",
+          "농림축산식품부장관"
+        ],
+        "query_text": "농림축산식품부장관이 생활환경정비사업에 대해 지원할 수 있는 근거 조항과 지원 유형을 확인 법률 조문 [원문 맥락] 이 사건이 발생한 지역에서는 생활환경정비사업이 진행 중이며, 주민들은 정부의 지원이 필요하다고 주장하고 있다. 갑이 을로부터 매입한 조성용지를 병에게 전매한 경우, 해당 법률행위의 효력은 어떻게 되며, 이 지역의 생활환경정비사업에서 농림축산식품부장관은 어떤 지원을 할 수 있는가?",
+        "request_id": "GRQ3",
+        "statute_hints": [
+          "농어촌정비법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 생활환경정비사업시행자인 을로부터 특정 조성용지를 매입했으나, 매입 후 해당 용지를 병에게 전매하였다. 갑은 농어촌정비법에 따라 전매가 제한된 사실을 알지 못했다. 이 사건이 발생한 지역에서는 생활환경정비사업이 진행 중이며, 주민들은 정부의 지원이 필요하다고 주장하고 있다.\n\n[질문]\n갑이 을로부터 매입한 조성용지를 병에게 전매한 경우, 해당 법률행위의 효력은 어떻게 되며, 이 지역의 생활환경정비사업에서 농림축산식품부장관은 어떤 지원을 할 수 있는가?",
+    "remaining_request_budget": 2,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "조성용지 전매제한 조항과 전매제한 위반 시 법률행위가 무효인지 또는 다른 효력인지 명시된 규정을 확인",
+        "critical": true,
+        "description": "농어촌정비법상 조성용지 전매제한 규정 및 위반 시 법률행위 효력",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "농림축산식품부장관이 생활환경정비사업에 대해 지원할 수 있는 근거 조항과 지원 유형을 확인",
+        "critical": true,
+        "description": "농림축산식품부장관의 생활환경정비사업 지원 근거와 지원 내용",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "f978bb62-bbda-42a9-bfb6-c867c6273786",
+    "seen_provision_ids": [
+      "동물보호법 35조  동물보호센터의 설치 등#KOBLEX-224855",
+      "주택법 101조  벌칙#KOBLEX-205149",
+      "농어촌정비법 130조  벌칙#KOBLEX-025939",
+      "공공주택 특별법 57조 2 벌칙#KOBLEX-140353",
+      "동물보호법 37조  민간동물보호시설의 신고 등#KOBLEX-224873",
+      "농수산물 유통 및 가격안정에 관한 법률 70조 2 농수산물 전자거래의 촉진 등#KOBLEX-010999",
+      "택지개발촉진법 28조  자금의 지원#KOBLEX-185419",
+      "공공주택 특별법 57조 2 벌칙#KOBLEX-221678",
+      "농어촌정비법 58조  생활환경정비사업 기본계획의 수립#KOBLEX-025574",
+      "말산업 육성법 28조  권한ㆍ업무의 위임ㆍ위탁#KOBLEX-108867",
+      "물환경보전법 57조  예산 등의 지원#KOBLEX-109392",
+      "초지법 13조  자금지원#KOBLEX-029209",
+      "농어촌정비법 56조  생활환경정비사업 시행자#KOBLEX-025564",
+      "토양환경보전법 10조 10 토양환경센터의 설치ㆍ운영 등#KOBLEX-123750",
+      "농수산물 유통 및 가격안정에 관한 법률 12조  유통명령 이행자에 대한 지원 등#KOBLEX-010718",
+      "건강가정기본법 21조 4 위기가족긴급지원에 대한 비용의 지원#KOBLEX-016565",
+      "산지관리법 시행령 11조  산지전용ㆍ일시사용제한지역지정의 해제#KOBLEX-090490",
+      "동물보호법 93조  권한의 위임ㆍ위탁#KOBLEX-225141",
+      "공공주택 특별법 57조 2 벌칙#KOBLEX-058322",
+      "농어촌정비법 52조  농어촌 생활환경 정비 원칙#KOBLEX-025540",
+      "중소기업기본법 시행령 10조 4 중소기업빅데이터플랫폼 전담기구의 지정 및 운영#KOBLEX-183084",
+      "농어촌정비법 15조 2 도서지역 등의 농어촌용수 실태조사 등#KOBLEX-025379",
+      "농어촌정비법 59조  생활환경정비사업 시행계획의 수립#KOBLEX-025578",
+      "농어촌정비법 58조  생활환경정비사업 기본계획의 수립#KOBLEX-025575",
+      "가축전염병 예방법 22조  사체의 처분제한#KOBLEX-184629",
+      "주택법 101조  벌칙#KOBLEX-133637",
+      "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025675",
+      "정보통신망 이용촉진 및 정보보호 등에 관한 법률 6조  기술개발의 추진 등#KOBLEX-176772",
+      "국가균형발전 특별법 21조 3 국가균형발전을 위한 국제적 교류협력 촉진 등#KOBLEX-168150",
+      "택지개발촉진법 31조 2 벌칙#KOBLEX-185428",
+      "농어업경영체 육성 및 지원에 관한 법률 27조  농어업인재개발전문기관의 지정 등#KOBLEX-217478",
+      "신문 등의 진흥에 관한 법률 20조  디지털 뉴스 분류체계 표준화 등#KOBLEX-215652",
+      "농어촌정비법 71조  기술지원 등#KOBLEX-025680",
+      "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025677"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

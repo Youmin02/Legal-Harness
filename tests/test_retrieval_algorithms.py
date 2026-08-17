@@ -127,8 +127,8 @@ class RetrievalAlgorithmTests(unittest.TestCase):
                 issue_id="I1",
                 evidence_item_id="E1",
                 query_channel=QueryChannel.PROVISION_STYLE,
-                query_text="운송인의 책임은 상품 인도일로부터 언제까지 행사해야 소멸하는가",
-                query_terms=["운송인"],
+                query_text="상품이 인도된 날로부터 언제까지 청구할 수 있는가",
+                query_terms=["운송계약"],
                 top_k=100,
             )
 

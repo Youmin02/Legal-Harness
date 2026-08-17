@@ -138,11 +138,13 @@ class LocalOllamaSkillExecutor:
                 if not isinstance(request, dict):
                     continue
                 query = request.get("query_text")
-                if not isinstance(query, str) or self._normalized_query(query) in emitted_queries:
+                contextual_query = self._with_source_context(query, skill_input)
+                if not isinstance(query, str) or self._normalized_query(contextual_query) in emitted_queries:
                     issue = issues_by_id.get(request.get("issue_id"), {})
                     query = self._fallback_initial_query(issue, index, emitted_queries)
-                    request["query_text"] = query
-                emitted_queries.add(self._normalized_query(query))
+                    contextual_query = self._with_source_context(query, skill_input)
+                request["query_text"] = contextual_query
+                emitted_queries.add(self._normalized_query(contextual_query))
 
         if entry_point == "GAP_QUERY_PLAN":
             unresolved = [item.get("evidence_item_id") for key in ("missing_evidence_items", "evidence_conflicts") for item in self._list(skill_input, key) if isinstance(item, Mapping)]
@@ -165,10 +167,12 @@ class LocalOllamaSkillExecutor:
                     continue
                 request["issue_id"] = evidence.get("issue_id")
                 query = request.get("query_text")
-                if not isinstance(query, str) or self._normalized_query(query) in emitted_queries:
+                contextual_query = self._with_source_context(query, skill_input)
+                if not isinstance(query, str) or self._normalized_query(contextual_query) in emitted_queries:
                     query = self._fallback_gap_query(evidence, index, emitted_queries)
-                    request["query_text"] = query
-                emitted_queries.add(self._normalized_query(query))
+                    contextual_query = self._with_source_context(query, skill_input)
+                request["query_text"] = contextual_query
+                emitted_queries.add(self._normalized_query(contextual_query))
             normalized["target_evidence_item_ids"] = list(dict.fromkeys(
                 request.get("evidence_item_id") for request in requests if isinstance(request, dict)
             ))
@@ -307,6 +311,30 @@ class LocalOllamaSkillExecutor:
     @staticmethod
     def _normalized_query(query: str) -> str:
         return " ".join(query.lower().split())
+
+    @staticmethod
+    def _source_context_excerpt(source: str) -> str:
+        parts = [
+            part.strip()
+            for part in re.split(r"(?<=[.!?])\s+|\[질문\]", source.strip())
+            if part.strip() and part.strip() != "[배경 시나리오]"
+        ]
+        return " ".join(parts[-2:])[-1200:]
+
+    def _with_source_context(
+        self, query: Any, skill_input: Mapping[str, Any]
+    ) -> str:
+        if not isinstance(query, str):
+            return ""
+        source = skill_input.get("normalized_question")
+        if not isinstance(source, str) or not source.strip():
+            return query
+        excerpt = self._source_context_excerpt(source)
+        query_normalized = self._normalized_query(query)
+        source_normalized = self._normalized_query(excerpt)
+        if source_normalized in query_normalized:
+            return query
+        return "%s\n%s" % (query.strip(), excerpt)
 
     def _fallback_initial_query(self, issue: Mapping[str, Any], index: int, seen: set) -> str:
         base = issue.get("decision_question") or issue.get("issue_statement") or "관련 법률"

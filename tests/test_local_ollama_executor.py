@@ -154,7 +154,24 @@ class LocalOllamaExecutorTests(unittest.TestCase):
         self.assertEqual(result["retrieval_requests"][0]["query_channel"], "sparse_keyword")
         self.assertEqual(result["retrieval_requests"][0]["top_k"], 100)
         self.assertEqual(result["retrieval_requests"][0]["query_terms"], ["손해배상"])
+        self.assertEqual(
+            result["retrieval_requests"][0]["query_text"],
+            "손해배상 책임\n손해배상 책임은 무엇인가",
+        )
         self.assertEqual(result["required_evidence_items"][0]["completion_criteria"], "책임의 근거 조문이 있다")
+
+    def test_s1_context_anchor_keeps_only_the_last_fact_and_question(self):
+        source = (
+            "무관한 첫 사실이다. 상품이 인도된 날부터 기간을 계산한다. "
+            "[질문] 손해배상청구권은 언제까지 행사하는가?"
+        )
+
+        contextual = self.executor._with_source_context(
+            "운송계약 소멸시효", {"normalized_question": source}
+        )
+
+        self.assertNotIn("무관한 첫 사실", contextual)
+        self.assertIn("상품이 인도된 날부터", contextual)
 
     def test_s2_and_s3_map_rich_skill_contracts_to_harness_contracts(self):
         evidence = {

@@ -610,7 +610,7 @@ FINAL OUTPUT INVARIANTS:
             if isinstance(item, Mapping)
         ]
         return (
-            "For S2, use only these evidence_item_id values: %s. Use only these candidate provision_id values: %s. Never invent an ID. Each evidence item appears in exactly one coverage assessment. For every non-covered item, copy issue_id and critical exactly from this evidence ledger: %s. Every evidence link must use quoted_text exactly '[FULL_TEXT]'."
+            "For S2, use only these evidence_item_id values: %s. Use only these candidate provision_id values: %s. Never invent an ID. Each evidence item appears in exactly one coverage assessment. For every non-covered item, copy issue_id and critical exactly from this evidence ledger: %s. Every evidence link must use quoted_text exactly '[FULL_TEXT]'. If the supplied provisions give complete alternative rules and only a missing question fact selects the branch (for example maritime versus air carriage), classify the item as partially_covered with partial_kind factual_condition, link every supported branch, and state the missing selector fact; do not classify that situation as conflicting. Use conflicting only for incompatible legal rules under the same established facts or unresolved legal interpretation."
             % (
                 json.dumps([item["evidence_item_id"] for item in evidence_ledger]),
                 json.dumps(candidate_ids),

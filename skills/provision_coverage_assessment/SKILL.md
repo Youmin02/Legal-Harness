@@ -15,7 +15,7 @@ Read [references/contract.md](references/contract.md) before executing. Conform 
 2. Create evidence links only for operational support, partial support, or a real unresolved conflict. Use only the short candidate IDs supplied as `candidate_provisions[].provision_id` (for example `C001`); never recreate a source statute ID.
 3. Set every evidence link's `quoted_text` to the literal string `[FULL_TEXT]`. The harness deterministically replaces this token with the complete immutable candidate text, preventing paraphrased or mistyped quotations.
 4. Construct `evidence_links` first. For each assessment, copy `linked_provision_ids` from that evidence item's links exactly; use `[]` only for `uncovered`.
-5. Apply the four status definitions in the contract. Base the judgment on each item's `completion_criteria`, not retrieval score or topical similarity alone. Treat the completion criteria as closed: do not invent an additional element that the question or criterion did not require. Set `partial_kind` to `factual_condition` only when the supplied provision states the complete governing legal rule but the question facts do not establish whether a stated condition applies. Set it to `legal_support_gap` when any requested legal period, element, effect, exception, remedy, or operative text is absent. Use `not_applicable` for every non-partial status.
+5. Apply the four status definitions in the contract. Base the judgment on each item's `completion_criteria`, not retrieval score or topical similarity alone. Treat the completion criteria as closed: do not invent an additional element that the question or criterion did not require. Set `partial_kind` to `factual_condition` when the supplied provisions state the complete rules for the possible factual branches but the question omits the fact that selects the applicable branch (for example, maritime versus air carriage). Link every supported branch and describe the missing selector fact. Set it to `legal_support_gap` when any requested legal period, element, effect, exception, remedy, or operative text is absent. Use `not_applicable` for every non-partial status.
 6. Emit one `missing_evidence_item` for every non-covered assessment. Emit a conflict object only for `conflicting` assessments.
 7. Explain what is satisfied and what remains missing; do not conceal uncertainty behind a high-level relevance statement. Because later candidate sets only grow, preserve a prior `covered` or `partially_covered` finding when its linked provision is still supplied, unless a newly supplied provision creates a real unresolved conflict.
 8. Return JSON only. On invalid input, return the error envelope.
@@ -26,7 +26,7 @@ Read [references/contract.md](references/contract.md) before executing. Conform 
 - Never return a policy action or `accepted_provision_ids`.
 - Never treat an absent candidate as proof that no governing provision exists.
 - Never perform answer generation or user-facing legal advice.
-- Treat `conflicting` as an unresolved applicability/scope/exception conflict, not mere coexistence of multiple provisions.
+- Treat `conflicting` as incompatible legal rules for the same established facts, not mere coexistence of fact-dependent branches. When a missing fact alone selects among otherwise complete rules, use `partially_covered` with `partial_kind: "factual_condition"`, not `conflicting`.
 
 Validate a result with:
 

@@ -361,6 +361,25 @@ class LocalOllamaExecutorTests(unittest.TestCase):
 
         self.assertEqual(errors, [])
 
+    def test_s2_invariants_distinguish_missing_fact_branches_from_legal_conflict(self):
+        skill_input = {
+            "required_evidence_items": [
+                {"evidence_item_id": "E1", "issue_id": "I1", "critical": True}
+            ],
+            "candidate_provisions": [
+                {"provision_id": "C001"},
+                {"provision_id": "C002"},
+            ],
+        }
+
+        invariants = self.executor._output_invariants(
+            "provision_coverage_assessment", skill_input
+        )
+
+        self.assertIn("maritime versus air carriage", invariants)
+        self.assertIn("partial_kind factual_condition", invariants)
+        self.assertIn("do not classify that situation as conflicting", invariants)
+
     def test_s1_normalizes_initial_and_gap_queries(self):
         initial = self.executor._normalize_harness_owned_fields(
             "legal_issue_and_query_planning",

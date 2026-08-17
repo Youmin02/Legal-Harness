@@ -3,9 +3,9 @@
 ## Operational status definitions
 
 - `covered`: the supplied provisions satisfy the evidence item's completion criteria, and no unresolved conflict blocks use of that evidence.
-- `partially_covered`: at least one supplied provision supports part of the criteria, but an identified aspect remains unsupported. Classify it as `factual_condition` only when the complete legal rule is present and solely a factual applicability condition is unresolved; otherwise classify it as `legal_support_gap`.
+- `partially_covered`: at least one supplied provision supports part of the criteria, but an identified aspect remains unsupported. Classify it as `factual_condition` when the complete rule for each supported factual branch is present and only the fact selecting the applicable branch is unresolved (for example, maritime versus air carriage); link all supported branches. Otherwise classify it as `legal_support_gap`.
 - `uncovered`: no supplied provision supports the evidence item. This is a statement about the current candidate set, not the entire law.
-- `conflicting`: supplied provisions create an unresolved scope, applicability, rule/exception, or cross-reference conflict that blocks a stable coverage finding.
+- `conflicting`: supplied provisions create incompatible legal rules for the same established facts, or an unresolved legal scope/rule/exception/cross-reference conflict. Alternative rules selected solely by a missing fact are not `conflicting`; they are `partially_covered` with `partial_kind: factual_condition`.
 
 ## Output sets
 

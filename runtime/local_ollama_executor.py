@@ -592,11 +592,13 @@ FINAL OUTPUT INVARIANTS:
             if partial_ids:
                 return (
                     "Use only accepted provision IDs supplied in INPUT. Critical partial evidence IDs are %s. "
-                    "Do not assert their missing facts. Include at least one conditional claim and a non-empty "
-                    "limitations array that states each unresolved condition."
+                    "Do not assert their missing facts. Include at least one cited conditional legal claim and a non-empty "
+                    "limitations array that states each unresolved condition. Every claims[] item must set citation_required "
+                    "true and have at least one claim_citation. Keep uncited missing-fact and limitation prose out of claims[]; "
+                    "put it only in answer, assumptions[], or limitations[]."
                     % json.dumps(partial_ids)
                 )
-            return "Use only accepted provision IDs supplied in INPUT and cite every substantive claim."
+            return "Use only accepted provision IDs supplied in INPUT. Every claims[] item must set citation_required true and have at least one claim_citation; keep uncited factual or limitation prose out of claims[]."
         if skill_name != "provision_coverage_assessment":
             return "Use only the identifiers and fields supplied in INPUT."
         evidence_ledger = [

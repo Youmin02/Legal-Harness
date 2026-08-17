@@ -21,9 +21,9 @@ Read [references/contract.md](references/contract.md) before executing. Conform 
 1. Answer in Korean unless the input constraint explicitly selects another language.
 2. Separate statutory rules from conditional application to the facts. Do not invent missing facts, case law, administrative guidance, or provision text.
 3. Use only `accepted_provisions[]`. Copy every `quoted_text` exactly from its accepted provision.
-4. Represent every substantive legal claim in `claims[]`. Make each claim text an exact substring of `answer`.
-5. Attach at least one citation to every claim that requires statutory support. Put each citation marker such as `[CT1]` in the answer.
-6. State assumptions and material limitations explicitly.
+4. Put only substantive legal claims in `claims[]`. Make each claim text an exact substring of `answer`, set `citation_required: true`, and attach at least one citation. Put each citation marker such as `[CT1]` in the answer.
+5. Keep uncited factual premises and limitation explanations out of `claims[]`; state them only in `assumptions[]`, `limitations[]`, and the surrounding answer text.
+6. State assumptions and material limitations explicitly without presenting them as established facts.
 7. For every partially covered critical item, state the unresolved condition in `limitations[]` and phrase the corresponding claim with `applicability: "conditional"`. Do not turn the missing factual premise into a fact.
 8. Return JSON only.
 

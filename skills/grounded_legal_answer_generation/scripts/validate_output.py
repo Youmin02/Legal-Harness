@@ -108,15 +108,14 @@ def validate(output, input_data):
         elif marker not in answer:
             errors.append(f"answer is missing citation marker: {citation_id}")
 
-    required_types = {"legal_rule", "application", "exception", "procedure", "remedy"}
     for claim_id, claim in claim_by_id.items():
         text = claim.get("text")
         if not isinstance(text, str) or text not in answer:
             errors.append(f"claim text must be an exact substring of answer: {claim_id}")
-        if claim.get("claim_type") in required_types and claim.get("citation_required") is not True:
-            errors.append(f"substantive legal claim must require citation: {claim_id}")
-        if claim.get("citation_required") is True and not citations_by_claim.get(claim_id):
-            errors.append(f"citation-required claim lacks citation: {claim_id}")
+        if claim.get("citation_required") is not True:
+            errors.append(f"every claims[] item must require citation: {claim_id}")
+        if not citations_by_claim.get(claim_id):
+            errors.append(f"claim lacks citation: {claim_id}")
     for claim_id in citations_by_claim:
         if claim_id not in claim_by_id:
             errors.append(f"citations contain unknown claim: {claim_id}")

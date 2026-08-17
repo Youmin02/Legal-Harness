@@ -14,12 +14,12 @@ If any precondition fails, return an error envelope. S3 does not decide whether 
 ## Success output
 
 - `answer`: the user-facing Korean draft containing citation markers.
-- `claims[]`: exact answer substrings classified as `legal_rule`, `factual_premise`, `application`, `exception`, `procedure`, `remedy`, or `limitation`.
+- `claims[]`: cited substantive legal claims that are exact answer substrings, classified as `legal_rule`, `application`, `exception`, `procedure`, or `remedy`.
 - `claim_citations[]`: claim-to-accepted-provision links with exact source excerpts.
 - `assumptions[]`: facts treated as assumptions rather than established facts.
 - `limitations[]`: material boundaries of the statutory answer.
 
-Claims of type `legal_rule`, `application`, `exception`, `procedure`, or `remedy` require at least one citation. A citation marker must equal `[citation_id]` and appear in `answer`.
+Every `claims[]` item must set `citation_required: true` and have at least one citation. Uncited factual or limitation prose belongs only in `answer`, `assumptions[]`, or `limitations[]`. A citation marker must equal `[citation_id]` and appear in `answer`.
 
 ## Grounding rules
 

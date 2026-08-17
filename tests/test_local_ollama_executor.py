@@ -360,6 +360,31 @@ class LocalOllamaExecutorTests(unittest.TestCase):
         ](output, skill_input)
 
         self.assertEqual(errors, [])
+        invariants = self.executor._output_invariants(
+            "grounded_legal_answer_generation", skill_input
+        )
+        self.assertIn("Every claims[] item must set citation_required true", invariants)
+        self.assertIn("Keep uncited missing-fact and limitation prose out of claims[]", invariants)
+
+        uncited_limitation = dict(output)
+        uncited_limitation["answer"] = (
+            output["answer"] + " 중대한 과실 해당 여부는 추가 확인이 필요합니다."
+        )
+        uncited_limitation["claims"] = output["claims"] + [
+            {
+                "claim_id": "C2",
+                "text": "중대한 과실 해당 여부는 추가 확인이 필요합니다.",
+                "claim_type": "limitation",
+                "applicability": "conditional",
+                "citation_required": False,
+            }
+        ]
+        errors = self.executor._validators[
+            "grounded_legal_answer_generation"
+        ](uncited_limitation, skill_input)
+        self.assertIn("every claims[] item must require citation: C2", errors)
+        self.assertIn("claim lacks citation: C2", errors)
+
 
     def test_s2_invariants_distinguish_missing_fact_branches_from_legal_conflict(self):
         skill_input = {

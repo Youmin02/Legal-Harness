@@ -14,9 +14,9 @@
       "properties": {
         "claim_id": {"type": "string", "pattern": "^C[1-9][0-9]*$"},
         "text": {"type": "string", "minLength": 1},
-        "claim_type": {"enum": ["legal_rule", "factual_premise", "application", "exception", "procedure", "remedy", "limitation"]},
+        "claim_type": {"enum": ["legal_rule", "application", "exception", "procedure", "remedy"]},
         "applicability": {"enum": ["direct", "conditional"]},
-        "citation_required": {"type": "boolean"}
+        "citation_required": {"const": true}
       }
     },
     "citation": {

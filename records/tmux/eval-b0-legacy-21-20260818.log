@@ -1,0 +1,540 @@
+{
+  "answers": {
+    "false_supported_answer_count": null,
+    "false_supported_answer_rate": null,
+    "false_supported_label_coverage": 0.0,
+    "false_supported_labelled_count": 0,
+    "gold_incomplete_supported_answer_count": 1,
+    "supported_answer_count": 6,
+    "supported_answer_yield": 0.2857142857142857
+  },
+  "batch_name": "bm25-bge-factualbranch-21",
+  "by_hop": {
+    "1": {
+      "answers": {
+        "false_supported_answer_count": null,
+        "false_supported_answer_rate": null,
+        "false_supported_label_coverage": 0.0,
+        "false_supported_labelled_count": 0,
+        "gold_incomplete_supported_answer_count": 1,
+        "supported_answer_count": 4,
+        "supported_answer_yield": 0.6666666666666666
+      },
+      "citation_integrity": {
+        "attempted": 4,
+        "pass_rate": 1.0,
+        "passed": 4
+      },
+      "efficiency": {
+        "candidate_count_returned": {
+          "count": 6,
+          "mean": 26.666666666666668,
+          "median": 25.0,
+          "p95": 40.0
+        },
+        "candidate_count_unique": {
+          "count": 6,
+          "mean": 24.833333333333332,
+          "median": 24.5,
+          "p95": 35.5
+        },
+        "end_to_end_latency_ms": {
+          "count": 6,
+          "mean": 289871.599,
+          "median": 314678.51399999997,
+          "p95": 445048.9445
+        },
+        "retrieval_requests": {
+          "count": 6,
+          "mean": 5.0,
+          "median": 5.0,
+          "p95": 8.0
+        },
+        "retrieval_rounds": {
+          "count": 6,
+          "mean": 2.0,
+          "median": 2.0,
+          "p95": 3.0
+        }
+      },
+      "outcomes": {
+        "ABSTAIN": {
+          "count": 2,
+          "rate": 0.3333333333333333
+        },
+        "ANSWER": {
+          "count": 4,
+          "rate": 0.6666666666666666
+        },
+        "EXECUTION_FAILURE": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "provision": {
+        "complete_evidence": {
+          "count": 3,
+          "rate": 0.5
+        },
+        "macro": {
+          "f1": 0.3611111111111111,
+          "precision": 0.3055555555555556,
+          "recall": 0.5
+        },
+        "micro": {
+          "f1": 0.37499999999999994,
+          "gold": 6,
+          "precision": 0.3,
+          "predicted": 10,
+          "recall": 0.5,
+          "true_positive": 3
+        }
+      },
+      "retrieval": {
+        "bge_at_10": {
+          "available": false,
+          "available_questions": 0,
+          "complete_evidence_count": null,
+          "complete_evidence_recall": null,
+          "provision_recall_macro": null,
+          "provision_recall_micro": null,
+          "question_count": 6,
+          "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+        },
+        "bge_at_20": {
+          "available": false,
+          "available_questions": 0,
+          "complete_evidence_count": null,
+          "complete_evidence_recall": null,
+          "provision_recall_macro": null,
+          "provision_recall_micro": null,
+          "question_count": 6,
+          "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+        },
+        "bge_at_30": {
+          "available": false,
+          "available_questions": 0,
+          "complete_evidence_count": null,
+          "complete_evidence_recall": null,
+          "provision_recall_macro": null,
+          "provision_recall_micro": null,
+          "question_count": 6,
+          "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+        },
+        "first_stage_at_100": {
+          "available": false,
+          "available_questions": 0,
+          "complete_evidence_count": null,
+          "complete_evidence_recall": null,
+          "provision_recall_macro": null,
+          "provision_recall_micro": null,
+          "question_count": 6,
+          "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+        },
+        "rrf_at_100": {
+          "available": false,
+          "available_questions": 0,
+          "complete_evidence_count": null,
+          "complete_evidence_recall": null,
+          "provision_recall_macro": null,
+          "provision_recall_micro": null,
+          "question_count": 6,
+          "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+        }
+      }
+    },
+    "2": {
+      "answers": {
+        "false_supported_answer_count": null,
+        "false_supported_answer_rate": null,
+        "false_supported_label_coverage": 0.0,
+        "false_supported_labelled_count": 0,
+        "gold_incomplete_supported_answer_count": 0,
+        "supported_answer_count": 2,
+        "supported_answer_yield": 0.18181818181818182
+      },
+      "citation_integrity": {
+        "attempted": 2,
+        "pass_rate": 1.0,
+        "passed": 2
+      },
+      "efficiency": {
+        "candidate_count_returned": {
+          "count": 11,
+          "mean": 40.0,
+          "median": 40.0,
+          "p95": 60.0
+        },
+        "candidate_count_unique": {
+          "count": 11,
+          "mean": 32.90909090909091,
+          "median": 35.0,
+          "p95": 50.5
+        },
+        "end_to_end_latency_ms": {
+          "count": 11,
+          "mean": 309618.0208181818,
+          "median": 311983.35,
+          "p95": 470861.61100000003
+        },
+        "retrieval_requests": {
+          "count": 11,
+          "mean": 5.818181818181818,
+          "median": 6.0,
+          "p95": 8.5
+        },
+        "retrieval_rounds": {
+          "count": 11,
+          "mean": 2.4545454545454546,
+          "median": 3.0,
+          "p95": 3.0
+        }
+      },
+      "outcomes": {
+        "ABSTAIN": {
+          "count": 7,
+          "rate": 0.6363636363636364
+        },
+        "ANSWER": {
+          "count": 2,
+          "rate": 0.18181818181818182
+        },
+        "EXECUTION_FAILURE": {
+          "count": 2,
+          "rate": 0.18181818181818182
+        }
+      },
+      "provision": {
+        "complete_evidence": {
+          "count": 5,
+          "rate": 0.45454545454545453
+        },
+        "macro": {
+          "f1": 0.5256132756132756,
+          "precision": 0.5099567099567099,
+          "recall": 0.6363636363636364
+        },
+        "micro": {
+          "f1": 0.5090909090909091,
+          "gold": 22,
+          "precision": 0.42424242424242425,
+          "predicted": 33,
+          "recall": 0.6363636363636364,
+          "true_positive": 14
+        }
+      },
+      "retrieval": {
+        "bge_at_10": {
+          "available": false,
+          "available_questions": 0,
+          "complete_evidence_count": null,
+          "complete_evidence_recall": null,
+          "provision_recall_macro": null,
+          "provision_recall_micro": null,
+          "question_count": 11,
+          "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+        },
+        "bge_at_20": {
+          "available": false,
+          "available_questions": 0,
+          "complete_evidence_count": null,
+          "complete_evidence_recall": null,
+          "provision_recall_macro": null,
+          "provision_recall_micro": null,
+          "question_count": 11,
+          "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+        },
+        "bge_at_30": {
+          "available": false,
+          "available_questions": 0,
+          "complete_evidence_count": null,
+          "complete_evidence_recall": null,
+          "provision_recall_macro": null,
+          "provision_recall_micro": null,
+          "question_count": 11,
+          "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+        },
+        "first_stage_at_100": {
+          "available": false,
+          "available_questions": 0,
+          "complete_evidence_count": null,
+          "complete_evidence_recall": null,
+          "provision_recall_macro": null,
+          "provision_recall_micro": null,
+          "question_count": 11,
+          "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+        },
+        "rrf_at_100": {
+          "available": false,
+          "available_questions": 0,
+          "complete_evidence_count": null,
+          "complete_evidence_recall": null,
+          "provision_recall_macro": null,
+          "provision_recall_micro": null,
+          "question_count": 11,
+          "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+        }
+      }
+    },
+    "3": {
+      "answers": {
+        "false_supported_answer_count": null,
+        "false_supported_answer_rate": null,
+        "false_supported_label_coverage": null,
+        "false_supported_labelled_count": 0,
+        "gold_incomplete_supported_answer_count": 0,
+        "supported_answer_count": 0,
+        "supported_answer_yield": 0.0
+      },
+      "citation_integrity": {
+        "attempted": 0,
+        "pass_rate": null,
+        "passed": 0
+      },
+      "efficiency": {
+        "candidate_count_returned": {
+          "count": 4,
+          "mean": 65.0,
+          "median": 70.0,
+          "p95": 88.5
+        },
+        "candidate_count_unique": {
+          "count": 4,
+          "mean": 40.75,
+          "median": 40.0,
+          "p95": 55.25
+        },
+        "end_to_end_latency_ms": {
+          "count": 4,
+          "mean": 341708.93200000003,
+          "median": 342894.977,
+          "p95": 395505.32540000003
+        },
+        "retrieval_requests": {
+          "count": 4,
+          "mean": 7.25,
+          "median": 7.0,
+          "p95": 8.85
+        },
+        "retrieval_rounds": {
+          "count": 4,
+          "mean": 3.0,
+          "median": 3.0,
+          "p95": 3.0
+        }
+      },
+      "outcomes": {
+        "ABSTAIN": {
+          "count": 4,
+          "rate": 1.0
+        },
+        "ANSWER": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "EXECUTION_FAILURE": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "provision": {
+        "complete_evidence": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "macro": {
+          "f1": 0.17142857142857143,
+          "precision": 0.1875,
+          "recall": 0.16666666666666666
+        },
+        "micro": {
+          "f1": 0.1818181818181818,
+          "gold": 12,
+          "precision": 0.2,
+          "predicted": 10,
+          "recall": 0.16666666666666666,
+          "true_positive": 2
+        }
+      },
+      "retrieval": {
+        "bge_at_10": {
+          "available": false,
+          "available_questions": 0,
+          "complete_evidence_count": null,
+          "complete_evidence_recall": null,
+          "provision_recall_macro": null,
+          "provision_recall_micro": null,
+          "question_count": 4,
+          "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+        },
+        "bge_at_20": {
+          "available": false,
+          "available_questions": 0,
+          "complete_evidence_count": null,
+          "complete_evidence_recall": null,
+          "provision_recall_macro": null,
+          "provision_recall_micro": null,
+          "question_count": 4,
+          "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+        },
+        "bge_at_30": {
+          "available": false,
+          "available_questions": 0,
+          "complete_evidence_count": null,
+          "complete_evidence_recall": null,
+          "provision_recall_macro": null,
+          "provision_recall_micro": null,
+          "question_count": 4,
+          "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+        },
+        "first_stage_at_100": {
+          "available": false,
+          "available_questions": 0,
+          "complete_evidence_count": null,
+          "complete_evidence_recall": null,
+          "provision_recall_macro": null,
+          "provision_recall_micro": null,
+          "question_count": 4,
+          "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+        },
+        "rrf_at_100": {
+          "available": false,
+          "available_questions": 0,
+          "complete_evidence_count": null,
+          "complete_evidence_recall": null,
+          "provision_recall_macro": null,
+          "provision_recall_micro": null,
+          "question_count": 4,
+          "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+        }
+      }
+    }
+  },
+  "citation_integrity": {
+    "attempted": 6,
+    "pass_rate": 1.0,
+    "passed": 6
+  },
+  "efficiency": {
+    "candidate_count_returned": {
+      "count": 21,
+      "mean": 40.95238095238095,
+      "median": 40.0,
+      "p95": 80.0
+    },
+    "candidate_count_unique": {
+      "count": 21,
+      "mean": 32.095238095238095,
+      "median": 34.0,
+      "p95": 51.0
+    },
+    "end_to_end_latency_ms": {
+      "count": 21,
+      "mean": 310088.7405238095,
+      "median": 311993.593,
+      "p95": 474483.465
+    },
+    "retrieval_requests": {
+      "count": 21,
+      "mean": 5.857142857142857,
+      "median": 6.0,
+      "p95": 9.0
+    },
+    "retrieval_rounds": {
+      "count": 21,
+      "mean": 2.4285714285714284,
+      "median": 3.0,
+      "p95": 3.0
+    }
+  },
+  "evaluation_schema_version": "1.0",
+  "outcomes": {
+    "ABSTAIN": {
+      "count": 13,
+      "rate": 0.6190476190476191
+    },
+    "ANSWER": {
+      "count": 6,
+      "rate": 0.2857142857142857
+    },
+    "EXECUTION_FAILURE": {
+      "count": 2,
+      "rate": 0.09523809523809523
+    }
+  },
+  "provision": {
+    "complete_evidence": {
+      "count": 8,
+      "rate": 0.38095238095238093
+    },
+    "macro": {
+      "f1": 0.41114890400604687,
+      "precision": 0.3901360544217687,
+      "recall": 0.5079365079365079
+    },
+    "micro": {
+      "f1": 0.4086021505376344,
+      "gold": 40,
+      "precision": 0.3584905660377358,
+      "predicted": 53,
+      "recall": 0.475,
+      "true_positive": 19
+    }
+  },
+  "question_count": 21,
+  "retrieval": {
+    "bge_at_10": {
+      "available": false,
+      "available_questions": 0,
+      "complete_evidence_count": null,
+      "complete_evidence_recall": null,
+      "provision_recall_macro": null,
+      "provision_recall_micro": null,
+      "question_count": 21,
+      "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+    },
+    "bge_at_20": {
+      "available": false,
+      "available_questions": 0,
+      "complete_evidence_count": null,
+      "complete_evidence_recall": null,
+      "provision_recall_macro": null,
+      "provision_recall_micro": null,
+      "question_count": 21,
+      "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+    },
+    "bge_at_30": {
+      "available": false,
+      "available_questions": 0,
+      "complete_evidence_count": null,
+      "complete_evidence_recall": null,
+      "provision_recall_macro": null,
+      "provision_recall_micro": null,
+      "question_count": 21,
+      "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+    },
+    "first_stage_at_100": {
+      "available": false,
+      "available_questions": 0,
+      "complete_evidence_count": null,
+      "complete_evidence_recall": null,
+      "provision_recall_macro": null,
+      "provision_recall_micro": null,
+      "question_count": 21,
+      "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+    },
+    "rrf_at_100": {
+      "available": false,
+      "available_questions": 0,
+      "complete_evidence_count": null,
+      "complete_evidence_recall": null,
+      "provision_recall_macro": null,
+      "provision_recall_micro": null,
+      "question_count": 21,
+      "unavailable_reason": "INCOMPLETE_STAGE_PROVENANCE"
+    }
+  },
+  "warnings": [
+    "STAGE_PROVENANCE_UNAVAILABLE"
+  ]
+}

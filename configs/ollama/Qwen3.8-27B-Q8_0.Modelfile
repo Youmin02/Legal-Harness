@@ -1,7 +1,9 @@
 # Reproducible Ollama definition for the Qwen3.8-27B Q8_0 development rerun.
+# Load only the content-addressed, verified Q8_0 text blob to avoid automatic
+# mmproj inclusion and its incompatible llama.cpp runner fallback.
 # Source provenance is frozen in:
 # data/koblex/manifests/bm25_bge_per_request_b1a_qwen38_q8_21_20260818.json
-FROM hf.co/ggml-org/Qwen3.8-27B-GGUF:Q8_0
+FROM /root/.ollama/models/blobs/sha256-f5c702d8820d36fb55985bb238fc83ee3a313e920f4b752a437c3a6a9e14e4c8
 
 # Preserve the raw prompt template used by legal-harness-qwen.
 TEMPLATE {{ .Prompt }}

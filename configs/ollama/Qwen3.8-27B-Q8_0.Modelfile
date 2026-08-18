@@ -1,0 +1,13 @@
+# Reproducible Ollama definition for the Qwen3.8-27B Q8_0 development rerun.
+# Source provenance is frozen in:
+# data/koblex/manifests/bm25_bge_per_request_b1a_qwen38_q8_21_20260818.json
+FROM hf.co/ggml-org/Qwen3.8-27B-GGUF:Q8_0
+
+# Preserve the raw prompt template used by legal-harness-qwen.
+TEMPLATE {{ .Prompt }}
+
+PARAMETER num_ctx 131072
+PARAMETER repeat_penalty 1
+PARAMETER temperature 1
+PARAMETER top_k 20
+PARAMETER top_p 0.95

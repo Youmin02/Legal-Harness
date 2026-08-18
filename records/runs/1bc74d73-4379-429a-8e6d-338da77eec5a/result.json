@@ -1,0 +1,649 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-15T13:00:57.811998+00:00",
+  "end_to_end_latency_ms": 144840.936,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "1bc74d73-4379-429a-8e6d-338da77eec5a",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 13,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 10,
+          "request_count": 4,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 6,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 35.870801681332445,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "공공단체등 위탁선거에 관한 법률 76조  위탁선거 위반행위 신고자에 대한 포상금 지급#KOBLEX-086722",
+        "provision_text": "제76조(위탁선거 위반행위 신고자에 대한 포상금 지급)",
+        "rerank_score": 0.9365241527557373,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "공공단체등 위탁선거에 관한 법률 76조  위탁선거 위반행위 신고자에 대한 포상금 지급"
+      },
+      {
+        "first_stage_score": 36.70605486554564,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "정치자금법 54조  정치자금범죄 신고자에 대한 포상금 지급#KOBLEX-149419",
+        "provision_text": "제54조(정치자금범죄 신고자에 대한 포상금 지급)",
+        "rerank_score": 0.9322494268417358,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "정치자금법 54조  정치자금범죄 신고자에 대한 포상금 지급"
+      },
+      {
+        "first_stage_score": 23.14197364024962,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "농업협동조합법 176조  선거범죄신고자에 대한 포상금 지급#KOBLEX-187827",
+        "provision_text": "제176조(선거범죄신고자에 대한 포상금 지급)",
+        "rerank_score": 0.7042953372001648,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "농업협동조합법 176조  선거범죄신고자에 대한 포상금 지급"
+      },
+      {
+        "first_stage_score": 23.14197364024962,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "중소기업협동조합법 143조  선거범죄신고자에 대한 포상금 지급#KOBLEX-031194",
+        "provision_text": "제143조(선거범죄신고자에 대한 포상금 지급)",
+        "rerank_score": 0.7560839056968689,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "중소기업협동조합법 143조  선거범죄신고자에 대한 포상금 지급"
+      },
+      {
+        "first_stage_score": 23.14197364024962,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 262조 3 선거범죄신고자에 대한 포상금 지급#KOBLEX-052700",
+        "provision_text": "제262조의3(선거범죄신고자에 대한 포상금 지급)",
+        "rerank_score": 0.7777171730995178,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "공직선거법 262조 3 선거범죄신고자에 대한 포상금 지급"
+      },
+      {
+        "first_stage_score": 23.14197364024962,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 262조 3 선거범죄신고자에 대한 포상금 지급#KOBLEX-175986",
+        "provision_text": "제262조의3(선거범죄신고자에 대한 포상금 지급)",
+        "rerank_score": 0.7777171730995178,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "공직선거법 262조 3 선거범죄신고자에 대한 포상금 지급"
+      },
+      {
+        "first_stage_score": 21.563657670274335,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "소득세법 시행령 147조 4 현금영수증 발급 불성실 가산세#KOBLEX-141902",
+        "provision_text": "제147조의4(현금영수증 발급 불성실 가산세)",
+        "rerank_score": 0.9815641045570374,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "소득세법 시행령 147조 4 현금영수증 발급 불성실 가산세"
+      },
+      {
+        "first_stage_score": 20.756571566956218,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "수산업협동조합법 182조  선거범죄 신고자에 대한 포상금 지급#KOBLEX-025033",
+        "provision_text": "제182조(선거범죄 신고자에 대한 포상금 지급) 조합은 제178조에 규정된 죄(제180조제3항의 과태료에 해당하는 죄를 포함한다)에 대하여 해당 조합 또는 조합선거관리위원회가 인지하기 전에 그 범죄행위를 신고한 사람에게 정관으로 정하는 바에 따라 포상금을 지급할 수 있다. <개정 2014.6.11>",
+        "rerank_score": 0.020810658112168312,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "수산업협동조합법 182조  선거범죄 신고자에 대한 포상금 지급"
+      },
+      {
+        "first_stage_score": 20.582287495879147,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "법인세법 75조 6 신용카드 및 현금영수증 발급 불성실 가산세#KOBLEX-209263",
+        "provision_text": "제75조의6(신용카드 및 현금영수증 발급 불성실 가산세)",
+        "rerank_score": 0.8884367942810059,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "법인세법 75조 6 신용카드 및 현금영수증 발급 불성실 가산세"
+      },
+      {
+        "first_stage_score": 20.582287495879147,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "소득세법 81조 9 신용카드 및 현금영수증 발급 불성실 가산세#KOBLEX-153451",
+        "provision_text": "제81조의9(신용카드 및 현금영수증 발급 불성실 가산세)",
+        "rerank_score": 0.8487417101860046,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "소득세법 81조 9 신용카드 및 현금영수증 발급 불성실 가산세"
+      },
+      {
+        "first_stage_score": 17.982787047165246,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 47조 6 정보보호 취약점 신고자에 대한 포상#KOBLEX-177002",
+        "provision_text": "제47조의6(정보보호 취약점 신고자에 대한 포상)",
+        "rerank_score": 3.343107891851105e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 47조 6 정보보호 취약점 신고자에 대한 포상"
+      },
+      {
+        "first_stage_score": 17.982787047165246,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "폐기물관리법 46조 2 폐기물처리 신고자에 대한 과징금 처분#KOBLEX-174100",
+        "provision_text": "제46조의2(폐기물처리 신고자에 대한 과징금 처분)",
+        "rerank_score": 6.19487400399521e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "폐기물관리법 46조 2 폐기물처리 신고자에 대한 과징금 처분"
+      },
+      {
+        "first_stage_score": 17.982787047165246,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "지방공무원법 67조 4 공익신고 등 신고자에 대한 보호#KOBLEX-208031",
+        "provision_text": "제67조의4(공익신고 등 신고자에 대한 보호)",
+        "rerank_score": 2.202779569415725e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "지방공무원법 67조 4 공익신고 등 신고자에 대한 보호"
+      },
+      {
+        "first_stage_score": 20.129410421515,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "범죄수익은닉의 규제 및 처벌 등에 관한 법률 13조  포상금 지급#KOBLEX-048166",
+        "provision_text": "제13조(포상금 지급)",
+        "rerank_score": 0.998556911945343,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "범죄수익은닉의 규제 및 처벌 등에 관한 법률 13조  포상금 지급"
+      },
+      {
+        "first_stage_score": 20.129410421515,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "병역법 시행령 166조  포상금 지급#KOBLEX-002425",
+        "provision_text": "제166조(포상금 지급)",
+        "rerank_score": 0.998141884803772,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "병역법 시행령 166조  포상금 지급"
+      },
+      {
+        "first_stage_score": 20.129410421515,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "국민체육진흥법 45조 2 포상금 지급#KOBLEX-103850",
+        "provision_text": "제45조의2(포상금 지급)",
+        "rerank_score": 0.9968722462654114,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "국민체육진흥법 45조 2 포상금 지급"
+      },
+      {
+        "first_stage_score": 21.574838536374266,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "범죄수익은닉의 규제 및 처벌 등에 관한 법률 13조  포상금 지급#KOBLEX-048168",
+        "provision_text": "② 제1항에 따른 포상금 지급 대상이 되는 신고 또는 공로의 범위, 포상금 지급의 기준ㆍ방법 및 절차 등에 관하여 필요한 사항은 대통령령으로 정한다.",
+        "rerank_score": 0.9888707995414734,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "범죄수익은닉의 규제 및 처벌 등에 관한 법률 13조  포상금 지급 2항"
+      },
+      {
+        "first_stage_score": 16.9983762837793,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등#KOBLEX-154805",
+        "provision_text": "③ 법 제42조의2제1항에 따른 신고 또는 고발을 받거나 이 조 제2항에 따른 통지를 받은 교육부장관, 시ㆍ도지사 또는 시장ㆍ군수ㆍ구청장은 그 내용을 확인하여 포상금 지급 여부를 결정하고, 신고 또는 고발한 사람에게 이를 알려야 한다. <개정 2024.6.25>",
+        "rerank_score": 0.8794692158699036,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등 3항"
+      },
+      {
+        "first_stage_score": 19.381211104251072,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등#KOBLEX-154806",
+        "provision_text": "④ 교육부장관, 시ㆍ도지사 또는 시장ㆍ군수ㆍ구청장은 제3항에 따라 신고 또는 고발한 사람에게 포상금 지급 여부를 알린 날부터 60일 이내에 별표 1의2의 포상금 지급의 기준에 따라 포상금을 지급한다. <개정 2024.6.25>",
+        "rerank_score": 0.7425453662872314,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등 4항"
+      },
+      {
+        "first_stage_score": 17.869362215065895,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등#KOBLEX-154807",
+        "provision_text": "⑤ 제1항부터 제4항까지에서 규정한 사항 외에 위법행위의 신고 또는 고발의 절차ㆍ방법, 포상금 지급 방법ㆍ절차 및 기준 등에 관한 사항은 교육부장관이 정한다. <개정 2024.6.25>",
+        "rerank_score": 0.7331230044364929,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등 5항"
+      },
+      {
+        "first_stage_score": 13.139985525910305,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "영유아보육법 42조 2 위법행위의 신고 및 신고자 보호#KOBLEX-046787",
+        "provision_text": "④ 제1항에 따른 신고 절차ㆍ방법 및 제3항에 따른 포상금 지급의 기준ㆍ방법 및 절차 등에 필요한 사항은 대통령령으로 정한다. <신설 2018.12.11>",
+        "rerank_score": 0.8928816318511963,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "영유아보육법 42조 2 위법행위의 신고 및 신고자 보호 4항"
+      },
+      {
+        "first_stage_score": 12.385403494152403,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "부가가치세법 시행령 119조  질문·조사 및 명령 사항#KOBLEX-055007",
+        "provision_text": "4. 현금영수증 발급장치의 설치·사용",
+        "rerank_score": 0.7900581359863281,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "부가가치세법 시행령 119조  질문·조사 및 명령 사항 4호"
+      },
+      {
+        "first_stage_score": 12.235674884163396,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "공익신고자 보호법 시행령 25조 3 포상금의 지급기준 등#KOBLEX-120553",
+        "provision_text": "④ 위원회는 제3항에 따라 포상금 지급대상자를 선정하는 경우 보상심의위원회가 심의ㆍ의결한 사항을 기초로 포상금 지급 여부 및 지급금액을 결정하고, 포상금 지급결정이 있는 경우에는 결정서 정본 및 결정통지서를 포상금 지급대상자에게 지체 없이 보내야 한다.",
+        "rerank_score": 0.04181878641247749,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "공익신고자 보호법 시행령 25조 3 포상금의 지급기준 등 4항"
+      },
+      {
+        "first_stage_score": 20.833456265964465,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "의료급여법 32조 3 포상금 및 장려금의 지급#KOBLEX-029121",
+        "provision_text": "제32조의3(포상금 및 장려금의 지급)",
+        "rerank_score": 0.975719153881073,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "의료급여법 32조 3 포상금 및 장려금의 지급"
+      },
+      {
+        "first_stage_score": 12.632232647260725,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "고용보험법 시행령 101조  출산전후휴가 급여등의 상ㆍ하한액#KOBLEX-156989",
+        "provision_text": "1. 상한액: 다음 각 목의 사항을 고려하여 매년 고용노동부장관이 고시하는 금액",
+        "rerank_score": 6.061873136786744e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "고용보험법 시행령 101조  출산전후휴가 급여등의 상ㆍ하한액 1호"
+      },
+      {
+        "first_stage_score": 14.791798438160585,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "고용보험법 시행령 68조  급여기초 임금일액의 상한액#KOBLEX-156867",
+        "provision_text": "제68조(급여기초 임금일액의 상한액)",
+        "rerank_score": 4.062029256601818e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "고용보험법 시행령 68조  급여기초 임금일액의 상한액"
+      },
+      {
+        "first_stage_score": 13.782027969149187,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "전기사업법 시행령 13조  금지행위에 대한 과징금의 상한액 및 부과기준#KOBLEX-206244",
+        "provision_text": "제13조(금지행위에 대한 과징금의 상한액 및 부과기준)",
+        "rerank_score": 1.573804752297292e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "전기사업법 시행령 13조  금지행위에 대한 과징금의 상한액 및 부과기준"
+      },
+      {
+        "first_stage_score": 14.832320087409297,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "지방세기본법 146조  포상금의 지급#KOBLEX-121155",
+        "provision_text": "⑧ 제1항제3호부터 제5호까지에 해당하는 포상금 지급대상, 지급기준, 지급방법 등에 필요한 사항은 지방자치단체의 조례 또는 「지방자치법」 제178조제1항에 따른 지방자치단체조합회의의 심의ㆍ의결을 거쳐 정하는 포상금 관련 규정(規程)으로 정한다. <개정 2020.12.29, 2023.3.14>",
+        "rerank_score": 1.0211398375759018e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "지방세기본법 146조  포상금의 지급 8항"
+      },
+      {
+        "first_stage_score": 13.74902226652273,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "보험업법 시행령 13조 2 소액단기전문보험회사#KOBLEX-121257",
+        "provision_text": "① 법 제9조제2항제2호에서 \"모집할 수 있는 보험상품의 종류, 보험기간, 보험금의 상한액, 연간 총보험료 상한액 등 대통령령으로 정하는 기준\"이란 다음 각 호의 구분에 따른 기준을 말한다. 1. 모집할 수 있는 보험상품의 종류: 다음 각 목의 보험상품 2. 보험기간: 2년 이내의 범위에서 금융위원회가 정하여 고시하는 기간 3. 보험금의 상한액: 5천만원 4. 연간 총보험료 상한액: 500억원",
+        "rerank_score": 6.344856160467316e-07,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "보험업법 시행령 13조 2 소액단기전문보험회사 1항"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "고용보험법 시행령 101조  출산전후휴가 급여등의 상ㆍ하한액#KOBLEX-156989": "1. 상한액: 다음 각 목의 사항을 고려하여 매년 고용노동부장관이 고시하는 금액",
+      "고용보험법 시행령 68조  급여기초 임금일액의 상한액#KOBLEX-156867": "제68조(급여기초 임금일액의 상한액)",
+      "공공단체등 위탁선거에 관한 법률 76조  위탁선거 위반행위 신고자에 대한 포상금 지급#KOBLEX-086722": "제76조(위탁선거 위반행위 신고자에 대한 포상금 지급)",
+      "공익신고자 보호법 시행령 25조 3 포상금의 지급기준 등#KOBLEX-120553": "④ 위원회는 제3항에 따라 포상금 지급대상자를 선정하는 경우 보상심의위원회가 심의ㆍ의결한 사항을 기초로 포상금 지급 여부 및 지급금액을 결정하고, 포상금 지급결정이 있는 경우에는 결정서 정본 및 결정통지서를 포상금 지급대상자에게 지체 없이 보내야 한다.",
+      "공직선거법 262조 3 선거범죄신고자에 대한 포상금 지급#KOBLEX-052700": "제262조의3(선거범죄신고자에 대한 포상금 지급)",
+      "공직선거법 262조 3 선거범죄신고자에 대한 포상금 지급#KOBLEX-175986": "제262조의3(선거범죄신고자에 대한 포상금 지급)",
+      "국민체육진흥법 45조 2 포상금 지급#KOBLEX-103850": "제45조의2(포상금 지급)",
+      "농업협동조합법 176조  선거범죄신고자에 대한 포상금 지급#KOBLEX-187827": "제176조(선거범죄신고자에 대한 포상금 지급)",
+      "범죄수익은닉의 규제 및 처벌 등에 관한 법률 13조  포상금 지급#KOBLEX-048166": "제13조(포상금 지급)",
+      "범죄수익은닉의 규제 및 처벌 등에 관한 법률 13조  포상금 지급#KOBLEX-048168": "② 제1항에 따른 포상금 지급 대상이 되는 신고 또는 공로의 범위, 포상금 지급의 기준ㆍ방법 및 절차 등에 관하여 필요한 사항은 대통령령으로 정한다.",
+      "법인세법 75조 6 신용카드 및 현금영수증 발급 불성실 가산세#KOBLEX-209263": "제75조의6(신용카드 및 현금영수증 발급 불성실 가산세)",
+      "병역법 시행령 166조  포상금 지급#KOBLEX-002425": "제166조(포상금 지급)",
+      "보험업법 시행령 13조 2 소액단기전문보험회사#KOBLEX-121257": "① 법 제9조제2항제2호에서 \"모집할 수 있는 보험상품의 종류, 보험기간, 보험금의 상한액, 연간 총보험료 상한액 등 대통령령으로 정하는 기준\"이란 다음 각 호의 구분에 따른 기준을 말한다. 1. 모집할 수 있는 보험상품의 종류: 다음 각 목의 보험상품 2. 보험기간: 2년 이내의 범위에서 금융위원회가 정하여 고시하는 기간 3. 보험금의 상한액: 5천만원 4. 연간 총보험료 상한액: 500억원",
+      "부가가치세법 시행령 119조  질문·조사 및 명령 사항#KOBLEX-055007": "4. 현금영수증 발급장치의 설치·사용",
+      "소득세법 81조 9 신용카드 및 현금영수증 발급 불성실 가산세#KOBLEX-153451": "제81조의9(신용카드 및 현금영수증 발급 불성실 가산세)",
+      "소득세법 시행령 147조 4 현금영수증 발급 불성실 가산세#KOBLEX-141902": "제147조의4(현금영수증 발급 불성실 가산세)",
+      "수산업협동조합법 182조  선거범죄 신고자에 대한 포상금 지급#KOBLEX-025033": "제182조(선거범죄 신고자에 대한 포상금 지급) 조합은 제178조에 규정된 죄(제180조제3항의 과태료에 해당하는 죄를 포함한다)에 대하여 해당 조합 또는 조합선거관리위원회가 인지하기 전에 그 범죄행위를 신고한 사람에게 정관으로 정하는 바에 따라 포상금을 지급할 수 있다. <개정 2014.6.11>",
+      "영유아보육법 42조 2 위법행위의 신고 및 신고자 보호#KOBLEX-046787": "④ 제1항에 따른 신고 절차ㆍ방법 및 제3항에 따른 포상금 지급의 기준ㆍ방법 및 절차 등에 필요한 사항은 대통령령으로 정한다. <신설 2018.12.11>",
+      "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등#KOBLEX-154805": "③ 법 제42조의2제1항에 따른 신고 또는 고발을 받거나 이 조 제2항에 따른 통지를 받은 교육부장관, 시ㆍ도지사 또는 시장ㆍ군수ㆍ구청장은 그 내용을 확인하여 포상금 지급 여부를 결정하고, 신고 또는 고발한 사람에게 이를 알려야 한다. <개정 2024.6.25>",
+      "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등#KOBLEX-154806": "④ 교육부장관, 시ㆍ도지사 또는 시장ㆍ군수ㆍ구청장은 제3항에 따라 신고 또는 고발한 사람에게 포상금 지급 여부를 알린 날부터 60일 이내에 별표 1의2의 포상금 지급의 기준에 따라 포상금을 지급한다. <개정 2024.6.25>",
+      "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등#KOBLEX-154807": "⑤ 제1항부터 제4항까지에서 규정한 사항 외에 위법행위의 신고 또는 고발의 절차ㆍ방법, 포상금 지급 방법ㆍ절차 및 기준 등에 관한 사항은 교육부장관이 정한다. <개정 2024.6.25>",
+      "의료급여법 32조 3 포상금 및 장려금의 지급#KOBLEX-029121": "제32조의3(포상금 및 장려금의 지급)",
+      "전기사업법 시행령 13조  금지행위에 대한 과징금의 상한액 및 부과기준#KOBLEX-206244": "제13조(금지행위에 대한 과징금의 상한액 및 부과기준)",
+      "정보통신망 이용촉진 및 정보보호 등에 관한 법률 47조 6 정보보호 취약점 신고자에 대한 포상#KOBLEX-177002": "제47조의6(정보보호 취약점 신고자에 대한 포상)",
+      "정치자금법 54조  정치자금범죄 신고자에 대한 포상금 지급#KOBLEX-149419": "제54조(정치자금범죄 신고자에 대한 포상금 지급)",
+      "중소기업협동조합법 143조  선거범죄신고자에 대한 포상금 지급#KOBLEX-031194": "제143조(선거범죄신고자에 대한 포상금 지급)",
+      "지방공무원법 67조 4 공익신고 등 신고자에 대한 보호#KOBLEX-208031": "제67조의4(공익신고 등 신고자에 대한 보호)",
+      "지방세기본법 146조  포상금의 지급#KOBLEX-121155": "⑧ 제1항제3호부터 제5호까지에 해당하는 포상금 지급대상, 지급기준, 지급방법 등에 필요한 사항은 지방자치단체의 조례 또는 「지방자치법」 제178조제1항에 따른 지방자치단체조합회의의 심의ㆍ의결을 거쳐 정하는 포상금 관련 규정(規程)으로 정한다. <개정 2020.12.29, 2023.3.14>",
+      "폐기물관리법 46조 2 폐기물처리 신고자에 대한 과징금 처분#KOBLEX-174100": "제46조의2(폐기물처리 신고자에 대한 과징금 처분)"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [],
+        "rationale": "The completion criteria require a provision specifying reward eligibility for reporters of cash receipt issuance refusal. All candidate provisions concern unrelated reward schemes (election violations, political funds, cooperative elections, cybersecurity vulnerabilities, waste disposal) or tax surcharges for non-issuance (C007, C009, C010). None define the reward eligibility criteria for cash receipt refusal reporters.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "rationale": "The completion criteria require a provision specifying the annual reward cap for reporters of cash receipt issuance refusal. No candidate provision addresses this reward cap; C007, C009, and C010 concern tax surcharges for non-issuance, not rewards for reporters.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 6,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "갑과 병 중 누가 포상금을 받을 수 있는가",
+        "issue_id": "I1"
+      },
+      {
+        "description": "갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금 한도는 얼마인가",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "현금영수증 발급 거부 신고자에 대한 포상금 지급 대상 요건을 규정한 조항을 확인",
+        "critical": true,
+        "description": "현금영수증 발급 거부 신고자에 대한 포상금 지급 대상 요건",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "현금영수증 발급 거부 신고자에 대한 연간 포상금 한도를 규정한 조항을 확인",
+        "critical": true,
+        "description": "현금영수증 발급 거부 신고자에 대한 연간 포상금 한도",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "갑과 병 중 누가 포상금을 받을 수 있으며, 갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금 한도는 얼마인가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "현금영수증 발급 거부 신고자에 대한 포상금 지급 대상 요건",
+        "request_id": "RQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "현금영수증 발급 거부 신고자에 대한 연간 포상금 한도",
+        "request_id": "RQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "현금영수증 발급 거부 신고 포상금 지급 대상 요건 관련 조항",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "현금영수증 발급 거부 신고 포상금 연간 한도 관련 조항",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_text": "현금영수증 발급거부 신고 포상금 지급대상",
+        "request_id": "GRQ3",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_text": "현금영수증 발급거부 신고 포상금 연간한도",
+        "request_id": "GRQ4",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "현금영수증 발급거부 신고자에 대한 포상금 지급 근거 조문",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "현금영수증 발급거부 신고 포상금 상한액 규정",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "현금영수증 미발급 신고자에 대한 포상금 지급 요건 및 절차",
+        "request_id": "GRQ3",
+        "top_k": 100
+      }
+    ],
+    "question": "갑과 병 중 누가 포상금을 받을 수 있으며, 갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금 한도는 얼마인가?",
+    "remaining_request_budget": 0,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "현금영수증 발급 거부 신고자에 대한 포상금 지급 대상 요건을 규정한 조항을 확인",
+        "critical": true,
+        "description": "현금영수증 발급 거부 신고자에 대한 포상금 지급 대상 요건",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "현금영수증 발급 거부 신고자에 대한 연간 포상금 한도를 규정한 조항을 확인",
+        "critical": true,
+        "description": "현금영수증 발급 거부 신고자에 대한 연간 포상금 한도",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "1bc74d73-4379-429a-8e6d-338da77eec5a",
+    "seen_provision_ids": [
+      "중소기업협동조합법 143조  선거범죄신고자에 대한 포상금 지급#KOBLEX-031194",
+      "농업협동조합법 176조  선거범죄신고자에 대한 포상금 지급#KOBLEX-187827",
+      "고용보험법 시행령 101조  출산전후휴가 급여등의 상ㆍ하한액#KOBLEX-156989",
+      "범죄수익은닉의 규제 및 처벌 등에 관한 법률 13조  포상금 지급#KOBLEX-048166",
+      "공익신고자 보호법 시행령 25조 3 포상금의 지급기준 등#KOBLEX-120553",
+      "국민체육진흥법 45조 2 포상금 지급#KOBLEX-103850",
+      "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등#KOBLEX-154806",
+      "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등#KOBLEX-154805",
+      "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등#KOBLEX-154807",
+      "공공단체등 위탁선거에 관한 법률 76조  위탁선거 위반행위 신고자에 대한 포상금 지급#KOBLEX-086722",
+      "정치자금법 54조  정치자금범죄 신고자에 대한 포상금 지급#KOBLEX-149419",
+      "부가가치세법 시행령 119조  질문·조사 및 명령 사항#KOBLEX-055007",
+      "범죄수익은닉의 규제 및 처벌 등에 관한 법률 13조  포상금 지급#KOBLEX-048168",
+      "의료급여법 32조 3 포상금 및 장려금의 지급#KOBLEX-029121",
+      "소득세법 시행령 147조 4 현금영수증 발급 불성실 가산세#KOBLEX-141902",
+      "영유아보육법 42조 2 위법행위의 신고 및 신고자 보호#KOBLEX-046787",
+      "공직선거법 262조 3 선거범죄신고자에 대한 포상금 지급#KOBLEX-052700",
+      "수산업협동조합법 182조  선거범죄 신고자에 대한 포상금 지급#KOBLEX-025033",
+      "지방공무원법 67조 4 공익신고 등 신고자에 대한 보호#KOBLEX-208031",
+      "고용보험법 시행령 68조  급여기초 임금일액의 상한액#KOBLEX-156867",
+      "소득세법 81조 9 신용카드 및 현금영수증 발급 불성실 가산세#KOBLEX-153451",
+      "법인세법 75조 6 신용카드 및 현금영수증 발급 불성실 가산세#KOBLEX-209263",
+      "폐기물관리법 46조 2 폐기물처리 신고자에 대한 과징금 처분#KOBLEX-174100",
+      "정보통신망 이용촉진 및 정보보호 등에 관한 법률 47조 6 정보보호 취약점 신고자에 대한 포상#KOBLEX-177002",
+      "전기사업법 시행령 13조  금지행위에 대한 과징금의 상한액 및 부과기준#KOBLEX-206244",
+      "보험업법 시행령 13조 2 소액단기전문보험회사#KOBLEX-121257",
+      "공직선거법 262조 3 선거범죄신고자에 대한 포상금 지급#KOBLEX-175986",
+      "지방세기본법 146조  포상금의 지급#KOBLEX-121155",
+      "병역법 시행령 166조  포상금 지급#KOBLEX-002425"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

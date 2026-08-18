@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/root/Legal Harness/retrieval/reranker.py", line 44, in __init__
+    from sentence_transformers import CrossEncoder
+ModuleNotFoundError: No module named 'sentence_transformers'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/Legal Harness/scripts/run_local_harness.py", line 135, in <module>
+    raise SystemExit(main())
+  File "/root/Legal Harness/scripts/run_local_harness.py", line 99, in main
+    retriever=build_retriever(args),
+  File "/root/Legal Harness/scripts/run_local_harness.py", line 59, in build_retriever
+    reranker = LocalBgeCrossEncoderReranker(
+  File "/root/Legal Harness/retrieval/reranker.py", line 46, in __init__
+    raise RuntimeError("install sentence-transformers to use the local BGE reranker") from exc
+RuntimeError: install sentence-transformers to use the local BGE reranker

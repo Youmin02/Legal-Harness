@@ -1,0 +1,905 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-15T13:13:08.201962+00:00",
+  "end_to_end_latency_ms": 161424.412,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "460cb0b6-59c8-4be2-8c5e-6f15958e6023",
+  "state": {
+    "accepted_provision_ids": [
+      "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082552",
+      "간접투자자산 운용업법 144조 13 (업무집행사원의 보수)#KOBLEX-082365",
+      "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082551"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 3,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 20,
+          "request_count": 3,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 9,
+          "request_count": 4,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 13,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 18.784250034691716,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082551",
+        "provision_text": "①자산운용회사·수탁회사·자산보관회사·일반사무관리회사 및 판매회사는 간접투자기구의 운용실적에 따라 보수 또는 수수료를 취득하여서는 아니된다.",
+        "rerank_score": 0.9224612712860107,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "간접투자자산 운용업법 177조  (성과보수의 제한) 1항"
+      },
+      {
+        "first_stage_score": 18.921351373414034,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082552",
+        "provision_text": "②제1항의 규정에 불구하고 사모간접투자기구의 경우에는 간접투자기구의 운용실적에 따라 보수 또는 수수료를 취득할 수 있다. 이 경우 투자자를 보호하기 위하여 보수 또는 수수료 취득에 관하여 필요한 사항은 대통령령으로 정한다.",
+        "rerank_score": 0.84900963306427,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "간접투자자산 운용업법 177조  (성과보수의 제한) 2항"
+      },
+      {
+        "first_stage_score": 10.863964841419369,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "관세사법 11조  보수#KOBLEX-155022",
+        "provision_text": "제11조(보수)",
+        "rerank_score": 0.9880129098892212,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "관세사법 11조  보수"
+      },
+      {
+        "first_stage_score": 10.863964841419369,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "법무사법 19조  보수#KOBLEX-061485",
+        "provision_text": "제19조(보수)",
+        "rerank_score": 0.9777805209159851,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "법무사법 19조  보수"
+      },
+      {
+        "first_stage_score": 10.863964841419369,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "법무사법 19조  보수#KOBLEX-171449",
+        "provision_text": "제19조(보수)",
+        "rerank_score": 0.9777805209159851,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "법무사법 19조  보수"
+      },
+      {
+        "first_stage_score": 10.863964841419369,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "소방법 88조  보수#KOBLEX-023413",
+        "provision_text": "제88조 (보수)",
+        "rerank_score": 0.0006380255799740553,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "소방법 88조  보수"
+      },
+      {
+        "first_stage_score": 20.102172023327206,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "보험업법 시행령 47조  수수료 지급 등의 금지 예외#KOBLEX-121461",
+        "provision_text": "제47조(수수료 지급 등의 금지 예외)",
+        "rerank_score": 0.0005462095723487437,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "보험업법 시행령 47조  수수료 지급 등의 금지 예외"
+      },
+      {
+        "first_stage_score": 18.196287042235582,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "사립학교법 26조  임원의 보수 제한#KOBLEX-172260",
+        "provision_text": "제26조(임원의 보수 제한)",
+        "rerank_score": 0.0002814377367030829,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "사립학교법 26조  임원의 보수 제한"
+      },
+      {
+        "first_stage_score": 10.591998716156416,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "간접투자자산 운용업법 144조 13 (업무집행사원의 보수)#KOBLEX-082365",
+        "provision_text": "제144조의13 (업무집행사원의 보수)",
+        "rerank_score": 0.0001924479438457638,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "간접투자자산 운용업법 144조 13 (업무집행사원의 보수)"
+      },
+      {
+        "first_stage_score": 15.212556632574115,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "정치자금법 27조 2 보조금을 지급받을 권리의 보호#KOBLEX-149286",
+        "provision_text": "제27조의2(보조금을 지급받을 권리의 보호) 이 법에 따라 정당이 보조금을 지급받을 권리는 양도 또는 압류하거나 담보로 제공할 수 없다.",
+        "rerank_score": 4.445564263733104e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "정치자금법 27조 2 보조금을 지급받을 권리의 보호"
+      },
+      {
+        "first_stage_score": 17.321168887860267,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "신문 등의 진흥에 관한 법률 19조  소유제한 위반 시 조치 등#KOBLEX-215645",
+        "provision_text": "제19조(소유제한 위반 시 조치 등)",
+        "rerank_score": 0.0009619261836633086,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "신문 등의 진흥에 관한 법률 19조  소유제한 위반 시 조치 등"
+      },
+      {
+        "first_stage_score": 17.541685092095932,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "전기통신사업법 시행령 57조  기간통신역무의 국경 간 공급계약의 승인취소 등#KOBLEX-006071",
+        "provision_text": "① 법 제87조제4항에 따른 기간통신역무의 국경 간 공급계약의 승인취소 및 기간통신역무의 국경 간 공급의 정지기준은 다음 각 호와 같다. 1. 1회 위반 시: 6개월 이내의 정지 또는 신규 이용자 모집 정지 2. 2회 위반 시: 승인취소",
+        "rerank_score": 1.864417026808951e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "전기통신사업법 시행령 57조  기간통신역무의 국경 간 공급계약의 승인취소 등 1항"
+      },
+      {
+        "first_stage_score": 12.193039751316341,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "선박직원법 5조 3 부정행위자에 대한 제재#KOBLEX-052840",
+        "provision_text": "제5조의3(부정행위자에 대한 제재)",
+        "rerank_score": 0.8774683475494385,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "선박직원법 5조 3 부정행위자에 대한 제재"
+      },
+      {
+        "first_stage_score": 12.193039751316341,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "공인회계사법 5조 2 부정행위자에 대한 제재#KOBLEX-003945",
+        "provision_text": "제5조의2(부정행위자에 대한 제재)",
+        "rerank_score": 0.9014986157417297,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "공인회계사법 5조 2 부정행위자에 대한 제재"
+      },
+      {
+        "first_stage_score": 12.193039751316341,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "경찰공무원법 11조  부정행위자에 대한 제재#KOBLEX-225904",
+        "provision_text": "제11조(부정행위자에 대한 제재)",
+        "rerank_score": 0.886243462562561,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "경찰공무원법 11조  부정행위자에 대한 제재"
+      },
+      {
+        "first_stage_score": 12.193039751316341,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "수상레저안전법 11조  부정행위자에 대한 제재#KOBLEX-080082",
+        "provision_text": "제11조(부정행위자에 대한 제재)",
+        "rerank_score": 0.886243462562561,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "수상레저안전법 11조  부정행위자에 대한 제재"
+      },
+      {
+        "first_stage_score": 12.193039751316341,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "보험업법 134조  보험회사에 대한 제재#KOBLEX-022368",
+        "provision_text": "제134조(보험회사에 대한 제재)",
+        "rerank_score": 0.6935340762138367,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "보험업법 134조  보험회사에 대한 제재"
+      },
+      {
+        "first_stage_score": 12.193039751316341,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "보험업법 시행령 73조 2 제재 사실의 공표#KOBLEX-121649",
+        "provision_text": "제73조의2(제재 사실의 공표)",
+        "rerank_score": 0.6664044260978699,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "보험업법 시행령 73조 2 제재 사실의 공표"
+      },
+      {
+        "first_stage_score": 12.385124815859932,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "보조금 관리에 관한 법률 30조#KOBLEX-137826",
+        "provision_text": "제5장 보조금의 반환 및 제재 <개정 2016.1.28>",
+        "rerank_score": 0.0730203166604042,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "보조금 관리에 관한 법률 30조"
+      },
+      {
+        "first_stage_score": 12.528343057242049,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "국유재산법 59조 3 민간참여 개발의 절차#KOBLEX-124785",
+        "provision_text": "⑧ 총괄청은 제7항에 따라 지정한 협상대상자와의 협의에 따라 개발사업의 추진을 위한 사업협약을 체결한다. 이 경우 제59조의2제3항에 따른 사업비 조달 제한 및 위반 시 책임에 관한 사항이 포함되어야 한다.",
+        "rerank_score": 8.390094308197149e-07,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "국유재산법 59조 3 민간참여 개발의 절차 8항"
+      },
+      {
+        "first_stage_score": 12.03777395060893,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "감사원법 5조  임명 및 보수#KOBLEX-081333",
+        "provision_text": "제5조(임명 및 보수)",
+        "rerank_score": 0.971698522567749,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "감사원법 5조  임명 및 보수"
+      },
+      {
+        "first_stage_score": 21.865876316837785,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "군인보수법 3조  보수 지급의 방법#KOBLEX-143306",
+        "provision_text": "제3조(보수 지급의 방법)",
+        "rerank_score": 0.9612011313438416,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "군인보수법 3조  보수 지급의 방법"
+      },
+      {
+        "first_stage_score": 15.594970035385748,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "사립학교법 55조  복무#KOBLEX-172429",
+        "provision_text": "③ 제2항에 따른 겸직 허가의 기준과 절차, 겸직 교원의 직무와 보수 등에 관하여 필요한 사항은 대통령령으로 정한다.",
+        "rerank_score": 0.08785992860794067,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "사립학교법 55조  복무 3항"
+      },
+      {
+        "first_stage_score": 15.924351675939096,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "지방공무원법 45조  보수에 관한 규정#KOBLEX-207913",
+        "provision_text": "① 공무원의 보수에 관한 다음 각 호의 사항은 대통령령으로 정한다. 1. 봉급ㆍ호봉 및 승급에 관한 사항 2. 수당에 관한 사항 3. 보수 지급 방법, 보수 계산, 그 밖에 보수 지급에 관한 사항",
+        "rerank_score": 0.005659937858581543,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "지방공무원법 45조  보수에 관한 규정 1항"
+      },
+      {
+        "first_stage_score": 11.302512990446827,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "식품위생법 7조  식품 또는 식품첨가물에 관한 기준 및 규격#KOBLEX-197180",
+        "provision_text": "③ 수출할 식품 또는 식품첨가물의 기준과 규격은 제1항 및 제2항에도 불구하고 수입자가 요구하는 기준과 규격을 따를 수 있다.",
+        "rerank_score": 0.004085725639015436,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "식품위생법 7조  식품 또는 식품첨가물에 관한 기준 및 규격 3항"
+      },
+      {
+        "first_stage_score": 11.951901952658385,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "상표법 195조  상표등록료 등의 반환의 특례#KOBLEX-057672",
+        "provision_text": "제195조(상표등록료 등의 반환의 특례) 국제상표등록출원에 대하여 제79조제1항 각 호 외의 부분을 적용할 경우 \"납부된 상표등록료와 수수료\"는 \"이미 낸 수수료\"로, \"상표등록료 및 수수료\"를 \"수수료\"로 보고, 같은 항 제1호 및 같은 조 제2항ㆍ제3항을 적용할 경우 \"상표등록료 및 수수료\"는 각각 \"수수료\"로 본다.",
+        "rerank_score": 0.0003827491891570389,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "상표법 195조  상표등록료 등의 반환의 특례"
+      },
+      {
+        "first_stage_score": 12.193039751316341,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "은행법 53조  은행에 대한 제재#KOBLEX-143811",
+        "provision_text": "제53조(은행에 대한 제재)",
+        "rerank_score": 0.7705494165420532,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "은행법 53조  은행에 대한 제재"
+      },
+      {
+        "first_stage_score": 13.100600694297164,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "약관의 규제에 관한 법률 14조  소송 제기의 금지 등#KOBLEX-103940",
+        "provision_text": "1. 고객에게 부당하게 불리한 소송 제기 금지 조항 또는 재판관할의 합의 조항",
+        "rerank_score": 0.5869016051292419,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "약관의 규제에 관한 법률 14조  소송 제기의 금지 등 1호"
+      },
+      {
+        "first_stage_score": 13.100600694297164,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "약관의 규제에 관한 법률 14조  소송 제기의 금지 등#KOBLEX-167855",
+        "provision_text": "1. 고객에게 부당하게 불리한 소송 제기 금지 조항 또는 재판관할의 합의 조항",
+        "rerank_score": 0.5869016051292419,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "약관의 규제에 관한 법률 14조  소송 제기의 금지 등 1호"
+      },
+      {
+        "first_stage_score": 12.869786422622754,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "개인정보 보호법 시행령 15조  개인정보의 목적 외 이용 또는 제3자 제공의 관리#KOBLEX-225321",
+        "provision_text": "4. 이용 또는 제공의 법적 근거",
+        "rerank_score": 0.10229013115167618,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "개인정보 보호법 시행령 15조  개인정보의 목적 외 이용 또는 제3자 제공의 관리 4호"
+      },
+      {
+        "first_stage_score": 12.619744252108125,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "고용보험법 41조  피보험 단위기간#KOBLEX-206617",
+        "provision_text": "①근로자의 피보험 단위기간은 피보험기간 중 보수 지급의 기초가 된 날을 합하여 계산한다. 다만, 자영업자인 피보험자의 피보험 단위기간은 제50조제3항 단서 및 제4항에 따른 피보험기간으로 한다. <개정 2010.1.27, 2011.7.21, 2021.1.5>",
+        "rerank_score": 8.757596333452966e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "고용보험법 41조  피보험 단위기간 1항"
+      },
+      {
+        "first_stage_score": 13.233767343037552,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "공공주택 특별법 시행규칙 34조 2 매입신청서#KOBLEX-061935",
+        "provision_text": "5. 인감증명서 또는 「본인서명사실 확인 등에 관한 법률」에 따른 본인서명사실확인서",
+        "rerank_score": 3.946052402170608e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "공공주택 특별법 시행규칙 34조 2 매입신청서 5호"
+      },
+      {
+        "first_stage_score": 13.233767343037552,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "공공주택 특별법 시행규칙 33조 2 지분적립형 분양주택의 매입신청#KOBLEX-061921",
+        "provision_text": "2. 인감증명서 또는 「본인서명사실 확인 등에 관한 법률」에 따른 본인서명사실확인서",
+        "rerank_score": 3.282832722106832e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "공공주택 특별법 시행규칙 33조 2 지분적립형 분양주택의 매입신청 2호"
+      },
+      {
+        "first_stage_score": 14.258031262346584,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "농지법 시행령 79조  자료의 제공 요청#KOBLEX-199868",
+        "provision_text": "8. 「재외동포의 출입국과 법적 지위에 관한 법률」 제6조에 따른 국내거소신고에 관한 자료",
+        "rerank_score": 1.1094680303358473e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "농지법 시행령 79조  자료의 제공 요청 8호"
+      },
+      {
+        "first_stage_score": 12.707925967434143,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "장애인복지법 시행규칙 39조  장애수당등의 수급희망 이력관리#KOBLEX-020315",
+        "provision_text": "④ 시장ㆍ군수ㆍ구청장은 제3항에 따른 확인 결과 영 제30조에 따른 장애수당등 지급대상자의 범위에 포함될 가능성을 확인한 경우에는 그 사람에게 제38조에 따른 장애수당등 지급의 신청 방법 및 절차를 안내해야 한다.",
+        "rerank_score": 2.511665798010654e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "장애인복지법 시행규칙 39조  장애수당등의 수급희망 이력관리 4항"
+      },
+      {
+        "first_stage_score": 14.865453601210007,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "국세징수법 시행령 92조  체류 관련 허가#KOBLEX-000311",
+        "provision_text": "1. 「재외동포의 출입국과 법적 지위에 관한 법률」 제6조에 따른 국내거소신고",
+        "rerank_score": 1.2326118849159684e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "국세징수법 시행령 92조  체류 관련 허가 1호"
+      },
+      {
+        "first_stage_score": 13.971250825653827,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "국민건강보험법 시행령 76조  외국인 등의 가입자 및 피부양자 자격취득 제한#KOBLEX-055816",
+        "provision_text": "1. 「출입국관리법」 제25조 및 「재외동포의 출입국과 법적 지위에 관한 법률」 제10조제2항에 따라 체류기간 연장허가를 받지 아니하고 체류하는 경우",
+        "rerank_score": 1.7009073417284526e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "국민건강보험법 시행령 76조  외국인 등의 가입자 및 피부양자 자격취득 제한 1호"
+      },
+      {
+        "first_stage_score": 16.848192722219085,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "신문 등의 진흥에 관한 법률 38조  자료 제공의 요청#KOBLEX-215723",
+        "provision_text": "1. 제18조에 따른 소유제한 등 위반 여부의 확인",
+        "rerank_score": 0.00706329382956028,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "신문 등의 진흥에 관한 법률 38조  자료 제공의 요청 1호"
+      },
+      {
+        "first_stage_score": 19.095014725488866,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "석유 및 석유대체연료 사업법 시행령 42조 4 취득 정보 또는 자료의 용도#KOBLEX-012356",
+        "provision_text": "1. 법 제29조 또는 제39조에 따른 금지행위 위반 여부의 확인",
+        "rerank_score": 0.0034677230287343264,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "석유 및 석유대체연료 사업법 시행령 42조 4 취득 정보 또는 자료의 용도 1호"
+      },
+      {
+        "first_stage_score": 16.481497370499717,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "신문 등의 진흥에 관한 법률 38조  자료 제공의 요청#KOBLEX-215724",
+        "provision_text": "2. 제26조에 따른 신문등 명칭의 사용제한 위반 여부의 확인",
+        "rerank_score": 6.149297860247316e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "신문 등의 진흥에 관한 법률 38조  자료 제공의 요청 2호"
+      },
+      {
+        "first_stage_score": 14.561494958158843,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "축산물 위생관리법 시행령 14조  검사관의 자격ㆍ임무#KOBLEX-048762",
+        "provision_text": "② 제1항에 따른 검사관의 임무는 다음 각 호와 같다. <개정 2016.7.26, 2018.4.24, 2019.3.14, 2020.10.8, 2021.8.10> 1. 법 제5조제1항에 따른 규격 등에 적합한 용기등(축산물에 사용하는 용기, 기구, 포장 또는 검인용ㆍ인쇄용 색소를 말한다)의 사용 여부 확인 2. 「식품 등의 표시ㆍ광고에 관한 법률」 제4조 또는 제5조에 따른 축산물의 표시기준 위반 여부 확인 3. 법 제7조제6항ㆍ제8항, 제11조제1항 및 제12조제1항ㆍ제2항ㆍ제8항에 따른 가축, 식육, 원유 및 식용란의 검사 4. 법 제8조제2항에 따른 자체위생관리기준의 작성ㆍ운영 여부 확인 5. 법 제9조제2항 및 제9조의3제2항에 따른 자체안전관리인증기준의 작성ㆍ운영 여부에 대한 확인 및 조사ㆍ평가에 관한 업무 6. 법 제9조제4항ㆍ제5항 및 제9조의3제1항ㆍ제5항에 따른 안전관리인증작업장ㆍ안전관리인증업소ㆍ안전관리인증농장 및 안전관리통합인증업체(이하 \"안전관리인증작업장등\"이라 한다)에 대한 점검ㆍ지도, 조사ㆍ평가 및 적정성 검증 등에 관한 업무 7. 법 제11조제2항에 따른 착유하는 소 또는 양의 검사 8. 법 제12조제3항에 따라 축산물가공업, 식육포장처리업 및 식육즉석판매가공업의 영업자가 실시하는 검사의 적정 여부 확인 9. 법 제13조제3항에 따른 책임수의사 및 법 제14조에 따른 검사원의 업무 이행 여부 확인 10. 법 제18조에 따른 검사에 불합격한 가축 및 축산물의 처리 11. 법 제19조에 따른 출입ㆍ검사ㆍ수거에 관한 업무 12. 법 제27조, 제28조, 제28조의2, 제30조제2항 및 제47조에 따른 행정처분의 이행 여부 확인 13. 법 제31조제2항에 따른 영업자 및 그 종업원의 준수사항의 이행 여부 확인ㆍ지도 14. 「식품 등의 표시ㆍ광고에 관한 법률」 제8조제1항에 따른 허위ㆍ과대ㆍ비방의 표시ㆍ광고 또는 과대포장 금지의 위반 여부에 관한 점검ㆍ지도 15. 법 제33조제1항에 따른 판매 등의 금지의 위반 여부에 대한 점검ㆍ지도 16. 법 제36조제1항에 따른 축산물의 압류ㆍ폐기ㆍ회수 17. 법 제40조의2에 따른 가축 외의 동물 및 그 지육(枝肉), 정육, 내장, 그 밖의 부분에 대한 검사ㆍ처리 18. 축산물의 유통에 관한 지도 19. 그 밖에 이 법에 따른 명령 및 보고의무의 이행 여부 확인 등 가축 및 축산물의 위생관리에 관련된 업무",
+        "rerank_score": 2.8307465527177555e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "축산물 위생관리법 시행령 14조  검사관의 자격ㆍ임무 2항"
+      },
+      {
+        "first_stage_score": 13.84848370672826,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "전자금융거래법 시행령 8조  고의나 중대한 과실의 범위#KOBLEX-033976",
+        "provision_text": "3. 금융회사 또는 전자금융업자가 법 제6조제1항에 따른 확인 외에 보안강화를 위하여 전자금융거래 시 요구하는 추가적인 보안조치를 이용자가 정당한 사유 없이 거부하여 법 제9조제1항제3호에 따른 사고가 발생한 경우",
+        "rerank_score": 1.5686262031522347e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "전자금융거래법 시행령 8조  고의나 중대한 과실의 범위 3호"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "간접투자자산 운용업법 144조 13 (업무집행사원의 보수)#KOBLEX-082365": "제144조의13 (업무집행사원의 보수)",
+      "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082551": "①자산운용회사·수탁회사·자산보관회사·일반사무관리회사 및 판매회사는 간접투자기구의 운용실적에 따라 보수 또는 수수료를 취득하여서는 아니된다.",
+      "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082552": "②제1항의 규정에 불구하고 사모간접투자기구의 경우에는 간접투자기구의 운용실적에 따라 보수 또는 수수료를 취득할 수 있다. 이 경우 투자자를 보호하기 위하여 보수 또는 수수료 취득에 관하여 필요한 사항은 대통령령으로 정한다.",
+      "감사원법 5조  임명 및 보수#KOBLEX-081333": "제5조(임명 및 보수)",
+      "개인정보 보호법 시행령 15조  개인정보의 목적 외 이용 또는 제3자 제공의 관리#KOBLEX-225321": "4. 이용 또는 제공의 법적 근거",
+      "경찰공무원법 11조  부정행위자에 대한 제재#KOBLEX-225904": "제11조(부정행위자에 대한 제재)",
+      "고용보험법 41조  피보험 단위기간#KOBLEX-206617": "①근로자의 피보험 단위기간은 피보험기간 중 보수 지급의 기초가 된 날을 합하여 계산한다. 다만, 자영업자인 피보험자의 피보험 단위기간은 제50조제3항 단서 및 제4항에 따른 피보험기간으로 한다. <개정 2010.1.27, 2011.7.21, 2021.1.5>",
+      "공공주택 특별법 시행규칙 33조 2 지분적립형 분양주택의 매입신청#KOBLEX-061921": "2. 인감증명서 또는 「본인서명사실 확인 등에 관한 법률」에 따른 본인서명사실확인서",
+      "공공주택 특별법 시행규칙 34조 2 매입신청서#KOBLEX-061935": "5. 인감증명서 또는 「본인서명사실 확인 등에 관한 법률」에 따른 본인서명사실확인서",
+      "공인회계사법 5조 2 부정행위자에 대한 제재#KOBLEX-003945": "제5조의2(부정행위자에 대한 제재)",
+      "관세사법 11조  보수#KOBLEX-155022": "제11조(보수)",
+      "국민건강보험법 시행령 76조  외국인 등의 가입자 및 피부양자 자격취득 제한#KOBLEX-055816": "1. 「출입국관리법」 제25조 및 「재외동포의 출입국과 법적 지위에 관한 법률」 제10조제2항에 따라 체류기간 연장허가를 받지 아니하고 체류하는 경우",
+      "국세징수법 시행령 92조  체류 관련 허가#KOBLEX-000311": "1. 「재외동포의 출입국과 법적 지위에 관한 법률」 제6조에 따른 국내거소신고",
+      "국유재산법 59조 3 민간참여 개발의 절차#KOBLEX-124785": "⑧ 총괄청은 제7항에 따라 지정한 협상대상자와의 협의에 따라 개발사업의 추진을 위한 사업협약을 체결한다. 이 경우 제59조의2제3항에 따른 사업비 조달 제한 및 위반 시 책임에 관한 사항이 포함되어야 한다.",
+      "군인보수법 3조  보수 지급의 방법#KOBLEX-143306": "제3조(보수 지급의 방법)",
+      "농지법 시행령 79조  자료의 제공 요청#KOBLEX-199868": "8. 「재외동포의 출입국과 법적 지위에 관한 법률」 제6조에 따른 국내거소신고에 관한 자료",
+      "법무사법 19조  보수#KOBLEX-061485": "제19조(보수)",
+      "법무사법 19조  보수#KOBLEX-171449": "제19조(보수)",
+      "보조금 관리에 관한 법률 30조#KOBLEX-137826": "제5장 보조금의 반환 및 제재 <개정 2016.1.28>",
+      "보험업법 134조  보험회사에 대한 제재#KOBLEX-022368": "제134조(보험회사에 대한 제재)",
+      "보험업법 시행령 47조  수수료 지급 등의 금지 예외#KOBLEX-121461": "제47조(수수료 지급 등의 금지 예외)",
+      "보험업법 시행령 73조 2 제재 사실의 공표#KOBLEX-121649": "제73조의2(제재 사실의 공표)",
+      "사립학교법 26조  임원의 보수 제한#KOBLEX-172260": "제26조(임원의 보수 제한)",
+      "사립학교법 55조  복무#KOBLEX-172429": "③ 제2항에 따른 겸직 허가의 기준과 절차, 겸직 교원의 직무와 보수 등에 관하여 필요한 사항은 대통령령으로 정한다.",
+      "상표법 195조  상표등록료 등의 반환의 특례#KOBLEX-057672": "제195조(상표등록료 등의 반환의 특례) 국제상표등록출원에 대하여 제79조제1항 각 호 외의 부분을 적용할 경우 \"납부된 상표등록료와 수수료\"는 \"이미 낸 수수료\"로, \"상표등록료 및 수수료\"를 \"수수료\"로 보고, 같은 항 제1호 및 같은 조 제2항ㆍ제3항을 적용할 경우 \"상표등록료 및 수수료\"는 각각 \"수수료\"로 본다.",
+      "석유 및 석유대체연료 사업법 시행령 42조 4 취득 정보 또는 자료의 용도#KOBLEX-012356": "1. 법 제29조 또는 제39조에 따른 금지행위 위반 여부의 확인",
+      "선박직원법 5조 3 부정행위자에 대한 제재#KOBLEX-052840": "제5조의3(부정행위자에 대한 제재)",
+      "소방법 88조  보수#KOBLEX-023413": "제88조 (보수)",
+      "수상레저안전법 11조  부정행위자에 대한 제재#KOBLEX-080082": "제11조(부정행위자에 대한 제재)",
+      "식품위생법 7조  식품 또는 식품첨가물에 관한 기준 및 규격#KOBLEX-197180": "③ 수출할 식품 또는 식품첨가물의 기준과 규격은 제1항 및 제2항에도 불구하고 수입자가 요구하는 기준과 규격을 따를 수 있다.",
+      "신문 등의 진흥에 관한 법률 19조  소유제한 위반 시 조치 등#KOBLEX-215645": "제19조(소유제한 위반 시 조치 등)",
+      "신문 등의 진흥에 관한 법률 38조  자료 제공의 요청#KOBLEX-215723": "1. 제18조에 따른 소유제한 등 위반 여부의 확인",
+      "신문 등의 진흥에 관한 법률 38조  자료 제공의 요청#KOBLEX-215724": "2. 제26조에 따른 신문등 명칭의 사용제한 위반 여부의 확인",
+      "약관의 규제에 관한 법률 14조  소송 제기의 금지 등#KOBLEX-103940": "1. 고객에게 부당하게 불리한 소송 제기 금지 조항 또는 재판관할의 합의 조항",
+      "약관의 규제에 관한 법률 14조  소송 제기의 금지 등#KOBLEX-167855": "1. 고객에게 부당하게 불리한 소송 제기 금지 조항 또는 재판관할의 합의 조항",
+      "은행법 53조  은행에 대한 제재#KOBLEX-143811": "제53조(은행에 대한 제재)",
+      "장애인복지법 시행규칙 39조  장애수당등의 수급희망 이력관리#KOBLEX-020315": "④ 시장ㆍ군수ㆍ구청장은 제3항에 따른 확인 결과 영 제30조에 따른 장애수당등 지급대상자의 범위에 포함될 가능성을 확인한 경우에는 그 사람에게 제38조에 따른 장애수당등 지급의 신청 방법 및 절차를 안내해야 한다.",
+      "전기통신사업법 시행령 57조  기간통신역무의 국경 간 공급계약의 승인취소 등#KOBLEX-006071": "① 법 제87조제4항에 따른 기간통신역무의 국경 간 공급계약의 승인취소 및 기간통신역무의 국경 간 공급의 정지기준은 다음 각 호와 같다. 1. 1회 위반 시: 6개월 이내의 정지 또는 신규 이용자 모집 정지 2. 2회 위반 시: 승인취소",
+      "전자금융거래법 시행령 8조  고의나 중대한 과실의 범위#KOBLEX-033976": "3. 금융회사 또는 전자금융업자가 법 제6조제1항에 따른 확인 외에 보안강화를 위하여 전자금융거래 시 요구하는 추가적인 보안조치를 이용자가 정당한 사유 없이 거부하여 법 제9조제1항제3호에 따른 사고가 발생한 경우",
+      "정치자금법 27조 2 보조금을 지급받을 권리의 보호#KOBLEX-149286": "제27조의2(보조금을 지급받을 권리의 보호) 이 법에 따라 정당이 보조금을 지급받을 권리는 양도 또는 압류하거나 담보로 제공할 수 없다.",
+      "지방공무원법 45조  보수에 관한 규정#KOBLEX-207913": "① 공무원의 보수에 관한 다음 각 호의 사항은 대통령령으로 정한다. 1. 봉급ㆍ호봉 및 승급에 관한 사항 2. 수당에 관한 사항 3. 보수 지급 방법, 보수 계산, 그 밖에 보수 지급에 관한 사항",
+      "축산물 위생관리법 시행령 14조  검사관의 자격ㆍ임무#KOBLEX-048762": "② 제1항에 따른 검사관의 임무는 다음 각 호와 같다. <개정 2016.7.26, 2018.4.24, 2019.3.14, 2020.10.8, 2021.8.10> 1. 법 제5조제1항에 따른 규격 등에 적합한 용기등(축산물에 사용하는 용기, 기구, 포장 또는 검인용ㆍ인쇄용 색소를 말한다)의 사용 여부 확인 2. 「식품 등의 표시ㆍ광고에 관한 법률」 제4조 또는 제5조에 따른 축산물의 표시기준 위반 여부 확인 3. 법 제7조제6항ㆍ제8항, 제11조제1항 및 제12조제1항ㆍ제2항ㆍ제8항에 따른 가축, 식육, 원유 및 식용란의 검사 4. 법 제8조제2항에 따른 자체위생관리기준의 작성ㆍ운영 여부 확인 5. 법 제9조제2항 및 제9조의3제2항에 따른 자체안전관리인증기준의 작성ㆍ운영 여부에 대한 확인 및 조사ㆍ평가에 관한 업무 6. 법 제9조제4항ㆍ제5항 및 제9조의3제1항ㆍ제5항에 따른 안전관리인증작업장ㆍ안전관리인증업소ㆍ안전관리인증농장 및 안전관리통합인증업체(이하 \"안전관리인증작업장등\"이라 한다)에 대한 점검ㆍ지도, 조사ㆍ평가 및 적정성 검증 등에 관한 업무 7. 법 제11조제2항에 따른 착유하는 소 또는 양의 검사 8. 법 제12조제3항에 따라 축산물가공업, 식육포장처리업 및 식육즉석판매가공업의 영업자가 실시하는 검사의 적정 여부 확인 9. 법 제13조제3항에 따른 책임수의사 및 법 제14조에 따른 검사원의 업무 이행 여부 확인 10. 법 제18조에 따른 검사에 불합격한 가축 및 축산물의 처리 11. 법 제19조에 따른 출입ㆍ검사ㆍ수거에 관한 업무 12. 법 제27조, 제28조, 제28조의2, 제30조제2항 및 제47조에 따른 행정처분의 이행 여부 확인 13. 법 제31조제2항에 따른 영업자 및 그 종업원의 준수사항의 이행 여부 확인ㆍ지도 14. 「식품 등의 표시ㆍ광고에 관한 법률」 제8조제1항에 따른 허위ㆍ과대ㆍ비방의 표시ㆍ광고 또는 과대포장 금지의 위반 여부에 관한 점검ㆍ지도 15. 법 제33조제1항에 따른 판매 등의 금지의 위반 여부에 대한 점검ㆍ지도 16. 법 제36조제1항에 따른 축산물의 압류ㆍ폐기ㆍ회수 17. 법 제40조의2에 따른 가축 외의 동물 및 그 지육(枝肉), 정육, 내장, 그 밖의 부분에 대한 검사ㆍ처리 18. 축산물의 유통에 관한 지도 19. 그 밖에 이 법에 따른 명령 및 보고의무의 이행 여부 확인 등 가축 및 축산물의 위생관리에 관련된 업무"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082551",
+          "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082552"
+        ],
+        "rationale": "C001과 C002는 성과보수에 대한 제한 및 예외 규정을 제공하나, 보수 또는 수수료 지급의 일반적 법적 근거와 기준을 포괄적으로 규정하지는 않아 완료 기준을 완전히 충족하지 못한다.",
+        "status": "partially_covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [
+          "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082551",
+          "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082552"
+        ],
+        "rationale": "C001과 C002는 보수 또는 수수료 지급에 대한 제한 및 예외 규정을 명확히 제공하여 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "evidence_item_id": "E3",
+        "linked_provision_ids": [
+          "간접투자자산 운용업법 144조 13 (업무집행사원의 보수)#KOBLEX-082365"
+        ],
+        "rationale": "C009는 간접투자자산운용업법상 보수 관련 조항이지만, 법 위반 시 적용되는 법적 제재 및 처벌 규정을 직접적으로 명시하지는 않아 완료 기준을 완전히 충족하지 못한다.",
+        "status": "partially_covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082551",
+        "support_spans": [
+          {
+            "end_char": 77,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082552",
+        "support_spans": [
+          {
+            "end_char": 124,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "provision_id": "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082551",
+        "support_spans": [
+          {
+            "end_char": 77,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "provision_id": "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082552",
+        "support_spans": [
+          {
+            "end_char": 124,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E3",
+        "issue_id": "I2",
+        "provision_id": "간접투자자산 운용업법 144조 13 (업무집행사원의 보수)#KOBLEX-082365",
+        "support_spans": [
+          {
+            "end_char": 21,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 13,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "갑이 보수 또는 수수료를 취득할 수 있는 법적 기준과 요건",
+        "issue_id": "I1"
+      },
+      {
+        "description": "갑이 간접투자자산운용업법을 위반할 경우 적용되는 법적 제재 및 처벌",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "보수 또는 수수료 지급의 법적 근거와 기준이 명시된 조항을 확인",
+        "critical": true,
+        "description": "갑이 보수 또는 수수료를 취득할 수 있는 법적 근거와 기준",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "법 위반 시 적용되는 법적 제재 및 처벌 조항을 확인",
+        "critical": true,
+        "description": "간접투자자산운용업법 위반 시 적용되는 법적 제재 및 처벌 규정",
+        "evidence_item_id": "E3",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "갑은 어떠한 기준에 따라 보수 또는 수수료를 취득할 수 있는가? 또한 갑이 간접투자자산 운용업법을 위반했을 때 어떤 처벌을 받을 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "갑은 어떤 기준에 따라 보수 또는 수수료를 지급받을 수 있는가?",
+        "request_id": "RQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_text": "보수 수수료 제한 예외",
+        "request_id": "RQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "간접투자자산운용업법 위반 시 법적 제재 및 처벌",
+        "request_id": "RQ3",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "보수 또는 수수료 지급의 일반적 기준과 요건을 규정하는 조항",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "간접투자자산운용업법상 보수 및 수수료 지급 기준과 요건",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "간접투자자산운용업법 위반 시 적용되는 법적 제재 및 처벌 조항",
+        "request_id": "GRQ3",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "간접투자자산운용업법 제재 및 처벌 조항",
+        "request_id": "GRQ4",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "보수 또는 수수료 지급의 법적 근거와 기준이 명시된 조항을 확인 법률 조문",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "법 위반 시 적용되는 법적 제재 및 처벌 조항을 확인 법률 조문",
+        "request_id": "GRQ2",
+        "top_k": 100
+      }
+    ],
+    "question": " 갑은 어떠한 기준에 따라 보수 또는 수수료를 취득할 수 있는가? 또한 갑이 간접투자자산 운용업법을 위반했을 때 어떤 처벌을 받을 수 있는가?",
+    "remaining_request_budget": 0,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "보수 또는 수수료 지급의 법적 근거와 기준이 명시된 조항을 확인",
+        "critical": true,
+        "description": "갑이 보수 또는 수수료를 취득할 수 있는 법적 근거와 기준",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "보수 또는 수수료 지급에 대한 제한 또는 예외 조항을 확인",
+        "critical": false,
+        "description": "보수 또는 수수료 지급에 대한 제한 또는 예외 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "exception",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "법 위반 시 적용되는 법적 제재 및 처벌 조항을 확인",
+        "critical": true,
+        "description": "간접투자자산운용업법 위반 시 적용되는 법적 제재 및 처벌 규정",
+        "evidence_item_id": "E3",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "460cb0b6-59c8-4be2-8c5e-6f15958e6023",
+    "seen_provision_ids": [
+      "선박직원법 5조 3 부정행위자에 대한 제재#KOBLEX-052840",
+      "보험업법 시행령 73조 2 제재 사실의 공표#KOBLEX-121649",
+      "신문 등의 진흥에 관한 법률 38조  자료 제공의 요청#KOBLEX-215723",
+      "개인정보 보호법 시행령 15조  개인정보의 목적 외 이용 또는 제3자 제공의 관리#KOBLEX-225321",
+      "군인보수법 3조  보수 지급의 방법#KOBLEX-143306",
+      "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082551",
+      "정치자금법 27조 2 보조금을 지급받을 권리의 보호#KOBLEX-149286",
+      "장애인복지법 시행규칙 39조  장애수당등의 수급희망 이력관리#KOBLEX-020315",
+      "관세사법 11조  보수#KOBLEX-155022",
+      "고용보험법 41조  피보험 단위기간#KOBLEX-206617",
+      "약관의 규제에 관한 법률 14조  소송 제기의 금지 등#KOBLEX-167855",
+      "공공주택 특별법 시행규칙 34조 2 매입신청서#KOBLEX-061935",
+      "공인회계사법 5조 2 부정행위자에 대한 제재#KOBLEX-003945",
+      "축산물 위생관리법 시행령 14조  검사관의 자격ㆍ임무#KOBLEX-048762",
+      "보험업법 134조  보험회사에 대한 제재#KOBLEX-022368",
+      "국세징수법 시행령 92조  체류 관련 허가#KOBLEX-000311",
+      "국유재산법 59조 3 민간참여 개발의 절차#KOBLEX-124785",
+      "경찰공무원법 11조  부정행위자에 대한 제재#KOBLEX-225904",
+      "법무사법 19조  보수#KOBLEX-061485",
+      "농지법 시행령 79조  자료의 제공 요청#KOBLEX-199868",
+      "감사원법 5조  임명 및 보수#KOBLEX-081333",
+      "석유 및 석유대체연료 사업법 시행령 42조 4 취득 정보 또는 자료의 용도#KOBLEX-012356",
+      "수상레저안전법 11조  부정행위자에 대한 제재#KOBLEX-080082",
+      "간접투자자산 운용업법 144조 13 (업무집행사원의 보수)#KOBLEX-082365",
+      "보험업법 시행령 47조  수수료 지급 등의 금지 예외#KOBLEX-121461",
+      "신문 등의 진흥에 관한 법률 19조  소유제한 위반 시 조치 등#KOBLEX-215645",
+      "은행법 53조  은행에 대한 제재#KOBLEX-143811",
+      "사립학교법 26조  임원의 보수 제한#KOBLEX-172260",
+      "전자금융거래법 시행령 8조  고의나 중대한 과실의 범위#KOBLEX-033976",
+      "소방법 88조  보수#KOBLEX-023413",
+      "사립학교법 55조  복무#KOBLEX-172429",
+      "공공주택 특별법 시행규칙 33조 2 지분적립형 분양주택의 매입신청#KOBLEX-061921",
+      "법무사법 19조  보수#KOBLEX-171449",
+      "신문 등의 진흥에 관한 법률 38조  자료 제공의 요청#KOBLEX-215724",
+      "국민건강보험법 시행령 76조  외국인 등의 가입자 및 피부양자 자격취득 제한#KOBLEX-055816",
+      "상표법 195조  상표등록료 등의 반환의 특례#KOBLEX-057672",
+      "전기통신사업법 시행령 57조  기간통신역무의 국경 간 공급계약의 승인취소 등#KOBLEX-006071",
+      "식품위생법 7조  식품 또는 식품첨가물에 관한 기준 및 규격#KOBLEX-197180",
+      "보조금 관리에 관한 법률 30조#KOBLEX-137826",
+      "지방공무원법 45조  보수에 관한 규정#KOBLEX-207913",
+      "약관의 규제에 관한 법률 14조  소송 제기의 금지 등#KOBLEX-103940",
+      "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082552"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

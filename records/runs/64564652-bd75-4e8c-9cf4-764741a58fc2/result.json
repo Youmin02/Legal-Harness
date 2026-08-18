@@ -1,0 +1,678 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-15T13:05:27.339602+00:00",
+  "end_to_end_latency_ms": 128964.485,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "64564652-bd75-4e8c-9cf4-764741a58fc2",
+  "state": {
+    "accepted_provision_ids": [
+      "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025677",
+      "농어촌정비법 71조  기술지원 등#KOBLEX-025681"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 20,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 3,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 0,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 21.945326429684364,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025677",
+        "provision_text": "② 제1항을 위반하여 조성용지를 전매하는 경우 해당 법률행위는 무효로 하며, 사업시행자는 조성용지의 공급 당시 가액과 「은행법」에 따른 은행의 1년 만기 정기예금 평균이자율을 합산한 금액을 지급하고 그 조성용지를 환매할 수 있다. <개정 2010.5.17>",
+        "rerank_score": 0.982705295085907,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "농어촌정비법 70조  조성용지의 전매행위 제한 등 2항"
+      },
+      {
+        "first_stage_score": 16.065820246723046,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "공공주택 특별법 시행령 25조  조성된 토지의 전매행위 제한의 특례#KOBLEX-173435",
+        "provision_text": "10. 조성된 토지(단독주택건설용지 및 공동주택건설용지는 제외한다)를 공급받은 자가 공공주택사업자로부터 공급받은 가격 이하로 전매하는 경우",
+        "rerank_score": 0.07923458516597748,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "공공주택 특별법 시행령 25조  조성된 토지의 전매행위 제한의 특례 10호"
+      },
+      {
+        "first_stage_score": 16.788997984858163,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "한국농어촌공사 및 농지관리기금법 24조 3 경영회생 지원을 위한 농지 매입 등#KOBLEX-170107",
+        "provision_text": "② 공사는 제1항에 따라 매입한 농지등을 임대하는 경우 임대기간 중에는 그 농지등을 제3자에게 매도하여서는 아니 된다.",
+        "rerank_score": 0.0007320577278733253,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "한국농어촌공사 및 농지관리기금법 24조 3 경영회생 지원을 위한 농지 매입 등 2항"
+      },
+      {
+        "first_stage_score": 15.204320912921446,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "공공주택 특별법 시행령 25조  조성된 토지의 전매행위 제한의 특례#KOBLEX-173436",
+        "provision_text": "10의2. 단독주택건설용지 또는 공동주택건설용지를 공급받은 자가 공공주택사업자로부터 공급받은 가격 이하로 전매하는 경우로서 다음 각 목의 어느 하나에 해당하는 경우",
+        "rerank_score": 0.0003377911343704909,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "공공주택 특별법 시행령 25조  조성된 토지의 전매행위 제한의 특례 11호"
+      },
+      {
+        "first_stage_score": 14.242155627638033,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "택지개발촉진법 시행령 13조 3 택지의 전매행위 제한의 특례#KOBLEX-133812",
+        "provision_text": "9의3. 공동주택 건설용지를 공급받은 자가 해당 용지에 대한 잔금 납부일(잔금 납부일이 공동주택 건설용지 공급계약일부터 2년을 초과하는 경우에는 2년을 말한다) 이후에 「독점규제 및 공정거래에 관한 법률」에 따른 계열회사가 아닌 자에게 시행자로부터 공급받은 가격 이하로 전매하는 경우(2024년 11월 30일까지 전매하는 경우로 한정한다)",
+        "rerank_score": 0.0001937828928930685,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "택지개발촉진법 시행령 13조 3 택지의 전매행위 제한의 특례 12호"
+      },
+      {
+        "first_stage_score": 15.481034682922648,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "택지개발촉진법 시행령 13조 3 택지의 전매행위 제한의 특례#KOBLEX-133810",
+        "provision_text": "9. 공공시설용지와 주택건설용지 중 근린생활시설을 건축하기 위한 용지를 공급받은 자가 시행자로부터 공급받은 가격 이하로 해당 용지를 전매하는 경우",
+        "rerank_score": 0.00015498310676775873,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "택지개발촉진법 시행령 13조 3 택지의 전매행위 제한의 특례 10호"
+      },
+      {
+        "first_stage_score": 14.530957046314718,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "공공주택 특별법 시행령 25조  조성된 토지의 전매행위 제한의 특례#KOBLEX-173437",
+        "provision_text": "10의3. 공동주택건설용지를 공급받은 자가 해당 용지에 대한 잔금 납부일(잔금 납부일이 공동주택건설용지 공급계약일부터 2년을 초과하는 경우에는 2년을 말한다) 이후에 「독점규제 및 공정거래에 관한 법률」에 따른 계열회사가 아닌 자에게 공공주택사업자로부터 공급받은 가격 이하로 전매하는 경우(2024년 11월 30일까지 전매하는 경우로 한정한다)",
+        "rerank_score": 0.0001549192820675671,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "공공주택 특별법 시행령 25조  조성된 토지의 전매행위 제한의 특례 12호"
+      },
+      {
+        "first_stage_score": 14.375871171041908,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "공공주택 특별법 시행령 25조  조성된 토지의 전매행위 제한의 특례#KOBLEX-173438",
+        "provision_text": "11. 공동주택건설용지를 공급받은 자가 주택건설사업을 목적으로 공동 출자하여 설립한 특수목적법인(「조세특례제한법」 제104조의31제1항에서 정하는 설립요건을 충족하는 법인으로서 공동주택건설용지를 공급받은 자가 50퍼센트를 초과하는 지분을 가지고 있는 경우로 한정한다)에 전매하는 경우",
+        "rerank_score": 9.344271529698744e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "공공주택 특별법 시행령 25조  조성된 토지의 전매행위 제한의 특례 13호"
+      },
+      {
+        "first_stage_score": 13.997783563106895,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "택지개발촉진법 시행령 13조 3 택지의 전매행위 제한의 특례#KOBLEX-133813",
+        "provision_text": "10. 공동주택 건설용지를 공급받은 자가 주택건설사업을 목적으로 공동 출자하여 설립한 특수목적법인(「조세특례제한법」 제104조의31제1항에서 정하는 설립요건을 충족하는 법인으로서 공동주택 건설용지를 공급받은 자가 50퍼센트를 초과하는 지분을 가지고 있는 경우로 한정한다)에 전매하는 경우",
+        "rerank_score": 7.850523252272978e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "택지개발촉진법 시행령 13조 3 택지의 전매행위 제한의 특례 13호"
+      },
+      {
+        "first_stage_score": 14.479251662755688,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "도시철도법 시행령 15조  도시철도채권의 사무취급기관 등#KOBLEX-192524",
+        "provision_text": "⑤ 도시철도채권 매입자가 매입확인증을 멸실 또는 도난 등의 사유로 분실한 경우에 그 매입자가 해당 매입확인증을 매입한 목적에 사용하지 아니하였음을 해당 도시철도채권을 발행한 자가 확인한 경우에만 이를 재발급할 수 있다.",
+        "rerank_score": 7.05465822647966e-07,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "도시철도법 시행령 15조  도시철도채권의 사무취급기관 등 5항"
+      },
+      {
+        "first_stage_score": 10.353666569654361,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "농업협동조합법 106조  사업#KOBLEX-187421",
+        "provision_text": "10. 그 밖에 설립 목적의 달성에 필요한 사업으로서 농림축산식품부장관의 승인을 받은 사업",
+        "rerank_score": 0.0027543106116354465,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "농업협동조합법 106조  사업 10호"
+      },
+      {
+        "first_stage_score": 10.353666569654361,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "농업협동조합법 111조  사업#KOBLEX-187440",
+        "provision_text": "9. 그 밖에 설립 목적의 달성에 필요한 사업으로서 농림축산식품부장관의 승인을 받은 사업",
+        "rerank_score": 0.002707504900172353,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "농업협동조합법 111조  사업 9호"
+      },
+      {
+        "first_stage_score": 10.146369448862213,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 271조  농어촌정비 등에 관한 특례#KOBLEX-037755",
+        "provision_text": "① 도지사는 「농어촌정비법」 제101조제4항에 따른 농림축산식품부장관의 승인을 받지 아니하고 마을정비구역을 지정ㆍ고시할 수 있다.",
+        "rerank_score": 9.049544314621016e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 271조  농어촌정비 등에 관한 특례 1항"
+      },
+      {
+        "first_stage_score": 12.157727492352358,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 274조  농업진흥지역 지정 등에 관한 특례#KOBLEX-037769",
+        "provision_text": "② 「농지법」 제28조제2항제1호에 따른 농림축산식품부장관의 권한과 같은 법 제30조제3항에 따른 국토교통부장관과의 협의에 관한 농림축산식품부장관의 권한은 도지사의 권한으로 한다.",
+        "rerank_score": 6.74192706355825e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 274조  농업진흥지역 지정 등에 관한 특례 2항"
+      },
+      {
+        "first_stage_score": 10.353666569654361,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "한국마사회법 23조  정관#KOBLEX-002586",
+        "provision_text": "② 마사회가 정관을 변경하려면 농림축산식품부장관의 인가를 받아야 한다. <개정 2013.3.23>",
+        "rerank_score": 1.4951992852729745e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "한국마사회법 23조  정관 2항"
+      },
+      {
+        "first_stage_score": 10.350664903632413,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "지방자치법 47조#KOBLEX-076352",
+        "provision_text": "제3절 권한",
+        "rerank_score": 8.209997758967802e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "지방자치법 47조"
+      },
+      {
+        "first_stage_score": 10.794754700815915,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "농업협동조합법 75조  합병#KOBLEX-187323",
+        "provision_text": "② 합병은 농림축산식품부장관의 인가를 받아야 한다. <개정 2013.3.23>",
+        "rerank_score": 8.06734988145763e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "농업협동조합법 75조  합병 2항"
+      },
+      {
+        "first_stage_score": 11.093198254161251,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "농업협동조합법 112조 6 정관기재사항#KOBLEX-187460",
+        "provision_text": "② 조합공동사업법인이 정관을 변경하려면 농림축산식품부장관의 인가를 받아야 한다. 다만, 농림축산식품부장관이 정하여 고시한 정관례에 따라 정관을 변경하는 경우에는 농림축산식품부장관의 인가를 받지 아니하여도 된다. <개정 2013.3.23>",
+        "rerank_score": 3.962984919780865e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "농업협동조합법 112조 6 정관기재사항 2항"
+      },
+      {
+        "first_stage_score": 10.353666569654361,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "한국마사회법 6조 3 시정명령 등#KOBLEX-002491",
+        "provision_text": "③ 마사회는 제2항에 따라 중단된 전자마권 발매를 재개하려면 농림축산식품부장관의 승인을 받아야 한다.",
+        "rerank_score": 2.5985661977756536e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "한국마사회법 6조 3 시정명령 등 3항"
+      },
+      {
+        "first_stage_score": 10.14323531198562,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "사립학교법 43조  지원#KOBLEX-172357",
+        "provision_text": "② 관할청은 제1항 또는 제35조제5항에 따라 지원을 받은 학교법인 또는 사학지원단체에 대하여 다음 각 호의 권한을 가진다. 1. 지원에 필요한 경우에는 해당 학교법인 또는 사학지원단체로부터 그 업무 또는 회계 상황에 관한 보고를 받을 권한 2. 해당 학교법인 또는 사학지원단체의 예산이 지원 목적에 비추어 적당하지 아니하다고 인정할 때에는 그 예산에 대하여 필요한 변경조치를 권고할 권한",
+        "rerank_score": 5.514589247468393e-07,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "사립학교법 43조  지원 2항"
+      },
+      {
+        "first_stage_score": 13.87095288019023,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 58조  생활환경정비사업 기본계획의 수립#KOBLEX-025574",
+        "provision_text": "제58조(생활환경정비사업 기본계획의 수립)",
+        "rerank_score": 0.9999027252197266,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "농어촌정비법 58조  생활환경정비사업 기본계획의 수립"
+      },
+      {
+        "first_stage_score": 13.87095288019023,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 59조  생활환경정비사업 시행계획의 수립#KOBLEX-025578",
+        "provision_text": "제59조(생활환경정비사업 시행계획의 수립)",
+        "rerank_score": 0.999873161315918,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "농어촌정비법 59조  생활환경정비사업 시행계획의 수립"
+      },
+      {
+        "first_stage_score": 14.218195287874371,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 56조  생활환경정비사업 시행자#KOBLEX-025564",
+        "provision_text": "제56조(생활환경정비사업 시행자)",
+        "rerank_score": 0.9998667240142822,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "농어촌정비법 56조  생활환경정비사업 시행자"
+      },
+      {
+        "first_stage_score": 11.60381004909259,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 58조  생활환경정비사업 기본계획의 수립#KOBLEX-025577",
+        "provision_text": "③ 시장ㆍ군수ㆍ구청장은 제1항에 따른 생활환경정비사업 기본계획을 수립하거나 변경한 경우에는 이를 고시하여야 한다.",
+        "rerank_score": 0.9996684789657593,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "농어촌정비법 58조  생활환경정비사업 기본계획의 수립 3항"
+      },
+      {
+        "first_stage_score": 14.682420084029188,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 60조  생활환경정비사업 시행계획의 내용#KOBLEX-025584",
+        "provision_text": "제60조(생활환경정비사업 시행계획의 내용) 생활환경정비사업 시행계획에는 다음 각 호의 사항이 포함되어야 한다.",
+        "rerank_score": 0.9996252059936523,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "농어촌정비법 60조  생활환경정비사업 시행계획의 내용"
+      },
+      {
+        "first_stage_score": 12.854719955408358,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 68조  농어촌 주택 등의 분양 등#KOBLEX-025672",
+        "provision_text": "① 생활환경정비사업 시행자는 생활환경정비사업 시행에 따른 조성 용지(이하 \"조성용지\"라 한다), 농어촌 주택, 그 밖의 시설물을 환지하거나 분양 또는 임대할 수 있다.",
+        "rerank_score": 0.9994156360626221,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "농어촌정비법 68조  농어촌 주택 등의 분양 등 1항"
+      },
+      {
+        "first_stage_score": 14.154697996207318,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 59조  생활환경정비사업 시행계획의 수립#KOBLEX-025579",
+        "provision_text": "① 생활환경정비사업 시행자가 생활환경정비사업을 추진하려면 제54조에 따른 생활환경정비계획, 제58조에 따른 생활환경정비사업 기본계획, 제101조에 따른 농어촌마을정비계획에 따라 생활환경정비사업 시행계획을 수립하여야 한다. 다만, 생활환경정비사업 시행계획을 세울 때 「국토의 계획 및 이용에 관한 법률」에 따른 도시ㆍ군관리계획이 수립되어 있는 지역에 대하여는 해당 도시ㆍ군관리계획에 따라 생활환경정비사업 시행계획을 수립할 수 있다. <개정 2011.4.14>",
+        "rerank_score": 0.999271810054779,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "농어촌정비법 59조  생활환경정비사업 시행계획의 수립 1항"
+      },
+      {
+        "first_stage_score": 11.547894949492521,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 71조  기술지원 등#KOBLEX-025681",
+        "provision_text": "② 농림축산식품부장관은 제1항에 따라 생활환경정비계획, 생활환경정비사업 기본계획, 농어촌마을정비계획 및 생활환경정비사업 시행계획을 세우는 데에 필요한 설계 및 집행상의 기술지원을 하기 위하여 대통령령으로 정하는 바에 따라 기획기술지원단을 설치하여 운영할 수 있다. <개정 2013.3.23>",
+        "rerank_score": 0.9992613196372986,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "농어촌정비법 71조  기술지원 등 2항"
+      },
+      {
+        "first_stage_score": 15.645636054327825,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 59조  생활환경정비사업 시행계획의 수립#KOBLEX-025580",
+        "provision_text": "② 생활환경정비사업 시행자가 시장ㆍ군수ㆍ구청장인 경우 제1항에 따른 생활환경정비사업 시행계획을 세워 사업을 시행하고, 시장ㆍ군수ㆍ구청장 이외의 생활환경정비사업 시행자는 생활환경정비사업 시행계획을 세워 시장ㆍ군수ㆍ구청장에게 승인을 받아야 한다.",
+        "rerank_score": 0.9974350333213806,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "농어촌정비법 59조  생활환경정비사업 시행계획의 수립 2항"
+      },
+      {
+        "first_stage_score": 13.439025407926922,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 61조  생활환경정비사업 시행계획의 변경#KOBLEX-025597",
+        "provision_text": "제61조(생활환경정비사업 시행계획의 변경) 생활환경정비사업 시행자는 여건의 변경 등으로 인하여 생활환경정비사업 시행계획의 내용을 변경하려면 제59조에 따른 절차를 따라야 한다. 다만, 농림축산식품부령으로 정하는 경미한 사항은 시장ㆍ군수ㆍ구청장에게 보고하고 변경할 수 있다. <개정 2013.3.23>",
+        "rerank_score": 0.9967055916786194,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "농어촌정비법 61조  생활환경정비사업 시행계획의 변경"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공공주택 특별법 시행령 25조  조성된 토지의 전매행위 제한의 특례#KOBLEX-173435": "10. 조성된 토지(단독주택건설용지 및 공동주택건설용지는 제외한다)를 공급받은 자가 공공주택사업자로부터 공급받은 가격 이하로 전매하는 경우",
+      "공공주택 특별법 시행령 25조  조성된 토지의 전매행위 제한의 특례#KOBLEX-173436": "10의2. 단독주택건설용지 또는 공동주택건설용지를 공급받은 자가 공공주택사업자로부터 공급받은 가격 이하로 전매하는 경우로서 다음 각 목의 어느 하나에 해당하는 경우",
+      "공공주택 특별법 시행령 25조  조성된 토지의 전매행위 제한의 특례#KOBLEX-173437": "10의3. 공동주택건설용지를 공급받은 자가 해당 용지에 대한 잔금 납부일(잔금 납부일이 공동주택건설용지 공급계약일부터 2년을 초과하는 경우에는 2년을 말한다) 이후에 「독점규제 및 공정거래에 관한 법률」에 따른 계열회사가 아닌 자에게 공공주택사업자로부터 공급받은 가격 이하로 전매하는 경우(2024년 11월 30일까지 전매하는 경우로 한정한다)",
+      "공공주택 특별법 시행령 25조  조성된 토지의 전매행위 제한의 특례#KOBLEX-173438": "11. 공동주택건설용지를 공급받은 자가 주택건설사업을 목적으로 공동 출자하여 설립한 특수목적법인(「조세특례제한법」 제104조의31제1항에서 정하는 설립요건을 충족하는 법인으로서 공동주택건설용지를 공급받은 자가 50퍼센트를 초과하는 지분을 가지고 있는 경우로 한정한다)에 전매하는 경우",
+      "농어촌정비법 56조  생활환경정비사업 시행자#KOBLEX-025564": "제56조(생활환경정비사업 시행자)",
+      "농어촌정비법 58조  생활환경정비사업 기본계획의 수립#KOBLEX-025574": "제58조(생활환경정비사업 기본계획의 수립)",
+      "농어촌정비법 58조  생활환경정비사업 기본계획의 수립#KOBLEX-025577": "③ 시장ㆍ군수ㆍ구청장은 제1항에 따른 생활환경정비사업 기본계획을 수립하거나 변경한 경우에는 이를 고시하여야 한다.",
+      "농어촌정비법 59조  생활환경정비사업 시행계획의 수립#KOBLEX-025578": "제59조(생활환경정비사업 시행계획의 수립)",
+      "농어촌정비법 59조  생활환경정비사업 시행계획의 수립#KOBLEX-025579": "① 생활환경정비사업 시행자가 생활환경정비사업을 추진하려면 제54조에 따른 생활환경정비계획, 제58조에 따른 생활환경정비사업 기본계획, 제101조에 따른 농어촌마을정비계획에 따라 생활환경정비사업 시행계획을 수립하여야 한다. 다만, 생활환경정비사업 시행계획을 세울 때 「국토의 계획 및 이용에 관한 법률」에 따른 도시ㆍ군관리계획이 수립되어 있는 지역에 대하여는 해당 도시ㆍ군관리계획에 따라 생활환경정비사업 시행계획을 수립할 수 있다. <개정 2011.4.14>",
+      "농어촌정비법 59조  생활환경정비사업 시행계획의 수립#KOBLEX-025580": "② 생활환경정비사업 시행자가 시장ㆍ군수ㆍ구청장인 경우 제1항에 따른 생활환경정비사업 시행계획을 세워 사업을 시행하고, 시장ㆍ군수ㆍ구청장 이외의 생활환경정비사업 시행자는 생활환경정비사업 시행계획을 세워 시장ㆍ군수ㆍ구청장에게 승인을 받아야 한다.",
+      "농어촌정비법 60조  생활환경정비사업 시행계획의 내용#KOBLEX-025584": "제60조(생활환경정비사업 시행계획의 내용) 생활환경정비사업 시행계획에는 다음 각 호의 사항이 포함되어야 한다.",
+      "농어촌정비법 61조  생활환경정비사업 시행계획의 변경#KOBLEX-025597": "제61조(생활환경정비사업 시행계획의 변경) 생활환경정비사업 시행자는 여건의 변경 등으로 인하여 생활환경정비사업 시행계획의 내용을 변경하려면 제59조에 따른 절차를 따라야 한다. 다만, 농림축산식품부령으로 정하는 경미한 사항은 시장ㆍ군수ㆍ구청장에게 보고하고 변경할 수 있다. <개정 2013.3.23>",
+      "농어촌정비법 68조  농어촌 주택 등의 분양 등#KOBLEX-025672": "① 생활환경정비사업 시행자는 생활환경정비사업 시행에 따른 조성 용지(이하 \"조성용지\"라 한다), 농어촌 주택, 그 밖의 시설물을 환지하거나 분양 또는 임대할 수 있다.",
+      "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025677": "② 제1항을 위반하여 조성용지를 전매하는 경우 해당 법률행위는 무효로 하며, 사업시행자는 조성용지의 공급 당시 가액과 「은행법」에 따른 은행의 1년 만기 정기예금 평균이자율을 합산한 금액을 지급하고 그 조성용지를 환매할 수 있다. <개정 2010.5.17>",
+      "농어촌정비법 71조  기술지원 등#KOBLEX-025681": "② 농림축산식품부장관은 제1항에 따라 생활환경정비계획, 생활환경정비사업 기본계획, 농어촌마을정비계획 및 생활환경정비사업 시행계획을 세우는 데에 필요한 설계 및 집행상의 기술지원을 하기 위하여 대통령령으로 정하는 바에 따라 기획기술지원단을 설치하여 운영할 수 있다. <개정 2013.3.23>",
+      "농업협동조합법 106조  사업#KOBLEX-187421": "10. 그 밖에 설립 목적의 달성에 필요한 사업으로서 농림축산식품부장관의 승인을 받은 사업",
+      "농업협동조합법 111조  사업#KOBLEX-187440": "9. 그 밖에 설립 목적의 달성에 필요한 사업으로서 농림축산식품부장관의 승인을 받은 사업",
+      "농업협동조합법 112조 6 정관기재사항#KOBLEX-187460": "② 조합공동사업법인이 정관을 변경하려면 농림축산식품부장관의 인가를 받아야 한다. 다만, 농림축산식품부장관이 정하여 고시한 정관례에 따라 정관을 변경하는 경우에는 농림축산식품부장관의 인가를 받지 아니하여도 된다. <개정 2013.3.23>",
+      "농업협동조합법 75조  합병#KOBLEX-187323": "② 합병은 농림축산식품부장관의 인가를 받아야 한다. <개정 2013.3.23>",
+      "도시철도법 시행령 15조  도시철도채권의 사무취급기관 등#KOBLEX-192524": "⑤ 도시철도채권 매입자가 매입확인증을 멸실 또는 도난 등의 사유로 분실한 경우에 그 매입자가 해당 매입확인증을 매입한 목적에 사용하지 아니하였음을 해당 도시철도채권을 발행한 자가 확인한 경우에만 이를 재발급할 수 있다.",
+      "사립학교법 43조  지원#KOBLEX-172357": "② 관할청은 제1항 또는 제35조제5항에 따라 지원을 받은 학교법인 또는 사학지원단체에 대하여 다음 각 호의 권한을 가진다. 1. 지원에 필요한 경우에는 해당 학교법인 또는 사학지원단체로부터 그 업무 또는 회계 상황에 관한 보고를 받을 권한 2. 해당 학교법인 또는 사학지원단체의 예산이 지원 목적에 비추어 적당하지 아니하다고 인정할 때에는 그 예산에 대하여 필요한 변경조치를 권고할 권한",
+      "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 271조  농어촌정비 등에 관한 특례#KOBLEX-037755": "① 도지사는 「농어촌정비법」 제101조제4항에 따른 농림축산식품부장관의 승인을 받지 아니하고 마을정비구역을 지정ㆍ고시할 수 있다.",
+      "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 274조  농업진흥지역 지정 등에 관한 특례#KOBLEX-037769": "② 「농지법」 제28조제2항제1호에 따른 농림축산식품부장관의 권한과 같은 법 제30조제3항에 따른 국토교통부장관과의 협의에 관한 농림축산식품부장관의 권한은 도지사의 권한으로 한다.",
+      "지방자치법 47조#KOBLEX-076352": "제3절 권한",
+      "택지개발촉진법 시행령 13조 3 택지의 전매행위 제한의 특례#KOBLEX-133810": "9. 공공시설용지와 주택건설용지 중 근린생활시설을 건축하기 위한 용지를 공급받은 자가 시행자로부터 공급받은 가격 이하로 해당 용지를 전매하는 경우",
+      "택지개발촉진법 시행령 13조 3 택지의 전매행위 제한의 특례#KOBLEX-133812": "9의3. 공동주택 건설용지를 공급받은 자가 해당 용지에 대한 잔금 납부일(잔금 납부일이 공동주택 건설용지 공급계약일부터 2년을 초과하는 경우에는 2년을 말한다) 이후에 「독점규제 및 공정거래에 관한 법률」에 따른 계열회사가 아닌 자에게 시행자로부터 공급받은 가격 이하로 전매하는 경우(2024년 11월 30일까지 전매하는 경우로 한정한다)",
+      "택지개발촉진법 시행령 13조 3 택지의 전매행위 제한의 특례#KOBLEX-133813": "10. 공동주택 건설용지를 공급받은 자가 주택건설사업을 목적으로 공동 출자하여 설립한 특수목적법인(「조세특례제한법」 제104조의31제1항에서 정하는 설립요건을 충족하는 법인으로서 공동주택 건설용지를 공급받은 자가 50퍼센트를 초과하는 지분을 가지고 있는 경우로 한정한다)에 전매하는 경우",
+      "한국농어촌공사 및 농지관리기금법 24조 3 경영회생 지원을 위한 농지 매입 등#KOBLEX-170107": "② 공사는 제1항에 따라 매입한 농지등을 임대하는 경우 임대기간 중에는 그 농지등을 제3자에게 매도하여서는 아니 된다.",
+      "한국마사회법 23조  정관#KOBLEX-002586": "② 마사회가 정관을 변경하려면 농림축산식품부장관의 인가를 받아야 한다. <개정 2013.3.23>",
+      "한국마사회법 6조 3 시정명령 등#KOBLEX-002491": "③ 마사회는 제2항에 따라 중단된 전자마권 발매를 재개하려면 농림축산식품부장관의 승인을 받아야 한다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025677"
+        ],
+        "rationale": "C001은 조성용지 전매의 효력을 무효로 규정하여 E1의 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [
+          "농어촌정비법 71조  기술지원 등#KOBLEX-025681"
+        ],
+        "rationale": "C028은 농림축산식품부장관의 기술지원 권한을 규정하지만, 생활환경정비사업에 대한 포괄적인 지원 권한(예: 재정지원 등)을 명시하지 않아 완료 기준을 완전히 충족하지 못한다.",
+        "status": "partially_covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025677",
+        "support_spans": [
+          {
+            "end_char": 143,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 71조  기술지원 등#KOBLEX-025681",
+        "support_spans": [
+          {
+            "end_char": 162,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "조성용지 전매의 효력",
+        "issue_id": "I1"
+      },
+      {
+        "description": "생활환경정비사업에서 농림축산식품부장관의 지원 권한",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "생활환경정비사업에서 농림축산식품부장관의 지원 권한을 규정하는 법령 조항을 확인한다.",
+        "critical": true,
+        "description": "생활환경정비사업에서 농림축산식품부장관의 지원 권한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 1,
+    "normalized_question": "갑이 을로부터 매입한 조성용지를 병에게 전매한 경우, 해당 법률행위의 효력은 어떻게 되며, 이 지역의 생활환경정비사업에서 농림축산식품부장관은 어떤 지원을 할 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "조성용지를 매입한 자가 이를 제3자에게 전매하는 행위의 효력",
+        "request_id": "RQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "생활환경정비사업에서 농림축산식품부장관의 지원 권한",
+        "request_id": "RQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "생활환경정비사업에 대한 농림축산식품부장관의 지원 근거 및 지원 범위",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "농어촌정비법상 생활환경정비사업 지원 권한 농림축산식품부장관",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_text": "생활환경정비사업 지원 농림축산식품부장관 권한",
+        "request_id": "GRQ3",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "생활환경정비사업에 대한 농림축산식품부장관의 재정지원 및 보조금 지급 근거",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "농어촌정비법 생활환경정비사업 농림축산식품부장관 지원 조항",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_text": "생활환경정비사업 농림축산식품부장관 지원 근거",
+        "request_id": "GRQ3",
+        "top_k": 100
+      }
+    ],
+    "question": "갑이 을로부터 매입한 조성용지를 병에게 전매한 경우, 해당 법률행위의 효력은 어떻게 되며, 이 지역의 생활환경정비사업에서 농림축산식품부장관은 어떤 지원을 할 수 있는가?",
+    "remaining_request_budget": 1,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "조성용지 전매의 효력을 규정하는 법령 조항을 확인한다.",
+        "critical": true,
+        "description": "조성용지 전매에 대한 효력 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "생활환경정비사업에서 농림축산식품부장관의 지원 권한을 규정하는 법령 조항을 확인한다.",
+        "critical": true,
+        "description": "생활환경정비사업에서 농림축산식품부장관의 지원 권한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "64564652-bd75-4e8c-9cf4-764741a58fc2",
+    "seen_provision_ids": [
+      "농업협동조합법 106조  사업#KOBLEX-187421",
+      "농어촌정비법 58조  생활환경정비사업 기본계획의 수립#KOBLEX-025574",
+      "택지개발촉진법 시행령 13조 3 택지의 전매행위 제한의 특례#KOBLEX-133812",
+      "농어촌정비법 58조  생활환경정비사업 기본계획의 수립#KOBLEX-025577",
+      "한국농어촌공사 및 농지관리기금법 24조 3 경영회생 지원을 위한 농지 매입 등#KOBLEX-170107",
+      "한국마사회법 23조  정관#KOBLEX-002586",
+      "농어촌정비법 61조  생활환경정비사업 시행계획의 변경#KOBLEX-025597",
+      "농어촌정비법 68조  농어촌 주택 등의 분양 등#KOBLEX-025672",
+      "농어촌정비법 56조  생활환경정비사업 시행자#KOBLEX-025564",
+      "농어촌정비법 60조  생활환경정비사업 시행계획의 내용#KOBLEX-025584",
+      "공공주택 특별법 시행령 25조  조성된 토지의 전매행위 제한의 특례#KOBLEX-173438",
+      "택지개발촉진법 시행령 13조 3 택지의 전매행위 제한의 특례#KOBLEX-133813",
+      "공공주택 특별법 시행령 25조  조성된 토지의 전매행위 제한의 특례#KOBLEX-173437",
+      "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 271조  농어촌정비 등에 관한 특례#KOBLEX-037755",
+      "농어촌정비법 59조  생활환경정비사업 시행계획의 수립#KOBLEX-025579",
+      "농업협동조합법 111조  사업#KOBLEX-187440",
+      "택지개발촉진법 시행령 13조 3 택지의 전매행위 제한의 특례#KOBLEX-133810",
+      "도시철도법 시행령 15조  도시철도채권의 사무취급기관 등#KOBLEX-192524",
+      "한국마사회법 6조 3 시정명령 등#KOBLEX-002491",
+      "농어촌정비법 59조  생활환경정비사업 시행계획의 수립#KOBLEX-025580",
+      "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 274조  농업진흥지역 지정 등에 관한 특례#KOBLEX-037769",
+      "지방자치법 47조#KOBLEX-076352",
+      "농업협동조합법 75조  합병#KOBLEX-187323",
+      "공공주택 특별법 시행령 25조  조성된 토지의 전매행위 제한의 특례#KOBLEX-173436",
+      "농어촌정비법 71조  기술지원 등#KOBLEX-025681",
+      "공공주택 특별법 시행령 25조  조성된 토지의 전매행위 제한의 특례#KOBLEX-173435",
+      "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025677",
+      "농어촌정비법 59조  생활환경정비사업 시행계획의 수립#KOBLEX-025578",
+      "사립학교법 43조  지원#KOBLEX-172357",
+      "농업협동조합법 112조 6 정관기재사항#KOBLEX-187460"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

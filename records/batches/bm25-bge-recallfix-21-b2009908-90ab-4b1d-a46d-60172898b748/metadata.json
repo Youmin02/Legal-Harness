@@ -1,0 +1,22 @@
+{
+  "batch_id": "bm25-bge-recallfix-21-b2009908-90ab-4b1d-a46d-60172898b748",
+  "started_at_utc": "2026-08-16T09:54:14.188594+00:00",
+  "manifest": "data/koblex/manifests/bm25_bge_recallfix_21_20260816.json",
+  "manifest_sha256": "af19eeed224cbbda08c509a66c3933facd49ffecd9d77adc574edd9fc8024e3f",
+  "start_ordinal": 1,
+  "entry_count": 21,
+  "configuration": {
+    "condition": "bm25-bge-recallfix-01",
+    "retriever": "bm25",
+    "reranker": "dragonkue--bge-reranker-v2-m3-ko",
+    "model": "legal-harness-qwen",
+    "seed": 0,
+    "num_ctx": 32768,
+    "total_retrieval_rounds": 3,
+    "total_retrieval_requests": 9,
+    "rerank_pool_k": 100,
+    "final_top_k": 10,
+    "conditional_generation": true,
+    "monotonic_coverage": true
+  }
+}

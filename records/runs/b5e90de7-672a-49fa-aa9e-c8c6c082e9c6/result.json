@@ -1,0 +1,645 @@
+{
+  "abstention_reason": null,
+  "answer": "민법 제766조는 손해배상청구권의 소멸시효에 관한 조항으로 규정되어 있습니다[CT1]. 그러나 현재 제공된 조문 텍스트는 조문 제목만 포함하고 있어, 손해배상청구권의 소멸시효 기간과 기산점을 확인할 수 없습니다. 따라서 을이 갑에 대한 손해배상청구권을 행사할 수 있는 시점은, 민법 제766조 본문에서 정하는 소멸시효 기간과 기산점이 확인될 경우에만 판단할 수 있습니다[CT2].",
+  "completed_at_utc": "2026-08-16T09:59:59.153061+00:00",
+  "end_to_end_latency_ms": 344897.792,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "b5e90de7-672a-49fa-aa9e-c8c6c082e9c6",
+  "state": {
+    "accepted_provision_ids": [
+      "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059940"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 8,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 8,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "explanation": "The round budget is exhausted, but every critical item has citable partial support; generate a conditional answer.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "claim_count": 2
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 18.408862087063095,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059940",
+        "provision_text": "제766조(손해배상청구권의 소멸시효)",
+        "rerank_score": 0.9798970818519592,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "민법 766조  손해배상청구권의 소멸시효"
+      },
+      {
+        "first_stage_score": 14.698340441463227,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "특허법 128조  손해배상청구권 등#KOBLEX-155966",
+        "provision_text": "제128조(손해배상청구권 등)",
+        "rerank_score": 0.7879276871681213,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "특허법 128조  손해배상청구권 등"
+      },
+      {
+        "first_stage_score": 14.339371738296828,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 115조  손해배상청구권 등의 조사확정재판#KOBLEX-031807",
+        "provision_text": "제115조(손해배상청구권 등의 조사확정재판)",
+        "rerank_score": 0.2712703347206116,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "채무자 회생 및 파산에 관한 법률 115조  손해배상청구권 등의 조사확정재판"
+      },
+      {
+        "first_stage_score": 13.063230173047767,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "공무원연금법 시행령 96조  민감정보 및 고유식별정보의 처리#KOBLEX-003706",
+        "provision_text": "9. 법 제42조에 따른 제3자에 대한 손해배상청구권 행사",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "공무원연금법 시행령 96조  민감정보 및 고유식별정보의 처리 9호"
+      },
+      {
+        "first_stage_score": 14.339371738296828,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 352조  손해배상청구권 등의 조사확정재판#KOBLEX-032663",
+        "provision_text": "제352조(손해배상청구권 등의 조사확정재판)",
+        "rerank_score": 0.1950761079788208,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "채무자 회생 및 파산에 관한 법률 352조  손해배상청구권 등의 조사확정재판"
+      },
+      {
+        "first_stage_score": 14.339371738296828,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "공무원연금법 42조  제3자에 대한 손해배상청구권#KOBLEX-148927",
+        "provision_text": "제42조(제3자에 대한 손해배상청구권)",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "공무원연금법 42조  제3자에 대한 손해배상청구권"
+      },
+      {
+        "first_stage_score": 10.840434303944196,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "도시개발법 47조  청산금의 소멸시효#KOBLEX-003017",
+        "provision_text": "제47조(청산금의 소멸시효) 청산금을 받을 권리나 징수할 권리를 5년간 행사하지 아니하면 시효로 소멸한다.",
+        "rerank_score": 0.9833162426948547,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "도시개발법 47조  청산금의 소멸시효"
+      },
+      {
+        "first_stage_score": 10.627651561269216,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "지적재조사에 관한 특별법 22조  조정금의 소멸시효#KOBLEX-213382",
+        "provision_text": "제22조(조정금의 소멸시효) 조정금을 받을 권리나 징수할 권리는 5년간 행사하지 아니하면 시효의 완성으로 소멸한다.",
+        "rerank_score": 0.9695156216621399,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "지적재조사에 관한 특별법 22조  조정금의 소멸시효"
+      },
+      {
+        "first_stage_score": 18.408862087063095,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "민법 806조  약혼해제와 손해배상청구권#KOBLEX-060013",
+        "provision_text": "제806조(약혼해제와 손해배상청구권)",
+        "rerank_score": 0.05759222060441971,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "민법 806조  약혼해제와 손해배상청구권"
+      },
+      {
+        "first_stage_score": 13.671585943575543,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 578조 10 수탁자등에 대한 손해배상청구권 등의 조사확정재판#KOBLEX-033271",
+        "provision_text": "제578조의10(수탁자등에 대한 손해배상청구권 등의 조사확정재판)",
+        "rerank_score": 0.02526632323861122,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "채무자 회생 및 파산에 관한 법률 578조 10 수탁자등에 대한 손해배상청구권 등의 조사확정재판"
+      },
+      {
+        "first_stage_score": 10.226199246393472,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "상법 662조  소멸시효#KOBLEX-115968",
+        "provision_text": "제662조(소멸시효) 보험금청구권은 3년간, 보험료 또는 적립금의 반환청구권은 3년간, 보험료청구권은 2년간 행사하지 아니하면 시효의 완성으로 소멸한다.",
+        "rerank_score": 0.9641291499137878,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "상법 662조  소멸시효"
+      },
+      {
+        "first_stage_score": 17.66732904637367,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민법 659조  3년 이상의 경과와 해지통고권#KOBLEX-059704",
+        "provision_text": "제659조(3년 이상의 경과와 해지통고권)",
+        "rerank_score": 0.947944700717926,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "민법 659조  3년 이상의 경과와 해지통고권"
+      },
+      {
+        "first_stage_score": 10.627651561269216,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "징발법 23조  보상청구권의 소멸시효#KOBLEX-073245",
+        "provision_text": "제23조(보상청구권의 소멸시효) 보상청구권은 제22조제1항에 따른 공고기간이 끝난 날부터 5년간 행사하지 아니하면 소멸시효가 완성된다.",
+        "rerank_score": 0.8976213335990906,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "징발법 23조  보상청구권의 소멸시효"
+      },
+      {
+        "first_stage_score": 17.66732904637367,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "민법 146조  취소권의 소멸#KOBLEX-058672",
+        "provision_text": "제146조(취소권의 소멸) 취소권은 추인할 수 있는 날로부터 3년내에 법률행위를 한 날로부터 10년내에 행사하여야 한다.",
+        "rerank_score": 0.8647741079330444,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "민법 146조  취소권의 소멸"
+      },
+      {
+        "first_stage_score": 19.987750674309876,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "민법 155조#KOBLEX-058694",
+        "provision_text": "제6장 기간",
+        "rerank_score": 0.8272693753242493,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "민법 155조"
+      },
+      {
+        "first_stage_score": 17.66732904637367,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "민법 905조  재판상 파양의 원인#KOBLEX-060244",
+        "provision_text": "3. 양부모나 양자의 생사가 3년 이상 분명하지 아니한 경우",
+        "rerank_score": 0.7790886759757996,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "민법 905조  재판상 파양의 원인 3호"
+      },
+      {
+        "first_stage_score": 17.66732904637367,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "민법 840조  재판상 이혼원인#KOBLEX-060119",
+        "provision_text": "5. 배우자의 생사가 3년 이상 분명하지 아니한 때",
+        "rerank_score": 0.7765536904335022,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "민법 840조  재판상 이혼원인 5호"
+      },
+      {
+        "first_stage_score": 15.66732904637367,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 294조  시효의 기산점#KOBLEX-093078",
+        "provision_text": "제294조(시효의 기산점)",
+        "rerank_score": 0.6783658266067505,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "군사법원법 294조  시효의 기산점"
+      },
+      {
+        "first_stage_score": 15.66732904637367,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "가족관계의 등록 등에 관한 법률 37조  신고기간의 기산점#KOBLEX-127439",
+        "provision_text": "제37조(신고기간의 기산점)",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "가족관계의 등록 등에 관한 법률 37조  신고기간의 기산점"
+      },
+      {
+        "first_stage_score": 8.7404574643471,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "계엄법 9조 6 보상청구권의 소멸시효#KOBLEX-054308",
+        "provision_text": "제9조의6(보상청구권의 소멸시효) 보상청구권은 제9조의2제2항에 따른 공고기간 만료일부터 5년간 행사하지 아니하면 시효의 완성으로 소멸한다. 다만, 공고 사실을 알지 못한 경우에는 그 사실을 안 날부터 계산한다.",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "계엄법 9조 6 보상청구권의 소멸시효"
+      },
+      {
+        "first_stage_score": 13.902230374827063,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "고용보험법 107조  소멸시효#KOBLEX-206956",
+        "provision_text": "제107조(소멸시효)",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "고용보험법 107조  소멸시효"
+      },
+      {
+        "first_stage_score": 9.478255617310728,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "공익신고자 보호법 시행령 27조 2 손해배상청구권 대위 행사의 절차#KOBLEX-120566",
+        "provision_text": "제27조의2(손해배상청구권 대위 행사의 절차) 위원회는 공익신고자등과 그 친족 또는 동거인에게 구조금을 지급한 때에는 법 제27조제5항에 따른 손해배상청구권을 대위하여 구상권을 행사할 것인지를 신속히 결정하여야 한다.",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "공익신고자 보호법 시행령 27조 2 손해배상청구권 대위 행사의 절차"
+      },
+      {
+        "first_stage_score": 13.223178800447364,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "관세법 22조  관세징수권 등의 소멸시효#KOBLEX-104462",
+        "provision_text": "제22조(관세징수권 등의 소멸시효)",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "관세법 22조  관세징수권 등의 소멸시효"
+      },
+      {
+        "first_stage_score": 13.902230374827063,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "광업법 80조  소멸시효#KOBLEX-134135",
+        "provision_text": "제80조(소멸시효)",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "광업법 80조  소멸시효"
+      },
+      {
+        "first_stage_score": 13.554204973167105,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "국가재정법 96조  금전채권ㆍ채무의 소멸시효#KOBLEX-178462",
+        "provision_text": "제96조(금전채권ㆍ채무의 소멸시효)",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "국가재정법 96조  금전채권ㆍ채무의 소멸시효"
+      },
+      {
+        "first_stage_score": 13.554204973167105,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "국세기본법 27조  국세징수권의 소멸시효#KOBLEX-147470",
+        "provision_text": "제27조(국세징수권의 소멸시효)",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "국세기본법 27조  국세징수권의 소멸시효"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "가족관계의 등록 등에 관한 법률 37조  신고기간의 기산점#KOBLEX-127439": "제37조(신고기간의 기산점)",
+      "계엄법 9조 6 보상청구권의 소멸시효#KOBLEX-054308": "제9조의6(보상청구권의 소멸시효) 보상청구권은 제9조의2제2항에 따른 공고기간 만료일부터 5년간 행사하지 아니하면 시효의 완성으로 소멸한다. 다만, 공고 사실을 알지 못한 경우에는 그 사실을 안 날부터 계산한다.",
+      "고용보험법 107조  소멸시효#KOBLEX-206956": "제107조(소멸시효)",
+      "공무원연금법 42조  제3자에 대한 손해배상청구권#KOBLEX-148927": "제42조(제3자에 대한 손해배상청구권)",
+      "공무원연금법 시행령 96조  민감정보 및 고유식별정보의 처리#KOBLEX-003706": "9. 법 제42조에 따른 제3자에 대한 손해배상청구권 행사",
+      "공익신고자 보호법 시행령 27조 2 손해배상청구권 대위 행사의 절차#KOBLEX-120566": "제27조의2(손해배상청구권 대위 행사의 절차) 위원회는 공익신고자등과 그 친족 또는 동거인에게 구조금을 지급한 때에는 법 제27조제5항에 따른 손해배상청구권을 대위하여 구상권을 행사할 것인지를 신속히 결정하여야 한다.",
+      "관세법 22조  관세징수권 등의 소멸시효#KOBLEX-104462": "제22조(관세징수권 등의 소멸시효)",
+      "광업법 80조  소멸시효#KOBLEX-134135": "제80조(소멸시효)",
+      "국가재정법 96조  금전채권ㆍ채무의 소멸시효#KOBLEX-178462": "제96조(금전채권ㆍ채무의 소멸시효)",
+      "국세기본법 27조  국세징수권의 소멸시효#KOBLEX-147470": "제27조(국세징수권의 소멸시효)",
+      "군사법원법 294조  시효의 기산점#KOBLEX-093078": "제294조(시효의 기산점)",
+      "도시개발법 47조  청산금의 소멸시효#KOBLEX-003017": "제47조(청산금의 소멸시효) 청산금을 받을 권리나 징수할 권리를 5년간 행사하지 아니하면 시효로 소멸한다.",
+      "민법 146조  취소권의 소멸#KOBLEX-058672": "제146조(취소권의 소멸) 취소권은 추인할 수 있는 날로부터 3년내에 법률행위를 한 날로부터 10년내에 행사하여야 한다.",
+      "민법 155조#KOBLEX-058694": "제6장 기간",
+      "민법 659조  3년 이상의 경과와 해지통고권#KOBLEX-059704": "제659조(3년 이상의 경과와 해지통고권)",
+      "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059940": "제766조(손해배상청구권의 소멸시효)",
+      "민법 806조  약혼해제와 손해배상청구권#KOBLEX-060013": "제806조(약혼해제와 손해배상청구권)",
+      "민법 840조  재판상 이혼원인#KOBLEX-060119": "5. 배우자의 생사가 3년 이상 분명하지 아니한 때",
+      "민법 905조  재판상 파양의 원인#KOBLEX-060244": "3. 양부모나 양자의 생사가 3년 이상 분명하지 아니한 경우",
+      "상법 662조  소멸시효#KOBLEX-115968": "제662조(소멸시효) 보험금청구권은 3년간, 보험료 또는 적립금의 반환청구권은 3년간, 보험료청구권은 2년간 행사하지 아니하면 시효의 완성으로 소멸한다.",
+      "지적재조사에 관한 특별법 22조  조정금의 소멸시효#KOBLEX-213382": "제22조(조정금의 소멸시효) 조정금을 받을 권리나 징수할 권리는 5년간 행사하지 아니하면 시효의 완성으로 소멸한다.",
+      "징발법 23조  보상청구권의 소멸시효#KOBLEX-073245": "제23조(보상청구권의 소멸시효) 보상청구권은 제22조제1항에 따른 공고기간이 끝난 날부터 5년간 행사하지 아니하면 소멸시효가 완성된다.",
+      "채무자 회생 및 파산에 관한 법률 115조  손해배상청구권 등의 조사확정재판#KOBLEX-031807": "제115조(손해배상청구권 등의 조사확정재판)",
+      "채무자 회생 및 파산에 관한 법률 352조  손해배상청구권 등의 조사확정재판#KOBLEX-032663": "제352조(손해배상청구권 등의 조사확정재판)",
+      "채무자 회생 및 파산에 관한 법률 578조 10 수탁자등에 대한 손해배상청구권 등의 조사확정재판#KOBLEX-033271": "제578조의10(수탁자등에 대한 손해배상청구권 등의 조사확정재판)",
+      "특허법 128조  손해배상청구권 등#KOBLEX-155966": "제128조(손해배상청구권 등)"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059940"
+        ],
+        "rationale": "C001은 손해배상청구권 소멸시효를 규정한 조항으로 관련성이 높으나, 제공된 텍스트가 조문 본문이 아닌 조문 제목만 포함하여 시효 기간과 기산점을 확인할 수 없다. 나머지 후보 조문들은 소멸시효 기간 및 기산점과 무관하다.",
+        "status": "partially_covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059940",
+        "support_spans": [
+          {
+            "end_char": 20,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 8,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "손해배상청구권 소멸시효 완성 시점",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "손해배상청구권 소멸시효 기간과 기산점을 명확히 규정한 조문이 확인되어야 한다",
+        "critical": true,
+        "description": "손해배상청구권 소멸시효 기간 및 기산점",
+        "evidence_item_id": "E1",
+        "evidence_type": "limitation",
+        "issue_id": "I1"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "손해배상청구권",
+          "소멸시효",
+          "시효기간",
+          "기산점",
+          "권리행사",
+          "소멸"
+        ],
+        "query_text": "손해배상청구권은 권리를 행사할 수 있는 때로부터 일정 기간 내에 행사하지 아니하면 시효로 인하여 소멸한다",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "손해배상청구권",
+          "소멸시효",
+          "3년",
+          "기산점",
+          "권리행사",
+          "소멸"
+        ],
+        "query_text": "손해배상청구권은 권리를 행사할 수 있는 때로부터 3년 내에 행사하지 아니하면 시효로 인하여 소멸한다",
+        "request_id": "GRQ1",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민법",
+          "766조",
+          "손해배상청구권",
+          "소멸시효",
+          "기간",
+          "기산점"
+        ],
+        "query_text": "민법 766조 손해배상청구권 소멸시효 기간 기산점",
+        "request_id": "GRQ2",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "손해배상청구권",
+          "소멸시효",
+          "3년",
+          "기산점",
+          "권리행사",
+          "소멸"
+        ],
+        "query_text": "손해배상청구권 소멸시효 기간과 기산점을 명확히 규정한 조문이 확인되어야 한다 법률 조문",
+        "request_id": "GRQ1",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민법",
+          "766조",
+          "손해배상청구권",
+          "소멸시효",
+          "기간",
+          "기산점"
+        ],
+        "query_text": "손해배상청구권 소멸시효 기간과 기산점을 명확히 규정한 조문이 확인되어야 한다 적용 요건 조문 2",
+        "request_id": "GRQ2",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "손해배상청구권",
+          "소멸시효",
+          "3년",
+          "기산점"
+        ],
+        "query_text": "손해배상청구권 소멸시효 3년 기산점",
+        "request_id": "GRQ3",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "손해배상청구권 소멸시효 기간과 기산점을 명확히 규정한 조문이 확인되어야 한다",
+        "critical": true,
+        "description": "손해배상청구권 소멸시효 기간 및 기산점",
+        "evidence_item_id": "E1",
+        "evidence_type": "limitation",
+        "issue_id": "I1"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "b5e90de7-672a-49fa-aa9e-c8c6c082e9c6",
+    "seen_provision_ids": [
+      "상법 662조  소멸시효#KOBLEX-115968",
+      "공무원연금법 42조  제3자에 대한 손해배상청구권#KOBLEX-148927",
+      "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059940",
+      "계엄법 9조 6 보상청구권의 소멸시효#KOBLEX-054308",
+      "공무원연금법 시행령 96조  민감정보 및 고유식별정보의 처리#KOBLEX-003706",
+      "채무자 회생 및 파산에 관한 법률 578조 10 수탁자등에 대한 손해배상청구권 등의 조사확정재판#KOBLEX-033271",
+      "민법 840조  재판상 이혼원인#KOBLEX-060119",
+      "민법 155조#KOBLEX-058694",
+      "징발법 23조  보상청구권의 소멸시효#KOBLEX-073245",
+      "민법 659조  3년 이상의 경과와 해지통고권#KOBLEX-059704",
+      "광업법 80조  소멸시효#KOBLEX-134135",
+      "민법 146조  취소권의 소멸#KOBLEX-058672",
+      "공익신고자 보호법 시행령 27조 2 손해배상청구권 대위 행사의 절차#KOBLEX-120566",
+      "민법 806조  약혼해제와 손해배상청구권#KOBLEX-060013",
+      "군사법원법 294조  시효의 기산점#KOBLEX-093078",
+      "민법 905조  재판상 파양의 원인#KOBLEX-060244",
+      "관세법 22조  관세징수권 등의 소멸시효#KOBLEX-104462",
+      "특허법 128조  손해배상청구권 등#KOBLEX-155966",
+      "고용보험법 107조  소멸시효#KOBLEX-206956",
+      "가족관계의 등록 등에 관한 법률 37조  신고기간의 기산점#KOBLEX-127439",
+      "국가재정법 96조  금전채권ㆍ채무의 소멸시효#KOBLEX-178462",
+      "도시개발법 47조  청산금의 소멸시효#KOBLEX-003017",
+      "채무자 회생 및 파산에 관한 법률 352조  손해배상청구권 등의 조사확정재판#KOBLEX-032663",
+      "지적재조사에 관한 특별법 22조  조정금의 소멸시효#KOBLEX-213382",
+      "채무자 회생 및 파산에 관한 법률 115조  손해배상청구권 등의 조사확정재판#KOBLEX-031807",
+      "국세기본법 27조  국세징수권의 소멸시효#KOBLEX-147470"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

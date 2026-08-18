@@ -1,0 +1,572 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-15T13:21:00.322146+00:00",
+  "end_to_end_latency_ms": 125804.141,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "2ac89673-09da-4076-a520-c8678ff36998",
+  "state": {
+    "accepted_provision_ids": [
+      "신탁법 63조  수익채권의 소멸시효#KOBLEX-107307"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 20,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 1,
+          "request_count": 3,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 2,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 15.832397951436475,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "기술보증기금법 38조  채권자의 의무#KOBLEX-118092",
+        "provision_text": "3. 채무자가 기한의 이익을 상실하였을 때",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "기술보증기금법 38조  채권자의 의무 3호"
+      },
+      {
+        "first_stage_score": 15.832397951436475,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "신용보증기금법 31조  채권자의 통지의무#KOBLEX-210969",
+        "provision_text": "3. 채무자가 기한의 이익을 상실하였을 때",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "신용보증기금법 31조  채권자의 통지의무 3호"
+      },
+      {
+        "first_stage_score": 15.832397951436475,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "지역신용보증재단법 26조  채권자의 의무#KOBLEX-056831",
+        "provision_text": "3. 채무자가 기한의 이익을 상실하였을 때",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "지역신용보증재단법 26조  채권자의 의무 3호"
+      },
+      {
+        "first_stage_score": 12.484953024735468,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "재외국민의 교육지원 등에 관한 법률 42조  벌칙#KOBLEX-062412",
+        "provision_text": "1. 제18조의 규정을 위반하여 재산을 매도ㆍ증여ㆍ교환 또는 용도변경하거나 담보로 제공한 때",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "재외국민의 교육지원 등에 관한 법률 42조  벌칙 1호"
+      },
+      {
+        "first_stage_score": 13.199064231621394,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 829조  부부재산의 약정과 그 변경#KOBLEX-060071",
+        "provision_text": "③전항의 약정에 의하여 부부의 일방이 다른 일방의 재산을 관리하는 경우에 부적당한 관리로 인하여 그 재산을 위태하게 한 때에는 다른 일방은 자기가 관리할 것을 법원에 청구할 수 있고 그 재산이 부부의 공유인 때에는 그 분할을 청구할 수 있다.",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "민법 829조  부부재산의 약정과 그 변경 3항"
+      },
+      {
+        "first_stage_score": 12.940657636717543,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 84조  임무종료의 경우의 보고의무 등#KOBLEX-031703",
+        "provision_text": "②관리인의 임무가 종료된 경우 급박한 사정이 있는 때에는 관리인 또는 그 승계인은 후임의 관리인 또는 채무자가 재산을 관리할 수 있게 될 때까지 필요한 처분을 하여야 한다.",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "채무자 회생 및 파산에 관한 법률 84조  임무종료의 경우의 보고의무 등 2항"
+      },
+      {
+        "first_stage_score": 12.351964464742725,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 366조  임무종료시의 긴급처분#KOBLEX-032713",
+        "provision_text": "제366조(임무종료시의 긴급처분) 파산관재인의 임무가 종료한 경우 급박한 사정이 있는 때에는 파산관재인 또는 그 상속인은 후임의 파산관재인 또는 채무자가 재산을 관리할 수 있게 될 때까지 필요한 처분을 하여야 한다.",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "채무자 회생 및 파산에 관한 법률 366조  임무종료시의 긴급처분"
+      },
+      {
+        "first_stage_score": 12.188936083036582,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "상속세 및 증여세법 39조  증자에 따른 이익의 증여#KOBLEX-207298",
+        "provision_text": "② 제1항제1호를 적용할 때 이익을 증여한 자가 대통령령으로 정하는 소액주주(이하 이 항 및 제39조의3에서 \"소액주주\"라 한다)로서 2명 이상인 경우에는 이익을 증여한 소액주주가 1명인 것으로 보고 이익을 계산한다. <개정 2015.12.15>",
+        "rerank_score": 0.9999988079071045,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "상속세 및 증여세법 39조  증자에 따른 이익의 증여 2항"
+      },
+      {
+        "first_stage_score": 12.188936083036582,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "상속세 및 증여세법 39조  증자에 따른 이익의 증여#KOBLEX-218897",
+        "provision_text": "② 제1항제1호를 적용할 때 이익을 증여한 자가 대통령령으로 정하는 소액주주(이하 이 항 및 제39조의3에서 \"소액주주\"라 한다)로서 2명 이상인 경우에는 이익을 증여한 소액주주가 1명인 것으로 보고 이익을 계산한다. <개정 2015.12.15>",
+        "rerank_score": 1.8060026150124031e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "상속세 및 증여세법 39조  증자에 따른 이익의 증여 2항"
+      },
+      {
+        "first_stage_score": 15.538165610399629,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "전자문서 및 전자거래 기본법 12조  개인정보 보호#KOBLEX-165874",
+        "provision_text": "② 전자거래사업자는 전자거래이용자의 개인정보를 수집ㆍ이용 또는 제공하거나 관리할 때 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」 등 관계 규정을 준수하여야 한다.",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "전자문서 및 전자거래 기본법 12조  개인정보 보호 2항"
+      },
+      {
+        "first_stage_score": 12.799244971785106,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "신탁법 63조  수익채권의 소멸시효#KOBLEX-107307",
+        "provision_text": "① 수익채권의 소멸시효는 채권의 예에 따른다.",
+        "rerank_score": 0.9991855025291443,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "신탁법 63조  수익채권의 소멸시효 1항"
+      },
+      {
+        "first_stage_score": 11.963530949387657,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "민법 166조  소멸시효의 기산점#KOBLEX-058728",
+        "provision_text": "②부작위를 목적으로 하는 채권의 소멸시효는 위반행위를 한 때로부터 진행한다.",
+        "rerank_score": 0.0006622191867791116,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "민법 166조  소멸시효의 기산점 2항"
+      },
+      {
+        "first_stage_score": 11.708695067187959,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 193조  채권의 발행 등#KOBLEX-037450",
+        "provision_text": "⑤ 채권의 소멸시효는 상환일부터 기산하여 원금은 5년, 이자는 2년으로 완성된다.",
+        "rerank_score": 0.0004700378922279924,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 193조  채권의 발행 등 5항"
+      },
+      {
+        "first_stage_score": 11.464489300739672,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "산업집적활성화 및 공장설립에 관한 법률 45조 27 채권의 발행#KOBLEX-043133",
+        "provision_text": "⑤ 채권의 소멸시효는 상환일부터 기산하여 원금은 5년, 이자는 2년이 지나면 완성한다.",
+        "rerank_score": 0.0004552154568955302,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "산업집적활성화 및 공장설립에 관한 법률 45조 27 채권의 발행 5항"
+      },
+      {
+        "first_stage_score": 11.963530949387657,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "국가철도공단법 19조  철도시설채권의 발행 등#KOBLEX-010383",
+        "provision_text": "⑤ 채권의 소멸시효는 원금은 5년, 이자는 2년이 지나면 완성한다.",
+        "rerank_score": 0.00024313614994753152,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "국가철도공단법 19조  철도시설채권의 발행 등 5항"
+      },
+      {
+        "first_stage_score": 11.963530949387657,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "수산업협동조합법 160조  소멸시효#KOBLEX-024927",
+        "provision_text": "제160조(소멸시효) 수산금융채권의 소멸시효는 원금은 5년, 이자는 2년으로 한다.",
+        "rerank_score": 0.0002330307470401749,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "수산업협동조합법 160조  소멸시효"
+      },
+      {
+        "first_stage_score": 11.963530949387657,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "농업협동조합법 157조  소멸시효#KOBLEX-187691",
+        "provision_text": "제157조(소멸시효) 농업금융채권의 소멸시효는 원금은 5년, 이자는 2년으로 한다.",
+        "rerank_score": 0.00022371156956069171,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "농업협동조합법 157조  소멸시효"
+      },
+      {
+        "first_stage_score": 11.963530949387657,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "민법 167조  소멸시효의 소급효#KOBLEX-058729",
+        "provision_text": "제167조(소멸시효의 소급효) 소멸시효는 그 기산일에 소급하여 효력이 생긴다.",
+        "rerank_score": 0.00012115864228690043,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "민법 167조  소멸시효의 소급효"
+      },
+      {
+        "first_stage_score": 12.799244971785106,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "관세법 23조  시효의 중단 및 정지#KOBLEX-104468",
+        "provision_text": "② 환급청구권의 소멸시효는 환급청구권의 행사로 중단된다.",
+        "rerank_score": 4.85493874293752e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "관세법 23조  시효의 중단 및 정지 2항"
+      },
+      {
+        "first_stage_score": 11.963530949387657,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "민법 168조  소멸시효의 중단사유#KOBLEX-058730",
+        "provision_text": "제168조(소멸시효의 중단사유) 소멸시효는 다음 각호의 사유로 인하여 중단된다.",
+        "rerank_score": 4.049921244586585e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "민법 168조  소멸시효의 중단사유"
+      },
+      {
+        "first_stage_score": 12.147979829577535,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "상속세 및 증여세법 42조 3 재산 취득 후 재산가치 증가에 따른 이익의 증여#KOBLEX-207347",
+        "provision_text": "① 직업, 연령, 소득 및 재산상태로 보아 자력(自力)으로 해당 행위를 할 수 없다고 인정되는 자가 다음 각 호의 사유로 재산을 취득하고 그 재산을 취득한 날부터 5년 이내에 개발사업의 시행, 형질변경, 공유물(共有物) 분할, 사업의 인가ㆍ허가 등 대통령령으로 정하는 사유(이하 이 조에서 \"재산가치증가사유\"라 한다)로 인하여 이익을 얻은 경우에는 그 이익에 상당하는 금액을 그 이익을 얻은 자의 증여재산가액으로 한다. 다만, 그 이익에 상당하는 금액이 대통령령으로 정하는 기준금액 미만인 경우는 제외한다. 1. 특수관계인으로부터 재산을 증여받은 경우 2. 특수관계인으로부터 기업의 경영 등에 관하여 공표되지 아니한 내부 정보를 제공받아 그 정보와 관련된 재산을 유상으로 취득한 경우 3. 특수관계인으로부터 차입한 자금 또는 특수관계인의 재산을 담보로 차입한 자금으로 재산을 취득한 경우",
+        "rerank_score": 0.9999991655349731,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "상속세 및 증여세법 42조 3 재산 취득 후 재산가치 증가에 따른 이익의 증여 1항"
+      },
+      {
+        "first_stage_score": 16.14797144834339,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "상법 625조  회사재산을 위태롭게 하는 죄#KOBLEX-115866",
+        "provision_text": "2. 누구의 명의로 하거나를 불문하고 회사의 계산으로 부정하게 그 주식 또는 지분을 취득하거나 질권의 목적으로 이를 받은 때",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "상법 625조  회사재산을 위태롭게 하는 죄 2호"
+      },
+      {
+        "first_stage_score": 16.75353312321674,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "신탁법 36조  수탁자의 이익향수금지#KOBLEX-107212",
+        "provision_text": "제36조(수탁자의 이익향수금지) 수탁자는 누구의 명의로도 신탁의 이익을 누리지 못한다. 다만, 수탁자가 공동수익자의 1인인 경우에는 그러하지 아니하다.",
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "신탁법 36조  수탁자의 이익향수금지"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "관세법 23조  시효의 중단 및 정지#KOBLEX-104468": "② 환급청구권의 소멸시효는 환급청구권의 행사로 중단된다.",
+      "국가철도공단법 19조  철도시설채권의 발행 등#KOBLEX-010383": "⑤ 채권의 소멸시효는 원금은 5년, 이자는 2년이 지나면 완성한다.",
+      "기술보증기금법 38조  채권자의 의무#KOBLEX-118092": "3. 채무자가 기한의 이익을 상실하였을 때",
+      "농업협동조합법 157조  소멸시효#KOBLEX-187691": "제157조(소멸시효) 농업금융채권의 소멸시효는 원금은 5년, 이자는 2년으로 한다.",
+      "민법 166조  소멸시효의 기산점#KOBLEX-058728": "②부작위를 목적으로 하는 채권의 소멸시효는 위반행위를 한 때로부터 진행한다.",
+      "민법 167조  소멸시효의 소급효#KOBLEX-058729": "제167조(소멸시효의 소급효) 소멸시효는 그 기산일에 소급하여 효력이 생긴다.",
+      "민법 168조  소멸시효의 중단사유#KOBLEX-058730": "제168조(소멸시효의 중단사유) 소멸시효는 다음 각호의 사유로 인하여 중단된다.",
+      "민법 829조  부부재산의 약정과 그 변경#KOBLEX-060071": "③전항의 약정에 의하여 부부의 일방이 다른 일방의 재산을 관리하는 경우에 부적당한 관리로 인하여 그 재산을 위태하게 한 때에는 다른 일방은 자기가 관리할 것을 법원에 청구할 수 있고 그 재산이 부부의 공유인 때에는 그 분할을 청구할 수 있다.",
+      "산업집적활성화 및 공장설립에 관한 법률 45조 27 채권의 발행#KOBLEX-043133": "⑤ 채권의 소멸시효는 상환일부터 기산하여 원금은 5년, 이자는 2년이 지나면 완성한다.",
+      "상법 625조  회사재산을 위태롭게 하는 죄#KOBLEX-115866": "2. 누구의 명의로 하거나를 불문하고 회사의 계산으로 부정하게 그 주식 또는 지분을 취득하거나 질권의 목적으로 이를 받은 때",
+      "상속세 및 증여세법 39조  증자에 따른 이익의 증여#KOBLEX-207298": "② 제1항제1호를 적용할 때 이익을 증여한 자가 대통령령으로 정하는 소액주주(이하 이 항 및 제39조의3에서 \"소액주주\"라 한다)로서 2명 이상인 경우에는 이익을 증여한 소액주주가 1명인 것으로 보고 이익을 계산한다. <개정 2015.12.15>",
+      "상속세 및 증여세법 39조  증자에 따른 이익의 증여#KOBLEX-218897": "② 제1항제1호를 적용할 때 이익을 증여한 자가 대통령령으로 정하는 소액주주(이하 이 항 및 제39조의3에서 \"소액주주\"라 한다)로서 2명 이상인 경우에는 이익을 증여한 소액주주가 1명인 것으로 보고 이익을 계산한다. <개정 2015.12.15>",
+      "상속세 및 증여세법 42조 3 재산 취득 후 재산가치 증가에 따른 이익의 증여#KOBLEX-207347": "① 직업, 연령, 소득 및 재산상태로 보아 자력(自力)으로 해당 행위를 할 수 없다고 인정되는 자가 다음 각 호의 사유로 재산을 취득하고 그 재산을 취득한 날부터 5년 이내에 개발사업의 시행, 형질변경, 공유물(共有物) 분할, 사업의 인가ㆍ허가 등 대통령령으로 정하는 사유(이하 이 조에서 \"재산가치증가사유\"라 한다)로 인하여 이익을 얻은 경우에는 그 이익에 상당하는 금액을 그 이익을 얻은 자의 증여재산가액으로 한다. 다만, 그 이익에 상당하는 금액이 대통령령으로 정하는 기준금액 미만인 경우는 제외한다. 1. 특수관계인으로부터 재산을 증여받은 경우 2. 특수관계인으로부터 기업의 경영 등에 관하여 공표되지 아니한 내부 정보를 제공받아 그 정보와 관련된 재산을 유상으로 취득한 경우 3. 특수관계인으로부터 차입한 자금 또는 특수관계인의 재산을 담보로 차입한 자금으로 재산을 취득한 경우",
+      "수산업협동조합법 160조  소멸시효#KOBLEX-024927": "제160조(소멸시효) 수산금융채권의 소멸시효는 원금은 5년, 이자는 2년으로 한다.",
+      "신용보증기금법 31조  채권자의 통지의무#KOBLEX-210969": "3. 채무자가 기한의 이익을 상실하였을 때",
+      "신탁법 36조  수탁자의 이익향수금지#KOBLEX-107212": "제36조(수탁자의 이익향수금지) 수탁자는 누구의 명의로도 신탁의 이익을 누리지 못한다. 다만, 수탁자가 공동수익자의 1인인 경우에는 그러하지 아니하다.",
+      "신탁법 63조  수익채권의 소멸시효#KOBLEX-107307": "① 수익채권의 소멸시효는 채권의 예에 따른다.",
+      "재외국민의 교육지원 등에 관한 법률 42조  벌칙#KOBLEX-062412": "1. 제18조의 규정을 위반하여 재산을 매도ㆍ증여ㆍ교환 또는 용도변경하거나 담보로 제공한 때",
+      "전자문서 및 전자거래 기본법 12조  개인정보 보호#KOBLEX-165874": "② 전자거래사업자는 전자거래이용자의 개인정보를 수집ㆍ이용 또는 제공하거나 관리할 때 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」 등 관계 규정을 준수하여야 한다.",
+      "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 193조  채권의 발행 등#KOBLEX-037450": "⑤ 채권의 소멸시효는 상환일부터 기산하여 원금은 5년, 이자는 2년으로 완성된다.",
+      "지역신용보증재단법 26조  채권자의 의무#KOBLEX-056831": "3. 채무자가 기한의 이익을 상실하였을 때",
+      "채무자 회생 및 파산에 관한 법률 366조  임무종료시의 긴급처분#KOBLEX-032713": "제366조(임무종료시의 긴급처분) 파산관재인의 임무가 종료한 경우 급박한 사정이 있는 때에는 파산관재인 또는 그 상속인은 후임의 파산관재인 또는 채무자가 재산을 관리할 수 있게 될 때까지 필요한 처분을 하여야 한다.",
+      "채무자 회생 및 파산에 관한 법률 84조  임무종료의 경우의 보고의무 등#KOBLEX-031703": "②관리인의 임무가 종료된 경우 급박한 사정이 있는 때에는 관리인 또는 그 승계인은 후임의 관리인 또는 채무자가 재산을 관리할 수 있게 될 때까지 필요한 처분을 하여야 한다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [],
+        "rationale": "후보 조항 중 을이 갑의 재산을 관리할 때 누구의 이익을 우선시해야 하는지를 명시하는 규정은 없다. 민법 829조 3항(C005)은 부적당한 관리 시 다른 일방이 관리권 회수 또는 분할을 청구할 수 있는 구제절차를 규정할 뿐, 관리 시 우선시해야 할 이익 주체에 대한 기준을 제시하지 않는다.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [
+          "신탁법 63조  수익채권의 소멸시효#KOBLEX-107307"
+        ],
+        "rationale": "신탁법 63조 1항(C011)은 수익채권의 소멸시효가 채권의 예에 따른다고 명시하여, 갑의 수익채권 소멸시효 적용 기준을 직접 규정한다.",
+        "status": "covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "신탁법 63조  수익채권의 소멸시효#KOBLEX-107307",
+        "support_spans": [
+          {
+            "end_char": 25,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 2,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "을은 갑의 재산을 관리할 때 누구의 이익을 우선시해야 하는가",
+        "issue_id": "I1"
+      },
+      {
+        "description": "갑의 수익채권 소멸시효는 어떻게 적용되는가",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "을이 갑의 재산을 관리할 때 누구의 이익을 우선시해야 하는지 명시하는 조항을 확인함",
+        "critical": true,
+        "description": "을이 갑의 재산을 관리할 때 우선시해야 할 이익 주체에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "을은 갑의 재산을 관리할 때 누구의 이익을 우선시해야 하며, 갑의 수익채권 소멸시효는 어떻게 적용됩니까?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "을은 갑의 재산을 관리할 때 갑의 이익을 우선시해야 한다",
+        "request_id": "RQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "갑의 수익채권 소멸시효는 어떻게 적용되는가",
+        "request_id": "RQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "을은 갑의 재산을 관리할 때 갑의 이익을 우선하여 관리하여야 한다",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_text": "재산관리 이익우선 관리자 의무",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "민법 또는 신탁법에서 을이 갑의 재산을 관리할 때 누구의 이익을 우선시해야 하는지",
+        "request_id": "GRQ3",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "을이 갑의 재산을 관리할 때 누구의 이익을 우선시해야 하는지 명시하는 조항을 확인함 법률 조문",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_text": "을이 갑의 재산을 관리할 때 누구의 이익을 우선시해야 하는지 명시하는 조항을 확인함 적용 요건 조문 2",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "을이 갑의 재산을 관리할 때 누구의 이익을 우선시해야 하는지 명시하는 조항을 확인함 적용 요건 조문 3",
+        "request_id": "GRQ3",
+        "top_k": 100
+      }
+    ],
+    "question": "을은 갑의 재산을 관리할 때 누구의 이익을 우선시해야 하며, 갑의 수익채권 소멸시효는 어떻게 적용됩니까?",
+    "remaining_request_budget": 1,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "을이 갑의 재산을 관리할 때 누구의 이익을 우선시해야 하는지 명시하는 조항을 확인함",
+        "critical": true,
+        "description": "을이 갑의 재산을 관리할 때 우선시해야 할 이익 주체에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "갑의 수익채권 소멸시효 적용 기준을 명시하는 조항을 확인함",
+        "critical": true,
+        "description": "갑의 수익채권 소멸시효 적용 기준에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "2ac89673-09da-4076-a520-c8678ff36998",
+    "seen_provision_ids": [
+      "신탁법 36조  수탁자의 이익향수금지#KOBLEX-107212",
+      "국가철도공단법 19조  철도시설채권의 발행 등#KOBLEX-010383",
+      "민법 829조  부부재산의 약정과 그 변경#KOBLEX-060071",
+      "농업협동조합법 157조  소멸시효#KOBLEX-187691",
+      "민법 166조  소멸시효의 기산점#KOBLEX-058728",
+      "산업집적활성화 및 공장설립에 관한 법률 45조 27 채권의 발행#KOBLEX-043133",
+      "재외국민의 교육지원 등에 관한 법률 42조  벌칙#KOBLEX-062412",
+      "상속세 및 증여세법 39조  증자에 따른 이익의 증여#KOBLEX-207298",
+      "채무자 회생 및 파산에 관한 법률 84조  임무종료의 경우의 보고의무 등#KOBLEX-031703",
+      "상속세 및 증여세법 42조 3 재산 취득 후 재산가치 증가에 따른 이익의 증여#KOBLEX-207347",
+      "지역신용보증재단법 26조  채권자의 의무#KOBLEX-056831",
+      "채무자 회생 및 파산에 관한 법률 366조  임무종료시의 긴급처분#KOBLEX-032713",
+      "상속세 및 증여세법 39조  증자에 따른 이익의 증여#KOBLEX-218897",
+      "관세법 23조  시효의 중단 및 정지#KOBLEX-104468",
+      "수산업협동조합법 160조  소멸시효#KOBLEX-024927",
+      "기술보증기금법 38조  채권자의 의무#KOBLEX-118092",
+      "민법 167조  소멸시효의 소급효#KOBLEX-058729",
+      "상법 625조  회사재산을 위태롭게 하는 죄#KOBLEX-115866",
+      "신탁법 63조  수익채권의 소멸시효#KOBLEX-107307",
+      "민법 168조  소멸시효의 중단사유#KOBLEX-058730",
+      "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 193조  채권의 발행 등#KOBLEX-037450",
+      "신용보증기금법 31조  채권자의 통지의무#KOBLEX-210969",
+      "전자문서 및 전자거래 기본법 12조  개인정보 보호#KOBLEX-165874"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

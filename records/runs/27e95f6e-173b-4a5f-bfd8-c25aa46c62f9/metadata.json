@@ -1,0 +1,70 @@
+{
+  "configuration": {
+    "condition": "M",
+    "model": "legal-harness-qwen",
+    "num_ctx": 32768,
+    "ollama_endpoint": "http://127.0.0.1:11434/api/generate",
+    "retriever": "bm25",
+    "seed": 0,
+    "total_retrieval_requests": 9,
+    "total_retrieval_rounds": 3
+  },
+  "git_commit": "01116ead8c9cf269811d68f0fe5c147e51907d79",
+  "index_metadata": {
+    "bm25": {
+      "database": "data/koblex/indexes/bm25/statute_fts5.sqlite3",
+      "type": "SQLite FTS5"
+    },
+    "documents": 233544,
+    "identity": {
+      "provision_id": "{KoBLEX index}#KOBLEX-{one-based source row number}",
+      "source_index": "original KoBLEX index value retained in normalized corpus"
+    },
+    "kure": {
+      "dimensions": 1024,
+      "model": "nlpai-lab/KURE-v1",
+      "provision_ids": "data/koblex/indexes/kure-v1/provision_ids.txt",
+      "similarity": "exact cosine similarity; float32 memory-mapped matrix",
+      "vector_file": "data/koblex/indexes/kure-v1/vectors.f32.npy"
+    },
+    "source": "JihyungL/KoBLEX-statute",
+    "source_file": "data/koblex/statute/corpus-00000-of-00001.parquet",
+    "source_sha256": "6323f7d024ec504f4b2346cd3ab67aa709aac49a5340c9f3d8372ad6bd5f9b8b"
+  },
+  "question": "을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+  "question_id": "qa_19_1hop_28",
+  "record_schema_version": "1.0",
+  "run_id": "27e95f6e-173b-4a5f-bfd8-c25aa46c62f9",
+  "runtime": {
+    "packages": {
+      "pyarrow": "18.1.0",
+      "sentence-transformers": "5.1.2",
+      "torch": "2.7.1+cu128",
+      "transformers": "4.57.6"
+    },
+    "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.35",
+    "python": "3.9.25 (main, Nov  7 2025, 18:07:57) \n[GCC 11.4.0]"
+  },
+  "skill_sha256": {
+    "grounded_legal_answer_generation/SKILL.md": "6213f820227e1b6eade58292e1ddd93d81f9ead81e52f066c1c698663a46ec62",
+    "grounded_legal_answer_generation/references/contract.md": "2070ee60d04e5f0350ccd89190ecd8f9a7a548299bf682434d6f3c2c2e53e2c4",
+    "grounded_legal_answer_generation/references/input.schema.json": "031eea346a105571f0da9786807dccc7262e5b8c2996c3d246cacf37c539e511",
+    "grounded_legal_answer_generation/references/output.schema.json": "5355d7bc575fbfc8f6cfa8610d7c2730c295b93382c9ff2a56ca86a3a480ed8b",
+    "grounded_legal_answer_generation/scripts/__pycache__/validate_output.cpython-39.pyc": "ae0ac941a296f45336bc1ae0ca4f69c413c2b412042f2fb5c57074931695438f",
+    "grounded_legal_answer_generation/scripts/validate_output.py": "e2cc802726869f7c24d2468e5cd37bf8f6e6cd688b593d356d86cf0c11a30f3f",
+    "legal_issue_and_query_planning/SKILL.md": "68a8cbf537fff87b49ac7b67941bca71043e9174f0207651d3978be7baaf38ab",
+    "legal_issue_and_query_planning/references/contract.md": "79a5f6695deaebebcf09b197bd9744eac504b715c01490e3ff93c693e7ca86f6",
+    "legal_issue_and_query_planning/references/input.schema.json": "c617df2974228906e34838ef5f42058e2e6f909d5358fc3a05448cb36774172b",
+    "legal_issue_and_query_planning/references/output.schema.json": "c2aef4f05b14fe584f48a2f13e3de15085b1774ca289f258751e156f636444d1",
+    "legal_issue_and_query_planning/scripts/__pycache__/validate_output.cpython-39.pyc": "414992f1e0970274854dd58251e2f0736d615657be9e124197d7a6ef5c01fc83",
+    "legal_issue_and_query_planning/scripts/validate_output.py": "53be62712d579692b0660331a68f3405de3c668c5ca84ae2f80725fa96a8dbd1",
+    "provision_coverage_assessment/SKILL.md": "82b9264e1963710e90fee143890be3bbd8f60f0c7d26c367ae2f2ab215adb33b",
+    "provision_coverage_assessment/references/contract.md": "0c64ec74008376f898159049f5cff46e0d97f4593c17d7a877cab1392538926b",
+    "provision_coverage_assessment/references/input.schema.json": "07e0d6cd3f31bc858ec9fcea320e3f03129549a02e7390588d18fa8831ea56b8",
+    "provision_coverage_assessment/references/output.schema.json": "585827da721813f2d2bb550d4bf53233e98d4e2aa38b35ca8c8ddb9ae3048e14",
+    "provision_coverage_assessment/scripts/__pycache__/validate_output.cpython-39.pyc": "34350559b6b899d2d15ba0198a3695602dd88795bbe6a9f7a9e9a45a16c38363",
+    "provision_coverage_assessment/scripts/validate_output.py": "4e041f82da1b8d5d17904be9df4c06c810b3f6934cfaaccf11896d48ec49aab4",
+    "skill-pack-manifest.json": "204d144927400952d4d9146313434e5f5ab62dd49bd5c43e63c1ca0aa5d01a95"
+  },
+  "started_at_utc": "2026-08-15T06:08:04.417762+00:00"
+}

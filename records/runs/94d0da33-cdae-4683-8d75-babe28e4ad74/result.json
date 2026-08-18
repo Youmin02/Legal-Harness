@@ -1,0 +1,796 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-15T13:30:11.150034+00:00",
+  "end_to_end_latency_ms": 150746.749,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "94d0da33-cdae-4683-8d75-babe28e4ad74",
+  "state": {
+    "accepted_provision_ids": [
+      "민법 741조  부당이득의 내용#KOBLEX-059887"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 18,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 11,
+          "request_count": 4,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 10,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 15.052567578543934,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 741조  부당이득의 내용#KOBLEX-059887",
+        "provision_text": "제741조(부당이득의 내용) 법률상 원인없이 타인의 재산 또는 노무로 인하여 이익을 얻고 이로 인하여 타인에게 손해를 가한 자는 그 이익을 반환하여야 한다.",
+        "rerank_score": 0.9992327690124512,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "민법 741조  부당이득의 내용"
+      },
+      {
+        "first_stage_score": 18.162089579596728,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "상속세 및 증여세법 37조  부동산 무상사용에 따른 이익의 증여#KOBLEX-207289",
+        "provision_text": "② 타인의 부동산을 무상으로 담보로 이용하여 금전 등을 차입함에 따라 이익을 얻은 경우에는 그 부동산 담보 이용을 개시한 날을 증여일로 하여 그 이익에 상당하는 금액을 부동산을 담보로 이용한 자의 증여재산가액으로 한다. 다만, 그 이익에 상당하는 금액이 대통령령으로 정하는 기준금액 미만인 경우는 제외한다. <신설 2015.12.15>",
+        "rerank_score": 0.8170299530029297,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "상속세 및 증여세법 37조  부동산 무상사용에 따른 이익의 증여 2항"
+      },
+      {
+        "first_stage_score": 18.162089579596728,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "상속세 및 증여세법 37조  부동산 무상사용에 따른 이익의 증여#KOBLEX-218888",
+        "provision_text": "② 타인의 부동산을 무상으로 담보로 이용하여 금전 등을 차입함에 따라 이익을 얻은 경우에는 그 부동산 담보 이용을 개시한 날을 증여일로 하여 그 이익에 상당하는 금액을 부동산을 담보로 이용한 자의 증여재산가액으로 한다. 다만, 그 이익에 상당하는 금액이 대통령령으로 정하는 기준금액 미만인 경우는 제외한다. <신설 2015.12.15>",
+        "rerank_score": 0.8170299530029297,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "상속세 및 증여세법 37조  부동산 무상사용에 따른 이익의 증여 2항"
+      },
+      {
+        "first_stage_score": 14.75399056277318,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "신탁법 43조  수탁자의 원상회복의무 등#KOBLEX-107237",
+        "provision_text": "③ 수탁자가 제33조부터 제37조까지의 규정에서 정한 의무를 위반한 경우에는 신탁재산에 손해가 생기지 아니하였더라도 수탁자는 그로 인하여 수탁자나 제3자가 얻은 이득 전부를 신탁재산에 반환하여야 한다.",
+        "rerank_score": 0.004863187670707703,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "신탁법 43조  수탁자의 원상회복의무 등 3항"
+      },
+      {
+        "first_stage_score": 14.285208260790503,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "민법 743조  기한전의 변제#KOBLEX-059889",
+        "provision_text": "제743조(기한전의 변제) 변제기에 있지 아니한 채무를 변제한 때에는 그 반환을 청구하지 못한다. 그러나 채무자가 착오로 인하여 변제한 때에는 채권자는 이로 인하여 얻은 이익을 반환하여야 한다.",
+        "rerank_score": 0.001270105130970478,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "민법 743조  기한전의 변제"
+      },
+      {
+        "first_stage_score": 17.310219312915287,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "민법 1115조  유류분의 보전#KOBLEX-060824",
+        "provision_text": "②제1항의 경우에 증여 및 유증을 받은 자가 수인인 때에는 각자가 얻은 유증가액의 비례로 반환하여야 한다.",
+        "rerank_score": 0.000481237395433709,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "민법 1115조  유류분의 보전 2항"
+      },
+      {
+        "first_stage_score": 18.727060399432848,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "부정경쟁방지 및 영업비밀보호에 관한 법률 9조 8 영업비밀 훼손 등의 금지#KOBLEX-033841",
+        "provision_text": "제9조의8(영업비밀 훼손 등의 금지) 누구든지 정당한 권한 없이 또는 허용된 권한을 넘어 타인의 영업비밀을 훼손ㆍ멸실ㆍ변경하여서는 아니 된다.",
+        "rerank_score": 0.5532016158103943,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ3",
+        "statute_name": "부정경쟁방지 및 영업비밀보호에 관한 법률 9조 8 영업비밀 훼손 등의 금지"
+      },
+      {
+        "first_stage_score": 18.727060399432848,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "부정경쟁방지 및 영업비밀보호에 관한 법률 9조 8 영업비밀 훼손 등의 금지#KOBLEX-171293",
+        "provision_text": "제9조의8(영업비밀 훼손 등의 금지) 누구든지 정당한 권한 없이 또는 허용된 권한을 넘어 타인의 영업비밀을 훼손ㆍ멸실ㆍ변경하여서는 아니 된다.",
+        "rerank_score": 0.0033763875253498554,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "부정경쟁방지 및 영업비밀보호에 관한 법률 9조 8 영업비밀 훼손 등의 금지"
+      },
+      {
+        "first_stage_score": 15.261822443907779,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "농지법 시행령 43조  복구비용예치금 등의 반환#KOBLEX-199646",
+        "provision_text": "③시장ㆍ군수등은 제2항에 따른 반환청구가 있으면 지체 없이 이를 청구인에게 반환하여야 한다.",
+        "rerank_score": 1.3646420484292321e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "농지법 시행령 43조  복구비용예치금 등의 반환 3항"
+      },
+      {
+        "first_stage_score": 14.650689792613852,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "의료급여법 11조 3 급여 대상 여부의 확인 등#KOBLEX-028997",
+        "provision_text": "③ 제2항에 따라 통보받은 의료급여기관은 과다 징수한 금액을 지체 없이 수급권자에게 반환하여야 한다.",
+        "rerank_score": 6.459149062720826e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "의료급여법 11조 3 급여 대상 여부의 확인 등 3항"
+      },
+      {
+        "first_stage_score": 13.189825398810138,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "지적재조사에 관한 특별법 43조  벌칙#KOBLEX-213476",
+        "provision_text": "② 제41조를 위반하여 지적재조사사업 중에 알게 된 타인의 비밀을 누설하거나 사용한 자는 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+        "rerank_score": 0.00018200960766989738,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "지적재조사에 관한 특별법 43조  벌칙 2항"
+      },
+      {
+        "first_stage_score": 13.017250932600437,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "민법 303조  전세권의 내용#KOBLEX-059014",
+        "provision_text": "①전세권자는 전세금을 지급하고 타인의 부동산을 점유하여 그 부동산의 용도에 좇아 사용ㆍ수익하며, 그 부동산 전부에 대하여 후순위권리자 기타 채권자보다 전세금의 우선변제를 받을 권리가 있다. <개정 1984.4.10>",
+        "rerank_score": 4.1312185203423724e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "민법 303조  전세권의 내용 1항"
+      },
+      {
+        "first_stage_score": 13.92332667804767,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "범죄피해자 보호법 48조  벌칙#KOBLEX-012096",
+        "provision_text": "1. 제39조 또는 제46조를 위반하여 타인의 비밀을 누설하거나 범죄피해자 보호ㆍ지원 또는 형사조정 업무 외의 목적에 사용한 자",
+        "rerank_score": 0.001321825198829174,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ4",
+        "statute_name": "범죄피해자 보호법 48조  벌칙 1호"
+      },
+      {
+        "first_stage_score": 13.146097109275283,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "국민연금법 시행령 74조  기금의 운용사업 등#KOBLEX-210301",
+        "provision_text": "② 법 제102조제2항제5호에 따른 사업을 실시하기 위하여 기금을 대여하는 경우 그 이자율은 운용위원회가 정한다.",
+        "rerank_score": 3.660702304841834e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "국민연금법 시행령 74조  기금의 운용사업 등 2항"
+      },
+      {
+        "first_stage_score": 17.64615257992375,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "지방세법 시행령 34조  중과세 대상 재산의 신고 및 납부#KOBLEX-077445",
+        "provision_text": "1. 법 제13조제1항에 따른 본점 또는 주사무소의 사업용 부동산을 취득한 경우: 사무소로 최초로 사용한 날",
+        "rerank_score": 0.0004899551859125495,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ4",
+        "statute_name": "지방세법 시행령 34조  중과세 대상 재산의 신고 및 납부 1호"
+      },
+      {
+        "first_stage_score": 12.352547455862794,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "주택도시기금법 시행령 17조 2 유한책임대출의 운용#KOBLEX-054190",
+        "provision_text": "3. 대출한도 및 이자율은 주택도시기금 운용계획으로 정할 것",
+        "rerank_score": 2.6071254524140386e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "주택도시기금법 시행령 17조 2 유한책임대출의 운용 3호"
+      },
+      {
+        "first_stage_score": 12.758970938602664,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "지방세특례제한법 22조  사회복지법인등에 대한 감면#KOBLEX-109847",
+        "provision_text": "② 제1항에 따라 취득세를 감면받은 법인 또는 단체가 다음 각 호의 어느 하나에 해당하는 경우 그 해당 부분에 대해서는 감면된 취득세를 추징한다. <신설 2023.3.14> 1. 부동산을 취득한 날부터 5년 이내에 수익사업에 사용하는 경우 2. 정당한 사유 없이 부동산의 취득일부터 3년이 경과할 때까지 해당 용도로 직접 사용하지 아니하는 경우 3. 해당 용도로 직접 사용한 기간이 2년 미만인 상태에서 부동산을 매각ㆍ증여하거나 다른 용도로 사용하는 경우",
+        "rerank_score": 2.4127546112140408e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "지방세특례제한법 22조  사회복지법인등에 대한 감면 2항"
+      },
+      {
+        "first_stage_score": 13.609349436117379,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "조세특례제한법 시행령 63조  영농조합법인 등에 대한 법인세의 면제 등#KOBLEX-069999",
+        "provision_text": "⑬ 법 제66조제9항에 따른 양도소득세는 해당 부동산을 현물출자하기 전에 직접 사용하였던 기간과 현물출자 후 주식 또는 출자지분의 처분일까지의 기간을 합한 기간이 8년 미만인 경우에 납부한다. 이 경우 상속받은 부동산의 사용기간을 계산할 때 피상속인이 사용한 기간은 상속인이 사용한 기간으로 본다. <신설 2014.2.21>",
+        "rerank_score": 1.5063500541145913e-05,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ4",
+        "statute_name": "조세특례제한법 시행령 63조  영농조합법인 등에 대한 법인세의 면제 등 13항"
+      },
+      {
+        "first_stage_score": 33.6105092021409,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "공익신고자 보호법 시행령 21조  보상금의 지급사유#KOBLEX-120529",
+        "provision_text": "3. 손해배상 또는 부당이득 반환 등의 판결",
+        "rerank_score": 0.9987621307373047,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "공익신고자 보호법 시행령 21조  보상금의 지급사유 3호"
+      },
+      {
+        "first_stage_score": 32.86271200773027,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "공익신고자 보호법 시행령 21조  보상금의 지급사유#KOBLEX-120530",
+        "provision_text": "4. 손해배상 또는 부당이득 반환 등에 의한 환수",
+        "rerank_score": 0.9983343482017517,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "공익신고자 보호법 시행령 21조  보상금의 지급사유 4호"
+      },
+      {
+        "first_stage_score": 21.58168638080137,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "공유재산 및 물품 관리법 85조  은닉된 공유재산의 자진 반환자에 대한 특례#KOBLEX-205604",
+        "provision_text": "1. 자진 반환",
+        "rerank_score": 0.2334570586681366,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "공유재산 및 물품 관리법 85조  은닉된 공유재산의 자진 반환자에 대한 특례 1호"
+      },
+      {
+        "first_stage_score": 21.58168638080137,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "가맹사업거래의 공정화에 관한 법률 10조  가맹금의 반환#KOBLEX-139570",
+        "provision_text": "제10조(가맹금의 반환)",
+        "rerank_score": 0.8923472762107849,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "가맹사업거래의 공정화에 관한 법률 10조  가맹금의 반환"
+      },
+      {
+        "first_stage_score": 18.976934488045455,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "환경정책기본법 13조  환경기준의 유지#KOBLEX-106266",
+        "provision_text": "3. 새로운 과학기술의 사용으로 인한 환경오염 및 환경훼손의 예방",
+        "rerank_score": 0.988728404045105,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ3",
+        "statute_name": "환경정책기본법 13조  환경기준의 유지 3호"
+      },
+      {
+        "first_stage_score": 21.58168638080137,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "공동주택관리법 시행령 45조  하자보수보증금의 반환#KOBLEX-095524",
+        "provision_text": "제45조(하자보수보증금의 반환)",
+        "rerank_score": 0.8707978129386902,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "공동주택관리법 시행령 45조  하자보수보증금의 반환"
+      },
+      {
+        "first_stage_score": 15.309860886739994,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "제조물 책임법 8조  「민법」의 적용#KOBLEX-011847",
+        "provision_text": "제8조(「민법」의 적용) 제조물의 결함으로 인한 손해배상책임에 관하여 이 법에 규정된 것을 제외하고는 「민법」에 따른다.",
+        "rerank_score": 0.014982574619352818,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "제조물 책임법 8조  「민법」의 적용"
+      },
+      {
+        "first_stage_score": 15.309860886739994,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "제조물 책임법 8조  「민법」의 적용#KOBLEX-222261",
+        "provision_text": "제8조(「민법」의 적용) 제조물의 결함으로 인한 손해배상책임에 관하여 이 법에 규정된 것을 제외하고는 「민법」에 따른다.",
+        "rerank_score": 0.014982574619352818,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "제조물 책임법 8조  「민법」의 적용"
+      },
+      {
+        "first_stage_score": 15.309860886739994,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "건축사법 36조  「민법」의 적용#KOBLEX-120330",
+        "provision_text": "제36조(「민법」의 적용) 건축사협회에 관하여는 이 법에 규정된 사항을 제외하고는 「민법」 중 사단법인에 관한 규정을 적용한다.",
+        "rerank_score": 0.008552785031497478,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "건축사법 36조  「민법」의 적용"
+      },
+      {
+        "first_stage_score": 15.085006798131364,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "자동차손해배상 보장법 4조  「민법」의 적용#KOBLEX-005248",
+        "provision_text": "제4조(「민법」의 적용) 자기를 위하여 자동차를 운행하는 자의 손해배상책임에 대하여는 제3조에 따른 경우 외에는 「민법」에 따른다.",
+        "rerank_score": 0.0005635604029521346,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "자동차손해배상 보장법 4조  「민법」의 적용"
+      },
+      {
+        "first_stage_score": 10.548419074167821,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "국민연금법 시행령 42조  급여의 환수 시 가산할 이자#KOBLEX-210094",
+        "provision_text": "② 제1항의 계산 기간에 적용할 이자율은 다음 각 호의 구분에 따른다. <개정 2012.6.29> 1. 법 제57조제1항제1호의 경우: 3년 만기 정기예금 이자율 2. 법 제57조제1항제2호의 경우: 1년 만기 정기예금 이자율",
+        "rerank_score": 0.00017182841838803142,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "국민연금법 시행령 42조  급여의 환수 시 가산할 이자 2항"
+      },
+      {
+        "first_stage_score": 27.539948486421103,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "법인세법 시행규칙 26조  업무와 관련이 없는 부동산 등의 범위#KOBLEX-150430",
+        "provision_text": "제26조(업무와 관련이 없는 부동산 등의 범위)",
+        "rerank_score": 0.9949678778648376,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "법인세법 시행규칙 26조  업무와 관련이 없는 부동산 등의 범위"
+      },
+      {
+        "first_stage_score": 18.66708866936838,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "행정심판법 55조  증거서류 등의 반환#KOBLEX-183006",
+        "provision_text": "제55조(증거서류 등의 반환) 위원회는 재결을 한 후 증거서류 등의 반환 신청을 받으면 신청인이 제출한 문서ㆍ장부ㆍ물건이나 그 밖의 증거자료의 원본(原本)을 지체 없이 제출자에게 반환하여야 한다.",
+        "rerank_score": 0.34691789746284485,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "행정심판법 55조  증거서류 등의 반환"
+      },
+      {
+        "first_stage_score": 15.78969111683094,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "민법 741조#KOBLEX-059886",
+        "provision_text": "제4장 부당이득",
+        "rerank_score": 0.00019676769443321973,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "민법 741조"
+      },
+      {
+        "first_stage_score": 15.78969111683094,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "형법 349조  부당이득#KOBLEX-193402",
+        "provision_text": "제349조(부당이득)",
+        "rerank_score": 7.512051524827257e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "형법 349조  부당이득"
+      },
+      {
+        "first_stage_score": 14.66040469071774,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "국민건강보험법 시행령 46조 6 부당이득 징수금의 압류 등#KOBLEX-055640",
+        "provision_text": "제46조의6(부당이득 징수금의 압류 등)",
+        "rerank_score": 1.9555736798793077e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "국민건강보험법 시행령 46조 6 부당이득 징수금의 압류 등"
+      },
+      {
+        "first_stage_score": 15.018446911924967,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "국민건강보험법 81조 2 부당이득 징수금의 압류#KOBLEX-208516",
+        "provision_text": "제81조의2(부당이득 징수금의 압류)",
+        "rerank_score": 1.6949992414083681e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "국민건강보험법 81조 2 부당이득 징수금의 압류"
+      },
+      {
+        "first_stage_score": 14.319036527035227,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "국민건강보험법 57조 2 부당이득 징수금 체납자의 인적사항등 공개#KOBLEX-208386",
+        "provision_text": "제57조의2(부당이득 징수금 체납자의 인적사항등 공개)",
+        "rerank_score": 8.432850790995872e-07,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "국민건강보험법 57조 2 부당이득 징수금 체납자의 인적사항등 공개"
+      },
+      {
+        "first_stage_score": 14.331392453715083,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "국토의 계획 및 이용에 관한 법률 84조  둘 이상의 용도지역ㆍ용도지구ㆍ용도구역에 걸치는 대지에 대한 적용 기준#KOBLEX-199213",
+        "provision_text": "제84조(둘 이상의 용도지역ㆍ용도지구ㆍ용도구역에 걸치는 대지에 대한 적용 기준)",
+        "rerank_score": 6.940625212337181e-07,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "국토의 계획 및 이용에 관한 법률 84조  둘 이상의 용도지역ㆍ용도지구ㆍ용도구역에 걸치는 대지에 대한 적용 기준"
+      },
+      {
+        "first_stage_score": 14.6502503146428,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "도시개발법 71조 2 결합개발 등에 관한 적용 기준 완화의 특례#KOBLEX-003131",
+        "provision_text": "제71조의2(결합개발 등에 관한 적용 기준 완화의 특례)",
+        "rerank_score": 5.984567792438611e-07,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "도시개발법 71조 2 결합개발 등에 관한 적용 기준 완화의 특례"
+      },
+      {
+        "first_stage_score": 13.705068564043238,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "국민연금법 시행령 32조  대여사업#KOBLEX-210064",
+        "provision_text": "② 대여금의 이자율, 대여의 기간과 기준 및 절차 등에 필요한 사항은 보건복지부장관이 정하여 고시한다. <개정 2008.2.29, 2010.3.15>",
+        "rerank_score": 5.450196454148681e-07,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "국민연금법 시행령 32조  대여사업 2항"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "가맹사업거래의 공정화에 관한 법률 10조  가맹금의 반환#KOBLEX-139570": "제10조(가맹금의 반환)",
+      "건축사법 36조  「민법」의 적용#KOBLEX-120330": "제36조(「민법」의 적용) 건축사협회에 관하여는 이 법에 규정된 사항을 제외하고는 「민법」 중 사단법인에 관한 규정을 적용한다.",
+      "공동주택관리법 시행령 45조  하자보수보증금의 반환#KOBLEX-095524": "제45조(하자보수보증금의 반환)",
+      "공유재산 및 물품 관리법 85조  은닉된 공유재산의 자진 반환자에 대한 특례#KOBLEX-205604": "1. 자진 반환",
+      "공익신고자 보호법 시행령 21조  보상금의 지급사유#KOBLEX-120529": "3. 손해배상 또는 부당이득 반환 등의 판결",
+      "공익신고자 보호법 시행령 21조  보상금의 지급사유#KOBLEX-120530": "4. 손해배상 또는 부당이득 반환 등에 의한 환수",
+      "국민건강보험법 57조 2 부당이득 징수금 체납자의 인적사항등 공개#KOBLEX-208386": "제57조의2(부당이득 징수금 체납자의 인적사항등 공개)",
+      "국민건강보험법 81조 2 부당이득 징수금의 압류#KOBLEX-208516": "제81조의2(부당이득 징수금의 압류)",
+      "국민건강보험법 시행령 46조 6 부당이득 징수금의 압류 등#KOBLEX-055640": "제46조의6(부당이득 징수금의 압류 등)",
+      "국민연금법 시행령 32조  대여사업#KOBLEX-210064": "② 대여금의 이자율, 대여의 기간과 기준 및 절차 등에 필요한 사항은 보건복지부장관이 정하여 고시한다. <개정 2008.2.29, 2010.3.15>",
+      "국민연금법 시행령 42조  급여의 환수 시 가산할 이자#KOBLEX-210094": "② 제1항의 계산 기간에 적용할 이자율은 다음 각 호의 구분에 따른다. <개정 2012.6.29> 1. 법 제57조제1항제1호의 경우: 3년 만기 정기예금 이자율 2. 법 제57조제1항제2호의 경우: 1년 만기 정기예금 이자율",
+      "국민연금법 시행령 74조  기금의 운용사업 등#KOBLEX-210301": "② 법 제102조제2항제5호에 따른 사업을 실시하기 위하여 기금을 대여하는 경우 그 이자율은 운용위원회가 정한다.",
+      "국토의 계획 및 이용에 관한 법률 84조  둘 이상의 용도지역ㆍ용도지구ㆍ용도구역에 걸치는 대지에 대한 적용 기준#KOBLEX-199213": "제84조(둘 이상의 용도지역ㆍ용도지구ㆍ용도구역에 걸치는 대지에 대한 적용 기준)",
+      "농지법 시행령 43조  복구비용예치금 등의 반환#KOBLEX-199646": "③시장ㆍ군수등은 제2항에 따른 반환청구가 있으면 지체 없이 이를 청구인에게 반환하여야 한다.",
+      "도시개발법 71조 2 결합개발 등에 관한 적용 기준 완화의 특례#KOBLEX-003131": "제71조의2(결합개발 등에 관한 적용 기준 완화의 특례)",
+      "민법 1115조  유류분의 보전#KOBLEX-060824": "②제1항의 경우에 증여 및 유증을 받은 자가 수인인 때에는 각자가 얻은 유증가액의 비례로 반환하여야 한다.",
+      "민법 303조  전세권의 내용#KOBLEX-059014": "①전세권자는 전세금을 지급하고 타인의 부동산을 점유하여 그 부동산의 용도에 좇아 사용ㆍ수익하며, 그 부동산 전부에 대하여 후순위권리자 기타 채권자보다 전세금의 우선변제를 받을 권리가 있다. <개정 1984.4.10>",
+      "민법 741조  부당이득의 내용#KOBLEX-059887": "제741조(부당이득의 내용) 법률상 원인없이 타인의 재산 또는 노무로 인하여 이익을 얻고 이로 인하여 타인에게 손해를 가한 자는 그 이익을 반환하여야 한다.",
+      "민법 741조#KOBLEX-059886": "제4장 부당이득",
+      "민법 743조  기한전의 변제#KOBLEX-059889": "제743조(기한전의 변제) 변제기에 있지 아니한 채무를 변제한 때에는 그 반환을 청구하지 못한다. 그러나 채무자가 착오로 인하여 변제한 때에는 채권자는 이로 인하여 얻은 이익을 반환하여야 한다.",
+      "범죄피해자 보호법 48조  벌칙#KOBLEX-012096": "1. 제39조 또는 제46조를 위반하여 타인의 비밀을 누설하거나 범죄피해자 보호ㆍ지원 또는 형사조정 업무 외의 목적에 사용한 자",
+      "법인세법 시행규칙 26조  업무와 관련이 없는 부동산 등의 범위#KOBLEX-150430": "제26조(업무와 관련이 없는 부동산 등의 범위)",
+      "부정경쟁방지 및 영업비밀보호에 관한 법률 9조 8 영업비밀 훼손 등의 금지#KOBLEX-033841": "제9조의8(영업비밀 훼손 등의 금지) 누구든지 정당한 권한 없이 또는 허용된 권한을 넘어 타인의 영업비밀을 훼손ㆍ멸실ㆍ변경하여서는 아니 된다.",
+      "부정경쟁방지 및 영업비밀보호에 관한 법률 9조 8 영업비밀 훼손 등의 금지#KOBLEX-171293": "제9조의8(영업비밀 훼손 등의 금지) 누구든지 정당한 권한 없이 또는 허용된 권한을 넘어 타인의 영업비밀을 훼손ㆍ멸실ㆍ변경하여서는 아니 된다.",
+      "상속세 및 증여세법 37조  부동산 무상사용에 따른 이익의 증여#KOBLEX-207289": "② 타인의 부동산을 무상으로 담보로 이용하여 금전 등을 차입함에 따라 이익을 얻은 경우에는 그 부동산 담보 이용을 개시한 날을 증여일로 하여 그 이익에 상당하는 금액을 부동산을 담보로 이용한 자의 증여재산가액으로 한다. 다만, 그 이익에 상당하는 금액이 대통령령으로 정하는 기준금액 미만인 경우는 제외한다. <신설 2015.12.15>",
+      "상속세 및 증여세법 37조  부동산 무상사용에 따른 이익의 증여#KOBLEX-218888": "② 타인의 부동산을 무상으로 담보로 이용하여 금전 등을 차입함에 따라 이익을 얻은 경우에는 그 부동산 담보 이용을 개시한 날을 증여일로 하여 그 이익에 상당하는 금액을 부동산을 담보로 이용한 자의 증여재산가액으로 한다. 다만, 그 이익에 상당하는 금액이 대통령령으로 정하는 기준금액 미만인 경우는 제외한다. <신설 2015.12.15>",
+      "신탁법 43조  수탁자의 원상회복의무 등#KOBLEX-107237": "③ 수탁자가 제33조부터 제37조까지의 규정에서 정한 의무를 위반한 경우에는 신탁재산에 손해가 생기지 아니하였더라도 수탁자는 그로 인하여 수탁자나 제3자가 얻은 이득 전부를 신탁재산에 반환하여야 한다.",
+      "의료급여법 11조 3 급여 대상 여부의 확인 등#KOBLEX-028997": "③ 제2항에 따라 통보받은 의료급여기관은 과다 징수한 금액을 지체 없이 수급권자에게 반환하여야 한다.",
+      "자동차손해배상 보장법 4조  「민법」의 적용#KOBLEX-005248": "제4조(「민법」의 적용) 자기를 위하여 자동차를 운행하는 자의 손해배상책임에 대하여는 제3조에 따른 경우 외에는 「민법」에 따른다.",
+      "제조물 책임법 8조  「민법」의 적용#KOBLEX-011847": "제8조(「민법」의 적용) 제조물의 결함으로 인한 손해배상책임에 관하여 이 법에 규정된 것을 제외하고는 「민법」에 따른다.",
+      "제조물 책임법 8조  「민법」의 적용#KOBLEX-222261": "제8조(「민법」의 적용) 제조물의 결함으로 인한 손해배상책임에 관하여 이 법에 규정된 것을 제외하고는 「민법」에 따른다.",
+      "조세특례제한법 시행령 63조  영농조합법인 등에 대한 법인세의 면제 등#KOBLEX-069999": "⑬ 법 제66조제9항에 따른 양도소득세는 해당 부동산을 현물출자하기 전에 직접 사용하였던 기간과 현물출자 후 주식 또는 출자지분의 처분일까지의 기간을 합한 기간이 8년 미만인 경우에 납부한다. 이 경우 상속받은 부동산의 사용기간을 계산할 때 피상속인이 사용한 기간은 상속인이 사용한 기간으로 본다. <신설 2014.2.21>",
+      "주택도시기금법 시행령 17조 2 유한책임대출의 운용#KOBLEX-054190": "3. 대출한도 및 이자율은 주택도시기금 운용계획으로 정할 것",
+      "지방세법 시행령 34조  중과세 대상 재산의 신고 및 납부#KOBLEX-077445": "1. 법 제13조제1항에 따른 본점 또는 주사무소의 사업용 부동산을 취득한 경우: 사무소로 최초로 사용한 날",
+      "지방세특례제한법 22조  사회복지법인등에 대한 감면#KOBLEX-109847": "② 제1항에 따라 취득세를 감면받은 법인 또는 단체가 다음 각 호의 어느 하나에 해당하는 경우 그 해당 부분에 대해서는 감면된 취득세를 추징한다. <신설 2023.3.14> 1. 부동산을 취득한 날부터 5년 이내에 수익사업에 사용하는 경우 2. 정당한 사유 없이 부동산의 취득일부터 3년이 경과할 때까지 해당 용도로 직접 사용하지 아니하는 경우 3. 해당 용도로 직접 사용한 기간이 2년 미만인 상태에서 부동산을 매각ㆍ증여하거나 다른 용도로 사용하는 경우",
+      "지적재조사에 관한 특별법 43조  벌칙#KOBLEX-213476": "② 제41조를 위반하여 지적재조사사업 중에 알게 된 타인의 비밀을 누설하거나 사용한 자는 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+      "행정심판법 55조  증거서류 등의 반환#KOBLEX-183006": "제55조(증거서류 등의 반환) 위원회는 재결을 한 후 증거서류 등의 반환 신청을 받으면 신청인이 제출한 문서ㆍ장부ㆍ물건이나 그 밖의 증거자료의 원본(原本)을 지체 없이 제출자에게 반환하여야 한다.",
+      "형법 349조  부당이득#KOBLEX-193402": "제349조(부당이득)",
+      "환경정책기본법 13조  환경기준의 유지#KOBLEX-106266": "3. 새로운 과학기술의 사용으로 인한 환경오염 및 환경훼손의 예방"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "민법 741조  부당이득의 내용#KOBLEX-059887"
+        ],
+        "rationale": "민법 제741조(C001)는 부당이득 반환의 일반 원칙을 제공하지만, 권한 없는 부동산 사용으로 인한 수익의 구체적 반환 범위나 악의적 사용자에 대한 특별 규정을 포함하지 않아 완료 기준을 완전히 충족하지 못한다.",
+        "status": "partially_covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "rationale": "제시된 조항 중 악의적 사용자의 이자율 적용 기준을 명시하는 규정은 존재하지 않는다.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 741조  부당이득의 내용#KOBLEX-059887",
+        "support_spans": [
+          {
+            "end_char": 87,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "권한 없는 사용으로 인한 수익의 반환 범위",
+        "issue_id": "I1"
+      },
+      {
+        "description": "악의적 사용자의 이자율 적용 기준",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "권한 없는 사용으로 인한 수익 반환 범위를 명확히 규정하는 조항을 확인한다.",
+        "critical": true,
+        "description": "권한 없는 사용으로 인한 수익 반환 범위 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "악의적 사용자의 이자율 적용 기준을 명확히 규정하는 조항을 확인한다.",
+        "critical": true,
+        "description": "악의적 사용자의 이자율 적용 기준 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "갑이 을의 부동산을 권한 없이 악의적으로 사용하여 수익을 얻은 경우, 그 반환 범위와 이자율은 어떻게 정해지는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "권한 없이 타인의 부동산을 사용하여 얻은 수익은 반환하여야 한다.",
+        "request_id": "RQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "악의적으로 타인의 부동산을 사용한 경우 이자율은 어떻게 적용되는가?",
+        "request_id": "RQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "부당이득 반환 범위 권한 없는 부동산 사용 수익 반환 민법 제741조 제742조",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "권한 없이 타인의 부동산을 사용하여 얻은 수익은 그 사용으로 인한 이익의 범위 내에서 반환하여야 한다.",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "악의적 사용자 이자율 적용 기준 민법 제742조 제743조",
+        "request_id": "GRQ3",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "악의적으로 타인의 부동산을 사용한 경우 이자율은 법정이율에 따라 적용된다.",
+        "request_id": "GRQ4",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "권한 없는 부동산 사용 수익 반환 범위 민법 제742조 제743조 부당이득 반환 범위",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_text": "악의적 사용자 이자율 적용 기준 부당이득 반환 이자",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "권한 없이 타인의 부동산을 사용하여 얻은 수익은 그 사용으로 인한 이익의 전액을 반환하여야 한다.",
+        "request_id": "GRQ3",
+        "top_k": 100
+      }
+    ],
+    "question": "갑이 을의 부동산을 권한 없이 악의적으로 사용하여 수익을 얻은 경우, 그 반환 범위와 이자율은 어떻게 정해지는가?",
+    "remaining_request_budget": 0,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "권한 없는 사용으로 인한 수익 반환 범위를 명확히 규정하는 조항을 확인한다.",
+        "critical": true,
+        "description": "권한 없는 사용으로 인한 수익 반환 범위 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "악의적 사용자의 이자율 적용 기준을 명확히 규정하는 조항을 확인한다.",
+        "critical": true,
+        "description": "악의적 사용자의 이자율 적용 기준 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "94d0da33-cdae-4683-8d75-babe28e4ad74",
+    "seen_provision_ids": [
+      "행정심판법 55조  증거서류 등의 반환#KOBLEX-183006",
+      "지적재조사에 관한 특별법 43조  벌칙#KOBLEX-213476",
+      "건축사법 36조  「민법」의 적용#KOBLEX-120330",
+      "환경정책기본법 13조  환경기준의 유지#KOBLEX-106266",
+      "민법 741조#KOBLEX-059886",
+      "주택도시기금법 시행령 17조 2 유한책임대출의 운용#KOBLEX-054190",
+      "지방세법 시행령 34조  중과세 대상 재산의 신고 및 납부#KOBLEX-077445",
+      "국민건강보험법 81조 2 부당이득 징수금의 압류#KOBLEX-208516",
+      "상속세 및 증여세법 37조  부동산 무상사용에 따른 이익의 증여#KOBLEX-218888",
+      "공익신고자 보호법 시행령 21조  보상금의 지급사유#KOBLEX-120530",
+      "국토의 계획 및 이용에 관한 법률 84조  둘 이상의 용도지역ㆍ용도지구ㆍ용도구역에 걸치는 대지에 대한 적용 기준#KOBLEX-199213",
+      "형법 349조  부당이득#KOBLEX-193402",
+      "지방세특례제한법 22조  사회복지법인등에 대한 감면#KOBLEX-109847",
+      "공유재산 및 물품 관리법 85조  은닉된 공유재산의 자진 반환자에 대한 특례#KOBLEX-205604",
+      "민법 303조  전세권의 내용#KOBLEX-059014",
+      "공익신고자 보호법 시행령 21조  보상금의 지급사유#KOBLEX-120529",
+      "의료급여법 11조 3 급여 대상 여부의 확인 등#KOBLEX-028997",
+      "국민연금법 시행령 74조  기금의 운용사업 등#KOBLEX-210301",
+      "농지법 시행령 43조  복구비용예치금 등의 반환#KOBLEX-199646",
+      "상속세 및 증여세법 37조  부동산 무상사용에 따른 이익의 증여#KOBLEX-207289",
+      "국민건강보험법 57조 2 부당이득 징수금 체납자의 인적사항등 공개#KOBLEX-208386",
+      "국민건강보험법 시행령 46조 6 부당이득 징수금의 압류 등#KOBLEX-055640",
+      "민법 1115조  유류분의 보전#KOBLEX-060824",
+      "민법 743조  기한전의 변제#KOBLEX-059889",
+      "제조물 책임법 8조  「민법」의 적용#KOBLEX-011847",
+      "공동주택관리법 시행령 45조  하자보수보증금의 반환#KOBLEX-095524",
+      "자동차손해배상 보장법 4조  「민법」의 적용#KOBLEX-005248",
+      "신탁법 43조  수탁자의 원상회복의무 등#KOBLEX-107237",
+      "제조물 책임법 8조  「민법」의 적용#KOBLEX-222261",
+      "가맹사업거래의 공정화에 관한 법률 10조  가맹금의 반환#KOBLEX-139570",
+      "국민연금법 시행령 42조  급여의 환수 시 가산할 이자#KOBLEX-210094",
+      "부정경쟁방지 및 영업비밀보호에 관한 법률 9조 8 영업비밀 훼손 등의 금지#KOBLEX-171293",
+      "민법 741조  부당이득의 내용#KOBLEX-059887",
+      "조세특례제한법 시행령 63조  영농조합법인 등에 대한 법인세의 면제 등#KOBLEX-069999",
+      "법인세법 시행규칙 26조  업무와 관련이 없는 부동산 등의 범위#KOBLEX-150430",
+      "도시개발법 71조 2 결합개발 등에 관한 적용 기준 완화의 특례#KOBLEX-003131",
+      "국민연금법 시행령 32조  대여사업#KOBLEX-210064",
+      "범죄피해자 보호법 48조  벌칙#KOBLEX-012096",
+      "부정경쟁방지 및 영업비밀보호에 관한 법률 9조 8 영업비밀 훼손 등의 금지#KOBLEX-033841"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

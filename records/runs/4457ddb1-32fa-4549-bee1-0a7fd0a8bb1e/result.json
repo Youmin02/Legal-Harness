@@ -1,0 +1,652 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-15T13:10:25.090282+00:00",
+  "end_to_end_latency_ms": 145613.969,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "4457ddb1-32fa-4549-bee1-0a7fd0a8bb1e",
+  "state": {
+    "accepted_provision_ids": [
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075415",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075416"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 15,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 8,
+          "request_count": 3,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 5,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 18.62273885989777,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075415",
+        "provision_text": "④ 소장은 제1항 또는 제2항에 따라 수용자가 외부의료시설에서 진료받거나 치료감호시설로 이송되면 그 사실을 그 가족(가족이 없는 경우에는 수용자가 지정하는 사람)에게 지체 없이 알려야 한다. 다만, 수용자가 알리는 것을 원하지 아니하면 그러하지 아니하다. <개정 2020.2.4>",
+        "rerank_score": 0.9990503191947937,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등 4항"
+      },
+      {
+        "first_stage_score": 18.62273885989777,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213602",
+        "provision_text": "④ 소장은 제1항 또는 제2항에 따라 수용자가 외부의료시설에서 진료받거나 치료감호시설로 이송되면 그 사실을 그 가족(가족이 없는 경우에는 수용자가 지정하는 사람)에게 지체 없이 알려야 한다. 다만, 수용자가 알리는 것을 원하지 아니하면 그러하지 아니하다. <개정 2020.2.4>",
+        "rerank_score": 0.9990503191947937,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등 4항"
+      },
+      {
+        "first_stage_score": 27.54753647493046,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075416",
+        "provision_text": "⑤ 소장은 수용자가 자신의 고의 또는 중대한 과실로 부상 등이 발생하여 외부의료시설에서 진료를 받은 경우에는 그 진료비의 전부 또는 일부를 그 수용자에게 부담하게 할 수 있다.",
+        "rerank_score": 0.9999581575393677,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등 5항"
+      },
+      {
+        "first_stage_score": 27.54753647493046,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213603",
+        "provision_text": "⑤ 소장은 수용자가 자신의 고의 또는 중대한 과실로 부상 등이 발생하여 외부의료시설에서 진료를 받은 경우에는 그 진료비의 전부 또는 일부를 그 수용자에게 부담하게 할 수 있다.",
+        "rerank_score": 0.9999581575393677,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등 5항"
+      },
+      {
+        "first_stage_score": 22.058102848667765,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 52조  임산부인 수용자의 처우#KOBLEX-075487",
+        "provision_text": "② 소장은 수용자가 출산하려고 하는 경우에는 외부의료시설에서 진료를 받게 하는 등 적절한 조치를 하여야 한다.",
+        "rerank_score": 0.1347535103559494,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 52조  임산부인 수용자의 처우 2항"
+      },
+      {
+        "first_stage_score": 22.058102848667765,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 52조  임산부인 수용자의 처우#KOBLEX-213674",
+        "provision_text": "② 소장은 수용자가 출산하려고 하는 경우에는 외부의료시설에서 진료를 받게 하는 등 적절한 조치를 하여야 한다.",
+        "rerank_score": 0.1347535103559494,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 52조  임산부인 수용자의 처우 2항"
+      },
+      {
+        "first_stage_score": 15.36208625526203,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "노인장기요양보험법 35조 4 장기요양요원의 보호#KOBLEX-046039",
+        "provision_text": "③ 장기요양기관의 장은 보건복지부령으로 정하는 바에 따라 장기요양 수급자와 그 가족에게 장기요양요원의 업무범위, 직무상 권리와 의무 등 권익보호를 위한 사항을 안내할 수 있다. <신설 2024.1.2>",
+        "rerank_score": 1.0045908311440144e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "노인장기요양보험법 35조 4 장기요양요원의 보호 3항"
+      },
+      {
+        "first_stage_score": 15.44680335807135,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "건설폐기물의 재활용촉진에 관한 법률 46조  방치폐기물의 처리이행보증 주체에 대한 조치 등#KOBLEX-062200",
+        "provision_text": "제46조(방치폐기물의 처리이행보증 주체에 대한 조치 등)",
+        "rerank_score": 9.781585958990036e-07,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "건설폐기물의 재활용촉진에 관한 법률 46조  방치폐기물의 처리이행보증 주체에 대한 조치 등"
+      },
+      {
+        "first_stage_score": 14.015819576675598,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "서민의 금융생활 지원에 관한 법률 51조  채권자의 의무#KOBLEX-172771",
+        "provision_text": "제51조(채권자의 의무) 제50조제1항에 따라 통지를 받은 채권자는 다음 각 호의 어느 하나에 해당하는 경우에는 그 사실을 진흥원에 지체 없이 알려야 한다.",
+        "rerank_score": 8.978912546808715e-07,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "서민의 금융생활 지원에 관한 법률 51조  채권자의 의무"
+      },
+      {
+        "first_stage_score": 14.4953625256131,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "변호사법 21조 2 법률사무소 개설 요건 등#KOBLEX-086857",
+        "provision_text": "⑫ 제1항부터 제11항까지의 규정 외에 법률사무종사기관의 지정 및 취소의 절차와 방법, 지도·감독 등 필요한 사항은 대통령령으로 정한다.",
+        "rerank_score": 7.478227530555159e-07,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "변호사법 21조 2 법률사무소 개설 요건 등 12항"
+      },
+      {
+        "first_stage_score": 15.15092347452251,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 38조  자비치료#KOBLEX-075417",
+        "provision_text": "제38조(자비치료) 소장은 수용자가 자신의 비용으로 외부의료시설에서 근무하는 의사(이하 \"외부의사\"라 한다)에게 치료받기를 원하면 교정시설에 근무하는 의사(공중보건의사를 포함하며, 이하 \"의무관\"이라 한다)의 의견을 고려하여 이를 허가할 수 있다.",
+        "rerank_score": 0.3039393126964569,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 38조  자비치료"
+      },
+      {
+        "first_stage_score": 15.15092347452251,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 38조  자비치료#KOBLEX-213604",
+        "provision_text": "제38조(자비치료) 소장은 수용자가 자신의 비용으로 외부의료시설에서 근무하는 의사(이하 \"외부의사\"라 한다)에게 치료받기를 원하면 교정시설에 근무하는 의사(공중보건의사를 포함하며, 이하 \"의무관\"이라 한다)의 의견을 고려하여 이를 허가할 수 있다.",
+        "rerank_score": 0.3039393126964569,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 38조  자비치료"
+      },
+      {
+        "first_stage_score": 17.013957745586627,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "의료법 시행규칙 30조 3 폐업ㆍ휴업 시 조치사항#KOBLEX-007354",
+        "provision_text": "3. 진료비 등의 정산 및 반환 등에 관한 사항",
+        "rerank_score": 0.838977575302124,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "의료법 시행규칙 30조 3 폐업ㆍ휴업 시 조치사항 3호"
+      },
+      {
+        "first_stage_score": 15.043127572022645,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "응급의료에 관한 법률 22조  미수금의 대지급#KOBLEX-132744",
+        "provision_text": "④ 기금관리기관의 장은 제2항에 따라 미수금을 대신 지급한 경우에는 응급환자 본인과 그 배우자, 응급환자의 1촌의 직계혈족 및 그 배우자 또는 다른 법령에 따른 진료비 부담 의무자에게 그 대지급금(代支給金)을 구상(求償)할 수 있다.",
+        "rerank_score": 0.031062310561537743,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "응급의료에 관한 법률 22조  미수금의 대지급 4항"
+      },
+      {
+        "first_stage_score": 13.965449414883748,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "군인연금법 시행령 57조  제출요청 대상 자료의 범위 등#KOBLEX-206118",
+        "provision_text": "14. 「의료법」에 따른 진단서, 진료기록부 등 진료에 관한 자료 및 진료비 산출에 관한 자료: 요양기관의 장",
+        "rerank_score": 1.4961386796130682e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "군인연금법 시행령 57조  제출요청 대상 자료의 범위 등 14호"
+      },
+      {
+        "first_stage_score": 25.87609798503976,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075411",
+        "provision_text": "제37조(외부의료시설 진료 등)",
+        "rerank_score": 0.9778949618339539,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등"
+      },
+      {
+        "first_stage_score": 25.87609798503976,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213598",
+        "provision_text": "제37조(외부의료시설 진료 등)",
+        "rerank_score": 0.9778949618339539,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등"
+      },
+      {
+        "first_stage_score": 12.136458594773481,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "형법 189조  과실, 업무상과실, 중과실#KOBLEX-193074",
+        "provision_text": "제189조(과실, 업무상과실, 중과실)",
+        "rerank_score": 0.6439123749732971,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "형법 189조  과실, 업무상과실, 중과실"
+      },
+      {
+        "first_stage_score": 12.584162020930346,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "응급의료에 관한 법률 21조  기금의 사용#KOBLEX-132731",
+        "provision_text": "1. 응급환자의 진료비 중 제22조에 따른 미수금의 대지급(代支給)",
+        "rerank_score": 0.11546080559492111,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "응급의료에 관한 법률 21조  기금의 사용 1호"
+      },
+      {
+        "first_stage_score": 12.440280050992733,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "민법 535조  계약체결상의 과실#KOBLEX-059465",
+        "provision_text": "제535조(계약체결상의 과실)",
+        "rerank_score": 0.06486820429563522,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "민법 535조  계약체결상의 과실"
+      },
+      {
+        "first_stage_score": 14.41691387754267,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "국민건강보험법 시행규칙 24조  임신ㆍ출산 진료비 이용권의 신청 및 발급 등#KOBLEX-000609",
+        "provision_text": "제24조(임신ㆍ출산 진료비 이용권의 신청 및 발급 등)",
+        "rerank_score": 0.6674101948738098,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "국민건강보험법 시행규칙 24조  임신ㆍ출산 진료비 이용권의 신청 및 발급 등"
+      },
+      {
+        "first_stage_score": 12.440280050992733,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "민법 201조  점유자와 과실#KOBLEX-058790",
+        "provision_text": "제201조(점유자와 과실)",
+        "rerank_score": 0.009620250202715397,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "민법 201조  점유자와 과실"
+      },
+      {
+        "first_stage_score": 12.136458594773481,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "도로교통법 시행령 32조  교통사고의 조사#KOBLEX-130750",
+        "provision_text": "5. 운전자의 과실 유무",
+        "rerank_score": 1.5276304111466743e-05,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "도로교통법 시행령 32조  교통사고의 조사 5호"
+      },
+      {
+        "first_stage_score": 15.162093092609368,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "민법 1005조#KOBLEX-060575",
+        "provision_text": "제1관 일반적 효력",
+        "rerank_score": 0.7266958355903625,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "민법 1005조"
+      },
+      {
+        "first_stage_score": 15.162093092609368,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "민법 826조#KOBLEX-060056",
+        "provision_text": "제1관 일반적 효력",
+        "rerank_score": 0.7266958355903625,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "민법 826조"
+      },
+      {
+        "first_stage_score": 14.80410297775304,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 195조  검사와 사법경찰관의 관계 등#KOBLEX-232005",
+        "provision_text": "② 제1항에 따른 수사를 위하여 준수하여야 하는 일반적 수사준칙에 관한 사항은 대통령령으로 정한다.",
+        "rerank_score": 0.057520415633916855,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "형사소송법 195조  검사와 사법경찰관의 관계 등 2항"
+      },
+      {
+        "first_stage_score": 15.457341283733506,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "국제사법 64조  혼인의 일반적 효력#KOBLEX-127919",
+        "provision_text": "제64조(혼인의 일반적 효력) 혼인의 일반적 효력은 다음 각 호의 법의 순위에 따른다.",
+        "rerank_score": 0.01571054384112358,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "국제사법 64조  혼인의 일반적 효력"
+      },
+      {
+        "first_stage_score": 15.457341283733506,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "국제사법 64조  혼인의 일반적 효력#KOBLEX-200600",
+        "provision_text": "제64조(혼인의 일반적 효력) 혼인의 일반적 효력은 다음 각 호의 법의 순위에 따른다.",
+        "rerank_score": 0.01571054384112358,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "국제사법 64조  혼인의 일반적 효력"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "건설폐기물의 재활용촉진에 관한 법률 46조  방치폐기물의 처리이행보증 주체에 대한 조치 등#KOBLEX-062200": "제46조(방치폐기물의 처리이행보증 주체에 대한 조치 등)",
+      "국민건강보험법 시행규칙 24조  임신ㆍ출산 진료비 이용권의 신청 및 발급 등#KOBLEX-000609": "제24조(임신ㆍ출산 진료비 이용권의 신청 및 발급 등)",
+      "국제사법 64조  혼인의 일반적 효력#KOBLEX-127919": "제64조(혼인의 일반적 효력) 혼인의 일반적 효력은 다음 각 호의 법의 순위에 따른다.",
+      "국제사법 64조  혼인의 일반적 효력#KOBLEX-200600": "제64조(혼인의 일반적 효력) 혼인의 일반적 효력은 다음 각 호의 법의 순위에 따른다.",
+      "군인연금법 시행령 57조  제출요청 대상 자료의 범위 등#KOBLEX-206118": "14. 「의료법」에 따른 진단서, 진료기록부 등 진료에 관한 자료 및 진료비 산출에 관한 자료: 요양기관의 장",
+      "노인장기요양보험법 35조 4 장기요양요원의 보호#KOBLEX-046039": "③ 장기요양기관의 장은 보건복지부령으로 정하는 바에 따라 장기요양 수급자와 그 가족에게 장기요양요원의 업무범위, 직무상 권리와 의무 등 권익보호를 위한 사항을 안내할 수 있다. <신설 2024.1.2>",
+      "도로교통법 시행령 32조  교통사고의 조사#KOBLEX-130750": "5. 운전자의 과실 유무",
+      "민법 1005조#KOBLEX-060575": "제1관 일반적 효력",
+      "민법 201조  점유자와 과실#KOBLEX-058790": "제201조(점유자와 과실)",
+      "민법 535조  계약체결상의 과실#KOBLEX-059465": "제535조(계약체결상의 과실)",
+      "민법 826조#KOBLEX-060056": "제1관 일반적 효력",
+      "변호사법 21조 2 법률사무소 개설 요건 등#KOBLEX-086857": "⑫ 제1항부터 제11항까지의 규정 외에 법률사무종사기관의 지정 및 취소의 절차와 방법, 지도·감독 등 필요한 사항은 대통령령으로 정한다.",
+      "서민의 금융생활 지원에 관한 법률 51조  채권자의 의무#KOBLEX-172771": "제51조(채권자의 의무) 제50조제1항에 따라 통지를 받은 채권자는 다음 각 호의 어느 하나에 해당하는 경우에는 그 사실을 진흥원에 지체 없이 알려야 한다.",
+      "응급의료에 관한 법률 21조  기금의 사용#KOBLEX-132731": "1. 응급환자의 진료비 중 제22조에 따른 미수금의 대지급(代支給)",
+      "응급의료에 관한 법률 22조  미수금의 대지급#KOBLEX-132744": "④ 기금관리기관의 장은 제2항에 따라 미수금을 대신 지급한 경우에는 응급환자 본인과 그 배우자, 응급환자의 1촌의 직계혈족 및 그 배우자 또는 다른 법령에 따른 진료비 부담 의무자에게 그 대지급금(代支給金)을 구상(求償)할 수 있다.",
+      "의료법 시행규칙 30조 3 폐업ㆍ휴업 시 조치사항#KOBLEX-007354": "3. 진료비 등의 정산 및 반환 등에 관한 사항",
+      "형법 189조  과실, 업무상과실, 중과실#KOBLEX-193074": "제189조(과실, 업무상과실, 중과실)",
+      "형사소송법 195조  검사와 사법경찰관의 관계 등#KOBLEX-232005": "② 제1항에 따른 수사를 위하여 준수하여야 하는 일반적 수사준칙에 관한 사항은 대통령령으로 정한다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075411": "제37조(외부의료시설 진료 등)",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075415": "④ 소장은 제1항 또는 제2항에 따라 수용자가 외부의료시설에서 진료받거나 치료감호시설로 이송되면 그 사실을 그 가족(가족이 없는 경우에는 수용자가 지정하는 사람)에게 지체 없이 알려야 한다. 다만, 수용자가 알리는 것을 원하지 아니하면 그러하지 아니하다. <개정 2020.2.4>",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075416": "⑤ 소장은 수용자가 자신의 고의 또는 중대한 과실로 부상 등이 발생하여 외부의료시설에서 진료를 받은 경우에는 그 진료비의 전부 또는 일부를 그 수용자에게 부담하게 할 수 있다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213598": "제37조(외부의료시설 진료 등)",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213602": "④ 소장은 제1항 또는 제2항에 따라 수용자가 외부의료시설에서 진료받거나 치료감호시설로 이송되면 그 사실을 그 가족(가족이 없는 경우에는 수용자가 지정하는 사람)에게 지체 없이 알려야 한다. 다만, 수용자가 알리는 것을 원하지 아니하면 그러하지 아니하다. <개정 2020.2.4>",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213603": "⑤ 소장은 수용자가 자신의 고의 또는 중대한 과실로 부상 등이 발생하여 외부의료시설에서 진료를 받은 경우에는 그 진료비의 전부 또는 일부를 그 수용자에게 부담하게 할 수 있다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 38조  자비치료#KOBLEX-075417": "제38조(자비치료) 소장은 수용자가 자신의 비용으로 외부의료시설에서 근무하는 의사(이하 \"외부의사\"라 한다)에게 치료받기를 원하면 교정시설에 근무하는 의사(공중보건의사를 포함하며, 이하 \"의무관\"이라 한다)의 의견을 고려하여 이를 허가할 수 있다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 38조  자비치료#KOBLEX-213604": "제38조(자비치료) 소장은 수용자가 자신의 비용으로 외부의료시설에서 근무하는 의사(이하 \"외부의사\"라 한다)에게 치료받기를 원하면 교정시설에 근무하는 의사(공중보건의사를 포함하며, 이하 \"의무관\"이라 한다)의 의견을 고려하여 이를 허가할 수 있다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 52조  임산부인 수용자의 처우#KOBLEX-075487": "② 소장은 수용자가 출산하려고 하는 경우에는 외부의료시설에서 진료를 받게 하는 등 적절한 조치를 하여야 한다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 52조  임산부인 수용자의 처우#KOBLEX-213674": "② 소장은 수용자가 출산하려고 하는 경우에는 외부의료시설에서 진료를 받게 하는 등 적절한 조치를 하여야 한다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075415"
+        ],
+        "rationale": "C001은 외부의료시설 진료 사실의 가족 통지 의무 주체(소장)와 절차(지체 없이), 예외(수용자의 의사)를 명확히 규정하여 E1의 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [
+          "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075416"
+        ],
+        "rationale": "C003은 고의 또는 중대한 과실로 인한 외부의료시설 진료 시 수용자의 진료비 부담 가능성을 규정하나, 질문의 전제인 '자신의 부주의'(경미한 과실 포함)에 대한 명시적 부담 주체 규정이 없어 부분적 지원에 그친다.",
+        "status": "partially_covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075415",
+        "support_spans": [
+          {
+            "end_char": 156,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075416",
+        "support_spans": [
+          {
+            "end_char": 98,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 5,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "갑이 자신의 부주의로 외부의료시설에서 진료를 받은 사실을 가족에게 알리는 절차와 의무 주체가 누구인가",
+        "issue_id": "I1"
+      },
+      {
+        "description": "갑이 자신의 부주의로 외부의료시설에서 진료를 받은 경우 진료비 부담 주체는 누구인가",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "진료비 부담 주체가 명시되어 있는지 확인",
+        "critical": true,
+        "description": "갑이 자신의 부주의로 외부의료시설에서 진료를 받은 경우 진료비 부담 주체",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "갑이 자신의 부주의로 인해 외부의료시설에서 진료를 받은 경우, 그 사실은 갑의 가족에게 어떻게 알리게 되는가? 그리고 진료비는 누가 부담하게 되는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "외부의료시설에서 진료를 받은 사실을 가족에게 알리는 절차와 의무 주체에 관한 규정",
+        "request_id": "RQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "자신의 부주의로 외부의료시설에서 진료를 받은 경우 진료비 부담 주체에 관한 규정",
+        "request_id": "RQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "수용자가 고의 또는 중대한 과실이 아닌 경미한 과실로 외부의료시설에서 진료를 받은 경우 진료비 부담 주체에 관한 규정",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "형의 집행 및 수용자의 처우에 관한 법률 수용자 외부의료시설 진료비 부담 경미한 과실",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_text": "수용자 외부의료시설 진료비 부담 부주의 과실 구분",
+        "request_id": "GRQ3",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "수용자가 고의나 중대한 과실이 아닌 일반적 부주의로 외부의료시설에서 진료를 받은 경우 진료비 부담 주체에 관한 규정",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "형의 집행 및 수용자의 처우에 관한 법률 제37조 수용자 외부의료시설 진료비 부담 일반적 부주의",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_text": "수용자 외부의료시설 진료비 부담 일반적 부주의 과실 구분",
+        "request_id": "GRQ3",
+        "top_k": 100
+      }
+    ],
+    "question": "갑이 자신의 부주의로 인해 외부의료시설에서 진료를 받은 경우, 그 사실은 갑의 가족에게 어떻게 알리게 되는가? 그리고 진료비는 누가 부담하게 되는가?",
+    "remaining_request_budget": 1,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "가족에게 진료 사실을 알릴 의무가 있는지, 그 주체와 절차가 명시되어 있는지 확인",
+        "critical": true,
+        "description": "갑이 외부의료시설에서 진료를 받은 사실을 가족에게 알리는 법적 절차와 의무 주체",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "진료비 부담 주체가 명시되어 있는지 확인",
+        "critical": true,
+        "description": "갑이 자신의 부주의로 외부의료시설에서 진료를 받은 경우 진료비 부담 주체",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "4457ddb1-32fa-4549-bee1-0a7fd0a8bb1e",
+    "seen_provision_ids": [
+      "노인장기요양보험법 35조 4 장기요양요원의 보호#KOBLEX-046039",
+      "군인연금법 시행령 57조  제출요청 대상 자료의 범위 등#KOBLEX-206118",
+      "건설폐기물의 재활용촉진에 관한 법률 46조  방치폐기물의 처리이행보증 주체에 대한 조치 등#KOBLEX-062200",
+      "형사소송법 195조  검사와 사법경찰관의 관계 등#KOBLEX-232005",
+      "의료법 시행규칙 30조 3 폐업ㆍ휴업 시 조치사항#KOBLEX-007354",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075416",
+      "민법 1005조#KOBLEX-060575",
+      "응급의료에 관한 법률 21조  기금의 사용#KOBLEX-132731",
+      "응급의료에 관한 법률 22조  미수금의 대지급#KOBLEX-132744",
+      "도로교통법 시행령 32조  교통사고의 조사#KOBLEX-130750",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075411",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213603",
+      "형의 집행 및 수용자의 처우에 관한 법률 38조  자비치료#KOBLEX-075417",
+      "변호사법 21조 2 법률사무소 개설 요건 등#KOBLEX-086857",
+      "형의 집행 및 수용자의 처우에 관한 법률 52조  임산부인 수용자의 처우#KOBLEX-213674",
+      "민법 201조  점유자와 과실#KOBLEX-058790",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075415",
+      "국제사법 64조  혼인의 일반적 효력#KOBLEX-200600",
+      "민법 826조#KOBLEX-060056",
+      "민법 535조  계약체결상의 과실#KOBLEX-059465",
+      "형의 집행 및 수용자의 처우에 관한 법률 38조  자비치료#KOBLEX-213604",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213598",
+      "형의 집행 및 수용자의 처우에 관한 법률 52조  임산부인 수용자의 처우#KOBLEX-075487",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213602",
+      "형법 189조  과실, 업무상과실, 중과실#KOBLEX-193074",
+      "국제사법 64조  혼인의 일반적 효력#KOBLEX-127919",
+      "서민의 금융생활 지원에 관한 법률 51조  채권자의 의무#KOBLEX-172771",
+      "국민건강보험법 시행규칙 24조  임신ㆍ출산 진료비 이용권의 신청 및 발급 등#KOBLEX-000609"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

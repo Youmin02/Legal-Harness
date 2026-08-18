@@ -1,0 +1,132 @@
+{
+  "manifest_schema_version": "1.0",
+  "name": "bm25_bge_pilot_20_seed_20260815",
+  "purpose": "Frozen engineering preflight pilot; report separately from the 226-item final evaluation.",
+  "source_dataset": {
+    "path": "data/koblex/qa/test-00000-of-00001.parquet",
+    "sha256": "afdaff3a8000cdf5e0a64adbcfc8e6aff0042b318bf03718155f2b70f551c47b"
+  },
+  "selection": {
+    "method": "stratified random sample without replacement, with one previously completed fixed anchor",
+    "seed": 20260815,
+    "allocation": {
+      "1-hop": 5,
+      "2-hop": 11,
+      "3-hop": 4
+    },
+    "anchor_question_id": "qa_92_1hop_149",
+    "anchor_completed_run_id": "3c1b22ca-3a57-48c6-a4c6-8556184fc182"
+  },
+  "frozen_configuration": {
+    "condition": "bm25-bge-pilot-02",
+    "retriever": "bm25",
+    "reranker": "dragonkue--bge-reranker-v2-m3-ko",
+    "model": "legal-harness-qwen",
+    "seed": 0,
+    "num_ctx": 32768,
+    "total_retrieval_rounds": 3,
+    "total_retrieval_requests": 9
+  },
+  "entries": [
+    {
+      "ordinal": 1,
+      "question_id": "qa_92_1hop_149",
+      "n_hops": 1
+    },
+    {
+      "ordinal": 2,
+      "question_id": "qa_139_1hop_254",
+      "n_hops": 1
+    },
+    {
+      "ordinal": 3,
+      "question_id": "qa_140_1hop_257",
+      "n_hops": 1
+    },
+    {
+      "ordinal": 4,
+      "question_id": "qa_165_1hop_293",
+      "n_hops": 1
+    },
+    {
+      "ordinal": 5,
+      "question_id": "qa_85_1hop_135",
+      "n_hops": 1
+    },
+    {
+      "ordinal": 6,
+      "question_id": "qa_163_2hop_630_rand",
+      "n_hops": 2
+    },
+    {
+      "ordinal": 7,
+      "question_id": "qa_180_2hop_689_rand",
+      "n_hops": 2
+    },
+    {
+      "ordinal": 8,
+      "question_id": "qa_197_2hop_752_rand",
+      "n_hops": 2
+    },
+    {
+      "ordinal": 9,
+      "question_id": "qa_211_2hop_804_rand",
+      "n_hops": 2
+    },
+    {
+      "ordinal": 10,
+      "question_id": "qa_234_2hop_892_rand",
+      "n_hops": 2
+    },
+    {
+      "ordinal": 11,
+      "question_id": "qa_26_2hop_104_rand",
+      "n_hops": 2
+    },
+    {
+      "ordinal": 12,
+      "question_id": "qa_281_2hop_441",
+      "n_hops": 2
+    },
+    {
+      "ordinal": 13,
+      "question_id": "qa_290_2hop_453",
+      "n_hops": 2
+    },
+    {
+      "ordinal": 14,
+      "question_id": "qa_423_2hop_656",
+      "n_hops": 2
+    },
+    {
+      "ordinal": 15,
+      "question_id": "qa_430_2hop_668",
+      "n_hops": 2
+    },
+    {
+      "ordinal": 16,
+      "question_id": "qa_83_2hop_325_rand",
+      "n_hops": 2
+    },
+    {
+      "ordinal": 17,
+      "question_id": "qa_104_3hop_182",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 18,
+      "question_id": "qa_321_3hop_511",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 19,
+      "question_id": "qa_352_3hop_554",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 20,
+      "question_id": "qa_74_3hop_116",
+      "n_hops": 3
+    }
+  ]
+}

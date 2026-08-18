@@ -1,0 +1,68 @@
+{
+  "configuration": {
+    "condition": "bm25-bge-pilot-02",
+    "model": "legal-harness-qwen",
+    "num_ctx": 32768,
+    "ollama_endpoint": "http://127.0.0.1:11434/api/generate",
+    "retriever": "bm25",
+    "seed": 0,
+    "total_retrieval_requests": 9,
+    "total_retrieval_rounds": 3
+  },
+  "git_commit": "c6763ec28d9b2670aeb9eaf4d41fc15fcaa08f55",
+  "index_metadata": {
+    "bm25": {
+      "database": "data/koblex/indexes/bm25/statute_fts5.sqlite3",
+      "type": "SQLite FTS5"
+    },
+    "documents": 233544,
+    "identity": {
+      "provision_id": "{KoBLEX index}#KOBLEX-{one-based source row number}",
+      "source_index": "original KoBLEX index value retained in normalized corpus"
+    },
+    "kure": {
+      "dimensions": 1024,
+      "model": "nlpai-lab/KURE-v1",
+      "provision_ids": "data/koblex/indexes/kure-v1/provision_ids.txt",
+      "similarity": "exact cosine similarity; float32 memory-mapped matrix",
+      "vector_file": "data/koblex/indexes/kure-v1/vectors.f32.npy"
+    },
+    "source": "JihyungL/KoBLEX-statute",
+    "source_file": "data/koblex/statute/corpus-00000-of-00001.parquet",
+    "source_sha256": "6323f7d024ec504f4b2346cd3ab67aa709aac49a5340c9f3d8372ad6bd5f9b8b"
+  },
+  "model_artifact": "/root/.ollama/models/blobs/sha256-8440f2a076f149f65bf16975f3a08359936ba2658fc1827b51a30b717de49acb",
+  "question": "갑이 을로부터 매입한 조성용지를 병에게 전매한 경우, 해당 법률행위의 효력은 어떻게 되며, 이 지역의 생활환경정비사업에서 농림축산식품부장관은 어떤 지원을 할 수 있는가?",
+  "question_id": "qa_197_2hop_752_rand",
+  "record_schema_version": "1.0",
+  "run_id": "33b13757-0633-4af6-b073-8ea4f4c4a129",
+  "runtime": {
+    "packages": {
+      "pyarrow": "18.1.0",
+      "sentence-transformers": "5.1.2",
+      "torch": "2.7.1+cu128",
+      "transformers": "4.57.6"
+    },
+    "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.35",
+    "python": "3.9.25 (main, Nov  7 2025, 18:07:57) \n[GCC 11.4.0]"
+  },
+  "skill_sha256": {
+    "grounded_legal_answer_generation/SKILL.md": "6213f820227e1b6eade58292e1ddd93d81f9ead81e52f066c1c698663a46ec62",
+    "grounded_legal_answer_generation/references/contract.md": "2070ee60d04e5f0350ccd89190ecd8f9a7a548299bf682434d6f3c2c2e53e2c4",
+    "grounded_legal_answer_generation/references/input.schema.json": "031eea346a105571f0da9786807dccc7262e5b8c2996c3d246cacf37c539e511",
+    "grounded_legal_answer_generation/references/output.schema.json": "5355d7bc575fbfc8f6cfa8610d7c2730c295b93382c9ff2a56ca86a3a480ed8b",
+    "grounded_legal_answer_generation/scripts/validate_output.py": "e2cc802726869f7c24d2468e5cd37bf8f6e6cd688b593d356d86cf0c11a30f3f",
+    "legal_issue_and_query_planning/SKILL.md": "7b6852f6e767ba9f423e77202e5438305556417fb46c4e780fb8523a76df5ae7",
+    "legal_issue_and_query_planning/references/contract.md": "a201d0bfe6d992b53d9745dc6241a844060b98f446d037670c0f63279f8879d9",
+    "legal_issue_and_query_planning/references/input.schema.json": "c617df2974228906e34838ef5f42058e2e6f909d5358fc3a05448cb36774172b",
+    "legal_issue_and_query_planning/references/output.schema.json": "c2aef4f05b14fe584f48a2f13e3de15085b1774ca289f258751e156f636444d1",
+    "legal_issue_and_query_planning/scripts/validate_output.py": "53be62712d579692b0660331a68f3405de3c668c5ca84ae2f80725fa96a8dbd1",
+    "provision_coverage_assessment/SKILL.md": "ccf124a76f26f32056f676588b9e6ee9cb46bd2aab5d5640baa6035ec6d26de1",
+    "provision_coverage_assessment/references/contract.md": "b99b06ea712a9e80b1e39de470b9060be4fb08d94afacd73e152c85b92d923f2",
+    "provision_coverage_assessment/references/input.schema.json": "6cd352a71e7343f9578da5d1f56d2f41839b35a9f84d297449b74d29e71989b2",
+    "provision_coverage_assessment/references/output.schema.json": "585827da721813f2d2bb550d4bf53233e98d4e2aa38b35ca8c8ddb9ae3048e14",
+    "provision_coverage_assessment/scripts/validate_output.py": "105140772e74ddace491850b5843c5ead7f7e2af24b26bc032bbbb0f23cae3b0",
+    "skill-pack-manifest.json": "204d144927400952d4d9146313434e5f5ab62dd49bd5c43e63c1ca0aa5d01a95"
+  },
+  "started_at_utc": "2026-08-15T08:51:31.718316+00:00"
+}

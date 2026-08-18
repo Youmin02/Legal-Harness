@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/root/Legal Harness/scripts/run_local_harness.py", line 135, in <module>
+    raise SystemExit(main())
+  File "/root/Legal Harness/scripts/run_local_harness.py", line 107, in main
+    outcome = runner.run(args.question, run_id=run_id)
+  File "/root/Legal Harness/harness/runner.py", line 153, in run
+    gap_raw = self._execute(S1, "GAP_QUERY_PLAN", self._gap_payload(state))
+  File "/root/Legal Harness/harness/runner.py", line 268, in _execute
+    result = self.skill_executor.execute(skill_name, entry_point, payload)
+  File "/root/Legal Harness/runtime/local_ollama_executor.py", line 80, in execute
+    skill_output = self._normalize_harness_owned_fields(
+  File "/root/Legal Harness/runtime/local_ollama_executor.py", line 129, in _normalize_harness_owned_fields
+    unresolved = [item.get("evidence_item_id") for key in ("missing_evidence_items", "evidence_conflicts") for item in self._list(skill_input, key) if isinstance(item, Mapping)]
+  File "/root/Legal Harness/runtime/local_ollama_executor.py", line 129, in <listcomp>
+    unresolved = [item.get("evidence_item_id") for key in ("missing_evidence_items", "evidence_conflicts") for item in self._list(skill_input, key) if isinstance(item, Mapping)]
+NameError: name 'self' is not defined

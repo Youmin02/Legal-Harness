@@ -1,0 +1,559 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-15T13:25:14.303840+00:00",
+  "end_to_end_latency_ms": 122838.756,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "b53fbf44-209f-46d8-a2fa-d785a5faccf6",
+  "state": {
+    "accepted_provision_ids": [
+      "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 17,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 5,
+          "request_count": 3,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 0,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 21.420726285030522,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333",
+        "provision_text": "① 해양항만관청은 다음 각 호의 어느 하나에 해당하는 사람에게 선원수첩을 발급하지 아니할 수 있다. 1. 신원이 분명하지 아니한 사람 2. 「병역법」 제76조제1항 각 호의 어느 하나에 해당하는 사람 3. 삭제 <2021.6.15>",
+        "rerank_score": 0.9997316002845764,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "선원법 46조  선원수첩의 발급 제한 1항"
+      },
+      {
+        "first_stage_score": 13.914814502102269,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "선원법 47조  선원수첩의 실효#KOBLEX-067338",
+        "provision_text": "3. 선원수첩을 재발급한 경우 종전의 선원수첩",
+        "rerank_score": 0.9996453523635864,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "선원법 47조  선원수첩의 실효 3호"
+      },
+      {
+        "first_stage_score": 14.572913659835514,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "부가가치세법 33조  세금계산서 발급의무의 면제 등#KOBLEX-126910",
+        "provision_text": "① 제32조에도 불구하고 세금계산서(전자세금계산서를 포함한다. 이하 같다)를 발급하기 어렵거나 세금계산서의 발급이 불필요한 경우 등 대통령령으로 정하는 경우에는 세금계산서를 발급하지 아니할 수 있다.",
+        "rerank_score": 0.002254289109259844,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "부가가치세법 33조  세금계산서 발급의무의 면제 등 1항"
+      },
+      {
+        "first_stage_score": 14.368684974734839,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "재해구호법 19조  의연금품의 접수장소 등#KOBLEX-111360",
+        "provision_text": "② 모집자나 모집종사자는 의연금품의 접수 사실을 장부에 기록하고, 기부자에게 영수증을 발급하여야 한다. 다만, 익명(匿名) 기부 등 기부자를 알 수 없는 경우에는 영수증을 발급하지 아니할 수 있다.",
+        "rerank_score": 0.0007485927199013531,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "재해구호법 19조  의연금품의 접수장소 등 2항"
+      },
+      {
+        "first_stage_score": 15.596543625947056,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "농지법 8조 3 농지취득자격증명의 발급제한#KOBLEX-172986",
+        "provision_text": "② 시ㆍ구ㆍ읍ㆍ면의 장은 1필지를 공유로 취득하려는 자가 제22조제3항에 따른 시ㆍ군ㆍ구의 조례로 정한 수를 초과한 경우에는 농지취득자격증명을 발급하지 아니할 수 있다.",
+        "rerank_score": 0.0001499762001913041,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "농지법 8조 3 농지취득자격증명의 발급제한 2항"
+      },
+      {
+        "first_stage_score": 14.60986394999557,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "농지법 8조 3 농지취득자격증명의 발급제한#KOBLEX-172987",
+        "provision_text": "③ 시ㆍ구ㆍ읍ㆍ면의 장은 「농어업경영체 육성 및 지원에 관한 법률」 제20조의2에 따른 실태조사 등에 따라 영농조합법인 또는 농업회사법인이 같은 법 제20조의3제2항에 따른 해산명령 청구 요건에 해당하는 것으로 인정하는 경우에는 농지취득자격증명을 발급하지 아니할 수 있다.",
+        "rerank_score": 5.065447840024717e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "농지법 8조 3 농지취득자격증명의 발급제한 3항"
+      },
+      {
+        "first_stage_score": 15.616612622565551,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "의료급여법 8조  의료급여증#KOBLEX-028969",
+        "provision_text": "① 시장ㆍ군수ㆍ구청장은 수급권자가 신청하는 경우 의료급여증을 발급하여야 한다. 다만, 부득이한 사유가 있는 경우에는 의료급여증을 갈음하여 의료급여증명서를 발급하거나 보건복지부령으로 정하는 바에 따라 의료급여증을 발급하지 아니할 수 있다. <개정 2023.3.28>",
+        "rerank_score": 3.140131229883991e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "의료급여법 8조  의료급여증 1항"
+      },
+      {
+        "first_stage_score": 17.065479609792128,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 282조  회생계획의 변경#KOBLEX-032437",
+        "provision_text": "②제1항의 규정에 의하여 회생채권자ㆍ회생담보권자ㆍ주주ㆍ지분권자에게 불리한 영향을 미칠 것으로 인정되는 회생계획의 변경신청이 있는 때에는 회생계획안의 제출이 있는 경우의 절차에 관한 규정을 준용한다. 다만, 이 경우에는 회생계획의 변경으로 인하여 불리한 영향을 받지 아니하는 권리자를 절차에 참가시키지 아니할 수 있다.",
+        "rerank_score": 1.8067201381199993e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "채무자 회생 및 파산에 관한 법률 282조  회생계획의 변경 2항"
+      },
+      {
+        "first_stage_score": 13.729375049738838,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "질서위반행위규제법 5조  다른 법률과의 관계#KOBLEX-022761",
+        "provision_text": "제5조(다른 법률과의 관계) 과태료의 부과ㆍ징수, 재판 및 집행 등의 절차에 관한 다른 법률의 규정 중 이 법의 규정에 저촉되는 것은 이 법으로 정하는 바에 따른다.",
+        "rerank_score": 3.587016408346244e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "질서위반행위규제법 5조  다른 법률과의 관계"
+      },
+      {
+        "first_stage_score": 14.92396655027004,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "가사소송법 11조  위임 규정#KOBLEX-064815",
+        "provision_text": "제11조(위임 규정) 가사사건의 재판과 조정의 절차에 관하여 필요한 사항은 대법원규칙으로 정한다.",
+        "rerank_score": 2.8882466267532436e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "가사소송법 11조  위임 규정"
+      },
+      {
+        "first_stage_score": 15.343952962293748,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "선원법 45조  선원수첩#KOBLEX-067325",
+        "provision_text": "제45조(선원수첩)",
+        "rerank_score": 0.9997085928916931,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "선원법 45조  선원수첩"
+      },
+      {
+        "first_stage_score": 26.522188710468726,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "도로교통법 시행규칙 83조 2 본인 여부를 확인할 수 있는 신분증명서의 종류#KOBLEX-161767",
+        "provision_text": "2. 「선원법」 제45조에 따라 발급된 선원수첩",
+        "rerank_score": 0.9993390440940857,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "도로교통법 시행규칙 83조 2 본인 여부를 확인할 수 있는 신분증명서의 종류 2호"
+      },
+      {
+        "first_stage_score": 14.594480745582391,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "선원법 47조  선원수첩의 실효#KOBLEX-067337",
+        "provision_text": "2. 사망한 선원의 선원수첩",
+        "rerank_score": 0.9991238713264465,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "선원법 47조  선원수첩의 실효 2호"
+      },
+      {
+        "first_stage_score": 14.166504376759578,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "선원법 50조  선원수첩 등의 대여 및 부당사용 금지#KOBLEX-067348",
+        "provision_text": "제50조(선원수첩 등의 대여 및 부당사용 금지) 선원은 선원수첩 또는 선원신분증명서를 부당하게 사용하거나 다른 사람에게 빌려 주어서는 아니 된다.",
+        "rerank_score": 0.9982535243034363,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "선원법 50조  선원수첩 등의 대여 및 부당사용 금지"
+      },
+      {
+        "first_stage_score": 20.553311250728115,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "관세법 시행령 141조 9 납세증명서의 유효기간#KOBLEX-144793",
+        "provision_text": "② 세관장은 제1항 단서에 따라 유효기간을 정할 경우에는 해당 납세증명서에 그 사유와 유효기간을 분명하게 적어야 한다.",
+        "rerank_score": 0.00011199473374290392,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "관세법 시행령 141조 9 납세증명서의 유효기간 2항"
+      },
+      {
+        "first_stage_score": 19.954573360048094,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "국세징수법 시행령 96조  납세증명서의 유효기간#KOBLEX-000334",
+        "provision_text": "② 관할 세무서장은 제1항 단서에 따라 유효기간을 지정납부기한까지로 정하는 경우 해당 납세증명서에 그 사유와 유효기간을 분명하게 적어야 한다.",
+        "rerank_score": 3.497708894428797e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "국세징수법 시행령 96조  납세증명서의 유효기간 2항"
+      },
+      {
+        "first_stage_score": 13.834145864613829,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "관세법 157조  물품의 반입ㆍ반출#KOBLEX-105237",
+        "provision_text": "③ 세관장은 보세구역에 반입할 수 있는 물품의 종류를 제한할 수 있다.",
+        "rerank_score": 2.7280284484731965e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "관세법 157조  물품의 반입ㆍ반출 3항"
+      },
+      {
+        "first_stage_score": 11.065259434397515,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "공증인법 15조 8 인가의 유효기간#KOBLEX-096864",
+        "provision_text": "제15조의8(인가의 유효기간)",
+        "rerank_score": 0.9995088577270508,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "공증인법 15조 8 인가의 유효기간"
+      },
+      {
+        "first_stage_score": 12.209080644974026,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "선원법 2조  정의#KOBLEX-067173",
+        "provision_text": "20. \"선원수첩\"이란 선원의 승무경력, 자격증명, 근로계약 등의 내용을 수록한 문서를 말한다.",
+        "rerank_score": 0.9988628625869751,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "선원법 2조  정의 21호"
+      },
+      {
+        "first_stage_score": 12.729213346627375,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "선원법 시행령 54조  외국선박에 승무하는 자에 대한 선원수첩 및 선원신분증명서의 발급 등#KOBLEX-122488",
+        "provision_text": "제54조(외국선박에 승무하는 자에 대한 선원수첩 및 선원신분증명서의 발급 등)",
+        "rerank_score": 0.998794436454773,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "선원법 시행령 54조  외국선박에 승무하는 자에 대한 선원수첩 및 선원신분증명서의 발급 등"
+      },
+      {
+        "first_stage_score": 16.73539325316715,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "선원법 48조  선원신분증명서#KOBLEX-067343",
+        "provision_text": "④ 선원신분증명서의 발급 제한 및 실효에 관하여는 제46조제1항 및 제47조를 준용한다. 이 경우 \"선원수첩\"은 \"선원신분증명서\"로 본다.",
+        "rerank_score": 0.9972206354141235,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "선원법 48조  선원신분증명서 4항"
+      },
+      {
+        "first_stage_score": 11.084957577324577,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "선원법 시행령 9조  미성년자의 선원수첩 발급신청#KOBLEX-122245",
+        "provision_text": "제9조(미성년자의 선원수첩 발급신청) 미성년자가 선원수첩의 발급을 신청할 때에는 그 신청서에 법정대리인의 동의서를 첨부하여야 한다. <개정 2012.2.3>",
+        "rerank_score": 0.9961786270141602,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "선원법 시행령 9조  미성년자의 선원수첩 발급신청"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "가사소송법 11조  위임 규정#KOBLEX-064815": "제11조(위임 규정) 가사사건의 재판과 조정의 절차에 관하여 필요한 사항은 대법원규칙으로 정한다.",
+      "공증인법 15조 8 인가의 유효기간#KOBLEX-096864": "제15조의8(인가의 유효기간)",
+      "관세법 157조  물품의 반입ㆍ반출#KOBLEX-105237": "③ 세관장은 보세구역에 반입할 수 있는 물품의 종류를 제한할 수 있다.",
+      "관세법 시행령 141조 9 납세증명서의 유효기간#KOBLEX-144793": "② 세관장은 제1항 단서에 따라 유효기간을 정할 경우에는 해당 납세증명서에 그 사유와 유효기간을 분명하게 적어야 한다.",
+      "국세징수법 시행령 96조  납세증명서의 유효기간#KOBLEX-000334": "② 관할 세무서장은 제1항 단서에 따라 유효기간을 지정납부기한까지로 정하는 경우 해당 납세증명서에 그 사유와 유효기간을 분명하게 적어야 한다.",
+      "농지법 8조 3 농지취득자격증명의 발급제한#KOBLEX-172986": "② 시ㆍ구ㆍ읍ㆍ면의 장은 1필지를 공유로 취득하려는 자가 제22조제3항에 따른 시ㆍ군ㆍ구의 조례로 정한 수를 초과한 경우에는 농지취득자격증명을 발급하지 아니할 수 있다.",
+      "농지법 8조 3 농지취득자격증명의 발급제한#KOBLEX-172987": "③ 시ㆍ구ㆍ읍ㆍ면의 장은 「농어업경영체 육성 및 지원에 관한 법률」 제20조의2에 따른 실태조사 등에 따라 영농조합법인 또는 농업회사법인이 같은 법 제20조의3제2항에 따른 해산명령 청구 요건에 해당하는 것으로 인정하는 경우에는 농지취득자격증명을 발급하지 아니할 수 있다.",
+      "도로교통법 시행규칙 83조 2 본인 여부를 확인할 수 있는 신분증명서의 종류#KOBLEX-161767": "2. 「선원법」 제45조에 따라 발급된 선원수첩",
+      "부가가치세법 33조  세금계산서 발급의무의 면제 등#KOBLEX-126910": "① 제32조에도 불구하고 세금계산서(전자세금계산서를 포함한다. 이하 같다)를 발급하기 어렵거나 세금계산서의 발급이 불필요한 경우 등 대통령령으로 정하는 경우에는 세금계산서를 발급하지 아니할 수 있다.",
+      "선원법 2조  정의#KOBLEX-067173": "20. \"선원수첩\"이란 선원의 승무경력, 자격증명, 근로계약 등의 내용을 수록한 문서를 말한다.",
+      "선원법 45조  선원수첩#KOBLEX-067325": "제45조(선원수첩)",
+      "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333": "① 해양항만관청은 다음 각 호의 어느 하나에 해당하는 사람에게 선원수첩을 발급하지 아니할 수 있다. 1. 신원이 분명하지 아니한 사람 2. 「병역법」 제76조제1항 각 호의 어느 하나에 해당하는 사람 3. 삭제 <2021.6.15>",
+      "선원법 47조  선원수첩의 실효#KOBLEX-067337": "2. 사망한 선원의 선원수첩",
+      "선원법 47조  선원수첩의 실효#KOBLEX-067338": "3. 선원수첩을 재발급한 경우 종전의 선원수첩",
+      "선원법 48조  선원신분증명서#KOBLEX-067343": "④ 선원신분증명서의 발급 제한 및 실효에 관하여는 제46조제1항 및 제47조를 준용한다. 이 경우 \"선원수첩\"은 \"선원신분증명서\"로 본다.",
+      "선원법 50조  선원수첩 등의 대여 및 부당사용 금지#KOBLEX-067348": "제50조(선원수첩 등의 대여 및 부당사용 금지) 선원은 선원수첩 또는 선원신분증명서를 부당하게 사용하거나 다른 사람에게 빌려 주어서는 아니 된다.",
+      "선원법 시행령 54조  외국선박에 승무하는 자에 대한 선원수첩 및 선원신분증명서의 발급 등#KOBLEX-122488": "제54조(외국선박에 승무하는 자에 대한 선원수첩 및 선원신분증명서의 발급 등)",
+      "선원법 시행령 9조  미성년자의 선원수첩 발급신청#KOBLEX-122245": "제9조(미성년자의 선원수첩 발급신청) 미성년자가 선원수첩의 발급을 신청할 때에는 그 신청서에 법정대리인의 동의서를 첨부하여야 한다. <개정 2012.2.3>",
+      "의료급여법 8조  의료급여증#KOBLEX-028969": "① 시장ㆍ군수ㆍ구청장은 수급권자가 신청하는 경우 의료급여증을 발급하여야 한다. 다만, 부득이한 사유가 있는 경우에는 의료급여증을 갈음하여 의료급여증명서를 발급하거나 보건복지부령으로 정하는 바에 따라 의료급여증을 발급하지 아니할 수 있다. <개정 2023.3.28>",
+      "재해구호법 19조  의연금품의 접수장소 등#KOBLEX-111360": "② 모집자나 모집종사자는 의연금품의 접수 사실을 장부에 기록하고, 기부자에게 영수증을 발급하여야 한다. 다만, 익명(匿名) 기부 등 기부자를 알 수 없는 경우에는 영수증을 발급하지 아니할 수 있다.",
+      "질서위반행위규제법 5조  다른 법률과의 관계#KOBLEX-022761": "제5조(다른 법률과의 관계) 과태료의 부과ㆍ징수, 재판 및 집행 등의 절차에 관한 다른 법률의 규정 중 이 법의 규정에 저촉되는 것은 이 법으로 정하는 바에 따른다.",
+      "채무자 회생 및 파산에 관한 법률 282조  회생계획의 변경#KOBLEX-032437": "②제1항의 규정에 의하여 회생채권자ㆍ회생담보권자ㆍ주주ㆍ지분권자에게 불리한 영향을 미칠 것으로 인정되는 회생계획의 변경신청이 있는 때에는 회생계획안의 제출이 있는 경우의 절차에 관한 규정을 준용한다. 다만, 이 경우에는 회생계획의 변경으로 인하여 불리한 영향을 받지 아니하는 권리자를 절차에 참가시키지 아니할 수 있다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333"
+        ],
+        "rationale": "C001은 선원수첩 발급 거절 또는 불발급의 법적 요건과 근거를 명시하여 E1의 완료 기준을 충족함.",
+        "status": "covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "rationale": "후보 조항 중 선원수첩 유효기간을 제한할 수 있는 사유와 절차를 명시한 규정은 없음. C002와 C013은 실효 사유를 규정할 뿐 유효기간 제한 근거가 아니며, C015와 C016은 납세증명서의 유효기간에 관한 규정으로 선원수첩과 무관함.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333",
+        "support_spans": [
+          {
+            "end_char": 129,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "해양항만관청이 갑에게 선원수첩을 발급하지 않을 수 있는 법적 근거",
+        "issue_id": "I1"
+      },
+      {
+        "description": "을의 선원수첩 유효기간 제한의 법적 근거",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "선원수첩 유효기간을 제한할 수 있는 사유와 절차를 명시한 법령 조항을 확인함",
+        "critical": true,
+        "description": "선원수첩 유효기간 제한의 법적 요건과 근거 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 1,
+    "normalized_question": "해양항만관청이 갑에게 선원수첩을 발급하지 않을 수 있는 법적 근거는 무엇이며, 을의 선원수첩 유효기간을 제한한 것은 어떤 법적 근거에서 이루어졌는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "선원수첩을 발급하지 아니할 수 있는 사유와 절차에 관한 규정",
+        "request_id": "RQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "선원수첩 유효기간을 제한할 수 있는 사유와 절차에 관한 규정",
+        "request_id": "RQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "선원수첩의 유효기간을 정하거나 제한할 수 있는 사유와 절차에 관한 규정",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "선원법 선원수첩 유효기간 제한 근거 조항",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_text": "선원수첩 유효기간 제한 사유",
+        "request_id": "GRQ3",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "선원수첩의 유효기간을 단축하거나 제한할 수 있는 행정적 요건과 법적 근거에 관한 규정",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "선원법 시행령 선원수첩 유효기간 제한 조항",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_text": "선원수첩 유효기간 단축 제한 행정처분",
+        "request_id": "GRQ3",
+        "top_k": 100
+      }
+    ],
+    "question": "해양항만관청이 갑에게 선원수첩을 발급하지 않을 수 있는 법적 근거는 무엇이며, 을의 선원수첩 유효기간을 제한한 것은 어떤 법적 근거에서 이루어졌는가?\n",
+    "remaining_request_budget": 1,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "선원수첩을 발급하지 않을 수 있는 사유와 절차를 명시한 법령 조항을 확인함",
+        "critical": true,
+        "description": "선원수첩 발급 거절 또는 불발급의 법적 요건과 근거 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "선원수첩 유효기간을 제한할 수 있는 사유와 절차를 명시한 법령 조항을 확인함",
+        "critical": true,
+        "description": "선원수첩 유효기간 제한의 법적 요건과 근거 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "b53fbf44-209f-46d8-a2fa-d785a5faccf6",
+    "seen_provision_ids": [
+      "선원법 47조  선원수첩의 실효#KOBLEX-067338",
+      "재해구호법 19조  의연금품의 접수장소 등#KOBLEX-111360",
+      "농지법 8조 3 농지취득자격증명의 발급제한#KOBLEX-172987",
+      "부가가치세법 33조  세금계산서 발급의무의 면제 등#KOBLEX-126910",
+      "농지법 8조 3 농지취득자격증명의 발급제한#KOBLEX-172986",
+      "선원법 48조  선원신분증명서#KOBLEX-067343",
+      "선원법 45조  선원수첩#KOBLEX-067325",
+      "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333",
+      "국세징수법 시행령 96조  납세증명서의 유효기간#KOBLEX-000334",
+      "선원법 2조  정의#KOBLEX-067173",
+      "질서위반행위규제법 5조  다른 법률과의 관계#KOBLEX-022761",
+      "의료급여법 8조  의료급여증#KOBLEX-028969",
+      "선원법 47조  선원수첩의 실효#KOBLEX-067337",
+      "선원법 50조  선원수첩 등의 대여 및 부당사용 금지#KOBLEX-067348",
+      "채무자 회생 및 파산에 관한 법률 282조  회생계획의 변경#KOBLEX-032437",
+      "도로교통법 시행규칙 83조 2 본인 여부를 확인할 수 있는 신분증명서의 종류#KOBLEX-161767",
+      "관세법 157조  물품의 반입ㆍ반출#KOBLEX-105237",
+      "선원법 시행령 54조  외국선박에 승무하는 자에 대한 선원수첩 및 선원신분증명서의 발급 등#KOBLEX-122488",
+      "선원법 시행령 9조  미성년자의 선원수첩 발급신청#KOBLEX-122245",
+      "관세법 시행령 141조 9 납세증명서의 유효기간#KOBLEX-144793",
+      "가사소송법 11조  위임 규정#KOBLEX-064815",
+      "공증인법 15조 8 인가의 유효기간#KOBLEX-096864"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

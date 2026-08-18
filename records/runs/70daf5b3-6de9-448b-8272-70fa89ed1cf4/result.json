@@ -1,0 +1,563 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-15T12:50:24.363482+00:00",
+  "end_to_end_latency_ms": 123749.559,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "70daf5b3-6de9-448b-8272-70fa89ed1cf4",
+  "state": {
+    "accepted_provision_ids": [
+      "공직선거법 6조 3 감염병환자 등의 선거권 보장#KOBLEX-051045",
+      "공직선거법 15조  선거권#KOBLEX-051166",
+      "공직선거법 6조 3 감염병환자 등의 선거권 보장#KOBLEX-174331",
+      "공직선거법 15조  선거권#KOBLEX-174452"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 0,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 17.8115942507551,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "유선 및 도선 사업법 27조  개선명령 등#KOBLEX-179671",
+        "provision_text": "3. 영업구역의 제한 또는 영업의 일시 정지",
+        "rerank_score": 0.0004890033742412925,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "유선 및 도선 사업법 27조  개선명령 등 3호"
+      },
+      {
+        "first_stage_score": 20.84608449658127,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "중소기업협동조합법 100조  의결권과 선거권#KOBLEX-031019",
+        "provision_text": "③중소기업 관련 단체인 정회원 모두가 가지는 의결권 또는 선거권은 중앙회 전체 의결권 또는 선거권 총수의 100분의 20을 초과할 수 없다.",
+        "rerank_score": 0.006874929182231426,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "중소기업협동조합법 100조  의결권과 선거권 3항"
+      },
+      {
+        "first_stage_score": 12.048034612018798,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "협동조합 기본법 31조  대의원총회#KOBLEX-016057",
+        "provision_text": "④ 대의원의 의결권 및 선거권은 대리인으로 하여금 행사하게 할 수 없다. <개정 2014.1.21>",
+        "rerank_score": 0.00010433961142553017,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "협동조합 기본법 31조  대의원총회 4항"
+      },
+      {
+        "first_stage_score": 14.600527767444792,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민법 924조#KOBLEX-060315",
+        "provision_text": "제3관 친권의 상실, 일시 정지 및 일부 제한 <개정 2014.10.15>",
+        "rerank_score": 9.283574763685465e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "민법 924조"
+      },
+      {
+        "first_stage_score": 12.012436835114382,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 412조  별제권의 행사#KOBLEX-032849",
+        "provision_text": "제412조(별제권의 행사) 별제권은 파산절차에 의하지 아니하고 행사한다.",
+        "rerank_score": 3.399997149244882e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "채무자 회생 및 파산에 관한 법률 412조  별제권의 행사"
+      },
+      {
+        "first_stage_score": 13.516020447865275,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 584조  부인권#KOBLEX-033310",
+        "provision_text": "②부인권은 채무자가 행사한다.",
+        "rerank_score": 2.3280870664166287e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "채무자 회생 및 파산에 관한 법률 584조  부인권 2항"
+      },
+      {
+        "first_stage_score": 16.20579236836295,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "군인연금법 55조  신고사항#KOBLEX-150147",
+        "provision_text": "1. 제27조제1항의 연금지급 정지 사유",
+        "rerank_score": 2.307700015080627e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "군인연금법 55조  신고사항 1호"
+      },
+      {
+        "first_stage_score": 17.037080492448627,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "전기통신사업법 시행령 55조  업무의 제한 및 정지#KOBLEX-006061",
+        "provision_text": "제55조(업무의 제한 및 정지)",
+        "rerank_score": 1.821463229134679e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "전기통신사업법 시행령 55조  업무의 제한 및 정지"
+      },
+      {
+        "first_stage_score": 16.325623696150437,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "전기통신사업법 96조  벌칙#KOBLEX-204482",
+        "provision_text": "11. 제85조에 따른 업무의 제한 또는 정지 명령을 이행하지 아니한 자",
+        "rerank_score": 9.65477738645859e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "전기통신사업법 96조  벌칙 15호"
+      },
+      {
+        "first_stage_score": 12.219881233243076,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "법원조직법 7조  심판권의 행사#KOBLEX-177557",
+        "provision_text": "③ 고등법원ㆍ특허법원 및 행정법원의 심판권은 판사 3명으로 구성된 합의부에서 행사한다. 다만, 행정법원의 경우 단독판사가 심판할 것으로 행정법원 합의부가 결정한 사건의 심판권은 단독판사가 행사한다.",
+        "rerank_score": 8.322055009557516e-07,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "법원조직법 7조  심판권의 행사 3항"
+      },
+      {
+        "first_stage_score": 14.41107682226215,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 15조  선거권#KOBLEX-051166",
+        "provision_text": "제15조(선거권)",
+        "rerank_score": 0.36274653673171997,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "공직선거법 15조  선거권"
+      },
+      {
+        "first_stage_score": 14.41107682226215,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 15조  선거권#KOBLEX-174452",
+        "provision_text": "제15조(선거권)",
+        "rerank_score": 0.36274653673171997,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "공직선거법 15조  선거권"
+      },
+      {
+        "first_stage_score": 12.0465772214708,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "지방교육자치에 관한 법률 49조  「공직선거법」의 준용#KOBLEX-021756",
+        "provision_text": "제49조(「공직선거법」의 준용)",
+        "rerank_score": 0.03165816888213158,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "지방교육자치에 관한 법률 49조  「공직선거법」의 준용"
+      },
+      {
+        "first_stage_score": 13.707170748141605,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "공공단체등 위탁선거에 관한 법률 12조#KOBLEX-086451",
+        "provision_text": "제3장 선거권 및 피선거권",
+        "rerank_score": 0.24827618896961212,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "공공단체등 위탁선거에 관한 법률 12조"
+      },
+      {
+        "first_stage_score": 13.38038956431397,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "신용협동조합법 19조  의결권 및 선거권 등#KOBLEX-063047",
+        "provision_text": "제19조(의결권 및 선거권 등)",
+        "rerank_score": 0.13194715976715088,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "신용협동조합법 19조  의결권 및 선거권 등"
+      },
+      {
+        "first_stage_score": 13.707170748141605,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "협동조합 기본법 23조  의결권 및 선거권#KOBLEX-016021",
+        "provision_text": "제23조(의결권 및 선거권)",
+        "rerank_score": 0.17968113720417023,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "협동조합 기본법 23조  의결권 및 선거권"
+      },
+      {
+        "first_stage_score": 14.050313069670207,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "중소기업협동조합법 19조  의결권과 선거권#KOBLEX-030692",
+        "provision_text": "제19조(의결권과 선거권)",
+        "rerank_score": 0.15441358089447021,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "중소기업협동조합법 19조  의결권과 선거권"
+      },
+      {
+        "first_stage_score": 14.050313069670207,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "중소기업협동조합법 100조  의결권과 선거권#KOBLEX-031016",
+        "provision_text": "제100조(의결권과 선거권)",
+        "rerank_score": 0.13128294050693512,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "중소기업협동조합법 100조  의결권과 선거권"
+      },
+      {
+        "first_stage_score": 13.38038956431397,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 6조 3 감염병환자 등의 선거권 보장#KOBLEX-051045",
+        "provision_text": "제6조의3(감염병환자 등의 선거권 보장)",
+        "rerank_score": 0.010953541845083237,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "공직선거법 6조 3 감염병환자 등의 선거권 보장"
+      },
+      {
+        "first_stage_score": 13.38038956431397,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 6조 3 감염병환자 등의 선거권 보장#KOBLEX-174331",
+        "provision_text": "제6조의3(감염병환자 등의 선거권 보장)",
+        "rerank_score": 0.010953541845083237,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "공직선거법 6조 3 감염병환자 등의 선거권 보장"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공공단체등 위탁선거에 관한 법률 12조#KOBLEX-086451": "제3장 선거권 및 피선거권",
+      "공직선거법 15조  선거권#KOBLEX-051166": "제15조(선거권)",
+      "공직선거법 15조  선거권#KOBLEX-174452": "제15조(선거권)",
+      "공직선거법 6조 3 감염병환자 등의 선거권 보장#KOBLEX-051045": "제6조의3(감염병환자 등의 선거권 보장)",
+      "공직선거법 6조 3 감염병환자 등의 선거권 보장#KOBLEX-174331": "제6조의3(감염병환자 등의 선거권 보장)",
+      "군인연금법 55조  신고사항#KOBLEX-150147": "1. 제27조제1항의 연금지급 정지 사유",
+      "민법 924조#KOBLEX-060315": "제3관 친권의 상실, 일시 정지 및 일부 제한 <개정 2014.10.15>",
+      "법원조직법 7조  심판권의 행사#KOBLEX-177557": "③ 고등법원ㆍ특허법원 및 행정법원의 심판권은 판사 3명으로 구성된 합의부에서 행사한다. 다만, 행정법원의 경우 단독판사가 심판할 것으로 행정법원 합의부가 결정한 사건의 심판권은 단독판사가 행사한다.",
+      "신용협동조합법 19조  의결권 및 선거권 등#KOBLEX-063047": "제19조(의결권 및 선거권 등)",
+      "유선 및 도선 사업법 27조  개선명령 등#KOBLEX-179671": "3. 영업구역의 제한 또는 영업의 일시 정지",
+      "전기통신사업법 96조  벌칙#KOBLEX-204482": "11. 제85조에 따른 업무의 제한 또는 정지 명령을 이행하지 아니한 자",
+      "전기통신사업법 시행령 55조  업무의 제한 및 정지#KOBLEX-006061": "제55조(업무의 제한 및 정지)",
+      "중소기업협동조합법 100조  의결권과 선거권#KOBLEX-031016": "제100조(의결권과 선거권)",
+      "중소기업협동조합법 100조  의결권과 선거권#KOBLEX-031019": "③중소기업 관련 단체인 정회원 모두가 가지는 의결권 또는 선거권은 중앙회 전체 의결권 또는 선거권 총수의 100분의 20을 초과할 수 없다.",
+      "중소기업협동조합법 19조  의결권과 선거권#KOBLEX-030692": "제19조(의결권과 선거권)",
+      "지방교육자치에 관한 법률 49조  「공직선거법」의 준용#KOBLEX-021756": "제49조(「공직선거법」의 준용)",
+      "채무자 회생 및 파산에 관한 법률 412조  별제권의 행사#KOBLEX-032849": "제412조(별제권의 행사) 별제권은 파산절차에 의하지 아니하고 행사한다.",
+      "채무자 회생 및 파산에 관한 법률 584조  부인권#KOBLEX-033310": "②부인권은 채무자가 행사한다.",
+      "협동조합 기본법 23조  의결권 및 선거권#KOBLEX-016021": "제23조(의결권 및 선거권)",
+      "협동조합 기본법 31조  대의원총회#KOBLEX-016057": "④ 대의원의 의결권 및 선거권은 대리인으로 하여금 행사하게 할 수 없다. <개정 2014.1.21>"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "공직선거법 15조  선거권#KOBLEX-051166",
+          "공직선거법 15조  선거권#KOBLEX-174452",
+          "공직선거법 6조 3 감염병환자 등의 선거권 보장#KOBLEX-051045",
+          "공직선거법 6조 3 감염병환자 등의 선거권 보장#KOBLEX-174331"
+        ],
+        "rationale": "공직선거법 제15조와 제6조의3이 제공되었으나, 해당 조항들의 본문이 누락되어 선거권 행사 요건과 선거일 투표 가능 여부를 확인하는 completion_criteria를 충족하지 못함.",
+        "status": "partially_covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "rationale": "갑의 선거권 행사 제한 또는 정지 사유를 명시하는 조항이 제공되지 않음. 제공된 조항들은 협동조합 의결권, 영업 정지, 친권 정지, 연금 정지 등 선거권 제한과 무관함.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "공직선거법 15조  선거권#KOBLEX-051166",
+        "support_spans": [
+          {
+            "end_char": 9,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "공직선거법 15조  선거권#KOBLEX-174452",
+        "support_spans": [
+          {
+            "end_char": 9,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "공직선거법 6조 3 감염병환자 등의 선거권 보장#KOBLEX-051045",
+        "support_spans": [
+          {
+            "end_char": 22,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "공직선거법 6조 3 감염병환자 등의 선거권 보장#KOBLEX-174331",
+        "support_spans": [
+          {
+            "end_char": 22,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "갑이 선거일에 선거권을 행사할 수 있는지 여부",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "선거권 행사 요건과 선거일 투표 가능 여부를 명시하는 조항을 확인",
+        "critical": true,
+        "description": "선거권 행사 요건 및 선거일에 투표할 수 있는 법적 근거",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "갑의 선거권 행사가 제한되거나 정지될 수 있는 사유를 명시하는 조항을 확인",
+        "critical": true,
+        "description": "선거권 행사 제한 또는 정지 사유",
+        "evidence_item_id": "E2",
+        "evidence_type": "exception",
+        "issue_id": "I1"
+      }
+    ],
+    "no_progress_rounds": 1,
+    "normalized_question": "갑은 선거일에 자신의 선거권을 행사할 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "선거권은 선거일에 투표함으로써 행사한다",
+        "request_id": "RQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "선거권 제한 또는 정지 사유",
+        "request_id": "RQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "공직선거법 선거권 행사 요건 선거일 투표",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "공직선거법 선거권 제한 정지 사유",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "선거권은 선거일에 투표함으로써 행사하며, 선거권 행사의 요건은 대한민국 국민으로서 만 18세 이상이어야 한다",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_text": "선거권 제한 정지 사유",
+        "request_id": "GRQ2",
+        "top_k": 100
+      }
+    ],
+    "question": "갑은 선거일에 자신의 선거권을 행사할 수 있는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "선거권 행사 요건과 선거일 투표 가능 여부를 명시하는 조항을 확인",
+        "critical": true,
+        "description": "선거권 행사 요건 및 선거일에 투표할 수 있는 법적 근거",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "갑의 선거권 행사가 제한되거나 정지될 수 있는 사유를 명시하는 조항을 확인",
+        "critical": true,
+        "description": "선거권 행사 제한 또는 정지 사유",
+        "evidence_item_id": "E2",
+        "evidence_type": "exception",
+        "issue_id": "I1"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "70daf5b3-6de9-448b-8272-70fa89ed1cf4",
+    "seen_provision_ids": [
+      "중소기업협동조합법 100조  의결권과 선거권#KOBLEX-031019",
+      "채무자 회생 및 파산에 관한 법률 584조  부인권#KOBLEX-033310",
+      "공직선거법 6조 3 감염병환자 등의 선거권 보장#KOBLEX-051045",
+      "전기통신사업법 96조  벌칙#KOBLEX-204482",
+      "공공단체등 위탁선거에 관한 법률 12조#KOBLEX-086451",
+      "협동조합 기본법 23조  의결권 및 선거권#KOBLEX-016021",
+      "민법 924조#KOBLEX-060315",
+      "법원조직법 7조  심판권의 행사#KOBLEX-177557",
+      "중소기업협동조합법 19조  의결권과 선거권#KOBLEX-030692",
+      "유선 및 도선 사업법 27조  개선명령 등#KOBLEX-179671",
+      "공직선거법 15조  선거권#KOBLEX-051166",
+      "신용협동조합법 19조  의결권 및 선거권 등#KOBLEX-063047",
+      "협동조합 기본법 31조  대의원총회#KOBLEX-016057",
+      "공직선거법 15조  선거권#KOBLEX-174452",
+      "채무자 회생 및 파산에 관한 법률 412조  별제권의 행사#KOBLEX-032849",
+      "지방교육자치에 관한 법률 49조  「공직선거법」의 준용#KOBLEX-021756",
+      "군인연금법 55조  신고사항#KOBLEX-150147",
+      "공직선거법 6조 3 감염병환자 등의 선거권 보장#KOBLEX-174331",
+      "전기통신사업법 시행령 55조  업무의 제한 및 정지#KOBLEX-006061",
+      "중소기업협동조합법 100조  의결권과 선거권#KOBLEX-031016"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

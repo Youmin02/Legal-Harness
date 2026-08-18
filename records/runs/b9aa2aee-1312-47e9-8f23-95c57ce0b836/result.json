@@ -1,0 +1,581 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "completed_at_utc": "2026-08-15T13:15:49.011232+00:00",
+  "end_to_end_latency_ms": 159429.489,
+  "errors": [
+    "provision_coverage_assessment did not produce a valid ASSESS_COVERAGE result after 2 attempts: duplicate evidence_item_id: E2; duplicate evidence_item_id: E2"
+  ],
+  "record_schema_version": "1.0",
+  "run_id": "b9aa2aee-1312-47e9-8f23-95c57ce0b836",
+  "state": {
+    "accepted_provision_ids": [
+      "형법 299조  준강간, 준강제추행#KOBLEX-193297"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 20,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 8,
+          "request_count": 3,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "error": "provision_coverage_assessment did not produce a valid ASSESS_COVERAGE result after 2 attempts: duplicate evidence_item_id: E2; duplicate evidence_item_id: E2",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 16.387231077380534,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형법 299조  준강간, 준강제추행#KOBLEX-193297",
+        "provision_text": "제299조(준강간, 준강제추행) 사람의 심신상실 또는 항거불능의 상태를 이용하여 간음 또는 추행을 한 자는 제297조, 제297조의2 및 제298조의 예에 의한다. <개정 2012.12.18>",
+        "rerank_score": 0.9980325102806091,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "형법 299조  준강간, 준강제추행"
+      },
+      {
+        "first_stage_score": 15.61843121082906,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "군형법 92조 4 준강간, 준강제추행#KOBLEX-140851",
+        "provision_text": "제92조의4(준강간, 준강제추행) 제1조제1항부터 제3항까지에 규정된 사람의 심신상실 또는 항거불능 상태를 이용하여 간음 또는 추행을 한 사람은 제92조, 제92조의2 및 제92조의3의 예에 따른다. <개정 2013.4.5>",
+        "rerank_score": 0.9959302544593811,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "군형법 92조 4 준강간, 준강제추행"
+      },
+      {
+        "first_stage_score": 26.27820099634875,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157541",
+        "provision_text": "④ 신체적인 또는 정신적인 장애로 항거불능 또는 항거곤란 상태에 있음을 이용하여 사람을 간음하거나 추행한 사람은 제1항부터 제3항까지의 예에 따라 처벌한다.",
+        "rerank_score": 0.9557759761810303,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등 4항"
+      },
+      {
+        "first_stage_score": 14.99941174391989,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 33조  전문가의 의견 조회#KOBLEX-157654",
+        "provision_text": "④ 제1항부터 제3항까지의 규정은 수사기관이 성폭력범죄를 수사하는 경우에 준용한다. 다만, 피해자가 13세 미만이거나 신체적인 또는 정신적인 장애로 사물을 변별하거나 의사를 결정할 능력이 미약한 경우에는 관련 전문가에게 피해자의 정신ㆍ심리 상태에 대한 진단 소견 및 진술 내용에 관한 의견을 조회하여야 한다.",
+        "rerank_score": 3.2551868116570404e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 33조  전문가의 의견 조회 4항"
+      },
+      {
+        "first_stage_score": 13.449257604083735,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "군인사법 59조  징계의 절차 등#KOBLEX-007106",
+        "provision_text": "⑧ 징계권자는 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 및 「양성평등기본법」 제3조제2호에 따른 성희롱에 해당하는 사유로 징계처분등을 할 때에는 피해자가 요청하는 경우 그 징계처분등의 결과를 피해자에게 통보하여야 한다. <신설 2023.10.31>",
+        "rerank_score": 1.3946851140644867e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "군인사법 59조  징계의 절차 등 8항"
+      },
+      {
+        "first_stage_score": 13.834959194200056,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "지방세기본법 101조  처벌#KOBLEX-121008",
+        "provision_text": "제101조(처벌) 이 법 또는 지방세관계법을 위반한 자에 대해서는 이 장 제2절 및 제3절과 제133조 및 제134조에서 정한 바에 따라 처벌한다.",
+        "rerank_score": 1.1138835134261171e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "지방세기본법 101조  처벌"
+      },
+      {
+        "first_stage_score": 14.393261989641916,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "지방세기본법 101조#KOBLEX-121006",
+        "provision_text": "제8장 범칙행위 등에 대한 처벌 및 처벌절차",
+        "rerank_score": 1.0571756092758733e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "지방세기본법 101조"
+      },
+      {
+        "first_stage_score": 14.728409723859397,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "관세법 264조 9 과세자료 비밀유지의무 위반에 대한 처벌#KOBLEX-105870",
+        "provision_text": "제264조의9(과세자료 비밀유지의무 위반에 대한 처벌)",
+        "rerank_score": 7.685846412641695e-07,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "관세법 264조 9 과세자료 비밀유지의무 위반에 대한 처벌"
+      },
+      {
+        "first_stage_score": 13.477797387884786,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "도로교통법 2조  정의#KOBLEX-013756",
+        "provision_text": "24. \"주차\"란 운전자가 승객을 기다리거나 화물을 싣거나 차가 고장 나거나 그 밖의 사유로 차를 계속 정지 상태에 두는 것 또는 운전자가 차에서 떠나서 즉시 그 차를 운전할 수 없는 상태에 두는 것을 말한다.",
+        "rerank_score": 6.878565272927517e-07,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "도로교통법 2조  정의 32호"
+      },
+      {
+        "first_stage_score": 14.587847025455424,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "고용보험법 2조  정의#KOBLEX-206488",
+        "provision_text": "3. \"실업\"이란 근로의 의사와 능력이 있음에도 불구하고 취업하지 못한 상태에 있는 것을 말한다.",
+        "rerank_score": 5.758179781878425e-07,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "고용보험법 2조  정의 3호"
+      },
+      {
+        "first_stage_score": 28.161256667739526,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "장애인활동 지원에 관한 법률 29조  활동지원인력의 결격 사유#KOBLEX-074510",
+        "provision_text": "5. 「성폭력범죄의 처벌 등에 관한 특례법」 제3조부터 제10조까지 및 제15조(같은 법 제3조부터 제9조까지의 미수범으로 한정한다)에 규정된 죄로 금고 이상의 형을 선고받은 사람",
+        "rerank_score": 0.7422031760215759,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "장애인활동 지원에 관한 법률 29조  활동지원인력의 결격 사유 6호"
+      },
+      {
+        "first_stage_score": 36.55936104343813,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "범죄수익은닉의 규제 및 처벌 등에 관한 법률 10조 4 범죄수익등의 추정#KOBLEX-048160",
+        "provision_text": "2. 「성폭력범죄의 처벌 등에 관한 특례법」 제14조 및 제14조의2의 죄",
+        "rerank_score": 0.2834755778312683,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "범죄수익은닉의 규제 및 처벌 등에 관한 법률 10조 4 범죄수익등의 추정 2호"
+      },
+      {
+        "first_stage_score": 35.796850214243165,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 18조  교육활동 침해행위 관련 보고 사항#KOBLEX-219361",
+        "provision_text": "2. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조제1항에 따른 성폭력범죄 행위인 경우",
+        "rerank_score": 0.007256272714585066,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 18조  교육활동 침해행위 관련 보고 사항 2호"
+      },
+      {
+        "first_stage_score": 36.55936104343813,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "사립학교법 시행령 24조 5 직위해제 대상 비위행위#KOBLEX-190053",
+        "provision_text": "3. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위",
+        "rerank_score": 0.005795557517558336,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "사립학교법 시행령 24조 5 직위해제 대상 비위행위 3호"
+      },
+      {
+        "first_stage_score": 34.363428743130804,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "장애인복지법 59조 15 피해장애인에 대한 변호사 선임의 특례#KOBLEX-188531",
+        "provision_text": "② 제1항에 따른 변호사에 관하여는 「성폭력범죄의 처벌 등에 관한 특례법」 제27조제2항부터 제6항까지를 준용한다.",
+        "rerank_score": 0.0007679105619899929,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "장애인복지법 59조 15 피해장애인에 대한 변호사 선임의 특례 2항"
+      },
+      {
+        "first_stage_score": 27.232425159556936,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "아동학대범죄의 처벌 등에 관한 특례법 3조  다른 법률과의 관계#KOBLEX-124230",
+        "provision_text": "제3조(다른 법률과의 관계) 아동학대범죄에 대하여는 이 법을 우선 적용한다. 다만, 「성폭력범죄의 처벌 등에 관한 특례법」, 「아동ㆍ청소년의 성보호에 관한 법률」에서 가중처벌되는 경우에는 그 법에서 정한 바에 따른다.",
+        "rerank_score": 0.0006757027585990727,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "아동학대범죄의 처벌 등에 관한 특례법 3조  다른 법률과의 관계"
+      },
+      {
+        "first_stage_score": 29.412494901314805,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "경찰관 직무집행법 11조 5 직무 수행으로 인한 형의 감면#KOBLEX-033758",
+        "provision_text": "2. 「가정폭력범죄의 처벌 등에 관한 특례법」에 따른 가정폭력범죄, 「아동학대범죄의 처벌 등에 관한 특례법」에 따른 아동학대범죄",
+        "rerank_score": 0.0006689404835924506,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "경찰관 직무집행법 11조 5 직무 수행으로 인한 형의 감면 2호"
+      },
+      {
+        "first_stage_score": 29.412494901314805,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "경찰관 직무집행법 11조 5 직무 수행으로 인한 형의 감면#KOBLEX-226639",
+        "provision_text": "2. 「가정폭력범죄의 처벌 등에 관한 특례법」에 따른 가정폭력범죄, 「아동학대범죄의 처벌 등에 관한 특례법」에 따른 아동학대범죄",
+        "rerank_score": 0.0006689404835924506,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "경찰관 직무집행법 11조 5 직무 수행으로 인한 형의 감면 2호"
+      },
+      {
+        "first_stage_score": 32.29282464491079,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "장애인복지법 59조 16 진술조력인의 참여 등#KOBLEX-188535",
+        "provision_text": "③ 그 밖에 진술조력인의 수사ㆍ재판과정의 참여와 의무 등에 관하여는 「성폭력범죄의 처벌 등에 관한 특례법」 제36조부터 제39조까지의 규정을 준용한다.",
+        "rerank_score": 0.00017392497102264315,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "장애인복지법 59조 16 진술조력인의 참여 등 3항"
+      },
+      {
+        "first_stage_score": 30.678080530003065,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조  목적#KOBLEX-107704",
+        "provision_text": "제1조(목적) 이 영은 「성폭력범죄의 처벌 등에 관한 특례법」에서 위임된 사항과 그 시행에 필요한 사항을 규정함을 목적으로 한다.",
+        "rerank_score": 0.0001612721534911543,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조  목적"
+      },
+      {
+        "first_stage_score": 28.857332424523914,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등#KOBLEX-157530",
+        "provision_text": "③ 제1항의 방법으로 「형법」 제299조(준강간, 준강제추행)의 죄를 범한 사람은 제1항 또는 제2항의 예에 따라 처벌한다.",
+        "rerank_score": 0.9997788071632385,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등 3항"
+      },
+      {
+        "first_stage_score": 28.33213821867274,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157549",
+        "provision_text": "④ 13세 미만의 사람에 대하여 「형법」 제299조(준강간, 준강제추행)의 죄를 범한 사람은 제1항부터 제3항까지의 예에 따라 처벌한다.",
+        "rerank_score": 0.9993410706520081,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등 4항"
+      },
+      {
+        "first_stage_score": 27.82571904584236,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157534",
+        "provision_text": "③ 친족관계인 사람이 사람에 대하여 「형법」 제299조(준강간, 준강제추행)의 죄를 범한 경우에는 제1항 또는 제2항의 예에 따라 처벌한다.",
+        "rerank_score": 0.998331606388092,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등 3항"
+      },
+      {
+        "first_stage_score": 20.771459896591367,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 3조  특수강도강간 등#KOBLEX-157526",
+        "provision_text": "② 「형법」 제334조(특수강도) 또는 제342조(미수범. 다만, 제334조의 미수범으로 한정한다)의 죄를 범한 사람이 같은 법 제297조(강간), 제297조의2(유사강간), 제298조(강제추행) 및 제299조(준강간, 준강제추행)의 죄를 범한 경우에는 사형, 무기징역 또는 10년 이상의 징역에 처한다.",
+        "rerank_score": 0.915652871131897,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 3조  특수강도강간 등 2항"
+      },
+      {
+        "first_stage_score": 18.544515314052727,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 3조  특수강도강간 등#KOBLEX-157525",
+        "provision_text": "① 「형법」 제319조제1항(주거침입), 제330조(야간주거침입절도), 제331조(특수절도) 또는 제342조(미수범. 다만, 제330조 및 제331조의 미수범으로 한정한다)의 죄를 범한 사람이 같은 법 제297조(강간), 제297조의2(유사강간), 제298조(강제추행) 및 제299조(준강간, 준강제추행)의 죄를 범한 경우에는 무기징역 또는 7년 이상의 징역에 처한다. <개정 2020.5.19>",
+        "rerank_score": 0.5504063963890076,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 3조  특수강도강간 등 1항"
+      },
+      {
+        "first_stage_score": 13.426405356789886,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 21조  공소시효에 관한 특례#KOBLEX-157602",
+        "provision_text": "③ 13세 미만의 사람 및 신체적인 또는 정신적인 장애가 있는 사람에 대하여 다음 각 호의 죄를 범한 경우에는 제1항과 제2항에도 불구하고 「형사소송법」 제249조부터 제253조까지 및 「군사법원법」 제291조부터 제295조까지에 규정된 공소시효를 적용하지 아니한다. <개정 2019.8.20, 2020.5.19> 1. 「형법」 제297조(강간), 제298조(강제추행), 제299조(준강간, 준강제추행), 제301조(강간등 상해ㆍ치상), 제301조의2(강간등 살인ㆍ치사) 또는 제305조(미성년자에 대한 간음, 추행)의 죄 2. 제6조제2항, 제7조제2항 및 제5항, 제8조, 제9조의 죄 3. 「아동ㆍ청소년의 성보호에 관한 법률」 제9조 또는 제10조의 죄",
+        "rerank_score": 0.06472373753786087,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 21조  공소시효에 관한 특례 3항"
+      },
+      {
+        "first_stage_score": 12.934530426004068,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "부정수표 단속법 3조  법인ㆍ단체 등의 형사책임#KOBLEX-071962",
+        "provision_text": "② 대리인이 수표를 발행한 경우에는 본인을 처벌하는 외에 그 대리인도 처벌한다.",
+        "rerank_score": 3.784295768127777e-05,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "부정수표 단속법 3조  법인ㆍ단체 등의 형사책임 2항"
+      },
+      {
+        "first_stage_score": 12.934530426004068,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "부정수표 단속법 3조  법인ㆍ단체 등의 형사책임#KOBLEX-148784",
+        "provision_text": "② 대리인이 수표를 발행한 경우에는 본인을 처벌하는 외에 그 대리인도 처벌한다.",
+        "rerank_score": 3.784295768127777e-05,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "부정수표 단속법 3조  법인ㆍ단체 등의 형사책임 2항"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "경찰관 직무집행법 11조 5 직무 수행으로 인한 형의 감면#KOBLEX-033758": "2. 「가정폭력범죄의 처벌 등에 관한 특례법」에 따른 가정폭력범죄, 「아동학대범죄의 처벌 등에 관한 특례법」에 따른 아동학대범죄",
+      "경찰관 직무집행법 11조 5 직무 수행으로 인한 형의 감면#KOBLEX-226639": "2. 「가정폭력범죄의 처벌 등에 관한 특례법」에 따른 가정폭력범죄, 「아동학대범죄의 처벌 등에 관한 특례법」에 따른 아동학대범죄",
+      "고용보험법 2조  정의#KOBLEX-206488": "3. \"실업\"이란 근로의 의사와 능력이 있음에도 불구하고 취업하지 못한 상태에 있는 것을 말한다.",
+      "관세법 264조 9 과세자료 비밀유지의무 위반에 대한 처벌#KOBLEX-105870": "제264조의9(과세자료 비밀유지의무 위반에 대한 처벌)",
+      "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 18조  교육활동 침해행위 관련 보고 사항#KOBLEX-219361": "2. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조제1항에 따른 성폭력범죄 행위인 경우",
+      "군인사법 59조  징계의 절차 등#KOBLEX-007106": "⑧ 징계권자는 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 및 「양성평등기본법」 제3조제2호에 따른 성희롱에 해당하는 사유로 징계처분등을 할 때에는 피해자가 요청하는 경우 그 징계처분등의 결과를 피해자에게 통보하여야 한다. <신설 2023.10.31>",
+      "군형법 92조 4 준강간, 준강제추행#KOBLEX-140851": "제92조의4(준강간, 준강제추행) 제1조제1항부터 제3항까지에 규정된 사람의 심신상실 또는 항거불능 상태를 이용하여 간음 또는 추행을 한 사람은 제92조, 제92조의2 및 제92조의3의 예에 따른다. <개정 2013.4.5>",
+      "도로교통법 2조  정의#KOBLEX-013756": "24. \"주차\"란 운전자가 승객을 기다리거나 화물을 싣거나 차가 고장 나거나 그 밖의 사유로 차를 계속 정지 상태에 두는 것 또는 운전자가 차에서 떠나서 즉시 그 차를 운전할 수 없는 상태에 두는 것을 말한다.",
+      "범죄수익은닉의 규제 및 처벌 등에 관한 법률 10조 4 범죄수익등의 추정#KOBLEX-048160": "2. 「성폭력범죄의 처벌 등에 관한 특례법」 제14조 및 제14조의2의 죄",
+      "부정수표 단속법 3조  법인ㆍ단체 등의 형사책임#KOBLEX-071962": "② 대리인이 수표를 발행한 경우에는 본인을 처벌하는 외에 그 대리인도 처벌한다.",
+      "부정수표 단속법 3조  법인ㆍ단체 등의 형사책임#KOBLEX-148784": "② 대리인이 수표를 발행한 경우에는 본인을 처벌하는 외에 그 대리인도 처벌한다.",
+      "사립학교법 시행령 24조 5 직위해제 대상 비위행위#KOBLEX-190053": "3. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위",
+      "성폭력범죄의 처벌 등에 관한 특례법 21조  공소시효에 관한 특례#KOBLEX-157602": "③ 13세 미만의 사람 및 신체적인 또는 정신적인 장애가 있는 사람에 대하여 다음 각 호의 죄를 범한 경우에는 제1항과 제2항에도 불구하고 「형사소송법」 제249조부터 제253조까지 및 「군사법원법」 제291조부터 제295조까지에 규정된 공소시효를 적용하지 아니한다. <개정 2019.8.20, 2020.5.19> 1. 「형법」 제297조(강간), 제298조(강제추행), 제299조(준강간, 준강제추행), 제301조(강간등 상해ㆍ치상), 제301조의2(강간등 살인ㆍ치사) 또는 제305조(미성년자에 대한 간음, 추행)의 죄 2. 제6조제2항, 제7조제2항 및 제5항, 제8조, 제9조의 죄 3. 「아동ㆍ청소년의 성보호에 관한 법률」 제9조 또는 제10조의 죄",
+      "성폭력범죄의 처벌 등에 관한 특례법 33조  전문가의 의견 조회#KOBLEX-157654": "④ 제1항부터 제3항까지의 규정은 수사기관이 성폭력범죄를 수사하는 경우에 준용한다. 다만, 피해자가 13세 미만이거나 신체적인 또는 정신적인 장애로 사물을 변별하거나 의사를 결정할 능력이 미약한 경우에는 관련 전문가에게 피해자의 정신ㆍ심리 상태에 대한 진단 소견 및 진술 내용에 관한 의견을 조회하여야 한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 3조  특수강도강간 등#KOBLEX-157525": "① 「형법」 제319조제1항(주거침입), 제330조(야간주거침입절도), 제331조(특수절도) 또는 제342조(미수범. 다만, 제330조 및 제331조의 미수범으로 한정한다)의 죄를 범한 사람이 같은 법 제297조(강간), 제297조의2(유사강간), 제298조(강제추행) 및 제299조(준강간, 준강제추행)의 죄를 범한 경우에는 무기징역 또는 7년 이상의 징역에 처한다. <개정 2020.5.19>",
+      "성폭력범죄의 처벌 등에 관한 특례법 3조  특수강도강간 등#KOBLEX-157526": "② 「형법」 제334조(특수강도) 또는 제342조(미수범. 다만, 제334조의 미수범으로 한정한다)의 죄를 범한 사람이 같은 법 제297조(강간), 제297조의2(유사강간), 제298조(강제추행) 및 제299조(준강간, 준강제추행)의 죄를 범한 경우에는 사형, 무기징역 또는 10년 이상의 징역에 처한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등#KOBLEX-157530": "③ 제1항의 방법으로 「형법」 제299조(준강간, 준강제추행)의 죄를 범한 사람은 제1항 또는 제2항의 예에 따라 처벌한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157534": "③ 친족관계인 사람이 사람에 대하여 「형법」 제299조(준강간, 준강제추행)의 죄를 범한 경우에는 제1항 또는 제2항의 예에 따라 처벌한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157541": "④ 신체적인 또는 정신적인 장애로 항거불능 또는 항거곤란 상태에 있음을 이용하여 사람을 간음하거나 추행한 사람은 제1항부터 제3항까지의 예에 따라 처벌한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157549": "④ 13세 미만의 사람에 대하여 「형법」 제299조(준강간, 준강제추행)의 죄를 범한 사람은 제1항부터 제3항까지의 예에 따라 처벌한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조  목적#KOBLEX-107704": "제1조(목적) 이 영은 「성폭력범죄의 처벌 등에 관한 특례법」에서 위임된 사항과 그 시행에 필요한 사항을 규정함을 목적으로 한다.",
+      "아동학대범죄의 처벌 등에 관한 특례법 3조  다른 법률과의 관계#KOBLEX-124230": "제3조(다른 법률과의 관계) 아동학대범죄에 대하여는 이 법을 우선 적용한다. 다만, 「성폭력범죄의 처벌 등에 관한 특례법」, 「아동ㆍ청소년의 성보호에 관한 법률」에서 가중처벌되는 경우에는 그 법에서 정한 바에 따른다.",
+      "장애인복지법 59조 15 피해장애인에 대한 변호사 선임의 특례#KOBLEX-188531": "② 제1항에 따른 변호사에 관하여는 「성폭력범죄의 처벌 등에 관한 특례법」 제27조제2항부터 제6항까지를 준용한다.",
+      "장애인복지법 59조 16 진술조력인의 참여 등#KOBLEX-188535": "③ 그 밖에 진술조력인의 수사ㆍ재판과정의 참여와 의무 등에 관하여는 「성폭력범죄의 처벌 등에 관한 특례법」 제36조부터 제39조까지의 규정을 준용한다.",
+      "장애인활동 지원에 관한 법률 29조  활동지원인력의 결격 사유#KOBLEX-074510": "5. 「성폭력범죄의 처벌 등에 관한 특례법」 제3조부터 제10조까지 및 제15조(같은 법 제3조부터 제9조까지의 미수범으로 한정한다)에 규정된 죄로 금고 이상의 형을 선고받은 사람",
+      "지방세기본법 101조  처벌#KOBLEX-121008": "제101조(처벌) 이 법 또는 지방세관계법을 위반한 자에 대해서는 이 장 제2절 및 제3절과 제133조 및 제134조에서 정한 바에 따라 처벌한다.",
+      "지방세기본법 101조#KOBLEX-121006": "제8장 범칙행위 등에 대한 처벌 및 처벌절차",
+      "형법 299조  준강간, 준강제추행#KOBLEX-193297": "제299조(준강간, 준강제추행) 사람의 심신상실 또는 항거불능의 상태를 이용하여 간음 또는 추행을 한 자는 제297조, 제297조의2 및 제298조의 예에 의한다. <개정 2012.12.18>"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "형법 299조  준강간, 준강제추행#KOBLEX-193297"
+        ],
+        "rationale": "형법 제299조가 심신상실 상태를 이용한 추행 행위를 명시적으로 처벌하는 구성요건을 규정하므로 E1의 완료 기준이 충족된다.",
+        "status": "covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [
+          "형법 299조  준강간, 준강제추행#KOBLEX-193297"
+        ],
+        "rationale": "형법 제299조는 해당 행위에 대한 처벌 근거를 제공하나, 구체적 형량은 제297조 등 다른 조항의 예에 의하도록 규정하고 있어 본 후보 집합 내에서는 구체적 형량 규정이 확인되지 않는다.",
+        "status": "partially_covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형법 299조  준강간, 준강제추행#KOBLEX-193297",
+        "support_spans": [
+          {
+            "end_char": 107,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형법 299조  준강간, 준강제추행#KOBLEX-193297",
+        "support_spans": [
+          {
+            "end_char": 107,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 8,
+    "last_validated_event": "D2.GAP_RETRIEVAL",
+    "legal_issues": [
+      {
+        "description": "심신상실 상태의 피해자를 이용한 추행 시도가 성범죄 구성요건에 해당하는지 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "해당 행위에 적용되는 법정형 및 처벌 범위",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "해당 죄명에 대한 구체적 형량(징역 또는 벌금 등)이 명시된 조항이 확인되어야 한다.",
+        "critical": true,
+        "description": "해당 구성요건에 대한 법정형 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "피해자가 심신상실 상태에 빠진 것을 이용하여 추행한 자에 대한 처벌 규정",
+        "request_id": "RQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "성폭력범죄의 처벌 등에 관한 특례법 심신상실 추행 죄의 법정형",
+        "request_id": "RQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "형법 제299조 준강간 준강제추행의 형량 적용 근거 조항",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "준강간 또는 준강제추행으로 처벌하는 죄에 적용되는 법정형 규정",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_text": "준강간 준강제추행 형량 징역 벌금",
+        "request_id": "GRQ3",
+        "top_k": 100
+      }
+    ],
+    "question": "갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+    "remaining_request_budget": 4,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "피해자가 심신상실 상태임을 이용하여 추행한 경우를 명시적으로 처벌하는 조항이 확인되어야 한다.",
+        "critical": true,
+        "description": "심신상실 상태의 피해자를 이용한 추행 행위를 처벌하는 구성요건 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "element",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "해당 죄명에 대한 구체적 형량(징역 또는 벌금 등)이 명시된 조항이 확인되어야 한다.",
+        "critical": true,
+        "description": "해당 구성요건에 대한 법정형 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "b9aa2aee-1312-47e9-8f23-95c57ce0b836",
+    "seen_provision_ids": [
+      "장애인복지법 59조 15 피해장애인에 대한 변호사 선임의 특례#KOBLEX-188531",
+      "부정수표 단속법 3조  법인ㆍ단체 등의 형사책임#KOBLEX-148784",
+      "성폭력범죄의 처벌 등에 관한 특례법 3조  특수강도강간 등#KOBLEX-157526",
+      "경찰관 직무집행법 11조 5 직무 수행으로 인한 형의 감면#KOBLEX-033758",
+      "성폭력범죄의 처벌 등에 관한 특례법 21조  공소시효에 관한 특례#KOBLEX-157602",
+      "지방세기본법 101조#KOBLEX-121006",
+      "아동학대범죄의 처벌 등에 관한 특례법 3조  다른 법률과의 관계#KOBLEX-124230",
+      "고용보험법 2조  정의#KOBLEX-206488",
+      "형법 299조  준강간, 준강제추행#KOBLEX-193297",
+      "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157534",
+      "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157541",
+      "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등#KOBLEX-157530",
+      "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157549",
+      "장애인복지법 59조 16 진술조력인의 참여 등#KOBLEX-188535",
+      "성폭력범죄의 처벌 등에 관한 특례법 3조  특수강도강간 등#KOBLEX-157525",
+      "관세법 264조 9 과세자료 비밀유지의무 위반에 대한 처벌#KOBLEX-105870",
+      "군형법 92조 4 준강간, 준강제추행#KOBLEX-140851",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조  목적#KOBLEX-107704",
+      "지방세기본법 101조  처벌#KOBLEX-121008",
+      "사립학교법 시행령 24조 5 직위해제 대상 비위행위#KOBLEX-190053",
+      "장애인활동 지원에 관한 법률 29조  활동지원인력의 결격 사유#KOBLEX-074510",
+      "부정수표 단속법 3조  법인ㆍ단체 등의 형사책임#KOBLEX-071962",
+      "범죄수익은닉의 규제 및 처벌 등에 관한 법률 10조 4 범죄수익등의 추정#KOBLEX-048160",
+      "성폭력범죄의 처벌 등에 관한 특례법 33조  전문가의 의견 조회#KOBLEX-157654",
+      "경찰관 직무집행법 11조 5 직무 수행으로 인한 형의 감면#KOBLEX-226639",
+      "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 18조  교육활동 침해행위 관련 보고 사항#KOBLEX-219361",
+      "군인사법 59조  징계의 절차 등#KOBLEX-007106",
+      "도로교통법 2조  정의#KOBLEX-013756"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

@@ -1,0 +1,556 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-15T12:53:41.590186+00:00",
+  "end_to_end_latency_ms": 134882.149,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "7d162726-aedd-474c-8b21-acce448f5de2",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 3,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 18,
+          "request_count": 3,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 3,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 1,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 21.453147388464487,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "새마을금고법 76조  외부 감사#KOBLEX-096697",
+        "provision_text": "② 회장은 감사 종료 후 20일 이내에 그 결과를 주무부장관에게 보고하여야 한다.",
+        "rerank_score": 1.306122612731997e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "새마을금고법 76조  외부 감사 2항"
+      },
+      {
+        "first_stage_score": 24.99744088044355,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "북한이탈주민의 보호 및 정착지원에 관한 법률 5조  보호기준 등#KOBLEX-119468",
+        "provision_text": "⑤ 통일부장관은 제3항 단서에 따른 보호 기간의 연장과 관련하여 보호 기간의 종료 시점, 보호 기간의 연장 요청 절차 등 대통령령으로 정하는 사항을 보호 기간 종료 전에 보호대상자에게 알려야 한다. <신설 2024.2.6>",
+        "rerank_score": 1.0683958862500731e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "북한이탈주민의 보호 및 정착지원에 관한 법률 5조  보호기준 등 5항"
+      },
+      {
+        "first_stage_score": 15.423655777224354,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "소득세법 시행령 191조  배당소득 원천징수시기에 관한 특례#KOBLEX-142575",
+        "provision_text": "2. 출자공동사업자의 배당소득으로서 과세기간 종료 후 3개월이 되는 날까지 지급하지 아니한 소득 과세기간 종료 후 3개월이 되는 날",
+        "rerank_score": 0.7304867506027222,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "소득세법 시행령 191조  배당소득 원천징수시기에 관한 특례 2호"
+      },
+      {
+        "first_stage_score": 21.02362074148973,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "공무원연금법 시행령 67조  연금부담금 및 보전금#KOBLEX-003583",
+        "provision_text": "⑨ 국가나 지방자치단체의 장은 회계연도 종료 후 해당 세출예산의 결산서를 공단에 제출하여야 한다.",
+        "rerank_score": 2.5488234314252622e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "공무원연금법 시행령 67조  연금부담금 및 보전금 9항"
+      },
+      {
+        "first_stage_score": 22.936787426109753,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "국민연금법 시행령 61조  연금보험료의 납부 예외 신청 등#KOBLEX-210185",
+        "provision_text": "③ 공단은 법 제91조제1항제6호 또는 제7호에 따른 사유로 연금보험료를 내지 아니하는 자에 대하여는 연금보험료의 납부 예외 시작일부터 1년이 지날 때마다 그 예외 사유의 종료 여부를 확인하여야 한다.",
+        "rerank_score": 2.4573050723120105e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "국민연금법 시행령 61조  연금보험료의 납부 예외 신청 등 3항"
+      },
+      {
+        "first_stage_score": 21.02362074148973,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "공무원연금법 19조  공단에 대한 감독#KOBLEX-148844",
+        "provision_text": "② 공단은 매 회계연도 종료 후 2개월 이내에 사업실적과 결산을 인사혁신처장에게 보고하여야 한다.",
+        "rerank_score": 1.7126944840129e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "공무원연금법 19조  공단에 대한 감독 2항"
+      },
+      {
+        "first_stage_score": 23.239841794978766,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "소득세법 시행령 191조  배당소득 원천징수시기에 관한 특례#KOBLEX-142576",
+        "provision_text": "3. 「조세특례제한법」 제100조의18제1항에 따라 배분받는 소득으로서 해당 동업기업의 과세기간 종료 후 3개월이 되는 날까지 지급하지 아니한 소득 해당 동업기업의 과세기간 종료 후 3개월이 되는 날",
+        "rerank_score": 1.5362616068159696e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "소득세법 시행령 191조  배당소득 원천징수시기에 관한 특례 3호"
+      },
+      {
+        "first_stage_score": 14.22889730839979,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "소득세법 시행령 190조  이자소득 원천징수시기에 대한 특례#KOBLEX-142570",
+        "provision_text": "1의3. 「조세특례제한법」 제100조의18제1항에 따라 배분받는 소득으로서 해당 동업기업의 과세기간 종료 후 3개월이 되는 날까지 지급하지 아니한 소득 해당 동업기업의 과세기간 종료 후 3개월이 되는 날",
+        "rerank_score": 0.29650038480758667,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "소득세법 시행령 190조  이자소득 원천징수시기에 대한 특례 3호"
+      },
+      {
+        "first_stage_score": 21.02852270992276,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "항만법 63조  개발이익의 재투자#KOBLEX-089715",
+        "provision_text": "③ 제1항에 따른 개발이익의 산정에 관하여는 「개발이익 환수에 관한 법률」 제8조부터 제12조까지의 규정을 준용한다. 이 경우 \"개발부담금의 부과 기준\"은 \"개발이익의 산정 기준\"으로, \"부과 종료 시점\"은 \"개발이익 산정 종료 시점\"으로, \"부과 대상 토지\"는 \"개발이익 산정 대상 토지\"로, \"부과 개시 시점\"은 \"개발이익 산정 개시 시점\"으로, \"부과 기간\"은 \"개발이익 산정 기간\"으로, \"국가나 지방자치단체로부터 개발사업의 인가등\", \"국가나 지방자치단체의 인가등\", \"개발사업의 인가등\", \"개발사업 인가등\" 또는 \"인가등\"은 \"개발사업실시계획 승인\"으로, \"개발사업의 준공인가 등\"은 \"준공확인\"으로, \"납부 의무자\"는 \"사업시행자\"로, \"개발사업\"은 \"항만배후단지개발사업\"으로, \"국토교통부장관\"은 \"해양수산부장관\"으로 본다.",
+        "rerank_score": 8.595156373303325e-07,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "항만법 63조  개발이익의 재투자 3항"
+      },
+      {
+        "first_stage_score": 21.931311226765143,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "여객자동차 운수사업법 시행규칙 44조 6 운수종사자의 휴식시간 보장#KOBLEX-190987",
+        "provision_text": "① 시내버스운송사업자, 농어촌버스운송사업자 및 마을버스운송사업자는 운수종사자에게 기점부터 종점(종점에서 휴식시간 없이 회차하는 경우에는 기점)까지 1회 운행 종료 후 10분 이상의 휴식시간을 보장하여야 한다. 다만, 기점부터 종점(종점에서 휴식시간 없이 회차하는 경우에는 기점)까지의 운행시간이 2시간 이상인 경우에는 운행 종료 후 15분 이상의 휴식시간, 4시간 이상인 경우에는 운행 종료 후 30분 이상의 휴식시간을 보장하여야 한다.",
+        "rerank_score": 6.470058337981754e-07,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "여객자동차 운수사업법 시행규칙 44조 6 운수종사자의 휴식시간 보장 1항"
+      },
+      {
+        "first_stage_score": 15.81063937752172,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "건축법 시행령 63조 4 건축자재등 품질 유지ㆍ관리 의무 위반에 따른 조치#KOBLEX-012824",
+        "provision_text": "제63조의4(건축자재등 품질 유지ㆍ관리 의무 위반에 따른 조치)",
+        "rerank_score": 0.9807853698730469,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "건축법 시행령 63조 4 건축자재등 품질 유지ㆍ관리 의무 위반에 따른 조치"
+      },
+      {
+        "first_stage_score": 16.54694223475025,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "보험업법 85조 4 고객응대직원에 대한 보호 조치 의무#KOBLEX-022072",
+        "provision_text": "제85조의4(고객응대직원에 대한 보호 조치 의무)",
+        "rerank_score": 0.9605605602264404,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "보험업법 85조 4 고객응대직원에 대한 보호 조치 의무"
+      },
+      {
+        "first_stage_score": 16.54694223475025,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "은행법 52조 4 고객응대직원에 대한 보호 조치 의무#KOBLEX-143807",
+        "provision_text": "제52조의4(고객응대직원에 대한 보호 조치 의무)",
+        "rerank_score": 0.9605205059051514,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "은행법 52조 4 고객응대직원에 대한 보호 조치 의무"
+      },
+      {
+        "first_stage_score": 16.54694223475025,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 63조 2 고객응대직원에 대한 보호 조치 의무#KOBLEX-135125",
+        "provision_text": "제63조의2(고객응대직원에 대한 보호 조치 의무)",
+        "rerank_score": 0.9539315700531006,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "자본시장과 금융투자업에 관한 법률 63조 2 고객응대직원에 대한 보호 조치 의무"
+      },
+      {
+        "first_stage_score": 16.54694223475025,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "여신전문금융업법 50조 12 고객응대직원에 대한 보호 조치 의무#KOBLEX-042372",
+        "provision_text": "제50조의12(고객응대직원에 대한 보호 조치 의무)",
+        "rerank_score": 0.9498131275177002,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "여신전문금융업법 50조 12 고객응대직원에 대한 보호 조치 의무"
+      },
+      {
+        "first_stage_score": 16.54694223475025,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "신용협동조합법 45조 2 고객응대직원에 대한 보호 조치 의무#KOBLEX-063165",
+        "provision_text": "제45조의2(고객응대직원에 대한 보호 조치 의무)",
+        "rerank_score": 0.9479131102561951,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "신용협동조합법 45조 2 고객응대직원에 대한 보호 조치 의무"
+      },
+      {
+        "first_stage_score": 16.54694223475025,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "상호저축은행법 18조 7 고객응대직원에 대한 보호 조치 의무#KOBLEX-074093",
+        "provision_text": "제18조의7(고객응대직원에 대한 보호 조치 의무)",
+        "rerank_score": 0.9424794316291809,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "상호저축은행법 18조 7 고객응대직원에 대한 보호 조치 의무"
+      },
+      {
+        "first_stage_score": 16.54694223475025,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "상호저축은행법 18조 7 고객응대직원에 대한 보호 조치 의무#KOBLEX-180983",
+        "provision_text": "제18조의7(고객응대직원에 대한 보호 조치 의무)",
+        "rerank_score": 0.9424794316291809,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "상호저축은행법 18조 7 고객응대직원에 대한 보호 조치 의무"
+      },
+      {
+        "first_stage_score": 15.82398768984579,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "국제사법 27조  실종과 부재#KOBLEX-127799",
+        "provision_text": "제27조(실종과 부재)",
+        "rerank_score": 0.0002548958291299641,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "국제사법 27조  실종과 부재"
+      },
+      {
+        "first_stage_score": 15.82398768984579,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "국제사법 27조  실종과 부재#KOBLEX-200480",
+        "provision_text": "제27조(실종과 부재)",
+        "rerank_score": 0.0002548958291299641,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "국제사법 27조  실종과 부재"
+      },
+      {
+        "first_stage_score": 16.06062200225758,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 98조  범죄의 발견 시 조치#KOBLEX-037086",
+        "provision_text": "제98조(범죄의 발견 시 조치)",
+        "rerank_score": 1.2674906884058146e-06,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 98조  범죄의 발견 시 조치"
+      },
+      {
+        "first_stage_score": 15.33140279633894,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 473조  재단채권의 범위#KOBLEX-032981",
+        "provision_text": "6. 위임의 종료 또는 대리권의 소멸 후에 긴급한 필요에 의하여 한 행위로 인하여 파산재단에 대하여 생긴 청구권",
+        "rerank_score": 0.6124885678291321,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "채무자 회생 및 파산에 관한 법률 473조  재단채권의 범위 6호"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "건축법 시행령 63조 4 건축자재등 품질 유지ㆍ관리 의무 위반에 따른 조치#KOBLEX-012824": "제63조의4(건축자재등 품질 유지ㆍ관리 의무 위반에 따른 조치)",
+      "공무원연금법 19조  공단에 대한 감독#KOBLEX-148844": "② 공단은 매 회계연도 종료 후 2개월 이내에 사업실적과 결산을 인사혁신처장에게 보고하여야 한다.",
+      "공무원연금법 시행령 67조  연금부담금 및 보전금#KOBLEX-003583": "⑨ 국가나 지방자치단체의 장은 회계연도 종료 후 해당 세출예산의 결산서를 공단에 제출하여야 한다.",
+      "국민연금법 시행령 61조  연금보험료의 납부 예외 신청 등#KOBLEX-210185": "③ 공단은 법 제91조제1항제6호 또는 제7호에 따른 사유로 연금보험료를 내지 아니하는 자에 대하여는 연금보험료의 납부 예외 시작일부터 1년이 지날 때마다 그 예외 사유의 종료 여부를 확인하여야 한다.",
+      "국제사법 27조  실종과 부재#KOBLEX-127799": "제27조(실종과 부재)",
+      "국제사법 27조  실종과 부재#KOBLEX-200480": "제27조(실종과 부재)",
+      "보험업법 85조 4 고객응대직원에 대한 보호 조치 의무#KOBLEX-022072": "제85조의4(고객응대직원에 대한 보호 조치 의무)",
+      "북한이탈주민의 보호 및 정착지원에 관한 법률 5조  보호기준 등#KOBLEX-119468": "⑤ 통일부장관은 제3항 단서에 따른 보호 기간의 연장과 관련하여 보호 기간의 종료 시점, 보호 기간의 연장 요청 절차 등 대통령령으로 정하는 사항을 보호 기간 종료 전에 보호대상자에게 알려야 한다. <신설 2024.2.6>",
+      "상호저축은행법 18조 7 고객응대직원에 대한 보호 조치 의무#KOBLEX-074093": "제18조의7(고객응대직원에 대한 보호 조치 의무)",
+      "상호저축은행법 18조 7 고객응대직원에 대한 보호 조치 의무#KOBLEX-180983": "제18조의7(고객응대직원에 대한 보호 조치 의무)",
+      "새마을금고법 76조  외부 감사#KOBLEX-096697": "② 회장은 감사 종료 후 20일 이내에 그 결과를 주무부장관에게 보고하여야 한다.",
+      "소득세법 시행령 190조  이자소득 원천징수시기에 대한 특례#KOBLEX-142570": "1의3. 「조세특례제한법」 제100조의18제1항에 따라 배분받는 소득으로서 해당 동업기업의 과세기간 종료 후 3개월이 되는 날까지 지급하지 아니한 소득 해당 동업기업의 과세기간 종료 후 3개월이 되는 날",
+      "소득세법 시행령 191조  배당소득 원천징수시기에 관한 특례#KOBLEX-142575": "2. 출자공동사업자의 배당소득으로서 과세기간 종료 후 3개월이 되는 날까지 지급하지 아니한 소득 과세기간 종료 후 3개월이 되는 날",
+      "소득세법 시행령 191조  배당소득 원천징수시기에 관한 특례#KOBLEX-142576": "3. 「조세특례제한법」 제100조의18제1항에 따라 배분받는 소득으로서 해당 동업기업의 과세기간 종료 후 3개월이 되는 날까지 지급하지 아니한 소득 해당 동업기업의 과세기간 종료 후 3개월이 되는 날",
+      "신용협동조합법 45조 2 고객응대직원에 대한 보호 조치 의무#KOBLEX-063165": "제45조의2(고객응대직원에 대한 보호 조치 의무)",
+      "여객자동차 운수사업법 시행규칙 44조 6 운수종사자의 휴식시간 보장#KOBLEX-190987": "① 시내버스운송사업자, 농어촌버스운송사업자 및 마을버스운송사업자는 운수종사자에게 기점부터 종점(종점에서 휴식시간 없이 회차하는 경우에는 기점)까지 1회 운행 종료 후 10분 이상의 휴식시간을 보장하여야 한다. 다만, 기점부터 종점(종점에서 휴식시간 없이 회차하는 경우에는 기점)까지의 운행시간이 2시간 이상인 경우에는 운행 종료 후 15분 이상의 휴식시간, 4시간 이상인 경우에는 운행 종료 후 30분 이상의 휴식시간을 보장하여야 한다.",
+      "여신전문금융업법 50조 12 고객응대직원에 대한 보호 조치 의무#KOBLEX-042372": "제50조의12(고객응대직원에 대한 보호 조치 의무)",
+      "은행법 52조 4 고객응대직원에 대한 보호 조치 의무#KOBLEX-143807": "제52조의4(고객응대직원에 대한 보호 조치 의무)",
+      "자본시장과 금융투자업에 관한 법률 63조 2 고객응대직원에 대한 보호 조치 의무#KOBLEX-135125": "제63조의2(고객응대직원에 대한 보호 조치 의무)",
+      "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 98조  범죄의 발견 시 조치#KOBLEX-037086": "제98조(범죄의 발견 시 조치)",
+      "채무자 회생 및 파산에 관한 법률 473조  재단채권의 범위#KOBLEX-032981": "6. 위임의 종료 또는 대리권의 소멸 후에 긴급한 필요에 의하여 한 행위로 인하여 파산재단에 대하여 생긴 청구권",
+      "항만법 63조  개발이익의 재투자#KOBLEX-089715": "③ 제1항에 따른 개발이익의 산정에 관하여는 「개발이익 환수에 관한 법률」 제8조부터 제12조까지의 규정을 준용한다. 이 경우 \"개발부담금의 부과 기준\"은 \"개발이익의 산정 기준\"으로, \"부과 종료 시점\"은 \"개발이익 산정 종료 시점\"으로, \"부과 대상 토지\"는 \"개발이익 산정 대상 토지\"로, \"부과 개시 시점\"은 \"개발이익 산정 개시 시점\"으로, \"부과 기간\"은 \"개발이익 산정 기간\"으로, \"국가나 지방자치단체로부터 개발사업의 인가등\", \"국가나 지방자치단체의 인가등\", \"개발사업의 인가등\", \"개발사업 인가등\" 또는 \"인가등\"은 \"개발사업실시계획 승인\"으로, \"개발사업의 준공인가 등\"은 \"준공확인\"으로, \"납부 의무자\"는 \"사업시행자\"로, \"개발사업\"은 \"항만배후단지개발사업\"으로, \"국토교통부장관\"은 \"해양수산부장관\"으로 본다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [],
+        "rationale": "The completion criteria require a provision specifying when the agent's obligations terminate after the end of a mandate and any exceptions. None of the candidate provisions (C001–C022) relate to mandate law (위임) or the termination of an agent's duties under the Civil Code. They concern audit reporting, protection periods, tax withholding, pension reporting, port development, bus driver rest, financial-sector customer protection, and general headings on absence or crime discovery, none of which satisfy the criteria.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "rationale": "The completion criteria require a provision explicitly stating the agent's duty to take measures in an emergency after the mandate has ended due to the principal's absence. None of the candidate provisions govern mandate law or an agent's post-termination emergency duties. C019 and C020 are merely headings for 'Disappearance and Absence' under the Private International Law Act and contain no operative text on mandate-related emergency duties. C022 mentions claims arising from acts done out of urgent necessity after termination of a mandate, but it defines the scope of bankruptcy estate claims rather than establishing the agent's duty to act. All other provisions are unrelated.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E3",
+        "linked_provision_ids": [],
+        "rationale": "The completion criteria require a provision specifying limitations or exclusions on the agent's emergency duty after the mandate ends. Since no candidate provision establishes the underlying emergency duty, none can specify its limitations. All candidate provisions are unrelated to mandate law or emergency duties.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 1,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "위임 종료 후 위임자 갑의 해외 출장으로 인한 긴급 상황에서 수임자 을의 법적 의무 존재 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "위임 종료 후 수임자의 긴급 조치 의무의 법적 근거 및 범위",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "위임 종료 후 수임자의 의무가 종료되는 시점과 그 예외 상황을 명시하는 조항을 확인함",
+        "critical": true,
+        "description": "위임 종료 후 수임자의 의무 종료 시점 및 예외 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "위임 종료 후 위임자의 부재로 인한 긴급한 상황에서 수임자가 취해야 할 조치 의무를 명시하는 조항을 확인함",
+        "critical": true,
+        "description": "위임 종료 후 긴급한 상황에서 수임자의 조치 의무에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "위임 종료 후 수임자의 의무 종료 시점 및 예외 규정",
+        "request_id": "RQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "위임 종료 후 긴급한 상황에서 수임자의 조치 의무",
+        "request_id": "RQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_text": "위임 종료 후 수임자 긴급 조치 의무 제한",
+        "request_id": "RQ3",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "민법 위임계약 종료 후 수임자 의무 종료 시점 및 예외",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "위임 종료 후 위임자 부재 시 긴급한 상황에서 수임자의 조치 의무",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "민법 위임계약 종료 후 수임자 의무 종료 시점 및 예외 규정",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "위임 종료 후 위임자 부재로 인한 긴급한 상황에서 수임자가 취해야 할 조치 의무",
+        "request_id": "GRQ2",
+        "top_k": 100
+      }
+    ],
+    "question": "갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+    "remaining_request_budget": 2,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "위임 종료 후 수임자의 의무가 종료되는 시점과 그 예외 상황을 명시하는 조항을 확인함",
+        "critical": true,
+        "description": "위임 종료 후 수임자의 의무 종료 시점 및 예외 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "위임 종료 후 위임자의 부재로 인한 긴급한 상황에서 수임자가 취해야 할 조치 의무를 명시하는 조항을 확인함",
+        "critical": true,
+        "description": "위임 종료 후 긴급한 상황에서 수임자의 조치 의무에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      },
+      {
+        "completion_criteria": "위임 종료 후 수임자의 긴급 조치 의무가 적용되지 않거나 제한되는 경우를 명시하는 조항을 확인함",
+        "critical": false,
+        "description": "위임 종료 후 수임자의 긴급 조치 의무의 제한 사항",
+        "evidence_item_id": "E3",
+        "evidence_type": "exception",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "7d162726-aedd-474c-8b21-acce448f5de2",
+    "seen_provision_ids": [
+      "새마을금고법 76조  외부 감사#KOBLEX-096697",
+      "공무원연금법 19조  공단에 대한 감독#KOBLEX-148844",
+      "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 98조  범죄의 발견 시 조치#KOBLEX-037086",
+      "상호저축은행법 18조 7 고객응대직원에 대한 보호 조치 의무#KOBLEX-180983",
+      "국제사법 27조  실종과 부재#KOBLEX-127799",
+      "채무자 회생 및 파산에 관한 법률 473조  재단채권의 범위#KOBLEX-032981",
+      "보험업법 85조 4 고객응대직원에 대한 보호 조치 의무#KOBLEX-022072",
+      "소득세법 시행령 191조  배당소득 원천징수시기에 관한 특례#KOBLEX-142575",
+      "북한이탈주민의 보호 및 정착지원에 관한 법률 5조  보호기준 등#KOBLEX-119468",
+      "여신전문금융업법 50조 12 고객응대직원에 대한 보호 조치 의무#KOBLEX-042372",
+      "건축법 시행령 63조 4 건축자재등 품질 유지ㆍ관리 의무 위반에 따른 조치#KOBLEX-012824",
+      "공무원연금법 시행령 67조  연금부담금 및 보전금#KOBLEX-003583",
+      "소득세법 시행령 191조  배당소득 원천징수시기에 관한 특례#KOBLEX-142576",
+      "여객자동차 운수사업법 시행규칙 44조 6 운수종사자의 휴식시간 보장#KOBLEX-190987",
+      "국민연금법 시행령 61조  연금보험료의 납부 예외 신청 등#KOBLEX-210185",
+      "신용협동조합법 45조 2 고객응대직원에 대한 보호 조치 의무#KOBLEX-063165",
+      "자본시장과 금융투자업에 관한 법률 63조 2 고객응대직원에 대한 보호 조치 의무#KOBLEX-135125",
+      "국제사법 27조  실종과 부재#KOBLEX-200480",
+      "소득세법 시행령 190조  이자소득 원천징수시기에 대한 특례#KOBLEX-142570",
+      "은행법 52조 4 고객응대직원에 대한 보호 조치 의무#KOBLEX-143807",
+      "상호저축은행법 18조 7 고객응대직원에 대한 보호 조치 의무#KOBLEX-074093",
+      "항만법 63조  개발이익의 재투자#KOBLEX-089715"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

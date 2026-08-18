@@ -1,0 +1,31 @@
+{
+  "batch_id": "bm25-bge-actorprefix-qa19-smoke-c18fa72b-99a6-4687-8f69-fec458adf30b",
+  "started_at_utc": "2026-08-17T07:20:47.367158+00:00",
+  "manifest": "data/koblex/manifests/bm25_bge_actorprefix_21_20260817.json",
+  "manifest_sha256": "26cabab761944d9e5c8d4a1062d1a9ca10b6a63a3f336aa2421087792307af02",
+  "start_ordinal": 1,
+  "end_ordinal": 1,
+  "entry_count": 1,
+  "configuration": {
+    "condition": "bm25-bge-actorprefix-01",
+    "retriever": "bm25",
+    "reranker": "dragonkue--bge-reranker-v2-m3-ko",
+    "model": "legal-harness-qwen",
+    "seed": 0,
+    "num_ctx": 32768,
+    "total_retrieval_rounds": 3,
+    "total_retrieval_requests": 9,
+    "rerank_pool_k": 100,
+    "final_top_k": 10,
+    "bm25_korean_ending_prefixes": "deterministic_small_suffix_set",
+    "statute_hint_candidate_quota": 0.2,
+    "source_context_anchor": "last_fact_sentence_plus_question_max_1200_chars",
+    "focus_bare_term_prefixes": "2_to_4_chars_excluding_stoplist",
+    "planned_actor_term_prefixes": "2_to_6_chars_actor_suffixes_only",
+    "conditional_generation": "factual_condition_only",
+    "monotonic_coverage": true,
+    "input_format": "koblex_background_plus_question"
+  },
+  "completed_at_utc": "2026-08-17T07:26:30.551021+00:00",
+  "has_execution_failure": false
+}

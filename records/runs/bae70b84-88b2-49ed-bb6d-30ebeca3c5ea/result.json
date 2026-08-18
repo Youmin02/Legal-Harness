@@ -1,0 +1,725 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-15T12:56:12.877739+00:00",
+  "end_to_end_latency_ms": 150033.239,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "bae70b84-88b2-49ed-bb6d-30ebeca3c5ea",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 3,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 20,
+          "request_count": 3,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 6,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 18.122860756975946,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "비송사건절차법 88조  신주의 발행 무효로 인하여 신주의 주주가 받을 금액의 증감 신청#KOBLEX-047800",
+        "provision_text": "③ 여러 건의 신청사건이 동시에 계속 중일 때에는 심문과 재판을 병합하여야 한다.",
+        "rerank_score": 0.9721706509590149,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "비송사건절차법 88조  신주의 발행 무효로 인하여 신주의 주주가 받을 금액의 증감 신청 3항"
+      },
+      {
+        "first_stage_score": 18.90523357358972,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "공공주택 특별법 시행령 50조  공공분양주택의 예외적 전매 허용 시 주택의 매입 등#KOBLEX-173651",
+        "provision_text": "제50조(공공분양주택의 예외적 전매 허용 시 주택의 매입 등)",
+        "rerank_score": 0.84270840883255,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "공공주택 특별법 시행령 50조  공공분양주택의 예외적 전매 허용 시 주택의 매입 등"
+      },
+      {
+        "first_stage_score": 18.90523357358972,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "공공주택 특별법 49조 6 공공분양주택의 예외적 전매 허용 시 주택의 매입 등#KOBLEX-058237",
+        "provision_text": "제49조의6(공공분양주택의 예외적 전매 허용 시 주택의 매입 등)",
+        "rerank_score": 0.829033613204956,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "공공주택 특별법 49조 6 공공분양주택의 예외적 전매 허용 시 주택의 매입 등"
+      },
+      {
+        "first_stage_score": 18.90523357358972,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "공공주택 특별법 49조 6 공공분양주택의 예외적 전매 허용 시 주택의 매입 등#KOBLEX-140268",
+        "provision_text": "제49조의6(공공분양주택의 예외적 전매 허용 시 주택의 매입 등)",
+        "rerank_score": 0.829033613204956,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "공공주택 특별법 49조 6 공공분양주택의 예외적 전매 허용 시 주택의 매입 등"
+      },
+      {
+        "first_stage_score": 18.90523357358972,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "공공주택 특별법 49조 6 공공분양주택의 예외적 전매 허용 시 주택의 매입 등#KOBLEX-221593",
+        "provision_text": "제49조의6(공공분양주택의 예외적 전매 허용 시 주택의 매입 등)",
+        "rerank_score": 0.829033613204956,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "공공주택 특별법 49조 6 공공분양주택의 예외적 전매 허용 시 주택의 매입 등"
+      },
+      {
+        "first_stage_score": 12.82257437419671,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "세무사법 21조  규제의 재검토#KOBLEX-177506",
+        "provision_text": "2. 제16조의4에 따른 세무법인의 등록, 등록 요건과 등록 거부에 관한 사항: 2016년 1월 1일",
+        "rerank_score": 0.7411118149757385,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "세무사법 21조  규제의 재검토 2호"
+      },
+      {
+        "first_stage_score": 12.753008609652815,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "주택법 시행령 45조  주택건설기준 등에 관한 규정#KOBLEX-176439",
+        "provision_text": "제45조(주택건설기준 등에 관한 규정) 다음 각 호의 사항은 「주택건설기준 등에 관한 규정」으로 정한다.",
+        "rerank_score": 0.6245338916778564,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "주택법 시행령 45조  주택건설기준 등에 관한 규정"
+      },
+      {
+        "first_stage_score": 15.633761187369831,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "소비자기본법 78조  자료 및 정보제공요청 등#KOBLEX-050205",
+        "provision_text": "④제1항의 규정에 따라 자료 및 정보를 요청할 수 있는 소비자단체의 요건과 자료 및 정보의 범위 등에 관한 사항은 대통령령으로 정한다.",
+        "rerank_score": 0.4122857451438904,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "소비자기본법 78조  자료 및 정보제공요청 등 4항"
+      },
+      {
+        "first_stage_score": 12.793899505366698,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "특허법 186조  심결 등에 대한 소#KOBLEX-156281",
+        "provision_text": "⑥ 특허취소를 신청할 수 있는 사항 또는 심판을 청구할 수 있는 사항에 관한 소는 특허취소결정이나 심결에 대한 것이 아니면 제기할 수 없다. <개정 2016.2.29>",
+        "rerank_score": 0.3006753921508789,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "특허법 186조  심결 등에 대한 소 6항"
+      },
+      {
+        "first_stage_score": 12.816677951800541,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 493조  증서에 관한 공시최고신청권자#KOBLEX-064766",
+        "provision_text": "제493조(증서에 관한 공시최고신청권자) 무기명증권 또는 배서(背書)로 이전할 수 있거나 약식배서(略式背書)가 있는 증권 또는 증서에 관하여는 최종소지인이 공시최고절차를 신청할 수 있으며, 그 밖의 증서에 관하여는 그 증서에 따라서 권리를 주장할 수 있는 사람이 공시최고절차를 신청할 수 있다.",
+        "rerank_score": 0.23004016280174255,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "민사소송법 493조  증서에 관한 공시최고신청권자"
+      },
+      {
+        "first_stage_score": 10.493901223948216,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "상고심절차에 관한 특례법 7조  재항고 및 특별항고에의 준용#KOBLEX-027569",
+        "provision_text": "제7조 (재항고 및 특별항고에의 준용) 민사소송, 가사소송 및 행정소송의 재항고(再抗告) 및 특별항고 사건에는 제3조, 제4조제2항ㆍ제3항, 제5조제1항ㆍ제3항 및 제6조를 준용한다.",
+        "rerank_score": 2.4483610104653053e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "상고심절차에 관한 특례법 7조  재항고 및 특별항고에의 준용"
+      },
+      {
+        "first_stage_score": 15.59975134444274,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "민사조정법 23조  진술의 원용 제한#KOBLEX-195931",
+        "provision_text": "제23조(진술의 원용 제한) 조정절차에서의 의견과 진술은 민사소송(해당 조정에 대한 준재심은 제외한다)에서 원용(援用)하지 못한다. <개정 2020.2.4>",
+        "rerank_score": 7.1321883297059685e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "민사조정법 23조  진술의 원용 제한"
+      },
+      {
+        "first_stage_score": 10.31280335304193,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 248조  소제기의 방식#KOBLEX-064184",
+        "provision_text": "② 법원은 소장에 붙이거나 납부한 인지액이 「민사소송 등 인지법」 제13조제2항 각 호에서 정한 금액에 미달하는 경우 소장의 접수를 보류할 수 있다.",
+        "rerank_score": 5.419639364845352e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "민사소송법 248조  소제기의 방식 2항"
+      },
+      {
+        "first_stage_score": 10.31280335304193,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "가사소송법 3조  지방법원과 가정법원 사이의 관할의 지정#KOBLEX-064797",
+        "provision_text": "③ 제1항에 따라 가정법원의 관할로 정하여진 사건은 이 법에서 정하는 절차에 따라 처리하고, 지방법원의 관할로 정하여진 사건은 민사소송 절차에 따라 처리한다.",
+        "rerank_score": 4.067013378517004e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "가사소송법 3조  지방법원과 가정법원 사이의 관할의 지정 3항"
+      },
+      {
+        "first_stage_score": 11.503978685728903,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "증권관련 집단소송법 7조  소의 제기 및 소송허가 신청#KOBLEX-178506",
+        "provision_text": "③ 증권관련집단소송의 항소심(抗訴審) 및 상고심(上告審)에서의 인지액에 대하여는 「민사소송 등 인지법」 제3조를 준용한다.",
+        "rerank_score": 3.387131300769397e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "증권관련 집단소송법 7조  소의 제기 및 소송허가 신청 3항"
+      },
+      {
+        "first_stage_score": 11.729785887524619,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "지방자치법 22조  주민소송#KOBLEX-076272",
+        "provision_text": "⑯ 제2항에 따른 소송은 「민사소송 등 인지법」 제2조제4항에 따른 비재산권을 목적으로 하는 소송으로 본다.",
+        "rerank_score": 2.3948712168930797e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "지방자치법 22조  주민소송 16항"
+      },
+      {
+        "first_stage_score": 13.081139052004563,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "민사소송 등에서의 전자문서 이용 등에 관한 법률 1조  목적#KOBLEX-041504",
+        "provision_text": "제1조(목적) 이 법은 민사소송 등에서 전자문서 이용에 대한 기본 원칙과 절차를 규정함으로써 민사소송 등의 정보화를 촉진하고 신속성, 투명성을 높여 국민의 권리 실현에 이바지함을 목적으로 한다.",
+        "rerank_score": 1.3556610838350025e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "민사소송 등에서의 전자문서 이용 등에 관한 법률 1조  목적"
+      },
+      {
+        "first_stage_score": 11.790653680816737,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "공직선거법 229조  인지 첩부 및 첨부에 관한 특례#KOBLEX-052564",
+        "provision_text": "제229조(인지 첩부 및 첨부에 관한 특례) 선거에 관한 소송에 있어서는 「민사소송 등 인지법」의 규정에 불구하고 소송서류에 붙여야 할 인지는 「민사소송 등 인지법」에 규정된 금액의 10배로 한다. <개정 2005.8.4, 2012.12.18>",
+        "rerank_score": 1.3032170045335079e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "공직선거법 229조  인지 첩부 및 첨부에 관한 특례"
+      },
+      {
+        "first_stage_score": 11.790653680816737,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "공직선거법 229조  인지 첩부 및 첨부에 관한 특례#KOBLEX-175850",
+        "provision_text": "제229조(인지 첩부 및 첨부에 관한 특례) 선거에 관한 소송에 있어서는 「민사소송 등 인지법」의 규정에 불구하고 소송서류에 붙여야 할 인지는 「민사소송 등 인지법」에 규정된 금액의 10배로 한다. <개정 2005.8.4, 2012.12.18>",
+        "rerank_score": 1.3032170045335079e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "공직선거법 229조  인지 첩부 및 첨부에 관한 특례"
+      },
+      {
+        "first_stage_score": 12.532468301565716,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "민사소송 등 인지법 16조  전자소송에서의 특례#KOBLEX-107015",
+        "provision_text": "① 「민사소송 등에서의 전자문서 이용 등에 관한 법률」 제8조에 따라 등록사용자로서 전산정보처리시스템을 이용한 민사소송 등의 진행에 동의한 자가 전자문서로 제출하는 소장에는 제2조에 따른 인지액의 10분의 9에 해당하는 인지를 붙여야 한다.",
+        "rerank_score": 1.0218608395007323e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "민사소송 등 인지법 16조  전자소송에서의 특례 1항"
+      },
+      {
+        "first_stage_score": 17.760011825134832,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "비송사건절차법 86조 2 주식매도가액 및 주식매수가액 결정의 재판#KOBLEX-047794",
+        "provision_text": "② 여러 건의 신청사건이 동시에 계속(係屬) 중일 때에는 심문과 재판을 병합하여야 한다.",
+        "rerank_score": 0.0010073991725221276,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "비송사건절차법 86조 2 주식매도가액 및 주식매수가액 결정의 재판 2항"
+      },
+      {
+        "first_stage_score": 20.336213692244435,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "고용보험법 시행령 28조 4 고령자 계속고용장려금#KOBLEX-156668",
+        "provision_text": "② 제1항에 따른 지원 대상, 지원 요건, 지원 수준, 지원 기간, 신청 기간, 신청 방법ㆍ절차 등 지원에 필요한 사항은 고용노동부장관이 정하여 고시한다. <개정 2022.6.28>",
+        "rerank_score": 1.3882483472116292e-05,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "고용보험법 시행령 28조 4 고령자 계속고용장려금 2항"
+      },
+      {
+        "first_stage_score": 20.336213692244435,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "고용보험법 시행령 28조 5 고령자 고용지원금#KOBLEX-156671",
+        "provision_text": "② 제1항에 따른 지원 대상, 지원 요건, 지원 수준, 지원 기간, 신청 기간, 신청 방법ㆍ절차 등 지원에 필요한 사항은 고용노동부장관이 정하여 고시한다. <개정 2022.6.28>",
+        "rerank_score": 1.3882483472116292e-05,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "고용보험법 시행령 28조 5 고령자 고용지원금 2항"
+      },
+      {
+        "first_stage_score": 19.843445741100716,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "고용보험법 시행령 17조  고용창출에 대한 지원#KOBLEX-156590",
+        "provision_text": "② 제1항에 따라 지원하는 경우에 지원 대상, 지원 요건, 지원 수준, 지원 기간, 신청 기간, 신청 방법 등 지원에 필요한 사항은 고용노동부장관이 정하여 고시한다. <개정 2022.6.28>",
+        "rerank_score": 8.15454768599011e-06,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "고용보험법 시행령 17조  고용창출에 대한 지원 2항"
+      },
+      {
+        "first_stage_score": 19.374689040412335,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "고용보험법 시행령 19조  고용유지지원금의 지급 대상#KOBLEX-156600",
+        "provision_text": "⑤ 제1항부터 제4항까지에서 규정한 사항 외에 고용유지지원금의 지원 대상, 지원 요건, 지원 수준, 지원 기간, 신청 기간, 신청 방법 등 지원에 필요한 사항은 고용노동부장관이 정하여 고시한다. <신설 2022.6.28>",
+        "rerank_score": 2.700393906707177e-06,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "고용보험법 시행령 19조  고용유지지원금의 지급 대상 5항"
+      },
+      {
+        "first_stage_score": 15.855317496342868,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "소년법 64조  보호처분과 형의 집행#KOBLEX-190699",
+        "provision_text": "제64조(보호처분과 형의 집행) 보호처분이 계속 중일 때에 징역, 금고 또는 구류를 선고받은 소년에 대하여는 먼저 그 형을 집행한다.",
+        "rerank_score": 7.402803021250293e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "소년법 64조  보호처분과 형의 집행"
+      },
+      {
+        "first_stage_score": 19.843445741100716,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "고용보험법 시행령 37조 2 고용안정 지원사업 등에 대한 지원#KOBLEX-156708",
+        "provision_text": "② 제1항에 따른 고용안정 지원사업의 지원 대상, 지원 요건, 지원 수준, 지원 기간, 신청 기간, 신청 방법 등 지원에 필요한 사항은 고용노동부장관이 정하여 고시한다. <개정 2022.6.28>",
+        "rerank_score": 1.6810519127830048e-06,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "고용보험법 시행령 37조 2 고용안정 지원사업 등에 대한 지원 2항"
+      },
+      {
+        "first_stage_score": 16.998670270058916,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "소년법 38조  보호처분의 취소#KOBLEX-190637",
+        "provision_text": "② 제4조제1항제1호ㆍ제2호의 소년에 대한 보호처분이 계속 중일 때에 사건 본인이 행위 당시 10세 미만으로 밝혀진 경우 또는 제4조제1항제3호의 소년에 대한 보호처분이 계속 중일 때에 사건 본인이 처분 당시 10세 미만으로 밝혀진 경우에는 소년부 판사는 결정으로써 그 보호처분을 취소하여야 한다.",
+        "rerank_score": 5.367682206269819e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "소년법 38조  보호처분의 취소 2항"
+      },
+      {
+        "first_stage_score": 16.580824823885,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "디자인보호법 21조  절차의 속행#KOBLEX-125860",
+        "provision_text": "제21조(절차의 속행) 특허청장 또는 심판장은 디자인에 관한 절차가 특허청 또는 특허심판원에 계속(係屬) 중일 때 디자인권 또는 디자인에 관한 권리가 이전되면  그 디자인권 또는 디자인에 관한 권리의 승계인에 대하여 그 절차를 속행(續行)하게 할 수 있다.",
+        "rerank_score": 1.2543533784992178e-06,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "디자인보호법 21조  절차의 속행"
+      },
+      {
+        "first_stage_score": 17.384071595970592,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "산업재해보상보험법 시행령 48조  재요양의 요건 및 절차#KOBLEX-191672",
+        "provision_text": "제48조(재요양의 요건 및 절차)",
+        "rerank_score": 0.00022395914129447192,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "산업재해보상보험법 시행령 48조  재요양의 요건 및 절차"
+      },
+      {
+        "first_stage_score": 15.617762733845023,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "지방자치법 시행령 85조  분쟁조정 신청 및 직권조정 절차#KOBLEX-196975",
+        "provision_text": "제85조(분쟁조정 신청 및 직권조정 절차)",
+        "rerank_score": 7.482974615413696e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "지방자치법 시행령 85조  분쟁조정 신청 및 직권조정 절차"
+      },
+      {
+        "first_stage_score": 16.97928272941228,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "전자금융거래법 시행령 22조 2 소액후불결제업무의 승인 요건 및 절차#KOBLEX-034100",
+        "provision_text": "제22조의2(소액후불결제업무의 승인 요건 및 절차)",
+        "rerank_score": 6.486558413598686e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "전자금융거래법 시행령 22조 2 소액후불결제업무의 승인 요건 및 절차"
+      },
+      {
+        "first_stage_score": 16.592915956482134,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "국적법 14조  대한민국 국적의 이탈 요건 및 절차#KOBLEX-067962",
+        "provision_text": "제14조(대한민국 국적의 이탈 요건 및 절차)",
+        "rerank_score": 2.9546356017817743e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "국적법 14조  대한민국 국적의 이탈 요건 및 절차"
+      },
+      {
+        "first_stage_score": 18.69086765208105,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 35조  파산신청의무와 회생절차개시의 신청#KOBLEX-031493",
+        "provision_text": "②청산 중이거나 파산선고를 받은 회사인 채무자가 회생절차개시의 신청을 하는 때에는 「상법」 제229조(회사의 계속)제1항, 제285조(해산, 계속)제2항, 제519조(회사의 계속) 또는 제610조(회사의 계속)의 규정을 준용한다.",
+        "rerank_score": 9.909762411552947e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "채무자 회생 및 파산에 관한 법률 35조  파산신청의무와 회생절차개시의 신청 2항"
+      },
+      {
+        "first_stage_score": 16.056185282146284,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "여객자동차 운수사업법 시행규칙 54조 2 교통안전체험교육의 공고#KOBLEX-191037",
+        "provision_text": "② 한국교통안전공단은 교통안전체험교육을 실시하기 20일 전까지 다음 각 호의 사항을 한국교통안전공단의 인터넷 홈페이지에 게시하여야 한다. <개정 2018.6.22> 1. 교통안전체험교육의 일시ㆍ장소 2. 신청 요건 3. 신청 절차 4. 수료 요건 5. 수료자 발표일과 발표 방법 6. 제1호부터 제5호까지에서 규정한 사항 외에 교통안전체험교육 실시에 필요한 사항",
+        "rerank_score": 1.2087216418876778e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "여객자동차 운수사업법 시행규칙 54조 2 교통안전체험교육의 공고 2항"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "가사소송법 3조  지방법원과 가정법원 사이의 관할의 지정#KOBLEX-064797": "③ 제1항에 따라 가정법원의 관할로 정하여진 사건은 이 법에서 정하는 절차에 따라 처리하고, 지방법원의 관할로 정하여진 사건은 민사소송 절차에 따라 처리한다.",
+      "고용보험법 시행령 17조  고용창출에 대한 지원#KOBLEX-156590": "② 제1항에 따라 지원하는 경우에 지원 대상, 지원 요건, 지원 수준, 지원 기간, 신청 기간, 신청 방법 등 지원에 필요한 사항은 고용노동부장관이 정하여 고시한다. <개정 2022.6.28>",
+      "고용보험법 시행령 19조  고용유지지원금의 지급 대상#KOBLEX-156600": "⑤ 제1항부터 제4항까지에서 규정한 사항 외에 고용유지지원금의 지원 대상, 지원 요건, 지원 수준, 지원 기간, 신청 기간, 신청 방법 등 지원에 필요한 사항은 고용노동부장관이 정하여 고시한다. <신설 2022.6.28>",
+      "고용보험법 시행령 28조 4 고령자 계속고용장려금#KOBLEX-156668": "② 제1항에 따른 지원 대상, 지원 요건, 지원 수준, 지원 기간, 신청 기간, 신청 방법ㆍ절차 등 지원에 필요한 사항은 고용노동부장관이 정하여 고시한다. <개정 2022.6.28>",
+      "고용보험법 시행령 28조 5 고령자 고용지원금#KOBLEX-156671": "② 제1항에 따른 지원 대상, 지원 요건, 지원 수준, 지원 기간, 신청 기간, 신청 방법ㆍ절차 등 지원에 필요한 사항은 고용노동부장관이 정하여 고시한다. <개정 2022.6.28>",
+      "고용보험법 시행령 37조 2 고용안정 지원사업 등에 대한 지원#KOBLEX-156708": "② 제1항에 따른 고용안정 지원사업의 지원 대상, 지원 요건, 지원 수준, 지원 기간, 신청 기간, 신청 방법 등 지원에 필요한 사항은 고용노동부장관이 정하여 고시한다. <개정 2022.6.28>",
+      "공공주택 특별법 49조 6 공공분양주택의 예외적 전매 허용 시 주택의 매입 등#KOBLEX-058237": "제49조의6(공공분양주택의 예외적 전매 허용 시 주택의 매입 등)",
+      "공공주택 특별법 49조 6 공공분양주택의 예외적 전매 허용 시 주택의 매입 등#KOBLEX-140268": "제49조의6(공공분양주택의 예외적 전매 허용 시 주택의 매입 등)",
+      "공공주택 특별법 49조 6 공공분양주택의 예외적 전매 허용 시 주택의 매입 등#KOBLEX-221593": "제49조의6(공공분양주택의 예외적 전매 허용 시 주택의 매입 등)",
+      "공공주택 특별법 시행령 50조  공공분양주택의 예외적 전매 허용 시 주택의 매입 등#KOBLEX-173651": "제50조(공공분양주택의 예외적 전매 허용 시 주택의 매입 등)",
+      "공직선거법 229조  인지 첩부 및 첨부에 관한 특례#KOBLEX-052564": "제229조(인지 첩부 및 첨부에 관한 특례) 선거에 관한 소송에 있어서는 「민사소송 등 인지법」의 규정에 불구하고 소송서류에 붙여야 할 인지는 「민사소송 등 인지법」에 규정된 금액의 10배로 한다. <개정 2005.8.4, 2012.12.18>",
+      "공직선거법 229조  인지 첩부 및 첨부에 관한 특례#KOBLEX-175850": "제229조(인지 첩부 및 첨부에 관한 특례) 선거에 관한 소송에 있어서는 「민사소송 등 인지법」의 규정에 불구하고 소송서류에 붙여야 할 인지는 「민사소송 등 인지법」에 규정된 금액의 10배로 한다. <개정 2005.8.4, 2012.12.18>",
+      "국적법 14조  대한민국 국적의 이탈 요건 및 절차#KOBLEX-067962": "제14조(대한민국 국적의 이탈 요건 및 절차)",
+      "디자인보호법 21조  절차의 속행#KOBLEX-125860": "제21조(절차의 속행) 특허청장 또는 심판장은 디자인에 관한 절차가 특허청 또는 특허심판원에 계속(係屬) 중일 때 디자인권 또는 디자인에 관한 권리가 이전되면  그 디자인권 또는 디자인에 관한 권리의 승계인에 대하여 그 절차를 속행(續行)하게 할 수 있다.",
+      "민사소송 등 인지법 16조  전자소송에서의 특례#KOBLEX-107015": "① 「민사소송 등에서의 전자문서 이용 등에 관한 법률」 제8조에 따라 등록사용자로서 전산정보처리시스템을 이용한 민사소송 등의 진행에 동의한 자가 전자문서로 제출하는 소장에는 제2조에 따른 인지액의 10분의 9에 해당하는 인지를 붙여야 한다.",
+      "민사소송 등에서의 전자문서 이용 등에 관한 법률 1조  목적#KOBLEX-041504": "제1조(목적) 이 법은 민사소송 등에서 전자문서 이용에 대한 기본 원칙과 절차를 규정함으로써 민사소송 등의 정보화를 촉진하고 신속성, 투명성을 높여 국민의 권리 실현에 이바지함을 목적으로 한다.",
+      "민사소송법 248조  소제기의 방식#KOBLEX-064184": "② 법원은 소장에 붙이거나 납부한 인지액이 「민사소송 등 인지법」 제13조제2항 각 호에서 정한 금액에 미달하는 경우 소장의 접수를 보류할 수 있다.",
+      "민사소송법 493조  증서에 관한 공시최고신청권자#KOBLEX-064766": "제493조(증서에 관한 공시최고신청권자) 무기명증권 또는 배서(背書)로 이전할 수 있거나 약식배서(略式背書)가 있는 증권 또는 증서에 관하여는 최종소지인이 공시최고절차를 신청할 수 있으며, 그 밖의 증서에 관하여는 그 증서에 따라서 권리를 주장할 수 있는 사람이 공시최고절차를 신청할 수 있다.",
+      "민사조정법 23조  진술의 원용 제한#KOBLEX-195931": "제23조(진술의 원용 제한) 조정절차에서의 의견과 진술은 민사소송(해당 조정에 대한 준재심은 제외한다)에서 원용(援用)하지 못한다. <개정 2020.2.4>",
+      "비송사건절차법 86조 2 주식매도가액 및 주식매수가액 결정의 재판#KOBLEX-047794": "② 여러 건의 신청사건이 동시에 계속(係屬) 중일 때에는 심문과 재판을 병합하여야 한다.",
+      "비송사건절차법 88조  신주의 발행 무효로 인하여 신주의 주주가 받을 금액의 증감 신청#KOBLEX-047800": "③ 여러 건의 신청사건이 동시에 계속 중일 때에는 심문과 재판을 병합하여야 한다.",
+      "산업재해보상보험법 시행령 48조  재요양의 요건 및 절차#KOBLEX-191672": "제48조(재요양의 요건 및 절차)",
+      "상고심절차에 관한 특례법 7조  재항고 및 특별항고에의 준용#KOBLEX-027569": "제7조 (재항고 및 특별항고에의 준용) 민사소송, 가사소송 및 행정소송의 재항고(再抗告) 및 특별항고 사건에는 제3조, 제4조제2항ㆍ제3항, 제5조제1항ㆍ제3항 및 제6조를 준용한다.",
+      "세무사법 21조  규제의 재검토#KOBLEX-177506": "2. 제16조의4에 따른 세무법인의 등록, 등록 요건과 등록 거부에 관한 사항: 2016년 1월 1일",
+      "소년법 38조  보호처분의 취소#KOBLEX-190637": "② 제4조제1항제1호ㆍ제2호의 소년에 대한 보호처분이 계속 중일 때에 사건 본인이 행위 당시 10세 미만으로 밝혀진 경우 또는 제4조제1항제3호의 소년에 대한 보호처분이 계속 중일 때에 사건 본인이 처분 당시 10세 미만으로 밝혀진 경우에는 소년부 판사는 결정으로써 그 보호처분을 취소하여야 한다.",
+      "소년법 64조  보호처분과 형의 집행#KOBLEX-190699": "제64조(보호처분과 형의 집행) 보호처분이 계속 중일 때에 징역, 금고 또는 구류를 선고받은 소년에 대하여는 먼저 그 형을 집행한다.",
+      "소비자기본법 78조  자료 및 정보제공요청 등#KOBLEX-050205": "④제1항의 규정에 따라 자료 및 정보를 요청할 수 있는 소비자단체의 요건과 자료 및 정보의 범위 등에 관한 사항은 대통령령으로 정한다.",
+      "여객자동차 운수사업법 시행규칙 54조 2 교통안전체험교육의 공고#KOBLEX-191037": "② 한국교통안전공단은 교통안전체험교육을 실시하기 20일 전까지 다음 각 호의 사항을 한국교통안전공단의 인터넷 홈페이지에 게시하여야 한다. <개정 2018.6.22> 1. 교통안전체험교육의 일시ㆍ장소 2. 신청 요건 3. 신청 절차 4. 수료 요건 5. 수료자 발표일과 발표 방법 6. 제1호부터 제5호까지에서 규정한 사항 외에 교통안전체험교육 실시에 필요한 사항",
+      "전자금융거래법 시행령 22조 2 소액후불결제업무의 승인 요건 및 절차#KOBLEX-034100": "제22조의2(소액후불결제업무의 승인 요건 및 절차)",
+      "주택법 시행령 45조  주택건설기준 등에 관한 규정#KOBLEX-176439": "제45조(주택건설기준 등에 관한 규정) 다음 각 호의 사항은 「주택건설기준 등에 관한 규정」으로 정한다.",
+      "증권관련 집단소송법 7조  소의 제기 및 소송허가 신청#KOBLEX-178506": "③ 증권관련집단소송의 항소심(抗訴審) 및 상고심(上告審)에서의 인지액에 대하여는 「민사소송 등 인지법」 제3조를 준용한다.",
+      "지방자치법 22조  주민소송#KOBLEX-076272": "⑯ 제2항에 따른 소송은 「민사소송 등 인지법」 제2조제4항에 따른 비재산권을 목적으로 하는 소송으로 본다.",
+      "지방자치법 시행령 85조  분쟁조정 신청 및 직권조정 절차#KOBLEX-196975": "제85조(분쟁조정 신청 및 직권조정 절차)",
+      "채무자 회생 및 파산에 관한 법률 35조  파산신청의무와 회생절차개시의 신청#KOBLEX-031493": "②청산 중이거나 파산선고를 받은 회사인 채무자가 회생절차개시의 신청을 하는 때에는 「상법」 제229조(회사의 계속)제1항, 제285조(해산, 계속)제2항, 제519조(회사의 계속) 또는 제610조(회사의 계속)의 규정을 준용한다.",
+      "특허법 186조  심결 등에 대한 소#KOBLEX-156281": "⑥ 특허취소를 신청할 수 있는 사항 또는 심판을 청구할 수 있는 사항에 관한 소는 특허취소결정이나 심결에 대한 것이 아니면 제기할 수 없다. <개정 2016.2.29>"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [],
+        "rationale": "형사배상명령 신청 요건 및 시기를 규정한 조항이 제공되지 않음. 제공된 조항들은 비송사건절차법, 공공주택 특별법, 세무사법, 주택법, 소비자기본법, 특허법, 민사소송법, 상고심절차에 관한 특례법, 민사조정법, 가사소송법, 증권관련 집단소송법, 지방자치법, 민사소송 등에서의 전자문서 이용 등에 관한 법률, 공직선거법, 민사소송 등 인지법 등 형사배상명령과 무관한 법령임.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "rationale": "민사소송 계속 중일 때 형사배상명령 신청을 제한하거나 허용하는 규정이 제공되지 않음. 제공된 조항들은 형사배상명령과 민사소송의 관계에 관한 규정이 아님.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E3",
+        "linked_provision_ids": [],
+        "rationale": "형사배상명령과 민사소송 간 중복 구제 제한이나 선택적 적용 규정이 제공되지 않음. 제공된 조항들은 형사배상명령과 민사소송의 관계를 규정한 조항이 아님.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 6,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "형사배상명령 신청 요건과 민사소송 계속 중일 때의 신청 가능성",
+        "issue_id": "I1"
+      },
+      {
+        "description": "형사배상명령과 민사소송의 관계 및 중복 구제 제한",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "형사소송에서 형사배상명령을 신청할 수 있는 요건과 시기가 명시된 조항을 확인함",
+        "critical": true,
+        "description": "형사배상명령 신청 요건 및 신청 시기",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "민사소송이 계속 중일 때 형사배상명령 신청을 제한하거나 허용하는 규정을 확인함",
+        "critical": true,
+        "description": "민사소송 계속 중일 때 형사배상명령 신청 제한 여부",
+        "evidence_item_id": "E2",
+        "evidence_type": "exception",
+        "issue_id": "I1"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "갑은 을의 범죄행위로 인해 발생한 피해에 관하여 민사소송이 법원에 계속 중일 때, 형사소송에서 형사배상명령을 신청할 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "형사소송에서 형사배상명령을 신청할 수 있는 요건과 시기에 관한 규정",
+        "request_id": "RQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "형사배상명령 신청 시 민사소송 계속 중일 때의 제한 또는 허용 규정",
+        "request_id": "RQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_text": "형사배상명령 민사소송 중복구제 제한",
+        "request_id": "RQ3",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "형사소송법 제757조 형사배상명령 신청 요건 및 신청 시기",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "형사배상명령 신청 시 민사소송 계속 중일 때의 제한 또는 허용에 관한 규정",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "형사소송법 제757조부터 제762조까지 형사배상명령 신청 요건 및 절차",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "민사소송이 계속 중일 때 형사배상명령 신청을 제한하거나 허용하는 규정을 확인함 법률 조문",
+        "request_id": "GRQ2",
+        "top_k": 100
+      }
+    ],
+    "question": "갑은 을의 범죄행위로 인해 발생한 피해에 관하여 민사소송이 법원에 계속 중일 때, 형사소송에서 형사배상명령을 신청할 수 있는가?",
+    "remaining_request_budget": 2,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "형사소송에서 형사배상명령을 신청할 수 있는 요건과 시기가 명시된 조항을 확인함",
+        "critical": true,
+        "description": "형사배상명령 신청 요건 및 신청 시기",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "민사소송이 계속 중일 때 형사배상명령 신청을 제한하거나 허용하는 규정을 확인함",
+        "critical": true,
+        "description": "민사소송 계속 중일 때 형사배상명령 신청 제한 여부",
+        "evidence_item_id": "E2",
+        "evidence_type": "exception",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "형사배상명령과 민사소송 간 중복 구제 제한이나 선택적 적용 규정을 확인함",
+        "critical": false,
+        "description": "형사배상명령과 민사소송 간 관계 및 중복 구제 제한",
+        "evidence_item_id": "E3",
+        "evidence_type": "relationship",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "bae70b84-88b2-49ed-bb6d-30ebeca3c5ea",
+    "seen_provision_ids": [
+      "상고심절차에 관한 특례법 7조  재항고 및 특별항고에의 준용#KOBLEX-027569",
+      "디자인보호법 21조  절차의 속행#KOBLEX-125860",
+      "민사소송법 493조  증서에 관한 공시최고신청권자#KOBLEX-064766",
+      "공공주택 특별법 49조 6 공공분양주택의 예외적 전매 허용 시 주택의 매입 등#KOBLEX-140268",
+      "세무사법 21조  규제의 재검토#KOBLEX-177506",
+      "여객자동차 운수사업법 시행규칙 54조 2 교통안전체험교육의 공고#KOBLEX-191037",
+      "민사소송 등에서의 전자문서 이용 등에 관한 법률 1조  목적#KOBLEX-041504",
+      "민사조정법 23조  진술의 원용 제한#KOBLEX-195931",
+      "공공주택 특별법 49조 6 공공분양주택의 예외적 전매 허용 시 주택의 매입 등#KOBLEX-058237",
+      "소비자기본법 78조  자료 및 정보제공요청 등#KOBLEX-050205",
+      "공공주택 특별법 49조 6 공공분양주택의 예외적 전매 허용 시 주택의 매입 등#KOBLEX-221593",
+      "주택법 시행령 45조  주택건설기준 등에 관한 규정#KOBLEX-176439",
+      "고용보험법 시행령 28조 5 고령자 고용지원금#KOBLEX-156671",
+      "공직선거법 229조  인지 첩부 및 첨부에 관한 특례#KOBLEX-052564",
+      "고용보험법 시행령 37조 2 고용안정 지원사업 등에 대한 지원#KOBLEX-156708",
+      "민사소송법 248조  소제기의 방식#KOBLEX-064184",
+      "증권관련 집단소송법 7조  소의 제기 및 소송허가 신청#KOBLEX-178506",
+      "고용보험법 시행령 28조 4 고령자 계속고용장려금#KOBLEX-156668",
+      "공공주택 특별법 시행령 50조  공공분양주택의 예외적 전매 허용 시 주택의 매입 등#KOBLEX-173651",
+      "비송사건절차법 86조 2 주식매도가액 및 주식매수가액 결정의 재판#KOBLEX-047794",
+      "지방자치법 시행령 85조  분쟁조정 신청 및 직권조정 절차#KOBLEX-196975",
+      "전자금융거래법 시행령 22조 2 소액후불결제업무의 승인 요건 및 절차#KOBLEX-034100",
+      "국적법 14조  대한민국 국적의 이탈 요건 및 절차#KOBLEX-067962",
+      "소년법 64조  보호처분과 형의 집행#KOBLEX-190699",
+      "공직선거법 229조  인지 첩부 및 첨부에 관한 특례#KOBLEX-175850",
+      "소년법 38조  보호처분의 취소#KOBLEX-190637",
+      "지방자치법 22조  주민소송#KOBLEX-076272",
+      "비송사건절차법 88조  신주의 발행 무효로 인하여 신주의 주주가 받을 금액의 증감 신청#KOBLEX-047800",
+      "가사소송법 3조  지방법원과 가정법원 사이의 관할의 지정#KOBLEX-064797",
+      "고용보험법 시행령 19조  고용유지지원금의 지급 대상#KOBLEX-156600",
+      "채무자 회생 및 파산에 관한 법률 35조  파산신청의무와 회생절차개시의 신청#KOBLEX-031493",
+      "산업재해보상보험법 시행령 48조  재요양의 요건 및 절차#KOBLEX-191672",
+      "특허법 186조  심결 등에 대한 소#KOBLEX-156281",
+      "민사소송 등 인지법 16조  전자소송에서의 특례#KOBLEX-107015",
+      "고용보험법 시행령 17조  고용창출에 대한 지원#KOBLEX-156590"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

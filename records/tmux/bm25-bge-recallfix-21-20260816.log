@@ -1,0 +1,29 @@
+.venv/bin/python scripts/run_bm25_bge_pilot_batch.py --manifest data/koblex/manifests/bm25_bge_recallfix_21_20260816.json --start-ordinal 1 --batch-name bm25-bge-recallfix-21
+[?2004lTraceback (most recent call last):
+  File "/root/Legal Harness/scripts/run_bm25_bge_pilot_batch.py", line 185, in <module>
+    raise SystemExit(main())
+  File "/root/Legal Harness/scripts/run_bm25_bge_pilot_batch.py", line 110, in main
+    "manifest": str(args.manifest.relative_to(PROJECT_ROOT)),
+  File "/usr/lib/python3.9/pathlib.py", line 857, in relative_to
+    raise ValueError("{!r} is not in the subpath of {!r}"
+ValueError: 'data/koblex/manifests/bm25_bge_recallfix_21_20260816.json' is not in the subpath of '/root/Legal Harness' OR one path is relative and the other is absolute.
+[?2004hroot@bf9769101dde:~/Legal Harness# .venv/bin/python scripts/run_bm25_bge_pilot_batch.py --manifest data/koblex/manifests/bm25_bge_recallfix_21_20260816.json --start-ordinal 1 --batch-name bm25-bge-recallfix-21
+[?2004l{"ordinal": 1, "question_id": "qa_19_1hop_28", "n_hops": 1, "started_at_utc": "2026-08-16T09:54:14.189323+00:00", "completed_at_utc": "2026-08-16T10:00:00.479491+00:00", "exit_code": 0, "log_file": "records/batches/bm25-bge-recallfix-21-b2009908-90ab-4b1d-a46d-60172898b748/01_qa_19_1hop_28.log", "record_directory": "/root/Legal Harness/records/runs/b5e90de7-672a-49fa-aa9e-c8c6c082e9c6", "status": "ANSWER", "termination_reason": "COMPLETED", "abstention_reason": null, "errors": [], "end_to_end_latency_ms": 344897.792}
+^CTraceback (most recent call last):
+  File "/root/Legal Harness/scripts/run_bm25_bge_pilot_batch.py", line 189, in <module>
+    raise SystemExit(main())
+  File "/root/Legal Harness/scripts/run_bm25_bge_pilot_batch.py", line 154, in main
+    completed = subprocess.run(
+  File "/usr/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1126, in communicate
+    self.wait()
+  File "/usr/lib/python3.9/subprocess.py", line 1189, in wait
+    return self._wait(timeout=timeout)
+  File "/usr/lib/python3.9/subprocess.py", line 1933, in _wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.9/subprocess.py", line 1891, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt
+
+[?2004hroot@bf9769101dde:~/Legal Harness# 

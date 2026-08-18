@@ -1,0 +1,28 @@
+{
+  "batch_id": "bm25-bge-morphfix-qa19-smoke-cec7a0de-d597-4c1b-a644-4b6a189c5ddb",
+  "started_at_utc": "2026-08-17T06:49:24.517136+00:00",
+  "manifest": "data/koblex/manifests/bm25_bge_morphfix_21_20260817.json",
+  "manifest_sha256": "466d4a7968f6d23215a005129cb72125714b3d49f331260a1229c4d3a8d4c932",
+  "start_ordinal": 1,
+  "end_ordinal": 1,
+  "entry_count": 1,
+  "configuration": {
+    "condition": "bm25-bge-morphfix-01",
+    "retriever": "bm25",
+    "reranker": "dragonkue--bge-reranker-v2-m3-ko",
+    "model": "legal-harness-qwen",
+    "seed": 0,
+    "num_ctx": 32768,
+    "total_retrieval_rounds": 3,
+    "total_retrieval_requests": 9,
+    "rerank_pool_k": 100,
+    "final_top_k": 10,
+    "bm25_korean_ending_prefixes": "deterministic_small_suffix_set",
+    "statute_hint_candidate_quota": 0.2,
+    "conditional_generation": "factual_condition_only",
+    "monotonic_coverage": true,
+    "input_format": "koblex_background_plus_question"
+  },
+  "completed_at_utc": "2026-08-17T06:52:22.304302+00:00",
+  "has_execution_failure": false
+}

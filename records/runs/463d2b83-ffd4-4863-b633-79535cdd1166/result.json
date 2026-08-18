@@ -1,0 +1,766 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-15T12:58:31.897684+00:00",
+  "end_to_end_latency_ms": 137696.116,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "463d2b83-ffd4-4863-b633-79535cdd1166",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 17,
+          "request_count": 4,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 11,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 21.500256696427208,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "하수도법 46조  분뇨수집ㆍ운반업자의 지위 승계#KOBLEX-222057",
+        "provision_text": "제46조(분뇨수집ㆍ운반업자의 지위 승계)",
+        "rerank_score": 0.22060510516166687,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "하수도법 46조  분뇨수집ㆍ운반업자의 지위 승계"
+      },
+      {
+        "first_stage_score": 21.500256696427208,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "공간정보의 구축 및 관리 등에 관한 법률 46조  측량업자의 지위 승계#KOBLEX-123283",
+        "provision_text": "제46조(측량업자의 지위 승계)",
+        "rerank_score": 0.13206832110881805,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "공간정보의 구축 및 관리 등에 관한 법률 46조  측량업자의 지위 승계"
+      },
+      {
+        "first_stage_score": 21.500256696427208,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "석유 및 석유대체연료 사업법 7조  석유정제업자의 지위 승계#KOBLEX-074973",
+        "provision_text": "제7조(석유정제업자의 지위 승계)",
+        "rerank_score": 0.1923445612192154,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "석유 및 석유대체연료 사업법 7조  석유정제업자의 지위 승계"
+      },
+      {
+        "first_stage_score": 21.500256696427208,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "석유 및 석유대체연료 사업법 7조  석유정제업자의 지위 승계#KOBLEX-085449",
+        "provision_text": "제7조(석유정제업자의 지위 승계)",
+        "rerank_score": 0.1923445612192154,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "석유 및 석유대체연료 사업법 7조  석유정제업자의 지위 승계"
+      },
+      {
+        "first_stage_score": 21.500256696427208,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "약사법 21조 2 약국개설자의 지위 승계#KOBLEX-181866",
+        "provision_text": "제21조의2(약국개설자의 지위 승계)",
+        "rerank_score": 0.19100740551948547,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "약사법 21조 2 약국개설자의 지위 승계"
+      },
+      {
+        "first_stage_score": 21.500256696427208,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "액화석유가스의 안전관리 및 사업법 12조  사업자등의 지위 승계#KOBLEX-056381",
+        "provision_text": "제12조(사업자등의 지위 승계)",
+        "rerank_score": 0.3774905800819397,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "액화석유가스의 안전관리 및 사업법 12조  사업자등의 지위 승계"
+      },
+      {
+        "first_stage_score": 20.987687073931692,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "약사법 44조 5 안전상비의약품 판매자의 지위 승계#KOBLEX-182148",
+        "provision_text": "제44조의5(안전상비의약품 판매자의 지위 승계)",
+        "rerank_score": 0.013441280461847782,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "약사법 44조 5 안전상비의약품 판매자의 지위 승계"
+      },
+      {
+        "first_stage_score": 21.500256696427208,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "행정심판법 16조  청구인의 지위 승계#KOBLEX-182795",
+        "provision_text": "제16조(청구인의 지위 승계)",
+        "rerank_score": 0.004542110487818718,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "행정심판법 16조  청구인의 지위 승계"
+      },
+      {
+        "first_stage_score": 20.987687073931692,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "건설산업기본법 85조 2 건설사업자의 지위 승계 등#KOBLEX-066842",
+        "provision_text": "제85조의2(건설사업자의 지위 승계 등)",
+        "rerank_score": 0.0038314643315970898,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "건설산업기본법 85조 2 건설사업자의 지위 승계 등"
+      },
+      {
+        "first_stage_score": 20.987687073931692,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "건설산업기본법 85조 2 건설사업자의 지위 승계 등#KOBLEX-108535",
+        "provision_text": "제85조의2(건설사업자의 지위 승계 등)",
+        "rerank_score": 0.0038314643315970898,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "건설산업기본법 85조 2 건설사업자의 지위 승계 등"
+      },
+      {
+        "first_stage_score": 13.759837224693484,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "직업안정법 36조 2 사업자의 지위승계 등#KOBLEX-082829",
+        "provision_text": "제36조의2(사업자의 지위승계 등)",
+        "rerank_score": 0.010804716497659683,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "직업안정법 36조 2 사업자의 지위승계 등"
+      },
+      {
+        "first_stage_score": 13.759837224693484,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "직업안정법 36조 2 사업자의 지위승계 등#KOBLEX-090068",
+        "provision_text": "제36조의2(사업자의 지위승계 등)",
+        "rerank_score": 0.010804716497659683,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "직업안정법 36조 2 사업자의 지위승계 등"
+      },
+      {
+        "first_stage_score": 14.10429798730397,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "유통산업발전법 13조  대규모점포등개설자의 지위승계#KOBLEX-101093",
+        "provision_text": "제13조(대규모점포등개설자의 지위승계)",
+        "rerank_score": 0.29989466071128845,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ4",
+        "statute_name": "유통산업발전법 13조  대규모점포등개설자의 지위승계"
+      },
+      {
+        "first_stage_score": 14.10429798730397,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "하수도법 19조 6 관리대행업자의 지위승계#KOBLEX-221909",
+        "provision_text": "제19조의6(관리대행업자의 지위승계)",
+        "rerank_score": 0.15694917738437653,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ4",
+        "statute_name": "하수도법 19조 6 관리대행업자의 지위승계"
+      },
+      {
+        "first_stage_score": 14.10429798730397,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "전기통신사업법 시행령 40조 10 분쟁당사자의 지위승계#KOBLEX-005905",
+        "provision_text": "제40조의10(분쟁당사자의 지위승계)",
+        "rerank_score": 0.11251337081193924,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ4",
+        "statute_name": "전기통신사업법 시행령 40조 10 분쟁당사자의 지위승계"
+      },
+      {
+        "first_stage_score": 14.10429798730397,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "하수도법 21조  기술진단전문기관의 지위승계#KOBLEX-221932",
+        "provision_text": "제21조(기술진단전문기관의 지위승계)",
+        "rerank_score": 0.003106712829321623,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "하수도법 21조  기술진단전문기관의 지위승계"
+      },
+      {
+        "first_stage_score": 13.759837224693484,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "식품위생법 시행규칙 48조  영업자 지위승계 신고#KOBLEX-014936",
+        "provision_text": "제48조(영업자 지위승계 신고)",
+        "rerank_score": 0.0017279653111472726,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "식품위생법 시행규칙 48조  영업자 지위승계 신고"
+      },
+      {
+        "first_stage_score": 13.759837224693484,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "동물보호법 시행규칙 46조  영업자의 지위승계 신고#KOBLEX-220348",
+        "provision_text": "제46조(영업자의 지위승계 신고)",
+        "rerank_score": 0.004849984776228666,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "동물보호법 시행규칙 46조  영업자의 지위승계 신고"
+      },
+      {
+        "first_stage_score": 13.381995883262585,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "직업안정법 26조  겸업 금지#KOBLEX-082792",
+        "provision_text": "2. 「공중위생관리법」 제2조제1항제2호의 숙박업",
+        "rerank_score": 9.629688429413363e-05,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "직업안정법 26조  겸업 금지 2호"
+      },
+      {
+        "first_stage_score": 13.431800463484354,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "동물보호법 시행규칙 36조 11 동물복지축산농장 인증의 지위승계 신고#KOBLEX-220299",
+        "provision_text": "제36조의11(동물복지축산농장 인증의 지위승계 신고)",
+        "rerank_score": 6.825421587564051e-05,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "동물보호법 시행규칙 36조 11 동물복지축산농장 인증의 지위승계 신고"
+      },
+      {
+        "first_stage_score": 20.44780918719396,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "환경영향평가법 56조 2 권리ㆍ의무의 승계#KOBLEX-167498",
+        "provision_text": "① 환경영향평가업자가 사망하거나 그 영업을 양도한 때 또는 환경영향평가업자인 법인이 합병한 때에는 그 상속인ㆍ양수인 또는 합병 후 존속하는 법인이나 합병에 따라 설립되는 법인은 등록에 따른 종전의 환경영향평가업자의 권리ㆍ의무를 승계한다.",
+        "rerank_score": 0.9999328851699829,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "환경영향평가법 56조 2 권리ㆍ의무의 승계 1항"
+      },
+      {
+        "first_stage_score": 21.008443870088893,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "약사법 21조 2 약국개설자의 지위 승계#KOBLEX-181867",
+        "provision_text": "① 약국개설자가 영업을 양도한 경우에 그 양수인이 종전의 약국개설자의 지위를 승계하려는 경우에는 그 양도일부터 1개월 이내에 보건복지부령으로 정하는 바에 따라 그 사실을 시장ㆍ군수ㆍ구청장에게 신고하여야 한다.",
+        "rerank_score": 0.9655494689941406,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "약사법 21조 2 약국개설자의 지위 승계 1항"
+      },
+      {
+        "first_stage_score": 20.751610271200214,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "건설산업기본법 17조  건설업의 양도 등#KOBLEX-066418",
+        "provision_text": "③ 건설업을 양수한 자와 합병으로 설립되거나 존속하는 법인은 제1항에 따른 신고가 수리된 때부터 각각 건설업을 양도한 자와 합병으로 소멸되는 법인의 건설사업자로서의 지위를 승계한다. <개정 2023.4.18>",
+        "rerank_score": 0.5153486728668213,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "건설산업기본법 17조  건설업의 양도 등 3항"
+      },
+      {
+        "first_stage_score": 20.751610271200214,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "건설산업기본법 17조  건설업의 양도 등#KOBLEX-108111",
+        "provision_text": "③ 건설업을 양수한 자와 합병으로 설립되거나 존속하는 법인은 제1항에 따른 신고가 수리된 때부터 각각 건설업을 양도한 자와 합병으로 소멸되는 법인의 건설사업자로서의 지위를 승계한다. <개정 2023.4.18>",
+        "rerank_score": 0.5153486728668213,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "건설산업기본법 17조  건설업의 양도 등 3항"
+      },
+      {
+        "first_stage_score": 15.10312882031568,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "공중위생관리법 10조  위생지도 및 개선명령#KOBLEX-164322",
+        "provision_text": "2. 제4조의 규정에 의한 위생관리의무 등을 위반한 공중위생영업자",
+        "rerank_score": 0.03709884732961655,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ4",
+        "statute_name": "공중위생관리법 10조  위생지도 및 개선명령 2호"
+      },
+      {
+        "first_stage_score": 20.431997080288685,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "공중위생관리법 11조  공중위생영업소의 폐쇄등#KOBLEX-164327",
+        "provision_text": "③ 시장ㆍ군수ㆍ구청장은 다음 각 호의 어느 하나에 해당하는 경우에는 영업소 폐쇄를 명할 수 있다. <신설 2016.2.3, 2023.6.13> 1. 공중위생영업자가 정당한 사유 없이 6개월 이상 계속 휴업하는 경우 2. 공중위생영업자가 「부가가치세법」 제8조에 따라 관할 세무서장에게 폐업신고를 하거나 관할 세무서장이 사업자 등록을 말소한 경우 3. 공중위생영업자가 영업을 하지 아니하기 위하여 영업시설의 전부를 철거한 경우",
+        "rerank_score": 0.03356684371829033,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "공중위생관리법 11조  공중위생영업소의 폐쇄등 3항"
+      },
+      {
+        "first_stage_score": 14.158120569225012,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "공중위생관리법 10조  위생지도 및 개선명령#KOBLEX-164321",
+        "provision_text": "1. 제3조제1항의 규정에 의한 공중위생영업의 종류별 시설 및 설비기준을 위반한 공중위생영업자",
+        "rerank_score": 0.011757130734622478,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ4",
+        "statute_name": "공중위생관리법 10조  위생지도 및 개선명령 1호"
+      },
+      {
+        "first_stage_score": 12.923639166227414,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "동물보호법 시행규칙 36조 11 동물복지축산농장 인증의 지위승계 신고#KOBLEX-220300",
+        "provision_text": "① 법 제68조제2항에 따라 동물복지축산농장 인증의 지위승계 신고를 하려는 자는 별지 제18호의10서식의 지위승계 신고서에 다음 각 호의 서류를 첨부하여 인증기관에 제출해야 한다. 1. 동물복지축산농장 인증서 2. 동물복지축산농장 인증의 지위승계 사실을 증명하는 서류 3. 가축종류별 축산농장 운영 현황서",
+        "rerank_score": 1.5914695268293144e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "동물보호법 시행규칙 36조 11 동물복지축산농장 인증의 지위승계 신고 1항"
+      },
+      {
+        "first_stage_score": 17.384071595970592,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "산업재해보상보험법 시행령 48조  재요양의 요건 및 절차#KOBLEX-191672",
+        "provision_text": "제48조(재요양의 요건 및 절차)",
+        "rerank_score": 5.820778096676804e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "산업재해보상보험법 시행령 48조  재요양의 요건 및 절차"
+      },
+      {
+        "first_stage_score": 15.53257589619616,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "사립학교교직원 연금법 33조 3 재요양#KOBLEX-190244",
+        "provision_text": "③ 재요양의 요건 및 절차 등에 필요한 사항은 대통령령으로 정한다.",
+        "rerank_score": 5.4903510317672044e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "사립학교교직원 연금법 33조 3 재요양 3항"
+      },
+      {
+        "first_stage_score": 15.160264560638158,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "상법 41조#KOBLEX-113635",
+        "provision_text": "제7장 영업양도",
+        "rerank_score": 1.481543222325854e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "상법 41조"
+      },
+      {
+        "first_stage_score": 15.785311925747699,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "비송사건절차법 39조  관할법원#KOBLEX-047563",
+        "provision_text": "④ 「신탁법」 제21조제3항에 따른 사건은 유언자 사망 시 주소지의 지방법원이 관할한다.",
+        "rerank_score": 4.234290372551186e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "비송사건절차법 39조  관할법원 4항"
+      },
+      {
+        "first_stage_score": 16.97928272941228,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "전자금융거래법 시행령 22조 2 소액후불결제업무의 승인 요건 및 절차#KOBLEX-034100",
+        "provision_text": "제22조의2(소액후불결제업무의 승인 요건 및 절차)",
+        "rerank_score": 3.3512667414470343e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "전자금융거래법 시행령 22조 2 소액후불결제업무의 승인 요건 및 절차"
+      },
+      {
+        "first_stage_score": 16.592915956482134,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "국적법 14조  대한민국 국적의 이탈 요건 및 절차#KOBLEX-067962",
+        "provision_text": "제14조(대한민국 국적의 이탈 요건 및 절차)",
+        "rerank_score": 1.8192872630606871e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "국적법 14조  대한민국 국적의 이탈 요건 및 절차"
+      },
+      {
+        "first_stage_score": 15.208616259372366,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "주택법 41조  바닥충격음 성능등급 인정 등#KOBLEX-133261",
+        "provision_text": "④ 바닥충격음 성능등급 인정기관의 지정 요건 및 절차 등은 대통령령으로 정한다.",
+        "rerank_score": 1.4376799981619115e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "주택법 41조  바닥충격음 성능등급 인정 등 4항"
+      },
+      {
+        "first_stage_score": 15.208616259372366,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "주택법 41조  바닥충격음 성능등급 인정 등#KOBLEX-204773",
+        "provision_text": "④ 바닥충격음 성능등급 인정기관의 지정 요건 및 절차 등은 대통령령으로 정한다.",
+        "rerank_score": 1.4376799981619115e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "주택법 41조  바닥충격음 성능등급 인정 등 4항"
+      },
+      {
+        "first_stage_score": 15.27081103704652,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "조세특례제한법 91조 12 재외동포전용 투자신탁등에 대한 과세특례#KOBLEX-099688",
+        "provision_text": "③ 재외동포 및 재외동포전용 투자신탁등의 요건, 가입 시 제출서류, 그 밖에 필요한 사항은 대통령령으로 정한다.",
+        "rerank_score": 1.2247110134921968e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "조세특례제한법 91조 12 재외동포전용 투자신탁등에 대한 과세특례 3항"
+      },
+      {
+        "first_stage_score": 15.27081103704652,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "조세특례제한법 91조 12 재외동포전용 투자신탁등에 대한 과세특례#KOBLEX-151669",
+        "provision_text": "③ 재외동포 및 재외동포전용 투자신탁등의 요건, 가입 시 제출서류, 그 밖에 필요한 사항은 대통령령으로 정한다.",
+        "rerank_score": 1.2247110134921968e-06,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "조세특례제한법 91조 12 재외동포전용 투자신탁등에 대한 과세특례 3항"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "건설산업기본법 17조  건설업의 양도 등#KOBLEX-066418": "③ 건설업을 양수한 자와 합병으로 설립되거나 존속하는 법인은 제1항에 따른 신고가 수리된 때부터 각각 건설업을 양도한 자와 합병으로 소멸되는 법인의 건설사업자로서의 지위를 승계한다. <개정 2023.4.18>",
+      "건설산업기본법 17조  건설업의 양도 등#KOBLEX-108111": "③ 건설업을 양수한 자와 합병으로 설립되거나 존속하는 법인은 제1항에 따른 신고가 수리된 때부터 각각 건설업을 양도한 자와 합병으로 소멸되는 법인의 건설사업자로서의 지위를 승계한다. <개정 2023.4.18>",
+      "건설산업기본법 85조 2 건설사업자의 지위 승계 등#KOBLEX-066842": "제85조의2(건설사업자의 지위 승계 등)",
+      "건설산업기본법 85조 2 건설사업자의 지위 승계 등#KOBLEX-108535": "제85조의2(건설사업자의 지위 승계 등)",
+      "공간정보의 구축 및 관리 등에 관한 법률 46조  측량업자의 지위 승계#KOBLEX-123283": "제46조(측량업자의 지위 승계)",
+      "공중위생관리법 10조  위생지도 및 개선명령#KOBLEX-164321": "1. 제3조제1항의 규정에 의한 공중위생영업의 종류별 시설 및 설비기준을 위반한 공중위생영업자",
+      "공중위생관리법 10조  위생지도 및 개선명령#KOBLEX-164322": "2. 제4조의 규정에 의한 위생관리의무 등을 위반한 공중위생영업자",
+      "공중위생관리법 11조  공중위생영업소의 폐쇄등#KOBLEX-164327": "③ 시장ㆍ군수ㆍ구청장은 다음 각 호의 어느 하나에 해당하는 경우에는 영업소 폐쇄를 명할 수 있다. <신설 2016.2.3, 2023.6.13> 1. 공중위생영업자가 정당한 사유 없이 6개월 이상 계속 휴업하는 경우 2. 공중위생영업자가 「부가가치세법」 제8조에 따라 관할 세무서장에게 폐업신고를 하거나 관할 세무서장이 사업자 등록을 말소한 경우 3. 공중위생영업자가 영업을 하지 아니하기 위하여 영업시설의 전부를 철거한 경우",
+      "국적법 14조  대한민국 국적의 이탈 요건 및 절차#KOBLEX-067962": "제14조(대한민국 국적의 이탈 요건 및 절차)",
+      "동물보호법 시행규칙 36조 11 동물복지축산농장 인증의 지위승계 신고#KOBLEX-220299": "제36조의11(동물복지축산농장 인증의 지위승계 신고)",
+      "동물보호법 시행규칙 36조 11 동물복지축산농장 인증의 지위승계 신고#KOBLEX-220300": "① 법 제68조제2항에 따라 동물복지축산농장 인증의 지위승계 신고를 하려는 자는 별지 제18호의10서식의 지위승계 신고서에 다음 각 호의 서류를 첨부하여 인증기관에 제출해야 한다. 1. 동물복지축산농장 인증서 2. 동물복지축산농장 인증의 지위승계 사실을 증명하는 서류 3. 가축종류별 축산농장 운영 현황서",
+      "동물보호법 시행규칙 46조  영업자의 지위승계 신고#KOBLEX-220348": "제46조(영업자의 지위승계 신고)",
+      "비송사건절차법 39조  관할법원#KOBLEX-047563": "④ 「신탁법」 제21조제3항에 따른 사건은 유언자 사망 시 주소지의 지방법원이 관할한다.",
+      "사립학교교직원 연금법 33조 3 재요양#KOBLEX-190244": "③ 재요양의 요건 및 절차 등에 필요한 사항은 대통령령으로 정한다.",
+      "산업재해보상보험법 시행령 48조  재요양의 요건 및 절차#KOBLEX-191672": "제48조(재요양의 요건 및 절차)",
+      "상법 41조#KOBLEX-113635": "제7장 영업양도",
+      "석유 및 석유대체연료 사업법 7조  석유정제업자의 지위 승계#KOBLEX-074973": "제7조(석유정제업자의 지위 승계)",
+      "석유 및 석유대체연료 사업법 7조  석유정제업자의 지위 승계#KOBLEX-085449": "제7조(석유정제업자의 지위 승계)",
+      "식품위생법 시행규칙 48조  영업자 지위승계 신고#KOBLEX-014936": "제48조(영업자 지위승계 신고)",
+      "액화석유가스의 안전관리 및 사업법 12조  사업자등의 지위 승계#KOBLEX-056381": "제12조(사업자등의 지위 승계)",
+      "약사법 21조 2 약국개설자의 지위 승계#KOBLEX-181866": "제21조의2(약국개설자의 지위 승계)",
+      "약사법 21조 2 약국개설자의 지위 승계#KOBLEX-181867": "① 약국개설자가 영업을 양도한 경우에 그 양수인이 종전의 약국개설자의 지위를 승계하려는 경우에는 그 양도일부터 1개월 이내에 보건복지부령으로 정하는 바에 따라 그 사실을 시장ㆍ군수ㆍ구청장에게 신고하여야 한다.",
+      "약사법 44조 5 안전상비의약품 판매자의 지위 승계#KOBLEX-182148": "제44조의5(안전상비의약품 판매자의 지위 승계)",
+      "유통산업발전법 13조  대규모점포등개설자의 지위승계#KOBLEX-101093": "제13조(대규모점포등개설자의 지위승계)",
+      "전기통신사업법 시행령 40조 10 분쟁당사자의 지위승계#KOBLEX-005905": "제40조의10(분쟁당사자의 지위승계)",
+      "전자금융거래법 시행령 22조 2 소액후불결제업무의 승인 요건 및 절차#KOBLEX-034100": "제22조의2(소액후불결제업무의 승인 요건 및 절차)",
+      "조세특례제한법 91조 12 재외동포전용 투자신탁등에 대한 과세특례#KOBLEX-099688": "③ 재외동포 및 재외동포전용 투자신탁등의 요건, 가입 시 제출서류, 그 밖에 필요한 사항은 대통령령으로 정한다.",
+      "조세특례제한법 91조 12 재외동포전용 투자신탁등에 대한 과세특례#KOBLEX-151669": "③ 재외동포 및 재외동포전용 투자신탁등의 요건, 가입 시 제출서류, 그 밖에 필요한 사항은 대통령령으로 정한다.",
+      "주택법 41조  바닥충격음 성능등급 인정 등#KOBLEX-133261": "④ 바닥충격음 성능등급 인정기관의 지정 요건 및 절차 등은 대통령령으로 정한다.",
+      "주택법 41조  바닥충격음 성능등급 인정 등#KOBLEX-204773": "④ 바닥충격음 성능등급 인정기관의 지정 요건 및 절차 등은 대통령령으로 정한다.",
+      "직업안정법 26조  겸업 금지#KOBLEX-082792": "2. 「공중위생관리법」 제2조제1항제2호의 숙박업",
+      "직업안정법 36조 2 사업자의 지위승계 등#KOBLEX-082829": "제36조의2(사업자의 지위승계 등)",
+      "직업안정법 36조 2 사업자의 지위승계 등#KOBLEX-090068": "제36조의2(사업자의 지위승계 등)",
+      "하수도법 19조 6 관리대행업자의 지위승계#KOBLEX-221909": "제19조의6(관리대행업자의 지위승계)",
+      "하수도법 21조  기술진단전문기관의 지위승계#KOBLEX-221932": "제21조(기술진단전문기관의 지위승계)",
+      "하수도법 46조  분뇨수집ㆍ운반업자의 지위 승계#KOBLEX-222057": "제46조(분뇨수집ㆍ운반업자의 지위 승계)",
+      "행정심판법 16조  청구인의 지위 승계#KOBLEX-182795": "제16조(청구인의 지위 승계)",
+      "환경영향평가법 56조 2 권리ㆍ의무의 승계#KOBLEX-167498": "① 환경영향평가업자가 사망하거나 그 영업을 양도한 때 또는 환경영향평가업자인 법인이 합병한 때에는 그 상속인ㆍ양수인 또는 합병 후 존속하는 법인이나 합병에 따라 설립되는 법인은 등록에 따른 종전의 환경영향평가업자의 권리ㆍ의무를 승계한다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [],
+        "rationale": "공급된 후보 조항(C001-C038)은 공중위생관리법상 이발소 등 공중위생영업자의 지위 승계를 직접 규정하지 않는다. C021(환경영향평가법), C022(약사법), C023/C024(건설산업기본법) 등은 각자 해당 업종의 지위 승계 요건을 규정할 뿐, 이발소 양도 및 양도인 사망 시 공중위생영업자 지위 승계 가능 여부에 대한 명확한 법적 근거를 제공하지 못한다. C025, C026, C027은 공중위생관리법 조항이지만 위생지도, 개선명령, 영업소 폐쇄 등에 관한 규정일 뿐 지위 승계 규정이 아니다. C031(상법 41조)은 영업양도 일반 규정이지만 공중위생영업자 지위 승계 요건을 규정하지 않는다.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "rationale": "공급된 후보 조항(C001-C038)은 공중위생영업자 지위 승계의 법적 요건을 규정하지 않는다. C021, C022, C023/C024 등은 각 법령의 특정 업종에 한정된 지위 승계 규정이며, C025, C026, C027은 공중위생관리법 조항이지만 지위 승계 요건이 아닌 위생지도, 개선명령, 영업소 폐쇄 등에 관한 규정이다. C031(상법 41조)은 영업양도 일반 규정이지만 공중위생영업자 지위 승계 요건을 규정하지 않는다. 따라서 공중위생영업자 지위 승계를 위한 법적 요건에 대한 명확한 규정을 확인할 수 없다.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 11,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "이발소 양도 및 양도인 사망 시 공중위생영업자 지위 승계 요건",
+        "issue_id": "I1"
+      },
+      {
+        "description": "공중위생영업자 지위 승계의 법적 근거 및 요건",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "이발소 양도 및 양도인 사망 시 공중위생영업자 지위 승계 가능 여부에 대한 명확한 법적 근거 확인",
+        "critical": true,
+        "description": "이발소 양도 및 양도인 사망 시 공중위생영업자 지위 승계 가능 여부",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "공중위생영업자 지위 승계를 위한 법적 요건에 대한 명확한 규정 확인",
+        "critical": true,
+        "description": "공중위생영업자 지위 승계의 법적 요건",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "갑이 운영하던 이발소를 을에게 양도하고 갑이 사망한 경우, 을은 공중위생영업자의 지위를 승계할 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "이발소 양도 및 양도인 사망 시 공중위생영업자 지위 승계 가능 여부",
+        "request_id": "RQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "공중위생영업자 지위 승계 요건",
+        "request_id": "RQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "공중위생관리법 이발소 양도 사망 지위승계",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "공중위생영업자가 사망하거나 영업을 양도한 경우 그 지위를 승계할 수 있는 자와 요건",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_text": "이발소 영업양도 사망 지위승계 공중위생관리법",
+        "request_id": "GRQ3",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "공중위생관리법 시행령 공중위생영업자 지위승계 요건",
+        "request_id": "GRQ4",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "공중위생관리법 이발소 영업양도 사망 시 지위승계 규정",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "공중위생영업자의 사망 또는 영업양도 시 지위승계 요건 및 절차",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_text": "이발소 공중위생영업자 지위승계 사망 양도",
+        "request_id": "GRQ3",
+        "top_k": 100
+      }
+    ],
+    "question": "갑이 운영하던 이발소를 을에게 양도하고 갑이 사망한 경우, 을은 공중위생영업자의 지위를 승계할 수 있는가?",
+    "remaining_request_budget": 0,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "이발소 양도 및 양도인 사망 시 공중위생영업자 지위 승계 가능 여부에 대한 명확한 법적 근거 확인",
+        "critical": true,
+        "description": "이발소 양도 및 양도인 사망 시 공중위생영업자 지위 승계 가능 여부",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "공중위생영업자 지위 승계를 위한 법적 요건에 대한 명확한 규정 확인",
+        "critical": true,
+        "description": "공중위생영업자 지위 승계의 법적 요건",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "463d2b83-ffd4-4863-b633-79535cdd1166",
+    "seen_provision_ids": [
+      "주택법 41조  바닥충격음 성능등급 인정 등#KOBLEX-133261",
+      "국적법 14조  대한민국 국적의 이탈 요건 및 절차#KOBLEX-067962",
+      "동물보호법 시행규칙 36조 11 동물복지축산농장 인증의 지위승계 신고#KOBLEX-220300",
+      "직업안정법 36조 2 사업자의 지위승계 등#KOBLEX-090068",
+      "사립학교교직원 연금법 33조 3 재요양#KOBLEX-190244",
+      "전기통신사업법 시행령 40조 10 분쟁당사자의 지위승계#KOBLEX-005905",
+      "직업안정법 36조 2 사업자의 지위승계 등#KOBLEX-082829",
+      "전자금융거래법 시행령 22조 2 소액후불결제업무의 승인 요건 및 절차#KOBLEX-034100",
+      "약사법 21조 2 약국개설자의 지위 승계#KOBLEX-181866",
+      "공중위생관리법 10조  위생지도 및 개선명령#KOBLEX-164321",
+      "액화석유가스의 안전관리 및 사업법 12조  사업자등의 지위 승계#KOBLEX-056381",
+      "조세특례제한법 91조 12 재외동포전용 투자신탁등에 대한 과세특례#KOBLEX-151669",
+      "유통산업발전법 13조  대규모점포등개설자의 지위승계#KOBLEX-101093",
+      "조세특례제한법 91조 12 재외동포전용 투자신탁등에 대한 과세특례#KOBLEX-099688",
+      "공중위생관리법 10조  위생지도 및 개선명령#KOBLEX-164322",
+      "상법 41조#KOBLEX-113635",
+      "공간정보의 구축 및 관리 등에 관한 법률 46조  측량업자의 지위 승계#KOBLEX-123283",
+      "직업안정법 26조  겸업 금지#KOBLEX-082792",
+      "석유 및 석유대체연료 사업법 7조  석유정제업자의 지위 승계#KOBLEX-074973",
+      "공중위생관리법 11조  공중위생영업소의 폐쇄등#KOBLEX-164327",
+      "석유 및 석유대체연료 사업법 7조  석유정제업자의 지위 승계#KOBLEX-085449",
+      "주택법 41조  바닥충격음 성능등급 인정 등#KOBLEX-204773",
+      "건설산업기본법 17조  건설업의 양도 등#KOBLEX-108111",
+      "동물보호법 시행규칙 46조  영업자의 지위승계 신고#KOBLEX-220348",
+      "비송사건절차법 39조  관할법원#KOBLEX-047563",
+      "건설산업기본법 85조 2 건설사업자의 지위 승계 등#KOBLEX-066842",
+      "동물보호법 시행규칙 36조 11 동물복지축산농장 인증의 지위승계 신고#KOBLEX-220299",
+      "건설산업기본법 17조  건설업의 양도 등#KOBLEX-066418",
+      "하수도법 21조  기술진단전문기관의 지위승계#KOBLEX-221932",
+      "약사법 44조 5 안전상비의약품 판매자의 지위 승계#KOBLEX-182148",
+      "하수도법 46조  분뇨수집ㆍ운반업자의 지위 승계#KOBLEX-222057",
+      "행정심판법 16조  청구인의 지위 승계#KOBLEX-182795",
+      "식품위생법 시행규칙 48조  영업자 지위승계 신고#KOBLEX-014936",
+      "약사법 21조 2 약국개설자의 지위 승계#KOBLEX-181867",
+      "산업재해보상보험법 시행령 48조  재요양의 요건 및 절차#KOBLEX-191672",
+      "하수도법 19조 6 관리대행업자의 지위승계#KOBLEX-221909",
+      "환경영향평가법 56조 2 권리ㆍ의무의 승계#KOBLEX-167498",
+      "건설산업기본법 85조 2 건설사업자의 지위 승계 등#KOBLEX-108535"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

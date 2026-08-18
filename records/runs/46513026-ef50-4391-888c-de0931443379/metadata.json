@@ -1,0 +1,73 @@
+{
+  "configuration": {
+    "condition": "bm25-bge-actorprefix-01",
+    "conditional_generation": "factual_condition_only",
+    "final_top_k": 10,
+    "input_format": "koblex_background_plus_question",
+    "model": "legal-harness-qwen",
+    "monotonic_coverage": true,
+    "num_ctx": 32768,
+    "ollama_endpoint": "http://127.0.0.1:11434/api/generate",
+    "rerank_pool_k": 100,
+    "retriever": "bm25",
+    "seed": 0,
+    "total_retrieval_requests": 9,
+    "total_retrieval_rounds": 3
+  },
+  "git_commit": "349e7fd563920a1f66f082d72510236b3bfe33be",
+  "index_metadata": {
+    "bm25": {
+      "database": "data/koblex/indexes/bm25/statute_fts5.sqlite3",
+      "type": "SQLite FTS5"
+    },
+    "documents": 233544,
+    "identity": {
+      "provision_id": "{KoBLEX index}#KOBLEX-{one-based source row number}",
+      "source_index": "original KoBLEX index value retained in normalized corpus"
+    },
+    "kure": {
+      "dimensions": 1024,
+      "model": "nlpai-lab/KURE-v1",
+      "provision_ids": "data/koblex/indexes/kure-v1/provision_ids.txt",
+      "similarity": "exact cosine similarity; float32 memory-mapped matrix",
+      "vector_file": "data/koblex/indexes/kure-v1/vectors.f32.npy"
+    },
+    "source": "JihyungL/KoBLEX-statute",
+    "source_file": "data/koblex/statute/corpus-00000-of-00001.parquet",
+    "source_sha256": "6323f7d024ec504f4b2346cd3ab67aa709aac49a5340c9f3d8372ad6bd5f9b8b"
+  },
+  "model_artifact": "/root/.ollama/models/blobs/sha256-8440f2a076f149f65bf16975f3a08359936ba2658fc1827b51a30b717de49acb",
+  "question": "[배경 시나리오]\n갑은 을과 을의 상품을 목적지로 운송하기로 하는 운송계약을 체결하였다. 을은 계약 체결 과정에서 상품이 제때 도착하지 않을 경우 손해가 발생할 수 있음을 갑에게 미리 고지하였다. 그러나 운송 도중 문제가 발생하여 상품은 예정된 날짜보다 3일 늦게 도착하였고, 이로 인해 을에게 손해가 발생하였다.\r\n\r\n을은 이에 대한 손해배상을 청구할 생각이었으나, 바쁜 업무로 인해 소송을 즉시 제기하지는 못하였다. 이에 따라 을은 상품이 인도된 날로부터 언제까지 소송을 제기할 수 있는지를 고민하게 되었다.\n\n[질문]\n을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+  "question_id": "qa_19_1hop_28",
+  "record_schema_version": "1.0",
+  "run_id": "46513026-ef50-4391-888c-de0931443379",
+  "runtime": {
+    "packages": {
+      "pyarrow": "18.1.0",
+      "sentence-transformers": "5.1.2",
+      "torch": "2.7.1+cu128",
+      "transformers": "4.57.6"
+    },
+    "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.35",
+    "python": "3.9.25 (main, Nov  7 2025, 18:07:57) \n[GCC 11.4.0]"
+  },
+  "skill_sha256": {
+    "grounded_legal_answer_generation/SKILL.md": "5a60a159b9f08d1a4aa36a0f96df8f10733f4bec3eda4d4efc5fe297bf19fe54",
+    "grounded_legal_answer_generation/references/contract.md": "a97ab085171bf9e5fff044c1b6d979d160ac2247003202232a074219caedbcfd",
+    "grounded_legal_answer_generation/references/input.schema.json": "031eea346a105571f0da9786807dccc7262e5b8c2996c3d246cacf37c539e511",
+    "grounded_legal_answer_generation/references/output.schema.json": "5355d7bc575fbfc8f6cfa8610d7c2730c295b93382c9ff2a56ca86a3a480ed8b",
+    "grounded_legal_answer_generation/scripts/validate_output.py": "0b12c51ad90f3d1c92497db1968baaf5772389b6ee2cbc438e72d7ec79a63050",
+    "legal_issue_and_query_planning/SKILL.md": "8f47d609a0c0b052e1aa90b35cea68dd0b5a940de57b012e3ed805457f0d1716",
+    "legal_issue_and_query_planning/references/contract.md": "a201d0bfe6d992b53d9745dc6241a844060b98f446d037670c0f63279f8879d9",
+    "legal_issue_and_query_planning/references/input.schema.json": "c617df2974228906e34838ef5f42058e2e6f909d5358fc3a05448cb36774172b",
+    "legal_issue_and_query_planning/references/output.schema.json": "c2aef4f05b14fe584f48a2f13e3de15085b1774ca289f258751e156f636444d1",
+    "legal_issue_and_query_planning/scripts/validate_output.py": "53be62712d579692b0660331a68f3405de3c668c5ca84ae2f80725fa96a8dbd1",
+    "provision_coverage_assessment/SKILL.md": "d84910bb4bc1d0db4433290437fe8665894541d9385a9ca08b668753dc11b42d",
+    "provision_coverage_assessment/references/contract.md": "d3905c1d7609b6f12494ca0d0b0f745cd090c46b7918c9012053aba2ec84f4eb",
+    "provision_coverage_assessment/references/input.schema.json": "6cd352a71e7343f9578da5d1f56d2f41839b35a9f84d297449b74d29e71989b2",
+    "provision_coverage_assessment/references/output.schema.json": "d6636749e032454b36c7a9c41edd31b0eb6865b762373ff3944ea5449f385a08",
+    "provision_coverage_assessment/scripts/validate_output.py": "083e9011d42d1b99f95b7a55793c7b0fb0285e2169d659b79b9d6d803f67c9cb",
+    "skill-pack-manifest.json": "204d144927400952d4d9146313434e5f5ab62dd49bd5c43e63c1ca0aa5d01a95"
+  },
+  "started_at_utc": "2026-08-17T07:20:47.435212+00:00"
+}

@@ -1,0 +1,704 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-15T13:07:58.176793+00:00",
+  "end_to_end_latency_ms": 149559.25,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "aa1167e6-8c2d-4912-a154-bb61ec7a3f64",
+  "state": {
+    "accepted_provision_ids": [
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008842",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 20,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 3,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 2,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 49.70326459549439,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843",
+        "provision_text": "⑦ 환경부장관은 제1항에 따른 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 제조, 수입, 공급 또는 판매하려는 자에게 환경부령으로 정하는 바에 따라 일정한 기간을 정하여 제품의 회수, 폐기 등의 필요한 조치를 명할 수 있다. <신설 2023.8.16>",
+        "rerank_score": 0.999994158744812,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등 7항"
+      },
+      {
+        "first_stage_score": 28.171491374624633,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "골재채취법 49조 2 벌칙#KOBLEX-030316",
+        "provision_text": "1. 제22조의4제1항을 위반하여 인증을 받지 아니하거나 품질기준에 적합하지 아니한 골재를 공급하거나 판매한 자",
+        "rerank_score": 0.0023463438265025616,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "골재채취법 49조 2 벌칙 1호"
+      },
+      {
+        "first_stage_score": 28.078982346444718,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "대기환경보전법 75조  자동차연료ㆍ첨가제 또는 촉매제의 제조ㆍ공급ㆍ판매 중지 및 회수#KOBLEX-008944",
+        "provision_text": "②환경부장관은 제74조제6항에 따라 공급ㆍ판매 또는 사용이 금지되는 자동차연료ㆍ첨가제 또는 촉매제를 공급하거나 판매한 자에 대하여는 공급이나 판매의 중지를 명할 수 있다. <개정 2008.12.31, 2012.5.23, 2013.7.16, 2020.12.29>",
+        "rerank_score": 0.0011105034500360489,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "대기환경보전법 75조  자동차연료ㆍ첨가제 또는 촉매제의 제조ㆍ공급ㆍ판매 중지 및 회수 2항"
+      },
+      {
+        "first_stage_score": 28.142800144640656,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "폐기물관리법 13조 5 재활용 제품 또는 물질에 관한 유해성기준#KOBLEX-173820",
+        "provision_text": "⑤ 환경부장관은 제3항에 따른 시험ㆍ분석 또는 실태 조사 결과 유해성기준을 위반한 제품 또는 물질을 제조 또는 유통한 자에 대하여 해당 제품 또는 물질의 회수, 파기 등 필요한 조치를 명할 수 있다.",
+        "rerank_score": 0.0006382424617186189,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "폐기물관리법 13조 5 재활용 제품 또는 물질에 관한 유해성기준 5항"
+      },
+      {
+        "first_stage_score": 23.701397877493022,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "대기환경보전법 62조  운행차의 배출가스 정기검사#KOBLEX-008868",
+        "provision_text": "④ 환경부장관은 이륜자동차정기검사를 받지 아니한 이륜자동차 소유자에게 환경부령으로 정하는 바에 따라 이륜자동차정기검사를 받도록 명할 수 있다. <신설 2013.7.16>",
+        "rerank_score": 0.00014698006270918995,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "대기환경보전법 62조  운행차의 배출가스 정기검사 4항"
+      },
+      {
+        "first_stage_score": 24.173575062917703,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "자동차관리법 35조 9 내압용기의 제조 또는 판매의 중지#KOBLEX-112855",
+        "provision_text": "제35조의9(내압용기의 제조 또는 판매의 중지)",
+        "rerank_score": 8.347654329554643e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "자동차관리법 35조 9 내압용기의 제조 또는 판매의 중지"
+      },
+      {
+        "first_stage_score": 24.173575062917703,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "자동차관리법 35조 9 내압용기의 제조 또는 판매의 중지#KOBLEX-216327",
+        "provision_text": "제35조의9(내압용기의 제조 또는 판매의 중지)",
+        "rerank_score": 8.347654329554643e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "자동차관리법 35조 9 내압용기의 제조 또는 판매의 중지"
+      },
+      {
+        "first_stage_score": 25.114837865201977,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "자동차관리법 81조  벌칙#KOBLEX-113486",
+        "provision_text": "20의5. 제35조의9제1항에 따른 내압용기의 제조ㆍ수입 또는 판매의 중지명령을 위반한 자",
+        "rerank_score": 6.957430741749704e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "자동차관리법 81조  벌칙 33호"
+      },
+      {
+        "first_stage_score": 25.114837865201977,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "자동차관리법 81조  벌칙#KOBLEX-216958",
+        "provision_text": "20의5. 제35조의9제1항에 따른 내압용기의 제조ㆍ수입 또는 판매의 중지명령을 위반한 자",
+        "rerank_score": 6.957430741749704e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "자동차관리법 81조  벌칙 33호"
+      },
+      {
+        "first_stage_score": 33.061201512099856,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "담배사업법 11조 5 저발화성담배의 제조·수입 및 성능인증#KOBLEX-143400",
+        "provision_text": "⑤ 소방청장은 화재방지성능인증을 받지 아니한 담배를 제조 또는 수입·판매하는 것으로 의심되는 경우에는 해당 담배를 제조 또는 수입·판매한 자에게 화재방지성능인증을 받도록 명할 수 있다. <개정 2014.11.19, 2017.7.26>",
+        "rerank_score": 5.766297363152262e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "담배사업법 11조 5 저발화성담배의 제조·수입 및 성능인증 5항"
+      },
+      {
+        "first_stage_score": 29.649621178206846,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008842",
+        "provision_text": "⑥ 누구든지 제1항에 따른 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 공급ㆍ판매하거나 공급ㆍ판매의 목적으로 진열ㆍ보관 또는 저장하여서는 아니 된다. <신설 2023.8.16>",
+        "rerank_score": 0.9999972581863403,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등 6항"
+      },
+      {
+        "first_stage_score": 32.34768921502284,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008845",
+        "provision_text": "⑨ 누구든지 제1항에 따른 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 사용하여서는 아니 된다. <신설 2023.8.16>",
+        "rerank_score": 0.9998797178268433,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등 9항"
+      },
+      {
+        "first_stage_score": 32.94731988240422,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "수도법 14조  수도용 자재와 제품의 인증 등#KOBLEX-015487",
+        "provision_text": "⑤ 누구든지 제1항에 따른 인증을 받지 아니한 수도용 자재나 제품 및 그 포장에 인증표시를 하여서는 아니 된다.",
+        "rerank_score": 0.29432663321495056,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "수도법 14조  수도용 자재와 제품의 인증 등 5항"
+      },
+      {
+        "first_stage_score": 31.312736165252467,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "의료법 58조 6 인증서와 인증마크#KOBLEX-180425",
+        "provision_text": "② 누구든지 제58조제1항에 따른 인증을 받지 아니하고 인증서나 인증마크를 제작ㆍ사용하거나 그 밖의 방법으로 인증을 사칭하여서는 아니 된다.",
+        "rerank_score": 0.13216528296470642,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "의료법 58조 6 인증서와 인증마크 2항"
+      },
+      {
+        "first_stage_score": 27.304097499559926,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "액화석유가스의 안전관리 및 사업법 39조  가스용품의 수입 및 검사#KOBLEX-056535",
+        "provision_text": "③ 제1항에 따라 검사를 받아야 하는데도 검사를 받지 아니한 가스용품은 양도ㆍ임대 또는 사용하거나 판매를 목적으로 진열하여서는 아니 된다.",
+        "rerank_score": 0.034962356090545654,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "액화석유가스의 안전관리 및 사업법 39조  가스용품의 수입 및 검사 3항"
+      },
+      {
+        "first_stage_score": 28.628688186917294,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "국민건강증진법 6조 2 건강친화기업 인증#KOBLEX-079522",
+        "provision_text": "④ 인증을 받지 아니한 기업은 인증표시 또는 이와 유사한 표시를 하여서는 아니 된다.",
+        "rerank_score": 0.02133338153362274,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "국민건강증진법 6조 2 건강친화기업 인증 4항"
+      },
+      {
+        "first_stage_score": 28.164050376236446,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "경비업법 7조 2 경비업무 도급인 등의 의무#KOBLEX-219686",
+        "provision_text": "① 누구든지 제4조제1항에 따른 허가를 받지 아니한 자에게 경비업무를 도급하여서는 아니 된다.",
+        "rerank_score": 0.012502815574407578,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "경비업법 7조 2 경비업무 도급인 등의 의무 1항"
+      },
+      {
+        "first_stage_score": 27.98389388553135,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "수도법 33조 2 정수장의 위생안전 인증#KOBLEX-015680",
+        "provision_text": "⑥ 누구든지 제1항에 따른 정수장 위생안전 인증을 받지 아니하고 제5항에 따른 인증서를 제작ㆍ사용하거나 이와 비슷한 인증표시를 하여서는 아니 된다.",
+        "rerank_score": 0.004934526048600674,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "수도법 33조 2 정수장의 위생안전 인증 6항"
+      },
+      {
+        "first_stage_score": 29.649621178206846,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "문화유산의 보존 및 활용에 관한 법률 22조 6 문화유산교육 프로그램의 개발ㆍ보급 및 인증 등#KOBLEX-125355",
+        "provision_text": "⑥ 누구든지 제3항에 따른 인증을 받지 아니한 문화유산교육 프로그램에 대하여 제5항의 인증표시를 하거나 이와 비슷한 표시를 하여서는 아니 된다. <개정 2023.8.8>",
+        "rerank_score": 0.0005544421728700399,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "문화유산의 보존 및 활용에 관한 법률 22조 6 문화유산교육 프로그램의 개발ㆍ보급 및 인증 등 6항"
+      },
+      {
+        "first_stage_score": 30.485535014656932,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 11조 2 알선ㆍ중개행위 금지#KOBLEX-134894",
+        "provision_text": "제11조의2(알선ㆍ중개행위 금지) 누구든지 제11조에 따른 무인가 영업행위를 목적으로 계좌의 대여를 알선하거나 중개하여서는 아니 된다.",
+        "rerank_score": 0.00014404144894797355,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "자본시장과 금융투자업에 관한 법률 11조 2 알선ㆍ중개행위 금지"
+      },
+      {
+        "first_stage_score": 22.90946927367599,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008836",
+        "provision_text": "제60조(배출가스저감장치 및 공회전제한장치의 인증 등)",
+        "rerank_score": 0.9999654293060303,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등"
+      },
+      {
+        "first_stage_score": 18.193817699774982,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "약사법 61조  판매 등의 금지#KOBLEX-182315",
+        "provision_text": "제61조(판매 등의 금지)",
+        "rerank_score": 0.9999462366104126,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "약사법 61조  판매 등의 금지"
+      },
+      {
+        "first_stage_score": 18.193817699774982,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "축산물 위생관리법 33조  판매 등의 금지#KOBLEX-094801",
+        "provision_text": "제33조(판매 등의 금지)",
+        "rerank_score": 0.9999463558197021,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "축산물 위생관리법 33조  판매 등의 금지"
+      },
+      {
+        "first_stage_score": 18.193817699774982,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "축산물 위생관리법 33조  판매 등의 금지#KOBLEX-166406",
+        "provision_text": "제33조(판매 등의 금지)",
+        "rerank_score": 0.9999463558197021,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "축산물 위생관리법 33조  판매 등의 금지"
+      },
+      {
+        "first_stage_score": 18.193817699774982,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "축산물 위생관리법 33조  판매 등의 금지#KOBLEX-194936",
+        "provision_text": "제33조(판매 등의 금지)",
+        "rerank_score": 0.9999463558197021,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "축산물 위생관리법 33조  판매 등의 금지"
+      },
+      {
+        "first_stage_score": 15.220122689445128,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "석유 및 석유대체연료 사업법 45조  벌칙#KOBLEX-075263",
+        "provision_text": "5. 제27조에 따른 품질기준에 맞지 아니한 석유제품의 판매 금지 등을 위반한 자",
+        "rerank_score": 0.9998031258583069,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "석유 및 석유대체연료 사업법 45조  벌칙 5호"
+      },
+      {
+        "first_stage_score": 15.220122689445128,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "석유 및 석유대체연료 사업법 45조  벌칙#KOBLEX-085739",
+        "provision_text": "5. 제27조에 따른 품질기준에 맞지 아니한 석유제품의 판매 금지 등을 위반한 자",
+        "rerank_score": 0.9995608925819397,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "석유 및 석유대체연료 사업법 45조  벌칙 5호"
+      },
+      {
+        "first_stage_score": 17.760074121649446,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "영화 및 비디오물의 진흥에 관한 법률 53조  불법비디오물의 판매 등의 금지#KOBLEX-200197",
+        "provision_text": "제53조(불법비디오물의 판매 등의 금지)",
+        "rerank_score": 0.9998786449432373,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "영화 및 비디오물의 진흥에 관한 법률 53조  불법비디오물의 판매 등의 금지"
+      },
+      {
+        "first_stage_score": 14.294553438333105,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "대기환경보전법 시행규칙 82조 9 배출가스저감장치 등의 수시검사 대상#KOBLEX-189558",
+        "provision_text": "2. 법 제82조 및 이 규칙 제131조제1항제7호의4에 따라 제출된 자료를 확인하거나 검사한 결과 출고된 배출가스저감장치 또는 저공해엔진의 구조나 사용 부품 등이 인증 당시와 차이가 있다고 인정되는 경우",
+        "rerank_score": 0.9993411898612976,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "대기환경보전법 시행규칙 82조 9 배출가스저감장치 등의 수시검사 대상 2호"
+      },
+      {
+        "first_stage_score": 16.732860950693382,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "대기환경보전법 시행규칙 82조  배출가스저감장치 등의 인증의 신청ㆍ시험ㆍ기준 및 방법 등#KOBLEX-189516",
+        "provision_text": "① 법 제60조제1항 본문에 따라 인증을 받으려는 자는 별지 제37호서식의 배출가스저감장치 또는 저공해엔진 인증신청서에 다음 각 호의 서류를 첨부하여 국립환경과학원장에게 제출해야 한다. 1. 배출가스저감장치 또는 저공해엔진의 구조ㆍ성능ㆍ내구성 등에 관한 설명서 2. 배출가스저감장치 부착 또는 저공해엔진으로 개조ㆍ교체 전후의 배출가스, 출력, 연비 등 성능시험 결과서 3. 배출가스저감장치 또는 저공해엔진의 내구성시험 결과서 4. 배출가스저감장치 또는 저공해엔진의 판매 및 사후관리체계에 관한 설명서 5. 제품보증에 관한 서류",
+        "rerank_score": 0.9983835220336914,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "대기환경보전법 시행규칙 82조  배출가스저감장치 등의 인증의 신청ㆍ시험ㆍ기준 및 방법 등 1항"
+      },
+      {
+        "first_stage_score": 19.25280852523594,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "건설산업기본법 21조  건설업 등록증 등의 대여 및 알선 등 금지#KOBLEX-066431",
+        "provision_text": "제21조(건설업 등록증 등의 대여 및 알선 등 금지)",
+        "rerank_score": 0.9998989105224609,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "건설산업기본법 21조  건설업 등록증 등의 대여 및 알선 등 금지"
+      },
+      {
+        "first_stage_score": 19.25280852523594,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "건설산업기본법 21조  건설업 등록증 등의 대여 및 알선 등 금지#KOBLEX-108124",
+        "provision_text": "제21조(건설업 등록증 등의 대여 및 알선 등 금지)",
+        "rerank_score": 0.9998989105224609,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ2",
+        "statute_name": "건설산업기본법 21조  건설업 등록증 등의 대여 및 알선 등 금지"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "건설산업기본법 21조  건설업 등록증 등의 대여 및 알선 등 금지#KOBLEX-066431": "제21조(건설업 등록증 등의 대여 및 알선 등 금지)",
+      "건설산업기본법 21조  건설업 등록증 등의 대여 및 알선 등 금지#KOBLEX-108124": "제21조(건설업 등록증 등의 대여 및 알선 등 금지)",
+      "경비업법 7조 2 경비업무 도급인 등의 의무#KOBLEX-219686": "① 누구든지 제4조제1항에 따른 허가를 받지 아니한 자에게 경비업무를 도급하여서는 아니 된다.",
+      "골재채취법 49조 2 벌칙#KOBLEX-030316": "1. 제22조의4제1항을 위반하여 인증을 받지 아니하거나 품질기준에 적합하지 아니한 골재를 공급하거나 판매한 자",
+      "국민건강증진법 6조 2 건강친화기업 인증#KOBLEX-079522": "④ 인증을 받지 아니한 기업은 인증표시 또는 이와 유사한 표시를 하여서는 아니 된다.",
+      "담배사업법 11조 5 저발화성담배의 제조·수입 및 성능인증#KOBLEX-143400": "⑤ 소방청장은 화재방지성능인증을 받지 아니한 담배를 제조 또는 수입·판매하는 것으로 의심되는 경우에는 해당 담배를 제조 또는 수입·판매한 자에게 화재방지성능인증을 받도록 명할 수 있다. <개정 2014.11.19, 2017.7.26>",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008836": "제60조(배출가스저감장치 및 공회전제한장치의 인증 등)",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008842": "⑥ 누구든지 제1항에 따른 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 공급ㆍ판매하거나 공급ㆍ판매의 목적으로 진열ㆍ보관 또는 저장하여서는 아니 된다. <신설 2023.8.16>",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843": "⑦ 환경부장관은 제1항에 따른 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 제조, 수입, 공급 또는 판매하려는 자에게 환경부령으로 정하는 바에 따라 일정한 기간을 정하여 제품의 회수, 폐기 등의 필요한 조치를 명할 수 있다. <신설 2023.8.16>",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008845": "⑨ 누구든지 제1항에 따른 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 사용하여서는 아니 된다. <신설 2023.8.16>",
+      "대기환경보전법 62조  운행차의 배출가스 정기검사#KOBLEX-008868": "④ 환경부장관은 이륜자동차정기검사를 받지 아니한 이륜자동차 소유자에게 환경부령으로 정하는 바에 따라 이륜자동차정기검사를 받도록 명할 수 있다. <신설 2013.7.16>",
+      "대기환경보전법 75조  자동차연료ㆍ첨가제 또는 촉매제의 제조ㆍ공급ㆍ판매 중지 및 회수#KOBLEX-008944": "②환경부장관은 제74조제6항에 따라 공급ㆍ판매 또는 사용이 금지되는 자동차연료ㆍ첨가제 또는 촉매제를 공급하거나 판매한 자에 대하여는 공급이나 판매의 중지를 명할 수 있다. <개정 2008.12.31, 2012.5.23, 2013.7.16, 2020.12.29>",
+      "대기환경보전법 시행규칙 82조  배출가스저감장치 등의 인증의 신청ㆍ시험ㆍ기준 및 방법 등#KOBLEX-189516": "① 법 제60조제1항 본문에 따라 인증을 받으려는 자는 별지 제37호서식의 배출가스저감장치 또는 저공해엔진 인증신청서에 다음 각 호의 서류를 첨부하여 국립환경과학원장에게 제출해야 한다. 1. 배출가스저감장치 또는 저공해엔진의 구조ㆍ성능ㆍ내구성 등에 관한 설명서 2. 배출가스저감장치 부착 또는 저공해엔진으로 개조ㆍ교체 전후의 배출가스, 출력, 연비 등 성능시험 결과서 3. 배출가스저감장치 또는 저공해엔진의 내구성시험 결과서 4. 배출가스저감장치 또는 저공해엔진의 판매 및 사후관리체계에 관한 설명서 5. 제품보증에 관한 서류",
+      "대기환경보전법 시행규칙 82조 9 배출가스저감장치 등의 수시검사 대상#KOBLEX-189558": "2. 법 제82조 및 이 규칙 제131조제1항제7호의4에 따라 제출된 자료를 확인하거나 검사한 결과 출고된 배출가스저감장치 또는 저공해엔진의 구조나 사용 부품 등이 인증 당시와 차이가 있다고 인정되는 경우",
+      "문화유산의 보존 및 활용에 관한 법률 22조 6 문화유산교육 프로그램의 개발ㆍ보급 및 인증 등#KOBLEX-125355": "⑥ 누구든지 제3항에 따른 인증을 받지 아니한 문화유산교육 프로그램에 대하여 제5항의 인증표시를 하거나 이와 비슷한 표시를 하여서는 아니 된다. <개정 2023.8.8>",
+      "석유 및 석유대체연료 사업법 45조  벌칙#KOBLEX-075263": "5. 제27조에 따른 품질기준에 맞지 아니한 석유제품의 판매 금지 등을 위반한 자",
+      "석유 및 석유대체연료 사업법 45조  벌칙#KOBLEX-085739": "5. 제27조에 따른 품질기준에 맞지 아니한 석유제품의 판매 금지 등을 위반한 자",
+      "수도법 14조  수도용 자재와 제품의 인증 등#KOBLEX-015487": "⑤ 누구든지 제1항에 따른 인증을 받지 아니한 수도용 자재나 제품 및 그 포장에 인증표시를 하여서는 아니 된다.",
+      "수도법 33조 2 정수장의 위생안전 인증#KOBLEX-015680": "⑥ 누구든지 제1항에 따른 정수장 위생안전 인증을 받지 아니하고 제5항에 따른 인증서를 제작ㆍ사용하거나 이와 비슷한 인증표시를 하여서는 아니 된다.",
+      "액화석유가스의 안전관리 및 사업법 39조  가스용품의 수입 및 검사#KOBLEX-056535": "③ 제1항에 따라 검사를 받아야 하는데도 검사를 받지 아니한 가스용품은 양도ㆍ임대 또는 사용하거나 판매를 목적으로 진열하여서는 아니 된다.",
+      "약사법 61조  판매 등의 금지#KOBLEX-182315": "제61조(판매 등의 금지)",
+      "영화 및 비디오물의 진흥에 관한 법률 53조  불법비디오물의 판매 등의 금지#KOBLEX-200197": "제53조(불법비디오물의 판매 등의 금지)",
+      "의료법 58조 6 인증서와 인증마크#KOBLEX-180425": "② 누구든지 제58조제1항에 따른 인증을 받지 아니하고 인증서나 인증마크를 제작ㆍ사용하거나 그 밖의 방법으로 인증을 사칭하여서는 아니 된다.",
+      "자동차관리법 35조 9 내압용기의 제조 또는 판매의 중지#KOBLEX-112855": "제35조의9(내압용기의 제조 또는 판매의 중지)",
+      "자동차관리법 35조 9 내압용기의 제조 또는 판매의 중지#KOBLEX-216327": "제35조의9(내압용기의 제조 또는 판매의 중지)",
+      "자동차관리법 81조  벌칙#KOBLEX-113486": "20의5. 제35조의9제1항에 따른 내압용기의 제조ㆍ수입 또는 판매의 중지명령을 위반한 자",
+      "자동차관리법 81조  벌칙#KOBLEX-216958": "20의5. 제35조의9제1항에 따른 내압용기의 제조ㆍ수입 또는 판매의 중지명령을 위반한 자",
+      "자본시장과 금융투자업에 관한 법률 11조 2 알선ㆍ중개행위 금지#KOBLEX-134894": "제11조의2(알선ㆍ중개행위 금지) 누구든지 제11조에 따른 무인가 영업행위를 목적으로 계좌의 대여를 알선하거나 중개하여서는 아니 된다.",
+      "축산물 위생관리법 33조  판매 등의 금지#KOBLEX-094801": "제33조(판매 등의 금지)",
+      "축산물 위생관리법 33조  판매 등의 금지#KOBLEX-166406": "제33조(판매 등의 금지)",
+      "축산물 위생관리법 33조  판매 등의 금지#KOBLEX-194936": "제33조(판매 등의 금지)",
+      "폐기물관리법 13조 5 재활용 제품 또는 물질에 관한 유해성기준#KOBLEX-173820": "⑤ 환경부장관은 제3항에 따른 시험ㆍ분석 또는 실태 조사 결과 유해성기준을 위반한 제품 또는 물질을 제조 또는 유통한 자에 대하여 해당 제품 또는 물질의 회수, 파기 등 필요한 조치를 명할 수 있다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843"
+        ],
+        "rationale": "C001(대기환경보전법 제60조 제7항)은 인증 미획득 배출가스저감장치 제조·수입·공급·판매에 대한 환경부장관의 조치 권한과 그 종류(회수, 폐기 등)를 명시하여 E1의 완료 기준을 완전히 충족함.",
+        "status": "covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [
+          "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008842"
+        ],
+        "rationale": "C011(대기환경보전법 제60조 제6항)은 인증 미획득 배출가스저감장치 등의 공급·판매 및 판매 목적 진열·보관·저장을 금지하지만, 판매 중개 행위를 직접적으로 금지하거나 그 금지 조건을 명시하지는 않아 E2의 완료 기준을 부분적으로만 충족함.",
+        "status": "partially_covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843",
+        "support_spans": [
+          {
+            "end_char": 154,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008842",
+        "support_spans": [
+          {
+            "end_char": 112,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 2,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "환경부장관의 인증 미획득 배출가스저감장치 제조·수입·공급·판매에 대한 조치 권한",
+        "issue_id": "I1"
+      },
+      {
+        "description": "인증 미획득 배출가스저감장치 판매 중개 금지 조건",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "인증 미획득 배출가스저감장치 판매 중개 금지 조항과 그 적용 조건이 명시된 조항을 확인함",
+        "critical": true,
+        "description": "인증받지 않은 배출가스저감장치의 판매 중개를 금지하는 조항 및 그 금지 조건",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "환경부장관은 을이 인증받지 않은 배출가스저감장치를 제조, 수입, 공급 또는 판매하려는 경우에 어떤 조치를 명할 수 있으며, 을의 인증받지 않은 제품의 판매 중개는 어떤 조건에서 금지되는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "환경부장관은 인증을 받지 아니한 배출가스저감장치를 제조하거나 수입하거나 공급하거나 판매하려는 자에 대하여 제조·수입·공급·판매의 금지 또는 중지명령을 명할 수 있다",
+        "request_id": "RQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "누구든지 인증을 받지 아니한 배출가스저감장치의 판매를 중개하여서는 아니 된다",
+        "request_id": "RQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "누구든지 인증을 받지 아니한 배출가스저감장치의 판매를 알선하거나 중개하는 행위를 하여서는 아니 된다",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "대기환경보전법에서 인증 미획득 배출가스저감장치 판매 중개 금지 조항",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_text": "배출가스저감장치 인증 판매 중개 금지",
+        "request_id": "GRQ3",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "누구든지 인증을 받지 아니한 배출가스저감장치에 관하여 판매를 알선하거나 중개하는 행위를 하여서는 아니 된다",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "대기환경보전법에서 인증 미획득 배출가스저감장치 판매 알선 및 중개 금지 조항",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_text": "배출가스저감장치 인증 판매 알선 중개 금지",
+        "request_id": "GRQ3",
+        "top_k": 100
+      }
+    ],
+    "question": "환경부장관은 을이 인증받지 않은 배출가스저감장치를 제조, 수입, 공급 또는 판매하려는 경우에 어떤 조치를 명할 수 있으며, 을의 인증받지 않은 제품의 판매 중개는 어떤 조건에서 금지되는가?",
+    "remaining_request_budget": 1,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "인증 미획득 배출가스저감장치 제조·수입·공급·판매에 대한 환경부장관의 조치 권한과 그 종류가 명시된 조항을 확인함",
+        "critical": true,
+        "description": "환경부장관이 인증받지 않은 배출가스저감장치의 제조, 수입, 공급 또는 판매를 금지하거나 중지명령 등 조치를 명할 수 있는 근거 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "인증 미획득 배출가스저감장치 판매 중개 금지 조항과 그 적용 조건이 명시된 조항을 확인함",
+        "critical": true,
+        "description": "인증받지 않은 배출가스저감장치의 판매 중개를 금지하는 조항 및 그 금지 조건",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "aa1167e6-8c2d-4912-a154-bb61ec7a3f64",
+    "seen_provision_ids": [
+      "수도법 14조  수도용 자재와 제품의 인증 등#KOBLEX-015487",
+      "자동차관리법 81조  벌칙#KOBLEX-216958",
+      "대기환경보전법 시행규칙 82조  배출가스저감장치 등의 인증의 신청ㆍ시험ㆍ기준 및 방법 등#KOBLEX-189516",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008836",
+      "대기환경보전법 시행규칙 82조 9 배출가스저감장치 등의 수시검사 대상#KOBLEX-189558",
+      "건설산업기본법 21조  건설업 등록증 등의 대여 및 알선 등 금지#KOBLEX-108124",
+      "영화 및 비디오물의 진흥에 관한 법률 53조  불법비디오물의 판매 등의 금지#KOBLEX-200197",
+      "대기환경보전법 62조  운행차의 배출가스 정기검사#KOBLEX-008868",
+      "자동차관리법 35조 9 내압용기의 제조 또는 판매의 중지#KOBLEX-112855",
+      "경비업법 7조 2 경비업무 도급인 등의 의무#KOBLEX-219686",
+      "문화유산의 보존 및 활용에 관한 법률 22조 6 문화유산교육 프로그램의 개발ㆍ보급 및 인증 등#KOBLEX-125355",
+      "석유 및 석유대체연료 사업법 45조  벌칙#KOBLEX-085739",
+      "약사법 61조  판매 등의 금지#KOBLEX-182315",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008845",
+      "축산물 위생관리법 33조  판매 등의 금지#KOBLEX-194936",
+      "석유 및 석유대체연료 사업법 45조  벌칙#KOBLEX-075263",
+      "축산물 위생관리법 33조  판매 등의 금지#KOBLEX-094801",
+      "자동차관리법 81조  벌칙#KOBLEX-113486",
+      "폐기물관리법 13조 5 재활용 제품 또는 물질에 관한 유해성기준#KOBLEX-173820",
+      "대기환경보전법 75조  자동차연료ㆍ첨가제 또는 촉매제의 제조ㆍ공급ㆍ판매 중지 및 회수#KOBLEX-008944",
+      "축산물 위생관리법 33조  판매 등의 금지#KOBLEX-166406",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008842",
+      "골재채취법 49조 2 벌칙#KOBLEX-030316",
+      "자본시장과 금융투자업에 관한 법률 11조 2 알선ㆍ중개행위 금지#KOBLEX-134894",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843",
+      "국민건강증진법 6조 2 건강친화기업 인증#KOBLEX-079522",
+      "자동차관리법 35조 9 내압용기의 제조 또는 판매의 중지#KOBLEX-216327",
+      "의료법 58조 6 인증서와 인증마크#KOBLEX-180425",
+      "담배사업법 11조 5 저발화성담배의 제조·수입 및 성능인증#KOBLEX-143400",
+      "액화석유가스의 안전관리 및 사업법 39조  가스용품의 수입 및 검사#KOBLEX-056535",
+      "건설산업기본법 21조  건설업 등록증 등의 대여 및 알선 등 금지#KOBLEX-066431",
+      "수도법 33조 2 정수장의 위생안전 인증#KOBLEX-015680"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

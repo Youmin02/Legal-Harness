@@ -1,0 +1,375 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "completed_at_utc": "2026-08-15T06:40:24.270529+00:00",
+  "end_to_end_latency_ms": 243427.384,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid GAP_QUERY_PLAN result after 2 attempts: run_id does not match input; invalid request_id: 'GAP_QUERY_PLAN'; query repeats query_history: 손해배상청구권은 권리를 행사할 수 있는 때로부터 3년 또는 10년 내에 행사하지 아니하면 소멸시효가 완성된다.; query repeats query_history: 민법 소멸시효 일반 규정 손해배상청구권 기산점"
+  ],
+  "record_schema_version": "1.0",
+  "run_id": "d6ca49ea-549b-4620-8c38-922331629c16",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 4,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid GAP_QUERY_PLAN result after 2 attempts: run_id does not match input; invalid request_id: 'GAP_QUERY_PLAN'; query repeats query_history: 손해배상청구권은 권리를 행사할 수 있는 때로부터 3년 또는 10년 내에 행사하지 아니하면 소멸시효가 완성된다.; query repeats query_history: 민법 소멸시효 일반 규정 손해배상청구권 기산점",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 46.83968615311162,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "국세기본법 54조  국세환급금의 소멸시효#KOBLEX-147620",
+        "provision_text": "① 납세자의 국세환급금과 국세환급가산금에 관한 권리는 행사할 수 있는 때부터 5년간 행사하지 아니하면 소멸시효가 완성된다.",
+        "rerank_score": 0.9999746084213257,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "국세기본법 54조  국세환급금의 소멸시효 1항"
+      },
+      {
+        "first_stage_score": 41.377018357665676,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "관세법 22조  관세징수권 등의 소멸시효#KOBLEX-104464",
+        "provision_text": "② 납세자가 납부한 금액 중 잘못 납부하거나 초과하여 납부한 금액 또는 그 밖의 관세의 환급청구권은 그 권리를 행사할 수 있는 날부터 5년간 행사하지 아니하면 소멸시효가 완성된다. <개정 2023.12.31>",
+        "rerank_score": 0.9998998641967773,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "관세법 22조  관세징수권 등의 소멸시효 2항"
+      },
+      {
+        "first_stage_score": 35.4780040571494,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "징발법 23조  보상청구권의 소멸시효#KOBLEX-073245",
+        "provision_text": "제23조(보상청구권의 소멸시효) 보상청구권은 제22조제1항에 따른 공고기간이 끝난 날부터 5년간 행사하지 아니하면 소멸시효가 완성된다.",
+        "rerank_score": 0.9984147548675537,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "징발법 23조  보상청구권의 소멸시효"
+      },
+      {
+        "first_stage_score": 41.12916465633834,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "서민의 금융생활 지원에 관한 법률 54조  구상권의 행사 등#KOBLEX-172789",
+        "provision_text": "⑤ 구상채권은 10년간 행사하지 아니하면 소멸시효가 완성된다.",
+        "rerank_score": 0.9971668124198914,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "서민의 금융생활 지원에 관한 법률 54조  구상권의 행사 등 5항"
+      },
+      {
+        "first_stage_score": 38.366583515218636,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "어음법 70조  시효기간#KOBLEX-030594",
+        "provision_text": "② 소지인의 배서인과 발행인에 대한 청구권은 다음 각 호의 날부터 1년간 행사하지 아니하면 소멸시효가 완성된다. 1. 적법한 기간 내에 작성시킨 거절증서의 날짜 2. 무비용상환의 문구가 적혀 있는 경우에는 만기일",
+        "rerank_score": 0.9875561594963074,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "어음법 70조  시효기간 2항"
+      },
+      {
+        "first_stage_score": 22.06479157702493,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "도시개발법 47조  청산금의 소멸시효#KOBLEX-003017",
+        "provision_text": "제47조(청산금의 소멸시효) 청산금을 받을 권리나 징수할 권리를 5년간 행사하지 아니하면 시효로 소멸한다.",
+        "rerank_score": 0.9773224592208862,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "도시개발법 47조  청산금의 소멸시효"
+      },
+      {
+        "first_stage_score": 20.292477001831582,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "관세법 23조  시효의 중단 및 정지#KOBLEX-104466",
+        "provision_text": "제23조(시효의 중단 및 정지)",
+        "rerank_score": 0.3595326244831085,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "관세법 23조  시효의 중단 및 정지"
+      },
+      {
+        "first_stage_score": 17.987750674309876,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "의료급여법 31조  소멸시효#KOBLEX-029110",
+        "provision_text": "③ 소멸시효 및 시효중단에 관하여 이 법에서 정한 사항 외에는 「민법」에 따른다.",
+        "rerank_score": 0.35665449500083923,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "의료급여법 31조  소멸시효 3항"
+      },
+      {
+        "first_stage_score": 16.20579236836295,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "군인연금법 55조  신고사항#KOBLEX-150147",
+        "provision_text": "1. 제27조제1항의 연금지급 정지 사유",
+        "rerank_score": 0.15285474061965942,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "군인연금법 55조  신고사항 1호"
+      },
+      {
+        "first_stage_score": 18.198676145887678,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "전자문서 및 전자거래 기본법 36조 2 소멸시효의 중단#KOBLEX-166091",
+        "provision_text": "제36조의2(소멸시효의 중단) 제33조제1항에 따른 분쟁조정의 신청은 소멸시효 중단의 효력이 있다. 다만, 분쟁조정의 신청을 취하하는 경우에는 그러하지 아니하다.",
+        "rerank_score": 0.021697495132684708,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "전자문서 및 전자거래 기본법 36조 2 소멸시효의 중단"
+      },
+      {
+        "first_stage_score": 42.13362607460476,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "응급의료에 관한 법률 22조 3 구상권의 시효#KOBLEX-132754",
+        "provision_text": "① 제22조제4항에 따른 대지급금에 대한 구상의 권리는 그 대지급금을 청구할 수 있는 날부터 3년 동안 행사하지 아니하면 소멸시효가 완성된다.",
+        "rerank_score": 0.9986942410469055,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "응급의료에 관한 법률 22조 3 구상권의 시효 1항"
+      },
+      {
+        "first_stage_score": 15.66732904637367,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 294조  시효의 기산점#KOBLEX-093078",
+        "provision_text": "제294조(시효의 기산점)",
+        "rerank_score": 0.13499535620212555,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "군사법원법 294조  시효의 기산점"
+      },
+      {
+        "first_stage_score": 15.66732904637367,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "가족관계의 등록 등에 관한 법률 37조  신고기간의 기산점#KOBLEX-127439",
+        "provision_text": "제37조(신고기간의 기산점)",
+        "rerank_score": 0.08166060596704483,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "가족관계의 등록 등에 관한 법률 37조  신고기간의 기산점"
+      },
+      {
+        "first_stage_score": 15.749506309628075,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "지방자치법 22조  주민소송#KOBLEX-076267",
+        "provision_text": "⑪ 제2항제4호에 따른 소송이 제기된 경우에 지방자치단체의 장이 한 소송고지신청은 그 소송에 관한 손해배상청구권 또는 부당이득반환청구권의 시효중단에 관하여 「민법」 제168조제1호에 따른 청구로 본다.",
+        "rerank_score": 0.0019443812780082226,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "지방자치법 22조  주민소송 11항"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "가족관계의 등록 등에 관한 법률 37조  신고기간의 기산점#KOBLEX-127439": "제37조(신고기간의 기산점)",
+      "관세법 22조  관세징수권 등의 소멸시효#KOBLEX-104464": "② 납세자가 납부한 금액 중 잘못 납부하거나 초과하여 납부한 금액 또는 그 밖의 관세의 환급청구권은 그 권리를 행사할 수 있는 날부터 5년간 행사하지 아니하면 소멸시효가 완성된다. <개정 2023.12.31>",
+      "관세법 23조  시효의 중단 및 정지#KOBLEX-104466": "제23조(시효의 중단 및 정지)",
+      "국세기본법 54조  국세환급금의 소멸시효#KOBLEX-147620": "① 납세자의 국세환급금과 국세환급가산금에 관한 권리는 행사할 수 있는 때부터 5년간 행사하지 아니하면 소멸시효가 완성된다.",
+      "군사법원법 294조  시효의 기산점#KOBLEX-093078": "제294조(시효의 기산점)",
+      "군인연금법 55조  신고사항#KOBLEX-150147": "1. 제27조제1항의 연금지급 정지 사유",
+      "도시개발법 47조  청산금의 소멸시효#KOBLEX-003017": "제47조(청산금의 소멸시효) 청산금을 받을 권리나 징수할 권리를 5년간 행사하지 아니하면 시효로 소멸한다.",
+      "서민의 금융생활 지원에 관한 법률 54조  구상권의 행사 등#KOBLEX-172789": "⑤ 구상채권은 10년간 행사하지 아니하면 소멸시효가 완성된다.",
+      "어음법 70조  시효기간#KOBLEX-030594": "② 소지인의 배서인과 발행인에 대한 청구권은 다음 각 호의 날부터 1년간 행사하지 아니하면 소멸시효가 완성된다. 1. 적법한 기간 내에 작성시킨 거절증서의 날짜 2. 무비용상환의 문구가 적혀 있는 경우에는 만기일",
+      "응급의료에 관한 법률 22조 3 구상권의 시효#KOBLEX-132754": "① 제22조제4항에 따른 대지급금에 대한 구상의 권리는 그 대지급금을 청구할 수 있는 날부터 3년 동안 행사하지 아니하면 소멸시효가 완성된다.",
+      "의료급여법 31조  소멸시효#KOBLEX-029110": "③ 소멸시효 및 시효중단에 관하여 이 법에서 정한 사항 외에는 「민법」에 따른다.",
+      "전자문서 및 전자거래 기본법 36조 2 소멸시효의 중단#KOBLEX-166091": "제36조의2(소멸시효의 중단) 제33조제1항에 따른 분쟁조정의 신청은 소멸시효 중단의 효력이 있다. 다만, 분쟁조정의 신청을 취하하는 경우에는 그러하지 아니하다.",
+      "지방자치법 22조  주민소송#KOBLEX-076267": "⑪ 제2항제4호에 따른 소송이 제기된 경우에 지방자치단체의 장이 한 소송고지신청은 그 소송에 관한 손해배상청구권 또는 부당이득반환청구권의 시효중단에 관하여 「민법」 제168조제1호에 따른 청구로 본다.",
+      "징발법 23조  보상청구권의 소멸시효#KOBLEX-073245": "제23조(보상청구권의 소멸시효) 보상청구권은 제22조제1항에 따른 공고기간이 끝난 날부터 5년간 행사하지 아니하면 소멸시효가 완성된다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [],
+        "rationale": "E1 requires a provision specifying the limitation period and its starting point (including suspension/interruption grounds) for a general tort damages claim. All candidate provisions address specialized regimes (tax refunds, customs refunds, requisition compensation, subrogation, negotiable instruments, urban development settlement, etc.) or are irrelevant headings. None govern the general civil damages claim limitation period or its accrual.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "rationale": "E2 requires provisions on interruption/suspension of limitation and their effect on completion timing for the relevant claim. C007 is only a heading without operative text; C008 applies to medical aid benefits; C010 applies only to dispute mediation under the Electronic Documents Act. None provide the general civil limitation interruption/suspension rules applicable to the damages claim.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 4,
+    "last_validated_event": "S2.ASSESS_COVERAGE",
+    "legal_issues": [
+      {
+        "description": "을의 갑에 대한 손해배상청구권 소멸시효 완성 시점",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "손해배상청구권의 소멸시효 기간과 그 기산점(지연 또는 중단 사유 포함)을 명시하는 조문이 확인되어야 한다.",
+        "critical": true,
+        "description": "손해배상청구권의 소멸시효 기간 및 기산점 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "limitation",
+        "issue_id": "I1"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "손해배상청구권은 권리를 행사할 수 있는 때로부터 일정 기간 내에 행사하지 아니하면 소멸시효가 완성된다.",
+        "request_id": "RQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "민법 소멸시효 중단 정지 사유 손해배상청구권",
+        "request_id": "RQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "손해배상청구권은 권리를 행사할 수 있는 때로부터 3년 또는 10년 내에 행사하지 아니하면 소멸시효가 완성된다.",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "민법 소멸시효 일반 규정 손해배상청구권 기산점",
+        "request_id": "GRQ2",
+        "top_k": 100
+      }
+    ],
+    "question": "을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+    "remaining_request_budget": 5,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "손해배상청구권의 소멸시효 기간과 그 기산점(지연 또는 중단 사유 포함)을 명시하는 조문이 확인되어야 한다.",
+        "critical": true,
+        "description": "손해배상청구권의 소멸시효 기간 및 기산점 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "limitation",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "소멸시효 중단·정지 사유와 그로 인한 시효 완성 시점의 변경 여부를 규정한 조문이 확인되어야 한다.",
+        "critical": false,
+        "description": "소멸시효의 중단 또는 정지 사유 및 그 효과",
+        "evidence_item_id": "E2",
+        "evidence_type": "exception",
+        "issue_id": "I1"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "d6ca49ea-549b-4620-8c38-922331629c16",
+    "seen_provision_ids": [
+      "응급의료에 관한 법률 22조 3 구상권의 시효#KOBLEX-132754",
+      "군인연금법 55조  신고사항#KOBLEX-150147",
+      "징발법 23조  보상청구권의 소멸시효#KOBLEX-073245",
+      "군사법원법 294조  시효의 기산점#KOBLEX-093078",
+      "어음법 70조  시효기간#KOBLEX-030594",
+      "도시개발법 47조  청산금의 소멸시효#KOBLEX-003017",
+      "국세기본법 54조  국세환급금의 소멸시효#KOBLEX-147620",
+      "관세법 23조  시효의 중단 및 정지#KOBLEX-104466",
+      "가족관계의 등록 등에 관한 법률 37조  신고기간의 기산점#KOBLEX-127439",
+      "관세법 22조  관세징수권 등의 소멸시효#KOBLEX-104464",
+      "지방자치법 22조  주민소송#KOBLEX-076267",
+      "전자문서 및 전자거래 기본법 36조 2 소멸시효의 중단#KOBLEX-166091",
+      "서민의 금융생활 지원에 관한 법률 54조  구상권의 행사 등#KOBLEX-172789",
+      "의료급여법 31조  소멸시효#KOBLEX-029110"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

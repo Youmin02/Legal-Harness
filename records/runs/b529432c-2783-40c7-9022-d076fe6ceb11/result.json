@@ -1,0 +1,892 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-15T13:27:38.723219+00:00",
+  "end_to_end_latency_ms": 143247.167,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "b529432c-2783-40c7-9022-d076fe6ceb11",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 3,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 20,
+          "request_count": 3,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 3,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 18,
+          "request_count": 3,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 3,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 8,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 3,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 14.039097183444014,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위#KOBLEX-020990",
+        "provision_text": "제116조(법령에 따른 정당한 행위) 이 법은 사업자 또는 사업자단체가 다른 법령에 따라 하는 정당한 행위에 대해서는 적용하지 아니한다.",
+        "rerank_score": 0.3941057324409485,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위"
+      },
+      {
+        "first_stage_score": 14.039097183444014,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위#KOBLEX-039418",
+        "provision_text": "제116조(법령에 따른 정당한 행위) 이 법은 사업자 또는 사업자단체가 다른 법령에 따라 하는 정당한 행위에 대해서는 적용하지 아니한다.",
+        "rerank_score": 0.3941057324409485,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위"
+      },
+      {
+        "first_stage_score": 17.38693831624293,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "새마을금고법 2조  정의와 명칭#KOBLEX-096217",
+        "provision_text": "제2조(정의와 명칭)",
+        "rerank_score": 0.0010472559370100498,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "새마을금고법 2조  정의와 명칭"
+      },
+      {
+        "first_stage_score": 13.543437031088432,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "보험업법 시행령 94조  선임계리사 등의 금지행위#KOBLEX-121776",
+        "provision_text": "1. 정당한 이유 없이 보험계리업무를 게을리하는 행위",
+        "rerank_score": 1.2187420907139312e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "보험업법 시행령 94조  선임계리사 등의 금지행위 1호"
+      },
+      {
+        "first_stage_score": 12.677968365081387,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075693",
+        "provision_text": "3. 정당한 사유 없이 작업ㆍ교육ㆍ교화프로그램 등을 거부하거나 태만히 하는 행위",
+        "rerank_score": 2.067426612484269e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌 3호"
+      },
+      {
+        "first_stage_score": 12.677968365081387,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213880",
+        "provision_text": "3. 정당한 사유 없이 작업ㆍ교육ㆍ교화프로그램 등을 거부하거나 태만히 하는 행위",
+        "rerank_score": 2.067426612484269e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌 3호"
+      },
+      {
+        "first_stage_score": 12.413546671302885,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "해운법 21조 3 여객의 금지행위#KOBLEX-111650",
+        "provision_text": "3. 정당한 사유 없이 여객선등의 장치 또는 기구 등을 조작하는 행위",
+        "rerank_score": 1.338979200227186e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "해운법 21조 3 여객의 금지행위 3호"
+      },
+      {
+        "first_stage_score": 16.962307608832635,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 202조  동시선거의 정의와 선거기간#KOBLEX-052290",
+        "provision_text": "제202조(동시선거의 정의와 선거기간)",
+        "rerank_score": 3.334205530336476e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "공직선거법 202조  동시선거의 정의와 선거기간"
+      },
+      {
+        "first_stage_score": 16.962307608832635,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 202조  동시선거의 정의와 선거기간#KOBLEX-175576",
+        "provision_text": "제202조(동시선거의 정의와 선거기간)",
+        "rerank_score": 3.334205530336476e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "공직선거법 202조  동시선거의 정의와 선거기간"
+      },
+      {
+        "first_stage_score": 12.299624546546012,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "보험업법 85조 3 보험설계사에 대한 불공정 행위 금지#KOBLEX-022069",
+        "provision_text": "① 보험회사등은 보험설계사에게 보험계약의 모집을 위탁할 때 다음 각 호의 행위를 하여서는 아니 된다. <개정 2014.10.15> 1. 보험모집 위탁계약서를 교부하지 아니하는 행위 2. 위탁계약서상 계약사항을 이행하지 아니하는 행위 3. 위탁계약서에서 정한 해지요건 외의 사유로 위탁계약을 해지하는 행위 4. 정당한 사유 없이 보험설계사가 요청한 위탁계약 해지를 거부하는 행위 5. 위탁계약서에서 정한 위탁업무 외의 업무를 강요하는 행위 6. 정당한 사유 없이 보험설계사에게 지급되어야 할 수수료의 전부 또는 일부를 지급하지 아니하거나 지연하여 지급하는 행위 7. 정당한 사유 없이 보험설계사에게 지급한 수수료를 환수하는 행위 8. 보험설계사에게 보험료 대납(代納)을 강요하는 행위 9. 그 밖에 대통령령으로 정하는 불공정한 행위",
+        "rerank_score": 1.0022348533311742e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "보험업법 85조 3 보험설계사에 대한 불공정 행위 금지 1항"
+      },
+      {
+        "first_stage_score": 12.497330306203391,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "공직선거법 218조 32 국외선거범에 대한 영사조사#KOBLEX-052511",
+        "provision_text": "④ 영사가 법원의 의뢰를 받아 진술을 들을 경우 그 절차 및 방식에 관하여는 「형사소송법」 제48조, 제50조 및 제161조의2부터 제164조까지를 준용한다.",
+        "rerank_score": 0.009718690998852253,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "공직선거법 218조 32 국외선거범에 대한 영사조사 4항"
+      },
+      {
+        "first_stage_score": 12.497330306203391,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "공직선거법 218조 32 국외선거범에 대한 영사조사#KOBLEX-175797",
+        "provision_text": "④ 영사가 법원의 의뢰를 받아 진술을 들을 경우 그 절차 및 방식에 관하여는 「형사소송법」 제48조, 제50조 및 제161조의2부터 제164조까지를 준용한다.",
+        "rerank_score": 0.009718690998852253,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "공직선거법 218조 32 국외선거범에 대한 영사조사 4항"
+      },
+      {
+        "first_stage_score": 12.720712234789517,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "공직선거법 218조 32 국외선거범에 대한 영사조사#KOBLEX-052512",
+        "provision_text": "⑤ 영사가 검사의 의뢰를 받아 진술을 들을 경우 그 절차 및 방식에 관하여는 「형사소송법」 제241조, 제242조, 제243조의2부터 제245조까지를 준용한다.",
+        "rerank_score": 0.003821133403107524,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "공직선거법 218조 32 국외선거범에 대한 영사조사 5항"
+      },
+      {
+        "first_stage_score": 12.720712234789517,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "공직선거법 218조 32 국외선거범에 대한 영사조사#KOBLEX-175798",
+        "provision_text": "⑤ 영사가 검사의 의뢰를 받아 진술을 들을 경우 그 절차 및 방식에 관하여는 「형사소송법」 제241조, 제242조, 제243조의2부터 제245조까지를 준용한다.",
+        "rerank_score": 0.003821133403107524,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "공직선거법 218조 32 국외선거범에 대한 영사조사 5항"
+      },
+      {
+        "first_stage_score": 16.185948422048725,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "헌법재판소법 42조  재판의 정지 등#KOBLEX-188024",
+        "provision_text": "② 제1항 본문에 따른 재판정지기간은 「형사소송법」 제92조제1항ㆍ제2항 및 「군사법원법」 제132조제1항ㆍ제2항의 구속기간과 「민사소송법」 제199조의 판결 선고기간에 산입하지 아니한다.",
+        "rerank_score": 0.0008402802050113678,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "헌법재판소법 42조  재판의 정지 등 2항"
+      },
+      {
+        "first_stage_score": 13.700245352317713,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "공직선거법 218조 33 국외선거범에 대한 인터넷 화상조사#KOBLEX-052519",
+        "provision_text": "⑤ 제1항에 따른 진술 청취의 절차 및 방식에 관하여는 「형사소송법」 제241조, 제242조, 제243조의2부터 제245조까지를 준용한다.",
+        "rerank_score": 0.0007516522309742868,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "공직선거법 218조 33 국외선거범에 대한 인터넷 화상조사 5항"
+      },
+      {
+        "first_stage_score": 13.700245352317713,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "공직선거법 218조 33 국외선거범에 대한 인터넷 화상조사#KOBLEX-175805",
+        "provision_text": "⑤ 제1항에 따른 진술 청취의 절차 및 방식에 관하여는 「형사소송법」 제241조, 제242조, 제243조의2부터 제245조까지를 준용한다.",
+        "rerank_score": 0.0007516522309742868,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "공직선거법 218조 33 국외선거범에 대한 인터넷 화상조사 5항"
+      },
+      {
+        "first_stage_score": 12.95222512245802,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "공무원범죄에 관한 몰수 특례법 52조  불복신청#KOBLEX-038703",
+        "provision_text": "③ 제2항에 따른 불복신청의 절차에 관하여는 「형사소송법」 제416조제1항에 따른 재판의 취소 또는 변경의 청구에 관련된 절차 규정을 준용한다.",
+        "rerank_score": 0.0006460105068981647,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "공무원범죄에 관한 몰수 특례법 52조  불복신청 3항"
+      },
+      {
+        "first_stage_score": 12.95222512245802,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "마약류 불법거래 방지에 관한 특례법 62조  불복신청#KOBLEX-006704",
+        "provision_text": "③ 제2항에 따른 불복신청의 절차에 관하여는 「형사소송법」 제416조제1항에 따른 재판의 취소 또는 변경의 청구에 관련되는 절차 규정을 준용한다.",
+        "rerank_score": 0.0005992137012071908,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "마약류 불법거래 방지에 관한 특례법 62조  불복신청 3항"
+      },
+      {
+        "first_stage_score": 12.95222512245802,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "마약류 불법거래 방지에 관한 특례법 62조  불복신청#KOBLEX-045454",
+        "provision_text": "③ 제2항에 따른 불복신청의 절차에 관하여는 「형사소송법」 제416조제1항에 따른 재판의 취소 또는 변경의 청구에 관련되는 절차 규정을 준용한다.",
+        "rerank_score": 0.0005992137012071908,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "마약류 불법거래 방지에 관한 특례법 62조  불복신청 3항"
+      },
+      {
+        "first_stage_score": 13.810902668031481,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075691",
+        "provision_text": "1. 「형법」, 「폭력행위 등 처벌에 관한 법률」, 그 밖의 형사 법률에 저촉되는 행위",
+        "rerank_score": 0.0001163921770057641,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌 1호"
+      },
+      {
+        "first_stage_score": 13.810902668031481,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213878",
+        "provision_text": "1. 「형법」, 「폭력행위 등 처벌에 관한 법률」, 그 밖의 형사 법률에 저촉되는 행위",
+        "rerank_score": 0.0001163921770057641,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌 1호"
+      },
+      {
+        "first_stage_score": 14.698340441463227,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 366조  진술서 등#KOBLEX-093370",
+        "provision_text": "제366조(진술서 등)",
+        "rerank_score": 1.3715648492507171e-05,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "군사법원법 366조  진술서 등"
+      },
+      {
+        "first_stage_score": 14.698340441463227,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 366조  진술서 등#KOBLEX-159335",
+        "provision_text": "제366조(진술서 등)",
+        "rerank_score": 1.3715648492507171e-05,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ2",
+        "statute_name": "군사법원법 366조  진술서 등"
+      },
+      {
+        "first_stage_score": 13.963129155966351,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "공무원연금법 16조  벌칙 적용에서 공무원 의제#KOBLEX-148833",
+        "provision_text": "제16조(벌칙 적용에서 공무원 의제) 공단의 임직원은 「형법」 제129조부터 제132조까지의 규정을 적용할 때에는 공무원으로 본다.",
+        "rerank_score": 6.174625468702288e-06,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "공무원연금법 16조  벌칙 적용에서 공무원 의제"
+      },
+      {
+        "first_stage_score": 12.224942312464481,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 16조  관리위원회의 구성 등#KOBLEX-031398",
+        "provision_text": "⑦관리위원은 「형법」그 밖의 법률의 규정에 의한 벌칙의 적용에 있어서는 이를 공무원으로 본다.",
+        "rerank_score": 2.319184204679914e-06,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "채무자 회생 및 파산에 관한 법률 16조  관리위원회의 구성 등 7항"
+      },
+      {
+        "first_stage_score": 12.97228668975066,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "청원경찰법 10조  직권남용 금지 등#KOBLEX-104338",
+        "provision_text": "② 청원경찰 업무에 종사하는 사람은 「형법」이나 그 밖의 법령에 따른 벌칙을 적용할 때에는 공무원으로 본다.",
+        "rerank_score": 1.4216719819160062e-06,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "청원경찰법 10조  직권남용 금지 등 2항"
+      },
+      {
+        "first_stage_score": 11.391055121754892,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "담배사업법 31조  「형법」의 적용 제한#KOBLEX-143502",
+        "provision_text": "제31조(「형법」의 적용 제한) 이 법에서 정한 죄를 범한 자에 대해서는 「형법」 제9조, 제10조제2항, 제11조, 제16조, 제32조제2항, 제38조제1항제2호 중 벌금 경합에 관한 제한가중규정과 같은 법 제53조는 적용하지 아니한다. 다만, 징역형에 처할 경우 또는 징역형과 벌금형을 병과할 경우의 징역형에 대해서는 그러하지 아니하다.",
+        "rerank_score": 9.335960271528165e-07,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "담배사업법 31조  「형법」의 적용 제한"
+      },
+      {
+        "first_stage_score": 20.471173797851833,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형법 58조  판결의 공시#KOBLEX-192787",
+        "provision_text": "② 피고사건에 대하여 무죄의 판결을 선고하는 경우에는 무죄판결공시의 취지를 선고하여야 한다. 다만, 무죄판결을 받은 피고인이 무죄판결공시 취지의 선고에 동의하지 아니하거나 피고인의 동의를 받을 수 없는 경우에는 그러하지 아니하다. <개정 2014.12.30>",
+        "rerank_score": 0.9990134239196777,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "형법 58조  판결의 공시 2항"
+      },
+      {
+        "first_stage_score": 21.603127411405566,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 325조  경미사건 등과 피고인의 불출석#KOBLEX-093241",
+        "provision_text": "4. 제501조의7에 따라 피고인만이 정식재판을 청구하여 판결을 선고하는 사건",
+        "rerank_score": 0.9262754321098328,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "군사법원법 325조  경미사건 등과 피고인의 불출석 4호"
+      },
+      {
+        "first_stage_score": 21.603127411405566,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 325조  경미사건 등과 피고인의 불출석#KOBLEX-159206",
+        "provision_text": "4. 제501조의7에 따라 피고인만이 정식재판을 청구하여 판결을 선고하는 사건",
+        "rerank_score": 0.9262754321098328,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "군사법원법 325조  경미사건 등과 피고인의 불출석 4호"
+      },
+      {
+        "first_stage_score": 21.142957913332772,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 277조  경미사건 등과 피고인의 불출석#KOBLEX-232443",
+        "provision_text": "4. 제453조제1항에 따라 피고인만이 정식재판의 청구를 하여 판결을 선고하는 사건",
+        "rerank_score": 0.8515357971191406,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "형사소송법 277조  경미사건 등과 피고인의 불출석 4호"
+      },
+      {
+        "first_stage_score": 26.104156549900978,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 277조  경미사건 등과 피고인의 불출석#KOBLEX-232442",
+        "provision_text": "3. 장기 3년 이하의 징역 또는 금고, 다액 500만원을 초과하는 벌금 또는 구류에 해당하는 사건에서 피고인의 불출석허가신청이 있고 법원이 피고인의 불출석이 그의 권리를 보호함에 지장이 없다고 인정하여 이를 허가한 사건. 다만, 제284조에 따른 절차를 진행하거나 판결을 선고하는 공판기일에는 출석하여야 한다.",
+        "rerank_score": 0.05434650182723999,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "형사소송법 277조  경미사건 등과 피고인의 불출석 3호"
+      },
+      {
+        "first_stage_score": 20.279028342750273,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "국민의 형사재판 참여에 관한 법률 49조  판결서의 기재사항#KOBLEX-220031",
+        "provision_text": "② 배심원의 평결결과와 다른 판결을 선고하는 때에는 판결서에 그 이유를 기재하여야 한다.",
+        "rerank_score": 0.0013827552320435643,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "국민의 형사재판 참여에 관한 법률 49조  판결서의 기재사항 2항"
+      },
+      {
+        "first_stage_score": 19.482929745854747,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 372조 2 판결선고기일#KOBLEX-093395",
+        "provision_text": "② 변론을 종결한 기일에 판결을 선고하는 경우에는 판결 선고 후에 판결서를 작성할 수 있다.",
+        "rerank_score": 0.0010162005200982094,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "군사법원법 372조 2 판결선고기일 2항"
+      },
+      {
+        "first_stage_score": 19.482929745854747,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 372조 2 판결선고기일#KOBLEX-159360",
+        "provision_text": "② 변론을 종결한 기일에 판결을 선고하는 경우에는 판결 선고 후에 판결서를 작성할 수 있다.",
+        "rerank_score": 0.0010162005200982094,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "군사법원법 372조 2 판결선고기일 2항"
+      },
+      {
+        "first_stage_score": 19.873009454694188,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "국민의 형사재판 참여에 관한 법률 48조  판결선고기일#KOBLEX-220026",
+        "provision_text": "② 변론을 종결한 기일에 판결을 선고하는 경우에는 판결서를 선고 후에 작성할 수 있다.",
+        "rerank_score": 0.0009421688737347722,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "국민의 형사재판 참여에 관한 법률 48조  판결선고기일 2항"
+      },
+      {
+        "first_stage_score": 19.873009454694188,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 318조 4 판결선고기일#KOBLEX-232606",
+        "provision_text": "②변론을 종결한 기일에 판결을 선고하는 경우에는 판결의 선고 후에 판결서를 작성할 수 있다.",
+        "rerank_score": 0.00039734740857966244,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ3",
+        "statute_name": "형사소송법 318조 4 판결선고기일 2항"
+      },
+      {
+        "first_stage_score": 12.29315617243121,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "전기사업법 시행령 9조  금지행위의 유형 및 기준#KOBLEX-206235",
+        "provision_text": "⑤ 법 제21조제1항제5호에 따른 행위는 다음 각 호의 어느 하나에 해당하는 행위로 한다. <개정 2013.3.23> 1. 정당한 이유 없이 전기공급을 거부하거나 전기공급을 정지하는 행위 2. 전기사용자로부터 전기공급에 관한 업무처리를 요청받은 경우 정당한 이유 없이 지연하는 행위 3. 공급약관을 위반하거나 공급약관에 규정되지 아니한 방식으로 전기를 공급하는 행위 4. 정당한 이유 없이 전기사용자를 차별하여 전기사용자에게 불이익을 주는 행위 5. 제1호부터 제4호까지에 준하여 전기사용자의 이익을 현저하게 해치는 행위로서 산업통상자원부령으로 정하는 행위",
+        "rerank_score": 9.107812388720049e-07,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ1",
+        "statute_name": "전기사업법 시행령 9조  금지행위의 유형 및 기준 5항"
+      },
+      {
+        "first_stage_score": 24.75542363902315,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 380조  무죄의 판결#KOBLEX-093410",
+        "provision_text": "제380조(무죄의 판결) 피고사건이 범죄가 되지 아니하거나 범죄사실이 증명되지 아니할 때에는 판결로 무죄를 선고하여야 한다.",
+        "rerank_score": 0.99327552318573,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ3",
+        "statute_name": "군사법원법 380조  무죄의 판결"
+      },
+      {
+        "first_stage_score": 24.75542363902315,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 380조  무죄의 판결#KOBLEX-159375",
+        "provision_text": "제380조(무죄의 판결) 피고사건이 범죄가 되지 아니하거나 범죄사실이 증명되지 아니할 때에는 판결로 무죄를 선고하여야 한다.",
+        "rerank_score": 0.99327552318573,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ3",
+        "statute_name": "군사법원법 380조  무죄의 판결"
+      },
+      {
+        "first_stage_score": 12.302383888331496,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 325조  무죄의 판결#KOBLEX-232620",
+        "provision_text": "제325조(무죄의 판결) 피고사건이 범죄로 되지 아니하거나 범죄사실의 증명이 없는 때에는 판결로써 무죄를 선고하여야 한다.",
+        "rerank_score": 0.988731861114502,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ3",
+        "statute_name": "형사소송법 325조  무죄의 판결"
+      },
+      {
+        "first_stage_score": 10.872570619970084,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 128조  매각허가결정#KOBLEX-128500",
+        "provision_text": "②제1항의 결정은 선고하는 외에 대법원규칙이 정하는 바에 따라 공고하여야 한다.",
+        "rerank_score": 0.0003333461354486644,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ3",
+        "statute_name": "민사집행법 128조  매각허가결정 2항"
+      },
+      {
+        "first_stage_score": 11.028537976290187,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "군인사법 48조  휴직#KOBLEX-007009",
+        "provision_text": "⑤ 제2항에 따라 휴직된 사람이 무죄를 선고받은 경우에는 휴직을 이유로 진급, 보직 등에서 이 법 적용 시 불리한 처우를 받지 아니한다.",
+        "rerank_score": 2.889322058763355e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ3",
+        "statute_name": "군인사법 48조  휴직 5항"
+      },
+      {
+        "first_stage_score": 11.356376310431168,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 392조  형의 집행유예의 취소절차#KOBLEX-093445",
+        "provision_text": "④ 유예한 형을 선고하는 경우에는 제2항과 제3항을 준용한다.",
+        "rerank_score": 2.506442069716286e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ3",
+        "statute_name": "군사법원법 392조  형의 집행유예의 취소절차 4항"
+      },
+      {
+        "first_stage_score": 11.356376310431168,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 392조  형의 집행유예의 취소절차#KOBLEX-159410",
+        "provision_text": "④ 유예한 형을 선고하는 경우에는 제2항과 제3항을 준용한다.",
+        "rerank_score": 2.506442069716286e-05,
+        "retrieval_round": 3,
+        "source_request_id": "GRQ3",
+        "statute_name": "군사법원법 392조  형의 집행유예의 취소절차 4항"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공무원범죄에 관한 몰수 특례법 52조  불복신청#KOBLEX-038703": "③ 제2항에 따른 불복신청의 절차에 관하여는 「형사소송법」 제416조제1항에 따른 재판의 취소 또는 변경의 청구에 관련된 절차 규정을 준용한다.",
+      "공무원연금법 16조  벌칙 적용에서 공무원 의제#KOBLEX-148833": "제16조(벌칙 적용에서 공무원 의제) 공단의 임직원은 「형법」 제129조부터 제132조까지의 규정을 적용할 때에는 공무원으로 본다.",
+      "공직선거법 202조  동시선거의 정의와 선거기간#KOBLEX-052290": "제202조(동시선거의 정의와 선거기간)",
+      "공직선거법 202조  동시선거의 정의와 선거기간#KOBLEX-175576": "제202조(동시선거의 정의와 선거기간)",
+      "공직선거법 218조 32 국외선거범에 대한 영사조사#KOBLEX-052511": "④ 영사가 법원의 의뢰를 받아 진술을 들을 경우 그 절차 및 방식에 관하여는 「형사소송법」 제48조, 제50조 및 제161조의2부터 제164조까지를 준용한다.",
+      "공직선거법 218조 32 국외선거범에 대한 영사조사#KOBLEX-052512": "⑤ 영사가 검사의 의뢰를 받아 진술을 들을 경우 그 절차 및 방식에 관하여는 「형사소송법」 제241조, 제242조, 제243조의2부터 제245조까지를 준용한다.",
+      "공직선거법 218조 32 국외선거범에 대한 영사조사#KOBLEX-175797": "④ 영사가 법원의 의뢰를 받아 진술을 들을 경우 그 절차 및 방식에 관하여는 「형사소송법」 제48조, 제50조 및 제161조의2부터 제164조까지를 준용한다.",
+      "공직선거법 218조 32 국외선거범에 대한 영사조사#KOBLEX-175798": "⑤ 영사가 검사의 의뢰를 받아 진술을 들을 경우 그 절차 및 방식에 관하여는 「형사소송법」 제241조, 제242조, 제243조의2부터 제245조까지를 준용한다.",
+      "공직선거법 218조 33 국외선거범에 대한 인터넷 화상조사#KOBLEX-052519": "⑤ 제1항에 따른 진술 청취의 절차 및 방식에 관하여는 「형사소송법」 제241조, 제242조, 제243조의2부터 제245조까지를 준용한다.",
+      "공직선거법 218조 33 국외선거범에 대한 인터넷 화상조사#KOBLEX-175805": "⑤ 제1항에 따른 진술 청취의 절차 및 방식에 관하여는 「형사소송법」 제241조, 제242조, 제243조의2부터 제245조까지를 준용한다.",
+      "국민의 형사재판 참여에 관한 법률 48조  판결선고기일#KOBLEX-220026": "② 변론을 종결한 기일에 판결을 선고하는 경우에는 판결서를 선고 후에 작성할 수 있다.",
+      "국민의 형사재판 참여에 관한 법률 49조  판결서의 기재사항#KOBLEX-220031": "② 배심원의 평결결과와 다른 판결을 선고하는 때에는 판결서에 그 이유를 기재하여야 한다.",
+      "군사법원법 325조  경미사건 등과 피고인의 불출석#KOBLEX-093241": "4. 제501조의7에 따라 피고인만이 정식재판을 청구하여 판결을 선고하는 사건",
+      "군사법원법 325조  경미사건 등과 피고인의 불출석#KOBLEX-159206": "4. 제501조의7에 따라 피고인만이 정식재판을 청구하여 판결을 선고하는 사건",
+      "군사법원법 366조  진술서 등#KOBLEX-093370": "제366조(진술서 등)",
+      "군사법원법 366조  진술서 등#KOBLEX-159335": "제366조(진술서 등)",
+      "군사법원법 372조 2 판결선고기일#KOBLEX-093395": "② 변론을 종결한 기일에 판결을 선고하는 경우에는 판결 선고 후에 판결서를 작성할 수 있다.",
+      "군사법원법 372조 2 판결선고기일#KOBLEX-159360": "② 변론을 종결한 기일에 판결을 선고하는 경우에는 판결 선고 후에 판결서를 작성할 수 있다.",
+      "군사법원법 380조  무죄의 판결#KOBLEX-093410": "제380조(무죄의 판결) 피고사건이 범죄가 되지 아니하거나 범죄사실이 증명되지 아니할 때에는 판결로 무죄를 선고하여야 한다.",
+      "군사법원법 380조  무죄의 판결#KOBLEX-159375": "제380조(무죄의 판결) 피고사건이 범죄가 되지 아니하거나 범죄사실이 증명되지 아니할 때에는 판결로 무죄를 선고하여야 한다.",
+      "군사법원법 392조  형의 집행유예의 취소절차#KOBLEX-093445": "④ 유예한 형을 선고하는 경우에는 제2항과 제3항을 준용한다.",
+      "군사법원법 392조  형의 집행유예의 취소절차#KOBLEX-159410": "④ 유예한 형을 선고하는 경우에는 제2항과 제3항을 준용한다.",
+      "군인사법 48조  휴직#KOBLEX-007009": "⑤ 제2항에 따라 휴직된 사람이 무죄를 선고받은 경우에는 휴직을 이유로 진급, 보직 등에서 이 법 적용 시 불리한 처우를 받지 아니한다.",
+      "담배사업법 31조  「형법」의 적용 제한#KOBLEX-143502": "제31조(「형법」의 적용 제한) 이 법에서 정한 죄를 범한 자에 대해서는 「형법」 제9조, 제10조제2항, 제11조, 제16조, 제32조제2항, 제38조제1항제2호 중 벌금 경합에 관한 제한가중규정과 같은 법 제53조는 적용하지 아니한다. 다만, 징역형에 처할 경우 또는 징역형과 벌금형을 병과할 경우의 징역형에 대해서는 그러하지 아니하다.",
+      "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위#KOBLEX-020990": "제116조(법령에 따른 정당한 행위) 이 법은 사업자 또는 사업자단체가 다른 법령에 따라 하는 정당한 행위에 대해서는 적용하지 아니한다.",
+      "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위#KOBLEX-039418": "제116조(법령에 따른 정당한 행위) 이 법은 사업자 또는 사업자단체가 다른 법령에 따라 하는 정당한 행위에 대해서는 적용하지 아니한다.",
+      "마약류 불법거래 방지에 관한 특례법 62조  불복신청#KOBLEX-006704": "③ 제2항에 따른 불복신청의 절차에 관하여는 「형사소송법」 제416조제1항에 따른 재판의 취소 또는 변경의 청구에 관련되는 절차 규정을 준용한다.",
+      "마약류 불법거래 방지에 관한 특례법 62조  불복신청#KOBLEX-045454": "③ 제2항에 따른 불복신청의 절차에 관하여는 「형사소송법」 제416조제1항에 따른 재판의 취소 또는 변경의 청구에 관련되는 절차 규정을 준용한다.",
+      "민사집행법 128조  매각허가결정#KOBLEX-128500": "②제1항의 결정은 선고하는 외에 대법원규칙이 정하는 바에 따라 공고하여야 한다.",
+      "보험업법 85조 3 보험설계사에 대한 불공정 행위 금지#KOBLEX-022069": "① 보험회사등은 보험설계사에게 보험계약의 모집을 위탁할 때 다음 각 호의 행위를 하여서는 아니 된다. <개정 2014.10.15> 1. 보험모집 위탁계약서를 교부하지 아니하는 행위 2. 위탁계약서상 계약사항을 이행하지 아니하는 행위 3. 위탁계약서에서 정한 해지요건 외의 사유로 위탁계약을 해지하는 행위 4. 정당한 사유 없이 보험설계사가 요청한 위탁계약 해지를 거부하는 행위 5. 위탁계약서에서 정한 위탁업무 외의 업무를 강요하는 행위 6. 정당한 사유 없이 보험설계사에게 지급되어야 할 수수료의 전부 또는 일부를 지급하지 아니하거나 지연하여 지급하는 행위 7. 정당한 사유 없이 보험설계사에게 지급한 수수료를 환수하는 행위 8. 보험설계사에게 보험료 대납(代納)을 강요하는 행위 9. 그 밖에 대통령령으로 정하는 불공정한 행위",
+      "보험업법 시행령 94조  선임계리사 등의 금지행위#KOBLEX-121776": "1. 정당한 이유 없이 보험계리업무를 게을리하는 행위",
+      "새마을금고법 2조  정의와 명칭#KOBLEX-096217": "제2조(정의와 명칭)",
+      "전기사업법 시행령 9조  금지행위의 유형 및 기준#KOBLEX-206235": "⑤ 법 제21조제1항제5호에 따른 행위는 다음 각 호의 어느 하나에 해당하는 행위로 한다. <개정 2013.3.23> 1. 정당한 이유 없이 전기공급을 거부하거나 전기공급을 정지하는 행위 2. 전기사용자로부터 전기공급에 관한 업무처리를 요청받은 경우 정당한 이유 없이 지연하는 행위 3. 공급약관을 위반하거나 공급약관에 규정되지 아니한 방식으로 전기를 공급하는 행위 4. 정당한 이유 없이 전기사용자를 차별하여 전기사용자에게 불이익을 주는 행위 5. 제1호부터 제4호까지에 준하여 전기사용자의 이익을 현저하게 해치는 행위로서 산업통상자원부령으로 정하는 행위",
+      "채무자 회생 및 파산에 관한 법률 16조  관리위원회의 구성 등#KOBLEX-031398": "⑦관리위원은 「형법」그 밖의 법률의 규정에 의한 벌칙의 적용에 있어서는 이를 공무원으로 본다.",
+      "청원경찰법 10조  직권남용 금지 등#KOBLEX-104338": "② 청원경찰 업무에 종사하는 사람은 「형법」이나 그 밖의 법령에 따른 벌칙을 적용할 때에는 공무원으로 본다.",
+      "해운법 21조 3 여객의 금지행위#KOBLEX-111650": "3. 정당한 사유 없이 여객선등의 장치 또는 기구 등을 조작하는 행위",
+      "헌법재판소법 42조  재판의 정지 등#KOBLEX-188024": "② 제1항 본문에 따른 재판정지기간은 「형사소송법」 제92조제1항ㆍ제2항 및 「군사법원법」 제132조제1항ㆍ제2항의 구속기간과 「민사소송법」 제199조의 판결 선고기간에 산입하지 아니한다.",
+      "형법 58조  판결의 공시#KOBLEX-192787": "② 피고사건에 대하여 무죄의 판결을 선고하는 경우에는 무죄판결공시의 취지를 선고하여야 한다. 다만, 무죄판결을 받은 피고인이 무죄판결공시 취지의 선고에 동의하지 아니하거나 피고인의 동의를 받을 수 없는 경우에는 그러하지 아니하다. <개정 2014.12.30>",
+      "형사소송법 277조  경미사건 등과 피고인의 불출석#KOBLEX-232442": "3. 장기 3년 이하의 징역 또는 금고, 다액 500만원을 초과하는 벌금 또는 구류에 해당하는 사건에서 피고인의 불출석허가신청이 있고 법원이 피고인의 불출석이 그의 권리를 보호함에 지장이 없다고 인정하여 이를 허가한 사건. 다만, 제284조에 따른 절차를 진행하거나 판결을 선고하는 공판기일에는 출석하여야 한다.",
+      "형사소송법 277조  경미사건 등과 피고인의 불출석#KOBLEX-232443": "4. 제453조제1항에 따라 피고인만이 정식재판의 청구를 하여 판결을 선고하는 사건",
+      "형사소송법 318조 4 판결선고기일#KOBLEX-232606": "②변론을 종결한 기일에 판결을 선고하는 경우에는 판결의 선고 후에 판결서를 작성할 수 있다.",
+      "형사소송법 325조  무죄의 판결#KOBLEX-232620": "제325조(무죄의 판결) 피고사건이 범죄로 되지 아니하거나 범죄사실의 증명이 없는 때에는 판결로써 무죄를 선고하여야 한다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075691": "1. 「형법」, 「폭력행위 등 처벌에 관한 법률」, 그 밖의 형사 법률에 저촉되는 행위",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075693": "3. 정당한 사유 없이 작업ㆍ교육ㆍ교화프로그램 등을 거부하거나 태만히 하는 행위",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213878": "1. 「형법」, 「폭력행위 등 처벌에 관한 법률」, 그 밖의 형사 법률에 저촉되는 행위",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213880": "3. 정당한 사유 없이 작업ㆍ교육ㆍ교화프로그램 등을 거부하거나 태만히 하는 행위"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [],
+        "rationale": "E1 requires the general criminal law definition and elements of 'lawful act pursuant to statute' (법령에 의한 정당한 행위) as a justification. The only candidates mentioning this phrase (C001, C002) are from the Monopoly Regulation and Fair Trade Act and define a non-application clause for that specific economic law, not the general criminal law justification needed for a document destruction case. No candidate provides the required general definition or elements.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "rationale": "E2 requires the elements of the crime of document destruction and its relationship to lawful acts. None of the supplied candidates define the crime of document destruction or discuss its interaction with justifications.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E3",
+        "linked_provision_ids": [],
+        "rationale": "E3 requires the criminal procedure for obtaining an acquittal. The supplied candidates (C011-C020) only contain cross-references to specific articles of the Criminal Procedure Act for specialized contexts (e.g., consular investigations, video investigations, appeals in special laws) and do not provide the general procedural framework for an acquittal. C029 relates to post-acquittal publication, not the procedure to obtain an acquittal.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 8,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "문서손괴 행위가 법령에 의한 정당한 행위에 해당하는지 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "정당한 행위로 인정될 경우 무죄 판결을 받기 위한 절차",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "법령에 의한 정당한 행위의 법적 정의와 요건을 명시하는 조항을 확인함",
+        "critical": true,
+        "description": "법령에 의한 정당한 행위의 정의 및 요건",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "문서손괴죄의 구성요건과 정당한 행위가 적용될 수 있는 범위를 확인함",
+        "critical": true,
+        "description": "문서손괴죄의 구성요건 및 정당한 행위와의 관계",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "형사소송 절차에서 무죄 판결을 받기 위한 법적 절차를 확인함",
+        "critical": true,
+        "description": "형사소송에서 무죄 판결을 받기 위한 절차",
+        "evidence_item_id": "E3",
+        "evidence_type": "procedure",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "법령에 의한 정당한 행위의 정의와 요건",
+        "request_id": "RQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_text": "문서손괴죄 구성요건 정당한 행위",
+        "request_id": "RQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "형사소송법 무죄 판결 절차",
+        "request_id": "RQ3",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "형법 제16조 법령에 의한 정당한 행위 정의 요건",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "형법 제366조 문서손괴죄 구성요건",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "형사소송법에서 피고인의 무죄를 인정하여 무죄 판결을 선고하는 절차",
+        "request_id": "GRQ3",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "형법 제16조 법령에 의한 정당한 행위 무죄 요건",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_text": "형법 제366조 문서손괴죄 정당한 행위 적용",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "형사소송법에서 공소사실이 증명되지 아니하여 무죄를 선고하는 절차",
+        "request_id": "GRQ3",
+        "top_k": 100
+      }
+    ],
+    "question": "갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+    "remaining_request_budget": 0,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "법령에 의한 정당한 행위의 법적 정의와 요건을 명시하는 조항을 확인함",
+        "critical": true,
+        "description": "법령에 의한 정당한 행위의 정의 및 요건",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "문서손괴죄의 구성요건과 정당한 행위가 적용될 수 있는 범위를 확인함",
+        "critical": true,
+        "description": "문서손괴죄의 구성요건 및 정당한 행위와의 관계",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "형사소송 절차에서 무죄 판결을 받기 위한 법적 절차를 확인함",
+        "critical": true,
+        "description": "형사소송에서 무죄 판결을 받기 위한 절차",
+        "evidence_item_id": "E3",
+        "evidence_type": "procedure",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "b529432c-2783-40c7-9022-d076fe6ceb11",
+    "seen_provision_ids": [
+      "군사법원법 380조  무죄의 판결#KOBLEX-159375",
+      "채무자 회생 및 파산에 관한 법률 16조  관리위원회의 구성 등#KOBLEX-031398",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213878",
+      "공직선거법 218조 32 국외선거범에 대한 영사조사#KOBLEX-052511",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213880",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075691",
+      "군사법원법 325조  경미사건 등과 피고인의 불출석#KOBLEX-093241",
+      "국민의 형사재판 참여에 관한 법률 49조  판결서의 기재사항#KOBLEX-220031",
+      "공직선거법 218조 32 국외선거범에 대한 영사조사#KOBLEX-175797",
+      "군사법원법 366조  진술서 등#KOBLEX-159335",
+      "보험업법 시행령 94조  선임계리사 등의 금지행위#KOBLEX-121776",
+      "공직선거법 218조 32 국외선거범에 대한 영사조사#KOBLEX-175798",
+      "마약류 불법거래 방지에 관한 특례법 62조  불복신청#KOBLEX-045454",
+      "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위#KOBLEX-039418",
+      "군사법원법 372조 2 판결선고기일#KOBLEX-093395",
+      "군사법원법 380조  무죄의 판결#KOBLEX-093410",
+      "형사소송법 318조 4 판결선고기일#KOBLEX-232606",
+      "국민의 형사재판 참여에 관한 법률 48조  판결선고기일#KOBLEX-220026",
+      "공직선거법 218조 33 국외선거범에 대한 인터넷 화상조사#KOBLEX-052519",
+      "공무원연금법 16조  벌칙 적용에서 공무원 의제#KOBLEX-148833",
+      "군사법원법 392조  형의 집행유예의 취소절차#KOBLEX-159410",
+      "군사법원법 392조  형의 집행유예의 취소절차#KOBLEX-093445",
+      "형법 58조  판결의 공시#KOBLEX-192787",
+      "형사소송법 325조  무죄의 판결#KOBLEX-232620",
+      "공직선거법 202조  동시선거의 정의와 선거기간#KOBLEX-052290",
+      "보험업법 85조 3 보험설계사에 대한 불공정 행위 금지#KOBLEX-022069",
+      "군사법원법 366조  진술서 등#KOBLEX-093370",
+      "독점규제 및 공정거래에 관한 법률 116조  법령에 따른 정당한 행위#KOBLEX-020990",
+      "공직선거법 218조 32 국외선거범에 대한 영사조사#KOBLEX-052512",
+      "담배사업법 31조  「형법」의 적용 제한#KOBLEX-143502",
+      "민사집행법 128조  매각허가결정#KOBLEX-128500",
+      "공직선거법 218조 33 국외선거범에 대한 인터넷 화상조사#KOBLEX-175805",
+      "헌법재판소법 42조  재판의 정지 등#KOBLEX-188024",
+      "전기사업법 시행령 9조  금지행위의 유형 및 기준#KOBLEX-206235",
+      "새마을금고법 2조  정의와 명칭#KOBLEX-096217",
+      "공직선거법 202조  동시선거의 정의와 선거기간#KOBLEX-175576",
+      "공무원범죄에 관한 몰수 특례법 52조  불복신청#KOBLEX-038703",
+      "군사법원법 325조  경미사건 등과 피고인의 불출석#KOBLEX-159206",
+      "군사법원법 372조 2 판결선고기일#KOBLEX-159360",
+      "형사소송법 277조  경미사건 등과 피고인의 불출석#KOBLEX-232442",
+      "마약류 불법거래 방지에 관한 특례법 62조  불복신청#KOBLEX-006704",
+      "청원경찰법 10조  직권남용 금지 등#KOBLEX-104338",
+      "해운법 21조 3 여객의 금지행위#KOBLEX-111650",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075693",
+      "형사소송법 277조  경미사건 등과 피고인의 불출석#KOBLEX-232443",
+      "군인사법 48조  휴직#KOBLEX-007009"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

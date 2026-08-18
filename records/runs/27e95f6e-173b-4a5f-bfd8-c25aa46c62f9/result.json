@@ -1,0 +1,387 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "completed_at_utc": "2026-08-15T06:09:51.104144+00:00",
+  "end_to_end_latency_ms": 106686.385,
+  "errors": [
+    "provision_coverage_assessment did not produce a valid ASSESS_COVERAGE result after 2 attempts: quoted_text is not exact source text: L4; assessment/link provision mismatch: E3; assessment uses non-candidate provision: E3"
+  ],
+  "record_schema_version": "1.0",
+  "run_id": "27e95f6e-173b-4a5f-bfd8-c25aa46c62f9",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 3,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 20,
+          "request_count": 3,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "error": "provision_coverage_assessment did not produce a valid ASSESS_COVERAGE result after 2 attempts: quoted_text is not exact source text: L4; assessment/link provision mismatch: E3; assessment uses non-candidate provision: E3",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 25.539142757307687,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "가상자산 이용자 보호 등에 관한 법률 11조  가상자산에 관한 임의적 입ㆍ출금 차단 금지#KOBLEX-007916",
+        "provision_text": "④ 제3항에 따른 손해배상청구권은 청구권자가 제1항을 위반한 행위가 있었던 사실을 안 때부터 2년간 또는 그 행위가 있었던 때부터 5년간 이를 행사하지 아니한 경우에는 시효로 인하여 소멸한다.",
+        "rerank_score": 0.9998241066932678,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "가상자산 이용자 보호 등에 관한 법률 11조  가상자산에 관한 임의적 입ㆍ출금 차단 금지 4항"
+      },
+      {
+        "first_stage_score": 34.089778116866256,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 166조  소멸시효의 기산점#KOBLEX-058727",
+        "provision_text": "①소멸시효는 권리를 행사할 수 있는 때로부터 진행한다.",
+        "rerank_score": 0.8751351237297058,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "민법 166조  소멸시효의 기산점 1항"
+      },
+      {
+        "first_stage_score": 28.878245360734994,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "지방세기본법 64조  지방세환급금의 소멸시효#KOBLEX-120832",
+        "provision_text": "① 지방세환급금과 지방세환급가산금에 관한 납세자의 권리는 행사할 수 있는 때부터 5년간 행사하지 아니하면 시효로 인하여 소멸한다.",
+        "rerank_score": 0.08158950507640839,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "지방세기본법 64조  지방세환급금의 소멸시효 1항"
+      },
+      {
+        "first_stage_score": 17.06107442879652,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "상법 662조  소멸시효#KOBLEX-115968",
+        "provision_text": "제662조(소멸시효) 보험금청구권은 3년간, 보험료 또는 적립금의 반환청구권은 3년간, 보험료청구권은 2년간 행사하지 아니하면 시효의 완성으로 소멸한다.",
+        "rerank_score": 0.00573071651160717,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "상법 662조  소멸시효"
+      },
+      {
+        "first_stage_score": 24.83095520678259,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "도시개발법 47조  청산금의 소멸시효#KOBLEX-003017",
+        "provision_text": "제47조(청산금의 소멸시효) 청산금을 받을 권리나 징수할 권리를 5년간 행사하지 아니하면 시효로 소멸한다.",
+        "rerank_score": 0.0014269589446485043,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "도시개발법 47조  청산금의 소멸시효"
+      },
+      {
+        "first_stage_score": 17.730845050185817,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "지적재조사에 관한 특별법 22조  조정금의 소멸시효#KOBLEX-213382",
+        "provision_text": "제22조(조정금의 소멸시효) 조정금을 받을 권리나 징수할 권리는 5년간 행사하지 아니하면 시효의 완성으로 소멸한다.",
+        "rerank_score": 0.0006690265145152807,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "지적재조사에 관한 특별법 22조  조정금의 소멸시효"
+      },
+      {
+        "first_stage_score": 20.292477001831582,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "관세법 23조  시효의 중단 및 정지#KOBLEX-104466",
+        "provision_text": "제23조(시효의 중단 및 정지)",
+        "rerank_score": 0.00011319205805193633,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "관세법 23조  시효의 중단 및 정지"
+      },
+      {
+        "first_stage_score": 16.20579236836295,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "군인연금법 55조  신고사항#KOBLEX-150147",
+        "provision_text": "1. 제27조제1항의 연금지급 정지 사유",
+        "rerank_score": 5.592988145508571e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "군인연금법 55조  신고사항 1호"
+      },
+      {
+        "first_stage_score": 18.198676145887678,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "전자문서 및 전자거래 기본법 36조 2 소멸시효의 중단#KOBLEX-166091",
+        "provision_text": "제36조의2(소멸시효의 중단) 제33조제1항에 따른 분쟁조정의 신청은 소멸시효 중단의 효력이 있다. 다만, 분쟁조정의 신청을 취하하는 경우에는 그러하지 아니하다.",
+        "rerank_score": 2.8165018193249125e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "전자문서 및 전자거래 기본법 36조 2 소멸시효의 중단"
+      },
+      {
+        "first_stage_score": 14.689337727663624,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "전기사업법 시행령 5조 5 전기공급의 거부 사유#KOBLEX-206200",
+        "provision_text": "4의2. 전기설비의 정기적인 점검 및 보수 등 제1호의2 각 목의 약관이나 계약에서 정한 정당한 전기공급 중단 또는 정지 사유가 발생하는 경우",
+        "rerank_score": 7.572471076855436e-07,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "전기사업법 시행령 5조 5 전기공급의 거부 사유 7호"
+      },
+      {
+        "first_stage_score": 13.902230374827063,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "민법 162조#KOBLEX-058705",
+        "provision_text": "제7장 소멸시효",
+        "rerank_score": 0.0047273640520870686,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "민법 162조"
+      },
+      {
+        "first_stage_score": 13.902230374827063,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "국유재산법 73조 3 소멸시효#KOBLEX-124874",
+        "provision_text": "제73조의3(소멸시효)",
+        "rerank_score": 0.003990900237113237,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "국유재산법 73조 3 소멸시효"
+      },
+      {
+        "first_stage_score": 13.902230374827063,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "고용보험법 107조  소멸시효#KOBLEX-206956",
+        "provision_text": "제107조(소멸시효)",
+        "rerank_score": 0.003021730575710535,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "고용보험법 107조  소멸시효"
+      },
+      {
+        "first_stage_score": 13.902230374827063,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "의료급여법 31조  소멸시효#KOBLEX-029107",
+        "provision_text": "제31조(소멸시효)",
+        "rerank_score": 0.002532805548980832,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "의료급여법 31조  소멸시효"
+      },
+      {
+        "first_stage_score": 13.902230374827063,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "광업법 80조  소멸시효#KOBLEX-134135",
+        "provision_text": "제80조(소멸시효)",
+        "rerank_score": 0.002439947798848152,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "광업법 80조  소멸시효"
+      },
+      {
+        "first_stage_score": 14.698340441463227,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "특허법 128조  손해배상청구권 등#KOBLEX-155966",
+        "provision_text": "제128조(손해배상청구권 등)",
+        "rerank_score": 0.0010410263203084469,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "특허법 128조  손해배상청구권 등"
+      },
+      {
+        "first_stage_score": 14.339371738296828,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 115조  손해배상청구권 등의 조사확정재판#KOBLEX-031807",
+        "provision_text": "제115조(손해배상청구권 등의 조사확정재판)",
+        "rerank_score": 0.00036280963104218245,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "채무자 회생 및 파산에 관한 법률 115조  손해배상청구권 등의 조사확정재판"
+      },
+      {
+        "first_stage_score": 14.339371738296828,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 352조  손해배상청구권 등의 조사확정재판#KOBLEX-032663",
+        "provision_text": "제352조(손해배상청구권 등의 조사확정재판)",
+        "rerank_score": 0.0003294232883490622,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "채무자 회생 및 파산에 관한 법률 352조  손해배상청구권 등의 조사확정재판"
+      },
+      {
+        "first_stage_score": 14.339371738296828,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "공무원연금법 42조  제3자에 대한 손해배상청구권#KOBLEX-148927",
+        "provision_text": "제42조(제3자에 대한 손해배상청구권)",
+        "rerank_score": 0.00019734659872483462,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "공무원연금법 42조  제3자에 대한 손해배상청구권"
+      },
+      {
+        "first_stage_score": 14.698340441463227,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "민법 806조  약혼해제와 손해배상청구권#KOBLEX-060013",
+        "provision_text": "제806조(약혼해제와 손해배상청구권)",
+        "rerank_score": 0.00011296561569906771,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "민법 806조  약혼해제와 손해배상청구권"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "가상자산 이용자 보호 등에 관한 법률 11조  가상자산에 관한 임의적 입ㆍ출금 차단 금지#KOBLEX-007916": "④ 제3항에 따른 손해배상청구권은 청구권자가 제1항을 위반한 행위가 있었던 사실을 안 때부터 2년간 또는 그 행위가 있었던 때부터 5년간 이를 행사하지 아니한 경우에는 시효로 인하여 소멸한다.",
+      "고용보험법 107조  소멸시효#KOBLEX-206956": "제107조(소멸시효)",
+      "공무원연금법 42조  제3자에 대한 손해배상청구권#KOBLEX-148927": "제42조(제3자에 대한 손해배상청구권)",
+      "관세법 23조  시효의 중단 및 정지#KOBLEX-104466": "제23조(시효의 중단 및 정지)",
+      "광업법 80조  소멸시효#KOBLEX-134135": "제80조(소멸시효)",
+      "국유재산법 73조 3 소멸시효#KOBLEX-124874": "제73조의3(소멸시효)",
+      "군인연금법 55조  신고사항#KOBLEX-150147": "1. 제27조제1항의 연금지급 정지 사유",
+      "도시개발법 47조  청산금의 소멸시효#KOBLEX-003017": "제47조(청산금의 소멸시효) 청산금을 받을 권리나 징수할 권리를 5년간 행사하지 아니하면 시효로 소멸한다.",
+      "민법 162조#KOBLEX-058705": "제7장 소멸시효",
+      "민법 166조  소멸시효의 기산점#KOBLEX-058727": "①소멸시효는 권리를 행사할 수 있는 때로부터 진행한다.",
+      "민법 806조  약혼해제와 손해배상청구권#KOBLEX-060013": "제806조(약혼해제와 손해배상청구권)",
+      "상법 662조  소멸시효#KOBLEX-115968": "제662조(소멸시효) 보험금청구권은 3년간, 보험료 또는 적립금의 반환청구권은 3년간, 보험료청구권은 2년간 행사하지 아니하면 시효의 완성으로 소멸한다.",
+      "의료급여법 31조  소멸시효#KOBLEX-029107": "제31조(소멸시효)",
+      "전기사업법 시행령 5조 5 전기공급의 거부 사유#KOBLEX-206200": "4의2. 전기설비의 정기적인 점검 및 보수 등 제1호의2 각 목의 약관이나 계약에서 정한 정당한 전기공급 중단 또는 정지 사유가 발생하는 경우",
+      "전자문서 및 전자거래 기본법 36조 2 소멸시효의 중단#KOBLEX-166091": "제36조의2(소멸시효의 중단) 제33조제1항에 따른 분쟁조정의 신청은 소멸시효 중단의 효력이 있다. 다만, 분쟁조정의 신청을 취하하는 경우에는 그러하지 아니하다.",
+      "지방세기본법 64조  지방세환급금의 소멸시효#KOBLEX-120832": "① 지방세환급금과 지방세환급가산금에 관한 납세자의 권리는 행사할 수 있는 때부터 5년간 행사하지 아니하면 시효로 인하여 소멸한다.",
+      "지적재조사에 관한 특별법 22조  조정금의 소멸시효#KOBLEX-213382": "제22조(조정금의 소멸시효) 조정금을 받을 권리나 징수할 권리는 5년간 행사하지 아니하면 시효의 완성으로 소멸한다.",
+      "채무자 회생 및 파산에 관한 법률 115조  손해배상청구권 등의 조사확정재판#KOBLEX-031807": "제115조(손해배상청구권 등의 조사확정재판)",
+      "채무자 회생 및 파산에 관한 법률 352조  손해배상청구권 등의 조사확정재판#KOBLEX-032663": "제352조(손해배상청구권 등의 조사확정재판)",
+      "특허법 128조  손해배상청구권 등#KOBLEX-155966": "제128조(손해배상청구권 등)"
+    },
+    "coverage_assessments": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 20,
+    "last_validated_event": "D2.INITIAL_RETRIEVAL",
+    "legal_issues": [
+      {
+        "description": "손해배상청구권의 소멸시효 기간과 기산점",
+        "issue_id": "I1"
+      },
+      {
+        "description": "손해배상청구권의 종류와 적용 시효",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "손해배상청구권은 그 권리를 행사할 수 있는 때로부터 일정 기간 내에 행사하지 않으면 소멸한다.",
+        "request_id": "RQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_text": "소멸시효 중단 정지 사유",
+        "request_id": "RQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "특별법상 손해배상청구권 소멸시효",
+        "request_id": "RQ3",
+        "top_k": 100
+      }
+    ],
+    "question": "을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+    "remaining_request_budget": 6,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "손해배상청구권의 소멸시효 기간과 기산점을 명확히 규정한 조항을 확인한다.",
+        "critical": true,
+        "description": "손해배상청구권의 소멸시효 기간과 기산점",
+        "evidence_item_id": "E1",
+        "evidence_type": "limitation",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "소멸시효 중단 또는 정지 사유가 존재하는지 확인한다.",
+        "critical": false,
+        "description": "소멸시효 중단·정지 사유",
+        "evidence_item_id": "E2",
+        "evidence_type": "exception",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "특별법상 손해배상청구권에 적용되는 소멸시효 규정이 있는지 확인한다.",
+        "critical": false,
+        "description": "특별법상 손해배상청구권의 소멸시효",
+        "evidence_item_id": "E3",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "27e95f6e-173b-4a5f-bfd8-c25aa46c62f9",
+    "seen_provision_ids": [
+      "광업법 80조  소멸시효#KOBLEX-134135",
+      "지적재조사에 관한 특별법 22조  조정금의 소멸시효#KOBLEX-213382",
+      "고용보험법 107조  소멸시효#KOBLEX-206956",
+      "채무자 회생 및 파산에 관한 법률 115조  손해배상청구권 등의 조사확정재판#KOBLEX-031807",
+      "민법 162조#KOBLEX-058705",
+      "특허법 128조  손해배상청구권 등#KOBLEX-155966",
+      "민법 166조  소멸시효의 기산점#KOBLEX-058727",
+      "가상자산 이용자 보호 등에 관한 법률 11조  가상자산에 관한 임의적 입ㆍ출금 차단 금지#KOBLEX-007916",
+      "국유재산법 73조 3 소멸시효#KOBLEX-124874",
+      "전자문서 및 전자거래 기본법 36조 2 소멸시효의 중단#KOBLEX-166091",
+      "군인연금법 55조  신고사항#KOBLEX-150147",
+      "지방세기본법 64조  지방세환급금의 소멸시효#KOBLEX-120832",
+      "전기사업법 시행령 5조 5 전기공급의 거부 사유#KOBLEX-206200",
+      "상법 662조  소멸시효#KOBLEX-115968",
+      "민법 806조  약혼해제와 손해배상청구권#KOBLEX-060013",
+      "의료급여법 31조  소멸시효#KOBLEX-029107",
+      "도시개발법 47조  청산금의 소멸시효#KOBLEX-003017",
+      "채무자 회생 및 파산에 관한 법률 352조  손해배상청구권 등의 조사확정재판#KOBLEX-032663",
+      "공무원연금법 42조  제3자에 대한 손해배상청구권#KOBLEX-148927",
+      "관세법 23조  시효의 중단 및 정지#KOBLEX-104466"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

@@ -337,4 +337,4 @@ ABSTAIN 문항에서 BM25 Top-100에도 한 번도 들어오지 않은 gold는 7
 - 최초 유효 remaining-18 batch: `records/batches/bm25-bge-pilot-19-e37e7dec-e7b4-48fa-872d-6e07479444f6/`
 - 최종 실행 기록 커밋: `d4143e2`
 
-초기·중간 개발 run 중 일부는 현재 로컬에서만 미추적 상태이다. 논문 artifact 공개 전에 이 보고서가 참조하는 selected development run과 batch를 별도 커밋하고, 중단된 `NO_FINAL_RESULT`는 실패 원인 기록으로만 분리하는 것이 좋다.
+초기·중간 개발 run, batch, tmux log도 최종 결과와 함께 Git 이력에 보존했다. 실패·중단 기록은 재현성과 오류 분석을 위한 audit trail이며, 중단된 `NO_FINAL_RESULT`는 성능 지표에서 제외하고 실패 원인 기록으로만 취급한다.

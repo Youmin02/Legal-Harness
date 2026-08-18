@@ -1,0 +1,652 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "completed_at_utc": "2026-08-15T07:28:47.019863+00:00",
+  "end_to_end_latency_ms": 193409.699,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid GAP_QUERY_PLAN result after 2 attempts: target list contains unknown evidence items; target list contains resolved evidence items; query repeats query_history: 형법 야간 몰래 침입 절도 가중처벌 조항; unknown evidence_item_id in request: None; query repeats query_history: 야간 몰래 침입 절도 가중처벌"
+  ],
+  "record_schema_version": "1.0",
+  "run_id": "1e6abb54-f799-497a-8561-9ce78d68b942",
+  "state": {
+    "accepted_provision_ids": [
+      "형법 329조  절도#KOBLEX-193367"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 3,
+          "issue_count": 3
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 30,
+          "new_provision_count": 28,
+          "request_count": 3,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 2,
+          "request_count": 3,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid GAP_QUERY_PLAN result after 2 attempts: target list contains unknown evidence items; target list contains resolved evidence items; query repeats query_history: 형법 야간 몰래 침입 절도 가중처벌 조항; unknown evidence_item_id in request: None; query repeats query_history: 야간 몰래 침입 절도 가중처벌",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 14.747415736130266,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "상법 23조  주체를 오인시킬 상호의 사용금지#KOBLEX-113599",
+        "provision_text": "①누구든지 부정한 목적으로 타인의 영업으로 오인할 수 있는 상호를 사용하지 못한다.",
+        "rerank_score": 0.07859467715024948,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "상법 23조  주체를 오인시킬 상호의 사용금지 1항"
+      },
+      {
+        "first_stage_score": 15.118468275360767,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 291조  지역권의 내용#KOBLEX-058990",
+        "provision_text": "제291조(지역권의 내용) 지역권자는 일정한 목적을 위하여 타인의 토지를 자기토지의 편익에 이용하는 권리가 있다.",
+        "rerank_score": 0.0001449143310310319,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "민법 291조  지역권의 내용"
+      },
+      {
+        "first_stage_score": 14.393261989641916,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "지방세기본법 101조#KOBLEX-121006",
+        "provision_text": "제8장 범칙행위 등에 대한 처벌 및 처벌절차",
+        "rerank_score": 0.0001039357521221973,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "지방세기본법 101조"
+      },
+      {
+        "first_stage_score": 14.728409723859397,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "관세법 264조 9 과세자료 비밀유지의무 위반에 대한 처벌#KOBLEX-105870",
+        "provision_text": "제264조의9(과세자료 비밀유지의무 위반에 대한 처벌)",
+        "rerank_score": 6.832805956946686e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "관세법 264조 9 과세자료 비밀유지의무 위반에 대한 처벌"
+      },
+      {
+        "first_stage_score": 13.785811054513875,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "상법 750조  특수한 행위에 대한 권한#KOBLEX-116209",
+        "provision_text": "제750조(특수한 행위에 대한 권한)",
+        "rerank_score": 4.8486799641977996e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "상법 750조  특수한 행위에 대한 권한"
+      },
+      {
+        "first_stage_score": 13.408024631055582,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "방문판매 등에 관한 법률 67조  과태료에 관한 규정 적용의 특례#KOBLEX-074930",
+        "provision_text": "제67조(과태료에 관한 규정 적용의 특례) 제66조의 과태료에 관한 규정을 적용할 때 제51조에 따라 과징금을 부과한 행위에 대해서는 과태료를 부과할 수 없다.",
+        "rerank_score": 1.5425126775880926e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "방문판매 등에 관한 법률 67조  과태료에 관한 규정 적용의 특례"
+      },
+      {
+        "first_stage_score": 13.408024631055582,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "방문판매 등에 관한 법률 67조  과태료에 관한 규정 적용의 특례#KOBLEX-101693",
+        "provision_text": "제67조(과태료에 관한 규정 적용의 특례) 제66조의 과태료에 관한 규정을 적용할 때 제51조에 따라 과징금을 부과한 행위에 대해서는 과태료를 부과할 수 없다.",
+        "rerank_score": 1.5425126775880926e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "방문판매 등에 관한 법률 67조  과태료에 관한 규정 적용의 특례"
+      },
+      {
+        "first_stage_score": 13.785811054513875,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 19조  관리위원의 행위에 대한 이의신청#KOBLEX-031405",
+        "provision_text": "제19조(관리위원의 행위에 대한 이의신청)",
+        "rerank_score": 7.741312515463505e-07,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "채무자 회생 및 파산에 관한 법률 19조  관리위원의 행위에 대한 이의신청"
+      },
+      {
+        "first_stage_score": 13.723118141967436,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "농어촌정비법 86조 4 농어촌민박사업자의 불법카메라 설치 금지#KOBLEX-025750",
+        "provision_text": "제86조의4(농어촌민박사업자의 불법카메라 설치 금지) 농어촌민박사업자는 사업장에 「성폭력범죄의 처벌 등에 관한 특례법」 제14조제1항에 위반되는 행위에 이용되는 카메라나 그 밖에 이와 유사한 기능을 갖춘 기계장치를 설치하여서는 아니 된다.",
+        "rerank_score": 6.78738899750897e-07,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "농어촌정비법 86조 4 농어촌민박사업자의 불법카메라 설치 금지"
+      },
+      {
+        "first_stage_score": 13.723118141967436,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "공중위생관리법 5조  공중위생영업자의 불법카메라 설치 금지#KOBLEX-164278",
+        "provision_text": "제5조(공중위생영업자의 불법카메라 설치 금지) 공중위생영업자는 영업소에 「성폭력범죄의 처벌 등에 관한 특례법」 제14조제1항에 위반되는 행위에 이용되는 카메라나 그 밖에 이와 유사한 기능을 갖춘 기계장치를 설치해서는 아니 된다.",
+        "rerank_score": 6.149903697405534e-07,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "공중위생관리법 5조  공중위생영업자의 불법카메라 설치 금지"
+      },
+      {
+        "first_stage_score": 12.364756747683876,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "장애인복지법 88조 2 가중처벌#KOBLEX-188723",
+        "provision_text": "제88조의2(가중처벌)",
+        "rerank_score": 0.9886288642883301,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "장애인복지법 88조 2 가중처벌"
+      },
+      {
+        "first_stage_score": 12.055220125320583,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "감염병의 예방 및 관리에 관한 법률 81조 2 형의 가중처벌#KOBLEX-231286",
+        "provision_text": "제81조의2(형의 가중처벌)",
+        "rerank_score": 0.9806050062179565,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "감염병의 예방 및 관리에 관한 법률 81조 2 형의 가중처벌"
+      },
+      {
+        "first_stage_score": 12.055220125320583,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "경비업법 29조  형의 가중처벌#KOBLEX-219831",
+        "provision_text": "제29조(형의 가중처벌)",
+        "rerank_score": 0.9835208654403687,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "경비업법 29조  형의 가중처벌"
+      },
+      {
+        "first_stage_score": 12.055220125320583,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "특정경제범죄 가중처벌 등에 관한 법률 3조  (특정재산범죄의 가중처벌)#KOBLEX-029475",
+        "provision_text": "제3조(특정재산범죄의 가중처벌)",
+        "rerank_score": 0.9471411108970642,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "특정경제범죄 가중처벌 등에 관한 법률 3조  (특정재산범죄의 가중처벌)"
+      },
+      {
+        "first_stage_score": 12.055220125320583,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "특정경제범죄 가중처벌 등에 관한 법률 3조  (특정재산범죄의 가중처벌)#KOBLEX-106517",
+        "provision_text": "제3조(특정재산범죄의 가중처벌)",
+        "rerank_score": 0.9471411108970642,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "특정경제범죄 가중처벌 등에 관한 법률 3조  (특정재산범죄의 가중처벌)"
+      },
+      {
+        "first_stage_score": 12.055220125320583,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "특정범죄 가중처벌 등에 관한 법률 2조  뇌물죄의 가중처벌#KOBLEX-050650",
+        "provision_text": "제2조(뇌물죄의 가중처벌)",
+        "rerank_score": 0.9154030680656433,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "특정범죄 가중처벌 등에 관한 법률 2조  뇌물죄의 가중처벌"
+      },
+      {
+        "first_stage_score": 12.055220125320583,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "특정범죄 가중처벌 등에 관한 법률 2조  뇌물죄의 가중처벌#KOBLEX-080682",
+        "provision_text": "제2조(뇌물죄의 가중처벌)",
+        "rerank_score": 0.9154030680656433,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "특정범죄 가중처벌 등에 관한 법률 2조  뇌물죄의 가중처벌"
+      },
+      {
+        "first_stage_score": 12.055220125320583,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "보험사기방지 특별법 11조  보험사기죄의 가중처벌#KOBLEX-063527",
+        "provision_text": "제11조(보험사기죄의 가중처벌)",
+        "rerank_score": 0.8266085386276245,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "보험사기방지 특별법 11조  보험사기죄의 가중처벌"
+      },
+      {
+        "first_stage_score": 13.851967747895431,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "근로기준법 시행규칙 12조  야간 또는 휴일근로의 인가#KOBLEX-011382",
+        "provision_text": "제12조(야간 또는 휴일근로의 인가)",
+        "rerank_score": 5.183064786251634e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "근로기준법 시행규칙 12조  야간 또는 휴일근로의 인가"
+      },
+      {
+        "first_stage_score": 14.190266001264078,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "수상레저안전법 26조  야간 수상레저활동의 금지#KOBLEX-080132",
+        "provision_text": "제26조(야간 수상레저활동의 금지)",
+        "rerank_score": 3.293123882031068e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ2",
+        "statute_name": "수상레저안전법 26조  야간 수상레저활동의 금지"
+      },
+      {
+        "first_stage_score": 16.217059539910075,
+        "fusion_rank": 1,
+        "issue_id": "I3",
+        "provision_id": "집회 및 시위에 관한 법률 23조  벌칙#KOBLEX-049613",
+        "provision_text": "1. 주최자는 1년 이하의 징역 또는 100만원 이하의 벌금",
+        "rerank_score": 9.147838136414066e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "집회 및 시위에 관한 법률 23조  벌칙 1호"
+      },
+      {
+        "first_stage_score": 16.217059539910075,
+        "fusion_rank": 2,
+        "issue_id": "I3",
+        "provision_id": "집회 및 시위에 관한 법률 23조  벌칙#KOBLEX-227726",
+        "provision_text": "1. 주최자는 1년 이하의 징역 또는 100만원 이하의 벌금",
+        "rerank_score": 9.147838136414066e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "집회 및 시위에 관한 법률 23조  벌칙 1호"
+      },
+      {
+        "first_stage_score": 15.223083388948456,
+        "fusion_rank": 3,
+        "issue_id": "I3",
+        "provision_id": "집회 및 시위에 관한 법률 23조  벌칙#KOBLEX-049614",
+        "provision_text": "2. 질서유지인은 6개월 이하의 징역 또는 50만원 이하의 벌금·구류 또는 과료",
+        "rerank_score": 3.162821667501703e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "집회 및 시위에 관한 법률 23조  벌칙 2호"
+      },
+      {
+        "first_stage_score": 15.223083388948456,
+        "fusion_rank": 4,
+        "issue_id": "I3",
+        "provision_id": "집회 및 시위에 관한 법률 23조  벌칙#KOBLEX-227727",
+        "provision_text": "2. 질서유지인은 6개월 이하의 징역 또는 50만원 이하의 벌금·구류 또는 과료",
+        "rerank_score": 3.162821667501703e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "집회 및 시위에 관한 법률 23조  벌칙 2호"
+      },
+      {
+        "first_stage_score": 13.812128252178084,
+        "fusion_rank": 5,
+        "issue_id": "I3",
+        "provision_id": "형법 283조  협박, 존속협박#KOBLEX-193261",
+        "provision_text": "①사람을 협박한 자는 3년 이하의 징역, 500만원 이하의 벌금, 구류 또는 과료에 처한다. <개정 1995.12.29>",
+        "rerank_score": 2.5546258257236332e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "형법 283조  협박, 존속협박 1항"
+      },
+      {
+        "first_stage_score": 17.476102828649868,
+        "fusion_rank": 6,
+        "issue_id": "I3",
+        "provision_id": "군사기밀 보호법 17조  군사보호구역 침입 등#KOBLEX-194081",
+        "provision_text": "제17조(군사보호구역 침입 등)",
+        "rerank_score": 1.726835580484476e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "군사기밀 보호법 17조  군사보호구역 침입 등"
+      },
+      {
+        "first_stage_score": 17.54050284513452,
+        "fusion_rank": 7,
+        "issue_id": "I3",
+        "provision_id": "형법 329조  절도#KOBLEX-193367",
+        "provision_text": "제329조(절도) 타인의 재물을 절취한 자는 6년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_score": 4.209432063362328e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "형법 329조  절도"
+      },
+      {
+        "first_stage_score": 14.073000130985491,
+        "fusion_rank": 10,
+        "issue_id": "I3",
+        "provision_id": "선원법 162조  벌칙#KOBLEX-067814",
+        "provision_text": "3. 선박을 구조하는 데 필요한 조치를 다하지 아니한 선장: 1년 이하의 징역 또는 1천만원 이하의 벌금",
+        "rerank_score": 1.922943511090125e-06,
+        "retrieval_round": 1,
+        "source_request_id": "RQ3",
+        "statute_name": "선원법 162조  벌칙 3호"
+      },
+      {
+        "first_stage_score": 12.055220125320583,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "특정범죄 가중처벌 등에 관한 법률 2조  뇌물죄의 가중처벌#KOBLEX-107018",
+        "provision_text": "제2조(뇌물죄의 가중처벌)",
+        "rerank_score": 0.9154030680656433,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "특정범죄 가중처벌 등에 관한 법률 2조  뇌물죄의 가중처벌"
+      },
+      {
+        "first_stage_score": 12.055220125320583,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "특정범죄 가중처벌 등에 관한 법률 2조  뇌물죄의 가중처벌#KOBLEX-107620",
+        "provision_text": "제2조(뇌물죄의 가중처벌)",
+        "rerank_score": 0.9154030680656433,
+        "retrieval_round": 2,
+        "source_request_id": "GRQ1",
+        "statute_name": "특정범죄 가중처벌 등에 관한 법률 2조  뇌물죄의 가중처벌"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "감염병의 예방 및 관리에 관한 법률 81조 2 형의 가중처벌#KOBLEX-231286": "제81조의2(형의 가중처벌)",
+      "경비업법 29조  형의 가중처벌#KOBLEX-219831": "제29조(형의 가중처벌)",
+      "공중위생관리법 5조  공중위생영업자의 불법카메라 설치 금지#KOBLEX-164278": "제5조(공중위생영업자의 불법카메라 설치 금지) 공중위생영업자는 영업소에 「성폭력범죄의 처벌 등에 관한 특례법」 제14조제1항에 위반되는 행위에 이용되는 카메라나 그 밖에 이와 유사한 기능을 갖춘 기계장치를 설치해서는 아니 된다.",
+      "관세법 264조 9 과세자료 비밀유지의무 위반에 대한 처벌#KOBLEX-105870": "제264조의9(과세자료 비밀유지의무 위반에 대한 처벌)",
+      "군사기밀 보호법 17조  군사보호구역 침입 등#KOBLEX-194081": "제17조(군사보호구역 침입 등)",
+      "근로기준법 시행규칙 12조  야간 또는 휴일근로의 인가#KOBLEX-011382": "제12조(야간 또는 휴일근로의 인가)",
+      "농어촌정비법 86조 4 농어촌민박사업자의 불법카메라 설치 금지#KOBLEX-025750": "제86조의4(농어촌민박사업자의 불법카메라 설치 금지) 농어촌민박사업자는 사업장에 「성폭력범죄의 처벌 등에 관한 특례법」 제14조제1항에 위반되는 행위에 이용되는 카메라나 그 밖에 이와 유사한 기능을 갖춘 기계장치를 설치하여서는 아니 된다.",
+      "민법 291조  지역권의 내용#KOBLEX-058990": "제291조(지역권의 내용) 지역권자는 일정한 목적을 위하여 타인의 토지를 자기토지의 편익에 이용하는 권리가 있다.",
+      "방문판매 등에 관한 법률 67조  과태료에 관한 규정 적용의 특례#KOBLEX-074930": "제67조(과태료에 관한 규정 적용의 특례) 제66조의 과태료에 관한 규정을 적용할 때 제51조에 따라 과징금을 부과한 행위에 대해서는 과태료를 부과할 수 없다.",
+      "방문판매 등에 관한 법률 67조  과태료에 관한 규정 적용의 특례#KOBLEX-101693": "제67조(과태료에 관한 규정 적용의 특례) 제66조의 과태료에 관한 규정을 적용할 때 제51조에 따라 과징금을 부과한 행위에 대해서는 과태료를 부과할 수 없다.",
+      "보험사기방지 특별법 11조  보험사기죄의 가중처벌#KOBLEX-063527": "제11조(보험사기죄의 가중처벌)",
+      "상법 23조  주체를 오인시킬 상호의 사용금지#KOBLEX-113599": "①누구든지 부정한 목적으로 타인의 영업으로 오인할 수 있는 상호를 사용하지 못한다.",
+      "상법 750조  특수한 행위에 대한 권한#KOBLEX-116209": "제750조(특수한 행위에 대한 권한)",
+      "선원법 162조  벌칙#KOBLEX-067814": "3. 선박을 구조하는 데 필요한 조치를 다하지 아니한 선장: 1년 이하의 징역 또는 1천만원 이하의 벌금",
+      "수상레저안전법 26조  야간 수상레저활동의 금지#KOBLEX-080132": "제26조(야간 수상레저활동의 금지)",
+      "장애인복지법 88조 2 가중처벌#KOBLEX-188723": "제88조의2(가중처벌)",
+      "지방세기본법 101조#KOBLEX-121006": "제8장 범칙행위 등에 대한 처벌 및 처벌절차",
+      "집회 및 시위에 관한 법률 23조  벌칙#KOBLEX-049613": "1. 주최자는 1년 이하의 징역 또는 100만원 이하의 벌금",
+      "집회 및 시위에 관한 법률 23조  벌칙#KOBLEX-049614": "2. 질서유지인은 6개월 이하의 징역 또는 50만원 이하의 벌금·구류 또는 과료",
+      "집회 및 시위에 관한 법률 23조  벌칙#KOBLEX-227726": "1. 주최자는 1년 이하의 징역 또는 100만원 이하의 벌금",
+      "집회 및 시위에 관한 법률 23조  벌칙#KOBLEX-227727": "2. 질서유지인은 6개월 이하의 징역 또는 50만원 이하의 벌금·구류 또는 과료",
+      "채무자 회생 및 파산에 관한 법률 19조  관리위원의 행위에 대한 이의신청#KOBLEX-031405": "제19조(관리위원의 행위에 대한 이의신청)",
+      "특정경제범죄 가중처벌 등에 관한 법률 3조  (특정재산범죄의 가중처벌)#KOBLEX-029475": "제3조(특정재산범죄의 가중처벌)",
+      "특정경제범죄 가중처벌 등에 관한 법률 3조  (특정재산범죄의 가중처벌)#KOBLEX-106517": "제3조(특정재산범죄의 가중처벌)",
+      "특정범죄 가중처벌 등에 관한 법률 2조  뇌물죄의 가중처벌#KOBLEX-050650": "제2조(뇌물죄의 가중처벌)",
+      "특정범죄 가중처벌 등에 관한 법률 2조  뇌물죄의 가중처벌#KOBLEX-080682": "제2조(뇌물죄의 가중처벌)",
+      "특정범죄 가중처벌 등에 관한 법률 2조  뇌물죄의 가중처벌#KOBLEX-107018": "제2조(뇌물죄의 가중처벌)",
+      "특정범죄 가중처벌 등에 관한 법률 2조  뇌물죄의 가중처벌#KOBLEX-107620": "제2조(뇌물죄의 가중처벌)",
+      "형법 283조  협박, 존속협박#KOBLEX-193261": "①사람을 협박한 자는 3년 이하의 징역, 500만원 이하의 벌금, 구류 또는 과료에 처한다. <개정 1995.12.29>",
+      "형법 329조  절도#KOBLEX-193367": "제329조(절도) 타인의 재물을 절취한 자는 6년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "형법 329조  절도#KOBLEX-193367"
+        ],
+        "rationale": "형법 제329조(C027)가 절도죄의 기본 구성요건(타인의 재물 절취)을 명시하므로 완료 기준이 달성되었다.",
+        "status": "covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "rationale": "후보 조항 중 야간 몰래 침입하여 절도한 경우의 가중처벌을 명시한 조항이 존재하지 않는다. C011~C018은 특정범죄 가중처벌 조항이지만 야간 몰래 침입 절도에 대한 구체적 규정이 아니며, C019는 근로기준법상 야간근로 인가 규정으로 관련성이 없다.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E3",
+        "linked_provision_ids": [
+          "형법 329조  절도#KOBLEX-193367"
+        ],
+        "rationale": "형법 제329조(C027)가 절도죄의 법정형(6년 이하 징역 또는 1천만원 이하 벌금)을 명시하므로 완료 기준이 달성되었다.",
+        "status": "covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형법 329조  절도#KOBLEX-193367",
+        "support_spans": [
+          {
+            "end_char": 71,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E3",
+        "issue_id": "I3",
+        "provision_id": "형법 329조  절도#KOBLEX-193367",
+        "support_spans": [
+          {
+            "end_char": 71,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 2,
+    "last_validated_event": "S2.ASSESS_COVERAGE",
+    "legal_issues": [
+      {
+        "description": "야간 몰래 침입하여 금목걸이를 훔친 행위가 형법상 절도죄의 구성요건을 충족하는지 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "야간 침입 및 주거침입 요소가 가중처벌 사유로 작용하는지 여부",
+        "issue_id": "I2"
+      },
+      {
+        "description": "해당 범죄에 적용되는 법정형 및 처벌 범위",
+        "issue_id": "I3"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "야간 몰래 침입 절도에 대한 가중처벌 조항을 확인",
+        "critical": true,
+        "description": "야간 몰래 침입하여 절도한 경우의 가중처벌 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_text": "타인의 동산을 부정한 목적을 가지고 가져가는 행위에 대한 처벌 규정",
+        "request_id": "RQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "야간 몰래 침입하여 절도한 경우의 가중처벌 규정",
+        "request_id": "RQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I3",
+        "query_channel": "sparse_keyword",
+        "query_text": "야간 몰래 침입 절도 법정형 징역 벌금",
+        "request_id": "RQ3",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_text": "야간에 몰래 주거침입하여 절도한 행위에 대한 가중처벌 규정",
+        "request_id": "GRQ1",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_text": "형법 야간 몰래 침입 절도 가중처벌 조항",
+        "request_id": "GRQ2",
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_text": "야간 몰래 침입 절도 가중처벌",
+        "request_id": "GRQ3",
+        "top_k": 100
+      }
+    ],
+    "question": "갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "절도죄의 기본 구성요건이 명시된 조항을 확인",
+        "critical": true,
+        "description": "절도죄의 구성요건(타인의 동산을 부정한 목적을 가지고 가져가는 행위)",
+        "evidence_item_id": "E1",
+        "evidence_type": "element",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "야간 몰래 침입 절도에 대한 가중처벌 조항을 확인",
+        "critical": true,
+        "description": "야간 몰래 침입하여 절도한 경우의 가중처벌 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      },
+      {
+        "completion_criteria": "적용 가능한 조항의 법정형이 명시되어 있는지 확인",
+        "critical": true,
+        "description": "해당 범죄에 적용되는 법정형(징역 또는 벌금)",
+        "evidence_item_id": "E3",
+        "evidence_type": "remedy",
+        "issue_id": "I3"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "1e6abb54-f799-497a-8561-9ce78d68b942",
+    "seen_provision_ids": [
+      "특정범죄 가중처벌 등에 관한 법률 2조  뇌물죄의 가중처벌#KOBLEX-107018",
+      "관세법 264조 9 과세자료 비밀유지의무 위반에 대한 처벌#KOBLEX-105870",
+      "장애인복지법 88조 2 가중처벌#KOBLEX-188723",
+      "방문판매 등에 관한 법률 67조  과태료에 관한 규정 적용의 특례#KOBLEX-101693",
+      "군사기밀 보호법 17조  군사보호구역 침입 등#KOBLEX-194081",
+      "형법 283조  협박, 존속협박#KOBLEX-193261",
+      "집회 및 시위에 관한 법률 23조  벌칙#KOBLEX-227727",
+      "특정경제범죄 가중처벌 등에 관한 법률 3조  (특정재산범죄의 가중처벌)#KOBLEX-029475",
+      "경비업법 29조  형의 가중처벌#KOBLEX-219831",
+      "특정범죄 가중처벌 등에 관한 법률 2조  뇌물죄의 가중처벌#KOBLEX-050650",
+      "민법 291조  지역권의 내용#KOBLEX-058990",
+      "상법 23조  주체를 오인시킬 상호의 사용금지#KOBLEX-113599",
+      "상법 750조  특수한 행위에 대한 권한#KOBLEX-116209",
+      "방문판매 등에 관한 법률 67조  과태료에 관한 규정 적용의 특례#KOBLEX-074930",
+      "지방세기본법 101조#KOBLEX-121006",
+      "보험사기방지 특별법 11조  보험사기죄의 가중처벌#KOBLEX-063527",
+      "농어촌정비법 86조 4 농어촌민박사업자의 불법카메라 설치 금지#KOBLEX-025750",
+      "집회 및 시위에 관한 법률 23조  벌칙#KOBLEX-227726",
+      "형법 329조  절도#KOBLEX-193367",
+      "공중위생관리법 5조  공중위생영업자의 불법카메라 설치 금지#KOBLEX-164278",
+      "특정범죄 가중처벌 등에 관한 법률 2조  뇌물죄의 가중처벌#KOBLEX-107620",
+      "감염병의 예방 및 관리에 관한 법률 81조 2 형의 가중처벌#KOBLEX-231286",
+      "특정경제범죄 가중처벌 등에 관한 법률 3조  (특정재산범죄의 가중처벌)#KOBLEX-106517",
+      "특정범죄 가중처벌 등에 관한 법률 2조  뇌물죄의 가중처벌#KOBLEX-080682",
+      "채무자 회생 및 파산에 관한 법률 19조  관리위원의 행위에 대한 이의신청#KOBLEX-031405",
+      "집회 및 시위에 관한 법률 23조  벌칙#KOBLEX-049614",
+      "선원법 162조  벌칙#KOBLEX-067814",
+      "수상레저안전법 26조  야간 수상레저활동의 금지#KOBLEX-080132",
+      "근로기준법 시행규칙 12조  야간 또는 휴일근로의 인가#KOBLEX-011382",
+      "집회 및 시위에 관한 법률 23조  벌칙#KOBLEX-049613"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

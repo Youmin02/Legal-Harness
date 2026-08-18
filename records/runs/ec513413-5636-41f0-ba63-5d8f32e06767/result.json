@@ -1,0 +1,279 @@
+{
+  "abstention_reason": null,
+  "answer": "운송계약상 운송인의 지체이행으로 인한 손해배상청구권은 운송물이 도착지에 도착한 날부터 2년 이내에 재판상 청구가 없으면 소멸합니다[CT1]. 따라서 을은 상품이 인도된 날(도착일)부터 2년 이내에 갑에 대한 손해배상청구권을 행사하기 위한 소송을 제기해야 합니다[CT2].",
+  "completed_at_utc": "2026-08-17T06:28:53.412735+00:00",
+  "end_to_end_latency_ms": 72416.407,
+  "errors": [],
+  "record_schema_version": "1.0",
+  "run_id": "ec513413-5636-41f0-ba63-5d8f32e06767",
+  "state": {
+    "accepted_provision_ids": [
+      "상법 902조  운송인 책임의 소멸#KOBLEX-116624"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "explanation": "All critical evidence items are covered without conflict.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "claim_count": 2
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "first_stage_score": 10.627651561269216,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "징발법 23조  보상청구권의 소멸시효#KOBLEX-073245",
+        "provision_text": "제23조(보상청구권의 소멸시효) 보상청구권은 제22조제1항에 따른 공고기간이 끝난 날부터 5년간 행사하지 아니하면 소멸시효가 완성된다.",
+        "rerank_score": 0.013902738690376282,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "징발법 23조  보상청구권의 소멸시효"
+      },
+      {
+        "first_stage_score": 8.7404574643471,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "계엄법 9조 6 보상청구권의 소멸시효#KOBLEX-054308",
+        "provision_text": "제9조의6(보상청구권의 소멸시효) 보상청구권은 제9조의2제2항에 따른 공고기간 만료일부터 5년간 행사하지 아니하면 시효의 완성으로 소멸한다. 다만, 공고 사실을 알지 못한 경우에는 그 사실을 안 날부터 계산한다.",
+        "rerank_score": 0.004335540346801281,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "계엄법 9조 6 보상청구권의 소멸시효"
+      },
+      {
+        "first_stage_score": 7.792449744187599,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "상법 902조  운송인 책임의 소멸#KOBLEX-116624",
+        "provision_text": "제902조(운송인 책임의 소멸) 운송인의 여객, 송하인 또는 수하인에 대한 책임은 그 청구원인에 관계없이 여객 또는 운송물이 도착지에 도착한 날, 항공기가 도착할 날 또는 운송이 중지된 날 가운데 가장 늦게 도래한 날부터 2년 이내에 재판상 청구가 없으면 소멸한다.",
+        "rerank_score": 0.0013421425828710198,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "상법 902조  운송인 책임의 소멸"
+      },
+      {
+        "first_stage_score": 13.554204973167105,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059940",
+        "provision_text": "제766조(손해배상청구권의 소멸시효)",
+        "rerank_score": 0.0007175283972173929,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "민법 766조  손해배상청구권의 소멸시효"
+      },
+      {
+        "first_stage_score": 14.698340441463227,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "특허법 128조  손해배상청구권 등#KOBLEX-155966",
+        "provision_text": "제128조(손해배상청구권 등)",
+        "rerank_score": 0.00023006362607702613,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "특허법 128조  손해배상청구권 등"
+      },
+      {
+        "first_stage_score": 10.03663570019611,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "범죄피해자 보호법 31조  소멸시효#KOBLEX-012035",
+        "provision_text": "제31조(소멸시효) 구조금을 받을 권리는 그 구조결정이 해당 신청인에게 송달된 날부터 2년간 행사하지 아니하면 시효로 인하여 소멸된다.",
+        "rerank_score": 0.00020534514624159783,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "범죄피해자 보호법 31조  소멸시효"
+      },
+      {
+        "first_stage_score": 9.794481958621821,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "증권관련 집단소송법 56조  분배관리인에 대한 손해배상청구권#KOBLEX-178676",
+        "provision_text": "제56조(분배관리인에 대한 손해배상청구권) 분배관리인의 직무상 행위에 관한 손해배상청구권은 분배종료보고서를 제출한 날부터 2년이 지나면 소멸한다. 다만, 분배관리인의 부정행위로 인한 손해배상청구권인 경우에는 그러하지 아니하다.",
+        "rerank_score": 8.726718078833073e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "증권관련 집단소송법 56조  분배관리인에 대한 손해배상청구권"
+      },
+      {
+        "first_stage_score": 10.825879056595312,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "상법 798조  비계약적 청구에 대한 적용#KOBLEX-116346",
+        "provision_text": "④제1항부터 제3항까지의 규정은 운송물에 관한 손해배상청구가 운송인 외의 실제운송인 또는 그 사용인이나 대리인에 대하여 제기된 경우에도 적용한다.",
+        "rerank_score": 5.079354377812706e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "상법 798조  비계약적 청구에 대한 적용 4항"
+      },
+      {
+        "first_stage_score": 13.902230374827063,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "의료급여법 31조  소멸시효#KOBLEX-029107",
+        "provision_text": "제31조(소멸시효)",
+        "rerank_score": 4.613302007783204e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "의료급여법 31조  소멸시효"
+      },
+      {
+        "first_stage_score": 13.902230374827063,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "민법 162조#KOBLEX-058705",
+        "provision_text": "제7장 소멸시효",
+        "rerank_score": 4.203915159450844e-05,
+        "retrieval_round": 1,
+        "source_request_id": "RQ1",
+        "statute_name": "민법 162조"
+      }
+    ],
+    "corpus_text_snapshots": {
+      "계엄법 9조 6 보상청구권의 소멸시효#KOBLEX-054308": "제9조의6(보상청구권의 소멸시효) 보상청구권은 제9조의2제2항에 따른 공고기간 만료일부터 5년간 행사하지 아니하면 시효의 완성으로 소멸한다. 다만, 공고 사실을 알지 못한 경우에는 그 사실을 안 날부터 계산한다.",
+      "민법 162조#KOBLEX-058705": "제7장 소멸시효",
+      "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059940": "제766조(손해배상청구권의 소멸시효)",
+      "범죄피해자 보호법 31조  소멸시효#KOBLEX-012035": "제31조(소멸시효) 구조금을 받을 권리는 그 구조결정이 해당 신청인에게 송달된 날부터 2년간 행사하지 아니하면 시효로 인하여 소멸된다.",
+      "상법 798조  비계약적 청구에 대한 적용#KOBLEX-116346": "④제1항부터 제3항까지의 규정은 운송물에 관한 손해배상청구가 운송인 외의 실제운송인 또는 그 사용인이나 대리인에 대하여 제기된 경우에도 적용한다.",
+      "상법 902조  운송인 책임의 소멸#KOBLEX-116624": "제902조(운송인 책임의 소멸) 운송인의 여객, 송하인 또는 수하인에 대한 책임은 그 청구원인에 관계없이 여객 또는 운송물이 도착지에 도착한 날, 항공기가 도착할 날 또는 운송이 중지된 날 가운데 가장 늦게 도래한 날부터 2년 이내에 재판상 청구가 없으면 소멸한다.",
+      "의료급여법 31조  소멸시효#KOBLEX-029107": "제31조(소멸시효)",
+      "증권관련 집단소송법 56조  분배관리인에 대한 손해배상청구권#KOBLEX-178676": "제56조(분배관리인에 대한 손해배상청구권) 분배관리인의 직무상 행위에 관한 손해배상청구권은 분배종료보고서를 제출한 날부터 2년이 지나면 소멸한다. 다만, 분배관리인의 부정행위로 인한 손해배상청구권인 경우에는 그러하지 아니하다.",
+      "징발법 23조  보상청구권의 소멸시효#KOBLEX-073245": "제23조(보상청구권의 소멸시효) 보상청구권은 제22조제1항에 따른 공고기간이 끝난 날부터 5년간 행사하지 아니하면 소멸시효가 완성된다.",
+      "특허법 128조  손해배상청구권 등#KOBLEX-155966": "제128조(손해배상청구권 등)"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "상법 902조  운송인 책임의 소멸#KOBLEX-116624"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "상법 제902조는 운송계약상 운송인의 지체이행으로 인한 손해배상청구권의 소멸시효 기간(2년)과 기산점(도착일 등)을 명확히 규정하므로, E1의 완료 기준이 충족된다.",
+        "status": "covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "상법 902조  운송인 책임의 소멸#KOBLEX-116624",
+        "support_spans": [
+          {
+            "end_char": 148,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "운송계약상 운송인의 지체이행으로 인한 손해배상청구권의 소멸시효 기간과 기산점",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을과 을의 상품을 목적지로 운송하기로 하는 운송계약을 체결하였다. 을은 계약 체결 과정에서 상품이 제때 도착하지 않을 경우 손해가 발생할 수 있음을 갑에게 미리 고지하였다. 그러나 운송 도중 문제가 발생하여 상품은 예정된 날짜보다 3일 늦게 도착하였고, 이로 인해 을에게 손해가 발생하였다. 을은 이에 대한 손해배상을 청구할 생각이었으나, 바쁜 업무로 인해 소송을 즉시 제기하지는 못하였다. 이에 따라 을은 상품이 인도된 날로부터 언제까지 소송을 제기할 수 있는지를 고민하게 되었다. [질문] 을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "운송계약",
+          "운송인",
+          "지체이행",
+          "손해배상청구권",
+          "소멸시효",
+          "기산점"
+        ],
+        "query_text": "운송계약상 운송인의 지체이행으로 인한 손해배상청구권은 상품 인도일로부터 몇 년 내에 행사해야 소멸하는가",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "상법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을과 을의 상품을 목적지로 운송하기로 하는 운송계약을 체결하였다. 을은 계약 체결 과정에서 상품이 제때 도착하지 않을 경우 손해가 발생할 수 있음을 갑에게 미리 고지하였다. 그러나 운송 도중 문제가 발생하여 상품은 예정된 날짜보다 3일 늦게 도착하였고, 이로 인해 을에게 손해가 발생하였다.\r\n\r\n을은 이에 대한 손해배상을 청구할 생각이었으나, 바쁜 업무로 인해 소송을 즉시 제기하지는 못하였다. 이에 따라 을은 상품이 인도된 날로부터 언제까지 소송을 제기할 수 있는지를 고민하게 되었다.\n\n[질문]\n을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "운송계약상 운송인의 지체이행으로 인한 손해배상청구권의 소멸시효 기간과 기산점을 명확히 규정한 조항을 확인",
+        "critical": true,
+        "description": "운송계약상 운송인의 지체이행으로 인한 손해배상청구권의 소멸시효 기간과 기산점 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "limitation",
+        "issue_id": "I1"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "ec513413-5636-41f0-ba63-5d8f32e06767",
+    "seen_provision_ids": [
+      "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059940",
+      "상법 902조  운송인 책임의 소멸#KOBLEX-116624",
+      "증권관련 집단소송법 56조  분배관리인에 대한 손해배상청구권#KOBLEX-178676",
+      "민법 162조#KOBLEX-058705",
+      "계엄법 9조 6 보상청구권의 소멸시효#KOBLEX-054308",
+      "범죄피해자 보호법 31조  소멸시효#KOBLEX-012035",
+      "상법 798조  비계약적 청구에 대한 적용#KOBLEX-116346",
+      "징발법 23조  보상청구권의 소멸시효#KOBLEX-073245",
+      "의료급여법 31조  소멸시효#KOBLEX-029107",
+      "특허법 128조  손해배상청구권 등#KOBLEX-155966"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

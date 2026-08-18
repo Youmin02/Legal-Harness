@@ -20,7 +20,7 @@ Do not claim that a statute hint exists or applies. The retrieval tool must veri
 
 ### `GAP_QUERY_PLAN`
 
-Input prior issues/evidence, S2 assessments, missing items, conflicts, query history, seen provision IDs, and the remaining request budget. Output:
+Input prior issues/evidence, S2 assessments, missing items, conflicts, query history, seen provision IDs, the remaining request budget, and `next_retrieval_round` (a positive integer). Output:
 
 - `target_evidence_item_ids[]`: the unresolved items actually targeted in this call.
 - `gap_retrieval_requests[]`: new queries with a `gap_reason` and the prior assessment status.

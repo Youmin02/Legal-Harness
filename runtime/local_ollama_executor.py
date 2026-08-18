@@ -502,8 +502,16 @@ class LocalOllamaSkillExecutor:
             return base
         if entry_point != "GAP_QUERY_PLAN":
             raise SkillExecutionError("S1 entry point is invalid: %s" % entry_point)
+        next_retrieval_round = payload.get("next_retrieval_round")
+        if (
+            isinstance(next_retrieval_round, bool)
+            or not isinstance(next_retrieval_round, int)
+            or next_retrieval_round < 1
+        ):
+            raise SkillExecutionError("next_retrieval_round must be a positive integer")
         base.update(
             {
+                "next_retrieval_round": next_retrieval_round,
                 "legal_issues": self._list(payload, "legal_issues"),
                 "required_evidence_items": self._external_evidence(
                     self._list(payload, "required_evidence_items")

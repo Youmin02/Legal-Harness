@@ -10,13 +10,13 @@ Produce one contract-valid JSON object for S1. Treat the surrounding harness as 
 ## Select the mode
 
 - Use `INITIAL_PLAN` for a normalized question that has not yet been decomposed.
-- Use `GAP_QUERY_PLAN` only with S2 assessments, missing/conflicting evidence, query history, and a remaining request budget.
+- Use `GAP_QUERY_PLAN` only with S2 assessments, missing/conflicting evidence, query history, a remaining request budget, and a positive `next_retrieval_round`.
 
 Read [references/contract.md](references/contract.md) before executing. Conform to [references/input.schema.json](references/input.schema.json) and [references/output.schema.json](references/output.schema.json).
 
 ## Execute
 
-7. Copy `run_id` from input. Use `RQ<positive index>` request IDs in `INITIAL_PLAN` and `GRQ-R<positive round>-<positive index>` in `GAP_QUERY_PLAN`, never a mode name; the harness canonicalizes these transport identifiers, but the target evidence and query text remain your responsibility.
+7. Copy `run_id` from input. Use `RQ<positive index>` request IDs in `INITIAL_PLAN`; in `GAP_QUERY_PLAN`, use the supplied `next_retrieval_round` in `GRQ-R<positive round>-<positive index>`, never a mode name. The harness canonicalizes these transport identifiers, but the target evidence and query text remain your responsibility.
 1. Preserve the question's meaning. Do not perform a legal rewrite in place of deterministic input normalization.
 2. Decompose by legal issue and required evidence, not by a hard statute-domain route and not by a fixed hop count.
 3. Mark an evidence item `critical: true` only when the core conclusion cannot be justified without it. Do not split details that one governing provision can ordinarily establish into separate critical items. Create a separate critical item only for an independently necessary legal conclusion.

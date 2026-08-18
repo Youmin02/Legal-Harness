@@ -20,12 +20,13 @@
     {
       "type": "object",
       "additionalProperties": false,
-      "required": ["schema_version", "mode", "run_id", "normalized_question", "legal_issues", "required_evidence_items", "coverage_assessments", "missing_evidence_items", "evidence_conflicts", "query_history", "seen_provision_ids", "remaining_request_budget", "constraints"],
+      "required": ["schema_version", "mode", "run_id", "normalized_question", "next_retrieval_round", "legal_issues", "required_evidence_items", "coverage_assessments", "missing_evidence_items", "evidence_conflicts", "query_history", "seen_provision_ids", "remaining_request_budget", "constraints"],
       "properties": {
         "schema_version": {"const": "1.0"},
         "mode": {"const": "GAP_QUERY_PLAN"},
         "run_id": {"type": "string", "minLength": 1},
         "normalized_question": {"type": "string", "minLength": 1},
+        "next_retrieval_round": {"type": "integer", "minimum": 1},
         "legal_issues": {"type": "array", "minItems": 1, "items": {"type": "object"}},
         "required_evidence_items": {"type": "array", "minItems": 1, "items": {"type": "object"}},
         "coverage_assessments": {"type": "array", "minItems": 1, "items": {"type": "object"}},

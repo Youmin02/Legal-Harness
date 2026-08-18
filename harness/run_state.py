@@ -6,6 +6,7 @@ from typing import Dict, List, Optional, Set
 from .contracts import (
     ActionTrace,
     CandidateProvision,
+    CandidateStageRecord,
     CoverageAssessment,
     CoverageStatus,
     EvidenceConflict,
@@ -29,6 +30,7 @@ class RunState:
     legal_issues: List[LegalIssue] = field(default_factory=list)
     required_evidence_items: List[RequiredEvidenceItem] = field(default_factory=list)
     candidate_provisions: List[CandidateProvision] = field(default_factory=list)
+    retrieval_stage_records: List[CandidateStageRecord] = field(default_factory=list)
     evidence_links: List[EvidenceLink] = field(default_factory=list)
     coverage_assessments: List[CoverageAssessment] = field(default_factory=list)
     missing_critical_items: List[RequiredEvidenceItem] = field(default_factory=list)

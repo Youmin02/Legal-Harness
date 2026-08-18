@@ -100,6 +100,32 @@ class CandidateProvision:
     first_stage_score: float
     fusion_rank: int
     rerank_score: float
+    source_request_ids: List[str] = field(default_factory=list)
+    target_evidence_item_ids: List[str] = field(default_factory=list)
+    first_stage_rank: Optional[int] = None
+    rerank_rank: Optional[int] = None
+    selection_rank: Optional[int] = None
+    candidate_stage: str = "bge_rerank"
+    selection_reason: str = "global_top_k"
+
+
+@dataclass(frozen=True)
+class CandidateStageRecord:
+    """One immutable candidate observation at a retrieval pipeline stage."""
+
+    provision_id: str
+    retrieval_round: int
+    candidate_stage: str
+    source_request_ids: List[str]
+    target_evidence_item_ids: List[str]
+    first_stage_rank: Optional[int] = None
+    fusion_rank: Optional[int] = None
+    rerank_rank: Optional[int] = None
+    selection_rank: Optional[int] = None
+    first_stage_score: Optional[float] = None
+    fusion_score: Optional[float] = None
+    rerank_score: Optional[float] = None
+    selection_reason: str = ""
 
 
 @dataclass(frozen=True)

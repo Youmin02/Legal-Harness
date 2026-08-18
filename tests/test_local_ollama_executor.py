@@ -449,7 +449,21 @@ class LocalOllamaExecutorTests(unittest.TestCase):
             },
         )
         gap_request = gap["gap_retrieval_requests"][0]
-        self.assertEqual(gap_request["request_id"], "GRQ1")
+        self.assertEqual(gap_request["request_id"], "GRQ-R1-1")
+        second_round = self.executor._normalize_harness_owned_fields(
+            "legal_issue_and_query_planning",
+            "GAP_QUERY_PLAN",
+            {
+                "run_id": "run-1",
+                "required_evidence_items": [{"evidence_item_id": "E1", "issue_id": "I1", "description": "도박죄 처벌 규정", "completion_criteria": "처벌 조문"}],
+                "missing_evidence_items": [{"evidence_item_id": "E1"}],
+                "evidence_conflicts": [],
+                "query_history": [],
+                "next_retrieval_round": 2,
+            },
+            {"gap_retrieval_requests": [{"issue_id": "I1", "evidence_item_id": "E1", "query_text": "새 질의"}]},
+        )
+        self.assertEqual(second_round["gap_retrieval_requests"][0]["request_id"], "GRQ-R2-1")
         self.assertEqual(gap_request["issue_id"], "I1")
         self.assertEqual(gap_request["evidence_item_id"], "E1")
         self.assertNotEqual(gap_request["query_text"], "기존 질의")

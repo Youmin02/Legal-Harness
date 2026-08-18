@@ -30,6 +30,7 @@ from .validation import (
     validate_gap_plan,
     validate_initial_plan,
     validate_retrieval_candidates,
+    validate_retrieval_stage_records,
 )
 
 
@@ -185,14 +186,40 @@ class HarnessRunner:
     ) -> Optional[HarnessOutcome]:
         retrieval_round = state.retrieval_rounds_used + 1
         try:
-            candidates = self.retriever.retrieve(requests, retrieval_round)
+            critical_evidence_item_ids = [
+                item.evidence_item_id
+                for item in state.required_evidence_items
+                if item.critical
+            ]
+            candidates = self.retriever.retrieve(
+                requests,
+                retrieval_round,
+                critical_evidence_item_ids=critical_evidence_item_ids,
+            )
             validate_retrieval_candidates(candidates, requests, retrieval_round)
-            register_retrieval_round(state, requests, candidates, is_gap=is_gap)
+            stage_records = list(
+                getattr(self.retriever, "last_stage_records", ())
+            )
+            unsatisfied_critical_evidence_item_ids = list(
+                getattr(self.retriever, "last_unsatisfied_critical_evidence_item_ids", ())
+            )
+            validate_retrieval_stage_records(
+                stage_records, requests, retrieval_round
+            )
+            register_retrieval_round(
+                state,
+                requests,
+                candidates,
+                is_gap=is_gap,
+                candidate_stage_records=stage_records,
+            )
             self._trace(
                 "GAP_RETRIEVAL_VALIDATED" if is_gap else "INITIAL_RETRIEVAL_VALIDATED",
                 state,
                 request_count=len(requests),
                 candidate_count=len(candidates),
+                stage_record_count=len(stage_records),
+                unsatisfied_critical_evidence_item_ids=unsatisfied_critical_evidence_item_ids,
             )
             return None
         except (ValidationError, StateInvariantError) as exc:
@@ -298,6 +325,7 @@ class HarnessRunner:
         return {
             "run_id": state.run_id,
             "normalized_question": state.normalized_question,
+            "next_retrieval_round": state.retrieval_rounds_used + 1,
             "legal_issues": to_primitive(state.legal_issues),
             "required_evidence_items": to_primitive(state.required_evidence_items),
             "coverage_assessments": to_primitive(state.coverage_assessments),

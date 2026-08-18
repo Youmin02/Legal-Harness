@@ -1,5 +1,6 @@
 """Reciprocal-rank fusion within one selected retriever's query channels."""
 
+from dataclasses import replace
 from typing import Dict, Iterable, List, Sequence
 
 from .types import FusedHit, RetrievalHit
@@ -21,18 +22,26 @@ def reciprocal_rank_fusion(
                     "rrf_score": 0.0,
                     "first_stage_score": hit.score,
                     "source_request_ids": [],
+                    "source_first_stage_ranks": {},
                 },
             )
             item["rrf_score"] = float(item["rrf_score"]) + 1.0 / (k + rank)
             item["first_stage_score"] = max(float(item["first_stage_score"]), hit.score)
-            item["source_request_ids"].append(hit.source_request_id)
+            if hit.source_request_id not in item["source_request_ids"]:
+                item["source_request_ids"].append(hit.source_request_id)
+            previous_rank = item["source_first_stage_ranks"].get(hit.source_request_id)
+            if previous_rank is None or rank < previous_rank:
+                item["source_first_stage_ranks"][hit.source_request_id] = rank
     fused = [
         FusedHit(
             document=item["document"],
             rrf_score=float(item["rrf_score"]),
             first_stage_score=float(item["first_stage_score"]),
             source_request_ids=list(item["source_request_ids"]),
+            source_first_stage_ranks=dict(item["source_first_stage_ranks"]),
+            first_stage_rank=min(item["source_first_stage_ranks"].values()),
         )
         for item in aggregate.values()
     ]
-    return sorted(fused, key=lambda hit: (-hit.rrf_score, hit.document.provision_id))
+    ranked = sorted(fused, key=lambda hit: (-hit.rrf_score, hit.document.provision_id))
+    return [replace(hit, fusion_rank=rank) for rank, hit in enumerate(ranked, start=1)]

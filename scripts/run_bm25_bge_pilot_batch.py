@@ -170,6 +170,10 @@ def main() -> int:
                 "--seed", str(configuration["seed"]),
                 "--rerank-pool-k", str(configuration.get("rerank_pool_k", 100)),
                 "--final-top-k", str(configuration.get("final_top_k", 10)),
+                "--rerank-query-mode", str(configuration.get("rerank_query_mode", "combined_issue")),
+                "--candidate-selection", str(configuration.get("candidate_selection", "global_top_k")),
+                "--per-evidence-min-k", str(configuration.get("per_evidence_min_k", 1)),
+                "--rerank-document-mode", str(configuration.get("rerank_document_mode", "body_only")),
                 "--input-format", str(
                     configuration.get(
                         "input_format", "koblex_background_plus_question"

@@ -25,6 +25,8 @@ class ProvisionRetriever(Protocol):
         self,
         requests: Sequence[RetrievalRequest],
         retrieval_round: int,
+        *,
+        critical_evidence_item_ids: Sequence[str] = (),
     ) -> List[CandidateProvision]:
         ...
 

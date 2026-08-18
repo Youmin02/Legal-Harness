@@ -37,7 +37,23 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--rounds", type=int, default=3)
     parser.add_argument("--requests", type=int, default=9)
     parser.add_argument("--rerank-pool-k", type=int, default=100)
-    parser.add_argument("--final-top-k", type=int, default=10)
+    parser.add_argument("--final-top-k", type=int, choices=(10, 20, 30), default=10)
+    parser.add_argument(
+        "--rerank-query-mode",
+        choices=("combined_issue", "per_request"),
+        default="combined_issue",
+    )
+    parser.add_argument(
+        "--candidate-selection",
+        choices=("global_top_k", "evidence_balanced"),
+        default="global_top_k",
+    )
+    parser.add_argument("--per-evidence-min-k", type=int, default=1)
+    parser.add_argument(
+        "--rerank-document-mode",
+        choices=("body_only", "statute_and_body"),
+        default="body_only",
+    )
     parser.add_argument("--input-format", default="question_only")
     parser.add_argument("--record-dir", type=Path, default=PROJECT_ROOT / "records/runs")
     parser.add_argument("--question-id", help="stable benchmark item ID, for example qa_19_1hop_28")
@@ -62,12 +78,16 @@ def build_retriever(args: argparse.Namespace) -> RetrievalPipeline:
     reranker = LocalBgeCrossEncoderReranker(
         PROJECT_ROOT / "models/huggingface/dragonkue--bge-reranker-v2-m3-ko",
         device="cuda",
+        document_mode=args.rerank_document_mode,
     )
     return RetrievalPipeline(
         first_stage,
         reranker,
         rerank_pool_k=args.rerank_pool_k,
         final_top_k=args.final_top_k,
+        rerank_query_mode=args.rerank_query_mode,
+        candidate_selection=args.candidate_selection,
+        per_evidence_min_k=args.per_evidence_min_k,
     )
 
 
@@ -85,6 +105,11 @@ def main() -> int:
         "total_retrieval_requests": args.requests,
         "rerank_pool_k": args.rerank_pool_k,
         "final_top_k": args.final_top_k,
+        "candidate_budget_scope": "per_issue_per_round",
+        "rerank_query_mode": args.rerank_query_mode,
+        "candidate_selection": args.candidate_selection,
+        "per_evidence_min_k": args.per_evidence_min_k,
+        "rerank_document_mode": args.rerank_document_mode,
         "conditional_generation": "factual_condition_only",
         "monotonic_coverage": True,
         "input_format": args.input_format,

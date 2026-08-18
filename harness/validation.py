@@ -1,5 +1,6 @@
 """Deterministic input, schema-shape, and cross-reference validation."""
 
+import math
 import re
 import unicodedata
 from typing import Any, Dict, Iterable, List, Mapping, Sequence, Tuple
@@ -7,6 +8,7 @@ from typing import Any, Dict, Iterable, List, Mapping, Sequence, Tuple
 from .contracts import (
     AnswerDraft,
     CandidateProvision,
+    CandidateStageRecord,
     Claim,
     ClaimCitation,
     CoverageAssessment,
@@ -161,7 +163,11 @@ def _validate_requests(
     _unique([request.request_id for request in requests], "retrieval requests")
     issue_ids, evidence_ids = set(issue_ids), set(evidence_ids)
     seen_queries = {normalized_query(request.query_text) for request in history}
+    seen_request_ids = {request.request_id for request in history}
     for request in requests:
+        if request.request_id in seen_request_ids:
+            raise ValidationError("retrieval request_id must not be reused across rounds")
+        seen_request_ids.add(request.request_id)
         if request.issue_id not in issue_ids:
             raise ValidationError("retrieval request references an unknown issue_id")
         if request.evidence_item_id not in evidence_ids:
@@ -311,9 +317,89 @@ def validate_retrieval_candidates(
             raise ValidationError("candidate source_request_id is not in this retrieval round")
         if candidate.issue_id != request.issue_id:
             raise ValidationError("candidate issue_id does not match source retrieval request")
+        source_request_ids = candidate.source_request_ids or [candidate.source_request_id]
+        if len(source_request_ids) != len(set(source_request_ids)):
+            raise ValidationError("candidate source_request_ids must be unique")
+        if candidate.source_request_ids and source_request_ids[0] != candidate.source_request_id:
+            raise ValidationError("candidate primary source_request_id must be first")
+        if any(source_id not in request_by_id for source_id in source_request_ids):
+            raise ValidationError("candidate source_request_ids are not in this retrieval round")
+        if any(request_by_id[source_id].issue_id != candidate.issue_id for source_id in source_request_ids):
+            raise ValidationError("candidate source requests must belong to its issue")
+        expected_targets = list(
+            dict.fromkeys(request_by_id[source_id].evidence_item_id for source_id in source_request_ids)
+        )
+        if candidate.target_evidence_item_ids and candidate.target_evidence_item_ids != expected_targets:
+            raise ValidationError("candidate target_evidence_item_ids do not match source requests")
         if candidate.retrieval_round != retrieval_round:
             raise ValidationError("candidate retrieval_round is invalid")
         if not candidate.provision_id or not candidate.provision_text:
             raise ValidationError("candidate provision_id and provision_text are required")
-        if candidate.fusion_rank < 1:
+        if isinstance(candidate.fusion_rank, bool) or candidate.fusion_rank < 1:
             raise ValidationError("candidate fusion_rank must be positive")
+        for label, rank in (
+            ("first_stage_rank", candidate.first_stage_rank),
+            ("rerank_rank", candidate.rerank_rank),
+            ("selection_rank", candidate.selection_rank),
+        ):
+            if rank is not None and (isinstance(rank, bool) or not isinstance(rank, int) or rank < 1):
+                raise ValidationError("candidate %s must be a positive integer" % label)
+        if not candidate.candidate_stage or not candidate.selection_reason:
+            raise ValidationError("candidate stage and selection reason are required")
+
+
+def validate_retrieval_stage_records(
+    records: Sequence[CandidateStageRecord],
+    requests: Sequence[RetrievalRequest],
+    retrieval_round: int,
+) -> None:
+    """Validate the non-behavioral audit trail emitted by the retriever."""
+    request_by_id = {request.request_id: request for request in requests}
+    allowed_stages = {
+        "first_stage", "rrf", "request_rerank", "bge_rerank", "selected",
+        "evidence_fusion",
+    }
+    for record in records:
+        if not isinstance(record, CandidateStageRecord):
+            raise ValidationError("retrieval stage audit must contain CandidateStageRecord instances")
+        if record.retrieval_round != retrieval_round:
+            raise ValidationError("retrieval stage record has the wrong round")
+        if not record.provision_id or record.candidate_stage not in allowed_stages:
+            raise ValidationError("retrieval stage record has invalid identity or stage")
+        if not record.source_request_ids or len(record.source_request_ids) != len(set(record.source_request_ids)):
+            raise ValidationError("retrieval stage source_request_ids must be non-empty and unique")
+        if any(source_id not in request_by_id for source_id in record.source_request_ids):
+            raise ValidationError("retrieval stage record references an unknown request")
+        expected_targets = list(
+            dict.fromkeys(
+                request_by_id[source_id].evidence_item_id
+                for source_id in record.source_request_ids
+            )
+        )
+        if record.target_evidence_item_ids != expected_targets:
+            raise ValidationError("retrieval stage target evidence does not match source requests")
+        for label, rank in (
+            ("first_stage_rank", record.first_stage_rank),
+            ("fusion_rank", record.fusion_rank),
+            ("rerank_rank", record.rerank_rank),
+            ("selection_rank", record.selection_rank),
+        ):
+            if rank is not None and (isinstance(rank, bool) or not isinstance(rank, int) or rank < 1):
+                raise ValidationError("retrieval stage %s must be a positive integer" % label)
+        if record.candidate_stage == "first_stage" and record.first_stage_rank is None:
+            raise ValidationError("first-stage audit requires first_stage_rank")
+        if record.candidate_stage in {"rrf", "evidence_fusion"} and record.fusion_rank is None:
+            raise ValidationError("fusion audit requires fusion_rank")
+        if record.candidate_stage in {"request_rerank", "bge_rerank"} and record.rerank_rank is None:
+            raise ValidationError("rerank audit requires rerank_rank")
+        if record.candidate_stage == "selected" and record.selection_rank is None:
+            raise ValidationError("selection audit requires selection_rank")
+        for score in (
+            record.first_stage_score,
+            record.fusion_score,
+            record.rerank_score,
+        ):
+            if score is not None and not math.isfinite(score):
+                raise ValidationError("retrieval stage scores must be finite")
+        if not record.selection_reason:
+            raise ValidationError("retrieval stage selection_reason is required")

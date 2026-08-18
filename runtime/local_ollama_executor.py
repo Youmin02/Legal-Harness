@@ -126,7 +126,7 @@ class LocalOllamaSkillExecutor:
         prefix = "GRQ" if entry_point == "GAP_QUERY_PLAN" else "RQ"
         for index, request in enumerate(requests, start=1):
             if isinstance(request, dict):
-                request["request_id"] = "%s%d" % (prefix, index)
+                request["request_id"] = ("GRQ-R%d-%d" % (int(skill_input.get("next_retrieval_round", 1)), index) if entry_point == "GAP_QUERY_PLAN" else "RQ%d" % index)
         if entry_point == "INITIAL_PLAN":
             issues_by_id = {
                 issue.get("issue_id"): issue

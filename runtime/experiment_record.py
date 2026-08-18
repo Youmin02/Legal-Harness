@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from collections import Counter
 import hashlib
 import json
 import platform
@@ -15,7 +16,8 @@ from typing import Any, Dict, Mapping, Optional
 from harness.tracing import JsonlTraceSink, to_primitive
 
 
-RECORD_SCHEMA_VERSION = "1.0"
+RECORD_SCHEMA_VERSION = "1.1"
+RETRIEVAL_PROVENANCE_SCHEMA_VERSION = "1.0"
 
 
 def _sha256(path: Path) -> str:
@@ -24,6 +26,24 @@ def _sha256(path: Path) -> str:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def _source_worktree_dirty_from_porcelain(status: str) -> bool:
+    return any(
+        line[3:] and not line[3:].startswith("records/")
+        for line in status.splitlines()
+    )
+
+
+def _git_source_worktree_dirty(project_root: Path) -> Optional[bool]:
+    try:
+        status = subprocess.run(
+            ["git", "status", "--porcelain=v1", "--untracked-files=all"],
+            cwd=str(project_root), check=True, capture_output=True, text=True,
+        ).stdout
+        return _source_worktree_dirty_from_porcelain(status)
+    except (OSError, subprocess.CalledProcessError):
+        return None
 
 
 def _git_commit(project_root: Path) -> Optional[str]:
@@ -105,6 +125,7 @@ class ExperimentRecord:
         self._started_at_monotonic = perf_counter()
         metadata = {
             "record_schema_version": RECORD_SCHEMA_VERSION,
+            "retrieval_provenance_schema_version": RETRIEVAL_PROVENANCE_SCHEMA_VERSION,
             "run_id": run_id,
             "started_at_utc": self.started_at.isoformat(),
             "model_artifact": _ollama_model_artifact(configuration.get("model")),
@@ -112,6 +133,7 @@ class ExperimentRecord:
             "question": question,
             "configuration": to_primitive(dict(configuration)),
             "git_commit": _git_commit(project_root),
+            "git_source_worktree_dirty": _git_source_worktree_dirty(project_root),
             "runtime": {
                 "python": sys.version,
                 "platform": platform.platform(),
@@ -134,8 +156,27 @@ class ExperimentRecord:
 
     def finalize(self, outcome: Any) -> Path:
         completed_at = datetime.now(timezone.utc)
+        state = to_primitive(outcome.state)
+        stage_records = state.pop("retrieval_stage_records", [])
+        stage_counts = Counter(
+            record.get("candidate_stage", "unknown")
+            for record in stage_records
+            if isinstance(record, dict)
+        )
+        stage_file = None
+        if stage_records:
+            stage_file = "retrieval_stages.jsonl"
+            with (self.directory / stage_file).open("w", encoding="utf-8") as handle:
+                for record in stage_records:
+                    handle.write(json.dumps(record, ensure_ascii=False, sort_keys=True))
+                    handle.write("\n")
         result = {
             "record_schema_version": RECORD_SCHEMA_VERSION,
+            "retrieval_provenance": {
+                "schema_version": RETRIEVAL_PROVENANCE_SCHEMA_VERSION,
+                "stage_file": stage_file,
+                "stage_record_counts": dict(sorted(stage_counts.items())),
+            },
             "run_id": self.run_id,
             "completed_at_utc": completed_at.isoformat(),
             "end_to_end_latency_ms": round((perf_counter() - self._started_at_monotonic) * 1000, 3),
@@ -144,7 +185,7 @@ class ExperimentRecord:
             "abstention_reason": outcome.abstention_reason.value if outcome.abstention_reason else None,
             "answer": outcome.answer,
             "errors": list(outcome.errors),
-            "state": to_primitive(outcome.state),
+            "state": state,
         }
         return self._write_json("result.json", result)
 

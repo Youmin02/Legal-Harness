@@ -1,9 +1,11 @@
 """Validated state transitions and progress accounting."""
 
+from dataclasses import replace
 from typing import Iterable, List, Sequence
 
 from .contracts import (
     CandidateProvision,
+    CandidateStageRecord,
     CoverageAssessment,
     CoverageStatus,
     EvidenceConflict,
@@ -34,11 +36,55 @@ def apply_initial_plan(
     state.record("INITIAL_PLAN_VALIDATED", issue_count=len(legal_issues), evidence_count=len(required_evidence_items))
 
 
+def _ordered_union(*groups: Sequence[str]) -> List[str]:
+    return list(dict.fromkeys(value for group in groups for value in group))
+
+
+def _best_optional_rank(*values):
+    present = [value for value in values if value is not None]
+    return min(present) if present else None
+
+
+def _merge_candidate_provenance(
+    previous: CandidateProvision,
+    incoming: CandidateProvision,
+) -> CandidateProvision:
+    """Keep the first observation and merge origins without cross-query scores."""
+    if (
+        previous.statute_name != incoming.statute_name
+        or previous.provision_text != incoming.provision_text
+    ):
+        raise StateInvariantError(
+            "the same provision_id cannot identify different corpus snapshots"
+        )
+    previous_sources = previous.source_request_ids or [previous.source_request_id]
+    incoming_sources = incoming.source_request_ids or [incoming.source_request_id]
+    source_request_ids = _ordered_union(
+        [previous.source_request_id], previous_sources, incoming_sources
+    )
+    return replace(
+        previous,
+        source_request_ids=source_request_ids,
+        target_evidence_item_ids=_ordered_union(
+            previous.target_evidence_item_ids,
+            incoming.target_evidence_item_ids,
+        ),
+        # Scalar rank/score fields describe the retained first observation.
+        # Cross-round and cross-query comparison belongs in the immutable
+        # stage sidecar, where each observation keeps its local rank.
+        first_stage_rank=previous.first_stage_rank,
+        fusion_rank=previous.fusion_rank,
+        rerank_rank=previous.rerank_rank,
+        selection_rank=previous.selection_rank,
+    )
+
+
 def register_retrieval_round(
     state: RunState,
     requests: Sequence[RetrievalRequest],
     candidates: Sequence[CandidateProvision],
     is_gap: bool,
+    candidate_stage_records: Sequence[CandidateStageRecord] = (),
 ) -> None:
     if not requests:
         raise StateInvariantError("a retrieval round requires at least one request")
@@ -54,10 +100,13 @@ def register_retrieval_round(
     new_ids = {candidate.provision_id for candidate in candidates if candidate.provision_id not in existing}
     for candidate in candidates:
         previous = existing.get(candidate.provision_id)
-        if previous is None or candidate.rerank_score > previous.rerank_score:
+        if previous is None:
             existing[candidate.provision_id] = candidate
+        else:
+            existing[candidate.provision_id] = _merge_candidate_provenance(previous, candidate)
         state.corpus_text_snapshots.setdefault(candidate.provision_id, candidate.provision_text)
     state.candidate_provisions = list(existing.values())
+    state.retrieval_stage_records.extend(candidate_stage_records)
     state.seen_provision_ids.update(candidate.provision_id for candidate in candidates)
     state.query_history.extend(requests)
     state.remaining_round_budget -= 1

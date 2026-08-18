@@ -29,8 +29,16 @@ class ScriptedRetriever:
         self.provisions_by_round = provisions_by_round
         self.calls = []
 
-    def retrieve(self, requests, retrieval_round):
-        self.calls.append((list(requests), retrieval_round))
+    def retrieve(
+        self,
+        requests,
+        retrieval_round,
+        *,
+        critical_evidence_item_ids=(),
+    ):
+        self.calls.append(
+            (list(requests), retrieval_round, list(critical_evidence_item_ids))
+        )
         return [
             CandidateProvision(
                 provision_id=provision_id,
@@ -114,7 +122,7 @@ def gap_plan(query="예외 규정"):
     return {
         "gap_retrieval_requests": [
             {
-                "request_id": "RQ-I1-02",
+                "request_id": "GRQ-" + query,
                 "issue_id": "I1",
                 "evidence_item_id": "E1",
                 "query_channel": "statute_aware",
@@ -139,7 +147,7 @@ class HarnessPathTests(unittest.TestCase):
         return runner, executor, retriever
 
     def test_initial_path_generates_only_after_citation_pass(self):
-        runner, executor, _ = self.make_runner(
+        runner, executor, retriever = self.make_runner(
             {
                 (S1, "INITIAL_PLAN"): [initial_plan()],
                 (S2, "ASSESS_COVERAGE"): [coverage("covered", "P1")],
@@ -155,6 +163,7 @@ class HarnessPathTests(unittest.TestCase):
         self.assertEqual(outcome.answer, "테스트 답변입니다.")
         self.assertEqual(outcome.termination_reason, TerminationReason.COMPLETED)
         self.assertEqual(outcome.state.normalized_question, "적용 요건은?")
+        self.assertEqual(retriever.calls[0][2], ["E1"])
         self.assertEqual([call[:2] for call in executor.calls], [(S1, "INITIAL_PLAN"), (S2, "ASSESS_COVERAGE"), (S3, "GENERATE_ANSWER")])
 
     def test_gap_path_reassesses_then_generates(self):

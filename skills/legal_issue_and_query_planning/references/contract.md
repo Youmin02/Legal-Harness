@@ -35,7 +35,7 @@ Use one of: `definition`, `element`, `rule`, `exception`, `procedure`, `remedy`,
 
 - Use `I1`, `I2`, ... for issues.
 - Use `E1`, `E2`, ... for evidence items.
-- Use `RQ1`, `RQ2`, ... for initial requests and `GRQ1`, `GRQ2`, ... for gap requests.
+- Use `RQ1`, `RQ2`, ... for initial requests. For gap requests, use `GRQ-R<round>-<index>` with positive decimal values, such as `GRQ-R1-1` and `GRQ-R2-3`.
 - Keep IDs unique in the result.
 - Every evidence item must reference an existing issue.
 - Every request must reference a valid issue/evidence pair.

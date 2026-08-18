@@ -52,7 +52,7 @@
       "additionalProperties": false,
       "required": ["request_id", "issue_id", "evidence_item_id", "query_channel", "query_text", "query_terms", "statute_hints", "rationale", "gap_reason", "source_assessment_status"],
       "properties": {
-        "request_id": {"type": "string", "pattern": "^GRQ[1-9][0-9]*$"},
+        "request_id": {"type": "string", "pattern": "^GRQ-R[1-9][0-9]*-[1-9][0-9]*$"},
         "issue_id": {"type": "string", "pattern": "^I[1-9][0-9]*$"},
         "evidence_item_id": {"type": "string", "pattern": "^E[1-9][0-9]*$"},
         "query_channel": {"enum": ["provision_style", "sparse_keywords", "statute_aware"]},

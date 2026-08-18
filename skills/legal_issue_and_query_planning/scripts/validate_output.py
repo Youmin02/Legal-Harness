@@ -61,7 +61,7 @@ def validate_common(out, inp, errors):
 
 
 def validate_requests(requests, issues, evidence, prior_queries, allowed_channels, max_per_issue, errors, gap=False):
-    pattern = r"GRQ[1-9][0-9]*" if gap else r"RQ[1-9][0-9]*"
+    pattern = r"GRQ-R[1-9][0-9]*-[1-9][0-9]*" if gap else r"RQ[1-9][0-9]*"
     unique_ids(requests, "request_id", pattern, errors)
     current_queries = set()
     per_issue = {}

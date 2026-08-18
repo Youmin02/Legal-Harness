@@ -1,7 +1,7 @@
 {
   "manifest_schema_version": "1.0",
   "name": "bm25-bge-per-request-b1a-qwen38-q8-21",
-  "purpose": "Development rerun on the same frozen 21-item set with the corrected B1a per-request BGE retrieval configuration; only the generation model changes to Qwen3.8-27B Q8_0. This is not held-out KoBLEX evaluation.",
+  "purpose": "Development rerun on the same frozen 21-item set with the corrected B1a per-request BGE retrieval configuration. The Qwen3.8 checkpoint/quantization and its required model-specific non-thinking chat framing change; retrieval and harness policy remain fixed. This is not held-out KoBLEX evaluation.",
   "source_dataset": {
     "path": "data/koblex/qa/test-00000-of-00001.parquet",
     "sha256": "afdaff3a8000cdf5e0a64adbcfc8e6aff0042b318bf03718155f2b70f551c47b"
@@ -51,7 +51,10 @@
       "ollama_version": "0.20.5",
       "ollama_model_blob": "/root/.ollama/models/blobs/sha256-f5c702d8820d36fb55985bb238fc83ee3a313e920f4b752a437c3a6a9e14e4c8",
       "runtime_mode": "text_only",
-      "vision_projector_loaded": false
+      "vision_projector_loaded": false,
+      "prompt_template_mode": "qwen38_official_chat_tokens_non_thinking",
+      "stop_sequences": ["<|im_end|>", "<|endoftext|>", "<|im_start|>"],
+      "note": "Applied after raw-completion framing produced malformed JSON on two qa_92 S1 attempts."
     }
   },
   "entries": [

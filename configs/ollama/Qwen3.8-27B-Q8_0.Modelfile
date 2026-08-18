@@ -5,11 +5,21 @@
 # data/koblex/manifests/bm25_bge_per_request_b1a_qwen38_q8_21_20260818.json
 FROM /root/.ollama/models/blobs/sha256-f5c702d8820d36fb55985bb238fc83ee3a313e920f4b752a437c3a6a9e14e4c8
 
-# Preserve the raw prompt template used by legal-harness-qwen.
-TEMPLATE {{ .Prompt }}
+# Qwen3.8 official non-thinking chat framing for generation.
+TEMPLATE """<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+"""
 
 PARAMETER num_ctx 131072
 PARAMETER repeat_penalty 1
 PARAMETER temperature 1
 PARAMETER top_k 20
 PARAMETER top_p 0.95
+PARAMETER stop "<|im_end|>"
+PARAMETER stop "<|endoftext|>"
+PARAMETER stop "<|im_start|>"

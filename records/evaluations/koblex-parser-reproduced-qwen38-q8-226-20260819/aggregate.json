@@ -1,0 +1,58 @@
+{
+  "answer_rate": 0.9735,
+  "batch_dir": "records/baselines/koblex-parser-reproduced-qwen38-q8-226-23f5c9ae-45a5-4d7e-a88f-fbcfb5320185",
+  "by_hop": {
+    "1": {
+      "latency_mean": 22.124,
+      "n": 57,
+      "retrieval_f1_mean": 0.67,
+      "retrieval_recall_mean": 0.711,
+      "token_f1_mean": 0.432
+    },
+    "2": {
+      "latency_mean": 30.949,
+      "n": 122,
+      "retrieval_f1_mean": 0.507,
+      "retrieval_recall_mean": 0.477,
+      "token_f1_mean": 0.472
+    },
+    "3": {
+      "latency_mean": 39.364,
+      "n": 41,
+      "retrieval_f1_mean": 0.431,
+      "retrieval_recall_mean": 0.407,
+      "token_f1_mean": 0.334
+    }
+  },
+  "latency_seconds": {
+    "stage1_parametric_provision_mean": 8.721,
+    "stage2_selection_retrieval_mean": 15.691,
+    "stage3_answer_generation_mean": 5.818,
+    "total_mean": 30.231,
+    "total_median": 27.806,
+    "wall_sum_total": 6650.7
+  },
+  "legal_fidelity_lf_eval": "not computed (requires OpenAI API key + cost pre-registration; see module docstring)",
+  "n_errors": 6,
+  "n_items": 226,
+  "n_scored": 220,
+  "note": "ANSWER rate is expected to be ~100%: ParSeR (the KoBLEX paper's own method) has no abstention mechanism and is instructed not to refuse. n_errors counts only pipeline execution failures (e.g. Ollama request errors), not model-declined answers.",
+  "retrieval": {
+    "em_mean": 0.264,
+    "f1_mean": 0.535,
+    "precision_mean": 0.588,
+    "recall_mean": 0.524
+  },
+  "retrieval_funnel": {
+    "bm25_top100_recall_mean": 0.678,
+    "description": "Per-question gold-provision coverage at each ParSeR stage, unioned across all of that question's parametric-provision sub-queries. Isolates whether a missed gold provision fell out at BM25 recall, at reranking, or was retrieved but not the one the LLM selection step chose.",
+    "n_scored": 220,
+    "rerank_top10_recall_mean": 0.608,
+    "selected_recall_mean": 0.524
+  },
+  "token_f1": {
+    "mean": 0.436,
+    "precision_mean": 0.481,
+    "recall_mean": 0.457
+  }
+}

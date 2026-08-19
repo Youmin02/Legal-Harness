@@ -1,0 +1,34 @@
+{
+  "baseline": "ParSeR (Reproduced) -- KoBLEX paper's own proposed method, corrected per the paper's stated algorithm rather than a byte-for-byte copy of the released code; see docs/KOBLEX_PARSER_BASELINE_REPRODUCTION_NOTES.md",
+  "deviations_from_released_code": [
+    "Fixed a confirmed indexing bug in the official experiments/parser/vllm/selection_retrieval.py process_completions(): the released code always selects from contexts_list[0] (the first parametric provision's reranked candidates) for every sub-query. This reproduction selects each provision's answer from its OWN reranked top-10, matching the paper's stated algorithm.",
+    "Did not reproduce the official utils.py escape_quotes() double-escaping quirk (manual backslash-escaping followed by json.dumps, which escapes again); parsed parametric-provision strings are kept as-is and JSON-escaped exactly once when written to disk."
+  ],
+  "git_commit": "ddc5247f678bfd9ddbd3162363c13ee9fccd796d",
+  "git_source_worktree_dirty": false,
+  "hyperparameters": {
+    "bm25_top_k_per_subquery": 100,
+    "num_ctx": 32768,
+    "rerank_top_l_shown_to_llm": 10,
+    "stage1_max_tokens": 4000,
+    "stage2_max_tokens": 2048,
+    "stage3_max_tokens": 4000,
+    "temperature": 0.0
+  },
+  "limit": null,
+  "model": "legal-harness-qwen38-q8",
+  "not_run": [
+    "Official LF-Eval (GPT-4o G-Eval via deepeval) was NOT run: requires an OpenAI API key and incurs external API cost that must be pre-registered before spending. Token-F1 and retrieval P/R/F1/EM (both fully local, zero-cost, and defined identically to experiments/lf-eval/eval_pipeline.py) are computed by scripts/evaluate_koblex_parser_baseline.py instead."
+  ],
+  "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.35",
+  "python": "3.9.25 (main, Nov  7 2025, 18:07:57) \n[GCC 11.4.0]",
+  "qa_items_planned": 226,
+  "qa_parquet": "/root/Legal Harness/data/koblex/qa/test-00000-of-00001.parquet",
+  "reranker_path": "/root/Legal Harness/models/huggingface/dragonkue--bge-reranker-v2-m3-ko",
+  "source_paper": "https://aclanthology.org/2025.emnlp-main.200/",
+  "source_repository": "https://github.com/daehuikim/KoBLEX",
+  "start_index": 0,
+  "started_at_utc": "2026-08-19T07:53:24.850583+00:00",
+  "statute_corpus_size": 233544,
+  "statute_parquet": "/root/Legal Harness/data/koblex/statute/corpus-00000-of-00001.parquet"
+}

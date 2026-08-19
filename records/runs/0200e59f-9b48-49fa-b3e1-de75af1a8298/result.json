@@ -1,0 +1,862 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-18T16:49:11.416941+00:00",
+  "end_to_end_latency_ms": 250233.026,
+  "errors": [],
+  "record_schema_version": "1.1",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 300,
+      "evidence_fusion": 300,
+      "first_stage": 700,
+      "request_rerank": 700,
+      "rrf": 300,
+      "selected": 30
+    }
+  },
+  "run_id": "0200e59f-9b48-49fa-b3e1-de75af1a8298",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 8,
+          "request_count": 3,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 3,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 32,
+        "first_stage_score": 25.650693192909838,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 6조 3 감염병환자 등의 선거권 보장#KOBLEX-051046",
+        "provision_text": "① 「감염병의 예방 및 관리에 관한 법률」 제41조제1항 또는 제2항에 따라 입원치료, 자가(自家)치료 또는 시설치료 중이거나 같은 법 제42조제2항제1호에 따라 자가 또는 시설에 격리 중인 사람(이하 \"격리자등\"이라 한다)은 선거권 행사를 위하여 활동할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.3038679361343384,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공직선거법 6조 3 감염병환자 등의 선거권 보장 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 33,
+        "first_stage_score": 25.650693192909838,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 6조 3 감염병환자 등의 선거권 보장#KOBLEX-174332",
+        "provision_text": "① 「감염병의 예방 및 관리에 관한 법률」 제41조제1항 또는 제2항에 따라 입원치료, 자가(自家)치료 또는 시설치료 중이거나 같은 법 제42조제2항제1호에 따라 자가 또는 시설에 격리 중인 사람(이하 \"격리자등\"이라 한다)은 선거권 행사를 위하여 활동할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.3038679361343384,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공직선거법 6조 3 감염병환자 등의 선거권 보장 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 47.29447198771319,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "공공단체등 위탁선거에 관한 법률 12조#KOBLEX-086451",
+        "provision_text": "제3장 선거권 및 피선거권",
+        "rerank_rank": 3,
+        "rerank_score": 0.29191818833351135,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공공단체등 위탁선거에 관한 법률 12조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 75,
+        "first_stage_score": 18.473036212516433,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "대한민국헌법 67조#KOBLEX-019721",
+        "provision_text": "④대통령으로 선거될 수 있는 자는 국회의원의 피선거권이 있고 선거일 현재 40세에 달하여야 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.2209138572216034,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "대한민국헌법 67조 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 34.428118409868354,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 15조#KOBLEX-051165",
+        "provision_text": "제2장 선거권과 피선거권",
+        "rerank_rank": 5,
+        "rerank_score": 0.2144169807434082,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공직선거법 15조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 34.428118409868354,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 15조#KOBLEX-174451",
+        "provision_text": "제2장 선거권과 피선거권",
+        "rerank_rank": 6,
+        "rerank_score": 0.2144169807434082,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공직선거법 15조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 42.6371604528318,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 17조  연령산정기준#KOBLEX-051174",
+        "provision_text": "제17조(연령산정기준) 선거권자와 피선거권자의 연령은 선거일 현재로 산정한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.11363473534584045,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공직선거법 17조  연령산정기준",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 42.6371604528318,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 17조  연령산정기준#KOBLEX-174460",
+        "provision_text": "제17조(연령산정기준) 선거권자와 피선거권자의 연령은 선거일 현재로 산정한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.11363473534584045,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공직선거법 17조  연령산정기준",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 38,
+        "first_stage_score": 23.382480826945738,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 6조  선거권행사의 보장#KOBLEX-051039",
+        "provision_text": "④선거권자는 성실하게 선거에 참여하여 선거권을 행사하여야 한다. <개정 2008.2.29>",
+        "rerank_rank": 9,
+        "rerank_score": 0.10547903180122375,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R2-3",
+          "GRQ-R3-1",
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "공직선거법 6조  선거권행사의 보장 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 39,
+        "first_stage_score": 23.382480826945738,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 6조  선거권행사의 보장#KOBLEX-174325",
+        "provision_text": "④선거권자는 성실하게 선거에 참여하여 선거권을 행사하여야 한다. <개정 2008.2.29>",
+        "rerank_rank": 10,
+        "rerank_score": 0.10547903180122375,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R2-3",
+          "GRQ-R3-1",
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "공직선거법 6조  선거권행사의 보장 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 26.169279074619496,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 6조  선거권행사의 보장#KOBLEX-051036",
+        "provision_text": "①국가는 선거권자가 선거권을 행사할 수 있도록 필요한 조치를 취하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9753731489181519,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R2-3",
+          "GRQ-R3-1",
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "공직선거법 6조  선거권행사의 보장 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 26.169279074619496,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 6조  선거권행사의 보장#KOBLEX-174322",
+        "provision_text": "①국가는 선거권자가 선거권을 행사할 수 있도록 필요한 조치를 취하여야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9753731489181519,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R2-3",
+          "GRQ-R3-1",
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "공직선거법 6조  선거권행사의 보장 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 61,
+        "first_stage_score": 20.166585860135566,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "협동조합 기본법 31조  대의원총회#KOBLEX-016057",
+        "provision_text": "④ 대의원의 의결권 및 선거권은 대리인으로 하여금 행사하게 할 수 없다. <개정 2014.1.21>",
+        "rerank_rank": 3,
+        "rerank_score": 0.9704270362854004,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R2-3"
+        ],
+        "statute_name": "협동조합 기본법 31조  대의원총회 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 25.704110058499808,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 156조  투표의 제한#KOBLEX-052022",
+        "provision_text": "②선거인명부에 올라 있더라도 선거일에 선거권이 없는 자는 투표할 수 없다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.9283313155174255,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R2-3",
+          "GRQ-R3-1",
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "공직선거법 156조  투표의 제한 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 26.397588808548548,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 218조 27 재외선거의 공정성 확보 의무#KOBLEX-052485",
+        "provision_text": "① 중앙선거관리위원회와 재외투표관리관은 재외선거인 등록신청, 재외투표의 방법, 그 밖에 재외선거인의 선거권 행사를 위한 사항을 홍보하는 등 재외선거인의 투표참여와 재외선거의 공정성을 확보하기 위하여 노력하여야 한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.8927850127220154,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R2-3",
+          "GRQ-R3-1",
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "공직선거법 218조 27 재외선거의 공정성 확보 의무 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 25.704110058499808,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 156조  투표의 제한#KOBLEX-175308",
+        "provision_text": "②선거인명부에 올라 있더라도 선거일에 선거권이 없는 자는 투표할 수 없다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.9283313155174255,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R2-3",
+          "GRQ-R3-1",
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "공직선거법 156조  투표의 제한 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 26.397588808548548,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 218조 27 재외선거의 공정성 확보 의무#KOBLEX-175771",
+        "provision_text": "① 중앙선거관리위원회와 재외투표관리관은 재외선거인 등록신청, 재외투표의 방법, 그 밖에 재외선거인의 선거권 행사를 위한 사항을 홍보하는 등 재외선거인의 투표참여와 재외선거의 공정성을 확보하기 위하여 노력하여야 한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.8927850127220154,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R2-3"
+        ],
+        "statute_name": "공직선거법 218조 27 재외선거의 공정성 확보 의무 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 21.114300537215833,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "공공단체등 위탁선거에 관한 법률 41조  동시조합장선거ㆍ동시이사장선거의 투표소의 설치 등#KOBLEX-086601",
+        "provision_text": "③ 투표관리관은 제2항에 따라 투표하려는 선거인에 대해서는 본인임을 확인할 수 있는 신분증명서를 제시하게 하여 본인여부를 확인한 다음 전자적 방식으로 무인 또는 서명하게 하고, 투표용지 발급기를 이용하여 선거권이 있는 해당 선거의 투표용지를 출력하여 자신의 도장을 찍은 후 선거인에게 교부한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.8417679071426392,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R2-3"
+        ],
+        "statute_name": "공공단체등 위탁선거에 관한 법률 41조  동시조합장선거ㆍ동시이사장선거의 투표소의 설치 등 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 25.97294247151649,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "병역법 시행령 136조  수형자 등의 병역처분#KOBLEX-002181",
+        "provision_text": "제136조(수형자 등의 병역처분)",
+        "rerank_rank": 3,
+        "rerank_score": 0.997134804725647,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "병역법 시행령 136조  수형자 등의 병역처분",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 24.76338027129335,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "병역법 시행령 158조 3 가족관계등록 전산정보의 공동이용#KOBLEX-002364",
+        "provision_text": "9. 제136조에 따른 수형자 등의 병역처분",
+        "rerank_rank": 6,
+        "rerank_score": 0.9976027607917786,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "병역법 시행령 158조 3 가족관계등록 전산정보의 공동이용 9호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 21.699244516201205,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 11조  구분수용#KOBLEX-075328",
+        "provision_text": "① 수용자는 다음 각 호에 따라 구분하여 수용한다. <개정 2008.12.11> 1. 19세 이상 수형자: 교도소 2. 19세 미만 수형자: 소년교도소 3. 미결수용자: 구치소 4. 사형확정자: 교도소 또는 구치소. 이 경우 구체적인 구분 기준은 법무부령으로 정한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.9586828351020813,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 11조  구분수용 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공공단체등 위탁선거에 관한 법률 12조#KOBLEX-086451": "제3장 선거권 및 피선거권",
+      "공공단체등 위탁선거에 관한 법률 41조  동시조합장선거ㆍ동시이사장선거의 투표소의 설치 등#KOBLEX-086601": "③ 투표관리관은 제2항에 따라 투표하려는 선거인에 대해서는 본인임을 확인할 수 있는 신분증명서를 제시하게 하여 본인여부를 확인한 다음 전자적 방식으로 무인 또는 서명하게 하고, 투표용지 발급기를 이용하여 선거권이 있는 해당 선거의 투표용지를 출력하여 자신의 도장을 찍은 후 선거인에게 교부한다.",
+      "공직선거법 156조  투표의 제한#KOBLEX-052022": "②선거인명부에 올라 있더라도 선거일에 선거권이 없는 자는 투표할 수 없다.",
+      "공직선거법 156조  투표의 제한#KOBLEX-175308": "②선거인명부에 올라 있더라도 선거일에 선거권이 없는 자는 투표할 수 없다.",
+      "공직선거법 15조#KOBLEX-051165": "제2장 선거권과 피선거권",
+      "공직선거법 15조#KOBLEX-174451": "제2장 선거권과 피선거권",
+      "공직선거법 17조  연령산정기준#KOBLEX-051174": "제17조(연령산정기준) 선거권자와 피선거권자의 연령은 선거일 현재로 산정한다.",
+      "공직선거법 17조  연령산정기준#KOBLEX-174460": "제17조(연령산정기준) 선거권자와 피선거권자의 연령은 선거일 현재로 산정한다.",
+      "공직선거법 218조 27 재외선거의 공정성 확보 의무#KOBLEX-052485": "① 중앙선거관리위원회와 재외투표관리관은 재외선거인 등록신청, 재외투표의 방법, 그 밖에 재외선거인의 선거권 행사를 위한 사항을 홍보하는 등 재외선거인의 투표참여와 재외선거의 공정성을 확보하기 위하여 노력하여야 한다.",
+      "공직선거법 218조 27 재외선거의 공정성 확보 의무#KOBLEX-175771": "① 중앙선거관리위원회와 재외투표관리관은 재외선거인 등록신청, 재외투표의 방법, 그 밖에 재외선거인의 선거권 행사를 위한 사항을 홍보하는 등 재외선거인의 투표참여와 재외선거의 공정성을 확보하기 위하여 노력하여야 한다.",
+      "공직선거법 6조  선거권행사의 보장#KOBLEX-051036": "①국가는 선거권자가 선거권을 행사할 수 있도록 필요한 조치를 취하여야 한다.",
+      "공직선거법 6조  선거권행사의 보장#KOBLEX-051039": "④선거권자는 성실하게 선거에 참여하여 선거권을 행사하여야 한다. <개정 2008.2.29>",
+      "공직선거법 6조  선거권행사의 보장#KOBLEX-174322": "①국가는 선거권자가 선거권을 행사할 수 있도록 필요한 조치를 취하여야 한다.",
+      "공직선거법 6조  선거권행사의 보장#KOBLEX-174325": "④선거권자는 성실하게 선거에 참여하여 선거권을 행사하여야 한다. <개정 2008.2.29>",
+      "공직선거법 6조 3 감염병환자 등의 선거권 보장#KOBLEX-051046": "① 「감염병의 예방 및 관리에 관한 법률」 제41조제1항 또는 제2항에 따라 입원치료, 자가(自家)치료 또는 시설치료 중이거나 같은 법 제42조제2항제1호에 따라 자가 또는 시설에 격리 중인 사람(이하 \"격리자등\"이라 한다)은 선거권 행사를 위하여 활동할 수 있다.",
+      "공직선거법 6조 3 감염병환자 등의 선거권 보장#KOBLEX-174332": "① 「감염병의 예방 및 관리에 관한 법률」 제41조제1항 또는 제2항에 따라 입원치료, 자가(自家)치료 또는 시설치료 중이거나 같은 법 제42조제2항제1호에 따라 자가 또는 시설에 격리 중인 사람(이하 \"격리자등\"이라 한다)은 선거권 행사를 위하여 활동할 수 있다.",
+      "대한민국헌법 67조#KOBLEX-019721": "④대통령으로 선거될 수 있는 자는 국회의원의 피선거권이 있고 선거일 현재 40세에 달하여야 한다.",
+      "병역법 시행령 136조  수형자 등의 병역처분#KOBLEX-002181": "제136조(수형자 등의 병역처분)",
+      "병역법 시행령 158조 3 가족관계등록 전산정보의 공동이용#KOBLEX-002364": "9. 제136조에 따른 수형자 등의 병역처분",
+      "협동조합 기본법 31조  대의원총회#KOBLEX-016057": "④ 대의원의 의결권 및 선거권은 대리인으로 하여금 행사하게 할 수 없다. <개정 2014.1.21>",
+      "형의 집행 및 수용자의 처우에 관한 법률 11조  구분수용#KOBLEX-075328": "① 수용자는 다음 각 호에 따라 구분하여 수용한다. <개정 2008.12.11> 1. 19세 이상 수형자: 교도소 2. 19세 미만 수형자: 소년교도소 3. 미결수용자: 구치소 4. 사형확정자: 교도소 또는 구치소. 이 경우 구체적인 구분 기준은 법무부령으로 정한다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "Legal provision explicitly stating whether a person serving a prison sentence retains the right to vote",
+          "Provision detailing the procedure or conditions for exercising voting rights while incarcerated"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The supplied candidate provisions do not contain the specific legal rule governing the exercise of voting rights by a person serving a prison sentence. C001 and C002 address voting rights for persons isolated due to infectious diseases, not prisoners. C003 and C005/C006 are chapter headings. C004 concerns eligibility for the presidency. C007/C008 concern age calculation. C009/C010 state a general duty to vote but do not specify whether incarceration suspends or preserves the right to vote. C011/C012 state the state's duty to ensure voting rights but do not specify the status of prisoners. C013 concerns cooperative elections. C014/C016 state that those without voting rights cannot vote, but do not define who lacks voting rights due to incarceration. C015/C017 concern overseas elections. C018 concerns cooperative election procedures. C019 and C020 concern military service dispositions for prisoners, not voting rights. C021 concerns the classification of prisoners for detention, not voting rights. Therefore, no provision supports the completion criteria.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 3,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "2년 징역형을 선고받고 수감 중인 피선거권자의 선거권 행사 여부",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "수감 상태의 피선거권자가 선거권을 행사할 수 있는지 여부에 대한 명확한 법적 근거를 확인",
+        "critical": true,
+        "description": "형사피고인 또는 수형자의 선거권 행사에 관한 법적 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 작년에 2년 징역형을 선고받았고, 현재 수감 중이다. 선거일이 다가오자 갑은 자신의 선거권을 행사할 수 있는지 궁금해졌다. [질문] 갑은 선거일에 자신의 선거권을 행사할 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "수감",
+          "피선거권",
+          "선거권",
+          "제한",
+          "형사피고인",
+          "공직선거법"
+        ],
+        "query_text": "수감 중인 피선거권자의 선거권 행사 제한 규정 [원문 맥락] 선거일이 다가오자 갑은 자신의 선거권을 행사할 수 있는지 궁금해졌다. 갑은 선거일에 자신의 선거권을 행사할 수 있는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "공직선거법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "수형자",
+          "투표권",
+          "선거권",
+          "수감",
+          "투표"
+        ],
+        "query_text": "수형자 투표권 행사 [원문 맥락] 선거일이 다가오자 갑은 자신의 선거권을 행사할 수 있는지 궁금해졌다. 갑은 선거일에 자신의 선거권을 행사할 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "수감",
+          "투표방법",
+          "투표절차",
+          "우편투표",
+          "현장투표"
+        ],
+        "query_text": "수감 중인 자의 투표 방법 및 절차 [원문 맥락] 선거일이 다가오자 갑은 자신의 선거권을 행사할 수 있는지 궁금해졌다. 갑은 선거일에 자신의 선거권을 행사할 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "공직선거법",
+          "수형자",
+          "선거권",
+          "투표"
+        ],
+        "query_text": "공직선거법 수형자 선거권 [원문 맥락] 선거일이 다가오자 갑은 자신의 선거권을 행사할 수 있는지 궁금해졌다. 갑은 선거일에 자신의 선거권을 행사할 수 있는가?",
+        "request_id": "GRQ-R2-3",
+        "statute_hints": [
+          "공직선거법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "수형자",
+          "선거권",
+          "행사",
+          "금지",
+          "제한"
+        ],
+        "query_text": "수형자의 선거권 행사 금지 또는 제한 규정 [원문 맥락] 선거일이 다가오자 갑은 자신의 선거권을 행사할 수 있는지 궁금해졌다. 갑은 선거일에 자신의 선거권을 행사할 수 있는가?",
+        "request_id": "GRQ-R3-1",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "교도소",
+          "투표소",
+          "설치",
+          "수형자",
+          "투표"
+        ],
+        "query_text": "교도소 투표소 설치 수형자 투표 [원문 맥락] 선거일이 다가오자 갑은 자신의 선거권을 행사할 수 있는지 궁금해졌다. 갑은 선거일에 자신의 선거권을 행사할 수 있는가?",
+        "request_id": "GRQ-R3-2",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "공직선거법",
+          "제156조",
+          "투표의제한",
+          "예외",
+          "수형자"
+        ],
+        "query_text": "공직선거법 제156조 투표의 제한 예외 수형자 [원문 맥락] 선거일이 다가오자 갑은 자신의 선거권을 행사할 수 있는지 궁금해졌다. 갑은 선거일에 자신의 선거권을 행사할 수 있는가?",
+        "request_id": "GRQ-R3-3",
+        "statute_hints": [
+          "공직선거법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 작년에 2년 징역형을 선고받았고, 현재 수감 중이다. 선거일이 다가오자 갑은 자신의 선거권을 행사할 수 있는지 궁금해졌다.\n\n[질문]\n갑은 선거일에 자신의 선거권을 행사할 수 있는가?",
+    "remaining_request_budget": 2,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "수감 상태의 피선거권자가 선거권을 행사할 수 있는지 여부에 대한 명확한 법적 근거를 확인",
+        "critical": true,
+        "description": "형사피고인 또는 수형자의 선거권 행사에 관한 법적 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "0200e59f-9b48-49fa-b3e1-de75af1a8298",
+    "seen_provision_ids": [
+      "병역법 시행령 158조 3 가족관계등록 전산정보의 공동이용#KOBLEX-002364",
+      "공직선거법 15조#KOBLEX-174451",
+      "공직선거법 156조  투표의 제한#KOBLEX-052022",
+      "공직선거법 6조 3 감염병환자 등의 선거권 보장#KOBLEX-174332",
+      "공직선거법 6조 3 감염병환자 등의 선거권 보장#KOBLEX-051046",
+      "공직선거법 218조 27 재외선거의 공정성 확보 의무#KOBLEX-175771",
+      "공직선거법 218조 27 재외선거의 공정성 확보 의무#KOBLEX-052485",
+      "공직선거법 6조  선거권행사의 보장#KOBLEX-174325",
+      "형의 집행 및 수용자의 처우에 관한 법률 11조  구분수용#KOBLEX-075328",
+      "공직선거법 156조  투표의 제한#KOBLEX-175308",
+      "공직선거법 6조  선거권행사의 보장#KOBLEX-051039",
+      "대한민국헌법 67조#KOBLEX-019721",
+      "공공단체등 위탁선거에 관한 법률 12조#KOBLEX-086451",
+      "공직선거법 17조  연령산정기준#KOBLEX-174460",
+      "공직선거법 6조  선거권행사의 보장#KOBLEX-051036",
+      "공직선거법 17조  연령산정기준#KOBLEX-051174",
+      "공직선거법 6조  선거권행사의 보장#KOBLEX-174322",
+      "공직선거법 15조#KOBLEX-051165",
+      "협동조합 기본법 31조  대의원총회#KOBLEX-016057",
+      "공공단체등 위탁선거에 관한 법률 41조  동시조합장선거ㆍ동시이사장선거의 투표소의 설치 등#KOBLEX-086601",
+      "병역법 시행령 136조  수형자 등의 병역처분#KOBLEX-002181"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

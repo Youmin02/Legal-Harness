@@ -1,0 +1,1411 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-18T18:26:00.699729+00:00",
+  "end_to_end_latency_ms": 319372.368,
+  "errors": [],
+  "record_schema_version": "1.1",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 600,
+      "evidence_fusion": 600,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "rrf": 600,
+      "selected": 60
+    }
+  },
+  "run_id": "05d40ad9-8943-497b-ae07-ab6f5fbe4e17",
+  "state": {
+    "accepted_provision_ids": [
+      "국민체육진흥법 26조  유사행위의 금지 등#KOBLEX-103743",
+      "국민체육진흥법 26조  유사행위의 금지 등#KOBLEX-103742"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 16,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 11,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 15,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 30.01138639054023,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "공동주택관리법 98조  벌칙#KOBLEX-086391",
+        "provision_text": "3. 제90조제2항을 위반하여 부정하게 재물 또는 재산상의 이익을 취득하거나 제공한 자",
+        "rerank_rank": 1,
+        "rerank_score": 0.7875099778175354,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "공동주택관리법 98조  벌칙 3호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 30.01138639054023,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "주택법 102조  벌칙#KOBLEX-133664",
+        "provision_text": "18. 제77조를 위반하여 부정하게 재물 또는 재산상의 이익을 취득하거나 제공한 자",
+        "rerank_rank": 2,
+        "rerank_score": 0.728324294090271,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "주택법 102조  벌칙 23호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 30.01138639054023,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "주택법 102조  벌칙#KOBLEX-205176",
+        "provision_text": "18. 제77조를 위반하여 부정하게 재물 또는 재산상의 이익을 취득하거나 제공한 자",
+        "rerank_rank": 3,
+        "rerank_score": 0.728324294090271,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "주택법 102조  벌칙 23호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 24,
+        "first_stage_score": 25.53569844698638,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "빈집 및 소규모주택 정비에 관한 특례법 59조  벌칙#KOBLEX-194617",
+        "provision_text": "2. 제54조제8항 각 호의 어느 하나를 위반하여 금품이나 그 밖의 재산상 이익을 제공하거나 제공의사를 표시하거나 제공을 약속하는 행위를 하거나, 제공받거나 제공의사 표시를 승낙한 자",
+        "rerank_rank": 4,
+        "rerank_score": 0.712072491645813,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "빈집 및 소규모주택 정비에 관한 특례법 59조  벌칙 2호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 30,
+        "first_stage_score": 24.532942672708057,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "도시 및 주거환경정비법 135조  벌칙#KOBLEX-148741",
+        "provision_text": "2. 제132조제1항 각 호의 어느 하나를 위반하여 금품, 향응 또는 그 밖의 재산상 이익을 제공하거나 제공의사를 표시하거나 제공을 약속하는 행위를 하거나 제공을 받거나 제공의사 표시를 승낙한 자",
+        "rerank_rank": 5,
+        "rerank_score": 0.7110110521316528,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "도시 및 주거환경정비법 135조  벌칙 2호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 31,
+        "first_stage_score": 24.532942672708057,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "도시 및 주거환경정비법 135조  벌칙#KOBLEX-229313",
+        "provision_text": "2. 제132조제1항 각 호의 어느 하나를 위반하여 금품, 향응 또는 그 밖의 재산상 이익을 제공하거나 제공의사를 표시하거나 제공을 약속하는 행위를 하거나 제공을 받거나 제공의사 표시를 승낙한 자",
+        "rerank_rank": 6,
+        "rerank_score": 0.7110110521316528,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "도시 및 주거환경정비법 135조  벌칙 2호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 37,
+        "first_stage_score": 24.262655995675317,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "한국마사회법 51조  벌칙#KOBLEX-002706",
+        "provision_text": "3. 제1호나 제2호에 따른 재물 또는 재산상의 이익을 약속ㆍ공여하거나 공여할 의사를 표시한 자",
+        "rerank_rank": 7,
+        "rerank_score": 0.696595311164856,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "한국마사회법 51조  벌칙 3호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 79,
+        "first_stage_score": 20.41562054853029,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "변호사법 115조  법무법인 등의 처벌#KOBLEX-087338",
+        "provision_text": "제115조(법무법인 등의 처벌)",
+        "rerank_rank": 8,
+        "rerank_score": 0.6866763234138489,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "변호사법 115조  법무법인 등의 처벌",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 30.257577871524802,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "국민의 형사재판 참여에 관한 법률 59조  배심원 등의 금품 수수 등#KOBLEX-220063",
+        "provision_text": "② 배심원·예비배심원 또는 배심원후보자에게 제1항의 재물 또는 재산상 이익을 약속·공여 또는 공여의 의사를 표시한 자도 제1항과 같다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.6695539951324463,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "국민의 형사재판 참여에 관한 법률 59조  배심원 등의 금품 수수 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 57,
+        "first_stage_score": 21.908990072748157,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "형법 348조  준사기#KOBLEX-193400",
+        "provision_text": "② 제1항의 방법으로 제3자로 하여금 재물을 교부받게 하거나 재산상 이익을 취득하게 한 경우에도 제1항의 형에 처한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.6492138504981995,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 348조  준사기 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 79,
+        "first_stage_score": 15.788503401388802,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "스토킹범죄의 처벌 등에 관한 법률 3조  스토킹행위 신고 등에 대한 응급조치#KOBLEX-130426",
+        "provision_text": "1. 스토킹행위의 제지, 향후 스토킹행위의 중단 통보 및 스토킹행위를 지속적 또는 반복적으로 할 경우 처벌 서면경고",
+        "rerank_rank": 1,
+        "rerank_score": 0.997837245464325,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "스토킹범죄의 처벌 등에 관한 법률 3조  스토킹행위 신고 등에 대한 응급조치 1호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 50,
+        "first_stage_score": 17.806374484730707,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "교육환경 보호에 관한 법률 9조  교육환경보호구역에서의 금지행위 등#KOBLEX-108720",
+        "provision_text": "23. 「사행행위 등 규제 및 처벌 특례법」 제2조제1항제2호에 따른 사행행위영업",
+        "rerank_rank": 4,
+        "rerank_score": 0.9971551895141602,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "교육환경 보호에 관한 법률 9조  교육환경보호구역에서의 금지행위 등 23호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 29,
+        "first_stage_score": 20.298134017855883,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "경찰관 직무집행법 11조 5 직무 수행으로 인한 형의 감면#KOBLEX-033758",
+        "provision_text": "2. 「가정폭력범죄의 처벌 등에 관한 특례법」에 따른 가정폭력범죄, 「아동학대범죄의 처벌 등에 관한 특례법」에 따른 아동학대범죄",
+        "rerank_rank": 7,
+        "rerank_score": 0.9969743490219116,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "경찰관 직무집행법 11조 5 직무 수행으로 인한 형의 감면 2호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 30,
+        "first_stage_score": 20.298134017855883,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "경찰관 직무집행법 11조 5 직무 수행으로 인한 형의 감면#KOBLEX-226639",
+        "provision_text": "2. 「가정폭력범죄의 처벌 등에 관한 특례법」에 따른 가정폭력범죄, 「아동학대범죄의 처벌 등에 관한 특례법」에 따른 아동학대범죄",
+        "rerank_rank": 8,
+        "rerank_score": 0.9969743490219116,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "경찰관 직무집행법 11조 5 직무 수행으로 인한 형의 감면 2호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 28,
+        "first_stage_score": 20.41562054853029,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "형법 1조  범죄의 성립과 처벌#KOBLEX-192644",
+        "provision_text": "제1조(범죄의 성립과 처벌)",
+        "rerank_rank": 9,
+        "rerank_score": 0.9968472123146057,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 1조  범죄의 성립과 처벌",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 25.51032231791252,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 126조  야간집행제한의 예외#KOBLEX-231798",
+        "provision_text": "1. 도박 기타 풍속을 해하는 행위에 상용된다고 인정하는 장소",
+        "rerank_rank": 10,
+        "rerank_score": 0.996614396572113,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 126조  야간집행제한의 예외 1호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 40.49266511905995,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "국민체육진흥법 26조  유사행위의 금지 등#KOBLEX-103742",
+        "provision_text": "① 서울올림픽기념국민체육진흥공단과 수탁사업자가 아닌 자는 체육진흥투표권 또는 이와 비슷한 것을 발행(정보통신망에 의한 발행을 포함한다)하여 결과를 적중시킨 자에게 재물이나 재산상의 이익을 제공하는 행위(이하 \"유사행위\"라 한다)를 하여서는 아니 된다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.8112499713897705,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "국민체육진흥법 26조  유사행위의 금지 등 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 72,
+        "first_stage_score": 16.184753999325835,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "상호저축은행법 18조 2 금지 행위#KOBLEX-074072",
+        "provision_text": "제18조의2(금지 행위)",
+        "rerank_rank": 2,
+        "rerank_score": 0.6803717017173767,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상호저축은행법 18조 2 금지 행위",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 73,
+        "first_stage_score": 16.184753999325835,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "상호저축은행법 18조 2 금지 행위#KOBLEX-180962",
+        "provision_text": "제18조의2(금지 행위)",
+        "rerank_rank": 3,
+        "rerank_score": 0.6803717017173767,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상호저축은행법 18조 2 금지 행위",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 67,
+        "first_stage_score": 16.49126383715086,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "병역법 92조  전문연구요원 등의 편입 및 복무의무위반 등#KOBLEX-035752",
+        "provision_text": "⑤ 제3항과 제4항에 따른 금품 또는 재산상의 이익을 제공한 사람은 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.6587646007537842,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "병역법 92조  전문연구요원 등의 편입 및 복무의무위반 등 5항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 29.143930971260843,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "한국마사회법 48조  유사행위의 금지 등#KOBLEX-002691",
+        "provision_text": "② 누구든지 다음 각 호의 어느 하나에 해당하는 행위를 하여서는 아니 된다. 1. 외국에서 개최되는 말의 경주에 전자적 방법으로 국내에서 승마투표나 이와 비슷한 행위를 하게 하여 적중자에게 재물 또는 재산상의 이익을 지급하는 행위 2. 영리 목적으로 마권 또는 이와 비슷한 것의 구매를 대행 또는 알선하거나 마권을 양도하는 행위",
+        "rerank_rank": 5,
+        "rerank_score": 0.4133285880088806,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "한국마사회법 48조  유사행위의 금지 등 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 27,
+        "first_stage_score": 20.482837353456166,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "국가기술자격법 19조  유사 자격 등의 검정의 금지#KOBLEX-079135",
+        "provision_text": "제19조(유사 자격 등의 검정의 금지)",
+        "rerank_rank": 6,
+        "rerank_score": 0.41257619857788086,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "국가기술자격법 19조  유사 자격 등의 검정의 금지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 34,
+        "first_stage_score": 19.40661240212313,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "약사법 24조 2 부당한 경제적 이익 등의 제공 금지#KOBLEX-181908",
+        "provision_text": "제24조의2(부당한 경제적 이익 등의 제공 금지)",
+        "rerank_rank": 7,
+        "rerank_score": 0.34025838971138,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "약사법 24조 2 부당한 경제적 이익 등의 제공 금지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 99,
+        "first_stage_score": 14.406729603399274,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "선원법 161조  벌칙#KOBLEX-067806",
+        "provision_text": "제161조(벌칙) 제11조를 위반한 사람은 다음 각 호의 구분에 따라 처벌한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.9114444851875305,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "선원법 161조  벌칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 100,
+        "first_stage_score": 14.350729079506134,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "도시개발법 79조 2 벌칙#KOBLEX-003176",
+        "provision_text": "① 제10조의2제2항 또는 제3항을 위반하여 미공개정보를 목적 외로 사용하거나 타인에게 제공 또는 누설한 자는 5년 이하의 징역 또는 그 위반행위로 얻은 재산상 이익 또는 회피한 손실액의 3배 이상 5배 이하에 상당하는 벌금에 처한다. 다만, 얻은 이익 또는 회피한 손실액이 없거나 산정하기 곤란한 경우 또는 그 위반행위로 얻은 재산상 이익의 5배에 해당하는 금액이 10억원 이하인 경우에는 벌금의 상한액을 10억원으로 한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.9045156836509705,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "도시개발법 79조 2 벌칙 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 93,
+        "first_stage_score": 14.606095947693127,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "중소기업협동조합법 53조  선거운동의 제한#KOBLEX-030843",
+        "provision_text": "③누구든지 제2항제1호 또는 같은 항 제2호에서 규정하고 있는 이익이나 공사의 직을 제공받는 행위 또는 그 제공의 의사 표시를 승낙하는 행위를 할 수 없다. <개정 2018.3.13>",
+        "rerank_rank": 9,
+        "rerank_score": 0.8998819589614868,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "중소기업협동조합법 53조  선거운동의 제한 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 34,
+        "first_stage_score": 18.826337844193116,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "전기통신사업법 95조 2 벌칙#KOBLEX-204464",
+        "provision_text": "3의2. 제32조의4제1항제3호를 위반하여 「형법」 제247조(도박장소 등 개설), 제347조(사기) 및 제347조의2(컴퓨터등 사용사기)의 죄에 해당하는 행위, 「성매매알선 등 행위의 처벌에 관한 법률」 제2조제1항제2호 및 제3호에 따른 성매매알선 등 행위 및 성매매 목적의 인신매매에 이용할 목적으로 다른 사람 명의의 이동통신단말장치를 개통하여 그 이동통신단말장치에 제공되는 전기통신역무를 이용하는 행위를 한 자",
+        "rerank_rank": 10,
+        "rerank_score": 0.8936293125152588,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "전기통신사업법 95조 2 벌칙 6호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 39,
+        "first_stage_score": 18.142760760485185,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 68조  벌칙#KOBLEX-162897",
+        "provision_text": "제68조(벌칙) 다음 각 호의 어느 하나에 해당하는 자는 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 2021.4.13>",
+        "rerank_rank": 1,
+        "rerank_score": 0.0887492299079895,
+        "retrieval_round": 3,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "화물자동차 운수사업법 68조  벌칙",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 61,
+        "first_stage_score": 17.249703585711746,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "생명윤리 및 안전에 관한 법률 68조  벌칙#KOBLEX-139468",
+        "provision_text": "제68조(벌칙) 다음 각 호의 어느 하나에 해당하는 자는 1년 이하의 징역 또는 2천만원 이하의 벌금에 처한다. <개정 2019.4.23, 2020.12.29>",
+        "rerank_rank": 2,
+        "rerank_score": 0.08290176093578339,
+        "retrieval_round": 3,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "생명윤리 및 안전에 관한 법률 68조  벌칙",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 62,
+        "first_stage_score": 17.249703585711746,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "액화석유가스의 안전관리 및 사업법 68조  벌칙#KOBLEX-056679",
+        "provision_text": "제68조(벌칙) 다음 각 호의 어느 하나에 해당하는 자는 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 2019.8.20, 2022.2.3>",
+        "rerank_rank": 3,
+        "rerank_score": 0.07849950343370438,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "액화석유가스의 안전관리 및 사업법 68조  벌칙",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 30,
+        "first_stage_score": 19.086759248820197,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "은행법 68조  벌칙#KOBLEX-143928",
+        "provision_text": "제68조(벌칙)",
+        "rerank_rank": 4,
+        "rerank_score": 0.07265044748783112,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "은행법 68조  벌칙",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 22,
+        "first_stage_score": 20.318147058090325,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "금융위원회의 설치 등에 관한 법률 68조  벌칙#KOBLEX-219634",
+        "provision_text": "제68조(벌칙) 제35조제2항을 위반하여 직무상 알게 된 비밀을 다른 사람에게 누설하거나 직무상의 목적 외에 이를 사용한 사람은 3년 이하의 징역 또는 2천만원 이하의 벌금에 처한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.038594022393226624,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "금융위원회의 설치 등에 관한 법률 68조  벌칙",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 48,
+        "first_stage_score": 17.7216648984179,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "민사집행법 68조  채무자의 감치 및 벌칙#KOBLEX-128263",
+        "provision_text": "제68조(채무자의 감치 및 벌칙)",
+        "rerank_rank": 7,
+        "rerank_score": 0.0018466858891770244,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사집행법 68조  채무자의 감치 및 벌칙",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 54,
+        "first_stage_score": 17.34590776165883,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "약사법 68조  과장광고 등의 금지#KOBLEX-182371",
+        "provision_text": "제68조(과장광고 등의 금지)",
+        "rerank_rank": 8,
+        "rerank_score": 0.0013995376648381352,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "약사법 68조  과장광고 등의 금지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 55,
+        "first_stage_score": 17.34590776165883,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 68조  입원등의 금지 등#KOBLEX-039885",
+        "provision_text": "제68조(입원등의 금지 등)",
+        "rerank_rank": 9,
+        "rerank_score": 0.0013921849895268679,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 68조  입원등의 금지 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 46,
+        "first_stage_score": 17.780141431591304,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "소년법 68조  보도 금지#KOBLEX-190713",
+        "provision_text": "제68조(보도 금지)",
+        "rerank_rank": 10,
+        "rerank_score": 0.0004928003763779998,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "소년법 68조  보도 금지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 59,
+        "first_stage_score": 14.463971055078142,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "여신전문금융업법 68조 2 재단의 운영 재원#KOBLEX-042488",
+        "provision_text": "1. 제68조에 따라 기부받은 선불카드 미사용잔액등의 재산상 이익에 상당하는 금액",
+        "rerank_rank": 3,
+        "rerank_score": 0.012582975439727306,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "여신전문금융업법 68조 2 재단의 운영 재원 1호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 19.37410093648521,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "국민체육진흥법 26조  유사행위의 금지 등#KOBLEX-103743",
+        "provision_text": "② 누구든지 다음 각 호의 어느 하나에 해당하는 행위를 하여서는 아니 된다. 1. 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」 제2조제1항제1호에 따른 정보통신망을 이용하여 체육진흥투표권이나 이와 비슷한 것을 발행하는 시스템을 설계ㆍ제작ㆍ유통 또는 공중이 이용할 수 있도록 제공하는 행위 2. 유사행위를 위하여 해당 운동경기 관련 정보를 제공하는 행위 3. 유사행위를 홍보하거나 체육진흥투표권 또는 이와 비슷한 것의 구매를 중개 또는 알선하는 행위",
+        "rerank_rank": 5,
+        "rerank_score": 0.0012082671746611595,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "국민체육진흥법 26조  유사행위의 금지 등 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 2.0,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "국민체육진흥법 51조  몰수ㆍ추징#KOBLEX-103883",
+        "provision_text": "③ 제1항 및 제2항에 따른 물건과 재물을 몰수하기 불가능하거나 재산상의 이익을 취득한 경우에는 그 가액(價額)을 추징한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.0004325689806137234,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "국민체육진흥법 51조  몰수ㆍ추징 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 24.591418677759833,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "관광진흥법 26조 2 유사행위 등의 금지#KOBLEX-094070",
+        "provision_text": "제26조의2(유사행위 등의 금지) 카지노사업자가 아닌 자는 영리 목적으로 제26조에 따른 카지노업의 영업 종류를 제공하여 이용자 중 특정인에게 재산상의 이익을 주고 다른 이용자에게 손실을 주는 행위를 하여서는 아니 된다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.0003797744575422257,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "관광진흥법 26조 2 유사행위 등의 금지",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 69,
+        "first_stage_score": 13.895633789261401,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "보험업법 198조  벌칙#KOBLEX-022609",
+        "provision_text": "제198조(벌칙) 제25조제1항 또는 제54조제1항의 기관을 구성하는 자가 그 임무를 위반하여 재산상의 이익을 취득하거나 제3자로 하여금 취득하게 하여 보험계약자나 사원에게 손해를 입힌 경우에는 7년 이하의 징역 또는 7천만원 이하의 벌금에 처한다. <개정 2017.10.31>",
+        "rerank_rank": 9,
+        "rerank_score": 0.00036846494185738266,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "보험업법 198조  벌칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 72,
+        "first_stage_score": 13.6876262875742,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "공직선거법 231조  재산상의 이익목적의 매수 및 이해유도죄#KOBLEX-052576",
+        "provision_text": "① 다음 각 호의 어느 하나에 해당하는 사람은 7년 이하의 징역 또는 300만원 이상 5천만원 이하의 벌금에 처한다. <개정 2010.1.25, 2014.2.13> 1. 재산상의 이익을 얻거나 얻을 목적으로 정당 또는 후보자(후보자가 되려는 사람을 포함한다)를 위하여 선거인ㆍ선거사무장ㆍ선거연락소장ㆍ선거사무원ㆍ회계책임자ㆍ연설원 또는 참관인에게 제230조제1항 각 호의 어느 하나에 해당하는 행위를 한 사람 2. 제1호에 규정된 행위의 대가로 또는 그 행위를 하게 할 목적으로 금전ㆍ물품, 그 밖에 재산상의 이익 또는 공사의 직을 제공하거나 그 제공의 의사를 표시하거나 그 제공을 약속한 사람 3. 제1호에 규정된 행위의 대가로 또는 그 행위를 약속하고 제2호에 규정된 이익 또는 직의 제공을 받거나 그 제공의 의사표시를 승낙한 사람",
+        "rerank_rank": 10,
+        "rerank_score": 0.000260272528976202,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "공직선거법 231조  재산상의 이익목적의 매수 및 이해유도죄 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "경찰관 직무집행법 11조 5 직무 수행으로 인한 형의 감면#KOBLEX-033758": "2. 「가정폭력범죄의 처벌 등에 관한 특례법」에 따른 가정폭력범죄, 「아동학대범죄의 처벌 등에 관한 특례법」에 따른 아동학대범죄",
+      "경찰관 직무집행법 11조 5 직무 수행으로 인한 형의 감면#KOBLEX-226639": "2. 「가정폭력범죄의 처벌 등에 관한 특례법」에 따른 가정폭력범죄, 「아동학대범죄의 처벌 등에 관한 특례법」에 따른 아동학대범죄",
+      "공동주택관리법 98조  벌칙#KOBLEX-086391": "3. 제90조제2항을 위반하여 부정하게 재물 또는 재산상의 이익을 취득하거나 제공한 자",
+      "공직선거법 231조  재산상의 이익목적의 매수 및 이해유도죄#KOBLEX-052576": "① 다음 각 호의 어느 하나에 해당하는 사람은 7년 이하의 징역 또는 300만원 이상 5천만원 이하의 벌금에 처한다. <개정 2010.1.25, 2014.2.13> 1. 재산상의 이익을 얻거나 얻을 목적으로 정당 또는 후보자(후보자가 되려는 사람을 포함한다)를 위하여 선거인ㆍ선거사무장ㆍ선거연락소장ㆍ선거사무원ㆍ회계책임자ㆍ연설원 또는 참관인에게 제230조제1항 각 호의 어느 하나에 해당하는 행위를 한 사람 2. 제1호에 규정된 행위의 대가로 또는 그 행위를 하게 할 목적으로 금전ㆍ물품, 그 밖에 재산상의 이익 또는 공사의 직을 제공하거나 그 제공의 의사를 표시하거나 그 제공을 약속한 사람 3. 제1호에 규정된 행위의 대가로 또는 그 행위를 약속하고 제2호에 규정된 이익 또는 직의 제공을 받거나 그 제공의 의사표시를 승낙한 사람",
+      "관광진흥법 26조 2 유사행위 등의 금지#KOBLEX-094070": "제26조의2(유사행위 등의 금지) 카지노사업자가 아닌 자는 영리 목적으로 제26조에 따른 카지노업의 영업 종류를 제공하여 이용자 중 특정인에게 재산상의 이익을 주고 다른 이용자에게 손실을 주는 행위를 하여서는 아니 된다.",
+      "교육환경 보호에 관한 법률 9조  교육환경보호구역에서의 금지행위 등#KOBLEX-108720": "23. 「사행행위 등 규제 및 처벌 특례법」 제2조제1항제2호에 따른 사행행위영업",
+      "국가기술자격법 19조  유사 자격 등의 검정의 금지#KOBLEX-079135": "제19조(유사 자격 등의 검정의 금지)",
+      "국민의 형사재판 참여에 관한 법률 59조  배심원 등의 금품 수수 등#KOBLEX-220063": "② 배심원·예비배심원 또는 배심원후보자에게 제1항의 재물 또는 재산상 이익을 약속·공여 또는 공여의 의사를 표시한 자도 제1항과 같다.",
+      "국민체육진흥법 26조  유사행위의 금지 등#KOBLEX-103742": "① 서울올림픽기념국민체육진흥공단과 수탁사업자가 아닌 자는 체육진흥투표권 또는 이와 비슷한 것을 발행(정보통신망에 의한 발행을 포함한다)하여 결과를 적중시킨 자에게 재물이나 재산상의 이익을 제공하는 행위(이하 \"유사행위\"라 한다)를 하여서는 아니 된다.",
+      "국민체육진흥법 26조  유사행위의 금지 등#KOBLEX-103743": "② 누구든지 다음 각 호의 어느 하나에 해당하는 행위를 하여서는 아니 된다. 1. 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」 제2조제1항제1호에 따른 정보통신망을 이용하여 체육진흥투표권이나 이와 비슷한 것을 발행하는 시스템을 설계ㆍ제작ㆍ유통 또는 공중이 이용할 수 있도록 제공하는 행위 2. 유사행위를 위하여 해당 운동경기 관련 정보를 제공하는 행위 3. 유사행위를 홍보하거나 체육진흥투표권 또는 이와 비슷한 것의 구매를 중개 또는 알선하는 행위",
+      "국민체육진흥법 51조  몰수ㆍ추징#KOBLEX-103883": "③ 제1항 및 제2항에 따른 물건과 재물을 몰수하기 불가능하거나 재산상의 이익을 취득한 경우에는 그 가액(價額)을 추징한다.",
+      "금융위원회의 설치 등에 관한 법률 68조  벌칙#KOBLEX-219634": "제68조(벌칙) 제35조제2항을 위반하여 직무상 알게 된 비밀을 다른 사람에게 누설하거나 직무상의 목적 외에 이를 사용한 사람은 3년 이하의 징역 또는 2천만원 이하의 벌금에 처한다.",
+      "도시 및 주거환경정비법 135조  벌칙#KOBLEX-148741": "2. 제132조제1항 각 호의 어느 하나를 위반하여 금품, 향응 또는 그 밖의 재산상 이익을 제공하거나 제공의사를 표시하거나 제공을 약속하는 행위를 하거나 제공을 받거나 제공의사 표시를 승낙한 자",
+      "도시 및 주거환경정비법 135조  벌칙#KOBLEX-229313": "2. 제132조제1항 각 호의 어느 하나를 위반하여 금품, 향응 또는 그 밖의 재산상 이익을 제공하거나 제공의사를 표시하거나 제공을 약속하는 행위를 하거나 제공을 받거나 제공의사 표시를 승낙한 자",
+      "도시개발법 79조 2 벌칙#KOBLEX-003176": "① 제10조의2제2항 또는 제3항을 위반하여 미공개정보를 목적 외로 사용하거나 타인에게 제공 또는 누설한 자는 5년 이하의 징역 또는 그 위반행위로 얻은 재산상 이익 또는 회피한 손실액의 3배 이상 5배 이하에 상당하는 벌금에 처한다. 다만, 얻은 이익 또는 회피한 손실액이 없거나 산정하기 곤란한 경우 또는 그 위반행위로 얻은 재산상 이익의 5배에 해당하는 금액이 10억원 이하인 경우에는 벌금의 상한액을 10억원으로 한다.",
+      "민사집행법 68조  채무자의 감치 및 벌칙#KOBLEX-128263": "제68조(채무자의 감치 및 벌칙)",
+      "변호사법 115조  법무법인 등의 처벌#KOBLEX-087338": "제115조(법무법인 등의 처벌)",
+      "병역법 92조  전문연구요원 등의 편입 및 복무의무위반 등#KOBLEX-035752": "⑤ 제3항과 제4항에 따른 금품 또는 재산상의 이익을 제공한 사람은 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+      "보험업법 198조  벌칙#KOBLEX-022609": "제198조(벌칙) 제25조제1항 또는 제54조제1항의 기관을 구성하는 자가 그 임무를 위반하여 재산상의 이익을 취득하거나 제3자로 하여금 취득하게 하여 보험계약자나 사원에게 손해를 입힌 경우에는 7년 이하의 징역 또는 7천만원 이하의 벌금에 처한다. <개정 2017.10.31>",
+      "빈집 및 소규모주택 정비에 관한 특례법 59조  벌칙#KOBLEX-194617": "2. 제54조제8항 각 호의 어느 하나를 위반하여 금품이나 그 밖의 재산상 이익을 제공하거나 제공의사를 표시하거나 제공을 약속하는 행위를 하거나, 제공받거나 제공의사 표시를 승낙한 자",
+      "상호저축은행법 18조 2 금지 행위#KOBLEX-074072": "제18조의2(금지 행위)",
+      "상호저축은행법 18조 2 금지 행위#KOBLEX-180962": "제18조의2(금지 행위)",
+      "생명윤리 및 안전에 관한 법률 68조  벌칙#KOBLEX-139468": "제68조(벌칙) 다음 각 호의 어느 하나에 해당하는 자는 1년 이하의 징역 또는 2천만원 이하의 벌금에 처한다. <개정 2019.4.23, 2020.12.29>",
+      "선원법 161조  벌칙#KOBLEX-067806": "제161조(벌칙) 제11조를 위반한 사람은 다음 각 호의 구분에 따라 처벌한다.",
+      "소년법 68조  보도 금지#KOBLEX-190713": "제68조(보도 금지)",
+      "스토킹범죄의 처벌 등에 관한 법률 3조  스토킹행위 신고 등에 대한 응급조치#KOBLEX-130426": "1. 스토킹행위의 제지, 향후 스토킹행위의 중단 통보 및 스토킹행위를 지속적 또는 반복적으로 할 경우 처벌 서면경고",
+      "액화석유가스의 안전관리 및 사업법 68조  벌칙#KOBLEX-056679": "제68조(벌칙) 다음 각 호의 어느 하나에 해당하는 자는 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 2019.8.20, 2022.2.3>",
+      "약사법 24조 2 부당한 경제적 이익 등의 제공 금지#KOBLEX-181908": "제24조의2(부당한 경제적 이익 등의 제공 금지)",
+      "약사법 68조  과장광고 등의 금지#KOBLEX-182371": "제68조(과장광고 등의 금지)",
+      "여신전문금융업법 68조 2 재단의 운영 재원#KOBLEX-042488": "1. 제68조에 따라 기부받은 선불카드 미사용잔액등의 재산상 이익에 상당하는 금액",
+      "은행법 68조  벌칙#KOBLEX-143928": "제68조(벌칙)",
+      "전기통신사업법 95조 2 벌칙#KOBLEX-204464": "3의2. 제32조의4제1항제3호를 위반하여 「형법」 제247조(도박장소 등 개설), 제347조(사기) 및 제347조의2(컴퓨터등 사용사기)의 죄에 해당하는 행위, 「성매매알선 등 행위의 처벌에 관한 법률」 제2조제1항제2호 및 제3호에 따른 성매매알선 등 행위 및 성매매 목적의 인신매매에 이용할 목적으로 다른 사람 명의의 이동통신단말장치를 개통하여 그 이동통신단말장치에 제공되는 전기통신역무를 이용하는 행위를 한 자",
+      "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 68조  입원등의 금지 등#KOBLEX-039885": "제68조(입원등의 금지 등)",
+      "주택법 102조  벌칙#KOBLEX-133664": "18. 제77조를 위반하여 부정하게 재물 또는 재산상의 이익을 취득하거나 제공한 자",
+      "주택법 102조  벌칙#KOBLEX-205176": "18. 제77조를 위반하여 부정하게 재물 또는 재산상의 이익을 취득하거나 제공한 자",
+      "중소기업협동조합법 53조  선거운동의 제한#KOBLEX-030843": "③누구든지 제2항제1호 또는 같은 항 제2호에서 규정하고 있는 이익이나 공사의 직을 제공받는 행위 또는 그 제공의 의사 표시를 승낙하는 행위를 할 수 없다. <개정 2018.3.13>",
+      "한국마사회법 48조  유사행위의 금지 등#KOBLEX-002691": "② 누구든지 다음 각 호의 어느 하나에 해당하는 행위를 하여서는 아니 된다. 1. 외국에서 개최되는 말의 경주에 전자적 방법으로 국내에서 승마투표나 이와 비슷한 행위를 하게 하여 적중자에게 재물 또는 재산상의 이익을 지급하는 행위 2. 영리 목적으로 마권 또는 이와 비슷한 것의 구매를 대행 또는 알선하거나 마권을 양도하는 행위",
+      "한국마사회법 51조  벌칙#KOBLEX-002706": "3. 제1호나 제2호에 따른 재물 또는 재산상의 이익을 약속ㆍ공여하거나 공여할 의사를 표시한 자",
+      "형법 1조  범죄의 성립과 처벌#KOBLEX-192644": "제1조(범죄의 성립과 처벌)",
+      "형법 348조  준사기#KOBLEX-193400": "② 제1항의 방법으로 제3자로 하여금 재물을 교부받게 하거나 재산상 이익을 취득하게 한 경우에도 제1항의 형에 처한다.",
+      "형사소송법 126조  야간집행제한의 예외#KOBLEX-231798": "1. 도박 기타 풍속을 해하는 행위에 상용된다고 인정하는 장소",
+      "화물자동차 운수사업법 68조  벌칙#KOBLEX-162897": "제68조(벌칙) 다음 각 호의 어느 하나에 해당하는 자는 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 2021.4.13>"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "국민체육진흥법 26조  유사행위의 금지 등#KOBLEX-103742",
+          "국민체육진흥법 26조  유사행위의 금지 등#KOBLEX-103743"
+        ],
+        "missing_aspects": [
+          "Statutory penalty (legal sentence) for the operator's violation"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "The supplied provisions C017 and C038 establish the prohibition of the operator's conduct (issuing similar tickets and providing benefits). However, the completion criteria require confirmation of the 'exact content and statutory penalty' (정확한 내용과 법정형). The candidate set lacks the specific penalty clause (e.g., National Sports Promotion Act Art. 68) that defines the imprisonment or fine amounts for this violation.",
+        "status": "partially_covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [
+          "국민체육진흥법 26조  유사행위의 금지 등#KOBLEX-103742"
+        ],
+        "missing_aspects": [
+          "Specific prohibition and statutory penalty for the participant who gambles on the illegal event"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C017 defines the illegal nature of the event (similar act), which is necessary to establish the context for the participant's gambling. However, the completion criteria require the specific legal provision prohibiting the participant's act of gambling on this illegal event and its statutory penalty. The supplied text of C017 only addresses the operator's liability. No other candidate provision specifically addresses the penalty for a participant in this specific type of illegal sports prediction event.",
+        "status": "partially_covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "국민체육진흥법 26조  유사행위의 금지 등#KOBLEX-103742",
+        "support_spans": [
+          {
+            "end_char": 140,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "국민체육진흥법 26조  유사행위의 금지 등#KOBLEX-103743",
+        "support_spans": [
+          {
+            "end_char": 254,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "국민체육진흥법 26조  유사행위의 금지 등#KOBLEX-103742",
+        "support_spans": [
+          {
+            "end_char": 140,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 15,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "체육진흥투표권과 유사한 형태의 승부예측 이벤트를 운영하여 적중자에게 재물 또는 재산상 이익을 제공한 행위의 위법성 및 처벌 규정",
+        "issue_id": "I1"
+      },
+      {
+        "description": "위반 행위를 알면서도 해당 이벤트를 이용하여 도박을 한 참가자의 위법성 및 처벌 규정",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "해당 행위를 금지하고 처벌하는 법률 조항의 정확한 내용과 법정형을 확인",
+        "critical": true,
+        "description": "체육진흥투표권과 유사한 형태의 승부예측 이벤트를 운영하여 적중자에게 재물 또는 재산상 이익을 제공한 행위의 금지 규정 및 처벌 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "해당 행위를 금지하고 처벌하는 법률 조항의 정확한 내용과 법정형을 확인",
+        "critical": true,
+        "description": "체육진흥투표권과 유사한 형태의 불법 이벤트를 알면서도 이용하여 도박을 한 행위의 금지 규정 및 처벌 조항",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 ‘승부예측 이벤트’라는 명칭으로 스포츠 경기 결과를 맞히는 사람에게 상금을 지급하는 온라인 이벤트를 운영하였다. 이 이벤트는 체육진흥투표권과 유사한 방식으로 구성되어 있었으며, 갑은 서울올림픽기념국민체육진흥공단이나 수탁사업자가 아닌 일반인이었다. 참가자 을은 해당 이벤트가 불법인 줄 알면서도 경기 결과에 돈을 걸고 참여하여 도박을 하였다. [질문] 갑이 체육진흥투표권과 비슷한 것을 발행하여 결과 적중자에게 재물이나 재산상의 이익을 제공하는 이벤트를 진행하고, 을이 이 이벤트를 이용하여 도박을 한 경우, 갑과 을은 각각 어떤 처벌을 받게 되는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "체육진흥투표권",
+          "유사 형태",
+          "승부예측",
+          "이벤트 운영",
+          "재물 제공",
+          "재산상 이익",
+          "처벌"
+        ],
+        "query_text": "체육진흥투표권 유사 형태 승부예측 이벤트 운영 적중자 재물 재산상 이익 제공 처벌 [원문 맥락] 참가자 을은 해당 이벤트가 불법인 줄 알면서도 경기 결과에 돈을 걸고 참여하여 도박을 하였다. 갑이 체육진흥투표권과 비슷한 것을 발행하여 결과 적중자에게 재물이나 재산상의 이익을 제공하는 이벤트를 진행하고, 을이 이 이벤트를 이용하여 도박을 한 경우, 갑과 을은 각각 어떤 처벌을 받게 되는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "체육진흥투표권 발행 및 운영에 관한 법률"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "체육진흥투표권",
+          "유사 형태",
+          "불법 이벤트",
+          "이용",
+          "도박",
+          "참가자",
+          "처벌"
+        ],
+        "query_text": "체육진흥투표권 유사 형태 불법 이벤트 이용 도박 참가자 처벌 [원문 맥락] 참가자 을은 해당 이벤트가 불법인 줄 알면서도 경기 결과에 돈을 걸고 참여하여 도박을 하였다. 갑이 체육진흥투표권과 비슷한 것을 발행하여 결과 적중자에게 재물이나 재산상의 이익을 제공하는 이벤트를 진행하고, 을이 이 이벤트를 이용하여 도박을 한 경우, 갑과 을은 각각 어떤 처벌을 받게 되는가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "체육진흥투표권 발행 및 운영에 관한 법률"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "체육진흥투표권",
+          "유사 행위",
+          "금지",
+          "벌칙",
+          "운영자"
+        ],
+        "query_text": "체육진흥투표권 유사 행위 금지 벌칙 [원문 맥락] 참가자 을은 해당 이벤트가 불법인 줄 알면서도 경기 결과에 돈을 걸고 참여하여 도박을 하였다. 갑이 체육진흥투표권과 비슷한 것을 발행하여 결과 적중자에게 재물이나 재산상의 이익을 제공하는 이벤트를 진행하고, 을이 이 이벤트를 이용하여 도박을 한 경우, 갑과 을은 각각 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ-R2-1",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "체육진흥투표권",
+          "유사 행위",
+          "참가자",
+          "도박",
+          "벌칙"
+        ],
+        "query_text": "체육진흥투표권 유사 행위 참가자 도박 벌칙 [원문 맥락] 참가자 을은 해당 이벤트가 불법인 줄 알면서도 경기 결과에 돈을 걸고 참여하여 도박을 하였다. 갑이 체육진흥투표권과 비슷한 것을 발행하여 결과 적중자에게 재물이나 재산상의 이익을 제공하는 이벤트를 진행하고, 을이 이 이벤트를 이용하여 도박을 한 경우, 갑과 을은 각각 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ-R2-2",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "국민체육진흥법",
+          "제68조",
+          "벌칙",
+          "유사행위",
+          "징역",
+          "벌금"
+        ],
+        "query_text": "국민체육진흥법 제68조 벌칙 유사행위 금지 위반 징역 벌금 [원문 맥락] 참가자 을은 해당 이벤트가 불법인 줄 알면서도 경기 결과에 돈을 걸고 참여하여 도박을 하였다. 갑이 체육진흥투표권과 비슷한 것을 발행하여 결과 적중자에게 재물이나 재산상의 이익을 제공하는 이벤트를 진행하고, 을이 이 이벤트를 이용하여 도박을 한 경우, 갑과 을은 각각 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ-R3-1",
+        "statute_hints": [
+          "국민체육진흥법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "국민체육진흥법",
+          "제68조",
+          "벌칙",
+          "유사행위",
+          "이용",
+          "도박",
+          "참가자"
+        ],
+        "query_text": "국민체육진흥법 제68조 벌칙 유사행위 이용 도박 참가자 처벌 [원문 맥락] 참가자 을은 해당 이벤트가 불법인 줄 알면서도 경기 결과에 돈을 걸고 참여하여 도박을 하였다. 갑이 체육진흥투표권과 비슷한 것을 발행하여 결과 적중자에게 재물이나 재산상의 이익을 제공하는 이벤트를 진행하고, 을이 이 이벤트를 이용하여 도박을 한 경우, 갑과 을은 각각 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ-R3-2",
+        "statute_hints": [
+          "국민체육진흥법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 ‘승부예측 이벤트’라는 명칭으로 스포츠 경기 결과를 맞히는 사람에게 상금을 지급하는 온라인 이벤트를 운영하였다. 이 이벤트는 체육진흥투표권과 유사한 방식으로 구성되어 있었으며, 갑은 서울올림픽기념국민체육진흥공단이나 수탁사업자가 아닌 일반인이었다. 참가자 을은 해당 이벤트가 불법인 줄 알면서도 경기 결과에 돈을 걸고 참여하여 도박을 하였다.\n\n[질문]\n갑이 체육진흥투표권과 비슷한 것을 발행하여 결과 적중자에게 재물이나 재산상의 이익을 제공하는 이벤트를 진행하고, 을이 이 이벤트를 이용하여 도박을 한 경우, 갑과 을은 각각 어떤 처벌을 받게 되는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "해당 행위를 금지하고 처벌하는 법률 조항의 정확한 내용과 법정형을 확인",
+        "critical": true,
+        "description": "체육진흥투표권과 유사한 형태의 승부예측 이벤트를 운영하여 적중자에게 재물 또는 재산상 이익을 제공한 행위의 금지 규정 및 처벌 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "해당 행위를 금지하고 처벌하는 법률 조항의 정확한 내용과 법정형을 확인",
+        "critical": true,
+        "description": "체육진흥투표권과 유사한 형태의 불법 이벤트를 알면서도 이용하여 도박을 한 행위의 금지 규정 및 처벌 조항",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "05d40ad9-8943-497b-ae07-ab6f5fbe4e17",
+    "seen_provision_ids": [
+      "전기통신사업법 95조 2 벌칙#KOBLEX-204464",
+      "국민체육진흥법 26조  유사행위의 금지 등#KOBLEX-103743",
+      "형사소송법 126조  야간집행제한의 예외#KOBLEX-231798",
+      "경찰관 직무집행법 11조 5 직무 수행으로 인한 형의 감면#KOBLEX-226639",
+      "선원법 161조  벌칙#KOBLEX-067806",
+      "스토킹범죄의 처벌 등에 관한 법률 3조  스토킹행위 신고 등에 대한 응급조치#KOBLEX-130426",
+      "도시 및 주거환경정비법 135조  벌칙#KOBLEX-229313",
+      "형법 1조  범죄의 성립과 처벌#KOBLEX-192644",
+      "국가기술자격법 19조  유사 자격 등의 검정의 금지#KOBLEX-079135",
+      "보험업법 198조  벌칙#KOBLEX-022609",
+      "상호저축은행법 18조 2 금지 행위#KOBLEX-180962",
+      "병역법 92조  전문연구요원 등의 편입 및 복무의무위반 등#KOBLEX-035752",
+      "생명윤리 및 안전에 관한 법률 68조  벌칙#KOBLEX-139468",
+      "화물자동차 운수사업법 68조  벌칙#KOBLEX-162897",
+      "한국마사회법 48조  유사행위의 금지 등#KOBLEX-002691",
+      "도시개발법 79조 2 벌칙#KOBLEX-003176",
+      "금융위원회의 설치 등에 관한 법률 68조  벌칙#KOBLEX-219634",
+      "변호사법 115조  법무법인 등의 처벌#KOBLEX-087338",
+      "빈집 및 소규모주택 정비에 관한 특례법 59조  벌칙#KOBLEX-194617",
+      "관광진흥법 26조 2 유사행위 등의 금지#KOBLEX-094070",
+      "국민체육진흥법 51조  몰수ㆍ추징#KOBLEX-103883",
+      "국민체육진흥법 26조  유사행위의 금지 등#KOBLEX-103742",
+      "중소기업협동조합법 53조  선거운동의 제한#KOBLEX-030843",
+      "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 68조  입원등의 금지 등#KOBLEX-039885",
+      "여신전문금융업법 68조 2 재단의 운영 재원#KOBLEX-042488",
+      "주택법 102조  벌칙#KOBLEX-133664",
+      "약사법 24조 2 부당한 경제적 이익 등의 제공 금지#KOBLEX-181908",
+      "약사법 68조  과장광고 등의 금지#KOBLEX-182371",
+      "도시 및 주거환경정비법 135조  벌칙#KOBLEX-148741",
+      "교육환경 보호에 관한 법률 9조  교육환경보호구역에서의 금지행위 등#KOBLEX-108720",
+      "경찰관 직무집행법 11조 5 직무 수행으로 인한 형의 감면#KOBLEX-033758",
+      "민사집행법 68조  채무자의 감치 및 벌칙#KOBLEX-128263",
+      "형법 348조  준사기#KOBLEX-193400",
+      "상호저축은행법 18조 2 금지 행위#KOBLEX-074072",
+      "소년법 68조  보도 금지#KOBLEX-190713",
+      "액화석유가스의 안전관리 및 사업법 68조  벌칙#KOBLEX-056679",
+      "주택법 102조  벌칙#KOBLEX-205176",
+      "국민의 형사재판 참여에 관한 법률 59조  배심원 등의 금품 수수 등#KOBLEX-220063",
+      "공직선거법 231조  재산상의 이익목적의 매수 및 이해유도죄#KOBLEX-052576",
+      "은행법 68조  벌칙#KOBLEX-143928",
+      "공동주택관리법 98조  벌칙#KOBLEX-086391",
+      "한국마사회법 51조  벌칙#KOBLEX-002706"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

@@ -1,0 +1,938 @@
+{
+  "abstention_reason": null,
+  "answer": "1. 갑에 대한 선원수첩 발급 거절의 법적 근거\n선원법 제46조 제1항에 따르면, 해양항만관청은 「병역법」 제76조제1항 각 호의 어느 하나에 해당하는 사람에게 선원수첩을 발급하지 아니할 수 있습니다 [CT1]. 문제의 사실관계에서 갑은 과거 병역법 제76조제1항 각호에 해당하는 사유로 병역의무를 이행하지 않은 자로 기재되어 있으므로, 해양항만관청은 선원법 제46조 제1항 제2호에 근거하여 갑에게 선원수첩을 발급하지 않을 수 있습니다.\n\n2. 을에 대한 선원수첩 유효기간 제한의 법적 근거\n선원법 제46조 제2항에 따르면, 해양항만관청은 선원수첩을 발급할 때 필요하다고 인정하면 해양수산부령으로 정하는 바에 따라 승선선박 또는 승선구역을 한정하거나 유효기간을 정하여 발급할 수 있습니다 [CT2]. 따라서 해양항만관청이 을에게 선원수첩의 유효기간을 제한한 행위는 동 조항에 근거하여 이루어진 것입니다.",
+  "completed_at_utc": "2026-08-18T18:08:03.388013+00:00",
+  "end_to_end_latency_ms": 260720.708,
+  "errors": [],
+  "record_schema_version": "1.1",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 300,
+      "evidence_fusion": 300,
+      "first_stage": 400,
+      "request_rerank": 400,
+      "rrf": 300,
+      "selected": 30
+    }
+  },
+  "run_id": "7d97eef3-e9a3-4736-b895-1bf94f848623",
+  "state": {
+    "accepted_provision_ids": [
+      "선원법 46조  선원수첩의 발급 제한#KOBLEX-067334",
+      "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 20,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 7,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "explanation": "All critical evidence items are covered without conflict.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "claim_count": 2
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 21.361520153928453,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "병역법 시행령 160조  병역의무 기피자의 인적사항 등의 공개#KOBLEX-002377",
+        "provision_text": "③ 법 제81조의2제1항에 따라 공개하는 병역의무 기피자의 인적사항과 병역의무 미이행 사항 등(이하 이 조에서 \"인적사항등\"이라 한다)은 다음 각 호와 같다. 1. 병역의무 기피자의 성명, 연령, 주소 2. 기피일자 및 기피요지 3. 법 위반 조항",
+        "rerank_rank": 1,
+        "rerank_score": 0.8384798169136047,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "병역법 시행령 160조  병역의무 기피자의 인적사항 등의 공개 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 69,
+        "first_stage_score": 13.485047621851708,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "병역법 76조  병역의무 불이행자에 대한 제재#KOBLEX-035620",
+        "provision_text": "제76조(병역의무 불이행자에 대한 제재)",
+        "rerank_rank": 2,
+        "rerank_score": 0.5404067039489746,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "병역법 76조  병역의무 불이행자에 대한 제재",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 49,
+        "first_stage_score": 14.523796657510264,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "병역법 3조  병역의무#KOBLEX-035034",
+        "provision_text": "제3조(병역의무)",
+        "rerank_rank": 3,
+        "rerank_score": 0.08628498762845993,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "병역법 3조  병역의무",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 76,
+        "first_stage_score": 13.171047698864767,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "병역법 81조 2 병역의무 기피자의 인적사항 등의 공개#KOBLEX-035675",
+        "provision_text": "제81조의2(병역의무 기피자의 인적사항 등의 공개)",
+        "rerank_rank": 4,
+        "rerank_score": 0.07854613661766052,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "병역법 81조 2 병역의무 기피자의 인적사항 등의 공개",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 77,
+        "first_stage_score": 13.171047698864767,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "병역법 시행령 160조  병역의무 기피자의 인적사항 등의 공개#KOBLEX-002374",
+        "provision_text": "제160조(병역의무 기피자의 인적사항 등의 공개)",
+        "rerank_rank": 5,
+        "rerank_score": 0.05155566707253456,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "병역법 시행령 160조  병역의무 기피자의 인적사항 등의 공개",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 2.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "병역법 68조  병역의무의 연기 및 감면의 제한#KOBLEX-035555",
+        "provision_text": "제68조(병역의무의 연기 및 감면의 제한) 제86조부터 제88조까지 또는 제94조에 규정된 죄를 지은 사람, 징집 또는 소집 후 복무를 이탈한 사람과 고의로 병역의무의 연기 또는 감면사유를 발생하게 한 사람에 대하여는 다음 각 호의 처분을 하지 아니한다. 다만, 본인이 아니면 가족의 생계를 유지할 수 없는 사람의 경우에는 고의로 그 사유를 발생하게 한 사람을 제외하고는 그러하지 아니하다. <개정 2010.1.25, 2013.6.4, 2016.1.19, 2016.5.29, 2019.12.31>",
+        "rerank_rank": 6,
+        "rerank_score": 0.05013275891542435,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "병역법 68조  병역의무의 연기 및 감면의 제한",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 35,
+        "first_stage_score": 16.239205033461953,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "고용보험법 시행령 71조  수급기간의 연기 신청#KOBLEX-156882",
+        "provision_text": "① 법 제48조제2항에 따라 취업할 수 없는 사실을 신고하려는 사람은 직접 또는 대리인을 통하여 수급기간 내에 수급기간 연기신청서에 수급자격증(수급자격증을 발급 받은 경우로 한정한다)을 첨부하여 신청지 관할 직업안정기관의 장에게 제출해야 한다. 다만, 천재지변, 「병역법」에 따른 병역의무 이행, 그 밖의 부득이한 사유가 있는 경우에는 그 사유가 없어진 날부터 30일 이내에 제출해야 한다. <개정 2011.9.15, 2012.1.13, 2021.6.8>",
+        "rerank_rank": 7,
+        "rerank_score": 0.015293042175471783,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "고용보험법 시행령 71조  수급기간의 연기 신청 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 26.347112842726087,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333",
+        "provision_text": "① 해양항만관청은 다음 각 호의 어느 하나에 해당하는 사람에게 선원수첩을 발급하지 아니할 수 있다. 1. 신원이 분명하지 아니한 사람 2. 「병역법」 제76조제1항 각 호의 어느 하나에 해당하는 사람 3. 삭제 <2021.6.15>",
+        "rerank_rank": 8,
+        "rerank_score": 0.013186437077820301,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "선원법 46조  선원수첩의 발급 제한 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 41,
+        "first_stage_score": 15.092469220717284,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "진실ㆍ화해를 위한 과거사정리 기본법 32조 2 국가기관의 권고사항 이행노력 의무 등#KOBLEX-168710",
+        "provision_text": "⑤ 제2항부터 제4항까지에서 규정한 사항 외에 이행계획, 조치결과 및 미이행 사유의 제출ㆍ점검 등에 필요한 사항은 대통령령으로 정한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.00766487792134285,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "진실ㆍ화해를 위한 과거사정리 기본법 32조 2 국가기관의 권고사항 이행노력 의무 등 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 2.0,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "병역법 시행령 145조  국외여행허가 등#KOBLEX-002233",
+        "provision_text": "④ 법 제70조제2항 본문에 따라 국외여행허가 등이 제한되는 사람은 다음 각 호와 같다. 다만, 승선근무예비역, 보충역 또는 대체복무요원으로 복무 중인 사람은 제외한다. <개정 2013.12.4, 2016.11.29, 2020.6.30, 2021.6.22, 2024.4.23> 1. 법 제87조 및 제88조에 따른 병역판정검사, 재병역판정검사, 입영판정검사, 확인신체검사 또는 입영ㆍ소집을 기피하고 있거나 기피한 사실이 있는 사람 2. 법 제89조의2에 따른 사회복무요원 등의 복무를 이탈하고 있거나 이탈한 사실이 있는 사람 3. 법 제94조에 따른 국외여행허가 의무를 위반한 사실이 있는 사람 4. 제147조의2제1항제1호다목부터 마목까지의 규정 중 어느 하나에 해당하는 사유로 병역판정검사 연기, 재병역판정검사 연기, 입영ㆍ소집 연기 또는 사회복무요원ㆍ대체복무요원 소집 해제처분이 취소된 사람. 다만, 「해외이주법」 제12조에 따라 영주귀국 신고를 한 사람은 제외한다. 5. 병역의무를 기피하거나 감면받을 목적으로 도망가거나 행방을 감춘 경우 또는 신체를 손상하거나 속임수를 쓴 사람 6. 정당한 사유 없이 병역의무부과 통지서 수령을 거부한 사람",
+        "rerank_rank": 10,
+        "rerank_score": 0.006169985979795456,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "병역법 시행령 145조  국외여행허가 등 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 38,
+        "first_stage_score": 20.029297091328075,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "개인정보 보호법 시행령 15조  개인정보의 목적 외 이용 또는 제3자 제공의 관리#KOBLEX-225321",
+        "provision_text": "4. 이용 또는 제공의 법적 근거",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999321699142456,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "개인정보 보호법 시행령 15조  개인정보의 목적 외 이용 또는 제3자 제공의 관리 4호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 1.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "선원법 104조  해양항만관청의 심사ㆍ조정#KOBLEX-067582",
+        "provision_text": "제104조(해양항만관청의 심사ㆍ조정)",
+        "rerank_rank": 2,
+        "rerank_score": 0.9998853206634521,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "선원법 104조  해양항만관청의 심사ㆍ조정",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "선원법 105조  선원노동위원회의 심사와 중재#KOBLEX-067590",
+        "provision_text": "① 해양항만관청이 제104조제2항에 따른 기간에 심사나 조정을 하지 아니하거나 심사나 조정의 결과에 이의가 있는 자는 선원노동위원회에 심사나 중재를 청구할 수 있다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9998445510864258,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "선원법 105조  선원노동위원회의 심사와 중재 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 96,
+        "first_stage_score": 1.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "선원법 106조 2 재해보상보험등의 해지 제한 등#KOBLEX-067598",
+        "provision_text": "제106조의2(재해보상보험등의 해지 제한 등)",
+        "rerank_rank": 4,
+        "rerank_score": 0.99983811378479,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "선원법 106조 2 재해보상보험등의 해지 제한 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 57,
+        "first_stage_score": 19.081523705349788,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "방송법 시행령 16조  허가 및 승인의 유효기간 등#KOBLEX-233140",
+        "provision_text": "제16조(허가 및 승인의 유효기간 등)",
+        "rerank_rank": 5,
+        "rerank_score": 0.9998358488082886,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "방송법 시행령 16조  허가 및 승인의 유효기간 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 20.514571807587323,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "노인장기요양보험법 시행령 8조  장기요양인정 유효기간#KOBLEX-155197",
+        "provision_text": "제8조(장기요양인정 유효기간)",
+        "rerank_rank": 6,
+        "rerank_score": 0.9998304843902588,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "노인장기요양보험법 시행령 8조  장기요양인정 유효기간",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 29.32750065784078,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "선원법 45조  선원수첩#KOBLEX-067325",
+        "provision_text": "제45조(선원수첩)",
+        "rerank_rank": 7,
+        "rerank_score": 0.9998214840888977,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "선원법 45조  선원수첩",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 55,
+        "first_stage_score": 19.081523705349788,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "건설기술 진흥법 20조 3 교육ㆍ훈련 대행의 유효기간 및 갱신#KOBLEX-062525",
+        "provision_text": "제20조의3(교육ㆍ훈련 대행의 유효기간 및 갱신)",
+        "rerank_rank": 8,
+        "rerank_score": 0.9998173117637634,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "건설기술 진흥법 20조 3 교육ㆍ훈련 대행의 유효기간 및 갱신",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 56,
+        "first_stage_score": 19.081523705349788,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "건설기술 진흥법 20조 3 교육ㆍ훈련 대행의 유효기간 및 갱신#KOBLEX-170319",
+        "provision_text": "제20조의3(교육ㆍ훈련 대행의 유효기간 및 갱신)",
+        "rerank_rank": 9,
+        "rerank_score": 0.9998173117637634,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "건설기술 진흥법 20조 3 교육ㆍ훈련 대행의 유효기간 및 갱신",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 20.01355679387803,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "고엽제후유의증 등 환자지원 및 단체설립에 관한 법률 13조 4 승인의 유효기간 등#KOBLEX-091014",
+        "provision_text": "제13조의4(승인의 유효기간 등)",
+        "rerank_rank": 10,
+        "rerank_score": 0.9998144507408142,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "고엽제후유의증 등 환자지원 및 단체설립에 관한 법률 13조 4 승인의 유효기간 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 27.755970478203082,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "선원법 46조  선원수첩의 발급 제한#KOBLEX-067332",
+        "provision_text": "제46조(선원수첩의 발급 제한)",
+        "rerank_rank": 3,
+        "rerank_score": 0.9942803382873535,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "선원법 46조  선원수첩의 발급 제한",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 30.542185542857474,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "선원법 47조  선원수첩의 실효#KOBLEX-067338",
+        "provision_text": "3. 선원수첩을 재발급한 경우 종전의 선원수첩",
+        "rerank_rank": 5,
+        "rerank_score": 0.9927828311920166,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "선원법 47조  선원수첩의 실효 3호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 23.25315685397939,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "선원법 47조  선원수첩의 실효#KOBLEX-067336",
+        "provision_text": "1. 선원수첩을 발급한 날 또는 하선한 날부터 5년(군 복무기간 등 해양수산부장관이 인정하는 기간은 제외한다) 이내에 승선하지 아니한 선원의 선원수첩",
+        "rerank_rank": 6,
+        "rerank_score": 0.9923052191734314,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "선원법 47조  선원수첩의 실효 1호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 38,
+        "first_stage_score": 20.01355679387803,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "경비업법 6조  허가의 유효기간 등#KOBLEX-219672",
+        "provision_text": "제6조(허가의 유효기간 등)",
+        "rerank_rank": 7,
+        "rerank_score": 0.9846524596214294,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "경비업법 6조  허가의 유효기간 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 24.0387472241626,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "선원법 46조  선원수첩의 발급 제한#KOBLEX-067334",
+        "provision_text": "② 해양항만관청은 선원수첩을 발급할 때 필요하다고 인정하면 해양수산부령으로 정하는 바에 따라 승선선박 또는 승선구역을 한정하거나 유효기간을 정하여 발급할 수 있다. <개정 2013.3.23>",
+        "rerank_rank": 8,
+        "rerank_score": 0.9994340538978577,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "선원법 46조  선원수첩의 발급 제한 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 45,
+        "first_stage_score": 20.01355679387803,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "파견근로자 보호 등에 관한 법률 10조  허가의 유효기간 등#KOBLEX-029339",
+        "provision_text": "제10조(허가의 유효기간 등)",
+        "rerank_rank": 9,
+        "rerank_score": 0.9832965135574341,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "파견근로자 보호 등에 관한 법률 10조  허가의 유효기간 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 26.595932121727017,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "도로교통법 시행규칙 83조 2 본인 여부를 확인할 수 있는 신분증명서의 종류#KOBLEX-161767",
+        "provision_text": "2. 「선원법」 제45조에 따라 발급된 선원수첩",
+        "rerank_rank": 10,
+        "rerank_score": 0.9862290620803833,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "도로교통법 시행규칙 83조 2 본인 여부를 확인할 수 있는 신분증명서의 종류 2호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "개인정보 보호법 시행령 15조  개인정보의 목적 외 이용 또는 제3자 제공의 관리#KOBLEX-225321": "4. 이용 또는 제공의 법적 근거",
+      "건설기술 진흥법 20조 3 교육ㆍ훈련 대행의 유효기간 및 갱신#KOBLEX-062525": "제20조의3(교육ㆍ훈련 대행의 유효기간 및 갱신)",
+      "건설기술 진흥법 20조 3 교육ㆍ훈련 대행의 유효기간 및 갱신#KOBLEX-170319": "제20조의3(교육ㆍ훈련 대행의 유효기간 및 갱신)",
+      "경비업법 6조  허가의 유효기간 등#KOBLEX-219672": "제6조(허가의 유효기간 등)",
+      "고엽제후유의증 등 환자지원 및 단체설립에 관한 법률 13조 4 승인의 유효기간 등#KOBLEX-091014": "제13조의4(승인의 유효기간 등)",
+      "고용보험법 시행령 71조  수급기간의 연기 신청#KOBLEX-156882": "① 법 제48조제2항에 따라 취업할 수 없는 사실을 신고하려는 사람은 직접 또는 대리인을 통하여 수급기간 내에 수급기간 연기신청서에 수급자격증(수급자격증을 발급 받은 경우로 한정한다)을 첨부하여 신청지 관할 직업안정기관의 장에게 제출해야 한다. 다만, 천재지변, 「병역법」에 따른 병역의무 이행, 그 밖의 부득이한 사유가 있는 경우에는 그 사유가 없어진 날부터 30일 이내에 제출해야 한다. <개정 2011.9.15, 2012.1.13, 2021.6.8>",
+      "노인장기요양보험법 시행령 8조  장기요양인정 유효기간#KOBLEX-155197": "제8조(장기요양인정 유효기간)",
+      "도로교통법 시행규칙 83조 2 본인 여부를 확인할 수 있는 신분증명서의 종류#KOBLEX-161767": "2. 「선원법」 제45조에 따라 발급된 선원수첩",
+      "방송법 시행령 16조  허가 및 승인의 유효기간 등#KOBLEX-233140": "제16조(허가 및 승인의 유효기간 등)",
+      "병역법 3조  병역의무#KOBLEX-035034": "제3조(병역의무)",
+      "병역법 68조  병역의무의 연기 및 감면의 제한#KOBLEX-035555": "제68조(병역의무의 연기 및 감면의 제한) 제86조부터 제88조까지 또는 제94조에 규정된 죄를 지은 사람, 징집 또는 소집 후 복무를 이탈한 사람과 고의로 병역의무의 연기 또는 감면사유를 발생하게 한 사람에 대하여는 다음 각 호의 처분을 하지 아니한다. 다만, 본인이 아니면 가족의 생계를 유지할 수 없는 사람의 경우에는 고의로 그 사유를 발생하게 한 사람을 제외하고는 그러하지 아니하다. <개정 2010.1.25, 2013.6.4, 2016.1.19, 2016.5.29, 2019.12.31>",
+      "병역법 76조  병역의무 불이행자에 대한 제재#KOBLEX-035620": "제76조(병역의무 불이행자에 대한 제재)",
+      "병역법 81조 2 병역의무 기피자의 인적사항 등의 공개#KOBLEX-035675": "제81조의2(병역의무 기피자의 인적사항 등의 공개)",
+      "병역법 시행령 145조  국외여행허가 등#KOBLEX-002233": "④ 법 제70조제2항 본문에 따라 국외여행허가 등이 제한되는 사람은 다음 각 호와 같다. 다만, 승선근무예비역, 보충역 또는 대체복무요원으로 복무 중인 사람은 제외한다. <개정 2013.12.4, 2016.11.29, 2020.6.30, 2021.6.22, 2024.4.23> 1. 법 제87조 및 제88조에 따른 병역판정검사, 재병역판정검사, 입영판정검사, 확인신체검사 또는 입영ㆍ소집을 기피하고 있거나 기피한 사실이 있는 사람 2. 법 제89조의2에 따른 사회복무요원 등의 복무를 이탈하고 있거나 이탈한 사실이 있는 사람 3. 법 제94조에 따른 국외여행허가 의무를 위반한 사실이 있는 사람 4. 제147조의2제1항제1호다목부터 마목까지의 규정 중 어느 하나에 해당하는 사유로 병역판정검사 연기, 재병역판정검사 연기, 입영ㆍ소집 연기 또는 사회복무요원ㆍ대체복무요원 소집 해제처분이 취소된 사람. 다만, 「해외이주법」 제12조에 따라 영주귀국 신고를 한 사람은 제외한다. 5. 병역의무를 기피하거나 감면받을 목적으로 도망가거나 행방을 감춘 경우 또는 신체를 손상하거나 속임수를 쓴 사람 6. 정당한 사유 없이 병역의무부과 통지서 수령을 거부한 사람",
+      "병역법 시행령 160조  병역의무 기피자의 인적사항 등의 공개#KOBLEX-002374": "제160조(병역의무 기피자의 인적사항 등의 공개)",
+      "병역법 시행령 160조  병역의무 기피자의 인적사항 등의 공개#KOBLEX-002377": "③ 법 제81조의2제1항에 따라 공개하는 병역의무 기피자의 인적사항과 병역의무 미이행 사항 등(이하 이 조에서 \"인적사항등\"이라 한다)은 다음 각 호와 같다. 1. 병역의무 기피자의 성명, 연령, 주소 2. 기피일자 및 기피요지 3. 법 위반 조항",
+      "선원법 104조  해양항만관청의 심사ㆍ조정#KOBLEX-067582": "제104조(해양항만관청의 심사ㆍ조정)",
+      "선원법 105조  선원노동위원회의 심사와 중재#KOBLEX-067590": "① 해양항만관청이 제104조제2항에 따른 기간에 심사나 조정을 하지 아니하거나 심사나 조정의 결과에 이의가 있는 자는 선원노동위원회에 심사나 중재를 청구할 수 있다.",
+      "선원법 106조 2 재해보상보험등의 해지 제한 등#KOBLEX-067598": "제106조의2(재해보상보험등의 해지 제한 등)",
+      "선원법 45조  선원수첩#KOBLEX-067325": "제45조(선원수첩)",
+      "선원법 46조  선원수첩의 발급 제한#KOBLEX-067332": "제46조(선원수첩의 발급 제한)",
+      "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333": "① 해양항만관청은 다음 각 호의 어느 하나에 해당하는 사람에게 선원수첩을 발급하지 아니할 수 있다. 1. 신원이 분명하지 아니한 사람 2. 「병역법」 제76조제1항 각 호의 어느 하나에 해당하는 사람 3. 삭제 <2021.6.15>",
+      "선원법 46조  선원수첩의 발급 제한#KOBLEX-067334": "② 해양항만관청은 선원수첩을 발급할 때 필요하다고 인정하면 해양수산부령으로 정하는 바에 따라 승선선박 또는 승선구역을 한정하거나 유효기간을 정하여 발급할 수 있다. <개정 2013.3.23>",
+      "선원법 47조  선원수첩의 실효#KOBLEX-067336": "1. 선원수첩을 발급한 날 또는 하선한 날부터 5년(군 복무기간 등 해양수산부장관이 인정하는 기간은 제외한다) 이내에 승선하지 아니한 선원의 선원수첩",
+      "선원법 47조  선원수첩의 실효#KOBLEX-067338": "3. 선원수첩을 재발급한 경우 종전의 선원수첩",
+      "진실ㆍ화해를 위한 과거사정리 기본법 32조 2 국가기관의 권고사항 이행노력 의무 등#KOBLEX-168710": "⑤ 제2항부터 제4항까지에서 규정한 사항 외에 이행계획, 조치결과 및 미이행 사유의 제출ㆍ점검 등에 필요한 사항은 대통령령으로 정한다.",
+      "파견근로자 보호 등에 관한 법률 10조  허가의 유효기간 등#KOBLEX-029339": "제10조(허가의 유효기간 등)"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C008(선원법 제46조 제1항)은 병역법 제76조 제1항 각 호에 해당하는 자에 대해 선원수첩 발급을 제한할 수 있는 법적 근거를 명시하고 있어, 병역의무 미이행이 발급 거절 사유에 해당하는지 확인하는 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [
+          "선원법 46조  선원수첩의 발급 제한#KOBLEX-067334"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C025(선원법 제46조 제2항)은 해양항만관청이 선원수첩 발급 시 유효기간을 정하여 발급할 수 있는 법적 근거와 요건(필요하다고 인정하는 경우)을 명시하고 있어, 완료 기준을 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333",
+        "support_spans": [
+          {
+            "end_char": 129,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "선원법 46조  선원수첩의 발급 제한#KOBLEX-067334",
+        "support_spans": [
+          {
+            "end_char": 106,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 7,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "병역의무 미이행 사유가 선원수첩 발급 거절의 법적 근거가 되는지 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "선원수첩 유효기간 제한의 법적 근거 및 요건",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 최근에 해양 운송업에 종사하기 위해 선원수첩을 발급받고자 해양항만관청에 신청을 하였습니다. 그러나 갑은 과거 병역법 제76조제1항 각호에 해당하는 사유로 병역의무를 이행하지 않았습니다. 또한, 을은 선원수첩을 받았으나, 해양항만관청은 을에게 수첩의 유효기간을 제한하였습니다. 이에 을은 해양항만관청의 결정에 대해 이의를 제기하려고 합니다. [질문] 해양항만관청이 갑에게 선원수첩을 발급하지 않을 수 있는 법적 근거는 무엇이며, 을의 선원수첩 유효기간을 제한한 것은 어떤 법적 근거에서 이루어졌는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "선원수첩",
+          "발급거절",
+          "병역의무",
+          "미이행",
+          "병역법"
+        ],
+        "query_text": "병역의무 미이행 선원수첩 발급 거절 사유 [원문 맥락] 이에 을은 해양항만관청의 결정에 대해 이의를 제기하려고 합니다. 해양항만관청이 갑에게 선원수첩을 발급하지 않을 수 있는 법적 근거는 무엇이며, 을의 선원수첩 유효기간을 제한한 것은 어떤 법적 근거에서 이루어졌는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "선원법",
+          "병역법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "선원수첩",
+          "유효기간",
+          "제한",
+          "해양항만관청"
+        ],
+        "query_text": "선원수첩 유효기간 제한 법적 근거 [원문 맥락] 이에 을은 해양항만관청의 결정에 대해 이의를 제기하려고 합니다. 해양항만관청이 갑에게 선원수첩을 발급하지 않을 수 있는 법적 근거는 무엇이며, 을의 선원수첩 유효기간을 제한한 것은 어떤 법적 근거에서 이루어졌는가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "선원법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "선원수첩",
+          "유효기간",
+          "제한",
+          "요건",
+          "해양항만관청"
+        ],
+        "query_text": "선원수첩의 유효기간을 제한할 수 있는 경우와 그 요건에 관한 규정 [원문 맥락] 이에 을은 해양항만관청의 결정에 대해 이의를 제기하려고 합니다. 해양항만관청이 갑에게 선원수첩을 발급하지 않을 수 있는 법적 근거는 무엇이며, 을의 선원수첩 유효기간을 제한한 것은 어떤 법적 근거에서 이루어졌는가?",
+        "request_id": "GRQ-R2-1",
+        "statute_hints": [
+          "선원법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "선원수첩",
+          "유효기간",
+          "제한",
+          "사유",
+          "관청"
+        ],
+        "query_text": "선원수첩 유효기간 제한 사유 [원문 맥락] 이에 을은 해양항만관청의 결정에 대해 이의를 제기하려고 합니다. 해양항만관청이 갑에게 선원수첩을 발급하지 않을 수 있는 법적 근거는 무엇이며, 을의 선원수첩 유효기간을 제한한 것은 어떤 법적 근거에서 이루어졌는가?",
+        "request_id": "GRQ-R2-2",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 최근에 해양 운송업에 종사하기 위해 선원수첩을 발급받고자 해양항만관청에 신청을 하였습니다. 그러나 갑은 과거 병역법 제76조제1항 각호에 해당하는 사유로 병역의무를 이행하지 않았습니다. 또한, 을은 선원수첩을 받았으나, 해양항만관청은 을에게 수첩의 유효기간을 제한하였습니다. 이에 을은 해양항만관청의 결정에 대해 이의를 제기하려고 합니다.\n\n[질문]\n해양항만관청이 갑에게 선원수첩을 발급하지 않을 수 있는 법적 근거는 무엇이며, 을의 선원수첩 유효기간을 제한한 것은 어떤 법적 근거에서 이루어졌는가?",
+    "remaining_request_budget": 5,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "병역의무 미이행이 선원수첩 발급 거절 사유에 해당하는지 명시하는 조항 확인",
+        "critical": true,
+        "description": "선원수첩 발급 거절 사유로서 병역의무 미이행에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "선원수첩 유효기간을 제한할 수 있는 법적 근거와 요건을 명시하는 조항 확인",
+        "critical": true,
+        "description": "선원수첩 유효기간 제한에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "7d97eef3-e9a3-4736-b895-1bf94f848623",
+    "seen_provision_ids": [
+      "경비업법 6조  허가의 유효기간 등#KOBLEX-219672",
+      "개인정보 보호법 시행령 15조  개인정보의 목적 외 이용 또는 제3자 제공의 관리#KOBLEX-225321",
+      "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333",
+      "건설기술 진흥법 20조 3 교육ㆍ훈련 대행의 유효기간 및 갱신#KOBLEX-062525",
+      "파견근로자 보호 등에 관한 법률 10조  허가의 유효기간 등#KOBLEX-029339",
+      "선원법 106조 2 재해보상보험등의 해지 제한 등#KOBLEX-067598",
+      "고엽제후유의증 등 환자지원 및 단체설립에 관한 법률 13조 4 승인의 유효기간 등#KOBLEX-091014",
+      "병역법 시행령 145조  국외여행허가 등#KOBLEX-002233",
+      "선원법 47조  선원수첩의 실효#KOBLEX-067336",
+      "병역법 81조 2 병역의무 기피자의 인적사항 등의 공개#KOBLEX-035675",
+      "건설기술 진흥법 20조 3 교육ㆍ훈련 대행의 유효기간 및 갱신#KOBLEX-170319",
+      "선원법 45조  선원수첩#KOBLEX-067325",
+      "노인장기요양보험법 시행령 8조  장기요양인정 유효기간#KOBLEX-155197",
+      "진실ㆍ화해를 위한 과거사정리 기본법 32조 2 국가기관의 권고사항 이행노력 의무 등#KOBLEX-168710",
+      "병역법 시행령 160조  병역의무 기피자의 인적사항 등의 공개#KOBLEX-002377",
+      "선원법 46조  선원수첩의 발급 제한#KOBLEX-067332",
+      "병역법 68조  병역의무의 연기 및 감면의 제한#KOBLEX-035555",
+      "선원법 104조  해양항만관청의 심사ㆍ조정#KOBLEX-067582",
+      "도로교통법 시행규칙 83조 2 본인 여부를 확인할 수 있는 신분증명서의 종류#KOBLEX-161767",
+      "고용보험법 시행령 71조  수급기간의 연기 신청#KOBLEX-156882",
+      "방송법 시행령 16조  허가 및 승인의 유효기간 등#KOBLEX-233140",
+      "병역법 3조  병역의무#KOBLEX-035034",
+      "병역법 76조  병역의무 불이행자에 대한 제재#KOBLEX-035620",
+      "선원법 47조  선원수첩의 실효#KOBLEX-067338",
+      "선원법 105조  선원노동위원회의 심사와 중재#KOBLEX-067590",
+      "선원법 46조  선원수첩의 발급 제한#KOBLEX-067334",
+      "병역법 시행령 160조  병역의무 기피자의 인적사항 등의 공개#KOBLEX-002374"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

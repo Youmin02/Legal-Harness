@@ -1,0 +1,1263 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-18T17:43:32.929241+00:00",
+  "end_to_end_latency_ms": 399074.171,
+  "errors": [],
+  "record_schema_version": "1.1",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 500,
+      "evidence_fusion": 500,
+      "first_stage": 700,
+      "request_rerank": 700,
+      "rrf": 500,
+      "selected": 50
+    }
+  },
+  "run_id": "25499bc6-7d69-49d1-9bba-c555b426f459",
+  "state": {
+    "accepted_provision_ids": [
+      "형법 299조  준강간, 준강제추행#KOBLEX-193297",
+      "형법 286조  미수범#KOBLEX-193266",
+      "군형법 92조 3 강제추행#KOBLEX-140850"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 3,
+          "issue_count": 3
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 30,
+          "new_provision_count": 24,
+          "request_count": 3,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 5,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 5,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 54.976719889986065,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "군형법 92조 4 준강간, 준강제추행#KOBLEX-140851",
+        "provision_text": "제92조의4(준강간, 준강제추행) 제1조제1항부터 제3항까지에 규정된 사람의 심신상실 또는 항거불능 상태를 이용하여 간음 또는 추행을 한 사람은 제92조, 제92조의2 및 제92조의3의 예에 따른다. <개정 2013.4.5>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9989120960235596,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ3"
+        ],
+        "statute_name": "군형법 92조 4 준강간, 준강제추행",
+        "target_evidence_item_ids": [
+          "E1",
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 44.74343961936915,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형법 299조  준강간, 준강제추행#KOBLEX-193297",
+        "provision_text": "제299조(준강간, 준강제추행) 사람의 심신상실 또는 항거불능의 상태를 이용하여 간음 또는 추행을 한 자는 제297조, 제297조의2 및 제298조의 예에 의한다. <개정 2012.12.18>",
+        "rerank_rank": 2,
+        "rerank_score": 0.9986082911491394,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ3"
+        ],
+        "statute_name": "형법 299조  준강간, 준강제추행",
+        "target_evidence_item_ids": [
+          "E1",
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 22.30206056214054,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157534",
+        "provision_text": "③ 친족관계인 사람이 사람에 대하여 「형법」 제299조(준강간, 준강제추행)의 죄를 범한 경우에는 제1항 또는 제2항의 예에 따라 처벌한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9983002543449402,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 14.58326967886508,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "도로법 10조  도로의 종류와 등급#KOBLEX-211443",
+        "provision_text": "5. 시도",
+        "rerank_rank": 4,
+        "rerank_score": 0.9982942938804626,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "도로법 10조  도로의 종류와 등급 5호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 21.9804996943732,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등#KOBLEX-157530",
+        "provision_text": "③ 제1항의 방법으로 「형법」 제299조(준강간, 준강제추행)의 죄를 범한 사람은 제1항 또는 제2항의 예에 따라 처벌한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.9981549382209778,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 45.55745798991063,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157541",
+        "provision_text": "④ 신체적인 또는 정신적인 장애로 항거불능 또는 항거곤란 상태에 있음을 이용하여 사람을 간음하거나 추행한 사람은 제1항부터 제3항까지의 예에 따라 처벌한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.9979686141014099,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 24,
+        "first_stage_score": 15.190260606795174,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "군형법 92조 3 강제추행#KOBLEX-140850",
+        "provision_text": "제92조의3(강제추행) 폭행이나 협박으로 제1조제1항부터 제3항까지에 규정된 사람에 대하여 추행을 한 사람은 1년 이상의 유기징역에 처한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.997427761554718,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "군형법 92조 3 강제추행",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 16.45028469744965,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157543",
+        "provision_text": "⑥ 위계 또는 위력으로써 신체적인 또는 정신적인 장애가 있는 사람을 추행한 사람은 1년 이상의 유기징역 또는 1천만원 이상 3천만원 이하의 벌금에 처한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.9963613152503967,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등 6항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 26.789943647722055,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "형법 288조  추행 등 목적 약취, 유인 등#KOBLEX-193269",
+        "provision_text": "제288조(추행 등 목적 약취, 유인 등)",
+        "rerank_rank": 9,
+        "rerank_score": 0.9957335591316223,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 288조  추행 등 목적 약취, 유인 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 93,
+        "first_stage_score": 3.0,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 34조  신뢰관계에 있는 사람의 동석#KOBLEX-157656",
+        "provision_text": "제34조(신뢰관계에 있는 사람의 동석)",
+        "rerank_rank": 10,
+        "rerank_score": 0.9955222606658936,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 34조  신뢰관계에 있는 사람의 동석",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 20.820924254987634,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "아동복지법 73조  미수범#KOBLEX-171206",
+        "provision_text": "제73조(미수범) 제71조제1항제1호의 미수범은 처벌한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.03782710060477257,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ3",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "아동복지법 73조  미수범",
+        "target_evidence_item_ids": [
+          "E2",
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 20.820924254987634,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "형법 286조  미수범#KOBLEX-193266",
+        "provision_text": "제286조(미수범) 전3조의 미수범은 처벌한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.03338583931326866,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ3",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형법 286조  미수범",
+        "target_evidence_item_ids": [
+          "E2",
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 48,
+        "first_stage_score": 19.873356157792635,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "보험업법 205조  미수범#KOBLEX-022640",
+        "provision_text": "제205조(미수범) 제197조 및 제198조의 미수범은 처벌한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.03099239245057106,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ3"
+        ],
+        "statute_name": "보험업법 205조  미수범",
+        "target_evidence_item_ids": [
+          "E2",
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 68,
+        "first_stage_score": 19.431195645170174,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "형법 254조  미수범#KOBLEX-193187",
+        "provision_text": "제254조(미수범) 제250조, 제252조 및 제253조의 미수범은 처벌한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.027752457186579704,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 254조  미수범",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 46,
+        "first_stage_score": 19.873356157792635,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "군형법 25조  미수범#KOBLEX-140621",
+        "provision_text": "제25조(미수범) 제22조 및 제23조의 미수범은 처벌한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.02695957012474537,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ3"
+        ],
+        "statute_name": "군형법 25조  미수범",
+        "target_evidence_item_ids": [
+          "E2",
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 50,
+        "first_stage_score": 19.873356157792635,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "형법 182조  미수범#KOBLEX-193066",
+        "provision_text": "제182조(미수범) 제177조 내지 제179조제1항의 미수범은 처벌한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.025855209678411484,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 182조  미수범",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 54,
+        "first_stage_score": 19.873356157792635,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "형법 324조 5 미수범#KOBLEX-193354",
+        "provision_text": "제324조의5(미수범) 제324조 내지 제324조의4의 미수범은 처벌한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.02437073364853859,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 324조 5 미수범",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 58,
+        "first_stage_score": 19.873356157792635,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 136조  미수범#KOBLEX-075821",
+        "provision_text": "제136조(미수범) 제133조 및 제135조의 미수범은 처벌한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.024011390283703804,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 136조  미수범",
+        "target_evidence_item_ids": [
+          "E2",
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 59,
+        "first_stage_score": 19.873356157792635,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 136조  미수범#KOBLEX-214008",
+        "provision_text": "제136조(미수범) 제133조 및 제135조의 미수범은 처벌한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.024011390283703804,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 136조  미수범",
+        "target_evidence_item_ids": [
+          "E2",
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 53,
+        "first_stage_score": 19.873356157792635,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "형법 212조  미수범#KOBLEX-193114",
+        "provision_text": "제212조(미수범) 제207조, 제208조와 전조의 미수범은 처벌한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.02302432432770729,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 212조  미수범",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 67,
+        "first_stage_score": 15.066399581536054,
+        "fusion_rank": 1,
+        "issue_id": "I3",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 3조  특수강도강간 등#KOBLEX-157526",
+        "provision_text": "② 「형법」 제334조(특수강도) 또는 제342조(미수범. 다만, 제334조의 미수범으로 한정한다)의 죄를 범한 사람이 같은 법 제297조(강간), 제297조의2(유사강간), 제298조(강제추행) 및 제299조(준강간, 준강제추행)의 죄를 범한 경우에는 사형, 무기징역 또는 10년 이상의 징역에 처한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.007589262444525957,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 3조  특수강도강간 등 2항",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 19.873356157792635,
+        "fusion_rank": 4,
+        "issue_id": "I3",
+        "provision_id": "보험사기방지 특별법 10조  미수범#KOBLEX-063526",
+        "provision_text": "제10조(미수범) 제8조 및 제9조의 미수범은 처벌한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.0005710190162062645,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "보험사기방지 특별법 10조  미수범",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 20.33610812412066,
+        "fusion_rank": 5,
+        "issue_id": "I3",
+        "provision_id": "군형법 7조  미수범#KOBLEX-140578",
+        "provision_text": "제7조(미수범) 제5조와 제6조의 미수범은 처벌한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0004848680109716952,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "군형법 7조  미수범",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 36,
+        "first_stage_score": 19.431195645170174,
+        "fusion_rank": 7,
+        "issue_id": "I3",
+        "provision_id": "군형법 72조  미수범#KOBLEX-140803",
+        "provision_text": "제72조(미수범) 제66조부터 제70조까지 및 제71조제1항ㆍ제2항의 미수범은 처벌한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.00034619405050762,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "군형법 72조  미수범",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 32.66254059489248,
+        "fusion_rank": 1,
+        "issue_id": "I3",
+        "provision_id": "군형법 15조  미수범#KOBLEX-140604",
+        "provision_text": "제15조(미수범) 제11조부터 제14조까지의 미수범은 처벌한다.",
+        "rerank_rank": 1,
+        "rerank_score": 6.44767569610849e-05,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "군형법 15조  미수범",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 33.32253260091801,
+        "fusion_rank": 4,
+        "issue_id": "I3",
+        "provision_id": "형법 100조  미수범#KOBLEX-192892",
+        "provision_text": "제100조(미수범) 전8조의 미수범은 처벌한다.",
+        "rerank_rank": 4,
+        "rerank_score": 2.658975608937908e-05,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형법 100조  미수범",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 28.170711642672998,
+        "fusion_rank": 5,
+        "issue_id": "I3",
+        "provision_id": "폭력행위 등 처벌에 관한 법률 6조  미수범#KOBLEX-126725",
+        "provision_text": "제6조(미수범) 제2조, 제3조, 제4조제2항[「형법」 제136조, 제255조, 제314조, 제315조, 제335조, 제337조(강도치상의 죄에 한정한다), 제340조제2항(해상강도치상의 죄에 한정한다) 또는 제343조의 죄를 범한 경우는 제외한다] 및 제5조의 미수범은 처벌한다.",
+        "rerank_rank": 5,
+        "rerank_score": 6.04610686423257e-05,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "폭력행위 등 처벌에 관한 법률 6조  미수범",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 50,
+        "first_stage_score": 24.217199192638795,
+        "fusion_rank": 6,
+        "issue_id": "I3",
+        "provision_id": "형법 25조  미수범#KOBLEX-192694",
+        "provision_text": "제25조(미수범)",
+        "rerank_rank": 6,
+        "rerank_score": 2.226416108896956e-05,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형법 25조  미수범",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 41,
+        "first_stage_score": 28.170711642672998,
+        "fusion_rank": 8,
+        "issue_id": "I3",
+        "provision_id": "폭력행위 등 처벌에 관한 법률 6조  미수범#KOBLEX-178715",
+        "provision_text": "제6조(미수범) 제2조, 제3조, 제4조제2항[「형법」 제136조, 제255조, 제314조, 제315조, 제335조, 제337조(강도치상의 죄에 한정한다), 제340조제2항(해상강도치상의 죄에 한정한다) 또는 제343조의 죄를 범한 경우는 제외한다] 및 제5조의 미수범은 처벌한다.",
+        "rerank_rank": 8,
+        "rerank_score": 6.04610686423257e-05,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "폭력행위 등 처벌에 관한 법률 6조  미수범",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 37,
+        "first_stage_score": 30.83745400930505,
+        "fusion_rank": 3,
+        "issue_id": "I3",
+        "provision_id": "군사기밀 보호법 18조  미수범#KOBLEX-194084",
+        "provision_text": "제18조(미수범) 제11조부터 제13조까지, 제15조 및 제17조의 미수범은 처벌한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.000641965598333627,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "군사기밀 보호법 18조  미수범",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 33.32253260091801,
+        "fusion_rank": 5,
+        "issue_id": "I3",
+        "provision_id": "형법 149조  미수범#KOBLEX-192992",
+        "provision_text": "제149조(미수범) 전4조의 미수범은 처벌한다.",
+        "rerank_rank": 5,
+        "rerank_score": 8.38601408759132e-05,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형법 149조  미수범",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 33.32253260091801,
+        "fusion_rank": 6,
+        "issue_id": "I3",
+        "provision_id": "형법 162조  미수범#KOBLEX-193018",
+        "provision_text": "제162조(미수범) 전2조의 미수범은 처벌한다.",
+        "rerank_rank": 6,
+        "rerank_score": 5.240541213424876e-05,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형법 162조  미수범",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 33.32253260091801,
+        "fusion_rank": 8,
+        "issue_id": "I3",
+        "provision_id": "형법 89조  미수범#KOBLEX-192870",
+        "provision_text": "제89조(미수범) 전2조의 미수범은 처벌한다.",
+        "rerank_rank": 8,
+        "rerank_score": 4.055275348946452e-05,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형법 89조  미수범",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 33.32253260091801,
+        "fusion_rank": 9,
+        "issue_id": "I3",
+        "provision_id": "형법 202조  미수범#KOBLEX-193097",
+        "provision_text": "제202조(미수범) 전4조의 미수범은 처벌한다.",
+        "rerank_rank": 9,
+        "rerank_score": 4.977150456397794e-05,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형법 202조  미수범",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "군사기밀 보호법 18조  미수범#KOBLEX-194084": "제18조(미수범) 제11조부터 제13조까지, 제15조 및 제17조의 미수범은 처벌한다.",
+      "군형법 15조  미수범#KOBLEX-140604": "제15조(미수범) 제11조부터 제14조까지의 미수범은 처벌한다.",
+      "군형법 25조  미수범#KOBLEX-140621": "제25조(미수범) 제22조 및 제23조의 미수범은 처벌한다.",
+      "군형법 72조  미수범#KOBLEX-140803": "제72조(미수범) 제66조부터 제70조까지 및 제71조제1항ㆍ제2항의 미수범은 처벌한다.",
+      "군형법 7조  미수범#KOBLEX-140578": "제7조(미수범) 제5조와 제6조의 미수범은 처벌한다.",
+      "군형법 92조 3 강제추행#KOBLEX-140850": "제92조의3(강제추행) 폭행이나 협박으로 제1조제1항부터 제3항까지에 규정된 사람에 대하여 추행을 한 사람은 1년 이상의 유기징역에 처한다.",
+      "군형법 92조 4 준강간, 준강제추행#KOBLEX-140851": "제92조의4(준강간, 준강제추행) 제1조제1항부터 제3항까지에 규정된 사람의 심신상실 또는 항거불능 상태를 이용하여 간음 또는 추행을 한 사람은 제92조, 제92조의2 및 제92조의3의 예에 따른다. <개정 2013.4.5>",
+      "도로법 10조  도로의 종류와 등급#KOBLEX-211443": "5. 시도",
+      "보험사기방지 특별법 10조  미수범#KOBLEX-063526": "제10조(미수범) 제8조 및 제9조의 미수범은 처벌한다.",
+      "보험업법 205조  미수범#KOBLEX-022640": "제205조(미수범) 제197조 및 제198조의 미수범은 처벌한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 34조  신뢰관계에 있는 사람의 동석#KOBLEX-157656": "제34조(신뢰관계에 있는 사람의 동석)",
+      "성폭력범죄의 처벌 등에 관한 특례법 3조  특수강도강간 등#KOBLEX-157526": "② 「형법」 제334조(특수강도) 또는 제342조(미수범. 다만, 제334조의 미수범으로 한정한다)의 죄를 범한 사람이 같은 법 제297조(강간), 제297조의2(유사강간), 제298조(강제추행) 및 제299조(준강간, 준강제추행)의 죄를 범한 경우에는 사형, 무기징역 또는 10년 이상의 징역에 처한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등#KOBLEX-157530": "③ 제1항의 방법으로 「형법」 제299조(준강간, 준강제추행)의 죄를 범한 사람은 제1항 또는 제2항의 예에 따라 처벌한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157534": "③ 친족관계인 사람이 사람에 대하여 「형법」 제299조(준강간, 준강제추행)의 죄를 범한 경우에는 제1항 또는 제2항의 예에 따라 처벌한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157541": "④ 신체적인 또는 정신적인 장애로 항거불능 또는 항거곤란 상태에 있음을 이용하여 사람을 간음하거나 추행한 사람은 제1항부터 제3항까지의 예에 따라 처벌한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157543": "⑥ 위계 또는 위력으로써 신체적인 또는 정신적인 장애가 있는 사람을 추행한 사람은 1년 이상의 유기징역 또는 1천만원 이상 3천만원 이하의 벌금에 처한다.",
+      "아동복지법 73조  미수범#KOBLEX-171206": "제73조(미수범) 제71조제1항제1호의 미수범은 처벌한다.",
+      "폭력행위 등 처벌에 관한 법률 6조  미수범#KOBLEX-126725": "제6조(미수범) 제2조, 제3조, 제4조제2항[「형법」 제136조, 제255조, 제314조, 제315조, 제335조, 제337조(강도치상의 죄에 한정한다), 제340조제2항(해상강도치상의 죄에 한정한다) 또는 제343조의 죄를 범한 경우는 제외한다] 및 제5조의 미수범은 처벌한다.",
+      "폭력행위 등 처벌에 관한 법률 6조  미수범#KOBLEX-178715": "제6조(미수범) 제2조, 제3조, 제4조제2항[「형법」 제136조, 제255조, 제314조, 제315조, 제335조, 제337조(강도치상의 죄에 한정한다), 제340조제2항(해상강도치상의 죄에 한정한다) 또는 제343조의 죄를 범한 경우는 제외한다] 및 제5조의 미수범은 처벌한다.",
+      "형법 100조  미수범#KOBLEX-192892": "제100조(미수범) 전8조의 미수범은 처벌한다.",
+      "형법 149조  미수범#KOBLEX-192992": "제149조(미수범) 전4조의 미수범은 처벌한다.",
+      "형법 162조  미수범#KOBLEX-193018": "제162조(미수범) 전2조의 미수범은 처벌한다.",
+      "형법 182조  미수범#KOBLEX-193066": "제182조(미수범) 제177조 내지 제179조제1항의 미수범은 처벌한다.",
+      "형법 202조  미수범#KOBLEX-193097": "제202조(미수범) 전4조의 미수범은 처벌한다.",
+      "형법 212조  미수범#KOBLEX-193114": "제212조(미수범) 제207조, 제208조와 전조의 미수범은 처벌한다.",
+      "형법 254조  미수범#KOBLEX-193187": "제254조(미수범) 제250조, 제252조 및 제253조의 미수범은 처벌한다.",
+      "형법 25조  미수범#KOBLEX-192694": "제25조(미수범)",
+      "형법 286조  미수범#KOBLEX-193266": "제286조(미수범) 전3조의 미수범은 처벌한다.",
+      "형법 288조  추행 등 목적 약취, 유인 등#KOBLEX-193269": "제288조(추행 등 목적 약취, 유인 등)",
+      "형법 299조  준강간, 준강제추행#KOBLEX-193297": "제299조(준강간, 준강제추행) 사람의 심신상실 또는 항거불능의 상태를 이용하여 간음 또는 추행을 한 자는 제297조, 제297조의2 및 제298조의 예에 의한다. <개정 2012.12.18>",
+      "형법 324조 5 미수범#KOBLEX-193354": "제324조의5(미수범) 제324조 내지 제324조의4의 미수범은 처벌한다.",
+      "형법 89조  미수범#KOBLEX-192870": "제89조(미수범) 전2조의 미수범은 처벌한다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 136조  미수범#KOBLEX-075821": "제136조(미수범) 제133조 및 제135조의 미수범은 처벌한다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 136조  미수범#KOBLEX-214008": "제136조(미수범) 제133조 및 제135조의 미수범은 처벌한다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "형법 299조  준강간, 준강제추행#KOBLEX-193297"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "형법 제299조(C002)는 심신상실 또는 항거불능 상태의 사람을 이용하여 추행한 행위를 준강제추행죄로 명시적으로 규정하고 있어, 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [
+          "형법 286조  미수범#KOBLEX-193266"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "형법 제286조(C012)는 성폭력범죄의 미수범을 처벌한다고 명시하여, 완료 기준인 미수범 처벌 근거 및 성폭력범죄 미수범 처벌 규정을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "evidence_item_id": "E3",
+        "linked_provision_ids": [
+          "군형법 92조 3 강제추행#KOBLEX-140850"
+        ],
+        "missing_aspects": [
+          "미수범에 대한 가중/감경 규정 확인"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "군형법 제92조의3(C007)을 통해 준강제추행의 기본형(1년 이상 유기징역)을 알 수 있으나, 완료 기준에 포함된 '미수범 가중/감경 규정'에 해당하는 형법 제13조(미수범의 형량 감경) 또는 관련 조항이 후보 규정 목록에 포함되어 있지 않아 미수범에 대한 구체적인 형량 적용 근거가 부족하다.",
+        "status": "partially_covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형법 299조  준강간, 준강제추행#KOBLEX-193297",
+        "support_spans": [
+          {
+            "end_char": 107,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형법 286조  미수범#KOBLEX-193266",
+        "support_spans": [
+          {
+            "end_char": 26,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E3",
+        "issue_id": "I3",
+        "provision_id": "군형법 92조 3 강제추행#KOBLEX-140850",
+        "support_spans": [
+          {
+            "end_char": 78,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 5,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "심신상실 상태의 피해자를 이용한 추행 시도가 성폭력범죄의 처벌 등에 관한 특례법상 준강제추행죄의 구성요건에 해당하는지 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "추행의 실행 개시 후 타인의 저지로 미수에 그친 경우 미수범으로서 처벌되는지 여부",
+        "issue_id": "I2"
+      },
+      {
+        "description": "해당 범죄에 적용되는 법정형 및 가중처벌 여부",
+        "issue_id": "I3"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "해당 범죄의 기본형 및 미수범 가중/감경 규정을 확인",
+        "critical": true,
+        "description": "준강제추행죄 및 미수범에 대한 법정형(형량) 규정",
+        "evidence_item_id": "E3",
+        "evidence_type": "remedy",
+        "issue_id": "I3"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을과 함께 술자리에 갔다. 을이 술에 취해 정신을 잃자, 갑은 을의 상태를 이용해 추행을 시도하려 했지만, 이를 목격한 다른 친구 병에 의해 저지되었다. 이 사건이 경찰에 신고되어 조사가 시작되었다. [질문] 갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "준강제추행",
+          "심신상실",
+          "항거불능",
+          "추행",
+          "성폭력범죄의처벌등에관한특례법"
+        ],
+        "query_text": "심신상실 상태의 사람을 이용하여 추행한 경우 준강제추행죄 구성요건 [원문 맥락] 이 사건이 경찰에 신고되어 조사가 시작되었다. 갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "미수범",
+          "추행",
+          "처벌",
+          "형법",
+          "성폭력범죄"
+        ],
+        "query_text": "추행 미수범 처벌 규정 [원문 맥락] 이 사건이 경찰에 신고되어 조사가 시작되었다. 갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "형법",
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I3",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "준강제추행",
+          "형량",
+          "미수범",
+          "가중처벌",
+          "징역"
+        ],
+        "query_text": "준강제추행죄의 형량 및 미수범에 대한 가중처벌 규정 [원문 맥락] 이 사건이 경찰에 신고되어 조사가 시작되었다. 갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ3",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법",
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I3",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형법",
+          "제13조",
+          "미수범",
+          "형량",
+          "감경"
+        ],
+        "query_text": "형법 제13조 미수범의 형량 감경 규정 [원문 맥락] 이 사건이 경찰에 신고되어 조사가 시작되었다. 갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I3",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "미수범",
+          "형량",
+          "감경",
+          "비율",
+          "형법"
+        ],
+        "query_text": "미수범 형량 감경 비율 [원문 맥락] 이 사건이 경찰에 신고되어 조사가 시작되었다. 갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I3",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형법",
+          "제13조",
+          "미수범",
+          "형",
+          "감경"
+        ],
+        "query_text": "형법 제13조 미수범의 형 감경 규정 [원문 맥락] 이 사건이 경찰에 신고되어 조사가 시작되었다. 갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R3-1",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I3",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "미수범",
+          "형",
+          "감경",
+          "2분의1",
+          "형법"
+        ],
+        "query_text": "미수범에 대하여 정한 형의 2분의 1 이상 감경 [원문 맥락] 이 사건이 경찰에 신고되어 조사가 시작되었다. 갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R3-2",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을과 함께 술자리에 갔다. 을이 술에 취해 정신을 잃자, 갑은 을의 상태를 이용해 추행을 시도하려 했지만, 이를 목격한 다른 친구 병에 의해 저지되었다. 이 사건이 경찰에 신고되어 조사가 시작되었다.\n\n[질문]\n갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+    "remaining_request_budget": 2,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "심신상실 상태의 피해자를 이용한 추행이 준강제추행죄에 해당함을 명시하는 조항을 확인",
+        "critical": true,
+        "description": "심신상실 또는 항거불능 상태의 사람을 이용하여 추행한 행위에 대한 준강제추행죄의 구성요건 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "element",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "미수범에 대한 처벌 근거 및 성폭력범죄 미수범 처벌 규정을 확인",
+        "critical": true,
+        "description": "범죄의 미수범에 대한 일반적 처벌 규정 및 성폭력범죄에서의 미수범 처벌 가능성",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      },
+      {
+        "completion_criteria": "해당 범죄의 기본형 및 미수범 가중/감경 규정을 확인",
+        "critical": true,
+        "description": "준강제추행죄 및 미수범에 대한 법정형(형량) 규정",
+        "evidence_item_id": "E3",
+        "evidence_type": "remedy",
+        "issue_id": "I3"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "25499bc6-7d69-49d1-9bba-c555b426f459",
+    "seen_provision_ids": [
+      "형법 212조  미수범#KOBLEX-193114",
+      "형의 집행 및 수용자의 처우에 관한 법률 136조  미수범#KOBLEX-214008",
+      "형법 254조  미수범#KOBLEX-193187",
+      "형법 288조  추행 등 목적 약취, 유인 등#KOBLEX-193269",
+      "형법 202조  미수범#KOBLEX-193097",
+      "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157541",
+      "형법 299조  준강간, 준강제추행#KOBLEX-193297",
+      "군형법 92조 3 강제추행#KOBLEX-140850",
+      "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157543",
+      "폭력행위 등 처벌에 관한 법률 6조  미수범#KOBLEX-126725",
+      "형법 286조  미수범#KOBLEX-193266",
+      "폭력행위 등 처벌에 관한 법률 6조  미수범#KOBLEX-178715",
+      "아동복지법 73조  미수범#KOBLEX-171206",
+      "군사기밀 보호법 18조  미수범#KOBLEX-194084",
+      "군형법 72조  미수범#KOBLEX-140803",
+      "성폭력범죄의 처벌 등에 관한 특례법 3조  특수강도강간 등#KOBLEX-157526",
+      "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157534",
+      "군형법 92조 4 준강간, 준강제추행#KOBLEX-140851",
+      "형법 149조  미수범#KOBLEX-192992",
+      "보험사기방지 특별법 10조  미수범#KOBLEX-063526",
+      "군형법 7조  미수범#KOBLEX-140578",
+      "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등#KOBLEX-157530",
+      "형법 324조 5 미수범#KOBLEX-193354",
+      "보험업법 205조  미수범#KOBLEX-022640",
+      "군형법 25조  미수범#KOBLEX-140621",
+      "성폭력범죄의 처벌 등에 관한 특례법 34조  신뢰관계에 있는 사람의 동석#KOBLEX-157656",
+      "형법 162조  미수범#KOBLEX-193018",
+      "형법 182조  미수범#KOBLEX-193066",
+      "형법 100조  미수범#KOBLEX-192892",
+      "도로법 10조  도로의 종류와 등급#KOBLEX-211443",
+      "군형법 15조  미수범#KOBLEX-140604",
+      "형법 25조  미수범#KOBLEX-192694",
+      "형법 89조  미수범#KOBLEX-192870",
+      "형의 집행 및 수용자의 처우에 관한 법률 136조  미수범#KOBLEX-075821"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

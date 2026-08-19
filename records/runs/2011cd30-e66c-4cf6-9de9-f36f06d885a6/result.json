@@ -1,0 +1,1178 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-18T18:03:41.413380+00:00",
+  "end_to_end_latency_ms": 373989.314,
+  "errors": [],
+  "record_schema_version": "1.1",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 400,
+      "evidence_fusion": 400,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "rrf": 400,
+      "selected": 40
+    }
+  },
+  "run_id": "2011cd30-e66c-4cf6-9de9-f36f06d885a6",
+  "state": {
+    "accepted_provision_ids": [
+      "상법 682조  제3자에 대한 보험대위#KOBLEX-116014",
+      "자동차손해배상 보장법 10조  보험금등의 청구#KOBLEX-005277",
+      "상법 724조  보험자와 제3자와의 관계#KOBLEX-116125"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 19,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 5,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 40.05247678420581,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "상법 682조  제3자에 대한 보험대위#KOBLEX-116014",
+        "provision_text": "① 손해가 제3자의 행위로 인하여 발생한 경우에 보험금을 지급한 보험자는 그 지급한 금액의 한도에서 그 제3자에 대한 보험계약자 또는 피보험자의 권리를 취득한다. 다만, 보험자가 보상할 보험금의 일부를 지급한 경우에는 피보험자의 권리를 침해하지 아니하는 범위에서 그 권리를 행사할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.8698806762695312,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "상법 682조  제3자에 대한 보험대위 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 29.216104100818445,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "상법 729조  제3자에 대한 보험대위의 금지#KOBLEX-116155",
+        "provision_text": "제729조(제3자에 대한 보험대위의 금지) 보험자는 보험사고로 인하여 생긴 보험계약자 또는 보험수익자의 제3자에 대한 권리를 대위하여 행사하지 못한다. 그러나 상해보험계약의 경우에 당사자간에 다른 약정이 있는 때에는 보험자는 피보험자의 권리를 해하지 아니하는 범위안에서 그 권리를 대위하여 행사할 수 있다. <개정 1991.12.31>",
+        "rerank_rank": 2,
+        "rerank_score": 0.11660465598106384,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상법 729조  제3자에 대한 보험대위의 금지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 44,
+        "first_stage_score": 23.9743048836786,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "국민연금법 114조  대위권 등#KOBLEX-044216",
+        "provision_text": "① 공단은 제3자의 행위로 장애연금이나 유족연금의 지급 사유가 발생하여 장애연금이나 유족연금을 지급한 때에는 그 급여액의 범위에서 제3자에 대한 수급권자의 손해배상청구권에 관하여 수급권자를 대위(代位)한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.1069563627243042,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "국민연금법 114조  대위권 등 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 35,
+        "first_stage_score": 24.624582088109673,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "상법 724조  보험자와 제3자와의 관계#KOBLEX-116124",
+        "provision_text": "①보험자는 피보험자가 책임을 질 사고로 인하여 생긴 손해에 대하여 제3자가 그 배상을 받기 전에는 보험금액의 전부 또는 일부를 피보험자에게 지급하지 못한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.09857793152332306,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상법 724조  보험자와 제3자와의 관계 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 30.227013867591424,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "산업재해보상보험법 87조  제3자에 대한 구상권#KOBLEX-166925",
+        "provision_text": "제87조(제3자에 대한 구상권)",
+        "rerank_rank": 5,
+        "rerank_score": 0.051806289702653885,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "산업재해보상보험법 87조  제3자에 대한 구상권",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 32.31292961359384,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 277조 2 질병ㆍ부상 또는 사망에 대한 보상#KOBLEX-052792",
+        "provision_text": "③제1항의 보상금 지급사유가 제3자의 행위로 인하여 발생한 경우에는 중앙선거관리위원회는 이미 지급한 보상금의 지급 범위안에서 수급권자가 제3자에 대하여 가지는 손해배상청구권을 취득한다. 다만, 제3자가 공무수행중의 공무원인 경우에는 손해배상청구권의 전부 또는 일부를 행사하지 아니할 수 있다. <신설 2004.3.12>",
+        "rerank_rank": 6,
+        "rerank_score": 0.012356637045741081,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공직선거법 277조 2 질병ㆍ부상 또는 사망에 대한 보상 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 32.31292961359384,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 277조 2 질병ㆍ부상 또는 사망에 대한 보상#KOBLEX-176078",
+        "provision_text": "③제1항의 보상금 지급사유가 제3자의 행위로 인하여 발생한 경우에는 중앙선거관리위원회는 이미 지급한 보상금의 지급 범위안에서 수급권자가 제3자에 대하여 가지는 손해배상청구권을 취득한다. 다만, 제3자가 공무수행중의 공무원인 경우에는 손해배상청구권의 전부 또는 일부를 행사하지 아니할 수 있다. <신설 2004.3.12>",
+        "rerank_rank": 7,
+        "rerank_score": 0.012356637045741081,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공직선거법 277조 2 질병ㆍ부상 또는 사망에 대한 보상 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 26.403606855648164,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "상법 724조  보험자와 제3자와의 관계#KOBLEX-116125",
+        "provision_text": "②제3자는 피보험자가 책임을 질 사고로 입은 손해에 대하여 보험금액의 한도내에서 보험자에게 직접 보상을 청구할 수 있다. 그러나 보험자는 피보험자가 그 사고에 관하여 가지는 항변으로써 제3자에게 대항할 수 있다. <개정 1991.12.31>",
+        "rerank_rank": 8,
+        "rerank_score": 0.010397146455943584,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상법 724조  보험자와 제3자와의 관계 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 64,
+        "first_stage_score": 23.0072415917324,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "보험업법 173조  구상권#KOBLEX-022480",
+        "provision_text": "제173조(구상권) 손해보험협회는 제169조에 따라 보험금을 지급한 경우에는 해당 손해보험회사에 대하여 구상권을 가진다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.008754602633416653,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "보험업법 173조  구상권",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 33.05353755425714,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "공공단체등 위탁선거에 관한 법률 79조  질병ㆍ부상 또는 사망에 대한 보상#KOBLEX-086742",
+        "provision_text": "② 제1항의 보상금 지급사유가 제3자의 행위로 인하여 발생한 경우에는 중앙선거관리위원회는 이미 지급한 보상금의 지급 범위에서 수급권자가 제3자에 대하여 가지는 손해배상청구권을 취득한다. 다만, 제3자가 공무수행 중의 공무원인 경우에는 손해배상청구권의 전부 또는 일부를 행사하지 아니할 수 있다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.0074995169416069984,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공공단체등 위탁선거에 관한 법률 79조  질병ㆍ부상 또는 사망에 대한 보상 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 19.307906792615963,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "신탁법 61조  수익권의 제한 금지#KOBLEX-107299",
+        "provision_text": "4. 제43조 및 제45조에 따라 원상회복 또는 손해배상 등을 청구할 수 있는 권리",
+        "rerank_rank": 1,
+        "rerank_score": 0.006396295502781868,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "신탁법 61조  수익권의 제한 금지 4호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 43,
+        "first_stage_score": 17.558748782165427,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "자동차손해배상 보장법 11조  피해자에 대한 가불금#KOBLEX-005280",
+        "provision_text": "① 보험가입자등이 자동차의 운행으로 다른 사람을 사망하게 하거나 부상하게 한 경우에는 피해자는 대통령령으로 정하는 바에 따라 보험회사등에게 자동차보험진료수가에 대하여는 그 전액을, 그 외의 보험금등에 대하여는 대통령령으로 정한 금액을 제10조에 따른 보험금등을 지급하기 위한 가불금(假拂金)으로 지급할 것을 청구할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.0030664517544209957,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "자동차손해배상 보장법 11조  피해자에 대한 가불금 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 44,
+        "first_stage_score": 17.558748782165427,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "자동차손해배상 보장법 11조  피해자에 대한 가불금#KOBLEX-220758",
+        "provision_text": "① 보험가입자등이 자동차의 운행으로 다른 사람을 사망하게 하거나 부상하게 한 경우에는 피해자는 대통령령으로 정하는 바에 따라 보험회사등에게 자동차보험진료수가에 대하여는 그 전액을, 그 외의 보험금등에 대하여는 대통령령으로 정한 금액을 제10조에 따른 보험금등을 지급하기 위한 가불금(假拂金)으로 지급할 것을 청구할 수 있다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.0030664517544209957,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "자동차손해배상 보장법 11조  피해자에 대한 가불금 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 20.88346540638955,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "상법 726조 2 자동차보험자의 책임#KOBLEX-116132",
+        "provision_text": "제726조의2(자동차보험자의 책임) 자동차보험계약의 보험자는 피보험자가 자동차를 소유, 사용 또는 관리하는 동안에 발생한 사고로 인하여 생긴 손해를 보상할 책임이 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0011876469943672419,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "상법 726조 2 자동차보험자의 책임",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 76,
+        "first_stage_score": 16.212293970743364,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "자동차손해배상 보장법 23조 3 자동차손해배상보장위원회의 설치#KOBLEX-005362",
+        "provision_text": "① 자동차 사고와 관련된 이해관계자의 손해배상 및 사회복귀 지원 등과 관련된 사항을 심의ㆍ의결 또는 조정하기 위하여 국토교통부장관 소속으로 자동차손해배상보장위원회를 둔다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.001156616723164916,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "자동차손해배상 보장법 23조 3 자동차손해배상보장위원회의 설치 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 77,
+        "first_stage_score": 16.212293970743364,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "자동차손해배상 보장법 23조 3 자동차손해배상보장위원회의 설치#KOBLEX-220840",
+        "provision_text": "① 자동차 사고와 관련된 이해관계자의 손해배상 및 사회복귀 지원 등과 관련된 사항을 심의ㆍ의결 또는 조정하기 위하여 국토교통부장관 소속으로 자동차손해배상보장위원회를 둔다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.001156616723164916,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "자동차손해배상 보장법 23조 3 자동차손해배상보장위원회의 설치 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 27.974750757538004,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "보험사기방지 특별법 7조 2 자동차보험사기 피해사실 고지의무 등#KOBLEX-063521",
+        "provision_text": "제7조의2(자동차보험사기 피해사실 고지의무 등) 보험회사는 자동차(「자동차손해배상 보장법」 제2조제1호에 따른 자동차를 말한다) 사고와 관련된 보험사기행위로 자동차보험(「보험업법」 제4조제1항제2호다목에 따른 자동차보험을 말한다)의 보험료가 부당하게 할증된 사실을 확인한 경우 해당 보험계약자 또는 피보험자에게 대통령령으로 정하는 바에 따라 보험사기 피해사실 및 후속 처리절차 등을 고지하여야 한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.0008244349737651646,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "보험사기방지 특별법 7조 2 자동차보험사기 피해사실 고지의무 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 24,
+        "first_stage_score": 19.110701961747928,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "보험업법 98조  특별이익의 제공 금지#KOBLEX-022159",
+        "provision_text": "7. 「상법」 제682조에 따른 제3자에 대한 청구권 대위행사의 포기",
+        "rerank_rank": 9,
+        "rerank_score": 0.0007996754720807076,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "보험업법 98조  특별이익의 제공 금지 7호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 56,
+        "first_stage_score": 16.738410299855886,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "자동차손해배상 보장법 13조  입원환자의 관리 등#KOBLEX-005301",
+        "provision_text": "① 제12조제2항에 따라 보험회사등에 자동차보험진료수가를 청구할 수 있는 의료기관은 교통사고로 입원한 환자(이하 \"입원환자\"라 한다)의 외출이나 외박에 관한 사항을 기록ㆍ관리하여야 한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.0006825555465184152,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "자동차손해배상 보장법 13조  입원환자의 관리 등 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 22.99314025107641,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "자동차손해배상 보장법 39조  청구권 등의 대위#KOBLEX-005436",
+        "provision_text": "① 정부는 제30조제1항에 따라 피해를 보상한 경우에는 그 보상금액의 한도에서 제3조에 따른 손해배상책임이 있는 자에 대한 피해자의 손해배상 청구권을 대위행사(代位行使)할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.0007221130654215813,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "자동차손해배상 보장법 39조  청구권 등의 대위 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 22.99314025107641,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "자동차손해배상 보장법 39조  청구권 등의 대위#KOBLEX-220914",
+        "provision_text": "① 정부는 제30조제1항에 따라 피해를 보상한 경우에는 그 보상금액의 한도에서 제3조에 따른 손해배상책임이 있는 자에 대한 피해자의 손해배상 청구권을 대위행사(代位行使)할 수 있다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.0007221130654215813,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "자동차손해배상 보장법 39조  청구권 등의 대위 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 27.111372201527367,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "도로교통법 54조  사고발생 시의 조치#KOBLEX-014098",
+        "provision_text": "⑤ 긴급자동차, 부상자를 운반 중인 차, 우편물자동차 및 노면전차 등의 운전자는 긴급한 경우에는 동승자 등으로 하여금 제1항에 따른 조치나 제2항에 따른 신고를 하게 하고 운전을 계속할 수 있다. <개정 2018.3.27>",
+        "rerank_rank": 4,
+        "rerank_score": 0.00039895076770335436,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "도로교통법 54조  사고발생 시의 조치 5항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 23.802478784920165,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "근로기준법 시행령 59조 2 민감정보 및 고유식별정보의 처리#KOBLEX-011331",
+        "provision_text": "1. 법 제19조제2항에 따른 손해배상 청구에 관한 사무",
+        "rerank_rank": 5,
+        "rerank_score": 0.7234581112861633,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "근로기준법 시행령 59조 2 민감정보 및 고유식별정보의 처리 1호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 22.979982665293463,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "자동차손해배상 보장법 10조  보험금등의 청구#KOBLEX-005277",
+        "provision_text": "① 보험가입자등에게 제3조에 따른 손해배상책임이 발생하면 그 피해자는 대통령령으로 정하는 바에 따라 보험회사등에게 「상법」 제724조제2항에 따라 보험금등을 자기에게 직접 지급할 것을 청구할 수 있다. 이 경우 피해자는 자동차보험진료수가에 해당하는 금액은 진료한 의료기관에 직접 지급하여 줄 것을 청구할 수 있다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.451248437166214,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "자동차손해배상 보장법 10조  보험금등의 청구 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 24.83813843056759,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "국민건강보험법 시행령 13조  이사장 권한의 위임#KOBLEX-055408",
+        "provision_text": "5. 법 제58조에 따른 손해배상을 청구할 권리의 행사에 관한 권한",
+        "rerank_rank": 7,
+        "rerank_score": 0.6608147025108337,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "국민건강보험법 시행령 13조  이사장 권한의 위임 5호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 22.979982665293463,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "자동차손해배상 보장법 10조  보험금등의 청구#KOBLEX-220755",
+        "provision_text": "① 보험가입자등에게 제3조에 따른 손해배상책임이 발생하면 그 피해자는 대통령령으로 정하는 바에 따라 보험회사등에게 「상법」 제724조제2항에 따라 보험금등을 자기에게 직접 지급할 것을 청구할 수 있다. 이 경우 피해자는 자동차보험진료수가에 해당하는 금액은 진료한 의료기관에 직접 지급하여 줄 것을 청구할 수 있다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.451248437166214,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "자동차손해배상 보장법 10조  보험금등의 청구 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 25.52120857679938,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059941",
+        "provision_text": "①불법행위로 인한 손해배상의 청구권은 피해자나 그 법정대리인이 그 손해 및 가해자를 안 날로부터 3년간 이를 행사하지 아니하면 시효로 인하여 소멸한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.44014373421669006,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민법 766조  손해배상청구권의 소멸시효 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 23.14286333736624,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "자동차손해배상 보장법 12조  자동차보험진료수가의 청구 및 지급#KOBLEX-005290",
+        "provision_text": "⑤ 의료기관은 제2항에 따라 보험회사등에게 자동차보험진료수가를 청구할 수 있는 경우에는 교통사고환자(환자의 보호자를 포함한다)에게 이에 해당하는 진료비를 청구하여서는 아니 된다. 다만, 다음 각 호의 어느 하나에 해당하는 경우에는 해당 진료비를 청구할 수 있다. <개정 2013.3.23> 1. 보험회사등이 지급 의사가 없다는 사실을 알리거나 지급 의사를 철회한 경우 2. 보험회사등이 보상하여야 할  대상이 아닌 비용의 경우 3. 제1항에 따라 보험회사등이 알린 지급 한도를 초과한 진료비의 경우 4. 제10조제1항 또는 제11조제1항에 따라 피해자가 보험회사등에게 자동차보험진료수가를 자기에게 직접 지급할 것을 청구한 경우 5. 그 밖에 국토교통부령으로 정하는 사유에 해당하는 경우",
+        "rerank_rank": 10,
+        "rerank_score": 0.015609726309776306,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "자동차손해배상 보장법 12조  자동차보험진료수가의 청구 및 지급 5항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 23.503484924086173,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "자동차손해배상 보장법 시행령 20조  보상의 절차 등#KOBLEX-023991",
+        "provision_text": "③ 자동차의 운행으로 인한 사망 또는 부상 사고를 조사한 경찰서장은 그 사고가 법 제30조제1항 각 호의 어느 하나에 해당하는 경우에는 피해자에게 법 제30조제1항에 따른 보상을 청구할 수 있음을 알려야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.004043850116431713,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "자동차손해배상 보장법 시행령 20조  보상의 절차 등 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 17.10276378813211,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "자동차손해배상 보장법 시행령 7조  보험금등의 지급청구 절차#KOBLEX-023880",
+        "provision_text": "① 법 제10조제1항에 따라 보험금 또는 공제금(이하 \"보험금등\"이라 한다)의 지급을 청구하거나 법 제11조제1항에 따라 가불금의 지급을 청구하려는 자는 보험회사 또는 공제사업자(이하 \"보험회사등\"이라 한다)에 다음 각 호의 사항을 적은 청구서를 제출해야 한다. <개정 2023.5.15> 1. 청구인의 성명 및 주소 2. 청구인과 사망자의 관계(피해자가 사망한 경우만 해당한다) 3. 피해자의 성명 및 주소 3의2. 가해자의 성명 4. 사고 발생의 일시ㆍ장소 및 개요 5. 해당 자동차의 종류 및 등록번호 6. 보험가입자(공제가입자를 포함한다. 이하 같다)의 성명 7. 청구금액과 그 산출 기초. 다만, 법 제11조제1항에 따라 가불금의 지급을 청구하는 경우에는 산출 기초를 적지 아니한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.004434249363839626,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "자동차손해배상 보장법 시행령 7조  보험금등의 지급청구 절차 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 18.003523463381057,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "자동차손해배상 보장법 10조  보험금등의 청구#KOBLEX-005278",
+        "provision_text": "② 보험가입자등은 보험회사등이 보험금등을 지급하기 전에 피해자에게 손해에 대한 배상금을 지급한 경우에는 보험회사등에게 보험금등의 보상한도에서 그가 피해자에게 지급한 금액의 지급을 청구할 수 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0011932936031371355,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "자동차손해배상 보장법 10조  보험금등의 청구 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 18.003523463381057,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "자동차손해배상 보장법 10조  보험금등의 청구#KOBLEX-220756",
+        "provision_text": "② 보험가입자등은 보험회사등이 보험금등을 지급하기 전에 피해자에게 손해에 대한 배상금을 지급한 경우에는 보험회사등에게 보험금등의 보상한도에서 그가 피해자에게 지급한 금액의 지급을 청구할 수 있다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.0011932936031371355,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "자동차손해배상 보장법 10조  보험금등의 청구 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 18.730256694619978,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "산업재해보상보험법 87조 2 구상금협의조정기구 등#KOBLEX-166930",
+        "provision_text": "① 공단은 제87조에 따라 「자동차손해배상 보장법」 제2조제7호가목에 따른 보험회사등(이하 이 조에서 \"보험회사등\"이라 한다)에게 구상권을 행사하는 경우 그 구상금 청구액을 협의ㆍ조정하기 위하여 보험회사등과 구상금협의조정기구를 구성하여 운영할 수 있다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.05649071931838989,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "산업재해보상보험법 87조 2 구상금협의조정기구 등 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공공단체등 위탁선거에 관한 법률 79조  질병ㆍ부상 또는 사망에 대한 보상#KOBLEX-086742": "② 제1항의 보상금 지급사유가 제3자의 행위로 인하여 발생한 경우에는 중앙선거관리위원회는 이미 지급한 보상금의 지급 범위에서 수급권자가 제3자에 대하여 가지는 손해배상청구권을 취득한다. 다만, 제3자가 공무수행 중의 공무원인 경우에는 손해배상청구권의 전부 또는 일부를 행사하지 아니할 수 있다.",
+      "공직선거법 277조 2 질병ㆍ부상 또는 사망에 대한 보상#KOBLEX-052792": "③제1항의 보상금 지급사유가 제3자의 행위로 인하여 발생한 경우에는 중앙선거관리위원회는 이미 지급한 보상금의 지급 범위안에서 수급권자가 제3자에 대하여 가지는 손해배상청구권을 취득한다. 다만, 제3자가 공무수행중의 공무원인 경우에는 손해배상청구권의 전부 또는 일부를 행사하지 아니할 수 있다. <신설 2004.3.12>",
+      "공직선거법 277조 2 질병ㆍ부상 또는 사망에 대한 보상#KOBLEX-176078": "③제1항의 보상금 지급사유가 제3자의 행위로 인하여 발생한 경우에는 중앙선거관리위원회는 이미 지급한 보상금의 지급 범위안에서 수급권자가 제3자에 대하여 가지는 손해배상청구권을 취득한다. 다만, 제3자가 공무수행중의 공무원인 경우에는 손해배상청구권의 전부 또는 일부를 행사하지 아니할 수 있다. <신설 2004.3.12>",
+      "국민건강보험법 시행령 13조  이사장 권한의 위임#KOBLEX-055408": "5. 법 제58조에 따른 손해배상을 청구할 권리의 행사에 관한 권한",
+      "국민연금법 114조  대위권 등#KOBLEX-044216": "① 공단은 제3자의 행위로 장애연금이나 유족연금의 지급 사유가 발생하여 장애연금이나 유족연금을 지급한 때에는 그 급여액의 범위에서 제3자에 대한 수급권자의 손해배상청구권에 관하여 수급권자를 대위(代位)한다.",
+      "근로기준법 시행령 59조 2 민감정보 및 고유식별정보의 처리#KOBLEX-011331": "1. 법 제19조제2항에 따른 손해배상 청구에 관한 사무",
+      "도로교통법 54조  사고발생 시의 조치#KOBLEX-014098": "⑤ 긴급자동차, 부상자를 운반 중인 차, 우편물자동차 및 노면전차 등의 운전자는 긴급한 경우에는 동승자 등으로 하여금 제1항에 따른 조치나 제2항에 따른 신고를 하게 하고 운전을 계속할 수 있다. <개정 2018.3.27>",
+      "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059941": "①불법행위로 인한 손해배상의 청구권은 피해자나 그 법정대리인이 그 손해 및 가해자를 안 날로부터 3년간 이를 행사하지 아니하면 시효로 인하여 소멸한다.",
+      "보험사기방지 특별법 7조 2 자동차보험사기 피해사실 고지의무 등#KOBLEX-063521": "제7조의2(자동차보험사기 피해사실 고지의무 등) 보험회사는 자동차(「자동차손해배상 보장법」 제2조제1호에 따른 자동차를 말한다) 사고와 관련된 보험사기행위로 자동차보험(「보험업법」 제4조제1항제2호다목에 따른 자동차보험을 말한다)의 보험료가 부당하게 할증된 사실을 확인한 경우 해당 보험계약자 또는 피보험자에게 대통령령으로 정하는 바에 따라 보험사기 피해사실 및 후속 처리절차 등을 고지하여야 한다.",
+      "보험업법 173조  구상권#KOBLEX-022480": "제173조(구상권) 손해보험협회는 제169조에 따라 보험금을 지급한 경우에는 해당 손해보험회사에 대하여 구상권을 가진다.",
+      "보험업법 98조  특별이익의 제공 금지#KOBLEX-022159": "7. 「상법」 제682조에 따른 제3자에 대한 청구권 대위행사의 포기",
+      "산업재해보상보험법 87조  제3자에 대한 구상권#KOBLEX-166925": "제87조(제3자에 대한 구상권)",
+      "산업재해보상보험법 87조 2 구상금협의조정기구 등#KOBLEX-166930": "① 공단은 제87조에 따라 「자동차손해배상 보장법」 제2조제7호가목에 따른 보험회사등(이하 이 조에서 \"보험회사등\"이라 한다)에게 구상권을 행사하는 경우 그 구상금 청구액을 협의ㆍ조정하기 위하여 보험회사등과 구상금협의조정기구를 구성하여 운영할 수 있다.",
+      "상법 682조  제3자에 대한 보험대위#KOBLEX-116014": "① 손해가 제3자의 행위로 인하여 발생한 경우에 보험금을 지급한 보험자는 그 지급한 금액의 한도에서 그 제3자에 대한 보험계약자 또는 피보험자의 권리를 취득한다. 다만, 보험자가 보상할 보험금의 일부를 지급한 경우에는 피보험자의 권리를 침해하지 아니하는 범위에서 그 권리를 행사할 수 있다.",
+      "상법 724조  보험자와 제3자와의 관계#KOBLEX-116124": "①보험자는 피보험자가 책임을 질 사고로 인하여 생긴 손해에 대하여 제3자가 그 배상을 받기 전에는 보험금액의 전부 또는 일부를 피보험자에게 지급하지 못한다.",
+      "상법 724조  보험자와 제3자와의 관계#KOBLEX-116125": "②제3자는 피보험자가 책임을 질 사고로 입은 손해에 대하여 보험금액의 한도내에서 보험자에게 직접 보상을 청구할 수 있다. 그러나 보험자는 피보험자가 그 사고에 관하여 가지는 항변으로써 제3자에게 대항할 수 있다. <개정 1991.12.31>",
+      "상법 726조 2 자동차보험자의 책임#KOBLEX-116132": "제726조의2(자동차보험자의 책임) 자동차보험계약의 보험자는 피보험자가 자동차를 소유, 사용 또는 관리하는 동안에 발생한 사고로 인하여 생긴 손해를 보상할 책임이 있다.",
+      "상법 729조  제3자에 대한 보험대위의 금지#KOBLEX-116155": "제729조(제3자에 대한 보험대위의 금지) 보험자는 보험사고로 인하여 생긴 보험계약자 또는 보험수익자의 제3자에 대한 권리를 대위하여 행사하지 못한다. 그러나 상해보험계약의 경우에 당사자간에 다른 약정이 있는 때에는 보험자는 피보험자의 권리를 해하지 아니하는 범위안에서 그 권리를 대위하여 행사할 수 있다. <개정 1991.12.31>",
+      "신탁법 61조  수익권의 제한 금지#KOBLEX-107299": "4. 제43조 및 제45조에 따라 원상회복 또는 손해배상 등을 청구할 수 있는 권리",
+      "자동차손해배상 보장법 10조  보험금등의 청구#KOBLEX-005277": "① 보험가입자등에게 제3조에 따른 손해배상책임이 발생하면 그 피해자는 대통령령으로 정하는 바에 따라 보험회사등에게 「상법」 제724조제2항에 따라 보험금등을 자기에게 직접 지급할 것을 청구할 수 있다. 이 경우 피해자는 자동차보험진료수가에 해당하는 금액은 진료한 의료기관에 직접 지급하여 줄 것을 청구할 수 있다.",
+      "자동차손해배상 보장법 10조  보험금등의 청구#KOBLEX-005278": "② 보험가입자등은 보험회사등이 보험금등을 지급하기 전에 피해자에게 손해에 대한 배상금을 지급한 경우에는 보험회사등에게 보험금등의 보상한도에서 그가 피해자에게 지급한 금액의 지급을 청구할 수 있다.",
+      "자동차손해배상 보장법 10조  보험금등의 청구#KOBLEX-220755": "① 보험가입자등에게 제3조에 따른 손해배상책임이 발생하면 그 피해자는 대통령령으로 정하는 바에 따라 보험회사등에게 「상법」 제724조제2항에 따라 보험금등을 자기에게 직접 지급할 것을 청구할 수 있다. 이 경우 피해자는 자동차보험진료수가에 해당하는 금액은 진료한 의료기관에 직접 지급하여 줄 것을 청구할 수 있다.",
+      "자동차손해배상 보장법 10조  보험금등의 청구#KOBLEX-220756": "② 보험가입자등은 보험회사등이 보험금등을 지급하기 전에 피해자에게 손해에 대한 배상금을 지급한 경우에는 보험회사등에게 보험금등의 보상한도에서 그가 피해자에게 지급한 금액의 지급을 청구할 수 있다.",
+      "자동차손해배상 보장법 11조  피해자에 대한 가불금#KOBLEX-005280": "① 보험가입자등이 자동차의 운행으로 다른 사람을 사망하게 하거나 부상하게 한 경우에는 피해자는 대통령령으로 정하는 바에 따라 보험회사등에게 자동차보험진료수가에 대하여는 그 전액을, 그 외의 보험금등에 대하여는 대통령령으로 정한 금액을 제10조에 따른 보험금등을 지급하기 위한 가불금(假拂金)으로 지급할 것을 청구할 수 있다.",
+      "자동차손해배상 보장법 11조  피해자에 대한 가불금#KOBLEX-220758": "① 보험가입자등이 자동차의 운행으로 다른 사람을 사망하게 하거나 부상하게 한 경우에는 피해자는 대통령령으로 정하는 바에 따라 보험회사등에게 자동차보험진료수가에 대하여는 그 전액을, 그 외의 보험금등에 대하여는 대통령령으로 정한 금액을 제10조에 따른 보험금등을 지급하기 위한 가불금(假拂金)으로 지급할 것을 청구할 수 있다.",
+      "자동차손해배상 보장법 12조  자동차보험진료수가의 청구 및 지급#KOBLEX-005290": "⑤ 의료기관은 제2항에 따라 보험회사등에게 자동차보험진료수가를 청구할 수 있는 경우에는 교통사고환자(환자의 보호자를 포함한다)에게 이에 해당하는 진료비를 청구하여서는 아니 된다. 다만, 다음 각 호의 어느 하나에 해당하는 경우에는 해당 진료비를 청구할 수 있다. <개정 2013.3.23> 1. 보험회사등이 지급 의사가 없다는 사실을 알리거나 지급 의사를 철회한 경우 2. 보험회사등이 보상하여야 할  대상이 아닌 비용의 경우 3. 제1항에 따라 보험회사등이 알린 지급 한도를 초과한 진료비의 경우 4. 제10조제1항 또는 제11조제1항에 따라 피해자가 보험회사등에게 자동차보험진료수가를 자기에게 직접 지급할 것을 청구한 경우 5. 그 밖에 국토교통부령으로 정하는 사유에 해당하는 경우",
+      "자동차손해배상 보장법 13조  입원환자의 관리 등#KOBLEX-005301": "① 제12조제2항에 따라 보험회사등에 자동차보험진료수가를 청구할 수 있는 의료기관은 교통사고로 입원한 환자(이하 \"입원환자\"라 한다)의 외출이나 외박에 관한 사항을 기록ㆍ관리하여야 한다.",
+      "자동차손해배상 보장법 23조 3 자동차손해배상보장위원회의 설치#KOBLEX-005362": "① 자동차 사고와 관련된 이해관계자의 손해배상 및 사회복귀 지원 등과 관련된 사항을 심의ㆍ의결 또는 조정하기 위하여 국토교통부장관 소속으로 자동차손해배상보장위원회를 둔다.",
+      "자동차손해배상 보장법 23조 3 자동차손해배상보장위원회의 설치#KOBLEX-220840": "① 자동차 사고와 관련된 이해관계자의 손해배상 및 사회복귀 지원 등과 관련된 사항을 심의ㆍ의결 또는 조정하기 위하여 국토교통부장관 소속으로 자동차손해배상보장위원회를 둔다.",
+      "자동차손해배상 보장법 39조  청구권 등의 대위#KOBLEX-005436": "① 정부는 제30조제1항에 따라 피해를 보상한 경우에는 그 보상금액의 한도에서 제3조에 따른 손해배상책임이 있는 자에 대한 피해자의 손해배상 청구권을 대위행사(代位行使)할 수 있다.",
+      "자동차손해배상 보장법 39조  청구권 등의 대위#KOBLEX-220914": "① 정부는 제30조제1항에 따라 피해를 보상한 경우에는 그 보상금액의 한도에서 제3조에 따른 손해배상책임이 있는 자에 대한 피해자의 손해배상 청구권을 대위행사(代位行使)할 수 있다.",
+      "자동차손해배상 보장법 시행령 20조  보상의 절차 등#KOBLEX-023991": "③ 자동차의 운행으로 인한 사망 또는 부상 사고를 조사한 경찰서장은 그 사고가 법 제30조제1항 각 호의 어느 하나에 해당하는 경우에는 피해자에게 법 제30조제1항에 따른 보상을 청구할 수 있음을 알려야 한다.",
+      "자동차손해배상 보장법 시행령 7조  보험금등의 지급청구 절차#KOBLEX-023880": "① 법 제10조제1항에 따라 보험금 또는 공제금(이하 \"보험금등\"이라 한다)의 지급을 청구하거나 법 제11조제1항에 따라 가불금의 지급을 청구하려는 자는 보험회사 또는 공제사업자(이하 \"보험회사등\"이라 한다)에 다음 각 호의 사항을 적은 청구서를 제출해야 한다. <개정 2023.5.15> 1. 청구인의 성명 및 주소 2. 청구인과 사망자의 관계(피해자가 사망한 경우만 해당한다) 3. 피해자의 성명 및 주소 3의2. 가해자의 성명 4. 사고 발생의 일시ㆍ장소 및 개요 5. 해당 자동차의 종류 및 등록번호 6. 보험가입자(공제가입자를 포함한다. 이하 같다)의 성명 7. 청구금액과 그 산출 기초. 다만, 법 제11조제1항에 따라 가불금의 지급을 청구하는 경우에는 산출 기초를 적지 아니한다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "상법 682조  제3자에 대한 보험대위#KOBLEX-116014"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "상법 제682조 제1항(C001)은 보험회사가 제3자의 행위로 인한 손해에 대해 보험금을 지급한 경우 그 제3자에 대한 피보험자의 권리를 대위 취득한다는 법적 근거와 범위를 명확히 규정하고 있어, 을 보험회사가 병에 대해 취득하는 권리에 관한 증거 항목의 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [
+          "상법 724조  보험자와 제3자와의 관계#KOBLEX-116125",
+          "자동차손해배상 보장법 10조  보험금등의 청구#KOBLEX-005277"
+        ],
+        "missing_aspects": [
+          "피보험자가 피해자인 경우 동승자가 보험회사에 대해 행사할 수 있는 권리의 법적 근거",
+          "정이 을 보험회사에 대해 행사할 수 있는 권리의 구체적 요건"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "상법 제724조 제2항(C008)과 자동차손해배상 보장법 제10조 제1항(C024)은 자동차보험에서 제3자의 직접 청구권 일반 원칙을 제공한다. 그러나 본 사안에서 정(동승자)이 을 보험회사에 대해 행사할 수 있는 권리의 법적 근거와 요건을 완전히 특정할 수 있는 조항이 부재하다. 특히, 갑이 피해자인 상황에서 정이 을 보험회사에 대해 보험금을 청구할 수 있는지, 또는 다른 권리를 행사할 수 있는지에 대한 명확한 법적 근거가 제공되지 않아 법적 지원 공백이 존재한다.",
+        "status": "partially_covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "상법 682조  제3자에 대한 보험대위#KOBLEX-116014",
+        "support_spans": [
+          {
+            "end_char": 162,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "상법 724조  보험자와 제3자와의 관계#KOBLEX-116125",
+        "support_spans": [
+          {
+            "end_char": 134,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "자동차손해배상 보장법 10조  보험금등의 청구#KOBLEX-005277",
+        "support_spans": [
+          {
+            "end_char": 175,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 5,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "을 보험회사가 보험금을 지급한 후 제3자(병)에 대해 취득하는 권리의 법적 성격과 범위",
+        "issue_id": "I1"
+      },
+      {
+        "description": "피보험자의 동승자(정)가 제3자(병)의 불법행위로 인한 부상에 대해 을 보험회사에 행사할 수 있는 권리",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "정이 을 보험회사에 대해 행사할 수 있는 권리의 법적 근거와 요건을 특정할 수 있는 조항 확인",
+        "critical": true,
+        "description": "자동차보험에서 제3자(동승자)의 손해배상 청구권 또는 보험금 청구권에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 자신의 자동차에 대해 을 보험회사와 보험계약을 체결하였습니다. 어느 날 갑은 병의 운전 실수로 인해 사고를 당하여 손해를 입었고, 을 보험회사로부터 보험금을 지급받았습니다. 한편, 이 사고로 인해 정이 갑의 자동차에 탑승하고 있다가 부상을 입었습니다. [질문] 갑이 병의 운전 실수로 사고를 당한 경우, 을 보험회사는 어떤 권리를 취득하게 되며, 정은 자신의 부상에 대해 을 보험회사에 어떤 권리를 행사할 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "보험회사",
+          "구상권",
+          "대위권",
+          "제3자",
+          "보험금 지급"
+        ],
+        "query_text": "보험회사가 보험금을 지급한 후 제3자에 대해 취득하는 구상권 또는 대위권 [원문 맥락] 한편, 이 사고로 인해 정이 갑의 자동차에 탑승하고 있다가 부상을 입었습니다. 갑이 병의 운전 실수로 사고를 당한 경우, 을 보험회사는 어떤 권리를 취득하게 되며, 정은 자신의 부상에 대해 을 보험회사에 어떤 권리를 행사할 수 있는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "보험업법",
+          "상법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "자동차보험",
+          "동승자",
+          "손해배상",
+          "보험금 청구권",
+          "제3자"
+        ],
+        "query_text": "자동차보험에서 동승자의 부상 손해배상 청구권 또는 보험금 청구권 [원문 맥락] 한편, 이 사고로 인해 정이 갑의 자동차에 탑승하고 있다가 부상을 입었습니다. 갑이 병의 운전 실수로 사고를 당한 경우, 을 보험회사는 어떤 권리를 취득하게 되며, 정은 자신의 부상에 대해 을 보험회사에 어떤 권리를 행사할 수 있는가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "자동차손해배상보장법",
+          "보험업법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "자동차보험",
+          "동승자",
+          "직접청구권",
+          "보험금",
+          "손해배상"
+        ],
+        "query_text": "자동차보험에서 동승자가 보험회사에 직접 청구할 수 있는 보험금 또는 손해배상 청구권 [원문 맥락] 한편, 이 사고로 인해 정이 갑의 자동차에 탑승하고 있다가 부상을 입었습니다. 갑이 병의 운전 실수로 사고를 당한 경우, 을 보험회사는 어떤 권리를 취득하게 되며, 정은 자신의 부상에 대해 을 보험회사에 어떤 권리를 행사할 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "statute_hints": [
+          "상법",
+          "자동차손해배상보장법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "동승자",
+          "부상",
+          "손해배상",
+          "청구권",
+          "자동차사고"
+        ],
+        "query_text": "자동차 사고로 부상한 동승자가 가해자 또는 보험회사에 대해 손해배상을 청구할 수 있는 권리 [원문 맥락] 한편, 이 사고로 인해 정이 갑의 자동차에 탑승하고 있다가 부상을 입었습니다. 갑이 병의 운전 실수로 사고를 당한 경우, 을 보험회사는 어떤 권리를 취득하게 되며, 정은 자신의 부상에 대해 을 보험회사에 어떤 권리를 행사할 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "자동차손해배상보장법",
+          "피해자",
+          "보험금",
+          "직접청구권",
+          "청구요건"
+        ],
+        "query_text": "자동차손해배상 보장법상 자동차 사고 피해자의 보험금 직접 청구권 요건 [원문 맥락] 한편, 이 사고로 인해 정이 갑의 자동차에 탑승하고 있다가 부상을 입었습니다. 갑이 병의 운전 실수로 사고를 당한 경우, 을 보험회사는 어떤 권리를 취득하게 되며, 정은 자신의 부상에 대해 을 보험회사에 어떤 권리를 행사할 수 있는가?",
+        "request_id": "GRQ-R3-1",
+        "statute_hints": [
+          "자동차손해배상보장법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "동승자",
+          "부상",
+          "보험회사",
+          "보험금청구",
+          "법적근거"
+        ],
+        "query_text": "자동차 사고로 부상한 동승자가 보험회사에 보험금을 청구할 수 있는 법적 근거 [원문 맥락] 한편, 이 사고로 인해 정이 갑의 자동차에 탑승하고 있다가 부상을 입었습니다. 갑이 병의 운전 실수로 사고를 당한 경우, 을 보험회사는 어떤 권리를 취득하게 되며, 정은 자신의 부상에 대해 을 보험회사에 어떤 권리를 행사할 수 있는가?",
+        "request_id": "GRQ-R3-2",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 자신의 자동차에 대해 을 보험회사와 보험계약을 체결하였습니다. 어느 날 갑은 병의 운전 실수로 인해 사고를 당하여 손해를 입었고, 을 보험회사로부터 보험금을 지급받았습니다. 한편, 이 사고로 인해 정이 갑의 자동차에 탑승하고 있다가 부상을 입었습니다.\n\n[질문]\n갑이 병의 운전 실수로 사고를 당한 경우, 을 보험회사는 어떤 권리를 취득하게 되며, 정은 자신의 부상에 대해 을 보험회사에 어떤 권리를 행사할 수 있는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "보험회사의 제3자 상대 권리의 법적 근거와 범위를 특정할 수 있는 조항 확인",
+        "critical": true,
+        "description": "보험회사가 보험금을 지급한 경우 제3자에 대한 구상권 또는 대위권 취득에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "정이 을 보험회사에 대해 행사할 수 있는 권리의 법적 근거와 요건을 특정할 수 있는 조항 확인",
+        "critical": true,
+        "description": "자동차보험에서 제3자(동승자)의 손해배상 청구권 또는 보험금 청구권에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "2011cd30-e66c-4cf6-9de9-f36f06d885a6",
+    "seen_provision_ids": [
+      "산업재해보상보험법 87조 2 구상금협의조정기구 등#KOBLEX-166930",
+      "신탁법 61조  수익권의 제한 금지#KOBLEX-107299",
+      "자동차손해배상 보장법 13조  입원환자의 관리 등#KOBLEX-005301",
+      "보험업법 173조  구상권#KOBLEX-022480",
+      "상법 724조  보험자와 제3자와의 관계#KOBLEX-116125",
+      "공직선거법 277조 2 질병ㆍ부상 또는 사망에 대한 보상#KOBLEX-176078",
+      "상법 726조 2 자동차보험자의 책임#KOBLEX-116132",
+      "상법 724조  보험자와 제3자와의 관계#KOBLEX-116124",
+      "자동차손해배상 보장법 10조  보험금등의 청구#KOBLEX-005278",
+      "자동차손해배상 보장법 10조  보험금등의 청구#KOBLEX-005277",
+      "자동차손해배상 보장법 12조  자동차보험진료수가의 청구 및 지급#KOBLEX-005290",
+      "도로교통법 54조  사고발생 시의 조치#KOBLEX-014098",
+      "공공단체등 위탁선거에 관한 법률 79조  질병ㆍ부상 또는 사망에 대한 보상#KOBLEX-086742",
+      "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059941",
+      "근로기준법 시행령 59조 2 민감정보 및 고유식별정보의 처리#KOBLEX-011331",
+      "자동차손해배상 보장법 시행령 7조  보험금등의 지급청구 절차#KOBLEX-023880",
+      "공직선거법 277조 2 질병ㆍ부상 또는 사망에 대한 보상#KOBLEX-052792",
+      "산업재해보상보험법 87조  제3자에 대한 구상권#KOBLEX-166925",
+      "자동차손해배상 보장법 11조  피해자에 대한 가불금#KOBLEX-220758",
+      "자동차손해배상 보장법 39조  청구권 등의 대위#KOBLEX-005436",
+      "자동차손해배상 보장법 시행령 20조  보상의 절차 등#KOBLEX-023991",
+      "자동차손해배상 보장법 10조  보험금등의 청구#KOBLEX-220755",
+      "상법 729조  제3자에 대한 보험대위의 금지#KOBLEX-116155",
+      "보험업법 98조  특별이익의 제공 금지#KOBLEX-022159",
+      "상법 682조  제3자에 대한 보험대위#KOBLEX-116014",
+      "국민연금법 114조  대위권 등#KOBLEX-044216",
+      "자동차손해배상 보장법 39조  청구권 등의 대위#KOBLEX-220914",
+      "자동차손해배상 보장법 11조  피해자에 대한 가불금#KOBLEX-005280",
+      "자동차손해배상 보장법 23조 3 자동차손해배상보장위원회의 설치#KOBLEX-220840",
+      "보험사기방지 특별법 7조 2 자동차보험사기 피해사실 고지의무 등#KOBLEX-063521",
+      "자동차손해배상 보장법 10조  보험금등의 청구#KOBLEX-220756",
+      "국민건강보험법 시행령 13조  이사장 권한의 위임#KOBLEX-055408",
+      "자동차손해배상 보장법 23조 3 자동차손해배상보장위원회의 설치#KOBLEX-005362"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

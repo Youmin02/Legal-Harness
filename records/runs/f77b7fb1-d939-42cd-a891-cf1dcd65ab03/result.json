@@ -1,0 +1,657 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "completed_at_utc": "2026-08-18T16:02:08.117436+00:00",
+  "end_to_end_latency_ms": 193583.568,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid GAP_QUERY_PLAN result after 2 attempts: invalid request_id: 'GRQ-R1-1'; invalid request_id: 'GRQ-R1-2'; invalid request_id: 'GRQ-R1-3'"
+  ],
+  "record_schema_version": "1.1",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 200,
+      "evidence_fusion": 200,
+      "first_stage": 300,
+      "request_rerank": 300,
+      "rrf": 200,
+      "selected": 20
+    }
+  },
+  "run_id": "f77b7fb1-d939-42cd-a891-cf1dcd65ab03",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 18,
+          "request_count": 3,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid GAP_QUERY_PLAN result after 2 attempts: invalid request_id: 'GRQ-R1-1'; invalid request_id: 'GRQ-R1-2'; invalid request_id: 'GRQ-R1-3'",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 49,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "상법 121조  운송주선인의 책임의 시효#KOBLEX-113843",
+        "provision_text": "②전항의 기간은 운송물이 전부멸실한 경우에는 그 운송물을 인도할 날로부터 기산한다. <개정 1962.12.12>",
+        "rerank_rank": 1,
+        "rerank_score": 0.017281807959079742,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "RQ3"
+        ],
+        "statute_name": "상법 121조  운송주선인의 책임의 시효 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 3.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "상법 146조  운송인의 책임소멸#KOBLEX-113901",
+        "provision_text": "①운송인의 책임은 수하인 또는 화물상환증소지인이 유보없이 운송물을 수령하고 운임 기타의 비용을 지급한 때에는 소멸한다. 그러나 운송물에 즉시 발견할 수 없는 훼손 또는 일부 멸실이 있는 경우에 운송물을 수령한 날로부터 2주간내에 운송인에게 그 통지를 발송한 때에는 그러하지 아니하다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.044431429356336594,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "상법 146조  운송인의 책임소멸 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 62,
+        "first_stage_score": 19.84257075345325,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민법 670조  담보책임의 존속기간#KOBLEX-059731",
+        "provision_text": "①전3조의 규정에 의한 하자의 보수, 손해배상의 청구 및 계약의 해제는 목적물의 인도를 받은 날로부터 1년내에 하여야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.0001194521100842394,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "민법 670조  담보책임의 존속기간 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 21.020426632288018,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "행정소송법 31조  제3자에 의한 재심청구#KOBLEX-011509",
+        "provision_text": "②제1항의 규정에 의한 청구는 확정판결이 있음을 안 날로부터 30일 이내, 판결이 확정된 날로부터 1년 이내에 제기하여야 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 8.187660569092259e-05,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "RQ3"
+        ],
+        "statute_name": "행정소송법 31조  제3자에 의한 재심청구 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 37.55888647570811,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059940",
+        "provision_text": "제766조(손해배상청구권의 소멸시효)",
+        "rerank_rank": 5,
+        "rerank_score": 0.0005974870873615146,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "민법 766조  손해배상청구권의 소멸시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 27.967858330461752,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "징발법 23조  보상청구권의 소멸시효#KOBLEX-073245",
+        "provision_text": "제23조(보상청구권의 소멸시효) 보상청구권은 제22조제1항에 따른 공고기간이 끝난 날부터 5년간 행사하지 아니하면 소멸시효가 완성된다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.0002598998253233731,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "징발법 23조  보상청구권의 소멸시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 44,
+        "first_stage_score": 22.214049370059758,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "민법 205조  점유의 보유#KOBLEX-058805",
+        "provision_text": "②전항의 청구권은 방해가 종료한 날로부터 1년내에 행사하여야 한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.0005253051640465856,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "민법 205조  점유의 보유 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 43,
+        "first_stage_score": 22.214049370059758,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "민법 204조  점유의 회수#KOBLEX-058802",
+        "provision_text": "③제1항의 청구권은 침탈을 당한 날로부터 1년내에 행사하여야 한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.00016330392099916935,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "민법 204조  점유의 회수 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 3.0,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "상법 133조  화물상환증교부의 물권적 효력#KOBLEX-113866",
+        "provision_text": "제133조(화물상환증교부의 물권적 효력) 화물상환증에 의하여 운송물을 받을 수 있는 자에게 화물상환증을 교부한 때에는 운송물 위에 행사하는 권리의 취득에 관하여 운송물을 인도한 것과 동일한 효력이 있다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.00018639967311173677,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "상법 133조  화물상환증교부의 물권적 효력",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 3.0,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "상법 198조  사원의 경업의 금지#KOBLEX-114047",
+        "provision_text": "④제2항의 권리는 다른 사원 과반수의 결의에 의하여 행사하여야 하며 다른 사원의 1인이 그 거래를 안 날로부터 2주간을 경과하거나 그 거래가 있은 날로부터 1년을 경과하면 소멸한다.",
+        "rerank_rank": 10,
+        "rerank_score": 8.12014623079449e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "상법 198조  사원의 경업의 금지 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 60,
+        "first_stage_score": 15.042738628335421,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "약관의 규제에 관한 법률 14조  소송 제기의 금지 등#KOBLEX-103939",
+        "provision_text": "제14조(소송 제기의 금지 등) 소송 제기 등과 관련된 약관의 내용 중 다음 각 호의 어느 하나에 해당하는 조항은 무효로 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.00823882780969143,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "약관의 규제에 관한 법률 14조  소송 제기의 금지 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 61,
+        "first_stage_score": 15.042738628335421,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "약관의 규제에 관한 법률 14조  소송 제기의 금지 등#KOBLEX-167854",
+        "provision_text": "제14조(소송 제기의 금지 등) 소송 제기 등과 관련된 약관의 내용 중 다음 각 호의 어느 하나에 해당하는 조항은 무효로 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.00823882780969143,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "약관의 규제에 관한 법률 14조  소송 제기의 금지 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 59,
+        "first_stage_score": 15.125751922241527,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "증권관련 집단소송법 7조  소의 제기 및 소송허가 신청#KOBLEX-178503",
+        "provision_text": "제7조(소의 제기 및 소송허가 신청)",
+        "rerank_rank": 4,
+        "rerank_score": 0.0073190839029848576,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "증권관련 집단소송법 7조  소의 제기 및 소송허가 신청",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 99,
+        "first_stage_score": 13.902230374827063,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "고용보험법 107조  소멸시효#KOBLEX-206956",
+        "provision_text": "제107조(소멸시효)",
+        "rerank_rank": 5,
+        "rerank_score": 0.005154869519174099,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "고용보험법 107조  소멸시효",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 100,
+        "first_stage_score": 13.902230374827063,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "광업법 80조  소멸시효#KOBLEX-134135",
+        "provision_text": "제80조(소멸시효)",
+        "rerank_rank": 7,
+        "rerank_score": 0.004461578093469143,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "광업법 80조  소멸시효",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 46,
+        "first_stage_score": 15.833684997042464,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "상법 236조  합병무효의 소의 제기#KOBLEX-114137",
+        "provision_text": "②전항의 소는 제233조의 등기가 있은 날로부터 6월내에 제기하여야 한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.003898689290508628,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "상법 236조  합병무효의 소의 제기 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 88,
+        "first_stage_score": 14.12564014696226,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "화물자동차 운수사업법 7조  운송사업자의 책임#KOBLEX-162432",
+        "provision_text": "① 화물의 멸실(滅失)ㆍ훼손(毁損) 또는 인도(引渡)의 지연(이하 \"적재물사고\"라 한다)으로 발생한 운송사업자의 손해배상 책임에 관하여는 「상법」 제135조를 준용한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.003761875908821821,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "화물자동차 운수사업법 7조  운송사업자의 책임 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 39,
+        "first_stage_score": 16.18596722956562,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 343조  상소 제기기간#KOBLEX-232676",
+        "provision_text": "②상소의 제기기간은 재판을 선고 또는 고지한 날로부터 진행된다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.0033414247445762157,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "형사소송법 343조  상소 제기기간 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "고용보험법 107조  소멸시효#KOBLEX-206956": "제107조(소멸시효)",
+      "광업법 80조  소멸시효#KOBLEX-134135": "제80조(소멸시효)",
+      "민법 204조  점유의 회수#KOBLEX-058802": "③제1항의 청구권은 침탈을 당한 날로부터 1년내에 행사하여야 한다.",
+      "민법 205조  점유의 보유#KOBLEX-058805": "②전항의 청구권은 방해가 종료한 날로부터 1년내에 행사하여야 한다.",
+      "민법 670조  담보책임의 존속기간#KOBLEX-059731": "①전3조의 규정에 의한 하자의 보수, 손해배상의 청구 및 계약의 해제는 목적물의 인도를 받은 날로부터 1년내에 하여야 한다.",
+      "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059940": "제766조(손해배상청구권의 소멸시효)",
+      "상법 121조  운송주선인의 책임의 시효#KOBLEX-113843": "②전항의 기간은 운송물이 전부멸실한 경우에는 그 운송물을 인도할 날로부터 기산한다. <개정 1962.12.12>",
+      "상법 133조  화물상환증교부의 물권적 효력#KOBLEX-113866": "제133조(화물상환증교부의 물권적 효력) 화물상환증에 의하여 운송물을 받을 수 있는 자에게 화물상환증을 교부한 때에는 운송물 위에 행사하는 권리의 취득에 관하여 운송물을 인도한 것과 동일한 효력이 있다.",
+      "상법 146조  운송인의 책임소멸#KOBLEX-113901": "①운송인의 책임은 수하인 또는 화물상환증소지인이 유보없이 운송물을 수령하고 운임 기타의 비용을 지급한 때에는 소멸한다. 그러나 운송물에 즉시 발견할 수 없는 훼손 또는 일부 멸실이 있는 경우에 운송물을 수령한 날로부터 2주간내에 운송인에게 그 통지를 발송한 때에는 그러하지 아니하다.",
+      "상법 198조  사원의 경업의 금지#KOBLEX-114047": "④제2항의 권리는 다른 사원 과반수의 결의에 의하여 행사하여야 하며 다른 사원의 1인이 그 거래를 안 날로부터 2주간을 경과하거나 그 거래가 있은 날로부터 1년을 경과하면 소멸한다.",
+      "상법 236조  합병무효의 소의 제기#KOBLEX-114137": "②전항의 소는 제233조의 등기가 있은 날로부터 6월내에 제기하여야 한다.",
+      "약관의 규제에 관한 법률 14조  소송 제기의 금지 등#KOBLEX-103939": "제14조(소송 제기의 금지 등) 소송 제기 등과 관련된 약관의 내용 중 다음 각 호의 어느 하나에 해당하는 조항은 무효로 한다.",
+      "약관의 규제에 관한 법률 14조  소송 제기의 금지 등#KOBLEX-167854": "제14조(소송 제기의 금지 등) 소송 제기 등과 관련된 약관의 내용 중 다음 각 호의 어느 하나에 해당하는 조항은 무효로 한다.",
+      "증권관련 집단소송법 7조  소의 제기 및 소송허가 신청#KOBLEX-178503": "제7조(소의 제기 및 소송허가 신청)",
+      "징발법 23조  보상청구권의 소멸시효#KOBLEX-073245": "제23조(보상청구권의 소멸시효) 보상청구권은 제22조제1항에 따른 공고기간이 끝난 날부터 5년간 행사하지 아니하면 소멸시효가 완성된다.",
+      "행정소송법 31조  제3자에 의한 재심청구#KOBLEX-011509": "②제1항의 규정에 의한 청구는 확정판결이 있음을 안 날로부터 30일 이내, 판결이 확정된 날로부터 1년 이내에 제기하여야 한다.",
+      "형사소송법 343조  상소 제기기간#KOBLEX-232676": "②상소의 제기기간은 재판을 선고 또는 고지한 날로부터 진행된다.",
+      "화물자동차 운수사업법 7조  운송사업자의 책임#KOBLEX-162432": "① 화물의 멸실(滅失)ㆍ훼손(毁損) 또는 인도(引渡)의 지연(이하 \"적재물사고\"라 한다)으로 발생한 운송사업자의 손해배상 책임에 관하여는 「상법」 제135조를 준용한다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "운송계약상 운송인의 지체로 인한 손해배상채권에 적용되는 소멸시효 기간",
+          "운송계약상 운송인의 지체로 인한 손해배상채권에 적용되는 소멸시효 기산점"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The completion criteria require identifying the specific limitation period and starting point for a carrier's delay-based damages claim under a transport contract. C001 (상법 121조 2항) addresses the limitation period for a freight forwarder (운송주선인) in the case of total loss, not a carrier's (운송인) delay damages. C002 (상법 146조 1항) addresses the extinction of a carrier's liability upon receipt of goods, not the limitation period for filing a damages lawsuit. C017 (화물자동차 운수사업법 7조 1항) references 상법 135조 for cargo transport liability but does not itself state the limitation period or starting point. No candidate provision states the specific limitation period and starting point for a carrier's delay-based damages claim under a transport contract.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "특별법상 운송계약 손해배상청구권 소멸시효 규정의 존재 여부 확인",
+          "일반 민법상 손해배상청구권 소멸시효의 구체적 기간과 기산점 (민법 766조 본문)"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The completion criteria require confirming whether a special-law limitation period exists for transport contract damages claims, and if not, whether the general civil law limitation period applies. C005 (민법 766조) is titled '손해배상청구권의 소멸시효' but its text is only the article heading with no operative content stating the actual limitation period. C003 (민법 670조 1항) addresses warranty liability (담보책임) for sale of goods, not transport contract damages. No candidate provision provides the operative text of the general civil law limitation period for damages claims (e.g., 민법 766조 본문) or confirms the relationship between special-law and general-law limitation periods for transport contracts.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 18,
+    "last_validated_event": "S2.ASSESS_COVERAGE",
+    "legal_issues": [
+      {
+        "description": "운송계약상 운송인의 지체로 인한 손해배상채권의 소멸시효 기간과 기산점",
+        "issue_id": "I1"
+      },
+      {
+        "description": "운송계약 손해배상청구권의 일반 민법상 소멸시효와의 관계",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "운송계약 손해배상청구권의 소멸시효 기간과 기산점이 특정되어야 한다",
+        "critical": true,
+        "description": "운송계약상 운송인의 지체로 인한 손해배상채권에 적용되는 소멸시효 기간과 기산점",
+        "evidence_item_id": "E1",
+        "evidence_type": "limitation",
+        "issue_id": "I1"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을과 을의 상품을 목적지로 운송하기로 하는 운송계약을 체결하였다. 을은 계약 체결 과정에서 상품이 제때 도착하지 않을 경우 손해가 발생할 수 있음을 갑에게 미리 고지하였다. 그러나 운송 도중 문제가 발생하여 상품은 예정된 날짜보다 3일 늦게 도착하였고, 이로 인해 을에게 손해가 발생하였다. 을은 이에 대한 손해배상을 청구할 생각이었으나, 바쁜 업무로 인해 소송을 즉시 제기하지는 못하였다. 이에 따라 을은 상품이 인도된 날로부터 언제까지 소송을 제기할 수 있는지를 고민하게 되었다. [질문] 을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "운송계약",
+          "운송인",
+          "지체",
+          "손해배상",
+          "소멸시효",
+          "인도일"
+        ],
+        "query_text": "운송계약상 운송인의 지체로 인한 손해배상채권의 소멸시효는 상품 인도일로부터 1년 [원문 맥락] 이에 따라 을은 상품이 인도된 날로부터 언제까지 소송을 제기할 수 있는지를 고민하게 되었다. 을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "상법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "상법",
+          "운송계약",
+          "손해배상",
+          "소멸시효",
+          "1년"
+        ],
+        "query_text": "상법 운송계약 손해배상 소멸시효 1년 [원문 맥락] 이에 따라 을은 상품이 인도된 날로부터 언제까지 소송을 제기할 수 있는지를 고민하게 되었다. 을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "상법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "운송계약",
+          "손해배상",
+          "소멸시효",
+          "민법",
+          "일반시효"
+        ],
+        "query_text": "운송계약 손해배상 소멸시효 민법 일반시효 관계 [원문 맥락] 이에 따라 을은 상품이 인도된 날로부터 언제까지 소송을 제기할 수 있는지를 고민하게 되었다. 을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+        "request_id": "RQ3",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을과 을의 상품을 목적지로 운송하기로 하는 운송계약을 체결하였다. 을은 계약 체결 과정에서 상품이 제때 도착하지 않을 경우 손해가 발생할 수 있음을 갑에게 미리 고지하였다. 그러나 운송 도중 문제가 발생하여 상품은 예정된 날짜보다 3일 늦게 도착하였고, 이로 인해 을에게 손해가 발생하였다.\r\n\r\n을은 이에 대한 손해배상을 청구할 생각이었으나, 바쁜 업무로 인해 소송을 즉시 제기하지는 못하였다. 이에 따라 을은 상품이 인도된 날로부터 언제까지 소송을 제기할 수 있는지를 고민하게 되었다.\n\n[질문]\n을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+    "remaining_request_budget": 6,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "운송계약 손해배상청구권의 소멸시효 기간과 기산점이 특정되어야 한다",
+        "critical": true,
+        "description": "운송계약상 운송인의 지체로 인한 손해배상채권에 적용되는 소멸시효 기간과 기산점",
+        "evidence_item_id": "E1",
+        "evidence_type": "limitation",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "특별법상 소멸시효 규정이 존재하는지, 존재하지 않을 경우 일반 민법상 소멸시효가 적용되는지 확인",
+        "critical": false,
+        "description": "운송계약 손해배상청구권에 대한 특별법상 소멸시효와 일반 민법상 소멸시효의 관계",
+        "evidence_item_id": "E2",
+        "evidence_type": "relationship",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "f77b7fb1-d939-42cd-a891-cf1dcd65ab03",
+    "seen_provision_ids": [
+      "상법 133조  화물상환증교부의 물권적 효력#KOBLEX-113866",
+      "징발법 23조  보상청구권의 소멸시효#KOBLEX-073245",
+      "광업법 80조  소멸시효#KOBLEX-134135",
+      "민법 204조  점유의 회수#KOBLEX-058802",
+      "행정소송법 31조  제3자에 의한 재심청구#KOBLEX-011509",
+      "증권관련 집단소송법 7조  소의 제기 및 소송허가 신청#KOBLEX-178503",
+      "상법 146조  운송인의 책임소멸#KOBLEX-113901",
+      "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059940",
+      "민법 205조  점유의 보유#KOBLEX-058805",
+      "민법 670조  담보책임의 존속기간#KOBLEX-059731",
+      "약관의 규제에 관한 법률 14조  소송 제기의 금지 등#KOBLEX-167854",
+      "화물자동차 운수사업법 7조  운송사업자의 책임#KOBLEX-162432",
+      "약관의 규제에 관한 법률 14조  소송 제기의 금지 등#KOBLEX-103939",
+      "상법 236조  합병무효의 소의 제기#KOBLEX-114137",
+      "상법 198조  사원의 경업의 금지#KOBLEX-114047",
+      "상법 121조  운송주선인의 책임의 시효#KOBLEX-113843",
+      "형사소송법 343조  상소 제기기간#KOBLEX-232676",
+      "고용보험법 107조  소멸시효#KOBLEX-206956"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

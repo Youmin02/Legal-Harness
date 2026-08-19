@@ -1,0 +1,1323 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-18T17:12:02.021048+00:00",
+  "end_to_end_latency_ms": 308459.827,
+  "errors": [],
+  "record_schema_version": "1.1",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 600,
+      "evidence_fusion": 600,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "rrf": 600,
+      "selected": 60
+    }
+  },
+  "run_id": "239c75dd-6bdb-483f-badd-a3b7a3bb1b94",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 20,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 17,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 3,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 26.531382398576575,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "농지법 시행규칙 62조  포상금의 지급#KOBLEX-179036",
+        "provision_text": "③농림축산식품부장관은 하나의 사건에 대하여 신고 또는 고발한 자가 2인 이상인 경우에는 그 공로를 참작하여 영 제72조제1항에 따라 산정한 포상금을 적절하게 배분하여 지급하여야 한다. 다만, 포상금을 지급받을 자가 배분방법에 관하여 미리 합의한 포상금의 지급을 신청하는 경우에는 그 합의된 방법에 따라 지급한다. <개정 2008.3.3, 2013.3.23>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9996403455734253,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "농지법 시행규칙 62조  포상금의 지급 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 28.934948808115877,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "공인중개사법 시행규칙 28조  포상금의 지급#KOBLEX-111241",
+        "provision_text": "③등록관청은 하나의 사건에 대하여 2인 이상이 공동으로 신고 또는 고발한 경우에는 영 제36조의2제1항에 따른 포상금을 균등하게 배분하여 지급한다. 다만, 포상금을 지급받을 자가 배분방법에 관하여 미리 합의하여 포상금의 지급을 신청한 경우에는 그 합의된 방법에 따라 지급한다. <개정 2020.2.21>",
+        "rerank_rank": 2,
+        "rerank_score": 0.999581515789032,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공인중개사법 시행규칙 28조  포상금의 지급 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 77,
+        "first_stage_score": 20.376378547565917,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "의료급여법 시행령 18조 2 포상금의 지급 등#KOBLEX-018638",
+        "provision_text": "② 시장ㆍ군수ㆍ구청장은 제1항에 따라 신고를 받으면 그 내용을 확인한 후 포상금 지급 여부를 결정하여 신고인(2명 이상이 공동명의로 신고한 경우에는 제1항 후단에 따른 대표자를 말한다. 이하 이 조에서 같다)에게 통보하여야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9995797276496887,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "의료급여법 시행령 18조 2 포상금의 지급 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 79,
+        "first_stage_score": 20.250741437692838,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "제조물 책임법 5조  연대책임#KOBLEX-011842",
+        "provision_text": "제5조(연대책임) 동일한 손해에 대하여 배상할 책임이 있는 자가 2인 이상인 경우에는 연대하여 그 손해를 배상할 책임이 있다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.9994571805000305,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "제조물 책임법 5조  연대책임",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 80,
+        "first_stage_score": 20.250741437692838,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "제조물 책임법 5조  연대책임#KOBLEX-222256",
+        "provision_text": "제5조(연대책임) 동일한 손해에 대하여 배상할 책임이 있는 자가 2인 이상인 경우에는 연대하여 그 손해를 배상할 책임이 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.9994571805000305,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "제조물 책임법 5조  연대책임",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 74,
+        "first_stage_score": 20.644258521801248,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "국민건강보험법 시행령 75조  포상금의 지급 기준 등#KOBLEX-055803",
+        "provision_text": "② 공단은 제1항에 따라 신고를 받으면 그 내용을 확인한 후 포상금 지급 여부를 결정하여 신고인(2명 이상이 공동명의로 신고한 경우에는 제1항 후단에 따른 대표자를 말한다. 이하 이조에서 같다)에게 통보하여야 한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.9994490742683411,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "국민건강보험법 시행령 75조  포상금의 지급 기준 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 23.060283156439958,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "공인중개사법 시행규칙 28조  포상금의 지급#KOBLEX-111242",
+        "provision_text": "④등록관청은 하나의 사건에 대하여 2건 이상의 신고 또는 고발이 접수된 경우에는 최초로 신고 또는 고발한 자에게 포상금을 지급한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.9986177682876587,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공인중개사법 시행규칙 28조  포상금의 지급 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 19.53973254225071,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "민법 30조  동시사망#KOBLEX-058424",
+        "provision_text": "제30조(동시사망) 2인 이상이 동일한 위난으로 사망한 경우에는 동시에 사망한 것으로 추정한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.9985814094543457,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 30조  동시사망",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 22.184284569216537,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "산지관리법 시행규칙 50조 2 포상금의 지급#KOBLEX-223574",
+        "provision_text": "④관할청은 하나의 사건에 대하여 신고 또는 고발한 자가 2명 이상인 경우에는 그 공로를 참작하여 포상금을 적절하게 배분하여 지급하여야 한다. 다만, 포상금을 지급받을 자가 배분방법에 관하여 미리 합의하여 포상금의 지급을 신청하는 경우에는 그 합의된 방법에 따라 지급한다. <개정 2009.4.20, 2011.1.5>",
+        "rerank_rank": 9,
+        "rerank_score": 0.9984581470489502,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "산지관리법 시행규칙 50조 2 포상금의 지급 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 98,
+        "first_stage_score": 18.27395910570766,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "산지관리법 시행령 50조 2 포상금의 지급#KOBLEX-090821",
+        "provision_text": "③제1항에 따른 포상금을 2인 이상의 자가 함께 받게 되는 경우의 배분방법, 그 밖의 포상금의 지급방법 및 절차 등에 필요한 사항은 농림축산식품부령으로 정한다. <개정 2008.2.29, 2013.3.23>",
+        "rerank_rank": 10,
+        "rerank_score": 0.9977263808250427,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "산지관리법 시행령 50조 2 포상금의 지급 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 24.61637316498056,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "농지법 시행령 72조  포상금의 지급#KOBLEX-199819",
+        "provision_text": "①법 제52조에 따른 포상금은 별표 4의 포상금 지급기준에 따라 예산의 범위에서 지급해야 한다. 이 경우 포상금의 1명당 연간(포상금 지급 결정일이 속하는 해의 1월 1일부터 12월 31일까지를 말한다) 지급상한은 150만원으로 한다. <개정 2009.11.26, 2021.10.14>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9996892213821411,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "농지법 시행령 72조  포상금의 지급 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 23.515168544366116,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "범죄수익은닉의 규제 및 처벌 등에 관한 법률 13조  포상금 지급#KOBLEX-048168",
+        "provision_text": "② 제1항에 따른 포상금 지급 대상이 되는 신고 또는 공로의 범위, 포상금 지급의 기준ㆍ방법 및 절차 등에 관하여 필요한 사항은 대통령령으로 정한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9996756315231323,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "범죄수익은닉의 규제 및 처벌 등에 관한 법률 13조  포상금 지급 2항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 59,
+        "first_stage_score": 19.12778266039267,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "공익신고자 보호법 26조#KOBLEX-007830",
+        "provision_text": "제4장 보상금, 포상금 및 구조금 <개정 2015.7.24>",
+        "rerank_rank": 3,
+        "rerank_score": 0.9996705055236816,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공익신고자 보호법 26조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 65,
+        "first_stage_score": 18.47045288556612,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "소득세법 시행령 213조 2 현금영수증 발급장치 등을 통한 제출#KOBLEX-142894",
+        "provision_text": "제213조의2(현금영수증 발급장치 등을 통한 제출)",
+        "rerank_rank": 4,
+        "rerank_score": 0.9996664524078369,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "소득세법 시행령 213조 2 현금영수증 발급장치 등을 통한 제출",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 56,
+        "first_stage_score": 19.553354975370482,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "노인장기요양보험법 시행규칙 43조 2 포상금의 지급#KOBLEX-186619",
+        "provision_text": "② 제1항에 따른 포상금 지급신청서는 별지 제35호서식에 따른다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.9996334314346313,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "노인장기요양보험법 시행규칙 43조 2 포상금의 지급 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 60,
+        "first_stage_score": 19.12778266039267,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "공익신고자 보호법 시행령 21조#KOBLEX-120525",
+        "provision_text": "제4장 보상금, 포상금 및 구조금 <개정 2016.1.22>",
+        "rerank_rank": 6,
+        "rerank_score": 0.9996163845062256,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공익신고자 보호법 시행령 21조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 22.75031135117047,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등#KOBLEX-154806",
+        "provision_text": "④ 교육부장관, 시ㆍ도지사 또는 시장ㆍ군수ㆍ구청장은 제3항에 따라 신고 또는 고발한 사람에게 포상금 지급 여부를 알린 날부터 60일 이내에 별표 1의2의 포상금 지급의 기준에 따라 포상금을 지급한다. <개정 2024.6.25>",
+        "rerank_rank": 7,
+        "rerank_score": 0.9996071457862854,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등 4항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 66,
+        "first_stage_score": 18.30579657384594,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "영유아보육법 42조 2 위법행위의 신고 및 신고자 보호#KOBLEX-046787",
+        "provision_text": "④ 제1항에 따른 신고 절차ㆍ방법 및 제3항에 따른 포상금 지급의 기준ㆍ방법 및 절차 등에 필요한 사항은 대통령령으로 정한다. <신설 2018.12.11>",
+        "rerank_rank": 8,
+        "rerank_score": 0.9995821118354797,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "영유아보육법 42조 2 위법행위의 신고 및 신고자 보호 4항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 48,
+        "first_stage_score": 20.772599052964182,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "국가유공자 등 예우 및 지원에 관한 법률 82조 7 포상금의 지급#KOBLEX-044914",
+        "provision_text": "② 제1항에 따른 신고요건, 포상금 지급의 기준ㆍ방법 및 절차 등에 관하여 필요한 사항은 대통령령으로 정한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.9995672106742859,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "국가유공자 등 예우 및 지원에 관한 법률 82조 7 포상금의 지급 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 49,
+        "first_stage_score": 20.772599052964182,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "국가유공자 등 예우 및 지원에 관한 법률 82조 7 포상금의 지급#KOBLEX-164237",
+        "provision_text": "② 제1항에 따른 신고요건, 포상금 지급의 기준ㆍ방법 및 절차 등에 관하여 필요한 사항은 대통령령으로 정한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.9995672106742859,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "국가유공자 등 예우 및 지원에 관한 법률 82조 7 포상금의 지급 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 30.637625506530977,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "방문판매 등에 관한 법률 44조  포상금의 지급#KOBLEX-074812",
+        "provision_text": "② 제1항에 따른 포상금의 지급대상이 되는 이 법 위반행위 및 포상금 지급대상자의 범위, 포상금 지급의 기준ㆍ절차 등에 관하여 필요한 사항은 대통령령으로 정한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9596384167671204,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "방문판매 등에 관한 법률 44조  포상금의 지급 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 30.637625506530977,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "방문판매 등에 관한 법률 44조  포상금의 지급#KOBLEX-101575",
+        "provision_text": "② 제1항에 따른 포상금의 지급대상이 되는 이 법 위반행위 및 포상금 지급대상자의 범위, 포상금 지급의 기준ㆍ절차 등에 관하여 필요한 사항은 대통령령으로 정한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9596384167671204,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "방문판매 등에 관한 법률 44조  포상금의 지급 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 54,
+        "first_stage_score": 24.02671883358313,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등#KOBLEX-154805",
+        "provision_text": "③ 법 제42조의2제1항에 따른 신고 또는 고발을 받거나 이 조 제2항에 따른 통지를 받은 교육부장관, 시ㆍ도지사 또는 시장ㆍ군수ㆍ구청장은 그 내용을 확인하여 포상금 지급 여부를 결정하고, 신고 또는 고발한 사람에게 이를 알려야 한다. <개정 2024.6.25>",
+        "rerank_rank": 4,
+        "rerank_score": 0.9567450881004333,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 37.5069872314727,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "조달사업에 관한 법률 23조  포상금의 지급#KOBLEX-049725",
+        "provision_text": "③ 제1항에 따른 포상금 지급 대상자의 범위, 포상금 지급의 기준 및 절차에 관한 사항은 대통령령으로 정한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.9425048828125,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "조달사업에 관한 법률 23조  포상금의 지급 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 27.65280271989499,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 시행령 13조 2 신고포상금 지급#KOBLEX-157971",
+        "provision_text": "④ 제3항에 따라 포상금 지급결정을 통보받은 신고인 또는 고발인은 관할 시ㆍ도지사에게 포상금 지급을 신청하여야 한다. 이 경우 시ㆍ도지사는 포상금 지급 신청을 받은 날부터 1개월 이내에 신고인 또는 고발인에게 포상금을 지급하여야 한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.9398745894432068,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "화물자동차 운수사업법 시행령 13조 2 신고포상금 지급 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 29.840567521665943,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "하도급거래 공정화에 관한 법률 22조  위반행위의 신고 등#KOBLEX-228367",
+        "provision_text": "⑥ 제5항에 따른 포상금 지급대상자의 범위 및 포상금 지급의 기준ㆍ절차 등에 필요한 사항은 대통령령으로 정한다. <신설 2015.7.24>",
+        "rerank_rank": 7,
+        "rerank_score": 0.936621904373169,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "하도급거래 공정화에 관한 법률 22조  위반행위의 신고 등 6항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 30.70836789456433,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "국민건강보험법 시행령 75조  포상금의 지급 기준 등#KOBLEX-055804",
+        "provision_text": "③ 제2항에 따라 포상금 지급 결정을 통보받은 신고인은 공단이 정하는 바에 따라 공단에 포상금 지급을 신청하여야 한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.9330052137374878,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "국민건강보험법 시행령 75조  포상금의 지급 기준 등 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 27.449476568532415,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "범죄수익은닉의 규제 및 처벌 등에 관한 법률 13조  포상금 지급#KOBLEX-048166",
+        "provision_text": "제13조(포상금 지급)",
+        "rerank_rank": 9,
+        "rerank_score": 0.9280076026916504,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "범죄수익은닉의 규제 및 처벌 등에 관한 법률 13조  포상금 지급",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 27.449476568532415,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "해운법 49조 2 포상금 지급#KOBLEX-111853",
+        "provision_text": "제49조의2(포상금 지급)",
+        "rerank_rank": 10,
+        "rerank_score": 0.927155077457428,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "해운법 49조 2 포상금 지급",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 64,
+        "first_stage_score": 22.003371095100192,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030004",
+        "provision_text": "② 제1항에 따라 과세관청이 포상금을 지급(같은 항 제3호를 적용하여 지급하는 경우도 포함한다)하려는 경우에는 조세탈루제보자 또는 은닉재산신고자에게 제1항제1호의 요건을 갖춘 날부터 15일 이내에 포상금 지급대상이라는 사실과 지급 절차, 포상금을 지급하기 위해 제보자 또는 신고자가 제출해야 하는 서류 등을 안내해야 한다. <신설 2021.2.17, 2022.2.15>",
+        "rerank_rank": 1,
+        "rerank_score": 0.6982676982879639,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "국세기본법 시행령 65조 4 포상금의 지급 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 27.449476568532415,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "병역법 시행령 166조  포상금 지급#KOBLEX-002425",
+        "provision_text": "제166조(포상금 지급)",
+        "rerank_rank": 3,
+        "rerank_score": 0.5483872294425964,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "병역법 시행령 166조  포상금 지급",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 27.449476568532415,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "식품위생법 90조  포상금 지급#KOBLEX-197730",
+        "provision_text": "제90조(포상금 지급)",
+        "rerank_rank": 4,
+        "rerank_score": 0.5081753134727478,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "식품위생법 90조  포상금 지급",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 26.77909455869637,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "국민건강보험법 104조  포상금 등의 지급#KOBLEX-208657",
+        "provision_text": "제104조(포상금 등의 지급)",
+        "rerank_rank": 5,
+        "rerank_score": 0.49730098247528076,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "국민건강보험법 104조  포상금 등의 지급",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 46,
+        "first_stage_score": 22.565732713160997,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "공인중개사법 46조  포상금#KOBLEX-068981",
+        "provision_text": "제46조(포상금)",
+        "rerank_rank": 6,
+        "rerank_score": 0.4914573132991791,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "공인중개사법 46조  포상금",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 47,
+        "first_stage_score": 22.565732713160997,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "공인중개사법 46조  포상금#KOBLEX-084443",
+        "provision_text": "제46조(포상금)",
+        "rerank_rank": 7,
+        "rerank_score": 0.4914573132991791,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "공인중개사법 46조  포상금",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 48,
+        "first_stage_score": 22.565732713160997,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "공인중개사법 46조  포상금#KOBLEX-201025",
+        "provision_text": "제46조(포상금)",
+        "rerank_rank": 8,
+        "rerank_score": 0.4914573132991791,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "공인중개사법 46조  포상금",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 27.449476568532415,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "국민체육진흥법 45조 2 포상금 지급#KOBLEX-103850",
+        "provision_text": "제45조의2(포상금 지급)",
+        "rerank_rank": 9,
+        "rerank_score": 0.4747948944568634,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "국민체육진흥법 45조 2 포상금 지급",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 48,
+        "first_stage_score": 25.531989785337625,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "식품위생법 시행령 65조  권한의 위임#KOBLEX-103246",
+        "provision_text": "18. 법 제90조제1항에 따른 포상금 지급",
+        "rerank_rank": 3,
+        "rerank_score": 0.5407619476318359,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "식품위생법 시행령 65조  권한의 위임 28호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 55,
+        "first_stage_score": 24.748618996536422,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등#KOBLEX-154807",
+        "provision_text": "⑤ 제1항부터 제4항까지에서 규정한 사항 외에 위법행위의 신고 또는 고발의 절차ㆍ방법, 포상금 지급 방법ㆍ절차 및 기준 등에 관한 사항은 교육부장관이 정한다. <개정 2024.6.25>",
+        "rerank_rank": 4,
+        "rerank_score": 0.42392733693122864,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 71,
+        "first_stage_score": 22.565732713160997,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "문화유산의 보존 및 활용에 관한 법률 86조  포상금#KOBLEX-125721",
+        "provision_text": "제86조(포상금)",
+        "rerank_rank": 10,
+        "rerank_score": 0.6617683172225952,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "문화유산의 보존 및 활용에 관한 법률 86조  포상금",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공익신고자 보호법 26조#KOBLEX-007830": "제4장 보상금, 포상금 및 구조금 <개정 2015.7.24>",
+      "공익신고자 보호법 시행령 21조#KOBLEX-120525": "제4장 보상금, 포상금 및 구조금 <개정 2016.1.22>",
+      "공인중개사법 46조  포상금#KOBLEX-068981": "제46조(포상금)",
+      "공인중개사법 46조  포상금#KOBLEX-084443": "제46조(포상금)",
+      "공인중개사법 46조  포상금#KOBLEX-201025": "제46조(포상금)",
+      "공인중개사법 시행규칙 28조  포상금의 지급#KOBLEX-111241": "③등록관청은 하나의 사건에 대하여 2인 이상이 공동으로 신고 또는 고발한 경우에는 영 제36조의2제1항에 따른 포상금을 균등하게 배분하여 지급한다. 다만, 포상금을 지급받을 자가 배분방법에 관하여 미리 합의하여 포상금의 지급을 신청한 경우에는 그 합의된 방법에 따라 지급한다. <개정 2020.2.21>",
+      "공인중개사법 시행규칙 28조  포상금의 지급#KOBLEX-111242": "④등록관청은 하나의 사건에 대하여 2건 이상의 신고 또는 고발이 접수된 경우에는 최초로 신고 또는 고발한 자에게 포상금을 지급한다.",
+      "국가유공자 등 예우 및 지원에 관한 법률 82조 7 포상금의 지급#KOBLEX-044914": "② 제1항에 따른 신고요건, 포상금 지급의 기준ㆍ방법 및 절차 등에 관하여 필요한 사항은 대통령령으로 정한다.",
+      "국가유공자 등 예우 및 지원에 관한 법률 82조 7 포상금의 지급#KOBLEX-164237": "② 제1항에 따른 신고요건, 포상금 지급의 기준ㆍ방법 및 절차 등에 관하여 필요한 사항은 대통령령으로 정한다.",
+      "국민건강보험법 104조  포상금 등의 지급#KOBLEX-208657": "제104조(포상금 등의 지급)",
+      "국민건강보험법 시행령 75조  포상금의 지급 기준 등#KOBLEX-055803": "② 공단은 제1항에 따라 신고를 받으면 그 내용을 확인한 후 포상금 지급 여부를 결정하여 신고인(2명 이상이 공동명의로 신고한 경우에는 제1항 후단에 따른 대표자를 말한다. 이하 이조에서 같다)에게 통보하여야 한다.",
+      "국민건강보험법 시행령 75조  포상금의 지급 기준 등#KOBLEX-055804": "③ 제2항에 따라 포상금 지급 결정을 통보받은 신고인은 공단이 정하는 바에 따라 공단에 포상금 지급을 신청하여야 한다.",
+      "국민체육진흥법 45조 2 포상금 지급#KOBLEX-103850": "제45조의2(포상금 지급)",
+      "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030004": "② 제1항에 따라 과세관청이 포상금을 지급(같은 항 제3호를 적용하여 지급하는 경우도 포함한다)하려는 경우에는 조세탈루제보자 또는 은닉재산신고자에게 제1항제1호의 요건을 갖춘 날부터 15일 이내에 포상금 지급대상이라는 사실과 지급 절차, 포상금을 지급하기 위해 제보자 또는 신고자가 제출해야 하는 서류 등을 안내해야 한다. <신설 2021.2.17, 2022.2.15>",
+      "노인장기요양보험법 시행규칙 43조 2 포상금의 지급#KOBLEX-186619": "② 제1항에 따른 포상금 지급신청서는 별지 제35호서식에 따른다.",
+      "농지법 시행규칙 62조  포상금의 지급#KOBLEX-179036": "③농림축산식품부장관은 하나의 사건에 대하여 신고 또는 고발한 자가 2인 이상인 경우에는 그 공로를 참작하여 영 제72조제1항에 따라 산정한 포상금을 적절하게 배분하여 지급하여야 한다. 다만, 포상금을 지급받을 자가 배분방법에 관하여 미리 합의한 포상금의 지급을 신청하는 경우에는 그 합의된 방법에 따라 지급한다. <개정 2008.3.3, 2013.3.23>",
+      "농지법 시행령 72조  포상금의 지급#KOBLEX-199819": "①법 제52조에 따른 포상금은 별표 4의 포상금 지급기준에 따라 예산의 범위에서 지급해야 한다. 이 경우 포상금의 1명당 연간(포상금 지급 결정일이 속하는 해의 1월 1일부터 12월 31일까지를 말한다) 지급상한은 150만원으로 한다. <개정 2009.11.26, 2021.10.14>",
+      "문화유산의 보존 및 활용에 관한 법률 86조  포상금#KOBLEX-125721": "제86조(포상금)",
+      "민법 30조  동시사망#KOBLEX-058424": "제30조(동시사망) 2인 이상이 동일한 위난으로 사망한 경우에는 동시에 사망한 것으로 추정한다.",
+      "방문판매 등에 관한 법률 44조  포상금의 지급#KOBLEX-074812": "② 제1항에 따른 포상금의 지급대상이 되는 이 법 위반행위 및 포상금 지급대상자의 범위, 포상금 지급의 기준ㆍ절차 등에 관하여 필요한 사항은 대통령령으로 정한다.",
+      "방문판매 등에 관한 법률 44조  포상금의 지급#KOBLEX-101575": "② 제1항에 따른 포상금의 지급대상이 되는 이 법 위반행위 및 포상금 지급대상자의 범위, 포상금 지급의 기준ㆍ절차 등에 관하여 필요한 사항은 대통령령으로 정한다.",
+      "범죄수익은닉의 규제 및 처벌 등에 관한 법률 13조  포상금 지급#KOBLEX-048166": "제13조(포상금 지급)",
+      "범죄수익은닉의 규제 및 처벌 등에 관한 법률 13조  포상금 지급#KOBLEX-048168": "② 제1항에 따른 포상금 지급 대상이 되는 신고 또는 공로의 범위, 포상금 지급의 기준ㆍ방법 및 절차 등에 관하여 필요한 사항은 대통령령으로 정한다.",
+      "병역법 시행령 166조  포상금 지급#KOBLEX-002425": "제166조(포상금 지급)",
+      "산지관리법 시행규칙 50조 2 포상금의 지급#KOBLEX-223574": "④관할청은 하나의 사건에 대하여 신고 또는 고발한 자가 2명 이상인 경우에는 그 공로를 참작하여 포상금을 적절하게 배분하여 지급하여야 한다. 다만, 포상금을 지급받을 자가 배분방법에 관하여 미리 합의하여 포상금의 지급을 신청하는 경우에는 그 합의된 방법에 따라 지급한다. <개정 2009.4.20, 2011.1.5>",
+      "산지관리법 시행령 50조 2 포상금의 지급#KOBLEX-090821": "③제1항에 따른 포상금을 2인 이상의 자가 함께 받게 되는 경우의 배분방법, 그 밖의 포상금의 지급방법 및 절차 등에 필요한 사항은 농림축산식품부령으로 정한다. <개정 2008.2.29, 2013.3.23>",
+      "소득세법 시행령 213조 2 현금영수증 발급장치 등을 통한 제출#KOBLEX-142894": "제213조의2(현금영수증 발급장치 등을 통한 제출)",
+      "식품위생법 90조  포상금 지급#KOBLEX-197730": "제90조(포상금 지급)",
+      "식품위생법 시행령 65조  권한의 위임#KOBLEX-103246": "18. 법 제90조제1항에 따른 포상금 지급",
+      "영유아보육법 42조 2 위법행위의 신고 및 신고자 보호#KOBLEX-046787": "④ 제1항에 따른 신고 절차ㆍ방법 및 제3항에 따른 포상금 지급의 기준ㆍ방법 및 절차 등에 필요한 사항은 대통령령으로 정한다. <신설 2018.12.11>",
+      "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등#KOBLEX-154805": "③ 법 제42조의2제1항에 따른 신고 또는 고발을 받거나 이 조 제2항에 따른 통지를 받은 교육부장관, 시ㆍ도지사 또는 시장ㆍ군수ㆍ구청장은 그 내용을 확인하여 포상금 지급 여부를 결정하고, 신고 또는 고발한 사람에게 이를 알려야 한다. <개정 2024.6.25>",
+      "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등#KOBLEX-154806": "④ 교육부장관, 시ㆍ도지사 또는 시장ㆍ군수ㆍ구청장은 제3항에 따라 신고 또는 고발한 사람에게 포상금 지급 여부를 알린 날부터 60일 이내에 별표 1의2의 포상금 지급의 기준에 따라 포상금을 지급한다. <개정 2024.6.25>",
+      "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등#KOBLEX-154807": "⑤ 제1항부터 제4항까지에서 규정한 사항 외에 위법행위의 신고 또는 고발의 절차ㆍ방법, 포상금 지급 방법ㆍ절차 및 기준 등에 관한 사항은 교육부장관이 정한다. <개정 2024.6.25>",
+      "의료급여법 시행령 18조 2 포상금의 지급 등#KOBLEX-018638": "② 시장ㆍ군수ㆍ구청장은 제1항에 따라 신고를 받으면 그 내용을 확인한 후 포상금 지급 여부를 결정하여 신고인(2명 이상이 공동명의로 신고한 경우에는 제1항 후단에 따른 대표자를 말한다. 이하 이 조에서 같다)에게 통보하여야 한다.",
+      "제조물 책임법 5조  연대책임#KOBLEX-011842": "제5조(연대책임) 동일한 손해에 대하여 배상할 책임이 있는 자가 2인 이상인 경우에는 연대하여 그 손해를 배상할 책임이 있다.",
+      "제조물 책임법 5조  연대책임#KOBLEX-222256": "제5조(연대책임) 동일한 손해에 대하여 배상할 책임이 있는 자가 2인 이상인 경우에는 연대하여 그 손해를 배상할 책임이 있다.",
+      "조달사업에 관한 법률 23조  포상금의 지급#KOBLEX-049725": "③ 제1항에 따른 포상금 지급 대상자의 범위, 포상금 지급의 기준 및 절차에 관한 사항은 대통령령으로 정한다.",
+      "하도급거래 공정화에 관한 법률 22조  위반행위의 신고 등#KOBLEX-228367": "⑥ 제5항에 따른 포상금 지급대상자의 범위 및 포상금 지급의 기준ㆍ절차 등에 필요한 사항은 대통령령으로 정한다. <신설 2015.7.24>",
+      "해운법 49조 2 포상금 지급#KOBLEX-111853": "제49조의2(포상금 지급)",
+      "화물자동차 운수사업법 시행령 13조 2 신고포상금 지급#KOBLEX-157971": "④ 제3항에 따라 포상금 지급결정을 통보받은 신고인 또는 고발인은 관할 시ㆍ도지사에게 포상금 지급을 신청하여야 한다. 이 경우 시ㆍ도지사는 포상금 지급 신청을 받은 날부터 1개월 이내에 신고인 또는 고발인에게 포상금을 지급하여야 한다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "Legal rule determining the reward recipient when multiple persons report the same cash receipt refusal violation"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The question concerns the reward for reporting the refusal to issue a cash receipt (현금영수증 발급 거부), which is governed by the Income Tax Act (소득세법) and its enforcement decree. The supplied candidate provisions (C001-C040) relate to other statutes such as the Agricultural Land Act, Real Estate Broker Act, Medical Aid Act, Product Liability Act, etc. None of the supplied provisions contain the specific legal rule for determining the reward recipient when multiple persons report the same cash receipt refusal violation (e.g., first reporter priority or distribution rules specific to this tax violation). Therefore, the evidence item is uncovered by the current candidate set.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "Annual reward payment limit for cash receipt refusal reporting"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The question asks for the annual reward limit for reporting cash receipt refusal. The supplied candidate provisions do not include the relevant provisions from the Income Tax Act Enforcement Decree (소득세법 시행령) that specify the reward amount and annual cap for this specific violation. Provisions like C011 refer to the Agricultural Land Act, which is not applicable to this tax-related reward. Thus, the specific annual limit for cash receipt refusal rewards is not supported by the supplied candidates.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 3,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "동일한 현금영수증 발급 거부 행위에 대해 다수인이 신고한 경우 포상금 지급 대상자 결정 기준",
+        "issue_id": "I1"
+      },
+      {
+        "description": "현금영수증 발급 거부 신고에 대한 연간 포상금 지급 한도",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "누가 포상금을 받을 수 있는지 결정하는 법적 기준(예: 선신고자, 동시신고 시 처리방식)이 확인되어야 함",
+        "critical": true,
+        "description": "동일한 위반행위에 대해 2인 이상이 신고한 경우 포상금 지급 우선순위 또는 배제 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "연간 포상금 총액 한도 또는 건당 한도 및 연간 합산 한도가 명확히 확인되어야 함",
+        "critical": true,
+        "description": "현금영수증 발급 거부 신고 포상금의 연간 지급 한도 금액",
+        "evidence_item_id": "E2",
+        "evidence_type": "limitation",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 2023년에 을이 운영하는 가게에서 현금영수증 발급을 거부당했습니다. 갑은 이를 국세청에 신고하여 포상금을 받기로 했습니다. 같은 날, 병도 을의 가게에서 동일한 이유로 현금영수증 발급을 거부당했고, 병 역시 국세청에 이를 신고했습니다. 갑과 병의 신고 중 누가 포상금을 받을 수 있는지, 그리고 갑이 받을 수 있는 연간 포상금의 한도는 얼마인지가 문제됩니다. [질문] 갑과 병 중 누가 포상금을 받을 수 있으며, 갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금 한도는 얼마인가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "현금영수증",
+          "발급거부",
+          "신고",
+          "포상금",
+          "동시신고",
+          "지급대상"
+        ],
+        "query_text": "동일한 현금영수증 발급 거부 행위에 대해 2인 이상이 신고한 경우 포상금을 지급받을 수 있는 자는 누구인가 [원문 맥락] 갑과 병의 신고 중 누가 포상금을 받을 수 있는지, 그리고 갑이 받을 수 있는 연간 포상금의 한도는 얼마인지가 문제됩니다. 갑과 병 중 누가 포상금을 받을 수 있으며, 갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금 한도는 얼마인가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "현금영수증의 발급 및 이용에 관한 법률"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "현금영수증",
+          "발급거부",
+          "포상금",
+          "연간한도",
+          "상한액"
+        ],
+        "query_text": "현금영수증 발급 거부 신고 포상금 연간 한도 [원문 맥락] 갑과 병의 신고 중 누가 포상금을 받을 수 있는지, 그리고 갑이 받을 수 있는 연간 포상금의 한도는 얼마인지가 문제됩니다. 갑과 병 중 누가 포상금을 받을 수 있으며, 갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금 한도는 얼마인가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "현금영수증의 발급 및 이용에 관한 법률"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "소득세법",
+          "현금영수증",
+          "발급거부",
+          "신고",
+          "포상금",
+          "지급대상"
+        ],
+        "query_text": "소득세법 현금영수증 발급 거부 신고 포상금 지급 대상자 결정 기준 [원문 맥락] 갑과 병의 신고 중 누가 포상금을 받을 수 있는지, 그리고 갑이 받을 수 있는 연간 포상금의 한도는 얼마인지가 문제됩니다. 갑과 병 중 누가 포상금을 받을 수 있으며, 갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금 한도는 얼마인가?",
+        "request_id": "GRQ-R2-1",
+        "statute_hints": [
+          "소득세법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "소득세법",
+          "시행령",
+          "현금영수증",
+          "발급거부",
+          "포상금",
+          "연간한도"
+        ],
+        "query_text": "소득세법 시행령 현금영수증 발급 거부 신고 포상금 연간 지급 한도 [원문 맥락] 갑과 병의 신고 중 누가 포상금을 받을 수 있는지, 그리고 갑이 받을 수 있는 연간 포상금의 한도는 얼마인지가 문제됩니다. 갑과 병 중 누가 포상금을 받을 수 있으며, 갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금 한도는 얼마인가?",
+        "request_id": "GRQ-R2-2",
+        "statute_hints": [
+          "소득세법 시행령"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "현금영수증",
+          "발급거부",
+          "신고",
+          "포상금",
+          "우선순위",
+          "선신고자"
+        ],
+        "query_text": "현금영수증의 발급 및 이용에 관한 법률 위반행위 신고 포상금 지급 우선순위 [원문 맥락] 갑과 병의 신고 중 누가 포상금을 받을 수 있는지, 그리고 갑이 받을 수 있는 연간 포상금의 한도는 얼마인지가 문제됩니다. 갑과 병 중 누가 포상금을 받을 수 있으며, 갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금 한도는 얼마인가?",
+        "request_id": "GRQ-R3-1",
+        "statute_hints": [
+          "현금영수증의 발급 및 이용에 관한 법률"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "현금영수증",
+          "시행령",
+          "포상금",
+          "한도액",
+          "연간",
+          "상한"
+        ],
+        "query_text": "현금영수증의 발급 및 이용에 관한 법률 시행령 포상금 지급 한도액 [원문 맥락] 갑과 병의 신고 중 누가 포상금을 받을 수 있는지, 그리고 갑이 받을 수 있는 연간 포상금의 한도는 얼마인지가 문제됩니다. 갑과 병 중 누가 포상금을 받을 수 있으며, 갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금 한도는 얼마인가?",
+        "request_id": "GRQ-R3-2",
+        "statute_hints": [
+          "현금영수증의 발급 및 이용에 관한 법률 시행령"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 2023년에 을이 운영하는 가게에서 현금영수증 발급을 거부당했습니다. 갑은 이를 국세청에 신고하여 포상금을 받기로 했습니다. 같은 날, 병도 을의 가게에서 동일한 이유로 현금영수증 발급을 거부당했고, 병 역시 국세청에 이를 신고했습니다. 갑과 병의 신고 중 누가 포상금을 받을 수 있는지, 그리고 갑이 받을 수 있는 연간 포상금의 한도는 얼마인지가 문제됩니다.\n\n[질문]\n갑과 병 중 누가 포상금을 받을 수 있으며, 갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금 한도는 얼마인가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "누가 포상금을 받을 수 있는지 결정하는 법적 기준(예: 선신고자, 동시신고 시 처리방식)이 확인되어야 함",
+        "critical": true,
+        "description": "동일한 위반행위에 대해 2인 이상이 신고한 경우 포상금 지급 우선순위 또는 배제 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "연간 포상금 총액 한도 또는 건당 한도 및 연간 합산 한도가 명확히 확인되어야 함",
+        "critical": true,
+        "description": "현금영수증 발급 거부 신고 포상금의 연간 지급 한도 금액",
+        "evidence_item_id": "E2",
+        "evidence_type": "limitation",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "239c75dd-6bdb-483f-badd-a3b7a3bb1b94",
+    "seen_provision_ids": [
+      "농지법 시행령 72조  포상금의 지급#KOBLEX-199819",
+      "국민체육진흥법 45조 2 포상금 지급#KOBLEX-103850",
+      "식품위생법 시행령 65조  권한의 위임#KOBLEX-103246",
+      "제조물 책임법 5조  연대책임#KOBLEX-011842",
+      "영유아보육법 42조 2 위법행위의 신고 및 신고자 보호#KOBLEX-046787",
+      "공인중개사법 46조  포상금#KOBLEX-201025",
+      "국민건강보험법 104조  포상금 등의 지급#KOBLEX-208657",
+      "국민건강보험법 시행령 75조  포상금의 지급 기준 등#KOBLEX-055803",
+      "범죄수익은닉의 규제 및 처벌 등에 관한 법률 13조  포상금 지급#KOBLEX-048166",
+      "의료급여법 시행령 18조 2 포상금의 지급 등#KOBLEX-018638",
+      "식품위생법 90조  포상금 지급#KOBLEX-197730",
+      "병역법 시행령 166조  포상금 지급#KOBLEX-002425",
+      "공인중개사법 시행규칙 28조  포상금의 지급#KOBLEX-111242",
+      "산지관리법 시행령 50조 2 포상금의 지급#KOBLEX-090821",
+      "방문판매 등에 관한 법률 44조  포상금의 지급#KOBLEX-101575",
+      "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등#KOBLEX-154805",
+      "국가유공자 등 예우 및 지원에 관한 법률 82조 7 포상금의 지급#KOBLEX-044914",
+      "노인장기요양보험법 시행규칙 43조 2 포상금의 지급#KOBLEX-186619",
+      "농지법 시행규칙 62조  포상금의 지급#KOBLEX-179036",
+      "국민건강보험법 시행령 75조  포상금의 지급 기준 등#KOBLEX-055804",
+      "국가유공자 등 예우 및 지원에 관한 법률 82조 7 포상금의 지급#KOBLEX-164237",
+      "민법 30조  동시사망#KOBLEX-058424",
+      "문화유산의 보존 및 활용에 관한 법률 86조  포상금#KOBLEX-125721",
+      "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030004",
+      "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등#KOBLEX-154807",
+      "산지관리법 시행규칙 50조 2 포상금의 지급#KOBLEX-223574",
+      "범죄수익은닉의 규제 및 처벌 등에 관한 법률 13조  포상금 지급#KOBLEX-048168",
+      "해운법 49조 2 포상금 지급#KOBLEX-111853",
+      "제조물 책임법 5조  연대책임#KOBLEX-222256",
+      "소득세법 시행령 213조 2 현금영수증 발급장치 등을 통한 제출#KOBLEX-142894",
+      "조달사업에 관한 법률 23조  포상금의 지급#KOBLEX-049725",
+      "하도급거래 공정화에 관한 법률 22조  위반행위의 신고 등#KOBLEX-228367",
+      "화물자동차 운수사업법 시행령 13조 2 신고포상금 지급#KOBLEX-157971",
+      "영유아보육법 시행령 25조 2 위법행위의 신고 절차ㆍ방법 및 포상금의 지급 기준 등#KOBLEX-154806",
+      "공인중개사법 시행규칙 28조  포상금의 지급#KOBLEX-111241",
+      "공익신고자 보호법 시행령 21조#KOBLEX-120525",
+      "공인중개사법 46조  포상금#KOBLEX-068981",
+      "공인중개사법 46조  포상금#KOBLEX-084443",
+      "공익신고자 보호법 26조#KOBLEX-007830",
+      "방문판매 등에 관한 법률 44조  포상금의 지급#KOBLEX-074812"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

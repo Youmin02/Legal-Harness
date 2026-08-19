@@ -1,0 +1,1203 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-18T16:35:16.748445+00:00",
+  "end_to_end_latency_ms": 304605.652,
+  "errors": [],
+  "record_schema_version": "1.1",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 400,
+      "evidence_fusion": 900,
+      "first_stage": 900,
+      "request_rerank": 900,
+      "rrf": 400,
+      "selected": 40
+    }
+  },
+  "run_id": "c448728e-d24e-4860-bfbd-8725886b8dbe",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 5,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 16,
+          "request_count": 5,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 5,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 12,
+          "request_count": 4,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 5,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The retrieval request budget was exhausted.",
+          "termination_reason": "RETRIEVAL_BUDGET_EXHAUSTED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "RETRIEVAL_BUDGET_EXHAUSTED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 15.427190342418195,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "군형법 75조  군용물 등 범죄에 대한 형의 가중#KOBLEX-140810",
+        "provision_text": "② 제1항의 경우에는 「형법」에 정한 형과 비교하여 중한 형으로 처벌한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.0003444734902586788,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "RQ3",
+          "RQ4",
+          "RQ5",
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "군형법 75조  군용물 등 범죄에 대한 형의 가중 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 1.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형법 111조  외국에 대한 사전#KOBLEX-192916",
+        "provision_text": "②전항의 미수범은 처벌한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.0001891560386866331,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "RQ3",
+          "RQ4",
+          "RQ5",
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "형법 111조  외국에 대한 사전 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 1.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형법 119조  폭발물 사용#KOBLEX-192935",
+        "provision_text": "③ 제1항과 제2항의 미수범은 처벌한다.",
+        "rerank_rank": 3,
+        "rerank_score": 9.29865418584086e-05,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "RQ3",
+          "RQ4",
+          "RQ5",
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "형법 119조  폭발물 사용 3항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 1.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형법 100조  미수범#KOBLEX-192892",
+        "provision_text": "제100조(미수범) 전8조의 미수범은 처벌한다.",
+        "rerank_rank": 4,
+        "rerank_score": 9.842979488894343e-05,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "RQ3",
+          "RQ4",
+          "RQ5"
+        ],
+        "statute_name": "형법 100조  미수범",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 14.809435826492635,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075691",
+        "provision_text": "1. 「형법」, 「폭력행위 등 처벌에 관한 법률」, 그 밖의 형사 법률에 저촉되는 행위",
+        "rerank_rank": 5,
+        "rerank_score": 0.00010068355913972482,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌 1호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 14.809435826492635,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213878",
+        "provision_text": "1. 「형법」, 「폭력행위 등 처벌에 관한 법률」, 그 밖의 형사 법률에 저촉되는 행위",
+        "rerank_rank": 6,
+        "rerank_score": 0.00010068355913972482,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌 1호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 2.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형법 27조  불능범#KOBLEX-192698",
+        "provision_text": "제27조(불능범) 실행의 수단 또는 대상의 착오로 인하여 결과의 발생이 불가능하더라도 위험성이 있는 때에는 처벌한다. 단, 형을 감경 또는 면제할 수 있다.",
+        "rerank_rank": 7,
+        "rerank_score": 8.48662166390568e-05,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형법 27조  불능범",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 15.706227384018213,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 125조  야간집행의 제한#KOBLEX-231796",
+        "provision_text": "제125조(야간집행의 제한) 일출 전, 일몰 후에는 압수ㆍ수색영장에 야간집행을 할 수 있는 기재가 없으면 그 영장을 집행하기 위하여 타인의 주거, 간수자 있는 가옥, 건조물, 항공기 또는 선차 내에 들어가지 못한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.00014456819917540997,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형사소송법 125조  야간집행의 제한",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 13.711342935942984,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등#KOBLEX-157530",
+        "provision_text": "③ 제1항의 방법으로 「형법」 제299조(준강간, 준강제추행)의 죄를 범한 사람은 제1항 또는 제2항의 예에 따라 처벌한다.",
+        "rerank_rank": 9,
+        "rerank_score": 5.527772009372711e-05,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등 3항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 11.828768735732945,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "형법 310조  위법성의 조각#KOBLEX-193320",
+        "provision_text": "제310조(위법성의 조각) 제307조제1항의 행위가 진실한 사실로서 오로지 공공의 이익에 관한 때에는 처벌하지 아니한다.",
+        "rerank_rank": 10,
+        "rerank_score": 6.8472079874482e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형법 310조  위법성의 조각",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 94,
+        "first_stage_score": 1.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "형법 15조  사실의 착오#KOBLEX-192673",
+        "provision_text": "제15조(사실의 착오)",
+        "rerank_rank": 2,
+        "rerank_score": 0.0017009855946525931,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "RQ4",
+          "RQ5"
+        ],
+        "statute_name": "형법 15조  사실의 착오",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4",
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 1.0,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "형법 162조  미수범#KOBLEX-193018",
+        "provision_text": "제162조(미수범) 전2조의 미수범은 처벌한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0012846457539126277,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "RQ4",
+          "RQ5"
+        ],
+        "statute_name": "형법 162조  미수범",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4",
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 77,
+        "first_stage_score": 9.263393084603084,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "형법 124조  불법체포, 불법감금#KOBLEX-192945",
+        "provision_text": "②전항의 미수범은 처벌한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.0015642376383766532,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "RQ4",
+          "RQ5",
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "형법 124조  불법체포, 불법감금 2항",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4",
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 1.0,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "형법 149조  미수범#KOBLEX-192992",
+        "provision_text": "제149조(미수범) 전4조의 미수범은 처벌한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.0008898018859326839,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "RQ4",
+          "RQ5",
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "형법 149조  미수범",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4",
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 1.0,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "형법 143조  미수범#KOBLEX-192981",
+        "provision_text": "제143조(미수범) 제140조 내지 전조의 미수범은 처벌한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.0007218581740744412,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "RQ4",
+          "RQ5"
+        ],
+        "statute_name": "형법 143조  미수범",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4",
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 92,
+        "first_stage_score": 1.0,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "형법 155조  증거인멸 등과 친족간의 특례#KOBLEX-193007",
+        "provision_text": "④친족 또는 동거의 가족이 본인을 위하여 본조의 죄를 범한 때에는 처벌하지 아니한다. <개정 2005.3.31>",
+        "rerank_rank": 10,
+        "rerank_score": 0.0005032657645642757,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "RQ4",
+          "RQ5",
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "형법 155조  증거인멸 등과 친족간의 특례 4항",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4",
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 67,
+        "first_stage_score": 10.226777905039267,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "지방세기본법 101조#KOBLEX-121006",
+        "provision_text": "제8장 범칙행위 등에 대한 처벌 및 처벌절차",
+        "rerank_rank": 1,
+        "rerank_score": 9.34801428229548e-05,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "지방세기본법 101조",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 16.920227515989186,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075695",
+        "provision_text": "5. 다른 사람을 처벌받게 하거나 교도관의 직무집행을 방해할 목적으로 거짓 사실을 신고하는 행위",
+        "rerank_rank": 4,
+        "rerank_score": 8.505044388584793e-05,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌 5호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 16.920227515989186,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213882",
+        "provision_text": "5. 다른 사람을 처벌받게 하거나 교도관의 직무집행을 방해할 목적으로 거짓 사실을 신고하는 행위",
+        "rerank_rank": 5,
+        "rerank_score": 8.505044388584793e-05,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌 5호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 17.28166191368458,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "형법 14조  과실#KOBLEX-192672",
+        "provision_text": "제14조(과실) 정상적으로 기울여야 할 주의(注意)를 게을리하여 죄의 성립요소인 사실을 인식하지 못한 행위는 법률에 특별한 규정이 있는 경우에만 처벌한다.",
+        "rerank_rank": 6,
+        "rerank_score": 3.477826248854399e-05,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형법 14조  과실",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 61,
+        "first_stage_score": 10.39982886729127,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "교육공무원법 62조  벌칙#KOBLEX-218268",
+        "provision_text": "④ 제24조의2제3항을 위반한 사람은 500만원 이상 3천만원 이하의 벌금에 처한다. 다만, 진실한 사실로서 오로지 공공의 이익에 관한 것일 때에는 처벌하지 아니한다.",
+        "rerank_rank": 7,
+        "rerank_score": 4.723441452370025e-05,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "교육공무원법 62조  벌칙 4항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 13.403203043453246,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형법 34조  간접정범, 특수한 교사, 방조에 대한 형의 가중#KOBLEX-192712",
+        "provision_text": "①어느 행위로 인하여 처벌되지 아니하는 자 또는 과실범으로 처벌되는 자를 교사 또는 방조하여 범죄행위의 결과를 발생하게 한 자는 교사 또는 방조의 예에 의하여 처벌한다.",
+        "rerank_rank": 8,
+        "rerank_score": 4.770911982632242e-05,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형법 34조  간접정범, 특수한 교사, 방조에 대한 형의 가중 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 12.209680823217584,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 137조  구속영장집행과 수색#KOBLEX-231820",
+        "provision_text": "제137조(구속영장집행과 수색) 검사, 사법경찰관리 또는 제81조제2항의 규정에 의한 법원사무관등이 구속영장을 집행할 경우에 필요한 때에는 미리 수색영장을 발부받기 어려운 긴급한 사정이 있는 경우에 한정하여 타인의 주거, 간수자있는 가옥, 건조물, 항공기, 선차 내에 들어가 피고인을 수색할 수 있다. <개정 2007.6.1, 2019.12.31>",
+        "rerank_rank": 9,
+        "rerank_score": 3.8617294194409624e-05,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형사소송법 137조  구속영장집행과 수색",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 13.565472409080158,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "전자금융거래법 32조  허가와 등록의 결격사유#KOBLEX-186817",
+        "provision_text": "5. 허가 또는 등록 신청일을 기준으로 최근 3년간 대통령령이 정하는 금융관계법령을 위반하여 벌금형 이상의 처벌을 받은 사실이 있는 자",
+        "rerank_rank": 10,
+        "rerank_score": 2.248013515782077e-05,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "전자금융거래법 32조  허가와 등록의 결격사유 5호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 27,
+        "first_stage_score": 11.216330953834103,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "폭력행위 등 처벌에 관한 법률 6조  미수범#KOBLEX-126725",
+        "provision_text": "제6조(미수범) 제2조, 제3조, 제4조제2항[「형법」 제136조, 제255조, 제314조, 제315조, 제335조, 제337조(강도치상의 죄에 한정한다), 제340조제2항(해상강도치상의 죄에 한정한다) 또는 제343조의 죄를 범한 경우는 제외한다] 및 제5조의 미수범은 처벌한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.00027906615287065506,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "폭력행위 등 처벌에 관한 법률 6조  미수범",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 28,
+        "first_stage_score": 11.216330953834103,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "폭력행위 등 처벌에 관한 법률 6조  미수범#KOBLEX-178715",
+        "provision_text": "제6조(미수범) 제2조, 제3조, 제4조제2항[「형법」 제136조, 제255조, 제314조, 제315조, 제335조, 제337조(강도치상의 죄에 한정한다), 제340조제2항(해상강도치상의 죄에 한정한다) 또는 제343조의 죄를 범한 경우는 제외한다] 및 제5조의 미수범은 처벌한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.00027906615287065506,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "폭력행위 등 처벌에 관한 법률 6조  미수범",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 93,
+        "first_stage_score": 1.0,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "형법 151조  범인은닉과 친족간의 특례#KOBLEX-192996",
+        "provision_text": "②친족 또는 동거의 가족이 본인을 위하여 전항의 죄를 범한 때에는 처벌하지 아니한다. <개정 2005.3.31>",
+        "rerank_rank": 8,
+        "rerank_score": 0.00022511498536914587,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "형법 151조  범인은닉과 친족간의 특례 2항",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 98,
+        "first_stage_score": 1.0,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "형법 15조  사실의 착오#KOBLEX-192675",
+        "provision_text": "② 결과 때문에 형이 무거워지는 죄의 경우에 그 결과의 발생을 예견할 수 없었을 때에는 무거운 죄로 벌하지 아니한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.00019063768559135497,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "형법 15조  사실의 착오 2항",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "교육공무원법 62조  벌칙#KOBLEX-218268": "④ 제24조의2제3항을 위반한 사람은 500만원 이상 3천만원 이하의 벌금에 처한다. 다만, 진실한 사실로서 오로지 공공의 이익에 관한 것일 때에는 처벌하지 아니한다.",
+      "군형법 75조  군용물 등 범죄에 대한 형의 가중#KOBLEX-140810": "② 제1항의 경우에는 「형법」에 정한 형과 비교하여 중한 형으로 처벌한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등#KOBLEX-157530": "③ 제1항의 방법으로 「형법」 제299조(준강간, 준강제추행)의 죄를 범한 사람은 제1항 또는 제2항의 예에 따라 처벌한다.",
+      "전자금융거래법 32조  허가와 등록의 결격사유#KOBLEX-186817": "5. 허가 또는 등록 신청일을 기준으로 최근 3년간 대통령령이 정하는 금융관계법령을 위반하여 벌금형 이상의 처벌을 받은 사실이 있는 자",
+      "지방세기본법 101조#KOBLEX-121006": "제8장 범칙행위 등에 대한 처벌 및 처벌절차",
+      "폭력행위 등 처벌에 관한 법률 6조  미수범#KOBLEX-126725": "제6조(미수범) 제2조, 제3조, 제4조제2항[「형법」 제136조, 제255조, 제314조, 제315조, 제335조, 제337조(강도치상의 죄에 한정한다), 제340조제2항(해상강도치상의 죄에 한정한다) 또는 제343조의 죄를 범한 경우는 제외한다] 및 제5조의 미수범은 처벌한다.",
+      "폭력행위 등 처벌에 관한 법률 6조  미수범#KOBLEX-178715": "제6조(미수범) 제2조, 제3조, 제4조제2항[「형법」 제136조, 제255조, 제314조, 제315조, 제335조, 제337조(강도치상의 죄에 한정한다), 제340조제2항(해상강도치상의 죄에 한정한다) 또는 제343조의 죄를 범한 경우는 제외한다] 및 제5조의 미수범은 처벌한다.",
+      "형법 100조  미수범#KOBLEX-192892": "제100조(미수범) 전8조의 미수범은 처벌한다.",
+      "형법 111조  외국에 대한 사전#KOBLEX-192916": "②전항의 미수범은 처벌한다.",
+      "형법 119조  폭발물 사용#KOBLEX-192935": "③ 제1항과 제2항의 미수범은 처벌한다.",
+      "형법 124조  불법체포, 불법감금#KOBLEX-192945": "②전항의 미수범은 처벌한다.",
+      "형법 143조  미수범#KOBLEX-192981": "제143조(미수범) 제140조 내지 전조의 미수범은 처벌한다.",
+      "형법 149조  미수범#KOBLEX-192992": "제149조(미수범) 전4조의 미수범은 처벌한다.",
+      "형법 14조  과실#KOBLEX-192672": "제14조(과실) 정상적으로 기울여야 할 주의(注意)를 게을리하여 죄의 성립요소인 사실을 인식하지 못한 행위는 법률에 특별한 규정이 있는 경우에만 처벌한다.",
+      "형법 151조  범인은닉과 친족간의 특례#KOBLEX-192996": "②친족 또는 동거의 가족이 본인을 위하여 전항의 죄를 범한 때에는 처벌하지 아니한다. <개정 2005.3.31>",
+      "형법 155조  증거인멸 등과 친족간의 특례#KOBLEX-193007": "④친족 또는 동거의 가족이 본인을 위하여 본조의 죄를 범한 때에는 처벌하지 아니한다. <개정 2005.3.31>",
+      "형법 15조  사실의 착오#KOBLEX-192673": "제15조(사실의 착오)",
+      "형법 15조  사실의 착오#KOBLEX-192675": "② 결과 때문에 형이 무거워지는 죄의 경우에 그 결과의 발생을 예견할 수 없었을 때에는 무거운 죄로 벌하지 아니한다.",
+      "형법 162조  미수범#KOBLEX-193018": "제162조(미수범) 전2조의 미수범은 처벌한다.",
+      "형법 27조  불능범#KOBLEX-192698": "제27조(불능범) 실행의 수단 또는 대상의 착오로 인하여 결과의 발생이 불가능하더라도 위험성이 있는 때에는 처벌한다. 단, 형을 감경 또는 면제할 수 있다.",
+      "형법 310조  위법성의 조각#KOBLEX-193320": "제310조(위법성의 조각) 제307조제1항의 행위가 진실한 사실로서 오로지 공공의 이익에 관한 때에는 처벌하지 아니한다.",
+      "형법 34조  간접정범, 특수한 교사, 방조에 대한 형의 가중#KOBLEX-192712": "①어느 행위로 인하여 처벌되지 아니하는 자 또는 과실범으로 처벌되는 자를 교사 또는 방조하여 범죄행위의 결과를 발생하게 한 자는 교사 또는 방조의 예에 의하여 처벌한다.",
+      "형사소송법 125조  야간집행의 제한#KOBLEX-231796": "제125조(야간집행의 제한) 일출 전, 일몰 후에는 압수ㆍ수색영장에 야간집행을 할 수 있는 기재가 없으면 그 영장을 집행하기 위하여 타인의 주거, 간수자 있는 가옥, 건조물, 항공기 또는 선차 내에 들어가지 못한다.",
+      "형사소송법 137조  구속영장집행과 수색#KOBLEX-231820": "제137조(구속영장집행과 수색) 검사, 사법경찰관리 또는 제81조제2항의 규정에 의한 법원사무관등이 구속영장을 집행할 경우에 필요한 때에는 미리 수색영장을 발부받기 어려운 긴급한 사정이 있는 경우에 한정하여 타인의 주거, 간수자있는 가옥, 건조물, 항공기, 선차 내에 들어가 피고인을 수색할 수 있다. <개정 2007.6.1, 2019.12.31>",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075691": "1. 「형법」, 「폭력행위 등 처벌에 관한 법률」, 그 밖의 형사 법률에 저촉되는 행위",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075695": "5. 다른 사람을 처벌받게 하거나 교도관의 직무집행을 방해할 목적으로 거짓 사실을 신고하는 행위",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213878": "1. 「형법」, 「폭력행위 등 처벌에 관한 법률」, 그 밖의 형사 법률에 저촉되는 행위",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213882": "5. 다른 사람을 처벌받게 하거나 교도관의 직무집행을 방해할 목적으로 거짓 사실을 신고하는 행위"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "주거침입죄의 행위주체 및 침입 행위의 법적 정의",
+          "주거의 법적 범위 및 개념"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "주거침입죄(형법 제306조)의 구성요건, 주거의 법적 범위, 또는 침입의 개념을 명시하는 조문이 후보 목록에 포함되어 있지 않습니다. C008과 C023은 형사소송법상 집행 제한 규정으로, 범죄 구성요건과 무관합니다.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "절도죄의 타인 재물 및 점유 개념",
+          "절도죄의 취득의사 요건"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "절도죄(형법 제329조)의 구성요건인 타인 재물, 점유, 취득의사 등을 명시하는 조문이 후보 목록에 포함되어 있지 않습니다.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E3",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "주거침입죄의 기본 법정형"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "주거침입죄에 대한 기본 법정형을 명시하는 조문이 후보 목록에 포함되어 있지 않습니다.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E4",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "절도죄의 기본 법정형"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "절도죄에 대한 기본 법정형을 명시하는 조문이 후보 목록에 포함되어 있지 않습니다.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E5",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "야간 주거침입을 수단으로 한 절도죄의 가중처벌 규정"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "야간 주거침입을 수단으로 한 절도죄(형법 제330조)의 가중처벌 규정을 명시하는 조문이 후보 목록에 포함되어 있지 않습니다.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 12,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "야간 주거침입과 금목걸이 절도 행위의 법적 성립 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "야간 주거침입과 절도죄의 법정형 및 가중처벌 여부",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "주거침입죄의 행위주체, 주거의 범위, 침입의 개념 등 구성요건이 확인되어야 함",
+        "critical": true,
+        "description": "주거침입죄의 구성요건 및 주거의 정의",
+        "evidence_item_id": "E1",
+        "evidence_type": "element",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "절도죄의 타인 재물, 점유, 취득의사 등 구성요건이 확인되어야 함",
+        "critical": true,
+        "description": "절도죄의 구성요건",
+        "evidence_item_id": "E2",
+        "evidence_type": "element",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "주거침입죄에 대한 기본 법정형이 확인되어야 함",
+        "critical": true,
+        "description": "주거침입죄의 법정형",
+        "evidence_item_id": "E3",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      },
+      {
+        "completion_criteria": "절도죄에 대한 기본 법정형이 확인되어야 함",
+        "critical": true,
+        "description": "절도죄의 법정형",
+        "evidence_item_id": "E4",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      },
+      {
+        "completion_criteria": "야간 주거침입을 수단으로 한 절도죄의 가중처벌 규정이 확인되어야 함",
+        "critical": true,
+        "description": "야간 주거침입에 따른 절도죄 가중처벌 규정",
+        "evidence_item_id": "E5",
+        "evidence_type": "exception",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 한밤중에 을의 집에 몰래 들어가 을의 금목걸이를 훔쳤다. 을은 그 사실을 다음 날 아침에 발견하고 경찰에 신고하였다. [질문] 갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "주거침입죄",
+          "주거",
+          "침입",
+          "구성요건",
+          "형법"
+        ],
+        "query_text": "형법상 주거침입죄 구성요건 주거 정의 [원문 맥락] 을은 그 사실을 다음 날 아침에 발견하고 경찰에 신고하였다. 갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "형법 제319조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "절도죄",
+          "타인재물",
+          "점유",
+          "취득의사",
+          "형법"
+        ],
+        "query_text": "형법상 절도죄 구성요건 타인 재물 점유 취득 [원문 맥락] 을은 그 사실을 다음 날 아침에 발견하고 경찰에 신고하였다. 갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "형법 제329조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "주거침입죄",
+          "법정형",
+          "형량",
+          "형법"
+        ],
+        "query_text": "주거침입죄 법정형 형량 [원문 맥락] 을은 그 사실을 다음 날 아침에 발견하고 경찰에 신고하였다. 갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ3",
+        "statute_hints": [
+          "형법 제319조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E4",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "절도죄",
+          "법정형",
+          "형량",
+          "형법"
+        ],
+        "query_text": "절도죄 법정형 형량 [원문 맥락] 을은 그 사실을 다음 날 아침에 발견하고 경찰에 신고하였다. 갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ4",
+        "statute_hints": [
+          "형법 제329조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E5",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "야간",
+          "주거침입",
+          "절도",
+          "가중처벌",
+          "형법"
+        ],
+        "query_text": "야간 주거침입 절도 가중처벌 형법 [원문 맥락] 을은 그 사실을 다음 날 아침에 발견하고 경찰에 신고하였다. 갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ5",
+        "statute_hints": [
+          "형법 제330조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "주거침입",
+          "주거",
+          "침입",
+          "구성요건"
+        ],
+        "query_text": "주거침입죄 주거 개념 침입 행위 [원문 맥락] 을은 그 사실을 다음 날 아침에 발견하고 경찰에 신고하였다. 갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "절도",
+          "타인재물",
+          "점유",
+          "취득의사"
+        ],
+        "query_text": "절도죄 타인 재물 점유 취득의사 [원문 맥락] 을은 그 사실을 다음 날 아침에 발견하고 경찰에 신고하였다. 갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형법",
+          "제319조",
+          "주거침입",
+          "법정형"
+        ],
+        "query_text": "형법 제319조 주거침입죄 법정형 [원문 맥락] 을은 그 사실을 다음 날 아침에 발견하고 경찰에 신고하였다. 갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R2-3",
+        "statute_hints": [
+          "형법 제319조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E4",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형법",
+          "제329조",
+          "절도",
+          "법정형"
+        ],
+        "query_text": "형법 제329조 절도죄 법정형 [원문 맥락] 을은 그 사실을 다음 날 아침에 발견하고 경찰에 신고하였다. 갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R2-4",
+        "statute_hints": [
+          "형법 제329조"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 한밤중에 을의 집에 몰래 들어가 을의 금목걸이를 훔쳤다. 을은 그 사실을 다음 날 아침에 발견하고 경찰에 신고하였다.\n\n[질문]\n갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+    "remaining_request_budget": 0,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "주거침입죄의 행위주체, 주거의 범위, 침입의 개념 등 구성요건이 확인되어야 함",
+        "critical": true,
+        "description": "주거침입죄의 구성요건 및 주거의 정의",
+        "evidence_item_id": "E1",
+        "evidence_type": "element",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "절도죄의 타인 재물, 점유, 취득의사 등 구성요건이 확인되어야 함",
+        "critical": true,
+        "description": "절도죄의 구성요건",
+        "evidence_item_id": "E2",
+        "evidence_type": "element",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "주거침입죄에 대한 기본 법정형이 확인되어야 함",
+        "critical": true,
+        "description": "주거침입죄의 법정형",
+        "evidence_item_id": "E3",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      },
+      {
+        "completion_criteria": "절도죄에 대한 기본 법정형이 확인되어야 함",
+        "critical": true,
+        "description": "절도죄의 법정형",
+        "evidence_item_id": "E4",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      },
+      {
+        "completion_criteria": "야간 주거침입을 수단으로 한 절도죄의 가중처벌 규정이 확인되어야 함",
+        "critical": true,
+        "description": "야간 주거침입에 따른 절도죄 가중처벌 규정",
+        "evidence_item_id": "E5",
+        "evidence_type": "exception",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "c448728e-d24e-4860-bfbd-8725886b8dbe",
+    "seen_provision_ids": [
+      "군형법 75조  군용물 등 범죄에 대한 형의 가중#KOBLEX-140810",
+      "형법 310조  위법성의 조각#KOBLEX-193320",
+      "폭력행위 등 처벌에 관한 법률 6조  미수범#KOBLEX-126725",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075691",
+      "형법 27조  불능범#KOBLEX-192698",
+      "형법 119조  폭발물 사용#KOBLEX-192935",
+      "형사소송법 137조  구속영장집행과 수색#KOBLEX-231820",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213882",
+      "형사소송법 125조  야간집행의 제한#KOBLEX-231796",
+      "폭력행위 등 처벌에 관한 법률 6조  미수범#KOBLEX-178715",
+      "지방세기본법 101조#KOBLEX-121006",
+      "형법 15조  사실의 착오#KOBLEX-192673",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213878",
+      "전자금융거래법 32조  허가와 등록의 결격사유#KOBLEX-186817",
+      "형법 100조  미수범#KOBLEX-192892",
+      "형법 124조  불법체포, 불법감금#KOBLEX-192945",
+      "형법 143조  미수범#KOBLEX-192981",
+      "교육공무원법 62조  벌칙#KOBLEX-218268",
+      "형법 15조  사실의 착오#KOBLEX-192675",
+      "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등#KOBLEX-157530",
+      "형법 162조  미수범#KOBLEX-193018",
+      "형법 155조  증거인멸 등과 친족간의 특례#KOBLEX-193007",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075695",
+      "형법 14조  과실#KOBLEX-192672",
+      "형법 149조  미수범#KOBLEX-192992",
+      "형법 111조  외국에 대한 사전#KOBLEX-192916",
+      "형법 34조  간접정범, 특수한 교사, 방조에 대한 형의 가중#KOBLEX-192712",
+      "형법 151조  범인은닉과 친족간의 특례#KOBLEX-192996"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "RETRIEVAL_BUDGET_EXHAUSTED"
+}

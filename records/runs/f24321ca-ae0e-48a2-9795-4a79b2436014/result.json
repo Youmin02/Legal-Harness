@@ -1,0 +1,696 @@
+{
+  "abstention_reason": null,
+  "answer": "농어촌정비법 제70조 제2항에 따르면, 제1항을 위반하여 조성용지를 전매하는 경우 해당 법률행위는 무효로 하며, 사업시행자는 조성용지의 공급 당시 가액과 「은행법」에 따른 은행의 1년 만기 정기예금 평균이자율을 합산한 금액을 지급하고 그 조성용지를 환매할 수 있습니다 [CT1]. 따라서 갑이 을로부터 매입한 조성용지를 병에게 전매한 행위는 무효입니다. 또한, 농어촌정비법 제71조 제1항에 따르면, 농림축산식품부장관은 생활환경정비사업의 생활환경정비계획, 생활환경정비사업 기본계획, 농어촌마을정비계획 및 생활환경정비사업 시행계획의 수립과 조사ㆍ설계 등 사업의 원활한 추진과 생활환경정비사업으로 조성되는 시설물의 품질관리를 위하여 기획ㆍ기술지원을 하여야 하며, 이에 필요한 경비를 예산의 범위에서 지원할 수 있습니다 [CT2].",
+  "completed_at_utc": "2026-08-18T17:19:48.998647+00:00",
+  "end_to_end_latency_ms": 165227.018,
+  "errors": [],
+  "record_schema_version": "1.1",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 200,
+      "evidence_fusion": 200,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "rrf": 200,
+      "selected": 20
+    }
+  },
+  "run_id": "f24321ca-ae0e-48a2-9795-4a79b2436014",
+  "state": {
+    "accepted_provision_ids": [
+      "농어촌정비법 71조  기술지원 등#KOBLEX-025680",
+      "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025677"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 20,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "explanation": "All critical evidence items are covered without conflict.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "claim_count": 2
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 30.901842164643572,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025677",
+        "provision_text": "② 제1항을 위반하여 조성용지를 전매하는 경우 해당 법률행위는 무효로 하며, 사업시행자는 조성용지의 공급 당시 가액과 「은행법」에 따른 은행의 1년 만기 정기예금 평균이자율을 합산한 금액을 지급하고 그 조성용지를 환매할 수 있다. <개정 2010.5.17>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9007613658905029,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "농어촌정비법 70조  조성용지의 전매행위 제한 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 25.807852157143042,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "농어촌정비법 130조  벌칙#KOBLEX-025939",
+        "provision_text": "② 제70조를 위반하여 조성용지를 전매한 자는 3년 이하의 징역 또는 1억원 이하의 벌금에 처한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.26284515857696533,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "농어촌정비법 130조  벌칙 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 22.902988755563605,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "택지개발촉진법 19조 2 택지의 전매행위 제한 등#KOBLEX-185382",
+        "provision_text": "④ 공급대상자가 제2항을 위반하여 택지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등을 전매한 경우 해당 법률행위와 택지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등은 무효로 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.22318661212921143,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "택지개발촉진법 19조 2 택지의 전매행위 제한 등 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 59,
+        "first_stage_score": 17.398642958188177,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "경찰공무원법 11조 2 채용비위 관련자의 합격 등 취소#KOBLEX-225911",
+        "provision_text": "③ 제1항에 따른 취소 처분은 합격 또는 임용 당시로 소급하여 효력이 발생한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.15609325468540192,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "경찰공무원법 11조 2 채용비위 관련자의 합격 등 취소 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 60,
+        "first_stage_score": 17.398642958188177,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "국가공무원법 45조 3 채용 비위 관련자의 합격 등 취소#KOBLEX-073548",
+        "provision_text": "② 제1항에 따른 취소 처분은 합격 또는 임용 당시로 소급하여 효력이 발생한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.15525658428668976,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "국가공무원법 45조 3 채용 비위 관련자의 합격 등 취소 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 61,
+        "first_stage_score": 17.398642958188177,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "지방공무원법 43조 3 채용 비위 관련자의 합격 등 취소#KOBLEX-207905",
+        "provision_text": "② 제1항에 따른 취소 처분은 합격 또는 임용 당시로 소급하여 효력이 발생한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.15525658428668976,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "지방공무원법 43조 3 채용 비위 관련자의 합격 등 취소 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 21.518312000952307,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "공공주택 특별법 32조 3 조성된 토지의 전매행위 제한 등#KOBLEX-058004",
+        "provision_text": "④ 공급대상자가 제2항을 위반하여 토지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등을 전매한 경우 해당 법률행위와 토지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등은 무효로 한다. <신설 2020.12.22>",
+        "rerank_rank": 7,
+        "rerank_score": 0.12804751098155975,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공공주택 특별법 32조 3 조성된 토지의 전매행위 제한 등 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 24,
+        "first_stage_score": 21.518312000952307,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "공공주택 특별법 32조 3 조성된 토지의 전매행위 제한 등#KOBLEX-140035",
+        "provision_text": "④ 공급대상자가 제2항을 위반하여 토지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등을 전매한 경우 해당 법률행위와 토지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등은 무효로 한다. <신설 2020.12.22>",
+        "rerank_rank": 8,
+        "rerank_score": 0.12804751098155975,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공공주택 특별법 32조 3 조성된 토지의 전매행위 제한 등 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 21.518312000952307,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "공공주택 특별법 32조 3 조성된 토지의 전매행위 제한 등#KOBLEX-221360",
+        "provision_text": "④ 공급대상자가 제2항을 위반하여 토지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등을 전매한 경우 해당 법률행위와 토지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등은 무효로 한다. <신설 2020.12.22>",
+        "rerank_rank": 9,
+        "rerank_score": 0.12804751098155975,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공공주택 특별법 32조 3 조성된 토지의 전매행위 제한 등 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 3.0,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "농어촌정비법 15조 2 도서지역 등의 농어촌용수 실태조사 등#KOBLEX-025379",
+        "provision_text": "② 농림축산식품부장관은 제1항에 따른 조사 결과 농어촌용수의 공급이 현저하게 부족한 지역에 대하여는 공급 향상을 위하여 필요한 조치 및 예산의 범위에서 특별한 지원을 할 수 있다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.12203755974769592,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "농어촌정비법 15조 2 도서지역 등의 농어촌용수 실태조사 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 32,
+        "first_stage_score": 22.405794731943832,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 13조  정보통신망의 이용촉진 등에 관한 사업#KOBLEX-176800",
+        "provision_text": "② 정부는 제1항에 따른 사업에 참여하는 자에게 재정 및 기술 등 필요한 지원을 할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9899262189865112,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 13조  정보통신망의 이용촉진 등에 관한 사업 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 43,
+        "first_stage_score": 22.07190670424192,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "택시운송사업의 발전에 관한 법률 7조  재정 지원#KOBLEX-129898",
+        "provision_text": "제7조(재정 지원)",
+        "rerank_rank": 2,
+        "rerank_score": 0.9835171699523926,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "택시운송사업의 발전에 관한 법률 7조  재정 지원",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 42,
+        "first_stage_score": 22.07190670424192,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "응급의료에 관한 법률 16조  재정 지원#KOBLEX-132709",
+        "provision_text": "제16조(재정 지원)",
+        "rerank_rank": 3,
+        "rerank_score": 0.9750766754150391,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "응급의료에 관한 법률 16조  재정 지원",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 39,
+        "first_stage_score": 22.07190670424192,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "여객자동차 운수사업법 50조  재정 지원#KOBLEX-019050",
+        "provision_text": "제50조(재정 지원)",
+        "rerank_rank": 4,
+        "rerank_score": 0.9725570678710938,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "여객자동차 운수사업법 50조  재정 지원",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 22.07190670424192,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "여객자동차 운수사업법 50조  재정 지원#KOBLEX-088550",
+        "provision_text": "제50조(재정 지원)",
+        "rerank_rank": 5,
+        "rerank_score": 0.9725570678710938,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "여객자동차 운수사업법 50조  재정 지원",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 41,
+        "first_stage_score": 22.07190670424192,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "여객자동차 운수사업법 50조  재정 지원#KOBLEX-147062",
+        "provision_text": "제50조(재정 지원)",
+        "rerank_rank": 6,
+        "rerank_score": 0.9725570678710938,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "여객자동차 운수사업법 50조  재정 지원",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 38,
+        "first_stage_score": 22.07190670424192,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "대기환경보전법 81조  재정적ㆍ기술적 지원#KOBLEX-009037",
+        "provision_text": "제81조(재정적ㆍ기술적 지원)",
+        "rerank_rank": 7,
+        "rerank_score": 0.9588392972946167,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "대기환경보전법 81조  재정적ㆍ기술적 지원",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 27.97916346067509,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "수산업법 84조  재정적 및 기술적 지원#KOBLEX-034913",
+        "provision_text": "제84조(재정적 및 기술적 지원)",
+        "rerank_rank": 8,
+        "rerank_score": 0.9581353068351746,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "수산업법 84조  재정적 및 기술적 지원",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 44,
+        "first_stage_score": 21.990457439718146,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 12조  정보의 공동활용체제 구축#KOBLEX-176796",
+        "provision_text": "② 정부는 제1항에 따른 정보의 공동활용체제를 구축하는 자에게 재정 및 기술 등 필요한 지원을 할 수 있다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.9436545968055725,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 12조  정보의 공동활용체제 구축 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 33.11861562976595,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 71조  기술지원 등#KOBLEX-025680",
+        "provision_text": "① 농림축산식품부장관은 생활환경정비사업의 생활환경정비계획, 생활환경정비사업 기본계획, 농어촌마을정비계획 및 생활환경정비사업 시행계획의 수립과 조사ㆍ설계 등 사업의 원활한 추진과 생활환경정비사업으로 조성되는 시설물의 품질관리를 위하여 기획ㆍ기술지원을 하여야 하며, 이에 필요한 경비를 예산의 범위에서 지원할 수 있다. <개정 2013.3.23>",
+        "rerank_rank": 10,
+        "rerank_score": 0.9149442911148071,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "농어촌정비법 71조  기술지원 등 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "경찰공무원법 11조 2 채용비위 관련자의 합격 등 취소#KOBLEX-225911": "③ 제1항에 따른 취소 처분은 합격 또는 임용 당시로 소급하여 효력이 발생한다.",
+      "공공주택 특별법 32조 3 조성된 토지의 전매행위 제한 등#KOBLEX-058004": "④ 공급대상자가 제2항을 위반하여 토지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등을 전매한 경우 해당 법률행위와 토지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등은 무효로 한다. <신설 2020.12.22>",
+      "공공주택 특별법 32조 3 조성된 토지의 전매행위 제한 등#KOBLEX-140035": "④ 공급대상자가 제2항을 위반하여 토지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등을 전매한 경우 해당 법률행위와 토지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등은 무효로 한다. <신설 2020.12.22>",
+      "공공주택 특별법 32조 3 조성된 토지의 전매행위 제한 등#KOBLEX-221360": "④ 공급대상자가 제2항을 위반하여 토지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등을 전매한 경우 해당 법률행위와 토지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등은 무효로 한다. <신설 2020.12.22>",
+      "국가공무원법 45조 3 채용 비위 관련자의 합격 등 취소#KOBLEX-073548": "② 제1항에 따른 취소 처분은 합격 또는 임용 당시로 소급하여 효력이 발생한다.",
+      "농어촌정비법 130조  벌칙#KOBLEX-025939": "② 제70조를 위반하여 조성용지를 전매한 자는 3년 이하의 징역 또는 1억원 이하의 벌금에 처한다.",
+      "농어촌정비법 15조 2 도서지역 등의 농어촌용수 실태조사 등#KOBLEX-025379": "② 농림축산식품부장관은 제1항에 따른 조사 결과 농어촌용수의 공급이 현저하게 부족한 지역에 대하여는 공급 향상을 위하여 필요한 조치 및 예산의 범위에서 특별한 지원을 할 수 있다.",
+      "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025677": "② 제1항을 위반하여 조성용지를 전매하는 경우 해당 법률행위는 무효로 하며, 사업시행자는 조성용지의 공급 당시 가액과 「은행법」에 따른 은행의 1년 만기 정기예금 평균이자율을 합산한 금액을 지급하고 그 조성용지를 환매할 수 있다. <개정 2010.5.17>",
+      "농어촌정비법 71조  기술지원 등#KOBLEX-025680": "① 농림축산식품부장관은 생활환경정비사업의 생활환경정비계획, 생활환경정비사업 기본계획, 농어촌마을정비계획 및 생활환경정비사업 시행계획의 수립과 조사ㆍ설계 등 사업의 원활한 추진과 생활환경정비사업으로 조성되는 시설물의 품질관리를 위하여 기획ㆍ기술지원을 하여야 하며, 이에 필요한 경비를 예산의 범위에서 지원할 수 있다. <개정 2013.3.23>",
+      "대기환경보전법 81조  재정적ㆍ기술적 지원#KOBLEX-009037": "제81조(재정적ㆍ기술적 지원)",
+      "수산업법 84조  재정적 및 기술적 지원#KOBLEX-034913": "제84조(재정적 및 기술적 지원)",
+      "여객자동차 운수사업법 50조  재정 지원#KOBLEX-019050": "제50조(재정 지원)",
+      "여객자동차 운수사업법 50조  재정 지원#KOBLEX-088550": "제50조(재정 지원)",
+      "여객자동차 운수사업법 50조  재정 지원#KOBLEX-147062": "제50조(재정 지원)",
+      "응급의료에 관한 법률 16조  재정 지원#KOBLEX-132709": "제16조(재정 지원)",
+      "정보통신망 이용촉진 및 정보보호 등에 관한 법률 12조  정보의 공동활용체제 구축#KOBLEX-176796": "② 정부는 제1항에 따른 정보의 공동활용체제를 구축하는 자에게 재정 및 기술 등 필요한 지원을 할 수 있다.",
+      "정보통신망 이용촉진 및 정보보호 등에 관한 법률 13조  정보통신망의 이용촉진 등에 관한 사업#KOBLEX-176800": "② 정부는 제1항에 따른 사업에 참여하는 자에게 재정 및 기술 등 필요한 지원을 할 수 있다.",
+      "지방공무원법 43조 3 채용 비위 관련자의 합격 등 취소#KOBLEX-207905": "② 제1항에 따른 취소 처분은 합격 또는 임용 당시로 소급하여 효력이 발생한다.",
+      "택시운송사업의 발전에 관한 법률 7조  재정 지원#KOBLEX-129898": "제7조(재정 지원)",
+      "택지개발촉진법 19조 2 택지의 전매행위 제한 등#KOBLEX-185382": "④ 공급대상자가 제2항을 위반하여 택지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등을 전매한 경우 해당 법률행위와 택지를 공급받을 수 있는 권리ㆍ자격ㆍ지위 등은 무효로 한다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025677"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001(농어촌정비법 제70조 제2항)은 전매 제한 위반 시 법률행위의 무효를 명확히 규정하고 있어, 전매 제한의 법적 성격과 위반 시 효력에 대한 증거 요구사항을 완전히 충족한다.",
+        "status": "covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [
+          "농어촌정비법 71조  기술지원 등#KOBLEX-025680"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C020(농어촌정비법 제71조 제1항)은 농림축산식품부장관의 생활환경정비사업에 대한 기획·기술지원 의무와 예산 범위 내 경비 지원 권한을 명시하여, 지원 근거 조항 및 지원 유형에 대한 증거 요구사항을 완전히 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025677",
+        "support_spans": [
+          {
+            "end_char": 143,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 71조  기술지원 등#KOBLEX-025680",
+        "support_spans": [
+          {
+            "end_char": 191,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 20,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "생활환경정비사업시행자로부터 조성용지를 매입한 자가 이를 제3자에게 전매한 행위의 법적 효력",
+        "issue_id": "I1"
+      },
+      {
+        "description": "농림축산식품부장관의 생활환경정비사업 지원 권한과 범위",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 생활환경정비사업시행자인 을로부터 특정 조성용지를 매입했으나, 매입 후 해당 용지를 병에게 전매하였다. 갑은 농어촌정비법에 따라 전매가 제한된 사실을 알지 못했다. 이 사건이 발생한 지역에서는 생활환경정비사업이 진행 중이며, 주민들은 정부의 지원이 필요하다고 주장하고 있다. [질문] 갑이 을로부터 매입한 조성용지를 병에게 전매한 경우, 해당 법률행위의 효력은 어떻게 되며, 이 지역의 생활환경정비사업에서 농림축산식품부장관은 어떤 지원을 할 수 있는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "농어촌정비법",
+          "생활환경정비사업",
+          "조성용지",
+          "전매제한",
+          "법적효력",
+          "무효",
+          "취소"
+        ],
+        "query_text": "농어촌정비법 생활환경정비사업 조성용지 전매 제한 위반 시 법적 효력 무효 취소 [원문 맥락] 이 사건이 발생한 지역에서는 생활환경정비사업이 진행 중이며, 주민들은 정부의 지원이 필요하다고 주장하고 있다. 갑이 을로부터 매입한 조성용지를 병에게 전매한 경우, 해당 법률행위의 효력은 어떻게 되며, 이 지역의 생활환경정비사업에서 농림축산식품부장관은 어떤 지원을 할 수 있는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "농어촌정비법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "농림축산식품부장관",
+          "생활환경정비사업",
+          "지원",
+          "재정지원",
+          "기술지원",
+          "행정지원"
+        ],
+        "query_text": "농림축산식품부장관 생활환경정비사업 지원 재정 기술 행정 지원 근거 [원문 맥락] 이 사건이 발생한 지역에서는 생활환경정비사업이 진행 중이며, 주민들은 정부의 지원이 필요하다고 주장하고 있다. 갑이 을로부터 매입한 조성용지를 병에게 전매한 경우, 해당 법률행위의 효력은 어떻게 되며, 이 지역의 생활환경정비사업에서 농림축산식품부장관은 어떤 지원을 할 수 있는가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "농어촌정비법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 생활환경정비사업시행자인 을로부터 특정 조성용지를 매입했으나, 매입 후 해당 용지를 병에게 전매하였다. 갑은 농어촌정비법에 따라 전매가 제한된 사실을 알지 못했다. 이 사건이 발생한 지역에서는 생활환경정비사업이 진행 중이며, 주민들은 정부의 지원이 필요하다고 주장하고 있다.\n\n[질문]\n갑이 을로부터 매입한 조성용지를 병에게 전매한 경우, 해당 법률행위의 효력은 어떻게 되며, 이 지역의 생활환경정비사업에서 농림축산식품부장관은 어떤 지원을 할 수 있는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "전매 제한의 법적 성격(강행법규 여부) 및 위반 시 효력(무효, 취소, 또는 기타)을 명시하는 조항 확인",
+        "critical": true,
+        "description": "농어촌정비법상 생활환경정비사업 조성용지 전매 제한 규정 및 위반 시 법적 효과(무효/취소 등)",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "농림축산식품부장관의 지원 권한을 명시하는 조항 및 지원 유형(재정, 기술, 행정 등) 확인",
+        "critical": true,
+        "description": "농림축산식품부장관의 생활환경정비사업 지원 근거 조항 및 지원 내용(재정, 기술, 행정 등)",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "f24321ca-ae0e-48a2-9795-4a79b2436014",
+    "seen_provision_ids": [
+      "여객자동차 운수사업법 50조  재정 지원#KOBLEX-088550",
+      "택지개발촉진법 19조 2 택지의 전매행위 제한 등#KOBLEX-185382",
+      "정보통신망 이용촉진 및 정보보호 등에 관한 법률 12조  정보의 공동활용체제 구축#KOBLEX-176796",
+      "여객자동차 운수사업법 50조  재정 지원#KOBLEX-019050",
+      "공공주택 특별법 32조 3 조성된 토지의 전매행위 제한 등#KOBLEX-140035",
+      "경찰공무원법 11조 2 채용비위 관련자의 합격 등 취소#KOBLEX-225911",
+      "지방공무원법 43조 3 채용 비위 관련자의 합격 등 취소#KOBLEX-207905",
+      "택시운송사업의 발전에 관한 법률 7조  재정 지원#KOBLEX-129898",
+      "응급의료에 관한 법률 16조  재정 지원#KOBLEX-132709",
+      "여객자동차 운수사업법 50조  재정 지원#KOBLEX-147062",
+      "농어촌정비법 130조  벌칙#KOBLEX-025939",
+      "농어촌정비법 71조  기술지원 등#KOBLEX-025680",
+      "국가공무원법 45조 3 채용 비위 관련자의 합격 등 취소#KOBLEX-073548",
+      "수산업법 84조  재정적 및 기술적 지원#KOBLEX-034913",
+      "공공주택 특별법 32조 3 조성된 토지의 전매행위 제한 등#KOBLEX-221360",
+      "농어촌정비법 15조 2 도서지역 등의 농어촌용수 실태조사 등#KOBLEX-025379",
+      "농어촌정비법 70조  조성용지의 전매행위 제한 등#KOBLEX-025677",
+      "대기환경보전법 81조  재정적ㆍ기술적 지원#KOBLEX-009037",
+      "정보통신망 이용촉진 및 정보보호 등에 관한 법률 13조  정보통신망의 이용촉진 등에 관한 사업#KOBLEX-176800",
+      "공공주택 특별법 32조 3 조성된 토지의 전매행위 제한 등#KOBLEX-058004"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

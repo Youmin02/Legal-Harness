@@ -1,0 +1,980 @@
+{
+  "abstention_reason": null,
+  "answer": "형법 제330조에 따르면, 야간에 사람의 주거, 관리하는 건조물, 선박, 항공기 또는 점유하는 방실에 침입하여 타인의 재물을 절취한 자는 10년 이하의 징역에 처합니다 [CT1]. 본 사안에서 갑이 한밤중에 을의 집에 몰래 들어가 금목걸이를 훔친 행위는 위 조항의 구성요건에 해당할 수 있으며, 이에 따라 10년 이하의 징역형에 처해질 수 있습니다 [CT2].",
+  "completed_at_utc": "2026-08-18T16:44:59.943350+00:00",
+  "end_to_end_latency_ms": 259491.33,
+  "errors": [],
+  "record_schema_version": "1.1",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 300,
+      "evidence_fusion": 300,
+      "first_stage": 500,
+      "request_rerank": 500,
+      "rrf": 300,
+      "selected": 30
+    }
+  },
+  "run_id": "0af4c28b-5166-48b7-91c0-2f68baf5c58a",
+  "state": {
+    "accepted_provision_ids": [
+      "형법 330조  야간주거침입절도#KOBLEX-193368"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "explanation": "All critical evidence items are covered without conflict.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "claim_count": 2
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 31,
+        "first_stage_score": 16.993570976823897,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형법 319조  주거침입, 퇴거불응#KOBLEX-193340",
+        "provision_text": "제319조(주거침입, 퇴거불응)",
+        "rerank_rank": 1,
+        "rerank_score": 0.814476728439331,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형법 319조  주거침입, 퇴거불응",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 19.928908828511112,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "보건범죄 단속에 관한 특별조치법 4조  부정유독물 제조 등의 처벌#KOBLEX-081598",
+        "provision_text": "제4조(부정유독물 제조 등의 처벌)",
+        "rerank_rank": 2,
+        "rerank_score": 0.08050492405891418,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "보건범죄 단속에 관한 특별조치법 4조  부정유독물 제조 등의 처벌",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 1.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형법 100조  미수범#KOBLEX-192892",
+        "provision_text": "제100조(미수범) 전8조의 미수범은 처벌한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.059989698231220245,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 100조  미수범",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 47,
+        "first_stage_score": 15.427190342418195,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "군형법 75조  군용물 등 범죄에 대한 형의 가중#KOBLEX-140810",
+        "provision_text": "② 제1항의 경우에는 「형법」에 정한 형과 비교하여 중한 형으로 처벌한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.05784650892019272,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "군형법 75조  군용물 등 범죄에 대한 형의 가중 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 1.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형법 119조  폭발물 사용#KOBLEX-192935",
+        "provision_text": "③ 제1항과 제2항의 미수범은 처벌한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.05236760899424553,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 119조  폭발물 사용 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 19.928908828511112,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "보건범죄 단속에 관한 특별조치법 2조  부정식품 제조 등의 처벌#KOBLEX-081591",
+        "provision_text": "제2조(부정식품 제조 등의 처벌)",
+        "rerank_rank": 6,
+        "rerank_score": 0.05199606716632843,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "보건범죄 단속에 관한 특별조치법 2조  부정식품 제조 등의 처벌",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 20.41562054853029,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형법 1조  범죄의 성립과 처벌#KOBLEX-192644",
+        "provision_text": "제1조(범죄의 성립과 처벌)",
+        "rerank_rank": 7,
+        "rerank_score": 0.04771832004189491,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 1조  범죄의 성립과 처벌",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 20.926700738541015,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "지방세기본법 102조#KOBLEX-121009",
+        "provision_text": "제2절 범칙행위 처벌",
+        "rerank_rank": 8,
+        "rerank_score": 0.04767942056059837,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "지방세기본법 102조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 19.928908828511112,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "보건범죄 단속에 관한 특별조치법 3조  부정의약품 제조 등의 처벌#KOBLEX-081594",
+        "provision_text": "제3조(부정의약품 제조 등의 처벌)",
+        "rerank_rank": 9,
+        "rerank_score": 0.04747655242681503,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "보건범죄 단속에 관한 특별조치법 3조  부정의약품 제조 등의 처벌",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 100,
+        "first_stage_score": 1.0,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "형법 143조  미수범#KOBLEX-192981",
+        "provision_text": "제143조(미수범) 제140조 내지 전조의 미수범은 처벌한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.045963387936353683,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 143조  미수범",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 45,
+        "first_stage_score": 10.226777905039267,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "지방세기본법 101조#KOBLEX-121006",
+        "provision_text": "제8장 범칙행위 등에 대한 처벌 및 처벌절차",
+        "rerank_rank": 2,
+        "rerank_score": 0.0005070023471489549,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "지방세기본법 101조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 11.828768735732945,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형법 310조  위법성의 조각#KOBLEX-193320",
+        "provision_text": "제310조(위법성의 조각) 제307조제1항의 행위가 진실한 사실로서 오로지 공공의 이익에 관한 때에는 처벌하지 아니한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.0002559410349931568,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형법 310조  위법성의 조각",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 12.065599783452836,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075695",
+        "provision_text": "5. 다른 사람을 처벌받게 하거나 교도관의 직무집행을 방해할 목적으로 거짓 사실을 신고하는 행위",
+        "rerank_rank": 4,
+        "rerank_score": 0.00048279683687724173,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌 5호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 12.065599783452836,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213882",
+        "provision_text": "5. 다른 사람을 처벌받게 하거나 교도관의 직무집행을 방해할 목적으로 거짓 사실을 신고하는 행위",
+        "rerank_rank": 5,
+        "rerank_score": 0.00048279683687724173,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌 5호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 13.851967747895431,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "근로기준법 시행규칙 12조  야간 또는 휴일근로의 인가#KOBLEX-011382",
+        "provision_text": "제12조(야간 또는 휴일근로의 인가)",
+        "rerank_rank": 6,
+        "rerank_score": 0.0001982029207283631,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "근로기준법 시행규칙 12조  야간 또는 휴일근로의 인가",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 10.39982886729127,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "교육공무원법 62조  벌칙#KOBLEX-218268",
+        "provision_text": "④ 제24조의2제3항을 위반한 사람은 500만원 이상 3천만원 이하의 벌금에 처한다. 다만, 진실한 사실로서 오로지 공공의 이익에 관한 것일 때에는 처벌하지 아니한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.00019126126426272094,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "교육공무원법 62조  벌칙 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 60,
+        "first_stage_score": 9.819693572297883,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형법 29조  미수범의 처벌#KOBLEX-192700",
+        "provision_text": "제29조(미수범의 처벌) 미수범을 처벌할 죄는 각칙의 해당 죄에서 정한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.00012774395872838795,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형법 29조  미수범의 처벌",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 13.09726175630291,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "형법 14조  과실#KOBLEX-192672",
+        "provision_text": "제14조(과실) 정상적으로 기울여야 할 주의(注意)를 게을리하여 죄의 성립요소인 사실을 인식하지 못한 행위는 법률에 특별한 규정이 있는 경우에만 처벌한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.00010090289288200438,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형법 14조  과실",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 11.87093292342774,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "고등교육법 시행령 29조 2 재입학#KOBLEX-000971",
+        "provision_text": "③제1항의 규정에 의한 총정원은 주간과 야간, 본교와 분교 및 정원의 내외로 구분한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.0001673912483965978,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "고등교육법 시행령 29조 2 재입학 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 69.81440201069881,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형법 330조  야간주거침입절도#KOBLEX-193368",
+        "provision_text": "제330조(야간주거침입절도) 야간에 사람의 주거, 관리하는 건조물, 선박, 항공기 또는 점유하는 방실(房室)에 침입하여 타인의 재물을 절취(竊取)한 자는 10년 이하의 징역에 처한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9998701810836792,
+        "retrieval_round": 3,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형법 330조  야간주거침입절도",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 30.147077656107477,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "특정범죄 가중처벌 등에 관한 법률 5조 4 상습 강도ㆍ절도죄 등의 가중처벌#KOBLEX-050681",
+        "provision_text": "⑤ 「형법」 제329조부터 제331조까지, 제333조부터 제336조까지 및 제340조ㆍ제362조의 죄 또는 그 미수죄로 세 번 이상 징역형을 받은 사람이 다시 이들 죄를 범하여 누범(累犯)으로 처벌하는 경우에는 다음 각 호의 구분에 따라 가중처벌한다. <개정 2016.1.6> 1. 「형법」 제329조부터 제331조까지의 죄(미수범을 포함한다)를 범한 경우에는 2년 이상 20년 이하의 징역에 처한다. 2. 「형법」 제333조부터 제336조까지의 죄 및 제340조제1항의 죄(미수범을 포함한다)를 범한 경우에는 무기 또는 10년 이상의 징역에 처한다. 3. 「형법」 제362조의 죄를 범한 경우에는 2년 이상 20년 이하의 징역에 처한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.10761287808418274,
+        "retrieval_round": 3,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "특정범죄 가중처벌 등에 관한 법률 5조 4 상습 강도ㆍ절도죄 등의 가중처벌 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 30.147077656107477,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "특정범죄 가중처벌 등에 관한 법률 5조 4 상습 강도ㆍ절도죄 등의 가중처벌#KOBLEX-080713",
+        "provision_text": "⑤ 「형법」 제329조부터 제331조까지, 제333조부터 제336조까지 및 제340조ㆍ제362조의 죄 또는 그 미수죄로 세 번 이상 징역형을 받은 사람이 다시 이들 죄를 범하여 누범(累犯)으로 처벌하는 경우에는 다음 각 호의 구분에 따라 가중처벌한다. <개정 2016.1.6> 1. 「형법」 제329조부터 제331조까지의 죄(미수범을 포함한다)를 범한 경우에는 2년 이상 20년 이하의 징역에 처한다. 2. 「형법」 제333조부터 제336조까지의 죄 및 제340조제1항의 죄(미수범을 포함한다)를 범한 경우에는 무기 또는 10년 이상의 징역에 처한다. 3. 「형법」 제362조의 죄를 범한 경우에는 2년 이상 20년 이하의 징역에 처한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.10761287808418274,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "특정범죄 가중처벌 등에 관한 법률 5조 4 상습 강도ㆍ절도죄 등의 가중처벌 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 5.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형법 156조  무고#KOBLEX-193009",
+        "provision_text": "제156조(무고) 타인으로 하여금 형사처분 또는 징계처분을 받게 할 목적으로 공무소 또는 공무원에 대하여 허위의 사실을 신고한 자는 10년 이하의 징역 또는 1천500만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 4,
+        "rerank_score": 0.0897212028503418,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형법 156조  무고",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 23.126134798171893,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 3조  특수강도강간 등#KOBLEX-157525",
+        "provision_text": "① 「형법」 제319조제1항(주거침입), 제330조(야간주거침입절도), 제331조(특수절도) 또는 제342조(미수범. 다만, 제330조 및 제331조의 미수범으로 한정한다)의 죄를 범한 사람이 같은 법 제297조(강간), 제297조의2(유사강간), 제298조(강제추행) 및 제299조(준강간, 준강제추행)의 죄를 범한 경우에는 무기징역 또는 7년 이상의 징역에 처한다. <개정 2020.5.19>",
+        "rerank_rank": 5,
+        "rerank_score": 0.039822399616241455,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 3조  특수강도강간 등 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 29,
+        "first_stage_score": 27.463611068599505,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "형법 334조  특수강도#KOBLEX-193376",
+        "provision_text": "①야간에 사람의 주거, 관리하는 건조물, 선박이나 항공기 또는 점유하는 방실에 침입하여 제333조의 죄를 범한 자는 무기 또는 5년 이상의 징역에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 6,
+        "rerank_score": 0.9938079714775085,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형법 334조  특수강도 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 30.147077656107477,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "특정범죄 가중처벌 등에 관한 법률 5조 4 상습 강도ㆍ절도죄 등의 가중처벌#KOBLEX-107049",
+        "provision_text": "⑤ 「형법」 제329조부터 제331조까지, 제333조부터 제336조까지 및 제340조ㆍ제362조의 죄 또는 그 미수죄로 세 번 이상 징역형을 받은 사람이 다시 이들 죄를 범하여 누범(累犯)으로 처벌하는 경우에는 다음 각 호의 구분에 따라 가중처벌한다. <개정 2016.1.6> 1. 「형법」 제329조부터 제331조까지의 죄(미수범을 포함한다)를 범한 경우에는 2년 이상 20년 이하의 징역에 처한다. 2. 「형법」 제333조부터 제336조까지의 죄 및 제340조제1항의 죄(미수범을 포함한다)를 범한 경우에는 무기 또는 10년 이상의 징역에 처한다. 3. 「형법」 제362조의 죄를 범한 경우에는 2년 이상 20년 이하의 징역에 처한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.10761287808418274,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "특정범죄 가중처벌 등에 관한 법률 5조 4 상습 강도ㆍ절도죄 등의 가중처벌 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 30.147077656107477,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "특정범죄 가중처벌 등에 관한 법률 5조 4 상습 강도ㆍ절도죄 등의 가중처벌#KOBLEX-107651",
+        "provision_text": "⑤ 「형법」 제329조부터 제331조까지, 제333조부터 제336조까지 및 제340조ㆍ제362조의 죄 또는 그 미수죄로 세 번 이상 징역형을 받은 사람이 다시 이들 죄를 범하여 누범(累犯)으로 처벌하는 경우에는 다음 각 호의 구분에 따라 가중처벌한다. <개정 2016.1.6> 1. 「형법」 제329조부터 제331조까지의 죄(미수범을 포함한다)를 범한 경우에는 2년 이상 20년 이하의 징역에 처한다. 2. 「형법」 제333조부터 제336조까지의 죄 및 제340조제1항의 죄(미수범을 포함한다)를 범한 경우에는 무기 또는 10년 이상의 징역에 처한다. 3. 「형법」 제362조의 죄를 범한 경우에는 2년 이상 20년 이하의 징역에 처한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.10761287808418274,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "특정범죄 가중처벌 등에 관한 법률 5조 4 상습 강도ㆍ절도죄 등의 가중처벌 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 65.5803436990326,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "형법 331조  특수절도#KOBLEX-193370",
+        "provision_text": "① 야간에 문이나 담 그 밖의 건조물의 일부를 손괴하고 제330조의 장소에 침입하여 타인의 재물을 절취한 자는 1년 이상 10년 이하의 징역에 처한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.9902589321136475,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형법 331조  특수절도 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "고등교육법 시행령 29조 2 재입학#KOBLEX-000971": "③제1항의 규정에 의한 총정원은 주간과 야간, 본교와 분교 및 정원의 내외로 구분한다.",
+      "교육공무원법 62조  벌칙#KOBLEX-218268": "④ 제24조의2제3항을 위반한 사람은 500만원 이상 3천만원 이하의 벌금에 처한다. 다만, 진실한 사실로서 오로지 공공의 이익에 관한 것일 때에는 처벌하지 아니한다.",
+      "군형법 75조  군용물 등 범죄에 대한 형의 가중#KOBLEX-140810": "② 제1항의 경우에는 「형법」에 정한 형과 비교하여 중한 형으로 처벌한다.",
+      "근로기준법 시행규칙 12조  야간 또는 휴일근로의 인가#KOBLEX-011382": "제12조(야간 또는 휴일근로의 인가)",
+      "보건범죄 단속에 관한 특별조치법 2조  부정식품 제조 등의 처벌#KOBLEX-081591": "제2조(부정식품 제조 등의 처벌)",
+      "보건범죄 단속에 관한 특별조치법 3조  부정의약품 제조 등의 처벌#KOBLEX-081594": "제3조(부정의약품 제조 등의 처벌)",
+      "보건범죄 단속에 관한 특별조치법 4조  부정유독물 제조 등의 처벌#KOBLEX-081598": "제4조(부정유독물 제조 등의 처벌)",
+      "성폭력범죄의 처벌 등에 관한 특례법 3조  특수강도강간 등#KOBLEX-157525": "① 「형법」 제319조제1항(주거침입), 제330조(야간주거침입절도), 제331조(특수절도) 또는 제342조(미수범. 다만, 제330조 및 제331조의 미수범으로 한정한다)의 죄를 범한 사람이 같은 법 제297조(강간), 제297조의2(유사강간), 제298조(강제추행) 및 제299조(준강간, 준강제추행)의 죄를 범한 경우에는 무기징역 또는 7년 이상의 징역에 처한다. <개정 2020.5.19>",
+      "지방세기본법 101조#KOBLEX-121006": "제8장 범칙행위 등에 대한 처벌 및 처벌절차",
+      "지방세기본법 102조#KOBLEX-121009": "제2절 범칙행위 처벌",
+      "특정범죄 가중처벌 등에 관한 법률 5조 4 상습 강도ㆍ절도죄 등의 가중처벌#KOBLEX-050681": "⑤ 「형법」 제329조부터 제331조까지, 제333조부터 제336조까지 및 제340조ㆍ제362조의 죄 또는 그 미수죄로 세 번 이상 징역형을 받은 사람이 다시 이들 죄를 범하여 누범(累犯)으로 처벌하는 경우에는 다음 각 호의 구분에 따라 가중처벌한다. <개정 2016.1.6> 1. 「형법」 제329조부터 제331조까지의 죄(미수범을 포함한다)를 범한 경우에는 2년 이상 20년 이하의 징역에 처한다. 2. 「형법」 제333조부터 제336조까지의 죄 및 제340조제1항의 죄(미수범을 포함한다)를 범한 경우에는 무기 또는 10년 이상의 징역에 처한다. 3. 「형법」 제362조의 죄를 범한 경우에는 2년 이상 20년 이하의 징역에 처한다.",
+      "특정범죄 가중처벌 등에 관한 법률 5조 4 상습 강도ㆍ절도죄 등의 가중처벌#KOBLEX-080713": "⑤ 「형법」 제329조부터 제331조까지, 제333조부터 제336조까지 및 제340조ㆍ제362조의 죄 또는 그 미수죄로 세 번 이상 징역형을 받은 사람이 다시 이들 죄를 범하여 누범(累犯)으로 처벌하는 경우에는 다음 각 호의 구분에 따라 가중처벌한다. <개정 2016.1.6> 1. 「형법」 제329조부터 제331조까지의 죄(미수범을 포함한다)를 범한 경우에는 2년 이상 20년 이하의 징역에 처한다. 2. 「형법」 제333조부터 제336조까지의 죄 및 제340조제1항의 죄(미수범을 포함한다)를 범한 경우에는 무기 또는 10년 이상의 징역에 처한다. 3. 「형법」 제362조의 죄를 범한 경우에는 2년 이상 20년 이하의 징역에 처한다.",
+      "특정범죄 가중처벌 등에 관한 법률 5조 4 상습 강도ㆍ절도죄 등의 가중처벌#KOBLEX-107049": "⑤ 「형법」 제329조부터 제331조까지, 제333조부터 제336조까지 및 제340조ㆍ제362조의 죄 또는 그 미수죄로 세 번 이상 징역형을 받은 사람이 다시 이들 죄를 범하여 누범(累犯)으로 처벌하는 경우에는 다음 각 호의 구분에 따라 가중처벌한다. <개정 2016.1.6> 1. 「형법」 제329조부터 제331조까지의 죄(미수범을 포함한다)를 범한 경우에는 2년 이상 20년 이하의 징역에 처한다. 2. 「형법」 제333조부터 제336조까지의 죄 및 제340조제1항의 죄(미수범을 포함한다)를 범한 경우에는 무기 또는 10년 이상의 징역에 처한다. 3. 「형법」 제362조의 죄를 범한 경우에는 2년 이상 20년 이하의 징역에 처한다.",
+      "특정범죄 가중처벌 등에 관한 법률 5조 4 상습 강도ㆍ절도죄 등의 가중처벌#KOBLEX-107651": "⑤ 「형법」 제329조부터 제331조까지, 제333조부터 제336조까지 및 제340조ㆍ제362조의 죄 또는 그 미수죄로 세 번 이상 징역형을 받은 사람이 다시 이들 죄를 범하여 누범(累犯)으로 처벌하는 경우에는 다음 각 호의 구분에 따라 가중처벌한다. <개정 2016.1.6> 1. 「형법」 제329조부터 제331조까지의 죄(미수범을 포함한다)를 범한 경우에는 2년 이상 20년 이하의 징역에 처한다. 2. 「형법」 제333조부터 제336조까지의 죄 및 제340조제1항의 죄(미수범을 포함한다)를 범한 경우에는 무기 또는 10년 이상의 징역에 처한다. 3. 「형법」 제362조의 죄를 범한 경우에는 2년 이상 20년 이하의 징역에 처한다.",
+      "형법 100조  미수범#KOBLEX-192892": "제100조(미수범) 전8조의 미수범은 처벌한다.",
+      "형법 119조  폭발물 사용#KOBLEX-192935": "③ 제1항과 제2항의 미수범은 처벌한다.",
+      "형법 143조  미수범#KOBLEX-192981": "제143조(미수범) 제140조 내지 전조의 미수범은 처벌한다.",
+      "형법 14조  과실#KOBLEX-192672": "제14조(과실) 정상적으로 기울여야 할 주의(注意)를 게을리하여 죄의 성립요소인 사실을 인식하지 못한 행위는 법률에 특별한 규정이 있는 경우에만 처벌한다.",
+      "형법 156조  무고#KOBLEX-193009": "제156조(무고) 타인으로 하여금 형사처분 또는 징계처분을 받게 할 목적으로 공무소 또는 공무원에 대하여 허위의 사실을 신고한 자는 10년 이하의 징역 또는 1천500만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 1조  범죄의 성립과 처벌#KOBLEX-192644": "제1조(범죄의 성립과 처벌)",
+      "형법 29조  미수범의 처벌#KOBLEX-192700": "제29조(미수범의 처벌) 미수범을 처벌할 죄는 각칙의 해당 죄에서 정한다.",
+      "형법 310조  위법성의 조각#KOBLEX-193320": "제310조(위법성의 조각) 제307조제1항의 행위가 진실한 사실로서 오로지 공공의 이익에 관한 때에는 처벌하지 아니한다.",
+      "형법 319조  주거침입, 퇴거불응#KOBLEX-193340": "제319조(주거침입, 퇴거불응)",
+      "형법 330조  야간주거침입절도#KOBLEX-193368": "제330조(야간주거침입절도) 야간에 사람의 주거, 관리하는 건조물, 선박, 항공기 또는 점유하는 방실(房室)에 침입하여 타인의 재물을 절취(竊取)한 자는 10년 이하의 징역에 처한다.",
+      "형법 331조  특수절도#KOBLEX-193370": "① 야간에 문이나 담 그 밖의 건조물의 일부를 손괴하고 제330조의 장소에 침입하여 타인의 재물을 절취한 자는 1년 이상 10년 이하의 징역에 처한다.",
+      "형법 334조  특수강도#KOBLEX-193376": "①야간에 사람의 주거, 관리하는 건조물, 선박이나 항공기 또는 점유하는 방실에 침입하여 제333조의 죄를 범한 자는 무기 또는 5년 이상의 징역에 처한다. <개정 1995.12.29>",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075695": "5. 다른 사람을 처벌받게 하거나 교도관의 직무집행을 방해할 목적으로 거짓 사실을 신고하는 행위",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213882": "5. 다른 사람을 처벌받게 하거나 교도관의 직무집행을 방해할 목적으로 거짓 사실을 신고하는 행위"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "형법 330조  야간주거침입절도#KOBLEX-193368"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C020(형법 제330조)은 야간 주거침입 절도죄의 성립 요건과 처벌 수위를 명확히 규정하고 있어, 증거 항목 E1의 완료 기준을 충족한다. 이전 평가에서 미확인되었던 핵심 규정이 이번 검색 라운드에서 제공됨에 따라 커버리지 상태가 covered로 변경된다.",
+        "status": "covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형법 330조  야간주거침입절도#KOBLEX-193368",
+        "support_spans": [
+          {
+            "end_char": 102,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 9,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "야간 주거침입을 수반한 금목걸이 절도 행위의 법적 성질과 적용되는 형벌 규정",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 한밤중에 을의 집에 몰래 들어가 을의 금목걸이를 훔쳤다. 을은 그 사실을 다음 날 아침에 발견하고 경찰에 신고하였다. [질문] 갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "야간",
+          "주거침입",
+          "절도",
+          "형법",
+          "처벌"
+        ],
+        "query_text": "야간 주거침입 절도죄 처벌 규정 [원문 맥락] 을은 그 사실을 다음 날 아침에 발견하고 경찰에 신고하였다. 갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형법",
+          "제330조",
+          "가중절도",
+          "야간",
+          "주거침입",
+          "법정형"
+        ],
+        "query_text": "형법 제330조 가중절도죄 야간 주거침입 법정형 [원문 맥락] 을은 그 사실을 다음 날 아침에 발견하고 경찰에 신고하였다. 갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "야간",
+          "주거침입",
+          "절도",
+          "가중처벌",
+          "요건"
+        ],
+        "query_text": "야간 주거침입 절도 가중처벌 요건 [원문 맥락] 을은 그 사실을 다음 날 아침에 발견하고 경찰에 신고하였다. 갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "야간",
+          "주거침입",
+          "절취",
+          "징역",
+          "형법"
+        ],
+        "query_text": "야간에 주거에 침입하여 재물을 절취한 자는 6월 이상 10년 이하의 징역에 처한다 [원문 맥락] 을은 그 사실을 다음 날 아침에 발견하고 경찰에 신고하였다. 갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R3-1",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "형법",
+          "제330조",
+          "가중절도",
+          "야간",
+          "주거침입",
+          "법정형"
+        ],
+        "query_text": "형법 제330조 가중절도 야간 주거침입 법정형 [원문 맥락] 을은 그 사실을 다음 날 아침에 발견하고 경찰에 신고하였다. 갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R3-2",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 한밤중에 을의 집에 몰래 들어가 을의 금목걸이를 훔쳤다. 을은 그 사실을 다음 날 아침에 발견하고 경찰에 신고하였다.\n\n[질문]\n갑이 야간에 을의 집에 몰래 들어가 금목걸이를 훔쳤다면 어떤 처벌을 받을 수 있는가?",
+    "remaining_request_budget": 4,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "야간 주거침입 절도죄의 성립 요건과 처벌 수위가 명확히 확인되어야 함",
+        "critical": true,
+        "description": "야간 주거침입을 수반한 절도죄의 구성요건 및 법정형",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "0af4c28b-5166-48b7-91c0-2f68baf5c58a",
+    "seen_provision_ids": [
+      "형법 331조  특수절도#KOBLEX-193370",
+      "형법 14조  과실#KOBLEX-192672",
+      "특정범죄 가중처벌 등에 관한 법률 5조 4 상습 강도ㆍ절도죄 등의 가중처벌#KOBLEX-080713",
+      "보건범죄 단속에 관한 특별조치법 4조  부정유독물 제조 등의 처벌#KOBLEX-081598",
+      "지방세기본법 101조#KOBLEX-121006",
+      "형법 156조  무고#KOBLEX-193009",
+      "지방세기본법 102조#KOBLEX-121009",
+      "형법 29조  미수범의 처벌#KOBLEX-192700",
+      "교육공무원법 62조  벌칙#KOBLEX-218268",
+      "형법 119조  폭발물 사용#KOBLEX-192935",
+      "고등교육법 시행령 29조 2 재입학#KOBLEX-000971",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213882",
+      "보건범죄 단속에 관한 특별조치법 3조  부정의약품 제조 등의 처벌#KOBLEX-081594",
+      "형법 143조  미수범#KOBLEX-192981",
+      "특정범죄 가중처벌 등에 관한 법률 5조 4 상습 강도ㆍ절도죄 등의 가중처벌#KOBLEX-107049",
+      "성폭력범죄의 처벌 등에 관한 특례법 3조  특수강도강간 등#KOBLEX-157525",
+      "특정범죄 가중처벌 등에 관한 법률 5조 4 상습 강도ㆍ절도죄 등의 가중처벌#KOBLEX-107651",
+      "특정범죄 가중처벌 등에 관한 법률 5조 4 상습 강도ㆍ절도죄 등의 가중처벌#KOBLEX-050681",
+      "보건범죄 단속에 관한 특별조치법 2조  부정식품 제조 등의 처벌#KOBLEX-081591",
+      "형법 330조  야간주거침입절도#KOBLEX-193368",
+      "형법 1조  범죄의 성립과 처벌#KOBLEX-192644",
+      "형법 319조  주거침입, 퇴거불응#KOBLEX-193340",
+      "근로기준법 시행규칙 12조  야간 또는 휴일근로의 인가#KOBLEX-011382",
+      "군형법 75조  군용물 등 범죄에 대한 형의 가중#KOBLEX-140810",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075695",
+      "형법 310조  위법성의 조각#KOBLEX-193320",
+      "형법 100조  미수범#KOBLEX-192892",
+      "형법 334조  특수강도#KOBLEX-193376"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

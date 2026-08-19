@@ -1,0 +1,1618 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-18T16:54:17.249806+00:00",
+  "end_to_end_latency_ms": 304709.73,
+  "errors": [],
+  "record_schema_version": "1.1",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 500,
+      "evidence_fusion": 900,
+      "first_stage": 900,
+      "request_rerank": 900,
+      "rrf": 500,
+      "selected": 50
+    }
+  },
+  "run_id": "5ec63ed9-1f95-4423-8818-cab150755908",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 5,
+          "issue_count": 3
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 30,
+          "new_provision_count": 29,
+          "request_count": 5,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 4,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 18,
+          "request_count": 4,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 4,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The retrieval request budget was exhausted.",
+          "termination_reason": "RETRIEVAL_BUDGET_EXHAUSTED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "RETRIEVAL_BUDGET_EXHAUSTED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 23.223325064272945,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "여신전문금융업법 39조  거래조건의 주지 의무#KOBLEX-042292",
+        "provision_text": "제39조(거래조건의 주지 의무)",
+        "rerank_rank": 1,
+        "rerank_score": 0.5496802926063538,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "여신전문금융업법 39조  거래조건의 주지 의무",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 1.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 2조  신의성실#KOBLEX-058345",
+        "provision_text": "①권리의 행사와 의무의 이행은 신의에 좇아 성실히 하여야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.49922966957092285,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "RQ3",
+          "RQ4",
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "민법 2조  신의성실 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 21.11866559582743,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 63조 2 고객응대직원에 대한 보호 조치 의무#KOBLEX-135125",
+        "provision_text": "제63조의2(고객응대직원에 대한 보호 조치 의무)",
+        "rerank_rank": 3,
+        "rerank_score": 0.47246280312538147,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 63조 2 고객응대직원에 대한 보호 조치 의무",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 18.189955243361076,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "양육비 이행확보 및 지원에 관한 법률 14조 2 긴급지원 종료 등#KOBLEX-150218",
+        "provision_text": "제14조의2(긴급지원 종료 등)",
+        "rerank_rank": 4,
+        "rerank_score": 0.5966905951499939,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "양육비 이행확보 및 지원에 관한 법률 14조 2 긴급지원 종료 등",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 21.11866559582743,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "신용협동조합법 45조 2 고객응대직원에 대한 보호 조치 의무#KOBLEX-063165",
+        "provision_text": "제45조의2(고객응대직원에 대한 보호 조치 의무)",
+        "rerank_rank": 5,
+        "rerank_score": 0.4721236526966095,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "신용협동조합법 45조 2 고객응대직원에 대한 보호 조치 의무",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 21.11866559582743,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "은행법 52조 4 고객응대직원에 대한 보호 조치 의무#KOBLEX-143807",
+        "provision_text": "제52조의4(고객응대직원에 대한 보호 조치 의무)",
+        "rerank_rank": 6,
+        "rerank_score": 0.47292593121528625,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "은행법 52조 4 고객응대직원에 대한 보호 조치 의무",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 21.11866559582743,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "여신전문금융업법 50조 12 고객응대직원에 대한 보호 조치 의무#KOBLEX-042372",
+        "provision_text": "제50조의12(고객응대직원에 대한 보호 조치 의무)",
+        "rerank_rank": 7,
+        "rerank_score": 0.45170626044273376,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "여신전문금융업법 50조 12 고객응대직원에 대한 보호 조치 의무",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 21.11866559582743,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "상호저축은행법 18조 7 고객응대직원에 대한 보호 조치 의무#KOBLEX-074093",
+        "provision_text": "제18조의7(고객응대직원에 대한 보호 조치 의무)",
+        "rerank_rank": 8,
+        "rerank_score": 0.4465063810348511,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "상호저축은행법 18조 7 고객응대직원에 대한 보호 조치 의무",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 21.11866559582743,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "상호저축은행법 18조 7 고객응대직원에 대한 보호 조치 의무#KOBLEX-180983",
+        "provision_text": "제18조의7(고객응대직원에 대한 보호 조치 의무)",
+        "rerank_rank": 9,
+        "rerank_score": 0.4465063810348511,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "상호저축은행법 18조 7 고객응대직원에 대한 보호 조치 의무",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 21.11866559582743,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "보험업법 85조 4 고객응대직원에 대한 보호 조치 의무#KOBLEX-022072",
+        "provision_text": "제85조의4(고객응대직원에 대한 보호 조치 의무)",
+        "rerank_rank": 10,
+        "rerank_score": 0.4510512053966522,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "보험업법 85조 4 고객응대직원에 대한 보호 조치 의무",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 15.770475875083505,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "법원조직법 55조 2 법원보안관리대#KOBLEX-177840",
+        "provision_text": "④ 제2항에 따른 조치를 할 때에는 미리 그 행위자에게 경고하여야 한다. 다만, 긴급한 상황으로서 경고를 할 만한 시간적 여유가 없는 경우에는 그러하지 아니하다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.025040999054908752,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "RQ4",
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "법원조직법 55조 2 법원보안관리대 4항",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 19.666121199659692,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "도로법 76조  통행의 금지ㆍ제한 등#KOBLEX-211766",
+        "provision_text": "⑦ 긴급 통행제한에 관하여는 제3항부터 제5항까지의 규정을 준용한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.005729505326598883,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "RQ4"
+        ],
+        "statute_name": "도로법 76조  통행의 금지ㆍ제한 등 7항",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 67,
+        "first_stage_score": 14.418766951777439,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "교통약자의 이동편의 증진법 19조  보행우선구역에서의 조치#KOBLEX-195173",
+        "provision_text": "제19조(보행우선구역에서의 조치)",
+        "rerank_rank": 3,
+        "rerank_score": 0.004965346772223711,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "RQ4"
+        ],
+        "statute_name": "교통약자의 이동편의 증진법 19조  보행우선구역에서의 조치",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 30,
+        "first_stage_score": 17.697383712117144,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "축산물 위생관리법 시행규칙 55조 2 위해 축산물의 긴급 회수문 등#KOBLEX-117047",
+        "provision_text": "① 영 제28조제1항에 따른 긴급 회수문의 내용 및 작성요령 등은 별표 14의4와 같다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.00551047595217824,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "RQ4"
+        ],
+        "statute_name": "축산물 위생관리법 시행규칙 55조 2 위해 축산물의 긴급 회수문 등 1항",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 66,
+        "first_stage_score": 14.418766951777439,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "공탁법 13조  공탁관의 조치#KOBLEX-210623",
+        "provision_text": "제13조(공탁관의 조치)",
+        "rerank_rank": 5,
+        "rerank_score": 0.003669392317533493,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "RQ4"
+        ],
+        "statute_name": "공탁법 13조  공탁관의 조치",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 20.581974182208818,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "국민보호와 공공안전을 위한 테러방지법 12조  테러선동ㆍ선전물 긴급 삭제 등 요청#KOBLEX-231338",
+        "provision_text": "제12조(테러선동ㆍ선전물 긴급 삭제 등 요청)",
+        "rerank_rank": 6,
+        "rerank_score": 0.0028257202357053757,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "RQ4"
+        ],
+        "statute_name": "국민보호와 공공안전을 위한 테러방지법 12조  테러선동ㆍ선전물 긴급 삭제 등 요청",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 20.581974182208818,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "도로법 시행령 78조  긴급 통행제한의 기준 및 절차#KOBLEX-179416",
+        "provision_text": "제78조(긴급 통행제한의 기준 및 절차)",
+        "rerank_rank": 7,
+        "rerank_score": 0.002105053048580885,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "RQ4"
+        ],
+        "statute_name": "도로법 시행령 78조  긴급 통행제한의 기준 및 절차",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 68,
+        "first_stage_score": 14.418766951777439,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "부동산등기법 103조  등기관의 조치#KOBLEX-088164",
+        "provision_text": "제103조(등기관의 조치)",
+        "rerank_rank": 9,
+        "rerank_score": 0.002322086365893483,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "RQ4"
+        ],
+        "statute_name": "부동산등기법 103조  등기관의 조치",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 58,
+        "first_stage_score": 14.745163848031403,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "민법 943조  목록작성전의 권한#KOBLEX-060395",
+        "provision_text": "제943조(목록작성전의 권한) 후견인은 재산조사와 목록작성을 완료하기까지는 긴급 필요한 경우가 아니면 그 재산에 관한 권한을 행사하지 못한다. 그러나 이로써 선의의 제삼자에게 대항하지 못한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.0034643535036593676,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "RQ4"
+        ],
+        "statute_name": "민법 943조  목록작성전의 권한",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 19.79480363412298,
+        "fusion_rank": 1,
+        "issue_id": "I3",
+        "provision_id": "북한이탈주민의 보호 및 정착지원에 관한 법률 29조  비용 부담#KOBLEX-119655",
+        "provision_text": "제29조(비용 부담)",
+        "rerank_rank": 1,
+        "rerank_score": 0.9256137609481812,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ5",
+        "source_request_ids": [
+          "RQ5"
+        ],
+        "statute_name": "북한이탈주민의 보호 및 정착지원에 관한 법률 29조  비용 부담",
+        "target_evidence_item_ids": [
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 24,
+        "first_stage_score": 19.79480363412298,
+        "fusion_rank": 2,
+        "issue_id": "I3",
+        "provision_id": "도시공원 및 녹지 등에 관한 법률 39조  비용 부담#KOBLEX-119221",
+        "provision_text": "제39조(비용 부담)",
+        "rerank_rank": 2,
+        "rerank_score": 0.9218387603759766,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ5",
+        "source_request_ids": [
+          "RQ5"
+        ],
+        "statute_name": "도시공원 및 녹지 등에 관한 법률 39조  비용 부담",
+        "target_evidence_item_ids": [
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 19.79480363412298,
+        "fusion_rank": 3,
+        "issue_id": "I3",
+        "provision_id": "도시공원 및 녹지 등에 관한 법률 39조  비용 부담#KOBLEX-197998",
+        "provision_text": "제39조(비용 부담)",
+        "rerank_rank": 3,
+        "rerank_score": 0.9218387603759766,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ5",
+        "source_request_ids": [
+          "RQ5"
+        ],
+        "statute_name": "도시공원 및 녹지 등에 관한 법률 39조  비용 부담",
+        "target_evidence_item_ids": [
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 28,
+        "first_stage_score": 19.79480363412298,
+        "fusion_rank": 4,
+        "issue_id": "I3",
+        "provision_id": "장애인복지법 시행령 42조  비용 부담#KOBLEX-079457",
+        "provision_text": "제42조(비용 부담)",
+        "rerank_rank": 4,
+        "rerank_score": 0.9187849164009094,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ5",
+        "source_request_ids": [
+          "RQ5"
+        ],
+        "statute_name": "장애인복지법 시행령 42조  비용 부담",
+        "target_evidence_item_ids": [
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 19.79480363412298,
+        "fusion_rank": 5,
+        "issue_id": "I3",
+        "provision_id": "공공기관의 정보공개에 관한 법률 17조  비용 부담#KOBLEX-130165",
+        "provision_text": "제17조(비용 부담)",
+        "rerank_rank": 5,
+        "rerank_score": 0.9154731035232544,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ5",
+        "source_request_ids": [
+          "RQ5"
+        ],
+        "statute_name": "공공기관의 정보공개에 관한 법률 17조  비용 부담",
+        "target_evidence_item_ids": [
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 19.79480363412298,
+        "fusion_rank": 6,
+        "issue_id": "I3",
+        "provision_id": "공공기관의 정보공개에 관한 법률 17조  비용 부담#KOBLEX-217225",
+        "provision_text": "제17조(비용 부담)",
+        "rerank_rank": 6,
+        "rerank_score": 0.9154731035232544,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ5",
+        "source_request_ids": [
+          "RQ5"
+        ],
+        "statute_name": "공공기관의 정보공개에 관한 법률 17조  비용 부담",
+        "target_evidence_item_ids": [
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 27,
+        "first_stage_score": 19.79480363412298,
+        "fusion_rank": 7,
+        "issue_id": "I3",
+        "provision_id": "장애인복지법 79조  비용 부담#KOBLEX-188660",
+        "provision_text": "제79조(비용 부담)",
+        "rerank_rank": 7,
+        "rerank_score": 0.915376603603363,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ5",
+        "source_request_ids": [
+          "RQ5"
+        ],
+        "statute_name": "장애인복지법 79조  비용 부담",
+        "target_evidence_item_ids": [
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 22,
+        "first_stage_score": 19.79480363412298,
+        "fusion_rank": 8,
+        "issue_id": "I3",
+        "provision_id": "군인연금법 41조#KOBLEX-150091",
+        "provision_text": "제4장 비용 부담",
+        "rerank_rank": 8,
+        "rerank_score": 0.909640371799469,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ5",
+        "source_request_ids": [
+          "RQ5"
+        ],
+        "statute_name": "군인연금법 41조",
+        "target_evidence_item_ids": [
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 19.79480363412298,
+        "fusion_rank": 9,
+        "issue_id": "I3",
+        "provision_id": "군인연금법 시행령 44조#KOBLEX-206057",
+        "provision_text": "제4장 비용 부담",
+        "rerank_rank": 9,
+        "rerank_score": 0.909640371799469,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ5",
+        "source_request_ids": [
+          "RQ5"
+        ],
+        "statute_name": "군인연금법 시행령 44조",
+        "target_evidence_item_ids": [
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 34,
+        "first_stage_score": 19.311367084379597,
+        "fusion_rank": 10,
+        "issue_id": "I3",
+        "provision_id": "도시개발법 54조#KOBLEX-003046",
+        "provision_text": "제4장 비용 부담 등",
+        "rerank_rank": 10,
+        "rerank_score": 0.8001334071159363,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ5",
+        "source_request_ids": [
+          "RQ5"
+        ],
+        "statute_name": "도시개발법 54조",
+        "target_evidence_item_ids": [
+          "E5"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 48,
+        "first_stage_score": 1.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 186조  부동산물권변동의 효력#KOBLEX-058761",
+        "provision_text": "제186조(부동산물권변동의 효력) 부동산에 관한 법률행위로 인한 물권의 득실변경은 등기하여야 그 효력이 생긴다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.00014803651720285416,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민법 186조  부동산물권변동의 효력",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 79,
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "하수도법 41조  분뇨처리 의무#KOBLEX-222027",
+        "provision_text": "제41조(분뇨처리 의무)",
+        "rerank_rank": 2,
+        "rerank_score": 0.004355589859187603,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "하수도법 41조  분뇨처리 의무",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 18.339315253392762,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "행정절차법 15조  송달의 효력 발생#KOBLEX-098007",
+        "provision_text": "③ 제14조제4항의 경우에는 다른 법령등에 특별한 규정이 있는 경우를 제외하고는 공고일부터 14일이 지난 때에 그 효력이 발생한다. 다만, 긴급히 시행하여야 할 특별한 사유가 있어 효력 발생 시기를 달리 정하여 공고한 경우에는 그에 따른다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.0507616251707077,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "행정절차법 15조  송달의 효력 발생 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 21.555729435845056,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 205조  판결의 효력발생#KOBLEX-064069",
+        "provision_text": "제205조(판결의 효력발생) 판결은 선고로 효력이 생긴다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.01024319976568222,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민사소송법 205조  판결의 효력발생",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 55,
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "외국환거래법 10조  업무상의 의무#KOBLEX-003758",
+        "provision_text": "제10조(업무상의 의무)",
+        "rerank_rank": 5,
+        "rerank_score": 0.0014889169251546264,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "외국환거래법 10조  업무상의 의무",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 1.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "민법 180조  재산관리자에 대한 제한능력자의 권리, 부부 사이의 권리와 시효정지#KOBLEX-058751",
+        "provision_text": "② 부부 중 한쪽이 다른 쪽에 대하여 가지는 권리는 혼인관계가 종료된 때부터 6개월 내에는 소멸시효가 완성되지 아니한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.00024473629309795797,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민법 180조  재산관리자에 대한 제한능력자의 권리, 부부 사이의 권리와 시효정지 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 22.136130440402425,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 196조  공시송달의 효력발생#KOBLEX-064048",
+        "provision_text": "제196조(공시송달의 효력발생)",
+        "rerank_rank": 7,
+        "rerank_score": 0.008602195419371128,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민사소송법 196조  공시송달의 효력발생",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 56,
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "외국환거래법 10조  업무상의 의무#KOBLEX-080804",
+        "provision_text": "제10조(업무상의 의무)",
+        "rerank_rank": 8,
+        "rerank_score": 0.0014889169251546264,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "외국환거래법 10조  업무상의 의무",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 73,
+        "first_stage_score": 14.249144360846625,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "민사집행법 56조  그 밖의 집행권원#KOBLEX-128214",
+        "provision_text": "5. 소송상 화해, 청구의 인낙(認諾) 등 그 밖에 확정판결과 같은 효력을 가지는 것",
+        "rerank_rank": 9,
+        "rerank_score": 0.007826519198715687,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민사집행법 56조  그 밖의 집행권원 5호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 53,
+        "first_stage_score": 16.645878773576985,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "신탁법 116조  명시ㆍ교부 의무#KOBLEX-107531",
+        "provision_text": "제116조(명시ㆍ교부 의무)",
+        "rerank_rank": 10,
+        "rerank_score": 0.0013866190565750003,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "신탁법 116조  명시ㆍ교부 의무",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 39,
+        "first_stage_score": 12.81471973345161,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "독점규제 및 공정거래에 관한 법률 47조  특수관계인에 대한 부당한 이익제공 등 금지#KOBLEX-020697",
+        "provision_text": "② 기업의 효율성 증대, 보안성, 긴급성 등 거래의 목적을 달성하기 위하여 불가피한 경우로서 대통령령으로 정하는 거래에는 제1항제4호를 적용하지 아니한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.10703736543655396,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "독점규제 및 공정거래에 관한 법률 47조  특수관계인에 대한 부당한 이익제공 등 금지 2항",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 12.81471973345161,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "독점규제 및 공정거래에 관한 법률 47조  특수관계인에 대한 부당한 이익제공 등 금지#KOBLEX-039125",
+        "provision_text": "② 기업의 효율성 증대, 보안성, 긴급성 등 거래의 목적을 달성하기 위하여 불가피한 경우로서 대통령령으로 정하는 거래에는 제1항제4호를 적용하지 아니한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.10703736543655396,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "독점규제 및 공정거래에 관한 법률 47조  특수관계인에 대한 부당한 이익제공 등 금지 2항",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 31,
+        "first_stage_score": 13.152714427527695,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "스토킹범죄의 처벌 등에 관한 법률 6조  긴급응급조치의 통지 등#KOBLEX-130441",
+        "provision_text": "② 사법경찰관은 긴급응급조치를 하는 경우에는 해당 긴급응급조치의 대상자(이하 \"긴급응급조치대상자\"라 한다)에게 조치의 내용 및 불복방법 등을 고지하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.10509657114744186,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "스토킹범죄의 처벌 등에 관한 법률 6조  긴급응급조치의 통지 등 2항",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 14.982126833204276,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "의료법 시행규칙 35조  의료기관의 안전관리시설#KOBLEX-007380",
+        "provision_text": "1. 화재나 그 밖의 긴급한 상황에 대처하기 위하여 필요한 시설",
+        "rerank_rank": 6,
+        "rerank_score": 0.12570419907569885,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "의료법 시행규칙 35조  의료기관의 안전관리시설 1호",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 14.81891131676667,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "국제사법 14조  보전처분의 관할#KOBLEX-127767",
+        "provision_text": "② 제1항에도 불구하고 당사자는 긴급히 필요한 경우에는 대한민국에서만 효력을 가지는 보전처분을 법원에 신청할 수 있다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.09373887628316879,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "국제사법 14조  보전처분의 관할 2항",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 14.81891131676667,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "국제사법 14조  보전처분의 관할#KOBLEX-200448",
+        "provision_text": "② 제1항에도 불구하고 당사자는 긴급히 필요한 경우에는 대한민국에서만 효력을 가지는 보전처분을 법원에 신청할 수 있다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.09373887628316879,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "국제사법 14조  보전처분의 관할 2항",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 55,
+        "first_stage_score": 12.274761381326567,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "국세기본법 시행령 63조 12 부분조사 사유#KOBLEX-029929",
+        "provision_text": "2. 무자료거래, 위장ㆍ가공 거래 등 특정 거래 내용이 사실과 다른 구체적인 혐의가 있는 경우로서 조세채권의 확보 등을 위하여 긴급한 조사가 필요한 경우",
+        "rerank_rank": 9,
+        "rerank_score": 0.10372744500637054,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "국세기본법 시행령 63조 12 부분조사 사유 2호",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 88,
+        "first_stage_score": 1.0,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "민법 220조  분할, 일부양도와 주위통행권#KOBLEX-058842",
+        "provision_text": "①분할로 인하여 공로에 통하지 못하는 토지가 있는 때에는 그 토지소유자는 공로에 출입하기 위하여 다른 분할자의 토지를 통행할 수 있다. 이 경우에는 보상의 의무가 없다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.07955906540155411,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "민법 220조  분할, 일부양도와 주위통행권 1항",
+        "target_evidence_item_ids": [
+          "E3",
+          "E4"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공공기관의 정보공개에 관한 법률 17조  비용 부담#KOBLEX-130165": "제17조(비용 부담)",
+      "공공기관의 정보공개에 관한 법률 17조  비용 부담#KOBLEX-217225": "제17조(비용 부담)",
+      "공탁법 13조  공탁관의 조치#KOBLEX-210623": "제13조(공탁관의 조치)",
+      "교통약자의 이동편의 증진법 19조  보행우선구역에서의 조치#KOBLEX-195173": "제19조(보행우선구역에서의 조치)",
+      "국민보호와 공공안전을 위한 테러방지법 12조  테러선동ㆍ선전물 긴급 삭제 등 요청#KOBLEX-231338": "제12조(테러선동ㆍ선전물 긴급 삭제 등 요청)",
+      "국세기본법 시행령 63조 12 부분조사 사유#KOBLEX-029929": "2. 무자료거래, 위장ㆍ가공 거래 등 특정 거래 내용이 사실과 다른 구체적인 혐의가 있는 경우로서 조세채권의 확보 등을 위하여 긴급한 조사가 필요한 경우",
+      "국제사법 14조  보전처분의 관할#KOBLEX-127767": "② 제1항에도 불구하고 당사자는 긴급히 필요한 경우에는 대한민국에서만 효력을 가지는 보전처분을 법원에 신청할 수 있다.",
+      "국제사법 14조  보전처분의 관할#KOBLEX-200448": "② 제1항에도 불구하고 당사자는 긴급히 필요한 경우에는 대한민국에서만 효력을 가지는 보전처분을 법원에 신청할 수 있다.",
+      "군인연금법 41조#KOBLEX-150091": "제4장 비용 부담",
+      "군인연금법 시행령 44조#KOBLEX-206057": "제4장 비용 부담",
+      "도로법 76조  통행의 금지ㆍ제한 등#KOBLEX-211766": "⑦ 긴급 통행제한에 관하여는 제3항부터 제5항까지의 규정을 준용한다.",
+      "도로법 시행령 78조  긴급 통행제한의 기준 및 절차#KOBLEX-179416": "제78조(긴급 통행제한의 기준 및 절차)",
+      "도시개발법 54조#KOBLEX-003046": "제4장 비용 부담 등",
+      "도시공원 및 녹지 등에 관한 법률 39조  비용 부담#KOBLEX-119221": "제39조(비용 부담)",
+      "도시공원 및 녹지 등에 관한 법률 39조  비용 부담#KOBLEX-197998": "제39조(비용 부담)",
+      "독점규제 및 공정거래에 관한 법률 47조  특수관계인에 대한 부당한 이익제공 등 금지#KOBLEX-020697": "② 기업의 효율성 증대, 보안성, 긴급성 등 거래의 목적을 달성하기 위하여 불가피한 경우로서 대통령령으로 정하는 거래에는 제1항제4호를 적용하지 아니한다.",
+      "독점규제 및 공정거래에 관한 법률 47조  특수관계인에 대한 부당한 이익제공 등 금지#KOBLEX-039125": "② 기업의 효율성 증대, 보안성, 긴급성 등 거래의 목적을 달성하기 위하여 불가피한 경우로서 대통령령으로 정하는 거래에는 제1항제4호를 적용하지 아니한다.",
+      "민법 180조  재산관리자에 대한 제한능력자의 권리, 부부 사이의 권리와 시효정지#KOBLEX-058751": "② 부부 중 한쪽이 다른 쪽에 대하여 가지는 권리는 혼인관계가 종료된 때부터 6개월 내에는 소멸시효가 완성되지 아니한다.",
+      "민법 186조  부동산물권변동의 효력#KOBLEX-058761": "제186조(부동산물권변동의 효력) 부동산에 관한 법률행위로 인한 물권의 득실변경은 등기하여야 그 효력이 생긴다.",
+      "민법 220조  분할, 일부양도와 주위통행권#KOBLEX-058842": "①분할로 인하여 공로에 통하지 못하는 토지가 있는 때에는 그 토지소유자는 공로에 출입하기 위하여 다른 분할자의 토지를 통행할 수 있다. 이 경우에는 보상의 의무가 없다.",
+      "민법 2조  신의성실#KOBLEX-058345": "①권리의 행사와 의무의 이행은 신의에 좇아 성실히 하여야 한다.",
+      "민법 943조  목록작성전의 권한#KOBLEX-060395": "제943조(목록작성전의 권한) 후견인은 재산조사와 목록작성을 완료하기까지는 긴급 필요한 경우가 아니면 그 재산에 관한 권한을 행사하지 못한다. 그러나 이로써 선의의 제삼자에게 대항하지 못한다.",
+      "민사소송법 196조  공시송달의 효력발생#KOBLEX-064048": "제196조(공시송달의 효력발생)",
+      "민사소송법 205조  판결의 효력발생#KOBLEX-064069": "제205조(판결의 효력발생) 판결은 선고로 효력이 생긴다.",
+      "민사집행법 56조  그 밖의 집행권원#KOBLEX-128214": "5. 소송상 화해, 청구의 인낙(認諾) 등 그 밖에 확정판결과 같은 효력을 가지는 것",
+      "법원조직법 55조 2 법원보안관리대#KOBLEX-177840": "④ 제2항에 따른 조치를 할 때에는 미리 그 행위자에게 경고하여야 한다. 다만, 긴급한 상황으로서 경고를 할 만한 시간적 여유가 없는 경우에는 그러하지 아니하다.",
+      "보험업법 85조 4 고객응대직원에 대한 보호 조치 의무#KOBLEX-022072": "제85조의4(고객응대직원에 대한 보호 조치 의무)",
+      "부동산등기법 103조  등기관의 조치#KOBLEX-088164": "제103조(등기관의 조치)",
+      "북한이탈주민의 보호 및 정착지원에 관한 법률 29조  비용 부담#KOBLEX-119655": "제29조(비용 부담)",
+      "상호저축은행법 18조 7 고객응대직원에 대한 보호 조치 의무#KOBLEX-074093": "제18조의7(고객응대직원에 대한 보호 조치 의무)",
+      "상호저축은행법 18조 7 고객응대직원에 대한 보호 조치 의무#KOBLEX-180983": "제18조의7(고객응대직원에 대한 보호 조치 의무)",
+      "스토킹범죄의 처벌 등에 관한 법률 6조  긴급응급조치의 통지 등#KOBLEX-130441": "② 사법경찰관은 긴급응급조치를 하는 경우에는 해당 긴급응급조치의 대상자(이하 \"긴급응급조치대상자\"라 한다)에게 조치의 내용 및 불복방법 등을 고지하여야 한다.",
+      "신용협동조합법 45조 2 고객응대직원에 대한 보호 조치 의무#KOBLEX-063165": "제45조의2(고객응대직원에 대한 보호 조치 의무)",
+      "신탁법 116조  명시ㆍ교부 의무#KOBLEX-107531": "제116조(명시ㆍ교부 의무)",
+      "양육비 이행확보 및 지원에 관한 법률 14조 2 긴급지원 종료 등#KOBLEX-150218": "제14조의2(긴급지원 종료 등)",
+      "여신전문금융업법 39조  거래조건의 주지 의무#KOBLEX-042292": "제39조(거래조건의 주지 의무)",
+      "여신전문금융업법 50조 12 고객응대직원에 대한 보호 조치 의무#KOBLEX-042372": "제50조의12(고객응대직원에 대한 보호 조치 의무)",
+      "외국환거래법 10조  업무상의 의무#KOBLEX-003758": "제10조(업무상의 의무)",
+      "외국환거래법 10조  업무상의 의무#KOBLEX-080804": "제10조(업무상의 의무)",
+      "은행법 52조 4 고객응대직원에 대한 보호 조치 의무#KOBLEX-143807": "제52조의4(고객응대직원에 대한 보호 조치 의무)",
+      "의료법 시행규칙 35조  의료기관의 안전관리시설#KOBLEX-007380": "1. 화재나 그 밖의 긴급한 상황에 대처하기 위하여 필요한 시설",
+      "자본시장과 금융투자업에 관한 법률 63조 2 고객응대직원에 대한 보호 조치 의무#KOBLEX-135125": "제63조의2(고객응대직원에 대한 보호 조치 의무)",
+      "장애인복지법 79조  비용 부담#KOBLEX-188660": "제79조(비용 부담)",
+      "장애인복지법 시행령 42조  비용 부담#KOBLEX-079457": "제42조(비용 부담)",
+      "축산물 위생관리법 시행규칙 55조 2 위해 축산물의 긴급 회수문 등#KOBLEX-117047": "① 영 제28조제1항에 따른 긴급 회수문의 내용 및 작성요령 등은 별표 14의4와 같다.",
+      "하수도법 41조  분뇨처리 의무#KOBLEX-222027": "제41조(분뇨처리 의무)",
+      "행정절차법 15조  송달의 효력 발생#KOBLEX-098007": "③ 제14조제4항의 경우에는 다른 법령등에 특별한 규정이 있는 경우를 제외하고는 공고일부터 14일이 지난 때에 그 효력이 발생한다. 다만, 긴급히 시행하여야 할 특별한 사유가 있어 효력 발생 시기를 달리 정하여 공고한 경우에는 그에 따른다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "Legal basis for the mandatary's status and obligations after mandate termination"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "No supplied provision addresses the legal status or continuing obligations of a mandatary after the termination of a mandate. The candidate set contains unrelated provisions regarding financial services, road traffic, and other administrative matters.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "Provision specifying the timing and legal consequences of mandate termination"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "No supplied provision defines the legal effect or timing of the termination of a mandate. The candidates do not contain the relevant Civil Code provisions governing mandate termination.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E3",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "Provision defining the scope of authority for emergency measures by the mandatary"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "No supplied provision regulates the scope of actions a mandatary may take in an emergency situation. The candidates are irrelevant to the law of mandate.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E4",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "Provision detailing limitations and prohibitions on emergency measures"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "No supplied provision outlines the limitations or prohibitions on emergency measures taken by a mandatary. The candidate set lacks relevant civil law provisions.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E5",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "Provision governing cost allocation and liability for damages from emergency measures"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "No supplied provision addresses the cost burden or liability for damages arising from emergency measures taken by a mandatary. The 'cost burden' provisions in the candidate set relate to unrelated administrative statutes.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 18,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "위임 종료 후 갑의 부동산에 긴급한 상황이 발생했을 때 을의 법적 지위와 의무의 근거",
+        "issue_id": "I1"
+      },
+      {
+        "description": "을이 취할 수 있는 긴급 조치의 범위와 한계",
+        "issue_id": "I2"
+      },
+      {
+        "description": "을의 긴급 조치에 따른 비용 부담과 손해배상 책임",
+        "issue_id": "I3"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "위임 종료 후 피위임자의 법적 지위와 의무 발생 요건을 명확히 규정한 조항을 확인",
+        "critical": true,
+        "description": "위임 종료 후에도 피위임자의 의무가 지속되거나 새로운 의무가 발생하는 법적 근거",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "위임 종료의 효력이 발생하는 시점과 그 법적 결과를 규정한 조항을 확인",
+        "critical": true,
+        "description": "위임 종료의 법적 효력과 시점",
+        "evidence_item_id": "E2",
+        "evidence_type": "definition",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "긴급 상황에서 피위임자의 조치 권한과 범위를 규정한 조항을 확인",
+        "critical": true,
+        "description": "긴급한 상황에서 피위임자가 취할 수 있는 조치의 범위",
+        "evidence_item_id": "E3",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      },
+      {
+        "completion_criteria": "긴급 조치의 한계와 금지 사항을 규정한 조항을 확인",
+        "critical": true,
+        "description": "긴급 조치의 한계와 금지 사항",
+        "evidence_item_id": "E4",
+        "evidence_type": "limitation",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을에게 부동산 거래를 위임했습니다. 그러나 계약 기간 중 갑이 해외로 장기 출장을 떠나게 되어 을에게 계약 종료를 알렸습니다. 출장 중 갑의 부동산에 예상치 못한 홍수가 발생했고, 부동산에 대한 긴급 조치가 필요해졌습니다. 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. [질문] 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "위임",
+          "종료",
+          "피위임자",
+          "의무",
+          "민법"
+        ],
+        "query_text": "위임 종료 후 피위임자의 의무 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "위임",
+          "종료",
+          "효력",
+          "시점",
+          "민법"
+        ],
+        "query_text": "위임 종료 효력 시점 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "긴급",
+          "피위임자",
+          "조치",
+          "범위",
+          "민법"
+        ],
+        "query_text": "긴급 상황 피위임자 조치 범위 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "RQ3",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E4",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "긴급",
+          "조치",
+          "한계",
+          "금지",
+          "민법"
+        ],
+        "query_text": "긴급 조치 한계 금지 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "RQ4",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E5",
+        "issue_id": "I3",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "긴급",
+          "조치",
+          "비용",
+          "부담",
+          "손해배상",
+          "민법"
+        ],
+        "query_text": "긴급 조치 비용 부담 손해배상 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "RQ5",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "위임종료",
+          "사무처리",
+          "의무",
+          "민법"
+        ],
+        "query_text": "민법 위임종료 후 사무처리 의무 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "GRQ-R2-1",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "위임계약",
+          "종료사유",
+          "효력발생",
+          "해지"
+        ],
+        "query_text": "위임계약 종료 사유 효력 발생 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "GRQ-R2-2",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "위임종료",
+          "긴급",
+          "사무처리",
+          "계속"
+        ],
+        "query_text": "위임종료 후 긴급한 경우 사무처리 계속 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "GRQ-R2-3",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E4",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "위임종료",
+          "긴급조치",
+          "한계",
+          "손해방지"
+        ],
+        "query_text": "위임종료 후 긴급조치 한계 손해방지 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "GRQ-R2-4",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을에게 부동산 거래를 위임했습니다. 그러나 계약 기간 중 갑이 해외로 장기 출장을 떠나게 되어 을에게 계약 종료를 알렸습니다. 출장 중 갑의 부동산에 예상치 못한 홍수가 발생했고, 부동산에 대한 긴급 조치가 필요해졌습니다. 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다.\n\n[질문]\n갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+    "remaining_request_budget": 0,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "위임 종료 후 피위임자의 법적 지위와 의무 발생 요건을 명확히 규정한 조항을 확인",
+        "critical": true,
+        "description": "위임 종료 후에도 피위임자의 의무가 지속되거나 새로운 의무가 발생하는 법적 근거",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "위임 종료의 효력이 발생하는 시점과 그 법적 결과를 규정한 조항을 확인",
+        "critical": true,
+        "description": "위임 종료의 법적 효력과 시점",
+        "evidence_item_id": "E2",
+        "evidence_type": "definition",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "긴급 상황에서 피위임자의 조치 권한과 범위를 규정한 조항을 확인",
+        "critical": true,
+        "description": "긴급한 상황에서 피위임자가 취할 수 있는 조치의 범위",
+        "evidence_item_id": "E3",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      },
+      {
+        "completion_criteria": "긴급 조치의 한계와 금지 사항을 규정한 조항을 확인",
+        "critical": true,
+        "description": "긴급 조치의 한계와 금지 사항",
+        "evidence_item_id": "E4",
+        "evidence_type": "limitation",
+        "issue_id": "I2"
+      },
+      {
+        "completion_criteria": "긴급 조치 비용 부담과 손해배상 책임을 규정한 조항을 확인",
+        "critical": false,
+        "description": "긴급 조치에 따른 비용 부담과 손해배상 책임",
+        "evidence_item_id": "E5",
+        "evidence_type": "remedy",
+        "issue_id": "I3"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "5ec63ed9-1f95-4423-8818-cab150755908",
+    "seen_provision_ids": [
+      "양육비 이행확보 및 지원에 관한 법률 14조 2 긴급지원 종료 등#KOBLEX-150218",
+      "민법 220조  분할, 일부양도와 주위통행권#KOBLEX-058842",
+      "민사소송법 205조  판결의 효력발생#KOBLEX-064069",
+      "은행법 52조 4 고객응대직원에 대한 보호 조치 의무#KOBLEX-143807",
+      "보험업법 85조 4 고객응대직원에 대한 보호 조치 의무#KOBLEX-022072",
+      "교통약자의 이동편의 증진법 19조  보행우선구역에서의 조치#KOBLEX-195173",
+      "군인연금법 41조#KOBLEX-150091",
+      "행정절차법 15조  송달의 효력 발생#KOBLEX-098007",
+      "민법 186조  부동산물권변동의 효력#KOBLEX-058761",
+      "상호저축은행법 18조 7 고객응대직원에 대한 보호 조치 의무#KOBLEX-074093",
+      "민법 180조  재산관리자에 대한 제한능력자의 권리, 부부 사이의 권리와 시효정지#KOBLEX-058751",
+      "민법 2조  신의성실#KOBLEX-058345",
+      "도시공원 및 녹지 등에 관한 법률 39조  비용 부담#KOBLEX-119221",
+      "스토킹범죄의 처벌 등에 관한 법률 6조  긴급응급조치의 통지 등#KOBLEX-130441",
+      "법원조직법 55조 2 법원보안관리대#KOBLEX-177840",
+      "도시개발법 54조#KOBLEX-003046",
+      "국민보호와 공공안전을 위한 테러방지법 12조  테러선동ㆍ선전물 긴급 삭제 등 요청#KOBLEX-231338",
+      "공공기관의 정보공개에 관한 법률 17조  비용 부담#KOBLEX-217225",
+      "외국환거래법 10조  업무상의 의무#KOBLEX-080804",
+      "여신전문금융업법 39조  거래조건의 주지 의무#KOBLEX-042292",
+      "도로법 76조  통행의 금지ㆍ제한 등#KOBLEX-211766",
+      "민법 943조  목록작성전의 권한#KOBLEX-060395",
+      "공공기관의 정보공개에 관한 법률 17조  비용 부담#KOBLEX-130165",
+      "축산물 위생관리법 시행규칙 55조 2 위해 축산물의 긴급 회수문 등#KOBLEX-117047",
+      "도시공원 및 녹지 등에 관한 법률 39조  비용 부담#KOBLEX-197998",
+      "여신전문금융업법 50조 12 고객응대직원에 대한 보호 조치 의무#KOBLEX-042372",
+      "국제사법 14조  보전처분의 관할#KOBLEX-127767",
+      "민사집행법 56조  그 밖의 집행권원#KOBLEX-128214",
+      "부동산등기법 103조  등기관의 조치#KOBLEX-088164",
+      "상호저축은행법 18조 7 고객응대직원에 대한 보호 조치 의무#KOBLEX-180983",
+      "신용협동조합법 45조 2 고객응대직원에 대한 보호 조치 의무#KOBLEX-063165",
+      "북한이탈주민의 보호 및 정착지원에 관한 법률 29조  비용 부담#KOBLEX-119655",
+      "신탁법 116조  명시ㆍ교부 의무#KOBLEX-107531",
+      "의료법 시행규칙 35조  의료기관의 안전관리시설#KOBLEX-007380",
+      "독점규제 및 공정거래에 관한 법률 47조  특수관계인에 대한 부당한 이익제공 등 금지#KOBLEX-039125",
+      "장애인복지법 시행령 42조  비용 부담#KOBLEX-079457",
+      "하수도법 41조  분뇨처리 의무#KOBLEX-222027",
+      "국제사법 14조  보전처분의 관할#KOBLEX-200448",
+      "자본시장과 금융투자업에 관한 법률 63조 2 고객응대직원에 대한 보호 조치 의무#KOBLEX-135125",
+      "국세기본법 시행령 63조 12 부분조사 사유#KOBLEX-029929",
+      "공탁법 13조  공탁관의 조치#KOBLEX-210623",
+      "장애인복지법 79조  비용 부담#KOBLEX-188660",
+      "군인연금법 시행령 44조#KOBLEX-206057",
+      "민사소송법 196조  공시송달의 효력발생#KOBLEX-064048",
+      "외국환거래법 10조  업무상의 의무#KOBLEX-003758",
+      "독점규제 및 공정거래에 관한 법률 47조  특수관계인에 대한 부당한 이익제공 등 금지#KOBLEX-020697",
+      "도로법 시행령 78조  긴급 통행제한의 기준 및 절차#KOBLEX-179416"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "RETRIEVAL_BUDGET_EXHAUSTED"
+}

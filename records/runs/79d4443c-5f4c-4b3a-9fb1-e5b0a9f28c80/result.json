@@ -1,0 +1,1720 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-18T18:15:14.715209+00:00",
+  "end_to_end_latency_ms": 430129.47,
+  "errors": [],
+  "record_schema_version": "1.1",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 600,
+      "evidence_fusion": 600,
+      "first_stage": 900,
+      "request_rerank": 900,
+      "rrf": 600,
+      "selected": 60
+    }
+  },
+  "run_id": "79d4443c-5f4c-4b3a-9fb1-e5b0a9f28c80",
+  "state": {
+    "accepted_provision_ids": [
+      "형사소송법 365조  피고인의 출정#KOBLEX-232753",
+      "형사소송법 266조 7 공판준비기일#KOBLEX-232364",
+      "형법 20조  정당행위#KOBLEX-192680",
+      "형사소송법 325조  무죄의 판결#KOBLEX-232620",
+      "형사소송법 215조  압수, 수색, 검증#KOBLEX-232128"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 20,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 15,
+          "request_count": 4,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 17,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 44,
+        "first_stage_score": 18.66553040056783,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075691",
+        "provision_text": "1. 「형법」, 「폭력행위 등 처벌에 관한 법률」, 그 밖의 형사 법률에 저촉되는 행위",
+        "rerank_rank": 1,
+        "rerank_score": 0.01822313852608204,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 45,
+        "first_stage_score": 18.66553040056783,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213878",
+        "provision_text": "1. 「형법」, 「폭력행위 등 처벌에 관한 법률」, 그 밖의 형사 법률에 저촉되는 행위",
+        "rerank_rank": 2,
+        "rerank_score": 0.01822313852608204,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 93,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형법 39조  판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범#KOBLEX-192724",
+        "provision_text": "제39조(판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범)",
+        "rerank_rank": 3,
+        "rerank_score": 0.014504785649478436,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 39조  판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 72,
+        "first_stage_score": 17.471806491698455,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 460조  결과가 정당한 경우의 재심기각#KOBLEX-064692",
+        "provision_text": "제460조(결과가 정당한 경우의 재심기각) 재심의 사유가 있는 경우라도 판결이 정당하다고 인정한 때에는 법원은 재심의 청구를 기각하여야 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.009067355655133724,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민사소송법 460조  결과가 정당한 경우의 재심기각",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 73,
+        "first_stage_score": 17.3032007805612,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형법 310조  위법성의 조각#KOBLEX-193320",
+        "provision_text": "제310조(위법성의 조각) 제307조제1항의 행위가 진실한 사실로서 오로지 공공의 이익에 관한 때에는 처벌하지 아니한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.007343069650232792,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 310조  위법성의 조각",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 24.14423463785219,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "노동조합 및 노동관계조정법 4조  정당행위#KOBLEX-052957",
+        "provision_text": "제4조(정당행위) 형법 제20조의 규정은 노동조합이 단체교섭ㆍ쟁의행위 기타의 행위로서 제1조의 목적을 달성하기 위하여 한 정당한 행위에 대하여 적용된다. 다만, 어떠한 경우에도 폭력이나 파괴행위는 정당한 행위로 해석되어서는 아니된다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.00677794823423028,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "노동조합 및 노동관계조정법 4조  정당행위",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 24.14423463785219,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "노동조합 및 노동관계조정법 4조  정당행위#KOBLEX-134454",
+        "provision_text": "제4조(정당행위) 형법 제20조의 규정은 노동조합이 단체교섭ㆍ쟁의행위 기타의 행위로서 제1조의 목적을 달성하기 위하여 한 정당한 행위에 대하여 적용된다. 다만, 어떠한 경우에도 폭력이나 파괴행위는 정당한 행위로 해석되어서는 아니된다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.00677794823423028,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "노동조합 및 노동관계조정법 4조  정당행위",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 25.87107778362906,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "폭력행위 등 처벌에 관한 법률 2조  폭행 등#KOBLEX-126709",
+        "provision_text": "② 2명 이상이 공동하여 다음 각 호의 죄를 범한 사람은 「형법」 각 해당 조항에서 정한 형의 2분의 1까지 가중한다. <개정 2016.1.6> 1. 「형법」 제260조제1항(폭행), 제283조제1항(협박), 제319조(주거침입, 퇴거불응) 또는 제366조(재물손괴 등)의 죄 2. 「형법」 제260조제2항(존속폭행), 제276조제1항(체포, 감금), 제283조제2항(존속협박) 또는 제324조제1항(강요)의 죄 3. 「형법」 제257조제1항(상해)ㆍ제2항(존속상해), 제276조제2항(존속체포, 존속감금) 또는 제350조(공갈)의 죄",
+        "rerank_rank": 8,
+        "rerank_score": 0.005451269913464785,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "폭력행위 등 처벌에 관한 법률 2조  폭행 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 25.87107778362906,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "폭력행위 등 처벌에 관한 법률 2조  폭행 등#KOBLEX-178699",
+        "provision_text": "② 2명 이상이 공동하여 다음 각 호의 죄를 범한 사람은 「형법」 각 해당 조항에서 정한 형의 2분의 1까지 가중한다. <개정 2016.1.6> 1. 「형법」 제260조제1항(폭행), 제283조제1항(협박), 제319조(주거침입, 퇴거불응) 또는 제366조(재물손괴 등)의 죄 2. 「형법」 제260조제2항(존속폭행), 제276조제1항(체포, 감금), 제283조제2항(존속협박) 또는 제324조제1항(강요)의 죄 3. 「형법」 제257조제1항(상해)ㆍ제2항(존속상해), 제276조제2항(존속체포, 존속감금) 또는 제350조(공갈)의 죄",
+        "rerank_rank": 9,
+        "rerank_score": 0.005451269913464785,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "폭력행위 등 처벌에 관한 법률 2조  폭행 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 94,
+        "first_stage_score": 2.0,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "형법 39조  판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범#KOBLEX-192725",
+        "provision_text": "①경합범중 판결을 받지 아니한 죄가 있는 때에는 그 죄와 판결이 확정된 죄를 동시에 판결할 경우와 형평을 고려하여 그 죄에 대하여 형을 선고한다. 이 경우 그 형을 감경 또는 면제할 수 있다. <개정 2005.7.29>",
+        "rerank_rank": 10,
+        "rerank_score": 0.004727835301309824,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 39조  판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 3.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 327조  공소기각의 판결#KOBLEX-232628",
+        "provision_text": "2. 공소제기의 절차가 법률의 규정을 위반하여 무효일 때",
+        "rerank_rank": 1,
+        "rerank_score": 0.7629862427711487,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 327조  공소기각의 판결 2호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 36,
+        "first_stage_score": 17.8769342648286,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 327조  공소기각의 판결#KOBLEX-232626",
+        "provision_text": "제327조(공소기각의 판결) 다음 각 호의 경우에는 판결로써 공소기각의 선고를 하여야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.5336400270462036,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 327조  공소기각의 판결",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 48,
+        "first_stage_score": 17.300885899107044,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 382조  공소기각의 판결#KOBLEX-093416",
+        "provision_text": "제382조(공소기각의 판결) 다음 각 호의 어느 하나에 해당하는 경우에는 판결로 공소기각을 선고하여야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.46591314673423767,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "군사법원법 382조  공소기각의 판결",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 49,
+        "first_stage_score": 17.300885899107044,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 382조  공소기각의 판결#KOBLEX-159381",
+        "provision_text": "제382조(공소기각의 판결) 다음 각 호의 어느 하나에 해당하는 경우에는 판결로 공소기각을 선고하여야 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.46591314673423767,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "군사법원법 382조  공소기각의 판결",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 21.288923870959913,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "소액사건심판법 11조 2 판결에 관한 특례#KOBLEX-163769",
+        "provision_text": "① 판결의 선고는 변론종결 후 즉시 할 수 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.3810619115829468,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "소액사건심판법 11조 2 판결에 관한 특례 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 73,
+        "first_stage_score": 16.682945157502743,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 361조 5 항소이유#KOBLEX-232723",
+        "provision_text": "2. 판결 후 형의 폐지나 변경 또는 사면이 있는 때",
+        "rerank_rank": 6,
+        "rerank_score": 0.13913138210773468,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 361조 5 항소이유 2호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 68,
+        "first_stage_score": 16.682945157502743,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 414조  항소할 수 있는 판결#KOBLEX-093497",
+        "provision_text": "3. 판결 후 형의 폐지나 변경 또는 사면이 있을 때",
+        "rerank_rank": 7,
+        "rerank_score": 0.12985704839229584,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "군사법원법 414조  항소할 수 있는 판결 3호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 69,
+        "first_stage_score": 16.682945157502743,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 414조  항소할 수 있는 판결#KOBLEX-159462",
+        "provision_text": "3. 판결 후 형의 폐지나 변경 또는 사면이 있을 때",
+        "rerank_rank": 8,
+        "rerank_score": 0.12985704839229584,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "군사법원법 414조  항소할 수 있는 판결 3호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 22.60043444440753,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "헌법재판소법 42조  재판의 정지 등#KOBLEX-188024",
+        "provision_text": "② 제1항 본문에 따른 재판정지기간은 「형사소송법」 제92조제1항ㆍ제2항 및 「군사법원법」 제132조제1항ㆍ제2항의 구속기간과 「민사소송법」 제199조의 판결 선고기간에 산입하지 아니한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.1164662092924118,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "헌법재판소법 42조  재판의 정지 등 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 70,
+        "first_stage_score": 16.682945157502743,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 442조  상고할 수 있는 판결#KOBLEX-093562",
+        "provision_text": "4. 판결 후 형의 폐지나 변경 또는 사면이 있을 때",
+        "rerank_rank": 10,
+        "rerank_score": 0.1003141701221466,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "군사법원법 442조  상고할 수 있는 판결 4호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 33,
+        "first_stage_score": 18.451006819096847,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 347조  제출신청의 허가여부에 대한 재판#KOBLEX-064458",
+        "provision_text": "①법원은 문서제출신청에 정당한 이유가 있다고 인정한 때에는 결정으로 문서를 가진 사람에게 그 제출을 명할 수 있다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.001385113806463778,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민사소송법 347조  제출신청의 허가여부에 대한 재판 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형법 366조  재물손괴등#KOBLEX-193440",
+        "provision_text": "제366조(재물손괴등) 타인의 재물, 문서 또는 전자기록등 특수매체기록을 손괴 또는 은닉 기타 방법으로 기 효용을 해한 자는 3년이하의 징역 또는 700만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 5,
+        "rerank_score": 0.0008452486363239586,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "형법 366조  재물손괴등",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 27,
+        "first_stage_score": 19.376283603189698,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "증권관련 집단소송법 63조  과태료#KOBLEX-178695",
+        "provision_text": "3. 정당한 이유 없이 제32조제2항에 따른 문서제출 명령 또는 문서송부 촉탁을 거부한 자",
+        "rerank_rank": 6,
+        "rerank_score": 0.0004905433161184192,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "증권관련 집단소송법 63조  과태료 3호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 80,
+        "first_stage_score": 17.304158114086675,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "보호관찰 등에 관한 법률 20조  판결의 통지 등#KOBLEX-212820",
+        "provision_text": "제20조(판결의 통지 등)",
+        "rerank_rank": 7,
+        "rerank_score": 0.7375268340110779,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "보호관찰 등에 관한 법률 20조  판결의 통지 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 64,
+        "first_stage_score": 12.357358621279982,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "증권거래법 206조 3 금융위원회 및 증권선물위원회의 조사, 압수·수색 <개정 2008.2.29>#KOBLEX-227514",
+        "provision_text": "⑩「형사소송법」중 압수·수색과 압수·수색영장의 집행 및 압수물 환부 등에 관한 규정은 이 법에 규정된 압수·수색과 압수·수색영장에 관하여 이를 준용한다. <신설 2002.1.26, 2007.7.19>",
+        "rerank_rank": 8,
+        "rerank_score": 0.08201158791780472,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "증권거래법 206조 3 금융위원회 및 증권선물위원회의 조사, 압수·수색 <개정 2008.2.29> 10항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 14.744372496849559,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 427조  불공정거래 조사를 위한 압수ㆍ수색#KOBLEX-137360",
+        "provision_text": "④ 형사소송법 중 압수ㆍ수색과 압수ㆍ수색영장의 집행 및 압수물 환부(還付) 등에 관한 규정은 이 법에 규정된 압수ㆍ수색과 압수ㆍ수색영장에 관하여 준용한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.0757753998041153,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 427조  불공정거래 조사를 위한 압수ㆍ수색 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 36.74031954638431,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "형법 20조  정당행위#KOBLEX-192680",
+        "provision_text": "제20조(정당행위) 법령에 의한 행위 또는 업무로 인한 행위 기타 사회상규에 위배되지 아니하는 행위는 벌하지 아니한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.7096635699272156,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 20조  정당행위",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 19.941185157734015,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "가사소송법 21조  기판력의 주관적 범위에 관한 특칙#KOBLEX-064846",
+        "provision_text": "② 제1항의 청구를 배척한 판결이 확정된 경우에는 다른 제소권자는 사실심의 변론종결 전에 참가하지 못한 데 대하여 정당한 사유가 있지 아니하면 다시 소를 제기할 수 없다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.012366225942969322,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "가사소송법 21조  기판력의 주관적 범위에 관한 특칙 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 65,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 59조 3 확정 판결서등의 열람ㆍ복사#KOBLEX-231605",
+        "provision_text": "⑥ 판결서등의 열람 및 복사의 방법과 절차, 개인정보 보호조치의 방법과 절차, 그 밖에 필요한 사항은 대법원규칙으로 정한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.007891585119068623,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "형사소송법 59조 3 확정 판결서등의 열람ㆍ복사 6항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 365조  피고인의 출정#KOBLEX-232753",
+        "provision_text": "②피고인이 정당한 사유없이 다시 정한 기일에 출정하지 아니한 때에는 피고인의 진술없이 판결을 할 수 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.004942675586789846,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "형사소송법 365조  피고인의 출정 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 16.342729668471613,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 279조 2 전문심리위원의 참여#KOBLEX-232450",
+        "provision_text": "① 법원은 소송관계를 분명하게 하거나 소송절차를 원활하게 진행하기 위하여 필요한 경우에는 직권으로 또는 검사, 피고인 또는 변호인의 신청에 의하여 결정으로 전문심리위원을 지정하여 공판준비 및 공판기일 등 소송절차에 참여하게 할 수 있다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.009277032688260078,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-4",
+        "source_request_ids": [
+          "GRQ-R2-4"
+        ],
+        "statute_name": "형사소송법 279조 2 전문심리위원의 참여 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 28.53117254591328,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 325조  무죄의 판결#KOBLEX-232620",
+        "provision_text": "제325조(무죄의 판결) 피고사건이 범죄로 되지 아니하거나 범죄사실의 증명이 없는 때에는 판결로써 무죄를 선고하여야 한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.9763994812965393,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3"
+        ],
+        "statute_name": "형사소송법 325조  무죄의 판결",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 50,
+        "first_stage_score": 12.589983628911915,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 312조  검사 또는 사법경찰관의 조서 등#KOBLEX-232576",
+        "provision_text": "③검사 이외의 수사기관이 작성한 피의자신문조서는 적법한 절차와 방식에 따라 작성된 것으로서 공판준비 또는 공판기일에 그 피의자였던 피고인 또는 변호인이 그 내용을 인정할 때에 한하여 증거로 할 수 있다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.00825909711420536,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-4",
+        "source_request_ids": [
+          "GRQ-R2-4"
+        ],
+        "statute_name": "형사소송법 312조  검사 또는 사법경찰관의 조서 등 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 31.396134183577995,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 326조  면소의 판결#KOBLEX-232621",
+        "provision_text": "제326조(면소의 판결) 다음 경우에는 판결로써 면소의 선고를 하여야 한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.9540640115737915,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3"
+        ],
+        "statute_name": "형사소송법 326조  면소의 판결",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 19.63134696247794,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 310조 2 전문증거와 증거능력의 제한#KOBLEX-232571",
+        "provision_text": "제310조의2(전문증거와 증거능력의 제한) 제311조 내지 제316조에 규정한 것 이외에는 공판준비 또는 공판기일에서의 진술에 대신하여 진술을 기재한 서류나 공판준비 또는 공판기일 외에서의 타인의 진술을 내용으로 하는 진술은 이를 증거로 할 수 없다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.0073738908395171165,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-4",
+        "source_request_ids": [
+          "GRQ-R2-4"
+        ],
+        "statute_name": "형사소송법 310조 2 전문증거와 증거능력의 제한",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 22.144775864190443,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 119조  구속영장의 집행#KOBLEX-092505",
+        "provision_text": "제119조(구속영장의 집행)",
+        "rerank_rank": 1,
+        "rerank_score": 0.02694220282137394,
+        "retrieval_round": 3,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "군사법원법 119조  구속영장의 집행",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 22.144775864190443,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 119조  구속영장의 집행#KOBLEX-158470",
+        "provision_text": "제119조(구속영장의 집행)",
+        "rerank_rank": 2,
+        "rerank_score": 0.02694220282137394,
+        "retrieval_round": 3,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "군사법원법 119조  구속영장의 집행",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 20.843314476367716,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "조세범 처벌절차법 9조  압수ㆍ수색영장#KOBLEX-120122",
+        "provision_text": "② 제1항 단서에 따라 영장 없이 압수 또는 수색한 경우에는 압수 또는 수색한 때부터 48시간 이내에 관할 지방법원판사에게 압수ㆍ수색영장을 청구하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.005795793607831001,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "조세범 처벌절차법 9조  압수ㆍ수색영장 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 20.843314476367716,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "조세범 처벌절차법 9조  압수ㆍ수색영장#KOBLEX-129999",
+        "provision_text": "② 제1항 단서에 따라 영장 없이 압수 또는 수색한 경우에는 압수 또는 수색한 때부터 48시간 이내에 관할 지방법원판사에게 압수ㆍ수색영장을 청구하여야 한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.005795793607831001,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "조세범 처벌절차법 9조  압수ㆍ수색영장 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 51,
+        "first_stage_score": 14.903118284502483,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 215조  압수, 수색, 검증#KOBLEX-232128",
+        "provision_text": "① 검사는 범죄수사에 필요한 때에는 피의자가 죄를 범하였다고 의심할 만한 정황이 있고 해당 사건과 관계가 있다고 인정할 수 있는 것에 한정하여 지방법원판사에게 청구하여 발부받은 영장에 의하여 압수, 수색 또는 검증을 할 수 있다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.003110335674136877,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 215조  압수, 수색, 검증 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 21.60394736007888,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 119조  집행 중의 출입금지#KOBLEX-231783",
+        "provision_text": "제119조(집행 중의 출입금지)",
+        "rerank_rank": 8,
+        "rerank_score": 0.0008163035963661969,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 119조  집행 중의 출입금지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 48,
+        "first_stage_score": 15.538681476937041,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "특허법 시행규칙 119조  거부ㆍ선언ㆍ인정에 관한 결정#KOBLEX-160624",
+        "provision_text": "제119조(거부ㆍ선언ㆍ인정에 관한 결정) 법 제214조제3항의 규정에 의한 결정은 다음 각호의 사항을 기재한 문서로 하여야 한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.0007013508002273738,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "특허법 시행규칙 119조  거부ㆍ선언ㆍ인정에 관한 결정",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 20.938285436359738,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "지방세기본법 116조  「형사소송법」의 준용#KOBLEX-121048",
+        "provision_text": "제116조(「형사소송법」의 준용) 압수 또는 수색과 압수ㆍ수색영장에 관하여 이 법에서 규정한 것을 제외하고는 「형사소송법」 중 압수 또는 수색과 압수ㆍ수색영장에 관한 규정을 준용한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.0005647358484566212,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "지방세기본법 116조  「형사소송법」의 준용",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 15.657736009774148,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "공무원범죄에 관한 몰수 특례법 48조  추징보전명령의 실효#KOBLEX-038695",
+        "provision_text": "② 「형사소송법」 제327조제2호에 따른 공소기각의 판결이 있은 경우 추징보전명령의 효력에 관하여는 제33조제2항을 준용한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.00010560434020590037,
+        "retrieval_round": 3,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "공무원범죄에 관한 몰수 특례법 48조  추징보전명령의 실효 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 15.657736009774148,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "마약류 불법거래 방지에 관한 특례법 58조  추징보전명령의 실효#KOBLEX-006696",
+        "provision_text": "② 「형사소송법」 제327조제2호에 따른 공소기각의 판결이 있는 경우 추징보전명령의 효력에 관하여는 제43조제2항을 준용한다.",
+        "rerank_rank": 2,
+        "rerank_score": 9.752587357070297e-05,
+        "retrieval_round": 3,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "마약류 불법거래 방지에 관한 특례법 58조  추징보전명령의 실효 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 15.657736009774148,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "마약류 불법거래 방지에 관한 특례법 58조  추징보전명령의 실효#KOBLEX-045446",
+        "provision_text": "② 「형사소송법」 제327조제2호에 따른 공소기각의 판결이 있는 경우 추징보전명령의 효력에 관하여는 제43조제2항을 준용한다.",
+        "rerank_rank": 3,
+        "rerank_score": 9.752587357070297e-05,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "마약류 불법거래 방지에 관한 특례법 58조  추징보전명령의 실효 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 33,
+        "first_stage_score": 13.16482422310851,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "공직선거법 270조 2 피고인의 출정#KOBLEX-052735",
+        "provision_text": "②피고인이 정당한 사유없이 다시 정한 기일 또는 그 후에 열린 공판기일에 출석하지 아니한 때에는 피고인의 출석없이 공판절차를 진행할 수 있다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.03220563009381294,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-3",
+        "source_request_ids": [
+          "GRQ-R3-3"
+        ],
+        "statute_name": "공직선거법 270조 2 피고인의 출정 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 62,
+        "first_stage_score": 20.37481342244252,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 266조 7 공판준비기일#KOBLEX-232364",
+        "provision_text": "①법원은 검사, 피고인 또는 변호인의 의견을 들어 공판준비기일을 지정할 수 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.02515178546309471,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형사소송법 266조 7 공판준비기일 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 34,
+        "first_stage_score": 13.16482422310851,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "공직선거법 270조 2 피고인의 출정#KOBLEX-176021",
+        "provision_text": "②피고인이 정당한 사유없이 다시 정한 기일 또는 그 후에 열린 공판기일에 출석하지 아니한 때에는 피고인의 출석없이 공판절차를 진행할 수 있다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.03220563009381294,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-3",
+        "source_request_ids": [
+          "GRQ-R3-3"
+        ],
+        "statute_name": "공직선거법 270조 2 피고인의 출정 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 27.327976101042253,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 260조 2 군인 등 사이에 발생한 범죄의 피해군인 등에 대한 변호사 선임의 특례#KOBLEX-093003",
+        "provision_text": "③ 제1항에 따른 변호사는 피의자에 대한 구속 전 피의자심문, 증거보전절차, 공판준비기일 및 공판절차에 출석하여 의견을 진술할 수 있다. 이 경우 필요한 절차에 관한 구체적 사항은 대법원규칙으로 정한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.021011020988225937,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "군사법원법 260조 2 군인 등 사이에 발생한 범죄의 피해군인 등에 대한 변호사 선임의 특례 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 27.327976101042253,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 260조 2 군인 등 사이에 발생한 범죄의 피해군인 등에 대한 변호사 선임의 특례#KOBLEX-158968",
+        "provision_text": "③ 제1항에 따른 변호사는 피의자에 대한 구속 전 피의자심문, 증거보전절차, 공판준비기일 및 공판절차에 출석하여 의견을 진술할 수 있다. 이 경우 필요한 절차에 관한 구체적 사항은 대법원규칙으로 정한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.021011020988225937,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "군사법원법 260조 2 군인 등 사이에 발생한 범죄의 피해군인 등에 대한 변호사 선임의 특례 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 54,
+        "first_stage_score": 12.718150342113129,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "정치자금법 55조  피고인의 출정#KOBLEX-149426",
+        "provision_text": "②피고인이 정당한 사유 없이 다시 정한 기일 또는 그 후에 열린 공판기일에 출석하지 아니한 때에는 피고인의 출석 없이 공판절차를 진행할 수 있다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.031003380194306374,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-3",
+        "source_request_ids": [
+          "GRQ-R3-3"
+        ],
+        "statute_name": "정치자금법 55조  피고인의 출정 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "가사소송법 21조  기판력의 주관적 범위에 관한 특칙#KOBLEX-064846": "② 제1항의 청구를 배척한 판결이 확정된 경우에는 다른 제소권자는 사실심의 변론종결 전에 참가하지 못한 데 대하여 정당한 사유가 있지 아니하면 다시 소를 제기할 수 없다.",
+      "공무원범죄에 관한 몰수 특례법 48조  추징보전명령의 실효#KOBLEX-038695": "② 「형사소송법」 제327조제2호에 따른 공소기각의 판결이 있은 경우 추징보전명령의 효력에 관하여는 제33조제2항을 준용한다.",
+      "공직선거법 270조 2 피고인의 출정#KOBLEX-052735": "②피고인이 정당한 사유없이 다시 정한 기일 또는 그 후에 열린 공판기일에 출석하지 아니한 때에는 피고인의 출석없이 공판절차를 진행할 수 있다.",
+      "공직선거법 270조 2 피고인의 출정#KOBLEX-176021": "②피고인이 정당한 사유없이 다시 정한 기일 또는 그 후에 열린 공판기일에 출석하지 아니한 때에는 피고인의 출석없이 공판절차를 진행할 수 있다.",
+      "군사법원법 119조  구속영장의 집행#KOBLEX-092505": "제119조(구속영장의 집행)",
+      "군사법원법 119조  구속영장의 집행#KOBLEX-158470": "제119조(구속영장의 집행)",
+      "군사법원법 260조 2 군인 등 사이에 발생한 범죄의 피해군인 등에 대한 변호사 선임의 특례#KOBLEX-093003": "③ 제1항에 따른 변호사는 피의자에 대한 구속 전 피의자심문, 증거보전절차, 공판준비기일 및 공판절차에 출석하여 의견을 진술할 수 있다. 이 경우 필요한 절차에 관한 구체적 사항은 대법원규칙으로 정한다.",
+      "군사법원법 260조 2 군인 등 사이에 발생한 범죄의 피해군인 등에 대한 변호사 선임의 특례#KOBLEX-158968": "③ 제1항에 따른 변호사는 피의자에 대한 구속 전 피의자심문, 증거보전절차, 공판준비기일 및 공판절차에 출석하여 의견을 진술할 수 있다. 이 경우 필요한 절차에 관한 구체적 사항은 대법원규칙으로 정한다.",
+      "군사법원법 382조  공소기각의 판결#KOBLEX-093416": "제382조(공소기각의 판결) 다음 각 호의 어느 하나에 해당하는 경우에는 판결로 공소기각을 선고하여야 한다.",
+      "군사법원법 382조  공소기각의 판결#KOBLEX-159381": "제382조(공소기각의 판결) 다음 각 호의 어느 하나에 해당하는 경우에는 판결로 공소기각을 선고하여야 한다.",
+      "군사법원법 414조  항소할 수 있는 판결#KOBLEX-093497": "3. 판결 후 형의 폐지나 변경 또는 사면이 있을 때",
+      "군사법원법 414조  항소할 수 있는 판결#KOBLEX-159462": "3. 판결 후 형의 폐지나 변경 또는 사면이 있을 때",
+      "군사법원법 442조  상고할 수 있는 판결#KOBLEX-093562": "4. 판결 후 형의 폐지나 변경 또는 사면이 있을 때",
+      "노동조합 및 노동관계조정법 4조  정당행위#KOBLEX-052957": "제4조(정당행위) 형법 제20조의 규정은 노동조합이 단체교섭ㆍ쟁의행위 기타의 행위로서 제1조의 목적을 달성하기 위하여 한 정당한 행위에 대하여 적용된다. 다만, 어떠한 경우에도 폭력이나 파괴행위는 정당한 행위로 해석되어서는 아니된다.",
+      "노동조합 및 노동관계조정법 4조  정당행위#KOBLEX-134454": "제4조(정당행위) 형법 제20조의 규정은 노동조합이 단체교섭ㆍ쟁의행위 기타의 행위로서 제1조의 목적을 달성하기 위하여 한 정당한 행위에 대하여 적용된다. 다만, 어떠한 경우에도 폭력이나 파괴행위는 정당한 행위로 해석되어서는 아니된다.",
+      "마약류 불법거래 방지에 관한 특례법 58조  추징보전명령의 실효#KOBLEX-006696": "② 「형사소송법」 제327조제2호에 따른 공소기각의 판결이 있는 경우 추징보전명령의 효력에 관하여는 제43조제2항을 준용한다.",
+      "마약류 불법거래 방지에 관한 특례법 58조  추징보전명령의 실효#KOBLEX-045446": "② 「형사소송법」 제327조제2호에 따른 공소기각의 판결이 있는 경우 추징보전명령의 효력에 관하여는 제43조제2항을 준용한다.",
+      "민사소송법 347조  제출신청의 허가여부에 대한 재판#KOBLEX-064458": "①법원은 문서제출신청에 정당한 이유가 있다고 인정한 때에는 결정으로 문서를 가진 사람에게 그 제출을 명할 수 있다.",
+      "민사소송법 460조  결과가 정당한 경우의 재심기각#KOBLEX-064692": "제460조(결과가 정당한 경우의 재심기각) 재심의 사유가 있는 경우라도 판결이 정당하다고 인정한 때에는 법원은 재심의 청구를 기각하여야 한다.",
+      "보호관찰 등에 관한 법률 20조  판결의 통지 등#KOBLEX-212820": "제20조(판결의 통지 등)",
+      "소액사건심판법 11조 2 판결에 관한 특례#KOBLEX-163769": "① 판결의 선고는 변론종결 후 즉시 할 수 있다.",
+      "자본시장과 금융투자업에 관한 법률 427조  불공정거래 조사를 위한 압수ㆍ수색#KOBLEX-137360": "④ 형사소송법 중 압수ㆍ수색과 압수ㆍ수색영장의 집행 및 압수물 환부(還付) 등에 관한 규정은 이 법에 규정된 압수ㆍ수색과 압수ㆍ수색영장에 관하여 준용한다.",
+      "정치자금법 55조  피고인의 출정#KOBLEX-149426": "②피고인이 정당한 사유 없이 다시 정한 기일 또는 그 후에 열린 공판기일에 출석하지 아니한 때에는 피고인의 출석 없이 공판절차를 진행할 수 있다.",
+      "조세범 처벌절차법 9조  압수ㆍ수색영장#KOBLEX-120122": "② 제1항 단서에 따라 영장 없이 압수 또는 수색한 경우에는 압수 또는 수색한 때부터 48시간 이내에 관할 지방법원판사에게 압수ㆍ수색영장을 청구하여야 한다.",
+      "조세범 처벌절차법 9조  압수ㆍ수색영장#KOBLEX-129999": "② 제1항 단서에 따라 영장 없이 압수 또는 수색한 경우에는 압수 또는 수색한 때부터 48시간 이내에 관할 지방법원판사에게 압수ㆍ수색영장을 청구하여야 한다.",
+      "증권거래법 206조 3 금융위원회 및 증권선물위원회의 조사, 압수·수색 <개정 2008.2.29>#KOBLEX-227514": "⑩「형사소송법」중 압수·수색과 압수·수색영장의 집행 및 압수물 환부 등에 관한 규정은 이 법에 규정된 압수·수색과 압수·수색영장에 관하여 이를 준용한다. <신설 2002.1.26, 2007.7.19>",
+      "증권관련 집단소송법 63조  과태료#KOBLEX-178695": "3. 정당한 이유 없이 제32조제2항에 따른 문서제출 명령 또는 문서송부 촉탁을 거부한 자",
+      "지방세기본법 116조  「형사소송법」의 준용#KOBLEX-121048": "제116조(「형사소송법」의 준용) 압수 또는 수색과 압수ㆍ수색영장에 관하여 이 법에서 규정한 것을 제외하고는 「형사소송법」 중 압수 또는 수색과 압수ㆍ수색영장에 관한 규정을 준용한다.",
+      "특허법 시행규칙 119조  거부ㆍ선언ㆍ인정에 관한 결정#KOBLEX-160624": "제119조(거부ㆍ선언ㆍ인정에 관한 결정) 법 제214조제3항의 규정에 의한 결정은 다음 각호의 사항을 기재한 문서로 하여야 한다.",
+      "폭력행위 등 처벌에 관한 법률 2조  폭행 등#KOBLEX-126709": "② 2명 이상이 공동하여 다음 각 호의 죄를 범한 사람은 「형법」 각 해당 조항에서 정한 형의 2분의 1까지 가중한다. <개정 2016.1.6> 1. 「형법」 제260조제1항(폭행), 제283조제1항(협박), 제319조(주거침입, 퇴거불응) 또는 제366조(재물손괴 등)의 죄 2. 「형법」 제260조제2항(존속폭행), 제276조제1항(체포, 감금), 제283조제2항(존속협박) 또는 제324조제1항(강요)의 죄 3. 「형법」 제257조제1항(상해)ㆍ제2항(존속상해), 제276조제2항(존속체포, 존속감금) 또는 제350조(공갈)의 죄",
+      "폭력행위 등 처벌에 관한 법률 2조  폭행 등#KOBLEX-178699": "② 2명 이상이 공동하여 다음 각 호의 죄를 범한 사람은 「형법」 각 해당 조항에서 정한 형의 2분의 1까지 가중한다. <개정 2016.1.6> 1. 「형법」 제260조제1항(폭행), 제283조제1항(협박), 제319조(주거침입, 퇴거불응) 또는 제366조(재물손괴 등)의 죄 2. 「형법」 제260조제2항(존속폭행), 제276조제1항(체포, 감금), 제283조제2항(존속협박) 또는 제324조제1항(강요)의 죄 3. 「형법」 제257조제1항(상해)ㆍ제2항(존속상해), 제276조제2항(존속체포, 존속감금) 또는 제350조(공갈)의 죄",
+      "헌법재판소법 42조  재판의 정지 등#KOBLEX-188024": "② 제1항 본문에 따른 재판정지기간은 「형사소송법」 제92조제1항ㆍ제2항 및 「군사법원법」 제132조제1항ㆍ제2항의 구속기간과 「민사소송법」 제199조의 판결 선고기간에 산입하지 아니한다.",
+      "형법 20조  정당행위#KOBLEX-192680": "제20조(정당행위) 법령에 의한 행위 또는 업무로 인한 행위 기타 사회상규에 위배되지 아니하는 행위는 벌하지 아니한다.",
+      "형법 310조  위법성의 조각#KOBLEX-193320": "제310조(위법성의 조각) 제307조제1항의 행위가 진실한 사실로서 오로지 공공의 이익에 관한 때에는 처벌하지 아니한다.",
+      "형법 366조  재물손괴등#KOBLEX-193440": "제366조(재물손괴등) 타인의 재물, 문서 또는 전자기록등 특수매체기록을 손괴 또는 은닉 기타 방법으로 기 효용을 해한 자는 3년이하의 징역 또는 700만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 39조  판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범#KOBLEX-192724": "제39조(판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범)",
+      "형법 39조  판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범#KOBLEX-192725": "①경합범중 판결을 받지 아니한 죄가 있는 때에는 그 죄와 판결이 확정된 죄를 동시에 판결할 경우와 형평을 고려하여 그 죄에 대하여 형을 선고한다. 이 경우 그 형을 감경 또는 면제할 수 있다. <개정 2005.7.29>",
+      "형사소송법 119조  집행 중의 출입금지#KOBLEX-231783": "제119조(집행 중의 출입금지)",
+      "형사소송법 215조  압수, 수색, 검증#KOBLEX-232128": "① 검사는 범죄수사에 필요한 때에는 피의자가 죄를 범하였다고 의심할 만한 정황이 있고 해당 사건과 관계가 있다고 인정할 수 있는 것에 한정하여 지방법원판사에게 청구하여 발부받은 영장에 의하여 압수, 수색 또는 검증을 할 수 있다.",
+      "형사소송법 266조 7 공판준비기일#KOBLEX-232364": "①법원은 검사, 피고인 또는 변호인의 의견을 들어 공판준비기일을 지정할 수 있다.",
+      "형사소송법 279조 2 전문심리위원의 참여#KOBLEX-232450": "① 법원은 소송관계를 분명하게 하거나 소송절차를 원활하게 진행하기 위하여 필요한 경우에는 직권으로 또는 검사, 피고인 또는 변호인의 신청에 의하여 결정으로 전문심리위원을 지정하여 공판준비 및 공판기일 등 소송절차에 참여하게 할 수 있다.",
+      "형사소송법 310조 2 전문증거와 증거능력의 제한#KOBLEX-232571": "제310조의2(전문증거와 증거능력의 제한) 제311조 내지 제316조에 규정한 것 이외에는 공판준비 또는 공판기일에서의 진술에 대신하여 진술을 기재한 서류나 공판준비 또는 공판기일 외에서의 타인의 진술을 내용으로 하는 진술은 이를 증거로 할 수 없다.",
+      "형사소송법 312조  검사 또는 사법경찰관의 조서 등#KOBLEX-232576": "③검사 이외의 수사기관이 작성한 피의자신문조서는 적법한 절차와 방식에 따라 작성된 것으로서 공판준비 또는 공판기일에 그 피의자였던 피고인 또는 변호인이 그 내용을 인정할 때에 한하여 증거로 할 수 있다.",
+      "형사소송법 325조  무죄의 판결#KOBLEX-232620": "제325조(무죄의 판결) 피고사건이 범죄로 되지 아니하거나 범죄사실의 증명이 없는 때에는 판결로써 무죄를 선고하여야 한다.",
+      "형사소송법 326조  면소의 판결#KOBLEX-232621": "제326조(면소의 판결) 다음 경우에는 판결로써 면소의 선고를 하여야 한다.",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232626": "제327조(공소기각의 판결) 다음 각 호의 경우에는 판결로써 공소기각의 선고를 하여야 한다.",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232628": "2. 공소제기의 절차가 법률의 규정을 위반하여 무효일 때",
+      "형사소송법 361조 5 항소이유#KOBLEX-232723": "2. 판결 후 형의 폐지나 변경 또는 사면이 있는 때",
+      "형사소송법 365조  피고인의 출정#KOBLEX-232753": "②피고인이 정당한 사유없이 다시 정한 기일에 출정하지 아니한 때에는 피고인의 진술없이 판결을 할 수 있다.",
+      "형사소송법 59조 3 확정 판결서등의 열람ㆍ복사#KOBLEX-231605": "⑥ 판결서등의 열람 및 복사의 방법과 절차, 개인정보 보호조치의 방법과 절차, 그 밖에 필요한 사항은 대법원규칙으로 정한다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075691": "1. 「형법」, 「폭력행위 등 처벌에 관한 법률」, 그 밖의 형사 법률에 저촉되는 행위",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213878": "1. 「형법」, 「폭력행위 등 처벌에 관한 법률」, 그 밖의 형사 법률에 저촉되는 행위"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "형법 20조  정당행위#KOBLEX-192680",
+          "형사소송법 215조  압수, 수색, 검증#KOBLEX-232128"
+        ],
+        "missing_aspects": [
+          "압수수색 영장 집행 시 재물 손괴 행위의 적법성 판단 기준 및 구체적 요건"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "형법 제20조(C027)가 법령에 의한 행위의 위법성 조각 근거를 제공하고, 형사소송법 제215조(C040)가 압수·수색 영장의 발부 요건을 규정하고 있다. 그러나 압수수색 영장 집행 과정에서 발생하는 '재물 손괴' 행위의 적법성 기준(예: 비례성, 최소침해 원칙, 영장 범위 내에서의 손괴 허용 한계 등)을 구체적으로 명시한 조문이 후보군에 포함되어 있지 않아, 완성 기준의 일부가 충족되지 않았다.",
+        "status": "partially_covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [
+          "형사소송법 325조  무죄의 판결#KOBLEX-232620",
+          "형사소송법 266조 7 공판준비기일#KOBLEX-232364",
+          "형사소송법 365조  피고인의 출정#KOBLEX-232753"
+        ],
+        "missing_aspects": [
+          "변론종결에 대한 명시적 규정 조항"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "형사소송법 제325조(C032)가 무죄 판결의 근거를, 제266조의7(C048)이 공판준비기일, 제365조(C030)가 공판기일 진행 및 판결 선고를 위한 출석 요건을 규정하고 있다. 그러나 '변론종결'에 대한 명시적 규정 조항이 후보군에 포함되어 있지 않아, 공소제기부터 무죄 판결 선고까지의 주요 절차 단계(공판준비, 공판기일, 변론종결, 판결선고)를 모두 포괄적으로 확인하는 데 한계가 있다.",
+        "status": "partially_covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형법 20조  정당행위#KOBLEX-192680",
+        "support_spans": [
+          {
+            "end_char": 66,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 215조  압수, 수색, 검증#KOBLEX-232128",
+        "support_spans": [
+          {
+            "end_char": 128,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형사소송법 325조  무죄의 판결#KOBLEX-232620",
+        "support_spans": [
+          {
+            "end_char": 68,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형사소송법 266조 7 공판준비기일#KOBLEX-232364",
+        "support_spans": [
+          {
+            "end_char": 45,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형사소송법 365조  피고인의 출정#KOBLEX-232753",
+        "support_spans": [
+          {
+            "end_char": 59,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 17,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "압수수색 영장 집행 과정에서 재물 손괴 행위가 법령에 의한 정당한 행위로 인정되는지 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "형사소송법상 무죄 판결을 선고하기 위한 절차적 요건",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "법령에 의한 행위가 위법성을 조각하는 근거 조항과 압수수색 영장 집행 시 재물 손괴의 적법성 기준을 확인",
+        "critical": true,
+        "description": "형법상 정당한 행위(법령에 의한 행위)에 관한 규정 및 압수수색 영장 집행 시 재물 손괴의 위법성 조각 요건",
+        "evidence_item_id": "E1",
+        "evidence_type": "exception",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "공소제기부터 무죄 판결 선고까지의 주요 절차 단계(공판준비, 공판기일, 변론종결, 판결선고)를 확인",
+        "critical": true,
+        "description": "형사소송법상 공판절차 및 무죄 판결의 선고 절차",
+        "evidence_item_id": "E2",
+        "evidence_type": "procedure",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 최근 경찰서에서 압수수색 영장을 받은 후 을의 집에서 불법적으로 보관된 문서를 발견하고 이를 손괴하여 조사했다. 을은 이에 대해 재물손괴로 고소했으나, 갑의 행위는 법령에 따른 정당한 행위로 인정되었다. [질문] 갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "정당한 행위",
+          "위법성 조각",
+          "압수수색 영장",
+          "재물손괴",
+          "형법"
+        ],
+        "query_text": "형법상 정당한 행위와 압수수색 영장 집행 시 재물 손괴의 위법성 조각 [원문 맥락] 을은 이에 대해 재물손괴로 고소했으나, 갑의 행위는 법령에 따른 정당한 행위로 인정되었다. 갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "형법 제20조",
+          "형사소송법 제119조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "무죄 판결",
+          "공판절차",
+          "변론종결",
+          "판결선고",
+          "형사소송법"
+        ],
+        "query_text": "형사소송법상 공소제기 후 무죄 판결을 선고하기 위한 공판절차 및 변론종결 절차 [원문 맥락] 을은 이에 대해 재물손괴로 고소했으나, 갑의 행위는 법령에 따른 정당한 행위로 인정되었다. 갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "형사소송법 제325조",
+          "형사소송법 제326조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형법 제20조",
+          "법령에 의한 행위",
+          "위법성 조각",
+          "정당한 행위"
+        ],
+        "query_text": "형법 제20조 법령에 의한 행위 위법성 조각 요건 [원문 맥락] 을은 이에 대해 재물손괴로 고소했으나, 갑의 행위는 법령에 따른 정당한 행위로 인정되었다. 갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+        "request_id": "GRQ-R2-1",
+        "statute_hints": [
+          "형법 제20조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "압수수색",
+          "영장 집행",
+          "재물 손괴",
+          "적법성",
+          "형사소송법"
+        ],
+        "query_text": "압수수색 영장 집행 재물 손괴 적법성 기준 [원문 맥락] 을은 이에 대해 재물손괴로 고소했으나, 갑의 행위는 법령에 따른 정당한 행위로 인정되었다. 갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+        "request_id": "GRQ-R2-2",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사소송법 제325조",
+          "형사소송법 제326조",
+          "무죄 판결",
+          "선고",
+          "변론종결"
+        ],
+        "query_text": "형사소송법 제325조 제326조 무죄 판결 선고 절차 [원문 맥락] 을은 이에 대해 재물손괴로 고소했으나, 갑의 행위는 법령에 따른 정당한 행위로 인정되었다. 갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+        "request_id": "GRQ-R2-3",
+        "statute_hints": [
+          "형사소송법 제325조",
+          "형사소송법 제326조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "공판준비",
+          "공판기일",
+          "변론종결",
+          "판결선고",
+          "형사소송법"
+        ],
+        "query_text": "공판준비기일 공판기일 변론종결 판결선고 절차 [원문 맥락] 을은 이에 대해 재물손괴로 고소했으나, 갑의 행위는 법령에 따른 정당한 행위로 인정되었다. 갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+        "request_id": "GRQ-R2-4",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사소송법 제119조",
+          "압수",
+          "수색",
+          "영장 집행",
+          "절차"
+        ],
+        "query_text": "형사소송법 제119조 압수 수색 영장 집행 절차 및 한계 [원문 맥락] 을은 이에 대해 재물손괴로 고소했으나, 갑의 행위는 법령에 따른 정당한 행위로 인정되었다. 갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+        "request_id": "GRQ-R3-1",
+        "statute_hints": [
+          "형사소송법 제119조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "공판준비기일",
+          "변론종결",
+          "절차적 효과",
+          "형사소송법"
+        ],
+        "query_text": "형사소송법상 공판준비기일과 변론종결의 절차적 효과 [원문 맥락] 을은 이에 대해 재물손괴로 고소했으나, 갑의 행위는 법령에 따른 정당한 행위로 인정되었다. 갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+        "request_id": "GRQ-R3-2",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "공판절차",
+          "진행 순서",
+          "기일 지정",
+          "형사소송법"
+        ],
+        "query_text": "형사소송법 공판절차 진행 순서 및 기일 지정 [원문 맥락] 을은 이에 대해 재물손괴로 고소했으나, 갑의 행위는 법령에 따른 정당한 행위로 인정되었다. 갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+        "request_id": "GRQ-R3-3",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 최근 경찰서에서 압수수색 영장을 받은 후 을의 집에서 불법적으로 보관된 문서를 발견하고 이를 손괴하여 조사했다. 을은 이에 대해 재물손괴로 고소했으나, 갑의 행위는 법령에 따른 정당한 행위로 인정되었다.\n\n[질문]\n갑이 을의 집에서 문서를 손괴했지만, 그 행위가 법령에 의한 정당한 행위로 인정되어 무죄 판결을 받은 경우, 어떤 절차를 통해 무죄 판결을 받게 되는가?",
+    "remaining_request_budget": 0,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "법령에 의한 행위가 위법성을 조각하는 근거 조항과 압수수색 영장 집행 시 재물 손괴의 적법성 기준을 확인",
+        "critical": true,
+        "description": "형법상 정당한 행위(법령에 의한 행위)에 관한 규정 및 압수수색 영장 집행 시 재물 손괴의 위법성 조각 요건",
+        "evidence_item_id": "E1",
+        "evidence_type": "exception",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "공소제기부터 무죄 판결 선고까지의 주요 절차 단계(공판준비, 공판기일, 변론종결, 판결선고)를 확인",
+        "critical": true,
+        "description": "형사소송법상 공판절차 및 무죄 판결의 선고 절차",
+        "evidence_item_id": "E2",
+        "evidence_type": "procedure",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "79d4443c-5f4c-4b3a-9fb1-e5b0a9f28c80",
+    "seen_provision_ids": [
+      "형법 39조  판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범#KOBLEX-192725",
+      "군사법원법 119조  구속영장의 집행#KOBLEX-092505",
+      "폭력행위 등 처벌에 관한 법률 2조  폭행 등#KOBLEX-178699",
+      "정치자금법 55조  피고인의 출정#KOBLEX-149426",
+      "공무원범죄에 관한 몰수 특례법 48조  추징보전명령의 실효#KOBLEX-038695",
+      "노동조합 및 노동관계조정법 4조  정당행위#KOBLEX-134454",
+      "민사소송법 347조  제출신청의 허가여부에 대한 재판#KOBLEX-064458",
+      "형사소송법 310조 2 전문증거와 증거능력의 제한#KOBLEX-232571",
+      "형사소송법 119조  집행 중의 출입금지#KOBLEX-231783",
+      "조세범 처벌절차법 9조  압수ㆍ수색영장#KOBLEX-120122",
+      "형사소송법 279조 2 전문심리위원의 참여#KOBLEX-232450",
+      "형사소송법 59조 3 확정 판결서등의 열람ㆍ복사#KOBLEX-231605",
+      "군사법원법 442조  상고할 수 있는 판결#KOBLEX-093562",
+      "자본시장과 금융투자업에 관한 법률 427조  불공정거래 조사를 위한 압수ㆍ수색#KOBLEX-137360",
+      "소액사건심판법 11조 2 판결에 관한 특례#KOBLEX-163769",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232626",
+      "형사소송법 215조  압수, 수색, 검증#KOBLEX-232128",
+      "형사소송법 365조  피고인의 출정#KOBLEX-232753",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232628",
+      "공직선거법 270조 2 피고인의 출정#KOBLEX-176021",
+      "군사법원법 382조  공소기각의 판결#KOBLEX-159381",
+      "군사법원법 382조  공소기각의 판결#KOBLEX-093416",
+      "보호관찰 등에 관한 법률 20조  판결의 통지 등#KOBLEX-212820",
+      "가사소송법 21조  기판력의 주관적 범위에 관한 특칙#KOBLEX-064846",
+      "형사소송법 312조  검사 또는 사법경찰관의 조서 등#KOBLEX-232576",
+      "형법 310조  위법성의 조각#KOBLEX-193320",
+      "형사소송법 361조 5 항소이유#KOBLEX-232723",
+      "형사소송법 325조  무죄의 판결#KOBLEX-232620",
+      "형법 39조  판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범#KOBLEX-192724",
+      "특허법 시행규칙 119조  거부ㆍ선언ㆍ인정에 관한 결정#KOBLEX-160624",
+      "헌법재판소법 42조  재판의 정지 등#KOBLEX-188024",
+      "조세범 처벌절차법 9조  압수ㆍ수색영장#KOBLEX-129999",
+      "마약류 불법거래 방지에 관한 특례법 58조  추징보전명령의 실효#KOBLEX-045446",
+      "민사소송법 460조  결과가 정당한 경우의 재심기각#KOBLEX-064692",
+      "군사법원법 260조 2 군인 등 사이에 발생한 범죄의 피해군인 등에 대한 변호사 선임의 특례#KOBLEX-158968",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-213878",
+      "군사법원법 414조  항소할 수 있는 판결#KOBLEX-093497",
+      "공직선거법 270조 2 피고인의 출정#KOBLEX-052735",
+      "군사법원법 119조  구속영장의 집행#KOBLEX-158470",
+      "폭력행위 등 처벌에 관한 법률 2조  폭행 등#KOBLEX-126709",
+      "형사소송법 326조  면소의 판결#KOBLEX-232621",
+      "군사법원법 260조 2 군인 등 사이에 발생한 범죄의 피해군인 등에 대한 변호사 선임의 특례#KOBLEX-093003",
+      "마약류 불법거래 방지에 관한 특례법 58조  추징보전명령의 실효#KOBLEX-006696",
+      "노동조합 및 노동관계조정법 4조  정당행위#KOBLEX-052957",
+      "증권거래법 206조 3 금융위원회 및 증권선물위원회의 조사, 압수·수색 <개정 2008.2.29>#KOBLEX-227514",
+      "군사법원법 414조  항소할 수 있는 판결#KOBLEX-159462",
+      "형사소송법 266조 7 공판준비기일#KOBLEX-232364",
+      "형법 20조  정당행위#KOBLEX-192680",
+      "형의 집행 및 수용자의 처우에 관한 법률 107조  징벌#KOBLEX-075691",
+      "증권관련 집단소송법 63조  과태료#KOBLEX-178695",
+      "형법 366조  재물손괴등#KOBLEX-193440",
+      "지방세기본법 116조  「형사소송법」의 준용#KOBLEX-121048"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

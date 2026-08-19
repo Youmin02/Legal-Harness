@@ -1,0 +1,1387 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-18T18:31:11.352749+00:00",
+  "end_to_end_latency_ms": 309409.814,
+  "errors": [],
+  "record_schema_version": "1.1",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 500,
+      "evidence_fusion": 500,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "rrf": 500,
+      "selected": 50
+    }
+  },
+  "run_id": "17c64a2d-c33b-4b95-9aff-04a22c3c7057",
+  "state": {
+    "accepted_provision_ids": [
+      "성폭력범죄의 처벌 등에 관한 특례법 43조 2 출입국 시 신고의무 등#KOBLEX-157724"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 14,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 20,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 29.437388607848494,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "장애인활동 지원에 관한 법률 29조  활동지원인력의 결격 사유#KOBLEX-074510",
+        "provision_text": "5. 「성폭력범죄의 처벌 등에 관한 특례법」 제3조부터 제10조까지 및 제15조(같은 법 제3조부터 제9조까지의 미수범으로 한정한다)에 규정된 죄로 금고 이상의 형을 선고받은 사람",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999983310699463,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "장애인활동 지원에 관한 법률 29조  활동지원인력의 결격 사유 6호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 34.02380815560707,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "범죄수익은닉의 규제 및 처벌 등에 관한 법률 10조 4 범죄수익등의 추정#KOBLEX-048160",
+        "provision_text": "2. 「성폭력범죄의 처벌 등에 관한 특례법」 제14조 및 제14조의2의 죄",
+        "rerank_rank": 2,
+        "rerank_score": 0.9999982118606567,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "범죄수익은닉의 규제 및 처벌 등에 관한 법률 10조 4 범죄수익등의 추정 2호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 30,
+        "first_stage_score": 28.550420377831877,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조  목적#KOBLEX-107704",
+        "provision_text": "제1조(목적) 이 영은 「성폭력범죄의 처벌 등에 관한 특례법」에서 위임된 사항과 그 시행에 필요한 사항을 규정함을 목적으로 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9999982118606567,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조  목적",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 73,
+        "first_stage_score": 21.592336544331264,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조 2 성적 목적을 위한 공공장소 침입행위#KOBLEX-107705",
+        "provision_text": "제1조의2(성적 목적을 위한 공공장소 침입행위) 「성폭력범죄의 처벌 등에 관한 특례법」(이하 \"법\"이라 한다) 제12조에서 \"「공중화장실 등에 관한 법률」 제2조제1호부터 제5호까지에 따른 공중화장실 등 및 「공중위생관리법」 제2조제1항제3호에 따른 목욕장업의 목욕장 등 대통령령으로 정하는 공공장소\"란 다음 각 호의 어느 하나에 해당하는 장소를 말한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.9999982118606567,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조 2 성적 목적을 위한 공공장소 침입행위",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 47.400217230336736,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 18조  교육활동 침해행위 관련 보고 사항#KOBLEX-219361",
+        "provision_text": "2. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조제1항에 따른 성폭력범죄 행위인 경우",
+        "rerank_rank": 5,
+        "rerank_score": 0.9999980926513672,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 18조  교육활동 침해행위 관련 보고 사항 2호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 48.30794877573035,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "사립학교법 시행령 24조 5 직위해제 대상 비위행위#KOBLEX-190053",
+        "provision_text": "3. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위",
+        "rerank_rank": 6,
+        "rerank_score": 0.9999980926513672,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "사립학교법 시행령 24조 5 직위해제 대상 비위행위 3호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 42,
+        "first_stage_score": 25.39957473693843,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "아동학대범죄의 처벌 등에 관한 특례법 3조  다른 법률과의 관계#KOBLEX-124230",
+        "provision_text": "제3조(다른 법률과의 관계) 아동학대범죄에 대하여는 이 법을 우선 적용한다. 다만, 「성폭력범죄의 처벌 등에 관한 특례법」, 「아동ㆍ청소년의 성보호에 관한 법률」에서 가중처벌되는 경우에는 그 법에서 정한 바에 따른다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.9999980926513672,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "아동학대범죄의 처벌 등에 관한 특례법 3조  다른 법률과의 관계",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 35.01014784130038,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 18조  정신건강전문요원의 결격사유#KOBLEX-039616",
+        "provision_text": "3. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 또는 「아동ㆍ청소년의 성보호에 관한 법률」 제2조제2호에 따른 아동ㆍ청소년대상 성범죄를 저질러 금고 이상의 실형 또는 치료감호를 선고받고 그 집행이 끝나거나(집행이 끝난 것으로 보는 경우를 포함한다) 집행이 면제되지 아니한 사람",
+        "rerank_rank": 8,
+        "rerank_score": 0.9999980926513672,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 18조  정신건강전문요원의 결격사유 4호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 31.98017344274691,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "장애인복지법 59조 15 피해장애인에 대한 변호사 선임의 특례#KOBLEX-188531",
+        "provision_text": "② 제1항에 따른 변호사에 관하여는 「성폭력범죄의 처벌 등에 관한 특례법」 제27조제2항부터 제6항까지를 준용한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.9999979734420776,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "장애인복지법 59조 15 피해장애인에 대한 변호사 선임의 특례 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 34.45197953410143,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "국가공무원법 33조  결격사유#KOBLEX-073479",
+        "provision_text": "6의4. 미성년자에 대하여 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 또는 「아동ㆍ청소년의 성보호에 관한 법률」 제2조제2호에 따른 아동ㆍ청소년대상 성범죄를 범한 사람으로서 다음 각 목의 어느 하나에 해당하는 날부터 20년이 지나지 아니한 사람",
+        "rerank_rank": 10,
+        "rerank_score": 0.9999978542327881,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "국가공무원법 33조  결격사유 9호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 28,
+        "first_stage_score": 25.43731359302798,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "영유아보육법 21조 2 어린이집의 원장 또는 보육교사 자격 취득의 결격사유#KOBLEX-046589",
+        "provision_text": "3. 성인에 대한 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위로 100만원 이상의 벌금형이나 그 이상의 형 또는 치료감호를 선고받아 그 형 또는 치료감호가 확정된 사람(집행유예를 선고받고 그 집행유예기간이 경과한 사람을 포함한다)",
+        "rerank_rank": 1,
+        "rerank_score": 0.9998958110809326,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "영유아보육법 21조 2 어린이집의 원장 또는 보육교사 자격 취득의 결격사유 3호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 33,
+        "first_stage_score": 25.12214107201941,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "유아교육법 22조 2 교사 자격 취득의 결격사유#KOBLEX-226263",
+        "provision_text": "3. 성인에 대한 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위로 100만원 이상의 벌금형이나 그 이상의 형 또는 치료감호를 선고받아 그 형 또는 치료감호가 확정된 사람(집행유예를 선고받은 후 그 집행유예기간이 경과한 사람을 포함한다)",
+        "rerank_rank": 2,
+        "rerank_score": 0.9998894929885864,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "유아교육법 22조 2 교사 자격 취득의 결격사유 3호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 34,
+        "first_stage_score": 25.12214107201941,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "초ㆍ중등교육법 21조 2 교사 자격 취득의 결격사유#KOBLEX-164863",
+        "provision_text": "3. 성인에 대한 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위로 100만원 이상의 벌금형이나 그 이상의 형 또는 치료감호를 선고받아 그 형 또는 치료감호가 확정된 사람(집행유예를 선고받은 후 그 집행유예기간이 경과한 사람을 포함한다)",
+        "rerank_rank": 3,
+        "rerank_score": 0.9998894929885864,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "초ㆍ중등교육법 21조 2 교사 자격 취득의 결격사유 3호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 41,
+        "first_stage_score": 24.814862762948152,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "교육공무원법 10조 4 결격사유#KOBLEX-217975",
+        "provision_text": "3. 성인에 대한 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위로 파면ㆍ해임되거나 100만원 이상의 벌금형이나 그 이상의 형 또는 치료감호를 선고받아 그 형 또는 치료감호가 확정된 사람(집행유예를 선고받은 후 그 집행유예기간이 지난 사람을 포함한다)",
+        "rerank_rank": 5,
+        "rerank_score": 0.9998295307159424,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "교육공무원법 10조 4 결격사유 3호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 20.702018233416382,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 43조 2 출입국 시 신고의무 등#KOBLEX-157724",
+        "provision_text": "① 등록대상자가 6개월 이상 국외에 체류하기 위하여 출국하는 경우에는 미리 관할경찰관서의 장에게 체류국가 및 체류기간 등을 신고하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9956910014152527,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 43조 2 출입국 시 신고의무 등 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 20.867068140987975,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 43조  신상정보의 제출 의무#KOBLEX-157716",
+        "provision_text": "① 등록대상자는 제42조제1항의 판결이 확정된 날부터 30일 이내에 다음 각 호의 신상정보(이하 \"기본신상정보\"라 한다)를 자신의 주소지를 관할하는 경찰관서의 장(이하 \"관할경찰관서의 장\"이라 한다)에게 제출하여야 한다. 다만, 등록대상자가 교정시설 또는 치료감호시설에 수용된 경우에는 그 교정시설등의 장에게 기본신상정보를 제출함으로써 이를 갈음할 수 있다. <개정 2014.12.30, 2016.12.20, 2024.1.16> 1. 성명 2. 주민등록번호 3. 주소 및 실제거주지 4. 직업 및 직장 등의 소재지 5. 연락처(전화번호, 전자우편주소를 말한다) 6. 신체정보(키와 몸무게) 7. 소유차량의 등록번호",
+        "rerank_rank": 2,
+        "rerank_score": 0.9949043989181519,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 43조  신상정보의 제출 의무 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 70,
+        "first_stage_score": 13.768707011483023,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "공동주택관리법 시행령 96조 3 공동주택 관리비리의 신고 및 확인#KOBLEX-095786",
+        "provision_text": "① 법 제93조의2제3항에 따라 신고를 하려는 자는 다음 각 호의 사항을 포함한 신고서(전자문서를 포함한다)를 신고센터에 제출하여야 한다. 1. 신고자의 성명, 주소, 연락처 등 인적사항 2. 신고대상자의 성명, 주소, 연락처 및 근무기관 등 인적사항 3. 신고자와 신고대상자의 관계 4. 신고의 경위 및 이유 5. 신고 대상 비리행위의 발생일시ㆍ장소 및 그 내용 6. 신고내용을 증명할 수 있는 참고인의 인적사항 또는 증거자료",
+        "rerank_rank": 3,
+        "rerank_score": 0.9948804378509521,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "공동주택관리법 시행령 96조 3 공동주택 관리비리의 신고 및 확인 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 19.91683301186629,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "보안관찰법 18조  신고사항#KOBLEX-215799",
+        "provision_text": "제18조(신고사항)",
+        "rerank_rank": 4,
+        "rerank_score": 0.9935997724533081,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "보안관찰법 18조  신고사항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 27,
+        "first_stage_score": 19.91683301186629,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "주민등록법 10조  신고사항#KOBLEX-196033",
+        "provision_text": "제10조(신고사항)",
+        "rerank_rank": 5,
+        "rerank_score": 0.9935495257377625,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "주민등록법 10조  신고사항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 19.91683301186629,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "보험업법 93조  신고사항#KOBLEX-022119",
+        "provision_text": "제93조(신고사항)",
+        "rerank_rank": 6,
+        "rerank_score": 0.9926676154136658,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "보험업법 93조  신고사항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 55,
+        "first_stage_score": 15.032403142696346,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "군인연금법 55조  신고사항#KOBLEX-150146",
+        "provision_text": "제55조(신고사항) 다음 각 호의 어느 하나에 해당하는 사유나 사실이 있는 경우에는 대통령령으로 정하는 바에 따라 국방부장관에게 신고하여야 한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.9921247363090515,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "군인연금법 55조  신고사항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 24.16560684919976,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 시행령 5조 2 등록정보의 열람 방법 등#KOBLEX-107731",
+        "provision_text": "② 제1항에 따른 등록정보의 열람은 등록대상자 본인 외에는 할 수 없다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.989806592464447,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 시행령 5조 2 등록정보의 열람 방법 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 13.045389026215261,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 시행령 5조  신상정보의 등록 등#KOBLEX-107725",
+        "provision_text": "제5조(신상정보의 등록 등)",
+        "rerank_rank": 9,
+        "rerank_score": 0.9896905422210693,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 시행령 5조  신상정보의 등록 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 98,
+        "first_stage_score": 12.734384826456779,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 시행령 3조  신상정보의 제출 내용 등#KOBLEX-107711",
+        "provision_text": "제3조(신상정보의 제출 내용 등)",
+        "rerank_rank": 10,
+        "rerank_score": 0.9883731007575989,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 시행령 3조  신상정보의 제출 내용 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 48,
+        "first_stage_score": 16.98156980940324,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "조세범 처벌법 16조  해외금융계좌 신고의무 불이행#KOBLEX-205259",
+        "provision_text": "① 「국제조세조정에 관한 법률」 제53조제1항에 따른 계좌신고의무자로서 신고기한 내에 신고하지 아니한 금액이나 과소 신고한 금액(이하 이 항에서 \"신고의무 위반금액\"이라 한다)이 50억원을 초과하는 경우에는 2년 이하의 징역 또는 신고의무 위반금액의 100분의 13 이상 100분의 20 이하에 상당하는 벌금에 처한다. 다만, 정당한 사유가 있는 경우에는 그러하지 아니하다. <개정 2020.12.22>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9181279540061951,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "조세범 처벌법 16조  해외금융계좌 신고의무 불이행 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 49,
+        "first_stage_score": 16.98156980940324,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "조세범 처벌법 16조  해외금융계좌 신고의무 불이행#KOBLEX-219282",
+        "provision_text": "① 「국제조세조정에 관한 법률」 제53조제1항에 따른 계좌신고의무자로서 신고기한 내에 신고하지 아니한 금액이나 과소 신고한 금액(이하 이 항에서 \"신고의무 위반금액\"이라 한다)이 50억원을 초과하는 경우에는 2년 이하의 징역 또는 신고의무 위반금액의 100분의 13 이상 100분의 20 이하에 상당하는 벌금에 처한다. 다만, 정당한 사유가 있는 경우에는 그러하지 아니하다. <개정 2020.12.22>",
+        "rerank_rank": 2,
+        "rerank_score": 0.9181279540061951,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "조세범 처벌법 16조  해외금융계좌 신고의무 불이행 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 72,
+        "first_stage_score": 14.406729603399274,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "선원법 161조  벌칙#KOBLEX-067806",
+        "provision_text": "제161조(벌칙) 제11조를 위반한 사람은 다음 각 호의 구분에 따라 처벌한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.7727658152580261,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "선원법 161조  벌칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 77,
+        "first_stage_score": 14.112390472356633,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "선원법 162조  벌칙#KOBLEX-067811",
+        "provision_text": "제162조(벌칙) 제12조 본문을 위반한 사람은 다음 각 호의 구분에 따라 처벌한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.7569323778152466,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "선원법 162조  벌칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 76,
+        "first_stage_score": 14.126745368284023,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "국세기본법 시행령 66조  불성실기부금수령단체 등의 명단 공개#KOBLEX-030051",
+        "provision_text": "⑮ 법 제85조의5제1항제4호에 따라 해외금융계좌신고의무위반자의 명단을 공개할 때 공개할 사항은 신고의무 위반자(법인인 경우에는 법인 대표자를 포함한다)의 성명ㆍ법인명, 나이, 직업, 주소, 신고의무 위반금액 등으로 한다. <신설 2013.2.15, 2015.2.3, 2016.2.5, 2022.2.15>",
+        "rerank_rank": 5,
+        "rerank_score": 0.7444397807121277,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "국세기본법 시행령 66조  불성실기부금수령단체 등의 명단 공개 15항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 45,
+        "first_stage_score": 17.165180704404534,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 14조  주소 등이 바뀐 경우의 신고의무#KOBLEX-128067",
+        "provision_text": "제14조(주소 등이 바뀐 경우의 신고의무)",
+        "rerank_rank": 6,
+        "rerank_score": 0.7389320731163025,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민사집행법 14조  주소 등이 바뀐 경우의 신고의무",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 34,
+        "first_stage_score": 18.45430886905497,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 185조  송달장소변경의 신고의무#KOBLEX-064018",
+        "provision_text": "제185조(송달장소변경의 신고의무)",
+        "rerank_rank": 7,
+        "rerank_score": 0.7093314528465271,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민사소송법 185조  송달장소변경의 신고의무",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 43,
+        "first_stage_score": 17.57440140897343,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "노인복지법 39조 10 실종노인에 관한 신고의무 등#KOBLEX-040339",
+        "provision_text": "제39조의10(실종노인에 관한 신고의무 등)",
+        "rerank_rank": 8,
+        "rerank_score": 0.7000242471694946,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "노인복지법 39조 10 실종노인에 관한 신고의무 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 44,
+        "first_stage_score": 17.57440140897343,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 43조 2 출입국 시 신고의무 등#KOBLEX-157723",
+        "provision_text": "제43조의2(출입국 시 신고의무 등)",
+        "rerank_rank": 9,
+        "rerank_score": 0.6876551508903503,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 43조 2 출입국 시 신고의무 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 37,
+        "first_stage_score": 18.00361041442744,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "남북 주민 사이의 가족관계와 상속 등에 관한 특례법 17조  (재산관리인의 신고의무 등)#KOBLEX-162133",
+        "provision_text": "제17조(재산관리인의 신고의무 등)",
+        "rerank_rank": 10,
+        "rerank_score": 0.6290403008460999,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "남북 주민 사이의 가족관계와 상속 등에 관한 특례법 17조  (재산관리인의 신고의무 등)",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 8.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 시행령 3조  신상정보의 제출 내용 등#KOBLEX-107715",
+        "provision_text": "④ 관할경찰관서의 장 또는 교정시설등의 장은 제2항에 따라 기본신상정보와 변경정보를 받으면 기재사항 중 빠진 것이 없는지를 확인한 후 제출 일시를 적은 확인서를 지체 없이 등록대상자에게 발급하여야 한다. 이 경우 다음 각 호의 사항이 기재된 안내문을 함께 교부하여야 한다. <개정 2017.6.20> 1. 법 제43조에 따른 신상정보의 제출 의무에 관한 사항 2. 법 제43조의2에 따른 출입국 시 신고의무 등에 관한 사항 3. 법 제44조제2항에 따른 등록정보의 열람 및 통지에 관한 사항 4. 법 제45조의2에 따른 신상정보 등록의 면제에 관한 사항 5. 법 제45조의3제3항에 따른 등록정보 폐기 사실의 열람 및 통지에 관한 사항",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999873638153076,
+        "retrieval_round": 3,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 시행령 3조  신상정보의 제출 내용 등 4항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 7.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 시행령 9조  민감정보 및 고유식별정보의 처리#KOBLEX-107760",
+        "provision_text": "② 법무부장관, 여성가족부장관, 검사, 관할경찰관서의 장, 각급 경찰관서의 장, 교정시설등의 장, 관계 행정기관의 장 또는 사법경찰관은 다음 각 호의 사무를 수행하기 위하여 불가피한 경우 「개인정보 보호법」 제23조에 따른 건강 및 성생활에 관한 정보, 같은 법 시행령 제18조제1호 및 제2호에 따른 유전정보 및 범죄경력자료에 해당하는 정보 및 같은 영 제19조에 따른 주민등록번호, 여권번호, 운전면허의 면허번호 또는 외국인등록번호가 포함된 자료를 처리할 수 있다. <개정 2017.6.20> 1. 삭제 <2024.1.23> 2. 법 제43조의2에 따른 출입국 시 신고의무 등에 관한 사무 3. 법 제44조에 따른 등록대상자의 신상정보 등록 등에 관한 사무 4. 법 제45조에 따른 등록정보의 관리에 관한 사무 5. 법 제45조의2에 따른 신상정보 등록의 면제에 관한 사무 6. 법 제45조의3에 따른 신상정보 등록의 종료에 관한 사무 7. 법 제46조에 따른 등록정보의 활용 등에 관한 사무 8. 법 제47조에 따른 등록정보의 공개에 관한 사무 9. 법 제49조에 따른 등록정보의 고지에 관한 사무 10. 제1호부터 제9호까지의 규정에 따른 사무를 수행하기 위하여 필요한 사무",
+        "rerank_rank": 2,
+        "rerank_score": 0.9999896287918091,
+        "retrieval_round": 3,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 시행령 9조  민감정보 및 고유식별정보의 처리 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 39.15572935978719,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 44조  등록대상자의 신상정보 등록 등#KOBLEX-157728",
+        "provision_text": "제44조(등록대상자의 신상정보 등록 등)",
+        "rerank_rank": 3,
+        "rerank_score": 0.9999189376831055,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 44조  등록대상자의 신상정보 등록 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 9.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 44조  등록대상자의 신상정보 등록 등#KOBLEX-157732",
+        "provision_text": "④ 법무부장관은 등록대상자가 기본신상정보 또는 변경정보를 정당한 사유 없이 제출하지 아니한 경우에는 신상정보의 등록에 필요한 사항을 관계 행정기관의 장에게 조회를 요청하여 등록할 수 있다. 이 경우 법무부장관은 등록일자를 밝혀 등록대상자에게 신상정보를 등록한 사실 및 등록한 신상정보의 내용을 통지하여야 한다. <개정 2016.12.20>",
+        "rerank_rank": 4,
+        "rerank_score": 0.9998005032539368,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 44조  등록대상자의 신상정보 등록 등 4항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 67,
+        "first_stage_score": 7.0,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 42조  신상정보 등록대상자#KOBLEX-157711",
+        "provision_text": "① 제2조제1항제3호ㆍ제4호, 같은 조 제2항(제1항제3호ㆍ제4호에 한정한다), 제3조부터 제15조까지의 범죄 및 「아동ㆍ청소년의 성보호에 관한 법률」 제2조제2호가목ㆍ라목의 범죄(이하 \"등록대상 성범죄\"라 한다)로 유죄판결이나 약식명령이 확정된 자 또는 같은 법 제49조제1항제4호에 따라 공개명령이 확정된 자는 신상정보 등록대상자(이하 \"등록대상자\"라 한다)가 된다. 다만, 제12조ㆍ제13조의 범죄 및 「아동ㆍ청소년의 성보호에 관한 법률」 제11조제3항 및 제5항의 범죄로 벌금형을 선고받은 자는 제외한다. <개정 2016.12.20>",
+        "rerank_rank": 5,
+        "rerank_score": 0.9998020529747009,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 42조  신상정보 등록대상자 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 60,
+        "first_stage_score": 19.502124320967457,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "군형법 44조  항명#KOBLEX-140674",
+        "provision_text": "제44조(항명) 상관의 정당한 명령에 반항하거나 복종하지 아니한 사람은 다음 각 호의 구분에 따라 처벌한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.18701523542404175,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "군형법 44조  항명",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 69,
+        "first_stage_score": 18.736234694732822,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 시행령 6조 4 등록정보 폐기 사실의 통지 방법 및 절차#KOBLEX-107751",
+        "provision_text": "③ 법무부장관은 법 제44조제4항 전단에 따라 등록된 신상정보가 법 제45조의3제2항에 따라 폐기된 경우에는 등기우편으로 해당 등록대상자에게 그 사실을 통지하여야 한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.042602524161338806,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 시행령 6조 4 등록정보 폐기 사실의 통지 방법 및 절차 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 30,
+        "first_stage_score": 40.612522598513436,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "소년법 70조  조회 응답#KOBLEX-190719",
+        "provision_text": "② 제1항을 위반한 자는 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.9999877214431763,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "소년법 70조  조회 응답 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 59,
+        "first_stage_score": 19.708701912197753,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 45조  등록정보의 관리#KOBLEX-157737",
+        "provision_text": "① 법무부장관은 제44조제1항 또는 제4항에 따라 기본신상정보를 최초로 등록한 날(이하 \"최초등록일\"이라 한다)부터 다음 각 호의 구분에 따른 기간(이하 \"등록기간\"이라 한다) 동안 등록정보를 보존ㆍ관리하여야 한다. 다만, 법원이 제4항에 따라 등록기간을 정한 경우에는 그 기간 동안 등록정보를 보존ㆍ관리하여야 한다. 1. 신상정보 등록의 원인이 된 성범죄로 사형, 무기징역ㆍ무기금고형 또는 10년 초과의 징역ㆍ금고형을 선고받은 사람: 30년 2. 신상정보 등록의 원인이 된 성범죄로 3년 초과 10년 이하의 징역ㆍ금고형을 선고받은 사람: 20년 3. 신상정보 등록의 원인이 된 성범죄로 3년 이하의 징역ㆍ금고형을 선고받은 사람 또는 「아동ㆍ청소년의 성보호에 관한 법률」 제49조제1항제4호에 따라 공개명령이 확정된 사람: 15년 4. 신상정보 등록의 원인이 된 성범죄로 벌금형을 선고받은 사람: 10년",
+        "rerank_rank": 10,
+        "rerank_score": 0.041026607155799866,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 45조  등록정보의 관리 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공동주택관리법 시행령 96조 3 공동주택 관리비리의 신고 및 확인#KOBLEX-095786": "① 법 제93조의2제3항에 따라 신고를 하려는 자는 다음 각 호의 사항을 포함한 신고서(전자문서를 포함한다)를 신고센터에 제출하여야 한다. 1. 신고자의 성명, 주소, 연락처 등 인적사항 2. 신고대상자의 성명, 주소, 연락처 및 근무기관 등 인적사항 3. 신고자와 신고대상자의 관계 4. 신고의 경위 및 이유 5. 신고 대상 비리행위의 발생일시ㆍ장소 및 그 내용 6. 신고내용을 증명할 수 있는 참고인의 인적사항 또는 증거자료",
+      "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 18조  교육활동 침해행위 관련 보고 사항#KOBLEX-219361": "2. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조제1항에 따른 성폭력범죄 행위인 경우",
+      "교육공무원법 10조 4 결격사유#KOBLEX-217975": "3. 성인에 대한 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위로 파면ㆍ해임되거나 100만원 이상의 벌금형이나 그 이상의 형 또는 치료감호를 선고받아 그 형 또는 치료감호가 확정된 사람(집행유예를 선고받은 후 그 집행유예기간이 지난 사람을 포함한다)",
+      "국가공무원법 33조  결격사유#KOBLEX-073479": "6의4. 미성년자에 대하여 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 또는 「아동ㆍ청소년의 성보호에 관한 법률」 제2조제2호에 따른 아동ㆍ청소년대상 성범죄를 범한 사람으로서 다음 각 목의 어느 하나에 해당하는 날부터 20년이 지나지 아니한 사람",
+      "국세기본법 시행령 66조  불성실기부금수령단체 등의 명단 공개#KOBLEX-030051": "⑮ 법 제85조의5제1항제4호에 따라 해외금융계좌신고의무위반자의 명단을 공개할 때 공개할 사항은 신고의무 위반자(법인인 경우에는 법인 대표자를 포함한다)의 성명ㆍ법인명, 나이, 직업, 주소, 신고의무 위반금액 등으로 한다. <신설 2013.2.15, 2015.2.3, 2016.2.5, 2022.2.15>",
+      "군인연금법 55조  신고사항#KOBLEX-150146": "제55조(신고사항) 다음 각 호의 어느 하나에 해당하는 사유나 사실이 있는 경우에는 대통령령으로 정하는 바에 따라 국방부장관에게 신고하여야 한다.",
+      "군형법 44조  항명#KOBLEX-140674": "제44조(항명) 상관의 정당한 명령에 반항하거나 복종하지 아니한 사람은 다음 각 호의 구분에 따라 처벌한다.",
+      "남북 주민 사이의 가족관계와 상속 등에 관한 특례법 17조  (재산관리인의 신고의무 등)#KOBLEX-162133": "제17조(재산관리인의 신고의무 등)",
+      "노인복지법 39조 10 실종노인에 관한 신고의무 등#KOBLEX-040339": "제39조의10(실종노인에 관한 신고의무 등)",
+      "민사소송법 185조  송달장소변경의 신고의무#KOBLEX-064018": "제185조(송달장소변경의 신고의무)",
+      "민사집행법 14조  주소 등이 바뀐 경우의 신고의무#KOBLEX-128067": "제14조(주소 등이 바뀐 경우의 신고의무)",
+      "범죄수익은닉의 규제 및 처벌 등에 관한 법률 10조 4 범죄수익등의 추정#KOBLEX-048160": "2. 「성폭력범죄의 처벌 등에 관한 특례법」 제14조 및 제14조의2의 죄",
+      "보안관찰법 18조  신고사항#KOBLEX-215799": "제18조(신고사항)",
+      "보험업법 93조  신고사항#KOBLEX-022119": "제93조(신고사항)",
+      "사립학교법 시행령 24조 5 직위해제 대상 비위행위#KOBLEX-190053": "3. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위",
+      "선원법 161조  벌칙#KOBLEX-067806": "제161조(벌칙) 제11조를 위반한 사람은 다음 각 호의 구분에 따라 처벌한다.",
+      "선원법 162조  벌칙#KOBLEX-067811": "제162조(벌칙) 제12조 본문을 위반한 사람은 다음 각 호의 구분에 따라 처벌한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 42조  신상정보 등록대상자#KOBLEX-157711": "① 제2조제1항제3호ㆍ제4호, 같은 조 제2항(제1항제3호ㆍ제4호에 한정한다), 제3조부터 제15조까지의 범죄 및 「아동ㆍ청소년의 성보호에 관한 법률」 제2조제2호가목ㆍ라목의 범죄(이하 \"등록대상 성범죄\"라 한다)로 유죄판결이나 약식명령이 확정된 자 또는 같은 법 제49조제1항제4호에 따라 공개명령이 확정된 자는 신상정보 등록대상자(이하 \"등록대상자\"라 한다)가 된다. 다만, 제12조ㆍ제13조의 범죄 및 「아동ㆍ청소년의 성보호에 관한 법률」 제11조제3항 및 제5항의 범죄로 벌금형을 선고받은 자는 제외한다. <개정 2016.12.20>",
+      "성폭력범죄의 처벌 등에 관한 특례법 43조  신상정보의 제출 의무#KOBLEX-157716": "① 등록대상자는 제42조제1항의 판결이 확정된 날부터 30일 이내에 다음 각 호의 신상정보(이하 \"기본신상정보\"라 한다)를 자신의 주소지를 관할하는 경찰관서의 장(이하 \"관할경찰관서의 장\"이라 한다)에게 제출하여야 한다. 다만, 등록대상자가 교정시설 또는 치료감호시설에 수용된 경우에는 그 교정시설등의 장에게 기본신상정보를 제출함으로써 이를 갈음할 수 있다. <개정 2014.12.30, 2016.12.20, 2024.1.16> 1. 성명 2. 주민등록번호 3. 주소 및 실제거주지 4. 직업 및 직장 등의 소재지 5. 연락처(전화번호, 전자우편주소를 말한다) 6. 신체정보(키와 몸무게) 7. 소유차량의 등록번호",
+      "성폭력범죄의 처벌 등에 관한 특례법 43조 2 출입국 시 신고의무 등#KOBLEX-157723": "제43조의2(출입국 시 신고의무 등)",
+      "성폭력범죄의 처벌 등에 관한 특례법 43조 2 출입국 시 신고의무 등#KOBLEX-157724": "① 등록대상자가 6개월 이상 국외에 체류하기 위하여 출국하는 경우에는 미리 관할경찰관서의 장에게 체류국가 및 체류기간 등을 신고하여야 한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 44조  등록대상자의 신상정보 등록 등#KOBLEX-157728": "제44조(등록대상자의 신상정보 등록 등)",
+      "성폭력범죄의 처벌 등에 관한 특례법 44조  등록대상자의 신상정보 등록 등#KOBLEX-157732": "④ 법무부장관은 등록대상자가 기본신상정보 또는 변경정보를 정당한 사유 없이 제출하지 아니한 경우에는 신상정보의 등록에 필요한 사항을 관계 행정기관의 장에게 조회를 요청하여 등록할 수 있다. 이 경우 법무부장관은 등록일자를 밝혀 등록대상자에게 신상정보를 등록한 사실 및 등록한 신상정보의 내용을 통지하여야 한다. <개정 2016.12.20>",
+      "성폭력범죄의 처벌 등에 관한 특례법 45조  등록정보의 관리#KOBLEX-157737": "① 법무부장관은 제44조제1항 또는 제4항에 따라 기본신상정보를 최초로 등록한 날(이하 \"최초등록일\"이라 한다)부터 다음 각 호의 구분에 따른 기간(이하 \"등록기간\"이라 한다) 동안 등록정보를 보존ㆍ관리하여야 한다. 다만, 법원이 제4항에 따라 등록기간을 정한 경우에는 그 기간 동안 등록정보를 보존ㆍ관리하여야 한다. 1. 신상정보 등록의 원인이 된 성범죄로 사형, 무기징역ㆍ무기금고형 또는 10년 초과의 징역ㆍ금고형을 선고받은 사람: 30년 2. 신상정보 등록의 원인이 된 성범죄로 3년 초과 10년 이하의 징역ㆍ금고형을 선고받은 사람: 20년 3. 신상정보 등록의 원인이 된 성범죄로 3년 이하의 징역ㆍ금고형을 선고받은 사람 또는 「아동ㆍ청소년의 성보호에 관한 법률」 제49조제1항제4호에 따라 공개명령이 확정된 사람: 15년 4. 신상정보 등록의 원인이 된 성범죄로 벌금형을 선고받은 사람: 10년",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조  목적#KOBLEX-107704": "제1조(목적) 이 영은 「성폭력범죄의 처벌 등에 관한 특례법」에서 위임된 사항과 그 시행에 필요한 사항을 규정함을 목적으로 한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조 2 성적 목적을 위한 공공장소 침입행위#KOBLEX-107705": "제1조의2(성적 목적을 위한 공공장소 침입행위) 「성폭력범죄의 처벌 등에 관한 특례법」(이하 \"법\"이라 한다) 제12조에서 \"「공중화장실 등에 관한 법률」 제2조제1호부터 제5호까지에 따른 공중화장실 등 및 「공중위생관리법」 제2조제1항제3호에 따른 목욕장업의 목욕장 등 대통령령으로 정하는 공공장소\"란 다음 각 호의 어느 하나에 해당하는 장소를 말한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 3조  신상정보의 제출 내용 등#KOBLEX-107711": "제3조(신상정보의 제출 내용 등)",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 3조  신상정보의 제출 내용 등#KOBLEX-107715": "④ 관할경찰관서의 장 또는 교정시설등의 장은 제2항에 따라 기본신상정보와 변경정보를 받으면 기재사항 중 빠진 것이 없는지를 확인한 후 제출 일시를 적은 확인서를 지체 없이 등록대상자에게 발급하여야 한다. 이 경우 다음 각 호의 사항이 기재된 안내문을 함께 교부하여야 한다. <개정 2017.6.20> 1. 법 제43조에 따른 신상정보의 제출 의무에 관한 사항 2. 법 제43조의2에 따른 출입국 시 신고의무 등에 관한 사항 3. 법 제44조제2항에 따른 등록정보의 열람 및 통지에 관한 사항 4. 법 제45조의2에 따른 신상정보 등록의 면제에 관한 사항 5. 법 제45조의3제3항에 따른 등록정보 폐기 사실의 열람 및 통지에 관한 사항",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 5조  신상정보의 등록 등#KOBLEX-107725": "제5조(신상정보의 등록 등)",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 5조 2 등록정보의 열람 방법 등#KOBLEX-107731": "② 제1항에 따른 등록정보의 열람은 등록대상자 본인 외에는 할 수 없다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 6조 4 등록정보 폐기 사실의 통지 방법 및 절차#KOBLEX-107751": "③ 법무부장관은 법 제44조제4항 전단에 따라 등록된 신상정보가 법 제45조의3제2항에 따라 폐기된 경우에는 등기우편으로 해당 등록대상자에게 그 사실을 통지하여야 한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 9조  민감정보 및 고유식별정보의 처리#KOBLEX-107760": "② 법무부장관, 여성가족부장관, 검사, 관할경찰관서의 장, 각급 경찰관서의 장, 교정시설등의 장, 관계 행정기관의 장 또는 사법경찰관은 다음 각 호의 사무를 수행하기 위하여 불가피한 경우 「개인정보 보호법」 제23조에 따른 건강 및 성생활에 관한 정보, 같은 법 시행령 제18조제1호 및 제2호에 따른 유전정보 및 범죄경력자료에 해당하는 정보 및 같은 영 제19조에 따른 주민등록번호, 여권번호, 운전면허의 면허번호 또는 외국인등록번호가 포함된 자료를 처리할 수 있다. <개정 2017.6.20> 1. 삭제 <2024.1.23> 2. 법 제43조의2에 따른 출입국 시 신고의무 등에 관한 사무 3. 법 제44조에 따른 등록대상자의 신상정보 등록 등에 관한 사무 4. 법 제45조에 따른 등록정보의 관리에 관한 사무 5. 법 제45조의2에 따른 신상정보 등록의 면제에 관한 사무 6. 법 제45조의3에 따른 신상정보 등록의 종료에 관한 사무 7. 법 제46조에 따른 등록정보의 활용 등에 관한 사무 8. 법 제47조에 따른 등록정보의 공개에 관한 사무 9. 법 제49조에 따른 등록정보의 고지에 관한 사무 10. 제1호부터 제9호까지의 규정에 따른 사무를 수행하기 위하여 필요한 사무",
+      "소년법 70조  조회 응답#KOBLEX-190719": "② 제1항을 위반한 자는 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+      "아동학대범죄의 처벌 등에 관한 특례법 3조  다른 법률과의 관계#KOBLEX-124230": "제3조(다른 법률과의 관계) 아동학대범죄에 대하여는 이 법을 우선 적용한다. 다만, 「성폭력범죄의 처벌 등에 관한 특례법」, 「아동ㆍ청소년의 성보호에 관한 법률」에서 가중처벌되는 경우에는 그 법에서 정한 바에 따른다.",
+      "영유아보육법 21조 2 어린이집의 원장 또는 보육교사 자격 취득의 결격사유#KOBLEX-046589": "3. 성인에 대한 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위로 100만원 이상의 벌금형이나 그 이상의 형 또는 치료감호를 선고받아 그 형 또는 치료감호가 확정된 사람(집행유예를 선고받고 그 집행유예기간이 경과한 사람을 포함한다)",
+      "유아교육법 22조 2 교사 자격 취득의 결격사유#KOBLEX-226263": "3. 성인에 대한 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위로 100만원 이상의 벌금형이나 그 이상의 형 또는 치료감호를 선고받아 그 형 또는 치료감호가 확정된 사람(집행유예를 선고받은 후 그 집행유예기간이 경과한 사람을 포함한다)",
+      "장애인복지법 59조 15 피해장애인에 대한 변호사 선임의 특례#KOBLEX-188531": "② 제1항에 따른 변호사에 관하여는 「성폭력범죄의 처벌 등에 관한 특례법」 제27조제2항부터 제6항까지를 준용한다.",
+      "장애인활동 지원에 관한 법률 29조  활동지원인력의 결격 사유#KOBLEX-074510": "5. 「성폭력범죄의 처벌 등에 관한 특례법」 제3조부터 제10조까지 및 제15조(같은 법 제3조부터 제9조까지의 미수범으로 한정한다)에 규정된 죄로 금고 이상의 형을 선고받은 사람",
+      "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 18조  정신건강전문요원의 결격사유#KOBLEX-039616": "3. 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 또는 「아동ㆍ청소년의 성보호에 관한 법률」 제2조제2호에 따른 아동ㆍ청소년대상 성범죄를 저질러 금고 이상의 실형 또는 치료감호를 선고받고 그 집행이 끝나거나(집행이 끝난 것으로 보는 경우를 포함한다) 집행이 면제되지 아니한 사람",
+      "조세범 처벌법 16조  해외금융계좌 신고의무 불이행#KOBLEX-205259": "① 「국제조세조정에 관한 법률」 제53조제1항에 따른 계좌신고의무자로서 신고기한 내에 신고하지 아니한 금액이나 과소 신고한 금액(이하 이 항에서 \"신고의무 위반금액\"이라 한다)이 50억원을 초과하는 경우에는 2년 이하의 징역 또는 신고의무 위반금액의 100분의 13 이상 100분의 20 이하에 상당하는 벌금에 처한다. 다만, 정당한 사유가 있는 경우에는 그러하지 아니하다. <개정 2020.12.22>",
+      "조세범 처벌법 16조  해외금융계좌 신고의무 불이행#KOBLEX-219282": "① 「국제조세조정에 관한 법률」 제53조제1항에 따른 계좌신고의무자로서 신고기한 내에 신고하지 아니한 금액이나 과소 신고한 금액(이하 이 항에서 \"신고의무 위반금액\"이라 한다)이 50억원을 초과하는 경우에는 2년 이하의 징역 또는 신고의무 위반금액의 100분의 13 이상 100분의 20 이하에 상당하는 벌금에 처한다. 다만, 정당한 사유가 있는 경우에는 그러하지 아니하다. <개정 2020.12.22>",
+      "주민등록법 10조  신고사항#KOBLEX-196033": "제10조(신고사항)",
+      "초ㆍ중등교육법 21조 2 교사 자격 취득의 결격사유#KOBLEX-164863": "3. 성인에 대한 「성폭력범죄의 처벌 등에 관한 특례법」 제2조에 따른 성폭력범죄 행위로 100만원 이상의 벌금형이나 그 이상의 형 또는 치료감호를 선고받아 그 형 또는 치료감호가 확정된 사람(집행유예를 선고받은 후 그 집행유예기간이 경과한 사람을 포함한다)"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "성폭력범죄의 처벌 등에 관한 특례법 43조 2 출입국 시 신고의무 등#KOBLEX-157724"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "The supplied provision C015 clearly establishes the pre-departure reporting obligation for overseas stays of 6 months or more, specifying the required information (country of stay, duration) and the timing (in advance). This fully satisfies the completion criteria for E1.",
+        "status": "covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "Criminal penalty (imprisonment term or fine amount) for failure to report overseas stay information without justifiable cause"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "None of the supplied candidate provisions contain the specific penal provision (criminal punishment such as imprisonment or fine) for failing to fulfill the pre-departure reporting obligation without justifiable cause. C015 establishes the duty but does not specify the penalty. Other candidates are irrelevant to this specific penalty.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 43조 2 출입국 시 신고의무 등#KOBLEX-157724",
+        "support_spans": [
+          {
+            "end_char": 78,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 9,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "성폭력범죄 신상정보 등록대상자가 6개월 이상 국외 체류를 계획할 때 사전 신고해야 할 정보의 범위와 대상",
+        "issue_id": "I1"
+      },
+      {
+        "description": "사전 신고 의무를 정당한 사유 없이 이행하지 않을 경우의 형사처벌 내용",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "의무 위반 시 적용되는 구체적인 형사처벌 내용을 확인할 수 있어야 함",
+        "critical": true,
+        "description": "사전 신고 의무를 정당한 사유 없이 이행하지 않은 자에 대한 벌칙(형량, 벌금 등)을 규정한 조항",
+        "evidence_item_id": "E2",
+        "evidence_type": "remedy",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 을은 성폭력 범죄로 인해 신상정보 등록대상자가 되었고, 현재 기본신상정보를 관할 경찰관서에 등록 중이다. 최근 을은 외국 유학을 이유로 6개월 이상 해외에 체류할 계획을 세우고 있다. 출국을 앞둔 을은 관련 법령상 어떤 정보들을 신고해야 하는지, 그리고 이를 이행하지 않을 경우 어떤 처벌을 받을 수 있는지에 대해 경찰에 문의하였다. [질문] 성폭력범죄로 인해 신상정보 등록대상자가 된 을이 6개월 이상 국외에 체류하려는 경우, 사전에 어떤 신상정보를 관할 경찰관서에 신고해야 하며, 이를 정당한 사유 없이 이행하지 않았을 경우 어떤 처벌을 받게 되는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "성폭력범죄",
+          "신상정보",
+          "국외체류",
+          "사전신고",
+          "등록대상자"
+        ],
+        "query_text": "성폭력범죄의 처벌 등에 관한 특례법 신상정보 등록대상자 6개월 이상 국외 체류 사전 신고 정보 [원문 맥락] 출국을 앞둔 을은 관련 법령상 어떤 정보들을 신고해야 하는지, 그리고 이를 이행하지 않을 경우 어떤 처벌을 받을 수 있는지에 대해 경찰에 문의하였다. 성폭력범죄로 인해 신상정보 등록대상자가 된 을이 6개월 이상 국외에 체류하려는 경우, 사전에 어떤 신상정보를 관할 경찰관서에 신고해야 하며, 이를 정당한 사유 없이 이행하지 않았을 경우 어떤 처벌을 받게 되는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "신상정보",
+          "신고의무",
+          "위반",
+          "벌칙",
+          "형사처벌"
+        ],
+        "query_text": "성폭력범죄의 처벌 등에 관한 특례법 신상정보 등록대상자 국외 체류 신고 의무 위반 벌칙 [원문 맥락] 출국을 앞둔 을은 관련 법령상 어떤 정보들을 신고해야 하는지, 그리고 이를 이행하지 않을 경우 어떤 처벌을 받을 수 있는지에 대해 경찰에 문의하였다. 성폭력범죄로 인해 신상정보 등록대상자가 된 을이 6개월 이상 국외에 체류하려는 경우, 사전에 어떤 신상정보를 관할 경찰관서에 신고해야 하며, 이를 정당한 사유 없이 이행하지 않았을 경우 어떤 처벌을 받게 되는가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "신상정보",
+          "국외체류",
+          "신고사항",
+          "등록대상자",
+          "거주지",
+          "연락처"
+        ],
+        "query_text": "신상정보 등록대상자 국외체류 신고사항 [원문 맥락] 출국을 앞둔 을은 관련 법령상 어떤 정보들을 신고해야 하는지, 그리고 이를 이행하지 않을 경우 어떤 처벌을 받을 수 있는지에 대해 경찰에 문의하였다. 성폭력범죄로 인해 신상정보 등록대상자가 된 을이 6개월 이상 국외에 체류하려는 경우, 사전에 어떤 신상정보를 관할 경찰관서에 신고해야 하며, 이를 정당한 사유 없이 이행하지 않았을 경우 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ-R2-1",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "신상정보",
+          "국외체류",
+          "신고의무",
+          "위반",
+          "벌칙",
+          "형사처벌"
+        ],
+        "query_text": "신상정보 등록대상자 국외체류 신고의무 위반 벌칙 [원문 맥락] 출국을 앞둔 을은 관련 법령상 어떤 정보들을 신고해야 하는지, 그리고 이를 이행하지 않을 경우 어떤 처벌을 받을 수 있는지에 대해 경찰에 문의하였다. 성폭력범죄로 인해 신상정보 등록대상자가 된 을이 6개월 이상 국외에 체류하려는 경우, 사전에 어떤 신상정보를 관할 경찰관서에 신고해야 하며, 이를 정당한 사유 없이 이행하지 않았을 경우 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ-R2-2",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "신상정보",
+          "출입국",
+          "신고의무",
+          "위반",
+          "벌칙",
+          "징역",
+          "벌금"
+        ],
+        "query_text": "성폭력범죄 신상정보 등록대상자가 출입국 시 신고의무를 정당한 사유 없이 이행하지 아니한 자는 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다 [원문 맥락] 출국을 앞둔 을은 관련 법령상 어떤 정보들을 신고해야 하는지, 그리고 이를 이행하지 않을 경우 어떤 처벌을 받을 수 있는지에 대해 경찰에 문의하였다. 성폭력범죄로 인해 신상정보 등록대상자가 된 을이 6개월 이상 국외에 체류하려는 경우, 사전에 어떤 신상정보를 관할 경찰관서에 신고해야 하며, 이를 정당한 사유 없이 이행하지 않았을 경우 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ-R3-1",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "성폭력범죄",
+          "특례법",
+          "제44조",
+          "벌칙",
+          "신상정보",
+          "제출의무",
+          "위반"
+        ],
+        "query_text": "성폭력범죄 특례법 제44조 벌칙 신상정보 제출 의무 위반 [원문 맥락] 출국을 앞둔 을은 관련 법령상 어떤 정보들을 신고해야 하는지, 그리고 이를 이행하지 않을 경우 어떤 처벌을 받을 수 있는지에 대해 경찰에 문의하였다. 성폭력범죄로 인해 신상정보 등록대상자가 된 을이 6개월 이상 국외에 체류하려는 경우, 사전에 어떤 신상정보를 관할 경찰관서에 신고해야 하며, 이를 정당한 사유 없이 이행하지 않았을 경우 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ-R3-2",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n을은 성폭력 범죄로 인해 신상정보 등록대상자가 되었고, 현재 기본신상정보를 관할 경찰관서에 등록 중이다. 최근 을은 외국 유학을 이유로 6개월 이상 해외에 체류할 계획을 세우고 있다. 출국을 앞둔 을은 관련 법령상 어떤 정보들을 신고해야 하는지, 그리고 이를 이행하지 않을 경우 어떤 처벌을 받을 수 있는지에 대해 경찰에 문의하였다.\n\n[질문]\n성폭력범죄로 인해 신상정보 등록대상자가 된 을이 6개월 이상 국외에 체류하려는 경우, 사전에 어떤 신상정보를 관할 경찰관서에 신고해야 하며, 이를 정당한 사유 없이 이행하지 않았을 경우 어떤 처벌을 받게 되는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "6개월 이상 국외 체류 시 신고해야 할 정보 항목과 신고 시점(사전)을 명확히 확인할 수 있어야 함",
+        "critical": true,
+        "description": "성폭력범죄 신상정보 등록대상자의 국외 체류(6개월 이상) 시 사전 신고 의무 및 신고 대상 정보(거주지, 연락처, 체류 기간 등)를 규정한 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "의무 위반 시 적용되는 구체적인 형사처벌 내용을 확인할 수 있어야 함",
+        "critical": true,
+        "description": "사전 신고 의무를 정당한 사유 없이 이행하지 않은 자에 대한 벌칙(형량, 벌금 등)을 규정한 조항",
+        "evidence_item_id": "E2",
+        "evidence_type": "remedy",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "17c64a2d-c33b-4b95-9aff-04a22c3c7057",
+    "seen_provision_ids": [
+      "정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률 18조  정신건강전문요원의 결격사유#KOBLEX-039616",
+      "남북 주민 사이의 가족관계와 상속 등에 관한 특례법 17조  (재산관리인의 신고의무 등)#KOBLEX-162133",
+      "아동학대범죄의 처벌 등에 관한 특례법 3조  다른 법률과의 관계#KOBLEX-124230",
+      "보안관찰법 18조  신고사항#KOBLEX-215799",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 3조  신상정보의 제출 내용 등#KOBLEX-107711",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 6조 4 등록정보 폐기 사실의 통지 방법 및 절차#KOBLEX-107751",
+      "민사집행법 14조  주소 등이 바뀐 경우의 신고의무#KOBLEX-128067",
+      "성폭력범죄의 처벌 등에 관한 특례법 45조  등록정보의 관리#KOBLEX-157737",
+      "노인복지법 39조 10 실종노인에 관한 신고의무 등#KOBLEX-040339",
+      "조세범 처벌법 16조  해외금융계좌 신고의무 불이행#KOBLEX-205259",
+      "교육공무원법 10조 4 결격사유#KOBLEX-217975",
+      "소년법 70조  조회 응답#KOBLEX-190719",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조 2 성적 목적을 위한 공공장소 침입행위#KOBLEX-107705",
+      "성폭력범죄의 처벌 등에 관한 특례법 44조  등록대상자의 신상정보 등록 등#KOBLEX-157732",
+      "성폭력범죄의 처벌 등에 관한 특례법 43조 2 출입국 시 신고의무 등#KOBLEX-157723",
+      "성폭력범죄의 처벌 등에 관한 특례법 43조 2 출입국 시 신고의무 등#KOBLEX-157724",
+      "조세범 처벌법 16조  해외금융계좌 신고의무 불이행#KOBLEX-219282",
+      "보험업법 93조  신고사항#KOBLEX-022119",
+      "사립학교법 시행령 24조 5 직위해제 대상 비위행위#KOBLEX-190053",
+      "공동주택관리법 시행령 96조 3 공동주택 관리비리의 신고 및 확인#KOBLEX-095786",
+      "국세기본법 시행령 66조  불성실기부금수령단체 등의 명단 공개#KOBLEX-030051",
+      "장애인활동 지원에 관한 법률 29조  활동지원인력의 결격 사유#KOBLEX-074510",
+      "민사소송법 185조  송달장소변경의 신고의무#KOBLEX-064018",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 3조  신상정보의 제출 내용 등#KOBLEX-107715",
+      "초ㆍ중등교육법 21조 2 교사 자격 취득의 결격사유#KOBLEX-164863",
+      "성폭력범죄의 처벌 등에 관한 특례법 44조  등록대상자의 신상정보 등록 등#KOBLEX-157728",
+      "영유아보육법 21조 2 어린이집의 원장 또는 보육교사 자격 취득의 결격사유#KOBLEX-046589",
+      "군인연금법 55조  신고사항#KOBLEX-150146",
+      "성폭력범죄의 처벌 등에 관한 특례법 42조  신상정보 등록대상자#KOBLEX-157711",
+      "군형법 44조  항명#KOBLEX-140674",
+      "범죄수익은닉의 규제 및 처벌 등에 관한 법률 10조 4 범죄수익등의 추정#KOBLEX-048160",
+      "유아교육법 22조 2 교사 자격 취득의 결격사유#KOBLEX-226263",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 5조 2 등록정보의 열람 방법 등#KOBLEX-107731",
+      "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 18조  교육활동 침해행위 관련 보고 사항#KOBLEX-219361",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 5조  신상정보의 등록 등#KOBLEX-107725",
+      "선원법 162조  벌칙#KOBLEX-067811",
+      "주민등록법 10조  신고사항#KOBLEX-196033",
+      "선원법 161조  벌칙#KOBLEX-067806",
+      "국가공무원법 33조  결격사유#KOBLEX-073479",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 9조  민감정보 및 고유식별정보의 처리#KOBLEX-107760",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조  목적#KOBLEX-107704",
+      "성폭력범죄의 처벌 등에 관한 특례법 43조  신상정보의 제출 의무#KOBLEX-157716",
+      "장애인복지법 59조 15 피해장애인에 대한 변호사 선임의 특례#KOBLEX-188531"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

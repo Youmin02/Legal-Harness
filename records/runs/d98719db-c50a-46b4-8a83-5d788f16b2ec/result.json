@@ -1,0 +1,946 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-18T17:30:54.591225+00:00",
+  "end_to_end_latency_ms": 323379.85,
+  "errors": [],
+  "record_schema_version": "1.1",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 400,
+      "evidence_fusion": 400,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "rrf": 400,
+      "selected": 40
+    }
+  },
+  "run_id": "d98719db-c50a-46b4-8a83-5d788f16b2ec",
+  "state": {
+    "accepted_provision_ids": [
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075416",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075415"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 15,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 5,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 3,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 43.435428458133536,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075415",
+        "provision_text": "④ 소장은 제1항 또는 제2항에 따라 수용자가 외부의료시설에서 진료받거나 치료감호시설로 이송되면 그 사실을 그 가족(가족이 없는 경우에는 수용자가 지정하는 사람)에게 지체 없이 알려야 한다. 다만, 수용자가 알리는 것을 원하지 아니하면 그러하지 아니하다. <개정 2020.2.4>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999738931655884,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등 4항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 43.435428458133536,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213602",
+        "provision_text": "④ 소장은 제1항 또는 제2항에 따라 수용자가 외부의료시설에서 진료받거나 치료감호시설로 이송되면 그 사실을 그 가족(가족이 없는 경우에는 수용자가 지정하는 사람)에게 지체 없이 알려야 한다. 다만, 수용자가 알리는 것을 원하지 아니하면 그러하지 아니하다. <개정 2020.2.4>",
+        "rerank_rank": 2,
+        "rerank_score": 0.9999738931655884,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등 4항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 43.51345600387596,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075416",
+        "provision_text": "⑤ 소장은 수용자가 자신의 고의 또는 중대한 과실로 부상 등이 발생하여 외부의료시설에서 진료를 받은 경우에는 그 진료비의 전부 또는 일부를 그 수용자에게 부담하게 할 수 있다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9999717473983765,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등 5항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 43.51345600387596,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213603",
+        "provision_text": "⑤ 소장은 수용자가 자신의 고의 또는 중대한 과실로 부상 등이 발생하여 외부의료시설에서 진료를 받은 경우에는 그 진료비의 전부 또는 일부를 그 수용자에게 부담하게 할 수 있다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.9999717473983765,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등 5항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 51,
+        "first_stage_score": 19.653931382771376,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "방송법 시행령 39조  등록이 면제되는 수상기#KOBLEX-233262",
+        "provision_text": "11. 교도소의 수용자 또는 소년원 원생의 시청을 위해 갖추고 있는 수상기",
+        "rerank_rank": 5,
+        "rerank_score": 0.9999604225158691,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "방송법 시행령 39조  등록이 면제되는 수상기 11호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 43,
+        "first_stage_score": 20.29447458062659,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 2조  정의#KOBLEX-075297",
+        "provision_text": "1. \"수용자\"란 수형자ㆍ미결수용자ㆍ사형확정자 등 법률과 적법한 절차에 따라 교도소ㆍ구치소 및 그 지소(이하 \"교정시설\"이라 한다)에 수용된 사람을 말한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.9999489784240723,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 2조  정의 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 44,
+        "first_stage_score": 20.29447458062659,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 2조  정의#KOBLEX-213484",
+        "provision_text": "1. \"수용자\"란 수형자ㆍ미결수용자ㆍ사형확정자 등 법률과 적법한 절차에 따라 교도소ㆍ구치소 및 그 지소(이하 \"교정시설\"이라 한다)에 수용된 사람을 말한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.9999489784240723,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 2조  정의 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 25.851235070318044,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 21조  수용사실의 알림#KOBLEX-075365",
+        "provision_text": "제21조(수용사실의 알림) 소장은 신입자 또는 다른 교정시설로부터 이송되어 온 사람이 있으면 그 사실을 수용자의 가족(배우자, 직계 존속ㆍ비속 또는 형제자매를 말한다. 이하 같다)에게 지체 없이 알려야 한다. 다만, 수용자가 알리는 것을 원하지 아니하면 그러하지 아니하다. <개정 2020.2.4>",
+        "rerank_rank": 8,
+        "rerank_score": 0.9999369382858276,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 21조  수용사실의 알림",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 25.851235070318044,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 21조  수용사실의 알림#KOBLEX-213552",
+        "provision_text": "제21조(수용사실의 알림) 소장은 신입자 또는 다른 교정시설로부터 이송되어 온 사람이 있으면 그 사실을 수용자의 가족(배우자, 직계 존속ㆍ비속 또는 형제자매를 말한다. 이하 같다)에게 지체 없이 알려야 한다. 다만, 수용자가 알리는 것을 원하지 아니하면 그러하지 아니하다. <개정 2020.2.4>",
+        "rerank_rank": 9,
+        "rerank_score": 0.9999369382858276,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 21조  수용사실의 알림",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 36,
+        "first_stage_score": 21.000971880336415,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 41조  접견#KOBLEX-075432",
+        "provision_text": "⑤ 제4항에 따라 녹음ㆍ녹화하는 경우에는 사전에 수용자 및 그 상대방에게 그 사실을 알려 주어야 한다. <개정 2019.4.23>",
+        "rerank_rank": 10,
+        "rerank_score": 0.99992835521698,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 41조  접견 5항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 31,
+        "first_stage_score": 21.000971880336415,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 41조  접견#KOBLEX-213619",
+        "provision_text": "⑤ 제4항에 따라 녹음ㆍ녹화하는 경우에는 사전에 수용자 및 그 상대방에게 그 사실을 알려 주어야 한다. <개정 2019.4.23>",
+        "rerank_rank": 6,
+        "rerank_score": 0.9999086856842041,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 41조  접견 5항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 22.190918040228386,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 44조  전화통화#KOBLEX-075454",
+        "provision_text": "④ 제2항에 따라 통화내용을 청취 또는 녹음하려면 사전에 수용자 및 상대방에게 그 사실을 알려 주어야 한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.9998950958251953,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 44조  전화통화 4항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 22.190918040228386,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 44조  전화통화#KOBLEX-213641",
+        "provision_text": "④ 제2항에 따라 통화내용을 청취 또는 녹음하려면 사전에 수용자 및 상대방에게 그 사실을 알려 주어야 한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.9998950958251953,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 44조  전화통화 4항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 44,
+        "first_stage_score": 18.212311344252356,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 127조  사망 알림#KOBLEX-075793",
+        "provision_text": "제127조(사망 알림) 소장은 수용자가 사망한 경우에는 그 사실을 즉시 그 가족(가족이 없는 경우에는 다른 친족)에게 알려야 한다. <개정 2020.2.4>",
+        "rerank_rank": 9,
+        "rerank_score": 0.9998644590377808,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 127조  사망 알림",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 45,
+        "first_stage_score": 18.212311344252356,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 127조  사망 알림#KOBLEX-213980",
+        "provision_text": "제127조(사망 알림) 소장은 수용자가 사망한 경우에는 그 사실을 즉시 그 가족(가족이 없는 경우에는 다른 친족)에게 알려야 한다. <개정 2020.2.4>",
+        "rerank_rank": 10,
+        "rerank_score": 0.9998644590377808,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 127조  사망 알림",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 26.835160902095467,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 52조  임산부인 수용자의 처우#KOBLEX-075487",
+        "provision_text": "② 소장은 수용자가 출산하려고 하는 경우에는 외부의료시설에서 진료를 받게 하는 등 적절한 조치를 하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.15293088555335999,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 52조  임산부인 수용자의 처우 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 26.835160902095467,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 52조  임산부인 수용자의 처우#KOBLEX-213674",
+        "provision_text": "② 소장은 수용자가 출산하려고 하는 경우에는 외부의료시설에서 진료를 받게 하는 등 적절한 조치를 하여야 한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.15293088555335999,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 52조  임산부인 수용자의 처우 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 52.980564727879205,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075411",
+        "provision_text": "제37조(외부의료시설 진료 등)",
+        "rerank_rank": 7,
+        "rerank_score": 0.572857141494751,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 52.980564727879205,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213598",
+        "provision_text": "제37조(외부의료시설 진료 등)",
+        "rerank_rank": 8,
+        "rerank_score": 0.572857141494751,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 34.577864388045604,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075412",
+        "provision_text": "① 소장은 수용자에 대한 적절한 치료를 위하여 필요하다고 인정하면 교정시설 밖에 있는 의료시설(이하 \"외부의료시설\"이라 한다)에서 진료를 받게 할 수 있다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.12148059159517288,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 16.468124714805906,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213599",
+        "provision_text": "① 소장은 수용자에 대한 적절한 치료를 위하여 필요하다고 인정하면 교정시설 밖에 있는 의료시설(이하 \"외부의료시설\"이라 한다)에서 진료를 받게 할 수 있다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.0038963083643466234,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 34,
+        "first_stage_score": 19.087066416507405,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "의료법 시행규칙 30조 3 폐업ㆍ휴업 시 조치사항#KOBLEX-007354",
+        "provision_text": "3. 진료비 등의 정산 및 반환 등에 관한 사항",
+        "rerank_rank": 9,
+        "rerank_score": 0.046756964176893234,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "의료법 시행규칙 30조 3 폐업ㆍ휴업 시 조치사항 3호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 21.417825969285353,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "산업재해보상보험법 45조  진료비의 청구 등#KOBLEX-166756",
+        "provision_text": "제45조(진료비의 청구 등)",
+        "rerank_rank": 10,
+        "rerank_score": 0.009611671790480614,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "산업재해보상보험법 45조  진료비의 청구 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "방송법 시행령 39조  등록이 면제되는 수상기#KOBLEX-233262": "11. 교도소의 수용자 또는 소년원 원생의 시청을 위해 갖추고 있는 수상기",
+      "산업재해보상보험법 45조  진료비의 청구 등#KOBLEX-166756": "제45조(진료비의 청구 등)",
+      "의료법 시행규칙 30조 3 폐업ㆍ휴업 시 조치사항#KOBLEX-007354": "3. 진료비 등의 정산 및 반환 등에 관한 사항",
+      "형의 집행 및 수용자의 처우에 관한 법률 127조  사망 알림#KOBLEX-075793": "제127조(사망 알림) 소장은 수용자가 사망한 경우에는 그 사실을 즉시 그 가족(가족이 없는 경우에는 다른 친족)에게 알려야 한다. <개정 2020.2.4>",
+      "형의 집행 및 수용자의 처우에 관한 법률 127조  사망 알림#KOBLEX-213980": "제127조(사망 알림) 소장은 수용자가 사망한 경우에는 그 사실을 즉시 그 가족(가족이 없는 경우에는 다른 친족)에게 알려야 한다. <개정 2020.2.4>",
+      "형의 집행 및 수용자의 처우에 관한 법률 21조  수용사실의 알림#KOBLEX-075365": "제21조(수용사실의 알림) 소장은 신입자 또는 다른 교정시설로부터 이송되어 온 사람이 있으면 그 사실을 수용자의 가족(배우자, 직계 존속ㆍ비속 또는 형제자매를 말한다. 이하 같다)에게 지체 없이 알려야 한다. 다만, 수용자가 알리는 것을 원하지 아니하면 그러하지 아니하다. <개정 2020.2.4>",
+      "형의 집행 및 수용자의 처우에 관한 법률 21조  수용사실의 알림#KOBLEX-213552": "제21조(수용사실의 알림) 소장은 신입자 또는 다른 교정시설로부터 이송되어 온 사람이 있으면 그 사실을 수용자의 가족(배우자, 직계 존속ㆍ비속 또는 형제자매를 말한다. 이하 같다)에게 지체 없이 알려야 한다. 다만, 수용자가 알리는 것을 원하지 아니하면 그러하지 아니하다. <개정 2020.2.4>",
+      "형의 집행 및 수용자의 처우에 관한 법률 2조  정의#KOBLEX-075297": "1. \"수용자\"란 수형자ㆍ미결수용자ㆍ사형확정자 등 법률과 적법한 절차에 따라 교도소ㆍ구치소 및 그 지소(이하 \"교정시설\"이라 한다)에 수용된 사람을 말한다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 2조  정의#KOBLEX-213484": "1. \"수용자\"란 수형자ㆍ미결수용자ㆍ사형확정자 등 법률과 적법한 절차에 따라 교도소ㆍ구치소 및 그 지소(이하 \"교정시설\"이라 한다)에 수용된 사람을 말한다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075411": "제37조(외부의료시설 진료 등)",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075412": "① 소장은 수용자에 대한 적절한 치료를 위하여 필요하다고 인정하면 교정시설 밖에 있는 의료시설(이하 \"외부의료시설\"이라 한다)에서 진료를 받게 할 수 있다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075415": "④ 소장은 제1항 또는 제2항에 따라 수용자가 외부의료시설에서 진료받거나 치료감호시설로 이송되면 그 사실을 그 가족(가족이 없는 경우에는 수용자가 지정하는 사람)에게 지체 없이 알려야 한다. 다만, 수용자가 알리는 것을 원하지 아니하면 그러하지 아니하다. <개정 2020.2.4>",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075416": "⑤ 소장은 수용자가 자신의 고의 또는 중대한 과실로 부상 등이 발생하여 외부의료시설에서 진료를 받은 경우에는 그 진료비의 전부 또는 일부를 그 수용자에게 부담하게 할 수 있다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213598": "제37조(외부의료시설 진료 등)",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213599": "① 소장은 수용자에 대한 적절한 치료를 위하여 필요하다고 인정하면 교정시설 밖에 있는 의료시설(이하 \"외부의료시설\"이라 한다)에서 진료를 받게 할 수 있다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213602": "④ 소장은 제1항 또는 제2항에 따라 수용자가 외부의료시설에서 진료받거나 치료감호시설로 이송되면 그 사실을 그 가족(가족이 없는 경우에는 수용자가 지정하는 사람)에게 지체 없이 알려야 한다. 다만, 수용자가 알리는 것을 원하지 아니하면 그러하지 아니하다. <개정 2020.2.4>",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213603": "⑤ 소장은 수용자가 자신의 고의 또는 중대한 과실로 부상 등이 발생하여 외부의료시설에서 진료를 받은 경우에는 그 진료비의 전부 또는 일부를 그 수용자에게 부담하게 할 수 있다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 41조  접견#KOBLEX-075432": "⑤ 제4항에 따라 녹음ㆍ녹화하는 경우에는 사전에 수용자 및 그 상대방에게 그 사실을 알려 주어야 한다. <개정 2019.4.23>",
+      "형의 집행 및 수용자의 처우에 관한 법률 41조  접견#KOBLEX-213619": "⑤ 제4항에 따라 녹음ㆍ녹화하는 경우에는 사전에 수용자 및 그 상대방에게 그 사실을 알려 주어야 한다. <개정 2019.4.23>",
+      "형의 집행 및 수용자의 처우에 관한 법률 44조  전화통화#KOBLEX-075454": "④ 제2항에 따라 통화내용을 청취 또는 녹음하려면 사전에 수용자 및 상대방에게 그 사실을 알려 주어야 한다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 44조  전화통화#KOBLEX-213641": "④ 제2항에 따라 통화내용을 청취 또는 녹음하려면 사전에 수용자 및 상대방에게 그 사실을 알려 주어야 한다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 52조  임산부인 수용자의 처우#KOBLEX-075487": "② 소장은 수용자가 출산하려고 하는 경우에는 외부의료시설에서 진료를 받게 하는 등 적절한 조치를 하여야 한다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 52조  임산부인 수용자의 처우#KOBLEX-213674": "② 소장은 수용자가 출산하려고 하는 경우에는 외부의료시설에서 진료를 받게 하는 등 적절한 조치를 하여야 한다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075415"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001은 외부의료시설 진료 시 가족 통지의 주체(소장), 대상(가족 또는 지정자), 시점(지체 없이)을 명확히 규정하고 있어 완료 기준을 충족한다. 방법(서면/구두)은 법률에서 구체적 형식을 제한하지 않으며, '알려야 한다'는 일반적 통지 의무로 해석되어 현행 조항으로 충분하다.",
+        "status": "covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [
+          "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075416"
+        ],
+        "missing_aspects": [
+          "질문의 '부주의'가 법률상 '중대한 과실'에 해당하는지 여부 및 구별 기준"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C003은 '고의 또는 중대한 과실' 요건 하의 비용 부담을 규정한다. 질문은 '부주의'를 언급하고 있으나, 법률상 '부주의'가 '중대한 과실'에 해당하는지 여부는 조항 자체에서 정의되지 않으며, 단순 과실과 중대한 과실의 구별 기준이 부재하여 법적 지원이 불완전하다.",
+        "status": "partially_covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075415",
+        "support_spans": [
+          {
+            "end_char": 156,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075416",
+        "support_spans": [
+          {
+            "end_char": 98,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 3,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "구치소 수용자가 외부의료시설에서 진료를 받은 경우, 그 사실을 가족에게 알리는 절차와 방식은 무엇인가?",
+        "issue_id": "I1"
+      },
+      {
+        "description": "수용자의 부주의로 인한 외부의료시설 진료비의 부담 주체는 누구인가?",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "부주의(과실) 요건 하의 비용 부담 주체(수용자 본인 등)가 명시된 조항 확인",
+        "critical": true,
+        "description": "수용자의 부주의로 인한 외부의료시설 진료비 부담 주체에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 구치소에 수용 중인 수용자이다. 어느 날 갑은 자신의 부주의로 인해 발을 다쳤고, 외부의료시설에서 진료를 받게 되었다. 이 상황에서 소장은 갑의 가족에게 이 사실을 알리려 하고 있으며, 진료비 부담에 대한 문제도 고려하고 있다. [질문] 갑이 자신의 부주의로 인해 외부의료시설에서 진료를 받은 경우, 그 사실은 갑의 가족에게 어떻게 알리게 되는가? 그리고 진료비는 누가 부담하게 되는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "구치소",
+          "수용자",
+          "외부의료시설",
+          "진료",
+          "가족",
+          "통지"
+        ],
+        "query_text": "구치소 수용자가 외부의료시설에서 진료를 받은 경우 그 사실을 가족에게 알리는 절차 [원문 맥락] 갑이 자신의 부주의로 인해 외부의료시설에서 진료를 받은 경우, 그 사실은 갑의 가족에게 어떻게 알리게 되는가? 그리고 진료비는 누가 부담하게 되는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "구치소법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "수용자",
+          "부주의",
+          "외부의료시설",
+          "진료비",
+          "부담"
+        ],
+        "query_text": "수용자의 부주의로 인한 외부의료시설 진료비 부담 주체 [원문 맥락] 갑이 자신의 부주의로 인해 외부의료시설에서 진료를 받은 경우, 그 사실은 갑의 가족에게 어떻게 알리게 되는가? 그리고 진료비는 누가 부담하게 되는가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "구치소법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형의 집행 및 수용자의 처우에 관한 법률",
+          "37조",
+          "외부의료시설",
+          "진료",
+          "비용",
+          "고의",
+          "중대한 과실"
+        ],
+        "query_text": "형의 집행 및 수용자의 처우에 관한 법률 37조 외부의료시설 진료 비용 부담 고의 중대한 과실 [원문 맥락] 갑이 자신의 부주의로 인해 외부의료시설에서 진료를 받은 경우, 그 사실은 갑의 가족에게 어떻게 알리게 되는가? 그리고 진료비는 누가 부담하게 되는가?",
+        "request_id": "GRQ-R2-1",
+        "statute_hints": [
+          "형의 집행 및 수용자의 처우에 관한 법률"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "수용자",
+          "외부의료시설",
+          "진료비",
+          "본인 부담",
+          "과실",
+          "요건"
+        ],
+        "query_text": "수용자 외부의료시설 진료비 본인 부담 과실 요건 [원문 맥락] 갑이 자신의 부주의로 인해 외부의료시설에서 진료를 받은 경우, 그 사실은 갑의 가족에게 어떻게 알리게 되는가? 그리고 진료비는 누가 부담하게 되는가?",
+        "request_id": "GRQ-R2-2",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "중대한 과실",
+          "일반 과실",
+          "구별",
+          "형법",
+          "판례"
+        ],
+        "query_text": "중대한 과실 일반 과실 구별 기준 형법 [원문 맥락] 갑이 자신의 부주의로 인해 외부의료시설에서 진료를 받은 경우, 그 사실은 갑의 가족에게 어떻게 알리게 되는가? 그리고 진료비는 누가 부담하게 되는가?",
+        "request_id": "GRQ-R3-1",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "수용자",
+          "과실",
+          "의료비용",
+          "본인 부담",
+          "예외"
+        ],
+        "query_text": "수용자 과실로 인한 의료비용 본인 부담 예외 규정 [원문 맥락] 갑이 자신의 부주의로 인해 외부의료시설에서 진료를 받은 경우, 그 사실은 갑의 가족에게 어떻게 알리게 되는가? 그리고 진료비는 누가 부담하게 되는가?",
+        "request_id": "GRQ-R3-2",
+        "statute_hints": [
+          "형의 집행 및 수용자의 처우에 관한 법률"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 구치소에 수용 중인 수용자이다. 어느 날 갑은 자신의 부주의로 인해 발을 다쳤고, 외부의료시설에서 진료를 받게 되었다. 이 상황에서 소장은 갑의 가족에게 이 사실을 알리려 하고 있으며, 진료비 부담에 대한 문제도 고려하고 있다.\n\n[질문]\n갑이 자신의 부주의로 인해 외부의료시설에서 진료를 받은 경우, 그 사실은 갑의 가족에게 어떻게 알리게 되는가? 그리고 진료비는 누가 부담하게 되는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "통지의 주체, 대상, 시점, 방법(서면/구두 등)이 명시된 조항 확인",
+        "critical": true,
+        "description": "구치소 수용자가 외부의료시설에서 진료를 받을 때 가족에게 통지하는 법적 절차 및 방법",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "부주의(과실) 요건 하의 비용 부담 주체(수용자 본인 등)가 명시된 조항 확인",
+        "critical": true,
+        "description": "수용자의 부주의로 인한 외부의료시설 진료비 부담 주체에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "d98719db-c50a-46b4-8a83-5d788f16b2ec",
+    "seen_provision_ids": [
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075412",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075411",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075415",
+      "산업재해보상보험법 45조  진료비의 청구 등#KOBLEX-166756",
+      "형의 집행 및 수용자의 처우에 관한 법률 2조  정의#KOBLEX-075297",
+      "형의 집행 및 수용자의 처우에 관한 법률 2조  정의#KOBLEX-213484",
+      "형의 집행 및 수용자의 처우에 관한 법률 127조  사망 알림#KOBLEX-213980",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213603",
+      "형의 집행 및 수용자의 처우에 관한 법률 52조  임산부인 수용자의 처우#KOBLEX-213674",
+      "형의 집행 및 수용자의 처우에 관한 법률 127조  사망 알림#KOBLEX-075793",
+      "형의 집행 및 수용자의 처우에 관한 법률 41조  접견#KOBLEX-075432",
+      "형의 집행 및 수용자의 처우에 관한 법률 44조  전화통화#KOBLEX-213641",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213599",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213602",
+      "형의 집행 및 수용자의 처우에 관한 법률 52조  임산부인 수용자의 처우#KOBLEX-075487",
+      "형의 집행 및 수용자의 처우에 관한 법률 41조  접견#KOBLEX-213619",
+      "방송법 시행령 39조  등록이 면제되는 수상기#KOBLEX-233262",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-213598",
+      "의료법 시행규칙 30조 3 폐업ㆍ휴업 시 조치사항#KOBLEX-007354",
+      "형의 집행 및 수용자의 처우에 관한 법률 37조  외부의료시설 진료 등#KOBLEX-075416",
+      "형의 집행 및 수용자의 처우에 관한 법률 21조  수용사실의 알림#KOBLEX-075365",
+      "형의 집행 및 수용자의 처우에 관한 법률 21조  수용사실의 알림#KOBLEX-213552",
+      "형의 집행 및 수용자의 처우에 관한 법률 44조  전화통화#KOBLEX-075454"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

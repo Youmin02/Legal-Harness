@@ -1,0 +1,1113 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-18T17:17:02.456701+00:00",
+  "end_to_end_latency_ms": 299226.244,
+  "errors": [],
+  "record_schema_version": "1.1",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 600,
+      "evidence_fusion": 600,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "rrf": 600,
+      "selected": 60
+    }
+  },
+  "run_id": "c60568a8-aed1-4671-b700-be068807507d",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 18,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 3,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 65,
+        "first_stage_score": 19.556986837098776,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "지방세법 시행령 78조 2 종업원의 급여총액 범위#KOBLEX-077691",
+        "provision_text": "1. 「소득세법」 제12조제3호에 따른 비과세 대상 급여",
+        "rerank_rank": 1,
+        "rerank_score": 0.9991273283958435,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "지방세법 시행령 78조 2 종업원의 급여총액 범위 1호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 25.217525023352913,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "지방세법 90조  비과세#KOBLEX-102139",
+        "provision_text": "제90조(비과세) 「소득세법」, 「법인세법」 및 「조세특례제한법」에 따라 소득세 또는 법인세가 비과세되는 소득에 대하여는 지방소득세를 과세하지 아니한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9987188577651978,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "지방세법 90조  비과세",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 37,
+        "first_stage_score": 20.121549697715626,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "조세특례제한법 100조 6 근로장려금의 신청 등#KOBLEX-100000",
+        "provision_text": "③ 해당 소득세 과세기간에 근로소득 외의 소득이 있는 거주자가 제7항에 해당하는 내용의 신청을 한 경우에는 제1항에 따른 근로장려금을 신청한 것으로 본다. <신설 2021.12.28>",
+        "rerank_rank": 3,
+        "rerank_score": 0.9968146681785583,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "조세특례제한법 100조 6 근로장려금의 신청 등 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 38,
+        "first_stage_score": 20.121549697715626,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "조세특례제한법 100조 6 근로장려금의 신청 등#KOBLEX-151981",
+        "provision_text": "③ 해당 소득세 과세기간에 근로소득 외의 소득이 있는 거주자가 제7항에 해당하는 내용의 신청을 한 경우에는 제1항에 따른 근로장려금을 신청한 것으로 본다. <신설 2021.12.28>",
+        "rerank_rank": 4,
+        "rerank_score": 0.9968146681785583,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "조세특례제한법 100조 6 근로장려금의 신청 등 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 94,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "소득세법 시행규칙 70조  1세대의 범위#KOBLEX-036106",
+        "provision_text": "제70조(1세대의 범위) 영 제152조의3제3호 본문에서 \"기획재정부령으로 정하는 소득\"이란 다음 각 호의 소득(비과세소득은 제외하며, 제1호 및 제3호의 경우에는 필요경비를 공제한 금액으로 한다)을 합한 금액을 말한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.9967051148414612,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "소득세법 시행규칙 70조  1세대의 범위",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 28.92667624587399,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "국세징수법 42조  급여채권의 압류 제한#KOBLEX-026180",
+        "provision_text": "④ 제1항부터 제3항까지의 규정에 따른 총액은 「소득세법」 제20조제1항 각 호에 해당하는 근로소득의 금액의 합계액(비과세소득의 금액은 제외한다) 또는 같은 법 제22조제1항 각 호에 해당하는 퇴직소득의 금액의 합계액(비과세소득의 금액은 제외한다)에서 그 근로소득 또는 퇴직소득에 대한 소득세 및 소득세분 지방소득세를 뺀 금액으로 한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.9962055683135986,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "국세징수법 42조  급여채권의 압류 제한 4항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 66,
+        "first_stage_score": 19.275586482145844,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "조세특례제한법 시행령 100조 7 신청서류 등#KOBLEX-070819",
+        "provision_text": "⑨ 법 제100조의6제7항 각 호 외의 부분에서 \"대통령령으로 정하는 근로소득만 있는 거주자\"란 본인과 그 배우자가 해당 소득세 과세기간이 속하는 연도의 반기(半期)동안 근로소득(제100조의6제2항제1호부터 제3호까지의 근로소득은 제외한다)만 있는 사람을 말한다. <신설 2019.2.12, 2020.2.11, 2024.2.29>",
+        "rerank_rank": 7,
+        "rerank_score": 0.9959716200828552,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "조세특례제한법 시행령 100조 7 신청서류 등 9항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 60,
+        "first_stage_score": 19.6382409755792,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "조세특례제한법 91조 24 과세특례 대상 저축 등의 소득기준 적용에 대한 특례#KOBLEX-099769",
+        "provision_text": "2. 거주자가 「소득세법」 제12조제3호마목에 따른 육아휴직 급여, 육아휴직수당 또는 대통령령으로 정하는 소득이 있는 경우: 비과세소득만 있는 자로 보지 아니한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.9958667755126953,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "조세특례제한법 91조 24 과세특례 대상 저축 등의 소득기준 적용에 대한 특례 2호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 61,
+        "first_stage_score": 19.6382409755792,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "조세특례제한법 91조 24 과세특례 대상 저축 등의 소득기준 적용에 대한 특례#KOBLEX-151750",
+        "provision_text": "2. 거주자가 「소득세법」 제12조제3호마목에 따른 육아휴직 급여, 육아휴직수당 또는 대통령령으로 정하는 소득이 있는 경우: 비과세소득만 있는 자로 보지 아니한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.9958667755126953,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "조세특례제한법 91조 24 과세특례 대상 저축 등의 소득기준 적용에 대한 특례 2호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 23.446076408096832,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "지방세징수법 시행령 47조  급여의 압류 범위#KOBLEX-068573",
+        "provision_text": "① 법 제42조에 따른 총액은 지급받을 수 있는 급여금 전액에서 그 근로소득 또는 퇴직소득에 대한 소득세 및 개인지방소득세를 뺀 금액으로 한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.994983434677124,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "지방세징수법 시행령 47조  급여의 압류 범위 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 38,
+        "first_stage_score": 21.515328201248252,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "종합부동산세법 6조  비과세 등#KOBLEX-210724",
+        "provision_text": "제6조(비과세 등)",
+        "rerank_rank": 3,
+        "rerank_score": 0.01224451046437025,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "종합부동산세법 6조  비과세 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 35,
+        "first_stage_score": 21.515328201248252,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "소득세법 89조  비과세 양도소득#KOBLEX-153564",
+        "provision_text": "제89조(비과세 양도소득)",
+        "rerank_rank": 4,
+        "rerank_score": 0.011609617620706558,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "소득세법 89조  비과세 양도소득",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 22.06776788722827,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "지방세법 26조  비과세#KOBLEX-101869",
+        "provision_text": "제26조(비과세)",
+        "rerank_rank": 5,
+        "rerank_score": 0.011581090278923512,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "지방세법 26조  비과세",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 52,
+        "first_stage_score": 20.78359215462354,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "공익신고자 보호법 시행령 17조  체불된 보수 등의 지급 기준 등#KOBLEX-120502",
+        "provision_text": "① 법 제20조제1항제2호에 따른 보수 등은 「소득세법」 제20조제1항에 따른 근로소득으로 하고, 이자는 「근로기준법」 제37조에 따른 지연이자로 한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.01153202448040247,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공익신고자 보호법 시행령 17조  체불된 보수 등의 지급 기준 등 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 32,
+        "first_stage_score": 22.06776788722827,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "지방세법 시행령 40조  비과세#KOBLEX-077483",
+        "provision_text": "제40조(비과세)",
+        "rerank_rank": 7,
+        "rerank_score": 0.011418607085943222,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "지방세법 시행령 40조  비과세",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 28,
+        "first_stage_score": 22.06776788722827,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "지방세법 9조  비과세#KOBLEX-101749",
+        "provision_text": "제9조(비과세)",
+        "rerank_rank": 8,
+        "rerank_score": 0.011130155064165592,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "지방세법 9조  비과세",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 24,
+        "first_stage_score": 22.06776788722827,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "지방세법 109조  비과세#KOBLEX-102519",
+        "provision_text": "제109조(비과세)",
+        "rerank_rank": 9,
+        "rerank_score": 0.010913347825407982,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "지방세법 109조  비과세",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 30,
+        "first_stage_score": 22.06776788722827,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "지방세법 시행령 121조  비과세#KOBLEX-078075",
+        "provision_text": "제121조(비과세)",
+        "rerank_rank": 10,
+        "rerank_score": 0.010788967832922935,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "지방세법 시행령 121조  비과세",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 23.899368083686266,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "조세특례제한법 시행규칙 43조  과세특례 대상 저축 등의 소득기준 적용에 대한 특례#KOBLEX-146329",
+        "provision_text": "2. 육아휴직수당: 「소득세법」 제12조제3호마목에 따른 육아휴직수당을 받는 사람이 해당 소속 기관의 장으로부터 발급받은 휴직증명서",
+        "rerank_rank": 2,
+        "rerank_score": 0.9797195792198181,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "조세특례제한법 시행규칙 43조  과세특례 대상 저축 등의 소득기준 적용에 대한 특례 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 22.895101606845316,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "국민건강보험법 시행령 33조  보수에 포함되는 금품 등#KOBLEX-055538",
+        "provision_text": "① 법 제70조제3항 전단에서 \"대통령령으로 정하는 것\"이란 근로의 대가로 받은 봉급, 급료, 보수, 세비(歲費), 임금, 상여, 수당, 그 밖에 이와 유사한 성질의 금품으로서 다음 각 호의 것을 제외한 것을 말한다. <개정 2015.6.30> 1.퇴직금 2.현상금, 번역료 및 원고료 3. 「소득세법」에 따른 비과세근로소득. 다만, 「소득세법」 제12조제3호차목ㆍ파목 및 거목에 따라 비과세되는 소득은 제외한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.5860700607299805,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "국민건강보험법 시행령 33조  보수에 포함되는 금품 등 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 22.97758350093509,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "조세특례제한법 18조 2 외국인근로자에 대한 과세특례#KOBLEX-098975",
+        "provision_text": "③ 제2항을 적용할 때 「소득세법」 및 이 법에 따른 소득세와 관련된 비과세(「소득세법」 제12조제3호저목의 복리후생적 성질의 급여 중 대통령령으로 정하는 소득에 대한 비과세는 제외한다), 공제, 감면 및 세액공제에 관한 규정은 적용하지 아니하며, 해당 근로소득은 「소득세법」 제14조제2항에 따른 종합소득과세표준에 합산하지 아니한다. <개정 2014.12.23, 2023.12.31>",
+        "rerank_rank": 6,
+        "rerank_score": 0.4258982539176941,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "조세특례제한법 18조 2 외국인근로자에 대한 과세특례 3항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 22.97758350093509,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "조세특례제한법 18조 2 외국인근로자에 대한 과세특례#KOBLEX-150956",
+        "provision_text": "③ 제2항을 적용할 때 「소득세법」 및 이 법에 따른 소득세와 관련된 비과세(「소득세법」 제12조제3호저목의 복리후생적 성질의 급여 중 대통령령으로 정하는 소득에 대한 비과세는 제외한다), 공제, 감면 및 세액공제에 관한 규정은 적용하지 아니하며, 해당 근로소득은 「소득세법」 제14조제2항에 따른 종합소득과세표준에 합산하지 아니한다. <개정 2014.12.23, 2023.12.31>",
+        "rerank_rank": 7,
+        "rerank_score": 0.4258982539176941,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "조세특례제한법 18조 2 외국인근로자에 대한 과세특례 3항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 29.15210507832825,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "고용보험법 시행령 1조 2 보수에서 제외되는 금품#KOBLEX-156494",
+        "provision_text": "제1조의2(보수에서 제외되는 금품) 「고용보험법」(이하 \"법\"이라 한다) 제2조제5호 본문에서 \"대통령령으로 정하는 금품\"이란 「소득세법」 제12조제3호에 따른 비과세 근로소득을 말한다. <개정 2021.6.8>",
+        "rerank_rank": 8,
+        "rerank_score": 0.2980993390083313,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "고용보험법 시행령 1조 2 보수에서 제외되는 금품",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 51,
+        "first_stage_score": 20.58144976179049,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "조세특례제한법 91조 20 청년형 장기집합투자증권저축에 대한 소득공제#KOBLEX-099751",
+        "provision_text": "⑫ 제1항에도 불구하고 이 법에 따른 비과세 등 조세특례 또는 「소득세법」 제20조의3제1항제2호를 적용받는 저축 등의 경우에는 제1항에 따른 소득공제를 적용하지 아니한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.18825285136699677,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "조세특례제한법 91조 20 청년형 장기집합투자증권저축에 대한 소득공제 12항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 52,
+        "first_stage_score": 20.58144976179049,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "조세특례제한법 91조 20 청년형 장기집합투자증권저축에 대한 소득공제#KOBLEX-151732",
+        "provision_text": "⑫ 제1항에도 불구하고 이 법에 따른 비과세 등 조세특례 또는 「소득세법」 제20조의3제1항제2호를 적용받는 저축 등의 경우에는 제1항에 따른 소득공제를 적용하지 아니한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.18825285136699677,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "조세특례제한법 91조 20 청년형 장기집합투자증권저축에 대한 소득공제 12항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 22.65967742967143,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "지방세법 시행규칙 4조 2 비과세 신청#KOBLEX-028599",
+        "provision_text": "제4조의2(비과세 신청) 영 제12조의3제3항에 따른 비과세 신청은 별지 제1호의2서식의 자동차 상속 취득세 비과세 신청서에 따른다. <개정 2021.12.31>",
+        "rerank_rank": 8,
+        "rerank_score": 0.0028658066876232624,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "지방세법 시행규칙 4조 2 비과세 신청",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 25.311545980701624,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "국세징수법 시행령 12조  납부기한 등 연장 등의 기간과 분납 한도#KOBLEX-000044",
+        "provision_text": "제12조(납부기한 등 연장 등의 기간과 분납 한도)",
+        "rerank_rank": 9,
+        "rerank_score": 0.0009722484392113984,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "국세징수법 시행령 12조  납부기한 등 연장 등의 기간과 분납 한도",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 42,
+        "first_stage_score": 21.317210732852452,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "조세특례제한법 91조 16 장기집합투자증권저축에 대한 소득공제#KOBLEX-099715",
+        "provision_text": "⑩ 이 법에 따른 비과세 등 조세특례 또는 「소득세법」 제20조의3제1항제2호를 적용받는 저축 등의 경우에는 제1항에 따른 소득공제를 적용하지 아니한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.0008137146942317486,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "조세특례제한법 91조 16 장기집합투자증권저축에 대한 소득공제 10항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 34,
+        "first_stage_score": 21.05763571741442,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "조세특례제한법 129조  양도소득세의 감면 배제 등#KOBLEX-100902",
+        "provision_text": "② 「소득세법」 제104조제3항에 따른 미등기양도자산에 대해서는 양도소득세의 비과세 및 감면에 관한 규정을 적용하지 아니한다. <개정 2010.12.27>",
+        "rerank_rank": 3,
+        "rerank_score": 0.4271392822265625,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "조세특례제한법 129조  양도소득세의 감면 배제 등 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 35,
+        "first_stage_score": 21.05763571741442,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "조세특례제한법 129조  양도소득세의 감면 배제 등#KOBLEX-152883",
+        "provision_text": "② 「소득세법」 제104조제3항에 따른 미등기양도자산에 대해서는 양도소득세의 비과세 및 감면에 관한 규정을 적용하지 아니한다. <개정 2010.12.27>",
+        "rerank_rank": 4,
+        "rerank_score": 0.4271392822265625,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "조세특례제한법 129조  양도소득세의 감면 배제 등 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 74,
+        "first_stage_score": 19.22976657272083,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "상속세 및 증여세법 시행규칙 10조 3 소득세 상당액의 계산#KOBLEX-080502",
+        "provision_text": "② 영 제31조의2제4항제2호에서 \"기획재정부령으로 정하는 바에 따라 계산한 소득세액\"이란 다음 각 호의 구분에 따른 금액을 말한다. <신설 2021.3.16> 1. 「소득세법 시행령」 제26조의3제6항에 따라 배당소득에 포함되지 않는 경우 등 소득세 과세대상에서 제외되거나 비과세 대상인 초과배당금액의 경우: 0 2. 「소득세법」 제14조제5항에 따른 분리과세배당소득에 해당하는 경우 등 초과배당금액이 분리과세된 경우: 해당 분리과세된 세액 3. 「소득세법」 제14조제2항에 따라 종합과세되는 경우 : 다음 각 목의 금액 중 큰 금액",
+        "rerank_rank": 5,
+        "rerank_score": 0.0038126264698803425,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상속세 및 증여세법 시행규칙 10조 3 소득세 상당액의 계산 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "고용보험법 시행령 1조 2 보수에서 제외되는 금품#KOBLEX-156494": "제1조의2(보수에서 제외되는 금품) 「고용보험법」(이하 \"법\"이라 한다) 제2조제5호 본문에서 \"대통령령으로 정하는 금품\"이란 「소득세법」 제12조제3호에 따른 비과세 근로소득을 말한다. <개정 2021.6.8>",
+      "공익신고자 보호법 시행령 17조  체불된 보수 등의 지급 기준 등#KOBLEX-120502": "① 법 제20조제1항제2호에 따른 보수 등은 「소득세법」 제20조제1항에 따른 근로소득으로 하고, 이자는 「근로기준법」 제37조에 따른 지연이자로 한다.",
+      "국민건강보험법 시행령 33조  보수에 포함되는 금품 등#KOBLEX-055538": "① 법 제70조제3항 전단에서 \"대통령령으로 정하는 것\"이란 근로의 대가로 받은 봉급, 급료, 보수, 세비(歲費), 임금, 상여, 수당, 그 밖에 이와 유사한 성질의 금품으로서 다음 각 호의 것을 제외한 것을 말한다. <개정 2015.6.30> 1.퇴직금 2.현상금, 번역료 및 원고료 3. 「소득세법」에 따른 비과세근로소득. 다만, 「소득세법」 제12조제3호차목ㆍ파목 및 거목에 따라 비과세되는 소득은 제외한다.",
+      "국세징수법 42조  급여채권의 압류 제한#KOBLEX-026180": "④ 제1항부터 제3항까지의 규정에 따른 총액은 「소득세법」 제20조제1항 각 호에 해당하는 근로소득의 금액의 합계액(비과세소득의 금액은 제외한다) 또는 같은 법 제22조제1항 각 호에 해당하는 퇴직소득의 금액의 합계액(비과세소득의 금액은 제외한다)에서 그 근로소득 또는 퇴직소득에 대한 소득세 및 소득세분 지방소득세를 뺀 금액으로 한다.",
+      "국세징수법 시행령 12조  납부기한 등 연장 등의 기간과 분납 한도#KOBLEX-000044": "제12조(납부기한 등 연장 등의 기간과 분납 한도)",
+      "상속세 및 증여세법 시행규칙 10조 3 소득세 상당액의 계산#KOBLEX-080502": "② 영 제31조의2제4항제2호에서 \"기획재정부령으로 정하는 바에 따라 계산한 소득세액\"이란 다음 각 호의 구분에 따른 금액을 말한다. <신설 2021.3.16> 1. 「소득세법 시행령」 제26조의3제6항에 따라 배당소득에 포함되지 않는 경우 등 소득세 과세대상에서 제외되거나 비과세 대상인 초과배당금액의 경우: 0 2. 「소득세법」 제14조제5항에 따른 분리과세배당소득에 해당하는 경우 등 초과배당금액이 분리과세된 경우: 해당 분리과세된 세액 3. 「소득세법」 제14조제2항에 따라 종합과세되는 경우 : 다음 각 목의 금액 중 큰 금액",
+      "소득세법 89조  비과세 양도소득#KOBLEX-153564": "제89조(비과세 양도소득)",
+      "소득세법 시행규칙 70조  1세대의 범위#KOBLEX-036106": "제70조(1세대의 범위) 영 제152조의3제3호 본문에서 \"기획재정부령으로 정하는 소득\"이란 다음 각 호의 소득(비과세소득은 제외하며, 제1호 및 제3호의 경우에는 필요경비를 공제한 금액으로 한다)을 합한 금액을 말한다.",
+      "조세특례제한법 100조 6 근로장려금의 신청 등#KOBLEX-100000": "③ 해당 소득세 과세기간에 근로소득 외의 소득이 있는 거주자가 제7항에 해당하는 내용의 신청을 한 경우에는 제1항에 따른 근로장려금을 신청한 것으로 본다. <신설 2021.12.28>",
+      "조세특례제한법 100조 6 근로장려금의 신청 등#KOBLEX-151981": "③ 해당 소득세 과세기간에 근로소득 외의 소득이 있는 거주자가 제7항에 해당하는 내용의 신청을 한 경우에는 제1항에 따른 근로장려금을 신청한 것으로 본다. <신설 2021.12.28>",
+      "조세특례제한법 129조  양도소득세의 감면 배제 등#KOBLEX-100902": "② 「소득세법」 제104조제3항에 따른 미등기양도자산에 대해서는 양도소득세의 비과세 및 감면에 관한 규정을 적용하지 아니한다. <개정 2010.12.27>",
+      "조세특례제한법 129조  양도소득세의 감면 배제 등#KOBLEX-152883": "② 「소득세법」 제104조제3항에 따른 미등기양도자산에 대해서는 양도소득세의 비과세 및 감면에 관한 규정을 적용하지 아니한다. <개정 2010.12.27>",
+      "조세특례제한법 18조 2 외국인근로자에 대한 과세특례#KOBLEX-098975": "③ 제2항을 적용할 때 「소득세법」 및 이 법에 따른 소득세와 관련된 비과세(「소득세법」 제12조제3호저목의 복리후생적 성질의 급여 중 대통령령으로 정하는 소득에 대한 비과세는 제외한다), 공제, 감면 및 세액공제에 관한 규정은 적용하지 아니하며, 해당 근로소득은 「소득세법」 제14조제2항에 따른 종합소득과세표준에 합산하지 아니한다. <개정 2014.12.23, 2023.12.31>",
+      "조세특례제한법 18조 2 외국인근로자에 대한 과세특례#KOBLEX-150956": "③ 제2항을 적용할 때 「소득세법」 및 이 법에 따른 소득세와 관련된 비과세(「소득세법」 제12조제3호저목의 복리후생적 성질의 급여 중 대통령령으로 정하는 소득에 대한 비과세는 제외한다), 공제, 감면 및 세액공제에 관한 규정은 적용하지 아니하며, 해당 근로소득은 「소득세법」 제14조제2항에 따른 종합소득과세표준에 합산하지 아니한다. <개정 2014.12.23, 2023.12.31>",
+      "조세특례제한법 91조 16 장기집합투자증권저축에 대한 소득공제#KOBLEX-099715": "⑩ 이 법에 따른 비과세 등 조세특례 또는 「소득세법」 제20조의3제1항제2호를 적용받는 저축 등의 경우에는 제1항에 따른 소득공제를 적용하지 아니한다.",
+      "조세특례제한법 91조 20 청년형 장기집합투자증권저축에 대한 소득공제#KOBLEX-099751": "⑫ 제1항에도 불구하고 이 법에 따른 비과세 등 조세특례 또는 「소득세법」 제20조의3제1항제2호를 적용받는 저축 등의 경우에는 제1항에 따른 소득공제를 적용하지 아니한다.",
+      "조세특례제한법 91조 20 청년형 장기집합투자증권저축에 대한 소득공제#KOBLEX-151732": "⑫ 제1항에도 불구하고 이 법에 따른 비과세 등 조세특례 또는 「소득세법」 제20조의3제1항제2호를 적용받는 저축 등의 경우에는 제1항에 따른 소득공제를 적용하지 아니한다.",
+      "조세특례제한법 91조 24 과세특례 대상 저축 등의 소득기준 적용에 대한 특례#KOBLEX-099769": "2. 거주자가 「소득세법」 제12조제3호마목에 따른 육아휴직 급여, 육아휴직수당 또는 대통령령으로 정하는 소득이 있는 경우: 비과세소득만 있는 자로 보지 아니한다.",
+      "조세특례제한법 91조 24 과세특례 대상 저축 등의 소득기준 적용에 대한 특례#KOBLEX-151750": "2. 거주자가 「소득세법」 제12조제3호마목에 따른 육아휴직 급여, 육아휴직수당 또는 대통령령으로 정하는 소득이 있는 경우: 비과세소득만 있는 자로 보지 아니한다.",
+      "조세특례제한법 시행규칙 43조  과세특례 대상 저축 등의 소득기준 적용에 대한 특례#KOBLEX-146329": "2. 육아휴직수당: 「소득세법」 제12조제3호마목에 따른 육아휴직수당을 받는 사람이 해당 소속 기관의 장으로부터 발급받은 휴직증명서",
+      "조세특례제한법 시행령 100조 7 신청서류 등#KOBLEX-070819": "⑨ 법 제100조의6제7항 각 호 외의 부분에서 \"대통령령으로 정하는 근로소득만 있는 거주자\"란 본인과 그 배우자가 해당 소득세 과세기간이 속하는 연도의 반기(半期)동안 근로소득(제100조의6제2항제1호부터 제3호까지의 근로소득은 제외한다)만 있는 사람을 말한다. <신설 2019.2.12, 2020.2.11, 2024.2.29>",
+      "종합부동산세법 6조  비과세 등#KOBLEX-210724": "제6조(비과세 등)",
+      "지방세법 109조  비과세#KOBLEX-102519": "제109조(비과세)",
+      "지방세법 26조  비과세#KOBLEX-101869": "제26조(비과세)",
+      "지방세법 90조  비과세#KOBLEX-102139": "제90조(비과세) 「소득세법」, 「법인세법」 및 「조세특례제한법」에 따라 소득세 또는 법인세가 비과세되는 소득에 대하여는 지방소득세를 과세하지 아니한다.",
+      "지방세법 9조  비과세#KOBLEX-101749": "제9조(비과세)",
+      "지방세법 시행규칙 4조 2 비과세 신청#KOBLEX-028599": "제4조의2(비과세 신청) 영 제12조의3제3항에 따른 비과세 신청은 별지 제1호의2서식의 자동차 상속 취득세 비과세 신청서에 따른다. <개정 2021.12.31>",
+      "지방세법 시행령 121조  비과세#KOBLEX-078075": "제121조(비과세)",
+      "지방세법 시행령 40조  비과세#KOBLEX-077483": "제40조(비과세)",
+      "지방세법 시행령 78조 2 종업원의 급여총액 범위#KOBLEX-077691": "1. 「소득세법」 제12조제3호에 따른 비과세 대상 급여",
+      "지방세징수법 시행령 47조  급여의 압류 범위#KOBLEX-068573": "① 법 제42조에 따른 총액은 지급받을 수 있는 급여금 전액에서 그 근로소득 또는 퇴직소득에 대한 소득세 및 개인지방소득세를 뺀 금액으로 한다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "Non-taxable limit amount for childcare leave allowance",
+          "Specific application conditions for the non-taxable status of childcare leave allowance"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The supplied candidate provisions do not contain the specific statutory text of the Income Tax Act (소득세법) Article 12, Paragraph 3, Sub-item Ma (마목) or its implementing regulations that define the non-taxable limit amount for childcare leave allowance (육아휴직수당). While C008, C009, and C019 reference this provision or the allowance in the context of other tax rules (special savings income criteria or documentation), they do not state the non-taxable limit amount or the specific application conditions required by the completion criteria. Other provisions are irrelevant to the specific tax exemption rule for childcare leave allowance.",
+        "status": "uncovered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "Non-taxable limit amount for overseas work compensation",
+          "Specific application conditions for the non-taxable status of overseas work compensation"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The supplied candidate provisions do not contain the specific statutory text regarding the non-taxable limit for compensation received for work performed overseas (해외 근무 보수). None of the candidates provide the rule or limit amount for this specific type of income tax exemption. The provisions provided relate to local tax exemptions, wage garnishment, EITC, foreign worker tax preferences (which are distinct from the general overseas work compensation exemption), or other unrelated tax matters.",
+        "status": "uncovered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 3,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "육아휴직수당의 소득세 비과세 한도 및 적용 요건",
+        "issue_id": "I1"
+      },
+      {
+        "description": "해외 근무 보수의 소득세 비과세 한도 및 적용 요건",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "육아휴직수당 비과세 한도 금액과 적용 대상이 명확히 확인되어야 한다.",
+        "critical": true,
+        "description": "육아휴직수당에 대한 소득세 비과세 규정 및 한도 금액",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "해외 근무 보수 비과세 한도 금액과 적용 대상이 명확히 확인되어야 한다.",
+        "critical": true,
+        "description": "해외 근무 보수에 대한 소득세 비과세 규정 및 한도 금액",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 A회사의 직원으로, 최근 육아휴직을 신청하여 수당을 받고 있습니다. 을은 해외 지사에서 근무하며 보수를 받고 있는 상황입니다. 두 사람은 자신들이 받는 수당과 보수가 각각 얼마나 비과세되는지 궁금해하고 있습니다. [질문] 갑이 받는 육아휴직수당 중 비과세되는 금액은 얼마이며, 을이 해외 지사에서 근로를 제공하고 받는 보수의 비과세 한도는 얼마인가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "육아휴직수당",
+          "비과세",
+          "소득세",
+          "한도",
+          "근로소득"
+        ],
+        "query_text": "육아휴직수당 소득세 비과세 한도 [원문 맥락] 두 사람은 자신들이 받는 수당과 보수가 각각 얼마나 비과세되는지 궁금해하고 있습니다. 갑이 받는 육아휴직수당 중 비과세되는 금액은 얼마이며, 을이 해외 지사에서 근로를 제공하고 받는 보수의 비과세 한도는 얼마인가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "소득세법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "해외근무",
+          "보수",
+          "비과세",
+          "소득세",
+          "한도",
+          "근로소득"
+        ],
+        "query_text": "해외 근무 보수 소득세 비과세 한도 [원문 맥락] 두 사람은 자신들이 받는 수당과 보수가 각각 얼마나 비과세되는지 궁금해하고 있습니다. 갑이 받는 육아휴직수당 중 비과세되는 금액은 얼마이며, 을이 해외 지사에서 근로를 제공하고 받는 보수의 비과세 한도는 얼마인가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "소득세법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "소득세법",
+          "제12조",
+          "육아휴직수당",
+          "비과세",
+          "한도"
+        ],
+        "query_text": "소득세법 제12조 제3항 마목 육아휴직수당 비과세 한도 [원문 맥락] 두 사람은 자신들이 받는 수당과 보수가 각각 얼마나 비과세되는지 궁금해하고 있습니다. 갑이 받는 육아휴직수당 중 비과세되는 금액은 얼마이며, 을이 해외 지사에서 근로를 제공하고 받는 보수의 비과세 한도는 얼마인가?",
+        "request_id": "GRQ-R2-1",
+        "statute_hints": [
+          "소득세법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "소득세법",
+          "제12조",
+          "해외근무자",
+          "보수",
+          "비과세",
+          "한도"
+        ],
+        "query_text": "소득세법 제12조 제3항 해외근무자 보수 비과세 한도 [원문 맥락] 두 사람은 자신들이 받는 수당과 보수가 각각 얼마나 비과세되는지 궁금해하고 있습니다. 갑이 받는 육아휴직수당 중 비과세되는 금액은 얼마이며, 을이 해외 지사에서 근로를 제공하고 받는 보수의 비과세 한도는 얼마인가?",
+        "request_id": "GRQ-R2-2",
+        "statute_hints": [
+          "소득세법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "육아휴직급여",
+          "비과세",
+          "한도액",
+          "근로소득"
+        ],
+        "query_text": "육아휴직급여 소득세 비과세 한도액 [원문 맥락] 두 사람은 자신들이 받는 수당과 보수가 각각 얼마나 비과세되는지 궁금해하고 있습니다. 갑이 받는 육아휴직수당 중 비과세되는 금액은 얼마이며, 을이 해외 지사에서 근로를 제공하고 받는 보수의 비과세 한도는 얼마인가?",
+        "request_id": "GRQ-R3-1",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "해외근무자",
+          "급여",
+          "비과세",
+          "한도"
+        ],
+        "query_text": "해외근무자 급여 소득세 비과세 한도 [원문 맥락] 두 사람은 자신들이 받는 수당과 보수가 각각 얼마나 비과세되는지 궁금해하고 있습니다. 갑이 받는 육아휴직수당 중 비과세되는 금액은 얼마이며, 을이 해외 지사에서 근로를 제공하고 받는 보수의 비과세 한도는 얼마인가?",
+        "request_id": "GRQ-R3-2",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 A회사의 직원으로, 최근 육아휴직을 신청하여 수당을 받고 있습니다. 을은 해외 지사에서 근무하며 보수를 받고 있는 상황입니다. 두 사람은 자신들이 받는 수당과 보수가 각각 얼마나 비과세되는지 궁금해하고 있습니다.\n\n[질문]\n갑이 받는 육아휴직수당 중 비과세되는 금액은 얼마이며, 을이 해외 지사에서 근로를 제공하고 받는 보수의 비과세 한도는 얼마인가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "육아휴직수당 비과세 한도 금액과 적용 대상이 명확히 확인되어야 한다.",
+        "critical": true,
+        "description": "육아휴직수당에 대한 소득세 비과세 규정 및 한도 금액",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "해외 근무 보수 비과세 한도 금액과 적용 대상이 명확히 확인되어야 한다.",
+        "critical": true,
+        "description": "해외 근무 보수에 대한 소득세 비과세 규정 및 한도 금액",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "c60568a8-aed1-4671-b700-be068807507d",
+    "seen_provision_ids": [
+      "조세특례제한법 129조  양도소득세의 감면 배제 등#KOBLEX-100902",
+      "조세특례제한법 100조 6 근로장려금의 신청 등#KOBLEX-151981",
+      "공익신고자 보호법 시행령 17조  체불된 보수 등의 지급 기준 등#KOBLEX-120502",
+      "고용보험법 시행령 1조 2 보수에서 제외되는 금품#KOBLEX-156494",
+      "지방세법 109조  비과세#KOBLEX-102519",
+      "조세특례제한법 18조 2 외국인근로자에 대한 과세특례#KOBLEX-098975",
+      "국세징수법 42조  급여채권의 압류 제한#KOBLEX-026180",
+      "지방세법 시행령 40조  비과세#KOBLEX-077483",
+      "조세특례제한법 91조 24 과세특례 대상 저축 등의 소득기준 적용에 대한 특례#KOBLEX-151750",
+      "소득세법 시행규칙 70조  1세대의 범위#KOBLEX-036106",
+      "지방세법 시행규칙 4조 2 비과세 신청#KOBLEX-028599",
+      "조세특례제한법 129조  양도소득세의 감면 배제 등#KOBLEX-152883",
+      "조세특례제한법 91조 16 장기집합투자증권저축에 대한 소득공제#KOBLEX-099715",
+      "조세특례제한법 100조 6 근로장려금의 신청 등#KOBLEX-100000",
+      "지방세법 26조  비과세#KOBLEX-101869",
+      "지방세법 9조  비과세#KOBLEX-101749",
+      "조세특례제한법 91조 20 청년형 장기집합투자증권저축에 대한 소득공제#KOBLEX-099751",
+      "국세징수법 시행령 12조  납부기한 등 연장 등의 기간과 분납 한도#KOBLEX-000044",
+      "종합부동산세법 6조  비과세 등#KOBLEX-210724",
+      "조세특례제한법 시행령 100조 7 신청서류 등#KOBLEX-070819",
+      "지방세법 시행령 78조 2 종업원의 급여총액 범위#KOBLEX-077691",
+      "조세특례제한법 시행규칙 43조  과세특례 대상 저축 등의 소득기준 적용에 대한 특례#KOBLEX-146329",
+      "국민건강보험법 시행령 33조  보수에 포함되는 금품 등#KOBLEX-055538",
+      "지방세법 시행령 121조  비과세#KOBLEX-078075",
+      "소득세법 89조  비과세 양도소득#KOBLEX-153564",
+      "상속세 및 증여세법 시행규칙 10조 3 소득세 상당액의 계산#KOBLEX-080502",
+      "지방세징수법 시행령 47조  급여의 압류 범위#KOBLEX-068573",
+      "조세특례제한법 91조 24 과세특례 대상 저축 등의 소득기준 적용에 대한 특례#KOBLEX-099769",
+      "지방세법 90조  비과세#KOBLEX-102139",
+      "조세특례제한법 18조 2 외국인근로자에 대한 과세특례#KOBLEX-150956",
+      "조세특례제한법 91조 20 청년형 장기집합투자증권저축에 대한 소득공제#KOBLEX-151732"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

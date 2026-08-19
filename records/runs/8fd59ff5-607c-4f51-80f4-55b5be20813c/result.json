@@ -1,0 +1,1592 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "completed_at_utc": "2026-08-18T17:36:52.660995+00:00",
+  "end_to_end_latency_ms": 356863.813,
+  "errors": [],
+  "record_schema_version": "1.1",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 600,
+      "evidence_fusion": 600,
+      "first_stage": 800,
+      "request_rerank": 800,
+      "rrf": 600,
+      "selected": 60
+    }
+  },
+  "run_id": "8fd59ff5-607c-4f51-80f4-55b5be20813c",
+  "state": {
+    "accepted_provision_ids": [
+      "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082551",
+      "간접투자자산 운용업법 184조  (벌칙)#KOBLEX-082645",
+      "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082552"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 20,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 13,
+          "request_count": 3,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 20,
+          "new_provision_count": 15,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 27.60115639139466,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082552",
+        "provision_text": "②제1항의 규정에 불구하고 사모간접투자기구의 경우에는 간접투자기구의 운용실적에 따라 보수 또는 수수료를 취득할 수 있다. 이 경우 투자자를 보호하기 위하여 보수 또는 수수료 취득에 관하여 필요한 사항은 대통령령으로 정한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9653726816177368,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R2-3",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "간접투자자산 운용업법 177조  (성과보수의 제한) 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 19.759314724458793,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082551",
+        "provision_text": "①자산운용회사·수탁회사·자산보관회사·일반사무관리회사 및 판매회사는 간접투자기구의 운용실적에 따라 보수 또는 수수료를 취득하여서는 아니된다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.026541542261838913,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-3",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "간접투자자산 운용업법 177조  (성과보수의 제한) 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 18.74423617888229,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "농지법 시행규칙 11조  농지처분비용 및 수수료#KOBLEX-178797",
+        "provision_text": "2. 수수료",
+        "rerank_rank": 3,
+        "rerank_score": 0.00010817811562446877,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "농지법 시행규칙 11조  농지처분비용 및 수수료 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 52,
+        "first_stage_score": 18.74423617888229,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "조달사업에 관한 법률 16조  수수료#KOBLEX-049692",
+        "provision_text": "제16조(수수료)",
+        "rerank_rank": 4,
+        "rerank_score": 6.821731949457899e-05,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "조달사업에 관한 법률 16조  수수료",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 28,
+        "first_stage_score": 18.74423617888229,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "방위사업법 51조 2 수수료#KOBLEX-068319",
+        "provision_text": "제51조의2(수수료)",
+        "rerank_rank": 5,
+        "rerank_score": 6.819461850682274e-05,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "방위사업법 51조 2 수수료",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 42,
+        "first_stage_score": 18.74423617888229,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "여객자동차 운수사업법 시행규칙 102조  수수료#KOBLEX-191314",
+        "provision_text": "제102조(수수료)",
+        "rerank_rank": 6,
+        "rerank_score": 6.813416257500648e-05,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "여객자동차 운수사업법 시행규칙 102조  수수료",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 51,
+        "first_stage_score": 18.74423617888229,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "전기통신금융사기 피해 방지 및 피해금 환급에 관한 특별법 시행령 11조  수수료#KOBLEX-210546",
+        "provision_text": "제11조(수수료)",
+        "rerank_rank": 7,
+        "rerank_score": 6.770204345230013e-05,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "전기통신금융사기 피해 방지 및 피해금 환급에 관한 특별법 시행령 11조  수수료",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 18.74423617888229,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "근로자퇴직급여 보장법 29조 2 수수료#KOBLEX-091352",
+        "provision_text": "제29조의2(수수료)",
+        "rerank_rank": 8,
+        "rerank_score": 6.626273534493521e-05,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "근로자퇴직급여 보장법 29조 2 수수료",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 57,
+        "first_stage_score": 18.74423617888229,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "지방자치법 154조  수수료#KOBLEX-076698",
+        "provision_text": "제154조(수수료)",
+        "rerank_rank": 9,
+        "rerank_score": 6.547899829456583e-05,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "지방자치법 154조  수수료",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 56,
+        "first_stage_score": 18.74423617888229,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "지방공무원법 81조 2 수수료#KOBLEX-208115",
+        "provision_text": "제81조의2(수수료)",
+        "rerank_rank": 10,
+        "rerank_score": 6.439398566726595e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "지방공무원법 81조 2 수수료",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 91,
+        "first_stage_score": 11.850252135041588,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "간접투자자산 운용업법 19조  (자산운용회사 등의 책임)#KOBLEX-081733",
+        "provision_text": "제19조 (자산운용회사 등의 책임)",
+        "rerank_rank": 1,
+        "rerank_score": 0.9680187106132507,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "간접투자자산 운용업법 19조  (자산운용회사 등의 책임)",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 72,
+        "first_stage_score": 12.458799632623949,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "간접투자자산 운용업법 4조  (자산운용회사)#KOBLEX-081641",
+        "provision_text": "제4조 (자산운용회사)",
+        "rerank_rank": 2,
+        "rerank_score": 0.9658470749855042,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "간접투자자산 운용업법 4조  (자산운용회사)",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 73,
+        "first_stage_score": 12.458799632623949,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "간접투자자산 운용업법 4조#KOBLEX-081640",
+        "provision_text": "제1절 자산운용회사",
+        "rerank_rank": 3,
+        "rerank_score": 0.9565238356590271,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "간접투자자산 운용업법 4조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 62,
+        "first_stage_score": 12.777841543087614,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "상법 287조 19 유한책임회사의 대표#KOBLEX-114290",
+        "provision_text": "제287조의19(유한책임회사의 대표)",
+        "rerank_rank": 4,
+        "rerank_score": 0.4200949966907501,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "상법 287조 19 유한책임회사의 대표",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 16.61318920523434,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "간접투자자산 운용업법 59조  (판매광고)#KOBLEX-081907",
+        "provision_text": "②자산운용회사·투자회사 또는 판매회사가 간접투자증권의 취득을 권유하기 위하여 사용하는 광고에 포함될 수 있는 사항은 다음 각호에 한한다. 1. 간접투자기구의 명칭 2. 간접투자기구의 종류에 관한 사항 3. 간접투자기구의 투자목적 및 운용전략에 관한 사항 4. 자산운용회사·수탁회사·자산보관회사·판매회사 또는 일반사무관리회사의 명칭에 관한 사항 5. 자산운용회사·수탁회사·자산보관회사·판매회사 또는 일반사무관리회사가 취득하는 보수 및 수수료에 관한 사항 6. 그 밖에 대통령령이 정하는 사항",
+        "rerank_rank": 5,
+        "rerank_score": 0.34769749641418457,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "간접투자자산 운용업법 59조  (판매광고) 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 71,
+        "first_stage_score": 12.465776026150161,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 27조  법인과 소송행위의 대표#KOBLEX-231489",
+        "provision_text": "제27조(법인과 소송행위의 대표)",
+        "rerank_rank": 6,
+        "rerank_score": 0.3441966474056244,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 27조  법인과 소송행위의 대표",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 20.41562054853029,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "변호사법 115조  법무법인 등의 처벌#KOBLEX-087338",
+        "provision_text": "제115조(법무법인 등의 처벌)",
+        "rerank_rank": 7,
+        "rerank_score": 0.33619219064712524,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "변호사법 115조  법무법인 등의 처벌",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 11.885243747444555,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "상법 394조  이사와 회사간의 소에 관한 대표#KOBLEX-114890",
+        "provision_text": "제394조(이사와 회사간의 소에 관한 대표)",
+        "rerank_rank": 8,
+        "rerank_score": 0.3220910429954529,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "상법 394조  이사와 회사간의 소에 관한 대표",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 39,
+        "first_stage_score": 14.112390472356633,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "선원법 162조  벌칙#KOBLEX-067811",
+        "provision_text": "제162조(벌칙) 제12조 본문을 위반한 사람은 다음 각 호의 구분에 따라 처벌한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.3142281174659729,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "선원법 162조  벌칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 38,
+        "first_stage_score": 14.406729603399274,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "선원법 161조  벌칙#KOBLEX-067806",
+        "provision_text": "제161조(벌칙) 제11조를 위반한 사람은 다음 각 호의 구분에 따라 처벌한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.29975759983062744,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "선원법 161조  벌칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 53,
+        "first_stage_score": 10.810495655146596,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "폐기물관리법 시행령 23조 7 과징금의 계산방법 등#KOBLEX-193933",
+        "provision_text": "제23조의7(과징금의 계산방법 등)",
+        "rerank_rank": 3,
+        "rerank_score": 0.0010452016722410917,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "폐기물관리법 시행령 23조 7 과징금의 계산방법 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 13.975255418723833,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "국적법 24조  수수료#KOBLEX-068024",
+        "provision_text": "③ 제1항에 따른 수수료의 금액 및 제2항에 따른 수수료의 감액ㆍ면제 기준 등에 필요한 사항은 법무부령으로 정한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.0006657486082985997,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "국적법 24조  수수료 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 13.541973031184336,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "특정경제범죄 가중처벌 등에 관한 법률 11조  (무인가 단기금융업의 가중처벌)#KOBLEX-029506",
+        "provision_text": "② 제1항의 경우에 취득한 수수료액의 100분의 10 이상 수수료액 이하에 상당하는 벌금을 병과한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0005975136300548911,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R2-3"
+        ],
+        "statute_name": "특정경제범죄 가중처벌 등에 관한 법률 11조  (무인가 단기금융업의 가중처벌) 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 13.541973031184336,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "특정경제범죄 가중처벌 등에 관한 법률 11조  (무인가 단기금융업의 가중처벌)#KOBLEX-106548",
+        "provision_text": "② 제1항의 경우에 취득한 수수료액의 100분의 10 이상 수수료액 이하에 상당하는 벌금을 병과한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.0005975136300548911,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R2-3"
+        ],
+        "statute_name": "특정경제범죄 가중처벌 등에 관한 법률 11조  (무인가 단기금융업의 가중처벌) 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 15.478839073791576,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "진실ㆍ화해를 위한 과거사정리 기본법 24조 6 증인 등의 보호#KOBLEX-168662",
+        "provision_text": "② 증인ㆍ감정인ㆍ참고인은 청문회에서 한 증언ㆍ감정ㆍ진술로 인하여 이 법에서 정한 처벌 외에 다른 어떠한 불이익한 처분도 받지 아니한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.0005839573568664491,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R2-3",
+          "GRQ-R3-1",
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "진실ㆍ화해를 위한 과거사정리 기본법 24조 6 증인 등의 보호 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 80,
+        "first_stage_score": 10.168084091925927,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "지방자치법 시행령 38조  중요 재산, 공공시설의 취득ㆍ설치 및 처분의 범위 등#KOBLEX-196818",
+        "provision_text": "① 법 제47조제1항제6호에서 \"대통령령으로 정하는 중요 재산의 취득ㆍ처분\"이란 「공유재산 및 물품관리법 시행령」 제7조제1항 각 호의 어느 하나에 해당하는 재산의 취득ㆍ처분(같은 조 제3항 각 호의 어느 하나에 해당하는 재산의 취득ㆍ처분은 제외한다)을 말한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.0005741934292018414,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "지방자치법 시행령 38조  중요 재산, 공공시설의 취득ㆍ설치 및 처분의 범위 등 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 70,
+        "first_stage_score": 10.307049927944847,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "상속세 및 증여세법 시행령 29조  증자에 따른 이익의 계산방법 등#KOBLEX-212188",
+        "provision_text": "제29조(증자에 따른 이익의 계산방법 등)",
+        "rerank_rank": 9,
+        "rerank_score": 0.0005530453054234385,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상속세 및 증여세법 시행령 29조  증자에 따른 이익의 계산방법 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 73,
+        "first_stage_score": 10.307049927944847,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "상속세 및 증여세법 시행령 31조 2 초과배당에 따른 이익의 계산방법 등#KOBLEX-212208",
+        "provision_text": "제31조의2(초과배당에 따른 이익의 계산방법 등)",
+        "rerank_rank": 10,
+        "rerank_score": 0.0005472867633216083,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상속세 및 증여세법 시행령 31조 2 초과배당에 따른 이익의 계산방법 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 98,
+        "first_stage_score": 11.653447563017348,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "부동산등기법 111조  벌칙#KOBLEX-088185",
+        "provision_text": "제111조(벌칙) 다음 각 호의 어느 하나에 해당하는 사람은 2년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.9503163695335388,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "부동산등기법 111조  벌칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 12.700778941829778,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "간접투자자산 운용업법 184조  (벌칙)#KOBLEX-082645",
+        "provision_text": "8의3. 제61조의3제4항을 위반하여 투자자로부터 판매대금을 수납하거나 수수료를 받은 취득권유자",
+        "rerank_rank": 6,
+        "rerank_score": 0.030861884355545044,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R2-3"
+        ],
+        "statute_name": "간접투자자산 운용업법 184조  (벌칙) 10호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 38,
+        "first_stage_score": 12.586730902156766,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "농어업경영체 육성 및 지원에 관한 법률 31조  벌칙#KOBLEX-217513",
+        "provision_text": "제31조(벌칙) 제19조의5를 위반한 자는 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.9498010873794556,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "농어업경영체 육성 및 지원에 관한 법률 31조  벌칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 37,
+        "first_stage_score": 12.586730902156766,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "노동위원회법 30조  벌칙#KOBLEX-185829",
+        "provision_text": "제30조(벌칙) 제28조를 위반한 사람은 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.9475988149642944,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "노동위원회법 30조  벌칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 14.091979505565547,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "법무사법 48조  징계처분#KOBLEX-061640",
+        "provision_text": "② 징계의 종류는 다음과 같다. 1. 제명(除名) 2. 1개월 이상 2년 이하의 업무정지 3. 500만원 이하의 과태료 4. 견책(譴責)",
+        "rerank_rank": 9,
+        "rerank_score": 0.42252016067504883,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3"
+        ],
+        "statute_name": "법무사법 48조  징계처분 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 22.190129710158182,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "국유재산법 시행령 64조 6 민간참여개발사업계획제안서#KOBLEX-091779",
+        "provision_text": "6. 수익배분 기준에 관한 사항",
+        "rerank_rank": 3,
+        "rerank_score": 0.015172283165156841,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "국유재산법 시행령 64조 6 민간참여개발사업계획제안서 6호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 96,
+        "first_stage_score": 11.3465361258019,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 82조  자기집합투자증권의 취득 제한#KOBLEX-135235",
+        "provision_text": "1. 담보권의 실행 등 권리 행사에 필요한 경우. 이 경우 취득한 집합투자증권은 대통령령으로 정하는 방법에 따라 처분하여야 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.0002539195120334625,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 82조  자기집합투자증권의 취득 제한 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 13.254775966428962,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "전자금융거래법 32조  허가와 등록의 결격사유#KOBLEX-186817",
+        "provision_text": "5. 허가 또는 등록 신청일을 기준으로 최근 3년간 대통령령이 정하는 금융관계법령을 위반하여 벌금형 이상의 처벌을 받은 사실이 있는 자",
+        "rerank_rank": 5,
+        "rerank_score": 0.00011026774882338941,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "전자금융거래법 32조  허가와 등록의 결격사유 5호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 77,
+        "first_stage_score": 11.751051362316137,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 249조 4 일반 사모집합투자기구의 투자권유 등#KOBLEX-136331",
+        "provision_text": "⑤ 일반 사모집합투자기구(일반투자자를 대상으로 하는 경우로 한정한다)의 집합투자증권을 판매한 자는 그 일반 사모집합투자기구의 집합투자증권을 발행한 집합투자업자의 운용행위가 제2항에 따른 핵심상품설명서에 부합하는지 여부에 대하여 대통령령으로 정하는 기준 및 방법에 따라 확인하고, 부합하지 아니하는 경우에는 그 집합투자업자에게 그 운용행위의 철회ㆍ변경 또는 시정을 요구하여야 한다.",
+        "rerank_rank": 6,
+        "rerank_score": 8.240061288233846e-05,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 249조 4 일반 사모집합투자기구의 투자권유 등 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 14.887105480801694,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 235조  환매청구 및 방법 등#KOBLEX-136234",
+        "provision_text": "⑥ 집합투자증권을 판매한 투자매매업자ㆍ투자중개업자, 집합투자재산을 운용하는 집합투자업자 또는 집합투자재산을 보관ㆍ관리하는 신탁업자는 환매청구를 받거나 환매에 응할 것을 요구받은 집합투자증권을 자기의 계산으로 취득하거나 타인에게 취득하게 하여서는 아니 된다. 다만, 집합투자증권의 원활한 환매를 위하여 필요하거나 투자자의 이익을 해할 우려가 없는 경우로서 대통령령으로 정하는 경우에는 그 투자매매업자ㆍ투자중개업자ㆍ집합투자업자 또는 신탁업자는 환매청구를 받거나 환매에 응할 것을 요구받은 집합투자증권을 자기의 계산으로 취득할 수 있다.",
+        "rerank_rank": 7,
+        "rerank_score": 6.65471816319041e-05,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 235조  환매청구 및 방법 등 6항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 64,
+        "first_stage_score": 12.33197330639575,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 94조  부동산의 운용 특례#KOBLEX-135294",
+        "provision_text": "① 집합투자업자는 제83조제1항 각 호 외의 부분 본문에 불구하고 집합투자재산으로 부동산을 취득하는 경우(제229조제2호에 따른 부동산집합투자기구는 운용하는 경우를 포함한다)에는 대통령령으로 정하는 방법에 따라 집합투자기구의 계산으로 금전을 차입할 수 있다. <개정 2016.3.29>",
+        "rerank_rank": 9,
+        "rerank_score": 4.2284860683139414e-05,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 94조  부동산의 운용 특례 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 14.149962887916644,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "금융위원회의 설치 등에 관한 법률 38조  검사 대상 기관#KOBLEX-219557",
+        "provision_text": "2. 「자본시장과 금융투자업에 관한 법률」에 따른 금융투자업자, 증권금융회사, 종합금융회사 및 명의개서대행회사(名義改書代行會社)",
+        "rerank_rank": 1,
+        "rerank_score": 0.6588808298110962,
+        "retrieval_round": 3,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "금융위원회의 설치 등에 관한 법률 38조  검사 대상 기관 2호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 16.16078425155089,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "근로자퇴직급여 보장법 26조  퇴직연금사업자의 등록#KOBLEX-091333",
+        "provision_text": "1. 「자본시장과 금융투자업에 관한 법률」에 따른 투자매매업자, 투자중개업자 또는 집합투자업자",
+        "rerank_rank": 3,
+        "rerank_score": 0.8736444115638733,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "근로자퇴직급여 보장법 26조  퇴직연금사업자의 등록 1호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 20.24458351458877,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 428조  금융투자업자에 대한 과징금#KOBLEX-137367",
+        "provision_text": "제428조(금융투자업자에 대한 과징금)",
+        "rerank_rank": 4,
+        "rerank_score": 0.00017328337708022445,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-3",
+        "source_request_ids": [
+          "GRQ-R3-3"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 428조  금융투자업자에 대한 과징금",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 16.505026075240387,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "법인세법 시행규칙 23조  퇴직연금등의 범위#KOBLEX-150418",
+        "provision_text": "2. 「자본시장과 금융투자업에 관한 법률」에 따른 신탁업자ㆍ집합투자업자ㆍ투자매매업자 또는 투자중개업자",
+        "rerank_rank": 5,
+        "rerank_score": 0.7950651049613953,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "법인세법 시행규칙 23조  퇴직연금등의 범위 2호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 47,
+        "first_stage_score": 15.577898330128118,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 58조  수수료#KOBLEX-135109",
+        "provision_text": "③ 금융투자업자는 제1항에 따른 수수료 부과기준 및 절차에 관한 사항을 협회에 통보하여야 한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.0001413296558894217,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-3",
+        "source_request_ids": [
+          "GRQ-R3-3"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 58조  수수료 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 16.76743423512369,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "직업안정법 2조 2 정의#KOBLEX-082693",
+        "provision_text": "4. \"무료직업소개사업\"이란 수수료, 회비 또는 그 밖의 어떠한 금품도 받지 아니하고 하는 직업소개사업을 말한다.",
+        "rerank_rank": 7,
+        "rerank_score": 1.0419939826533664e-05,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "직업안정법 2조 2 정의 4호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 16.76743423512369,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "직업안정법 2조 2 정의#KOBLEX-089932",
+        "provision_text": "4. \"무료직업소개사업\"이란 수수료, 회비 또는 그 밖의 어떠한 금품도 받지 아니하고 하는 직업소개사업을 말한다.",
+        "rerank_rank": 8,
+        "rerank_score": 1.0419939826533664e-05,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "직업안정법 2조 2 정의 4호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 17.38349171867808,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "법인세법 시행령 95조 3 사실과 다른 회계처리로 인한 경정에 따른 세액공제#KOBLEX-017729",
+        "provision_text": "① 법 제58조의3제1항제2호에서 \"대통령령으로 정하는 경고ㆍ주의 등의 조치\"란 다음 각 호의 어느 하나에 해당하는 것을 말한다. <개정 2018.10.30> 1. 「자본시장과 금융투자업에 관한 법률 시행령」 제175조 각 호에 따른 임원해임권고 등 조치 2. 「자본시장과 금융투자업에 관한 법률」 제429조제3항에 따른 과징금의 부과 3. 「자본시장과 금융투자업에 관한 법률」 제444조제13호 또는 제446조제28호에 따른 징역 또는 벌금형의 선고 4. 「주식회사 등의 외부감사에 관한 법률」 제29조제3항 및 제4항에 따른 감사인 또는 그에 소속된 공인회계사의 등록취소, 업무ㆍ직무의 정지건의 또는 특정 회사에 대한 감사업무의 제한 5. 「주식회사 등의 외부감사에 관한 법률」 제29조제1항에 따른 주주총회에 대한 임원의 해임권고 또는 유가증권의 발행제한 6. 「주식회사 등의 외부감사에 관한 법률」 제39조부터 제44조까지의 규정에 따른 징역 또는 벌금형의 선고",
+        "rerank_rank": 9,
+        "rerank_score": 0.6815652847290039,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "법인세법 시행령 95조 3 사실과 다른 회계처리로 인한 경정에 따른 세액공제 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 24.613289280971383,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 8조  금융투자업자#KOBLEX-134840",
+        "provision_text": "제8조(금융투자업자)",
+        "rerank_rank": 10,
+        "rerank_score": 6.853328522993252e-05,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-3",
+        "source_request_ids": [
+          "GRQ-R3-3"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 8조  금융투자업자",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082551": "①자산운용회사·수탁회사·자산보관회사·일반사무관리회사 및 판매회사는 간접투자기구의 운용실적에 따라 보수 또는 수수료를 취득하여서는 아니된다.",
+      "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082552": "②제1항의 규정에 불구하고 사모간접투자기구의 경우에는 간접투자기구의 운용실적에 따라 보수 또는 수수료를 취득할 수 있다. 이 경우 투자자를 보호하기 위하여 보수 또는 수수료 취득에 관하여 필요한 사항은 대통령령으로 정한다.",
+      "간접투자자산 운용업법 184조  (벌칙)#KOBLEX-082645": "8의3. 제61조의3제4항을 위반하여 투자자로부터 판매대금을 수납하거나 수수료를 받은 취득권유자",
+      "간접투자자산 운용업법 19조  (자산운용회사 등의 책임)#KOBLEX-081733": "제19조 (자산운용회사 등의 책임)",
+      "간접투자자산 운용업법 4조  (자산운용회사)#KOBLEX-081641": "제4조 (자산운용회사)",
+      "간접투자자산 운용업법 4조#KOBLEX-081640": "제1절 자산운용회사",
+      "간접투자자산 운용업법 59조  (판매광고)#KOBLEX-081907": "②자산운용회사·투자회사 또는 판매회사가 간접투자증권의 취득을 권유하기 위하여 사용하는 광고에 포함될 수 있는 사항은 다음 각호에 한한다. 1. 간접투자기구의 명칭 2. 간접투자기구의 종류에 관한 사항 3. 간접투자기구의 투자목적 및 운용전략에 관한 사항 4. 자산운용회사·수탁회사·자산보관회사·판매회사 또는 일반사무관리회사의 명칭에 관한 사항 5. 자산운용회사·수탁회사·자산보관회사·판매회사 또는 일반사무관리회사가 취득하는 보수 및 수수료에 관한 사항 6. 그 밖에 대통령령이 정하는 사항",
+      "국유재산법 시행령 64조 6 민간참여개발사업계획제안서#KOBLEX-091779": "6. 수익배분 기준에 관한 사항",
+      "국적법 24조  수수료#KOBLEX-068024": "③ 제1항에 따른 수수료의 금액 및 제2항에 따른 수수료의 감액ㆍ면제 기준 등에 필요한 사항은 법무부령으로 정한다.",
+      "근로자퇴직급여 보장법 26조  퇴직연금사업자의 등록#KOBLEX-091333": "1. 「자본시장과 금융투자업에 관한 법률」에 따른 투자매매업자, 투자중개업자 또는 집합투자업자",
+      "근로자퇴직급여 보장법 29조 2 수수료#KOBLEX-091352": "제29조의2(수수료)",
+      "금융위원회의 설치 등에 관한 법률 38조  검사 대상 기관#KOBLEX-219557": "2. 「자본시장과 금융투자업에 관한 법률」에 따른 금융투자업자, 증권금융회사, 종합금융회사 및 명의개서대행회사(名義改書代行會社)",
+      "노동위원회법 30조  벌칙#KOBLEX-185829": "제30조(벌칙) 제28조를 위반한 사람은 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+      "농어업경영체 육성 및 지원에 관한 법률 31조  벌칙#KOBLEX-217513": "제31조(벌칙) 제19조의5를 위반한 자는 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다.",
+      "농지법 시행규칙 11조  농지처분비용 및 수수료#KOBLEX-178797": "2. 수수료",
+      "방위사업법 51조 2 수수료#KOBLEX-068319": "제51조의2(수수료)",
+      "법무사법 48조  징계처분#KOBLEX-061640": "② 징계의 종류는 다음과 같다. 1. 제명(除名) 2. 1개월 이상 2년 이하의 업무정지 3. 500만원 이하의 과태료 4. 견책(譴責)",
+      "법인세법 시행규칙 23조  퇴직연금등의 범위#KOBLEX-150418": "2. 「자본시장과 금융투자업에 관한 법률」에 따른 신탁업자ㆍ집합투자업자ㆍ투자매매업자 또는 투자중개업자",
+      "법인세법 시행령 95조 3 사실과 다른 회계처리로 인한 경정에 따른 세액공제#KOBLEX-017729": "① 법 제58조의3제1항제2호에서 \"대통령령으로 정하는 경고ㆍ주의 등의 조치\"란 다음 각 호의 어느 하나에 해당하는 것을 말한다. <개정 2018.10.30> 1. 「자본시장과 금융투자업에 관한 법률 시행령」 제175조 각 호에 따른 임원해임권고 등 조치 2. 「자본시장과 금융투자업에 관한 법률」 제429조제3항에 따른 과징금의 부과 3. 「자본시장과 금융투자업에 관한 법률」 제444조제13호 또는 제446조제28호에 따른 징역 또는 벌금형의 선고 4. 「주식회사 등의 외부감사에 관한 법률」 제29조제3항 및 제4항에 따른 감사인 또는 그에 소속된 공인회계사의 등록취소, 업무ㆍ직무의 정지건의 또는 특정 회사에 대한 감사업무의 제한 5. 「주식회사 등의 외부감사에 관한 법률」 제29조제1항에 따른 주주총회에 대한 임원의 해임권고 또는 유가증권의 발행제한 6. 「주식회사 등의 외부감사에 관한 법률」 제39조부터 제44조까지의 규정에 따른 징역 또는 벌금형의 선고",
+      "변호사법 115조  법무법인 등의 처벌#KOBLEX-087338": "제115조(법무법인 등의 처벌)",
+      "부동산등기법 111조  벌칙#KOBLEX-088185": "제111조(벌칙) 다음 각 호의 어느 하나에 해당하는 사람은 2년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+      "상법 287조 19 유한책임회사의 대표#KOBLEX-114290": "제287조의19(유한책임회사의 대표)",
+      "상법 394조  이사와 회사간의 소에 관한 대표#KOBLEX-114890": "제394조(이사와 회사간의 소에 관한 대표)",
+      "상속세 및 증여세법 시행령 29조  증자에 따른 이익의 계산방법 등#KOBLEX-212188": "제29조(증자에 따른 이익의 계산방법 등)",
+      "상속세 및 증여세법 시행령 31조 2 초과배당에 따른 이익의 계산방법 등#KOBLEX-212208": "제31조의2(초과배당에 따른 이익의 계산방법 등)",
+      "선원법 161조  벌칙#KOBLEX-067806": "제161조(벌칙) 제11조를 위반한 사람은 다음 각 호의 구분에 따라 처벌한다.",
+      "선원법 162조  벌칙#KOBLEX-067811": "제162조(벌칙) 제12조 본문을 위반한 사람은 다음 각 호의 구분에 따라 처벌한다.",
+      "여객자동차 운수사업법 시행규칙 102조  수수료#KOBLEX-191314": "제102조(수수료)",
+      "자본시장과 금융투자업에 관한 법률 235조  환매청구 및 방법 등#KOBLEX-136234": "⑥ 집합투자증권을 판매한 투자매매업자ㆍ투자중개업자, 집합투자재산을 운용하는 집합투자업자 또는 집합투자재산을 보관ㆍ관리하는 신탁업자는 환매청구를 받거나 환매에 응할 것을 요구받은 집합투자증권을 자기의 계산으로 취득하거나 타인에게 취득하게 하여서는 아니 된다. 다만, 집합투자증권의 원활한 환매를 위하여 필요하거나 투자자의 이익을 해할 우려가 없는 경우로서 대통령령으로 정하는 경우에는 그 투자매매업자ㆍ투자중개업자ㆍ집합투자업자 또는 신탁업자는 환매청구를 받거나 환매에 응할 것을 요구받은 집합투자증권을 자기의 계산으로 취득할 수 있다.",
+      "자본시장과 금융투자업에 관한 법률 249조 4 일반 사모집합투자기구의 투자권유 등#KOBLEX-136331": "⑤ 일반 사모집합투자기구(일반투자자를 대상으로 하는 경우로 한정한다)의 집합투자증권을 판매한 자는 그 일반 사모집합투자기구의 집합투자증권을 발행한 집합투자업자의 운용행위가 제2항에 따른 핵심상품설명서에 부합하는지 여부에 대하여 대통령령으로 정하는 기준 및 방법에 따라 확인하고, 부합하지 아니하는 경우에는 그 집합투자업자에게 그 운용행위의 철회ㆍ변경 또는 시정을 요구하여야 한다.",
+      "자본시장과 금융투자업에 관한 법률 428조  금융투자업자에 대한 과징금#KOBLEX-137367": "제428조(금융투자업자에 대한 과징금)",
+      "자본시장과 금융투자업에 관한 법률 58조  수수료#KOBLEX-135109": "③ 금융투자업자는 제1항에 따른 수수료 부과기준 및 절차에 관한 사항을 협회에 통보하여야 한다.",
+      "자본시장과 금융투자업에 관한 법률 82조  자기집합투자증권의 취득 제한#KOBLEX-135235": "1. 담보권의 실행 등 권리 행사에 필요한 경우. 이 경우 취득한 집합투자증권은 대통령령으로 정하는 방법에 따라 처분하여야 한다.",
+      "자본시장과 금융투자업에 관한 법률 8조  금융투자업자#KOBLEX-134840": "제8조(금융투자업자)",
+      "자본시장과 금융투자업에 관한 법률 94조  부동산의 운용 특례#KOBLEX-135294": "① 집합투자업자는 제83조제1항 각 호 외의 부분 본문에 불구하고 집합투자재산으로 부동산을 취득하는 경우(제229조제2호에 따른 부동산집합투자기구는 운용하는 경우를 포함한다)에는 대통령령으로 정하는 방법에 따라 집합투자기구의 계산으로 금전을 차입할 수 있다. <개정 2016.3.29>",
+      "전기통신금융사기 피해 방지 및 피해금 환급에 관한 특별법 시행령 11조  수수료#KOBLEX-210546": "제11조(수수료)",
+      "전자금융거래법 32조  허가와 등록의 결격사유#KOBLEX-186817": "5. 허가 또는 등록 신청일을 기준으로 최근 3년간 대통령령이 정하는 금융관계법령을 위반하여 벌금형 이상의 처벌을 받은 사실이 있는 자",
+      "조달사업에 관한 법률 16조  수수료#KOBLEX-049692": "제16조(수수료)",
+      "지방공무원법 81조 2 수수료#KOBLEX-208115": "제81조의2(수수료)",
+      "지방자치법 154조  수수료#KOBLEX-076698": "제154조(수수료)",
+      "지방자치법 시행령 38조  중요 재산, 공공시설의 취득ㆍ설치 및 처분의 범위 등#KOBLEX-196818": "① 법 제47조제1항제6호에서 \"대통령령으로 정하는 중요 재산의 취득ㆍ처분\"이란 「공유재산 및 물품관리법 시행령」 제7조제1항 각 호의 어느 하나에 해당하는 재산의 취득ㆍ처분(같은 조 제3항 각 호의 어느 하나에 해당하는 재산의 취득ㆍ처분은 제외한다)을 말한다.",
+      "직업안정법 2조 2 정의#KOBLEX-082693": "4. \"무료직업소개사업\"이란 수수료, 회비 또는 그 밖의 어떠한 금품도 받지 아니하고 하는 직업소개사업을 말한다.",
+      "직업안정법 2조 2 정의#KOBLEX-089932": "4. \"무료직업소개사업\"이란 수수료, 회비 또는 그 밖의 어떠한 금품도 받지 아니하고 하는 직업소개사업을 말한다.",
+      "진실ㆍ화해를 위한 과거사정리 기본법 24조 6 증인 등의 보호#KOBLEX-168662": "② 증인ㆍ감정인ㆍ참고인은 청문회에서 한 증언ㆍ감정ㆍ진술로 인하여 이 법에서 정한 처벌 외에 다른 어떠한 불이익한 처분도 받지 아니한다.",
+      "특정경제범죄 가중처벌 등에 관한 법률 11조  (무인가 단기금융업의 가중처벌)#KOBLEX-029506": "② 제1항의 경우에 취득한 수수료액의 100분의 10 이상 수수료액 이하에 상당하는 벌금을 병과한다.",
+      "특정경제범죄 가중처벌 등에 관한 법률 11조  (무인가 단기금융업의 가중처벌)#KOBLEX-106548": "② 제1항의 경우에 취득한 수수료액의 100분의 10 이상 수수료액 이하에 상당하는 벌금을 병과한다.",
+      "폐기물관리법 시행령 23조 7 과징금의 계산방법 등#KOBLEX-193933": "제23조의7(과징금의 계산방법 등)",
+      "형사소송법 27조  법인과 소송행위의 대표#KOBLEX-231489": "제27조(법인과 소송행위의 대표)"
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082552",
+          "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082551"
+        ],
+        "missing_aspects": [
+          "Specific criteria for compensation calculation and limits as prescribed by Presidential Decree"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "The general rule and the specific exception for private funds are present. However, the specific criteria for compensation calculation and limits, which are delegated to Presidential Decree in C001, are not included in the candidate provisions.",
+        "status": "partially_covered"
+      },
+      {
+        "evidence_item_id": "E2",
+        "linked_provision_ids": [
+          "간접투자자산 운용업법 184조  (벌칙)#KOBLEX-082645"
+        ],
+        "missing_aspects": [
+          "Criminal penalties (imprisonment, fines) for violations",
+          "Administrative sanctions (business suspension, administrative fines)"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C030 identifies a violation subject to penalty under Article 184, but the specific criminal penalties (imprisonment, fines) and administrative sanctions (business suspension, administrative fines) are not specified in the provided text.",
+        "status": "partially_covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082552",
+        "support_spans": [
+          {
+            "end_char": 124,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082551",
+        "support_spans": [
+          {
+            "end_char": 77,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "간접투자자산 운용업법 184조  (벌칙)#KOBLEX-082645",
+        "support_spans": [
+          {
+            "end_char": 53,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 15,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "사모간접투자기구의 자산운용회사 대표가 보수 또는 수수료를 취득할 수 있는 법적 기준과 요건",
+        "issue_id": "I1"
+      },
+      {
+        "description": "간접투자자산 운용업법 위반 시 자산운용회사 대표에 대한 형사처벌 및 제재 기준",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "보수 및 수수료 수령의 법적 근거 조항과 구체적 기준(운용실적 연동, 약정 사항 등)이 확인되어야 함",
+        "critical": true,
+        "description": "사모간접투자기구의 자산운용회사 대표가 보수 및 수수료를 수령할 수 있는 법적 근거와 기준",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "위반 행위에 대한 벌칙 조항(형량, 벌금) 및 행정제재(업무정지, 과태료 등)가 확인되어야 함",
+        "critical": true,
+        "description": "간접투자자산 운용업법 위반 시 자산운용회사 대표에 적용되는 형사처벌 및 제재 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "remedy",
+        "issue_id": "I2"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 사모간접투자기구인 \"성공투자펀드\"의 자산운용회사 대표로, 최근 이 기구의 높은 운용실적에 따라 상당한 보수와 수수료를 얻었다. 그러나 갑은 법에 명시된 규정을 충분히 검토하지 않고, 간접투자자산 운용업법을 위반하여 투자자 보호를 위한 필요 사항을 따르지 않았다. 이를 알게 된 을, 성공투자펀드의 주요 투자자 중 한 명은 갑의 행위가 법적으로 문제가 없는지 궁금하여 법적 자문을 구하고자 한다. [질문] 갑은 어떠한 기준에 따라 보수 또는 수수료를 취득할 수 있는가? 또한 갑이 간접투자자산 운용업법을 위반했을 때 어떤 처벌을 받을 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "사모간접투자기구",
+          "자산운용회사",
+          "대표",
+          "보수",
+          "수수료",
+          "취득기준"
+        ],
+        "query_text": "사모간접투자기구 자산운용회사 대표 보수 수수료 취득 기준 [원문 맥락] 갑은 어떠한 기준에 따라 보수 또는 수수료를 취득할 수 있는가? 또한 갑이 간접투자자산 운용업법을 위반했을 때 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "간접투자자산운용업법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "간접투자자산운용업법",
+          "위반",
+          "자산운용회사",
+          "대표",
+          "처벌",
+          "벌칙"
+        ],
+        "query_text": "간접투자자산운용업법 위반 자산운용회사 대표 처벌 벌칙 [원문 맥락] 갑은 어떠한 기준에 따라 보수 또는 수수료를 취득할 수 있는가? 또한 갑이 간접투자자산 운용업법을 위반했을 때 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ2",
+        "statute_hints": [
+          "간접투자자산운용업법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "간접투자자산운용업법",
+          "시행령",
+          "성과보수",
+          "계산방법",
+          "제한",
+          "기준"
+        ],
+        "query_text": "간접투자자산운용업법 시행령 성과보수 계산방법 제한 기준 [원문 맥락] 갑은 어떠한 기준에 따라 보수 또는 수수료를 취득할 수 있는가? 또한 갑이 간접투자자산 운용업법을 위반했을 때 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "statute_hints": [
+          "간접투자자산운용업법 시행령"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "간접투자자산운용업법",
+          "벌칙",
+          "징역",
+          "벌금",
+          "형사처벌"
+        ],
+        "query_text": "간접투자자산운용업법 벌칙 조항 징역 벌금 [원문 맥락] 갑은 어떠한 기준에 따라 보수 또는 수수료를 취득할 수 있는가? 또한 갑이 간접투자자산 운용업법을 위반했을 때 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "statute_hints": [
+          "간접투자자산운용업법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "간접투자자산운용업법",
+          "행정제재",
+          "업무정지",
+          "과태료",
+          "제재"
+        ],
+        "query_text": "간접투자자산운용업법 행정제재 업무정지 과태료 [원문 맥락] 갑은 어떠한 기준에 따라 보수 또는 수수료를 취득할 수 있는가? 또한 갑이 간접투자자산 운용업법을 위반했을 때 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R2-3",
+        "statute_hints": [
+          "간접투자자산운용업법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "사모투자",
+          "집합투자",
+          "운용보수",
+          "수익배분",
+          "대통령령"
+        ],
+        "query_text": "사모투자집합투자증권 운용보수 수익배분 기준 대통령령 [원문 맥락] 갑은 어떠한 기준에 따라 보수 또는 수수료를 취득할 수 있는가? 또한 갑이 간접투자자산 운용업법을 위반했을 때 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R3-1",
+        "statute_hints": [
+          "자본시장과 금융투자업에 관한 법률 시행령"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "자본시장법",
+          "위반",
+          "징역",
+          "벌금형",
+          "형사처벌"
+        ],
+        "query_text": "자본시장과 금융투자업에 관한 법률 위반 시 징역 또는 벌금형 [원문 맥락] 갑은 어떠한 기준에 따라 보수 또는 수수료를 취득할 수 있는가? 또한 갑이 간접투자자산 운용업법을 위반했을 때 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R3-2",
+        "statute_hints": [
+          "자본시장과 금융투자업에 관한 법률"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "금융투자업자",
+          "업무정지",
+          "과징금",
+          "행정제재",
+          "금융위원회"
+        ],
+        "query_text": "금융투자업자 업무정지 과징금 행정제재 [원문 맥락] 갑은 어떠한 기준에 따라 보수 또는 수수료를 취득할 수 있는가? 또한 갑이 간접투자자산 운용업법을 위반했을 때 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R3-3",
+        "statute_hints": [
+          "자본시장과 금융투자업에 관한 법률"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 사모간접투자기구인 \"성공투자펀드\"의 자산운용회사 대표로, 최근 이 기구의 높은 운용실적에 따라 상당한 보수와 수수료를 얻었다. 그러나 갑은 법에 명시된 규정을 충분히 검토하지 않고, 간접투자자산 운용업법을 위반하여 투자자 보호를 위한 필요 사항을 따르지 않았다. 이를 알게 된 을, 성공투자펀드의 주요 투자자 중 한 명은 갑의 행위가 법적으로 문제가 없는지 궁금하여 법적 자문을 구하고자 한다.\n\n[질문]\n갑은 어떠한 기준에 따라 보수 또는 수수료를 취득할 수 있는가? 또한 갑이 간접투자자산 운용업법을 위반했을 때 어떤 처벌을 받을 수 있는가?",
+    "remaining_request_budget": 1,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "보수 및 수수료 수령의 법적 근거 조항과 구체적 기준(운용실적 연동, 약정 사항 등)이 확인되어야 함",
+        "critical": true,
+        "description": "사모간접투자기구의 자산운용회사 대표가 보수 및 수수료를 수령할 수 있는 법적 근거와 기준",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1"
+      },
+      {
+        "completion_criteria": "위반 행위에 대한 벌칙 조항(형량, 벌금) 및 행정제재(업무정지, 과태료 등)가 확인되어야 함",
+        "critical": true,
+        "description": "간접투자자산 운용업법 위반 시 자산운용회사 대표에 적용되는 형사처벌 및 제재 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "remedy",
+        "issue_id": "I2"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "8fd59ff5-607c-4f51-80f4-55b5be20813c",
+    "seen_provision_ids": [
+      "금융위원회의 설치 등에 관한 법률 38조  검사 대상 기관#KOBLEX-219557",
+      "간접투자자산 운용업법 19조  (자산운용회사 등의 책임)#KOBLEX-081733",
+      "국적법 24조  수수료#KOBLEX-068024",
+      "진실ㆍ화해를 위한 과거사정리 기본법 24조 6 증인 등의 보호#KOBLEX-168662",
+      "자본시장과 금융투자업에 관한 법률 428조  금융투자업자에 대한 과징금#KOBLEX-137367",
+      "특정경제범죄 가중처벌 등에 관한 법률 11조  (무인가 단기금융업의 가중처벌)#KOBLEX-029506",
+      "지방자치법 154조  수수료#KOBLEX-076698",
+      "지방공무원법 81조 2 수수료#KOBLEX-208115",
+      "근로자퇴직급여 보장법 26조  퇴직연금사업자의 등록#KOBLEX-091333",
+      "부동산등기법 111조  벌칙#KOBLEX-088185",
+      "자본시장과 금융투자업에 관한 법률 249조 4 일반 사모집합투자기구의 투자권유 등#KOBLEX-136331",
+      "직업안정법 2조 2 정의#KOBLEX-082693",
+      "간접투자자산 운용업법 4조  (자산운용회사)#KOBLEX-081641",
+      "상속세 및 증여세법 시행령 29조  증자에 따른 이익의 계산방법 등#KOBLEX-212188",
+      "형사소송법 27조  법인과 소송행위의 대표#KOBLEX-231489",
+      "법인세법 시행규칙 23조  퇴직연금등의 범위#KOBLEX-150418",
+      "농어업경영체 육성 및 지원에 관한 법률 31조  벌칙#KOBLEX-217513",
+      "상속세 및 증여세법 시행령 31조 2 초과배당에 따른 이익의 계산방법 등#KOBLEX-212208",
+      "자본시장과 금융투자업에 관한 법률 94조  부동산의 운용 특례#KOBLEX-135294",
+      "자본시장과 금융투자업에 관한 법률 58조  수수료#KOBLEX-135109",
+      "법인세법 시행령 95조 3 사실과 다른 회계처리로 인한 경정에 따른 세액공제#KOBLEX-017729",
+      "법무사법 48조  징계처분#KOBLEX-061640",
+      "자본시장과 금융투자업에 관한 법률 235조  환매청구 및 방법 등#KOBLEX-136234",
+      "특정경제범죄 가중처벌 등에 관한 법률 11조  (무인가 단기금융업의 가중처벌)#KOBLEX-106548",
+      "방위사업법 51조 2 수수료#KOBLEX-068319",
+      "여객자동차 운수사업법 시행규칙 102조  수수료#KOBLEX-191314",
+      "선원법 162조  벌칙#KOBLEX-067811",
+      "상법 287조 19 유한책임회사의 대표#KOBLEX-114290",
+      "간접투자자산 운용업법 184조  (벌칙)#KOBLEX-082645",
+      "전기통신금융사기 피해 방지 및 피해금 환급에 관한 특별법 시행령 11조  수수료#KOBLEX-210546",
+      "자본시장과 금융투자업에 관한 법률 8조  금융투자업자#KOBLEX-134840",
+      "자본시장과 금융투자업에 관한 법률 82조  자기집합투자증권의 취득 제한#KOBLEX-135235",
+      "선원법 161조  벌칙#KOBLEX-067806",
+      "폐기물관리법 시행령 23조 7 과징금의 계산방법 등#KOBLEX-193933",
+      "조달사업에 관한 법률 16조  수수료#KOBLEX-049692",
+      "지방자치법 시행령 38조  중요 재산, 공공시설의 취득ㆍ설치 및 처분의 범위 등#KOBLEX-196818",
+      "간접투자자산 운용업법 4조#KOBLEX-081640",
+      "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082552",
+      "국유재산법 시행령 64조 6 민간참여개발사업계획제안서#KOBLEX-091779",
+      "농지법 시행규칙 11조  농지처분비용 및 수수료#KOBLEX-178797",
+      "간접투자자산 운용업법 177조  (성과보수의 제한)#KOBLEX-082551",
+      "간접투자자산 운용업법 59조  (판매광고)#KOBLEX-081907",
+      "변호사법 115조  법무법인 등의 처벌#KOBLEX-087338",
+      "노동위원회법 30조  벌칙#KOBLEX-185829",
+      "직업안정법 2조 2 정의#KOBLEX-089932",
+      "전자금융거래법 32조  허가와 등록의 결격사유#KOBLEX-186817",
+      "상법 394조  이사와 회사간의 소에 관한 대표#KOBLEX-114890",
+      "근로자퇴직급여 보장법 29조 2 수수료#KOBLEX-091352"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

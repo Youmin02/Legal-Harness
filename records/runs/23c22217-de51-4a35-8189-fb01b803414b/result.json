@@ -1,0 +1,887 @@
+{
+  "abstention_reason": null,
+  "answer": "을의 갑에 대한 손해배상청구권의 소멸시효는 운송수단에 따라 상법상 다른 규정이 적용됩니다. 만약 해당 운송이 해상운송에 해당한다면, 운송인의 채권 및 채무는 운송인이 수하인에게 운송물을 인도한 날 또는 인도할 날부터 1년 이내에 재판상 청구가 없으면 소멸합니다 [CT1]. 반면, 해당 운송이 항공운송에 해당한다면, 운송인의 책임은 운송물이 도착지에 도착한 날, 항공기가 도착할 날 또는 운송이 중지된 날 가운데 가장 늦게 도래한 날부터 2년 이내에 재판상 청구가 없으면 소멸합니다 [CT2]. 질문 시나리오에서는 운송수단이 특정되지 않아, 어느 조항이 적용되는지 판단할 수 있는 사실적 선택 기준이 부재합니다. 따라서 을은 운송수단이 해상운송인지 항공운송인지에 따라 각각 1년 또는 2년의 소멸시효 기간 내에서 소송을 제기해야 합니다.",
+  "completed_at_utc": "2026-08-18T16:30:10.960070+00:00",
+  "end_to_end_latency_ms": 405673.605,
+  "errors": [],
+  "record_schema_version": "1.1",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 300,
+      "evidence_fusion": 300,
+      "first_stage": 500,
+      "request_rerank": 500,
+      "rrf": 300,
+      "selected": 30
+    }
+  },
+  "run_id": "23c22217-de51-4a35-8189-fb01b803414b",
+  "state": {
+    "accepted_provision_ids": [
+      "상법 814조  운송인의 채권ㆍ채무의 소멸#KOBLEX-116392",
+      "상법 902조  운송인 책임의 소멸#KOBLEX-116624"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 6,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "explanation": "Critical evidence remains and a bounded gap retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 7,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "explanation": "The round budget is exhausted, but every critical item has citable partial support; generate a conditional answer.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "claim_count": 2
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "candidate_provisions": [
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 38,
+        "first_stage_score": 17.45646030678811,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "상법 919조  운송인의 채권의 시효#KOBLEX-116675",
+        "provision_text": "제919조(운송인의 채권의 시효) 운송인의 송하인 또는 수하인에 대한 채권은 2년간 행사하지 아니하면 소멸시효가 완성한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.08535538613796234,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상법 919조  운송인의 채권의 시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 48,
+        "first_stage_score": 16.91230785703438,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "상법 814조  운송인의 채권ㆍ채무의 소멸#KOBLEX-116392",
+        "provision_text": "①운송인의 송하인 또는 수하인에 대한 채권 및 채무는 그 청구원인의 여하에 불구하고 운송인이 수하인에게 운송물을 인도한 날 또는 인도할 날부터 1년 이내에 재판상 청구가 없으면 소멸한다. 다만, 이 기간은 당사자의 합의에 의하여 연장할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.04973733425140381,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상법 814조  운송인의 채권ㆍ채무의 소멸 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 69,
+        "first_stage_score": 16.076181651456572,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "상법 814조  운송인의 채권ㆍ채무의 소멸#KOBLEX-116394",
+        "provision_text": "③제2항의 경우에 있어서 재판상 청구를 받은 운송인이 그로부터 3개월 이내에 그 제3자에 대하여 소송고지를 하면 3개월의 기간은 그 재판이 확정되거나 그 밖에 종료된 때부터 기산한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.021425800397992134,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상법 814조  운송인의 채권ㆍ채무의 소멸 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 19.5604586586067,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "상법 121조  운송주선인의 책임의 시효#KOBLEX-113843",
+        "provision_text": "②전항의 기간은 운송물이 전부멸실한 경우에는 그 운송물을 인도할 날로부터 기산한다. <개정 1962.12.12>",
+        "rerank_rank": 4,
+        "rerank_score": 0.008206160739064217,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상법 121조  운송주선인의 책임의 시효 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 53,
+        "first_stage_score": 16.7043508181611,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "상법 902조  운송인 책임의 소멸#KOBLEX-116624",
+        "provision_text": "제902조(운송인 책임의 소멸) 운송인의 여객, 송하인 또는 수하인에 대한 책임은 그 청구원인에 관계없이 여객 또는 운송물이 도착지에 도착한 날, 항공기가 도착할 날 또는 운송이 중지된 날 가운데 가장 늦게 도래한 날부터 2년 이내에 재판상 청구가 없으면 소멸한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0030154597479850054,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상법 902조  운송인 책임의 소멸",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "상법 146조  운송인의 책임소멸#KOBLEX-113901",
+        "provision_text": "①운송인의 책임은 수하인 또는 화물상환증소지인이 유보없이 운송물을 수령하고 운임 기타의 비용을 지급한 때에는 소멸한다. 그러나 운송물에 즉시 발견할 수 없는 훼손 또는 일부 멸실이 있는 경우에 운송물을 수령한 날로부터 2주간내에 운송인에게 그 통지를 발송한 때에는 그러하지 아니하다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.0005484998691827059,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "상법 146조  운송인의 책임소멸 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 25.312339686675912,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "상법 798조  비계약적 청구에 대한 적용#KOBLEX-116346",
+        "provision_text": "④제1항부터 제3항까지의 규정은 운송물에 관한 손해배상청구가 운송인 외의 실제운송인 또는 그 사용인이나 대리인에 대하여 제기된 경우에도 적용한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.00045713200233876705,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "상법 798조  비계약적 청구에 대한 적용 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 57,
+        "first_stage_score": 16.498702334451792,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "상법 915조  운송물에 대한 책임한도액#KOBLEX-116658",
+        "provision_text": "① 제913조와 제914조에 따른 운송인의 손해배상책임은 손해가 발생한 해당 운송물의 1킬로그램당 19 계산단위의 금액을 한도로 하되, 송하인과의 운송계약상 그 출발지, 도착지 및 중간 착륙지가 대한민국 영토 내에 있는 운송의 경우에는 손해가 발생한 해당 운송물의 1킬로그램당 15 계산단위의 금액을 한도로 한다. 다만, 송하인이 운송물을 운송인에게 인도할 때에 도착지에서 인도받을 때의 예정가액을 미리 신고한 경우에는 운송인은 신고 가액이 도착지에서 인도할 때의 실제가액을 초과한다는 것을 증명하지 아니하는 한 신고 가액을 한도로 책임을 진다. <개정 2014.5.20>",
+        "rerank_rank": 8,
+        "rerank_score": 0.0004558531509246677,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상법 915조  운송물에 대한 책임한도액 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 20.708431295141047,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "상법 900조  실제운송인에 대한 청구#KOBLEX-116613",
+        "provision_text": "① 운송계약을 체결한 운송인(이하 \"계약운송인\"이라 한다)의 위임을 받아 운송의 전부 또는 일부를 수행한 운송인(이하 \"실제운송인\"이라 한다)이 있을 경우 실제운송인이 수행한 운송에 관하여는 실제운송인에 대하여도 이 장의 운송인의 책임에 관한 규정을 적용한다. 다만, 제901조의 순차운송에 해당하는 경우는 그러하지 아니하다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.00032819321495480835,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상법 900조  실제운송인에 대한 청구 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 20.373009276715603,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "상법 808조  운송인의 운송물경매권#KOBLEX-116377",
+        "provision_text": "②선장이 수하인에게 운송물을 인도한 후에도 운송인은 그 운송물에 대하여 제1항의 권리를 행사할 수 있다. 다만, 인도한 날부터 30일을 경과하거나 제3자가 그 운송물에 점유를 취득한 때에는 그러하지 아니하다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.00030541676096618176,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상법 808조  운송인의 운송물경매권 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 30,
+        "first_stage_score": 17.97715691070873,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "상법 119조  보수청구권#KOBLEX-113838",
+        "provision_text": "①운송주선인은 운송물을 운송인에게 인도한 때에는 즉시 보수를 청구할 수 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 5.7526161981513724e-05,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상법 119조  보수청구권 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 21.787147767828685,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "상법 804조  운송물의 일부 멸실ㆍ훼손에 관한 통지#KOBLEX-116365",
+        "provision_text": "③제1항 및 제2항은 운송인 또는 그 사용인이 악의인 경우에는 적용하지 아니한다.",
+        "rerank_rank": 6,
+        "rerank_score": 3.136097438982688e-05,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상법 804조  운송물의 일부 멸실ㆍ훼손에 관한 통지 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 59,
+        "first_stage_score": 15.99687033814117,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "상법 899조  비계약적 청구에 대한 적용 등#KOBLEX-116609",
+        "provision_text": "② 여객, 수하물 또는 운송물에 관한 손해배상청구가 운송인의 사용인이나 대리인에 대하여 제기된 경우에 그 손해가 그 사용인이나 대리인의 직무집행에 관하여 생겼을 때에는 그 사용인이나 대리인은 운송인이 주장할 수 있는 항변과 책임제한을 원용할 수 있다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.00011235541751375422,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상법 899조  비계약적 청구에 대한 적용 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 50,
+        "first_stage_score": 16.335763099737413,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "상법 907조  연착에 대한 책임#KOBLEX-116638",
+        "provision_text": "③ 제2항은 운송인 또는 그 사용인이나 대리인의 고의로 또는 연착이 생길 염려가 있음을 인식하면서 무모하게 한 작위 또는 부작위에 의하여 손해가 발생한 것이 증명된 경우에는 적용하지 아니한다.",
+        "rerank_rank": 8,
+        "rerank_score": 3.384359661140479e-05,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상법 907조  연착에 대한 책임 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 22.956310335573622,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "상법 916조  운송물의 일부 멸실ㆍ훼손 등에 관한 통지#KOBLEX-116665",
+        "provision_text": "⑤ 제1항과 제2항의 기간 내에 통지나 이의제기가 없을 경우에는 수하인은 운송인에 대하여 제소할 수 없다. 다만, 운송인 또는 그 사용인이나 대리인이 악의인 경우에는 그러하지 아니하다.",
+        "rerank_rank": 9,
+        "rerank_score": 5.125975440023467e-05,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상법 916조  운송물의 일부 멸실ㆍ훼손 등에 관한 통지 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 22.2512370944262,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "상법 146조  운송인의 책임소멸#KOBLEX-113902",
+        "provision_text": "②전항의 규정은 운송인 또는 그 사용인이 악의인 경우에는 적용하지 아니한다.",
+        "rerank_rank": 10,
+        "rerank_score": 3.111657133558765e-05,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상법 146조  운송인의 책임소멸 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 58,
+        "first_stage_score": 16.117700323614297,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 1024조  승인, 포기의 취소금지#KOBLEX-060624",
+        "provision_text": "②전항의 규정은 총칙편의 규정에 의한 취소에 영향을 미치지 아니한다. 그러나 그 취소권은 추인할 수 있는 날로부터 3월, 승인 또는 포기한 날로부터 1년내에 행사하지 아니하면 시효로 인하여 소멸된다.",
+        "rerank_rank": 2,
+        "rerank_score": 5.281185167405056e-06,
+        "retrieval_round": 3,
+        "selection_rank": 2,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 1024조  승인, 포기의 취소금지 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "상법 167조  창고업자의 채권의 시효#KOBLEX-113947",
+        "provision_text": "제167조(창고업자의 채권의 시효) 창고업자의 임치인 또는 창고증권소지인에 대한 채권은 그 물건을 출고한 날로부터 1년간 행사하지 아니하면 소멸시효가 완성한다.",
+        "rerank_rank": 3,
+        "rerank_score": 1.0622620720823761e-06,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상법 167조  창고업자의 채권의 시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 43.3044974961456,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "상법 146조  운송인의 책임소멸#KOBLEX-113900",
+        "provision_text": "제146조(운송인의 책임소멸)",
+        "rerank_rank": 4,
+        "rerank_score": 0.9869992136955261,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "상법 146조  운송인의 책임소멸",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 49,
+        "first_stage_score": 28.744140664343867,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "상법 122조  운송주선인의 채권의 시효#KOBLEX-113845",
+        "provision_text": "제122조(운송주선인의 채권의 시효) 운송주선인의 위탁자 또는 수하인에 대한 채권은 1 년간 행사하지 아니하면 소멸시효가 완성한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.8388049602508545,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상법 122조  운송주선인의 채권의 시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 35.437226375293996,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707",
+        "provision_text": "①채권은 10년간 행사하지 아니하면 소멸시효가 완성한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.27719512581825256,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 162조  채권, 재산권의 소멸시효 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 41.36601738959396,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "민법 164조  1년의 단기소멸시효#KOBLEX-058717",
+        "provision_text": "제164조(1년의 단기소멸시효) 다음 각호의 채권은 1년간 행사하지 아니하면 소멸시효가 완성한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.050449855625629425,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 164조  1년의 단기소멸시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "candidate_stage": "selected",
+        "first_stage_rank": 46,
+        "first_stage_score": 17.026988101128055,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 146조  적시제출주의#KOBLEX-063884",
+        "provision_text": "제146조(적시제출주의) 공격 또는 방어의 방법은 소송의 정도에 따라 적절한 시기에 제출하여야 한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.00020517136726994067,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "global_top_k",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민사소송법 146조  적시제출주의",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "민법 1024조  승인, 포기의 취소금지#KOBLEX-060624": "②전항의 규정은 총칙편의 규정에 의한 취소에 영향을 미치지 아니한다. 그러나 그 취소권은 추인할 수 있는 날로부터 3월, 승인 또는 포기한 날로부터 1년내에 행사하지 아니하면 시효로 인하여 소멸된다.",
+      "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707": "①채권은 10년간 행사하지 아니하면 소멸시효가 완성한다.",
+      "민법 164조  1년의 단기소멸시효#KOBLEX-058717": "제164조(1년의 단기소멸시효) 다음 각호의 채권은 1년간 행사하지 아니하면 소멸시효가 완성한다.",
+      "민사소송법 146조  적시제출주의#KOBLEX-063884": "제146조(적시제출주의) 공격 또는 방어의 방법은 소송의 정도에 따라 적절한 시기에 제출하여야 한다.",
+      "상법 119조  보수청구권#KOBLEX-113838": "①운송주선인은 운송물을 운송인에게 인도한 때에는 즉시 보수를 청구할 수 있다.",
+      "상법 121조  운송주선인의 책임의 시효#KOBLEX-113843": "②전항의 기간은 운송물이 전부멸실한 경우에는 그 운송물을 인도할 날로부터 기산한다. <개정 1962.12.12>",
+      "상법 122조  운송주선인의 채권의 시효#KOBLEX-113845": "제122조(운송주선인의 채권의 시효) 운송주선인의 위탁자 또는 수하인에 대한 채권은 1 년간 행사하지 아니하면 소멸시효가 완성한다.",
+      "상법 146조  운송인의 책임소멸#KOBLEX-113900": "제146조(운송인의 책임소멸)",
+      "상법 146조  운송인의 책임소멸#KOBLEX-113901": "①운송인의 책임은 수하인 또는 화물상환증소지인이 유보없이 운송물을 수령하고 운임 기타의 비용을 지급한 때에는 소멸한다. 그러나 운송물에 즉시 발견할 수 없는 훼손 또는 일부 멸실이 있는 경우에 운송물을 수령한 날로부터 2주간내에 운송인에게 그 통지를 발송한 때에는 그러하지 아니하다.",
+      "상법 146조  운송인의 책임소멸#KOBLEX-113902": "②전항의 규정은 운송인 또는 그 사용인이 악의인 경우에는 적용하지 아니한다.",
+      "상법 167조  창고업자의 채권의 시효#KOBLEX-113947": "제167조(창고업자의 채권의 시효) 창고업자의 임치인 또는 창고증권소지인에 대한 채권은 그 물건을 출고한 날로부터 1년간 행사하지 아니하면 소멸시효가 완성한다.",
+      "상법 798조  비계약적 청구에 대한 적용#KOBLEX-116346": "④제1항부터 제3항까지의 규정은 운송물에 관한 손해배상청구가 운송인 외의 실제운송인 또는 그 사용인이나 대리인에 대하여 제기된 경우에도 적용한다.",
+      "상법 804조  운송물의 일부 멸실ㆍ훼손에 관한 통지#KOBLEX-116365": "③제1항 및 제2항은 운송인 또는 그 사용인이 악의인 경우에는 적용하지 아니한다.",
+      "상법 808조  운송인의 운송물경매권#KOBLEX-116377": "②선장이 수하인에게 운송물을 인도한 후에도 운송인은 그 운송물에 대하여 제1항의 권리를 행사할 수 있다. 다만, 인도한 날부터 30일을 경과하거나 제3자가 그 운송물에 점유를 취득한 때에는 그러하지 아니하다.",
+      "상법 814조  운송인의 채권ㆍ채무의 소멸#KOBLEX-116392": "①운송인의 송하인 또는 수하인에 대한 채권 및 채무는 그 청구원인의 여하에 불구하고 운송인이 수하인에게 운송물을 인도한 날 또는 인도할 날부터 1년 이내에 재판상 청구가 없으면 소멸한다. 다만, 이 기간은 당사자의 합의에 의하여 연장할 수 있다.",
+      "상법 814조  운송인의 채권ㆍ채무의 소멸#KOBLEX-116394": "③제2항의 경우에 있어서 재판상 청구를 받은 운송인이 그로부터 3개월 이내에 그 제3자에 대하여 소송고지를 하면 3개월의 기간은 그 재판이 확정되거나 그 밖에 종료된 때부터 기산한다.",
+      "상법 899조  비계약적 청구에 대한 적용 등#KOBLEX-116609": "② 여객, 수하물 또는 운송물에 관한 손해배상청구가 운송인의 사용인이나 대리인에 대하여 제기된 경우에 그 손해가 그 사용인이나 대리인의 직무집행에 관하여 생겼을 때에는 그 사용인이나 대리인은 운송인이 주장할 수 있는 항변과 책임제한을 원용할 수 있다.",
+      "상법 900조  실제운송인에 대한 청구#KOBLEX-116613": "① 운송계약을 체결한 운송인(이하 \"계약운송인\"이라 한다)의 위임을 받아 운송의 전부 또는 일부를 수행한 운송인(이하 \"실제운송인\"이라 한다)이 있을 경우 실제운송인이 수행한 운송에 관하여는 실제운송인에 대하여도 이 장의 운송인의 책임에 관한 규정을 적용한다. 다만, 제901조의 순차운송에 해당하는 경우는 그러하지 아니하다.",
+      "상법 902조  운송인 책임의 소멸#KOBLEX-116624": "제902조(운송인 책임의 소멸) 운송인의 여객, 송하인 또는 수하인에 대한 책임은 그 청구원인에 관계없이 여객 또는 운송물이 도착지에 도착한 날, 항공기가 도착할 날 또는 운송이 중지된 날 가운데 가장 늦게 도래한 날부터 2년 이내에 재판상 청구가 없으면 소멸한다.",
+      "상법 907조  연착에 대한 책임#KOBLEX-116638": "③ 제2항은 운송인 또는 그 사용인이나 대리인의 고의로 또는 연착이 생길 염려가 있음을 인식하면서 무모하게 한 작위 또는 부작위에 의하여 손해가 발생한 것이 증명된 경우에는 적용하지 아니한다.",
+      "상법 915조  운송물에 대한 책임한도액#KOBLEX-116658": "① 제913조와 제914조에 따른 운송인의 손해배상책임은 손해가 발생한 해당 운송물의 1킬로그램당 19 계산단위의 금액을 한도로 하되, 송하인과의 운송계약상 그 출발지, 도착지 및 중간 착륙지가 대한민국 영토 내에 있는 운송의 경우에는 손해가 발생한 해당 운송물의 1킬로그램당 15 계산단위의 금액을 한도로 한다. 다만, 송하인이 운송물을 운송인에게 인도할 때에 도착지에서 인도받을 때의 예정가액을 미리 신고한 경우에는 운송인은 신고 가액이 도착지에서 인도할 때의 실제가액을 초과한다는 것을 증명하지 아니하는 한 신고 가액을 한도로 책임을 진다. <개정 2014.5.20>",
+      "상법 916조  운송물의 일부 멸실ㆍ훼손 등에 관한 통지#KOBLEX-116665": "⑤ 제1항과 제2항의 기간 내에 통지나 이의제기가 없을 경우에는 수하인은 운송인에 대하여 제소할 수 없다. 다만, 운송인 또는 그 사용인이나 대리인이 악의인 경우에는 그러하지 아니하다.",
+      "상법 919조  운송인의 채권의 시효#KOBLEX-116675": "제919조(운송인의 채권의 시효) 운송인의 송하인 또는 수하인에 대한 채권은 2년간 행사하지 아니하면 소멸시효가 완성한다."
+    },
+    "coverage_assessments": [
+      {
+        "evidence_item_id": "E1",
+        "linked_provision_ids": [
+          "상법 814조  운송인의 채권ㆍ채무의 소멸#KOBLEX-116392",
+          "상법 902조  운송인 책임의 소멸#KOBLEX-116624"
+        ],
+        "missing_aspects": [
+          "질문 시나리오에서 운송수단(해상, 항공 등)이 특정되지 않아, 적용될 소멸시효 조항을 선택할 수 있는 사실적 조건이 부재함"
+        ],
+        "partial_kind": "factual_condition",
+        "rationale": "제시된 후보 조항들은 해상운송(C002)과 항공운송(C005)에 각각 적용되는 상이한 소멸시효 기간(1년 vs 2년)과 기산점을 명확히 규정하고 있다. 그러나 질문 시나리오에서는 운송수단(해상, 항공 등)이 특정되지 않아, 어느 조항이 적용되는지 판단할 수 있는 사실적 선택 기준이 부재하다. 따라서 각 운송수단에 따른 완전한 법적 규칙은 존재하지만, 적용될 분기를 선택하는 사실이 누락되어 부분적으로만 커버된 것으로 평가된다.",
+        "status": "partially_covered"
+      }
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "상법 814조  운송인의 채권ㆍ채무의 소멸#KOBLEX-116392",
+        "support_spans": [
+          {
+            "end_char": 137,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "상법 902조  운송인 책임의 소멸#KOBLEX-116624",
+        "support_spans": [
+          {
+            "end_char": 148,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 7,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "운송계약상 운송인의 지체로 인한 손해배상채권의 소멸시효 기간과 기산점",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "completion_criteria": "운송인의 채무불이행으로 인한 손해배상채권에 적용되는 소멸시효 기간과 기산점(인도일 또는 인도 예정일 등)을 특정할 수 있는 조항을 확인",
+        "critical": true,
+        "description": "운송계약에 기한 손해배상채권의 소멸시효 기간 및 기산점에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "limitation",
+        "issue_id": "I1"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을과 을의 상품을 목적지로 운송하기로 하는 운송계약을 체결하였다. 을은 계약 체결 과정에서 상품이 제때 도착하지 않을 경우 손해가 발생할 수 있음을 갑에게 미리 고지하였다. 그러나 운송 도중 문제가 발생하여 상품은 예정된 날짜보다 3일 늦게 도착하였고, 이로 인해 을에게 손해가 발생하였다. 을은 이에 대한 손해배상을 청구할 생각이었으나, 바쁜 업무로 인해 소송을 즉시 제기하지는 못하였다. 이에 따라 을은 상품이 인도된 날로부터 언제까지 소송을 제기할 수 있는지를 고민하게 되었다. [질문] 을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "운송계약",
+          "운송인",
+          "손해배상",
+          "소멸시효",
+          "기산점",
+          "상법"
+        ],
+        "query_text": "운송계약 운송인 손해배상채권 소멸시효 기간 기산점 [원문 맥락] 이에 따라 을은 상품이 인도된 날로부터 언제까지 소송을 제기할 수 있는지를 고민하게 되었다. 을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+        "request_id": "RQ1",
+        "statute_hints": [
+          "상법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "상법",
+          "제146조",
+          "운송인",
+          "책임소멸",
+          "시효",
+          "기산점"
+        ],
+        "query_text": "상법 제146조 운송인의 책임소멸 시효 기간 기산점 [원문 맥락] 이에 따라 을은 상품이 인도된 날로부터 언제까지 소송을 제기할 수 있는지를 고민하게 되었다. 을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "statute_hints": [
+          "상법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "운송계약",
+          "운송인",
+          "손해배상",
+          "시효",
+          "기산점",
+          "인도일"
+        ],
+        "query_text": "운송계약 운송인 손해배상 시효 기산점 인도일 [원문 맥락] 이에 따라 을은 상품이 인도된 날로부터 언제까지 소송을 제기할 수 있는지를 고민하게 되었다. 을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "상법",
+          "제146조",
+          "운송인",
+          "책임소멸",
+          "일반운송"
+        ],
+        "query_text": "상법 제146조 운송인의 책임소멸 일반 운송계약 적용 범위 [원문 맥락] 이에 따라 을은 상품이 인도된 날로부터 언제까지 소송을 제기할 수 있는지를 고민하게 되었다. 을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+        "request_id": "GRQ-R3-1",
+        "statute_hints": [
+          "상법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "운송계약",
+          "채무불이행",
+          "손해배상채권",
+          "소멸시효",
+          "인도일",
+          "1년"
+        ],
+        "query_text": "운송계약에서 운송인의 채무불이행으로 인한 손해배상채권의 소멸시효는 인도일로부터 1년간 행사하지 아니하면 소멸한다 [원문 맥락] 이에 따라 을은 상품이 인도된 날로부터 언제까지 소송을 제기할 수 있는지를 고민하게 되었다. 을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+        "request_id": "GRQ-R3-2",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을과 을의 상품을 목적지로 운송하기로 하는 운송계약을 체결하였다. 을은 계약 체결 과정에서 상품이 제때 도착하지 않을 경우 손해가 발생할 수 있음을 갑에게 미리 고지하였다. 그러나 운송 도중 문제가 발생하여 상품은 예정된 날짜보다 3일 늦게 도착하였고, 이로 인해 을에게 손해가 발생하였다.\r\n\r\n을은 이에 대한 손해배상을 청구할 생각이었으나, 바쁜 업무로 인해 소송을 즉시 제기하지는 못하였다. 이에 따라 을은 상품이 인도된 날로부터 언제까지 소송을 제기할 수 있는지를 고민하게 되었다.\n\n[질문]\n을은 갑에 대한 손해배상청구권을 어느 시점까지 행사할 수 있는가?",
+    "remaining_request_budget": 4,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "completion_criteria": "운송인의 채무불이행으로 인한 손해배상채권에 적용되는 소멸시효 기간과 기산점(인도일 또는 인도 예정일 등)을 특정할 수 있는 조항을 확인",
+        "critical": true,
+        "description": "운송계약에 기한 손해배상채권의 소멸시효 기간 및 기산점에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "limitation",
+        "issue_id": "I1"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "23c22217-de51-4a35-8189-fb01b803414b",
+    "seen_provision_ids": [
+      "상법 146조  운송인의 책임소멸#KOBLEX-113902",
+      "상법 808조  운송인의 운송물경매권#KOBLEX-116377",
+      "상법 915조  운송물에 대한 책임한도액#KOBLEX-116658",
+      "상법 919조  운송인의 채권의 시효#KOBLEX-116675",
+      "상법 167조  창고업자의 채권의 시효#KOBLEX-113947",
+      "민법 164조  1년의 단기소멸시효#KOBLEX-058717",
+      "상법 916조  운송물의 일부 멸실ㆍ훼손 등에 관한 통지#KOBLEX-116665",
+      "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707",
+      "상법 814조  운송인의 채권ㆍ채무의 소멸#KOBLEX-116394",
+      "민법 1024조  승인, 포기의 취소금지#KOBLEX-060624",
+      "상법 146조  운송인의 책임소멸#KOBLEX-113900",
+      "상법 121조  운송주선인의 책임의 시효#KOBLEX-113843",
+      "상법 122조  운송주선인의 채권의 시효#KOBLEX-113845",
+      "상법 814조  운송인의 채권ㆍ채무의 소멸#KOBLEX-116392",
+      "상법 146조  운송인의 책임소멸#KOBLEX-113901",
+      "상법 804조  운송물의 일부 멸실ㆍ훼손에 관한 통지#KOBLEX-116365",
+      "상법 798조  비계약적 청구에 대한 적용#KOBLEX-116346",
+      "상법 902조  운송인 책임의 소멸#KOBLEX-116624",
+      "상법 119조  보수청구권#KOBLEX-113838",
+      "상법 899조  비계약적 청구에 대한 적용 등#KOBLEX-116609",
+      "민사소송법 146조  적시제출주의#KOBLEX-063884",
+      "상법 900조  실제운송인에 대한 청구#KOBLEX-116613",
+      "상법 907조  연착에 대한 책임#KOBLEX-116638"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

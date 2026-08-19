@@ -113,6 +113,43 @@ def median(values: List[float]) -> Optional[float]:
     return round(statistics.median(values), 3) if values else None
 
 
+def load_stage_traces(path: Path) -> Dict[str, Dict[str, Any]]:
+    if not path.is_file():
+        return {}
+    return {rec["question_id"]: rec for rec in load_jsonl(path)}
+
+
+def compute_retrieval_funnel(gold_contexts: List[str], trace: Optional[Dict[str, Any]]) -> Optional[Dict[str, float]]:
+    """Per-question gold coverage at each ParSeR retrieval stage, unioned across
+    all of that question's parametric-provision sub-queries:
+      bm25_100  -> gold text appears anywhere in any sub-query's BM25 top-100
+      rerank_10 -> gold text appears anywhere in any sub-query's rerank top-10
+      selected  -> gold text is one of the provisions actually selected/used for QA
+    This isolates whether a lost gold provision fell out at BM25 recall, at
+    reranking, or was available but not chosen by the LLM selection step.
+    """
+    if not gold_contexts or trace is None:
+        return None
+    selections = trace.get("selections") or []
+    bm25_union = set()
+    rerank_union = set()
+    selected_union = set()
+    for sel in selections:
+        bm25_union.update(sel.get("bm25_top_k_texts") or [])
+        rerank_union.update(sel.get("reranked_top_l") or [])
+        if sel.get("selected_text"):
+            selected_union.add(sel["selected_text"])
+
+    in_bm25 = [1.0 if g in bm25_union else 0.0 for g in gold_contexts]
+    in_rerank = [1.0 if g in rerank_union else 0.0 for g in gold_contexts]
+    in_selected = [1.0 if g in selected_union else 0.0 for g in gold_contexts]
+    return {
+        "bm25_100_recall": round(sum(in_bm25) / len(gold_contexts), 4),
+        "rerank_10_recall": round(sum(in_rerank) / len(gold_contexts), 4),
+        "selected_recall": round(sum(in_selected) / len(gold_contexts), 4),
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--batch-dir", type=Path, required=True, help="Dir with final_results.jsonl from run_koblex_parser_baseline.py")
@@ -120,6 +157,7 @@ def main() -> None:
     args = parser.parse_args()
 
     records = load_jsonl(args.batch_dir / "final_results.jsonl")
+    stage_traces = load_stage_traces(args.batch_dir / "stage_trace.jsonl")
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
     per_question_rows = []
@@ -127,6 +165,7 @@ def main() -> None:
     ret_ps, ret_rs, ret_f1s, ret_ems = [], [], [], []
     by_hop: Dict[int, Dict[str, List[float]]] = {}
     total_lat, s1_lat, s2_lat, s3_lat = [], [], [], []
+    funnel_bm25, funnel_rerank, funnel_selected = [], [], []
     n_errors = 0
 
     for rec in records:
@@ -145,6 +184,9 @@ def main() -> None:
                     "retrieval_f1": "",
                     "retrieval_em": "",
                     "total_latency_seconds": "",
+                    "funnel_bm25_100_recall": "",
+                    "funnel_rerank_10_recall": "",
+                    "funnel_selected_recall": "",
                 }
             )
             continue
@@ -174,6 +216,12 @@ def main() -> None:
         if rec.get("stage3_latency_seconds") is not None:
             s3_lat.append(rec["stage3_latency_seconds"])
 
+        funnel = compute_retrieval_funnel(gold_contexts, stage_traces.get(rec.get("question_id")))
+        if funnel is not None:
+            funnel_bm25.append(funnel["bm25_100_recall"])
+            funnel_rerank.append(funnel["rerank_10_recall"])
+            funnel_selected.append(funnel["selected_recall"])
+
         if isinstance(n_hops, int):
             bucket = by_hop.setdefault(n_hops, {"token_f1": [], "ret_f1": [], "ret_recall": [], "latency": []})
             bucket["token_f1"].append(tf1["f1"])
@@ -193,6 +241,9 @@ def main() -> None:
                 "retrieval_f1": round(ret["f1"], 4),
                 "retrieval_em": ret["em"],
                 "total_latency_seconds": total_latency,
+                "funnel_bm25_100_recall": funnel["bm25_100_recall"] if funnel else "",
+                "funnel_rerank_10_recall": funnel["rerank_10_recall"] if funnel else "",
+                "funnel_selected_recall": funnel["selected_recall"] if funnel else "",
             }
         )
 
@@ -227,6 +278,18 @@ def main() -> None:
             }
             for hop, bucket in sorted(by_hop.items())
         },
+        "retrieval_funnel": {
+            "description": (
+                "Per-question gold-provision coverage at each ParSeR stage, unioned across all "
+                "of that question's parametric-provision sub-queries. Isolates whether a missed "
+                "gold provision fell out at BM25 recall, at reranking, or was retrieved but not "
+                "the one the LLM selection step chose."
+            ),
+            "n_scored": len(funnel_bm25),
+            "bm25_top100_recall_mean": mean(funnel_bm25),
+            "rerank_top10_recall_mean": mean(funnel_rerank),
+            "selected_recall_mean": mean(funnel_selected),
+        },
         "legal_fidelity_lf_eval": "not computed (requires OpenAI API key + cost pre-registration; see module docstring)",
         "note": (
             "ANSWER rate is expected to be ~100%: ParSeR (the KoBLEX paper's own method) has no "
@@ -253,6 +316,9 @@ def main() -> None:
                 "retrieval_f1",
                 "retrieval_em",
                 "total_latency_seconds",
+                "funnel_bm25_100_recall",
+                "funnel_rerank_10_recall",
+                "funnel_selected_recall",
             ],
         )
         writer.writeheader()

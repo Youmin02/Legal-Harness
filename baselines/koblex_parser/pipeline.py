@@ -34,6 +34,7 @@ TEMPERATURE = 0.0
 class SelectionTrace:
     parametric_provision: str
     bm25_candidate_count: int
+    bm25_top_k_texts: List[str]
     reranked_top_l: List[str]
     llm_raw_text: str
     llm_choice_index: int
@@ -94,10 +95,16 @@ def select_provisions(
 ) -> List[SelectionTrace]:
     traces: List[SelectionTrace] = []
     for provision_query in parametric_provisions:
-        query_text = provision_query if provision_query.strip() else question
-        candidate_indices = bm25.top_k(query_text, k=BM25_TOP_K)
+        # BM25 query = this parametric provision (official utils.py: `for sq in subs: ... retriever.retrieve(...)`).
+        bm25_query_text = provision_query if provision_query.strip() else question
+        candidate_indices = bm25.top_k(bm25_query_text, k=BM25_TOP_K)
         candidate_texts = [bm25.records[i].text for i in candidate_indices]
-        ranked_texts = reranker.rerank(query_text, candidate_texts)
+        # CrossEncoder rerank query = the ORIGINAL question, not the parametric provision.
+        # Official selection_retrieval.py: `rerank(questions, bm25_candidates, ...)` zips one
+        # `q = item['question']` per item against ALL of that item's per-subquery candidate
+        # lists (`for indices in cand_list: pairs = [(q, t) for t in texts]`) -- the same bare
+        # question is reused as the rerank query for every parametric provision of that item.
+        ranked_texts = reranker.rerank(question, candidate_texts)
         top_l = ranked_texts[:RERANK_TOP_L]
         cand_lines = "\n".join("%d: %s" % (i, text) for i, text in enumerate(top_l))
         user_prompt = prompts.SELECTION_INSTRUCTION_PROMPT.substitute(
@@ -119,6 +126,7 @@ def select_provisions(
             SelectionTrace(
                 parametric_provision=provision_query,
                 bm25_candidate_count=len(candidate_indices),
+                bm25_top_k_texts=candidate_texts,
                 reranked_top_l=top_l,
                 llm_raw_text=result.text,
                 llm_choice_index=choice,

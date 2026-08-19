@@ -12,6 +12,16 @@
 코드 경로이며, 사용자 자신의 방법을 포함하지 않는다 — 논문 베이스라인
 비교를 위한 순수 재현이다.
 
+## 명명 규칙
+
+이 재현은 공개 코드의 바이트 단위 복사가 아니라 논문이 서술한 알고리즘을
+따르는 **corrected reproduction**이다. 논문·보고서에 인용할 때는
+"Official KoBLEX ParSeR Baseline"이라고 부르지 말고 **"ParSeR (Reproduced)"**
+또는 "ParSeR-Reproduced"라고 표기한다. 공개 코드를 한 글자도 바꾸지 않고
+그대로 재현한 버전("ParSeR-Official", `contexts_list[0][choice]` 인덱싱
+버그 포함)은 별도 조건으로 원하면 추가할 수 있으며 아직 실행하지 않았다
+(P0 결과 이후 사용자 결정 대기).
+
 ## 출처
 
 - 논문: Lee, Kim, Hwang, Kim, Lee. "KoBLEX: Open Legal Question Answering
@@ -89,6 +99,47 @@ top-10에서 선택되도록 수정했다 (`baselines/koblex_parser/pipeline.py`
 파싱된 문자열을 그대로 두고 JSON 직렬화 시 한 번만 이스케이프한다 — BM25
 질의 텍스트에 불필요한 백슬래시가 섞이는 것을 막기 위함이며, 알고리즘의
 본질(파라메트릭 조문 생성/검색/선택)에는 영향이 없다.
+
+## 구현 오류 수정 (2026-08-19, 첫 226문항 실행 35문항 시점에 발견)
+
+첫 구현은 BM25 질의와 CrossEncoder rerank 질의에 **똑같이 파라메트릭 조문**을
+넣었다. 공식 코드를 다시 대조한 결과 이는 공식 설계와 다르다는 것이 확인되어
+즉시 실행 중이던 226문항 배치(`records/baselines/koblex-parser-baseline-qwen38-q8-226-f3e8ee44-4983-49bf-a2fa-55328e764c35`,
+35문항 완료 시점)를 중단하고 코드를 고쳤다. 이 배치는 잘못된 설정의 실행
+이력으로 디렉터리를 보존만 하며 baseline 결과로 사용하지 않는다.
+
+공식 `experiments/parser/vllm/selection_retrieval.py`:
+
+```python
+def rerank(questions, candidates, statute, reranker):
+    for q, cand_list in zip(questions, candidates):      # q = 아이템당 1개, 원 질문
+        for indices in cand_list:                         # 조문(서브쿼리)마다 순회
+            pairs = [(q, t) for t in texts]                # 항상 같은 q로 rerank
+...
+q = item['question']       # BM25 서브쿼리와 무관하게 원 질문 텍스트 하나
+questions.append(q)
+for sq in subs:                                            # BM25만 조문별로 다른 질의 사용
+    idxs, _ = retriever.retrieve(bm25s.tokenize([sq]), k=100)
+```
+
+즉 공식 설계는:
+
+- **BM25 질의** = 파라메트릭 조문(서브쿼리) — 조문마다 다름 (이미 맞게 구현됨)
+- **CrossEncoder rerank 질의** = 원 질문(`item['question']`, background 미포함) —
+  한 문항 내 모든 서브쿼리에 동일하게 재사용 (수정 전에는 이 부분에 파라메트릭
+  조문을 잘못 넣고 있었음)
+- **LLM 선택 프롬프트**는 처음부터 `background`+`question`+`candidates`를 모두
+  받고 있었으므로 영향 없음
+
+`baselines/koblex_parser/pipeline.py`의 `select_provisions()`에서 BM25 질의는
+그대로 두고 rerank 질의만 `question`으로 고쳤다. 4문항 스모크 재검증 결과
+1-hop 문항 하나에서 최종 선택 조문이 실제로 달라지는 것을 확인했다(수정 전
+"상법 146조" -> 수정 후 "상법 119조" — 둘 다 gold "상법 814조"는 아니지만,
+질의 변경이 실질적으로 검색 결과에 영향을 준다는 것을 확인한 것이 목적).
+
+이후 진단 분석(recall@100 -> recall@10 -> recall@1 분해)을 위해
+`stage_trace.jsonl`에 `bm25_top_k_texts`(BM25 top-100 원문)도 함께 기록하도록
+확장했다.
 
 ## 실행하지 않은 것
 

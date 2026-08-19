@@ -151,7 +151,7 @@ def main() -> None:
     ollama_kwargs = {"endpoint": args.endpoint, "num_ctx": args.num_ctx, "timeout_seconds": args.timeout_seconds}
 
     run_metadata = {
-        "baseline": "koblex_parser (ParSeR, KoBLEX paper's own proposed method)",
+        "baseline": "ParSeR (Reproduced) -- KoBLEX paper's own proposed method, corrected per the paper's stated algorithm rather than a byte-for-byte copy of the released code; see docs/KOBLEX_PARSER_BASELINE_REPRODUCTION_NOTES.md",
         "source_repository": "https://github.com/daehuikim/KoBLEX",
         "source_paper": "https://aclanthology.org/2025.emnlp-main.200/",
         "deviations_from_released_code": [
@@ -274,6 +274,7 @@ def main() -> None:
                     {
                         "parametric_provision": trace.parametric_provision,
                         "bm25_candidate_count": trace.bm25_candidate_count,
+                        "bm25_top_k_texts": trace.bm25_top_k_texts,
                         "reranked_top_l": trace.reranked_top_l,
                         "llm_raw_text": trace.llm_raw_text,
                         "llm_choice_index": trace.llm_choice_index,

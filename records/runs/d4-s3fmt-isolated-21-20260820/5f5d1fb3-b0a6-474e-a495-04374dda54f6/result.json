@@ -1,0 +1,1222 @@
+{
+  "abstention_reason": null,
+  "answer": "갑이 을의 부동산을 권한 없이 점유·사용한 행위가 악의의 점유에 해당한다고 가정할 때, 갑은 을에게 수취한 과실을 반환하여야 하며, 소비하였거나 과실로 인하여 훼손 또는 수취하지 못한 경우에는 그 과실의 대가를 보상하여야 한다.[CT1]\n전제: 갑이 을의 부동산을 점유·사용한 행위가 '악의의 점유'에 해당한다고 가정한다. 이는 갑이 사용 권한이 없다는 사실을 알고 있었음에도 점유를 계속했다는 사실관계에 기반한 전제이다.\n한계: 수익반환금에 대한 이자율과 이자 기산점(T2)에 관한 조문이 제공된 증거에서 완전히 충족되지 않아, 해당 항목에 대한 법적 결론은 보류한다. 민법 제379조는 기본 이자율을 규정하지만, 수익반환금의 이자 기산점을 명확히 정하는 조항이 부재하다.",
+  "answer_mode": "limited",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "갑이 을의 부동산을 권한 없이 점유·사용한 행위가 악의의 점유에 해당한다고 가정할 때, 갑은 을에게 수취한 과실을 반환하여야 하며, 소비하였거나 과실로 인하여 훼손 또는 수취하지 못한 경우에는 그 과실의 대가를 보상하여야 한다.[CT1]\n전제: 갑이 을의 부동산을 점유·사용한 행위가 '악의의 점유'에 해당한다고 가정한다. 이는 갑이 사용 권한이 없다는 사실을 알고 있었음에도 점유를 계속했다는 사실관계에 기반한 전제이다.\n한계: 수익반환금에 대한 이자율과 이자 기산점(T2)에 관한 조문이 제공된 증거에서 완전히 충족되지 않아, 해당 항목에 대한 법적 결론은 보류한다. 민법 제379조는 기본 이자율을 규정하지만, 수익반환금의 이자 기산점을 명확히 정하는 조항이 부재하다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T11:09:15.381723+00:00",
+  "deferred_target_ids": [
+    "T2"
+  ],
+  "end_to_end_latency_ms": 732162.516,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 385,
+      "dedup_collapse": 72,
+      "evidence_fusion": 385,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "round_selected": 30,
+      "rrf": 400,
+      "selected": 385
+    }
+  },
+  "run_id": "5f5d1fb3-b0a6-474e-a495-04374dda54f6",
+  "state": {
+    "accepted_provision_ids": [
+      "민법 390조  채무불이행과 손해배상#KOBLEX-059183",
+      "민법 379조  법정이율#KOBLEX-059153",
+      "민법 201조  점유자와 과실#KOBLEX-058792"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 5,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [
+            "T2"
+          ],
+          "explanation": "Only the citable answer targets will be answered; remaining targets are deferred.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 1,
+          "deferred_target_ids": [
+            "T2"
+          ]
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "limited",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_rule",
+        "question_anchor": "반환 범위",
+        "requested_output": "무권리 점유자의 수익반환 범위"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_rule",
+        "question_anchor": "이자율",
+        "requested_output": "반환금에 대한 이자율"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "공유재산 및 물품 관리법 85조  은닉된 공유재산의 자진 반환자에 대한 특례#KOBLEX-205604"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 19.132527719326482,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "공유재산 및 물품 관리법 85조  은닉된 공유재산의 자진 반환자에 대한 특례#KOBLEX-205604",
+        "provision_text": "1. 자진 반환",
+        "rerank_rank": 1,
+        "rerank_score": 1.257421445188811e-05,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공유재산 및 물품 관리법 85조  은닉된 공유재산의 자진 반환자에 대한 특례 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 197조  점유의 태양#KOBLEX-058784"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 100,
+        "first_stage_score": 1.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "민법 197조  점유의 태양#KOBLEX-058784",
+        "provision_text": "②선의의 점유자라도 본권에 관한 소에 패소한 때에는 그 소가 제기된 때로부터 악의의 점유자로 본다.",
+        "rerank_rank": 1,
+        "rerank_score": 1.2501325727498624e-05,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 197조  점유의 태양 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 204조  점유의 회수#KOBLEX-058800"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 22.667760949541112,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 204조  점유의 회수#KOBLEX-058800",
+        "provision_text": "①점유자가 점유의 침탈을 당한 때에는 그 물건의 반환 및 손해의 배상을 청구할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 1.0282459697918966e-05,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 204조  점유의 회수 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 201조  점유자와 과실#KOBLEX-058792"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민법 201조  점유자와 과실#KOBLEX-058792",
+        "provision_text": "②악의의 점유자는 수취한 과실을 반환하여야 하며 소비하였거나 과실로 인하여 훼손 또는 수취하지 못한 경우에는 그 과실의 대가를 보상하여야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 6.941405899851816e-06,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 201조  점유자와 과실 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 172조  내부자의 단기매매차익 반환#KOBLEX-135829"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 75,
+        "first_stage_score": 18.66526553479253,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 172조  내부자의 단기매매차익 반환#KOBLEX-135829",
+        "provision_text": "제172조(내부자의 단기매매차익 반환)",
+        "rerank_rank": 4,
+        "rerank_score": 5.819775196869159e-06,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 172조  내부자의 단기매매차익 반환",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 202조  점유자의 회복자에 대한 책임#KOBLEX-058794"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "민법 202조  점유자의 회복자에 대한 책임#KOBLEX-058794",
+        "provision_text": "제202조(점유자의 회복자에 대한 책임) 점유물이 점유자의 책임있는 사유로 인하여 멸실 또는 훼손한 때에는 악의의 점유자는 그 손해의 전부를 배상하여야 하며 선의의 점유자는 이익이 현존하는 한도에서 배상하여야 한다. 소유의 의사가 없는 점유자는 선의인 경우에도 손해의 전부를 배상하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 5.648827482218621e-06,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 202조  점유자의 회복자에 대한 책임",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "귀속재산처리법 36조 2#KOBLEX-048113"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 23.49149161084967,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "귀속재산처리법 36조 2#KOBLEX-048113",
+        "provision_text": "제36조의2 귀속재산을 허가없이 점유 또는 사용하는 자에 대하여는 그 재산을 점유 또는 사용한 기간중 취득한 이득 또는 임대료에 상당한 금액을 손해금으로 부과징수할 수 있다. 전항의 손해금을 소정기일내에 납부하지 아니할 때에는 국세체납처분의 예에 의하여 처리한다.",
+        "rerank_rank": 6,
+        "rerank_score": 5.1421661737549584e-06,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "귀속재산처리법 36조 2",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 211조  소유권의 내용#KOBLEX-058822"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 88,
+        "first_stage_score": 2.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "민법 211조  소유권의 내용#KOBLEX-058822",
+        "provision_text": "제211조(소유권의 내용) 소유자는 법률의 범위내에서 그 소유물을 사용, 수익, 처분할 권리가 있다.",
+        "rerank_rank": 7,
+        "rerank_score": 4.786262707057176e-06,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 211조  소유권의 내용",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국유재산법 78조  은닉재산의 자진반환자 등에 관한 특례#KOBLEX-124889"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 43,
+        "first_stage_score": 19.132527719326482,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "국유재산법 78조  은닉재산의 자진반환자 등에 관한 특례#KOBLEX-124889",
+        "provision_text": "1. 자진 반환",
+        "rerank_rank": 8,
+        "rerank_score": 3.798864781856537e-06,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "국유재산법 78조  은닉재산의 자진반환자 등에 관한 특례 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 197조  점유의 태양#KOBLEX-058782"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 98,
+        "first_stage_score": 1.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "민법 197조  점유의 태양#KOBLEX-058782",
+        "provision_text": "제197조(점유의 태양)",
+        "rerank_rank": 2,
+        "rerank_score": 3.4362637961748987e-06,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "민법 197조  점유의 태양",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 390조  채무불이행과 손해배상#KOBLEX-059183"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 3.0,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "민법 390조  채무불이행과 손해배상#KOBLEX-059183",
+        "provision_text": "제390조(채무불이행과 손해배상) 채무자가 채무의 내용에 좇은 이행을 하지 아니한 때에는 채권자는 손해배상을 청구할 수 있다. 그러나 채무자의 고의나 과실없이 이행할 수 없게 된 때에는 그러하지 아니하다.",
+        "rerank_rank": 6,
+        "rerank_score": 5.6412871344946325e-05,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 390조  채무불이행과 손해배상",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 389조  강제이행#KOBLEX-059182"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 98,
+        "first_stage_score": 2.0,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "민법 389조  강제이행#KOBLEX-059182",
+        "provision_text": "④전3항의 규정은 손해배상의 청구에 영향을 미치지 아니한다.",
+        "rerank_rank": 7,
+        "rerank_score": 3.871574335789774e-06,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 389조  강제이행 4항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 294조  시효의 기산점#KOBLEX-093078",
+          "군사법원법 294조  시효의 기산점#KOBLEX-159043"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 31.33465809274734,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 294조  시효의 기산점#KOBLEX-093078",
+        "provision_text": "제294조(시효의 기산점)",
+        "rerank_rank": 5,
+        "rerank_score": 3.540618536135298e-06,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "군사법원법 294조  시효의 기산점",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 252조  시효의 기산점#KOBLEX-232278"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 31.33465809274734,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 252조  시효의 기산점#KOBLEX-232278",
+        "provision_text": "제252조(시효의 기산점)",
+        "rerank_rank": 8,
+        "rerank_score": 3.0310127385746455e-06,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형사소송법 252조  시효의 기산점",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 379조  법정이율#KOBLEX-059153"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 2.0,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "민법 379조  법정이율#KOBLEX-059153",
+        "provision_text": "제379조(법정이율) 이자있는 채권의 이율은 다른 법률의 규정이나 당사자의 약정이 없으면 연 5분으로 한다.",
+        "rerank_rank": 10,
+        "rerank_score": 2.535518433433026e-06,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 379조  법정이율",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 166조  소멸시효의 기산점#KOBLEX-058726"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 31.33465809274734,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "민법 166조  소멸시효의 기산점#KOBLEX-058726",
+        "provision_text": "제166조(소멸시효의 기산점)",
+        "rerank_rank": 9,
+        "rerank_score": 2.3804097963875392e-06,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 166조  소멸시효의 기산점",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "가족관계의 등록 등에 관한 법률 37조  신고기간의 기산점#KOBLEX-127439"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 31.33465809274734,
+        "fusion_rank": 11,
+        "issue_id": "I2",
+        "provision_id": "가족관계의 등록 등에 관한 법률 37조  신고기간의 기산점#KOBLEX-127439",
+        "provision_text": "제37조(신고기간의 기산점)",
+        "rerank_rank": 11,
+        "rerank_score": 2.246139729322749e-06,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "가족관계의 등록 등에 관한 법률 37조  신고기간의 기산점",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 206조  점유의 보전#KOBLEX-058808"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 2.0,
+        "fusion_rank": 12,
+        "issue_id": "I2",
+        "provision_id": "민법 206조  점유의 보전#KOBLEX-058808",
+        "provision_text": "①점유자가 점유의 방해를 받을 염려가 있는 때에는 그 방해의 예방 또는 손해배상의 담보를 청구할 수 있다.",
+        "rerank_rank": 12,
+        "rerank_score": 2.016221060330281e-06,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 206조  점유의 보전 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 323조  과실수취권#KOBLEX-059061"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 94,
+        "first_stage_score": 2.0,
+        "fusion_rank": 14,
+        "issue_id": "I2",
+        "provision_id": "민법 323조  과실수취권#KOBLEX-059061",
+        "provision_text": "②과실은 먼저 채권의 이자에 충당하고 그 잉여가 있으면 원본에 충당한다.",
+        "rerank_rank": 14,
+        "rerank_score": 1.7796741076381295e-06,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 323조  과실수취권 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 393조  손해배상의 범위#KOBLEX-059186"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 100,
+        "first_stage_score": 2.0,
+        "fusion_rank": 15,
+        "issue_id": "I2",
+        "provision_id": "민법 393조  손해배상의 범위#KOBLEX-059186",
+        "provision_text": "제393조(손해배상의 범위)",
+        "rerank_rank": 15,
+        "rerank_score": 1.7473572597737075e-06,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 393조  손해배상의 범위",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 156조  기간의 기산점#KOBLEX-058696"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 26.106335618193622,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "민법 156조  기간의 기산점#KOBLEX-058696",
+        "provision_text": "제156조(기간의 기산점) 기간을 시, 분, 초로 정한 때에는 즉시로부터 기산한다.",
+        "rerank_rank": 2,
+        "rerank_score": 1.1880243619089015e-05,
+        "retrieval_round": 3,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 156조  기간의 기산점",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 615조  등기기간의 기산점#KOBLEX-115838"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 28.06636274275057,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "상법 615조  등기기간의 기산점#KOBLEX-115838",
+        "provision_text": "제615조(등기기간의 기산점) 제614조제2항ㆍ제3항 및 제614조의2의 등기사항이 외국에서 발생한 경우 등기기간은 그 통지가 도달한 날부터 기산한다.",
+        "rerank_rank": 4,
+        "rerank_score": 4.038863153255079e-06,
+        "retrieval_round": 3,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상법 615조  등기기간의 기산점",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군인연금법 시행령 12조  복무기간 계산의 기산점#KOBLEX-205931"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 24.569041759401003,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "군인연금법 시행령 12조  복무기간 계산의 기산점#KOBLEX-205931",
+        "provision_text": "제12조(복무기간 계산의 기산점) 법 제5조제7항에 따른 정부수립연도 이전은 1948년 8월 14일 이전으로 한다.",
+        "rerank_rank": 7,
+        "rerank_score": 2.9260570499900496e-06,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "군인연금법 시행령 12조  복무기간 계산의 기산점",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 시행령 45조  이자소득의 수입시기#KOBLEX-141260"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 92,
+        "first_stage_score": 18.56379748572708,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "소득세법 시행령 45조  이자소득의 수입시기#KOBLEX-141260",
+        "provision_text": "5. 통지예금의 이자 인출일",
+        "rerank_rank": 9,
+        "rerank_score": 1.8741720850812271e-06,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "소득세법 시행령 45조  이자소득의 수입시기 6호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 157조  기간의 기산점#KOBLEX-058697"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 36,
+        "first_stage_score": 20.537762780748185,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "민법 157조  기간의 기산점#KOBLEX-058697",
+        "provision_text": "제157조(기간의 기산점) 기간을 일, 주, 월 또는 연으로 정한 때에는 기간의 초일은 산입하지 아니한다. 그러나 그 기간이 오전 영시로부터 시작하는 때에는 그러하지 아니하다.",
+        "rerank_rank": 10,
+        "rerank_score": 1.3785429473500699e-06,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 157조  기간의 기산점",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "가족관계의 등록 등에 관한 법률 37조  신고기간의 기산점#KOBLEX-127439": "제37조(신고기간의 기산점)",
+      "공유재산 및 물품 관리법 85조  은닉된 공유재산의 자진 반환자에 대한 특례#KOBLEX-205604": "1. 자진 반환",
+      "국유재산법 78조  은닉재산의 자진반환자 등에 관한 특례#KOBLEX-124889": "1. 자진 반환",
+      "군사법원법 294조  시효의 기산점#KOBLEX-093078": "제294조(시효의 기산점)",
+      "군인연금법 시행령 12조  복무기간 계산의 기산점#KOBLEX-205931": "제12조(복무기간 계산의 기산점) 법 제5조제7항에 따른 정부수립연도 이전은 1948년 8월 14일 이전으로 한다.",
+      "귀속재산처리법 36조 2#KOBLEX-048113": "제36조의2 귀속재산을 허가없이 점유 또는 사용하는 자에 대하여는 그 재산을 점유 또는 사용한 기간중 취득한 이득 또는 임대료에 상당한 금액을 손해금으로 부과징수할 수 있다. 전항의 손해금을 소정기일내에 납부하지 아니할 때에는 국세체납처분의 예에 의하여 처리한다.",
+      "민법 156조  기간의 기산점#KOBLEX-058696": "제156조(기간의 기산점) 기간을 시, 분, 초로 정한 때에는 즉시로부터 기산한다.",
+      "민법 157조  기간의 기산점#KOBLEX-058697": "제157조(기간의 기산점) 기간을 일, 주, 월 또는 연으로 정한 때에는 기간의 초일은 산입하지 아니한다. 그러나 그 기간이 오전 영시로부터 시작하는 때에는 그러하지 아니하다.",
+      "민법 166조  소멸시효의 기산점#KOBLEX-058726": "제166조(소멸시효의 기산점)",
+      "민법 197조  점유의 태양#KOBLEX-058782": "제197조(점유의 태양)",
+      "민법 197조  점유의 태양#KOBLEX-058784": "②선의의 점유자라도 본권에 관한 소에 패소한 때에는 그 소가 제기된 때로부터 악의의 점유자로 본다.",
+      "민법 201조  점유자와 과실#KOBLEX-058792": "②악의의 점유자는 수취한 과실을 반환하여야 하며 소비하였거나 과실로 인하여 훼손 또는 수취하지 못한 경우에는 그 과실의 대가를 보상하여야 한다.",
+      "민법 202조  점유자의 회복자에 대한 책임#KOBLEX-058794": "제202조(점유자의 회복자에 대한 책임) 점유물이 점유자의 책임있는 사유로 인하여 멸실 또는 훼손한 때에는 악의의 점유자는 그 손해의 전부를 배상하여야 하며 선의의 점유자는 이익이 현존하는 한도에서 배상하여야 한다. 소유의 의사가 없는 점유자는 선의인 경우에도 손해의 전부를 배상하여야 한다.",
+      "민법 204조  점유의 회수#KOBLEX-058800": "①점유자가 점유의 침탈을 당한 때에는 그 물건의 반환 및 손해의 배상을 청구할 수 있다.",
+      "민법 206조  점유의 보전#KOBLEX-058808": "①점유자가 점유의 방해를 받을 염려가 있는 때에는 그 방해의 예방 또는 손해배상의 담보를 청구할 수 있다.",
+      "민법 211조  소유권의 내용#KOBLEX-058822": "제211조(소유권의 내용) 소유자는 법률의 범위내에서 그 소유물을 사용, 수익, 처분할 권리가 있다.",
+      "민법 323조  과실수취권#KOBLEX-059061": "②과실은 먼저 채권의 이자에 충당하고 그 잉여가 있으면 원본에 충당한다.",
+      "민법 379조  법정이율#KOBLEX-059153": "제379조(법정이율) 이자있는 채권의 이율은 다른 법률의 규정이나 당사자의 약정이 없으면 연 5분으로 한다.",
+      "민법 389조  강제이행#KOBLEX-059182": "④전3항의 규정은 손해배상의 청구에 영향을 미치지 아니한다.",
+      "민법 390조  채무불이행과 손해배상#KOBLEX-059183": "제390조(채무불이행과 손해배상) 채무자가 채무의 내용에 좇은 이행을 하지 아니한 때에는 채권자는 손해배상을 청구할 수 있다. 그러나 채무자의 고의나 과실없이 이행할 수 없게 된 때에는 그러하지 아니하다.",
+      "민법 393조  손해배상의 범위#KOBLEX-059186": "제393조(손해배상의 범위)",
+      "상법 615조  등기기간의 기산점#KOBLEX-115838": "제615조(등기기간의 기산점) 제614조제2항ㆍ제3항 및 제614조의2의 등기사항이 외국에서 발생한 경우 등기기간은 그 통지가 도달한 날부터 기산한다.",
+      "소득세법 시행령 45조  이자소득의 수입시기#KOBLEX-141260": "5. 통지예금의 이자 인출일",
+      "자본시장과 금융투자업에 관한 법률 172조  내부자의 단기매매차익 반환#KOBLEX-135829": "제172조(내부자의 단기매매차익 반환)",
+      "형사소송법 252조  시효의 기산점#KOBLEX-232278": "제252조(시효의 기산점)"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 201조  점유자와 과실#KOBLEX-058792"
+            ],
+            "rationale": "C004(민법 201조 2항)는 악의의 점유자의 과실 반환 의무를 명시적으로 규정하고 있다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "민법 201조  점유자와 과실#KOBLEX-058792"
+            ],
+            "rationale": "C004는 반환 대상이 '수취한 과실'이며, 이를 소비하거나 수취하지 못한 경우 '그 과실의 대가'로 범위가 확장됨을 규정하여 이익의 범위를 명확히 한다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민법 201조  점유자와 과실#KOBLEX-058792"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "민법 제201조 제2항(C004)은 악의의 점유자의 수익(과실) 반환 의무와 그 범위(수취한 과실 또는 그 대가)를 명확히 규정하고 있어, 무권리 점유자의 수익반환 범위를 정하는 조항의 문언과 요건·효과를 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "conditional",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 379조  법정이율#KOBLEX-059153"
+            ],
+            "rationale": "C015(민법 379조)는 이자 있는 채권의 기본 이자율을 연 5%로 규정하여 이자율 요건을 충족한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "후보 조문 중 수익반환금의 이자 기산점을 명확히 정하는 조항이 없다.",
+            "requirement_id": "E2-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "민법 379조  법정이율#KOBLEX-059153",
+          "민법 390조  채무불이행과 손해배상#KOBLEX-059183"
+        ],
+        "missing_aspects": [
+          "E2-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "민법 제379조(C015)는 기본 이자율을 제공하지만, 수익반환금에 대한 이자 기산점(반환의무 발생 시점 등)을 명확히 정하는 조항이 후보 목록에 포함되어 있지 않아 이자 기산점 요건이 충족되지 않는다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [
+      "T2"
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 201조  점유자와 과실#KOBLEX-058792",
+        "support_spans": [
+          {
+            "end_char": 80,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 379조  법정이율#KOBLEX-059153",
+        "support_spans": [
+          {
+            "end_char": 60,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 390조  채무불이행과 손해배상#KOBLEX-059183",
+        "support_spans": [
+          {
+            "end_char": 114,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 5,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "무권리 점유자가 부동산을 점유·사용하여 얻은 이익의 반환 범위를 정하는 법적 기준",
+        "issue_id": "I1"
+      },
+      {
+        "description": "무권리 점유자의 수익반환금에 대한 이자율과 이자 기산점",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "반환금에 대한 이자율과 이자 기산점을 정하는 조항의 요건과 효과를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "반환금에 대한 이자율을 정하는 조항의 문언 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "이자 기산점(반환의무 발생 시점 등) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "무권리 점유자의 수익반환금에 대한 이자율과 이자 기산점을 정하는 민법 조항",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 요구하는 이자율을 결정하기 위한 핵심 법적 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 1,
+    "normalized_question": "[배경 시나리오] 갑은 을의 토지가 비어 있고 사용계약이 체결되지 않은 상태임에도, 마치 자신이 정당한 권한이 있는 것처럼 믿고 해당 토지를 무단으로 점유하여 창고 용도로 사용하고 수익을 올렸다. 그러나 갑은 실제로는 사용 권한이 없다는 사실을 알고 있었고, 그럼에도 불구하고 장기간 이를 계속 이용하였다. 을은 이로 인해 자신의 토지를 다른 용도로 활용하지 못해 실질적인 손해를 입게 되었다. [질문] 갑이 을의 부동산을 권한 없이 악의적으로 사용하여 수익을 얻은 경우, 그 반환 범위와 이자율은 어떻게 정해지는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "무권리 점유 부동산 점유 사용 이익 반환 범위",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "무권리 점유",
+          "부동산",
+          "점유",
+          "사용",
+          "이익",
+          "반환"
+        ],
+        "query_text": "무권리 점유자가 부동산을 점유·사용하여 얻은 이익은 반환하여야 한다 [원문 맥락] 을은 이로 인해 자신의 토지를 다른 용도로 활용하지 못해 실질적인 손해를 입게 되었다. 갑이 을의 부동산을 권한 없이 악의적으로 사용하여 수익을 얻은 경우, 그 반환 범위와 이자율은 어떻게 정해지는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "무권리 점유자의 수익반환 범위",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "무권리 점유 수익반환 이자 이자율 기산점",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "무권리 점유",
+          "수익반환",
+          "이자",
+          "이자율",
+          "기산점"
+        ],
+        "query_text": "무권리 점유자가 반환하여야 할 이익에 대하여 이자를 지급하여야 한다 [원문 맥락] 을은 이로 인해 자신의 토지를 다른 용도로 활용하지 못해 실질적인 손해를 입게 되었다. 갑이 을의 부동산을 권한 없이 악의적으로 사용하여 수익을 얻은 경우, 그 반환 범위와 이자율은 어떻게 정해지는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "무권리 점유자의 수익반환금 이자율",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "민법 390조 채무불이행 손해배상 이자 연 5퍼센트",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민법",
+          "390조",
+          "채무불이행",
+          "손해배상",
+          "이자율"
+        ],
+        "query_text": "민법 제390조 채무불이행에 대한 손해배상 이자율 [원문 맥락] 을은 이로 인해 자신의 토지를 다른 용도로 활용하지 못해 실질적인 손해를 입게 되었다. 갑이 을의 부동산을 권한 없이 악의적으로 사용하여 수익을 얻은 경우, 그 반환 범위와 이자율은 어떻게 정해지는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "무권리 점유 수익반환금 이자율 민법 390조",
+        "statute_hints": [
+          "민법 제390조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "점유자 과실 반환 이자 기산점 반환의무 발생 시점",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "점유자",
+          "과실",
+          "반환",
+          "이자",
+          "기산점"
+        ],
+        "query_text": "점유자 과실 반환 이자 기산점 [원문 맥락] 을은 이로 인해 자신의 토지를 다른 용도로 활용하지 못해 실질적인 손해를 입게 되었다. 갑이 을의 부동산을 권한 없이 악의적으로 사용하여 수익을 얻은 경우, 그 반환 범위와 이자율은 어떻게 정해지는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "무권리 점유 수익반환 이자 기산점",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "악의 점유자 과실 반환 이자 기산점 반환의무 발생 시점",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "악의 점유자",
+          "과실 반환",
+          "이자 기산점",
+          "반환의무 발생",
+          "이자 계산"
+        ],
+        "query_text": "악의의 점유자가 반환하여야 할 과실에 대하여 이자는 반환의무 발생 시점부터 계산한다 [원문 맥락] 을은 이로 인해 자신의 토지를 다른 용도로 활용하지 못해 실질적인 손해를 입게 되었다. 갑이 을의 부동산을 권한 없이 악의적으로 사용하여 수익을 얻은 경우, 그 반환 범위와 이자율은 어떻게 정해지는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "무권리 점유 수익반환금 이자 기산점 반환의무 발생 시점",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "점유 과실 반환 채무 이자 발생 시점 기산점",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "점유",
+          "과실",
+          "반환",
+          "채무",
+          "이자",
+          "발생 시점",
+          "기산점"
+        ],
+        "query_text": "점유 과실 반환 채무 이자 발생 시점 기산점 [원문 맥락] 을은 이로 인해 자신의 토지를 다른 용도로 활용하지 못해 실질적인 손해를 입게 되었다. 갑이 을의 부동산을 권한 없이 악의적으로 사용하여 수익을 얻은 경우, 그 반환 범위와 이자율은 어떻게 정해지는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "무권리 점유 수익반환 이자 기산점",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을의 토지가 비어 있고 사용계약이 체결되지 않은 상태임에도, 마치 자신이 정당한 권한이 있는 것처럼 믿고 해당 토지를 무단으로 점유하여 창고 용도로 사용하고 수익을 올렸다. 그러나 갑은 실제로는 사용 권한이 없다는 사실을 알고 있었고, 그럼에도 불구하고 장기간 이를 계속 이용하였다. 을은 이로 인해 자신의 토지를 다른 용도로 활용하지 못해 실질적인 손해를 입게 되었다.\n\n[질문]\n갑이 을의 부동산을 권한 없이 악의적으로 사용하여 수익을 얻은 경우, 그 반환 범위와 이자율은 어떻게 정해지는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "무권리 점유자의 수익반환 범위를 정하는 조항의 요건과 효과를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "무권리 점유자의 수익반환 범위를 정하는 조항의 문언 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "반환 대상 이익의 범위(실제 이익, 가산 이익 등) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "무권리 점유자가 부동산을 점유·사용하여 얻은 이익의 반환 범위를 정하는 민법 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 반환 범위를 결정하기 위한 핵심 법적 근거",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "반환금에 대한 이자율과 이자 기산점을 정하는 조항의 요건과 효과를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "반환금에 대한 이자율을 정하는 조항의 문언 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "이자 기산점(반환의무 발생 시점 등) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "무권리 점유자의 수익반환금에 대한 이자율과 이자 기산점을 정하는 민법 조항",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 요구하는 이자율을 결정하기 위한 핵심 법적 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "5f5d1fb3-b0a6-474e-a495-04374dda54f6",
+    "seen_provision_ids": [
+      "귀속재산처리법 36조 2#KOBLEX-048113",
+      "민법 390조  채무불이행과 손해배상#KOBLEX-059183",
+      "민법 166조  소멸시효의 기산점#KOBLEX-058726",
+      "민법 323조  과실수취권#KOBLEX-059061",
+      "가족관계의 등록 등에 관한 법률 37조  신고기간의 기산점#KOBLEX-127439",
+      "민법 206조  점유의 보전#KOBLEX-058808",
+      "민법 201조  점유자와 과실#KOBLEX-058792",
+      "소득세법 시행령 45조  이자소득의 수입시기#KOBLEX-141260",
+      "민법 204조  점유의 회수#KOBLEX-058800",
+      "민법 211조  소유권의 내용#KOBLEX-058822",
+      "민법 379조  법정이율#KOBLEX-059153",
+      "민법 393조  손해배상의 범위#KOBLEX-059186",
+      "민법 389조  강제이행#KOBLEX-059182",
+      "군인연금법 시행령 12조  복무기간 계산의 기산점#KOBLEX-205931",
+      "군사법원법 294조  시효의 기산점#KOBLEX-093078",
+      "형사소송법 252조  시효의 기산점#KOBLEX-232278",
+      "민법 157조  기간의 기산점#KOBLEX-058697",
+      "민법 202조  점유자의 회복자에 대한 책임#KOBLEX-058794",
+      "국유재산법 78조  은닉재산의 자진반환자 등에 관한 특례#KOBLEX-124889",
+      "공유재산 및 물품 관리법 85조  은닉된 공유재산의 자진 반환자에 대한 특례#KOBLEX-205604",
+      "민법 197조  점유의 태양#KOBLEX-058784",
+      "자본시장과 금융투자업에 관한 법률 172조  내부자의 단기매매차익 반환#KOBLEX-135829",
+      "상법 615조  등기기간의 기산점#KOBLEX-115838",
+      "민법 156조  기간의 기산점#KOBLEX-058696",
+      "민법 197조  점유의 태양#KOBLEX-058782"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

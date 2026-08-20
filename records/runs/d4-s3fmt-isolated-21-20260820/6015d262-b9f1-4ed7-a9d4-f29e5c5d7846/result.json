@@ -1,0 +1,803 @@
+{
+  "abstention_reason": null,
+  "answer": "동일 사안에 대해 중복신고가 있는 경우 포상금은 최초로 신고한 자에게만 지급된다.[CT1]\n현금영수증 발급 거부 신고에 대한 포상금은 동일인이 받을 수 있는 금액이 연간 100만원을 한도로 한다.[CT2]\n전제: 갑과 병의 신고가 동일한 현금영수증 발급 거부 사안에 대한 중복신고로 간주됨을 전제함\n한계: 갑과 병 중 누가 실제로 먼저 신고했는지는 사실관계에 따라 달라지며, 본 답변은 법적 기준만 제시함",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "동일 사안에 대해 중복신고가 있는 경우 포상금은 최초로 신고한 자에게만 지급된다.[CT1]\n현금영수증 발급 거부 신고에 대한 포상금은 동일인이 받을 수 있는 금액이 연간 100만원을 한도로 한다.[CT2]\n전제: 갑과 병의 신고가 동일한 현금영수증 발급 거부 사안에 대한 중복신고로 간주됨을 전제함\n한계: 갑과 병 중 누가 실제로 먼저 신고했는지는 사실관계에 따라 달라지며, 본 답변은 법적 기준만 제시함",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T09:23:23.587419+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 422800.704,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 283,
+      "dedup_collapse": 58,
+      "evidence_fusion": 283,
+      "first_stage": 400,
+      "request_rerank": 400,
+      "round_selected": 20,
+      "rrf": 300,
+      "selected": 283
+    }
+  },
+  "run_id": "6015d262-b9f1-4ed7-a9d4-f29e5c5d7846",
+  "state": {
+    "accepted_provision_ids": [
+      "법인세법 시행령 159조 2 현금영수증가맹점의 가입 등#KOBLEX-018243",
+      "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030023",
+      "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030021",
+      "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030008"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 3,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "갑과 병 중 누가 포상금을 받을 수 있으며",
+        "requested_output": "갑과 병 중 현금영수증 발급 거부 신고에 대해 포상금을 받을 수 있는 자의 특정"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "statutory_limit",
+        "question_anchor": "갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금 한도는 얼마인가",
+        "requested_output": "갑이 현금영수증 발급 거부 신고로 받을 수 있는 연간 포상금 한도 금액"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "의료급여법 시행령 18조 2 포상금의 지급 등#KOBLEX-018638"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 56,
+        "first_stage_score": 25.49964170417686,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "의료급여법 시행령 18조 2 포상금의 지급 등#KOBLEX-018638",
+        "provision_text": "② 시장ㆍ군수ㆍ구청장은 제1항에 따라 신고를 받으면 그 내용을 확인한 후 포상금 지급 여부를 결정하여 신고인(2명 이상이 공동명의로 신고한 경우에는 제1항 후단에 따른 대표자를 말한다. 이하 이 조에서 같다)에게 통보하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 2.5220151655958034e-05,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "의료급여법 시행령 18조 2 포상금의 지급 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030021"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 71,
+        "first_stage_score": 20.558143949161042,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030021",
+        "provision_text": "⑲ 법 제84조의2제1항제4호의2에 해당하는 자에게는 다음 표의 구분에 따른 포상금을 지급할 수 있다. 다만, 포상금으로 지급할 금액 중 1천원 미만의 금액은 없는 것으로 하고, 동일인에게 지급할 수 있는 포상금은 연간 100만원을 한도로 한다. <개정 2019.2.12, 2021.2.17, 2025.2.28> <img src=\"http://www.law.go.kr/flDownload.do?flSeq=149416625\"  alt=\"img149416625\" > ┌────────────────┬─────────────────────┐ │현금영수증을 발급하지 않은 금액 │지급금액                                  │ ├────────────────┼─────────────────────┤ │5만원 이하                      │1만원                                     │ ├────────────────┼─────────────────────┤ │5만원 초과 125만원 이하         │현금영수증을 발급하지 않은 금액의 100분의 │ │                                │20에 해당하는 금액                        │ ├────────────────┼─────────────────────┤ │125만원 초과                    │25만원                                    │ └────────────────┴─────────────────────┘ </img>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9993379712104797,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "국세기본법 시행령 65조 4 포상금의 지급 19항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030008"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 25.054776564553073,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030008",
+        "provision_text": "⑥법 제84조의2제1항제3호 또는 제4호에 해당하는 자에게는 신용카드ㆍ현금영수증의 결제ㆍ발급을 거부하거나 사실과 다르게 발급한 금액(사실과 다르게 발급한 경우 발급하여야 할 금액과의 차액을 말한다. 이하 이 항에서 \"거부금액\"이라 한다)에 따라 다음의 금액을 포상금으로 지급할 수 있다. 다만, 포상금으로 지급할 금액 중 1천원 미만의 금액은 없는 것으로 하고, 동일인이 받을 수 있는 포상금은 연간 100만원을 한도로 한다. <개정 2021.2.17, 2025.2.28> <img src=\"http://www.law.go.kr/flDownload.do?flSeq=149416885\"  alt=\"img149416885\" > ┌────────────┬───────────────────┐ │거부금액                │지급금액                              │ ├────────────┼───────────────────┤ │5천원 이상 5만원 이하   │1만원                                 │ ├────────────┼───────────────────┤ │5만원 초과 125만원 이하 │거부금액의 100분의 20에 해당하는 금액 │ ├────────────┼───────────────────┤ │125만원 초과            │25만원                                │ └────────────┴───────────────────┘ </img>",
+        "rerank_rank": 2,
+        "rerank_score": 0.9909955859184265,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "국세기본법 시행령 65조 4 포상금의 지급 6항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030020"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 29.82560374984906,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030020",
+        "provision_text": "⑱ 법 제84조의2제1항제7호에 해당하는 자에게는 해당 금융자산을 통한 탈루세액등이 1천만원 이상인 신고 건별로 100만원을 포상금으로 지급할 수 있다. 다만, 동일인이 지급받을 수 있는 포상금은 연간 5천만원을 한도로 한다. <신설 2013.2.15., 2015.2.3, 2021.2.17>",
+        "rerank_rank": 3,
+        "rerank_score": 0.04800080135464668,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "국세기본법 시행령 65조 4 포상금의 지급 18항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030013"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 75,
+        "first_stage_score": 20.32202802930739,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030013",
+        "provision_text": "⑪ 현금영수증을 발급한 후 재화나 용역을 공급받은 자의 의사에 반하여 그 발급을 취소하는 경우에는 법 제84조의2제1항제4호가목의 현금영수증 발급을 거부하는 것으로 본다. <개정 2021.2.17>",
+        "rerank_rank": 4,
+        "rerank_score": 0.0013374354457482696,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "국세기본법 시행령 65조 4 포상금의 지급 11항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국민건강보험법 시행령 75조  포상금의 지급 기준 등#KOBLEX-055803"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 52,
+        "first_stage_score": 25.84292363721276,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "국민건강보험법 시행령 75조  포상금의 지급 기준 등#KOBLEX-055803",
+        "provision_text": "② 공단은 제1항에 따라 신고를 받으면 그 내용을 확인한 후 포상금 지급 여부를 결정하여 신고인(2명 이상이 공동명의로 신고한 경우에는 제1항 후단에 따른 대표자를 말한다. 이하 이조에서 같다)에게 통보하여야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 2.517828943382483e-05,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "국민건강보험법 시행령 75조  포상금의 지급 기준 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국민건강보험법 시행령 75조  포상금의 지급 기준 등#KOBLEX-055804"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 36.497715747410886,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "국민건강보험법 시행령 75조  포상금의 지급 기준 등#KOBLEX-055804",
+        "provision_text": "③ 제2항에 따라 포상금 지급 결정을 통보받은 신고인은 공단이 정하는 바에 따라 공단에 포상금 지급을 신청하여야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 1.1512272067193408e-05,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "국민건강보험법 시행령 75조  포상금의 지급 기준 등 3항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 시행령 147조 4 현금영수증 발급 불성실 가산세#KOBLEX-141902"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 28.08904566771266,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "소득세법 시행령 147조 4 현금영수증 발급 불성실 가산세#KOBLEX-141902",
+        "provision_text": "제147조의4(현금영수증 발급 불성실 가산세)",
+        "rerank_rank": 5,
+        "rerank_score": 1.1170983270858414e-05,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "소득세법 시행령 147조 4 현금영수증 발급 불성실 가산세",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "의료급여법 시행령 18조 2 포상금의 지급 등#KOBLEX-018639"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 36.497715747410886,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "의료급여법 시행령 18조 2 포상금의 지급 등#KOBLEX-018639",
+        "provision_text": "③ 신고인은 제2항에 따라 포상금 지급 결정을 통보받으면 보건복지부장관이 정하는 바에 따라 시장ㆍ군수ㆍ구청장에게 포상금 지급을 신청하여야 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 9.44044950301759e-06,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "의료급여법 시행령 18조 2 포상금의 지급 등 3항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "법인세법 시행령 159조 2 현금영수증가맹점의 가입 등#KOBLEX-018243"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 24.121575090468326,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "법인세법 시행령 159조 2 현금영수증가맹점의 가입 등#KOBLEX-018243",
+        "provision_text": "⑦ 현금영수증가맹점 또는 법 제117조의2제4항에 따라 현금영수증을 발급해야 하는 내국법인으로부터 현금영수증 발급이 거부되거나 사실과 다른 현금영수증을 발급받은 자가 법 제117조의2제5항에 따라 그 거래내용을 신고하려는 때에는 다음 각 호의 사항이 포함된 신고서에 관련 사실을 증명할 수 있는 서류 또는 자료를 첨부하여 현금영수증 발급이 거부되거나 사실과 다르게 발급받은 날부터 5년 이내에 국세청장ㆍ지방국세청장 또는 세무서장에게 제출하여야 한다. <개정 2012.2.2, 2024.2.29> 1. 신고자 성명 2. 현금영수증가맹점 또는 법 제117조의2제4항에 따라 현금영수증을 발급해야 하는 내국법인의 상호 3. 현금영수증 발급이 거부되거나 사실과 다르게 발급받은 일자ㆍ거래내용 및 금액",
+        "rerank_rank": 6,
+        "rerank_score": 8.51023469294887e-06,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "법인세법 시행령 159조 2 현금영수증가맹점의 가입 등 7항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공인중개사법 시행규칙 28조  포상금의 지급#KOBLEX-111242"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 46.7956504212869,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "공인중개사법 시행규칙 28조  포상금의 지급#KOBLEX-111242",
+        "provision_text": "④등록관청은 하나의 사건에 대하여 2건 이상의 신고 또는 고발이 접수된 경우에는 최초로 신고 또는 고발한 자에게 포상금을 지급한다.",
+        "rerank_rank": 8,
+        "rerank_score": 3.066000499529764e-05,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "공인중개사법 시행규칙 28조  포상금의 지급 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030023"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 46.02230977679415,
+        "fusion_rank": 12,
+        "issue_id": "I1",
+        "provision_id": "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030023",
+        "provision_text": "㉑ 법 제84조의2제1항 각 호의 어느 하나에 해당하는 자에게 포상금을 지급하는 경우 같은 사안에 대하여 중복신고가 있으면 최초로 신고한 자에게만 포상금을 지급한다. <신설 2013.2.15, 2021.2.17>",
+        "rerank_rank": 12,
+        "rerank_score": 1.6446163499495015e-05,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "국세기본법 시행령 65조 4 포상금의 지급 21항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "증권거래법 188조 6 불공정거래행위의 신고 등#KOBLEX-227328"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 75,
+        "first_stage_score": 26.111777837107223,
+        "fusion_rank": 13,
+        "issue_id": "I1",
+        "provision_id": "증권거래법 188조 6 불공정거래행위의 신고 등#KOBLEX-227328",
+        "provision_text": "③증권선물위원회는 대통령령이 정하는 바에 따라 신고자등에 대하여 포상금을 지급할 수 있다.",
+        "rerank_rank": 13,
+        "rerank_score": 3.852782356261741e-06,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "증권거래법 188조 6 불공정거래행위의 신고 등 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공인중개사법 시행규칙 28조  포상금의 지급#KOBLEX-111242": "④등록관청은 하나의 사건에 대하여 2건 이상의 신고 또는 고발이 접수된 경우에는 최초로 신고 또는 고발한 자에게 포상금을 지급한다.",
+      "국민건강보험법 시행령 75조  포상금의 지급 기준 등#KOBLEX-055803": "② 공단은 제1항에 따라 신고를 받으면 그 내용을 확인한 후 포상금 지급 여부를 결정하여 신고인(2명 이상이 공동명의로 신고한 경우에는 제1항 후단에 따른 대표자를 말한다. 이하 이조에서 같다)에게 통보하여야 한다.",
+      "국민건강보험법 시행령 75조  포상금의 지급 기준 등#KOBLEX-055804": "③ 제2항에 따라 포상금 지급 결정을 통보받은 신고인은 공단이 정하는 바에 따라 공단에 포상금 지급을 신청하여야 한다.",
+      "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030008": "⑥법 제84조의2제1항제3호 또는 제4호에 해당하는 자에게는 신용카드ㆍ현금영수증의 결제ㆍ발급을 거부하거나 사실과 다르게 발급한 금액(사실과 다르게 발급한 경우 발급하여야 할 금액과의 차액을 말한다. 이하 이 항에서 \"거부금액\"이라 한다)에 따라 다음의 금액을 포상금으로 지급할 수 있다. 다만, 포상금으로 지급할 금액 중 1천원 미만의 금액은 없는 것으로 하고, 동일인이 받을 수 있는 포상금은 연간 100만원을 한도로 한다. <개정 2021.2.17, 2025.2.28> <img src=\"http://www.law.go.kr/flDownload.do?flSeq=149416885\"  alt=\"img149416885\" > ┌────────────┬───────────────────┐ │거부금액                │지급금액                              │ ├────────────┼───────────────────┤ │5천원 이상 5만원 이하   │1만원                                 │ ├────────────┼───────────────────┤ │5만원 초과 125만원 이하 │거부금액의 100분의 20에 해당하는 금액 │ ├────────────┼───────────────────┤ │125만원 초과            │25만원                                │ └────────────┴───────────────────┘ </img>",
+      "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030013": "⑪ 현금영수증을 발급한 후 재화나 용역을 공급받은 자의 의사에 반하여 그 발급을 취소하는 경우에는 법 제84조의2제1항제4호가목의 현금영수증 발급을 거부하는 것으로 본다. <개정 2021.2.17>",
+      "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030020": "⑱ 법 제84조의2제1항제7호에 해당하는 자에게는 해당 금융자산을 통한 탈루세액등이 1천만원 이상인 신고 건별로 100만원을 포상금으로 지급할 수 있다. 다만, 동일인이 지급받을 수 있는 포상금은 연간 5천만원을 한도로 한다. <신설 2013.2.15., 2015.2.3, 2021.2.17>",
+      "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030021": "⑲ 법 제84조의2제1항제4호의2에 해당하는 자에게는 다음 표의 구분에 따른 포상금을 지급할 수 있다. 다만, 포상금으로 지급할 금액 중 1천원 미만의 금액은 없는 것으로 하고, 동일인에게 지급할 수 있는 포상금은 연간 100만원을 한도로 한다. <개정 2019.2.12, 2021.2.17, 2025.2.28> <img src=\"http://www.law.go.kr/flDownload.do?flSeq=149416625\"  alt=\"img149416625\" > ┌────────────────┬─────────────────────┐ │현금영수증을 발급하지 않은 금액 │지급금액                                  │ ├────────────────┼─────────────────────┤ │5만원 이하                      │1만원                                     │ ├────────────────┼─────────────────────┤ │5만원 초과 125만원 이하         │현금영수증을 발급하지 않은 금액의 100분의 │ │                                │20에 해당하는 금액                        │ ├────────────────┼─────────────────────┤ │125만원 초과                    │25만원                                    │ └────────────────┴─────────────────────┘ </img>",
+      "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030023": "㉑ 법 제84조의2제1항 각 호의 어느 하나에 해당하는 자에게 포상금을 지급하는 경우 같은 사안에 대하여 중복신고가 있으면 최초로 신고한 자에게만 포상금을 지급한다. <신설 2013.2.15, 2021.2.17>",
+      "법인세법 시행령 159조 2 현금영수증가맹점의 가입 등#KOBLEX-018243": "⑦ 현금영수증가맹점 또는 법 제117조의2제4항에 따라 현금영수증을 발급해야 하는 내국법인으로부터 현금영수증 발급이 거부되거나 사실과 다른 현금영수증을 발급받은 자가 법 제117조의2제5항에 따라 그 거래내용을 신고하려는 때에는 다음 각 호의 사항이 포함된 신고서에 관련 사실을 증명할 수 있는 서류 또는 자료를 첨부하여 현금영수증 발급이 거부되거나 사실과 다르게 발급받은 날부터 5년 이내에 국세청장ㆍ지방국세청장 또는 세무서장에게 제출하여야 한다. <개정 2012.2.2, 2024.2.29> 1. 신고자 성명 2. 현금영수증가맹점 또는 법 제117조의2제4항에 따라 현금영수증을 발급해야 하는 내국법인의 상호 3. 현금영수증 발급이 거부되거나 사실과 다르게 발급받은 일자ㆍ거래내용 및 금액",
+      "소득세법 시행령 147조 4 현금영수증 발급 불성실 가산세#KOBLEX-141902": "제147조의4(현금영수증 발급 불성실 가산세)",
+      "의료급여법 시행령 18조 2 포상금의 지급 등#KOBLEX-018638": "② 시장ㆍ군수ㆍ구청장은 제1항에 따라 신고를 받으면 그 내용을 확인한 후 포상금 지급 여부를 결정하여 신고인(2명 이상이 공동명의로 신고한 경우에는 제1항 후단에 따른 대표자를 말한다. 이하 이 조에서 같다)에게 통보하여야 한다.",
+      "의료급여법 시행령 18조 2 포상금의 지급 등#KOBLEX-018639": "③ 신고인은 제2항에 따라 포상금 지급 결정을 통보받으면 보건복지부장관이 정하는 바에 따라 시장ㆍ군수ㆍ구청장에게 포상금 지급을 신청하여야 한다.",
+      "증권거래법 188조 6 불공정거래행위의 신고 등#KOBLEX-227328": "③증권선물위원회는 대통령령이 정하는 바에 따라 신고자등에 대하여 포상금을 지급할 수 있다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "법인세법 시행령 159조 2 현금영수증가맹점의 가입 등#KOBLEX-018243"
+            ],
+            "rationale": "C010 details the conditions and procedures for reporting cash receipt refusal, satisfying the requirement to confirm eligibility conditions.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030023"
+            ],
+            "rationale": "C012 explicitly states that for duplicate reports on the same matter, the reward is paid only to the first reporter, satisfying the requirement for a priority rule.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "법인세법 시행령 159조 2 현금영수증가맹점의 가입 등#KOBLEX-018243",
+          "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030023"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C010 establishes the reporting eligibility conditions, and C012 provides the specific rule that the first reporter receives the reward in cases of duplicate reporting. Together, they satisfy the criteria for determining the reward recipient among multiple reporters.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030021",
+              "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030008"
+            ],
+            "rationale": "C002 and C003 both specify the 1 million KRW annual limit for the reward.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030008",
+          "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030021"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "Both C002 and C003 explicitly state that the annual limit for rewards related to cash receipt issuance refusal is 1 million KRW per person. This fully satisfies the requirement to identify the annual limit.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "법인세법 시행령 159조 2 현금영수증가맹점의 가입 등#KOBLEX-018243",
+        "support_spans": [
+          {
+            "end_char": 387,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030023",
+        "support_spans": [
+          {
+            "end_char": 118,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030008",
+        "support_spans": [
+          {
+            "end_char": 748,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030021",
+        "support_spans": [
+          {
+            "end_char": 798,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 3,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "동일한 현금영수증 발급 거부 행위에 대해 다수인이 신고한 경우 포상금 지급 대상은 누구인지",
+        "issue_id": "I1"
+      },
+      {
+        "description": "현금영수증 발급 거부 신고에 대한 포상금의 연간 지급 한도는 얼마인지",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 2023년에 을이 운영하는 가게에서 현금영수증 발급을 거부당했습니다. 갑은 이를 국세청에 신고하여 포상금을 받기로 했습니다. 같은 날, 병도 을의 가게에서 동일한 이유로 현금영수증 발급을 거부당했고, 병 역시 국세청에 이를 신고했습니다. 갑과 병의 신고 중 누가 포상금을 받을 수 있는지, 그리고 갑이 받을 수 있는 연간 포상금의 한도는 얼마인지가 문제됩니다. [질문] 갑과 병 중 누가 포상금을 받을 수 있으며, 갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금 한도는 얼마인가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "현금영수증 발급 거부 신고 포상금 지급 대상 우선순위",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "현금영수증",
+          "발급거부",
+          "신고",
+          "포상금",
+          "지급대상",
+          "우선순위"
+        ],
+        "query_text": "현금영수증 발급 거부 신고 포상금 지급 대상 우선순위 [원문 맥락] 갑과 병의 신고 중 누가 포상금을 받을 수 있는지, 그리고 갑이 받을 수 있는 연간 포상금의 한도는 얼마인지가 문제됩니다. 갑과 병 중 누가 포상금을 받을 수 있으며, 갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금 한도는 얼마인가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "동일 건 다수 신고 시 현금영수증 발급 거부 포상금 수급권자 결정 기준",
+        "statute_hints": [
+          "현금영수증의 발급 및 이용에 관한 법률"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "현금영수증 발급 거부 신고 포상금 연간 한도",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "현금영수증",
+          "발급거부",
+          "신고",
+          "포상금",
+          "연간한도",
+          "최대금액"
+        ],
+        "query_text": "현금영수증 발급 거부 신고 포상금 연간 한도 [원문 맥락] 갑과 병의 신고 중 누가 포상금을 받을 수 있는지, 그리고 갑이 받을 수 있는 연간 포상금의 한도는 얼마인지가 문제됩니다. 갑과 병 중 누가 포상금을 받을 수 있으며, 갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금 한도는 얼마인가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "현금영수증 발급 거부 신고 포상금 연간 지급 한도 금액",
+        "statute_hints": [
+          "현금영수증의 발급 및 이용에 관한 법률"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "현금영수증 발급 거부 신고 포상금 동일 건 다수 신고자 지급 기준",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "현금영수증",
+          "발급거부",
+          "신고",
+          "포상금",
+          "다수신고",
+          "지급기준"
+        ],
+        "query_text": "현금영수증 발급 거부 신고 포상금 동일 건 다수 신고자 지급 기준 [원문 맥락] 갑과 병의 신고 중 누가 포상금을 받을 수 있는지, 그리고 갑이 받을 수 있는 연간 포상금의 한도는 얼마인지가 문제됩니다. 갑과 병 중 누가 포상금을 받을 수 있으며, 갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금 한도는 얼마인가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "동일 건 다수 신고 시 현금영수증 발급 거부 포상금 수급권자 결정 기준",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "현금영수증 발급 거부 행위에 대하여 2인 이상이 신고한 경우 포상금은 먼저 신고한 자에게 지급한다",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "현금영수증",
+          "발급거부",
+          "신고",
+          "포상금",
+          "먼저신고",
+          "지급"
+        ],
+        "query_text": "현금영수증 발급 거부 행위에 대하여 2인 이상이 신고한 경우 포상금은 먼저 신고한 자에게 지급한다 [원문 맥락] 갑과 병의 신고 중 누가 포상금을 받을 수 있는지, 그리고 갑이 받을 수 있는 연간 포상금의 한도는 얼마인지가 문제됩니다. 갑과 병 중 누가 포상금을 받을 수 있으며, 갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금 한도는 얼마인가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "동일 건 다수 신고 시 현금영수증 발급 거부 포상금 수급권자 결정 기준",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 2023년에 을이 운영하는 가게에서 현금영수증 발급을 거부당했습니다. 갑은 이를 국세청에 신고하여 포상금을 받기로 했습니다. 같은 날, 병도 을의 가게에서 동일한 이유로 현금영수증 발급을 거부당했고, 병 역시 국세청에 이를 신고했습니다. 갑과 병의 신고 중 누가 포상금을 받을 수 있는지, 그리고 갑이 받을 수 있는 연간 포상금의 한도는 얼마인지가 문제됩니다.\n\n[질문]\n갑과 병 중 누가 포상금을 받을 수 있으며, 갑이 현금영수증 발급 거부에 대해 받을 수 있는 연간 포상금 한도는 얼마인가?",
+    "remaining_request_budget": 5,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "동일 건에 대한 다수 신고 시 포상금 수급권자를 결정하는 법적 기준을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "현금영수증 발급 거부 신고 포상금 지급 대상 요건 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "동일 건 다수 신고 시 포상금 우선순위 또는 배제 규정 확인"
+          }
+        ],
+        "critical": true,
+        "description": "현금영수증 발급 거부 신고 포상금 지급 대상 및 우선순위 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 갑과 병 중 누가 포상금을 받을 수 있는지 묻고 있으므로, 포상금 지급 대상 결정 규칙이 없으면 결론을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "갑이 받을 수 있는 연간 포상금 최대 한도 금액을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "현금영수증 발급 거부 신고 포상금 연간 한도 금액 확인"
+          }
+        ],
+        "critical": true,
+        "description": "현금영수증 발급 거부 신고 포상금의 연간 지급 한도 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "limitation",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 갑의 연간 포상금 한도를 명시적으로 묻고 있으므로, 한도 규정이 없으면 답변 불가",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "6015d262-b9f1-4ed7-a9d4-f29e5c5d7846",
+    "seen_provision_ids": [
+      "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030008",
+      "국민건강보험법 시행령 75조  포상금의 지급 기준 등#KOBLEX-055803",
+      "소득세법 시행령 147조 4 현금영수증 발급 불성실 가산세#KOBLEX-141902",
+      "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030020",
+      "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030023",
+      "국민건강보험법 시행령 75조  포상금의 지급 기준 등#KOBLEX-055804",
+      "의료급여법 시행령 18조 2 포상금의 지급 등#KOBLEX-018639",
+      "공인중개사법 시행규칙 28조  포상금의 지급#KOBLEX-111242",
+      "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030021",
+      "증권거래법 188조 6 불공정거래행위의 신고 등#KOBLEX-227328",
+      "법인세법 시행령 159조 2 현금영수증가맹점의 가입 등#KOBLEX-018243",
+      "의료급여법 시행령 18조 2 포상금의 지급 등#KOBLEX-018638",
+      "국세기본법 시행령 65조 4 포상금의 지급#KOBLEX-030013"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T10:02:34.657081+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 177416.844,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 144 column 33 (char 3995)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "0cdf057e-0855-4d7d-9813-81c18837004e",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 144 column 33 (char 3995)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을과 함께 술자리에 갔다. 을이 술에 취해 정신을 잃자, 갑은 을의 상태를 이용해 추행을 시도하려 했지만, 이를 목격한 다른 친구 병에 의해 저지되었다. 이 사건이 경찰에 신고되어 조사가 시작되었다. [질문] 갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n갑은 을과 함께 술자리에 갔다. 을이 술에 취해 정신을 잃자, 갑은 을의 상태를 이용해 추행을 시도하려 했지만, 이를 목격한 다른 친구 병에 의해 저지되었다. 이 사건이 경찰에 신고되어 조사가 시작되었다.\n\n[질문]\n갑이 을이 심신상실 상태에 빠진 것을 이용하여 추행을 시도한 경우, 법적으로 어떤 처벌을 받을 수 있는가?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "0cdf057e-0855-4d7d-9813-81c18837004e",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

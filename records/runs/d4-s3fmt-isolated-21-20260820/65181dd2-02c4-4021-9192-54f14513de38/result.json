@@ -1,0 +1,1228 @@
+{
+  "abstention_reason": null,
+  "answer": "수탁자는 수익자의 이익을 위하여 신탁사무를 처리하여야 한다.[CT1]\n신탁업자는 수익자에 대하여 선량한 관리자의 주의로써 신탁재산을 운용하여야 한다.[CT2]\n수익채권의 소멸시효는 채권의 예에 따른다.[CT3]\n채권은 10년간 행사하지 아니하면 소멸시효가 완성한다.[CT4]\n이자, 부양료, 급료, 사용료 기타 1년 이내의 기간으로 정한 금전 또는 물건의 지급을 목적으로 한 채권은 3년간 행사하지 아니하면 소멸시효가 완성한다.[CT5]\n수익채권의 소멸시효는 수익자가 수익자로 된 사실을 알게 된 때부터 진행한다.[CT6]\n신탁이 종료한 때부터 6개월 내에는 수익채권의 소멸시효가 완성되지 아니한다.[CT7]\n전제: 을이 신탁업자(수탁자)로서 자본시장과 금융투자업에 관한 법률의 적용을 받는다고 가정한다.\n한계: 민법 제163조 제1호의 '기타 1년 이내의 기간으로 정한 금전 또는 물건의 지급을 목적으로 한 채권'에 해당되는지 여부는 구체적인 수익채권의 성격에 따라 달라질 수 있다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "수탁자는 수익자의 이익을 위하여 신탁사무를 처리하여야 한다.[CT1]\n신탁업자는 수익자에 대하여 선량한 관리자의 주의로써 신탁재산을 운용하여야 한다.[CT2]\n수익채권의 소멸시효는 채권의 예에 따른다.[CT3]\n채권은 10년간 행사하지 아니하면 소멸시효가 완성한다.[CT4]\n이자, 부양료, 급료, 사용료 기타 1년 이내의 기간으로 정한 금전 또는 물건의 지급을 목적으로 한 채권은 3년간 행사하지 아니하면 소멸시효가 완성한다.[CT5]\n수익채권의 소멸시효는 수익자가 수익자로 된 사실을 알게 된 때부터 진행한다.[CT6]\n신탁이 종료한 때부터 6개월 내에는 수익채권의 소멸시효가 완성되지 아니한다.[CT7]\n전제: 을이 신탁업자(수탁자)로서 자본시장과 금융투자업에 관한 법률의 적용을 받는다고 가정한다.\n한계: 민법 제163조 제1호의 '기타 1년 이내의 기간으로 정한 금전 또는 물건의 지급을 목적으로 한 채권'에 해당되는지 여부는 구체적인 수익채권의 성격에 따라 달라질 수 있다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T10:28:42.969250+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 783020.477,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 471,
+      "dedup_collapse": 54,
+      "evidence_fusion": 471,
+      "first_stage": 500,
+      "request_rerank": 500,
+      "round_selected": 30,
+      "rrf": 500,
+      "selected": 471
+    }
+  },
+  "run_id": "65181dd2-02c4-4021-9192-54f14513de38",
+  "state": {
+    "accepted_provision_ids": [
+      "신탁법 33조  충실의무#KOBLEX-107206",
+      "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707",
+      "민법 163조  3년의 단기소멸시효#KOBLEX-058710",
+      "신탁법 63조  수익채권의 소멸시효#KOBLEX-107307",
+      "신탁법 63조  수익채권의 소멸시효#KOBLEX-107309",
+      "신탁법 63조  수익채권의 소멸시효#KOBLEX-107308",
+      "민법 163조  3년의 단기소멸시효#KOBLEX-058709",
+      "자본시장과 금융투자업에 관한 법률 102조  선관의무 및 충실의무#KOBLEX-135353"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 7,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 7,
+          "request_count": 1,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 7,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_rule",
+        "question_anchor": "누구의 이익을 우선시해야 하며",
+        "requested_output": "신탁재산 관리 시 우선시해야 할 이익 주체"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_rule",
+        "question_anchor": "수익채권 소멸시효는 어떻게 적용됩니까",
+        "requested_output": "수익자의 수익채권에 적용되는 소멸시효 기간 및 기산점"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 102조  선관의무 및 충실의무#KOBLEX-135353"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 30.688057464079783,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 102조  선관의무 및 충실의무#KOBLEX-135353",
+        "provision_text": "① 신탁업자는 수익자에 대하여 선량한 관리자의 주의로써 신탁재산을 운용하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999867677688599,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 102조  선관의무 및 충실의무 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 63조  수익채권의 소멸시효#KOBLEX-107308"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 31.22994209525837,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "신탁법 63조  수익채권의 소멸시효#KOBLEX-107308",
+        "provision_text": "② 제1항에도 불구하고 수익채권의 소멸시효는 수익자가 수익자로 된 사실을 알게 된 때부터 진행한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999637603759766,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "신탁법 63조  수익채권의 소멸시효 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 22조#KOBLEX-107183"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 24,
+        "first_stage_score": 24.14105523353527,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "신탁법 22조#KOBLEX-107183",
+        "provision_text": "제3장 신탁재산",
+        "rerank_rank": 2,
+        "rerank_score": 0.9984065890312195,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "신탁법 22조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 112조  의결권 등#KOBLEX-135403"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 29.384189674753216,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 112조  의결권 등#KOBLEX-135403",
+        "provision_text": "① 신탁재산으로 취득한 주식에 대한 권리는 신탁업자가 행사한다. 이 경우 신탁업자는 수익자의 이익을 보호하기 위하여 신탁재산에 속하는 주식의 의결권을 충실하게 행사하여야 한다. <개정 2013.5.28>",
+        "rerank_rank": 3,
+        "rerank_score": 0.9980455636978149,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 112조  의결권 등 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 63조  수익채권의 소멸시효#KOBLEX-107307"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 37,
+        "first_stage_score": 24.582347357897664,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "신탁법 63조  수익채권의 소멸시효#KOBLEX-107307",
+        "provision_text": "① 수익채권의 소멸시효는 채권의 예에 따른다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9978007674217224,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "신탁법 63조  수익채권의 소멸시효 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 34조  이익에 반하는 행위의 금지#KOBLEX-107210"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 99,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "신탁법 34조  이익에 반하는 행위의 금지#KOBLEX-107210",
+        "provision_text": "③ 제1항에도 불구하고 수탁자는 상속 등 수탁자의 의사에 기하지 아니한 경우에는 신탁재산에 관한 권리를 포괄적으로 승계할 수 있다. 이 경우 해당 재산의 혼동에 관하여는 제26조를 준용한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.9836143255233765,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "신탁법 34조  이익에 반하는 행위의 금지 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 48조  비용상환청구권의 우선변제권 등#KOBLEX-107253"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 66,
+        "first_stage_score": 20.45373037757095,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "신탁법 48조  비용상환청구권의 우선변제권 등#KOBLEX-107253",
+        "provision_text": "① 수탁자는 신탁재산에 대한 민사집행절차 또는 「국세징수법」에 따른 공매절차에서 수익자나 그 밖의 채권자보다 우선하여 신탁의 목적에 따라 신탁재산의 보존, 개량을 위하여 지출한 필요비 또는 유익비(有益費)의 우선변제를 받을 권리가 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.9787951111793518,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "신탁법 48조  비용상환청구권의 우선변제권 등 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 63조  수익채권의 소멸시효#KOBLEX-107306"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 39.98271969032564,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "신탁법 63조  수익채권의 소멸시효#KOBLEX-107306",
+        "provision_text": "제63조(수익채권의 소멸시효)",
+        "rerank_rank": 3,
+        "rerank_score": 0.9731433987617493,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "신탁법 63조  수익채권의 소멸시효",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 102조  준용규정#KOBLEX-107502"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 2.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "신탁법 102조  준용규정#KOBLEX-107502",
+        "provision_text": "제102조(준용규정) 신탁의 종료로 인하여 신탁재산이 수익자나 그 밖의 자에게 귀속한 경우에는 제53조제3항 및 제54조를 준용한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.9573282599449158,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "신탁법 102조  준용규정",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 114조  신탁재산의 회계처리 등#KOBLEX-135416"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 61,
+        "first_stage_score": 20.829078264563194,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 114조  신탁재산의 회계처리 등#KOBLEX-135416",
+        "provision_text": "③ 신탁업자는 신탁재산에 대하여 그 신탁업자의 매 회계연도 종료 후 2개월 이내에 「주식회사 등의 외부감사에 관한 법률」 제2조제7호에 따른 감사인(이하 \"회계감사인\"이라 한다)의 회계감사를 받아야 한다. 다만, 수익자의 이익을 해할 우려가 없는 경우로서 대통령령으로 정하는 경우에는 회계감사를 받지 아니할 수 있다. <개정 2017.10.31>",
+        "rerank_rank": 7,
+        "rerank_score": 0.9548702836036682,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 114조  신탁재산의 회계처리 등 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 33조  충실의무#KOBLEX-107206"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 3.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "신탁법 33조  충실의무#KOBLEX-107206",
+        "provision_text": "제33조(충실의무) 수탁자는 수익자의 이익을 위하여 신탁사무를 처리하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.990006685256958,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "신탁법 33조  충실의무",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 63조  수익채권의 소멸시효#KOBLEX-107309"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 28.35756642603782,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "신탁법 63조  수익채권의 소멸시효#KOBLEX-107309",
+        "provision_text": "③ 제1항에도 불구하고 신탁이 종료한 때부터 6개월 내에는 수익채권의 소멸시효가 완성되지 아니한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9382808804512024,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "신탁법 63조  수익채권의 소멸시효 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 46조  비용상환청구권#KOBLEX-107244"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 3.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "신탁법 46조  비용상환청구권#KOBLEX-107244",
+        "provision_text": "④ 수탁자는 신탁재산이 신탁사무의 처리에 관하여 필요한 비용을 충당하기에 부족하게 될 우려가 있을 때에는 수익자에게 그가 얻은 이익의 범위에서 그 비용을 청구하거나 그에 상당하는 담보의 제공을 요구할 수 있다. 다만, 수익자가 특정되어 있지 아니하거나 존재하지 아니하는 경우 또는 수익자가 수익권을 포기한 경우에는 그러하지 아니하다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9769055843353271,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "신탁법 46조  비용상환청구권 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 62조  수익채권과 신탁채권의 관계#KOBLEX-107305"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 94,
+        "first_stage_score": 34.14129740343148,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "신탁법 62조  수익채권과 신탁채권의 관계#KOBLEX-107305",
+        "provision_text": "제62조(수익채권과 신탁채권의 관계) 신탁채권은 수익자가 수탁자에게 신탁재산에 속한 재산의 인도와 그 밖에 신탁재산에 기한 급부를 요구하는 청구권(이하 \"수익채권\"이라 한다)보다 우선한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.7954146862030029,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "신탁법 62조  수익채권과 신탁채권의 관계",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 2조 3 신탁재산 귀속 소득에 대한 납세의무의 범위#KOBLEX-152979"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 23.926493827373022,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "소득세법 2조 3 신탁재산 귀속 소득에 대한 납세의무의 범위#KOBLEX-152979",
+        "provision_text": "① 신탁재산에 귀속되는 소득은 그 신탁의 이익을 받을 수익자(수익자가 사망하는 경우에는 그 상속인)에게 귀속되는 것으로 본다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.6662551164627075,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "소득세법 2조 3 신탁재산 귀속 소득에 대한 납세의무의 범위 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107497"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 2.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107497",
+        "provision_text": "① 제98조제1호, 제4호부터 제6호까지, 제99조 또는 제100조에 따라 신탁이 종료된 경우 신탁재산은 수익자(잔여재산수익자를 정한 경우에는 그 잔여재산수익자를 말한다)에게 귀속한다. 다만, 신탁행위로 신탁재산의 잔여재산이 귀속될 자(이하 \"귀속권리자\"라 한다)를 정한 경우에는 그 귀속권리자에게 귀속한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.6065686345100403,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "신탁법 101조  신탁종료 후의 신탁재산의 귀속 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 34조  이익에 반하는 행위의 금지#KOBLEX-107208"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 3.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "신탁법 34조  이익에 반하는 행위의 금지#KOBLEX-107208",
+        "provision_text": "① 수탁자는 누구의 명의(名義)로도 다음 각 호의 행위를 하지 못한다. 1. 신탁재산을 고유재산으로 하거나 신탁재산에 관한 권리를 고유재산에 귀속시키는 행위 2. 고유재산을 신탁재산으로 하거나 고유재산에 관한 권리를 신탁재산에 귀속시키는 행위 3. 여러 개의 신탁을 인수한 경우 하나의 신탁재산 또는 그에 관한 권리를 다른 신탁의 신탁재산에 귀속시키는 행위 4. 제3자의 신탁재산에 대한 행위에서 제3자를 대리하는 행위 5. 그 밖에 수익자의 이익에 반하는 행위",
+        "rerank_rank": 8,
+        "rerank_score": 0.5672114491462708,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "신탁법 34조  이익에 반하는 행위의 금지 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 165조  판결 등에 의하여 확정된 채권의 소멸시효#KOBLEX-058723"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 4.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "민법 165조  판결 등에 의하여 확정된 채권의 소멸시효#KOBLEX-058723",
+        "provision_text": "①판결에 의하여 확정된 채권은 단기의 소멸시효에 해당한 것이라도 그 소멸시효는 10년으로 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.0005582696758210659,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 165조  판결 등에 의하여 확정된 채권의 소멸시효 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 162조#KOBLEX-058705"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 68,
+        "first_stage_score": 25.34320772028407,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "민법 162조#KOBLEX-058705",
+        "provision_text": "제7장 소멸시효",
+        "rerank_rank": 5,
+        "rerank_score": 0.00035417795879766345,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 162조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 4.0,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707",
+        "provision_text": "①채권은 10년간 행사하지 아니하면 소멸시효가 완성한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.00021997539442963898,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 162조  채권, 재산권의 소멸시효 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 163조  3년의 단기소멸시효#KOBLEX-058709"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 4.0,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "민법 163조  3년의 단기소멸시효#KOBLEX-058709",
+        "provision_text": "제163조(3년의 단기소멸시효) 다음 각호의 채권은 3년간 행사하지 아니하면 소멸시효가 완성한다. <개정 1997.12.13>",
+        "rerank_rank": 7,
+        "rerank_score": 0.00021212267165537924,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 163조  3년의 단기소멸시효",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 163조  3년의 단기소멸시효#KOBLEX-058710"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 3.0,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "민법 163조  3년의 단기소멸시효#KOBLEX-058710",
+        "provision_text": "1. 이자, 부양료, 급료, 사용료 기타 1년 이내의 기간으로 정한 금전 또는 물건의 지급을 목적으로 한 채권",
+        "rerank_rank": 8,
+        "rerank_score": 0.00010465170635143295,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 163조  3년의 단기소멸시효 1호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 165조  판결 등에 의하여 확정된 채권의 소멸시효#KOBLEX-058725"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 94,
+        "first_stage_score": 3.0,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "민법 165조  판결 등에 의하여 확정된 채권의 소멸시효#KOBLEX-058725",
+        "provision_text": "③전2항의 규정은 판결확정당시에 변제기가 도래하지 아니한 채권에 적용하지 아니한다.",
+        "rerank_rank": 9,
+        "rerank_score": 6.174003647174686e-05,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 165조  판결 등에 의하여 확정된 채권의 소멸시효 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 166조  소멸시효의 기산점#KOBLEX-058728"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 3.0,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "민법 166조  소멸시효의 기산점#KOBLEX-058728",
+        "provision_text": "②부작위를 목적으로 하는 채권의 소멸시효는 위반행위를 한 때로부터 진행한다.",
+        "rerank_rank": 10,
+        "rerank_score": 5.756693644798361e-05,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 166조  소멸시효의 기산점 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707": "①채권은 10년간 행사하지 아니하면 소멸시효가 완성한다.",
+      "민법 162조#KOBLEX-058705": "제7장 소멸시효",
+      "민법 163조  3년의 단기소멸시효#KOBLEX-058709": "제163조(3년의 단기소멸시효) 다음 각호의 채권은 3년간 행사하지 아니하면 소멸시효가 완성한다. <개정 1997.12.13>",
+      "민법 163조  3년의 단기소멸시효#KOBLEX-058710": "1. 이자, 부양료, 급료, 사용료 기타 1년 이내의 기간으로 정한 금전 또는 물건의 지급을 목적으로 한 채권",
+      "민법 165조  판결 등에 의하여 확정된 채권의 소멸시효#KOBLEX-058723": "①판결에 의하여 확정된 채권은 단기의 소멸시효에 해당한 것이라도 그 소멸시효는 10년으로 한다.",
+      "민법 165조  판결 등에 의하여 확정된 채권의 소멸시효#KOBLEX-058725": "③전2항의 규정은 판결확정당시에 변제기가 도래하지 아니한 채권에 적용하지 아니한다.",
+      "민법 166조  소멸시효의 기산점#KOBLEX-058728": "②부작위를 목적으로 하는 채권의 소멸시효는 위반행위를 한 때로부터 진행한다.",
+      "소득세법 2조 3 신탁재산 귀속 소득에 대한 납세의무의 범위#KOBLEX-152979": "① 신탁재산에 귀속되는 소득은 그 신탁의 이익을 받을 수익자(수익자가 사망하는 경우에는 그 상속인)에게 귀속되는 것으로 본다.",
+      "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107497": "① 제98조제1호, 제4호부터 제6호까지, 제99조 또는 제100조에 따라 신탁이 종료된 경우 신탁재산은 수익자(잔여재산수익자를 정한 경우에는 그 잔여재산수익자를 말한다)에게 귀속한다. 다만, 신탁행위로 신탁재산의 잔여재산이 귀속될 자(이하 \"귀속권리자\"라 한다)를 정한 경우에는 그 귀속권리자에게 귀속한다.",
+      "신탁법 102조  준용규정#KOBLEX-107502": "제102조(준용규정) 신탁의 종료로 인하여 신탁재산이 수익자나 그 밖의 자에게 귀속한 경우에는 제53조제3항 및 제54조를 준용한다.",
+      "신탁법 22조#KOBLEX-107183": "제3장 신탁재산",
+      "신탁법 33조  충실의무#KOBLEX-107206": "제33조(충실의무) 수탁자는 수익자의 이익을 위하여 신탁사무를 처리하여야 한다.",
+      "신탁법 34조  이익에 반하는 행위의 금지#KOBLEX-107208": "① 수탁자는 누구의 명의(名義)로도 다음 각 호의 행위를 하지 못한다. 1. 신탁재산을 고유재산으로 하거나 신탁재산에 관한 권리를 고유재산에 귀속시키는 행위 2. 고유재산을 신탁재산으로 하거나 고유재산에 관한 권리를 신탁재산에 귀속시키는 행위 3. 여러 개의 신탁을 인수한 경우 하나의 신탁재산 또는 그에 관한 권리를 다른 신탁의 신탁재산에 귀속시키는 행위 4. 제3자의 신탁재산에 대한 행위에서 제3자를 대리하는 행위 5. 그 밖에 수익자의 이익에 반하는 행위",
+      "신탁법 34조  이익에 반하는 행위의 금지#KOBLEX-107210": "③ 제1항에도 불구하고 수탁자는 상속 등 수탁자의 의사에 기하지 아니한 경우에는 신탁재산에 관한 권리를 포괄적으로 승계할 수 있다. 이 경우 해당 재산의 혼동에 관하여는 제26조를 준용한다.",
+      "신탁법 46조  비용상환청구권#KOBLEX-107244": "④ 수탁자는 신탁재산이 신탁사무의 처리에 관하여 필요한 비용을 충당하기에 부족하게 될 우려가 있을 때에는 수익자에게 그가 얻은 이익의 범위에서 그 비용을 청구하거나 그에 상당하는 담보의 제공을 요구할 수 있다. 다만, 수익자가 특정되어 있지 아니하거나 존재하지 아니하는 경우 또는 수익자가 수익권을 포기한 경우에는 그러하지 아니하다.",
+      "신탁법 48조  비용상환청구권의 우선변제권 등#KOBLEX-107253": "① 수탁자는 신탁재산에 대한 민사집행절차 또는 「국세징수법」에 따른 공매절차에서 수익자나 그 밖의 채권자보다 우선하여 신탁의 목적에 따라 신탁재산의 보존, 개량을 위하여 지출한 필요비 또는 유익비(有益費)의 우선변제를 받을 권리가 있다.",
+      "신탁법 62조  수익채권과 신탁채권의 관계#KOBLEX-107305": "제62조(수익채권과 신탁채권의 관계) 신탁채권은 수익자가 수탁자에게 신탁재산에 속한 재산의 인도와 그 밖에 신탁재산에 기한 급부를 요구하는 청구권(이하 \"수익채권\"이라 한다)보다 우선한다.",
+      "신탁법 63조  수익채권의 소멸시효#KOBLEX-107306": "제63조(수익채권의 소멸시효)",
+      "신탁법 63조  수익채권의 소멸시효#KOBLEX-107307": "① 수익채권의 소멸시효는 채권의 예에 따른다.",
+      "신탁법 63조  수익채권의 소멸시효#KOBLEX-107308": "② 제1항에도 불구하고 수익채권의 소멸시효는 수익자가 수익자로 된 사실을 알게 된 때부터 진행한다.",
+      "신탁법 63조  수익채권의 소멸시효#KOBLEX-107309": "③ 제1항에도 불구하고 신탁이 종료한 때부터 6개월 내에는 수익채권의 소멸시효가 완성되지 아니한다.",
+      "자본시장과 금융투자업에 관한 법률 102조  선관의무 및 충실의무#KOBLEX-135353": "① 신탁업자는 수익자에 대하여 선량한 관리자의 주의로써 신탁재산을 운용하여야 한다.",
+      "자본시장과 금융투자업에 관한 법률 112조  의결권 등#KOBLEX-135403": "① 신탁재산으로 취득한 주식에 대한 권리는 신탁업자가 행사한다. 이 경우 신탁업자는 수익자의 이익을 보호하기 위하여 신탁재산에 속하는 주식의 의결권을 충실하게 행사하여야 한다. <개정 2013.5.28>",
+      "자본시장과 금융투자업에 관한 법률 114조  신탁재산의 회계처리 등#KOBLEX-135416": "③ 신탁업자는 신탁재산에 대하여 그 신탁업자의 매 회계연도 종료 후 2개월 이내에 「주식회사 등의 외부감사에 관한 법률」 제2조제7호에 따른 감사인(이하 \"회계감사인\"이라 한다)의 회계감사를 받아야 한다. 다만, 수익자의 이익을 해할 우려가 없는 경우로서 대통령령으로 정하는 경우에는 회계감사를 받지 아니할 수 있다. <개정 2017.10.31>"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "신탁법 33조  충실의무#KOBLEX-107206",
+              "자본시장과 금융투자업에 관한 법률 102조  선관의무 및 충실의무#KOBLEX-135353"
+            ],
+            "rationale": "C011은 충실의무의 본질을, C001은 선관의무의 구체적 내용을 규정하여 충실의무 내용을 확인한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "신탁법 33조  충실의무#KOBLEX-107206"
+            ],
+            "rationale": "C011은 '수익자의 이익을 위하여 신탁사무를 처리하여야 한다'고 명시하여 수익자 이익 우선 원칙을 직접 확인한다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "신탁법 33조  충실의무#KOBLEX-107206",
+          "자본시장과 금융투자업에 관한 법률 102조  선관의무 및 충실의무#KOBLEX-135353"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "신탁법 제33조(C011)와 자본시장법 제102조(C001)는 신탁업자의 충실의무와 수익자 이익 우선 원칙을 명확히 규정하여 질문에서 요구하는 법적 근거를 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "신탁법 63조  수익채권의 소멸시효#KOBLEX-107307",
+              "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707",
+              "민법 163조  3년의 단기소멸시효#KOBLEX-058709",
+              "민법 163조  3년의 단기소멸시효#KOBLEX-058710"
+            ],
+            "rationale": "C005는 시효가 채권의 예에 따른다고 규정하고, C020은 일반 채권 시효를 10년으로, C021 및 C022는 특정 채권 시효를 3년으로 규정하여 구체적인 소멸시효 기간을 확인한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "신탁법 63조  수익채권의 소멸시효#KOBLEX-107308",
+              "신탁법 63조  수익채권의 소멸시효#KOBLEX-107309"
+            ],
+            "rationale": "C002는 일반적 기산점을, C012는 신탁 종료 시 예외적 기산점/완성 제한을 규정하여 기산점 요건을 충족한다.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "신탁법 63조  수익채권의 소멸시효#KOBLEX-107307",
+          "신탁법 63조  수익채권의 소멸시효#KOBLEX-107308",
+          "신탁법 63조  수익채권의 소멸시효#KOBLEX-107309",
+          "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707",
+          "민법 163조  3년의 단기소멸시효#KOBLEX-058709",
+          "민법 163조  3년의 단기소멸시효#KOBLEX-058710"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "신탁법 제63조(C005, C002, C012)는 수익채권 소멸시효의 준용 관계, 기산점, 및 완성 제한을 규정하고, 민법 제162조(C020) 및 제163조(C021, C022)는 '채권의 예'에 따른 구체적 소멸시효 기간(10년 일반, 3년 단기)을 제공하여 시효 기간 및 기산점 요건을 모두 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "신탁법 33조  충실의무#KOBLEX-107206",
+        "support_spans": [
+          {
+            "end_char": 44,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 102조  선관의무 및 충실의무#KOBLEX-135353",
+        "support_spans": [
+          {
+            "end_char": 46,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "신탁법 63조  수익채권의 소멸시효#KOBLEX-107307",
+        "support_spans": [
+          {
+            "end_char": 25,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "신탁법 63조  수익채권의 소멸시효#KOBLEX-107308",
+        "support_spans": [
+          {
+            "end_char": 55,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "신탁법 63조  수익채권의 소멸시효#KOBLEX-107309",
+        "support_spans": [
+          {
+            "end_char": 55,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707",
+        "support_spans": [
+          {
+            "end_char": 31,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 163조  3년의 단기소멸시효#KOBLEX-058709",
+        "support_spans": [
+          {
+            "end_char": 70,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 163조  3년의 단기소멸시효#KOBLEX-058710",
+        "support_spans": [
+          {
+            "end_char": 61,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 7,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "신탁업자의 신탁재산 관리 의무와 충실의무의 내용",
+        "issue_id": "I1"
+      },
+      {
+        "description": "수익자의 수익채권에 대한 소멸시효 적용",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 신탁회사를 운영하는 을에게 자신의 재산을 관리하도록 신탁 계약을 체결했습니다. 을은 갑의 재산을 관리하는 과정에서 자신에게 유리한 방향으로 의사결정을 하려 합니다. 갑은 을이 재산을 잘 관리하는지 걱정하고 있으며, 을의 의무와 관련하여 수익자의 권리에 대해 알고 싶습니다. [질문] 을은 갑의 재산을 관리할 때 누구의 이익을 우선시해야 하며, 갑의 수익채권 소멸시효는 어떻게 적용됩니까?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "신탁업자 충실의무 수익자 이익 우선 신탁재산 관리 의무",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "신탁업자",
+          "충실의무",
+          "수익자",
+          "이익",
+          "우선",
+          "신탁재산",
+          "관리"
+        ],
+        "query_text": "신탁업자 충실의무 수익자 이익 우선 신탁재산 관리 [원문 맥락] 갑은 을이 재산을 잘 관리하는지 걱정하고 있으며, 을의 의무와 관련하여 수익자의 권리에 대해 알고 싶습니다. 을은 갑의 재산을 관리할 때 누구의 이익을 우선시해야 하며, 갑의 수익채권 소멸시효는 어떻게 적용됩니까?",
+        "request_id": "RQ1",
+        "rerank_query_text": "신탁업자가 신탁재산을 관리할 때 누구의 이익을 우선시해야 하는가",
+        "statute_hints": [
+          "신탁법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "수익자 수익채권 소멸시효 기간 기산점 신탁",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "수익자",
+          "수익채권",
+          "소멸시효",
+          "기간",
+          "기산점",
+          "신탁"
+        ],
+        "query_text": "수익자 수익채권 소멸시효 기간 기산점 [원문 맥락] 갑은 을이 재산을 잘 관리하는지 걱정하고 있으며, 을의 의무와 관련하여 수익자의 권리에 대해 알고 싶습니다. 을은 갑의 재산을 관리할 때 누구의 이익을 우선시해야 하며, 갑의 수익채권 소멸시효는 어떻게 적용됩니까?",
+        "request_id": "RQ2",
+        "rerank_query_text": "수익자의 수익채권 소멸시효는 어떻게 적용되는가",
+        "statute_hints": [
+          "신탁법",
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "신탁인 의무 수익자 이익 우선 자기 이익 배제 신탁법",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "신탁인",
+          "의무",
+          "수익자",
+          "이익",
+          "우선",
+          "자기",
+          "배제"
+        ],
+        "query_text": "신탁법 신탁인 의무 수익자 이익 우선 자기 이익 배제 [원문 맥락] 갑은 을이 재산을 잘 관리하는지 걱정하고 있으며, 을의 의무와 관련하여 수익자의 권리에 대해 알고 싶습니다. 을은 갑의 재산을 관리할 때 누구의 이익을 우선시해야 하며, 갑의 수익채권 소멸시효는 어떻게 적용됩니까?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "신탁인이 신탁재산을 관리할 때 수익자의 이익을 우선시해야 하는 법적 근거",
+        "statute_hints": [
+          "신탁법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "민법 채권 소멸시효 3년 10년 신탁 수익채권",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민법",
+          "채권",
+          "소멸시효",
+          "3년",
+          "10년",
+          "수익채권"
+        ],
+        "query_text": "민법 채권 소멸시효 3년 10년 신탁 수익채권 [원문 맥락] 갑은 을이 재산을 잘 관리하는지 걱정하고 있으며, 을의 의무와 관련하여 수익자의 권리에 대해 알고 싶습니다. 을은 갑의 재산을 관리할 때 누구의 이익을 우선시해야 하며, 갑의 수익채권 소멸시효는 어떻게 적용됩니까?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "신탁 수익채권에 적용되는 민법상 소멸시효 기간",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "민법 제162조 채권 소멸시효 3년 10년 신탁 수익채권 준용",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민법",
+          "제162조",
+          "채권",
+          "소멸시효",
+          "3년",
+          "10년",
+          "신탁",
+          "수익채권"
+        ],
+        "query_text": "민법 제162조 채권 소멸시효 3년 10년 신탁 수익채권 준용 [원문 맥락] 갑은 을이 재산을 잘 관리하는지 걱정하고 있으며, 을의 의무와 관련하여 수익자의 권리에 대해 알고 싶습니다. 을은 갑의 재산을 관리할 때 누구의 이익을 우선시해야 하며, 갑의 수익채권 소멸시효는 어떻게 적용됩니까?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "신탁 수익채권에 적용되는 민법상 소멸시효 기간(3년 또는 10년) 및 기산점",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 신탁회사를 운영하는 을에게 자신의 재산을 관리하도록 신탁 계약을 체결했습니다. 을은 갑의 재산을 관리하는 과정에서 자신에게 유리한 방향으로 의사결정을 하려 합니다. 갑은 을이 재산을 잘 관리하는지 걱정하고 있으며, 을의 의무와 관련하여 수익자의 권리에 대해 알고 싶습니다.\n\n[질문]\n을은 갑의 재산을 관리할 때 누구의 이익을 우선시해야 하며, 갑의 수익채권 소멸시효는 어떻게 적용됩니까?",
+    "remaining_request_budget": 4,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "신탁업자가 수익자의 이익을 우선시해야 한다는 법적 근거 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "신탁업자의 충실의무 내용 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "신탁재산 관리 시 수익자 이익 우선 원칙 확인"
+          }
+        ],
+        "critical": true,
+        "description": "신탁업자의 충실의무 및 신탁재산 관리 시 수익자 이익 우선 원칙",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 을의 의무와 이익 우선 주체를 묻고 있으므로, 신탁업자의 충실의무 규정이 없으면 답을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "수익채권 소멸시효 기간 및 기산점 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "수익채권 소멸시효 기간 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "소멸시효 기산점 확인"
+          }
+        ],
+        "critical": true,
+        "description": "수익자의 수익채권에 적용되는 소멸시효 기간 및 기산점",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 갑의 수익채권 소멸시효 적용을 묻고 있으므로, 관련 시효 규정이 없으면 답을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "65181dd2-02c4-4021-9192-54f14513de38",
+    "seen_provision_ids": [
+      "자본시장과 금융투자업에 관한 법률 114조  신탁재산의 회계처리 등#KOBLEX-135416",
+      "신탁법 33조  충실의무#KOBLEX-107206",
+      "소득세법 2조 3 신탁재산 귀속 소득에 대한 납세의무의 범위#KOBLEX-152979",
+      "민법 165조  판결 등에 의하여 확정된 채권의 소멸시효#KOBLEX-058725",
+      "민법 166조  소멸시효의 기산점#KOBLEX-058728",
+      "신탁법 22조#KOBLEX-107183",
+      "민법 162조#KOBLEX-058705",
+      "신탁법 62조  수익채권과 신탁채권의 관계#KOBLEX-107305",
+      "민법 163조  3년의 단기소멸시효#KOBLEX-058710",
+      "신탁법 102조  준용규정#KOBLEX-107502",
+      "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707",
+      "신탁법 63조  수익채권의 소멸시효#KOBLEX-107308",
+      "신탁법 34조  이익에 반하는 행위의 금지#KOBLEX-107210",
+      "신탁법 46조  비용상환청구권#KOBLEX-107244",
+      "민법 165조  판결 등에 의하여 확정된 채권의 소멸시효#KOBLEX-058723",
+      "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107497",
+      "신탁법 63조  수익채권의 소멸시효#KOBLEX-107307",
+      "민법 163조  3년의 단기소멸시효#KOBLEX-058709",
+      "신탁법 48조  비용상환청구권의 우선변제권 등#KOBLEX-107253",
+      "신탁법 63조  수익채권의 소멸시효#KOBLEX-107306",
+      "신탁법 34조  이익에 반하는 행위의 금지#KOBLEX-107208",
+      "자본시장과 금융투자업에 관한 법률 112조  의결권 등#KOBLEX-135403",
+      "신탁법 63조  수익채권의 소멸시효#KOBLEX-107309",
+      "자본시장과 금융투자업에 관한 법률 102조  선관의무 및 충실의무#KOBLEX-135353"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

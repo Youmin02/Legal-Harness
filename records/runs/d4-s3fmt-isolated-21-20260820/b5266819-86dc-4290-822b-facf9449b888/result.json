@@ -1,0 +1,1133 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "위임이 종료된 후 급박한 사정이 있는 경우, 수임인(을)은 위임인(갑)이 위임사무를 처리할 수 있을 때까지 그 사무의 처리를 계속하여야 하는 의무가 있습니다.[CT1]\n위임 종료 후 급박한 사정 하에 수임인이 취하는 긴급 조치는 위임이 존속하는 것과 동일한 효력을 가집니다.[CT2]\n전제: 갑의 해외 출장으로 인한 연락 불능 상태가 '급박한 사정'에 해당한다고 가정합니다.\n한계: 긴급 조치의 구체적 허용 범위, 비용 적정성 판단 기준 등 세부 한계에 대한 명시적 규정은 후보 조항에 포함되어 있지 않아 불확실합니다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T09:06:43.517698+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 665344.819,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 375,
+      "dedup_collapse": 84,
+      "evidence_fusion": 375,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "round_selected": 30,
+      "rrf": 400,
+      "selected": 375
+    }
+  },
+  "run_id": "b5266819-86dc-4290-822b-facf9449b888",
+  "state": {
+    "accepted_provision_ids": [
+      "민법 691조  위임종료시의 긴급처리#KOBLEX-059799",
+      "민법 687조  수임인의 비용선급청구권#KOBLEX-059790",
+      "민법 688조  수임인의 비용상환청구권 등#KOBLEX-059792"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 7,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 4,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 21
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 21,
+          "claim_count": 2
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_obligation",
+        "question_anchor": "을은 어떤 의무를 가지는가",
+        "requested_output": "위임 종료 후 긴급 상황에서 수임자의 법적 의무 내용"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민법 683조  수임인의 보고의무#KOBLEX-059781"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 683조  수임인의 보고의무#KOBLEX-059781",
+        "provision_text": "제683조(수임인의 보고의무) 수임인은 위임인의 청구가 있는 때에는 위임사무의 처리상황을 보고하고 위임이 종료한 때에는 지체없이 그 전말을 보고하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.8749207258224487,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 683조  수임인의 보고의무",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 690조  사망ㆍ파산 등과 위임의 종료#KOBLEX-059798"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 21.922391604998914,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민법 690조  사망ㆍ파산 등과 위임의 종료#KOBLEX-059798",
+        "provision_text": "제690조(사망ㆍ파산 등과 위임의 종료) 위임은 당사자 한쪽의 사망이나 파산으로 종료된다. 수임인이 성년후견개시의 심판을 받은 경우에도 이와 같다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.015813469886779785,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 690조  사망ㆍ파산 등과 위임의 종료",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 691조  위임종료시의 긴급처리#KOBLEX-059799"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 3.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 691조  위임종료시의 긴급처리#KOBLEX-059799",
+        "provision_text": "제691조(위임종료시의 긴급처리) 위임종료의 경우에 급박한 사정이 있는 때에는 수임인, 그 상속인이나 법정대리인은 위임인, 그 상속인이나 법정대리인이 위임사무를 처리할 수 있을 때까지 그 사무의 처리를 계속하여야 한다. 이 경우에는 위임의 존속과 동일한 효력이 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.8410822749137878,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 691조  위임종료시의 긴급처리",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 686조  수임인의 보수청구권#KOBLEX-059789"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 3.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민법 686조  수임인의 보수청구권#KOBLEX-059789",
+        "provision_text": "③수임인이 위임사무를 처리하는 중에 수임인의 책임없는 사유로 인하여 위임이 종료된 때에는 수임인은 이미 처리한 사무의 비율에 따른 보수를 청구할 수 있다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.018628517165780067,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 686조  수임인의 보수청구권 3항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 473조  재단채권의 범위#KOBLEX-032981"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 25.02006429202822,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 473조  재단채권의 범위#KOBLEX-032981",
+        "provision_text": "6. 위임의 종료 또는 대리권의 소멸 후에 긴급한 필요에 의하여 한 행위로 인하여 파산재단에 대하여 생긴 청구권",
+        "rerank_rank": 1,
+        "rerank_score": 0.005555673036724329,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 473조  재단채권의 범위 6호",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 274조  합유의 종료#KOBLEX-058952"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 99,
+        "first_stage_score": 17.796306216677852,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "민법 274조  합유의 종료#KOBLEX-058952",
+        "provision_text": "제274조(합유의 종료)",
+        "rerank_rank": 6,
+        "rerank_score": 0.00017809138807933778,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "민법 274조  합유의 종료",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 382조  이사의 선임, 회사와의 관계 및 사외이사#KOBLEX-114829"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 21.590976594777953,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "상법 382조  이사의 선임, 회사와의 관계 및 사외이사#KOBLEX-114829",
+        "provision_text": "② 회사와 이사의 관계는 「민법」의 위임에 관한 규정을 준용한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.00013253622455522418,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상법 382조  이사의 선임, 회사와의 관계 및 사외이사 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 408조 2 집행임원 설치회사, 집행임원과 회사의 관계#KOBLEX-114956"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 32,
+        "first_stage_score": 21.140658181202504,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "상법 408조 2 집행임원 설치회사, 집행임원과 회사의 관계#KOBLEX-114956",
+        "provision_text": "② 집행임원 설치회사와 집행임원의 관계는 「민법」 중 위임에 관한 규정을 준용한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.00011461084795882925,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상법 408조 2 집행임원 설치회사, 집행임원과 회사의 관계 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공동주택관리법 52조  주택관리업의 등록#KOBLEX-086191"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 56,
+        "first_stage_score": 19.14422319368137,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "공동주택관리법 52조  주택관리업의 등록#KOBLEX-086191",
+        "provision_text": "⑥ 주택관리업자의 지위에 관하여 이 법에 규정이 있는 것 외에는 「민법」 중 위임에 관한 규정을 준용한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.00010595991625450552,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공동주택관리법 52조  주택관리업의 등록 6항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "법무사법 20조  위임에 따를 의무 등#KOBLEX-061489",
+          "법무사법 20조  위임에 따를 의무 등#KOBLEX-171453"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 23.0322987644179,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "법무사법 20조  위임에 따를 의무 등#KOBLEX-061489",
+        "provision_text": "제20조(위임에 따를 의무 등)",
+        "rerank_rank": 10,
+        "rerank_score": 9.53103372012265e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "법무사법 20조  위임에 따를 의무 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군인연금법 41조#KOBLEX-150091"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 33.568751726096366,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "군인연금법 41조#KOBLEX-150091",
+        "provision_text": "제4장 비용 부담",
+        "rerank_rank": 1,
+        "rerank_score": 3.203269079676829e-05,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "군인연금법 41조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 687조  수임인의 비용선급청구권#KOBLEX-059790"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 39.6418313202818,
+        "fusion_rank": 57,
+        "issue_id": "I2",
+        "provision_id": "민법 687조  수임인의 비용선급청구권#KOBLEX-059790",
+        "provision_text": "제687조(수임인의 비용선급청구권) 위임사무의 처리에 비용을 요하는 때에는 위임인은 수임인의 청구에 의하여 이를 선급하여야 한다.",
+        "rerank_rank": 57,
+        "rerank_score": 2.8849332011304796e-05,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 687조  수임인의 비용선급청구권",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군인연금법 시행령 44조#KOBLEX-206057"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 33.568751726096366,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "군인연금법 시행령 44조#KOBLEX-206057",
+        "provision_text": "제4장 비용 부담",
+        "rerank_rank": 2,
+        "rerank_score": 2.5144527171505615e-05,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "군인연금법 시행령 44조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공동주택관리법 45조  조정등의 처리기간 등#KOBLEX-086160"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 29.24257829171814,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "공동주택관리법 45조  조정등의 처리기간 등#KOBLEX-086160",
+        "provision_text": "⑤ 조정등의 진행과정에서 조사ㆍ검사, 자료 분석 등에 별도의 비용이 발생하는 경우 비용 부담의 주체, 부담 방법 등에 필요한 사항은 국토교통부령으로 정한다. <개정 2017.4.18>",
+        "rerank_rank": 8,
+        "rerank_score": 2.3827516997698694e-05,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "공동주택관리법 45조  조정등의 처리기간 등 5항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 611조  비용의 부담#KOBLEX-059613"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 55,
+        "first_stage_score": 24.64637634627594,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "민법 611조  비용의 부담#KOBLEX-059613",
+        "provision_text": "제611조(비용의 부담)",
+        "rerank_rank": 3,
+        "rerank_score": 2.240439243905712e-05,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민법 611조  비용의 부담",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 26조  권한의 위임#KOBLEX-219404"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 65,
+        "first_stage_score": 25.045381866098758,
+        "fusion_rank": 67,
+        "issue_id": "I2",
+        "provision_id": "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 26조  권한의 위임#KOBLEX-219404",
+        "provision_text": "6. 법 제20조제5항 단서에 따른 피해교원의 보호조치에 필요한 비용의 부담 및 구상권의 행사",
+        "rerank_rank": 67,
+        "rerank_score": 2.0607832993846387e-05,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 26조  권한의 위임 6호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "비송사건절차법 96조  비용의 부담#KOBLEX-047821"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 56,
+        "first_stage_score": 24.64637634627594,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "비송사건절차법 96조  비용의 부담#KOBLEX-047821",
+        "provision_text": "제96조(비용의 부담)",
+        "rerank_rank": 6,
+        "rerank_score": 1.9092029106104746e-05,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "비송사건절차법 96조  비용의 부담",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 688조  수임인의 비용상환청구권 등#KOBLEX-059792"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 4.0,
+        "fusion_rank": 24,
+        "issue_id": "I2",
+        "provision_id": "민법 688조  수임인의 비용상환청구권 등#KOBLEX-059792",
+        "provision_text": "①수임인이 위임사무의 처리에 관하여 필요비를 지출한 때에는 위임인에 대하여 지출한 날 이후의 이자를 청구할 수 있다.",
+        "rerank_rank": 24,
+        "rerank_score": 0.019261762499809265,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 688조  수임인의 비용상환청구권 등 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 688조  수임인의 비용상환청구권 등#KOBLEX-059794"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 4.0,
+        "fusion_rank": 27,
+        "issue_id": "I2",
+        "provision_id": "민법 688조  수임인의 비용상환청구권 등#KOBLEX-059794",
+        "provision_text": "③수임인이 위임사무의 처리를 위하여 과실없이 손해를 받은 때에는 위임인에 대하여 그 배상을 청구할 수 있다.",
+        "rerank_rank": 27,
+        "rerank_score": 0.0005173567915335298,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 688조  수임인의 비용상환청구권 등 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 686조  수임인의 보수청구권#KOBLEX-059788"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 3.0,
+        "fusion_rank": 29,
+        "issue_id": "I2",
+        "provision_id": "민법 686조  수임인의 보수청구권#KOBLEX-059788",
+        "provision_text": "②수임인이 보수를 받을 경우에는 위임사무를 완료한 후가 아니면 이를 청구하지 못한다. 그러나 기간으로 보수를 정한 때에는 그 기간이 경과한 후에 이를 청구할 수 있다.",
+        "rerank_rank": 29,
+        "rerank_score": 0.00039355570334009826,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 686조  수임인의 보수청구권 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 684조  수임인의 취득물 등의 인도, 이전의무#KOBLEX-059783"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 3.0,
+        "fusion_rank": 30,
+        "issue_id": "I2",
+        "provision_id": "민법 684조  수임인의 취득물 등의 인도, 이전의무#KOBLEX-059783",
+        "provision_text": "①수임인은 위임사무의 처리로 인하여 받은 금전 기타의 물건 및 그 수취한 과실을 위임인에게 인도하여야 한다.",
+        "rerank_rank": 30,
+        "rerank_score": 0.0003446778282523155,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 684조  수임인의 취득물 등의 인도, 이전의무 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공동주택관리법 45조  조정등의 처리기간 등#KOBLEX-086160": "⑤ 조정등의 진행과정에서 조사ㆍ검사, 자료 분석 등에 별도의 비용이 발생하는 경우 비용 부담의 주체, 부담 방법 등에 필요한 사항은 국토교통부령으로 정한다. <개정 2017.4.18>",
+      "공동주택관리법 52조  주택관리업의 등록#KOBLEX-086191": "⑥ 주택관리업자의 지위에 관하여 이 법에 규정이 있는 것 외에는 「민법」 중 위임에 관한 규정을 준용한다.",
+      "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 26조  권한의 위임#KOBLEX-219404": "6. 법 제20조제5항 단서에 따른 피해교원의 보호조치에 필요한 비용의 부담 및 구상권의 행사",
+      "군인연금법 41조#KOBLEX-150091": "제4장 비용 부담",
+      "군인연금법 시행령 44조#KOBLEX-206057": "제4장 비용 부담",
+      "민법 274조  합유의 종료#KOBLEX-058952": "제274조(합유의 종료)",
+      "민법 611조  비용의 부담#KOBLEX-059613": "제611조(비용의 부담)",
+      "민법 683조  수임인의 보고의무#KOBLEX-059781": "제683조(수임인의 보고의무) 수임인은 위임인의 청구가 있는 때에는 위임사무의 처리상황을 보고하고 위임이 종료한 때에는 지체없이 그 전말을 보고하여야 한다.",
+      "민법 684조  수임인의 취득물 등의 인도, 이전의무#KOBLEX-059783": "①수임인은 위임사무의 처리로 인하여 받은 금전 기타의 물건 및 그 수취한 과실을 위임인에게 인도하여야 한다.",
+      "민법 686조  수임인의 보수청구권#KOBLEX-059788": "②수임인이 보수를 받을 경우에는 위임사무를 완료한 후가 아니면 이를 청구하지 못한다. 그러나 기간으로 보수를 정한 때에는 그 기간이 경과한 후에 이를 청구할 수 있다.",
+      "민법 686조  수임인의 보수청구권#KOBLEX-059789": "③수임인이 위임사무를 처리하는 중에 수임인의 책임없는 사유로 인하여 위임이 종료된 때에는 수임인은 이미 처리한 사무의 비율에 따른 보수를 청구할 수 있다.",
+      "민법 687조  수임인의 비용선급청구권#KOBLEX-059790": "제687조(수임인의 비용선급청구권) 위임사무의 처리에 비용을 요하는 때에는 위임인은 수임인의 청구에 의하여 이를 선급하여야 한다.",
+      "민법 688조  수임인의 비용상환청구권 등#KOBLEX-059792": "①수임인이 위임사무의 처리에 관하여 필요비를 지출한 때에는 위임인에 대하여 지출한 날 이후의 이자를 청구할 수 있다.",
+      "민법 688조  수임인의 비용상환청구권 등#KOBLEX-059794": "③수임인이 위임사무의 처리를 위하여 과실없이 손해를 받은 때에는 위임인에 대하여 그 배상을 청구할 수 있다.",
+      "민법 690조  사망ㆍ파산 등과 위임의 종료#KOBLEX-059798": "제690조(사망ㆍ파산 등과 위임의 종료) 위임은 당사자 한쪽의 사망이나 파산으로 종료된다. 수임인이 성년후견개시의 심판을 받은 경우에도 이와 같다.",
+      "민법 691조  위임종료시의 긴급처리#KOBLEX-059799": "제691조(위임종료시의 긴급처리) 위임종료의 경우에 급박한 사정이 있는 때에는 수임인, 그 상속인이나 법정대리인은 위임인, 그 상속인이나 법정대리인이 위임사무를 처리할 수 있을 때까지 그 사무의 처리를 계속하여야 한다. 이 경우에는 위임의 존속과 동일한 효력이 있다.",
+      "법무사법 20조  위임에 따를 의무 등#KOBLEX-061489": "제20조(위임에 따를 의무 등)",
+      "비송사건절차법 96조  비용의 부담#KOBLEX-047821": "제96조(비용의 부담)",
+      "상법 382조  이사의 선임, 회사와의 관계 및 사외이사#KOBLEX-114829": "② 회사와 이사의 관계는 「민법」의 위임에 관한 규정을 준용한다.",
+      "상법 408조 2 집행임원 설치회사, 집행임원과 회사의 관계#KOBLEX-114956": "② 집행임원 설치회사와 집행임원의 관계는 「민법」 중 위임에 관한 규정을 준용한다.",
+      "채무자 회생 및 파산에 관한 법률 473조  재단채권의 범위#KOBLEX-032981": "6. 위임의 종료 또는 대리권의 소멸 후에 긴급한 필요에 의하여 한 행위로 인하여 파산재단에 대하여 생긴 청구권"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 691조  위임종료시의 긴급처리#KOBLEX-059799"
+            ],
+            "rationale": "C003(민법 제691조)은 위임종료시의 긴급처리에 관한 조항으로, 수임인의 의무를 명확히 규정하고 있다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "민법 691조  위임종료시의 긴급처리#KOBLEX-059799"
+            ],
+            "rationale": "C003은 '급박한 사정이 있는 때'를 적용 요건으로 명시하고 있어, 긴급성 요건을 충족한다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민법 691조  위임종료시의 긴급처리#KOBLEX-059799"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "민법 제691조(C003)는 위임 종료 후 급박한 사정 발생 시 수임인의 사무 처리 의무를 명시적으로 규정하고 있어, 긴급 조치 의무의 존재와 내용, 그리고 적용 요건(급박한 사정)을 모두 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 691조  위임종료시의 긴급처리#KOBLEX-059799"
+            ],
+            "rationale": "C003은 '위임사무의 처리를 계속하여야 한다'고 하여 긴급 조치의 허용 범위를 규정한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "민법 687조  수임인의 비용선급청구권#KOBLEX-059790",
+              "민법 688조  수임인의 비용상환청구권 등#KOBLEX-059792"
+            ],
+            "rationale": "C012와 C018은 비용 선급 및 상환 청구권을 규정하여 비용 부담의 원칙을 제공하지만, 긴급 조치의 구체적 방법이나 비용 적정성 등 세부 한계에 대한 명시적 규정은 부족하다.",
+            "requirement_id": "E2-R2",
+            "status": "partially_satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "민법 691조  위임종료시의 긴급처리#KOBLEX-059799",
+          "민법 687조  수임인의 비용선급청구권#KOBLEX-059790",
+          "민법 688조  수임인의 비용상환청구권 등#KOBLEX-059792"
+        ],
+        "missing_aspects": [
+          "E2-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "민법 제691조(C003)는 긴급 조치의 기본 범위와 효력을 규정하고, 제687조(C012)와 제688조(C018)는 비용 부담과 상환에 관한 원칙을 제공한다. 그러나 긴급 조치의 구체적 한계(예: 허용되는 조치의 구체적 유형, 비용의 적정성 판단 기준 등)에 대한 명시적 규정은 후보 조항에 포함되어 있지 않아 법적 지원의 공백이 존재한다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 691조  위임종료시의 긴급처리#KOBLEX-059799",
+        "support_spans": [
+          {
+            "end_char": 149,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 691조  위임종료시의 긴급처리#KOBLEX-059799",
+        "support_spans": [
+          {
+            "end_char": 149,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 687조  수임인의 비용선급청구권#KOBLEX-059790",
+        "support_spans": [
+          {
+            "end_char": 72,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 688조  수임인의 비용상환청구권 등#KOBLEX-059792",
+        "support_spans": [
+          {
+            "end_char": 65,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 4,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "위임 종료 후에도 수임자가 위임인의 이익을 위해 긴급 조치를 취할 법적 근거가 존재하는지 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "위임 종료 후 수임자가 취할 수 있는 긴급 조치의 범위와 한계",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "긴급 조치의 허용 범위와 한계를 규정하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "위임 종료 후 수임자의 긴급 조치 허용 범위를 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "긴급 조치의 한계(비용, 방법 등)를 확인"
+          }
+        ],
+        "critical": true,
+        "description": "위임 종료 후 수임자의 긴급 조치 의무의 범위와 한계에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "limitation",
+        "issue_id": "I2",
+        "necessity_reason": "수임자의 의무 범위를 특정하기 위해 긴급 조치의 한계에 관한 규정이 필요함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을에게 부동산 거래를 위임했습니다. 그러나 계약 기간 중 갑이 해외로 장기 출장을 떠나게 되어 을에게 계약 종료를 알렸습니다. 출장 중 갑의 부동산에 예상치 못한 홍수가 발생했고, 부동산에 대한 긴급 조치가 필요해졌습니다. 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. [질문] 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "위임 종료 후 수임자 긴급 조치 의무 민법 조항",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "위임",
+          "종료",
+          "수임자",
+          "긴급조치",
+          "의무",
+          "민법"
+        ],
+        "query_text": "위임 종료 후 수임자의 긴급 조치 의무 민법 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "위임 종료 후 수임자의 긴급 조치 의무를 규정하는 민법 조항",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "위임 종료 후 수임자 긴급 조치 범위 한계",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "위임",
+          "종료",
+          "수임자",
+          "긴급조치",
+          "범위",
+          "한계"
+        ],
+        "query_text": "위임 종료 후 수임자는 긴급한 경우 위임인의 이익을 위하여 필요한 조치를 취할 수 있다 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "위임 종료 후 수임자의 긴급 조치 의무의 범위와 한계",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "위임 종료 후 긴급 조치 비용 부담 한계",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "위임",
+          "종료",
+          "긴급조치",
+          "비용",
+          "부담",
+          "한계"
+        ],
+        "query_text": "위임 종료 후 긴급 조치 비용 부담 한계 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "위임 종료 후 수임자의 긴급 조치 비용 부담 및 방법의 구체적 한계",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "수임인 위임 종료 후 급박한 사정 시 필요한 조치 비용 위임인 부담",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "수임인",
+          "위임종료",
+          "급박한사정",
+          "조치",
+          "비용",
+          "부담"
+        ],
+        "query_text": "수임인은 위임 종료 후 급박한 사정 시 필요한 조치를 취하고 그 비용은 위임인이 부담한다 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "위임 종료 후 수임자의 긴급 조치 시 비용 부담 주체 및 조치 방법의 법적 한계",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "민법 691조 687조 수임인 비용 선급 청구권 위임 종료",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민법",
+          "691조",
+          "687조",
+          "비용",
+          "선급",
+          "청구권"
+        ],
+        "query_text": "민법 제691조 위임종료시 긴급처리 수임인 비용 선급 청구권 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "위임 종료 후 수임자의 긴급 조치 시 비용 부담 및 선급 청구에 관한 민법 조항",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "위임 종료 수임인 사무 처리 계속 범위 한계",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "위임",
+          "종료",
+          "수임인",
+          "사무처리",
+          "계속",
+          "범위",
+          "한계"
+        ],
+        "query_text": "위임 종료 후 수임인 사무 처리 계속 범위 한계 [원문 맥락] 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다. 갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "위임 종료 후 수임자가 취할 수 있는 긴급 조치의 구체적 범위와 한계",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을에게 부동산 거래를 위임했습니다. 그러나 계약 기간 중 갑이 해외로 장기 출장을 떠나게 되어 을에게 계약 종료를 알렸습니다. 출장 중 갑의 부동산에 예상치 못한 홍수가 발생했고, 부동산에 대한 긴급 조치가 필요해졌습니다. 을은 갑과 연락이 닿지 않는 상황에서 갑의 부동산을 보호하기 위한 긴급 조치를 진행했습니다.\n\n[질문]\n갑이 을에게 부동산 거래를 위임했으나 위임 종료 후 갑의 해외 출장으로 인해 긴급한 상황이 발생했을 때, 을은 어떤 의무를 가지는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "위임 종료 후 수임자의 긴급 조치 의무를 명시하는 조항의 존재와 내용을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "위임 종료 후 수임자의 긴급 조치 의무를 규정하는 조항 번호와 내용을 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "해당 조항이 적용되는 요건(긴급성, 연락 불가 등)을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "위임 종료 후 수임자의 긴급 조치 의무에 관한 민법 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문은 위임 종료 후 긴급 상황에서 수임자의 의무를 묻고 있으므로, 해당 의무의 법적 근거 조항이 없으면 결론을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "긴급 조치의 허용 범위와 한계를 규정하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "위임 종료 후 수임자의 긴급 조치 허용 범위를 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "긴급 조치의 한계(비용, 방법 등)를 확인"
+          }
+        ],
+        "critical": true,
+        "description": "위임 종료 후 수임자의 긴급 조치 의무의 범위와 한계에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "limitation",
+        "issue_id": "I2",
+        "necessity_reason": "수임자의 의무 범위를 특정하기 위해 긴급 조치의 한계에 관한 규정이 필요함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "b5266819-86dc-4290-822b-facf9449b888",
+    "seen_provision_ids": [
+      "공동주택관리법 52조  주택관리업의 등록#KOBLEX-086191",
+      "민법 683조  수임인의 보고의무#KOBLEX-059781",
+      "민법 684조  수임인의 취득물 등의 인도, 이전의무#KOBLEX-059783",
+      "민법 691조  위임종료시의 긴급처리#KOBLEX-059799",
+      "공동주택관리법 45조  조정등의 처리기간 등#KOBLEX-086160",
+      "상법 382조  이사의 선임, 회사와의 관계 및 사외이사#KOBLEX-114829",
+      "비송사건절차법 96조  비용의 부담#KOBLEX-047821",
+      "민법 688조  수임인의 비용상환청구권 등#KOBLEX-059792",
+      "민법 688조  수임인의 비용상환청구권 등#KOBLEX-059794",
+      "법무사법 20조  위임에 따를 의무 등#KOBLEX-061489",
+      "군인연금법 41조#KOBLEX-150091",
+      "군인연금법 시행령 44조#KOBLEX-206057",
+      "민법 686조  수임인의 보수청구권#KOBLEX-059789",
+      "민법 687조  수임인의 비용선급청구권#KOBLEX-059790",
+      "채무자 회생 및 파산에 관한 법률 473조  재단채권의 범위#KOBLEX-032981",
+      "상법 408조 2 집행임원 설치회사, 집행임원과 회사의 관계#KOBLEX-114956",
+      "민법 690조  사망ㆍ파산 등과 위임의 종료#KOBLEX-059798",
+      "교원의 지위 향상 및 교육활동 보호를 위한 특별법 시행령 26조  권한의 위임#KOBLEX-219404",
+      "민법 686조  수임인의 보수청구권#KOBLEX-059788",
+      "민법 274조  합유의 종료#KOBLEX-058952",
+      "민법 611조  비용의 부담#KOBLEX-059613"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

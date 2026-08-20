@@ -1,0 +1,603 @@
+{
+  "abstention_reason": null,
+  "answer": "해양항만관청은 「병역법」 제76조제1항 각 호의 어느 하나에 해당하는 사람에게 선원수첩을 발급하지 아니할 수 있다.[CT1]\n해양항만관청은 선원수첩을 발급할 때 필요하다고 인정하면 해양수산부령으로 정하는 바에 따라 승선선박 또는 승선구역을 한정하거나 유효기간을 정하여 발급할 수 있다.[CT2]\n전제: 갑이 병역법 제76조제1항 각 호에 해당하는 사유로 병역의무를 이행하지 않은 사실은 질문의 배경 시나리오에서 주어진 전제로 간주한다.\n한계: 본 답변은 제공된 선원법 제46조 제1항 및 제2항의 문언에 기반한 법적 근거를 제시하는 것이며, 개별 사건의 구체적 사실관계에 따른 행정청의 재량 행사 여부나 절차적 적법성에 대한 판단은 포함하지 않는다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "해양항만관청은 「병역법」 제76조제1항 각 호의 어느 하나에 해당하는 사람에게 선원수첩을 발급하지 아니할 수 있다.[CT1]\n해양항만관청은 선원수첩을 발급할 때 필요하다고 인정하면 해양수산부령으로 정하는 바에 따라 승선선박 또는 승선구역을 한정하거나 유효기간을 정하여 발급할 수 있다.[CT2]\n전제: 갑이 병역법 제76조제1항 각 호에 해당하는 사유로 병역의무를 이행하지 않은 사실은 질문의 배경 시나리오에서 주어진 전제로 간주한다.\n한계: 본 답변은 제공된 선원법 제46조 제1항 및 제2항의 문언에 기반한 법적 근거를 제시하는 것이며, 개별 사건의 구체적 사실관계에 따른 행정청의 재량 행사 여부나 절차적 적법성에 대한 판단은 포함하지 않는다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T10:44:57.318316+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 211919.602,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 185,
+      "dedup_collapse": 22,
+      "evidence_fusion": 185,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 185
+    }
+  },
+  "run_id": "acf35574-7656-43fa-b9ed-6b044d65f7a3",
+  "state": {
+    "accepted_provision_ids": [
+      "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333",
+      "선원법 46조  선원수첩의 발급 제한#KOBLEX-067334"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_basis",
+        "question_anchor": "선원수첩을 발급하지 않을 수 있는 법적 근거",
+        "requested_output": "선원수첩 발급 거절의 법적 근거"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_basis",
+        "question_anchor": "선원수첩 유효기간을 제한한 것은 어떤 법적 근거",
+        "requested_output": "선원수첩 유효기간 제한의 법적 근거"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "선원법 46조  선원수첩의 발급 제한#KOBLEX-067334"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 3.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "선원법 46조  선원수첩의 발급 제한#KOBLEX-067334",
+        "provision_text": "② 해양항만관청은 선원수첩을 발급할 때 필요하다고 인정하면 해양수산부령으로 정하는 바에 따라 승선선박 또는 승선구역을 한정하거나 유효기간을 정하여 발급할 수 있다. <개정 2013.3.23>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9996732473373413,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "선원법 46조  선원수첩의 발급 제한 2항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 47조  선원수첩의 실효#KOBLEX-067336"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 28.059709779053605,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "선원법 47조  선원수첩의 실효#KOBLEX-067336",
+        "provision_text": "1. 선원수첩을 발급한 날 또는 하선한 날부터 5년(군 복무기간 등 해양수산부장관이 인정하는 기간은 제외한다) 이내에 승선하지 아니한 선원의 선원수첩",
+        "rerank_rank": 2,
+        "rerank_score": 0.9804633259773254,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "선원법 47조  선원수첩의 실효 1호",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 46조  선원수첩의 발급 제한#KOBLEX-067332"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 29.387686947986914,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "선원법 46조  선원수첩의 발급 제한#KOBLEX-067332",
+        "provision_text": "제46조(선원수첩의 발급 제한)",
+        "rerank_rank": 3,
+        "rerank_score": 0.9723243713378906,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "선원법 46조  선원수첩의 발급 제한",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 47조  선원수첩의 실효#KOBLEX-067338"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 29.177075500179647,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "선원법 47조  선원수첩의 실효#KOBLEX-067338",
+        "provision_text": "3. 선원수첩을 재발급한 경우 종전의 선원수첩",
+        "rerank_rank": 4,
+        "rerank_score": 0.8359516263008118,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "선원법 47조  선원수첩의 실효 3호",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 48조  선원신분증명서#KOBLEX-067343"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 32.7757086172171,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "선원법 48조  선원신분증명서#KOBLEX-067343",
+        "provision_text": "④ 선원신분증명서의 발급 제한 및 실효에 관하여는 제46조제1항 및 제47조를 준용한다. 이 경우 \"선원수첩\"은 \"선원신분증명서\"로 본다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.8242634534835815,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "선원법 48조  선원신분증명서 4항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 시행령 8조  선원수첩의 발급절차#KOBLEX-122244"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "선원법 시행령 8조  선원수첩의 발급절차#KOBLEX-122244",
+        "provision_text": "③선원수첩을 소지한 자는 법 제49조에 따른 재발급신청의 경우를 제외하고는 선원수첩의 발급신청을 할 수 없다. <개정 2005.9.30, 2012.2.3>",
+        "rerank_rank": 1,
+        "rerank_score": 0.7085492610931396,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "선원법 시행령 8조  선원수첩의 발급절차 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 45조  선원수첩#KOBLEX-067325"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 29.32750065784078,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "선원법 45조  선원수첩#KOBLEX-067325",
+        "provision_text": "제45조(선원수첩)",
+        "rerank_rank": 6,
+        "rerank_score": 0.7049090266227722,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "선원법 45조  선원수첩",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333",
+        "provision_text": "① 해양항만관청은 다음 각 호의 어느 하나에 해당하는 사람에게 선원수첩을 발급하지 아니할 수 있다. 1. 신원이 분명하지 아니한 사람 2. 「병역법」 제76조제1항 각 호의 어느 하나에 해당하는 사람 3. 삭제 <2021.6.15>",
+        "rerank_rank": 2,
+        "rerank_score": 0.5452388525009155,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "선원법 46조  선원수첩의 발급 제한 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 47조  선원수첩의 실효#KOBLEX-067337"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 27.89500493899638,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "선원법 47조  선원수첩의 실효#KOBLEX-067337",
+        "provision_text": "2. 사망한 선원의 선원수첩",
+        "rerank_rank": 7,
+        "rerank_score": 0.3787207305431366,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "선원법 47조  선원수첩의 실효 2호",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 시행령 54조  외국선박에 승무하는 자에 대한 선원수첩 및 선원신분증명서의 발급 등#KOBLEX-122491"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 2.0,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "선원법 시행령 54조  외국선박에 승무하는 자에 대한 선원수첩 및 선원신분증명서의 발급 등#KOBLEX-122491",
+        "provision_text": "③지방해양항만관청은 제2항의 교육을 받지 아니한 자에 대하여 선박에의 승무를 제한할 수 있다. <개정 1997.5.24, 2008.2.29, 2017.1.17>",
+        "rerank_rank": 9,
+        "rerank_score": 0.10967741906642914,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "선원법 시행령 54조  외국선박에 승무하는 자에 대한 선원수첩 및 선원신분증명서의 발급 등 3항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "선원법 45조  선원수첩#KOBLEX-067325": "제45조(선원수첩)",
+      "선원법 46조  선원수첩의 발급 제한#KOBLEX-067332": "제46조(선원수첩의 발급 제한)",
+      "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333": "① 해양항만관청은 다음 각 호의 어느 하나에 해당하는 사람에게 선원수첩을 발급하지 아니할 수 있다. 1. 신원이 분명하지 아니한 사람 2. 「병역법」 제76조제1항 각 호의 어느 하나에 해당하는 사람 3. 삭제 <2021.6.15>",
+      "선원법 46조  선원수첩의 발급 제한#KOBLEX-067334": "② 해양항만관청은 선원수첩을 발급할 때 필요하다고 인정하면 해양수산부령으로 정하는 바에 따라 승선선박 또는 승선구역을 한정하거나 유효기간을 정하여 발급할 수 있다. <개정 2013.3.23>",
+      "선원법 47조  선원수첩의 실효#KOBLEX-067336": "1. 선원수첩을 발급한 날 또는 하선한 날부터 5년(군 복무기간 등 해양수산부장관이 인정하는 기간은 제외한다) 이내에 승선하지 아니한 선원의 선원수첩",
+      "선원법 47조  선원수첩의 실효#KOBLEX-067337": "2. 사망한 선원의 선원수첩",
+      "선원법 47조  선원수첩의 실효#KOBLEX-067338": "3. 선원수첩을 재발급한 경우 종전의 선원수첩",
+      "선원법 48조  선원신분증명서#KOBLEX-067343": "④ 선원신분증명서의 발급 제한 및 실효에 관하여는 제46조제1항 및 제47조를 준용한다. 이 경우 \"선원수첩\"은 \"선원신분증명서\"로 본다.",
+      "선원법 시행령 54조  외국선박에 승무하는 자에 대한 선원수첩 및 선원신분증명서의 발급 등#KOBLEX-122491": "③지방해양항만관청은 제2항의 교육을 받지 아니한 자에 대하여 선박에의 승무를 제한할 수 있다. <개정 1997.5.24, 2008.2.29, 2017.1.17>",
+      "선원법 시행령 8조  선원수첩의 발급절차#KOBLEX-122244": "③선원수첩을 소지한 자는 법 제49조에 따른 재발급신청의 경우를 제외하고는 선원수첩의 발급신청을 할 수 없다. <개정 2005.9.30, 2012.2.3>"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333"
+            ],
+            "rationale": "C008은 병역법 제76조 제1항 각 호에 해당하는 자에 대한 발급 거절 사유를 명시하고 있어 요구사항을 충족한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C008(선원법 제46조 제1항)은 병역법 제76조 제1항 각 호에 해당하는 자에 대해 선원수첩 발급을 거절할 수 있는 명시적 법적 근거를 제공하여, 질문에서 요구하는 병역의무 미이행자의 발급 거절 근거를 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "선원법 46조  선원수첩의 발급 제한#KOBLEX-067334"
+            ],
+            "rationale": "C001은 유효기간을 정하여 발급할 수 있는 근거를 명시하고 있어 요구사항을 충족한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "선원법 46조  선원수첩의 발급 제한#KOBLEX-067334"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001(선원법 제46조 제2항)은 해양항만관청이 선원수첩의 유효기간을 정하여 발급할 수 있는 권한을 명시하여, 질문에서 요구하는 유효기간 제한의 법적 근거를 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333",
+        "support_spans": [
+          {
+            "end_char": 129,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "선원법 46조  선원수첩의 발급 제한#KOBLEX-067334",
+        "support_spans": [
+          {
+            "end_char": 106,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "병역의무 미이행자가 선원수첩 발급을 신청한 경우, 해양항만관청이 발급을 거절할 수 있는 법적 근거가 존재하는지 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "선원수첩의 유효기간을 제한할 수 있는 법적 근거가 존재하는지 여부",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 최근에 해양 운송업에 종사하기 위해 선원수첩을 발급받고자 해양항만관청에 신청을 하였습니다. 그러나 갑은 과거 병역법 제76조제1항 각호에 해당하는 사유로 병역의무를 이행하지 않았습니다. 또한, 을은 선원수첩을 받았으나, 해양항만관청은 을에게 수첩의 유효기간을 제한하였습니다. 이에 을은 해양항만관청의 결정에 대해 이의를 제기하려고 합니다. [질문] 해양항만관청이 갑에게 선원수첩을 발급하지 않을 수 있는 법적 근거는 무엇이며, 을의 선원수첩 유효기간을 제한한 것은 어떤 법적 근거에서 이루어졌는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "병역의무 미이행 선원수첩 발급 거절",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "병역의무",
+          "미이행",
+          "선원수첩",
+          "발급",
+          "거절",
+          "사유"
+        ],
+        "query_text": "병역의무 미이행자 선원수첩 발급 거절 사유 [원문 맥락] 이에 을은 해양항만관청의 결정에 대해 이의를 제기하려고 합니다. 해양항만관청이 갑에게 선원수첩을 발급하지 않을 수 있는 법적 근거는 무엇이며, 을의 선원수첩 유효기간을 제한한 것은 어떤 법적 근거에서 이루어졌는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "병역의무 미이행자가 선원수첩 발급을 신청한 경우 발급을 거절할 수 있는 법적 근거",
+        "statute_hints": [
+          "선원법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "선원수첩 유효기간 제한",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "선원수첩",
+          "유효기간",
+          "제한",
+          "사유"
+        ],
+        "query_text": "선원수첩 유효기간 제한 사유 [원문 맥락] 이에 을은 해양항만관청의 결정에 대해 이의를 제기하려고 합니다. 해양항만관청이 갑에게 선원수첩을 발급하지 않을 수 있는 법적 근거는 무엇이며, 을의 선원수첩 유효기간을 제한한 것은 어떤 법적 근거에서 이루어졌는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "선원수첩의 유효기간을 제한할 수 있는 법적 근거",
+        "statute_hints": [
+          "선원법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 최근에 해양 운송업에 종사하기 위해 선원수첩을 발급받고자 해양항만관청에 신청을 하였습니다. 그러나 갑은 과거 병역법 제76조제1항 각호에 해당하는 사유로 병역의무를 이행하지 않았습니다. 또한, 을은 선원수첩을 받았으나, 해양항만관청은 을에게 수첩의 유효기간을 제한하였습니다. 이에 을은 해양항만관청의 결정에 대해 이의를 제기하려고 합니다.\n\n[질문]\n해양항만관청이 갑에게 선원수첩을 발급하지 않을 수 있는 법적 근거는 무엇이며, 을의 선원수첩 유효기간을 제한한 것은 어떤 법적 근거에서 이루어졌는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "병역의무 미이행자가 선원수첩 발급을 신청한 경우 발급을 거절할 수 있는 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "병역의무 미이행자가 선원수첩 발급을 신청한 경우 발급을 거절할 수 있는 법적 근거를 확인"
+          }
+        ],
+        "critical": true,
+        "description": "선원수첩 발급 거절 사유에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 갑에 대한 선원수첩 발급 거절의 법적 근거를 묻고 있으므로, 발급 거절 사유를 규정한 조항이 없으면 결론을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "선원수첩의 유효기간을 제한할 수 있는 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "선원수첩의 유효기간을 제한할 수 있는 법적 근거를 확인"
+          }
+        ],
+        "critical": true,
+        "description": "선원수첩 유효기간 제한에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 을에 대한 선원수첩 유효기간 제한의 법적 근거를 묻고 있으므로, 유효기간 제한 사유를 규정한 조항이 없으면 결론을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "acf35574-7656-43fa-b9ed-6b044d65f7a3",
+    "seen_provision_ids": [
+      "선원법 46조  선원수첩의 발급 제한#KOBLEX-067332",
+      "선원법 시행령 54조  외국선박에 승무하는 자에 대한 선원수첩 및 선원신분증명서의 발급 등#KOBLEX-122491",
+      "선원법 46조  선원수첩의 발급 제한#KOBLEX-067333",
+      "선원법 47조  선원수첩의 실효#KOBLEX-067336",
+      "선원법 47조  선원수첩의 실효#KOBLEX-067337",
+      "선원법 47조  선원수첩의 실효#KOBLEX-067338",
+      "선원법 48조  선원신분증명서#KOBLEX-067343",
+      "선원법 46조  선원수첩의 발급 제한#KOBLEX-067334",
+      "선원법 시행령 8조  선원수첩의 발급절차#KOBLEX-122244",
+      "선원법 45조  선원수첩#KOBLEX-067325"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

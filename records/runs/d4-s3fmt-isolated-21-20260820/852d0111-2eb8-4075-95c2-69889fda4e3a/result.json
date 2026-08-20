@@ -1,0 +1,844 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "민사소송이 법원에 계속 중일 때 형사배상명령을 신청할 수 있는지에 관하여, 제공된 후보 규정(C001-C019)에는 형사소송법상 형사배상명령의 신청 요건 및 민사소송과의 관계에 관한 규정이 포함되어 있지 않아 법적 결론을 도출할 수 없습니다.[CT1]\n한계: 후보 규정(C001-C019)에 형사배상명령의 신청 요건 및 민사소송과의 관계에 관한 형사소송법 조항이 포함되어 있지 않아, 해당 법적 쟁점에 대한 결론을 도출할 수 없습니다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T09:12:01.416665+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 316605.335,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 194,
+      "dedup_collapse": 42,
+      "evidence_fusion": 194,
+      "first_stage": 300,
+      "request_rerank": 300,
+      "round_selected": 20,
+      "rrf": 200,
+      "selected": 194
+    }
+  },
+  "run_id": "852d0111-2eb8-4075-95c2-69889fda4e3a",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "Two consecutive retrieval rounds did not improve critical evidence.",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 19
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 19,
+          "claim_count": 1
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "형사소송에서 형사배상명령을 신청할 수 있는가",
+        "requested_output": "민사소송이 법원에 계속 중일 때 형사배상명령 신청의 허용 여부"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민사소송법 84조  소송고지의 요건#KOBLEX-063730"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 36,
+        "first_stage_score": 16.465000322967974,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 84조  소송고지의 요건#KOBLEX-063730",
+        "provision_text": "제84조(소송고지의 요건)",
+        "rerank_rank": 1,
+        "rerank_score": 0.0026228763163089752,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 84조  소송고지의 요건",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 194조  공시송달의 요건#KOBLEX-064041"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 35,
+        "first_stage_score": 16.465000322967974,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 194조  공시송달의 요건#KOBLEX-064041",
+        "provision_text": "제194조(공시송달의 요건)",
+        "rerank_rank": 2,
+        "rerank_score": 0.0005103005096316338,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 194조  공시송달의 요건",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 128조  구조의 요건#KOBLEX-063826"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 34,
+        "first_stage_score": 16.465000322967974,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 128조  구조의 요건#KOBLEX-063826",
+        "provision_text": "제128조(구조의 요건)",
+        "rerank_rank": 3,
+        "rerank_score": 0.00046952333650551736,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 128조  구조의 요건",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 492조  상계의 요건#KOBLEX-059395"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 33,
+        "first_stage_score": 16.465000322967974,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민법 492조  상계의 요건#KOBLEX-059395",
+        "provision_text": "제492조(상계의 요건)",
+        "rerank_rank": 4,
+        "rerank_score": 0.0002241864858660847,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 492조  상계의 요건",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 144조  추인의 요건#KOBLEX-058662"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 32,
+        "first_stage_score": 16.465000322967974,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "민법 144조  추인의 요건#KOBLEX-058662",
+        "provision_text": "제144조(추인의 요건)",
+        "rerank_rank": 5,
+        "rerank_score": 4.192429332761094e-05,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 144조  추인의 요건",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 41조  집행개시의 요건#KOBLEX-128154"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 16.465000322967974,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "민사집행법 41조  집행개시의 요건#KOBLEX-128154",
+        "provision_text": "제41조(집행개시의 요건)",
+        "rerank_rank": 6,
+        "rerank_score": 2.5011628167703748e-05,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사집행법 41조  집행개시의 요건",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 15조  관할이전의 신청#KOBLEX-231446"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 1.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 15조  관할이전의 신청#KOBLEX-231446",
+        "provision_text": "2. 범죄의 성질, 지방의 민심, 소송의 상황 기타 사정으로 재판의 공평을 유지하기 어려운 염려가 있는 때",
+        "rerank_rank": 7,
+        "rerank_score": 2.2979560526437126e-05,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형사소송법 15조  관할이전의 신청 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 39조  집행개시의 요건#KOBLEX-128147"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 38,
+        "first_stage_score": 16.465000322967974,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "민사집행법 39조  집행개시의 요건#KOBLEX-128147",
+        "provision_text": "제39조(집행개시의 요건)",
+        "rerank_rank": 8,
+        "rerank_score": 2.2746180547983386e-05,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사집행법 39조  집행개시의 요건",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 292조  집행개시의 요건#KOBLEX-129007"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 37,
+        "first_stage_score": 16.465000322967974,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "민사집행법 292조  집행개시의 요건#KOBLEX-129007",
+        "provision_text": "제292조(집행개시의 요건)",
+        "rerank_rank": 9,
+        "rerank_score": 2.2288737454800867e-05,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사집행법 292조  집행개시의 요건",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 40조  집행개시의 요건#KOBLEX-128151"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 39,
+        "first_stage_score": 16.465000322967974,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "민사집행법 40조  집행개시의 요건#KOBLEX-128151",
+        "provision_text": "제40조(집행개시의 요건)",
+        "rerank_rank": 10,
+        "rerank_score": 2.1417765310616232e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사집행법 40조  집행개시의 요건",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "비송사건절차법 8조  신청 및 진술의 방법#KOBLEX-047500"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 21.733616022344833,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "비송사건절차법 8조  신청 및 진술의 방법#KOBLEX-047500",
+        "provision_text": "제8조(신청 및 진술의 방법) 신청 및 진술에 관하여는 「민사소송법」 제161조를 준용한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.0003597441827878356,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "비송사건절차법 8조  신청 및 진술의 방법",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송 등 인지법 9조  그 밖의 신청서#KOBLEX-106999"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 22,
+        "first_stage_score": 17.718951929119015,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민사소송 등 인지법 9조  그 밖의 신청서#KOBLEX-106999",
+        "provision_text": "⑤ 다음 각 호의 신청을 위한 신청서에는 1천원의 인지를 붙여야 한다. <개정 2011.7.18> 1. 「민사소송법」 제475조에 따른 공시최고(公示催告)의 신청 2. 「비송사건절차법」에 따라 재판을 구하는 신청 3. 재산명시신청이나 채무불이행자명부 등재(登載)신청 또는 그 말소(抹消)신청 4. 그 밖에 대법원규칙으로 정하는 각종 사건부에 등재할 신청(제1항부터 제3항까지의 신청은 제외한다)",
+        "rerank_rank": 2,
+        "rerank_score": 0.0002030157920671627,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민사소송 등 인지법 9조  그 밖의 신청서 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "증권관련 집단소송법 7조  소의 제기 및 소송허가 신청#KOBLEX-178506"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 19.432025848852142,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "증권관련 집단소송법 7조  소의 제기 및 소송허가 신청#KOBLEX-178506",
+        "provision_text": "③ 증권관련집단소송의 항소심(抗訴審) 및 상고심(上告審)에서의 인지액에 대하여는 「민사소송 등 인지법」 제3조를 준용한다.",
+        "rerank_rank": 3,
+        "rerank_score": 4.928615453536622e-05,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "증권관련 집단소송법 7조  소의 제기 및 소송허가 신청 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상고심절차에 관한 특례법 2조  적용 범위#KOBLEX-027556"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 16.562466414022843,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "상고심절차에 관한 특례법 2조  적용 범위#KOBLEX-027556",
+        "provision_text": "제2조 (적용 범위) 이 법은 민사소송, 가사소송 및 행정소송(「특허법」 제9장과 이를 준용하는 규정에 따른 소송을 포함한다. 이하 같다)의 상고사건(上告事件)에 적용한다.",
+        "rerank_rank": 4,
+        "rerank_score": 2.857669096556492e-05,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상고심절차에 관한 특례법 2조  적용 범위",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 248조  소제기의 방식#KOBLEX-064184"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 17.41994372599469,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 248조  소제기의 방식#KOBLEX-064184",
+        "provision_text": "② 법원은 소장에 붙이거나 납부한 인지액이 「민사소송 등 인지법」 제13조제2항 각 호에서 정한 금액에 미달하는 경우 소장의 접수를 보류할 수 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 2.2901960619492456e-05,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민사소송법 248조  소제기의 방식 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상고심절차에 관한 특례법 7조  재항고 및 특별항고에의 준용#KOBLEX-027569"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 17.725846457976328,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "상고심절차에 관한 특례법 7조  재항고 및 특별항고에의 준용#KOBLEX-027569",
+        "provision_text": "제7조 (재항고 및 특별항고에의 준용) 민사소송, 가사소송 및 행정소송의 재항고(再抗告) 및 특별항고 사건에는 제3조, 제4조제2항ㆍ제3항, 제5조제1항ㆍ제3항 및 제6조를 준용한다.",
+        "rerank_rank": 6,
+        "rerank_score": 1.4297292182163801e-05,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상고심절차에 관한 특례법 7조  재항고 및 특별항고에의 준용",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국회법 100조  발언의 계속#KOBLEX-132325"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 30,
+        "first_stage_score": 16.938581420679082,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "국회법 100조  발언의 계속#KOBLEX-132325",
+        "provision_text": "제100조(발언의 계속)",
+        "rerank_rank": 7,
+        "rerank_score": 1.1572889889066573e-05,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "국회법 100조  발언의 계속",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 229조  소송기록 열람 등의 청구 통지 등#KOBLEX-057774"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 70,
+        "first_stage_score": 14.908317462507405,
+        "fusion_rank": 50,
+        "issue_id": "I1",
+        "provision_id": "상표법 229조  소송기록 열람 등의 청구 통지 등#KOBLEX-057774",
+        "provision_text": "① 비밀유지명령이 내려진 소송(모든 비밀유지명령이 취소된 소송은 제외한다)에 관한 소송기록에 대하여 「민사소송법」 제163조제1항에 따른 열람 등의 제한 결정이 있는 경우로서, 그 소송에서 비밀유지명령을 받지 아니한 자가 열람 등이 가능한 당사자를 위하여 그 비밀 기재 부분의 열람 등의 청구절차를 밟은 경우에는 법원서기관, 법원사무관, 법원주사 또는 법원주사보(이하 이 조에서 \"법원사무관등\"이라 한다)는 「민사소송법」 제163조제1항에 따라 열람 등의 제한 신청을 한 당사자(그 열람 등의 청구를 한 자는 제외하며, 이하 제3항에서 같다)에게 그 청구 직후에 그 열람 등의 청구가 있었다는 사실을 알려야 한다.",
+        "rerank_rank": 50,
+        "rerank_score": 1.0731136171671096e-05,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상표법 229조  소송기록 열람 등의 청구 통지 등 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "새마을금고법 73조  손해배상청구권의 행사 등#KOBLEX-096667"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 18.49411420191359,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "새마을금고법 73조  손해배상청구권의 행사 등#KOBLEX-096667",
+        "provision_text": "④ 중앙회는 금고가 제1항에 따른 손해배상청구를 소송으로 하는 경우에는 그 소송의 계속(係屬) 중 그 금고를 보조하기 위하여 소송에 참가할 수 있다. 이 경우 「민사소송법」 제71조부터 제77조까지의 규정을 준용한다. <개정 2011.3.8>",
+        "rerank_rank": 8,
+        "rerank_score": 1.063887702912325e-05,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "새마을금고법 73조  손해배상청구권의 행사 등 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "국회법 100조  발언의 계속#KOBLEX-132325": "제100조(발언의 계속)",
+      "민법 144조  추인의 요건#KOBLEX-058662": "제144조(추인의 요건)",
+      "민법 492조  상계의 요건#KOBLEX-059395": "제492조(상계의 요건)",
+      "민사소송 등 인지법 9조  그 밖의 신청서#KOBLEX-106999": "⑤ 다음 각 호의 신청을 위한 신청서에는 1천원의 인지를 붙여야 한다. <개정 2011.7.18> 1. 「민사소송법」 제475조에 따른 공시최고(公示催告)의 신청 2. 「비송사건절차법」에 따라 재판을 구하는 신청 3. 재산명시신청이나 채무불이행자명부 등재(登載)신청 또는 그 말소(抹消)신청 4. 그 밖에 대법원규칙으로 정하는 각종 사건부에 등재할 신청(제1항부터 제3항까지의 신청은 제외한다)",
+      "민사소송법 128조  구조의 요건#KOBLEX-063826": "제128조(구조의 요건)",
+      "민사소송법 194조  공시송달의 요건#KOBLEX-064041": "제194조(공시송달의 요건)",
+      "민사소송법 248조  소제기의 방식#KOBLEX-064184": "② 법원은 소장에 붙이거나 납부한 인지액이 「민사소송 등 인지법」 제13조제2항 각 호에서 정한 금액에 미달하는 경우 소장의 접수를 보류할 수 있다.",
+      "민사소송법 84조  소송고지의 요건#KOBLEX-063730": "제84조(소송고지의 요건)",
+      "민사집행법 292조  집행개시의 요건#KOBLEX-129007": "제292조(집행개시의 요건)",
+      "민사집행법 39조  집행개시의 요건#KOBLEX-128147": "제39조(집행개시의 요건)",
+      "민사집행법 40조  집행개시의 요건#KOBLEX-128151": "제40조(집행개시의 요건)",
+      "민사집행법 41조  집행개시의 요건#KOBLEX-128154": "제41조(집행개시의 요건)",
+      "비송사건절차법 8조  신청 및 진술의 방법#KOBLEX-047500": "제8조(신청 및 진술의 방법) 신청 및 진술에 관하여는 「민사소송법」 제161조를 준용한다.",
+      "상고심절차에 관한 특례법 2조  적용 범위#KOBLEX-027556": "제2조 (적용 범위) 이 법은 민사소송, 가사소송 및 행정소송(「특허법」 제9장과 이를 준용하는 규정에 따른 소송을 포함한다. 이하 같다)의 상고사건(上告事件)에 적용한다.",
+      "상고심절차에 관한 특례법 7조  재항고 및 특별항고에의 준용#KOBLEX-027569": "제7조 (재항고 및 특별항고에의 준용) 민사소송, 가사소송 및 행정소송의 재항고(再抗告) 및 특별항고 사건에는 제3조, 제4조제2항ㆍ제3항, 제5조제1항ㆍ제3항 및 제6조를 준용한다.",
+      "상표법 229조  소송기록 열람 등의 청구 통지 등#KOBLEX-057774": "① 비밀유지명령이 내려진 소송(모든 비밀유지명령이 취소된 소송은 제외한다)에 관한 소송기록에 대하여 「민사소송법」 제163조제1항에 따른 열람 등의 제한 결정이 있는 경우로서, 그 소송에서 비밀유지명령을 받지 아니한 자가 열람 등이 가능한 당사자를 위하여 그 비밀 기재 부분의 열람 등의 청구절차를 밟은 경우에는 법원서기관, 법원사무관, 법원주사 또는 법원주사보(이하 이 조에서 \"법원사무관등\"이라 한다)는 「민사소송법」 제163조제1항에 따라 열람 등의 제한 신청을 한 당사자(그 열람 등의 청구를 한 자는 제외하며, 이하 제3항에서 같다)에게 그 청구 직후에 그 열람 등의 청구가 있었다는 사실을 알려야 한다.",
+      "새마을금고법 73조  손해배상청구권의 행사 등#KOBLEX-096667": "④ 중앙회는 금고가 제1항에 따른 손해배상청구를 소송으로 하는 경우에는 그 소송의 계속(係屬) 중 그 금고를 보조하기 위하여 소송에 참가할 수 있다. 이 경우 「민사소송법」 제71조부터 제77조까지의 규정을 준용한다. <개정 2011.3.8>",
+      "증권관련 집단소송법 7조  소의 제기 및 소송허가 신청#KOBLEX-178506": "③ 증권관련집단소송의 항소심(抗訴審) 및 상고심(上告審)에서의 인지액에 대하여는 「민사소송 등 인지법」 제3조를 준용한다.",
+      "형사소송법 15조  관할이전의 신청#KOBLEX-231446": "2. 범죄의 성질, 지방의 민심, 소송의 상황 기타 사정으로 재판의 공평을 유지하기 어려운 염려가 있는 때"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "No candidate provision addresses the requirements for applying for a criminal compensation order.",
+            "requirement_id": "E1-R1",
+            "status": "unsatisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "No candidate provision addresses the relationship between a criminal compensation order application and a pending civil lawsuit.",
+            "requirement_id": "E1-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "uncovered",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "E1-R1",
+          "E1-R2"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The supplied candidate provisions (C001-C019) do not contain the statutory provisions governing the requirements for applying for a criminal compensation order (형사배상명령) under the Criminal Procedure Act (specifically Articles 478-480) or the specific rules regarding the relationship between such an application and a pending civil lawsuit. The candidates consist of unrelated civil procedure, civil code, civil execution, and other statutory provisions that do not address the core legal issue.",
+        "status": "uncovered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 9,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "형사배상명령의 신청 요건 및 민사소송과의 관계",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "형사소송법상 형사배상명령 신청 요건 및 민사소송과의 관계 규정을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "형사배상명령의 신청 요건 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "민사소송과의 관계에 관한 규정 확인"
+          }
+        ],
+        "critical": true,
+        "description": "형사배상명령의 신청 요건 및 민사소송과의 관계에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문은 민사소송이 계속 중일 때 형사배상명령 신청 가능 여부를 묻고 있으므로, 해당 신청 요건 및 민사소송과의 관계 규정이 핵심 결론에 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 갑은 을에게 폭행을 당해 부상을 입었고, 이에 대한 손해배상을 요구하고자 을을 상대로 민사소송을 제기하였다. 민사소송이 법원에 계류 중인 상황에서, 갑은 같은 사건으로 형사소송이 진행 중인 을에게 형사배상명령을 신청할 수 있는지 고민하고 있다. [질문] 갑은 을의 범죄행위로 인해 발생한 피해에 관하여 민사소송이 법원에 계속 중일 때, 형사소송에서 형사배상명령을 신청할 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형사배상명령 신청 요건 민사소송과의 관계 형사소송법",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사배상명령",
+          "신청요건",
+          "민사소송",
+          "관계",
+          "형사소송법"
+        ],
+        "query_text": "형사배상명령 신청 요건 민사소송과의 관계 [원문 맥락] 민사소송이 법원에 계류 중인 상황에서, 갑은 같은 사건으로 형사소송이 진행 중인 을에게 형사배상명령을 신청할 수 있는지 고민하고 있다. 갑은 을의 범죄행위로 인해 발생한 피해에 관하여 민사소송이 법원에 계속 중일 때, 형사소송에서 형사배상명령을 신청할 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "형사배상명령 신청 요건 민사소송과의 관계 형사소송법",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형사배상명령 신청 제한 민사소송 계속 중",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "형사배상명령",
+          "신청제한",
+          "민사소송",
+          "계속중",
+          "형사소송법"
+        ],
+        "query_text": "형사배상명령 신청 제한 민사소송 계속 중 [원문 맥락] 민사소송이 법원에 계류 중인 상황에서, 갑은 같은 사건으로 형사소송이 진행 중인 을에게 형사배상명령을 신청할 수 있는지 고민하고 있다. 갑은 을의 범죄행위로 인해 발생한 피해에 관하여 민사소송이 법원에 계속 중일 때, 형사소송에서 형사배상명령을 신청할 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "형사배상명령 신청 요건 민사소송과의 관계 형사소송법",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "민사소송 계속 중 형사배상명령 신청 금지",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "형사배상명령",
+          "신청",
+          "민사소송",
+          "계속",
+          "금지"
+        ],
+        "query_text": "민사소송이 계속 중인 사건에 대하여 형사배상명령을 신청할 수 없다 [원문 맥락] 민사소송이 법원에 계류 중인 상황에서, 갑은 같은 사건으로 형사소송이 진행 중인 을에게 형사배상명령을 신청할 수 있는지 고민하고 있다. 갑은 을의 범죄행위로 인해 발생한 피해에 관하여 민사소송이 법원에 계속 중일 때, 형사소송에서 형사배상명령을 신청할 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "형사배상명령 신청 요건 민사소송과의 관계 형사소송법",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을에게 폭행을 당해 부상을 입었고, 이에 대한 손해배상을 요구하고자 을을 상대로 민사소송을 제기하였다. 민사소송이 법원에 계류 중인 상황에서, 갑은 같은 사건으로 형사소송이 진행 중인 을에게 형사배상명령을 신청할 수 있는지 고민하고 있다.\n\n[질문]\n갑은 을의 범죄행위로 인해 발생한 피해에 관하여 민사소송이 법원에 계속 중일 때, 형사소송에서 형사배상명령을 신청할 수 있는가?",
+    "remaining_request_budget": 6,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "형사소송법상 형사배상명령 신청 요건 및 민사소송과의 관계 규정을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "형사배상명령의 신청 요건 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "민사소송과의 관계에 관한 규정 확인"
+          }
+        ],
+        "critical": true,
+        "description": "형사배상명령의 신청 요건 및 민사소송과의 관계에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문은 민사소송이 계속 중일 때 형사배상명령 신청 가능 여부를 묻고 있으므로, 해당 신청 요건 및 민사소송과의 관계 규정이 핵심 결론에 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "852d0111-2eb8-4075-95c2-69889fda4e3a",
+    "seen_provision_ids": [
+      "민사소송법 128조  구조의 요건#KOBLEX-063826",
+      "형사소송법 15조  관할이전의 신청#KOBLEX-231446",
+      "민사집행법 39조  집행개시의 요건#KOBLEX-128147",
+      "민사집행법 41조  집행개시의 요건#KOBLEX-128154",
+      "상표법 229조  소송기록 열람 등의 청구 통지 등#KOBLEX-057774",
+      "민사집행법 40조  집행개시의 요건#KOBLEX-128151",
+      "민사집행법 292조  집행개시의 요건#KOBLEX-129007",
+      "민법 144조  추인의 요건#KOBLEX-058662",
+      "민사소송법 194조  공시송달의 요건#KOBLEX-064041",
+      "민사소송법 248조  소제기의 방식#KOBLEX-064184",
+      "새마을금고법 73조  손해배상청구권의 행사 등#KOBLEX-096667",
+      "민법 492조  상계의 요건#KOBLEX-059395",
+      "상고심절차에 관한 특례법 7조  재항고 및 특별항고에의 준용#KOBLEX-027569",
+      "상고심절차에 관한 특례법 2조  적용 범위#KOBLEX-027556",
+      "증권관련 집단소송법 7조  소의 제기 및 소송허가 신청#KOBLEX-178506",
+      "비송사건절차법 8조  신청 및 진술의 방법#KOBLEX-047500",
+      "민사소송 등 인지법 9조  그 밖의 신청서#KOBLEX-106999",
+      "국회법 100조  발언의 계속#KOBLEX-132325",
+      "민사소송법 84조  소송고지의 요건#KOBLEX-063730"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "NO_RETRIEVAL_PROGRESS"
+}

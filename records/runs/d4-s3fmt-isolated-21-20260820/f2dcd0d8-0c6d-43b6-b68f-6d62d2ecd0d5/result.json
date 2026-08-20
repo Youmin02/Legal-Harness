@@ -1,0 +1,597 @@
+{
+  "abstention_reason": null,
+  "answer": "갑이 받는 육아휴직수당 중 비과세되는 금액은 월 150만원입니다.[CT1]\n을이 해외 지사에서 근로를 제공하고 받는 보수 중 비과세되는 금액은 월 100만원입니다.[CT2]\n전제: 을의 해외 지사 근무가 원양어업 선박, 국외등을 항행하는 선박/항공기, 또는 국외등 건설현장 등 특별히 높은 한도(월 500만원)가 적용되는 대상에 해당하지 않는다고 가정합니다.\n한계: 본 답변은 제공된 법령 조항에 근거한 일반적 비과세 한도 금액을 설명하며, 개별 근로자의 구체적인 소득세 신고 의무나 기타 세법상 예외 규정은 다루지 않습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "갑이 받는 육아휴직수당 중 비과세되는 금액은 월 150만원입니다.[CT1]\n을이 해외 지사에서 근로를 제공하고 받는 보수 중 비과세되는 금액은 월 100만원입니다.[CT2]\n전제: 을의 해외 지사 근무가 원양어업 선박, 국외등을 항행하는 선박/항공기, 또는 국외등 건설현장 등 특별히 높은 한도(월 500만원)가 적용되는 대상에 해당하지 않는다고 가정합니다.\n한계: 본 답변은 제공된 법령 조항에 근거한 일반적 비과세 한도 금액을 설명하며, 개별 근로자의 구체적인 소득세 신고 의무나 기타 세법상 예외 규정은 다루지 않습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T09:26:27.874183+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 182888.793,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 170,
+      "dedup_collapse": 60,
+      "evidence_fusion": 170,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 170
+    }
+  },
+  "run_id": "f2dcd0d8-0c6d-43b6-b68f-6d62d2ecd0d5",
+  "state": {
+    "accepted_provision_ids": [
+      "소득세법 시행령 10조 2 비과세되는 육아휴직수당의 범위#KOBLEX-141026",
+      "소득세법 시행령 16조  국외근로자의 비과세급여의 범위#KOBLEX-141056"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "amount_limit",
+        "question_anchor": "갑이 받는 육아휴직수당 중 비과세되는 금액은 얼마이며",
+        "requested_output": "육아휴직수당 중 비과세되는 금액의 한도"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "amount_limit",
+        "question_anchor": "을이 해외 지사에서 근로를 제공하고 받는 보수의 비과세 한도는 얼마인가",
+        "requested_output": "해외 지사 근로 보수 중 비과세되는 금액의 한도"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "소득세법 시행령 10조 2 비과세되는 육아휴직수당의 범위#KOBLEX-141026"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 92,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "소득세법 시행령 10조 2 비과세되는 육아휴직수당의 범위#KOBLEX-141026",
+        "provision_text": "제10조의2(비과세되는 육아휴직수당의 범위) 법 제12조제3호마목에서 \"대통령령으로 정하는 금액\"이란 월 150만원을 말한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9983847141265869,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "소득세법 시행령 10조 2 비과세되는 육아휴직수당의 범위",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 시행령 16조  국외근로자의 비과세급여의 범위#KOBLEX-141056"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 4.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "소득세법 시행령 16조  국외근로자의 비과세급여의 범위#KOBLEX-141056",
+        "provision_text": "①법 제12조제3호거목에서 \"대통령령으로 정하는 급여\"란 다음 각 호의 것을 말한다. <개정 1995.12.30, 1999.12.31, 2000.12.29, 2005.2.19, 2006.2.9, 2009.2.4, 2010.2.18, 2012.2.2, 2012.4.13, 2013.2.15, 2014.2.21, 2017.2.3, 2019.2.12, 2024.2.29, 2025.2.28> 1. 국외 또는 「남북교류협력에 관한 법률」에 따른 북한지역(이하 이 조에서 \"국외등\"이라 한다)에서 근로를 제공(원양어업 선박 또는 국외등을 항행하는 선박이나 항공기에서 근로를 제공하는 것을 포함한다)하고 받는 보수 중 월 100만원[원양어업 선박, 국외등을 항행하는 선박 또는 국외등의 건설현장 등에서 근로(설계 및 감리 업무를 포함한다)를 제공하고 받는 보수의 경우에는 월 500만원] 이내의 금액 2. 공무원(「외무공무원법」 제32조에 따른 재외공관 행정직원과 이와 유사한 업무를 수행하는 사람으로서 기획재정부장관이 정하여 고시하는 사람을 포함한다), 「대한무역투자진흥공사법」에 따른 대한무역투자진흥공사, 「한국관광공사법」에 따른 한국관광공사, 「한국국제협력단법」에 따른 한국국제협력단, 「한국국제보건의료재단법」에 따른 한국국제보건의료재단, 「한국산업인력공단법」에 따른 한국산업인력공단 및 「중소기업진흥에 관한 법률」에 따른 중소벤처기업진흥공단의 종사자가 국외등에서 근무하고 받는 수당 중 해당 근로자가 국내에서 근무할 경우에 지급받을 금액상당액을 초과하여 받는 금액 중 실비변상적 성격의 급여로서 외교부장관이 기획재정부장관과 협의하여 고시하는 금액",
+        "rerank_rank": 1,
+        "rerank_score": 4.308486677473411e-05,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "소득세법 시행령 16조  국외근로자의 비과세급여의 범위 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "조세특례제한법 91조 24 과세특례 대상 저축 등의 소득기준 적용에 대한 특례#KOBLEX-099769",
+          "조세특례제한법 91조 24 과세특례 대상 저축 등의 소득기준 적용에 대한 특례#KOBLEX-151750"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 31.54337218468825,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "조세특례제한법 91조 24 과세특례 대상 저축 등의 소득기준 적용에 대한 특례#KOBLEX-099769",
+        "provision_text": "2. 거주자가 「소득세법」 제12조제3호마목에 따른 육아휴직 급여, 육아휴직수당 또는 대통령령으로 정하는 소득이 있는 경우: 비과세소득만 있는 자로 보지 아니한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.0024256419856101274,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "조세특례제한법 91조 24 과세특례 대상 저축 등의 소득기준 적용에 대한 특례 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "조세특례제한법 시행규칙 43조  과세특례 대상 저축 등의 소득기준 적용에 대한 특례#KOBLEX-146329"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 26.706378629641044,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "조세특례제한법 시행규칙 43조  과세특례 대상 저축 등의 소득기준 적용에 대한 특례#KOBLEX-146329",
+        "provision_text": "2. 육아휴직수당: 「소득세법」 제12조제3호마목에 따른 육아휴직수당을 받는 사람이 해당 소속 기관의 장으로부터 발급받은 휴직증명서",
+        "rerank_rank": 3,
+        "rerank_score": 0.001797130680643022,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "조세특례제한법 시행규칙 43조  과세특례 대상 저축 등의 소득기준 적용에 대한 특례 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 시행령 8조 2#KOBLEX-140995"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 22,
+        "first_stage_score": 22.06776788722827,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "소득세법 시행령 8조 2#KOBLEX-140995",
+        "provision_text": "제1절 비과세",
+        "rerank_rank": 4,
+        "rerank_score": 3.501420360407792e-05,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "소득세법 시행령 8조 2",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방세법 시행령 108조  비과세#KOBLEX-078007"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 28,
+        "first_stage_score": 22.06776788722827,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "지방세법 시행령 108조  비과세#KOBLEX-078007",
+        "provision_text": "제108조(비과세)",
+        "rerank_rank": 5,
+        "rerank_score": 2.521637907193508e-05,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "지방세법 시행령 108조  비과세",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방세법 시행령 40조  비과세#KOBLEX-077483"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 31,
+        "first_stage_score": 22.06776788722827,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "지방세법 시행령 40조  비과세#KOBLEX-077483",
+        "provision_text": "제40조(비과세)",
+        "rerank_rank": 6,
+        "rerank_score": 2.4911721993703395e-05,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "지방세법 시행령 40조  비과세",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방세법 26조  비과세#KOBLEX-101869"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 22.06776788722827,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "지방세법 26조  비과세#KOBLEX-101869",
+        "provision_text": "제26조(비과세)",
+        "rerank_rank": 7,
+        "rerank_score": 2.3315153157454915e-05,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "지방세법 26조  비과세",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방세법 77조  비과세#KOBLEX-102066"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 22.06776788722827,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "지방세법 77조  비과세#KOBLEX-102066",
+        "provision_text": "제77조(비과세)",
+        "rerank_rank": 8,
+        "rerank_score": 2.308261173311621e-05,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "지방세법 77조  비과세",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방세법 109조  비과세#KOBLEX-102519"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 22.06776788722827,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "지방세법 109조  비과세#KOBLEX-102519",
+        "provision_text": "제109조(비과세)",
+        "rerank_rank": 9,
+        "rerank_score": 2.2952444851398468e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "지방세법 109조  비과세",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "소득세법 시행령 10조 2 비과세되는 육아휴직수당의 범위#KOBLEX-141026": "제10조의2(비과세되는 육아휴직수당의 범위) 법 제12조제3호마목에서 \"대통령령으로 정하는 금액\"이란 월 150만원을 말한다.",
+      "소득세법 시행령 16조  국외근로자의 비과세급여의 범위#KOBLEX-141056": "①법 제12조제3호거목에서 \"대통령령으로 정하는 급여\"란 다음 각 호의 것을 말한다. <개정 1995.12.30, 1999.12.31, 2000.12.29, 2005.2.19, 2006.2.9, 2009.2.4, 2010.2.18, 2012.2.2, 2012.4.13, 2013.2.15, 2014.2.21, 2017.2.3, 2019.2.12, 2024.2.29, 2025.2.28> 1. 국외 또는 「남북교류협력에 관한 법률」에 따른 북한지역(이하 이 조에서 \"국외등\"이라 한다)에서 근로를 제공(원양어업 선박 또는 국외등을 항행하는 선박이나 항공기에서 근로를 제공하는 것을 포함한다)하고 받는 보수 중 월 100만원[원양어업 선박, 국외등을 항행하는 선박 또는 국외등의 건설현장 등에서 근로(설계 및 감리 업무를 포함한다)를 제공하고 받는 보수의 경우에는 월 500만원] 이내의 금액 2. 공무원(「외무공무원법」 제32조에 따른 재외공관 행정직원과 이와 유사한 업무를 수행하는 사람으로서 기획재정부장관이 정하여 고시하는 사람을 포함한다), 「대한무역투자진흥공사법」에 따른 대한무역투자진흥공사, 「한국관광공사법」에 따른 한국관광공사, 「한국국제협력단법」에 따른 한국국제협력단, 「한국국제보건의료재단법」에 따른 한국국제보건의료재단, 「한국산업인력공단법」에 따른 한국산업인력공단 및 「중소기업진흥에 관한 법률」에 따른 중소벤처기업진흥공단의 종사자가 국외등에서 근무하고 받는 수당 중 해당 근로자가 국내에서 근무할 경우에 지급받을 금액상당액을 초과하여 받는 금액 중 실비변상적 성격의 급여로서 외교부장관이 기획재정부장관과 협의하여 고시하는 금액",
+      "소득세법 시행령 8조 2#KOBLEX-140995": "제1절 비과세",
+      "조세특례제한법 91조 24 과세특례 대상 저축 등의 소득기준 적용에 대한 특례#KOBLEX-099769": "2. 거주자가 「소득세법」 제12조제3호마목에 따른 육아휴직 급여, 육아휴직수당 또는 대통령령으로 정하는 소득이 있는 경우: 비과세소득만 있는 자로 보지 아니한다.",
+      "조세특례제한법 시행규칙 43조  과세특례 대상 저축 등의 소득기준 적용에 대한 특례#KOBLEX-146329": "2. 육아휴직수당: 「소득세법」 제12조제3호마목에 따른 육아휴직수당을 받는 사람이 해당 소속 기관의 장으로부터 발급받은 휴직증명서",
+      "지방세법 109조  비과세#KOBLEX-102519": "제109조(비과세)",
+      "지방세법 26조  비과세#KOBLEX-101869": "제26조(비과세)",
+      "지방세법 77조  비과세#KOBLEX-102066": "제77조(비과세)",
+      "지방세법 시행령 108조  비과세#KOBLEX-078007": "제108조(비과세)",
+      "지방세법 시행령 40조  비과세#KOBLEX-077483": "제40조(비과세)"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "소득세법 시행령 10조 2 비과세되는 육아휴직수당의 범위#KOBLEX-141026"
+            ],
+            "rationale": "C001 specifies the amount as 1.5 million KRW per month.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "소득세법 시행령 10조 2 비과세되는 육아휴직수당의 범위#KOBLEX-141026"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "The supplied provision C001 clearly states the non-taxable limit for childcare leave allowance is 1.5 million KRW per month, fully satisfying the completion criteria.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "소득세법 시행령 16조  국외근로자의 비과세급여의 범위#KOBLEX-141056"
+            ],
+            "rationale": "C002 specifies the amount as 1 million KRW per month for general overseas work.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "소득세법 시행령 16조  국외근로자의 비과세급여의 범위#KOBLEX-141056"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "The supplied provision C002 clearly states the non-taxable limit for overseas work compensation is 1 million KRW per month (with a higher limit for specific sectors), fully satisfying the completion criteria.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "소득세법 시행령 10조 2 비과세되는 육아휴직수당의 범위#KOBLEX-141026",
+        "support_spans": [
+          {
+            "end_char": 70,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "소득세법 시행령 16조  국외근로자의 비과세급여의 범위#KOBLEX-141056",
+        "support_spans": [
+          {
+            "end_char": 807,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "육아휴직수당에 대한 소득세 비과세 한도 규정이 무엇인지",
+        "issue_id": "I1"
+      },
+      {
+        "description": "해외 지사 근무 보수에 대한 소득세 비과세 한도 규정이 무엇인지",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 A회사의 직원으로, 최근 육아휴직을 신청하여 수당을 받고 있습니다. 을은 해외 지사에서 근무하며 보수를 받고 있는 상황입니다. 두 사람은 자신들이 받는 수당과 보수가 각각 얼마나 비과세되는지 궁금해하고 있습니다. [질문] 갑이 받는 육아휴직수당 중 비과세되는 금액은 얼마이며, 을이 해외 지사에서 근로를 제공하고 받는 보수의 비과세 한도는 얼마인가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "육아휴직수당 비과세 소득세법",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "육아휴직수당",
+          "비과세",
+          "소득세",
+          "한도"
+        ],
+        "query_text": "육아휴직수당 소득세 비과세 한도 금액 [원문 맥락] 두 사람은 자신들이 받는 수당과 보수가 각각 얼마나 비과세되는지 궁금해하고 있습니다. 갑이 받는 육아휴직수당 중 비과세되는 금액은 얼마이며, 을이 해외 지사에서 근로를 제공하고 받는 보수의 비과세 한도는 얼마인가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "육아휴직수당 비과세 한도 금액",
+        "statute_hints": [
+          "소득세법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "해외지사 근무 보수 비과세 소득세법",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "해외지사",
+          "근로보수",
+          "비과세",
+          "소득세",
+          "한도"
+        ],
+        "query_text": "해외 지사 근무 보수 소득세 비과세 한도 금액 [원문 맥락] 두 사람은 자신들이 받는 수당과 보수가 각각 얼마나 비과세되는지 궁금해하고 있습니다. 갑이 받는 육아휴직수당 중 비과세되는 금액은 얼마이며, 을이 해외 지사에서 근로를 제공하고 받는 보수의 비과세 한도는 얼마인가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "해외 지사 근무 보수 비과세 한도 금액",
+        "statute_hints": [
+          "소득세법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 A회사의 직원으로, 최근 육아휴직을 신청하여 수당을 받고 있습니다. 을은 해외 지사에서 근무하며 보수를 받고 있는 상황입니다. 두 사람은 자신들이 받는 수당과 보수가 각각 얼마나 비과세되는지 궁금해하고 있습니다.\n\n[질문]\n갑이 받는 육아휴직수당 중 비과세되는 금액은 얼마이며, 을이 해외 지사에서 근로를 제공하고 받는 보수의 비과세 한도는 얼마인가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "육아휴직수당 비과세 한도 금액을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "육아휴직수당 비과세 한도 금액(예: 월 100만원 등)을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "육아휴직수당에 대한 소득세 비과세 한도를 정한 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 육아휴직수당 비과세 금액을 산정하기 위해 필수적인 법적 근거",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "해외 지사 근무 보수 비과세 한도 금액을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "해외 지사 근무 보수 비과세 한도 금액(예: 월 100만원 등)을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "해외 지사 근무 보수에 대한 소득세 비과세 한도를 정한 조항",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 요구하는 해외 지사 근무 보수 비과세 한도를 산정하기 위해 필수적인 법적 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "f2dcd0d8-0c6d-43b6-b68f-6d62d2ecd0d5",
+    "seen_provision_ids": [
+      "조세특례제한법 시행규칙 43조  과세특례 대상 저축 등의 소득기준 적용에 대한 특례#KOBLEX-146329",
+      "지방세법 26조  비과세#KOBLEX-101869",
+      "조세특례제한법 91조 24 과세특례 대상 저축 등의 소득기준 적용에 대한 특례#KOBLEX-099769",
+      "소득세법 시행령 16조  국외근로자의 비과세급여의 범위#KOBLEX-141056",
+      "지방세법 시행령 40조  비과세#KOBLEX-077483",
+      "지방세법 77조  비과세#KOBLEX-102066",
+      "소득세법 시행령 10조 2 비과세되는 육아휴직수당의 범위#KOBLEX-141026",
+      "소득세법 시행령 8조 2#KOBLEX-140995",
+      "지방세법 시행령 108조  비과세#KOBLEX-078007",
+      "지방세법 109조  비과세#KOBLEX-102519"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

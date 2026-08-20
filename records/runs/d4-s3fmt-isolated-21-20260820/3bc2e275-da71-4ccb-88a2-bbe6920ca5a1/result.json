@@ -1,0 +1,635 @@
+{
+  "abstention_reason": null,
+  "answer": "환경부장관은 제1항에 따른 인증을 받지 아니한 배출가스저감장치를 제조, 수입, 공급 또는 판매하려는 자에게 환경부령으로 정하는 바에 따라 일정한 기간을 정하여 제품의 회수, 폐기 등의 필요한 조치를 명할 수 있습니다.[CT1]\n배출가스저감장치의 판매를 중개하거나 구매를 대행하는 자는 제1항에 따른 인증을 받지 아니한 제품의 판매를 중개하거나 구매를 대행하여서는 아니 됩니다. 다만, 「전자상거래 등에서의 소비자보호에 관한 법률」에 따른 통신판매중개자가 자신이 운영하는 사이버몰에서 해당 제품을 발견하는 즉시 삭제하고, 소비자가 이러한 정보를 확인할 수 있도록 기술적 조치를 한 경우는 예외로 합니다.[CT2]",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "환경부장관은 제1항에 따른 인증을 받지 아니한 배출가스저감장치를 제조, 수입, 공급 또는 판매하려는 자에게 환경부령으로 정하는 바에 따라 일정한 기간을 정하여 제품의 회수, 폐기 등의 필요한 조치를 명할 수 있습니다.[CT1]\n배출가스저감장치의 판매를 중개하거나 구매를 대행하는 자는 제1항에 따른 인증을 받지 아니한 제품의 판매를 중개하거나 구매를 대행하여서는 아니 됩니다. 다만, 「전자상거래 등에서의 소비자보호에 관한 법률」에 따른 통신판매중개자가 자신이 운영하는 사이버몰에서 해당 제품을 발견하는 즉시 삭제하고, 소비자가 이러한 정보를 확인할 수 있도록 기술적 조치를 한 경우는 예외로 합니다.[CT2]",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T09:34:45.335286+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 241415.134,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 179,
+      "dedup_collapse": 32,
+      "evidence_fusion": 179,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 179
+    }
+  },
+  "run_id": "3bc2e275-da71-4ccb-88a2-bbe6920ca5a1",
+  "state": {
+    "accepted_provision_ids": [
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008844"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_rule",
+        "question_anchor": "환경부장관은 을이 인증받지 않은 배출가스저감장치를 제조, 수입, 공급 또는 판매하려는 경우에 어떤 조치를 명할 수 있으며",
+        "requested_output": "환경부장관이 인증받지 않은 배출가스저감장치의 제조, 수입, 공급 또는 판매를 명할 수 있는 조치의 종류와 법적 근거"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_condition",
+        "question_anchor": "을의 인증받지 않은 제품의 판매 중개는 어떤 조건에서 금지되는가",
+        "requested_output": "인증받지 않은 배출가스저감장치의 판매 중개가 금지되는 법적 조건"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 47.09363496622416,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843",
+        "provision_text": "⑦ 환경부장관은 제1항에 따른 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 제조, 수입, 공급 또는 판매하려는 자에게 환경부령으로 정하는 바에 따라 일정한 기간을 정하여 제품의 회수, 폐기 등의 필요한 조치를 명할 수 있다. <신설 2023.8.16>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999988079071045,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등 7항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008844"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 25.681060054186972,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008844",
+        "provision_text": "⑧ 배출가스저감장치, 저공해엔진 또는 공회전제한장치의 판매를 중개하거나 구매를 대행하는 자는 제1항에 따른 인증을 받지 아니한 제품의 판매를 중개(「전자상거래 등에서의 소비자보호에 관한 법률」에 따른 통신판매중개자가 자신이 운영하는 사이버몰에서 해당 제품을 발견하는 즉시 삭제하고, 소비자가 이러한 정보를 확인할 수 있도록 기술적 조치를 한 경우는 제외한다. 이하 같다)하거나 구매를 대행하여서는 아니 된다. <신설 2023.8.16>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9997894167900085,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등 8항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008842"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 3.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008842",
+        "provision_text": "⑥ 누구든지 제1항에 따른 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 공급ㆍ판매하거나 공급ㆍ판매의 목적으로 진열ㆍ보관 또는 저장하여서는 아니 된다. <신설 2023.8.16>",
+        "rerank_rank": 2,
+        "rerank_score": 0.9993492960929871,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등 6항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "대기환경보전법 89조  벌칙#KOBLEX-009097"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 93,
+        "first_stage_score": 3.0,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "대기환경보전법 89조  벌칙#KOBLEX-009097",
+        "provision_text": "8의2. 제60조제6항을 위반하여 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 공급ㆍ판매하거나 공급ㆍ판매의 목적으로 진열ㆍ보관 또는 저장한 자",
+        "rerank_rank": 3,
+        "rerank_score": 0.997972309589386,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "대기환경보전법 89조  벌칙 13호",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "대기환경보전법 94조  과태료#KOBLEX-009171"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "대기환경보전법 94조  과태료#KOBLEX-009171",
+        "provision_text": "① 다음 각 호의 어느 하나에 해당하는 자에게는 500만원 이하의 과태료를 부과한다. <개정 2015.1.20, 2017.11.28, 2019.4.2, 2019.11.26, 2020.12.29, 2023.8.16, 2024.1.23> 1. 제48조제3항에 따른 변경보고를 하지 아니하거나 거짓 또는 그 밖의 부정한 방법으로 변경보고를 한 자 1의2. 제48조제5항을 위반하여 인증ㆍ변경인증ㆍ변경보고의 표시를 하지 아니한 자 1의3. 제51조제5항 또는 제53조제4항에 따른 결함시정계획을 수립ㆍ제출하지 아니하거나 결함시정계획을 부실하게 수립ㆍ제출하여 환경부장관의 승인을 받지 못한 경우 1의4. 제58조의2제5항을 위반하여 보급실적을 제출하지 아니한 자 1의5. 제60조의2제6항에 따른 성능점검결과를 제출하지 아니한 자 2. 제76조의4제1항을 위반하여 자동차에 온실가스 배출량을 표시하지 아니하거나 거짓으로 표시한 자 3. 제60조제8항을 위반하여 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치의 판매를 중개하거나 구매를 대행한 자",
+        "rerank_rank": 4,
+        "rerank_score": 0.9615283608436584,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "대기환경보전법 94조  과태료 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008837"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 71,
+        "first_stage_score": 24.46303458626164,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008837",
+        "provision_text": "①배출가스저감장치, 저공해엔진 또는 공회전제한장치를 제조 또는 수입하려는 자는 환경부장관으로부터 그 장치나 엔진이 보증기간 동안 환경부령으로 정하는 저감효율 또는 기준에 맞게 유지될 수 있다는 인증을 받아야 한다. 다만, 제작단계에서 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 부착하여 제작차 인증을 받은 경우에는 인증을 받지 아니할 수 있다. <개정 2012.5.23, 2023.8.16>",
+        "rerank_rank": 2,
+        "rerank_score": 0.9525436162948608,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008836"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 28.90230460300148,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008836",
+        "provision_text": "제60조(배출가스저감장치 및 공회전제한장치의 인증 등)",
+        "rerank_rank": 6,
+        "rerank_score": 0.5855104327201843,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "대기환경보전법 92조  벌칙#KOBLEX-009164"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 35.39995962283935,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "대기환경보전법 92조  벌칙#KOBLEX-009164",
+        "provision_text": "10. 제60조제1항에 따라 인증받은 내용과 다르게 결함이 있는 배출가스저감장치 또는 저공해엔진을 제조 또는 수입하는 자",
+        "rerank_rank": 4,
+        "rerank_score": 0.2766059935092926,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "대기환경보전법 92조  벌칙 12호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "대기환경보전법 시행규칙 82조  배출가스저감장치 등의 인증의 신청ㆍ시험ㆍ기준 및 방법 등#KOBLEX-189520"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 43,
+        "first_stage_score": 19.4180621777519,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "대기환경보전법 시행규칙 82조  배출가스저감장치 등의 인증의 신청ㆍ시험ㆍ기준 및 방법 등#KOBLEX-189520",
+        "provision_text": "⑤ 국립환경과학원장은 법 제60조제1항 본문에 따라 인증을 받은 배출가스저감장치 또는 저공해엔진에 대해서는 별지 제37호의3서식의 배출가스저감장치 또는 저공해엔진 인증서를 내줘야 한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.1623707115650177,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "대기환경보전법 시행규칙 82조  배출가스저감장치 등의 인증의 신청ㆍ시험ㆍ기준 및 방법 등 5항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "대기환경보전법 89조  벌칙#KOBLEX-009096"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 34.08753812201332,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "대기환경보전법 89조  벌칙#KOBLEX-009096",
+        "provision_text": "8. 제60조제1항 또는 제2항을 위반하여 인증이나 변경인증을 받지 아니하고 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 제조 또는 수입한 자",
+        "rerank_rank": 6,
+        "rerank_score": 0.08841572701931,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "대기환경보전법 89조  벌칙 12호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008836": "제60조(배출가스저감장치 및 공회전제한장치의 인증 등)",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008837": "①배출가스저감장치, 저공해엔진 또는 공회전제한장치를 제조 또는 수입하려는 자는 환경부장관으로부터 그 장치나 엔진이 보증기간 동안 환경부령으로 정하는 저감효율 또는 기준에 맞게 유지될 수 있다는 인증을 받아야 한다. 다만, 제작단계에서 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 부착하여 제작차 인증을 받은 경우에는 인증을 받지 아니할 수 있다. <개정 2012.5.23, 2023.8.16>",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008842": "⑥ 누구든지 제1항에 따른 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 공급ㆍ판매하거나 공급ㆍ판매의 목적으로 진열ㆍ보관 또는 저장하여서는 아니 된다. <신설 2023.8.16>",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843": "⑦ 환경부장관은 제1항에 따른 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 제조, 수입, 공급 또는 판매하려는 자에게 환경부령으로 정하는 바에 따라 일정한 기간을 정하여 제품의 회수, 폐기 등의 필요한 조치를 명할 수 있다. <신설 2023.8.16>",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008844": "⑧ 배출가스저감장치, 저공해엔진 또는 공회전제한장치의 판매를 중개하거나 구매를 대행하는 자는 제1항에 따른 인증을 받지 아니한 제품의 판매를 중개(「전자상거래 등에서의 소비자보호에 관한 법률」에 따른 통신판매중개자가 자신이 운영하는 사이버몰에서 해당 제품을 발견하는 즉시 삭제하고, 소비자가 이러한 정보를 확인할 수 있도록 기술적 조치를 한 경우는 제외한다. 이하 같다)하거나 구매를 대행하여서는 아니 된다. <신설 2023.8.16>",
+      "대기환경보전법 89조  벌칙#KOBLEX-009096": "8. 제60조제1항 또는 제2항을 위반하여 인증이나 변경인증을 받지 아니하고 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 제조 또는 수입한 자",
+      "대기환경보전법 89조  벌칙#KOBLEX-009097": "8의2. 제60조제6항을 위반하여 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 공급ㆍ판매하거나 공급ㆍ판매의 목적으로 진열ㆍ보관 또는 저장한 자",
+      "대기환경보전법 92조  벌칙#KOBLEX-009164": "10. 제60조제1항에 따라 인증받은 내용과 다르게 결함이 있는 배출가스저감장치 또는 저공해엔진을 제조 또는 수입하는 자",
+      "대기환경보전법 94조  과태료#KOBLEX-009171": "① 다음 각 호의 어느 하나에 해당하는 자에게는 500만원 이하의 과태료를 부과한다. <개정 2015.1.20, 2017.11.28, 2019.4.2, 2019.11.26, 2020.12.29, 2023.8.16, 2024.1.23> 1. 제48조제3항에 따른 변경보고를 하지 아니하거나 거짓 또는 그 밖의 부정한 방법으로 변경보고를 한 자 1의2. 제48조제5항을 위반하여 인증ㆍ변경인증ㆍ변경보고의 표시를 하지 아니한 자 1의3. 제51조제5항 또는 제53조제4항에 따른 결함시정계획을 수립ㆍ제출하지 아니하거나 결함시정계획을 부실하게 수립ㆍ제출하여 환경부장관의 승인을 받지 못한 경우 1의4. 제58조의2제5항을 위반하여 보급실적을 제출하지 아니한 자 1의5. 제60조의2제6항에 따른 성능점검결과를 제출하지 아니한 자 2. 제76조의4제1항을 위반하여 자동차에 온실가스 배출량을 표시하지 아니하거나 거짓으로 표시한 자 3. 제60조제8항을 위반하여 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치의 판매를 중개하거나 구매를 대행한 자",
+      "대기환경보전법 시행규칙 82조  배출가스저감장치 등의 인증의 신청ㆍ시험ㆍ기준 및 방법 등#KOBLEX-189520": "⑤ 국립환경과학원장은 법 제60조제1항 본문에 따라 인증을 받은 배출가스저감장치 또는 저공해엔진에 대해서는 별지 제37호의3서식의 배출가스저감장치 또는 저공해엔진 인증서를 내줘야 한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843"
+            ],
+            "rationale": "C001은 환경부장관의 조치 권한을 명시합니다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843"
+            ],
+            "rationale": "C001은 조치 대상이 제조, 수입, 공급 또는 판매하려는 자임을 명시합니다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843"
+            ],
+            "rationale": "C001은 제품의 회수, 폐기 등의 필요한 조치를 명할 수 있음을 명시합니다.",
+            "requirement_id": "E1-R3",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001은 환경부장관의 조치 권한, 대상 행위(제조, 수입, 공급, 판매), 그리고 명할 수 있는 구체적 조치(회수, 폐기 등)를 모두 명시하고 있어 E1의 모든 완료 기준을 충족합니다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008844"
+            ],
+            "rationale": "C002는 판매 중개 금지 조항을 명시합니다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008844"
+            ],
+            "rationale": "C002는 제1항에 따른 인증을 받지 아니한 제품의 판매 중개를 금지 대상으로 규정하여 적용 조건을 명시합니다.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008844"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C002는 인증받지 않은 배출가스저감장치의 판매 중개 금지 조항과 그 적용 조건(인증 미획득 상태)을 명시하고 있어 E2의 모든 완료 기준을 충족합니다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843",
+        "support_spans": [
+          {
+            "end_char": 154,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008844",
+        "support_spans": [
+          {
+            "end_char": 243,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "환경부장관은 인증받지 않은 배출가스저감장치의 제조, 수입, 공급 또는 판매 행위에 대해 어떤 행정조치를 명할 수 있는가",
+        "issue_id": "I1"
+      },
+      {
+        "description": "인증받지 않은 배출가스저감장치의 판매 중개 행위는 어떤 법적 조건에서 금지되는가",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 자동차 부품 회사의 사장으로, 저공해엔진 및 배출가스저감장치를 제조하여 판매하고 있다. 그러나 최근, 을이라는 경쟁 회사는 인증받지 않은 배출가스저감장치를 제조하여 시중에 판매하고 있다는 소문이 돌고 있다. 이에 갑은 을의 행위가 불법적인지를 확인하고자 한다. 특히, 을의 인증 없는 제품에 대한 환경부장관의 조치 가능성과 해당 제품의 판매 중개 금지 여부를 알고 싶어 한다. [질문] 환경부장관은 을이 인증받지 않은 배출가스저감장치를 제조, 수입, 공급 또는 판매하려는 경우에 어떤 조치를 명할 수 있으며, 을의 인증받지 않은 제품의 판매 중개는 어떤 조건에서 금지되는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "환경부장관 배출가스저감장치 인증 미획득 제조 수입 공급 판매 금지 명령 조치",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "환경부장관",
+          "배출가스저감장치",
+          "인증",
+          "제조",
+          "수입",
+          "공급",
+          "판매",
+          "조치"
+        ],
+        "query_text": "환경부장관 인증받지 않은 배출가스저감장치 제조 수입 공급 판매 조치 명령 [원문 맥락] 특히, 을의 인증 없는 제품에 대한 환경부장관의 조치 가능성과 해당 제품의 판매 중개 금지 여부를 알고 싶어 한다. 환경부장관은 을이 인증받지 않은 배출가스저감장치를 제조, 수입, 공급 또는 판매하려는 경우에 어떤 조치를 명할 수 있으며, 을의 인증받지 않은 제품의 판매 중개는 어떤 조건에서 금지되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "환경부장관이 인증받지 않은 배출가스저감장치의 제조, 수입, 공급 또는 판매를 명할 수 있는 조치의 종류와 법적 근거",
+        "statute_hints": [
+          "대기환경보전법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "배출가스저감장치 판매 중개 금지 인증 미획득 조건",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "배출가스저감장치",
+          "판매",
+          "중개",
+          "금지",
+          "인증",
+          "조건"
+        ],
+        "query_text": "인증받지 않은 배출가스저감장치 판매 중개 금지 조건 [원문 맥락] 특히, 을의 인증 없는 제품에 대한 환경부장관의 조치 가능성과 해당 제품의 판매 중개 금지 여부를 알고 싶어 한다. 환경부장관은 을이 인증받지 않은 배출가스저감장치를 제조, 수입, 공급 또는 판매하려는 경우에 어떤 조치를 명할 수 있으며, 을의 인증받지 않은 제품의 판매 중개는 어떤 조건에서 금지되는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "인증받지 않은 배출가스저감장치의 판매 중개가 금지되는 법적 조건",
+        "statute_hints": [
+          "대기환경보전법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 자동차 부품 회사의 사장으로, 저공해엔진 및 배출가스저감장치를 제조하여 판매하고 있다. 그러나 최근, 을이라는 경쟁 회사는 인증받지 않은 배출가스저감장치를 제조하여 시중에 판매하고 있다는 소문이 돌고 있다. 이에 갑은 을의 행위가 불법적인지를 확인하고자 한다. 특히, 을의 인증 없는 제품에 대한 환경부장관의 조치 가능성과 해당 제품의 판매 중개 금지 여부를 알고 싶어 한다.\n\n[질문]\n환경부장관은 을이 인증받지 않은 배출가스저감장치를 제조, 수입, 공급 또는 판매하려는 경우에 어떤 조치를 명할 수 있으며, 을의 인증받지 않은 제품의 판매 중개는 어떤 조건에서 금지되는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "환경부장관의 조치 권한, 대상 행위(제조, 수입, 공급, 판매), 그리고 명할 수 있는 구체적 조치의 종류를 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "환경부장관의 인증 미획득 배출가스저감장치 관련 조치 권한을 명시하는 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "조치 대상이 제조, 수입, 공급, 판매 행위로 한정되는지 확인"
+          },
+          {
+            "requirement_id": "E1-R3",
+            "text": "명할 수 있는 구체적 조치의 종류(예: 제조 금지, 판매 금지, 회수 등) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "환경부장관이 인증받지 않은 배출가스저감장치의 제조, 수입, 공급 또는 판매를 명할 수 있는 조치에 관한 법적 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 직접적으로 환경부장관의 조치 가능성을 묻고 있으므로, 해당 조치의 법적 근거 없이는 답변이 불가능함",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "판매 중개 금지의 법적 근거, 적용 대상, 그리고 금지 조건을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "배출가스저감장치 판매 중개 금지 조항 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "판매 중개 금지의 적용 조건(예: 인증 미획득 상태) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "인증받지 않은 배출가스저감장치의 판매 중개 금지에 관한 법적 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 직접적으로 판매 중개 금지 조건을 묻고 있으므로, 해당 금지 규정 없이는 답변이 불가능함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "3bc2e275-da71-4ccb-88a2-bbe6920ca5a1",
+    "seen_provision_ids": [
+      "대기환경보전법 89조  벌칙#KOBLEX-009097",
+      "대기환경보전법 89조  벌칙#KOBLEX-009096",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008842",
+      "대기환경보전법 92조  벌칙#KOBLEX-009164",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008844",
+      "대기환경보전법 시행규칙 82조  배출가스저감장치 등의 인증의 신청ㆍ시험ㆍ기준 및 방법 등#KOBLEX-189520",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008843",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008837",
+      "대기환경보전법 94조  과태료#KOBLEX-009171",
+      "대기환경보전법 60조  배출가스저감장치 및 공회전제한장치의 인증 등#KOBLEX-008836"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

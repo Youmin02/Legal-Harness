@@ -1,0 +1,72 @@
+{
+  "answer_quality": {
+    "candidate_lf_eval": {
+      "available": false,
+      "note": "Export candidate_answer to a separate frozen LF-Eval input; --lf-eval-scores continues to score published ANSWER records only.",
+      "unavailable_reason": "SEPARATE_FROZEN_CANDIDATE_INPUT_REQUIRED"
+    },
+    "candidate_token_f1_at_800": {
+      "execution_failure_score": 0.0,
+      "scope": "ANSWER uses candidate_answer or legacy answer fallback; ABSTAIN uses candidate_answer"
+    },
+    "display_score_scale": "0_100",
+    "internal_score_scale": "0_1",
+    "official_token_f1_at_800": {
+      "max_characters": 800,
+      "mode": "answer.split(\"<\\think>\")[0][:800]"
+    },
+    "published_token_f1": {
+      "max_characters": null,
+      "mode": "legacy_full_text"
+    },
+    "token_f1_normalization": "lowercase + [가-힣a-z0-9] tokenization"
+  },
+  "evaluation_schema_version": "1.2",
+  "evaluator_git_commit": "0ea1611c038243d9e310408942dea00027b76f02",
+  "evaluator_git_source_worktree_dirty": true,
+  "generated_at_utc": "2026-08-20T11:46:57.984673+00:00",
+  "inputs": {
+    "answer_labels": null,
+    "answer_labels_sha256": null,
+    "batch_directory": "/root/Legal Harness/records/batches/bm25-bge-abstain-repair-d4-s3fmt-isolated-qwen38-q8-21-20260820-48b1f04e-1102-4627-bdf8-d3bef42adcfb",
+    "corpus": "/root/Legal Harness/data/koblex/normalized/statute.jsonl",
+    "corpus_sha256": "0e2283c7bcfa8f92d3ea7d4dd249449a31c0528b47dde04ab408bee45e0857b0",
+    "dataset": "/root/Legal Harness/data/koblex/qa/test-00000-of-00001.parquet",
+    "dataset_sha256": "afdaff3a8000cdf5e0a64adbcfc8e6aff0042b318bf03718155f2b70f551c47b",
+    "gold_map": null,
+    "gold_map_sha256": null,
+    "lf_eval_scores": null,
+    "lf_eval_scores_sha256": null,
+    "manifest": "/root/Legal Harness/records/batches/bm25-bge-abstain-repair-d4-s3fmt-isolated-qwen38-q8-21-20260820-48b1f04e-1102-4627-bdf8-d3bef42adcfb/manifest.json",
+    "manifest_sha256": "dbdf5471a5c018d88dd76e9d5fd2010fe3d605de6d6c565d940fcda19bfb008c",
+    "replacements": {
+      "question_ids": [
+        "qa_281_2hop_441"
+      ],
+      "source_batch_directories": {
+        "qa_281_2hop_441": "/root/Legal Harness/records/batches/bm25-bge-abstain-repair-d4-s3fmt-isolated-qwen38-q8-qa281-r1-20260820-cb84ba66-4cfa-46ae-9b8a-4930b83cc370"
+      },
+      "source_record_directories": {
+        "qa_281_2hop_441": "/root/Legal Harness/records/runs/d4-s3fmt-isolated-qa281-r1-20260820/eadfbb21-6f91-49f1-9df0-b6adc1446dac"
+      }
+    },
+    "split_manifest": null,
+    "split_manifest_sha256": null
+  },
+  "lf_eval": {
+    "display_score_scale": "0_100",
+    "input_scale": null,
+    "internal_score_scale": "0_1",
+    "judge_model": null,
+    "judge_revision": null,
+    "prompt_sha256": null,
+    "provided": false,
+    "scale": null
+  },
+  "validation": {
+    "joined_results": 21,
+    "manifest_entries": 21,
+    "require_stage_provenance": true,
+    "warnings": []
+  }
+}

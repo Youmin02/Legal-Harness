@@ -20,6 +20,7 @@ from harness.validation import (
     ValidationError,
     normalize_question,
     validate_gap_plan,
+    validate_retrieval_candidates,
     validate_retrieval_stage_records,
 )
 
@@ -164,6 +165,70 @@ class PolicyAndValidationTests(unittest.TestCase):
             validate_retrieval_stage_records(
                 [wrong_target], [request], retrieval_round=1
             )
+
+    def test_dedup_and_round_selected_stage_records_are_validated(self):
+        requests = [
+            RetrievalRequest("RQ1", "I1", "E1", QueryChannel.SPARSE_KEYWORD, "요건"),
+            RetrievalRequest("RQ2", "I2", "E2", QueryChannel.STATUTE_AWARE, "예외"),
+        ]
+        collapsed = CandidateStageRecord(
+            provision_id="P1",
+            retrieval_round=1,
+            candidate_stage="dedup_collapse",
+            source_request_ids=["RQ1", "RQ2"],
+            target_evidence_item_ids=["E1", "E2"],
+            selection_reason="canonical_text_collapse",
+        )
+        selected = CandidateStageRecord(
+            provision_id="P1",
+            retrieval_round=1,
+            candidate_stage="round_selected",
+            source_request_ids=["RQ1", "RQ2"],
+            target_evidence_item_ids=["E1", "E2"],
+            selection_rank=1,
+            selection_reason="round_budget",
+        )
+
+        validate_retrieval_stage_records(
+            [collapsed, selected], requests, retrieval_round=1
+        )
+
+        with self.assertRaises(ValidationError):
+            validate_retrieval_stage_records(
+                [
+                    CandidateStageRecord(
+                        provision_id="P1",
+                        retrieval_round=1,
+                        candidate_stage="round_selected",
+                        source_request_ids=["RQ1"],
+                        target_evidence_item_ids=["E1"],
+                        selection_reason="round_budget",
+                    )
+                ],
+                requests,
+                retrieval_round=1,
+            )
+
+    def test_candidate_can_merge_provenance_from_multiple_issues(self):
+        requests = [
+            RetrievalRequest("RQ1", "I1", "E1", QueryChannel.SPARSE_KEYWORD, "요건"),
+            RetrievalRequest("RQ2", "I2", "E2", QueryChannel.STATUTE_AWARE, "예외"),
+        ]
+        candidate = CandidateProvision(
+            provision_id="P1",
+            statute_name="테스트법",
+            provision_text="공통 조문",
+            issue_id="I1",
+            source_request_id="RQ1",
+            retrieval_round=1,
+            first_stage_score=1.0,
+            fusion_rank=1,
+            rerank_score=1.0,
+            source_request_ids=["RQ1", "RQ2"],
+            target_evidence_item_ids=["E1", "E2"],
+        )
+
+        validate_retrieval_candidates([candidate], requests, retrieval_round=1)
 
     def test_candidate_merge_never_compares_raw_scores_across_rounds(self):
         state = RunState(question="q", normalized_question="q", run_id="r")

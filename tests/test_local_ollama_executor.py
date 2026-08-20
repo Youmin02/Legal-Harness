@@ -26,6 +26,14 @@ class LocalOllamaExecutorTests(unittest.TestCase):
                     "mode": "INITIAL_PLAN",
                     "status": "ok",
                     "run_id": "run-1",
+                    "answer_targets": [
+                        {
+                            "answer_target_id": "T1",
+                            "question_anchor": "손해배상 책임은 무엇인가",
+                            "requested_output": "손해배상 책임의 법적 근거",
+                            "answer_type": "legal_rule",
+                        }
+                    ],
                     "legal_issues": [
                         {
                             "issue_id": "I1",
@@ -42,6 +50,15 @@ class LocalOllamaExecutorTests(unittest.TestCase):
                             "description": "손해배상 규정",
                             "critical": True,
                             "completion_criteria": "책임의 근거 조문이 있다",
+                            "necessity_reason": "책임의 법적 근거를 답하기 위해 필요하다",
+                            "answer_target_ids": ["T1"],
+                            "scope_source": "explicit_question",
+                            "completion_requirements": [
+                                {
+                                    "requirement_id": "E1-R1",
+                                    "text": "책임의 근거 조문",
+                                }
+                            ],
                         }
                     ],
                     "retrieval_requests": [
@@ -92,6 +109,56 @@ class LocalOllamaExecutorTests(unittest.TestCase):
                 },
                 ensure_ascii=False,
             )
+        if "ENTRY POINT: GENERATE_BENCHMARK_CANDIDATE" in prompt:
+            if '"candidate_answer_basis":"question_only"' in prompt:
+                return json.dumps(
+                    {
+                        "schema_version": "1.0",
+                        "skill_id": "S3",
+                        "mode": "GENERATE_BENCHMARK_CANDIDATE",
+                        "status": "ok",
+                        "run_id": "run-1",
+                        "answer": "질문만으로 생성한 후보 답변입니다.",
+                        "claims": [],
+                        "claim_citations": [],
+                        "assumptions": [],
+                        "limitations": [],
+                    },
+                    ensure_ascii=False,
+                )
+            return json.dumps(
+                {
+                    "schema_version": "1.0",
+                    "skill_id": "S3",
+                    "mode": "GENERATE_BENCHMARK_CANDIDATE",
+                    "status": "ok",
+                    "run_id": "run-1",
+                    "answer": "손해를 배상해야 합니다.[CT1]",
+                    "claims": [
+                        {
+                            "claim_id": "C1",
+                            "text": "손해를 배상해야 합니다.",
+                            "claim_type": "legal_rule",
+                            "applicability": "direct",
+                            "answer_target_ids": ["T1"],
+                            "citation_required": True,
+                        }
+                    ],
+                    "claim_citations": [
+                        {
+                            "citation_id": "CT1",
+                            "claim_id": "C1",
+                            "provision_id": "C001",
+                            "quoted_text": "손해를 배상한다",
+                            "support_description": "검색된 후보 조문",
+                            "answer_marker": "[CT1]",
+                        }
+                    ],
+                    "assumptions": [],
+                    "limitations": [],
+                },
+                ensure_ascii=False,
+            )
         return json.dumps(
             {
                 "schema_version": "1.0",
@@ -137,6 +204,60 @@ class LocalOllamaExecutorTests(unittest.TestCase):
             "first_stage_score": 1.0,
             "fusion_rank": 1,
             "rerank_score": 1.0,
+            "target_evidence_item_ids": ["E1"],
+        }
+
+    @staticmethod
+    def _s3_transport_input(question_only=False):
+        benchmark = question_only
+        provision_key = "candidate_provisions" if benchmark else "accepted_provisions"
+        source = {
+            "provision_id": "C001" if benchmark else "P1",
+            "text": "고의 또는 과실로 손해를 배상한다.",
+            "supported_evidence_item_ids": ["E1"],
+        }
+        return {
+            "schema_version": "1.0",
+            "mode": (
+                "GENERATE_BENCHMARK_CANDIDATE"
+                if benchmark
+                else "GENERATE_ANSWER"
+            ),
+            "run_id": "run-1",
+            "required_evidence_items": [
+                {"evidence_item_id": "E1", "issue_id": "I1", "critical": True}
+            ],
+            "coverage_assessments": [
+                {"evidence_item_id": "E1", "status": "covered"}
+            ],
+            "accepted_provisions": [] if benchmark else [source],
+            "candidate_provisions": [] if question_only else ([source] if benchmark else []),
+            "answer_mode": "abstain_candidate" if benchmark else "full",
+            "answered_target_ids": [],
+            "deferred_target_ids": [],
+            "authorization": {
+                "action": (
+                    "GENERATE_BENCHMARK_CANDIDATE" if benchmark else "GENERATE"
+                ),
+                "authorized_by": (
+                    "HARNESS_BENCHMARK_DIAGNOSTIC"
+                    if benchmark
+                    else "PROVISION_COVERAGE_POLICY"
+                ),
+                "validated_state_version": 1,
+            },
+            "generation_purpose": (
+                "benchmark_candidate" if benchmark else "published_answer"
+            ),
+            "publishable": not benchmark,
+            "candidate_answer_basis": "question_only" if question_only else (
+                "retrieved_candidates" if benchmark else "published_answer"
+            ),
+            "generation_constraints": {
+                "language": "ko",
+                "max_answer_chars": 6000,
+                "citation_marker_style": "citation_id",
+            },
         }
 
     def test_s1_maps_plural_sparse_channel_and_frozen_top_k(self):
@@ -213,6 +334,299 @@ class LocalOllamaExecutorTests(unittest.TestCase):
             },
         )
         self.assertEqual(answer["claim_citations"], [{"claim_id": "C1", "provision_ids": ["P1"]}])
+
+    def test_s3_transport_normalizes_bad_markers_and_rebuilds_answer(self):
+        skill_input = self._s3_transport_input()
+        raw = {
+            "schema_version": "1.0",
+            "skill_id": "S3",
+            "mode": "GENERATE_ANSWER",
+            "status": "ok",
+            "run_id": "wrong",
+            "answer": "모델이 만든 불완전한 답변",
+            "claims": [
+                {
+                    "claim_id": "rule",
+                    "text": "손해를 배상해야 합니다.",
+                    "claim_type": "legal_rule",
+                    "applicability": "direct",
+                    "citation_required": True,
+                },
+                {
+                    "claim_id": "scope",
+                    "text": "고의 또는 과실이 필요합니다.",
+                    "claim_type": "application",
+                    "applicability": "direct",
+                    "citation_required": True,
+                },
+            ],
+            "claim_citations": [
+                {
+                    "citation_id": "bad",
+                    "claim_id": "rule",
+                    "provision_id": "P1",
+                    "quoted_text": "잘못된 인용",
+                    "support_description": "배상 의무",
+                    "answer_marker": "[CT9]",
+                },
+                {
+                    "citation_id": "also-bad",
+                    "claim_id": "scope",
+                    "provision_id": "P1",
+                    "quoted_text": "축약 인용",
+                    "support_description": "고의·과실 요건",
+                    "answer_marker": "",
+                },
+            ],
+            "assumptions": [{"code": "A1", "message": "사실관계는 추가 확인이 필요합니다."}],
+            "limitations": [{"code": "L1", "message": "판례 판단은 포함하지 않습니다."}],
+        }
+
+        normalized = self.executor._normalize_harness_owned_fields(
+            "grounded_legal_answer_generation",
+            "GENERATE_ANSWER",
+            skill_input,
+            raw,
+        )
+
+        self.assertEqual([claim["claim_id"] for claim in normalized["claims"]], ["C1", "C2"])
+        self.assertEqual(
+            [citation["answer_marker"] for citation in normalized["claim_citations"]],
+            ["[CT1]", "[CT2]"],
+        )
+        self.assertEqual(
+            normalized["answer"],
+            "손해를 배상해야 합니다.[CT1]\n고의 또는 과실이 필요합니다.[CT2]\n"
+            "전제: 사실관계는 추가 확인이 필요합니다.\n한계: 판례 판단은 포함하지 않습니다.",
+        )
+        self.assertEqual(
+            normalized["claim_citations"][0]["quoted_text"],
+            "고의 또는 과실로 손해를 배상한다.",
+        )
+        self.assertEqual(
+            self.executor._validators["grounded_legal_answer_generation"](
+                normalized, skill_input
+            ),
+            [],
+        )
+
+    def test_s3_transport_keeps_every_marker_for_multiple_citations(self):
+        skill_input = self._s3_transport_input()
+        raw = {
+            "schema_version": "1.0",
+            "skill_id": "S3",
+            "mode": "GENERATE_ANSWER",
+            "status": "ok",
+            "run_id": "run-1",
+            "answer": "마커가 빠진 답변",
+            "claims": [
+                {
+                    "claim_id": "claim",
+                    "text": "손해를 배상해야 합니다.",
+                    "claim_type": "legal_rule",
+                    "applicability": "direct",
+                    "citation_required": True,
+                }
+            ],
+            "claim_citations": [
+                {
+                    "citation_id": "one",
+                    "claim_id": "claim",
+                    "provision_id": "P1",
+                    "quoted_text": "임의 인용",
+                    "support_description": "첫 번째 근거",
+                    "answer_marker": "[CT7]",
+                },
+                {
+                    "citation_id": "two",
+                    "claim_id": "claim",
+                    "provision_id": "P1",
+                    "quoted_text": "임의 인용",
+                    "support_description": "두 번째 근거",
+                    "answer_marker": "[CT8]",
+                },
+            ],
+            "assumptions": [],
+            "limitations": [],
+        }
+
+        normalized = self.executor._normalize_harness_owned_fields(
+            "grounded_legal_answer_generation",
+            "GENERATE_ANSWER",
+            skill_input,
+            raw,
+        )
+
+        self.assertEqual(normalized["answer"], "손해를 배상해야 합니다.[CT1][CT2]")
+        self.assertEqual(
+            [citation["citation_id"] for citation in normalized["claim_citations"]],
+            ["CT1", "CT2"],
+        )
+        self.assertEqual(
+            self.executor._validators["grounded_legal_answer_generation"](
+                normalized, skill_input
+            ),
+            [],
+        )
+
+    def test_s3_transport_leaves_unknown_claim_or_provision_for_validator(self):
+        skill_input = self._s3_transport_input()
+        raw = {
+            "schema_version": "1.0",
+            "skill_id": "S3",
+            "mode": "GENERATE_ANSWER",
+            "status": "ok",
+            "run_id": "run-1",
+            "answer": "손해를 배상해야 합니다.",
+            "claims": [
+                {
+                    "claim_id": "known",
+                    "text": "손해를 배상해야 합니다.",
+                    "claim_type": "legal_rule",
+                    "applicability": "direct",
+                    "citation_required": True,
+                }
+            ],
+            "claim_citations": [
+                {
+                    "citation_id": "bad",
+                    "claim_id": "unknown",
+                    "provision_id": "P999",
+                    "quoted_text": "임의 인용",
+                    "support_description": "잘못된 연결",
+                    "answer_marker": "[bad]",
+                }
+            ],
+            "assumptions": [],
+            "limitations": [],
+        }
+
+        normalized = self.executor._normalize_harness_owned_fields(
+            "grounded_legal_answer_generation",
+            "GENERATE_ANSWER",
+            skill_input,
+            raw,
+        )
+        errors = self.executor._validators["grounded_legal_answer_generation"](
+            normalized, skill_input
+        )
+
+        self.assertEqual(normalized["claim_citations"][0]["claim_id"], "unknown")
+        self.assertIn("citation references unknown claim: bad", errors)
+        self.assertIn("citation uses non-accepted provision: bad", errors)
+
+    def test_s3_transport_preserves_question_only_candidate_answer(self):
+        skill_input = self._s3_transport_input(question_only=True)
+        raw = {
+            "schema_version": "1.0",
+            "skill_id": "S3",
+            "mode": "GENERATE_BENCHMARK_CANDIDATE",
+            "status": "ok",
+            "run_id": "wrong",
+            "answer": "질문만으로 생성한 후보 답변입니다.",
+            "claims": [],
+            "claim_citations": [],
+            "assumptions": [],
+            "limitations": [],
+        }
+
+        normalized = self.executor._normalize_harness_owned_fields(
+            "grounded_legal_answer_generation",
+            "GENERATE_BENCHMARK_CANDIDATE",
+            skill_input,
+            raw,
+        )
+
+        self.assertEqual(normalized["answer"], raw["answer"])
+        self.assertEqual(normalized["claims"], [])
+        self.assertEqual(normalized["claim_citations"], [])
+        self.assertEqual(
+            self.executor._validators["grounded_legal_answer_generation"](
+                normalized, skill_input
+            ),
+            [],
+        )
+
+    def test_s3_benchmark_candidate_maps_retrieved_provision_to_source_id(self):
+        evidence = {
+            "evidence_item_id": "E1",
+            "issue_id": "I1",
+            "evidence_type": "rule",
+            "description": "손해배상 규정",
+            "critical": True,
+            "completion_criteria": "책임의 근거 조문이 있다",
+        }
+        result = self.executor.execute(
+            "grounded_legal_answer_generation",
+            "GENERATE_BENCHMARK_CANDIDATE",
+            {
+                "run_id": "run-1",
+                "normalized_question": "손해배상 책임은 무엇인가",
+                "legal_issues": [{"issue_id": "I1", "description": "손해배상"}],
+                "answer_targets": [
+                    {
+                        "answer_target_id": "T1",
+                        "question_anchor": "손해배상 책임은 무엇인가",
+                        "requested_output": "법적 근거",
+                        "answer_type": "legal_rule",
+                    }
+                ],
+                "required_evidence_items": [evidence],
+                "coverage_assessments": [
+                    {"evidence_item_id": "E1", "status": "uncovered"}
+                ],
+                "accepted_provisions": [],
+                "candidate_provisions": [self._candidate()],
+                "candidate_answer_basis": "retrieved_candidates",
+                "answer_mode": "abstain_candidate",
+                "answered_target_ids": ["T1"],
+                "deferred_target_ids": [],
+                "state_version": 3,
+            },
+        )
+
+        self.assertEqual(result["claim_citations"], [{"claim_id": "C1", "provision_ids": ["P1"]}])
+
+    def test_s3_question_only_candidate_allows_empty_claims_and_citations(self):
+        evidence = {
+            "evidence_item_id": "E1",
+            "issue_id": "I1",
+            "evidence_type": "rule",
+            "description": "손해배상 규정",
+            "critical": True,
+            "completion_criteria": "책임의 근거 조문이 있다",
+        }
+        result = self.executor.execute(
+            "grounded_legal_answer_generation",
+            "GENERATE_BENCHMARK_CANDIDATE",
+            {
+                "run_id": "run-1",
+                "normalized_question": "손해배상 책임은 무엇인가",
+                "legal_issues": [{"issue_id": "I1", "description": "손해배상"}],
+                "answer_targets": [
+                    {
+                        "answer_target_id": "T1",
+                        "question_anchor": "손해배상 책임은 무엇인가",
+                        "requested_output": "법적 근거",
+                        "answer_type": "legal_rule",
+                    }
+                ],
+                "required_evidence_items": [evidence],
+                "coverage_assessments": [
+                    {"evidence_item_id": "E1", "status": "uncovered"}
+                ],
+                "accepted_provisions": [],
+                "candidate_provisions": [],
+                "candidate_answer_basis": "question_only",
+                "answer_mode": "abstain_candidate",
+                "answered_target_ids": ["T1"],
+                "deferred_target_ids": [],
+                "state_version": 3,
+            },
+        )
+
+        self.assertEqual(result["claims"], [])
+        self.assertEqual(result["claim_citations"], [])
 
     def test_s2_deduplicates_repeated_evidence_assessments(self):
         raw = {
@@ -317,6 +731,9 @@ class LocalOllamaExecutorTests(unittest.TestCase):
                 "authorized_by": "PROVISION_COVERAGE_POLICY",
                 "validated_state_version": 3,
             },
+            "generation_purpose": "published_answer",
+            "publishable": True,
+            "candidate_answer_basis": "published_answer",
             "generation_constraints": {
                 "language": "ko",
                 "max_answer_chars": 6000,

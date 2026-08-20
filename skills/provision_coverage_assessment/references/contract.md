@@ -1,5 +1,12 @@
 # S2 contract
 
+## Coverage axes and legacy status
+
+- `legal_status`: whether supplied provisions satisfy the requested legal rule (`covered`, `partially_covered`, `uncovered`, or `conflicting`).
+- `applicability_status`: `direct`, `conditional`, or `not_assessed`; it records fact-to-rule application separately from legal support.
+- `gap_type`: `none`, `missing_statute`, `missing_fact`, `scope_excess`, or `conflict`.
+- Emit the derived legacy `status` and `partial_kind` as well: covered/direct → `covered`; covered/conditional → `partially_covered` + `factual_condition`; partial legal support → `partially_covered` + `legal_support_gap`.
+
 ## Operational status definitions
 
 - `covered`: the supplied provisions satisfy the evidence item's completion criteria, and no unresolved conflict blocks use of that evidence.
@@ -16,6 +23,7 @@
 
 ## Structural consistency
 
+- Every `criterion_results[].requirement_id` must refer to an existing S1 completion requirement; do not add a new `missing_aspect` outside that set.
 - A `covered` item must have at least one linked provision, no `missing_aspects`, and no conflict object.
 - A `partially_covered` item must have at least one linked provision, at least one `missing_aspect`, and `partial_kind` equal to `factual_condition` or `legal_support_gap`.
 - Every non-partial item must use `partial_kind: "not_applicable"`.

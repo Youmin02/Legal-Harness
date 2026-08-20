@@ -117,6 +117,8 @@ class LocalOllamaSkillExecutor:
         normalized["run_id"] = skill_input["run_id"]
         if skill_name == "provision_coverage_assessment":
             return self._normalize_s2_output(normalized, skill_input)
+        if skill_name == "grounded_legal_answer_generation":
+            return self._normalize_s3_transport(normalized, skill_input)
         if skill_name != "legal_issue_and_query_planning":
             return normalized
         request_key = "gap_retrieval_requests" if entry_point == "GAP_QUERY_PLAN" else "retrieval_requests"
@@ -178,6 +180,114 @@ class LocalOllamaSkillExecutor:
             ))
         return normalized
 
+    def _normalize_s3_transport(
+        self,
+        output: Dict[str, Any],
+        skill_input: Mapping[str, Any],
+    ) -> Dict[str, Any]:
+        """Own S3 identifiers and rendering without changing model legal choices."""
+        if output.get("status") != "ok":
+            return output
+        claims = output.get("claims")
+        citations = output.get("claim_citations")
+        question_only = (
+            skill_input.get("mode") == "GENERATE_BENCHMARK_CANDIDATE"
+            and skill_input.get("candidate_answer_basis") == "question_only"
+        )
+        if question_only and claims == [] and citations == []:
+            return output
+        if not isinstance(claims, list) or not isinstance(citations, list):
+            return output
+
+        claim_id_map: Dict[str, str] = {}
+        normalized_claims: List[Dict[str, Any]] = []
+        for index, raw_claim in enumerate(claims, start=1):
+            if not isinstance(raw_claim, Mapping):
+                return output
+            claim_id = raw_claim.get("claim_id")
+            if (
+                not isinstance(claim_id, str)
+                or not claim_id.strip()
+                or claim_id in claim_id_map
+                or not isinstance(raw_claim.get("text"), str)
+                or not raw_claim["text"].strip()
+            ):
+                return output
+            claim_id_map[claim_id] = "C%d" % index
+            claim = dict(raw_claim)
+            claim["claim_id"] = claim_id_map[claim_id]
+            normalized_claims.append(claim)
+
+        provision_key = (
+            "candidate_provisions"
+            if skill_input.get("mode") == "GENERATE_BENCHMARK_CANDIDATE"
+            else "accepted_provisions"
+        )
+        provisions = {
+            provision.get("provision_id"): provision
+            for provision in self._list(skill_input, provision_key)
+            if isinstance(provision, Mapping)
+            and isinstance(provision.get("provision_id"), str)
+        }
+        normalized_citations: List[Dict[str, Any]] = []
+        markers_by_claim: Dict[str, List[str]] = {}
+        for index, raw_citation in enumerate(citations, start=1):
+            if not isinstance(raw_citation, Mapping):
+                return output
+            model_claim_id = raw_citation.get("claim_id")
+            provision_id = raw_citation.get("provision_id")
+            if not isinstance(model_claim_id, str) or not isinstance(provision_id, str):
+                return output
+            provision = provisions.get(provision_id)
+            text = provision.get("text") if isinstance(provision, Mapping) else None
+            if (
+                model_claim_id not in claim_id_map
+                or not isinstance(text, str)
+                or not text
+            ):
+                return output
+            citation = dict(raw_citation)
+            citation_id = "CT%d" % index
+            citation["citation_id"] = citation_id
+            citation["claim_id"] = claim_id_map[model_claim_id]
+            citation["quoted_text"] = text
+            citation["answer_marker"] = "[%s]" % citation_id
+            normalized_citations.append(citation)
+            markers_by_claim.setdefault(citation["claim_id"], []).append(
+                citation["answer_marker"]
+            )
+
+        notes: List[str] = []
+        for key, prefix in (("assumptions", "전제:"), ("limitations", "한계:")):
+            raw_notes = output.get(key)
+            if not isinstance(raw_notes, list):
+                return output
+            for note in raw_notes:
+                if not isinstance(note, Mapping):
+                    return output
+                message = note.get("message")
+                if not isinstance(message, str) or not message.strip():
+                    return output
+                notes.append("%s %s" % (prefix, message.strip()))
+        answer_lines = [
+            "%s%s" % (
+                claim.get("text"),
+                "".join(markers_by_claim.get(claim["claim_id"], [])),
+            )
+            for claim in normalized_claims
+        ]
+        answer = "\n".join(answer_lines + notes)
+        max_answer_chars = skill_input.get("generation_constraints", {}).get(
+            "max_answer_chars"
+        )
+        if isinstance(max_answer_chars, int) and len(answer) > max_answer_chars:
+            return output
+        normalized = dict(output)
+        normalized["claims"] = normalized_claims
+        normalized["claim_citations"] = normalized_citations
+        normalized["answer"] = answer
+        return normalized
+
     def _normalize_s2_output(
         self,
         output: Dict[str, Any],
@@ -232,7 +342,20 @@ class LocalOllamaSkillExecutor:
             evidence_id = raw.get("evidence_item_id")
             if evidence_id in evidence_by_id and evidence_id not in first_assessment:
                 assessment = dict(raw)
-                if assessment.get("status") == "partially_covered":
+                status = assessment.get("status", assessment.get("evidence_status"))
+                if isinstance(status, str) and "status" not in assessment:
+                    assessment["status"] = status
+                if not isinstance(status, str) and isinstance(
+                    assessment.get("legal_status"), str
+                ):
+                    status = (
+                        "partially_covered"
+                        if assessment.get("legal_status") == "covered"
+                        and assessment.get("applicability_status") == "conditional"
+                        else assessment.get("legal_status")
+                    )
+                    assessment["status"] = status
+                if status == "partially_covered":
                     if assessment.get("partial_kind") not in {
                         "factual_condition",
                         "legal_support_gap",
@@ -441,6 +564,7 @@ class LocalOllamaSkillExecutor:
                 "run_id": run_id,
                 "normalized_question": self._string(payload, "normalized_question"),
                 "legal_issues": self._list(payload, "legal_issues"),
+                "answer_targets": self._list(payload, "answer_targets", required=False),
                 "required_evidence_items": self._external_evidence(self._list(payload, "required_evidence_items")),
                 "candidate_provisions": self._external_provisions(
                     self._list(payload, "candidate_provisions"), run_id
@@ -450,27 +574,62 @@ class LocalOllamaSkillExecutor:
                 ),
             }
         if skill_name == "grounded_legal_answer_generation":
-            if entry_point != "GENERATE_ANSWER":
-                raise SkillExecutionError("S3 supports GENERATE_ANSWER only")
+            if entry_point not in {"GENERATE_ANSWER", "GENERATE_BENCHMARK_CANDIDATE"}:
+                raise SkillExecutionError("S3 entry point is invalid: %s" % entry_point)
+            benchmark_candidate = entry_point == "GENERATE_BENCHMARK_CANDIDATE"
+            candidate_basis = payload.get("candidate_answer_basis")
+            if benchmark_candidate and candidate_basis not in {
+                "retrieved_candidates",
+                "question_only",
+            }:
+                raise SkillExecutionError("benchmark candidate basis is invalid")
             return {
                 "schema_version": "1.0",
                 "mode": entry_point,
                 "run_id": run_id,
                 "normalized_question": self._string(payload, "normalized_question"),
                 "legal_issues": self._list(payload, "legal_issues"),
+                "answer_targets": self._list(payload, "answer_targets", required=False),
                 "required_evidence_items": self._external_evidence(self._list(payload, "required_evidence_items")),
                 "coverage_assessments": self._list(payload, "coverage_assessments"),
                 "accepted_provisions": self._external_provisions(
                     self._list(payload, "accepted_provisions"), run_id, accepted=True
                 ),
+                "candidate_provisions": self._external_provisions(
+                    self._list(payload, "candidate_provisions", required=False),
+                    run_id,
+                    benchmark_candidate=True,
+                ),
+                "answer_mode": payload.get("answer_mode", "full"),
+                "answered_target_ids": self._list(
+                    payload, "answered_target_ids", required=False
+                ),
+                "deferred_target_ids": self._list(
+                    payload, "deferred_target_ids", required=False
+                ),
                 "authorization": {
-                    "action": "GENERATE",
-                    "authorized_by": "PROVISION_COVERAGE_POLICY",
+                    "action": (
+                        "GENERATE_BENCHMARK_CANDIDATE"
+                        if benchmark_candidate
+                        else "GENERATE"
+                    ),
+                    "authorized_by": (
+                        "HARNESS_BENCHMARK_DIAGNOSTIC"
+                        if benchmark_candidate
+                        else "PROVISION_COVERAGE_POLICY"
+                    ),
                     "validated_state_version": int(payload.get("state_version", 0)),
                 },
+                "generation_purpose": (
+                    "benchmark_candidate" if benchmark_candidate else "published_answer"
+                ),
+                "publishable": not benchmark_candidate,
+                "candidate_answer_basis": (
+                    candidate_basis if benchmark_candidate else "published_answer"
+                ),
                 "generation_constraints": {
                     "language": "ko",
-                    "max_answer_chars": 6000,
+                    "max_answer_chars": 800 if benchmark_candidate else 6000,
                     "citation_marker_style": "citation_id",
                 },
             }
@@ -490,6 +649,7 @@ class LocalOllamaSkillExecutor:
             "constraints": {
                 "allowed_query_channels": ["provision_style", "sparse_keywords", "statute_aware"],
                 "max_requests_per_issue": 3,
+                "answer_target_contract": "required",
             },
         }
         if entry_point == "INITIAL_PLAN":
@@ -513,6 +673,9 @@ class LocalOllamaSkillExecutor:
             {
                 "next_retrieval_round": next_retrieval_round,
                 "legal_issues": self._list(payload, "legal_issues"),
+                "answer_targets": self._list(
+                    payload, "answer_targets", required=False
+                ),
                 "required_evidence_items": self._external_evidence(
                     self._list(payload, "required_evidence_items")
                 ),
@@ -542,6 +705,14 @@ class LocalOllamaSkillExecutor:
                     "critical": item.get("critical"),
                     "completion_criteria": item.get("completion_criteria")
                     or self._string(item, "description"),
+                    "necessity_reason": item.get("necessity_reason", ""),
+                    "answer_target_ids": self._list(
+                        item, "answer_target_ids", required=False
+                    ),
+                    "scope_source": item.get("scope_source", "legacy"),
+                    "completion_requirements": self._list(
+                        item, "completion_requirements", required=False
+                    ),
                 }
             )
         return result
@@ -551,6 +722,7 @@ class LocalOllamaSkillExecutor:
         candidates: List[Any],
         run_id: str,
         accepted: bool = False,
+        benchmark_candidate: bool = False,
     ) -> List[Dict[str, Any]]:
         provisions: List[Dict[str, Any]] = []
         for index, candidate in enumerate(candidates, start=1):
@@ -565,12 +737,16 @@ class LocalOllamaSkillExecutor:
                 "text": text,
                 "source_snapshot_id": "sha256:%s" % hashlib.sha256(text.encode("utf-8")).hexdigest(),
             }
-            if accepted:
+            if accepted or benchmark_candidate:
                 supported = candidate.get("supported_evidence_item_ids")
                 if not isinstance(supported, list) or not supported:
-                    supported = [self._string(candidate, "issue_id")]
+                    supported = candidate.get("target_evidence_item_ids")
+                if not isinstance(supported, list) or not supported:
+                    raise SkillExecutionError(
+                        "S3 source provisions require supported evidence item IDs"
+                    )
                 provision["supported_evidence_item_ids"] = supported
-            else:
+            if not accepted:
                 provision["source_provision_id"] = source_provision_id
                 provision["retrieval_metadata"] = {
                     "run_id": run_id,
@@ -628,6 +804,24 @@ FINAL OUTPUT INVARIANTS:
         if skill_name == "legal_issue_and_query_planning":
             return self._s1_output_invariants(skill_input)
         if skill_name == "grounded_legal_answer_generation":
+            if skill_input.get("mode") == "GENERATE_BENCHMARK_CANDIDATE":
+                if skill_input.get("candidate_answer_basis") == "question_only":
+                    return (
+                        "This is a non-publishable question-only benchmark candidate because retrieval returned no candidate provisions. "
+                        "The harness policy remains ABSTAIN. Return a concise direct benchmark answer with no abstention boilerplate, claims, citations, or citation markers; do not present it as authorized, supported, or publishable."
+                    )
+                return (
+                    "This is a non-publishable benchmark candidate. The harness policy remains ABSTAIN. "
+                    "Use only candidate provision IDs supplied in INPUT; they are retrieved evidence, not accepted evidence. "
+                    "Give a concise direct benchmark answer with no abstention boilerplate, answer every supplied target, cite every substantive claim, and do not state that the candidate is authorized or publishable."
+                )
+            answer_mode = skill_input.get("answer_mode", "full")
+            answered_target_ids = self._list(
+                skill_input, "answered_target_ids", required=False
+            )
+            deferred_target_ids = self._list(
+                skill_input, "deferred_target_ids", required=False
+            )
             partial_ids = [
                 item.get("evidence_item_id")
                 for item in self._list(skill_input, "coverage_assessments")
@@ -636,14 +830,22 @@ FINAL OUTPUT INVARIANTS:
             ]
             if partial_ids:
                 return (
-                    "Use only accepted provision IDs supplied in INPUT. Critical partial evidence IDs are %s. "
+                    "Use only accepted provision IDs supplied in INPUT. Answer mode is %s; substantive claims may name only answered target IDs %s and must not name deferred target IDs %s. Critical partial evidence IDs are %s. "
                     "Do not assert their missing facts. Include at least one cited conditional legal claim and a non-empty "
                     "limitations array that states each unresolved condition. Every claims[] item must set citation_required "
                     "true and have at least one claim_citation. Keep uncited missing-fact and limitation prose out of claims[]; "
                     "put it only in answer, assumptions[], or limitations[]."
-                    % json.dumps(partial_ids)
+                    % (
+                        answer_mode,
+                        json.dumps(answered_target_ids),
+                        json.dumps(deferred_target_ids),
+                        json.dumps(partial_ids),
+                    )
                 )
-            return "Use only accepted provision IDs supplied in INPUT. Every claims[] item must set citation_required true and have at least one claim_citation; keep uncited factual or limitation prose out of claims[]."
+            return (
+                "Use only accepted provision IDs supplied in INPUT. Answer mode is %s; substantive claims may name only answered target IDs %s and must not name deferred target IDs %s. Every claims[] item must set citation_required true and have at least one claim_citation; keep uncited factual or limitation prose out of claims[]."
+                % (answer_mode, json.dumps(answered_target_ids), json.dumps(deferred_target_ids))
+            )
         if skill_name != "provision_coverage_assessment":
             return "Use only the identifiers and fields supplied in INPUT."
         evidence_ledger = [
@@ -657,7 +859,7 @@ FINAL OUTPUT INVARIANTS:
             if isinstance(item, Mapping)
         ]
         return (
-            "For S2, use only these evidence_item_id values: %s. Use only these candidate provision_id values: %s. Never invent an ID. Each evidence item appears in exactly one coverage assessment. For every non-covered item, copy issue_id and critical exactly from this evidence ledger: %s. Every evidence link must use quoted_text exactly '[FULL_TEXT]'. If the supplied provisions give complete alternative rules and only a missing question fact selects the branch (for example maritime versus air carriage), classify the item as partially_covered with partial_kind factual_condition, link every supported branch, and state the missing selector fact; do not classify that situation as conflicting. Use conflicting only for incompatible legal rules under the same established facts or unresolved legal interpretation."
+            "For S2, use only these evidence_item_id values: %s. Use only these candidate provision_id values: %s. Never invent an ID, requirement, or missing aspect. Each evidence item appears in exactly one coverage assessment. For every non-covered item, copy issue_id and critical exactly from this evidence ledger: %s. Every evidence link must use quoted_text exactly '[FULL_TEXT]'. Emit legal_status, applicability_status, gap_type, and one criterion result per supplied completion requirement; retain the derived legacy status and partial_kind for compatibility. If the supplied provisions give complete alternative rules and only a missing question fact selects the branch (for example maritime versus air carriage), use legal_status covered, applicability_status conditional, gap_type missing_fact, status partially_covered, partial_kind factual_condition, link every supported branch, and state the missing selector fact; do not classify that situation as conflicting. Use conflicting only for incompatible legal rules under the same established facts or unresolved legal interpretation."
             % (
                 json.dumps([item["evidence_item_id"] for item in evidence_ledger]),
                 json.dumps(candidate_ids),
@@ -667,7 +869,7 @@ FINAL OUTPUT INVARIANTS:
         )
     def _s1_output_invariants(self, skill_input: Mapping[str, Any]) -> str:
         if skill_input.get("mode") != "GAP_QUERY_PLAN":
-            return "Copy run_id exactly from INPUT. Use only the identifiers and fields supplied in INPUT."
+            return "Copy run_id exactly from INPUT. First emit question-scoped answer_targets with literal question anchors. Each new critical evidence item must name answer_target_ids, necessity_reason, scope_source, and atomic completion_requirements; never make supporting_context critical or add procedure/document details outside the requested answer."
         prior_queries = []
         for item in self._list(skill_input, "query_history"):
             if isinstance(item, Mapping):
@@ -746,7 +948,7 @@ FINAL OUTPUT INVARIANTS:
         if skill_name == "provision_coverage_assessment":
             return self._adapt_s2(output, skill_input)
         if skill_name == "grounded_legal_answer_generation":
-            return self._adapt_s3(output)
+            return self._adapt_s3(output, skill_input)
         raise SkillExecutionError("unsupported skill: %s" % skill_name)
 
     def _adapt_s1(self, entry_point: str, output: Mapping[str, Any]) -> Dict[str, Any]:
@@ -774,6 +976,8 @@ FINAL OUTPUT INVARIANTS:
                         for item in request.get("statute_hints", [])
                         if isinstance(item, str) and item.strip()
                     ],
+                    "first_stage_query_text": request.get("first_stage_query_text"),
+                    "rerank_query_text": request.get("rerank_query_text"),
                 }
             )
         if entry_point == "GAP_QUERY_PLAN":
@@ -800,10 +1004,40 @@ FINAL OUTPUT INVARIANTS:
                     "description": self._string(item, "description"),
                     "critical": item.get("critical"),
                     "completion_criteria": self._string(item, "completion_criteria"),
+                    "necessity_reason": item.get("necessity_reason", ""),
+                    "answer_target_ids": [
+                        target_id
+                        for target_id in item.get("answer_target_ids", [])
+                        if isinstance(target_id, str) and target_id
+                    ],
+                    "scope_source": item.get("scope_source", "legacy"),
+                    "completion_requirements": [
+                        {
+                            "requirement_id": self._string(requirement, "requirement_id"),
+                            "text": self._string(requirement, "text"),
+                        }
+                        for requirement in self._list(
+                            item, "completion_requirements", required=False
+                        )
+                        if isinstance(requirement, Mapping)
+                    ],
+                }
+            )
+        answer_targets = []
+        for target in self._list(output, "answer_targets", required=False):
+            if not isinstance(target, Mapping):
+                raise SkillExecutionError("S1 answer target must be an object")
+            answer_targets.append(
+                {
+                    "answer_target_id": self._string(target, "answer_target_id"),
+                    "question_anchor": self._string(target, "question_anchor"),
+                    "requested_output": self._string(target, "requested_output"),
+                    "answer_type": self._string(target, "answer_type"),
                 }
             )
         return {
             "legal_issues": issues,
+            "answer_targets": answer_targets,
             "required_evidence_items": evidence,
             "retrieval_requests": requests,
         }
@@ -847,22 +1081,67 @@ FINAL OUTPUT INVARIANTS:
         for assessment in self._list(output, "coverage_assessments"):
             if not isinstance(assessment, Mapping):
                 raise SkillExecutionError("S2 assessment must be an object")
-            assessments.append(
-                {
-                    "evidence_item_id": self._string(assessment, "evidence_item_id"),
-                    "status": self._string(assessment, "status"),
-                    "linked_provision_ids": [
-                        self._source_provision_id(provisions, provision_id)
-                        for provision_id in self._list(assessment, "linked_provision_ids")
-                    ],
-                    "rationale": self._string(assessment, "rationale"),
-                    "partial_kind": self._string(assessment, "partial_kind"),
-                    "missing_aspects": [
-                        self._string({"value": item}, "value")
-                        for item in self._list(assessment, "missing_aspects")
-                    ],
-                }
-            )
+            legal_status = assessment.get("legal_status")
+            applicability_status = assessment.get("applicability_status")
+            gap_type = assessment.get("gap_type")
+            status = assessment.get("status", assessment.get("evidence_status"))
+            if not isinstance(status, str) and isinstance(legal_status, str):
+                status = (
+                    "partially_covered"
+                    if legal_status == "covered" and applicability_status == "conditional"
+                    else legal_status
+                )
+            partial_kind = assessment.get("partial_kind")
+            if not isinstance(partial_kind, str):
+                partial_kind = (
+                    "factual_condition"
+                    if legal_status == "covered" and applicability_status == "conditional"
+                    else "legal_support_gap"
+                    if status == "partially_covered"
+                    else "not_applicable"
+                )
+            criterion_results = []
+            for result in self._list(assessment, "criterion_results", required=False):
+                if not isinstance(result, Mapping):
+                    raise SkillExecutionError("S2 criterion result must be an object")
+                criterion_results.append(
+                    {
+                        "requirement_id": self._string(result, "requirement_id"),
+                        "status": self._string(result, "status"),
+                        "linked_provision_ids": [
+                            self._source_provision_id(provisions, provision_id)
+                            for provision_id in self._list(result, "linked_provision_ids")
+                        ],
+                        "rationale": self._string(result, "rationale"),
+                    }
+                )
+            mapped_assessment = {
+                "evidence_item_id": self._string(assessment, "evidence_item_id"),
+                "status": self._string({"status": status}, "status"),
+                "linked_provision_ids": [
+                    self._source_provision_id(provisions, provision_id)
+                    for provision_id in self._list(assessment, "linked_provision_ids")
+                ],
+                "rationale": self._string(assessment, "rationale"),
+                "partial_kind": partial_kind,
+                "missing_aspects": [
+                    self._string({"value": item}, "value")
+                    for item in self._list(assessment, "missing_aspects")
+                ],
+                "criterion_results": criterion_results,
+            }
+            if all(
+                isinstance(value, str)
+                for value in (legal_status, applicability_status, gap_type)
+            ):
+                mapped_assessment.update(
+                    {
+                        "legal_status": legal_status,
+                        "applicability_status": applicability_status,
+                        "gap_type": gap_type,
+                    }
+                )
+            assessments.append(mapped_assessment)
         conflicts = []
         for conflict in self._list(output, "evidence_conflicts", required=False):
             if not isinstance(conflict, Mapping):
@@ -894,20 +1173,52 @@ FINAL OUTPUT INVARIANTS:
             raise SkillExecutionError("S2 cited a provision outside the supplied candidates")
         return self._string(source, "source_provision_id")
 
-    def _adapt_s3(self, output: Mapping[str, Any]) -> Dict[str, Any]:
+    def _adapt_s3(
+        self, output: Mapping[str, Any], skill_input: Mapping[str, Any]
+    ) -> Dict[str, Any]:
+        benchmark_question_only = (
+            skill_input.get("mode") == "GENERATE_BENCHMARK_CANDIDATE"
+            and skill_input.get("candidate_answer_basis") == "question_only"
+        )
         claims = []
-        for claim in self._list(output, "claims"):
+        for claim in self._list(
+            output, "claims", required=not benchmark_question_only
+        ):
             if not isinstance(claim, Mapping):
                 raise SkillExecutionError("S3 claim must be an object")
             claims.append(
-                {"claim_id": self._string(claim, "claim_id"), "text": self._string(claim, "text")}
+                {
+                    "claim_id": self._string(claim, "claim_id"),
+                    "text": self._string(claim, "text"),
+                    "answer_target_ids": self._list(
+                        claim, "answer_target_ids", required=False
+                    ),
+                }
             )
         grouped: Dict[str, List[str]] = {}
-        for citation in self._list(output, "claim_citations"):
+        provision_key = (
+            "candidate_provisions"
+            if skill_input.get("mode") == "GENERATE_BENCHMARK_CANDIDATE"
+            else "accepted_provisions"
+        )
+        provisions = {
+            self._string(provision, "provision_id"): provision
+            for provision in self._list(skill_input, provision_key)
+            if isinstance(provision, Mapping)
+        }
+        for citation in self._list(
+            output, "claim_citations", required=not benchmark_question_only
+        ):
             if not isinstance(citation, Mapping):
                 raise SkillExecutionError("S3 citation must be an object")
             claim_id = self._string(citation, "claim_id")
-            grouped.setdefault(claim_id, []).append(self._string(citation, "provision_id"))
+            provision_id = self._string(citation, "provision_id")
+            provision = provisions.get(provision_id)
+            if provision is None:
+                raise SkillExecutionError("S3 cited a provision outside the supplied source set")
+            grouped.setdefault(claim_id, []).append(
+                provision.get("source_provision_id", provision_id)
+            )
         expected_claim_ids = {claim["claim_id"] for claim in claims}
         if set(grouped) != expected_claim_ids:
             raise SkillExecutionError("S3 must cite every claim for the harness citation check")

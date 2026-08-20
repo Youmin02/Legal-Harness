@@ -2,7 +2,7 @@
 
 import math
 from collections import defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from typing import Dict, List, Protocol, Sequence, Set, Tuple
 
 from harness.contracts import (
@@ -11,6 +11,7 @@ from harness.contracts import (
     RetrievalRequest,
 )
 
+from .corpus import ProvisionDocument, legal_text_alias_key
 from .reranker import Reranker
 from .rrf import reciprocal_rank_fusion
 from .types import FusedHit, RetrievalHit
@@ -45,6 +46,8 @@ class RetrievalPipeline:
         rerank_query_mode: str = "combined_issue",
         candidate_selection: str = "global_top_k",
         per_evidence_min_k: int = 1,
+        dedup_mode: str = "none",
+        candidate_budget_scope: str = "per_issue",
     ):
         if rrf_k < 1:
             raise ValueError("RRF k must be positive")
@@ -54,6 +57,12 @@ class RetrievalPipeline:
             raise ValueError("unsupported rerank query mode: %s" % rerank_query_mode)
         if candidate_selection not in {"global_top_k", "evidence_balanced"}:
             raise ValueError("unsupported candidate selection: %s" % candidate_selection)
+        if dedup_mode not in {"none", "legal_text_alias"}:
+            raise ValueError("unsupported dedup mode: %s" % dedup_mode)
+        if candidate_budget_scope not in {"per_issue", "per_round"}:
+            raise ValueError(
+                "unsupported candidate budget scope: %s" % candidate_budget_scope
+            )
         if per_evidence_min_k < 1:
             raise ValueError("per_evidence_min_k must be positive")
         if final_top_k > rerank_pool_k:
@@ -68,8 +77,320 @@ class RetrievalPipeline:
         self.rerank_query_mode = rerank_query_mode
         self.candidate_selection = candidate_selection
         self.per_evidence_min_k = per_evidence_min_k
+        self.dedup_mode = dedup_mode
+        self.candidate_budget_scope = candidate_budget_scope
         self.last_stage_records: List[CandidateStageRecord] = []
         self.last_unsatisfied_critical_evidence_item_ids: List[str] = []
+        self.last_dedup_removed_count = 0
+
+    @staticmethod
+    def _request_query_text(request: RetrievalRequest, field_name: str) -> str:
+        return getattr(request, field_name, None) or request.query_text
+
+    def _first_stage_request(self, request: RetrievalRequest) -> RetrievalRequest:
+        first_stage_query_text = self._request_query_text(
+            request, "first_stage_query_text"
+        )
+        if first_stage_query_text == request.query_text:
+            return request
+        # Persistent BM25 otherwise gives legacy query_terms precedence over
+        # query_text, which would silently defeat the explicit recall query.
+        return replace(
+            request,
+            query_text=first_stage_query_text,
+            query_terms=[],
+        )
+
+    @staticmethod
+    def _alias_provision_ids(hit: FusedHit) -> List[str]:
+        return list(
+            dict.fromkeys([hit.document.provision_id] + hit.alias_provision_ids)
+        )
+
+    def _collapse_legal_text_aliases(
+        self,
+        reranked: Sequence[Tuple[FusedHit, float]],
+    ) -> List[Tuple[FusedHit, float]]:
+        if self.dedup_mode == "none":
+            return list(reranked)
+
+        grouped: Dict[Tuple[str, str], List[Tuple[FusedHit, float]]] = {}
+        for hit, rerank_score in reranked:
+            grouped.setdefault(legal_text_alias_key(hit.document), []).append(
+                (hit, rerank_score)
+            )
+
+        collapsed: List[Tuple[FusedHit, float]] = []
+        for aliases in grouped.values():
+            representative, rerank_score = aliases[0]
+            source_request_ids: List[str] = []
+            source_first_stage_ranks: Dict[str, int] = {}
+            alias_provision_ids: List[str] = []
+            for hit, _ in aliases:
+                for request_id in hit.source_request_ids:
+                    if request_id not in source_request_ids:
+                        source_request_ids.append(request_id)
+                    rank = hit.source_first_stage_ranks.get(request_id)
+                    previous_rank = source_first_stage_ranks.get(request_id)
+                    if rank is not None and (
+                        previous_rank is None or rank < previous_rank
+                    ):
+                        source_first_stage_ranks[request_id] = rank
+                for provision_id in self._alias_provision_ids(hit):
+                    if provision_id not in alias_provision_ids:
+                        alias_provision_ids.append(provision_id)
+            collapsed.append(
+                (
+                    replace(
+                        representative,
+                        first_stage_score=max(
+                            hit.first_stage_score for hit, _ in aliases
+                        ),
+                        source_request_ids=source_request_ids,
+                        source_first_stage_ranks=source_first_stage_ranks,
+                        first_stage_rank=min(source_first_stage_ranks.values()),
+                        alias_provision_ids=alias_provision_ids,
+                    ),
+                    rerank_score,
+                )
+            )
+            self.last_dedup_removed_count += len(aliases) - 1
+        return collapsed
+
+    def _record_alias_collapse(
+        self,
+        hit: FusedHit,
+        rerank_score: float,
+        retrieval_round: int,
+        requests_by_id: Dict[str, RetrievalRequest],
+    ) -> None:
+        alias_provision_ids = self._alias_provision_ids(hit)
+        if len(alias_provision_ids) < 2:
+            return
+        self.last_stage_records.append(
+            CandidateStageRecord(
+                provision_id=hit.document.provision_id,
+                retrieval_round=retrieval_round,
+                candidate_stage="dedup_collapse",
+                source_request_ids=list(hit.source_request_ids),
+                target_evidence_item_ids=self._target_evidence_ids(
+                    hit.source_request_ids, requests_by_id
+                ),
+                first_stage_rank=hit.first_stage_rank,
+                fusion_rank=hit.fusion_rank,
+                first_stage_score=hit.first_stage_score,
+                rerank_score=rerank_score,
+                selection_reason="legal_text_alias",
+                alias_provision_ids=alias_provision_ids,
+            )
+        )
+
+    @staticmethod
+    def _alias_groups_by_provision_id(
+        hits: Sequence[FusedHit],
+    ) -> Dict[str, List[str]]:
+        grouped: Dict[Tuple[str, str], List[str]] = {}
+        for hit in hits:
+            aliases = grouped.setdefault(legal_text_alias_key(hit.document), [])
+            for provision_id in RetrievalPipeline._alias_provision_ids(hit):
+                if provision_id not in aliases:
+                    aliases.append(provision_id)
+        return {
+            provision_id: aliases
+            for aliases in grouped.values()
+            for provision_id in aliases
+        }
+
+    def _collapse_ranked_ids_by_alias(
+        self,
+        ranked_ids: Sequence[str],
+        alias_groups_by_id: Dict[str, List[str]],
+    ) -> List[str]:
+        if self.dedup_mode == "none":
+            return list(ranked_ids)
+        selected: List[str] = []
+        seen_representatives: Set[str] = set()
+        for provision_id in ranked_ids:
+            aliases = alias_groups_by_id[provision_id]
+            representative_id = min(aliases)
+            if representative_id not in seen_representatives:
+                selected.append(representative_id)
+                seen_representatives.add(representative_id)
+        return selected
+
+    @staticmethod
+    def _observations_for_aliases(
+        issue_requests: Sequence[RetrievalRequest],
+        observations_by_request: Dict[str, Dict[str, _RequestRerankObservation]],
+        alias_provision_ids: Sequence[str],
+    ) -> Tuple[List[str], List[_RequestRerankObservation]]:
+        aliases = set(alias_provision_ids)
+        source_request_ids: List[str] = []
+        observations: List[_RequestRerankObservation] = []
+        for request in issue_requests:
+            request_observations = [
+                observation
+                for observation in observations_by_request[request.request_id].values()
+                if aliases.intersection(
+                    RetrievalPipeline._alias_provision_ids(observation.hit)
+                )
+            ]
+            if request_observations:
+                source_request_ids.append(request.request_id)
+                observations.extend(request_observations)
+        return source_request_ids, observations
+
+    def _round_ranked_candidates(
+        self,
+        candidates: Sequence[CandidateProvision],
+    ) -> List[CandidateProvision]:
+        """Merge repeated candidates before an opt-in round-wide final cutoff."""
+        ranked = sorted(
+            candidates,
+            key=lambda candidate: (
+                -candidate.rerank_score,
+                candidate.fusion_rank,
+                candidate.provision_id,
+                candidate.issue_id,
+            ),
+        )
+        grouped: Dict[object, List[CandidateProvision]] = {}
+        for candidate in ranked:
+            key: object = candidate.provision_id
+            if self.dedup_mode == "legal_text_alias":
+                key = legal_text_alias_key(
+                    ProvisionDocument(
+                        candidate.provision_id,
+                        candidate.statute_name,
+                        candidate.provision_text,
+                    )
+                )
+            grouped.setdefault(key, []).append(candidate)
+
+        merged: List[CandidateProvision] = []
+        for equivalents in grouped.values():
+            representative = equivalents[0]
+            if self.dedup_mode == "legal_text_alias":
+                self.last_dedup_removed_count += len(equivalents) - 1
+            source_request_ids: List[str] = []
+            target_evidence_item_ids: List[str] = []
+            alias_provision_ids: List[str] = []
+            for candidate in equivalents:
+                for request_id in candidate.source_request_ids:
+                    if request_id not in source_request_ids:
+                        source_request_ids.append(request_id)
+                for evidence_id in candidate.target_evidence_item_ids:
+                    if evidence_id not in target_evidence_item_ids:
+                        target_evidence_item_ids.append(evidence_id)
+                for provision_id in [
+                    candidate.provision_id,
+                    *candidate.alias_provision_ids,
+                ]:
+                    if provision_id not in alias_provision_ids:
+                        alias_provision_ids.append(provision_id)
+            merged.append(
+                replace(
+                    representative,
+                    first_stage_score=max(
+                        candidate.first_stage_score for candidate in equivalents
+                    ),
+                    source_request_ids=source_request_ids,
+                    target_evidence_item_ids=target_evidence_item_ids,
+                    alias_provision_ids=alias_provision_ids,
+                )
+            )
+        return merged
+
+    def _select_round_candidates(
+        self,
+        candidates: Sequence[CandidateProvision],
+        critical_evidence_item_ids: Sequence[str],
+        retrieval_round: int,
+    ) -> List[CandidateProvision]:
+        ranked = self._round_ranked_candidates(candidates)
+        selected: List[CandidateProvision] = []
+        quota_selected: Set[int] = set()
+        critical_ids = []
+        if self.candidate_selection == "evidence_balanced":
+            critical_ids = list(dict.fromkeys(critical_evidence_item_ids))
+            for quota_target in range(1, self.per_evidence_min_k + 1):
+                for evidence_id in critical_ids:
+                    current_count = sum(
+                        evidence_id in candidate.target_evidence_item_ids
+                        for candidate in selected
+                    )
+                    if current_count >= quota_target or len(selected) >= self.final_top_k:
+                        continue
+                    candidate = next(
+                        (
+                            candidate
+                            for candidate in ranked
+                            if evidence_id in candidate.target_evidence_item_ids
+                            and candidate not in selected
+                        ),
+                        None,
+                    )
+                    if candidate is not None:
+                        selected.append(candidate)
+                        quota_selected.add(id(candidate))
+
+        for candidate in ranked:
+            if len(selected) >= self.final_top_k:
+                break
+            if candidate not in selected:
+                selected.append(candidate)
+
+        unsatisfied = []
+        if self.candidate_selection == "evidence_balanced":
+            unsatisfied = [
+                evidence_id
+                for evidence_id in critical_ids
+                if sum(
+                    evidence_id in candidate.target_evidence_item_ids
+                    for candidate in selected
+                ) < self.per_evidence_min_k
+            ]
+        self.last_unsatisfied_critical_evidence_item_ids.extend(unsatisfied)
+        final_candidates: List[CandidateProvision] = []
+        for selection_rank, candidate in enumerate(selected, start=1):
+            if id(candidate) in quota_selected:
+                matched_evidence = [
+                    evidence_id
+                    for evidence_id in critical_ids
+                    if evidence_id in candidate.target_evidence_item_ids
+                ]
+                selection_reason = "critical_quota:%s" % ",".join(matched_evidence)
+            else:
+                selection_reason = (
+                    "round_global_top_k"
+                    if self.candidate_selection == "global_top_k"
+                    else "round_global_score_fill"
+                )
+            final_candidate = replace(
+                candidate,
+                selection_rank=selection_rank,
+                candidate_stage="selected",
+                selection_reason=selection_reason,
+            )
+            final_candidates.append(final_candidate)
+            self.last_stage_records.append(
+                CandidateStageRecord(
+                    provision_id=final_candidate.provision_id,
+                    retrieval_round=retrieval_round,
+                    candidate_stage="round_selected",
+                    source_request_ids=final_candidate.source_request_ids,
+                    target_evidence_item_ids=final_candidate.target_evidence_item_ids,
+                    first_stage_rank=final_candidate.first_stage_rank,
+                    fusion_rank=final_candidate.fusion_rank,
+                    rerank_rank=final_candidate.rerank_rank,
+                    selection_rank=selection_rank,
+                    first_stage_score=final_candidate.first_stage_score,
+                    rerank_score=final_candidate.rerank_score,
+                    selection_reason=selection_reason,
+                    alias_provision_ids=final_candidate.alias_provision_ids,
+                )
+            )
+        return final_candidates
 
     @staticmethod
     def _target_evidence_ids(
@@ -245,18 +566,16 @@ class RetrievalPipeline:
                 )
             )
 
-        query_text = " ".join(request.query_text for request in issue_requests)
-        reranked_all = self._rerank(
+        query_text = " ".join(
+            self._request_query_text(request, "rerank_query_text")
+            for request in issue_requests
+        )
+        raw_reranked = self._rerank(
             query_text,
             fused_hits[: self.rerank_pool_k],
         )
         reranked_by_id: Dict[str, Tuple[FusedHit, float, int]] = {}
-        for rerank_rank, (hit, rerank_score) in enumerate(reranked_all, start=1):
-            reranked_by_id[hit.document.provision_id] = (
-                hit,
-                rerank_score,
-                rerank_rank,
-            )
+        for rerank_rank, (hit, rerank_score) in enumerate(raw_reranked, start=1):
             self.last_stage_records.append(
                 CandidateStageRecord(
                     provision_id=hit.document.provision_id,
@@ -274,6 +593,20 @@ class RetrievalPipeline:
                     rerank_score=rerank_score,
                     selection_reason="rerank_pool",
                 )
+            )
+
+        reranked_all = self._collapse_legal_text_aliases(raw_reranked)
+        for rerank_rank, (hit, rerank_score) in enumerate(reranked_all, start=1):
+            reranked_by_id[hit.document.provision_id] = (
+                hit,
+                rerank_score,
+                rerank_rank,
+            )
+            self._record_alias_collapse(
+                hit,
+                rerank_score,
+                retrieval_round,
+                requests_by_id,
             )
 
         evidence_order = list(
@@ -320,6 +653,7 @@ class RetrievalPipeline:
                 selection_rank=selection_rank,
                 candidate_stage="selected",
                 selection_reason=reason,
+                alias_provision_ids=self._alias_provision_ids(hit),
             )
             candidates.append(candidate)
             self.last_stage_records.append(
@@ -337,6 +671,7 @@ class RetrievalPipeline:
                     fusion_score=hit.rrf_score,
                     rerank_score=rerank_score,
                     selection_reason=reason,
+                    alias_provision_ids=self._alias_provision_ids(hit),
                 )
             )
         return candidates
@@ -382,20 +717,13 @@ class RetrievalPipeline:
                 [hits_by_request[request.request_id]],
                 k=self.rrf_k,
             )
-            reranked = self._rerank(
-                request.query_text,
+            raw_reranked = self._rerank(
+                self._request_query_text(request, "rerank_query_text"),
                 request_hits[: self.rerank_pool_k],
             )
             observations: Dict[str, _RequestRerankObservation] = {}
             ranked_ids: List[str] = []
-            for rerank_rank, (hit, rerank_score) in enumerate(reranked, start=1):
-                observation = _RequestRerankObservation(
-                    hit=hit,
-                    rerank_score=rerank_score,
-                    rerank_rank=rerank_rank,
-                )
-                observations[hit.document.provision_id] = observation
-                ranked_ids.append(hit.document.provision_id)
+            for rerank_rank, (hit, rerank_score) in enumerate(raw_reranked, start=1):
                 self.last_stage_records.append(
                     CandidateStageRecord(
                         provision_id=hit.document.provision_id,
@@ -412,11 +740,33 @@ class RetrievalPipeline:
                         selection_reason="request_rerank_pool",
                     )
                 )
+            reranked = self._collapse_legal_text_aliases(raw_reranked)
+            for rerank_rank, (hit, rerank_score) in enumerate(reranked, start=1):
+                observation = _RequestRerankObservation(
+                    hit=hit,
+                    rerank_score=rerank_score,
+                    rerank_rank=rerank_rank,
+                )
+                observations[hit.document.provision_id] = observation
+                ranked_ids.append(hit.document.provision_id)
+                self._record_alias_collapse(
+                    hit,
+                    rerank_score,
+                    retrieval_round,
+                    requests_by_id,
+                )
             observations_by_request[request.request_id] = observations
             ranked_ids_by_request[request.request_id] = ranked_ids
 
         evidence_order = list(
             dict.fromkeys(request.evidence_item_id for request in issue_requests)
+        )
+        alias_groups_by_id = self._alias_groups_by_provision_id(
+            [
+                observation.hit
+                for observations in observations_by_request.values()
+                for observation in observations.values()
+            ]
         )
         evidence_rankings: Dict[str, List[str]] = {}
         for evidence_id in evidence_order:
@@ -427,27 +777,28 @@ class RetrievalPipeline:
             ]
             fused = self._rank_fuse_ids(
                 [
-                    ranked_ids_by_request[request.request_id]
+                    self._collapse_ranked_ids_by_alias(
+                        ranked_ids_by_request[request.request_id],
+                        alias_groups_by_id,
+                    )
                     for request in evidence_requests
                 ]
             )
-            evidence_rankings[evidence_id] = [
-                provision_id for provision_id, _ in fused
-            ]
-            for fusion_rank, (provision_id, fusion_score) in enumerate(
-                fused[:100],
+            evidence_rankings[evidence_id] = self._collapse_ranked_ids_by_alias(
+                [provision_id for provision_id, _ in fused],
+                alias_groups_by_id,
+            )
+            evidence_fusion_by_id = dict(fused)
+            for fusion_rank, provision_id in enumerate(
+                evidence_rankings[evidence_id][:100],
                 start=1,
             ):
-                source_request_ids = [
-                    request.request_id
-                    for request in evidence_requests
-                    if provision_id
-                    in observations_by_request[request.request_id]
-                ]
-                observations = [
-                    observations_by_request[request_id][provision_id]
-                    for request_id in source_request_ids
-                ]
+                alias_provision_ids = alias_groups_by_id[provision_id]
+                source_request_ids, observations = self._observations_for_aliases(
+                    evidence_requests,
+                    observations_by_request,
+                    alias_provision_ids,
+                )
                 self.last_stage_records.append(
                     CandidateStageRecord(
                         provision_id=provision_id,
@@ -465,34 +816,43 @@ class RetrievalPipeline:
                             for observation in observations
                         ),
                         first_stage_score=observations[0].hit.first_stage_score,
-                        fusion_score=fusion_score,
+                        fusion_score=evidence_fusion_by_id[provision_id],
                         selection_reason="evidence_rank_fusion",
+                        alias_provision_ids=alias_provision_ids,
                     )
                 )
 
         issue_fused = self._rank_fuse_ids(
             [evidence_rankings[evidence_id] for evidence_id in evidence_order]
         )
-        global_ranking = [provision_id for provision_id, _ in issue_fused]
+        global_ranking = self._collapse_ranked_ids_by_alias(
+            [provision_id for provision_id, _ in issue_fused],
+            alias_groups_by_id,
+        )
+        issue_fusion_scores_by_id = dict(issue_fused)
         issue_fusion_by_id = {
-            provision_id: (rank, score)
-            for rank, (provision_id, score) in enumerate(issue_fused, start=1)
+            provision_id: (rank, issue_fusion_scores_by_id[provision_id])
+            for rank, provision_id in enumerate(global_ranking, start=1)
         }
-        for rerank_rank, (provision_id, fusion_score) in enumerate(
-            issue_fused[: self.rerank_pool_k], start=1
+        for rerank_rank, provision_id in enumerate(
+            global_ranking[: self.rerank_pool_k], start=1
         ):
-            source_request_ids = [
-                request.request_id
-                for request in issue_requests
-                if provision_id in observations_by_request[request.request_id]
-            ]
-            observations = [
-                observations_by_request[request_id][provision_id]
-                for request_id in source_request_ids
-            ]
+            alias_provision_ids = alias_groups_by_id[provision_id]
+            source_request_ids, observations = self._observations_for_aliases(
+                issue_requests,
+                observations_by_request,
+                alias_provision_ids,
+            )
+            primary = min(
+                observations,
+                key=lambda observation: (
+                    observation.rerank_rank,
+                    observation.hit.document.provision_id,
+                ),
+            )
             self.last_stage_records.append(
                 CandidateStageRecord(
-                    provision_id=provision_id,
+                    provision_id=primary.hit.document.provision_id,
                     retrieval_round=retrieval_round,
                     candidate_stage="bge_rerank",
                     source_request_ids=source_request_ids,
@@ -502,10 +862,22 @@ class RetrievalPipeline:
                     first_stage_rank=min(observation.hit.first_stage_rank or 1 for observation in observations),
                     fusion_rank=rerank_rank,
                     rerank_rank=rerank_rank,
-                    fusion_score=fusion_score,
+                    fusion_score=issue_fusion_scores_by_id[provision_id],
                     selection_reason="issue_rank_fusion_after_request_rerank",
+                    alias_provision_ids=alias_provision_ids,
                 )
             )
+            if len(alias_provision_ids) > 1:
+                self._record_alias_collapse(
+                    replace(
+                        primary.hit,
+                        source_request_ids=source_request_ids,
+                        alias_provision_ids=alias_provision_ids,
+                    ),
+                    primary.rerank_score,
+                    retrieval_round,
+                    requests_by_id,
+                )
         selected_ids, selection_reasons = self._select_ids(
             global_ranking,
             evidence_rankings,
@@ -514,20 +886,22 @@ class RetrievalPipeline:
 
         candidates: List[CandidateProvision] = []
         for selection_rank, provision_id in enumerate(selected_ids, start=1):
-            source_request_ids = [
-                request.request_id
-                for request in issue_requests
-                if provision_id
-                in observations_by_request[request.request_id]
-            ]
+            alias_provision_ids = alias_groups_by_id[provision_id]
+            source_request_ids, observations = self._observations_for_aliases(
+                issue_requests,
+                observations_by_request,
+                alias_provision_ids,
+            )
             target_evidence_item_ids = self._target_evidence_ids(
                 source_request_ids, requests_by_id
             )
-            primary = observations_by_request[source_request_ids[0]][provision_id]
-            observations = [
-                observations_by_request[request_id][provision_id]
-                for request_id in source_request_ids
-            ]
+            primary = min(
+                observations,
+                key=lambda observation: (
+                    observation.rerank_rank,
+                    observation.hit.document.provision_id,
+                ),
+            )
             fusion_rank, fusion_score = issue_fusion_by_id[provision_id]
             reason = selection_reasons[provision_id]
             candidate = CandidateProvision(
@@ -550,6 +924,7 @@ class RetrievalPipeline:
                 selection_rank=selection_rank,
                 candidate_stage="selected",
                 selection_reason=reason,
+                alias_provision_ids=alias_provision_ids,
             )
             candidates.append(candidate)
             self.last_stage_records.append(
@@ -567,6 +942,7 @@ class RetrievalPipeline:
                     fusion_score=fusion_score,
                     rerank_score=primary.rerank_score,
                     selection_reason=reason,
+                    alias_provision_ids=alias_provision_ids,
                 )
             )
         return candidates
@@ -580,6 +956,7 @@ class RetrievalPipeline:
     ) -> List[CandidateProvision]:
         self.last_stage_records = []
         self.last_unsatisfied_critical_evidence_item_ids = []
+        self.last_dedup_removed_count = 0
         requests_by_id = {request.request_id: request for request in requests}
         if len(requests_by_id) != len(requests):
             raise ValueError("retrieval request IDs must be unique")
@@ -588,32 +965,44 @@ class RetrievalPipeline:
             requests_by_issue[request.issue_id].append(request)
 
         candidates: List[CandidateProvision] = []
-        for issue_id, issue_requests in sorted(requests_by_issue.items()):
-            hits_by_request: Dict[str, List[RetrievalHit]] = {}
-            for request in issue_requests:
-                hits = list(self.first_stage.search(request))
-                hits_by_request[request.request_id] = hits
-                self._record_first_stage(request, hits, retrieval_round)
+        final_top_k = self.final_top_k
+        if self.candidate_budget_scope == "per_round":
+            self.final_top_k = self.rerank_pool_k
+        try:
+            for issue_id, issue_requests in sorted(requests_by_issue.items()):
+                hits_by_request: Dict[str, List[RetrievalHit]] = {}
+                for request in issue_requests:
+                    hits = list(self.first_stage.search(self._first_stage_request(request)))
+                    hits_by_request[request.request_id] = hits
+                    self._record_first_stage(request, hits, retrieval_round)
 
-            if self.rerank_query_mode == "combined_issue":
-                issue_candidates = self._retrieve_combined_issue(
-                    issue_id,
-                    issue_requests,
-                    hits_by_request,
-                    requests_by_id,
-                    retrieval_round,
-                    critical_evidence_item_ids,
-                )
-            else:
-                issue_candidates = self._retrieve_per_request(
-                    issue_id,
-                    issue_requests,
-                    hits_by_request,
-                    requests_by_id,
-                    retrieval_round,
-                    critical_evidence_item_ids,
-                )
-            candidates.extend(issue_candidates)
+                if self.rerank_query_mode == "combined_issue":
+                    issue_candidates = self._retrieve_combined_issue(
+                        issue_id,
+                        issue_requests,
+                        hits_by_request,
+                        requests_by_id,
+                        retrieval_round,
+                        critical_evidence_item_ids,
+                    )
+                else:
+                    issue_candidates = self._retrieve_per_request(
+                        issue_id,
+                        issue_requests,
+                        hits_by_request,
+                        requests_by_id,
+                        retrieval_round,
+                        critical_evidence_item_ids,
+                    )
+                candidates.extend(issue_candidates)
+        finally:
+            self.final_top_k = final_top_k
+        if self.candidate_budget_scope == "per_round":
+            candidates = self._select_round_candidates(
+                candidates,
+                critical_evidence_item_ids,
+                retrieval_round,
+            )
         self.last_unsatisfied_critical_evidence_item_ids = list(
             dict.fromkeys(self.last_unsatisfied_critical_evidence_item_ids)
         )

@@ -29,7 +29,34 @@
         "evidence_type": {"enum": ["definition", "element", "rule", "exception", "procedure", "remedy", "limitation", "relationship", "other"]},
         "description": {"type": "string", "minLength": 1},
         "critical": {"type": "boolean"},
-        "completion_criteria": {"type": "string", "minLength": 1}
+        "completion_criteria": {"type": "string", "minLength": 1},
+        "necessity_reason": {"type": "string", "minLength": 1},
+        "answer_target_ids": {"type": "array", "items": {"type": "string", "pattern": "^T[1-9][0-9]*$"}, "uniqueItems": true},
+        "scope_source": {"enum": ["explicit_question", "outcome_changing_condition", "supporting_context"]},
+        "completion_requirements": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["requirement_id", "text"],
+            "properties": {
+              "requirement_id": {"type": "string", "pattern": "^E[1-9][0-9]*-R[1-9][0-9]*$"},
+              "text": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      }
+    },
+    "answerTarget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["answer_target_id", "question_anchor", "requested_output", "answer_type"],
+      "properties": {
+        "answer_target_id": {"type": "string", "pattern": "^T[1-9][0-9]*$"},
+        "question_anchor": {"type": "string", "minLength": 1},
+        "requested_output": {"type": "string", "minLength": 1},
+        "answer_type": {"type": "string", "minLength": 1}
       }
     },
     "initialRequest": {
@@ -42,6 +69,8 @@
         "evidence_item_id": {"type": "string", "pattern": "^E[1-9][0-9]*$"},
         "query_channel": {"enum": ["provision_style", "sparse_keywords", "statute_aware"]},
         "query_text": {"type": "string", "minLength": 1},
+        "first_stage_query_text": {"type": "string", "minLength": 1},
+        "rerank_query_text": {"type": "string", "minLength": 1},
         "query_terms": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
         "statute_hints": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
         "rationale": {"type": "string", "minLength": 1}
@@ -57,6 +86,8 @@
         "evidence_item_id": {"type": "string", "pattern": "^E[1-9][0-9]*$"},
         "query_channel": {"enum": ["provision_style", "sparse_keywords", "statute_aware"]},
         "query_text": {"type": "string", "minLength": 1},
+        "first_stage_query_text": {"type": "string", "minLength": 1},
+        "rerank_query_text": {"type": "string", "minLength": 1},
         "query_terms": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
         "statute_hints": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
         "rationale": {"type": "string", "minLength": 1},
@@ -74,6 +105,7 @@
         "mode": {"const": "INITIAL_PLAN"},
         "status": {"const": "ok"},
         "run_id": {"type": "string", "minLength": 1},
+        "answer_targets": {"type": "array", "items": {"$ref": "#/$defs/answerTarget"}, "uniqueItems": true},
         "legal_issues": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/issue"}},
         "required_evidence_items": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidence"}},
         "retrieval_requests": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/initialRequest"}}

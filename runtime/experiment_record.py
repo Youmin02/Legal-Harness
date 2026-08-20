@@ -16,7 +16,7 @@ from typing import Any, Dict, Mapping, Optional
 from harness.tracing import JsonlTraceSink, to_primitive
 
 
-RECORD_SCHEMA_VERSION = "1.1"
+RECORD_SCHEMA_VERSION = "1.2"
 RETRIEVAL_PROVENANCE_SCHEMA_VERSION = "1.0"
 
 
@@ -184,6 +184,33 @@ class ExperimentRecord:
             "termination_reason": outcome.termination_reason.value if outcome.termination_reason else None,
             "abstention_reason": outcome.abstention_reason.value if outcome.abstention_reason else None,
             "answer": outcome.answer,
+            "answer_mode": (
+                outcome.answer_mode.value if getattr(outcome, "answer_mode", None) else None
+            ),
+            "complete_answer": bool(getattr(outcome, "complete_answer", False)),
+            "answered_target_ids": list(
+                getattr(outcome, "answered_target_ids", ())
+            ),
+            "deferred_target_ids": list(
+                getattr(outcome, "deferred_target_ids", ())
+            ),
+            "candidate_answer": getattr(outcome, "candidate_answer", None),
+            "candidate_answer_status": (
+                getattr(outcome, "candidate_answer_status", None).value
+                if getattr(outcome, "candidate_answer_status", None)
+                else None
+            ),
+            "candidate_answer_basis": (
+                getattr(outcome, "candidate_answer_basis", None).value
+                if getattr(outcome, "candidate_answer_basis", None)
+                else None
+            ),
+            "candidate_answer_termination_reason": (
+                getattr(outcome, "candidate_answer_termination_reason", None).value
+                if getattr(outcome, "candidate_answer_termination_reason", None)
+                else None
+            ),
+            "candidate_answer_error": getattr(outcome, "candidate_answer_error", None),
             "errors": list(outcome.errors),
             "state": state,
         }

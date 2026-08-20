@@ -1,6 +1,8 @@
 """Minimal immutable provision corpus abstraction."""
 
 import json
+import re
+import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional
@@ -11,6 +13,18 @@ class ProvisionDocument:
     provision_id: str
     statute_name: str
     provision_text: str
+
+
+def legal_text_alias_key(document: ProvisionDocument) -> tuple[str, str]:
+    """Return the exact legal-text identity used for snapshot alias collapse.
+
+    The statute hierarchy is part of ``statute_name`` in the normalized corpus,
+    so identical body text from different statutes remains distinct.
+    """
+    return (
+        re.sub(r"\s+", " ", unicodedata.normalize("NFC", document.statute_name)).strip(),
+        re.sub(r"\s+", " ", unicodedata.normalize("NFC", document.provision_text)).strip(),
+    )
 
 
 class InMemoryProvisionCorpus:

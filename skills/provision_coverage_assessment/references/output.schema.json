@@ -31,7 +31,24 @@
         "linked_provision_ids": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
         "rationale": {"type": "string", "minLength": 1},
         "satisfied_aspects": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
-        "missing_aspects": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+        "missing_aspects": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+        "legal_status": {"enum": ["covered", "partially_covered", "uncovered", "conflicting"]},
+        "applicability_status": {"enum": ["direct", "conditional", "not_assessed"]},
+        "gap_type": {"enum": ["none", "missing_statute", "missing_fact", "scope_excess", "conflict"]},
+        "criterion_results": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["requirement_id", "status", "linked_provision_ids", "rationale"],
+            "properties": {
+              "requirement_id": {"type": "string", "minLength": 1},
+              "status": {"enum": ["satisfied", "partially_satisfied", "unsatisfied", "conflicting"]},
+              "linked_provision_ids": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+              "rationale": {"type": "string", "minLength": 1}
+            }
+          }
+        }
       }
     },
     "missing": {

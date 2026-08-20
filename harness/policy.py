@@ -6,6 +6,7 @@ not select control flow.
 
 from .contracts import (
     AbstentionReason,
+    AnswerMode,
     PolicyAction,
     PolicyDecision,
     TerminationReason,
@@ -19,65 +20,94 @@ def abstention_reason_for(state: RunState) -> AbstentionReason:
     return AbstentionReason.INSUFFICIENT_CRITICAL_EVIDENCE
 
 
+def _generation_decision(state: RunState, mode: AnswerMode) -> PolicyDecision:
+    all_target_ids = [target.answer_target_id for target in state.answer_targets]
+    answered_target_ids = (
+        state.covered_answer_target_ids()
+        if mode is AnswerMode.LIMITED
+        else all_target_ids
+    )
+    return PolicyDecision(
+        action=PolicyAction.GENERATE,
+        explanation={
+            AnswerMode.FULL: "Every answer target has citable legal support.",
+            AnswerMode.CONDITIONAL: "Legal support is complete; only question facts select an application branch.",
+            AnswerMode.LIMITED: "Only the citable answer targets will be answered; remaining targets are deferred.",
+        }[mode],
+        answer_mode=mode,
+        answered_target_ids=answered_target_ids,
+        deferred_target_ids=[
+            target_id for target_id in all_target_ids if target_id not in answered_target_ids
+        ],
+    )
+
+
+def _limited_or_abstain(
+    state: RunState,
+    termination_reason: TerminationReason,
+    explanation: str,
+) -> PolicyDecision:
+    if state.has_any_citable_answer_target():
+        return _generation_decision(state, AnswerMode.LIMITED)
+    return PolicyDecision(
+        action=PolicyAction.ABSTAIN,
+        termination_reason=termination_reason,
+        explanation=explanation,
+    )
+
+
 def decide_next_action(
     state: RunState,
     can_attempt_gap_query: bool = True,
 ) -> PolicyDecision:
-    """Apply the frozen three-action policy without calling any skill.
-
-    `can_attempt_gap_query` is a preflight capability supplied by the runtime.
-    A produced gap plan is still validated before retrieval.
-    """
-    if not state.has_critical_blockers() and not state.unresolved_critical_conflicts():
-        return PolicyDecision(
-            action=PolicyAction.GENERATE,
-            explanation="All critical evidence items are covered without conflict.",
-        )
-
-    if state.no_progress_rounds >= 2:
-        if state.can_generate_conditionally():
-            return PolicyDecision(
-                action=PolicyAction.GENERATE,
-                explanation="Retrieval stalled, but every critical item has citable partial support; generate a conditional answer.",
-            )
+    """Apply the answer-target policy without calling any skill."""
+    if state.unresolved_critical_conflicts():
         return PolicyDecision(
             action=PolicyAction.ABSTAIN,
             termination_reason=TerminationReason.NO_RETRIEVAL_PROGRESS,
-            explanation="Two consecutive retrieval rounds produced no progress.",
+            explanation="A substantive critical-evidence conflict remains unresolved.",
+        )
+
+    if state.all_answer_targets_legally_covered():
+        mode = AnswerMode.CONDITIONAL if state.has_missing_fact() else AnswerMode.FULL
+        return _generation_decision(state, mode)
+
+    if state.no_progress_rounds >= 2:
+        return _limited_or_abstain(
+            state,
+            TerminationReason.NO_RETRIEVAL_PROGRESS,
+            "Two consecutive retrieval rounds did not improve critical evidence.",
         )
 
     if state.remaining_round_budget <= 0:
-        if state.can_generate_conditionally():
-            return PolicyDecision(
-                action=PolicyAction.GENERATE,
-                explanation="The round budget is exhausted, but every critical item has citable partial support; generate a conditional answer.",
-            )
-        return PolicyDecision(
-            action=PolicyAction.ABSTAIN,
-            termination_reason=TerminationReason.MAX_RETRIEVAL_ROUNDS_REACHED,
-            explanation="The frozen maximum number of retrieval rounds was used.",
+        return _limited_or_abstain(
+            state,
+            TerminationReason.MAX_RETRIEVAL_ROUNDS_REACHED,
+            "The frozen maximum number of retrieval rounds was used.",
         )
 
     if state.remaining_request_budget <= 0:
-        if state.can_generate_conditionally():
-            return PolicyDecision(
-                action=PolicyAction.GENERATE,
-                explanation="The request budget is exhausted, but every critical item has citable partial support; generate a conditional answer.",
-            )
+        return _limited_or_abstain(
+            state,
+            TerminationReason.RETRIEVAL_BUDGET_EXHAUSTED,
+            "The retrieval request budget was exhausted.",
+        )
+
+    if state.has_retrievable_statute_gap() and can_attempt_gap_query:
         return PolicyDecision(
-            action=PolicyAction.ABSTAIN,
-            termination_reason=TerminationReason.RETRIEVAL_BUDGET_EXHAUSTED,
-            explanation="The retrieval request budget was exhausted.",
+            action=PolicyAction.RETRIEVE_GAP,
+            explanation="A critical statute gap remains and bounded retrieval is allowed.",
         )
 
     if not can_attempt_gap_query:
-        return PolicyDecision(
-            action=PolicyAction.ABSTAIN,
-            termination_reason=TerminationReason.NO_VALID_GAP_QUERY,
-            explanation="No non-duplicate gap retrieval request can be produced.",
+        return _limited_or_abstain(
+            state,
+            TerminationReason.NO_VALID_GAP_QUERY,
+            "No non-duplicate gap retrieval request can be produced.",
         )
 
-    return PolicyDecision(
-        action=PolicyAction.RETRIEVE_GAP,
-        explanation="Critical evidence remains and a bounded gap retrieval is allowed.",
+    return _limited_or_abstain(
+        state,
+        TerminationReason.NO_RETRIEVAL_PROGRESS,
+        "Critical evidence is not citable and no retrievable statute gap remains.",
     )

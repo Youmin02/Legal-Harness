@@ -28,8 +28,12 @@ from typing import Any, Dict, Iterable, List, Mapping, Optional, Sequence, Set, 
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-EVALUATION_SCHEMA_VERSION = "1.0"
+EVALUATION_SCHEMA_VERSION = "1.2"
 OUTCOME_STATUSES = ("ANSWER", "ABSTAIN", "EXECUTION_FAILURE")
+ANSWER_MODES = ("full", "conditional", "limited")
+NORMAL_OUTCOME_STATUSES = ("ANSWER", "ABSTAIN")
+KOBLEX_PREDICTION_MAX_CHARACTERS = 800
+LF_EVAL_SCALES = {"0_1": 1.0, "0_10": 10.0, "0_100": 100.0}
 RETRIEVAL_EVENT_NAMES = {
     "INITIAL_RETRIEVAL_VALIDATED",
     "GAP_RETRIEVAL_VALIDATED",
@@ -75,6 +79,18 @@ class GoldGroup:
     acceptable_provision_ids: Tuple[str, ...]
     match_type: str
     warnings: Tuple[str, ...] = ()
+
+
+@dataclass(frozen=True)
+class LFEvalScores:
+    """Imported, frozen LF-Eval scores; this evaluator never invokes a judge."""
+
+    judge_model: str
+    judge_revision: str
+    prompt_sha256: str
+    scale: str
+    raw_scores: Mapping[str, float]
+    normalized_scores: Mapping[str, float]
 
 
 def _sha256(path: Path) -> str:
@@ -443,8 +459,91 @@ def precision_recall_f1(
         "precision": precision,
         "recall": recall,
         "f1": f1,
+        # ``complete`` is recall-only: extra predicted provisions do not make
+        # it false.  KoBLEX provision EM is stricter and requires exact sets.
+        "provision_em": bool(groups)
+        and true_positives == len(groups)
+        and len(predictions) == len(groups),
         "complete": bool(groups) and true_positives == len(groups),
     }
+
+
+def koblex_normalize(text: str) -> str:
+    """Normalize answer text exactly as the KoBLEX Token-F1 protocol requires."""
+    value = str(text or "").lower()
+    value = re.sub(r"[^가-힣a-z0-9\s]", " ", value)
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def koblex_token_f1(prediction: str, gold: str) -> float:
+    """Return KoBLEX's multiset Token-F1 on normalized Korean text."""
+    prediction_tokens = koblex_normalize(prediction).split()
+    gold_tokens = koblex_normalize(gold).split()
+    common = Counter(prediction_tokens) & Counter(gold_tokens)
+    overlap = sum(common.values())
+    if overlap == 0:
+        return 0.0
+    precision = overlap / len(prediction_tokens)
+    recall = overlap / len(gold_tokens)
+    return 2.0 * precision * recall / (precision + recall)
+
+
+def koblex_official_prediction(answer: str) -> str:
+    """`temp_answer.split("<\\think>")[0][:800]` from the ParSeR evaluator.
+
+    `"<\\think>"` is `<` + TAB + `hink>` in Python, so this intentionally
+    preserves the baseline's near-no-op split rather than interpreting a
+    literal `<think>` tag.
+    """
+    if not answer:
+        return ""
+    return answer.split("<\think>")[0][:KOBLEX_PREDICTION_MAX_CHARACTERS]  # noqa: W605
+
+
+def koblex_token_f1_at_800(prediction: str, gold: str) -> float:
+    return koblex_token_f1(koblex_official_prediction(prediction), gold)
+
+
+def _koblex_exact_match_at_800(prediction: str, gold: str) -> bool:
+    return koblex_normalize(koblex_official_prediction(prediction)) == koblex_normalize(gold)
+
+
+def load_lf_eval_scores(path: Path) -> LFEvalScores:
+    """Load externally judged LF-Eval scores and convert them to the 0--1 scale."""
+    payload = _read_json(path)
+    required_metadata = ("judge_model", "judge_revision", "prompt_sha256", "scale")
+    values: Dict[str, str] = {}
+    for field in required_metadata:
+        value = payload.get(field)
+        if not isinstance(value, str) or not value.strip():
+            raise EvaluationError("LF-Eval input is missing %s" % field)
+        values[field] = value.strip()
+    scale_maximum = LF_EVAL_SCALES.get(values["scale"])
+    if scale_maximum is None:
+        raise EvaluationError("unsupported LF-Eval scale: %s" % values["scale"])
+    raw_scores = payload.get("scores")
+    if not isinstance(raw_scores, dict):
+        raise EvaluationError("LF-Eval input must contain a scores object")
+
+    normalized: Dict[str, float] = {}
+    raw: Dict[str, float] = {}
+    for question_id, value in raw_scores.items():
+        if isinstance(value, bool) or not isinstance(value, (int, float)):
+            raise EvaluationError("invalid LF-Eval score for %s" % question_id)
+        score = float(value)
+        if not math.isfinite(score) or not 0.0 <= score <= scale_maximum:
+            raise EvaluationError("LF-Eval score is outside %s for %s" % (values["scale"], question_id))
+        identifier = str(question_id)
+        raw[identifier] = score
+        normalized[identifier] = score / scale_maximum
+    return LFEvalScores(
+        judge_model=values["judge_model"],
+        judge_revision=values["judge_revision"],
+        prompt_sha256=values["prompt_sha256"],
+        scale=values["scale"],
+        raw_scores=raw,
+        normalized_scores=normalized,
+    )
 
 
 def percentile_type7(values: Sequence[float], percentile: float) -> Optional[float]:
@@ -587,6 +686,106 @@ def _citation_status(result: Mapping[str, Any]) -> Tuple[bool, Optional[bool]]:
     return False, None
 
 
+def _optional_string_list(
+    result: Mapping[str, Any], field: str, question_id: str
+) -> List[str]:
+    value = result.get(field)
+    if value is None:
+        return []
+    if not isinstance(value, list) or not all(isinstance(item, str) and item for item in value):
+        raise EvaluationError("invalid %s for %s" % (field, question_id))
+    return list(value)
+
+
+def _answer_mode(result: Mapping[str, Any], question_id: str) -> Optional[str]:
+    value = result.get("answer_mode")
+    if value is None:
+        return None
+    if result.get("status") != "ANSWER" or value not in ANSWER_MODES:
+        raise EvaluationError("invalid answer_mode for %s" % question_id)
+    return str(value)
+
+
+def _candidate_prediction(
+    result: Mapping[str, Any], question_id: str
+) -> Tuple[Optional[str], str]:
+    status = str(result.get("status") or "")
+    if status not in NORMAL_OUTCOME_STATUSES:
+        return None, "NOT_NORMAL_OUTCOME"
+    if "candidate_answer" not in result:
+        published = result.get("answer")
+        if status == "ANSWER" and isinstance(published, str) and published.strip():
+            return published, "LEGACY_PUBLISHED_FALLBACK"
+        return None, "UNRECORDED"
+    candidate = result.get("candidate_answer")
+    candidate_status = result.get("candidate_answer_status")
+    candidate_basis = result.get("candidate_answer_basis")
+    if candidate_basis not in {
+        "published_answer",
+        "retrieved_candidates",
+        "question_only",
+        None,
+    }:
+        raise EvaluationError("invalid candidate answer basis for %s" % question_id)
+    if status == "ABSTAIN" and (
+        candidate_status == "PUBLISHED_ANSWER"
+        or candidate_basis == "published_answer"
+    ):
+        raise EvaluationError("ABSTAIN must not use a published candidate answer for %s" % question_id)
+    if status == "ANSWER" and candidate_basis in {
+        "retrieved_candidates",
+        "question_only",
+    }:
+        raise EvaluationError("ANSWER must not use an abstain candidate basis for %s" % question_id)
+    if candidate is None:
+        if candidate_status not in {"EXECUTION_FAILURE", None}:
+            raise EvaluationError("invalid candidate answer status for %s" % question_id)
+        return None, str(candidate_status or "UNRECORDED")
+    if not isinstance(candidate, str) or not candidate.strip():
+        raise EvaluationError("candidate_answer must be a non-empty string for %s" % question_id)
+    if candidate_status not in {"PUBLISHED_ANSWER", "GENERATED", None}:
+        raise EvaluationError("invalid candidate answer status for %s" % question_id)
+    return candidate, str(candidate_status or "LEGACY_RECORDED")
+
+
+def load_evaluation_splits(
+    path: Optional[Path], question_ids: Sequence[str]
+) -> Dict[str, Tuple[str, ...]]:
+    """Load optional development/held-out/all memberships for a completed batch.
+
+    The split manifest is intentionally external to immutable run records.  Its
+    ``splits`` object maps a display name to either a question-ID list or an
+    object containing ``question_ids``.  ``all`` is always present and must
+    cover the completed batch exactly when explicitly supplied.
+    """
+    all_ids = tuple(str(question_id) for question_id in question_ids)
+    known_ids = set(all_ids)
+    splits: Dict[str, Tuple[str, ...]] = {"all": all_ids}
+    if path is None:
+        return splits
+    payload = _read_json(path)
+    raw_splits = payload.get("splits")
+    if not isinstance(raw_splits, dict) or not raw_splits:
+        raise EvaluationError("split manifest must contain a non-empty splits object")
+    for raw_name, raw_split in raw_splits.items():
+        name = str(raw_name).strip()
+        if not name:
+            raise EvaluationError("split manifest contains an empty split name")
+        members = raw_split.get("question_ids") if isinstance(raw_split, dict) else raw_split
+        if not isinstance(members, list) or not members:
+            raise EvaluationError("split %s must contain question_ids" % name)
+        identifiers = tuple(str(item) for item in members)
+        if len(set(identifiers)) != len(identifiers):
+            raise EvaluationError("split %s contains duplicate question IDs" % name)
+        unknown = sorted(set(identifiers) - known_ids)
+        if unknown:
+            raise EvaluationError("split %s references non-batch questions: %s" % (name, unknown))
+        if name == "all" and set(identifiers) != known_ids:
+            raise EvaluationError("all split must cover the completed batch exactly")
+        splits[name] = identifiers
+    return splits
+
+
 def _returned_candidate_count(state: Mapping[str, Any]) -> int:
     total = 0
     for trace in state.get("action_trace", []):
@@ -598,10 +797,41 @@ def _returned_candidate_count(state: Mapping[str, Any]) -> int:
     return total
 
 
+def _load_replacement_summaries(
+    replacement_batch_directories: Sequence[Path],
+    primary_question_ids: Sequence[str],
+) -> Dict[str, Tuple[Dict[str, Any], Path]]:
+    """Load retry summaries without requiring their full manifest to be rerun."""
+    known_ids = set(primary_question_ids)
+    replacements: Dict[str, Tuple[Dict[str, Any], Path]] = {}
+    for raw_directory in replacement_batch_directories:
+        batch_directory = Path(raw_directory).resolve()
+        manifest_path = batch_directory / "manifest.json"
+        if not manifest_path.is_file():
+            raise EvaluationError("replacement batch manifest is missing: %s" % batch_directory)
+        _read_json(manifest_path)
+        for summary in _read_jsonl(batch_directory / "summary.jsonl"):
+            question_id = str(summary.get("question_id") or "")
+            if question_id not in known_ids:
+                raise EvaluationError(
+                    "replacement summary references non-primary question: %s"
+                    % question_id
+                )
+            if question_id in replacements:
+                raise EvaluationError(
+                    "duplicate replacement summary row: %s" % question_id
+                )
+            replacements[question_id] = (summary, batch_directory)
+    return replacements
+
+
 def _join_inputs(
     batch_directory: Path,
     manifest: Mapping[str, Any],
     questions: Mapping[str, Mapping[str, Any]],
+    replacement_summaries: Optional[
+        Mapping[str, Tuple[Dict[str, Any], Path]]
+    ] = None,
 ) -> List[Tuple[Dict[str, Any], Dict[str, Any], Path, Dict[str, Any], Dict[str, Any]]]:
     entries = manifest.get("entries")
     if not isinstance(entries, list) or not entries:
@@ -616,13 +846,23 @@ def _join_inputs(
 
     summary_path = batch_directory / "summary.jsonl"
     summaries = _read_jsonl(summary_path)
-    by_question: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
+    by_question: Dict[str, List[Tuple[Dict[str, Any], Path]]] = defaultdict(list)
     for summary in summaries:
-        by_question[str(summary.get("question_id") or "")].append(summary)
+        by_question[str(summary.get("question_id") or "")].append(
+            (summary, batch_directory)
+        )
     if set(by_question) != set(identifiers):
         missing = sorted(set(identifiers) - set(by_question))
         extra = sorted(set(by_question) - set(identifiers))
         raise EvaluationError("summary/manifest mismatch; missing=%s extra=%s" % (missing, extra))
+    for question_id in identifiers:
+        if len(by_question[question_id]) != 1:
+            raise EvaluationError(
+                "question must have exactly one summary row: %s" % question_id
+            )
+    if replacement_summaries:
+        for question_id, replacement in replacement_summaries.items():
+            by_question[question_id] = [replacement]
 
     joined = []
     for entry in sorted(entries, key=lambda item: int(item["ordinal"])):
@@ -634,8 +874,8 @@ def _join_inputs(
         question = questions[question_id]
         if int(entry["n_hops"]) != int(question["n_hops"]):
             raise EvaluationError("hop mismatch for %s" % question_id)
-        summary = by_question[question_id][0]
-        run_directory = _resolve_run_directory(batch_directory, summary)
+        summary, summary_batch_directory = by_question[question_id][0]
+        run_directory = _resolve_run_directory(summary_batch_directory, summary)
         metadata_path = run_directory / "metadata.json"
         result_path = run_directory / "result.json"
         if not metadata_path.is_file() or not result_path.is_file():
@@ -661,6 +901,9 @@ def evaluate_batch(
     gold_map_path: Optional[Path] = None,
     answer_labels_path: Optional[Path] = None,
     require_stage_provenance: bool = False,
+    lf_eval_scores_path: Optional[Path] = None,
+    split_manifest_path: Optional[Path] = None,
+    replacement_batch_directories: Sequence[Path] = (),
 ) -> Tuple[Dict[str, Any], List[Dict[str, Any]], Dict[str, Any]]:
     batch_directory = batch_directory.resolve()
     dataset_path = dataset_path.resolve()
@@ -676,7 +919,19 @@ def evaluate_batch(
     questions = load_dataset(dataset_path)
     entries = manifest.get("entries", [])
     question_ids = [str(entry["question_id"]) for entry in entries]
-    joined = _join_inputs(batch_directory, manifest, questions)
+    replacement_summaries = _load_replacement_summaries(
+        [Path(path).resolve() for path in replacement_batch_directories],
+        question_ids,
+    )
+    joined = _join_inputs(
+        batch_directory, manifest, questions, replacement_summaries
+    )
+    split_memberships = load_evaluation_splits(
+        split_manifest_path.resolve() if split_manifest_path else None, question_ids
+    )
+    lf_eval_scores = load_lf_eval_scores(
+        lf_eval_scores_path.resolve() if lf_eval_scores_path else None
+    ) if lf_eval_scores_path else None
     wanted_indexes = {
         str(context["index"])
         for question_id in question_ids
@@ -724,6 +979,42 @@ def evaluate_batch(
         supported_answer = result["status"] == "ANSWER" and citation_passed is True
         false_supported = labels.get(question_id) if supported_answer else None
         gold_incomplete_supported = supported_answer and not provision["complete"]
+        answer_mode = _answer_mode(result, question_id)
+        answered_target_ids = _optional_string_list(result, "answered_target_ids", question_id)
+        deferred_target_ids = _optional_string_list(result, "deferred_target_ids", question_id)
+        answer_text = result.get("answer") if result["status"] == "ANSWER" else ""
+        prediction = answer_text if isinstance(answer_text, str) else ""
+        token_f1 = koblex_token_f1(prediction, str(question.get("answer") or ""))
+        token_f1_at_800 = koblex_token_f1_at_800(
+            prediction, str(question.get("answer") or "")
+        )
+        candidate_prediction, candidate_answer_status = _candidate_prediction(
+            result, question_id
+        )
+        candidate_token_f1_at_800 = (
+            koblex_token_f1_at_800(
+                candidate_prediction, str(question.get("answer") or "")
+            )
+            if candidate_prediction is not None
+            else None
+        )
+        candidate_exact_match_at_800 = (
+            _koblex_exact_match_at_800(
+                candidate_prediction, str(question.get("answer") or "")
+            )
+            if candidate_prediction is not None
+            else None
+        )
+        lf_eval_raw_score = (
+            lf_eval_scores.raw_scores.get(question_id)
+            if lf_eval_scores is not None and result["status"] == "ANSWER"
+            else None
+        )
+        lf_eval_normalized_score = (
+            lf_eval_scores.normalized_scores.get(question_id)
+            if lf_eval_scores is not None and result["status"] == "ANSWER"
+            else None
+        )
         query_history = state.get("query_history", [])
         if not isinstance(query_history, list):
             raise EvaluationError("query_history must be an array: %s" % question_id)
@@ -742,13 +1033,30 @@ def evaluate_batch(
             "status": result["status"],
             "termination_reason": result.get("termination_reason"),
             "abstention_reason": result.get("abstention_reason"),
+            "answer_mode": answer_mode,
+            "answered_target_ids": answered_target_ids,
+            "deferred_target_ids": deferred_target_ids,
+            "split_memberships": sorted(
+                name for name, identifiers in split_memberships.items() if question_id in identifiers
+            ),
             "gold_count": provision["gold"],
             "accepted_count": provision["predicted"],
             "gold_true_positive": provision["true_positive"],
             "provision_precision": provision["precision"],
             "provision_recall": provision["recall"],
             "provision_f1": provision["f1"],
+            "provision_em": provision["provision_em"],
             "accepted_complete_evidence": provision["complete"],
+            "token_f1": token_f1,
+            "token_f1_at_800": token_f1_at_800,
+            "candidate_answer_status": candidate_answer_status,
+            "candidate_answer": candidate_prediction,
+            "candidate_answer_basis": result.get("candidate_answer_basis"),
+            "candidate_answer_available": candidate_prediction is not None,
+            "candidate_token_f1_at_800": candidate_token_f1_at_800,
+            "candidate_exact_match_at_800": candidate_exact_match_at_800,
+            "lf_eval_score_raw": lf_eval_raw_score,
+            "lf_eval_score_normalized": lf_eval_normalized_score,
             "supported_answer": supported_answer,
             "false_supported": false_supported,
             "gold_incomplete_supported_answer": gold_incomplete_supported,
@@ -767,7 +1075,17 @@ def evaluate_batch(
         }
         per_question.append(row)
 
-    aggregate = aggregate_rows(per_question)
+    aggregate = aggregate_rows(per_question, lf_eval_scores=lf_eval_scores)
+    aggregate["splits"] = {
+        name: {
+            "question_count": len(identifiers),
+            "metrics": aggregate_rows(
+                [row for row in per_question if row["question_id"] in set(identifiers)],
+                lf_eval_scores=lf_eval_scores,
+            ),
+        }
+        for name, identifiers in split_memberships.items()
+    }
     aggregate.update(
         {
             "evaluation_schema_version": EVALUATION_SCHEMA_VERSION,
@@ -776,6 +1094,22 @@ def evaluate_batch(
             "warnings": sorted(warnings),
         }
     )
+    replacement_record_directories = {
+        str(entry["question_id"]): str(run_directory)
+        for entry, _, run_directory, _, _ in joined
+        if str(entry["question_id"]) in replacement_summaries
+    }
+    if replacement_summaries:
+        aggregate["replacements"] = {
+            "question_ids": sorted(replacement_summaries),
+            "source_batch_directories": {
+                question_id: str(source_directory)
+                for question_id, (_, source_directory) in sorted(
+                    replacement_summaries.items()
+                )
+            },
+            "source_record_directories": replacement_record_directories,
+        }
     metadata = {
         "evaluation_schema_version": EVALUATION_SCHEMA_VERSION,
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
@@ -793,6 +1127,43 @@ def evaluate_batch(
             "gold_map_sha256": _sha256(gold_map_path) if gold_map_path else None,
             "answer_labels": str(answer_labels_path.resolve()) if answer_labels_path else None,
             "answer_labels_sha256": _sha256(answer_labels_path.resolve()) if answer_labels_path else None,
+            "lf_eval_scores": str(lf_eval_scores_path.resolve()) if lf_eval_scores_path else None,
+            "lf_eval_scores_sha256": _sha256(lf_eval_scores_path.resolve())
+            if lf_eval_scores_path
+            else None,
+            "split_manifest": str(split_manifest_path.resolve()) if split_manifest_path else None,
+            "split_manifest_sha256": _sha256(split_manifest_path.resolve())
+            if split_manifest_path
+            else None,
+        },
+        "answer_quality": {
+            "token_f1_normalization": "lowercase + [가-힣a-z0-9] tokenization",
+            "published_token_f1": {"mode": "legacy_full_text", "max_characters": None},
+            "official_token_f1_at_800": {
+                "mode": "answer.split(\"<\\think>\")[0][:800]",
+                "max_characters": KOBLEX_PREDICTION_MAX_CHARACTERS,
+            },
+            "candidate_token_f1_at_800": {
+                "scope": "ANSWER uses candidate_answer or legacy answer fallback; ABSTAIN uses candidate_answer",
+                "execution_failure_score": 0.0,
+            },
+            "candidate_lf_eval": {
+                "available": False,
+                "unavailable_reason": "SEPARATE_FROZEN_CANDIDATE_INPUT_REQUIRED",
+                "note": "Export candidate_answer to a separate frozen LF-Eval input; --lf-eval-scores continues to score published ANSWER records only.",
+            },
+            "internal_score_scale": "0_1",
+            "display_score_scale": "0_100",
+        },
+        "lf_eval": {
+            "provided": lf_eval_scores is not None,
+            "judge_model": lf_eval_scores.judge_model if lf_eval_scores else None,
+            "judge_revision": lf_eval_scores.judge_revision if lf_eval_scores else None,
+            "prompt_sha256": lf_eval_scores.prompt_sha256 if lf_eval_scores else None,
+            "scale": lf_eval_scores.scale if lf_eval_scores else None,
+            "input_scale": lf_eval_scores.scale if lf_eval_scores else None,
+            "internal_score_scale": "0_1",
+            "display_score_scale": "0_100",
         },
         "validation": {
             "manifest_entries": len(entries),
@@ -801,6 +1172,17 @@ def evaluate_batch(
             "warnings": sorted(warnings),
         },
     }
+    if replacement_summaries:
+        metadata["inputs"]["replacements"] = {
+            "question_ids": sorted(replacement_summaries),
+            "source_batch_directories": {
+                question_id: str(source_directory)
+                for question_id, (_, source_directory) in sorted(
+                    replacement_summaries.items()
+                )
+            },
+            "source_record_directories": replacement_record_directories,
+        }
     return aggregate, per_question, metadata
 
 
@@ -825,6 +1207,7 @@ def _aggregate_provisions(rows: Sequence[Mapping[str, Any]]) -> Dict[str, Any]:
         else 0.0
     )
     complete_count = sum(bool(row["accepted_complete_evidence"]) for row in rows)
+    provision_em_count = sum(bool(row["provision_em"]) for row in rows)
     return {
         "micro": {
             "predicted": total_predictions,
@@ -842,6 +1225,10 @@ def _aggregate_provisions(rows: Sequence[Mapping[str, Any]]) -> Dict[str, Any]:
         "complete_evidence": {
             "count": complete_count,
             "rate": complete_count / len(rows) if rows else None,
+        },
+        "exact_match": {
+            "count": provision_em_count,
+            "rate": provision_em_count / len(rows) if rows else None,
         },
     }
 
@@ -877,7 +1264,179 @@ def _aggregate_stage(rows: Sequence[Mapping[str, Any]], metric_name: str) -> Dic
     }
 
 
-def aggregate_rows(rows: Sequence[Mapping[str, Any]], include_hops: bool = True) -> Dict[str, Any]:
+def _aggregate_answer_quality(
+    rows: Sequence[Mapping[str, Any]], lf_eval_scores: Optional[LFEvalScores]
+) -> Dict[str, Any]:
+    total = len(rows)
+    answered = [row for row in rows if row["status"] == "ANSWER"]
+    token_scores = [float(row["token_f1"]) for row in rows]
+    answered_token_scores = [float(row["token_f1"]) for row in answered]
+    official_token_scores = [
+        float(row.get("token_f1_at_800", row["token_f1"])) for row in rows
+    ]
+    answered_official_token_scores = [
+        float(row.get("token_f1_at_800", row["token_f1"])) for row in answered
+    ]
+    normal_outcomes = [
+        row for row in rows if row["status"] in NORMAL_OUTCOME_STATUSES
+    ]
+    abstained = [row for row in rows if row["status"] == "ABSTAIN"]
+    candidate_available = [
+        row for row in normal_outcomes if row.get("candidate_token_f1_at_800") is not None
+    ]
+    abstain_candidate_available = [
+        row for row in abstained if row.get("candidate_token_f1_at_800") is not None
+    ]
+    candidate_score_or_zero = lambda row: float(
+        row.get("candidate_token_f1_at_800") or 0.0
+    )
+    mode_counts = Counter(
+        str(row["answer_mode"]) for row in answered if row.get("answer_mode") in ANSWER_MODES
+    )
+    if lf_eval_scores is None:
+        lf_eval = {
+            "available": False,
+            "end_to_end": None,
+            "answered_only": None,
+            "unavailable_reason": "LF_EVAL_NOT_PROVIDED",
+            "missing_answer_score_count": len(answered),
+            "scale": None,
+            "input_scale": None,
+            "internal_scale": "0_1",
+            "scale_display": "0_100",
+        }
+    else:
+        missing_answers = [
+            row for row in answered if row.get("lf_eval_score_normalized") is None
+        ]
+        lf_eval = {
+            "available": not missing_answers,
+            "end_to_end": (
+                sum(
+                    float(row["lf_eval_score_normalized"])
+                    for row in answered
+                    if row["lf_eval_score_normalized"] is not None
+                )
+                / total
+                if not missing_answers and total
+                else None
+            ),
+            "answered_only": (
+                mean(float(row["lf_eval_score_normalized"]) for row in answered)
+                if not missing_answers and answered
+                else None
+            ),
+            "unavailable_reason": "MISSING_ANSWER_SCORES" if missing_answers else None,
+            "missing_answer_score_count": len(missing_answers),
+            "scale": lf_eval_scores.scale,
+            "input_scale": lf_eval_scores.scale,
+            "internal_scale": "0_1",
+            "scale_display": "0_100",
+            "judge_model": lf_eval_scores.judge_model,
+            "judge_revision": lf_eval_scores.judge_revision,
+            "prompt_sha256": lf_eval_scores.prompt_sha256,
+        }
+    return {
+        "answer_count": len(answered),
+        "answer_rate": len(answered) / total if total else None,
+        "abstain_count": sum(row["status"] == "ABSTAIN" for row in rows),
+        "abstain_rate": sum(row["status"] == "ABSTAIN" for row in rows) / total if total else None,
+        "execution_failure_count": sum(
+            row["status"] == "EXECUTION_FAILURE" for row in rows
+        ),
+        "execution_failure_rate": sum(
+            row["status"] == "EXECUTION_FAILURE" for row in rows) / total if total else None,
+        "token_f1": {
+            "end_to_end": mean(token_scores) if token_scores else None,
+            "answered_only": mean(answered_token_scores) if answered_token_scores else None,
+            "internal_scale": "0_1",
+            "scale_display": "0_100",
+        },
+        "token_f1_at_800": {
+            "end_to_end": mean(official_token_scores) if official_token_scores else None,
+            "answered_only": (
+                mean(answered_official_token_scores)
+                if answered_official_token_scores
+                else None
+            ),
+            "prediction_projection": "answer.split(\"<\\think>\")[0][:800]",
+            "internal_scale": "0_1",
+            "scale_display": "0_100",
+        },
+        "candidate_token_f1_at_800": {
+            "all_outcomes": (
+                mean([candidate_score_or_zero(row) for row in rows]) if rows else None
+            ),
+            "normal_outcomes": (
+                mean([candidate_score_or_zero(row) for row in normal_outcomes])
+                if normal_outcomes
+                else None
+            ),
+            "abstain_only": (
+                mean([candidate_score_or_zero(row) for row in abstained])
+                if abstained
+                else None
+            ),
+            "available_only": (
+                mean(float(row["candidate_token_f1_at_800"]) for row in candidate_available)
+                if candidate_available
+                else None
+            ),
+            "abstain_available_only": (
+                mean(
+                    float(row["candidate_token_f1_at_800"])
+                    for row in abstain_candidate_available
+                )
+                if abstain_candidate_available
+                else None
+            ),
+            "available_count": len(candidate_available),
+            "missing_count": len(normal_outcomes) - len(candidate_available),
+            "normal_outcome_count": len(normal_outcomes),
+            "all_outcomes_available_count": len(candidate_available),
+            "all_outcomes_missing_or_execution_failure_count": total - len(candidate_available),
+            "abstain_available_count": len(abstain_candidate_available),
+            "abstain_missing_count": len(abstained) - len(abstain_candidate_available),
+            "abstain_count": len(abstained),
+            "execution_failure_count": total - len(normal_outcomes),
+            "missing_or_execution_failure_score": 0.0,
+            "prediction_projection": "answer.split(\"<\\think>\")[0][:800]",
+            "internal_scale": "0_1",
+            "scale_display": "0_100",
+        },
+        "candidate_lf_eval": {
+            "available": False,
+            "unavailable_reason": "SEPARATE_FROZEN_CANDIDATE_INPUT_REQUIRED",
+            "note": "Export candidate_answer to a separately frozen LF-Eval input. The existing --lf-eval-scores import keeps its published ANSWER-record meaning.",
+        },
+        "over_abstention_exact_match_at_800": {
+            "count": sum(
+                row.get("candidate_exact_match_at_800") is True for row in abstained
+            ),
+            "rate": (
+                sum(row.get("candidate_exact_match_at_800") is True for row in abstained)
+                / len(abstained)
+                if abstained
+                else None
+            ),
+            "definition": "ABSTAIN rows whose available benchmark candidate exactly matches the gold answer after answer.split(\"<\\think>\")[0][:800] and KoBLEX normalization; unavailable candidates are counted as non-matches.",
+        },
+        "lf_eval": lf_eval,
+        "answer_modes": {mode: mode_counts[mode] for mode in ANSWER_MODES},
+        "answer_mode_rates_e2e": {
+            mode: mode_counts[mode] / total if total else None for mode in ANSWER_MODES
+        },
+        "unrecorded_answer_mode_count": sum(
+            row.get("answer_mode") is None for row in answered
+        ),
+    }
+
+
+def aggregate_rows(
+    rows: Sequence[Mapping[str, Any]],
+    include_hops: bool = True,
+    lf_eval_scores: Optional[LFEvalScores] = None,
+) -> Dict[str, Any]:
     total = len(rows)
     supported_count = sum(bool(row["supported_answer"]) for row in rows)
     labelled = [
@@ -889,6 +1448,7 @@ def aggregate_rows(rows: Sequence[Mapping[str, Any]], include_hops: bool = True)
     output: Dict[str, Any] = {
         "outcomes": _outcomes(rows),
         "provision": _aggregate_provisions(rows),
+        "answer_quality": _aggregate_answer_quality(rows, lf_eval_scores),
         "retrieval": {
             name: _aggregate_stage(rows, name) for name in STAGE_SPECS
         },
@@ -927,7 +1487,9 @@ def aggregate_rows(rows: Sequence[Mapping[str, Any]], include_hops: bool = True)
     if include_hops:
         output["by_hop"] = {
             str(hop): aggregate_rows(
-                [row for row in rows if int(row["n_hops"]) == hop], include_hops=False
+                [row for row in rows if int(row["n_hops"]) == hop],
+                include_hops=False,
+                lf_eval_scores=lf_eval_scores,
             )
             for hop in sorted({int(row["n_hops"]) for row in rows})
         }
@@ -945,13 +1507,28 @@ CSV_FIELDS = [
     "status",
     "termination_reason",
     "abstention_reason",
+    "answer_mode",
+    "answered_target_ids",
+    "deferred_target_ids",
+    "split_memberships",
     "gold_count",
     "accepted_count",
     "gold_true_positive",
     "provision_precision",
     "provision_recall",
     "provision_f1",
+    "provision_em",
     "accepted_complete_evidence",
+    "token_f1",
+    "token_f1_at_800",
+    "candidate_answer",
+    "candidate_answer_status",
+    "candidate_answer_basis",
+    "candidate_answer_available",
+    "candidate_token_f1_at_800",
+    "candidate_exact_match_at_800",
+    "lf_eval_score_raw",
+    "lf_eval_score_normalized",
     "supported_answer",
     "false_supported",
     "gold_incomplete_supported_answer",
@@ -979,6 +1556,10 @@ CSV_FIELDS = [
 
 def _flatten_csv_row(row: Mapping[str, Any]) -> Dict[str, Any]:
     flattened = {field: row.get(field) for field in CSV_FIELDS}
+    for field in ("answered_target_ids", "deferred_target_ids", "split_memberships"):
+        value = flattened[field]
+        if isinstance(value, list):
+            flattened[field] = ";".join(str(item) for item in value)
     mappings = {
         "first_stage_at_100": ("first_stage_recall_at_100", "first_stage_complete_at_100"),
         "rrf_at_100": ("rrf_recall_at_100", "rrf_complete_at_100"),
@@ -1022,6 +1603,90 @@ def render_markdown(aggregate: Mapping[str, Any], rows: Sequence[Mapping[str, An
         lines.append(
             "| %s | %d | %s |"
             % (status, outcomes[status]["count"], _format_metric(outcomes[status]["rate"]))
+        )
+    candidate_quality = aggregate["answer_quality"]["candidate_token_f1_at_800"]
+    over_abstention = aggregate["answer_quality"]["over_abstention_exact_match_at_800"]
+    lines.extend(
+        [
+            "",
+            "## ABSTAIN benchmark-candidate diagnostic",
+            "",
+            "Candidate answers are diagnostic only: the public harness status remains `ABSTAIN` and candidate citations are not accepted evidence.",
+            "",
+            "| Candidate Token-F1@800 scope | Score | Available | Missing |",
+            "| --- | ---: | ---: | ---: |",
+            "| All outcomes (missing/failure = 0) | %s | %d | %d |"
+            % (
+                _format_display_score(candidate_quality["all_outcomes"]),
+                candidate_quality["all_outcomes_available_count"],
+                candidate_quality["all_outcomes_missing_or_execution_failure_count"],
+            ),
+            "| Normal outcomes (ANSWER + ABSTAIN; missing = 0) | %s | %d | %d |"
+            % (
+                _format_display_score(candidate_quality["normal_outcomes"]),
+                candidate_quality["available_count"],
+                candidate_quality["missing_count"],
+            ),
+            "| ABSTAIN only (missing = 0) | %s | %d | %d |"
+            % (
+                _format_display_score(candidate_quality["abstain_only"]),
+                candidate_quality["abstain_available_count"],
+                candidate_quality["abstain_missing_count"],
+            ),
+            "| ABSTAIN candidates only (available only) | %s | %d | N/A |"
+            % (
+                _format_display_score(candidate_quality["abstain_available_only"]),
+                candidate_quality["abstain_available_count"],
+            ),
+            "| Available candidates only | %s | %d | N/A |"
+            % (
+                _format_display_score(candidate_quality["available_only"]),
+                candidate_quality["available_count"],
+            ),
+            "",
+            "- Potential over-abstention exact matches@800: %d / %d (%s)."
+            % (
+                over_abstention["count"],
+                candidate_quality["abstain_count"],
+                _format_metric(over_abstention["rate"]),
+            ),
+        ]
+    )
+    lines.extend(
+        [
+            "",
+            "## KoBLEX-aligned metrics",
+            "",
+            "All scores in this table use the 0--100 display scale; JSON keeps 0--1 values.",
+            "",
+            "| Split | N | Full | Conditional | Limited | Abstain | Failure | Prov F1 | Prov EM | Token-F1@800 E2E | LF-Eval E2E | Token-F1@800 Answered | LF-Eval Answered |",
+            "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+        ]
+    )
+    split_aggregates = aggregate.get(
+        "splits", {"all": {"question_count": len(rows), "metrics": aggregate}}
+    )
+    for split_name, split in split_aggregates.items():
+        metrics = split["metrics"]
+        quality = metrics["answer_quality"]
+        lf_eval = quality["lf_eval"]
+        lines.append(
+            "| %s | %d | %d | %d | %d | %d | %d | %s | %s | %s | %s | %s | %s |"
+            % (
+                split_name,
+                split["question_count"],
+                quality["answer_modes"]["full"],
+                quality["answer_modes"]["conditional"],
+                quality["answer_modes"]["limited"],
+                quality["abstain_count"],
+                quality["execution_failure_count"],
+                _format_display_score(metrics["provision"]["micro"]["f1"]),
+                _format_display_score(metrics["provision"]["exact_match"]["rate"]),
+                _format_display_score(quality["token_f1_at_800"]["end_to_end"]),
+                _format_display_score(lf_eval["end_to_end"]),
+                _format_display_score(quality["token_f1_at_800"]["answered_only"]),
+                _format_display_score(lf_eval["answered_only"]),
+            )
         )
     lines.extend(
         [
@@ -1073,6 +1738,10 @@ def _format_metric(value: Any) -> str:
     return "N/A" if value is None else "%.4f" % float(value)
 
 
+def _format_display_score(value: Any) -> str:
+    return "N/A" if value is None else "%.2f" % (100.0 * float(value))
+
+
 def _format_number(value: Any) -> str:
     return "N/A" if value is None else "%.3f" % float(value)
 
@@ -1112,6 +1781,23 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--gold-map", type=Path)
     parser.add_argument("--answer-labels", type=Path)
+    parser.add_argument(
+        "--lf-eval-scores",
+        type=Path,
+        help="frozen external LF-Eval JSON; omitted scores remain unavailable",
+    )
+    parser.add_argument(
+        "--split-manifest",
+        type=Path,
+        help="optional JSON split memberships for development, held-out, and all rows",
+    )
+    parser.add_argument(
+        "--replacement-batch-dir",
+        type=Path,
+        action="append",
+        default=[],
+        help="retry batch whose subset summary rows replace matching primary rows",
+    )
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--require-stage-provenance", action="store_true")
     return parser.parse_args()
@@ -1131,6 +1817,11 @@ def main() -> int:
     corpus_path = _resolve_path(args.corpus).resolve()
     gold_map_path = _resolve_path(args.gold_map).resolve() if args.gold_map else None
     labels_path = _resolve_path(args.answer_labels).resolve() if args.answer_labels else None
+    lf_eval_scores_path = _resolve_path(args.lf_eval_scores).resolve() if args.lf_eval_scores else None
+    split_manifest_path = _resolve_path(args.split_manifest).resolve() if args.split_manifest else None
+    replacement_batch_directories = [
+        _resolve_path(path).resolve() for path in args.replacement_batch_dir
+    ]
     output_directory = _resolve_path(args.output_dir).resolve()
     aggregate, rows, metadata = evaluate_batch(
         batch_directory=batch_directory,
@@ -1139,6 +1830,9 @@ def main() -> int:
         gold_map_path=gold_map_path,
         answer_labels_path=labels_path,
         require_stage_provenance=args.require_stage_provenance,
+        lf_eval_scores_path=lf_eval_scores_path,
+        split_manifest_path=split_manifest_path,
+        replacement_batch_directories=replacement_batch_directories,
     )
     write_outputs(output_directory, aggregate, rows, metadata)
     print(json.dumps(_json_ready(aggregate), ensure_ascii=False, indent=2, sort_keys=True))

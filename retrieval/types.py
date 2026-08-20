@@ -22,3 +22,4 @@ class FusedHit:
     source_first_stage_ranks: Dict[str, int] = field(default_factory=dict)
     first_stage_rank: Optional[int] = None
     fusion_rank: Optional[int] = None
+    alias_provision_ids: List[str] = field(default_factory=list)

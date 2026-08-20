@@ -32,6 +32,52 @@ class CoverageStatus(str, Enum):
     CONFLICTING = "conflicting"
 
 
+class LegalStatus(str, Enum):
+    COVERED = "covered"
+    PARTIALLY_COVERED = "partially_covered"
+    UNCOVERED = "uncovered"
+    CONFLICTING = "conflicting"
+
+
+class ApplicabilityStatus(str, Enum):
+    DIRECT = "direct"
+    CONDITIONAL = "conditional"
+    NOT_ASSESSED = "not_assessed"
+
+
+class GapType(str, Enum):
+    NONE = "none"
+    MISSING_STATUTE = "missing_statute"
+    MISSING_FACT = "missing_fact"
+    SCOPE_EXCESS = "scope_excess"
+    CONFLICT = "conflict"
+
+
+class CriterionStatus(str, Enum):
+    SATISFIED = "satisfied"
+    PARTIALLY_SATISFIED = "partially_satisfied"
+    UNSATISFIED = "unsatisfied"
+    CONFLICTING = "conflicting"
+
+
+class AnswerMode(str, Enum):
+    FULL = "full"
+    CONDITIONAL = "conditional"
+    LIMITED = "limited"
+
+
+class CandidateAnswerStatus(str, Enum):
+    PUBLISHED_ANSWER = "PUBLISHED_ANSWER"
+    GENERATED = "GENERATED"
+    EXECUTION_FAILURE = "EXECUTION_FAILURE"
+
+
+class CandidateAnswerBasis(str, Enum):
+    PUBLISHED_ANSWER = "published_answer"
+    RETRIEVED_CANDIDATES = "retrieved_candidates"
+    QUESTION_ONLY = "question_only"
+
+
 class QueryChannel(str, Enum):
     PROVISION_STYLE = "provision_style"
     SPARSE_KEYWORD = "sparse_keyword"
@@ -76,6 +122,24 @@ class RequiredEvidenceItem:
     critical: bool
 
     completion_criteria: str = ""
+    necessity_reason: str = ""
+    answer_target_ids: List[str] = field(default_factory=list)
+    scope_source: str = "legacy"
+    completion_requirements: List["CompletionRequirement"] = field(default_factory=list)
+
+
+@dataclass(frozen=True)
+class AnswerTarget:
+    answer_target_id: str
+    question_anchor: str
+    requested_output: str
+    answer_type: str
+
+
+@dataclass(frozen=True)
+class CompletionRequirement:
+    requirement_id: str
+    text: str
 
 @dataclass(frozen=True)
 class RetrievalRequest:
@@ -87,6 +151,8 @@ class RetrievalRequest:
     top_k: int = 100
     query_terms: List[str] = field(default_factory=list)
     statute_hints: List[str] = field(default_factory=list)
+    first_stage_query_text: Optional[str] = None
+    rerank_query_text: Optional[str] = None
 
 
 @dataclass(frozen=True)
@@ -107,6 +173,7 @@ class CandidateProvision:
     selection_rank: Optional[int] = None
     candidate_stage: str = "bge_rerank"
     selection_reason: str = "global_top_k"
+    alias_provision_ids: List[str] = field(default_factory=list)
 
 
 @dataclass(frozen=True)
@@ -126,6 +193,7 @@ class CandidateStageRecord:
     fusion_score: Optional[float] = None
     rerank_score: Optional[float] = None
     selection_reason: str = ""
+    alias_provision_ids: List[str] = field(default_factory=list)
 
 
 @dataclass(frozen=True)
@@ -151,6 +219,18 @@ class CoverageAssessment:
     rationale: str
     partial_kind: str = "not_applicable"
     missing_aspects: List[str] = field(default_factory=list)
+    legal_status: Optional[LegalStatus] = None
+    applicability_status: Optional[ApplicabilityStatus] = None
+    gap_type: Optional[GapType] = None
+    criterion_results: List["CriterionResult"] = field(default_factory=list)
+
+
+@dataclass(frozen=True)
+class CriterionResult:
+    requirement_id: str
+    status: CriterionStatus
+    linked_provision_ids: List[str]
+    rationale: str
 
 
 @dataclass(frozen=True)
@@ -165,6 +245,7 @@ class EvidenceConflict:
 class Claim:
     claim_id: str
     text: str
+    answer_target_ids: List[str] = field(default_factory=list)
 
 
 @dataclass(frozen=True)
@@ -191,6 +272,9 @@ class PolicyDecision:
     action: PolicyAction
     termination_reason: Optional[TerminationReason] = None
     explanation: str = ""
+    answer_mode: Optional[AnswerMode] = None
+    answered_target_ids: List[str] = field(default_factory=list)
+    deferred_target_ids: List[str] = field(default_factory=list)
 
 
 @dataclass(frozen=True)

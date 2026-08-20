@@ -25,7 +25,8 @@ class GapRoundPropagationTests(unittest.TestCase):
             "normalized_question": "적용 예외는 무엇인가",
             "next_retrieval_round": next_retrieval_round,
             "legal_issues": [{"issue_id": "I1"}],
-            "required_evidence_items": [{"evidence_item_id": "E1", "issue_id": "I1", "evidence_type": "exception", "description": "적용 예외", "critical": True}],
+            "answer_targets": [{"answer_target_id": "T1", "question_anchor": "적용 예외", "requested_output": "적용 예외", "answer_type": "legal_rule"}],
+            "required_evidence_items": [{"evidence_item_id": "E1", "issue_id": "I1", "evidence_type": "exception", "description": "적용 예외", "critical": True, "answer_target_ids": ["T1"]}],
             "coverage_assessments": [{"evidence_item_id": "E1", "status": "uncovered"}],
             "missing_evidence_items": [{"evidence_item_id": "E1"}],
             "evidence_conflicts": [],
@@ -39,6 +40,7 @@ class GapRoundPropagationTests(unittest.TestCase):
         round_two_payload = self.payload(2, history)
         planning_input = self.executor._planning_input("GAP_QUERY_PLAN", round_two_payload, "run-gap-rounds")
         self.assertEqual(planning_input["next_retrieval_round"], 2)
+        self.assertEqual(planning_input["answer_targets"], round_two_payload["answer_targets"])
         round_two = self.executor.execute("legal_issue_and_query_planning", "GAP_QUERY_PLAN", round_two_payload)
         self.assertEqual(round_two["gap_retrieval_requests"][0]["request_id"], "GRQ-R2-1")
         history.append(round_two["gap_retrieval_requests"][0])

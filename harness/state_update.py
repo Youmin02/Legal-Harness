@@ -4,12 +4,14 @@ from dataclasses import replace
 from typing import Iterable, List, Sequence
 
 from .contracts import (
+    AnswerTarget,
     CandidateProvision,
     CandidateStageRecord,
     CoverageAssessment,
     CoverageStatus,
     EvidenceConflict,
     EvidenceLink,
+    LegalStatus,
     LegalIssue,
     Phase,
     RequiredEvidenceItem,
@@ -26,10 +28,12 @@ def apply_initial_plan(
     state: RunState,
     legal_issues: Sequence[LegalIssue],
     required_evidence_items: Sequence[RequiredEvidenceItem],
+    answer_targets: Sequence[AnswerTarget] = (),
 ) -> None:
     if state.legal_issues or state.required_evidence_items:
         raise StateInvariantError("initial plan can only be applied once")
     state.legal_issues = list(legal_issues)
+    state.answer_targets = list(answer_targets)
     state.required_evidence_items = list(required_evidence_items)
     state.phase = Phase.PLANNING_INITIAL
     state.last_validated_event = "S1.INITIAL_PLAN"
@@ -68,6 +72,10 @@ def _merge_candidate_provenance(
         target_evidence_item_ids=_ordered_union(
             previous.target_evidence_item_ids,
             incoming.target_evidence_item_ids,
+        ),
+        alias_provision_ids=_ordered_union(
+            previous.alias_provision_ids,
+            incoming.alias_provision_ids,
         ),
         # Scalar rank/score fields describe the retained first observation.
         # Cross-round and cross-query comparison belongs in the immutable
@@ -124,18 +132,10 @@ def register_retrieval_round(
     )
 
 
-_CRITICAL_IMPROVEMENTS = {
-    (CoverageStatus.UNCOVERED, CoverageStatus.PARTIALLY_COVERED),
-    (CoverageStatus.UNCOVERED, CoverageStatus.COVERED),
-    (CoverageStatus.PARTIALLY_COVERED, CoverageStatus.COVERED),
-    (CoverageStatus.CONFLICTING, CoverageStatus.PARTIALLY_COVERED),
-    (CoverageStatus.CONFLICTING, CoverageStatus.COVERED),
-}
-
-_MONOTONIC_STATUS_RANK = {
-    CoverageStatus.UNCOVERED: 0,
-    CoverageStatus.PARTIALLY_COVERED: 1,
-    CoverageStatus.COVERED: 2,
+_MONOTONIC_LEGAL_STATUS_RANK = {
+    LegalStatus.UNCOVERED: 0,
+    LegalStatus.PARTIALLY_COVERED: 1,
+    LegalStatus.COVERED: 2,
 }
 
 
@@ -146,6 +146,20 @@ def apply_coverage_assessment(
     evidence_conflicts: Sequence[EvidenceConflict],
 ) -> bool:
     previous = state.coverage_by_evidence_id()
+    previous_accepted_critical_links = {
+        (link.evidence_item_id, link.provision_id)
+        for link in state.evidence_links
+        if link.assessment == "accepted"
+        and state.evidence_by_id().get(link.evidence_item_id)
+        and state.evidence_by_id()[link.evidence_item_id].critical
+    }
+    previous_unresolved_critical_conflict_ids = {
+        conflict.evidence_item_id
+        for conflict in state.unresolved_critical_conflicts()
+    }
+    previous_partially_citable_target_ids = set(
+        state.partially_citable_answer_target_ids()
+    )
     incoming = {
         assessment.evidence_item_id: assessment
         for assessment in coverage_assessments
@@ -164,10 +178,10 @@ def apply_coverage_assessment(
         if (
             prior is not None
             and evidence_id not in unresolved_conflict_ids
-            and prior.status in _MONOTONIC_STATUS_RANK
-            and assessment.status in _MONOTONIC_STATUS_RANK
-            and _MONOTONIC_STATUS_RANK[prior.status]
-            > _MONOTONIC_STATUS_RANK[assessment.status]
+            and state.legal_status_for(prior) in _MONOTONIC_LEGAL_STATUS_RANK
+            and state.legal_status_for(assessment) in _MONOTONIC_LEGAL_STATUS_RANK
+            and _MONOTONIC_LEGAL_STATUS_RANK[state.legal_status_for(prior)]
+            > _MONOTONIC_LEGAL_STATUS_RANK[state.legal_status_for(assessment)]
         ):
             current[evidence_id] = prior
             preserved_ids.add(evidence_id)
@@ -178,13 +192,6 @@ def apply_coverage_assessment(
         for item in state.required_evidence_items
         if item.critical
     }
-    status_improved = any(
-        evidence_id in critical_ids
-        and evidence_id in previous
-        and (previous[evidence_id].status, assessment.status) in _CRITICAL_IMPROVEMENTS
-        for evidence_id, assessment in current.items()
-    )
-    progress = state.last_retrieval_new_provision_count > 0 or status_improved
     incoming_links = list(evidence_links)
     retained_links = [
         link
@@ -202,16 +209,53 @@ def apply_coverage_assessment(
         current[item.evidence_item_id] for item in state.required_evidence_items
     ]
     state.evidence_conflicts = list(evidence_conflicts)
+    state.refresh_derived_fields()
+    status_improved = any(
+        evidence_id in critical_ids
+        and evidence_id in previous
+        and state.legal_status_for(previous[evidence_id])
+        in _MONOTONIC_LEGAL_STATUS_RANK
+        and state.legal_status_for(assessment) in _MONOTONIC_LEGAL_STATUS_RANK
+        and _MONOTONIC_LEGAL_STATUS_RANK[state.legal_status_for(assessment)]
+        > _MONOTONIC_LEGAL_STATUS_RANK[state.legal_status_for(previous[evidence_id])]
+        for evidence_id, assessment in current.items()
+    )
+    has_new_accepted_critical_link = bool(
+        {
+            (link.evidence_item_id, link.provision_id)
+            for link in state.evidence_links
+            if link.assessment == "accepted"
+            and link.evidence_item_id in critical_ids
+        }
+        - previous_accepted_critical_links
+    )
+    resolved_critical_conflict = bool(
+        previous_unresolved_critical_conflict_ids
+        - {conflict.evidence_item_id for conflict in state.unresolved_critical_conflicts()}
+    )
+    newly_partially_citable_target = bool(
+        set(state.partially_citable_answer_target_ids())
+        - previous_partially_citable_target_ids
+    )
+    progress = (
+        status_improved
+        or has_new_accepted_critical_link
+        or resolved_critical_conflict
+        or newly_partially_citable_target
+    )
     state.no_progress_rounds = 0 if progress else state.no_progress_rounds + 1
     state.phase = Phase.ASSESSING_COVERAGE
     state.last_validated_event = "S2.ASSESS_COVERAGE"
-    state.refresh_derived_fields()
     state.record(
         "COVERAGE_ASSESSMENT_VALIDATED",
         progress=progress,
         no_progress_rounds=state.no_progress_rounds,
         missing_critical_count=len(state.missing_critical_items),
         unresolved_conflict_count=len(state.unresolved_critical_conflicts()),
+        status_improved=status_improved,
+        new_accepted_critical_link=has_new_accepted_critical_link,
+        resolved_critical_conflict=resolved_critical_conflict,
+        newly_partially_citable_target=newly_partially_citable_target,
     )
     return progress
 

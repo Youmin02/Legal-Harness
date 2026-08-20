@@ -11,6 +11,7 @@
     "run_id": {"type": "string", "minLength": 1},
     "normalized_question": {"type": "string", "minLength": 1},
     "legal_issues": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "answer_targets": {"type": "array", "items": {"type": "object"}},
     "required_evidence_items": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidence"}},
     "candidate_provisions": {"type": "array", "items": {"$ref": "#/$defs/provision"}},
     "prior_coverage_assessments": {"type": "array", "items": {"type": "object"}}
@@ -24,7 +25,11 @@
         "issue_id": {"type": "string", "pattern": "^I[1-9][0-9]*$"},
         "description": {"type": "string", "minLength": 1},
         "critical": {"type": "boolean"},
-        "completion_criteria": {"type": "string", "minLength": 1}
+        "completion_criteria": {"type": "string", "minLength": 1},
+        "necessity_reason": {"type": "string"},
+        "answer_target_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "scope_source": {"type": "string"},
+        "completion_requirements": {"type": "array", "items": {"type": "object"}}
       }
     },
     "provision": {

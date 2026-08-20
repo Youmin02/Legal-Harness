@@ -50,6 +50,16 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--per-evidence-min-k", type=int, default=1)
     parser.add_argument(
+        "--candidate-budget-scope",
+        choices=("per_issue", "per_round"),
+        default="per_issue",
+    )
+    parser.add_argument(
+        "--dedup-mode",
+        choices=("none", "legal_text_alias"),
+        default="none",
+    )
+    parser.add_argument(
         "--rerank-document-mode",
         choices=("body_only", "statute_and_body"),
         default="body_only",
@@ -88,6 +98,8 @@ def build_retriever(args: argparse.Namespace) -> RetrievalPipeline:
         rerank_query_mode=args.rerank_query_mode,
         candidate_selection=args.candidate_selection,
         per_evidence_min_k=args.per_evidence_min_k,
+        dedup_mode=args.dedup_mode,
+        candidate_budget_scope=args.candidate_budget_scope,
     )
 
 
@@ -105,12 +117,14 @@ def main() -> int:
         "total_retrieval_requests": args.requests,
         "rerank_pool_k": args.rerank_pool_k,
         "final_top_k": args.final_top_k,
-        "candidate_budget_scope": "per_issue_per_round",
+        "candidate_budget_scope": args.candidate_budget_scope,
         "rerank_query_mode": args.rerank_query_mode,
         "candidate_selection": args.candidate_selection,
         "per_evidence_min_k": args.per_evidence_min_k,
+        "dedup_mode": args.dedup_mode,
         "rerank_document_mode": args.rerank_document_mode,
-        "conditional_generation": "factual_condition_only",
+        "conditional_generation": "answer_target_full_conditional_limited",
+        "planning_contract": "answer_targets_required",
         "monotonic_coverage": True,
         "input_format": args.input_format,
     }
@@ -156,9 +170,19 @@ def main() -> int:
         "run_id": outcome.state.run_id,
         "retrieval_rounds_used": outcome.state.retrieval_rounds_used,
         "accepted_provision_ids": sorted(outcome.state.accepted_provision_ids),
+        "candidate_answer_status": (
+            outcome.candidate_answer_status.value
+            if outcome.candidate_answer_status
+            else None
+        ),
+        "candidate_answer_basis": (
+            outcome.candidate_answer_basis.value
+            if outcome.candidate_answer_basis
+            else None
+        ),
         "errors": outcome.errors,
     }
-    result = dict(summary, answer=outcome.answer)
+    result = dict(summary, answer=outcome.answer, candidate_answer=outcome.candidate_answer)
     rendered = json.dumps(result, ensure_ascii=False, indent=2)
     if args.result_file:
         args.result_file.parent.mkdir(parents=True, exist_ok=True)
@@ -166,6 +190,8 @@ def main() -> int:
     print(rendered)
     if outcome.answer:
         print("\n--- answer ---\n" + outcome.answer)
+    elif outcome.candidate_answer:
+        print("\n--- benchmark candidate (ABSTAIN remains public status) ---\n" + outcome.candidate_answer)
     return 0 if outcome.status is OutcomeStatus.ANSWER else 1
 
 

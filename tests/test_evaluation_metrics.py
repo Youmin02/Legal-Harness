@@ -9,10 +9,19 @@ from scripts.evaluate_dev_runs import (
     CorpusEntry,
     EvaluationError,
     GoldGroup,
+    LFEvalScores,
+    _aggregate_answer_quality,
     build_gold_groups,
     evaluate_batch,
+    koblex_normalize,
+    koblex_official_prediction,
+    koblex_token_f1,
+    koblex_token_f1_at_800,
+    load_evaluation_splits,
+    load_lf_eval_scores,
     percentile_type7,
     precision_recall_f1,
+    render_markdown,
     write_outputs,
 )
 
@@ -129,6 +138,28 @@ class MetricFunctionTests(unittest.TestCase):
         self.assertAlmostEqual(metric["precision"], 1 / 3)
         self.assertAlmostEqual(metric["recall"], 1 / 2)
         self.assertFalse(metric["complete"])
+        self.assertFalse(metric["provision_em"])
+
+    def test_complete_evidence_and_provision_em_have_different_meanings(self):
+        groups = [
+            GoldGroup("q", "G1", "법A", "법A", "h1", ("P1",), "exact_single"),
+            GoldGroup("q", "G2", "법B", "법B", "h2", ("P2",), "exact_single"),
+        ]
+
+        metric = precision_recall_f1({"P1", "P2", "EXTRA"}, groups)
+
+        self.assertTrue(metric["complete"])
+        self.assertFalse(metric["provision_em"])
+
+    def test_one_exact_duplicate_alias_is_one_gold_match(self):
+        groups = [
+            GoldGroup("q", "G1", "법A", "법A", "h1", ("P1", "P1-copy"), "exact_duplicate")
+        ]
+
+        metric = precision_recall_f1({"P1-copy"}, groups)
+
+        self.assertEqual(metric["true_positive"], 1)
+        self.assertTrue(metric["provision_em"])
 
     def test_empty_predictions_have_zero_precision_recall_and_f1(self):
         groups = [GoldGroup("q", "G1", "법A", "법A", "h", ("P1",), "exact_single")]
@@ -142,6 +173,113 @@ class MetricFunctionTests(unittest.TestCase):
     def test_type7_percentile_is_deterministic(self):
         self.assertEqual(percentile_type7([100, 200, 300], 0.95), 290.0)
         self.assertEqual(percentile_type7([42], 0.95), 42.0)
+
+
+class KoBLEXAnswerMetricTests(unittest.TestCase):
+    def test_token_f1_uses_official_normalization_and_exact_match(self):
+        self.assertEqual(koblex_normalize("  법률, ABC!  "), "법률 abc")
+        self.assertEqual(koblex_token_f1("법률, ABC!", "법률 abc"), 1.0)
+
+    def test_empty_prediction_has_zero_token_f1(self):
+        self.assertEqual(koblex_token_f1("", "정답 문구"), 0.0)
+
+    def test_official_token_f1_removes_thinking_and_truncates_to_800_characters(self):
+        prediction = "정답" + "x" * 900 + "<\think>숨은 추론"
+        self.assertEqual(koblex_official_prediction(prediction), ("정답" + "x" * 798))
+        self.assertEqual(koblex_token_f1_at_800("정답<\think>숨은 추론", "정답"), 1.0)
+
+    def test_e2e_zeroes_abstain_and_keeps_answered_only_separate(self):
+        scores = LFEvalScores(
+            judge_model="frozen-judge",
+            judge_revision="r1",
+            prompt_sha256="a" * 64,
+            scale="0_10",
+            raw_scores={"q1": 8.0},
+            normalized_scores={"q1": 0.8},
+        )
+        quality = _aggregate_answer_quality(
+            [
+                {
+                    "status": "ANSWER",
+                    "token_f1": 0.8,
+                    "answer_mode": "full",
+                    "lf_eval_score_normalized": 0.8,
+                },
+                {
+                    "status": "ABSTAIN",
+                    "token_f1": 0.0,
+                    "answer_mode": None,
+                    "lf_eval_score_normalized": None,
+                },
+            ],
+            scores,
+        )
+
+        self.assertAlmostEqual(quality["token_f1"]["end_to_end"], 0.4)
+        self.assertAlmostEqual(quality["token_f1"]["answered_only"], 0.8)
+        self.assertAlmostEqual(quality["lf_eval"]["end_to_end"], 0.4)
+        self.assertAlmostEqual(quality["lf_eval"]["answered_only"], 0.8)
+        self.assertEqual(quality["answer_modes"]["full"], 1)
+
+    def test_lf_eval_scale_normalization_and_missing_scores_fail_closed(self):
+        with tempfile.TemporaryDirectory() as directory:
+            score_path = Path(directory) / "lf_eval.json"
+            write_json(
+                score_path,
+                {
+                    "judge_model": "frozen-judge",
+                    "judge_revision": "r1",
+                    "prompt_sha256": "b" * 64,
+                    "scale": "0_10",
+                    "scores": {"q1": 8.0},
+                },
+            )
+            scores = load_lf_eval_scores(score_path)
+
+        self.assertAlmostEqual(scores.normalized_scores["q1"], 0.8)
+        quality = _aggregate_answer_quality(
+            [
+                {
+                    "status": "ANSWER",
+                    "token_f1": 0.8,
+                    "answer_mode": "full",
+                    "lf_eval_score_normalized": 0.8,
+                },
+                {
+                    "status": "ANSWER",
+                    "token_f1": 0.5,
+                    "answer_mode": "limited",
+                    "lf_eval_score_normalized": None,
+                },
+            ],
+            scores,
+        )
+
+        self.assertFalse(quality["lf_eval"]["available"])
+        self.assertIsNone(quality["lf_eval"]["end_to_end"])
+        self.assertIsNone(quality["lf_eval"]["answered_only"])
+        self.assertEqual(quality["lf_eval"]["unavailable_reason"], "MISSING_ANSWER_SCORES")
+
+
+class SplitManifestTests(unittest.TestCase):
+    def test_development_held_out_and_all_splits_are_representable(self):
+        with tempfile.TemporaryDirectory() as directory:
+            split_path = Path(directory) / "splits.json"
+            write_json(
+                split_path,
+                {
+                    "splits": {
+                        "development": {"question_ids": ["q1"]},
+                        "held_out": {"question_ids": ["q2", "q3"]},
+                        "all": {"question_ids": ["q1", "q2", "q3"]},
+                    }
+                },
+            )
+            splits = load_evaluation_splits(split_path, ["q1", "q2", "q3"])
+
+        self.assertEqual(splits["development"], ("q1",))
+        self.assertEqual(splits["held_out"], ("q2", "q3"))
+        self.assertEqual(splits["all"], ("q1", "q2", "q3"))
 
 
 class EvaluationFixture:
@@ -291,6 +429,7 @@ class EvaluationFixture:
                     "record_schema_version": "1.0",
                     "run_id": run_id,
                     "status": status,
+                    "answer": "정답1" if question_id == "q1" else None,
                     "termination_reason": reason,
                     "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE"
                     if status == "ABSTAIN"
@@ -334,6 +473,11 @@ class EvaluationFixture:
 
 
 class EndToEndEvaluationTests(unittest.TestCase):
+    @staticmethod
+    def _write_replacement_batch(batch, manifest, summaries):
+        write_json(batch / "manifest.json", manifest)
+        write_jsonl(batch / "summary.jsonl", summaries)
+
     def test_legacy_records_keep_stage_metrics_unavailable(self):
         with tempfile.TemporaryDirectory() as directory:
             fixture = EvaluationFixture(Path(directory), include_stages=False)
@@ -353,6 +497,150 @@ class EndToEndEvaluationTests(unittest.TestCase):
             )
             self.assertIn("STAGE_PROVENANCE_UNAVAILABLE", aggregate["warnings"])
             self.assertTrue(all(not row["stage_provenance_available"] for row in rows))
+            self.assertAlmostEqual(
+                aggregate["answer_quality"]["token_f1"]["end_to_end"], 1 / 3
+            )
+            self.assertEqual(
+                aggregate["answer_quality"]["token_f1"]["answered_only"], 1.0
+            )
+            self.assertFalse(aggregate["answer_quality"]["lf_eval"]["available"])
+            self.assertEqual(
+                aggregate["answer_quality"]["unrecorded_answer_mode_count"], 1
+            )
+            candidate = aggregate["answer_quality"]["candidate_token_f1_at_800"]
+            self.assertAlmostEqual(candidate["all_outcomes"], 1 / 3)
+            self.assertAlmostEqual(candidate["normal_outcomes"], 1 / 2)
+            self.assertEqual(candidate["available_count"], 1)
+            self.assertEqual(candidate["missing_count"], 1)
+
+    def test_abstain_candidate_is_scored_separately_from_published_metrics(self):
+        with tempfile.TemporaryDirectory() as directory:
+            fixture = EvaluationFixture(Path(directory), include_stages=False)
+            result_path = fixture.runs / "run-2/result.json"
+            result = json.loads(result_path.read_text(encoding="utf-8"))
+            result.update(
+                {
+                    "candidate_answer": "정답2",
+                    "candidate_answer_status": "GENERATED",
+                    "candidate_answer_basis": "retrieved_candidates",
+                    "candidate_answer_termination_reason": None,
+                    "candidate_answer_error": None,
+                }
+            )
+            write_json(result_path, result)
+
+            aggregate, rows, _ = evaluate_batch(
+                fixture.batch, fixture.dataset, fixture.corpus
+            )
+
+            self.assertEqual(rows[1]["status"], "ABSTAIN")
+            self.assertIsNone(rows[1]["answer_mode"])
+            self.assertEqual(rows[1]["candidate_answer_status"], "GENERATED")
+            self.assertEqual(rows[1]["candidate_answer"], "정답2")
+            self.assertEqual(rows[1]["candidate_token_f1_at_800"], 1.0)
+            self.assertEqual(aggregate["answer_quality"]["token_f1"]["end_to_end"], 1 / 3)
+            candidate = aggregate["answer_quality"]["candidate_token_f1_at_800"]
+            self.assertAlmostEqual(candidate["all_outcomes"], 2 / 3)
+            self.assertEqual(candidate["available_count"], 2)
+            self.assertEqual(candidate["abstain_available_count"], 1)
+            self.assertEqual(candidate["abstain_available_only"], 1.0)
+            self.assertEqual(
+                aggregate["answer_quality"]["over_abstention_exact_match_at_800"]["count"],
+                1,
+            )
+            markdown = render_markdown(aggregate, rows)
+            self.assertIn("Token-F1@800 E2E", markdown)
+            self.assertIn("ABSTAIN candidates only (available only)", markdown)
+
+    def test_candidate_status_and_basis_must_match_public_outcome(self):
+        invalid_cases = (
+            (
+                "run-2",
+                {
+                    "candidate_answer": "정답2",
+                    "candidate_answer_status": "PUBLISHED_ANSWER",
+                    "candidate_answer_basis": "published_answer",
+                },
+                "ABSTAIN must not use a published candidate answer",
+            ),
+            (
+                "run-1",
+                {
+                    "candidate_answer": "정답1",
+                    "candidate_answer_status": "GENERATED",
+                    "candidate_answer_basis": "retrieved_candidates",
+                },
+                "ANSWER must not use an abstain candidate basis",
+            ),
+        )
+        for run_id, update, message in invalid_cases:
+            with self.subTest(run_id=run_id), tempfile.TemporaryDirectory() as directory:
+                fixture = EvaluationFixture(Path(directory), include_stages=False)
+                result_path = fixture.runs / run_id / "result.json"
+                result = json.loads(result_path.read_text(encoding="utf-8"))
+                result.update(update)
+                write_json(result_path, result)
+
+                with self.assertRaisesRegex(EvaluationError, message):
+                    evaluate_batch(fixture.batch, fixture.dataset, fixture.corpus)
+
+    def test_answer_modes_lf_eval_and_split_output_are_additive(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            fixture = EvaluationFixture(root, include_stages=False)
+            result_path = fixture.runs / "run-1/result.json"
+            result = json.loads(result_path.read_text(encoding="utf-8"))
+            result.update(
+                {
+                    "answer_mode": "full",
+                    "answered_target_ids": ["T1"],
+                    "deferred_target_ids": [],
+                }
+            )
+            write_json(result_path, result)
+            lf_eval_path = root / "lf_eval.json"
+            split_path = root / "splits.json"
+            write_json(
+                lf_eval_path,
+                {
+                    "judge_model": "frozen-judge",
+                    "judge_revision": "r1",
+                    "prompt_sha256": "c" * 64,
+                    "scale": "0_10",
+                    "scores": {"q1": 8.0},
+                },
+            )
+            write_json(
+                split_path,
+                {
+                    "splits": {
+                        "development": {"question_ids": ["q1"]},
+                        "held_out": {"question_ids": ["q2", "q3"]},
+                        "all": {"question_ids": ["q1", "q2", "q3"]},
+                    }
+                },
+            )
+
+            aggregate, rows, metadata = evaluate_batch(
+                fixture.batch,
+                fixture.dataset,
+                fixture.corpus,
+                lf_eval_scores_path=lf_eval_path,
+                split_manifest_path=split_path,
+            )
+
+            self.assertEqual(rows[0]["answer_mode"], "full")
+            self.assertEqual(rows[0]["answered_target_ids"], ["T1"])
+            self.assertEqual(rows[0]["split_memberships"], ["all", "development"])
+            self.assertEqual(aggregate["answer_quality"]["answer_modes"]["full"], 1)
+            self.assertAlmostEqual(
+                aggregate["answer_quality"]["lf_eval"]["end_to_end"], 0.8 / 3
+            )
+            self.assertAlmostEqual(
+                aggregate["splits"]["development"]["metrics"]["answer_quality"]["token_f1"]["end_to_end"],
+                1.0,
+            )
+            self.assertEqual(metadata["lf_eval"]["input_scale"], "0_10")
 
     def test_stage_boundaries_labels_hops_and_efficiency(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -429,6 +717,112 @@ class EndToEndEvaluationTests(unittest.TestCase):
             self.assertIn("Retrieval stages", (output / "summary.md").read_text(encoding="utf-8"))
             with self.assertRaises(FileExistsError):
                 write_outputs(output, aggregate, rows, metadata)
+
+    def test_subset_replacement_replaces_failure_and_uses_retry_record(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            fixture = EvaluationFixture(root, include_stages=False)
+            retry_batch = root / "records/batches/retry-q3"
+            retry_run = root / "records/retry-runs/retry-q3"
+            manifest = json.loads(
+                (fixture.batch / "manifest.json").read_text(encoding="utf-8")
+            )
+            self._write_replacement_batch(
+                retry_batch,
+                manifest,
+                [
+                    {
+                        "ordinal": 3,
+                        "question_id": "q3",
+                        "n_hops": 3,
+                        "record_directory": str(retry_run),
+                        "status": "ANSWER",
+                    }
+                ],
+            )
+            state = {
+                "accepted_provision_ids": ["P3"],
+                "candidate_provisions": [{"provision_id": "P3"}],
+                "query_history": [{"request_id": "RQ-q3-retry"}],
+                "retrieval_rounds_used": 1,
+                "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+                "action_trace": [],
+            }
+            write_json(
+                retry_run / "metadata.json",
+                {
+                    "record_schema_version": "1.0",
+                    "run_id": "retry-q3",
+                    "question_id": "q3",
+                    "configuration": {
+                        "condition": "B0-retry",
+                        "retriever": "bm25",
+                        "seed": 0,
+                    },
+                },
+            )
+            write_json(
+                retry_run / "result.json",
+                {
+                    "record_schema_version": "1.0",
+                    "run_id": "retry-q3",
+                    "status": "ANSWER",
+                    "answer": "정답3",
+                    "termination_reason": "COMPLETED",
+                    "abstention_reason": None,
+                    "end_to_end_latency_ms": 111.0,
+                    "state": state,
+                },
+            )
+
+            aggregate, rows, metadata = evaluate_batch(
+                fixture.batch,
+                fixture.dataset,
+                fixture.corpus,
+                replacement_batch_directories=[retry_batch],
+            )
+
+            retry_row = next(row for row in rows if row["question_id"] == "q3")
+            self.assertEqual(retry_row["status"], "ANSWER")
+            self.assertEqual(retry_row["record_directory"], str(retry_run.resolve()))
+            self.assertEqual(aggregate["outcomes"]["EXECUTION_FAILURE"]["count"], 0)
+            self.assertEqual(aggregate["replacements"]["question_ids"], ["q3"])
+            self.assertEqual(
+                metadata["inputs"]["replacements"]["source_record_directories"]["q3"],
+                str(retry_run.resolve()),
+            )
+
+    def test_unknown_or_duplicate_replacement_rows_fail_closed(self):
+        cases = (
+            (
+                [{"question_id": "not-in-primary", "status": "ANSWER"}],
+                "replacement summary references non-primary question",
+            ),
+            (
+                [
+                    {"question_id": "q3", "status": "ANSWER"},
+                    {"question_id": "q3", "status": "ANSWER"},
+                ],
+                "duplicate replacement summary row: q3",
+            ),
+        )
+        for summaries, message in cases:
+            with self.subTest(message=message), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                fixture = EvaluationFixture(root, include_stages=False)
+                manifest = json.loads(
+                    (fixture.batch / "manifest.json").read_text(encoding="utf-8")
+                )
+                retry_batch = root / "records/batches/retry-invalid"
+                self._write_replacement_batch(retry_batch, manifest, summaries)
+
+                with self.assertRaisesRegex(EvaluationError, message):
+                    evaluate_batch(
+                        fixture.batch,
+                        fixture.dataset,
+                        fixture.corpus,
+                        replacement_batch_directories=[retry_batch],
+                    )
 
     def test_missing_manifest_result_is_an_input_error_not_an_outcome(self):
         with tempfile.TemporaryDirectory() as directory:

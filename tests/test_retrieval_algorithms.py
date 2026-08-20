@@ -5,7 +5,11 @@ from pathlib import Path
 
 from harness.contracts import QueryChannel, RetrievalRequest
 from retrieval.bm25 import Bm25Retriever
-from retrieval.corpus import InMemoryProvisionCorpus, ProvisionDocument
+from retrieval.corpus import (
+    InMemoryProvisionCorpus,
+    ProvisionDocument,
+    legal_text_alias_key,
+)
 from retrieval.kure import KureExactVectorRetriever
 from retrieval.pipeline import RetrievalPipeline
 from retrieval.persistent import SqliteFts5Bm25Searcher, _query_terms_and_prefixes
@@ -45,6 +49,16 @@ class ScriptedFirstStage:
             )
             for rank, provision_id in enumerate(provision_ids)
         ]
+
+
+class QueryRecordingFirstStage(ScriptedFirstStage):
+    def __init__(self, documents, rankings):
+        super().__init__(documents, rankings)
+        self.queries = []
+
+    def search(self, request):
+        self.queries.append((request.query_text, list(request.query_terms)))
+        return super().search(request)
 
 
 class QueryRecordingReranker:
@@ -258,6 +272,7 @@ class RetrievalAlgorithmTests(unittest.TestCase):
             final_top_k=2,
             rerank_query_mode="combined_issue",
             candidate_selection="global_top_k",
+            dedup_mode="none",
         ).retrieve(requests, retrieval_round=1)
 
         self.assertEqual(
@@ -268,6 +283,130 @@ class RetrievalAlgorithmTests(unittest.TestCase):
             [candidate.source_request_ids for candidate in default],
             [candidate.source_request_ids for candidate in explicit],
         )
+
+    def test_first_stage_and_rerank_queries_are_independently_configurable(self):
+        document = ProvisionDocument("P1", "법1 제1조", "정밀 근거")
+        request = RetrievalRequest(
+            "RQ1",
+            "I1",
+            "E1",
+            QueryChannel.SPARSE_KEYWORD,
+            "legacy combined query",
+            query_terms=["legacy"],
+            first_stage_query_text="BM25 recall query",
+            rerank_query_text="BGE precision query",
+        )
+        first_stage = QueryRecordingFirstStage([document], {"RQ1": ["P1"]})
+        reranker = QueryRecordingReranker(
+            {"BGE precision query": {"P1": 1.0}}
+        )
+
+        RetrievalPipeline(first_stage, reranker).retrieve(
+            [request], retrieval_round=1
+        )
+
+        self.assertEqual(first_stage.queries, [("BM25 recall query", [])])
+        self.assertEqual(
+            [query for query, _ in reranker.calls], ["BGE precision query"]
+        )
+
+    def test_legal_text_alias_key_normalizes_unicode_and_whitespace(self):
+        first = ProvisionDocument("P1", "공직선거법  제18조", " 선거권이   없는 자 ")
+        second = ProvisionDocument("P2", "공직선거법 제18조", "선거권이 없는 자")
+
+        self.assertEqual(legal_text_alias_key(first), legal_text_alias_key(second))
+
+    def test_alias_dedup_preserves_raw_stages_and_final_alias_ids(self):
+        documents = [
+            ProvisionDocument("P1", "공직선거법 제18조", "선거권이 없는 자"),
+            ProvisionDocument("P2", "공직선거법 제18조", "선거권이 없는 자"),
+            ProvisionDocument("P3", "공직선거법 제19조", "선거권 회복"),
+        ]
+        request = RetrievalRequest(
+            "RQ1", "I1", "E1", QueryChannel.SPARSE_KEYWORD, "선거권"
+        )
+        pipeline = RetrievalPipeline(
+            ScriptedFirstStage(documents, {"RQ1": ["P1", "P2", "P3"]}),
+            PassThroughReranker(),
+            final_top_k=2,
+            dedup_mode="legal_text_alias",
+        )
+
+        candidates = pipeline.retrieve([request], retrieval_round=1)
+
+        self.assertEqual([candidate.provision_id for candidate in candidates], ["P1", "P3"])
+        self.assertEqual(candidates[0].alias_provision_ids, ["P1", "P2"])
+        self.assertEqual(
+            [
+                record.provision_id
+                for record in pipeline.last_stage_records
+                if record.candidate_stage == "bge_rerank"
+            ],
+            ["P1", "P2", "P3"],
+        )
+        collapse = [
+            record
+            for record in pipeline.last_stage_records
+            if record.candidate_stage == "dedup_collapse"
+        ]
+        self.assertEqual(len(collapse), 1)
+        self.assertEqual(collapse[0].alias_provision_ids, ["P1", "P2"])
+
+    def test_alias_dedup_does_not_merge_same_body_from_different_statutes(self):
+        documents = [
+            ProvisionDocument("P1", "법A 제1조", "공통 문장"),
+            ProvisionDocument("P2", "법B 제1조", "공통 문장"),
+        ]
+        request = RetrievalRequest(
+            "RQ1", "I1", "E1", QueryChannel.SPARSE_KEYWORD, "공통"
+        )
+
+        candidates = RetrievalPipeline(
+            ScriptedFirstStage(documents, {"RQ1": ["P1", "P2"]}),
+            PassThroughReranker(),
+            final_top_k=2,
+            dedup_mode="legal_text_alias",
+        ).retrieve([request], retrieval_round=1)
+
+        self.assertEqual([candidate.provision_id for candidate in candidates], ["P1", "P2"])
+        self.assertEqual(
+            [candidate.alias_provision_ids for candidate in candidates],
+            [["P1"], ["P2"]],
+        )
+
+    def test_qa_139_duplicate_cutoff_regression_recovers_article_18(self):
+        documents = []
+        ranking = []
+        for index in range(1, 6):
+            statute = "중복법 제%d조" % index
+            body = "중복 snapshot 본문 %d" % index
+            for alias in ("A", "B"):
+                provision_id = "D%d%s" % (index, alias)
+                documents.append(ProvisionDocument(provision_id, statute, body))
+                ranking.append(provision_id)
+        documents.append(
+            ProvisionDocument("ARTICLE_18", "공직선거법 제18조", "선거권이 없는 자")
+        )
+        ranking.append("ARTICLE_18")
+        request = RetrievalRequest(
+            "RQ139", "I1", "E1", QueryChannel.SPARSE_KEYWORD, "선거권"
+        )
+
+        baseline = RetrievalPipeline(
+            ScriptedFirstStage(documents, {"RQ139": ranking}),
+            PassThroughReranker(),
+            final_top_k=10,
+            dedup_mode="none",
+        ).retrieve([request], retrieval_round=1)
+        proposed = RetrievalPipeline(
+            ScriptedFirstStage(documents, {"RQ139": ranking}),
+            PassThroughReranker(),
+            final_top_k=10,
+            dedup_mode="legal_text_alias",
+        ).retrieve([request], retrieval_round=1)
+
+        self.assertNotIn("ARTICLE_18", [candidate.provision_id for candidate in baseline])
+        self.assertIn("ARTICLE_18", [candidate.provision_id for candidate in proposed])
 
     def test_per_request_reranking_never_concatenates_repeated_context(self):
         documents = [
@@ -365,6 +504,122 @@ class RetrievalAlgorithmTests(unittest.TestCase):
             {candidate.target_evidence_item_ids[0] for candidate in candidates},
             {"E1", "E2"},
         )
+
+    def test_per_request_aliases_share_one_critical_quota_slot(self):
+        documents = [
+            ProvisionDocument("P1", "공직선거법 제18조", "선거권이 없는 자"),
+            ProvisionDocument("P2", "공직선거법 제18조", "선거권이 없는 자"),
+        ]
+        requests = [
+            RetrievalRequest("RQ1", "I1", "E1", QueryChannel.SPARSE_KEYWORD, "선거권"),
+            RetrievalRequest("RQ2", "I1", "E2", QueryChannel.STATUTE_AWARE, "선거권"),
+        ]
+        pipeline = RetrievalPipeline(
+            ScriptedFirstStage(documents, {"RQ1": ["P1"], "RQ2": ["P2"]}),
+            QueryRecordingReranker(
+                {"선거권": {"P1": 1.0, "P2": 1.0}}
+            ),
+            final_top_k=1,
+            rerank_query_mode="per_request",
+            candidate_selection="evidence_balanced",
+            dedup_mode="legal_text_alias",
+        )
+
+        candidates = pipeline.retrieve(
+            requests,
+            retrieval_round=1,
+            critical_evidence_item_ids=["E1", "E2"],
+        )
+
+        self.assertEqual(len(candidates), 1)
+        self.assertEqual(candidates[0].alias_provision_ids, ["P1", "P2"])
+        self.assertEqual(candidates[0].source_request_ids, ["RQ1", "RQ2"])
+        self.assertEqual(candidates[0].target_evidence_item_ids, ["E1", "E2"])
+        self.assertEqual(candidates[0].selection_reason, "critical_quota:E1,E2")
+
+    def test_per_round_budget_applies_one_final_cutoff_across_issues(self):
+        documents = [
+            ProvisionDocument("P1", "법1 제1조", "E1 우선"),
+            ProvisionDocument("P2", "법1 제2조", "E1 보조"),
+            ProvisionDocument("P3", "법2 제1조", "E2 우선"),
+            ProvisionDocument("P4", "법2 제2조", "E2 보조"),
+        ]
+        requests = [
+            RetrievalRequest("RQ1", "I1", "E1", QueryChannel.SPARSE_KEYWORD, "질의1"),
+            RetrievalRequest("RQ2", "I2", "E2", QueryChannel.STATUTE_AWARE, "질의2"),
+        ]
+        pipeline = RetrievalPipeline(
+            ScriptedFirstStage(
+                documents,
+                {"RQ1": ["P1", "P2"], "RQ2": ["P3", "P4"]},
+            ),
+            QueryRecordingReranker(
+                {
+                    "질의1": {"P1": 10.0, "P2": 1.0},
+                    "질의2": {"P3": 8.0, "P4": 9.0},
+                }
+            ),
+            final_top_k=3,
+            rerank_query_mode="per_request",
+            candidate_selection="evidence_balanced",
+            candidate_budget_scope="per_round",
+        )
+
+        candidates = pipeline.retrieve(
+            requests,
+            retrieval_round=1,
+            critical_evidence_item_ids=["E1", "E2"],
+        )
+
+        self.assertEqual([candidate.provision_id for candidate in candidates], ["P1", "P4", "P3"])
+        self.assertEqual(
+            [candidate.selection_reason for candidate in candidates],
+            [
+                "critical_quota:E1",
+                "critical_quota:E2",
+                "round_global_score_fill",
+            ],
+        )
+
+    def test_per_round_global_top_k_skips_critical_quotas(self):
+        documents = [
+            ProvisionDocument("P1", "법1 제1조", "E1 우선"),
+            ProvisionDocument("P2", "법1 제2조", "E1 보조"),
+            ProvisionDocument("P3", "법2 제1조", "E2 우선"),
+        ]
+        requests = [
+            RetrievalRequest("RQ1", "I1", "E1", QueryChannel.SPARSE_KEYWORD, "질의1"),
+            RetrievalRequest("RQ2", "I2", "E2", QueryChannel.STATUTE_AWARE, "질의2"),
+        ]
+        pipeline = RetrievalPipeline(
+            ScriptedFirstStage(
+                documents,
+                {"RQ1": ["P1", "P2"], "RQ2": ["P3"]},
+            ),
+            QueryRecordingReranker(
+                {
+                    "질의1": {"P1": 10.0, "P2": 9.0},
+                    "질의2": {"P3": 1.0},
+                }
+            ),
+            final_top_k=2,
+            rerank_query_mode="per_request",
+            candidate_selection="global_top_k",
+            candidate_budget_scope="per_round",
+        )
+
+        candidates = pipeline.retrieve(
+            requests,
+            retrieval_round=1,
+            critical_evidence_item_ids=["E1", "E2"],
+        )
+
+        self.assertEqual([candidate.provision_id for candidate in candidates], ["P1", "P2"])
+        self.assertEqual(
+            [candidate.selection_reason for candidate in candidates],
+            ["round_global_top_k", "round_global_top_k"],
+        )
+        self.assertEqual(pipeline.last_unsatisfied_critical_evidence_item_ids, [])
 
     def test_shared_provision_satisfies_multiple_quotas_and_keeps_provenance(self):
         documents = [

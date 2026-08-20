@@ -5,13 +5,17 @@ from typing import Dict, List, Optional, Set
 
 from .contracts import (
     ActionTrace,
+    AnswerMode,
+    AnswerTarget,
     CandidateProvision,
     CandidateStageRecord,
     CoverageAssessment,
     CoverageStatus,
     EvidenceConflict,
     EvidenceLink,
+    GapType,
     LegalIssue,
+    LegalStatus,
     Phase,
     RequiredEvidenceItem,
     RetrievalRequest,
@@ -28,6 +32,7 @@ class RunState:
     remaining_request_budget: int = 9
     phase: Phase = Phase.INITIALIZING
     legal_issues: List[LegalIssue] = field(default_factory=list)
+    answer_targets: List[AnswerTarget] = field(default_factory=list)
     required_evidence_items: List[RequiredEvidenceItem] = field(default_factory=list)
     candidate_provisions: List[CandidateProvision] = field(default_factory=list)
     retrieval_stage_records: List[CandidateStageRecord] = field(default_factory=list)
@@ -43,6 +48,9 @@ class RunState:
     retrieval_rounds_used: int = 0
     last_retrieval_new_provision_count: int = 0
     last_validated_event: Optional[str] = None
+    answer_mode: Optional[AnswerMode] = None
+    answered_target_ids: List[str] = field(default_factory=list)
+    deferred_target_ids: List[str] = field(default_factory=list)
     action_trace: List[ActionTrace] = field(default_factory=list)
 
     def candidate_by_id(self) -> Dict[str, CandidateProvision]:
@@ -60,6 +68,37 @@ class RunState:
             for assessment in self.coverage_assessments
         }
 
+    def answer_target_by_id(self) -> Dict[str, AnswerTarget]:
+        return {
+            target.answer_target_id: target for target in self.answer_targets
+        }
+
+    @staticmethod
+    def legal_status_for(assessment: CoverageAssessment) -> LegalStatus:
+        if assessment.legal_status is not None:
+            return assessment.legal_status
+        if (
+            assessment.status is CoverageStatus.PARTIALLY_COVERED
+            and assessment.partial_kind == "factual_condition"
+        ):
+            return LegalStatus.COVERED
+        return LegalStatus(assessment.status.value)
+
+    @staticmethod
+    def gap_type_for(assessment: CoverageAssessment) -> GapType:
+        if assessment.gap_type is not None:
+            return assessment.gap_type
+        if (
+            assessment.status is CoverageStatus.PARTIALLY_COVERED
+            and assessment.partial_kind == "factual_condition"
+        ):
+            return GapType.MISSING_FACT
+        if assessment.status is CoverageStatus.CONFLICTING:
+            return GapType.CONFLICT
+        if assessment.status is CoverageStatus.COVERED:
+            return GapType.NONE
+        return GapType.MISSING_STATUTE
+
     def unresolved_critical_conflicts(self) -> List[EvidenceConflict]:
         evidence = self.evidence_by_id()
         return [
@@ -76,39 +115,102 @@ class RunState:
             if not item.critical:
                 continue
             assessment = coverage.get(item.evidence_item_id)
-            if assessment is None or assessment.status is not CoverageStatus.COVERED:
+            if (
+                assessment is None
+                or self.legal_status_for(assessment) is not LegalStatus.COVERED
+            ):
                 return True
         return False
 
-    def can_generate_conditionally(self) -> bool:
-        """Allow only evidence-linked partial critical items, never uncovered ones."""
-        if self.unresolved_critical_conflicts():
-            return False
-        coverage = self.coverage_by_evidence_id()
-        accepted_by_evidence = {
+    def _accepted_evidence_ids(self) -> Set[str]:
+        return {
             link.evidence_item_id
             for link in self.evidence_links
             if link.assessment == "accepted"
         }
-        has_partial = False
-        for item in self.required_evidence_items:
-            if not item.critical:
-                continue
-            assessment = coverage.get(item.evidence_item_id)
-            if assessment is None:
-                return False
-            if assessment.status is CoverageStatus.COVERED:
-                continue
-            if (
-                assessment.status is CoverageStatus.PARTIALLY_COVERED
-                and assessment.partial_kind == "factual_condition"
-                and assessment.linked_provision_ids
-                and item.evidence_item_id in accepted_by_evidence
+
+    def covered_answer_target_ids(self) -> List[str]:
+        """Return targets whose complete critical legal support is citable."""
+        if not self.answer_targets:
+            return []
+        coverage = self.coverage_by_evidence_id()
+        accepted_evidence_ids = self._accepted_evidence_ids()
+        covered = []
+        for target in self.answer_targets:
+            target_items = [
+                item
+                for item in self.required_evidence_items
+                if item.critical and target.answer_target_id in item.answer_target_ids
+            ]
+            if target_items and all(
+                coverage.get(item.evidence_item_id) is not None
+                and self.legal_status_for(coverage[item.evidence_item_id])
+                is LegalStatus.COVERED
+                and item.evidence_item_id in accepted_evidence_ids
+                for item in target_items
             ):
-                has_partial = True
-                continue
-            return False
-        return has_partial
+                covered.append(target.answer_target_id)
+        return covered
+
+    def all_answer_targets_legally_covered(self) -> bool:
+        if not self.answer_targets:
+            return not self.has_critical_blockers()
+        return set(self.covered_answer_target_ids()) == {
+            target.answer_target_id for target in self.answer_targets
+        }
+
+    def has_missing_fact(self) -> bool:
+        coverage = self.coverage_by_evidence_id()
+        return any(
+            assessment is not None
+            and self.gap_type_for(assessment) is GapType.MISSING_FACT
+            for item in self.required_evidence_items
+            if item.critical
+            for assessment in [coverage.get(item.evidence_item_id)]
+        )
+
+    def has_retrievable_statute_gap(self) -> bool:
+        coverage = self.coverage_by_evidence_id()
+        return any(
+            assessment is None
+            or (
+                self.legal_status_for(assessment) is not LegalStatus.COVERED
+                and self.gap_type_for(assessment) is GapType.MISSING_STATUTE
+            )
+            for item in self.required_evidence_items
+            if item.critical
+            for assessment in [coverage.get(item.evidence_item_id)]
+        )
+
+    def has_any_citable_answer_target(self) -> bool:
+        if self.answer_targets:
+            return bool(self.covered_answer_target_ids())
+        return bool(self.accepted_provision_ids)
+
+    def partially_citable_answer_target_ids(self) -> List[str]:
+        if not self.answer_targets:
+            return []
+        accepted_evidence_ids = self._accepted_evidence_ids()
+        covered = set(self.covered_answer_target_ids())
+        return [
+            target.answer_target_id
+            for target in self.answer_targets
+            if target.answer_target_id not in covered
+            and any(
+                item.critical
+                and target.answer_target_id in item.answer_target_ids
+                and item.evidence_item_id in accepted_evidence_ids
+                for item in self.required_evidence_items
+            )
+        ]
+
+    def can_generate_conditionally(self) -> bool:
+        """Compatibility helper for the factual-condition generation path."""
+        return (
+            not self.unresolved_critical_conflicts()
+            and self.all_answer_targets_legally_covered()
+            and self.has_missing_fact()
+        )
 
     def refresh_derived_fields(self) -> None:
         """Rebuild fields that must never be independently authored."""
@@ -125,8 +227,8 @@ class RunState:
             if item.critical
             and (
                 item.evidence_item_id not in coverage
-                or coverage[item.evidence_item_id].status
-                is not CoverageStatus.COVERED
+                or self.legal_status_for(coverage[item.evidence_item_id])
+                is not LegalStatus.COVERED
             )
         ]
         # Ignore impossible links defensively; validation rejects them before state update.

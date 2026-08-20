@@ -1,6 +1,11 @@
 import unittest
 
-from harness.contracts import CandidateProvision, OutcomeStatus, TerminationReason
+from harness.contracts import (
+    CandidateAnswerStatus,
+    CandidateProvision,
+    OutcomeStatus,
+    TerminationReason,
+)
 from harness.runner import HarnessConfig, HarnessRunner
 from retrieval.corpus import InMemoryProvisionCorpus, ProvisionDocument
 from tools.validate_citation_integrity import CitationIntegrityChecker
@@ -118,6 +123,10 @@ def answer(provision_id):
     }
 
 
+def question_only_candidate():
+    return {"claims": [], "claim_citations": [], "answer": "질문만으로 생성한 후보 답변입니다."}
+
+
 def gap_plan(query="예외 규정"):
     return {
         "gap_retrieval_requests": [
@@ -188,12 +197,13 @@ class HarnessPathTests(unittest.TestCase):
         self.assertEqual(len(retriever.calls), 2)
         self.assertIn((S1, "GAP_QUERY_PLAN"), [call[:2] for call in executor.calls])
 
-    def test_empty_gap_plan_is_normal_abstention_and_bypasses_s3(self):
+    def test_empty_gap_plan_keeps_abstention_and_generates_a_benchmark_candidate(self):
         runner, executor, _ = self.make_runner(
             {
                 (S1, "INITIAL_PLAN"): [initial_plan()],
                 (S1, "GAP_QUERY_PLAN"): [{"gap_retrieval_requests": []}],
                 (S2, "ASSESS_COVERAGE"): [coverage("uncovered")],
+                (S3, "GENERATE_BENCHMARK_CANDIDATE"): [answer("P1")],
             },
             {1: [("P1", "초기 조문")]},
             [ProvisionDocument("P1", "테스트법", "초기 조문")],
@@ -203,7 +213,56 @@ class HarnessPathTests(unittest.TestCase):
 
         self.assertEqual(outcome.status, OutcomeStatus.ABSTAIN)
         self.assertEqual(outcome.termination_reason, TerminationReason.NO_VALID_GAP_QUERY)
-        self.assertNotIn((S3, "GENERATE_ANSWER"), [call[:2] for call in executor.calls])
+        self.assertIsNone(outcome.answer)
+        self.assertEqual(outcome.candidate_answer, "테스트 답변입니다.")
+        self.assertEqual(outcome.candidate_answer_status, CandidateAnswerStatus.GENERATED)
+        self.assertIn(
+            (S3, "GENERATE_BENCHMARK_CANDIDATE"),
+            [call[:2] for call in executor.calls],
+        )
+
+    def test_benchmark_candidate_failure_does_not_reclassify_abstention(self):
+        runner, _, _ = self.make_runner(
+            {
+                (S1, "INITIAL_PLAN"): [initial_plan()],
+                (S1, "GAP_QUERY_PLAN"): [{"gap_retrieval_requests": []}],
+                (S2, "ASSESS_COVERAGE"): [coverage("uncovered")],
+            },
+            {1: [("P1", "초기 조문")]},
+            [ProvisionDocument("P1", "테스트법", "초기 조문")],
+        )
+
+        outcome = runner.run("질문", run_id="candidate-failure")
+
+        self.assertEqual(outcome.status, OutcomeStatus.ABSTAIN)
+        self.assertEqual(
+            outcome.candidate_answer_status, CandidateAnswerStatus.EXECUTION_FAILURE
+        )
+        self.assertEqual(
+            outcome.candidate_answer_termination_reason,
+            TerminationReason.INVALID_SKILL_OUTPUT,
+        )
+        self.assertIsNone(outcome.candidate_answer)
+        self.assertTrue(outcome.candidate_answer_error)
+
+    def test_empty_retrieval_still_records_a_question_only_candidate(self):
+        runner, _, _ = self.make_runner(
+            {
+                (S1, "INITIAL_PLAN"): [initial_plan()],
+                (S1, "GAP_QUERY_PLAN"): [{"gap_retrieval_requests": []}],
+                (S2, "ASSESS_COVERAGE"): [coverage("uncovered")],
+                (S3, "GENERATE_BENCHMARK_CANDIDATE"): [question_only_candidate()],
+            },
+            {1: []},
+            [],
+        )
+
+        outcome = runner.run("질문", run_id="question-only-candidate")
+
+        self.assertEqual(outcome.status, OutcomeStatus.ABSTAIN)
+        self.assertEqual(outcome.candidate_answer_status, CandidateAnswerStatus.GENERATED)
+        self.assertEqual(outcome.candidate_answer_basis.value, "question_only")
+        self.assertEqual(outcome.candidate_answer, "질문만으로 생성한 후보 답변입니다.")
 
     def test_two_no_progress_rounds_stop_retrieval(self):
         runner, _, retriever = self.make_runner(
@@ -211,6 +270,7 @@ class HarnessPathTests(unittest.TestCase):
                 (S1, "INITIAL_PLAN"): [initial_plan()],
                 (S1, "GAP_QUERY_PLAN"): [gap_plan("추가 요건"), gap_plan("다른 요건")],
                 (S2, "ASSESS_COVERAGE"): [coverage("uncovered"), coverage("uncovered"), coverage("uncovered")],
+                (S3, "GENERATE_BENCHMARK_CANDIDATE"): [answer("P1")],
             },
             {1: [("P1", "초기 조문")], 2: [], 3: []},
             [ProvisionDocument("P1", "테스트법", "초기 조문")],
@@ -220,7 +280,7 @@ class HarnessPathTests(unittest.TestCase):
 
         self.assertEqual(outcome.status, OutcomeStatus.ABSTAIN)
         self.assertEqual(outcome.termination_reason, TerminationReason.NO_RETRIEVAL_PROGRESS)
-        self.assertEqual(len(retriever.calls), 3)
+        self.assertEqual(len(retriever.calls), 2)
 
     def test_snapshot_mismatch_is_execution_failure_not_abstention(self):
         runner, _, _ = self.make_runner(

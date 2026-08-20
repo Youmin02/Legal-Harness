@@ -6,9 +6,13 @@ from typing import Any, Dict, List, Mapping, Optional, Sequence
 
 from .contracts import (
     AbstentionReason,
+    AnswerMode,
+    CandidateAnswerBasis,
+    CandidateAnswerStatus,
     OutcomeStatus,
     Phase,
     PolicyAction,
+    PolicyDecision,
     TerminationReason,
 )
 from .interfaces import CitationIntegrityValidator, ProvisionRetriever, SkillExecutor
@@ -26,6 +30,7 @@ from .validation import (
     ValidationError,
     normalize_question,
     validate_answer_draft,
+    validate_benchmark_candidate_draft,
     validate_coverage_assessment,
     validate_gap_plan,
     validate_initial_plan,
@@ -56,8 +61,17 @@ class HarnessOutcome:
     status: OutcomeStatus
     state: RunState
     answer: Optional[str] = None
+    answer_mode: Optional[AnswerMode] = None
+    complete_answer: bool = False
+    answered_target_ids: List[str] = field(default_factory=list)
+    deferred_target_ids: List[str] = field(default_factory=list)
     abstention_reason: Optional[AbstentionReason] = None
     termination_reason: Optional[TerminationReason] = None
+    candidate_answer: Optional[str] = None
+    candidate_answer_status: Optional[CandidateAnswerStatus] = None
+    candidate_answer_basis: Optional[CandidateAnswerBasis] = None
+    candidate_answer_termination_reason: Optional[TerminationReason] = None
+    candidate_answer_error: Optional[str] = None
     errors: List[str] = field(default_factory=list)
 
 
@@ -118,10 +132,14 @@ class HarnessRunner:
                     "query_history": [],
                 },
             )
-            issues, evidence_items, initial_requests = validate_initial_plan(initial_raw)
+            issues, answer_targets, evidence_items, initial_requests = validate_initial_plan(
+                initial_raw,
+                question=state.normalized_question,
+                include_answer_targets=True,
+            )
             if len(initial_requests) > state.remaining_request_budget:
                 raise ValidationError("initial retrieval requests exceed the frozen request budget")
-            apply_initial_plan(state, issues, evidence_items)
+            apply_initial_plan(state, issues, evidence_items, answer_targets)
             self._trace("INITIAL_PLAN_VALIDATED", state, retrieval_request_count=len(initial_requests))
         except (ValidationError, StateInvariantError, RuntimeError) as exc:
             return self._failure(state, TerminationReason.INVALID_SKILL_OUTPUT, exc)
@@ -141,10 +159,14 @@ class HarnessRunner:
                 decision.action.value,
                 termination_reason=(decision.termination_reason.value if decision.termination_reason else None),
                 explanation=decision.explanation,
+                answer_mode=(decision.answer_mode.value if decision.answer_mode else None),
+                answered_target_ids=decision.answered_target_ids,
+                deferred_target_ids=decision.deferred_target_ids,
             )
             self._trace("POLICY_DECISION", state, action=decision.action.value, explanation=decision.explanation)
 
             if decision.action is PolicyAction.GENERATE:
+                self._apply_generation_scope(state, decision)
                 return self._generate_and_validate(state)
             if decision.action is PolicyAction.ABSTAIN:
                 return self._abstain(state, decision.termination_reason)
@@ -157,20 +179,38 @@ class HarnessRunner:
                 return self._failure(state, TerminationReason.INVALID_SKILL_OUTPUT, exc)
 
             if not gap_requests:
-                if state.can_generate_conditionally():
-                    record_policy_decision(
-                        state,
-                        PolicyAction.GENERATE.value,
-                        explanation="No valid new gap query exists; generate a conditional answer from citable partial support.",
-                    )
+                fallback = decide_next_action(state, can_attempt_gap_query=False)
+                if fallback.action is PolicyAction.GENERATE:
+                    self._record_and_apply_generation_decision(state, fallback)
                     return self._generate_and_validate(state)
-                return self._abstain(state, TerminationReason.NO_VALID_GAP_QUERY)
+                return self._abstain(state, fallback.termination_reason)
             if len(gap_requests) > state.remaining_request_budget:
+                if state.has_any_citable_answer_target():
+                    limited = PolicyDecision(
+                        action=PolicyAction.GENERATE,
+                        explanation="The next gap plan exceeds the budget; answer only citable targets.",
+                        answer_mode=AnswerMode.LIMITED,
+                        answered_target_ids=state.covered_answer_target_ids(),
+                        deferred_target_ids=[
+                            target.answer_target_id
+                            for target in state.answer_targets
+                            if target.answer_target_id not in state.covered_answer_target_ids()
+                        ],
+                    )
+                    self._record_and_apply_generation_decision(state, limited)
+                    return self._generate_and_validate(state)
                 if state.can_generate_conditionally():
                     record_policy_decision(
                         state,
                         PolicyAction.GENERATE.value,
                         explanation="The next gap plan exceeds the budget; generate a conditional answer from citable partial support.",
+                    )
+                    self._apply_generation_scope(
+                        state,
+                        PolicyDecision(
+                            action=PolicyAction.GENERATE,
+                            answer_mode=AnswerMode.CONDITIONAL,
+                        ),
                     )
                     return self._generate_and_validate(state)
                 return self._abstain(state, TerminationReason.RETRIEVAL_BUDGET_EXHAUSTED)
@@ -203,6 +243,13 @@ class HarnessRunner:
             unsatisfied_critical_evidence_item_ids = list(
                 getattr(self.retriever, "last_unsatisfied_critical_evidence_item_ids", ())
             )
+            dedup_removed_count = getattr(
+                self.retriever, "last_dedup_removed_count", 0
+            )
+            if isinstance(dedup_removed_count, bool) or not isinstance(
+                dedup_removed_count, int
+            ):
+                dedup_removed_count = 0
             validate_retrieval_stage_records(
                 stage_records, requests, retrieval_round
             )
@@ -219,6 +266,7 @@ class HarnessRunner:
                 request_count=len(requests),
                 candidate_count=len(candidates),
                 stage_record_count=len(stage_records),
+                dedup_removed_count=dedup_removed_count,
                 unsatisfied_critical_evidence_item_ids=unsatisfied_critical_evidence_item_ids,
             )
             return None
@@ -243,7 +291,13 @@ class HarnessRunner:
             raw = self._execute(S3, "GENERATE_ANSWER", self._answer_payload(state))
             answer = validate_answer_draft(raw, state)
             state.last_validated_event = "S3.GENERATE_ANSWER"
-            state.record("ANSWER_DRAFT_VALIDATED", claim_count=len(answer.claims))
+            state.record(
+                "ANSWER_DRAFT_VALIDATED",
+                claim_count=len(answer.claims),
+                answer_mode=state.answer_mode.value if state.answer_mode else None,
+                answered_target_ids=state.answered_target_ids,
+                deferred_target_ids=state.deferred_target_ids,
+            )
             state.phase = Phase.VALIDATING_CITATIONS
             citation_result = self.citation_validator.validate(state, answer)
         except (ValidationError, RuntimeError) as exc:
@@ -265,7 +319,14 @@ class HarnessRunner:
             status=OutcomeStatus.ANSWER,
             state=state,
             answer=answer.answer,
+            answer_mode=state.answer_mode,
+            complete_answer=state.answer_mode is AnswerMode.FULL,
+            answered_target_ids=list(state.answered_target_ids),
+            deferred_target_ids=list(state.deferred_target_ids),
             termination_reason=TerminationReason.COMPLETED,
+            candidate_answer=answer.answer,
+            candidate_answer_status=CandidateAnswerStatus.PUBLISHED_ANSWER,
+            candidate_answer_basis=CandidateAnswerBasis.PUBLISHED_ANSWER,
         )
 
     def _abstain(
@@ -282,11 +343,82 @@ class HarnessRunner:
             termination_reason=(termination_reason.value if termination_reason else None),
         )
         self._trace("RUN_ABSTAINED", state, reason=reason.value)
+        (
+            candidate_answer,
+            candidate_status,
+            candidate_basis,
+            candidate_termination_reason,
+            candidate_error,
+        ) = self._generate_benchmark_candidate(state)
         return HarnessOutcome(
             status=OutcomeStatus.ABSTAIN,
             state=state,
             abstention_reason=reason,
             termination_reason=termination_reason,
+            candidate_answer=candidate_answer,
+            candidate_answer_status=candidate_status,
+            candidate_answer_basis=candidate_basis,
+            candidate_answer_termination_reason=candidate_termination_reason,
+            candidate_answer_error=candidate_error,
+        )
+
+    def _generate_benchmark_candidate(
+        self, state: RunState
+    ) -> tuple[
+        Optional[str],
+        CandidateAnswerStatus,
+        CandidateAnswerBasis,
+        Optional[TerminationReason],
+        Optional[str],
+    ]:
+        payload = self._benchmark_candidate_payload(state)
+        basis = CandidateAnswerBasis(payload["candidate_answer_basis"])
+        try:
+            state.record(
+                "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+                candidate_provision_count=len(payload["candidate_provisions"]),
+                candidate_answer_basis=basis.value,
+            )
+            raw = self._execute(
+                S3,
+                "GENERATE_BENCHMARK_CANDIDATE",
+                payload,
+            )
+            candidate = validate_benchmark_candidate_draft(raw, state)
+            state.record(
+                "BENCHMARK_CANDIDATE_VALIDATED",
+                claim_count=len(candidate.claims),
+                candidate_provision_count=len(payload["candidate_provisions"]),
+                candidate_answer_basis=basis.value,
+            )
+            self._trace("BENCHMARK_CANDIDATE_VALIDATED", state)
+            return candidate.answer, CandidateAnswerStatus.GENERATED, basis, None, None
+        except (ValidationError, RuntimeError) as exc:
+            return self._benchmark_candidate_failure(state, basis, exc)
+        except Exception as exc:
+            return self._benchmark_candidate_failure(state, basis, exc)
+
+    def _benchmark_candidate_failure(
+        self, state: RunState, basis: CandidateAnswerBasis, error: Exception
+    ) -> tuple[None, CandidateAnswerStatus, CandidateAnswerBasis, TerminationReason, str]:
+        termination_reason = TerminationReason.INVALID_SKILL_OUTPUT
+        state.record(
+            "BENCHMARK_CANDIDATE_EXECUTION_FAILURE",
+            termination_reason=termination_reason.value,
+            error=str(error),
+        )
+        self._trace(
+            "BENCHMARK_CANDIDATE_EXECUTION_FAILURE",
+            state,
+            error=str(error),
+            termination_reason=termination_reason.value,
+        )
+        return (
+            None,
+            CandidateAnswerStatus.EXECUTION_FAILURE,
+            basis,
+            termination_reason,
+            str(error),
         )
 
     def _failure(
@@ -316,6 +448,7 @@ class HarnessRunner:
             "run_id": state.run_id,
             "normalized_question": state.normalized_question,
             "legal_issues": to_primitive(state.legal_issues),
+            "answer_targets": to_primitive(state.answer_targets),
             "required_evidence_items": to_primitive(state.required_evidence_items),
             "candidate_provisions": to_primitive(state.candidate_provisions),
             "prior_coverage_assessments": to_primitive(state.coverage_assessments),
@@ -327,6 +460,7 @@ class HarnessRunner:
             "normalized_question": state.normalized_question,
             "next_retrieval_round": state.retrieval_rounds_used + 1,
             "legal_issues": to_primitive(state.legal_issues),
+            "answer_targets": to_primitive(state.answer_targets),
             "required_evidence_items": to_primitive(state.required_evidence_items),
             "coverage_assessments": to_primitive(state.coverage_assessments),
             "missing_evidence_items": to_primitive(state.missing_critical_items),
@@ -358,11 +492,83 @@ class HarnessRunner:
             "question": state.question,
             "normalized_question": state.normalized_question,
             "legal_issues": to_primitive(state.legal_issues),
+            "answer_targets": to_primitive(state.answer_targets),
             "required_evidence_items": to_primitive(state.required_evidence_items),
             "coverage_assessments": to_primitive(state.coverage_assessments),
             "accepted_provisions": to_primitive(accepted),
+            "answer_mode": state.answer_mode.value if state.answer_mode else AnswerMode.FULL.value,
+            "answered_target_ids": list(state.answered_target_ids),
+            "deferred_target_ids": list(state.deferred_target_ids),
             "state_version": len(state.action_trace),
         }
+
+    def _benchmark_candidate_payload(self, state: RunState) -> Dict[str, Any]:
+        requests_by_id = {
+            request.request_id: request for request in state.query_history
+        }
+        candidates = []
+        for candidate in state.candidate_provisions:
+            payload = to_primitive(candidate)
+            evidence_ids = list(candidate.target_evidence_item_ids)
+            if not evidence_ids:
+                source_ids = candidate.source_request_ids or [candidate.source_request_id]
+                evidence_ids = [
+                    requests_by_id[source_id].evidence_item_id
+                    for source_id in source_ids
+                    if source_id in requests_by_id
+                ]
+            if not evidence_ids:
+                continue
+            payload["supported_evidence_item_ids"] = list(dict.fromkeys(evidence_ids))
+            candidates.append(payload)
+        basis = (
+            CandidateAnswerBasis.RETRIEVED_CANDIDATES.value
+            if candidates
+            else CandidateAnswerBasis.QUESTION_ONLY.value
+        )
+        return {
+            "run_id": state.run_id,
+            "question": state.question,
+            "normalized_question": state.normalized_question,
+            "legal_issues": to_primitive(state.legal_issues),
+            "answer_targets": to_primitive(state.answer_targets),
+            "required_evidence_items": to_primitive(state.required_evidence_items),
+            "coverage_assessments": to_primitive(state.coverage_assessments),
+            "accepted_provisions": [],
+            "candidate_provisions": candidates,
+            "candidate_answer_basis": basis,
+            "answer_mode": "abstain_candidate",
+            "answered_target_ids": [
+                target.answer_target_id for target in state.answer_targets
+            ],
+            "deferred_target_ids": [],
+            "state_version": len(state.action_trace),
+        }
+
+    def _apply_generation_scope(
+        self,
+        state: RunState,
+        decision: PolicyDecision,
+    ) -> None:
+        state.answer_mode = decision.answer_mode or AnswerMode.FULL
+        state.answered_target_ids = list(decision.answered_target_ids)
+        state.deferred_target_ids = list(decision.deferred_target_ids)
+
+    def _record_and_apply_generation_decision(
+        self, state: RunState, decision: PolicyDecision
+    ) -> None:
+        record_policy_decision(
+            state,
+            decision.action.value,
+            termination_reason=(
+                decision.termination_reason.value if decision.termination_reason else None
+            ),
+            explanation=decision.explanation,
+            answer_mode=decision.answer_mode.value if decision.answer_mode else None,
+            answered_target_ids=decision.answered_target_ids,
+            deferred_target_ids=decision.deferred_target_ids,
+        )
+        self._apply_generation_scope(state, decision)
 
     def _trace(self, event: str, state: RunState, **details: object) -> None:
         self.trace_sink.record(event, state, **details)

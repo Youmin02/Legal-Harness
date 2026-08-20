@@ -23,6 +23,34 @@ def unique(items, key, pattern, errors):
     return seen
 
 
+def effective_status(assessment, errors):
+    legacy = assessment.get("status", assessment.get("evidence_status"))
+    axes = ("legal_status", "applicability_status", "gap_type")
+    has_axes = any(key in assessment for key in axes)
+    if not has_axes:
+        return legacy
+    if not all(key in assessment for key in axes):
+        errors.append("coverage axes must be supplied together")
+        return legacy
+    legal = assessment.get("legal_status")
+    applicability = assessment.get("applicability_status")
+    gap_type = assessment.get("gap_type")
+    if legal not in {"covered", "partially_covered", "uncovered", "conflicting"}:
+        errors.append("invalid legal_status")
+    if applicability not in {"direct", "conditional", "not_assessed"}:
+        errors.append("invalid applicability_status")
+    if gap_type not in {"none", "missing_statute", "missing_fact", "scope_excess", "conflict"}:
+        errors.append("invalid gap_type")
+    derived = (
+        "partially_covered"
+        if legal == "covered" and applicability == "conditional"
+        else legal
+    )
+    if legacy is not None and legacy != derived:
+        errors.append("legacy status conflicts with coverage axes")
+    return derived
+
+
 def validate(output, input_data):
     errors = []
     if output.get("schema_version") != "1.0" or output.get("skill_id") != "S2":
@@ -96,7 +124,7 @@ def validate(output, input_data):
     conflict_id_set = set(conflict_evidence_ids)
     assessment_by_id = {x.get("evidence_item_id"): x for x in assessments}
     for evidence_id, assessment in assessment_by_id.items():
-        status = assessment.get("status")
+        status = effective_status(assessment, errors)
         linked = assessment.get("linked_provision_ids", [])
         actual_linked = {x.get("provision_id") for x in links_by_evidence.get(evidence_id, [])}
         if len(linked) != len(set(linked)):
@@ -128,10 +156,60 @@ def validate(output, input_data):
         else:
             errors.append(f"invalid coverage status: {evidence_id}")
 
-    expected_missing = {eid for eid, a in assessment_by_id.items() if a.get("status") != "covered"}
+        evidence = evidence_by_id.get(evidence_id, {})
+        requirements = evidence.get("completion_requirements", [])
+        criterion_results = assessment.get("criterion_results")
+        if requirements and not all(
+            key in assessment
+            for key in ("legal_status", "applicability_status", "gap_type")
+        ):
+            errors.append(f"atomic requirements require coverage axes: {evidence_id}")
+        if requirements and criterion_results is None:
+            errors.append(f"atomic requirements require criterion_results: {evidence_id}")
+        if criterion_results is not None:
+            if not isinstance(criterion_results, list):
+                errors.append(f"criterion_results must be a list: {evidence_id}")
+            else:
+                criterion_id_list = [
+                    result.get("requirement_id")
+                    for result in criterion_results
+                    if isinstance(result, dict)
+                ]
+                criterion_ids = {
+                    result.get("requirement_id")
+                    for result in criterion_results
+                    if isinstance(result, dict)
+                }
+                required_ids = {
+                    requirement.get("requirement_id")
+                    for requirement in requirements
+                    if isinstance(requirement, dict)
+                }
+                if criterion_ids != required_ids:
+                    errors.append(f"criterion results must match completion requirements: {evidence_id}")
+                if len(criterion_id_list) != len(criterion_ids):
+                    errors.append(f"criterion requirements must appear exactly once: {evidence_id}")
+                for result in criterion_results:
+                    if not isinstance(result, dict) or result.get("status") not in {"satisfied", "partially_satisfied", "unsatisfied", "conflicting"}:
+                        errors.append(f"invalid criterion result: {evidence_id}")
+        if any(key in assessment for key in ("legal_status", "applicability_status", "gap_type")) and requirements:
+            if set(missing_aspects) - {
+                requirement.get("requirement_id")
+                for requirement in requirements
+                if isinstance(requirement, dict)
+            }:
+                errors.append(f"missing_aspects must reference requirement IDs: {evidence_id}")
+
+    expected_missing = {
+        eid for eid, assessment in assessment_by_id.items()
+        if effective_status(assessment, errors) != "covered"
+    }
     if missing_ids != expected_missing:
         errors.append("missing_evidence_items must equal all non-covered assessments")
-    expected_conflicts = {eid for eid, a in assessment_by_id.items() if a.get("status") == "conflicting"}
+    expected_conflicts = {
+        eid for eid, assessment in assessment_by_id.items()
+        if effective_status(assessment, errors) == "conflicting"
+    }
     if conflict_id_set != expected_conflicts:
         errors.append("evidence_conflicts must equal all conflicting assessments")
     for item in missing:

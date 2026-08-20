@@ -24,9 +24,30 @@ def unique(items, key, pattern, errors):
 
 
 def validate_preconditions(input_data, errors):
+    benchmark_candidate = input_data.get("mode") == "GENERATE_BENCHMARK_CANDIDATE"
     authorization = input_data.get("authorization", {})
+    if benchmark_candidate:
+        basis = input_data.get("candidate_answer_basis")
+        if (
+            authorization.get("action") != "GENERATE_BENCHMARK_CANDIDATE"
+            or authorization.get("authorized_by") != "HARNESS_BENCHMARK_DIAGNOSTIC"
+            or input_data.get("generation_purpose") != "benchmark_candidate"
+            or input_data.get("publishable") is not False
+        ):
+            errors.append("benchmark candidate is not authorized by the diagnostic harness")
+        if basis == "retrieved_candidates" and not input_data.get("candidate_provisions"):
+            errors.append("retrieved-candidate basis requires candidate_provisions")
+        elif basis == "question_only" and input_data.get("candidate_provisions"):
+            errors.append("question-only basis must not receive candidate_provisions")
+        elif basis not in {"retrieved_candidates", "question_only"}:
+            errors.append("benchmark candidate basis is invalid")
+        return
     if authorization.get("action") != "GENERATE" or authorization.get("authorized_by") != "PROVISION_COVERAGE_POLICY":
         errors.append("generation is not authorized by the provision coverage policy")
+    if input_data.get("generation_purpose") != "published_answer" or input_data.get("publishable") is not True:
+        errors.append("published generation purpose is invalid")
+    if input_data.get("candidate_answer_basis") != "published_answer":
+        errors.append("published generation must use the published_answer basis")
     evidence = {x.get("evidence_item_id"): x for x in input_data.get("required_evidence_items", [])}
     assessments = {x.get("evidence_item_id"): x for x in input_data.get("coverage_assessments", [])}
     supported = {
@@ -34,8 +55,12 @@ def validate_preconditions(input_data, errors):
         for provision in input_data.get("accepted_provisions", [])
         for evidence_id in provision.get("supported_evidence_item_ids", [])
     }
+    deferred_target_ids = set(input_data.get("deferred_target_ids", []))
     for evidence_id, item in evidence.items():
         if item.get("critical") is not True:
+            continue
+        item_target_ids = set(item.get("answer_target_ids", []))
+        if item_target_ids and item_target_ids.issubset(deferred_target_ids):
             continue
         status = assessments.get(evidence_id, {}).get("status")
         if status == "covered":
@@ -47,12 +72,59 @@ def validate_preconditions(input_data, errors):
         errors.append("accepted_provisions must not be empty")
 
 
+def validate_answer_target_scope(output, input_data, errors):
+    answer_targets = {
+        target.get("answer_target_id")
+        for target in input_data.get("answer_targets", [])
+        if isinstance(target, dict)
+    }
+    answered = input_data.get("answered_target_ids", [])
+    deferred = input_data.get("deferred_target_ids", [])
+    mode = input_data.get("answer_mode", "full")
+    if not answer_targets:
+        return
+    if not isinstance(answered, list) or not isinstance(deferred, list):
+        errors.append("answer target scope must be lists")
+        return
+    if set(answered) | set(deferred) != answer_targets or set(answered) & set(deferred):
+        errors.append("answered/deferred target IDs must partition answer_targets")
+    benchmark_candidate = input_data.get("mode") == "GENERATE_BENCHMARK_CANDIDATE"
+    if benchmark_candidate:
+        if mode != "abstain_candidate" or set(deferred) or set(answered) != answer_targets:
+            errors.append("benchmark candidate must answer every target without a deferred scope")
+        if input_data.get("candidate_answer_basis") == "question_only":
+            if output.get("claims") or output.get("claim_citations"):
+                errors.append("question-only benchmark candidate must not emit claims or citations")
+            return
+    elif mode not in {"full", "conditional", "limited"}:
+        errors.append("invalid answer_mode")
+    if not benchmark_candidate and mode in {"full", "conditional"} and set(deferred):
+        errors.append("full and conditional modes cannot defer answer targets")
+    claimed = set()
+    for claim in output.get("claims", []):
+        target_ids = claim.get("answer_target_ids", []) if isinstance(claim, dict) else []
+        if not isinstance(target_ids, list) or not target_ids:
+            errors.append("claims must identify answer_target_ids")
+            continue
+        if set(target_ids) - set(answered):
+            errors.append("claim references deferred or unknown answer target")
+        claimed.update(target_ids)
+    if claimed != set(answered):
+        errors.append("claims must cover every answered target exactly within scope")
+    if mode == "limited" and deferred and not output.get("limitations"):
+        errors.append("limited generation requires an explicit limitation")
+
+
 def validate(output, input_data):
     errors = []
     if output.get("schema_version") != "1.0" or output.get("skill_id") != "S3":
         errors.append("schema_version/skill_id must be 1.0/S3")
-    if output.get("mode") != "GENERATE_ANSWER":
-        errors.append("mode must be GENERATE_ANSWER")
+    allowed_modes = {"GENERATE_ANSWER", "GENERATE_BENCHMARK_CANDIDATE"}
+    if input_data is not None:
+        if output.get("mode") != input_data.get("mode"):
+            errors.append("mode must match input")
+    elif output.get("mode") not in allowed_modes:
+        errors.append("mode must be a supported S3 entry point")
     if output.get("status") not in {"ok", "error"}:
         errors.append("status must be ok or error")
     if input_data and output.get("run_id") != input_data.get("run_id"):
@@ -71,20 +143,34 @@ def validate(output, input_data):
         errors.append("success validation requires --input")
         return errors
     validate_preconditions(input_data, errors)
+    validate_answer_target_scope(output, input_data, errors)
 
     answer = output.get("answer", "")
     max_chars = input_data.get("generation_constraints", {}).get("max_answer_chars")
     if isinstance(max_chars, int) and len(answer) > max_chars:
         errors.append(f"answer exceeds max_answer_chars: {len(answer)} > {max_chars}")
+    if "claims" not in output or "claim_citations" not in output:
+        errors.append("success output requires claims and claim_citations arrays")
     claims = output.get("claims", [])
     citations = output.get("claim_citations", [])
+    benchmark_question_only = (
+        input_data.get("mode") == "GENERATE_BENCHMARK_CANDIDATE"
+        and input_data.get("candidate_answer_basis") == "question_only"
+    )
+    if not benchmark_question_only and (not claims or not citations):
+        errors.append("grounded generation requires claims and claim_citations")
     claim_ids = unique(claims, "claim_id", r"C[1-9][0-9]*", errors)
     unique(citations, "citation_id", r"CT[1-9][0-9]*", errors)
     claim_by_id = {x.get("claim_id"): x for x in claims}
-    accepted = input_data.get("accepted_provisions", [])
-    accepted_by_id = {x.get("provision_id"): x for x in accepted}
-    if len(accepted_by_id) != len(accepted):
-        errors.append("accepted provision IDs must be unique")
+    source_key = (
+        "candidate_provisions"
+        if input_data.get("mode") == "GENERATE_BENCHMARK_CANDIDATE"
+        else "accepted_provisions"
+    )
+    sources = input_data.get(source_key, [])
+    accepted_by_id = {x.get("provision_id"): x for x in sources}
+    if len(accepted_by_id) != len(sources):
+        errors.append("source provision IDs must be unique")
 
     citations_by_claim = {}
     for citation in citations:
@@ -130,7 +216,7 @@ def validate(output, input_data):
         if item.get("critical") is True
         and statuses.get(item.get("evidence_item_id")) == "partially_covered"
     }
-    if partial_critical:
+    if partial_critical and input_data.get("mode") != "GENERATE_BENCHMARK_CANDIDATE":
         if not any(claim.get("applicability") == "conditional" for claim in claims):
             errors.append("conditional generation requires at least one conditional claim")
         if not output.get("limitations"):

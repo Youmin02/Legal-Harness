@@ -63,6 +63,54 @@ def format_benchmark_input(question: Mapping[str, Any]) -> str:
     return "[배경 시나리오]\n%s\n\n[질문]\n%s" % (background, prompt)
 
 
+def build_run_command(
+    python: Path,
+    benchmark_input: str,
+    question_id: str,
+    configuration: Mapping[str, Any],
+    record_root: Path,
+) -> List[str]:
+    """Build one child run command without consulting mutable batch state."""
+    return [
+        str(python),
+        str(PROJECT_ROOT / "scripts/run_local_harness.py"),
+        benchmark_input,
+        "--retriever", configuration["retriever"],
+        "--model", configuration["model"],
+        "--ollama-endpoint", str(
+            configuration.get(
+                "ollama_endpoint", "http://127.0.0.1:11434/api/generate"
+            )
+        ),
+        "--num-ctx", str(configuration["num_ctx"]),
+        "--rounds", str(configuration["total_retrieval_rounds"]),
+        "--requests", str(configuration["total_retrieval_requests"]),
+        "--question-id", question_id,
+        "--condition", configuration["condition"],
+        "--seed", str(configuration["seed"]),
+        "--rerank-pool-k", str(configuration.get("rerank_pool_k", 100)),
+        "--final-top-k", str(configuration.get("final_top_k", 10)),
+        "--rerank-query-mode", str(
+            configuration.get("rerank_query_mode", "combined_issue")
+        ),
+        "--candidate-selection", str(
+            configuration.get("candidate_selection", "global_top_k")
+        ),
+        "--per-evidence-min-k", str(configuration.get("per_evidence_min_k", 1)),
+        "--candidate-budget-scope", str(
+            configuration.get("candidate_budget_scope", "per_issue")
+        ),
+        "--dedup-mode", str(configuration.get("dedup_mode", "none")),
+        "--rerank-document-mode", str(
+            configuration.get("rerank_document_mode", "body_only")
+        ),
+        "--input-format", str(
+            configuration.get("input_format", "koblex_background_plus_question")
+        ),
+        "--record-dir", str(record_root),
+    ]
+
+
 def record_directories(root: Path) -> Set[Path]:
     if not root.exists():
         return set()
@@ -94,6 +142,9 @@ def read_result(created: Iterable[Path]) -> Dict[str, Any]:
 
 def main() -> int:
     args = parse_args()
+    if not args.record_root.is_absolute():
+        args.record_root = PROJECT_ROOT / args.record_root
+    args.record_root = args.record_root.resolve()
     manifest_path = args.manifest
     if not manifest_path.is_absolute():
         manifest_path = PROJECT_ROOT / manifest_path
@@ -138,6 +189,7 @@ def main() -> int:
         "end_ordinal": args.end_ordinal,
         "entry_count": len(entries),
         "configuration": configuration,
+        "record_root": str(args.record_root),
     }
     (batch_dir / "metadata.json").write_text(
         json.dumps(batch_metadata, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
@@ -156,30 +208,13 @@ def main() -> int:
                 raise RuntimeError("hop count mismatch for %s" % question_id)
             log_path = batch_dir / ("%02d_%s.log" % (ordinal, question_id))
             benchmark_input = format_benchmark_input(question)
-            command = [
-                str(args.python),
-                str(PROJECT_ROOT / "scripts/run_local_harness.py"),
+            command = build_run_command(
+                args.python,
                 benchmark_input,
-                "--retriever", configuration["retriever"],
-                "--model", configuration["model"],
-                "--num-ctx", str(configuration["num_ctx"]),
-                "--rounds", str(configuration["total_retrieval_rounds"]),
-                "--requests", str(configuration["total_retrieval_requests"]),
-                "--question-id", question_id,
-                "--condition", configuration["condition"],
-                "--seed", str(configuration["seed"]),
-                "--rerank-pool-k", str(configuration.get("rerank_pool_k", 100)),
-                "--final-top-k", str(configuration.get("final_top_k", 10)),
-                "--rerank-query-mode", str(configuration.get("rerank_query_mode", "combined_issue")),
-                "--candidate-selection", str(configuration.get("candidate_selection", "global_top_k")),
-                "--per-evidence-min-k", str(configuration.get("per_evidence_min_k", 1)),
-                "--rerank-document-mode", str(configuration.get("rerank_document_mode", "body_only")),
-                "--input-format", str(
-                    configuration.get(
-                        "input_format", "koblex_background_plus_question"
-                    )
-                ),
-            ]
+                question_id,
+                configuration,
+                args.record_root,
+            )
             before = record_directories(args.record_root)
             started_at = utc_now()
             with log_path.open("w", encoding="utf-8") as log:

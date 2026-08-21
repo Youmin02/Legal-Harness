@@ -2,6 +2,7 @@ import json
 import unittest
 from pathlib import Path
 
+from harness.interfaces import SkillExecutionError
 from runtime.local_ollama_executor import LocalOllamaSkillExecutor
 
 
@@ -255,7 +256,7 @@ class LocalOllamaExecutorTests(unittest.TestCase):
             ),
             "generation_constraints": {
                 "language": "ko",
-                "max_answer_chars": 6000,
+                "max_answer_chars": 800,
                 "citation_marker_style": "citation_id",
             },
         }
@@ -333,7 +334,10 @@ class LocalOllamaExecutorTests(unittest.TestCase):
                 "state_version": 3,
             },
         )
-        self.assertEqual(answer["claim_citations"], [{"claim_id": "C1", "provision_ids": ["P1"]}])
+        self.assertEqual(answer["claim_citations"][0]["claim_id"], "C1")
+        self.assertEqual(answer["claim_citations"][0]["provision_id"], "P1")
+        self.assertEqual(answer["claim_citations"][0]["answer_marker"], "[CT1]")
+        self.assertEqual(answer["assumptions"], [])
 
     def test_s3_transport_normalizes_bad_markers_and_rebuilds_answer(self):
         skill_input = self._s3_transport_input()
@@ -396,13 +400,88 @@ class LocalOllamaExecutorTests(unittest.TestCase):
         )
         self.assertEqual(
             normalized["answer"],
-            "손해를 배상해야 합니다.[CT1]\n고의 또는 과실이 필요합니다.[CT2]\n"
-            "전제: 사실관계는 추가 확인이 필요합니다.\n한계: 판례 판단은 포함하지 않습니다.",
+            "손해를 배상해야 합니다.[CT1]\n고의 또는 과실이 필요합니다.[CT2]",
         )
         self.assertEqual(
             normalized["claim_citations"][0]["quoted_text"],
             "고의 또는 과실로 손해를 배상한다.",
         )
+        self.assertEqual(normalized["assumptions"], raw["assumptions"])
+        self.assertEqual(normalized["limitations"], raw["limitations"])
+        self.assertNotIn("전제:", normalized["answer"])
+        self.assertNotIn("한계:", normalized["answer"])
+        self.assertLessEqual(len(normalized["answer"]), 800)
+        self.assertEqual(
+            self.executor._validators["grounded_legal_answer_generation"](
+                normalized, skill_input
+            ),
+            [],
+        )
+
+    def test_s3_public_answer_selects_three_claims_and_preserves_full_audit(self):
+        skill_input = self._s3_transport_input()
+        claim_specs = [
+            ("conclusion", "배상 책임이 인정됩니다.", "application", "direct"),
+            ("procedure", "청구 절차를 따라야 합니다.", "procedure", "direct"),
+            ("condition", "고의 또는 과실이 있는 경우에 한합니다.", "application", "conditional"),
+            ("rule", "민법상 손해배상 규정이 근거입니다.", "legal_rule", "direct"),
+            ("remedy", "손해액 상당액을 청구할 수 있습니다.", "remedy", "direct"),
+        ]
+        raw = {
+            "schema_version": "1.0",
+            "skill_id": "S3",
+            "mode": "GENERATE_ANSWER",
+            "status": "ok",
+            "run_id": "run-1",
+            "answer": "모델의 장문 답변",
+            "claims": [
+                {
+                    "claim_id": claim_id,
+                    "text": text,
+                    "claim_type": claim_type,
+                    "applicability": applicability,
+                    "citation_required": True,
+                }
+                for claim_id, text, claim_type, applicability in claim_specs
+            ],
+            "claim_citations": [
+                {
+                    "citation_id": "model-%d" % index,
+                    "claim_id": claim_id,
+                    "provision_id": "P1",
+                    "quoted_text": "축약 인용",
+                    "support_description": "감사용 근거 %d" % index,
+                    "answer_marker": "[모델]",
+                }
+                for index, (claim_id, _, _, _) in enumerate(claim_specs, start=1)
+            ],
+            "assumptions": [
+                {"code": "A1", "message": "계약 관계가 존재한다고 가정합니다."}
+            ],
+            "limitations": [
+                {"code": "L1", "message": "구체적 손해액은 별도 확인이 필요합니다."}
+            ],
+        }
+
+        normalized = self.executor._normalize_harness_owned_fields(
+            "grounded_legal_answer_generation",
+            "GENERATE_ANSWER",
+            skill_input,
+            raw,
+        )
+
+        self.assertEqual(len(normalized["claims"]), 5)
+        self.assertEqual(len(normalized["claim_citations"]), 5)
+        self.assertEqual(
+            normalized["answer"],
+            "배상 책임이 인정됩니다.[CT1]\n"
+            "고의 또는 과실이 있는 경우에 한합니다.[CT3]\n"
+            "민법상 손해배상 규정이 근거입니다.[CT4]",
+        )
+        self.assertEqual(normalized["assumptions"], raw["assumptions"])
+        self.assertEqual(normalized["limitations"], raw["limitations"])
+        self.assertEqual(len(normalized["answer"].splitlines()), 3)
+        self.assertLessEqual(len(normalized["answer"]), 800)
         self.assertEqual(
             self.executor._validators["grounded_legal_answer_generation"](
                 normalized, skill_input
@@ -585,7 +664,9 @@ class LocalOllamaExecutorTests(unittest.TestCase):
             },
         )
 
-        self.assertEqual(result["claim_citations"], [{"claim_id": "C1", "provision_ids": ["P1"]}])
+        self.assertEqual(result["claim_citations"][0]["claim_id"], "C1")
+        self.assertEqual(result["claim_citations"][0]["provision_id"], "P1")
+        self.assertEqual(result["claim_citations"][0]["answer_marker"], "[CT1]")
 
     def test_s3_question_only_candidate_allows_empty_claims_and_citations(self):
         evidence = {
@@ -736,7 +817,7 @@ class LocalOllamaExecutorTests(unittest.TestCase):
             "candidate_answer_basis": "published_answer",
             "generation_constraints": {
                 "language": "ko",
-                "max_answer_chars": 6000,
+                "max_answer_chars": 800,
                 "citation_marker_style": "citation_id",
             },
         }
@@ -931,3 +1012,113 @@ class LocalOllamaExecutorTests(unittest.TestCase):
             self.executor._normalized_query(prior_query),
         )
         self.assertIn("[원문 맥락]", emitted)
+
+
+    @staticmethod
+    def _initial_plan_payload():
+        return {
+            "run_id": "run-1",
+            "question": "손해배상 책임은 무엇인가",
+            "normalized_question": "손해배상 책임은 무엇인가",
+            "query_history": [],
+        }
+
+    def test_s1_length_retry_uses_larger_limit_and_records_raw_diagnostics(self):
+        diagnostics = []
+        call_count = 0
+
+        def generator(prompt):
+            nonlocal call_count
+            call_count += 1
+            if call_count == 1:
+                return {
+                    "response": '{"schema_version":"1.0","unfinished":',
+                    "done_reason": "length",
+                    "eval_count": 4096,
+                }
+            return {
+                "response": self._generate(prompt),
+                "done_reason": "stop",
+                "eval_count": 512,
+            }
+
+        executor = LocalOllamaSkillExecutor(
+            skills_root=PROJECT_ROOT / "skills",
+            model="test-model",
+            generator=generator,
+            diagnostic_sink=diagnostics.append,
+        )
+        result = executor.execute(
+            "legal_issue_and_query_planning",
+            "INITIAL_PLAN",
+            self._initial_plan_payload(),
+        )
+
+        self.assertEqual(result["retrieval_requests"][0]["request_id"], "RQ1")
+        self.assertEqual(
+            [item["requested_max_tokens"] for item in diagnostics],
+            [4096, 8192],
+        )
+        self.assertEqual(
+            [item["outcome"] for item in diagnostics],
+            ["truncated", "valid"],
+        )
+        self.assertEqual(diagnostics[0]["done_reason"], "length")
+        self.assertEqual(diagnostics[0]["error_code"], "MODEL_OUTPUT_TRUNCATED")
+        self.assertEqual(diagnostics[0]["eval_count"], 4096)
+        self.assertEqual(diagnostics[0]["response_tokens"], 4096)
+        self.assertEqual(diagnostics[0]["response_characters"], 37)
+        self.assertEqual(len(diagnostics[0]["response_sha256"]), 64)
+        self.assertTrue(diagnostics[0]["response_tail"].endswith('"unfinished":'))
+
+    def test_invalid_json_has_distinct_error_code_and_diagnostic(self):
+        diagnostics = []
+        executor = LocalOllamaSkillExecutor(
+            skills_root=PROJECT_ROOT / "skills",
+            model="test-model",
+            max_attempts=1,
+            generator=lambda prompt: {
+                "response": '{"unfinished":',
+                "done_reason": "stop",
+                "eval_count": 12,
+            },
+            diagnostic_sink=diagnostics.append,
+        )
+
+        with self.assertRaises(SkillExecutionError) as raised:
+            executor.execute(
+                "legal_issue_and_query_planning",
+                "INITIAL_PLAN",
+                self._initial_plan_payload(),
+            )
+
+        self.assertIn("MODEL_OUTPUT_INVALID_JSON", str(raised.exception))
+        self.assertEqual(diagnostics[0]["outcome"], "invalid_json")
+        self.assertEqual(diagnostics[0]["error_code"], "MODEL_OUTPUT_INVALID_JSON")
+        self.assertEqual(diagnostics[0]["done_reason"], "stop")
+
+    def test_s1_query_terms_exact_duplicates_are_removed_deterministically(self):
+        def generator(prompt):
+            output = json.loads(self._generate(prompt))
+            output["retrieval_requests"][0]["query_terms"] = [
+                "손해배상",
+                "손해배상",
+                "책임",
+            ]
+            return json.dumps(output, ensure_ascii=False)
+
+        executor = LocalOllamaSkillExecutor(
+            skills_root=PROJECT_ROOT / "skills",
+            model="test-model",
+            generator=generator,
+        )
+        result = executor.execute(
+            "legal_issue_and_query_planning",
+            "INITIAL_PLAN",
+            self._initial_plan_payload(),
+        )
+
+        self.assertEqual(
+            result["retrieval_requests"][0]["query_terms"],
+            ["손해배상", "책임"],
+        )

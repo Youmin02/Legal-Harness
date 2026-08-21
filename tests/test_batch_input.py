@@ -1,5 +1,6 @@
 import unittest
 from pathlib import Path
+from runtime.source_snapshot import SourceSnapshot
 
 from scripts.run_bm25_bge_pilot_batch import (
     build_run_command,
@@ -30,6 +31,11 @@ class BatchInputTests(unittest.TestCase):
 
     def test_custom_record_root_is_forwarded_to_child_command(self):
         record_root = Path("/tmp/dedicated-smoke-records")
+        source_snapshot = SourceSnapshot(
+            git_commit="a" * 40,
+            git_tree="b" * 40,
+            source_manifest_sha256="c" * 64,
+        )
         command = build_run_command(
             Path("/tmp/python"),
             "[질문]\n질문",
@@ -45,6 +51,7 @@ class BatchInputTests(unittest.TestCase):
                 "ollama_endpoint": "http://127.0.0.1:11435/api/generate",
             },
             record_root,
+            source_snapshot,
         )
 
         record_dir_index = command.index("--record-dir")
@@ -54,6 +61,14 @@ class BatchInputTests(unittest.TestCase):
             command[endpoint_index + 1],
             "http://127.0.0.1:11435/api/generate",
         )
+        s1_limit_index = command.index("--s1-max-tokens")
+        self.assertEqual(command[s1_limit_index + 1], "4096")
+        retry_limit_index = command.index("--s1-truncation-retry-max-tokens")
+        self.assertEqual(command[retry_limit_index + 1], "8192")
+        commit_index = command.index("--expected-git-commit")
+        self.assertEqual(command[commit_index + 1], "a" * 40)
+        manifest_index = command.index("--expected-source-manifest-sha256")
+        self.assertEqual(command[manifest_index + 1], "c" * 64)
 
 
 if __name__ == "__main__":

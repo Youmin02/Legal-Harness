@@ -483,7 +483,10 @@ class EndToEndEvaluationTests(unittest.TestCase):
             fixture = EvaluationFixture(Path(directory), include_stages=False)
 
             aggregate, rows, _ = evaluate_batch(
-                fixture.batch, fixture.dataset, fixture.corpus
+                fixture.batch,
+                fixture.dataset,
+                fixture.corpus,
+                require_stage_provenance=False,
             )
 
             self.assertEqual(aggregate["outcomes"]["ANSWER"]["count"], 1)
@@ -530,7 +533,10 @@ class EndToEndEvaluationTests(unittest.TestCase):
             write_json(result_path, result)
 
             aggregate, rows, _ = evaluate_batch(
-                fixture.batch, fixture.dataset, fixture.corpus
+                fixture.batch,
+                fixture.dataset,
+                fixture.corpus,
+                require_stage_provenance=False,
             )
 
             self.assertEqual(rows[1]["status"], "ABSTAIN")
@@ -582,7 +588,12 @@ class EndToEndEvaluationTests(unittest.TestCase):
                 write_json(result_path, result)
 
                 with self.assertRaisesRegex(EvaluationError, message):
-                    evaluate_batch(fixture.batch, fixture.dataset, fixture.corpus)
+                    evaluate_batch(
+                        fixture.batch,
+                        fixture.dataset,
+                        fixture.corpus,
+                        require_stage_provenance=False,
+                    )
 
     def test_answer_modes_lf_eval_and_split_output_are_additive(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -625,6 +636,7 @@ class EndToEndEvaluationTests(unittest.TestCase):
                 fixture.batch,
                 fixture.dataset,
                 fixture.corpus,
+                require_stage_provenance=False,
                 lf_eval_scores_path=lf_eval_path,
                 split_manifest_path=split_path,
             )
@@ -642,23 +654,53 @@ class EndToEndEvaluationTests(unittest.TestCase):
             )
             self.assertEqual(metadata["lf_eval"]["input_scale"], "0_10")
 
-    def test_stage_boundaries_labels_hops_and_efficiency(self):
+    def test_comparison_invalid_status_propagates_to_outputs(self):
         with tempfile.TemporaryDirectory() as directory:
-            fixture = EvaluationFixture(
-                Path(directory), include_stages=True, include_labels=True
+            fixture = EvaluationFixture(Path(directory), include_stages=False)
+            validity = {
+                "status": "INVALID_FOR_CLEAN_RETRIEVER_COMPARISON",
+                "use": "DIAGNOSTIC_ONLY",
+                "reasons": [
+                    {"code": "S1_JSON_FAILURES", "affected_runs": 35},
+                    {"code": "CODE_PROVENANCE_MISMATCH"},
+                ],
+            }
+            write_json(
+                fixture.batch / "metadata.json",
+                {"comparison_validity": validity},
             )
 
             aggregate, rows, metadata = evaluate_batch(
                 fixture.batch,
                 fixture.dataset,
                 fixture.corpus,
+                require_stage_provenance=False,
+            )
+
+            self.assertEqual(aggregate["comparison_validity"], validity)
+            self.assertEqual(metadata["comparison_validity"], validity)
+            markdown = render_markdown(aggregate, rows)
+            self.assertIn("INVALID_FOR_CLEAN_RETRIEVER_COMPARISON", markdown)
+            self.assertIn("S1_JSON_FAILURES", markdown)
+            self.assertIn("CODE_PROVENANCE_MISMATCH", markdown)
+
+    def test_stage_boundaries_labels_hops_and_efficiency(self):
+        with tempfile.TemporaryDirectory() as directory:
+            fixture = EvaluationFixture(
+                Path(directory), include_stages=True, include_labels=True
+            )
+            (fixture.runs / "run-3/retrieval_stages.jsonl").unlink()
+
+            aggregate, rows, metadata = evaluate_batch(
+                fixture.batch,
+                fixture.dataset,
+                fixture.corpus,
                 answer_labels_path=fixture.labels,
-                require_stage_provenance=True,
             )
 
             self.assertAlmostEqual(
                 aggregate["retrieval"]["first_stage_at_100"]["provision_recall_micro"],
-                2 / 3,
+                1.0,
             )
             self.assertAlmostEqual(
                 aggregate["retrieval"]["rrf_at_100"]["complete_evidence_recall"],
@@ -666,16 +708,21 @@ class EndToEndEvaluationTests(unittest.TestCase):
             )
             self.assertAlmostEqual(
                 aggregate["retrieval"]["bge_at_10"]["provision_recall_micro"],
-                1 / 3,
+                1 / 2,
             )
             self.assertAlmostEqual(
                 aggregate["retrieval"]["bge_at_20"]["provision_recall_micro"],
-                2 / 3,
+                1.0,
             )
             self.assertAlmostEqual(
                 aggregate["retrieval"]["bge_at_30"]["provision_recall_micro"],
-                2 / 3,
+                1.0,
             )
+            self.assertEqual(
+                aggregate["retrieval"]["first_stage_at_100"]["question_count"],
+                2,
+            )
+            self.assertIsNone(rows[2]["stage_provenance_available"])
             self.assertEqual(aggregate["answers"]["false_supported_answer_count"], 1)
             self.assertEqual(aggregate["answers"]["false_supported_answer_rate"], 1.0)
             self.assertEqual(aggregate["citation_integrity"]["attempted"], 1)
@@ -700,7 +747,10 @@ class EndToEndEvaluationTests(unittest.TestCase):
             root = Path(directory)
             fixture = EvaluationFixture(root, include_stages=False)
             aggregate, rows, metadata = evaluate_batch(
-                fixture.batch, fixture.dataset, fixture.corpus
+                fixture.batch,
+                fixture.dataset,
+                fixture.corpus,
+                require_stage_provenance=False,
             )
             output = root / "evaluation"
 
@@ -779,6 +829,7 @@ class EndToEndEvaluationTests(unittest.TestCase):
                 fixture.batch,
                 fixture.dataset,
                 fixture.corpus,
+                require_stage_provenance=False,
                 replacement_batch_directories=[retry_batch],
             )
 

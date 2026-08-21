@@ -9,6 +9,7 @@ back to the harness contract.
 
 from __future__ import annotations
 
+from dataclasses import dataclass
 import hashlib
 import importlib.util
 import json
@@ -32,6 +33,30 @@ EXTERNAL_CHANNELS = {
 INTERNAL_CHANNELS = {
     "sparse_keywords": "sparse_keyword",
 }
+DEFAULT_SKILL_MAX_TOKENS = {
+    "legal_issue_and_query_planning": 4096,
+    "provision_coverage_assessment": 3072,
+    "grounded_legal_answer_generation": 3072,
+}
+DEFAULT_S1_TRUNCATION_RETRY_MAX_TOKENS = 8192
+RESPONSE_TAIL_CHARACTERS = 512
+PUBLIC_ANSWER_MAX_CHARACTERS = 800
+PUBLIC_ANSWER_MAX_CLAIMS = 3
+
+
+@dataclass(frozen=True)
+class GenerationResult:
+    text: str
+    done_reason: Optional[str] = None
+    eval_count: Optional[int] = None
+
+
+class ModelOutputTruncatedError(ValueError):
+    """The model hit its deterministic output budget before completing JSON."""
+
+
+class ModelOutputInvalidJsonError(ValueError):
+    """The model stopped normally but returned syntactically invalid JSON."""
 
 
 class LocalOllamaSkillExecutor:
@@ -45,10 +70,23 @@ class LocalOllamaSkillExecutor:
         timeout_seconds: int = 600,
         num_ctx: int = 32768,
         max_attempts: int = 2,
-        generator: Optional[Callable[[str], str]] = None,
+        generator: Optional[Callable[[str], Any]] = None,
+        diagnostic_sink: Optional[Callable[[Mapping[str, Any]], None]] = None,
+        s1_max_tokens: int = DEFAULT_SKILL_MAX_TOKENS["legal_issue_and_query_planning"],
+        s1_truncation_retry_max_tokens: int = DEFAULT_S1_TRUNCATION_RETRY_MAX_TOKENS,
     ):
         if timeout_seconds < 1 or num_ctx < 1024 or max_attempts < 1:
             raise ValueError("timeout, num_ctx, and max_attempts must be positive")
+        if (
+            isinstance(s1_max_tokens, bool)
+            or isinstance(s1_truncation_retry_max_tokens, bool)
+            or s1_max_tokens < 1
+            or s1_truncation_retry_max_tokens <= s1_max_tokens
+            or s1_truncation_retry_max_tokens > num_ctx
+        ):
+            raise ValueError(
+                "S1 retry token limit must be larger than the initial limit and no larger than num_ctx"
+            )
         self.skills_root = skills_root
         self.model = model
         self.endpoint = endpoint
@@ -56,6 +94,9 @@ class LocalOllamaSkillExecutor:
         self.num_ctx = num_ctx
         self.max_attempts = max_attempts
         self.generator = generator
+        self.diagnostic_sink = diagnostic_sink
+        self.s1_max_tokens = s1_max_tokens
+        self.s1_truncation_retry_max_tokens = s1_truncation_retry_max_tokens
         self._resources: Dict[str, Dict[str, str]] = {}
         self._validators: Dict[str, Callable[[Mapping[str, Any], Mapping[str, Any]], List[str]]] = {}
         for skill_name in SKILL_IDS:
@@ -72,11 +113,31 @@ class LocalOllamaSkillExecutor:
         skill_input = self._build_skill_input(skill_name, entry_point, payload)
         errors: List[str] = []
         repair_note = ""
+        max_tokens = self._max_tokens(skill_name)
         for attempt in range(1, self.max_attempts + 1):
             prompt = self._prompt(skill_name, entry_point, skill_input, repair_note)
+            diagnostic: Dict[str, Any] = {
+                "schema_version": "1.0",
+                "run_id": skill_input.get("run_id"),
+                "skill_name": skill_name,
+                "skill_id": SKILL_IDS[skill_name],
+                "entry_point": entry_point,
+                "attempt": attempt,
+                "requested_max_tokens": max_tokens,
+            }
             try:
-                raw_text = self._generate(prompt, self._max_tokens(skill_name))
-                skill_output = self._parse_json_object(raw_text)
+                generation = self._generate(prompt, max_tokens)
+                diagnostic.update(self._generation_diagnostic(generation))
+                if generation.done_reason == "length":
+                    retry_tokens = self._retry_max_tokens(skill_name, max_tokens)
+                    diagnostic["outcome"] = "truncated"
+                    diagnostic["error_code"] = "MODEL_OUTPUT_TRUNCATED"
+                    diagnostic["retry_max_tokens"] = retry_tokens
+                    raise ModelOutputTruncatedError(
+                        "MODEL_OUTPUT_TRUNCATED: %s %s attempt %d reached num_predict=%d"
+                        % (skill_name, entry_point, attempt, max_tokens)
+                    )
+                skill_output = self._parse_json_object(generation.text)
                 skill_output = self._normalize_harness_owned_fields(
                     skill_name, entry_point, skill_input, skill_output
                 )
@@ -90,6 +151,8 @@ class LocalOllamaSkillExecutor:
                         "linked_provision_ids from evidence_links. Previous JSON: "
                         + json.dumps(skill_output, ensure_ascii=False, separators=(",", ":"))
                     )
+                    diagnostic["outcome"] = "validation_error"
+                    diagnostic["error"] = "; ".join(validation_errors)
                     continue
                 if skill_output.get("status") == "error":
                     error = skill_output.get("error", {})
@@ -97,10 +160,28 @@ class LocalOllamaSkillExecutor:
                         "%s returned %s: %s"
                         % (skill_name, error.get("code", "UNKNOWN"), error.get("message", ""))
                     )
+                diagnostic["outcome"] = "valid"
                 return self._adapt_output(skill_name, entry_point, skill_output, skill_input)
-            except (SkillExecutionError, ValueError) as exc:
+            except ModelOutputTruncatedError as exc:
                 errors = [str(exc)]
+                repair_note = (
+                    "Your previous response was truncated at the output limit. "
+                    "Return a complete, compact replacement JSON within the enlarged limit."
+                )
+                max_tokens = self._retry_max_tokens(skill_name, max_tokens)
+            except ModelOutputInvalidJsonError as exc:
+                errors = [str(exc)]
+                diagnostic["outcome"] = "invalid_json"
+                diagnostic["error_code"] = "MODEL_OUTPUT_INVALID_JSON"
+                diagnostic["error"] = str(exc)
                 repair_note = "Your previous response was unusable: " + str(exc)
+            except SkillExecutionError as exc:
+                errors = [str(exc)]
+                diagnostic["outcome"] = "skill_error"
+                diagnostic["error"] = str(exc)
+                repair_note = "Your previous response was unusable: " + str(exc)
+            finally:
+                self._record_diagnostic(diagnostic)
         raise SkillExecutionError(
             "%s did not produce a valid %s result after %d attempts: %s"
             % (skill_name, entry_point, self.max_attempts, "; ".join(errors))
@@ -129,6 +210,8 @@ class LocalOllamaSkillExecutor:
         for index, request in enumerate(requests, start=1):
             if isinstance(request, dict):
                 request["request_id"] = ("GRQ-R%d-%d" % (int(skill_input.get("next_retrieval_round", 1)), index) if entry_point == "GAP_QUERY_PLAN" else "RQ%d" % index)
+                if isinstance(request.get("query_terms"), list):
+                    request["query_terms"] = self._deduplicate_query_terms(request["query_terms"])
         if entry_point == "INITIAL_PLAN":
             issues_by_id = {
                 issue.get("issue_id"): issue
@@ -195,7 +278,12 @@ class LocalOllamaSkillExecutor:
             and skill_input.get("candidate_answer_basis") == "question_only"
         )
         if question_only and claims == [] and citations == []:
-            return output
+            answer = self._compact_question_only_answer(output.get("answer"))
+            if answer is None:
+                return output
+            normalized = dict(output)
+            normalized["answer"] = answer
+            return normalized
         if not isinstance(claims, list) or not isinstance(citations, list):
             return output
 
@@ -257,8 +345,7 @@ class LocalOllamaSkillExecutor:
                 citation["answer_marker"]
             )
 
-        notes: List[str] = []
-        for key, prefix in (("assumptions", "전제:"), ("limitations", "한계:")):
+        for key in ("assumptions", "limitations"):
             raw_notes = output.get(key)
             if not isinstance(raw_notes, list):
                 return output
@@ -268,25 +355,68 @@ class LocalOllamaSkillExecutor:
                 message = note.get("message")
                 if not isinstance(message, str) or not message.strip():
                     return output
-                notes.append("%s %s" % (prefix, message.strip()))
         answer_lines = [
             "%s%s" % (
                 claim.get("text"),
                 "".join(markers_by_claim.get(claim["claim_id"], [])),
             )
-            for claim in normalized_claims
+            for claim in self._public_s3_claims(normalized_claims)
         ]
-        answer = "\n".join(answer_lines + notes)
+        answer = "\n".join(answer_lines)
         max_answer_chars = skill_input.get("generation_constraints", {}).get(
             "max_answer_chars"
         )
-        if isinstance(max_answer_chars, int) and len(answer) > max_answer_chars:
+        effective_max_chars = (
+            min(max_answer_chars, PUBLIC_ANSWER_MAX_CHARACTERS)
+            if isinstance(max_answer_chars, int)
+            else PUBLIC_ANSWER_MAX_CHARACTERS
+        )
+        if not answer or len(answer) > effective_max_chars:
             return output
         normalized = dict(output)
         normalized["claims"] = normalized_claims
         normalized["claim_citations"] = normalized_citations
         normalized["answer"] = answer
         return normalized
+
+    @staticmethod
+    def _public_s3_claims(
+        claims: List[Dict[str, Any]],
+    ) -> List[Dict[str, Any]]:
+        selected: List[Dict[str, Any]] = []
+
+        def add(claim: Dict[str, Any]) -> None:
+            if claim not in selected and len(selected) < PUBLIC_ANSWER_MAX_CLAIMS:
+                selected.append(claim)
+
+        if claims:
+            add(claims[0])
+        for claim in claims:
+            if claim.get("applicability") == "conditional":
+                add(claim)
+        for claim in claims:
+            if claim.get("claim_type") == "legal_rule":
+                add(claim)
+        for claim in claims:
+            add(claim)
+        return selected
+
+    @staticmethod
+    def _compact_question_only_answer(value: Any) -> Optional[str]:
+        if not isinstance(value, str) or not value.strip():
+            return None
+        lines = []
+        for raw_line in value.splitlines():
+            line = " ".join(raw_line.split())
+            if not line or line.startswith(("전제:", "한계:")):
+                continue
+            lines.append(line)
+            if len(lines) == PUBLIC_ANSWER_MAX_CLAIMS:
+                break
+        answer = " ".join(lines)
+        if not answer or len(answer) > PUBLIC_ANSWER_MAX_CHARACTERS:
+            return None
+        return answer
 
     def _normalize_s2_output(
         self,
@@ -432,6 +562,20 @@ class LocalOllamaSkillExecutor:
         return output
 
     @staticmethod
+    def _deduplicate_query_terms(values: Any) -> Any:
+        if not isinstance(values, list):
+            return values
+        output: List[Any] = []
+        seen = set()
+        for value in values:
+            if isinstance(value, str):
+                if value in seen:
+                    continue
+                seen.add(value)
+            output.append(value)
+        return output
+
+    @staticmethod
     def _normalized_query(query: str) -> str:
         return " ".join(query.lower().split())
 
@@ -512,11 +656,15 @@ class LocalOllamaSkillExecutor:
 
 
 
-    @staticmethod
-    def _max_tokens(skill_name: str) -> int:
-        return {"legal_issue_and_query_planning": 1600,
-                "provision_coverage_assessment": 3072,
-                "grounded_legal_answer_generation": 3072}[skill_name]
+    def _max_tokens(self, skill_name: str) -> int:
+        if skill_name == "legal_issue_and_query_planning":
+            return self.s1_max_tokens
+        return DEFAULT_SKILL_MAX_TOKENS[skill_name]
+
+    def _retry_max_tokens(self, skill_name: str, current: int) -> int:
+        if skill_name == "legal_issue_and_query_planning":
+            return self.s1_truncation_retry_max_tokens
+        return min(current * 2, self.num_ctx)
 
     def _load_skill(self, skill_name: str) -> None:
         directory = self.skills_root / skill_name
@@ -629,7 +777,7 @@ class LocalOllamaSkillExecutor:
                 ),
                 "generation_constraints": {
                     "language": "ko",
-                    "max_answer_chars": 800 if benchmark_candidate else 6000,
+                    "max_answer_chars": PUBLIC_ANSWER_MAX_CHARACTERS,
                     "citation_marker_style": "citation_id",
                 },
             }
@@ -808,12 +956,14 @@ FINAL OUTPUT INVARIANTS:
                 if skill_input.get("candidate_answer_basis") == "question_only":
                     return (
                         "This is a non-publishable question-only benchmark candidate because retrieval returned no candidate provisions. "
-                        "The harness policy remains ABSTAIN. Return a concise direct benchmark answer with no abstention boilerplate, claims, citations, or citation markers; do not present it as authorized, supported, or publishable."
+                        "The harness policy remains ABSTAIN. Return a conclusion-first benchmark answer in 1 to 3 short sentences and no more than 800 characters. "
+                        "Do not add abstention or audit boilerplate, claims, citations, or citation markers; do not present it as authorized, supported, or publishable."
                     )
                 return (
                     "This is a non-publishable benchmark candidate. The harness policy remains ABSTAIN. "
                     "Use only candidate provision IDs supplied in INPUT; they are retrieved evidence, not accepted evidence. "
-                    "Give a concise direct benchmark answer with no abstention boilerplate, answer every supplied target, cite every substantive claim, and do not state that the candidate is authorized or publishable."
+                    "Give a conclusion-first benchmark answer in 1 to 3 short sentences and no more than 800 characters, with no abstention or audit boilerplate. "
+                    "Answer every supplied target, cite every substantive claim, preserve all audit arrays, and do not state that the candidate is authorized or publishable."
                 )
             answer_mode = skill_input.get("answer_mode", "full")
             answered_target_ids = self._list(
@@ -834,7 +984,8 @@ FINAL OUTPUT INVARIANTS:
                     "Do not assert their missing facts. Include at least one cited conditional legal claim and a non-empty "
                     "limitations array that states each unresolved condition. Every claims[] item must set citation_required "
                     "true and have at least one claim_citation. Keep uncited missing-fact and limitation prose out of claims[]; "
-                    "put it only in answer, assumptions[], or limitations[]."
+                    "put it in assumptions[] or limitations[]. Preserve all audit claims, citations, assumptions, and limitations, but do not append them all to the public answer. "
+                    "The public answer must put the conclusion first, use 1 to 3 short sentences and no more than 800 characters, and repeat only an outcome-changing unresolved condition with the minimum statutory basis."
                     % (
                         answer_mode,
                         json.dumps(answered_target_ids),
@@ -843,7 +994,8 @@ FINAL OUTPUT INVARIANTS:
                     )
                 )
             return (
-                "Use only accepted provision IDs supplied in INPUT. Answer mode is %s; substantive claims may name only answered target IDs %s and must not name deferred target IDs %s. Every claims[] item must set citation_required true and have at least one claim_citation; keep uncited factual or limitation prose out of claims[]."
+                "Use only accepted provision IDs supplied in INPUT. Answer mode is %s; substantive claims may name only answered target IDs %s and must not name deferred target IDs %s. Every claims[] item must set citation_required true and have at least one claim_citation; keep uncited factual or limitation prose in assumptions[] or limitations[]. "
+                "Preserve every audit field, but make the public answer conclusion-first, 1 to 3 short sentences, no more than 800 characters, and include only an outcome-changing condition and the minimum statutory basis; do not append all audit claims or notes."
                 % (answer_mode, json.dumps(answered_target_ids), json.dumps(deferred_target_ids))
             )
         if skill_name != "provision_coverage_assessment":
@@ -890,9 +1042,9 @@ FINAL OUTPUT INVARIANTS:
             )
         )
 
-    def _generate(self, prompt: str, max_tokens: int) -> str:
+    def _generate(self, prompt: str, max_tokens: int) -> GenerationResult:
         if self.generator is not None:
-            return self.generator(prompt)
+            return self._generation_result(self.generator(prompt))
         request_data = json.dumps(
             {
                 "model": self.model,
@@ -914,10 +1066,50 @@ FINAL OUTPUT INVARIANTS:
                 payload = json.loads(response.read().decode("utf-8"))
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
             raise SkillExecutionError("local Ollama request failed: %s" % exc) from exc
-        generated = payload.get("response")
+        return self._generation_result(payload)
+
+    @staticmethod
+    def _generation_result(payload: Any) -> GenerationResult:
+        if isinstance(payload, str):
+            generated = payload
+            done_reason = None
+            eval_count = None
+        elif isinstance(payload, Mapping):
+            generated = payload.get("response")
+            raw_done_reason = payload.get("done_reason")
+            done_reason = raw_done_reason if isinstance(raw_done_reason, str) else None
+            raw_eval_count = payload.get("eval_count")
+            eval_count = (
+                raw_eval_count
+                if isinstance(raw_eval_count, int) and not isinstance(raw_eval_count, bool)
+                else None
+            )
+        else:
+            raise SkillExecutionError("local generator returned an unsupported response")
         if not isinstance(generated, str) or not generated.strip():
             raise SkillExecutionError("local Ollama returned no JSON response")
-        return generated
+        return GenerationResult(
+            text=generated,
+            done_reason=done_reason,
+            eval_count=eval_count,
+        )
+
+    @staticmethod
+    def _generation_diagnostic(generation: GenerationResult) -> Dict[str, Any]:
+        encoded = generation.text.encode("utf-8")
+        return {
+            "done_reason": generation.done_reason,
+            "eval_count": generation.eval_count,
+            "response_tokens": generation.eval_count,
+            "response_characters": len(generation.text),
+            "response_utf8_bytes": len(encoded),
+            "response_sha256": hashlib.sha256(encoded).hexdigest(),
+            "response_tail": generation.text[-RESPONSE_TAIL_CHARACTERS:],
+        }
+
+    def _record_diagnostic(self, diagnostic: Mapping[str, Any]) -> None:
+        if self.diagnostic_sink is not None:
+            self.diagnostic_sink(dict(diagnostic))
 
     @staticmethod
     def _parse_json_object(raw: str) -> Dict[str, Any]:
@@ -927,13 +1119,19 @@ FINAL OUTPUT INVARIANTS:
         decoder = json.JSONDecoder()
         first_brace = text.find("{")
         if first_brace < 0:
-            raise ValueError("model response contains no JSON object")
+            raise ModelOutputInvalidJsonError(
+                "MODEL_OUTPUT_INVALID_JSON: model response contains no JSON object"
+            )
         try:
             parsed, _ = decoder.raw_decode(text[first_brace:])
         except json.JSONDecodeError as exc:
-            raise ValueError("model response is not valid JSON: %s" % exc) from exc
+            raise ModelOutputInvalidJsonError(
+                "MODEL_OUTPUT_INVALID_JSON: %s" % exc
+            ) from exc
         if not isinstance(parsed, dict):
-            raise ValueError("model response must be a JSON object")
+            raise ModelOutputInvalidJsonError(
+                "MODEL_OUTPUT_INVALID_JSON: model response must be a JSON object"
+            )
         return parsed
 
     def _adapt_output(
@@ -1180,13 +1378,14 @@ FINAL OUTPUT INVARIANTS:
             skill_input.get("mode") == "GENERATE_BENCHMARK_CANDIDATE"
             and skill_input.get("candidate_answer_basis") == "question_only"
         )
-        claims = []
+        claims: List[Dict[str, Any]] = []
         for claim in self._list(
             output, "claims", required=not benchmark_question_only
         ):
             if not isinstance(claim, Mapping):
                 raise SkillExecutionError("S3 claim must be an object")
-            claims.append(
+            claim_payload = dict(claim)
+            claim_payload.update(
                 {
                     "claim_id": self._string(claim, "claim_id"),
                     "text": self._string(claim, "text"),
@@ -1195,7 +1394,8 @@ FINAL OUTPUT INVARIANTS:
                     ),
                 }
             )
-        grouped: Dict[str, List[str]] = {}
+            claims.append(claim_payload)
+
         provision_key = (
             "candidate_provisions"
             if skill_input.get("mode") == "GENERATE_BENCHMARK_CANDIDATE"
@@ -1206,6 +1406,7 @@ FINAL OUTPUT INVARIANTS:
             for provision in self._list(skill_input, provision_key)
             if isinstance(provision, Mapping)
         }
+        citations: List[Dict[str, Any]] = []
         for citation in self._list(
             output, "claim_citations", required=not benchmark_question_only
         ):
@@ -1215,20 +1416,37 @@ FINAL OUTPUT INVARIANTS:
             provision_id = self._string(citation, "provision_id")
             provision = provisions.get(provision_id)
             if provision is None:
-                raise SkillExecutionError("S3 cited a provision outside the supplied source set")
-            grouped.setdefault(claim_id, []).append(
+                raise SkillExecutionError(
+                    "S3 cited a provision outside the supplied source set"
+                )
+            citation_payload = dict(citation)
+            citation_payload["claim_id"] = claim_id
+            citation_payload["provision_id"] = str(
                 provision.get("source_provision_id", provision_id)
             )
+            citations.append(citation_payload)
+
         expected_claim_ids = {claim["claim_id"] for claim in claims}
-        if set(grouped) != expected_claim_ids:
-            raise SkillExecutionError("S3 must cite every claim for the harness citation check")
+        if {citation["claim_id"] for citation in citations} != expected_claim_ids:
+            raise SkillExecutionError(
+                "S3 must cite every claim for the harness citation check"
+            )
+
+        audit_notes: Dict[str, List[Dict[str, Any]]] = {}
+        for key in ("assumptions", "limitations"):
+            values: List[Dict[str, Any]] = []
+            for item in self._list(output, key):
+                if not isinstance(item, Mapping):
+                    raise SkillExecutionError("S3 %s item must be an object" % key)
+                values.append(dict(item))
+            audit_notes[key] = values
+
         return {
             "answer": self._string(output, "answer"),
             "claims": claims,
-            "claim_citations": [
-                {"claim_id": claim_id, "provision_ids": sorted(set(provision_ids))}
-                for claim_id, provision_ids in sorted(grouped.items())
-            ],
+            "claim_citations": citations,
+            "assumptions": audit_notes["assumptions"],
+            "limitations": audit_notes["limitations"],
         }
 
     @staticmethod

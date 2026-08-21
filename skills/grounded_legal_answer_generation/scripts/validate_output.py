@@ -23,6 +23,26 @@ def unique(items, key, pattern, errors):
     return seen
 
 
+def public_claims(claims):
+    selected = []
+
+    def add(claim):
+        if claim not in selected and len(selected) < 3:
+            selected.append(claim)
+
+    if claims:
+        add(claims[0])
+    for claim in claims:
+        if claim.get("applicability") == "conditional":
+            add(claim)
+    for claim in claims:
+        if claim.get("claim_type") == "legal_rule":
+            add(claim)
+    for claim in claims:
+        add(claim)
+    return selected
+
+
 def validate_preconditions(input_data, errors):
     benchmark_candidate = input_data.get("mode") == "GENERATE_BENCHMARK_CANDIDATE"
     authorization = input_data.get("authorization", {})
@@ -147,8 +167,18 @@ def validate(output, input_data):
 
     answer = output.get("answer", "")
     max_chars = input_data.get("generation_constraints", {}).get("max_answer_chars")
-    if isinstance(max_chars, int) and len(answer) > max_chars:
-        errors.append(f"answer exceeds max_answer_chars: {len(answer)} > {max_chars}")
+    effective_max_chars = min(max_chars, 800) if isinstance(max_chars, int) else 800
+    if len(answer) > effective_max_chars:
+        errors.append(
+            f"answer exceeds max_answer_chars: {len(answer)} > {effective_max_chars}"
+        )
+    answer_lines = [line.strip() for line in answer.splitlines() if line.strip()]
+    if not 1 <= len(answer_lines) <= 3:
+        errors.append("public answer must contain 1 to 3 short lines")
+    if any(
+        line.startswith(("전제:", "한계:")) for line in answer_lines
+    ):
+        errors.append("public answer must not append audit assumptions or limitations")
     if "claims" not in output or "claim_citations" not in output:
         errors.append("success output requires claims and claim_citations arrays")
     claims = output.get("claims", [])
@@ -191,13 +221,8 @@ def validate(output, input_data):
         expected_marker = f"[{citation_id}]"
         if marker != expected_marker:
             errors.append(f"answer_marker must be {expected_marker}: {citation_id}")
-        elif marker not in answer:
-            errors.append(f"answer is missing citation marker: {citation_id}")
 
     for claim_id, claim in claim_by_id.items():
-        text = claim.get("text")
-        if not isinstance(text, str) or text not in answer:
-            errors.append(f"claim text must be an exact substring of answer: {claim_id}")
         if claim.get("citation_required") is not True:
             errors.append(f"every claims[] item must require citation: {claim_id}")
         if not citations_by_claim.get(claim_id):
@@ -205,6 +230,22 @@ def validate(output, input_data):
     for claim_id in citations_by_claim:
         if claim_id not in claim_by_id:
             errors.append(f"citations contain unknown claim: {claim_id}")
+
+    if not benchmark_question_only:
+        expected_lines = [
+            "%s%s"
+            % (
+                claim.get("text", ""),
+                "".join(
+                    citation.get("answer_marker", "")
+                    for citation in citations_by_claim.get(claim.get("claim_id"), [])
+                ),
+            )
+            for claim in public_claims(claims)
+        ]
+        expected_answer = "\n".join(expected_lines)
+        if answer != expected_answer:
+            errors.append("public answer does not match deterministic concise serialization")
 
     statuses = {
         item.get("evidence_item_id"): item.get("status")

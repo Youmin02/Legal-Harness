@@ -1,4 +1,20 @@
 {
+  "comparison_validity": {
+    "status": "INVALID_FOR_CLEAN_RETRIEVER_COMPARISON",
+    "use": "DIAGNOSTIC_ONLY",
+    "reasons": [
+      {
+        "code": "S1_JSON_FAILURES",
+        "affected_runs": 35,
+        "detail": "S1 JSON generation failed in 35 runs."
+      },
+      {
+        "code": "CODE_PROVENANCE_MISMATCH",
+        "detail": "The 226-run batch was split across two recorded code provenances (58 and 168 runs)."
+      }
+    ],
+    "do_not_use_for": "clean BM25 versus KURE retriever comparison"
+  },
   "answer_quality": {
     "abstain_count": 38,
     "abstain_rate": 0.168141592920354,

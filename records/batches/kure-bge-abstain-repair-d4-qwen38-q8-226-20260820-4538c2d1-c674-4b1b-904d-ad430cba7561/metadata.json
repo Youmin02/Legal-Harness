@@ -1,4 +1,20 @@
 {
+  "comparison_validity": {
+    "status": "INVALID_FOR_CLEAN_RETRIEVER_COMPARISON",
+    "use": "DIAGNOSTIC_ONLY",
+    "reasons": [
+      {
+        "code": "S1_JSON_FAILURES",
+        "affected_runs": 35,
+        "detail": "S1 JSON generation failed in 35 runs."
+      },
+      {
+        "code": "CODE_PROVENANCE_MISMATCH",
+        "detail": "The 226-run batch was split across two recorded code provenances (58 and 168 runs)."
+      }
+    ],
+    "do_not_use_for": "clean BM25 versus KURE retriever comparison"
+  },
   "batch_id": "kure-bge-abstain-repair-d4-qwen38-q8-226-20260820-4538c2d1-c674-4b1b-904d-ad430cba7561",
   "started_at_utc": "2026-08-20T08:05:28.966320+00:00",
   "manifest": "data/koblex/manifests/kure_bge_abstain_repair_d4_qwen38_q8_226_20260820.json",

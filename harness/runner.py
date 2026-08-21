@@ -8,6 +8,7 @@ from .contracts import (
     AbstentionReason,
     AnswerMode,
     CandidateAnswerBasis,
+    AnswerDraft,
     CandidateAnswerStatus,
     OutcomeStatus,
     Phase,
@@ -72,6 +73,14 @@ class HarnessOutcome:
     candidate_answer_basis: Optional[CandidateAnswerBasis] = None
     candidate_answer_termination_reason: Optional[TerminationReason] = None
     candidate_answer_error: Optional[str] = None
+    claims: List[Dict[str, Any]] = field(default_factory=list)
+    claim_citations: List[Dict[str, Any]] = field(default_factory=list)
+    assumptions: List[Dict[str, Any]] = field(default_factory=list)
+    limitations: List[Dict[str, Any]] = field(default_factory=list)
+    candidate_claims: List[Dict[str, Any]] = field(default_factory=list)
+    candidate_claim_citations: List[Dict[str, Any]] = field(default_factory=list)
+    candidate_assumptions: List[Dict[str, Any]] = field(default_factory=list)
+    candidate_limitations: List[Dict[str, Any]] = field(default_factory=list)
     errors: List[str] = field(default_factory=list)
 
 
@@ -326,6 +335,10 @@ class HarnessRunner:
             termination_reason=TerminationReason.COMPLETED,
             candidate_answer=answer.answer,
             candidate_answer_status=CandidateAnswerStatus.PUBLISHED_ANSWER,
+            claims=answer.structured_claims,
+            claim_citations=answer.structured_claim_citations,
+            assumptions=answer.assumptions,
+            limitations=answer.limitations,
             candidate_answer_basis=CandidateAnswerBasis.PUBLISHED_ANSWER,
         )
 
@@ -344,7 +357,7 @@ class HarnessRunner:
         )
         self._trace("RUN_ABSTAINED", state, reason=reason.value)
         (
-            candidate_answer,
+            candidate,
             candidate_status,
             candidate_basis,
             candidate_termination_reason,
@@ -355,17 +368,25 @@ class HarnessRunner:
             state=state,
             abstention_reason=reason,
             termination_reason=termination_reason,
-            candidate_answer=candidate_answer,
+            candidate_answer=candidate.answer if candidate is not None else None,
             candidate_answer_status=candidate_status,
             candidate_answer_basis=candidate_basis,
             candidate_answer_termination_reason=candidate_termination_reason,
             candidate_answer_error=candidate_error,
+            candidate_claims=(
+                candidate.structured_claims if candidate is not None else []
+            ),
+            candidate_claim_citations=(
+                candidate.structured_claim_citations if candidate is not None else []
+            ),
+            candidate_assumptions=candidate.assumptions if candidate is not None else [],
+            candidate_limitations=candidate.limitations if candidate is not None else [],
         )
 
     def _generate_benchmark_candidate(
         self, state: RunState
     ) -> tuple[
-        Optional[str],
+        Optional[AnswerDraft],
         CandidateAnswerStatus,
         CandidateAnswerBasis,
         Optional[TerminationReason],
@@ -392,7 +413,7 @@ class HarnessRunner:
                 candidate_answer_basis=basis.value,
             )
             self._trace("BENCHMARK_CANDIDATE_VALIDATED", state)
-            return candidate.answer, CandidateAnswerStatus.GENERATED, basis, None, None
+            return candidate, CandidateAnswerStatus.GENERATED, basis, None, None
         except (ValidationError, RuntimeError) as exc:
             return self._benchmark_candidate_failure(state, basis, exc)
         except Exception as exc:

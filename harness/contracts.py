@@ -2,7 +2,7 @@
 
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 
 class Phase(str, Enum):
@@ -259,6 +259,10 @@ class AnswerDraft:
     claims: List[Claim]
     claim_citations: List[ClaimCitation]
     answer: str
+    structured_claims: List[Dict[str, Any]] = field(default_factory=list)
+    structured_claim_citations: List[Dict[str, Any]] = field(default_factory=list)
+    assumptions: List[Dict[str, Any]] = field(default_factory=list)
+    limitations: List[Dict[str, Any]] = field(default_factory=list)
 
 
 @dataclass(frozen=True)

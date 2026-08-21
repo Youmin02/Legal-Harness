@@ -38,7 +38,7 @@
       "required": ["language", "max_answer_chars", "citation_marker_style"],
       "properties": {
         "language": {"type": "string", "minLength": 2},
-        "max_answer_chars": {"type": "integer", "minimum": 1},
+        "max_answer_chars": {"type": "integer", "minimum": 1, "maximum": 800},
         "citation_marker_style": {"const": "citation_id"}
       }
     }

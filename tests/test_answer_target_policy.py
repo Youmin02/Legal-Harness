@@ -284,6 +284,26 @@ class AnswerTargetPolicyTests(unittest.TestCase):
         with self.assertRaisesRegex(ValidationError, "deferred"):
             validate_answer_draft(payload, state)
 
+    def test_public_answer_cannot_append_audit_assumptions_or_limitations(self):
+        state = target_state()
+        state.answered_target_ids = ["T1"]
+        state.deferred_target_ids = ["T2"]
+        state.accepted_provision_ids = {"P1"}
+        payload = {
+            "claims": [
+                {"claim_id": "C1", "text": "대위권이 인정됩니다.", "answer_target_ids": ["T1"]}
+            ],
+            "claim_citations": [{"claim_id": "C1", "provision_ids": ["P1"]}],
+            "answer": "대위권이 인정됩니다.\n전제: 보험금이 지급되었습니다.",
+            "assumptions": [
+                {"code": "A1", "message": "보험금이 지급되었다고 가정합니다."}
+            ],
+            "limitations": [],
+        }
+
+        with self.assertRaisesRegex(ValidationError, "must not append audit"):
+            validate_answer_draft(payload, state)
+
     def test_new_candidate_alone_is_not_progress(self):
         state = RunState(question="q", normalized_question="q", run_id="progress")
         state.required_evidence_items = [

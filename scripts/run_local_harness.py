@@ -20,8 +20,17 @@ from retrieval.corpus import InMemoryProvisionCorpus
 from retrieval.persistent import KureExactIndexSearcher, SqliteFts5Bm25Searcher
 from retrieval.pipeline import RetrievalPipeline
 from retrieval.reranker import LocalBgeCrossEncoderReranker
+from runtime.comparison_guard import resolve_frozen_configuration
 from runtime.experiment_record import ExperimentRecord
-from runtime.local_ollama_executor import LocalOllamaSkillExecutor
+from runtime.local_ollama_executor import (
+    DEFAULT_S1_TRUNCATION_RETRY_MAX_TOKENS,
+    DEFAULT_SKILL_MAX_TOKENS,
+    LocalOllamaSkillExecutor,
+)
+from runtime.source_snapshot import (
+    assert_source_snapshot_unchanged,
+    capture_clean_source_snapshot,
+)
 from tools.validate_citation_integrity import CitationIntegrityChecker
 
 
@@ -34,6 +43,16 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--skills-root", type=Path, default=PROJECT_ROOT / "skills")
     parser.add_argument("--ollama-endpoint", default="http://127.0.0.1:11434/api/generate")
     parser.add_argument("--num-ctx", type=int, default=32768)
+    parser.add_argument(
+        "--s1-max-tokens",
+        type=int,
+        default=DEFAULT_SKILL_MAX_TOKENS["legal_issue_and_query_planning"],
+    )
+    parser.add_argument(
+        "--s1-truncation-retry-max-tokens",
+        type=int,
+        default=DEFAULT_S1_TRUNCATION_RETRY_MAX_TOKENS,
+    )
     parser.add_argument("--rounds", type=int, default=3)
     parser.add_argument("--requests", type=int, default=9)
     parser.add_argument("--rerank-pool-k", type=int, default=100)
@@ -70,6 +89,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--condition", default="M", help="frozen experimental condition ID")
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--result-file", type=Path, help="write the complete run result as JSON")
+    parser.add_argument("--expected-git-commit")
+    parser.add_argument("--expected-source-manifest-sha256")
     return parser.parse_args()
 
 
@@ -105,8 +126,21 @@ def build_retriever(args: argparse.Namespace) -> RetrievalPipeline:
 
 def main() -> int:
     args = parse_args()
+    source_snapshot = capture_clean_source_snapshot(PROJECT_ROOT)
+    if (
+        args.expected_git_commit is not None
+        and source_snapshot.git_commit != args.expected_git_commit
+    ):
+        raise RuntimeError("Git commit does not match the frozen batch source")
+    if (
+        args.expected_source_manifest_sha256 is not None
+        and source_snapshot.source_manifest_sha256
+        != args.expected_source_manifest_sha256
+    ):
+        raise RuntimeError("source manifest hash does not match the frozen batch source")
+
     run_id = str(uuid.uuid4())
-    configuration = {
+    configuration = resolve_frozen_configuration({
         "condition": args.condition,
         "seed": args.seed,
         "retriever": args.retriever,
@@ -127,7 +161,12 @@ def main() -> int:
         "planning_contract": "answer_targets_required",
         "monotonic_coverage": True,
         "input_format": args.input_format,
-    }
+        "s1_max_tokens": args.s1_max_tokens,
+        "s1_truncation_retry_max_tokens": (
+            args.s1_truncation_retry_max_tokens
+        ),
+        "source_manifest_sha256": source_snapshot.source_manifest_sha256,
+    })
     record = ExperimentRecord(
         record_root=args.record_dir,
         run_id=run_id,
@@ -136,6 +175,7 @@ def main() -> int:
         configuration=configuration,
         question=args.question,
         question_id=args.question_id,
+        source_snapshot=source_snapshot.to_dict(),
     )
     assert_skill_layout_complete(args.skills_root)
     corpus = InMemoryProvisionCorpus.from_jsonl(
@@ -147,6 +187,9 @@ def main() -> int:
             model=args.model,
             endpoint=args.ollama_endpoint,
             num_ctx=args.num_ctx,
+            diagnostic_sink=record.record_skill_attempt,
+            s1_max_tokens=args.s1_max_tokens,
+            s1_truncation_retry_max_tokens=args.s1_truncation_retry_max_tokens,
         ),
         retriever=build_retriever(args),
         citation_validator=CitationIntegrityChecker(corpus),
@@ -157,7 +200,9 @@ def main() -> int:
         trace_sink=record.trace_sink,
     )
     outcome = runner.run(args.question, run_id=run_id)
+    assert_source_snapshot_unchanged(PROJECT_ROOT, source_snapshot)
     record_result_path = record.finalize(outcome)
+    assert_source_snapshot_unchanged(PROJECT_ROOT, source_snapshot)
     summary = {
         "status": outcome.status.value,
         "record_directory": str(record.directory),

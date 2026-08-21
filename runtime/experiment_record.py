@@ -14,10 +14,12 @@ from time import perf_counter
 from typing import Any, Dict, Mapping, Optional
 
 from harness.tracing import JsonlTraceSink, to_primitive
+from runtime.source_snapshot import source_dirty_paths_from_porcelain
 
 
-RECORD_SCHEMA_VERSION = "1.2"
+RECORD_SCHEMA_VERSION = "1.4"
 RETRIEVAL_PROVENANCE_SCHEMA_VERSION = "1.0"
+SKILL_GENERATION_DIAGNOSTIC_SCHEMA_VERSION = "1.0"
 
 
 def _sha256(path: Path) -> str:
@@ -29,10 +31,7 @@ def _sha256(path: Path) -> str:
 
 
 def _source_worktree_dirty_from_porcelain(status: str) -> bool:
-    return any(
-        line[3:] and not line[3:].startswith("records/")
-        for line in status.splitlines()
-    )
+    return bool(source_dirty_paths_from_porcelain(status))
 
 
 def _git_source_worktree_dirty(project_root: Path) -> Optional[bool]:
@@ -116,6 +115,7 @@ class ExperimentRecord:
         configuration: Mapping[str, Any],
         question: str,
         question_id: Optional[str],
+        source_snapshot: Optional[Mapping[str, Any]] = None,
     ):
         self.run_id = run_id
         self.directory = record_root / run_id
@@ -123,6 +123,7 @@ class ExperimentRecord:
         self.trace_sink = JsonlTraceSink(self.directory / "events.jsonl")
         self.started_at = datetime.now(timezone.utc)
         self._started_at_monotonic = perf_counter()
+        self._skill_attempt_count = 0
         metadata = {
             "record_schema_version": RECORD_SCHEMA_VERSION,
             "retrieval_provenance_schema_version": RETRIEVAL_PROVENANCE_SCHEMA_VERSION,
@@ -133,6 +134,11 @@ class ExperimentRecord:
             "question": question,
             "configuration": to_primitive(dict(configuration)),
             "git_commit": _git_commit(project_root),
+            "source_snapshot": (
+                to_primitive(dict(source_snapshot))
+                if source_snapshot is not None
+                else None
+            ),
             "git_source_worktree_dirty": _git_source_worktree_dirty(project_root),
             "runtime": {
                 "python": sys.version,
@@ -143,6 +149,18 @@ class ExperimentRecord:
             "index_metadata": self._read_index_metadata(project_root),
         }
         self._write_json("metadata.json", metadata)
+
+    def record_skill_attempt(self, diagnostic: Mapping[str, Any]) -> None:
+        self._skill_attempt_count += 1
+        payload = {
+            "recorded_at_utc": datetime.now(timezone.utc).isoformat(),
+            **to_primitive(dict(diagnostic)),
+        }
+        path = self.directory / "skill_attempts.jsonl"
+        with path.open("a", encoding="utf-8") as handle:
+            handle.write(
+                json.dumps(payload, ensure_ascii=False, sort_keys=True) + "\n"
+            )
 
     @staticmethod
     def _read_index_metadata(project_root: Path) -> Optional[Dict[str, Any]]:
@@ -177,6 +195,13 @@ class ExperimentRecord:
                 "stage_file": stage_file,
                 "stage_record_counts": dict(sorted(stage_counts.items())),
             },
+            "skill_generation_diagnostics": {
+                "schema_version": SKILL_GENERATION_DIAGNOSTIC_SCHEMA_VERSION,
+                "attempt_file": (
+                    "skill_attempts.jsonl" if self._skill_attempt_count else None
+                ),
+                "attempt_count": self._skill_attempt_count,
+            },
             "run_id": self.run_id,
             "completed_at_utc": completed_at.isoformat(),
             "end_to_end_latency_ms": round((perf_counter() - self._started_at_monotonic) * 1000, 3),
@@ -184,6 +209,10 @@ class ExperimentRecord:
             "termination_reason": outcome.termination_reason.value if outcome.termination_reason else None,
             "abstention_reason": outcome.abstention_reason.value if outcome.abstention_reason else None,
             "answer": outcome.answer,
+            "claims": list(getattr(outcome, "claims", ())),
+            "claim_citations": list(getattr(outcome, "claim_citations", ())),
+            "assumptions": list(getattr(outcome, "assumptions", ())),
+            "limitations": list(getattr(outcome, "limitations", ())),
             "answer_mode": (
                 outcome.answer_mode.value if getattr(outcome, "answer_mode", None) else None
             ),
@@ -211,6 +240,16 @@ class ExperimentRecord:
                 else None
             ),
             "candidate_answer_error": getattr(outcome, "candidate_answer_error", None),
+            "candidate_claims": list(getattr(outcome, "candidate_claims", ())),
+            "candidate_claim_citations": list(
+                getattr(outcome, "candidate_claim_citations", ())
+            ),
+            "candidate_assumptions": list(
+                getattr(outcome, "candidate_assumptions", ())
+            ),
+            "candidate_limitations": list(
+                getattr(outcome, "candidate_limitations", ())
+            ),
             "errors": list(outcome.errors),
             "state": state,
         }

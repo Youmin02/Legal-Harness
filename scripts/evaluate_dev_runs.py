@@ -28,7 +28,7 @@ from typing import Any, Dict, Iterable, List, Mapping, Optional, Sequence, Set, 
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-EVALUATION_SCHEMA_VERSION = "1.2"
+EVALUATION_SCHEMA_VERSION = "1.3"
 OUTCOME_STATUSES = ("ANSWER", "ABSTAIN", "EXECUTION_FAILURE")
 ANSWER_MODES = ("full", "conditional", "limited")
 NORMAL_OUTCOME_STATUSES = ("ANSWER", "ABSTAIN")
@@ -900,7 +900,7 @@ def evaluate_batch(
     corpus_path: Path,
     gold_map_path: Optional[Path] = None,
     answer_labels_path: Optional[Path] = None,
-    require_stage_provenance: bool = False,
+    require_stage_provenance: bool = True,
     lf_eval_scores_path: Optional[Path] = None,
     split_manifest_path: Optional[Path] = None,
     replacement_batch_directories: Sequence[Path] = (),
@@ -910,6 +910,13 @@ def evaluate_batch(
     corpus_path = corpus_path.resolve()
     manifest_path = batch_directory / "manifest.json"
     manifest = _read_json(manifest_path)
+    batch_metadata_path = batch_directory / "metadata.json"
+    batch_metadata = (
+        _read_json(batch_metadata_path) if batch_metadata_path.is_file() else {}
+    )
+    comparison_validity = batch_metadata.get("comparison_validity")
+    if not isinstance(comparison_validity, Mapping):
+        comparison_validity = None
     source = manifest.get("source_dataset", {})
     expected_dataset_sha = source.get("sha256") if isinstance(source, dict) else None
     actual_dataset_sha = _sha256(dataset_path)
@@ -965,10 +972,16 @@ def evaluate_batch(
         if not accepted_ids.issubset(candidate_ids):
             raise EvaluationError("accepted provision is absent from candidates: %s" % question_id)
         provision = precision_recall_f1(accepted_ids, groups)
-        stage_sets, stage_warnings = load_stage_sets(run_directory)
-        warnings.update(stage_warnings)
-        if require_stage_provenance and any(value is None for value in stage_sets.values()):
-            raise EvaluationError("complete stage provenance is required: %s" % question_id)
+        normal_outcome = result["status"] in NORMAL_OUTCOME_STATUSES
+        if normal_outcome:
+            stage_sets, stage_warnings = load_stage_sets(run_directory)
+            warnings.update(stage_warnings)
+            if require_stage_provenance and any(
+                value is None for value in stage_sets.values()
+            ):
+                raise EvaluationError("complete stage provenance is required: %s" % question_id)
+        else:
+            stage_sets = {name: None for name in STAGE_SPECS}
         stage_metrics: Dict[str, Optional[Dict[str, Any]]] = {}
         for metric_name, provision_ids in stage_sets.items():
             stage_metrics[metric_name] = (
@@ -1067,8 +1080,11 @@ def evaluate_batch(
             "candidate_count_returned": _returned_candidate_count(state),
             "candidate_count_unique": len(candidate_ids),
             "end_to_end_latency_ms": float(latency),
-            "stage_provenance_available": all(
-                metric is not None for metric in stage_metrics.values()
+            "stage_provenance_required": normal_outcome,
+            "stage_provenance_available": (
+                all(metric is not None for metric in stage_metrics.values())
+                if normal_outcome
+                else None
             ),
             "stage_metrics": stage_metrics,
             "gold_match_types": dict(Counter(group.match_type for group in groups)),
@@ -1094,6 +1110,8 @@ def evaluate_batch(
             "warnings": sorted(warnings),
         }
     )
+    if comparison_validity is not None:
+        aggregate["comparison_validity"] = dict(comparison_validity)
     replacement_record_directories = {
         str(entry["question_id"]): str(run_directory)
         for entry, _, run_directory, _, _ in joined
@@ -1115,6 +1133,7 @@ def evaluate_batch(
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "evaluator_git_commit": _git_commit(),
         "evaluator_git_source_worktree_dirty": _git_source_worktree_dirty(),
+        "comparison_validity": comparison_validity,
         "inputs": {
             "batch_directory": str(batch_directory),
             "manifest": str(manifest_path),
@@ -1234,13 +1253,25 @@ def _aggregate_provisions(rows: Sequence[Mapping[str, Any]]) -> Dict[str, Any]:
 
 
 def _aggregate_stage(rows: Sequence[Mapping[str, Any]], metric_name: str) -> Dict[str, Any]:
-    metrics = [row["stage_metrics"].get(metric_name) for row in rows]
+    eligible = [row for row in rows if row["status"] in NORMAL_OUTCOME_STATUSES]
+    if not eligible:
+        return {
+            "available": False,
+            "available_questions": 0,
+            "question_count": 0,
+            "provision_recall_micro": None,
+            "provision_recall_macro": None,
+            "complete_evidence_count": None,
+            "complete_evidence_recall": None,
+            "unavailable_reason": "NO_NORMAL_OUTCOMES",
+        }
+    metrics = [row["stage_metrics"].get(metric_name) for row in eligible]
     available = [metric for metric in metrics if metric is not None]
-    if len(available) != len(rows):
+    if len(available) != len(eligible):
         return {
             "available": False,
             "available_questions": len(available),
-            "question_count": len(rows),
+            "question_count": len(eligible),
             "provision_recall_micro": None,
             "provision_recall_macro": None,
             "complete_evidence_count": None,
@@ -1253,13 +1284,13 @@ def _aggregate_stage(rows: Sequence[Mapping[str, Any]], metric_name: str) -> Dic
     return {
         "available": True,
         "available_questions": len(available),
-        "question_count": len(rows),
+        "question_count": len(eligible),
         "provision_recall_micro": total_tp / total_gold if total_gold else 0.0,
         "provision_recall_macro": mean([float(metric["recall"]) for metric in available])
         if available
         else None,
         "complete_evidence_count": complete_count,
-        "complete_evidence_recall": complete_count / len(rows) if rows else None,
+        "complete_evidence_recall": complete_count / len(eligible),
         "unavailable_reason": None,
     }
 
@@ -1604,6 +1635,22 @@ def render_markdown(aggregate: Mapping[str, Any], rows: Sequence[Mapping[str, An
             "| %s | %d | %s |"
             % (status, outcomes[status]["count"], _format_metric(outcomes[status]["rate"]))
         )
+    validity = aggregate.get("comparison_validity")
+    if isinstance(validity, Mapping) and validity.get("status"):
+        reasons = validity.get("reasons", [])
+        reason_codes = ", ".join(
+            "`%s`" % reason.get("code")
+            for reason in reasons
+            if isinstance(reason, Mapping) and reason.get("code")
+        )
+        lines[2:2] = [
+            "> **Status: `%s` (`%s`).**"
+            % (validity["status"], validity.get("use", "DIAGNOSTIC_ONLY")),
+            ">",
+            "> Do not use this artifact for a clean retriever comparison. Reasons: %s."
+            % (reason_codes or "recorded comparison validity failure"),
+            "",
+        ]
     candidate_quality = aggregate["answer_quality"]["candidate_token_f1_at_800"]
     over_abstention = aggregate["answer_quality"]["over_abstention_exact_match_at_800"]
     lines.extend(
@@ -1799,7 +1846,18 @@ def parse_args() -> argparse.Namespace:
         help="retry batch whose subset summary rows replace matching primary rows",
     )
     parser.add_argument("--output-dir", type=Path, required=True)
-    parser.add_argument("--require-stage-provenance", action="store_true")
+    stage_group = parser.add_mutually_exclusive_group()
+    stage_group.add_argument(
+        "--require-stage-provenance",
+        dest="require_stage_provenance",
+        action="store_true",
+    )
+    stage_group.add_argument(
+        "--allow-missing-stage-provenance",
+        dest="require_stage_provenance",
+        action="store_false",
+    )
+    parser.set_defaults(require_stage_provenance=True)
     return parser.parse_args()
 
 

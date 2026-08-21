@@ -571,9 +571,10 @@ def _validate_answer_draft(
     scope_error: str,
     allow_empty: bool = False,
 ) -> AnswerDraft:
+    raw_claims = _items(payload, "claims", allow_empty=allow_empty)
     claims = []
     allowed_targets = set(allowed_target_ids)
-    for raw in _items(payload, "claims", allow_empty=allow_empty):
+    for raw in raw_claims:
         target_ids = _string_list(raw, "answer_target_ids")
         if state.answer_targets:
             if not target_ids:
@@ -588,21 +589,76 @@ def _validate_answer_draft(
             )
         )
     _unique([claim.claim_id for claim in claims], "claims")
-    citations: List[ClaimCitation] = []
-    for raw in _items(payload, "claim_citations", allow_empty=allow_empty):
+
+    raw_citations = _items(
+        payload, "claim_citations", allow_empty=allow_empty
+    )
+    provision_ids_by_claim: Dict[str, List[str]] = {}
+    for raw in raw_citations:
+        claim_id = _string(raw, "claim_id")
         provision_ids = raw.get("provision_ids")
-        if not isinstance(provision_ids, list) or not provision_ids or not all(isinstance(value, str) for value in provision_ids):
-            raise ValidationError("claim citation must contain one or more provision IDs")
-        citations.append(
-            ClaimCitation(claim_id=_string(raw, "claim_id"), provision_ids=list(provision_ids))
+        if provision_ids is None and isinstance(raw.get("provision_id"), str):
+            provision_ids = [raw["provision_id"]]
+        if (
+            not isinstance(provision_ids, list)
+            or not provision_ids
+            or not all(isinstance(value, str) and value for value in provision_ids)
+        ):
+            raise ValidationError(
+                "claim citation must contain one or more provision IDs"
+            )
+        provision_ids_by_claim.setdefault(claim_id, []).extend(provision_ids)
+    citations = [
+        ClaimCitation(
+            claim_id=claim_id,
+            provision_ids=sorted(set(provision_ids)),
         )
-    _unique([citation.claim_id for citation in citations], "claim_citations")
-    if {claim.claim_id for claim in claims} != {citation.claim_id for citation in citations}:
-        raise ValidationError("every answer claim must have exactly one claim citation")
-    cited_ids = {provision_id for citation in citations for provision_id in citation.provision_ids}
+        for claim_id, provision_ids in sorted(provision_ids_by_claim.items())
+    ]
+    if {claim.claim_id for claim in claims} != set(provision_ids_by_claim):
+        raise ValidationError("every answer claim must have at least one claim citation")
+    cited_ids = {
+        provision_id
+        for citation in citations
+        for provision_id in citation.provision_ids
+    }
     if not cited_ids.issubset(set(allowed_provision_ids)):
-        raise ValidationError("S3 cited a provision outside the authorized provision set")
-    return AnswerDraft(claims=claims, claim_citations=citations, answer=_string(payload, "answer"))
+        raise ValidationError(
+            "S3 cited a provision outside the authorized provision set"
+        )
+
+    audit_notes: Dict[str, List[Dict[str, Any]]] = {}
+    for key in ("assumptions", "limitations"):
+        value = payload.get(key, [])
+        if not isinstance(value, list):
+            raise ValidationError("%s must be a list" % key)
+        notes: List[Dict[str, Any]] = []
+        for raw in value:
+            note = _mapping(raw, "%s[]" % key)
+            _string(note, "code")
+            _string(note, "message")
+            notes.append(dict(note))
+        audit_notes[key] = notes
+
+    answer = _string(payload, "answer")
+    answer_lines = [line.strip() for line in answer.splitlines() if line.strip()]
+    if len(answer) > 800:
+        raise ValidationError("public answer exceeds 800 characters")
+    if not 1 <= len(answer_lines) <= 3:
+        raise ValidationError("public answer must contain 1 to 3 short lines")
+    if any(
+        line.startswith(("전제:", "한계:")) for line in answer_lines
+    ):
+        raise ValidationError("public answer must not append audit assumptions or limitations")
+    return AnswerDraft(
+        claims=claims,
+        claim_citations=citations,
+        answer=answer,
+        structured_claims=[dict(raw) for raw in raw_claims],
+        structured_claim_citations=[dict(raw) for raw in raw_citations],
+        assumptions=audit_notes["assumptions"],
+        limitations=audit_notes["limitations"],
+    )
 
 
 def validate_answer_draft(payload: Mapping[str, Any], state: RunState) -> AnswerDraft:

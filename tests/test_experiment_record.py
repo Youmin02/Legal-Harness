@@ -40,6 +40,11 @@ class ExperimentRecordTests(unittest.TestCase):
                 configuration={"condition": "M", "seed": 7},
                 question="질문",
                 question_id="qa_19_1hop_28",
+                source_snapshot={
+                    "git_commit": "a" * 40,
+                    "git_tree": "b" * 40,
+                    "source_manifest_sha256": "c" * 64,
+                },
             )
             state = RunState(question="질문", normalized_question="질문", run_id="run-1")
             state.retrieval_stage_records = [
@@ -54,6 +59,16 @@ class ExperimentRecordTests(unittest.TestCase):
                     selection_reason="request_top_k",
                 )
             ]
+            record.record_skill_attempt(
+                {
+                    "skill_id": "S1",
+                    "attempt": 1,
+                    "done_reason": "length",
+                    "eval_count": 4096,
+                    "response_sha256": "d" * 64,
+                    "response_tail": "unfinished",
+                }
+            )
             record.trace_sink.record("RUN_STARTED", state)
             result_path = record.finalize(
                 HarnessOutcome(
@@ -68,11 +83,17 @@ class ExperimentRecordTests(unittest.TestCase):
             self.assertEqual(metadata["question_id"], "qa_19_1hop_28")
             self.assertIn("planner.md", metadata["skill_sha256"])
             self.assertIn("git_source_worktree_dirty", metadata)
+            self.assertEqual(metadata["source_snapshot"]["git_commit"], "a" * 40)
             self.assertEqual(result["status"], "ABSTAIN")
             self.assertIsNone(result["answer_mode"])
             self.assertFalse(result["complete_answer"])
             self.assertTrue((record.directory / "events.jsonl").is_file())
-            self.assertEqual(result["record_schema_version"], "1.2")
+            self.assertEqual(result["record_schema_version"], "1.4")
+            diagnostics = result["skill_generation_diagnostics"]
+            self.assertEqual(diagnostics["attempt_file"], "skill_attempts.jsonl")
+            self.assertEqual(diagnostics["attempt_count"], 1)
+            attempts = (record.directory / "skill_attempts.jsonl").read_text(encoding="utf-8")
+            self.assertEqual(json.loads(attempts)["done_reason"], "length")
             self.assertIsNone(result["candidate_answer"])
             self.assertIsNone(result["candidate_answer_status"])
             self.assertEqual(
@@ -107,6 +128,10 @@ class ExperimentRecordTests(unittest.TestCase):
                     complete_answer=False,
                     answered_target_ids=["T1"],
                     deferred_target_ids=["T2"],
+                    claims=[{"claim_id": "C1", "text": "제한 답변"}],
+                    claim_citations=[{"citation_id": "CT1", "claim_id": "C1"}],
+                    assumptions=[{"code": "A1", "message": "가정"}],
+                    limitations=[{"code": "L1", "message": "한계"}],
                 )
             )
 
@@ -115,6 +140,10 @@ class ExperimentRecordTests(unittest.TestCase):
             self.assertEqual(result["answer_mode"], "limited")
             self.assertEqual(result["answered_target_ids"], ["T1"])
             self.assertEqual(result["deferred_target_ids"], ["T2"])
+            self.assertEqual(result["claims"][0]["claim_id"], "C1")
+            self.assertEqual(result["claim_citations"][0]["citation_id"], "CT1")
+            self.assertEqual(result["assumptions"][0]["code"], "A1")
+            self.assertEqual(result["limitations"][0]["code"], "L1")
 
     def test_writes_abstain_candidate_without_changing_public_status(self):
         with tempfile.TemporaryDirectory() as temporary_directory:
@@ -136,6 +165,10 @@ class ExperimentRecordTests(unittest.TestCase):
                 HarnessOutcome(
                     status=OutcomeStatus.ABSTAIN,
                     state=state,
+                    candidate_claims=[{"claim_id": "C1", "text": "후보"}],
+                    candidate_claim_citations=[{"citation_id": "CT1", "claim_id": "C1"}],
+                    candidate_assumptions=[{"code": "A1", "message": "가정"}],
+                    candidate_limitations=[{"code": "L1", "message": "한계"}],
                     candidate_answer="벤치마크 후보 답변",
                     candidate_answer_status=CandidateAnswerStatus.GENERATED,
                     candidate_answer_basis=CandidateAnswerBasis.RETRIEVED_CANDIDATES,
@@ -147,6 +180,10 @@ class ExperimentRecordTests(unittest.TestCase):
             self.assertEqual(result["candidate_answer"], "벤치마크 후보 답변")
             self.assertEqual(result["candidate_answer_status"], "GENERATED")
             self.assertEqual(result["candidate_answer_basis"], "retrieved_candidates")
+            self.assertEqual(result["candidate_claims"][0]["claim_id"], "C1")
+            self.assertEqual(result["candidate_claim_citations"][0]["citation_id"], "CT1")
+            self.assertEqual(result["candidate_assumptions"][0]["code"], "A1")
+            self.assertEqual(result["candidate_limitations"][0]["code"], "L1")
 
 
 if __name__ == "__main__":

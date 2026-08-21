@@ -1,5 +1,9 @@
 # Legal Harness development-run evaluation
 
+> **Status: `INVALID_FOR_CLEAN_RETRIEVER_COMPARISON` (`DIAGNOSTIC_ONLY`).**
+>
+> Do not use this artifact for a clean BM25-versus-KURE comparison. S1 JSON generation failed in 35 runs, and the batch was split across two recorded code provenances (58 and 168 runs). The files are retained for diagnostics.
+
 - Questions: 226
 - Supported-answer yield: 0.6549
 - Provision micro P/R/F1: 0.5519 / 0.6366 / 0.5912

@@ -52,7 +52,7 @@
         "mode": {"enum": ["GENERATE_ANSWER", "GENERATE_BENCHMARK_CANDIDATE"]},
         "status": {"const": "ok"},
         "run_id": {"type": "string", "minLength": 1},
-        "answer": {"type": "string", "minLength": 1},
+        "answer": {"type": "string", "minLength": 1, "maxLength": 800},
         "claims": {"type": "array", "items": {"$ref": "#/$defs/claim"}},
         "claim_citations": {"type": "array", "items": {"$ref": "#/$defs/citation"}},
         "assumptions": {"type": "array", "items": {"$ref": "#/$defs/note"}},

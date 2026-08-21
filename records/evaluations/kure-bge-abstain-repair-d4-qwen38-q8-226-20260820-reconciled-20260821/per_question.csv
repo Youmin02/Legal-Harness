@@ -1,0 +1,979 @@
+ordinal,question_id,n_hops,run_id,condition,retriever,seed,status,termination_reason,abstention_reason,answer_mode,answered_target_ids,deferred_target_ids,split_memberships,gold_count,accepted_count,gold_true_positive,provision_precision,provision_recall,provision_f1,provision_em,accepted_complete_evidence,token_f1,token_f1_at_800,candidate_answer,candidate_answer_status,candidate_answer_basis,candidate_answer_available,candidate_token_f1_at_800,candidate_exact_match_at_800,lf_eval_score_raw,lf_eval_score_normalized,supported_answer,false_supported,gold_incomplete_supported_answer,citation_integrity_attempted,citation_integrity_passed,retrieval_rounds,retrieval_requests,candidate_count_returned,candidate_count_unique,end_to_end_latency_ms,stage_provenance_available,first_stage_recall_at_100,first_stage_complete_at_100,rrf_recall_at_100,rrf_complete_at_100,bge_recall_at_10,bge_complete_at_10,bge_recall_at_20,bge_complete_at_20,bge_recall_at_30,bge_complete_at_30,record_directory
+1,qa_19_1hop_28,1,645a795c-0d34-44e4-ae6d-703030ffcf2a,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,1,0,0,0.0,0.0,0.0,False,False,0.0,0.0,"운송주선인의 책임은 수하인이 운송물을 수령한 날로부터 1년을 경과하면 소멸시효가 완성한다[CT1]
+전제: 갑과 을 사이의 계약이 상법상 운송계약에 해당한다고 가정합니다.
+한계: 운송계약상 손해배상채권의 소멸시효 기간 및 기산점을 특정할 수 있는 후보 조문이 제공되지 않았습니다.
+한계: 본 답변은 벤치마크 후보 생성을 위한 진단 목적이며, 법적 효력이 있는 공식 답변이 아닙니다.",GENERATED,retrieved_candidates,True,0.054794520547945195,False,,,False,,False,False,,2,3,20,19,199930.55,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/645a795c-0d34-44e4-ae6d-703030ffcf2a
+2,qa_92_1hop_149,1,a644e4dc-5702-448c-8df1-8343fa8e96c3,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.07692307692307691,0.07692307692307691,"야간에 사람의 주거에 침입하여 타인의 재물을 절취한 자는 10년 이하의 징역에 처한다.[CT1]
+전제: 질문에 명시된 '한밤중'이 형법상 '야간'에 해당한다고 가정한다.
+전제: 을의 '집'이 형법상 '주거'에 해당한다고 가정한다.
+한계: 본 답변은 제공된 형법 제330조 조문에만 근거하며, 실제 사건의 구체적 양형이나 기타 법률적 쟁점은 다루지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.07692307692307691,False,,,True,,False,True,True,1,2,10,10,109219.677,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/a644e4dc-5702-448c-8df1-8343fa8e96c3
+3,qa_139_1hop_254,1,7665ced1-b888-4d6f-bbb5-52b1981c7c1a,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.05194805194805195,0.05194805194805195,"1년 이상의 징역 또는 금고의 형의 선고를 받고 그 집행이 종료되지 아니하거나 그 집행을 받지 아니하기로 확정되지 아니한 사람은 선거권이 없다.[CT1]
+2년 징역형을 선고받고 현재 수감 중인 갑은 형의 집행이 종료되지 아니한 상태이므로 선거권이 없다.[CT2]
+전제: 갑이 받은 2년 징역형이 확정되었고, 현재까지 형의 집행이 종료되지 않았거나 면제되지 않았다고 가정한다.
+한계: 본 답변은 제공된 공직선거법 제18조 제1항 제2호에 근거한 법적 해석이며, 갑의 형이 집행유예로 확정되었거나 기타 예외 사유가 존재하는 경우 결론이 달라질 수 있다.",PUBLISHED_ANSWER,published_answer,True,0.05194805194805195,False,,,True,,False,True,True,1,1,10,10,205045.057,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/7665ced1-b888-4d6f-bbb5-52b1981c7c1a
+4,qa_172_1hop_308,1,b5730944-3a9a-4538-af4a-06ab598fcb43,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,1,4,1,0.25,1.0,0.4,False,True,0.0,0.0,"민사소송 중 당사자가 법정에서 화해하고 그 내용이 변론조서에 기록된 경우, 해당 조서는 확정판결과 동일한 효력을 가집니다.[CT1]
+소송상 화해는 집행권원에 해당하여 강제집행이 가능합니다.[CT2]
+전제: 질문에서 제시된 '법정에서 화해하고 변론조서에 기록되었다'는 사실관계가 민사소송법 제220조의 요건을 충족한다고 가정합니다.
+한계: 본 답변은 비공개 벤치마크 후보(benchmark candidate)이며, 공개 가능한 답변으로 승인되지 않았습니다.
+한계: 화해의 일반적 성립 요건 및 법적 성격에 대한 근거가 일부 부족하여, 효력 발생의 전제 조건에 대한 상세한 분석은 생략되었습니다.",GENERATED,retrieved_candidates,True,0.05263157894736842,False,,,False,,False,False,,3,6,30,17,427618.481,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/b5730944-3a9a-4538-af4a-06ab598fcb43
+5,qa_90_2hop_147,2,e40cf54d-d1fc-4594-b5e0-6f319147b2b5,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.4090909090909091,0.4090909090909091,"손해보험계약의 보험자는 보험사고로 인하여 생길 피보험자의 재산상의 손해를 보상할 책임이 있다.[CT1]
+보험계약은 금전으로 산정할 수 있는 이익에 한하여 보험계약의 목적으로 할 수 있다.[CT2]
+전제: 갑과 을 보험회사 간에 유효한 손해보험계약이 체결되어 있고, 갑의 자전거 도난이 보험약관에서 정한 보험사고에 해당한다고 가정한다.
+한계: 본 답변은 상법 제665조와 제668조에 근거한 일반적 법적 원칙을 설명하며, 개별 보험약관의 특약이나 면책조항에 따른 구체적 보상 범위나 절차에 대해서는 다루지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.4090909090909091,False,,,True,,False,True,True,2,4,20,18,387891.331,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/e40cf54d-d1fc-4594-b5e0-6f319147b2b5
+6,qa_192_2hop_334,2,f3b1d52e-9b57-4b50-9280-f80a202daffb,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,2,2,2,1.0,1.0,1.0,True,True,0.2,0.2,"사무처리를 그르치게 할 목적으로 공무원 또는 공무소의 전자기록등 특수매체기록을 위작 또는 변작한 자는 10년 이하의 징역에 처한다.[CT1]
+제225조 내지 제228조의 죄에 의하여 만들어진 전자기록등 특수매체기록을 행사한 자는 그 각 죄에 정한 형에 처한다.[CT2]
+전제: 갑의 행위가 '사무처리를 그르치게 할 목적'을 가지고 이루어졌다고 가정한다.
+전제: 을이 행사한 전자기록이 형법 제225조 내지 제228조의 죄에 의하여 만들어진 것임을 전제한다.
+한계: 본 답변은 제공된 형법 조항에 기반한 일반적 법적 규정을 설명하며, 개별 사건의 구체적 양형이나 다른 법률적 쟁점(예: 공무상 비밀누설 등)은 다루지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.2,False,,,True,,False,True,True,1,2,10,10,192247.124,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/f3b1d52e-9b57-4b50-9280-f80a202daffb
+7,qa_312_2hop_499,2,d3d95285-6db4-4b72-bcd8-d3a99d051df4,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.2857142857142857,0.2857142857142857,"기타 혼인을 계속하기 어려운 중대한 사유가 있을 때 재판상 이혼을 청구할 수 있습니다.[CT1]
+제840조 제6호의 사유에 기한 이혼 청구권은 다른 일방이 이를 안 날로부터 6월, 그 사유가 있었던 날로부터 2년을 경과하면 소멸합니다.[CT2]
+전제: 갑의 도박 중독이 '혼인을 계속하기 어려운 중대한 사유'에 해당하는지 여부는 구체적인 사정(도박의 정도, 가정 경제 파탄 여부, 배우자의 정신적 고통 등)에 따라 법원의 재량에 따라 판단될 수 있으며, 본 답변은 해당 사유가 성립한다고 가정하고 법적 요건과 기한만을 설명합니다.
+한계: 본 답변은 제공된 민법 조항에 근거한 법적 요건과 기한에 대한 설명이며, 실제 소송에서의 승소 여부는 구체적인 증거와 법원의 판단에 따라 달라질 수 있습니다.",PUBLISHED_ANSWER,published_answer,True,0.2857142857142857,False,,,True,,False,True,True,1,2,10,10,202191.441,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/d3d95285-6db4-4b72-bcd8-d3a99d051df4
+8,qa_387_2hop_603,2,459d88aa-fa03-438e-85a1-50296e29d784,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.1891891891891892,0.1891891891891892,"을의 회사 계약서 위조 행위는 형법 제231조 제1항에 따라 사문서 위조죄를 구성하며, 5년 이하의 징역 또는 1천만원 이하의 벌금에 처해집니다.[CT1]
+시청 발급 문서 변조 행위는 형법 제225조 제1항에 따라 공문서 변조죄를 구성하며, 10년 이하의 징역에 처해집니다.[CT2]
+전제: 갑의 행위가 '행사할 목적'을 가지고 이루어졌다고 가정합니다. 이는 위조·변조죄의 주관적 구성요건입니다.
+전제: 을의 회사 계약서가 형법상 '권리·의무 또는 사실증명에 관한 타인의 문서'에 해당한다고 가정합니다.
+전제: 시청 발급 가족관계증명서가 형법상 '공무원 또는 공무소의 문서'에 해당한다고 가정합니다.
+한계: 본 답변은 제공된 형법 조항에 근거한 법적 성질과 법정형에 한정됩니다. 실제 형량 결정은 사건의 구체적 정황, 전과, 피해 회복 여부 등 양형 요소에 따라 달라질 수 있습니다.
+한계: 갑의 행위가 다른 범죄(예: 업무상 배임, 정보통신망법 위반 등)와 경합하는지 여부는 본 답변의 범위에서 다루지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.1891891891891892,False,,,True,,False,True,True,1,2,10,10,235603.967,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/459d88aa-fa03-438e-85a1-50296e29d784
+9,qa_476_2hop_749,2,f5b298ef-42ff-43fc-a669-f2e13ee9c572,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,2,2,2,1.0,1.0,1.0,True,True,0.14457831325301204,0.14457831325301204,"폭행 또는 협박으로 타인의 재물을 강취한 자는 3년 이상의 유기징역에 처한다.[CT1]
+2인 이상이 공동하여 죄를 범한 때에는 각자를 그 죄의 정범으로 처벌한다.[CT2]
+전제: 질문에 제시된 사실관계(갑과 을의 공동 침입, 폭행, 협박, 재물 강취)가 법적으로 강도죄의 구성요건을 충족한다고 가정한다.
+한계: 본 답변은 제시된 조항에 근거한 일반적 법적 원칙의 적용이며, 개별 사건의 구체적 양형 요소(전과, 피해 회복, 자백 등)에 따른 실제 형량은 법원의 재량에 따라 달라질 수 있다.",PUBLISHED_ANSWER,published_answer,True,0.14457831325301204,False,,,True,,False,True,True,1,2,10,10,185248.883,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/f5b298ef-42ff-43fc-a669-f2e13ee9c572
+10,qa_621_2hop_937,2,3930dac2-ad9f-4a53-b38c-33b185003c73,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.28571428571428575,0.28571428571428575,"취소소송은 처분등의 취소를 구할 법률상 이익이 있는 자가 제기할 수 있다.[CT1]
+갑은 강제 수용 처분의 대상인 소유지 일부의 소유자로서, 해당 처분의 취소를 구할 법률상 이익이 있으므로 취소소송을 제기할 자격이 있다.[CT2]
+취소소송이 제기된 경우에 처분등이나 그 집행 또는 절차의 속행으로 인하여 생길 회복하기 어려운 손해를 예방하기 위하여 긴급한 필요가 있다고 인정할 때에는 본안이 계속되고 있는 법원은 당사자의 신청 또는 직권에 의하여 처분등의 효력이나 그 집행 또는 절차의 속행의 전부 또는 일부의 정지를 결정할 수 있다.[CT3]
+처분의 효력정지는 처분등의 집행 또는 절차의 속행을 정지함으로써 목적을 달성할 수 있는 경우에는 허용되지 아니한다.[CT4]
+전제: 갑이 강제 수용 처분의 대상인 토지 또는 건물의 소유자임을 전제로 한다.
+전제: 강제 수용 처분이 행정소송법상 '처분등'에 해당함을 전제로 한다.
+한계: 본 답변은 제공된 행정소송법 조항에 근거한 일반적 법적 요건 해석이며, 개별 사건의 구체적 사실관계(예: 긴급성의 정도, 손해의 구체성 등)에 따른 법원의 재량 판단은 포함되지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.28571428571428575,False,,,True,,False,True,True,1,2,10,10,217651.687,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/3930dac2-ad9f-4a53-b38c-33b185003c73
+11,qa_49_2hop_192_rand,2,56613b6f-8bd5-4521-98ba-7a7ed89de62f,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,MAX_RETRIEVAL_ROUNDS_REACHED,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,2,3,2,0.6666666666666666,1.0,0.8,False,True,0.0,0.0,"국토교통부장관은 도로협회의 설립을 인가하였을 때에는 그 사실을 공고하여야 합니다.[CT1]
+국토교통부장관은 협회의 업무를 감독하여야 합니다.[CT2]
+국토교통부장관은 협회에 대하여 감독에 필요한 경우에는 그 업무에 관한 사항을 보고하게 하거나 자료의 제출, 그 밖에 필요한 사항을 명할 수 있습니다.[CT3]
+전제: 질문에서 '도로관리 협회'라고 표현했으나, 후보 규정들은 '도로협회'에 관한 내용으로, 이를 동일 개념으로 간주하여 분석함.
+한계: 본 답변은 비공개 벤치마크 후보(benchmark candidate)이며, 공식적인 법적 자문이 아닙니다.
+한계: 인가 후 '등록'이나 '통보' 등 다른 의무적 절차에 대한 명시적 조항이 후보 규정 내에 부재하여, 해당 부분의 법적 근거는 불완전합니다.
+한계: 협회 업무 감독의 '검사'나 '지도' 등 다른 구체적 감독 방식에 대한 상세한 법적 근거가 후보 규정 내에 부재하여, 해당 부분의 법적 지원은 불완전합니다.",GENERATED,retrieved_candidates,True,0.2112676056338028,False,,,False,,False,False,,3,6,30,19,536497.54,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/56613b6f-8bd5-4521-98ba-7a7ed89de62f
+12,qa_116_2hop_452_rand,2,ab18893a-a493-4b48-9055-d6eec7e07743,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,3,2,0.6666666666666666,1.0,0.8,False,True,0.3484848484848485,0.3484848484848485,"별정우체국 지정을 해지하려면, 지정을 받은 사람은 해지하기 3개월 전에 과학기술정보통신부장관에게 알려야 합니다.[CT1]
+별정우체국의 지정이 취소된 경우, 피지정인은 업무를 인계할 우체국 또는 별정우체국이 업무 수행에 필요한 시설을 갖출 때까지 해당 시설을 철거하지 못합니다. 다만, 지정이 취소된 날부터 3개월이 지났을 때에는 시설을 철거할 수 있습니다.[CT2]
+별정우체국 지정이 해지 또는 취소된 때에는 해당 국장 및 직원은 당연히 퇴직합니다. 다만, 피지정인의 추천을 받아 임용된 국장이 그 별정우체국의 업무를 인수하여 새로 피지정인으로 지정받았을 때에는 퇴직하지 않습니다.[CT3]
+전제: 질문에서 '갑'이 별정우체국 지정을 받은 피지정인임을 전제로 합니다.
+한계: 해지 신청 시 제출해야 할 구체적인 서류 목록에 대한 명시적 조항은 제공된 근거 자료에 포함되어 있지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.3484848484848485,False,,,True,,False,True,True,1,2,10,10,240248.782,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/ab18893a-a493-4b48-9055-d6eec7e07743
+13,qa_163_2hop_630_rand,2,6b95d0d9-ab29-48c4-928e-361a859294f9,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,4,2,0.5,1.0,0.6666666666666666,False,True,0.14285714285714285,0.14285714285714285,"국세기본법 제84조의2제1항제4호에 따라 현금영수증 발급을 거부한 현금영수증가맹점을 신고한 자는 포상금을 지급받을 수 있는 대상에 해당합니다.[CT1]
+동일한 사안에 대해 중복으로 신고한 경우, 국세기본법 시행령 제65조 제4항 제21호에 따라 최초로 신고한 자에게만 포상금이 지급됩니다.[CT2]
+갑과 병 중 먼저 신고한 자(최초 신고자)만이 포상금을 받을 수 있습니다.[CT3]
+현금영수증 발급 거부 행위에 대한 포상금의 연간 지급 한도는 동일인이 받을 수 있는 포상금이 연간 100만원을 초과할 수 없으므로, 갑이 받을 수 있는 연간 포상금 한도는 100만원입니다.[CT4]
+전제: 갑과 병의 신고가 모두 국세기본법 제84조의2제1항제4호에서 정한 현금영수증 발급 거부 행위에 해당하며, 신고 시점의 우선순위가 명확히 구분된다고 가정합니다.
+한계: 본 답변은 제공된 법령 조항에 기반한 법적 해석이며, 실제 포상금 지급 여부는 국세청의 조사 결과 및 신고 시점의 구체적 사실관계에 따라 달라질 수 있습니다.",PUBLISHED_ANSWER,published_answer,True,0.14285714285714285,False,,,True,,False,True,True,2,4,20,14,476876.416,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/6b95d0d9-ab29-48c4-928e-361a859294f9
+14,qa_213_2hop_812_rand,2,c7b61ba7-11c1-45f1-87da-524025a0c909,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,2,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,174535.479,False,,,,,,,,,,,/root/Legal Harness/records/runs/c7b61ba7-11c1-45f1-87da-524025a0c909
+15,qa_257_2hop_983_rand,2,7dd6ae80-6b11-4a2f-aa8e-c966a2f5f2ed,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,MAX_RETRIEVAL_ROUNDS_REACHED,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,2,5,2,0.4,1.0,0.5714285714285715,False,True,0.0,0.0,"부가가치세법상 매입자발행세금계산서를 발행하려는 자는 해당 재화 또는 용역의 공급시기가 속하는 과세기간의 종료일부터 1년 이내에 기획재정부령으로 정하는 거래사실확인신청서에 거래사실을 객관적으로 입증할 수 있는 서류를 첨부하여 신청인 관할 세무서장에게 거래사실의 확인을 신청하여야 한다. [CT1] 소득세법상 매입자발행계산서를 발급하려는 거주자는 해당 재화 또는 용역의 공급시기가 속하는 과세기간의 종료일부터 6개월 이내에 기획재정부령으로 정하는 거래사실확인신청서에 거래사실을 객관적으로 입증할 수 있는 서류를 첨부하여 신청인 관할 세무서장에게 거래사실의 확인을 신청해야 한다. [CT2] 소득세법상 거래사실확인신청서는 별지 제29호의16서식과 같다. [CT3] 부가가치세법상 거래사실의 확인신청 대상이 되는 거래는 거래건당 공급대가가 5만원 이상인 경우로 한다. [CT4] 소득세법상 거래사실의 확인신청 대상이 되는 거래는 거래건당 공급가액이 5만원 이상인 경우로 한다. [CT5] 본 후보 답변은 비공개 벤치마크 진단용이며, 제출 서류의 구체적 목록(예: 거래명세서, 계약서 등)과 세금계산서 미발급 전제 요건에 대한 명시적 법적 근거가 후보 조문에 포함되어 있지 않아 해당 부분은 불완전합니다.",GENERATED,retrieved_candidates,True,0.2763157894736842,False,,,False,,False,False,,3,6,30,15,931186.033,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/7dd6ae80-6b11-4a2f-aa8e-c966a2f5f2ed
+16,qa_140_3hop_540_rand,3,4b0877fa-0e35-420c-9651-da7d3648fa33,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,157215.759,False,,,,,,,,,,,/root/Legal Harness/records/runs/4b0877fa-0e35-420c-9651-da7d3648fa33
+17,qa_86_3hop_140,3,e1f6ff9d-b57b-42cb-88c2-150f7daeda03,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,3,2,1,0.5,0.3333333333333333,0.4,False,False,0.27142857142857146,0.27142857142857146,"업무상 재해의 구체적인 인정 기준은 대통령령으로 정한다.[CT1]
+요양 중인 산재보험 의료기관 내에서 업무상 부상 또는 질병의 요양과 관련하여 발생한 사고는 업무상 재해에 해당한다.[CT2]
+산재보험 의료기관에서 요양 중 시술로 인한 의료과실로 추가 상해를 입은 경우, 이는 요양과 관련하여 발생한 사고에 해당하여 업무상 재해로 인정된다.[CT3]
+전제: 질문에 제시된 '산재보험 의료기관'이 산업재해보상보험법상 지정된 산재보험 의료기관임을 전제한다.
+전제: 의료과실로 인한 추가 상해가 '요양과 관련하여 발생'했음을 전제한다.
+한계: 본 답변은 제공된 법령 조항에 기반한 법적 해석이며, 개별 사건의 사실관계 확정이나 행정·사법 기관의 최종 판단을 대체하지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.27142857142857146,False,,,True,,True,True,True,1,1,10,10,157053.148,True,0.6666666666666666,False,0.6666666666666666,False,0.3333333333333333,False,0.3333333333333333,False,0.6666666666666666,False,/root/Legal Harness/records/runs/e1f6ff9d-b57b-42cb-88c2-150f7daeda03
+18,qa_352_3hop_554,3,f4424bfd-7e79-4fe8-9d47-fc79b4e455b9,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,3,5,3,0.6,1.0,0.7499999999999999,False,True,0.23188405797101452,0.23188405797101452,"서울올림픽기념국민체육진흥공단과 수탁사업자가 아닌 자는 체육진흥투표권 또는 이와 비슷한 것을 발행하여 결과를 적중시킨 자에게 재물이나 재산상의 이익을 제공하는 행위를 하여서는 아니 된다.[CT1]
+제26조 제1항을 위반한 자는 7년 이하의 징역이나 7천만원 이하의 벌금에 처한다.[CT2][CT3]
+제26조 제1항의 금지행위를 이용하여 도박을 한 자는 5년 이하의 징역이나 5천만원 이하의 벌금에 처한다.[CT4][CT5]
+전제: 갑이 서울올림픽기념국민체육진흥공단이나 수탁사업자가 아닌 일반인임을 전제로 함
+전제: 갑이 운영한 이벤트가 체육진흥투표권과 유사한 형태로 구성되었음을 전제로 함
+전제: 을이 해당 이벤트를 이용하여 도박을 했음을 전제로 함
+한계: 본 답변은 제공된 법령 조항에 기반한 형사처벌의 법정형 범위만 제시하며, 실제 양형이나 민사적 책임은 다루지 않음",PUBLISHED_ANSWER,published_answer,True,0.23188405797101452,False,,,True,,False,True,True,3,6,30,21,795891.883,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/f4424bfd-7e79-4fe8-9d47-fc79b4e455b9
+19,qa_61_1hop_93,1,b4683686-ce2b-4fcf-a106-8447aebbe2ae,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,2,1,0.5,1.0,0.6666666666666666,False,True,0.17094017094017094,0.17094017094017094,"헌법재판소장이 일시적인 사고로 인하여 직무를 수행할 수 없을 때에는 재판관 중 임명일자 순으로 그 권한을 대행한다. 다만, 임명일자가 같을 때에는 연장자 순으로 대행한다.[CT1]
+헌법재판소장이 궐위(闕位)되거나 1개월 이상 사고로 인하여 직무를 수행할 수 없을 때에는 재판관 중 재판관회의에서 선출된 사람이 그 권한을 대행한다. 다만, 그 권한대행자가 선출될 때까지는 제1항에 해당하는 사람이 권한을 대행한다.[CT2]
+전제: 질문 시나리오에서 언급된 '몇 주간'의 질병 기간이 법적 개념인 '일시적인 사고' 또는 '1개월 이상 사고'에 정확히 어떻게 해당되는지는 사실관계에 따라 달라질 수 있음
+한계: 본 답변은 헌법재판소법 제12조 제2항의 일반적 법적 규정을 제시한 것이며, 특정 개인의 임명일자나 연령 등 구체적 사실에 기반한 최종 직무대행자 지명은 불가함",PUBLISHED_ANSWER,published_answer,True,0.17094017094017094,False,,,True,,False,True,True,1,1,10,10,167802.814,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/b4683686-ce2b-4fcf-a106-8447aebbe2ae
+20,qa_94_1hop_155,1,ce2d3199-551d-42d2-bd4e-0838941c246a,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.29126213592233013,0.29126213592233013,"형법 제245조에 따르면, 공연히 음란한 행위를 한 자는 1년 이하의 징역, 500만원 이하의 벌금, 구류 또는 과료에 처합니다.[CT1]
+본 사안에서 갑이 공원과 같이 많은 사람이 오가는 공공장소에서 옷을 벗고 춤을 추며 음란한 행위를 한 것은 '공연히 음란한 행위'에 해당할 수 있으므로, 위 형사처벌 규정이 적용될 수 있습니다.[CT2]
+전제: 갑의 행위가 형법상 '공연히'라는 요건(다수인이 인식할 수 있는 상태)과 '음란한 행위'라는 요건을 충족한다고 가정합니다.
+한계: 본 답변은 제공된 형법 제245조 조문 텍스트에만 기반하며, 구체적인 사법부 판단이나 판례, 행정해석은 포함하지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.29126213592233013,False,,,True,,False,True,True,1,1,10,10,176682.669,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/ce2d3199-551d-42d2-bd4e-0838941c246a
+21,qa_140_1hop_257,1,469de539-b4c3-4a5a-8a8f-2f1793af69f4,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,MAX_RETRIEVAL_ROUNDS_REACHED,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,1,2,1,0.5,1.0,0.6666666666666666,False,True,0.0,0.0,"위임이 종료된 후 급박한 사정이 있는 경우, 수임인(을)은 위임인(갑)이 위임사무를 처리할 수 있을 때까지 그 사무의 처리를 계속하여야 하는 의무가 있습니다.[CT1]
+위임 종료 후 급박한 사정에서의 수임인의 사무 처리는 위임의 존속과 동일한 효력이 있습니다.[CT2]
+전제: 갑의 해외 출장으로 인한 연락 두절과 부동산 홍수 상황이 민법 제691조에서 말하는 '급박한 사정'에 해당한다고 가정합니다.
+한계: 본 답변은 비공개 벤치마크 후보이며, 공개 가능한 답변이 아닙니다.
+한계: 위임 종료 후 긴급 조치에 따른 구체적인 비용 부담 범위나 손해배상 책임의 한계에 대한 명시적 조항이 후보군에 포함되어 있지 않아, 해당 부분은 조건부로만 언급할 수 있습니다.",GENERATED,retrieved_candidates,True,0.2689075630252101,False,,,False,,False,False,,3,6,30,21,690139.35,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/469de539-b4c3-4a5a-8a8f-2f1793af69f4
+22,qa_174_1hop_312,1,8a7aa749-6980-4fc2-b8bf-5fbe6a3c9de0,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.34951456310679613,0.34951456310679613,"집행유예의 선고를 받은 자가 유예기간 중 고의로 범한 죄로 금고 이상의 실형을 선고받아 그 판결이 확정된 때에는 집행유예의 선고는 효력을 잃는다.[CT1]
+갑은 집행유예 기간 중 고의로 상해죄를 저질러 금고 1년의 실형을 선고받고 판결이 확정되었으므로, 형법 제63조에 따라 집행유예의 효력을 잃는다.[CT2]
+전제: 질문에 제시된 사실관계(갑의 전과, 유예기간 중 고의 상해, 금고 1년 실형 확정)가 사실임을 전제로 함
+한계: 본 답변은 형법 제63조에 근거한 집행유예의 효력 상실 여부에만 한정되며, 형의 집행 절차나 다른 법률적 효과에 대해서는 다루지 않음",PUBLISHED_ANSWER,published_answer,True,0.34951456310679613,False,,,True,,False,True,True,1,1,10,10,131264.977,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/8a7aa749-6980-4fc2-b8bf-5fbe6a3c9de0
+23,qa_99_2hop_168,2,812228d8-4c14-4af0-bcdd-b786eed59907,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,6,2,0.3333333333333333,1.0,0.5,False,True,0.1118881118881119,0.1118881118881119,"사용자가 근로자에게 부당해고를 한 경우, 근로자는 노동위원회에 구제를 신청할 수 있다.[CT1]
+부당해고 구제신청은 부당해고가 있었던 날부터 3개월 이내에 하여야 한다.[CT2]
+부당해고 구제신청은 별지 제3호서식의 신청서를 관할 지방노동위원회에 제출하여 한다.[CT3]
+노동위원회는 부당해고가 성립한다고 판정하면 사용자에게 구제명령을 하여야 한다.[CT4]
+근로자가 원직복직을 원하지 않는 경우, 노동위원회는 원직복직 대신 해고기간 동안 받을 수 있었던 임금 상당액 이상의 금품 지급을 명할 수 있다.[CT5]
+원직복직이 불가능한 경우에도 노동위원회는 구제명령을 하여야 하며, 해고기간 동안 받을 수 있었던 임금 상당액에 해당하는 금품 지급을 명할 수 있다.[CT6]
+전제: 질문 시나리오에서 갑의 해고가 '부당해고'에 해당한다고 가정하며, 이는 노동위원회의 판정 전제 조건입니다.
+한계: 본 답변은 근로기준법 제28조 및 제30조, 시행규칙 제5조에 근거한 일반적 법적 절차와 효과를 설명하며, 개별 사건의 구체적 사실관계(예: 해고 사유의 적법성, 절차적 하자 등)에 따른 세부 판단은 포함하지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.1118881118881119,False,,,True,,False,True,True,2,4,20,17,546571.686,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/812228d8-4c14-4af0-bcdd-b786eed59907
+24,qa_324_2hop_515,2,79270744-1391-46a7-8beb-a5242c267931,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,2,0,0,0.0,0.0,0.0,False,False,0.0,0.0,"소송목적이 한 쪽 당사자와 제3자에게 합일적으로 확정되어야 할 경우 그 제3자는 공동소송인으로 소송에 참가할 수 있다.[CT1]
+참가신청은 참가인으로서 할 수 있는 소송행위와 동시에 할 수 있다.[CT2]
+전제: 병이 갑과 을을 상대로 제기하려는 여러 청구가 민사소송법상 소송참가 및 청구병합의 대상이 되는 것으로 가정합니다.
+한계: 제공된 후보 조항에는 병이 갑과 을을 상대로 여러 청구를 병합하여 제기하는 구체적인 절차적 요건과 방식에 대한 명시적 규정이 포함되어 있지 않습니다.
+한계: 본 답변은 비공개 벤치마크 후보이며, 공개 가능한 답변으로 승인되지 않았습니다.",GENERATED,retrieved_candidates,True,0.10526315789473682,False,,,False,,False,False,,2,3,20,18,255490.464,True,0.0,False,0.0,False,0.0,False,0.0,False,0.0,False,/root/Legal Harness/records/runs/79270744-1391-46a7-8beb-a5242c267931
+25,qa_401_2hop_619,2,80e258f0-c7af-4c6d-9803-4c6745b894e3,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.21333333333333335,0.21333333333333335,"공유자는 다른 공유자의 동의 없이 공유물을 처분하거나 변경할 수 없습니다.[CT1]
+공유자는 자신의 지분을 처분할 수 있습니다.[CT2]
+전제: 갑, 을, 병이 해당 토지를 공동으로 소유하고 있다는 사실은 질문의 배경 시나리오에 따라 전제합니다.
+한계: 본 답변은 민법 제263조 및 제264조에 근거한 일반적인 법적 원칙을 설명하며, 구체적인 사건의 사실관계나 다른 법적 쟁점(예: 지분매매선택권 등)에 대한 판단을 포함하지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.21333333333333335,False,,,True,,False,True,True,1,2,10,10,173467.594,True,1.0,True,1.0,True,0.5,False,1.0,True,1.0,True,/root/Legal Harness/records/runs/80e258f0-c7af-4c6d-9803-4c6745b894e3
+26,qa_488_2hop_766,2,76fd527c-220b-412c-a411-54619e98e4c0,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T2,T1,all,2,3,1,0.3333333333333333,0.5,0.4,False,False,0.3564356435643564,0.3564356435643564,"한 개의 행위가 여러 개의 죄에 해당하는 경우에는 가장 무거운 죄에 대하여 정한 형으로 처벌한다.[CT1]
+범죄의 성립과 처벌은 행위 시의 법률에 따른다.[CT2]
+전제: 갑의 행위가 저작권 침해와 상표권 침해에 모두 해당한다고 가정한다.
+한계: 법 개정 후에 저작권법에 따라 처벌받아야 하는지(T1)에 대한 판단은 유보한다. 형법 제1조 제2항(경미한 법률 적용)에 대한 구체적인 법적 근거가 제공되지 않아, 사후법 금지 원칙의 적용 여부에 대해 확정적인 법적 결론을 내릴 수 없다.",PUBLISHED_ANSWER,published_answer,True,0.3564356435643564,False,,,True,,True,True,True,3,7,30,21,653486.038,True,0.5,False,0.5,False,0.5,False,0.5,False,0.5,False,/root/Legal Harness/records/runs/76fd527c-220b-412c-a411-54619e98e4c0
+27,qa_624_2hop_943,2,e4b17aed-20bb-4e1f-8224-b40fc59e127f,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,5,1,0.2,0.5,0.28571428571428575,False,False,0.12307692307692308,0.12307692307692308,"보건복지부장관은 시장·군수·구청장에게 사회복지사업의 수행에 필요한 비용을 지원할 수 있다.[CT1]
+지원금은 예산의 범위에서 보건복지부장관이 정한다.[CT2]
+보건복지부장관은 매년 지급기준에 해당하는 시장·군수·구청장에게 지원금을 지급한다.[CT3]
+지원금의 지급기준은 복지사업 평가결과가 높거나 향상된 경우, 복지행정 발전 및 주민 복지증진에 기여한 경우, 또는 보건복지부장관이 정하는 기준에 해당하는 경우로 한다.[CT4]
+보건복지부장관은 사회보장급여의 이용·제공 및 수급권자 발굴에 관한 법률 제39조에 따른 평가결과를 반영하여 지원을 할 수 있다.[CT5]
+전제: 을 시의 시장이 사회복지사업법 제42조의3 제1항에서 규정하는 '시장'에 해당한다고 가정합니다.
+한계: 본 답변은 제공된 법령 조항에 기반한 법적 근거와 기준을 설명하며, 실제 지원금의 지급 여부는 예산 상황, 구체적인 평가 결과 등 사실관계에 따라 달라질 수 있습니다.",PUBLISHED_ANSWER,published_answer,True,0.12307692307692308,False,,,True,,True,True,True,2,4,20,17,528613.497,True,0.5,False,0.5,False,0.5,False,0.5,False,0.5,False,/root/Legal Harness/records/runs/e4b17aed-20bb-4e1f-8224-b40fc59e127f
+28,qa_59_2hop_232_rand,2,db410660-7b7c-4c28-bdba-8d1021820c28,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,2,2,2,1.0,1.0,1.0,True,True,0.0,0.0,"대통령선거 후보자와 후보자가 지명한 연설원은 선거운동기간 중 텔레비전 및 라디오 방송별 각 11회 이내에서 방송연설을 할 수 있다.[CT1]
+대통령선거 후보자는 선거기간개시일부터 선거일전 2일까지 일간신문에 총 70회 이내의 신문광고를 게재할 수 있다.[CT2]
+전제: 갑이 대통령선거 후보자이며, 을이 갑이 지명한 연설원이라는 사실은 질문의 배경 시나리오에 근거한 전제입니다.
+한계: 제공된 후보 조항에는 연설원(을)의 신문광고 허용 횟수를 명시하는 규정이 포함되어 있지 않아, 해당 항목에 대한 법적 근거가 부족합니다.
+한계: 본 답변은 벤치마크 진단용 후보 답변이며, 공개 가능한 공식 답변이 아닙니다.",GENERATED,retrieved_candidates,True,0.1967213114754098,False,,,False,,False,False,,3,3,30,15,466378.899,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/db410660-7b7c-4c28-bdba-8d1021820c28
+29,qa_119_2hop_464_rand,2,84052f46-134a-470a-a0be-b7854eef3045,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,5,1,0.2,0.5,0.28571428571428575,False,False,0.17064846416382254,0.19672131147540983,"하천관리청은 매수청구를 받은 경우 매수대상토지등의 판정기준에 해당되는지를 판단하여 매수대상 여부와 매수대상인 경우 그 예상가격을 매수청구인에게 통보하여야 한다.[CT1]
+하천관리청은 매수예상가격을 통보한 경우에는 2인 이상의 감정평가법인등에게 매수대상토지등에 대한 감정평가를 의뢰하여 「공익사업을 위한 토지 등의 취득 및 보상에 관한 법률」에 따른 산정방법 등을 준용하여 매수가격을 결정한다.[CT2]
+하천구역의 결정 또는 변경으로 그 구역 안의 토지등을 종래의 용도로 사용할 수 없어 그 효용이 현저하게 감소한 토지등 또는 그 토지등의 사용 및 수익이 사실상 불가능한 토지등은 매수대상토지등에 해당한다.[CT3]
+매수대상토지등의 판정 시 토지등의 효용감소, 사용·수익의 불가능 등에 대하여 본인의 귀책사유가 없어야 한다.[CT4]
+종래의 용도대로 사용할 수 없어 그 효용이 현저히 감소한 토지등은 매수청구 당시 하천구역 지정 이전의 지목(또는 적법하게 지적공부상의 지목과 다르게 사용하고 있었음을 공적자료로 증명하는 경우에는 하천구역 지정 이전의 실제 용도)대로 사용할 수 없는 토지와 그 위의 건축물 및 그 밖에 그 토지에 정착된 물건을 말한다.[CT5]
+전제: 을의 토지가 하천구역(지방하천 제외)에 해당하며, 하천구역의 결정 또는 변경으로 인해 효용이 감소했다는 사실은 질문의 배경 시나리오에 근거한 전제이다.
+전제: 을이 매수청구 요건(소유 기간 등)을 충족하고 있으며, 효용감소나 사용불가에 대한 귀책사유가 없다는 것은 질문에서 명시되지 않았으므로, 판정 기준 설명 시 전제된 사항이다.
+한계: 본 답변은 하천법 및 하천법 시행령의 일반적 법적 기준을 설명한 것이며, 구체적인 토지의 매수대상 여부 최종 판정이나 정확한 매수예상가격 금액 산정은 하천관리청의 개별 판단 및 감정평가 결과에 따라 달라질 수 있다.
+한계: 지방하천의 하천구역은 하천법 제79조 제1항에 따라 매수청구 대상에서 제외되므로, 해당 토지가 지방하천 하천구역에 해당하는 경우 본 답변의 매수대상토지 판정 기준이 적용되지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.19672131147540983,False,,,True,,True,True,True,1,2,10,10,327417.5,True,0.5,False,0.5,False,0.5,False,0.5,False,0.5,False,/root/Legal Harness/records/runs/84052f46-134a-470a-a0be-b7854eef3045
+30,qa_171_2hop_658_rand,2,a4fa3ffc-26ea-484e-968d-15458d7a1373,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T1,T2,all,2,3,2,0.6666666666666666,1.0,0.8,False,True,0.2978723404255319,0.2978723404255319,"대기오염경보의 대상 오염물질은 「환경정책기본법」 제12조에 따라 환경기준이 설정된 오염물질 중 미세먼지(PM-10), 초미세먼지(PM-2.5), 오존(O3)로 한다.[CT1]
+대기오염경보 단계는 대기오염경보 대상 오염물질의 농도에 따라 구분되며, 단계별 오염물질의 농도기준은 환경부령으로 정한다.[CT2]
+한계: 대기오염경보 단계별 구체적인 농도 기준값(수치)에 대한 증거가 불완전하여, 해당 세부 사항은 답변에서 제외되었습니다.",PUBLISHED_ANSWER,published_answer,True,0.2978723404255319,False,,,True,,False,True,True,3,5,30,13,708946.316,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/a4fa3ffc-26ea-484e-968d-15458d7a1373
+31,qa_215_2hop_820_rand,2,900c6b3e-34d7-4a56-bcf1-e18b9fd8d765,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,2,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,170251.844,False,,,,,,,,,,,/root/Legal Harness/records/runs/900c6b3e-34d7-4a56-bcf1-e18b9fd8d765
+32,qa_260_2hop_995_rand,2,3189b6bf-87f2-4093-bff8-71581551da96,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,3,5,3,0.6,1.0,0.7499999999999999,False,True,0.37037037037037035,0.37037037037037035,"선장은 해원을 징계할 경우에는 미리 5명(해원 수가 10명 이내인 경우에는 3명) 이상의 해원으로 구성되는 징계위원회의 의결을 거쳐야 한다.[CT1]
+제4항에 따른 징계위원회의 구성 및 운영 등에 필요한 사항은 해양수산부령으로 정한다.[CT2]
+선장은 해원이 선내에서 싸움, 폭행, 음주, 소란행위를 하거나 고의로 시설물을 파손하였을 경우에는 해원을 징계할 수 있다.[CT3]
+징계는 훈계, 상륙금지 및 하선으로 하며, 상륙금지는 정박 중에 10일 이내로 한다.[CT4]
+하선의 징계는 해원이 폭력행위 등으로 선내 질서를 어지럽히거나 고의로 선박 운항에 현저한 지장을 준 행위가 명백한 경우에만 하여야 한다.[CT5]
+하선의 징계를 한 경우 선장은 지체 없이 선박소유자에게 하선의 징계를 한 사실을 알려야 한다.[CT6]
+전제: 을의 행위가 '폭력행위'에 해당하며, 이로 인해 선내 질서가 어지러워졌다고 가정함
+전제: 해원 수가 8명이라는 사실관계가 정확하다고 가정함
+한계: 징계위원회의 구체적인 운영 절차(소집, 의결 방식 등)는 해양수산부령에 위임되어 있어 본 답변에서는 상세히 다루지 않음
+한계: 상륙금지 징계의 경우 정박 중 10일 이내로 제한됨을 유의해야 함",PUBLISHED_ANSWER,published_answer,True,0.37037037037037035,False,,,True,,False,True,True,1,2,10,10,295000.585,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/3189b6bf-87f2-4093-bff8-71581551da96
+33,qa_279_3hop_1064_rand,3,54edb174-4f20-4884-8afd-11489989179a,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,187914.241,False,,,,,,,,,,,/root/Legal Harness/records/runs/54edb174-4f20-4884-8afd-11489989179a
+34,qa_102_3hop_175,3,1256132c-d053-4fa6-84d1-f59070954b58,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T2,T1,all,3,3,2,0.6666666666666666,0.6666666666666666,0.6666666666666666,False,False,0.2794117647058823,0.2794117647058823,"공무원에 대하여 허위신고를 하여 공정증서원본 또는 이와 동일한 전자기록등 특수매체기록에 부실의 사실을 기재 또는 기록하게 한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.[CT1]
+전제: 질문 시나리오에서 갑과 을이 공무원에게 허위 재무정보를 신고하고 공정증서원본에 부실한 내용이 기재되도록 한 사실이 전제됩니다.
+한계: 등기기관이 허위 기재가 포함된 등기 신청을 거절하거나 반려할 수 있는 명시적인 법적 근거가 제공된 조항에 포함되어 있지 않아, 등기기관의 처리 절차(T1)에 대한 답변은 보류됩니다.",PUBLISHED_ANSWER,published_answer,True,0.2794117647058823,False,,,True,,True,True,True,3,6,30,16,683583.386,True,0.6666666666666666,False,0.6666666666666666,False,0.6666666666666666,False,0.6666666666666666,False,0.6666666666666666,False,/root/Legal Harness/records/runs/1256132c-d053-4fa6-84d1-f59070954b58
+35,qa_422_3hop_653,3,26a2ee14-6a88-4728-8af5-103a3b9f609e,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,176765.082,False,,,,,,,,,,,/root/Legal Harness/records/runs/26a2ee14-6a88-4728-8af5-103a3b9f609e
+36,qa_24_1hop_35,1,4d5f8050-f2de-40c5-82a2-9b950669ea1b,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,1,1,1,1.0,1.0,1.0,True,True,0.0,0.0,"형사소송법 제420조에 따르면, 재심은 유죄의 확정판결에 대하여 그 선고를 받은 자의 이익을 위하여 청구할 수 있으며, 이는 다음 각 호의 어느 하나에 해당하는 이유가 있는 경우에 가능합니다.[CT1]
+본 사안에서 갑은 유죄 확정판결을 받은 자로서, 해당 조항이 규정하는 재심 사유에 해당하는지 여부에 따라 재심을 청구할 수 있는 법적 근거가 됩니다.[CT2]
+전제: 갑이 받은 유죄 판결이 확정판결로 간주됨
+한계: 제공된 후보 조항(C001)에는 재심 사유의 구체적 목록(각 호)이 포함되어 있지 않아, 갑의 사안이 특정 재심 사유에 해당하는지 여부를 판단할 수 없음
+한계: 본 답변은 벤치마크 진단용 후보이며, 공개 가능한 답변이 아님",GENERATED,retrieved_candidates,True,0.23880597014925373,False,,,False,,False,False,,3,5,30,16,469032.398,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/4d5f8050-f2de-40c5-82a2-9b950669ea1b
+37,qa_62_1hop_94,1,42a99b1f-c638-4e43-9c0f-c8f2f5b4b9a2,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,2,1,0.5,1.0,0.6666666666666666,False,True,0.26,0.26,"부동산에 관한 법률행위로 인한 물권의 득실변경은 등기하여야 그 효력이 생긴다.[CT1]
+상속, 공용징수, 판결, 경매 기타 법률의 규정에 의한 부동산에 관한 물권의 취득은 등기를 요하지 아니한다.[CT2]
+전제: 갑과 을 사이의 토지 매도 계약이 유효하게 체결되었음을 전제한다.
+전제: 을이 대금을 전부 지급하였으나 소유권 이전 등기가 아직 이루어지지 않았음을 전제한다.
+한계: 본 답변은 민법 제186조 및 제187조에 근거한 소유권 취득의 법적 요건에 한정하며, 대금 지급의 효력이나 계약 해제 등 다른 법적 쟁점은 다루지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.26,False,,,True,,False,True,True,1,1,10,10,145299.784,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/42a99b1f-c638-4e43-9c0f-c8f2f5b4b9a2
+38,qa_95_1hop_156,1,126fc0b0-335b-4cd2-88d4-3447ef71c64c,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,1,0,0,0.0,0.0,0.0,False,False,0.0,0.0,"법원은 갑이 신청하지 않은 정신적 손해배상에 대해 판결할 수 없다.[CT1]
+한계: 이 답변은 공개 가능한 답변이 아닌 벤치마크 진단용 후보이며, 인용된 조항은 일반 민사소송 절차의 직접적 법적 근거가 아닌 유사 원칙을 담은 규정이다.",GENERATED,retrieved_candidates,True,0.0,False,,,False,,False,False,,2,3,20,16,161029.712,True,0.0,False,0.0,False,0.0,False,0.0,False,0.0,False,/root/Legal Harness/records/runs/126fc0b0-335b-4cd2-88d4-3447ef71c64c
+39,qa_141_1hop_258,1,350a7a1b-68ed-45ee-a697-ac421164e394,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.2247191011235955,0.2247191011235955,"법률행위의 일부분이 무효인 때에는 그 전부를 무효로 한다.[CT1]
+무효부분이 없더라도 법률행위를 하였을 것이라고 인정될 때에는 나머지 부분은 무효가 되지 아니한다.[CT2]
+전제: 건축 가능 조항이 법적으로 건축이 금지된 지역임을 이유로 무효라는 전제
+한계: 무효부분이 없더라도 법률행위를 하였을 것이라고 인정되는지 여부는 구체적 사실관계에 따라 판단되어야 하며, 본 답변은 법적 기준만 제시한다.",PUBLISHED_ANSWER,published_answer,True,0.2247191011235955,False,,,True,,False,True,True,1,1,10,10,63944.397,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/350a7a1b-68ed-45ee-a697-ac421164e394
+40,qa_113_2hop_200,2,29622226-9589-47a4-a83e-cf2681836e22,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,2,2,1,0.5,0.5,0.5,False,False,0.0,0.0,,EXECUTION_FAILURE,retrieved_candidates,False,,,,,False,,False,False,,3,6,30,13,269703.18,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/29622226-9589-47a4-a83e-cf2681836e22
+41,qa_330_2hop_525,2,c3c51880-b205-420a-b360-b3b55692f414,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,3,2,0.6666666666666666,1.0,0.8,False,True,0.33684210526315783,0.33684210526315783,"신주발행의 무효는 주주ㆍ이사 또는 감사에 한하여 신주를 발행한 날로부터 6월내에 소만으로 이를 주장할 수 있다.[CT1]
+주주는 그가 가진 주식 수에 따라서 신주의 배정을 받을 권리가 있다.[CT2]
+신주인수권을 행사하려는 자는 청구서 2통을 회사에 제출하고, 신주의 발행가액의 전액을 납입하여야 한다.[CT3]
+전제: 을이 갑 회사의 주주로서 주식을 보유하고 있다고 가정합니다.
+한계: 본 답변은 제공된 상법 조항에 근거한 일반적 법적 규정을 설명하며, 구체적인 사안에 대한 법적 자문이 아닙니다.",PUBLISHED_ANSWER,published_answer,True,0.33684210526315783,False,,,True,,False,True,True,2,4,20,18,187789.507,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/c3c51880-b205-420a-b360-b3b55692f414
+42,qa_406_2hop_622,2,0d7cea43-32b1-499f-b51c-f8d84886bba9,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,2,1,1,1.0,0.5,0.6666666666666666,False,False,0.0,0.0,"갑은 을의 무단 토지 진입 및 꽃 꺾기 행위가 소유권을 방해하는 것으로 판단될 경우, 민법 제214조에 근거하여 방해의 제거를 청구할 수 있습니다.[CT1]
+갑의 방해제거청구권 행사에 권리남용의 원칙이 적용되는지 여부에 대해서는 후보 조문 중 민사적 권리남용을 규정한 조문이 부재하여 판단할 수 없습니다.[CT2]
+전제: 갑이 해당 토지의 소유자임을 전제로 합니다.
+전제: 을의 행위가 갑의 소유권을 현존하게 방해하고 있음을 전제로 합니다.
+한계: 후보 조문에는 '방해'의 구체적 정의나 '현존성' 등 청구 요건에 대한 명시적 규정이 포함되어 있지 않습니다.
+한계: 민사적 권리남용의 원칙(예: 민법 제2조)에 관한 조문이 후보 조문에 포함되어 있지 않아, 갑의 권리남용 여부에 대한 법적 판단을 제공하지 못합니다.",GENERATED,retrieved_candidates,True,0.10619469026548674,False,,,False,,False,False,,3,6,30,14,341065.358,True,0.5,False,0.5,False,0.5,False,0.5,False,0.5,False,/root/Legal Harness/records/runs/0d7cea43-32b1-499f-b51c-f8d84886bba9
+43,qa_503_2hop_790,2,dc231390-8b06-44ca-b7fe-569f55908148,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,6,2,0.3333333333333333,1.0,0.5,False,True,0.2231759656652361,0.2374429223744292,"폐기물의 종류 및 재활용 유형에 관한 세부분류는 폐기물의 발생원, 구성성분 및 유해성 등을 고려하여 환경부령으로 정한다.[CT1]
+폐기물의 종류별 세부분류는 폐기물관리법 시행규칙 별표 4와 같다.[CT2]
+폐기물의 재활용 유형별 세부분류는 폐기물관리법 시행규칙 별표 4의2와 같다.[CT3]
+시장·군수·구청장은 관할 구역의 폐기물의 배출 및 처리상황을 파악하여 폐기물이 적정하게 처리될 수 있도록 폐기물처리시설을 설치·운영하여야 하며, 폐기물의 처리방법의 개선 및 관계인의 자질 향상으로 폐기물 처리사업을 능률적으로 수행하는 한편, 주민과 사업자의 청소 의식 함양과 폐기물 발생 억제를 위하여 노력하여야 한다.[CT4]
+특별시장·광역시장·도지사는 시장·군수·구청장이 폐기물 관리 책무를 충실하게 하도록 기술적·재정적 지원을 하고, 그 관할 구역의 폐기물 처리사업에 대한 조정을 하여야 한다.[CT5]
+국가 및 지방자치단체는 건설폐기물을 친환경적으로 적절하게 처리하고 재활용을 촉진할 수 있도록 필요한 시책을 마련하여야 한다.[CT6]
+전제: 을이 속한 지방자치단체가 폐기물관리법 제4조 제1항에서 규정한 시장·군수·구청장 또는 제2항에서 규정한 특별시장·광역시장·도지사 중 하나에 해당한다고 가정합니다.
+전제: 갑의 재활용 프로젝트가 건설폐기물을 포함하는 경우에만 건설폐기물의 재활용촉진에 관한 법률 제4조의 적용이 전제됩니다.
+한계: 폐기물 종류별 및 재활용 유형별 세부분류의 구체적 내용은 시행규칙 별표 4 및 별표 4의2에 기재되어 있으나, 본 답변에서는 조항의 존재와 적용 기준만 확인하고 별표의 상세 목록은 제시하지 않습니다.
+한계: 건설폐기물 관련 의무(C6)는 프로젝트 대상이 건설폐기물일 경우에만 직접 적용되는 조건부 규정입니다.",PUBLISHED_ANSWER,published_answer,True,0.2374429223744292,False,,,True,,False,True,True,2,4,20,19,218370.747,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/dc231390-8b06-44ca-b7fe-569f55908148
+44,qa_633_2hop_954,2,95267ad1-f221-4e38-8480-9f011bed6a3f,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T2,T1,all,2,3,0,0.0,0.0,0.0,False,False,0.22818791946308725,0.22818791946308725,"재심 또는 상소의 추후보완신청이 있는 경우, 불복하는 이유로 내세운 사유가 법률상 정당한 이유가 있다고 인정되고 사실에 대한 소명이 있는 때에는 법원은 당사자의 신청에 따라 담보를 제공하게 하거나 담보를 제공하지 아니하게 하고 강제집행을 일시정지하도록 명할 수 있다.[CT1]
+담보없이 하는 강제집행의 정지는 그 집행으로 말미암아 보상할 수 없는 손해가 생기는 것을 소명한 때에만 한다.[CT2]
+전제: 을이 제기하려는 이의가 민사소송법상 재심 또는 상소의 추후보완신청에 해당한다고 가정합니다.
+한계: 확정판결에 대한 재심청구의 법적 근거(민사소송법 제447조 등)와 새로운 증거를 근거로 이의를 제기할 수 있는 구체적 요건에 관한 조항이 제공되지 않아, T1(이의제기 절차 및 요건)에 대한 답변은 보류됩니다.
+한계: 강제집행 정지 여부는 '법률상 정당한 이유' 및 '사실에 대한 소명' 등 구체적 사실관계에 따라 달라지므로, 본 답변은 일반적 법적 기준만을 제시합니다.",PUBLISHED_ANSWER,published_answer,True,0.22818791946308725,False,,,True,,True,True,True,3,6,30,27,291588.557,True,0.5,False,0.5,False,0.5,False,0.5,False,0.5,False,/root/Legal Harness/records/runs/95267ad1-f221-4e38-8480-9f011bed6a3f
+45,qa_62_2hop_244_rand,2,c9507bb6-3960-461b-9091-e036cfb88e71,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T2,T1,all,2,4,2,0.5,1.0,0.6666666666666666,False,True,0.11250000000000002,0.11250000000000002,"지방자치단체의 장은 소관 물품의 관리 사무를 소속 공무원에게 위임하여 물품을 관리하게 할 수 있다.[CT1]
+지방자치단체의 장이 2명 이상의 소속 공무원에게 물품의 관리에 관한 사무를 위임하는 경우에는 그 중 1명을 지정하여 물품의 관리에 관한 사무를 총괄·조정하게 하여야 한다.[CT2]
+물품관리관은 그가 소속하는 관서의 공무원에게 물품의 출납 및 보관에 관한 사무(출납명령에 관한 사무는 제외한다)를 위임하거나 물품의 사용에 관한 사무를 위임할 때에는 지방자치단체의 장이 정하는 바에 따라 하여야 한다.[CT3]
+전제: 질문에서 '을'이 지방자치단체의 소속 공무원임을 전제로 한다.
+한계: T1(출자 목적 제공 및 사권 설정 조건)에 대한 핵심 증거(E1)가 부분적으로만 충족되어 있어, 해당 사안에 대한 법적 결론을 제시하지 못하고 유보한다.
+한계: 물품의 출자 제공 및 사권 설정에 필요한 구체적인 행정 절차(심의, 승인, 등록 등)에 대한 규정이 제공된 조문에 포함되어 있지 않아, 절차적 요건에 대해서는 판단할 수 없다.",PUBLISHED_ANSWER,published_answer,True,0.11250000000000002,False,,,True,,False,True,True,3,6,30,24,279878.846,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/c9507bb6-3960-461b-9091-e036cfb88e71
+46,qa_124_2hop_480_rand,2,9835883d-ffa9-41c9-9ee0-dd2a48b7fd06,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,5,2,0.4,1.0,0.5714285714285715,False,True,0.1780104712041885,0.1780104712041885,"식품 또는 식품첨가물을 제조·가공하는 영업자는 식품 및 식품첨가물을 생산한 실적 등을 식품의약품안전처장 또는 시·도지사에게 보고해야 합니다.[CT1]
+영업자가 생산실적 등에 관한 보고를 할 때에는 등록관청을 거쳐 식품의약품안전처장 또는 시·도지사(특별자치시장·특별자치도지사를 제외한다)에게 보고해야 합니다.[CT2]
+위해식품으로 판명된 식품의 회수계획을 사전에 보고해야 하는 경우, 영업자는 회수계획을 식품의약품안전처장, 시·도지사 또는 시장·군수·구청장에게 미리 보고해야 합니다.[CT3]
+해당 식품이 수입식품안전관리 특별법에 따라 수입한 식품이고, 보고의무자가 해당 식품을 수입한 자인 경우에는 식품의약품안전처장에게 보고해야 합니다.[CT4]
+전제: 질문에서 '갑'이 식품 또는 식품첨가물을 제조·가공하는 영업자임을 전제로 합니다.
+전제: 위해식품 회수계획 보고 대상이 수입식품인지 여부에 따라 보고 대상 기관이 달라질 수 있으나, 질문의 일반적 맥락에 따라 국내 제조·판매 식품을 기준으로 답변합니다.
+한계: 본 답변은 제시된 법령 조항에 근거한 법적 근거와 대상 기관을 명시한 것이며, 구체적인 보고 절차(서식, 기한 등)나 행정적 세부 사항은 시행규칙 및 관련 고시를 추가로 확인해야 합니다.
+한계: 수입식품의 경우 보고의무자가 수입업자인지 여부에 따라 보고 대상 기관이 달라지므로, 해당 사실관계가 확인되지 않은 경우 예외 규정이 적용될 수 있습니다.",PUBLISHED_ANSWER,published_answer,True,0.1780104712041885,False,,,True,,False,True,True,1,2,10,10,112890.264,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/9835883d-ffa9-41c9-9ee0-dd2a48b7fd06
+47,qa_174_2hop_666_rand,2,b3c31e32-32b1-49ca-ab1b-62e8a8672ad4,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.31746031746031744,0.31746031746031744,"농어촌정비사업의 시행으로 토지의 이동이 있는 때에는 그 정비사업의 시행자가 시장·군수에게 신고하여야 합니다.[CT1]
+지역·지구등에서의 해당 사업이 완료된 날의 다음 날에 해제된 것으로 봅니다.[CT2]
+전제: 을이 농어촌정비사업의 시행자임을 전제로 합니다.
+한계: 해당 지역이 농어촌정비법상 '지역·지구등'에 해당하는지 여부는 별도 확인이 필요합니다.",PUBLISHED_ANSWER,published_answer,True,0.31746031746031744,False,,,True,,False,True,True,1,2,10,10,78637.112,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/b3c31e32-32b1-49ca-ab1b-62e8a8672ad4
+48,qa_216_2hop_824_rand,2,3efe13db-637f-4687-8478-3e1b1b255dc7,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.4,0.4,"의료기관 개설자는 진료기록부를 10년간 보존해야 합니다.[CT1]
+진료에 관한 기록은 마이크로필름이나 광디스크 등에 원본대로 수록하여 보존할 수 있습니다.[CT2]",PUBLISHED_ANSWER,published_answer,True,0.4,False,,,True,,False,True,True,1,2,10,10,80870.077,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/3efe13db-637f-4687-8478-3e1b1b255dc7
+49,qa_82_3hop_235_rand2,3,2462cacc-1135-44f5-809d-468fd5edabd4,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,101445.833,False,,,,,,,,,,,/root/Legal Harness/records/runs/2462cacc-1135-44f5-809d-468fd5edabd4
+50,qa_127_3hop_230,3,e59ebc12-1e8e-4803-ba47-ac12e04e1d22,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,101409.898,False,,,,,,,,,,,/root/Legal Harness/records/runs/e59ebc12-1e8e-4803-ba47-ac12e04e1d22
+51,qa_430_3hop_669,3,a8262551-b9fb-4463-90a9-5c7afa60e5f9,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,3,3,2,0.6666666666666666,0.6666666666666666,0.6666666666666666,False,False,0.3056768558951965,0.3056768558951965,"손해가 제3자의 행위로 인하여 발생한 경우에 보험금을 지급한 보험자는 그 지급한 금액의 한도에서 그 제3자에 대한 보험계약자 또는 피보험자의 권리를 취득한다.[CT1]
+보험자가 보상할 보험금의 일부를 지급한 경우에는 피보험자의 권리를 침해하지 아니하는 범위에서 그 권리를 행사할 수 있다.[CT2]
+제3자는 피보험자가 책임을 질 사고로 입은 손해에 대하여 보험금액의 한도내에서 보험자에게 직접 보상을 청구할 수 있다.[CT3]
+보험가입자등에게 제3조에 따른 손해배상책임이 발생하면 그 피해자는 대통령령으로 정하는 바에 따라 보험회사등에게 「상법」 제724조제2항에 따라 보험금등을 자기에게 직접 지급할 것을 청구할 수 있다.[CT4]
+전제: 을의 부주의가 상법 제682조 제1항에서 말하는 '제3자의 행위'에 해당한다고 가정한다.
+전제: 갑의 보험사가 병에게 지급한 보험금이 상법 제724조 제2항 및 자동차손해배상 보장법 제10조 제1항의 적용 대상인 책임보험금이라고 가정한다.
+한계: 본 답변은 제공된 법령 조항에 기반한 일반적 법적 해석이며, 구체적 사건의 사실관계(예: 을의 과실 정도, 보험 약관의 특약 내용 등)에 따라 결론이 달라질 수 있다.
+한계: 상법 제724조 제2항에 따라 보험사는 피보험자가 그 사고에 관하여 가지는 항변으로써 제3자에게 대항할 수 있으므로, 보험사의 직접청구권 거절 사유가 존재할 수 있다.",PUBLISHED_ANSWER,published_answer,True,0.3056768558951965,False,,,True,,True,True,True,1,2,10,10,151639.293,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/a8262551-b9fb-4463-90a9-5c7afa60e5f9
+52,qa_25_1hop_37,1,769f9e40-d786-4de0-9a0c-041d4972743f,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,2,2,1,0.5,0.5,0.5,False,False,0.3448275862068966,0.3448275862068966,"검사가 작성한 피의자신문조서는 적법한 절차와 방식에 따라 작성된 것으로서 공판준비, 공판기일에 그 피의자였던 피고인 또는 변호인이 그 내용을 인정할 때에 한정하여 증거로 할 수 있다.[CT1]
+전제: 피의자신문조서가 형사소송법 제312조 제1항에서 요구하는 '적법한 절차와 방식'에 따라 작성되었음을 전제로 합니다.
+한계: 본 답변은 검사가 작성한 피의자신문조서에 한정하여 적용되며, 검사 이외의 수사기관이 작성한 조서에 대해서는 형사소송법 제312조 제3항의 별도 요건이 적용됩니다.",PUBLISHED_ANSWER,published_answer,True,0.3448275862068966,False,,,True,,True,True,True,1,1,10,10,167074.019,True,1.0,True,1.0,True,0.5,False,1.0,True,1.0,True,/root/Legal Harness/records/runs/769f9e40-d786-4de0-9a0c-041d4972743f
+53,qa_64_1hop_95,1,1a9c1f65-dff7-4987-bfdd-f6c8c44e2f13,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,1,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,181720.415,False,,,,,,,,,,,/root/Legal Harness/records/runs/1a9c1f65-dff7-4987-bfdd-f6c8c44e2f13
+54,qa_99_1hop_167,1,eb909dfd-f213-4d19-84ef-44a9548453ae,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,MAX_RETRIEVAL_ROUNDS_REACHED,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,1,7,1,0.14285714285714285,1.0,0.25,False,True,0.0,0.0,"사용자가 근로자에게 부당해고등을 하면 근로자는 노동위원회에 구제를 신청할 수 있다.[CT1]
+부당해고등의 구제신청은 부당해고등이 있었던 날부터 3개월 이내에 하여야 한다.[CT2]
+근로자는 부당해고등의 구제를 신청하려면 별지 제3호서식의 부당해고등의 구제 신청서를 관할 지방노동위원회에 제출하여야 한다.[CT3]
+노동위원회는 제29조에 따른 심문을 끝내고 부당해고등이 성립한다고 판정하면 사용자에게 구제명령을 하여야 한다.[CT4]
+노동위원회의 구제명령, 기각결정 또는 재심판정은 제31조에 따른 중앙노동위원회에 대한 재심 신청이나 행정소송 제기에 의하여 그 효력이 정지되지 아니한다.[CT5]
+노동위원회는 근로자가 원직복직을 원하지 아니하면 원직복직을 명하는 대신 근로자가 해고기간 동안 근로를 제공하였더라면 받을 수 있었던 임금 상당액 이상의 금품을 근로자에게 지급하도록 명할 수 있다.[CT6]
+전제: 갑의 해고가 근로기준법상 '부당해고'에 해당한다고 가정한다.
+한계: 본 답변은 벤치마크 진단용 후보 조항에 기반한 비공개 후보 답변이며, 공식적인 법적 자문이 아닙니다.
+한계: 원직복직 명령의 구체적 내용(예: 복직 시점, 지위 등)에 대한 명시적 조항이 후보 집단에 포함되어 있지 않아, 복직 불가 또는 원하지 않을 경우의 금전 구제 중심으로 설명하였다.",GENERATED,retrieved_candidates,True,0.06622516556291391,False,,,False,,False,False,,3,5,30,18,542465.67,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/eb909dfd-f213-4d19-84ef-44a9548453ae
+55,qa_145_1hop_267,1,3de69713-9986-4005-855a-8ec1c739ebbe,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,1,1,1,1.0,1.0,1.0,True,True,0.0,0.0,"정관에 주식 양도 시 이사회의 승인이 필요한 주식회사의 주식을 취득한 자는, 상법 제335조의7 제1항에 따라 회사에 대하여 그 주식의 종류와 수를 기재한 서면으로 그 취득의 승인을 청구할 수 있습니다.[CT1]
+전제: 을 주식회사의 정관에 주식 양도 시 이사회의 승인이 필요하다는 사실은 질문의 배경 시나리오에서 주어진 전제로 간주함
+한계: 본 답변은 비공개 벤치마크 후보 진단용이며, 공개 정책은 ABSTAIN으로 유지됨
+한계: 상법 제335조의7 제1항은 승인 청구의 기한에 대한 명시적 규정을 포함하지 않아, 기한 관련 법적 근거는 불완전함",GENERATED,retrieved_candidates,True,0.3225806451612903,False,,,False,,False,False,,3,5,30,18,246812.332,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/3de69713-9986-4005-855a-8ec1c739ebbe
+56,qa_192_1hop_333,1,129e4e6e-6a79-40df-9f32-a4d7b5aa56c4,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.07407407407407407,0.07407407407407407,"사무처리를 그르치게 할 목적으로 공무원 또는 공무소의 전자기록등 특수매체기록을 위작 또는 변작한 자는 10년 이하의 징역에 처한다.[CT1]
+전제: 갑의 행위가 '사무처리를 그르치게 할 목적'을 가지고 이루어졌다고 가정한다.
+한계: 본 답변은 제공된 형법 제227조의2 조항에 기반한 법적 규범과 그 적용에 한정되며, 실제 사건의 구체적 양형이나 다른 법률과의 관계는 다루지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.07407407407407407,False,,,True,,False,True,True,1,2,10,10,130827.531,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/129e4e6e-6a79-40df-9f32-a4d7b5aa56c4
+57,qa_115_2hop_204,2,74d2d0f8-5e51-429f-b590-ea5ef049fbdb,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,5,2,0.4,1.0,0.5714285714285715,False,True,0.4023323615160349,0.5000000000000001,"폐기물처리업자는 대통령령으로 정하는 업종별 적합성확인의 유효기간이 경과할 때마다 환경부장관 또는 시·도지사로부터 다음 각 호의 사항을 모두 충족하여 폐기물처리업을 계속 수행할 수 있는 적합성을 갖추었음을 확인 받아야 한다. 1. 제13조에 따른 폐기물의 처리 기준과 방법 또는 제13조의2에 따른 폐기물의 재활용 원칙 및 준수사항을 충족하는 등 환경부령으로 정하는 조건을 갖추고 있을 것 2. 제26조에 따른 결격사유에 해당하지 아니할 것 3. 이 법을 위반하여 발생한 법적 책임을 모두 이행하였을 것[CT1]
+법 제25조의3제1항제1호에서 ""환경부령으로 정하는 조건""이란 다음 각 호의 조건을 말한다. 1. 법 제13조를 위반하여 폐기물을 매립하지 않을 것 2. 법 제25조제3항에 따른 시설ㆍ장비 및 기술능력에 관한 폐기물처리업의 허가 기준을 충족할 것[CT2]
+제1항에 따라 적합성확인을 받으려는 자(이하 이 조에서 ""적합성확인신청인""이라 한다)는 업종별 적합성확인 유효기간이 만료되기 3개월 전까지 환경부령으로 정하는 바에 따라 제1항 각 호의 사항을 확인하는 데 필요한 자료를 첨부하여 환경부장관 또는 시ㆍ도지사에게 신청하여야 한다. 이 경우 적합성확인신청을 받은 환경부장관 또는 시ㆍ도지사는 특별한 사정이 없으면 유효기간 만료일 이전에 적합성 여부를 확인하여 적합성확인신청인에게 통보하여야 한다.[CT3]
+법 제25조의3제1항에 따라 적합성확인을 받으려는 자(이하 ""적합성확인신청인""이라 한다)는 별지 제21호의6서식의 폐기물처리업 적합성확인 신청서에 다음 각 호의 서류를 첨부하여 시ㆍ도지사 또는 지방환경관서의 장에게 제출해야 한다.[CT4]
+시ㆍ도지사 또는 지방환경관서의 장은 폐기물처리업의 적합성 여부를 확인한 후 폐기물처리업 허가증에 그 결과를 적어 적합성확인신청인에게 돌려줘야 한다.[CT5]
+전제: 질문에서 '갑'이 폐기물처리업을 운영하고 있다고 가정하며, 해당 업종이 대통령령으로 정하는 적합성확인 대상 업종에 해당한다고 전제함.
+한계: 본 답변은 제공된 법령 조항(폐기물관리법 및 시행규칙)에 근거한 일반적 법적 요건과 절차이며, 개별 사업장의 구체적인 사실관계(예: 특정 위반 이력, 시설 상태 등)에 따른 개별적 판단은 포함하지 않음.",PUBLISHED_ANSWER,published_answer,True,0.5000000000000001,False,,,True,,False,True,True,1,2,10,10,243551.941,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/74d2d0f8-5e51-429f-b590-ea5ef049fbdb
+58,qa_332_2hop_531,2,30f1d8f1-d869-49b7-9e75-b0e29870eac3,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,MAX_RETRIEVAL_ROUNDS_REACHED,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,2,3,1,0.3333333333333333,0.5,0.4,False,False,0.0,0.0,"검사는 법원의 허가를 얻어 공소장에 기재한 공소사실 또는 적용법조의 추가, 철회 또는 변경을 할 수 있으며, 이 경우 법원은 공소사실의 동일성을 해하지 아니하는 한도에서 허가하여야 합니다.[CT1]
+법원은 심리의 경과에 비추어 상당하다고 인정할 때에는 공소사실 또는 적용법조의 추가 또는 변경을 요구하여야 합니다.[CT2]
+전제: 본 답변은 후보 조문(Candidate Provisions)만을 근거로 작성된 벤치마크 진단용 답변입니다.
+한계: 확정된 판결의 기판력 또는 일사부재리 원칙에 대한 예외로서 경합범 처리 시 공소장 변경의 허용 여부에 관한 규정이 후보 조문에 포함되어 있지 않아, 해당 쟁점에 대한 법적 결론은 유보됩니다.
+한계: 본 답변은 공개 가능한(Publishable) 답변이 아니며, 정책 상태는 ABSTAIN으로 유지됩니다.",GENERATED,retrieved_candidates,True,0.14754098360655737,False,,,False,,False,False,,3,6,30,26,552021.403,True,1.0,True,1.0,True,0.0,False,0.5,False,1.0,True,/root/Legal Harness/records/runs/30f1d8f1-d869-49b7-9e75-b0e29870eac3
+59,qa_522_2hop_806,2,db54c457-0e9f-43e3-8a7b-a6756e84ef73,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T1,T2,all,2,2,2,1.0,1.0,1.0,True,True,0.19298245614035087,0.19298245614035087,"취소소송은 처분의 취소를 구할 법률상 이익이 있는 자가 제기할 수 있다.[CT1]
+갑은 을시청의 영업정지 처분으로 인해 법률상 이익이 침해되었다면 취소소송을 제기할 수 있다.[CT2]
+전제: 갑이 을시청의 영업정지 처분으로 인해 법률상 이익이 침해되었다는 사실은 확인되지 않았으므로, 이 답변에서는 가정된 전제로만 취급한다.
+한계: 영업정지 처분의 구체적 지속 기간(법정 상한 또는 처분 내용)을 규정하는 조항이 제공된 증거에 포함되어 있지 않아, 처분의 효력 종료 시점에 대한 결론을 유보한다.
+한계: 갑의 법률상 이익 침해 여부는 개별 사실관계에 따라 달라질 수 있으므로, 본 답변은 일반적인 법적 요건에 기반한 조건부 결론에 그친다.",PUBLISHED_ANSWER,published_answer,True,0.19298245614035087,False,,,True,,False,True,True,3,6,30,18,782177.291,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/db54c457-0e9f-43e3-8a7b-a6756e84ef73
+60,qa_644_2hop_973,2,67e672fe-10aa-4f0a-b2f3-02853d98e54b,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.40384615384615385,0.40384615384615385,"임대차 계약은 당사자 일방이 상대방에게 목적물을 사용, 수익하게 할 것을 약정하고 상대방이 이에 대하여 차임을 지급할 것을 약정함으로써 그 효력이 생긴다.[CT1]
+임대인은 목적물을 임차인에게 인도하고 계약존속중 그 사용, 수익에 필요한 상태를 유지하게 할 의무를 부담한다.[CT2]
+전제: 갑과 을 사이에 건물 임대와 차임 지급에 관한 합의가 유효하게 이루어졌다고 가정한다.
+한계: 본 답변은 제공된 민법 조항에 기반한 일반적 법적 해석이며, 구체적인 계약서 내용이나 사법부 판례에 따른 개별적 판단을 대체하지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.40384615384615385,False,,,True,,False,True,True,2,4,20,16,533622.447,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/67e672fe-10aa-4f0a-b2f3-02853d98e54b
+61,qa_63_2hop_248_rand,2,d9827664-ee48-4b75-9306-267a98897232,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,3,2,0.6666666666666666,1.0,0.8,False,True,0.29743589743589743,0.29743589743589743,"조세범 처벌법 제3조부터 제14조까지에 규정된 범칙행위의 공소시효는 7년이 지나면 완성됩니다. 다만, 제18조에 따른 행위자가 「특정범죄가중처벌 등에 관한 법률」 제8조의 적용을 받는 경우에는 제18조에 따른 법인에 대한 공소시효는 10년이 지나면 완성됩니다.[CT1]
+시효는 범죄행위의 종료한 때로부터 진행합니다.[CT2]
+법인의 대표자 등이 그 법인의 업무에 관하여 조세범 처벌법에서 규정하는 범칙행위를 하면, 행위자를 벌할 뿐만 아니라 그 법인에도 해당 조문의 벌금형을 과합니다. 다만, 법인이 그 위반행위를 방지하기 위하여 해당 업무에 관하여 상당한 주의와 감독을 게을리하지 아니한 경우에는 법인에 대한 벌금형 부과가 제외됩니다.[CT3]
+전제: 갑 주식회사의 대표 갑씨가 저지른 행위가 조세범 처벌법 제3조부터 제14조까지에 규정된 범칙행위에 해당한다고 가정합니다.
+전제: 갑 주식회사가 「특정범죄가중처벌 등에 관한 법률」 제8조의 적용을 받는 법인인지 여부는 사실관계에 따라 달라질 수 있으며, 본 답변은 해당 조항의 문언에 따른 법적 구조를 설명합니다.
+한계: 본 답변은 제공된 법령 조항에 기반한 일반적 법적 구조를 설명하며, 개별 사건의 구체적 사실관계(범행의 구체적 내용, 가중처벌 대상 여부, 주의와 감독의 구체적 이행 여부 등)에 대한 사실 인정이나 최종 법적 판단을 대체하지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.29743589743589743,False,,,True,,False,True,True,2,3,20,18,566588.758,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/d9827664-ee48-4b75-9306-267a98897232
+62,qa_129_2hop_497_rand,2,668cf8e2-b155-419d-b78b-804b055c0611,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.15135135135135136,0.15135135135135136,"「새마을금고법」에 따라 설립된 새마을금고가 「새마을금고법」 제28조제1항제1호의 업무에 직접 사용하기 위하여 취득하는 부동산에 대해서는 취득세가 2026년 12월 31일까지 면제됩니다.[CT1]
+「새마을금고법」에 따라 설립된 새마을금고가 「새마을금고법」 제28조제1항제2호부터 제4호까지의 업무에 직접 사용하기 위하여 취득하는 부동산에 대해서는 취득세가 2026년 12월 31일까지 면제됩니다.[CT2]
+「신용협동조합법」에 따라 설립된 신용협동조합이 「신용협동조합법」 제39조제1항제1호의 업무에 직접 사용하기 위하여 취득하는 부동산에 대해서는 취득세가 2026년 12월 31일까지 면제됩니다.[CT3]
+「신용협동조합법」에 따라 설립된 신용협동조합이 「신용협동조합법」 제39조제1항제2호 및 제4호의 업무에 직접 사용하기 위하여 취득하는 부동산에 대해서는 취득세가 2026년 12월 31일까지 면제됩니다.[CT4]
+전제: 갑마을금고가 「새마을금고법」에 따라 설립된 새마을금고이며, 을신용조합이 「신용협동조합법」에 따라 설립된 신용협동조합임을 전제로 합니다.
+전제: 두 기관이 취득하는 부동산이 해당 법에서 정한 '주요 업무'에 직접 사용하기 위한 것임을 전제로 합니다.
+한계: 본 답변은 취득세 면제에 관한 것입니다. 재산세 면제나 다른 지방세 감면은 포함되지 않습니다.
+한계: 면제 기간은 2026년 12월 31일까지이며, 이후의 세제 혜택은 별도 규정에 따릅니다.",PUBLISHED_ANSWER,published_answer,True,0.15135135135135136,False,,,True,,False,True,True,1,2,10,10,343593.097,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/668cf8e2-b155-419d-b78b-804b055c0611
+63,qa_180_2hop_689_rand,2,c9307189-0485-49d8-a397-adcc61f4a4a4,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.380952380952381,0.380952380952381,"갑이 받는 육아휴직수당 중 비과세되는 금액은 월 150만원입니다.[CT1]
+을이 해외 지사에서 근로를 제공하고 받는 보수 중 비과세되는 한도는 일반적 경우 월 100만원이며, 원양어업 선박, 국외등을 항행하는 선박 또는 국외등의 건설현장 등에서 근로를 제공하는 경우에는 월 500만원입니다.[CT2]
+전제: 을이 해외 지사에서 근로를 제공하는 것이 소득세법 시행령 제16조 제1항 제1호에서 규정하는 '국외에서 근로를 제공'에 해당한다고 가정합니다.
+한계: 을의 경우, 원양어업 선박, 국외등을 항행하는 선박 또는 국외등의 건설현장 등에서 근로를 제공하는지 여부에 따라 비과세 한도가 달라질 수 있습니다. 본 답변은 일반적 경우와 특정 경우의 한도를 모두 제시합니다.",PUBLISHED_ANSWER,published_answer,True,0.380952380952381,False,,,True,,False,True,True,2,4,20,19,449468.476,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/c9307189-0485-49d8-a397-adcc61f4a4a4
+64,qa_226_2hop_860_rand,2,ff79d4f2-cc1d-4e41-8cd8-4c2052774de2,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.3448275862068966,0.3448275862068966,"복구비 예치기간 연장을 신청하기 위해 필요한 서류는 복구비 예치기간 연장신청서, 복구비 예치재원의 조달계획서, 그리고 부득이한 사유를 증명할 수 있는 서류입니다.[CT1]
+연장신청이 승인될 경우, 관할청은 당초 통지한 예치기간의 범위 내에서 1회에 한하여 기간을 연장할 수 있습니다.[CT2]
+전제: 갑이 복구비를 예치하기 어려운 부득이한 사유가 존재한다고 가정합니다.
+한계: 본 답변은 산지관리법 시행규칙 제40조 제3항 및 제4항의 규정에 기반한 법적 요건과 절차에 관한 것입니다.",PUBLISHED_ANSWER,published_answer,True,0.3448275862068966,False,,,True,,False,True,True,1,2,10,10,229368.289,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/ff79d4f2-cc1d-4e41-8cd8-4c2052774de2
+65,qa_286_2hop_1091_rand,2,87978746-5599-4e0b-822d-00b5092c5666,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,4,2,0.5,1.0,0.6666666666666666,False,True,0.33644859813084116,0.33644859813084116,"납세지 관할 세무서장은 갑이 종합소득 과세표준확정신고를 한 경우, 「전자정부법」에 따른 행정정보의 공동이용을 통해 전산으로 주민등록표 등본을 확인해야 합니다.[CT1]
+전산 확인을 통해 배우자, 공제대상 부양가족, 공제대상 장애인 또는 공제대상 경로우대자에 해당하는지를 확인합니다.[CT2]
+갑이 전산 확인에 동의하지 않거나, 전산 확인으로 부양가족의 유무를 판단할 수 없는 경우에는 갑에게 주민등록표 등본 또는 가족관계등록부 증명서를 첨부하도록 해야 합니다.[CT3]
+갑이 법에 따라 중간예납기간의 종합소득금액을 신고해야 할 의무가 있음에도 불구하고 중간예납추계액신고서를 제출하지 않은 경우, 납세지 관할 세무서장은 소득세법 제80조를 준용하여 그 종합소득금액을 조사 결정할 수 있습니다.[CT4]
+세무서장은 신고를 하지 아니한 경우를 포함하여 신고 내용에 탈루 또는 오류가 있는 경우 중간예납세액을 경정하거나 결정할 수 있으며, 이 경우 경정하거나 결정할 세액은 중간예납추계액의 계산방법을 준용하여 산출한 금액으로 합니다.[CT5]
+전제: 갑이 소득세법 제65조 제5항에 따라 중간예납기간의 종합소득금액을 신고해야 할 의무가 있는 자로 간주합니다.
+한계: 본 답변은 제공된 법령 조항에 기반한 일반적 법적 절차와 처리 방법을 설명하며, 갑의 구체적인 사실관계(예: 전산 확인 동의 여부, 부양가족 변동 여부 등)에 따른 개별적 행정 처분 결과는 아닙니다.",PUBLISHED_ANSWER,published_answer,True,0.33644859813084116,False,,,True,,False,True,True,2,4,20,19,640919.164,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/87978746-5599-4e0b-822d-00b5092c5666
+66,qa_144_3hop_410_rand2,3,b3fe86d3-e764-4b8d-9fa3-d247591e6aab,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,210816.603,False,,,,,,,,,,,/root/Legal Harness/records/runs/b3fe86d3-e764-4b8d-9fa3-d247591e6aab
+67,qa_131_3hop_237,3,92e92070-e0f2-4dd9-8ccf-6e555087fd99,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,211464.683,False,,,,,,,,,,,/root/Legal Harness/records/runs/92e92070-e0f2-4dd9-8ccf-6e555087fd99
+68,qa_441_3hop_696,3,78ff471f-d9dd-48e0-a6cb-cdf104d33b2d,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,259034.382,False,,,,,,,,,,,/root/Legal Harness/records/runs/78ff471f-d9dd-48e0-a6cb-cdf104d33b2d
+69,qa_26_1hop_39,1,ada719e9-bb91-468a-9397-4b11bb6f4b78,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.2121212121212121,0.2121212121212121,"폭행 또는 협박으로 사람에 대하여 추행을 한 자는 10년 이하의 징역 또는 1천500만원 이하의 벌금에 처한다.[CT1]
+전제: 갑의 행위가 형법상 '폭행' 또는 '협박'에 해당하며, 을의 의사에 반하는 '추행'에 해당한다고 가정한다.
+한계: 본 답변은 제공된 형법 제298조 조문에만 근거하며, 가중처벌 사유(예: 친족관계, 특수강제추행 등)나 양형 기준에 대한 구체적인 판단은 포함하지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.2121212121212121,False,,,True,,False,True,True,1,1,10,10,145042.884,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/ada719e9-bb91-468a-9397-4b11bb6f4b78
+70,qa_102_1hop_173,1,eebed460-504a-42fe-8247-009f465b39b8,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.11650485436893204,0.11650485436893204,"공무원에 대하여 허위신고를 하여 공정증서원본 또는 이와 동일한 전자기록등 특수매체기록에 부실의 사실을 기재 또는 기록하게 한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.[CT1]
+갑은 공무원에게 을의 채무가 존재한다고 허위신고하여 공정증서원본에 부실의 사실이 기재되도록 한 행위로 인해 형법 제228조 제1항에 따라 5년 이하의 징역 또는 1천만원 이하의 벌금에 처해진다.[CT2]
+전제: 갑이 제출한 공정증서 작성 신청서가 형법 제228조 제1항에서 규정하는 '공정증서원본'에 해당한다고 가정한다.
+전제: 갑의 허위신고와 공무원의 부실사실 기재 사이에 인과관계가 성립한다고 가정한다.
+한계: 본 답변은 제공된 형법 제228조 제1항의 문언에 기반한 법적 해석이며, 실제 사건의 구체적 증거 관계나 양형 과정은 고려하지 않았다.",PUBLISHED_ANSWER,published_answer,True,0.11650485436893204,False,,,True,,False,True,True,1,2,10,10,438598.736,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/eebed460-504a-42fe-8247-009f465b39b8
+71,qa_3_2hop_6,2,4b1e1370-fd80-480c-b489-796e79b96fbd,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,2,2,1,0.5,0.5,0.5,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,2,4,20,19,431250.447,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/4b1e1370-fd80-480c-b489-796e79b96fbd
+72,qa_116_2hop_208,2,2b9d26d6-e6ea-4a41-98c4-a7cb27d047ed,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,3,2,0.6666666666666666,1.0,0.8,False,True,0.40506329113924056,0.40506329113924056,"헌법재판소는 심판사건을 접수한 날부터 180일 이내에 종국결정의 선고를 하여야 한다.[CT1]
+정당의 해산을 명하는 결정이 선고된 때에는 그 정당은 해산된다.[CT2]
+헌법재판소의 해산결정의 통지가 있는 때에는 당해 선거관리위원회는 그 정당의 등록을 말소하고 지체 없이 그 뜻을 공고하여야 한다.[CT3]
+한계: 재판관의 궐위로 7명의 출석이 불가능한 경우, 그 궐위된 기간은 심판기간에 산입되지 않으므로 실제 종국결정 시점이 180일을 초과할 수 있다.",PUBLISHED_ANSWER,published_answer,True,0.40506329113924056,False,,,True,,False,True,True,1,2,10,10,217846.347,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/2b9d26d6-e6ea-4a41-98c4-a7cb27d047ed
+73,qa_202_2hop_350,2,64e9d2f9-c20f-484b-881e-1f53c138ce26,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,2,2,1,0.5,0.5,0.5,False,False,0.12903225806451613,0.12903225806451613,"사람의 현존하는 기차를 전복, 매몰, 추락 또는 파괴한 자는 무기 또는 3년 이상의 징역에 처한다.[CT1]
+궤도, 등대 또는 표지를 손괴하거나 기타 방법으로 기차, 전차, 자동차, 선박 또는 항공기의 교통을 방해한 자는 1년 이상의 유기징역에 처한다.[CT2]
+전제: 갑이 파손한 철로가 기차가 지나가는 현존하는 궤도(철로)에 해당한다고 가정한다.
+전제: 갑의 철로 파손 행위가 기차 전복의 직접적인 원인이 되었다고 가정한다.
+한계: 본 답변은 제공된 형법 조항에 기반한 일반적 법적 해석이며, 구체적인 사건의 양형이나 다른 법률적 쟁점(예: 과실 여부, 고의의 정도 등)에 대한 판단은 포함하지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.12903225806451613,False,,,True,,True,True,True,1,1,10,10,200888.531,True,1.0,True,1.0,True,0.5,False,1.0,True,1.0,True,/root/Legal Harness/records/runs/64e9d2f9-c20f-484b-881e-1f53c138ce26
+74,qa_339_2hop_536,2,0fe377ef-55e5-4d9e-ac25-6ad1d9b184e4,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,MAX_RETRIEVAL_ROUNDS_REACHED,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,2,4,2,0.5,1.0,0.6666666666666666,False,True,0.0,0.0,"검사가 사법경찰관이 신청한 영장을 정당한 이유 없이 판사에게 청구하지 아니한 경우 사법경찰관은 그 검사 소속의 지방검찰청 소재지를 관할하는 고등검찰청에 영장 청구 여부에 대한 심의를 신청할 수 있다.[CT1]
+제1항에 관한 사항을 심의하기 위하여 각 고등검찰청에 영장심의위원회를 둔다.[CT2]
+검사 또는 사법경찰관은 피의자를 신문하는 경우 피의자가 신체적 또는 정신적 장애로 사물을 변별하거나 의사를 결정·전달할 능력이 미약한 때에는 직권 또는 피의자·법정대리인의 신청에 따라 피의자와 신뢰관계에 있는 자를 동석하게 할 수 있다.[CT3][CT4]
+전제: 을이 형사소송법 제244조의5 제1호에 해당하는 '신체적 또는 정신적 장애로 사물을 변별하거나 의사를 결정·전달할 능력이 미약한' 상태에 있다고 가정합니다.
+한계: 본 답변은 비공개 벤치마크 후보(benchmark candidate)이며, 공개 가능한 답변으로 승인되지 않았습니다.
+한계: 제시된 후보 조문에는 사법경찰관의 법원 직접 영장 청구 권한에 대한 규정이 포함되어 있지 않아, 해당 구제 수단에 대한 법적 근거는 확인되지 않았습니다.",GENERATED,retrieved_candidates,True,0.29629629629629634,False,,,False,,False,False,,3,6,30,21,784447.362,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/0fe377ef-55e5-4d9e-ac25-6ad1d9b184e4
+75,qa_409_2hop_628,2,39e191f4-6623-41cb-abcc-3cc9ca610c24,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,2,4,0,0.0,0.0,0.0,False,False,0.0,0.0,"상표등록거절결정을 받은 자는 결정 등본 송달일로부터 3개월 이내에 지정상품 또는 상표를 보정하여 재심사를 청구할 수 있으나, 이미 재심사에 따른 거절결정이 있거나 제116조에 따른 심판청구가 있는 경우에는 재심사 청구가 제한됩니다.[CT1]
+단체표장·증명표장 또는 업무표장에 관하여는 이 법에서 특별히 규정한 것을 제외하고는 상표에 관한 규정이 적용됩니다.[CT2]
+전제: 질문에서 언급된 '심판 재청구'가 상표법상 '재심사' 절차와 동일한 개념으로 해석된다는 가정입니다.
+한계: 제116조에 따른 거절결정에 대한 심판의 재청구 요건에 관한 구체적 조항이 후보 조항에 포함되어 있지 않아, 해당 부분의 법적 근거가 불완전합니다.
+한계: 상표의 일반적 정의(제2조제1항) 및 기타 예외 상황(지리적 표시 등)에 관한 조항이 후보 조항에 포함되어 있지 않아, 상표 정의 관련 예외의 범위가 제한적으로 답변되었습니다.",GENERATED,retrieved_candidates,True,0.09210526315789473,False,,,False,,False,False,,3,6,30,12,833432.559,True,0.0,False,0.0,False,0.0,False,0.0,False,0.0,False,/root/Legal Harness/records/runs/39e191f4-6623-41cb-abcc-3cc9ca610c24
+76,qa_653_2hop_987,2,14e87e62-7a4b-4666-b794-55285bdaf410,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,MAX_RETRIEVAL_ROUNDS_REACHED,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,2,2,1,0.5,0.5,0.5,False,False,0.0,0.0,"민법 제168조에 따르면, 소멸시효는 압류 또는 가압류, 가처분 등의 사유로 중단됩니다[CT1]
+갑이 을에 대한 채권의 소멸시효를 중단하기 위해 취할 수 있는 조치 중 하나는 가압류 신청입니다[CT2]
+전제: 갑과 을 사이의 채권이 민법상 소멸시효에 적용되는 일반 민사채권임을 전제로 함
+한계: 본 답변은 비공개 벤치마크 진단용 후보이며, 공개 가능한 답변이 아님
+한계: 민법 제168조의 전체 중단 사유 목록이 후보 조문에 포함되어 있지 않아, 가압류 외 다른 조치에 대한 포괄적 답변은 제한됨",GENERATED,retrieved_candidates,True,0.11881188118811882,False,,,False,,False,False,,3,5,30,23,571359.693,True,0.5,False,0.5,False,0.5,False,0.5,False,0.5,False,/root/Legal Harness/records/runs/14e87e62-7a4b-4666-b794-55285bdaf410
+77,qa_130_2hop_501_rand,2,c0316faf-a95e-4750-9c50-8009a0f708a3,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T1,T2,all,2,3,2,0.6666666666666666,1.0,0.8,False,True,0.2711864406779661,0.2711864406779661,"사업주는 근로자가 제17조에 따른 확인의 청구를 한 것을 이유로 그 근로자에게 해고나 그 밖의 불이익한 처우를 하여서는 아니 된다.[CT1]
+고용노동부장관은 이 법에 따른 고용안정ㆍ직업능력개발 사업의 지원ㆍ위탁 및 실업급여ㆍ육아휴직 급여 또는 출산전후휴가 급여등의 지원과 관련한 부정행위를 신고한 자에게 예산의 범위에서 포상금을 지급할 수 있다.[CT2]
+전제: 갑이 을 회사에서 근로자로서 고용보험법 제17조에 따른 확인의 청구를 한 사실은 질문의 배경 시나리오에 근거하여 가정한다.
+한계: 고용보험 부정행위 신고자에 대한 불이익 처우 금지 또는 신고자 보호에 관한 구체적 법적 규정은 현재 제공된 조항에 포함되어 있지 않아, 해당 부분의 법적 보호 범위는 불확실하다.",PUBLISHED_ANSWER,published_answer,True,0.2711864406779661,False,,,True,,False,True,True,3,6,30,23,795298.584,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/c0316faf-a95e-4750-9c50-8009a0f708a3
+78,qa_185_2hop_707_rand,2,9483ee21-c1fc-4290-b01a-a0068b157b04,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.32876712328767127,0.32876712328767127,"대통령선거에서 당선의 효력에 이의가 있는 후보자는 당선인결정일부터 30일 이내에 대법원에 소를 제기할 수 있습니다.[CT1]
+선거에 관한 소송은 수소법원이 소가 제기된 날부터 180일 이내에 처리하여야 합니다.[CT2]
+전제: 질문에서 '을'이 대통령선거 후보자임을 전제로 합니다.
+한계: 본 답변은 공직선거법 제223조 및 제225조에 근거한 일반적 기한을 설명하며, 개별 사건의 구체적 절차적 요건이나 예외적 상황은 다루지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.32876712328767127,False,,,True,,False,True,True,1,2,10,10,184326.196,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/9483ee21-c1fc-4290-b01a-a0068b157b04
+79,qa_233_2hop_888_rand,2,044bc548-443c-4a97-9e48-cfec047549f5,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,4,2,0.5,1.0,0.6666666666666666,False,True,0.34285714285714286,0.34285714285714286,"재심에서는 원판결의 형보다 무거운 형을 선고할 수 없습니다.[CT1][CT2]
+재심개시의 결정을 할 때에는 결정으로 형의 집행을 정지할 수 있습니다.[CT3][CT4]
+전제: 갑의 사건이 군사법원의 관할에 속하며, 군사법원법이 적용된다고 가정합니다.
+한계: 형 집행 정지는 '정지할 수 있다'는 재량적 규정으로, 재심개시 결정이 내려졌다고 해서 형 집행이 자동으로 정지되는 것은 아닙니다.",PUBLISHED_ANSWER,published_answer,True,0.34285714285714286,False,,,True,,False,True,True,1,2,10,10,208680.624,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/044bc548-443c-4a97-9e48-cfec047549f5
+80,qa_41_3hop_66,3,a068b56e-97ea-4f28-9de0-391213f3fbee,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,217677.762,False,,,,,,,,,,,/root/Legal Harness/records/runs/a068b56e-97ea-4f28-9de0-391213f3fbee
+81,qa_304_3hop_869_rand2,3,75e10a37-5a8c-41dc-9670-063f237545f7,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2;T3,,all,3,5,3,0.6,1.0,0.7499999999999999,False,True,0.23293172690763053,0.23293172690763053,"환매조건부 매매에 따른 채권 또는 증권의 매매차익은 금융회사 등이 환매기간에 따른 사전약정이율을 적용하여 환매수 또는 환매도하는 조건으로 매매하는 경우를 의미하며, 이는 시장가격이 아닌 사전에 정하여진 이율에 의하여 결정된 가격으로 거래되는 것을 요건으로 합니다.[CT1][CT2][CT3]
+거주자가 환매기간에 따른 사전약정이율을 적용하여 환매수하는 조건으로 채권 또는 채권에 준하는 증권을 매도하고 환매수하는 날까지 해당 채권등에서 발생하는 이자에 상당하는 금액을 매수인으로부터 지급받는 경우, 해당 금액은 이자소득에 포함됩니다.[CT4]
+금융회사가 이자소득이 발생하는 채권(이자부상품)에 파생상품이 결합된 상품을 운용할 경우, 해당 파생상품의 거래 또는 행위로부터 발생하는 이익은 이자소득으로 과세됩니다.[CT5][CT6]
+전제: 질문에서 언급된 '금융회사'가 소득세법 시행령 제24조에서 정의하는 '금융회사 등'에 해당한다고 가정합니다.
+전제: 환매조건부 매매 거래가 '환매기간에 따른 사전약정이율'을 적용하여 이루어졌다고 가정합니다.
+한계: 본 답변은 제공된 법령 조항에 기반한 일반적 법적 해석이며, 개별 거래의 구체적 사실관계(예: 실제 적용 이율, 계약 형태 등)에 따라 소득 분류가 달라질 수 있습니다.
+한계: 파생상품 결합 상품의 경우, 시행령 제26조 제5항에서 정한 세부 요건(실질상 하나의 상품 운영, 이익 확정 등)을 모두 충족해야만 이자소득으로 과세되는지 여부가 최종 결정됩니다.",PUBLISHED_ANSWER,published_answer,True,0.23293172690763053,False,,,True,,False,True,True,1,2,10,10,294420.908,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/75e10a37-5a8c-41dc-9670-063f237545f7
+82,qa_148_3hop_273,3,b07541c5-09ca-48d4-b1e1-bc55362cde13,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,3,2,2,1.0,0.6666666666666666,0.8,False,False,0.0,0.0,"프로축구 선수 갑은 국민체육진흥법 제14조의3제1항을 위반하여 부정한 행위를 한 전문체육선수등에 해당하며, 이는 국민체육진흥법 제47조 벌칙 1호에 따라 형사처벌 대상이 됩니다.[CT1]
+친구 을은 국민체육진흥법 제14조의3에 따라 재물이나 재산상의 이익을 약속한 자에 해당하며, 이는 국민체육진흥법 제48조 벌칙 1호에 따라 형사처벌 대상이 됩니다.[CT2]
+전제: 갑이 초·중등교육법 제2조에 따른 학교의 학생선수가 아닌 전문체육선수등으로 간주됨
+전제: 을의 행위가 국민체육진흥법 제14조의3의 적용 대상인 재물 또는 재산상의 이익의 약속에 해당한다고 간주됨
+한계: 제공된 후보 조항(C001, C010) 텍스트에 구체적인 형량(징역 또는 벌금의 범위)이 포함되어 있지 않아, 정확한 처벌 수위는 확인되지 않음
+한계: 본 답변은 비공개 벤치마크 후보 진단용이며, 공개 가능한 답변이 아님",GENERATED,retrieved_candidates,True,0.22818791946308728,False,,,False,,False,False,,3,6,30,26,616478.297,True,1.0,True,1.0,True,0.6666666666666666,False,0.6666666666666666,False,1.0,True,/root/Legal Harness/records/runs/b07541c5-09ca-48d4-b1e1-bc55362cde13
+83,qa_460_3hop_730,3,6cee1abc-b7f1-4891-b49c-e32e827c6bb0,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,3,3,1,0.3333333333333333,0.3333333333333333,0.3333333333333333,False,False,0.20765027322404372,0.20765027322404372,"조정은 재판상의 화해와 동일한 효력이 있다.[CT1]
+당사자는 조서의 정본이 송달된 날부터 2주일 이내에 이의를 신청할 수 있다.[CT2]
+소송능력, 법정대리권 또는 소송행위에 필요한 권한의 수여에 흠이 있는 사람이 소송행위를 한 뒤에 보정된 당사자나 법정대리인이 이를 추인한 경우에는, 그 소송행위는 이를 한 때에 소급하여 효력이 생긴다.[CT3]
+전제: 을이 조정 결정의 정본 송달일로부터 2주 이내의 이의신청 기한 내에 이의를 신청하지 않은 것으로 가정한다.
+전제: 병의 소송능력 관련 흠결이 민사소송법 제60조에서 규정한 '보정'에 해당하는 절차적 요건을 충족하여 적법하게 보정된 것으로 가정한다.
+한계: 본 답변은 제공된 민사조정법 및 민사소송법 조문에 근거한 일반적 법적 해석이며, 개별 사건의 구체적 사실관계(예: 송달 시점의 정확성, 보정 절차의 적법성 등)에 따라 결론이 달라질 수 있다.",PUBLISHED_ANSWER,published_answer,True,0.20765027322404372,False,,,True,,True,True,True,3,6,30,25,668916.782,True,0.3333333333333333,False,0.3333333333333333,False,0.3333333333333333,False,0.3333333333333333,False,0.3333333333333333,False,/root/Legal Harness/records/runs/6cee1abc-b7f1-4891-b49c-e32e827c6bb0
+84,qa_68_1hop_100,1,c93cb6b7-4018-464d-bbea-a37e42126b09,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,2,1,0.5,1.0,0.6666666666666666,False,True,0.07947019867549669,0.07947019867549669,"누구든지 선거일 전 120일부터 선거일까지 선거에 영향을 미치게 하기 위하여 법의 규정에 의하지 아니하고 정당 또는 후보자를 지지·추천하거나 반대하는 내용이 포함된 문서·도화 등을 배부·첩부·살포·상영 또는 게시할 수 없습니다.[CT1]
+제93조 제1항의 규정에 위반하여 문서·도화 등을 배부·첩부·살포·게시·상영하거나 하게 한 자는 2년 이하의 징역 또는 400만원 이하의 벌금에 처합니다.[CT2]
+전제: 갑과 을의 행위가 '선거에 영향을 미치게 하기 위한' 목적을 가지고 있었음을 전제로 합니다.
+전제: 해당 문서가 '정당 또는 후보자를 지지·추천하거나 반대하는 내용' 또는 '정당의 명칭 또는 후보자의 성명을 나타내는' 내용을 포함하고 있음을 전제로 합니다.
+전제: 해당 행위가 '선거일 전 120일부터 선거일까지'의 기간 내에 이루어졌음을 전제로 합니다.
+한계: 본 답변은 제공된 공직선거법 제93조 제1항 및 제255조 제2항 제5호의 문언에 기반한 일반적 법적 해석이며, 개별 사건의 구체적 사실관계(예: 문서의 구체적 내용, 배포 시점, 주체별 역할 등)에 따른 최종 법적 판단은 사법부의 재량에 따릅니다.",PUBLISHED_ANSWER,published_answer,True,0.07947019867549669,False,,,True,,False,True,True,1,2,10,10,249696.883,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/c93cb6b7-4018-464d-bbea-a37e42126b09
+85,qa_104_1hop_180,1,77b82354-6b0f-4c77-91a6-6fe3006c1a54,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,1,0,0,0.0,0.0,0.0,False,False,0.0,0.0,"갑의 행위는 형법 제20장 '문서에 관한 죄'에 해당할 수 있습니다.[CT1]
+제공된 후보 조문에는 사문서손괴죄(형법 제317조)의 구체적인 구성요건 및 법정형이 포함되어 있지 않아, 갑의 행위에 대한 정확한 처벌 내용을 확인하지 못했습니다.[CT2]
+전제: 갑이 파손한 문서는 형법상 '문서'에 해당한다고 가정합니다.
+한계: 본 답변은 벤치마크 진단용 후보이며, 공개 가능한 공식 답변이 아닙니다.
+한계: 사문서손괴죄(형법 제317조)의 정확한 구성요건과 법정형은 제공된 후보 조문에 포함되어 있지 않아 확인이 불가능합니다.",GENERATED,retrieved_candidates,True,0.06451612903225806,False,,,False,,False,False,,2,4,20,17,452687.216,True,1.0,True,1.0,True,0.0,False,1.0,True,1.0,True,/root/Legal Harness/records/runs/77b82354-6b0f-4c77-91a6-6fe3006c1a54
+86,qa_150_1hop_277,1,ad5bac10-4125-4656-932f-1d147c192bfc,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.26373626373626374,0.26373626373626374,"형법 제55조 제1항 제2호에 따르면, 무기징역 또는 무기금고를 법률상 감경할 때에는 10년 이상 50년 이하의 징역 또는 금고로 한다.[CT1]
+갑의 무기징역에 대해 법률상 감경 사유가 인정되어 감경하는 경우, 을은 갑에게 10년 이상 50년 이하의 징역형을 선고할 수 있다.[CT2]
+전제: 갑의 무기징역에 대해 법률상 감경 사유가 인정된다는 전제
+한계: 본 답변은 형법 제55조 제1항 제2호에 명시된 법률상 감경의 형량 제한 범위만을 다루며, 실제 선고 형량은 사건의 구체적 정황에 따라 해당 범위 내에서 결정될 수 있음",PUBLISHED_ANSWER,published_answer,True,0.26373626373626374,False,,,True,,False,True,True,1,1,10,10,129544.209,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/ad5bac10-4125-4656-932f-1d147c192bfc
+87,qa_5_2hop_8,2,b6597437-f603-4ded-8ed1-3e1f37c29379,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,2,3,2,0.6666666666666666,1.0,0.8,False,True,0.2948717948717949,0.2948717948717949,"국가나 지방자치단체는 공무원이 직무를 집행하면서 고의 또는 과실로 법령을 위반하여 타인에게 손해를 입힌 때에는 그 손해를 배상할 책임이 있다.[CT1]
+공무원의 직무상 불법행위로 손해를 받은 국민은 법률이 정하는 바에 의하여 국가 또는 공공단체에 정당한 배상을 청구할 수 있으며, 이 경우 공무원 자신의 책임은 면제되지 아니한다.[CT2]
+고의 또는 과실로 인한 위법행위로 타인에게 손해를 가한 자는 그 손해를 배상할 책임이 있다.[CT3]
+전제: 갑이 시청 공무원으로서 도로 공사 감독이라는 직무 수행 중 사고를 발생시켰다고 가정합니다.
+전제: 을의 신호 위반 및 충돌 사고가 고의 또는 과실로 인한 위법행위에 해당한다고 가정합니다.
+한계: 본 답변은 제공된 조문(국가배상법 제2조, 헌법 제29조, 민법 제750조)에 근거한 법적 원칙 설명이며, 구체적인 손해액 산정, 면책 사유 존재 여부, 또는 형사적 책임에 대한 판단은 포함하지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.2948717948717949,False,,,True,,False,True,True,2,3,20,19,432932.496,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/b6597437-f603-4ded-8ed1-3e1f37c29379
+88,qa_122_2hop_219,2,cf75aa93-d2f3-479b-b3d2-e81347033cc8,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.18518518518518517,0.18518518518518517,"을의 행위는 형법 제225조에 따른 공문서위조죄에 해당하며, 10년 이하의 징역에 처해집니다.[CT1]
+갑의 행위는 형법 제229조에 따른 위조공문서행사죄에 해당하며, 제225조에 정한 형(10년 이하의 징역)에 처해집니다.[CT2]
+전제: 을이 위조한 문서가 형법상 '공무원 또는 공무소의 문서'에 해당한다고 가정합니다.
+전제: 갑이 행사한 문서가 형법 제225조에 의해 만들어진 문서에 해당한다고 가정합니다.
+한계: 본 답변은 제공된 형법 조항에 기반한 법적 구성요건 및 법정형에 대한 설명이며, 실제 사건의 구체적 양형이나 기타 형사책임(예: 공범 여부 등)에 대한 판단을 포함하지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.18518518518518517,False,,,True,,False,True,True,1,2,10,10,273040.15,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/cf75aa93-d2f3-479b-b3d2-e81347033cc8
+89,qa_340_2hop_539,2,874063ed-4b48-441b-8ae5-efe7fbed7b24,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,5,2,0.4,1.0,0.5714285714285715,False,True,0.22727272727272727,0.22727272727272727,"귀속재산의 임차인 또는 관리인은 정부의 지시하에 재산을 보존하며, 정부의 승인 없이 그 재산의 이동, 전대 또는 처분을 할 수 없습니다.[CT1]
+갑은 귀속재산의 전대나 용도변경 등 처분 행위를 정부 승인 없이 수행할 수 없습니다.[CT2]
+귀속재산의 관리운영에 관하여 불법처분, 고의 파괴 또는 고의 훼손, 허위보고 등의 사실이 있는 자와 그 가족은 귀속재산의 임대차 또는 관리를 받을 수 없습니다.[CT3]
+이는 귀속재산의 매수인 자격 제한 규정을 임대차 및 관리 영역으로 확장하여 적용한 것입니다.[CT4]
+을과 같이 과거 법률적 문제로 신뢰를 잃은 상태에 있는 자가 귀속재산의 임대차 또는 관리를 받을 수 없는 이유는, 귀속재산처리법 제9조 각 호의 1에 해당하는 자로서 임대차 또는 관리 대상에서 제외되기 때문입니다.[CT5]
+전제: 을이 귀속재산의 관리운영에 관하여 불법처분, 고의 파괴 또는 고의 훼손, 허위보고 등의 사실이 있는 자 또는 그 가족에 해당한다고 가정합니다.
+한계: 본 답변은 제공된 귀속재산처리법 조항에 기반한 법적 규칙과 적용에 한정되며, 개별 사건의 사실관계에 대한 최종 법적 판단을 대체하지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.22727272727272727,False,,,True,,False,True,True,1,2,10,10,272509.799,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/874063ed-4b48-441b-8ae5-efe7fbed7b24
+90,qa_421_2hop_650,2,df38a634-d8aa-446e-9470-0554289e31d6,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T1,T2,all,2,1,1,1.0,0.5,0.6666666666666666,False,False,0.23809523809523808,0.23809523809523808,"형사사건에서 상고인 또는 변호인은 전조의 통지를 받은 날로부터 20일 이내에 상고이유서를 상고법원에 제출하여야 합니다.[CT1]
+전제: 질문에 언급된 '전조의 통지'가 상고이유서 제출 기한의 기산점임을 전제로 합니다.
+한계: 상고이유서 제출 기한 연장의 법적 근거, 사유, 및 절차에 대한 증거가 부족하여(T2), 해당 부분은 답변에서 제외되었습니다.",PUBLISHED_ANSWER,published_answer,True,0.23809523809523808,False,,,True,,True,True,True,3,7,30,28,649751.823,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/df38a634-d8aa-446e-9470-0554289e31d6
+91,qa_0_2hop_1_rand,2,fbd8b5de-a349-42d5-8c68-d9d9d40468f5,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.45652173913043476,0.45652173913043476,"산업통상자원부장관은 제17조의3에 따른 공제조합의 설립인가에 대하여 2015년 1월 1일을 기준으로 3년마다(매 3년이 되는 해의 1월 1일 전까지를 말한다) 그 타당성을 검토하여 개선 등의 조치를 해야 한다.[CT1]
+산업통상자원부장관은 제23조제1항 및 제5항에 따른 석유 수입·판매 부과금의 징수 대상에 대하여 2015년 1월 1일을 기준으로 2년마다(매 2년이 되는 해의 1월 1일 전까지를 말한다) 그 타당성을 검토하여 개선 등의 조치를 하여야 한다.[CT2]",PUBLISHED_ANSWER,published_answer,True,0.45652173913043476,False,,,True,,False,True,True,1,2,10,10,242519.58,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/fbd8b5de-a349-42d5-8c68-d9d9d40468f5
+92,qa_67_2hop_261_rand,2,bac7fdd5-1009-410b-b45c-0d47ddf1b2b8,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,3,4,2,0.5,0.6666666666666666,0.5714285714285715,False,False,0.3316582914572865,0.3316582914572865,"자본시장과 금융투자업에 관한 법률 제193조 제2항에 따라, 투자신탁을 설정한 집합투자업자는 투자신탁을 합병하고자 하는 경우 다음 각 호의 사항을 기재한 합병계획서를 작성하여 합병하는 각 투자신탁의 수익자총회의 결의를 거쳐야 합니다. 1. 투자신탁의 합병으로 인하여 존속하는 투자신탁의 증가하는 신탁원본의 가액 및 수익증권의 좌수 2. 투자신탁의 합병으로 인하여 소멸하는 투자신탁의 수익자에게 발행하는 수익증권의 배정에 관한 사항 3. 투자신탁의 합병으로 인하여 소멸하는 투자신탁의 수익자에게 현금을 지급하는 경우 그 내용 4. 합병하는 각 투자신탁의 수익자총회의 회일 5. 합병을 할 날 6. 투자신탁의 합병으로 인하여 존속하는 투자신탁의 신탁계약을 변경하는 경우 그 내용 7. 그 밖에 대통령령으로 정하는 사항[CT1]
+자본시장과 금융투자업에 관한 법률 제193조 제6항에 따라, 투자신탁의 합병은 존속하는 투자신탁의 집합투자업자가 제5항에 따라 금융위원회에 보고를 한 때에 그 효력이 발생합니다. 이 경우 소멸하는 투자신탁은 해지된 것으로 봅니다.[CT2]
+전제: 갑 자산운용회사가 자본시장과 금융투자업에 관한 법률의 적용을 받는 집합투자업자임을 전제로 합니다.
+한계: 본 답변은 자본시장과 금융투자업에 관한 법률 제193조에 근거하여 작성되었습니다. 간접투자자산 운용업법 등 다른 법률의 적용 여부는 확인되지 않았습니다.",PUBLISHED_ANSWER,published_answer,True,0.3316582914572865,False,,,True,,True,True,True,1,2,10,10,238083.586,True,1.0,True,1.0,True,0.6666666666666666,False,0.6666666666666666,False,1.0,True,/root/Legal Harness/records/runs/bac7fdd5-1009-410b-b45c-0d47ddf1b2b8
+93,qa_132_2hop_507_rand,2,cb4b60a1-fcb8-49c4-869b-40eb9e9b1229,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T2,T1,all,2,3,2,0.6666666666666666,1.0,0.8,False,True,0.3291139240506329,0.3291139240506329,"농업생산기반 정비사업 시행자는 제26조제1항에 따른 인가를 받은 때에는 지체 없이 해당 환지 처분과 관련된 토지 및 건물의 등기를 촉탁하여야 한다.[CT1]
+전제: 갑이 '농업생산기반 정비사업 시행자'에 해당한다고 가정합니다.
+한계: 환지 분쟁 조정 기구(환지심의위원회)의 구체적인 구성 요건(인원, 자격 등)은 대통령령으로 정해지며, 현재 제공된 조항에는 그 상세 내용이 포함되어 있지 않아 T1에 대한 답변이 보류됩니다.",PUBLISHED_ANSWER,published_answer,True,0.3291139240506329,False,,,True,,False,True,True,3,5,30,20,607499.631,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/cb4b60a1-fcb8-49c4-869b-40eb9e9b1229
+94,qa_193_2hop_739_rand,2,d51f2ec2-83ff-40a6-8494-600f91209b93,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T1,T2,all,2,3,1,0.3333333333333333,0.5,0.4,False,False,0.16129032258064516,0.16129032258064516,"도로교통법 제160조에 따른 과태료는 과태료 납부고지서를 받은 날부터 60일 이내에 납부해야 합니다.[CT1]
+천재지변이나 그 밖의 부득이한 사유로 과태료를 낼 수 없을 때에는 그 사유가 없어진 날부터 5일 이내에 납부해야 합니다.[CT2]
+전제: 질문에서 언급된 '과태료'가 도로교통법 제160조에 따른 과태료임을 전제로 합니다.
+한계: 과태료 미납 시 취해질 수 있는 법적 조치(T2)에 대한 근거가 불완전합니다. 제공된 조항(질서위반행위규제법 제24조)은 가산금 및 중가산금 부과만을 규정하고 있어, 도로교통법상 과태료 미납 시의 압류, 형사처벌 등 포괄적 법적 조치를 직접적으로 뒷받침하지 않습니다. 따라서 미납 시의 모든 법적 조치에 대한 결론은 유보됩니다.",PUBLISHED_ANSWER,published_answer,True,0.16129032258064516,False,,,True,,True,True,True,3,6,30,25,562381.631,True,1.0,True,1.0,True,0.5,False,1.0,True,1.0,True,/root/Legal Harness/records/runs/d51f2ec2-83ff-40a6-8494-600f91209b93
+95,qa_234_2hop_892_rand,2,d45af2e2-de33-4d5f-aea2-2989f908947f,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,conditional,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.3255813953488372,0.3255813953488372,"소장은 수용자가 외부의료시설에서 진료받으면 그 사실을 그 가족(가족이 없는 경우에는 수용자가 지정하는 사람)에게 지체 없이 알려야 한다. 다만, 수용자가 알리는 것을 원하지 아니하면 그러하지 아니하다.[CT1]
+소장은 수용자가 자신의 고의 또는 중대한 과실로 부상 등이 발생하여 외부의료시설에서 진료를 받은 경우에는 그 진료비의 전부 또는 일부를 그 수용자에게 부담하게 할 수 있다.[CT2]
+전제: 갑이 구치소 수용자이며, 외부의료시설에서 진료를 받은 사실은 전제한다.
+한계: 질문에서 언급된 '부주의'가 형의 집행 및 수용자의 처우에 관한 법률 제37조 제5항에서 요구하는 '중대한 과실'에 해당하는지 여부는 사실관계 확인이 필요하며, 이에 따라 진료비 부담 여부가 결정된다.",PUBLISHED_ANSWER,published_answer,True,0.3255813953488372,False,,,True,,False,True,True,1,2,10,10,318856.821,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/d45af2e2-de33-4d5f-aea2-2989f908947f
+96,qa_291_2hop_1111_rand,2,33e57ef4-164c-497f-a98d-50f0c600484f,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.10309278350515463,0.10309278350515463,"누구든지 선거운동을 위하여 선거구민에 대하여 서명이나 날인을 받을 수 없다.[CT1]
+누구든지 선거운동을 위하여 방송을 경영·관리하는 자에게 금품·향응 기타의 이익을 제공하거나 제공할 의사의 표시 또는 그 제공을 약속할 수 없다.[CT2]
+전제: 을은 갑의 선거운동을 돕는 선거운동원이며, 갑은 지역구 국회의원 선거 후보자라는 사실관계를 전제로 합니다.
+전제: 병은 지역 방송국을 경영·관리하는 자에 해당한다고 전제합니다.
+한계: 본 답변은 제공된 공직선거법 조항에 근거한 법적 허용 여부 판단이며, 해당 행위에 대한 형사처벌 수위나 행정제재 등 구체적인 법적 효과에 대해서는 다루지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.10309278350515463,False,,,True,,False,True,True,1,2,10,10,204421.285,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/33e57ef4-164c-497f-a98d-50f0c600484f
+97,qa_104_3hop_182,3,67b1b9ef-bdc5-4e0a-8c68-c5955d905254,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,MAX_RETRIEVAL_ROUNDS_REACHED,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,3,3,1,0.3333333333333333,0.3333333333333333,0.3333333333333333,False,False,0.0,0.0,"피고사건이 범죄로 되지 아니하거나 범죄사실의 증명이 없는 때에는 판결로써 무죄를 선고하여야 한다.[CT1]
+갑의 행위가 법령에 의한 정당한 행위로서 범죄가 되지 않거나 증명이 부족할 경우 무죄 판결의 법적 근거가 적용된다.[CT2]
+공판기일에는 공판정에서 심리한다.[CT3]
+전제: 갑의 행위가 '범죄로 되지 아니한다'거나 '범죄사실의 증명이 없다'는 법적 요건을 충족한다고 가정한다.
+한계: 본 답변은 벤치마크 후보용 진단 자료이며, 공개 가능한 공식 답변이 아닙니다.
+한계: 공판 절차의 전체적인 흐름(공판준비, 증거조사, 변론종결 등)에 대한 포괄적인 조항이 후보 자료에 부재하여, 절차적 단계의 상세한 설명은 제한적입니다.",GENERATED,retrieved_candidates,True,0.15238095238095242,False,,,False,,False,False,,3,4,30,23,606727.588,True,0.3333333333333333,False,0.3333333333333333,False,0.3333333333333333,False,0.3333333333333333,False,0.3333333333333333,False,/root/Legal Harness/records/runs/67b1b9ef-bdc5-4e0a-8c68-c5955d905254
+98,qa_309_3hop_881_rand2,3,57d1d21f-2bb2-4424-b473-b76313b20ab0,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,195920.239,False,,,,,,,,,,,/root/Legal Harness/records/runs/57d1d21f-2bb2-4424-b473-b76313b20ab0
+99,qa_168_3hop_301,3,18cea8dd-ea46-43d8-a4af-b894256c5072,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,197784.584,False,,,,,,,,,,,/root/Legal Harness/records/runs/18cea8dd-ea46-43d8-a4af-b894256c5072
+100,qa_493_3hop_773,3,d71ba3b4-ce80-49b2-9a02-ad16d79b2229,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,163752.902,False,,,,,,,,,,,/root/Legal Harness/records/runs/d71ba3b4-ce80-49b2-9a02-ad16d79b2229
+101,qa_32_1hop_49,1,6f9e1483-4bc8-4825-8018-47417bf11e24,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.0,0.0,"15세 미만자의 사망을 보험사고로 한 보험계약은 무효로 규정되어 있습니다.[CT1]
+14세 아들 을의 사망을 보험사고로 하는 생명보험계약은 피보험자가 15세 미만자에 해당하므로 법적으로 무효입니다.[CT2]
+전제: 피보험자 을의 나이가 14세이며, 계약 체결 시점에 15세 미만 상태임을 전제로 합니다.
+한계: 본 답변은 상법 제732조에 근거한 계약의 무효 여부에 한정하며, 계약 무효에 따른 법적 효과(예: 보험료 반환 등)나 다른 법적 쟁점에 대해서는 다루지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.0,False,,,True,,False,True,True,1,1,10,10,143182.721,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/6f9e1483-4bc8-4825-8018-47417bf11e24
+102,qa_69_1hop_102,1,2146d2a4-11bc-4b69-b3c5-81d1915f802d,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,2,1,1,1.0,0.5,0.6666666666666666,False,False,0.14814814814814817,0.14814814814814817,"제4조제1항의 규정에 의한 허가를 받지 아니하고 경비업을 영위한 자는 3년 이하의 징역 또는 3천만원 이하의 벌금에 처한다.[CT1]
+경비업 허가를 받지 않고 회사를 운영한 갑은 경비업법 제28조 제2항 제1호에 따라 3년 이하의 징역 또는 3천만원 이하의 벌금에 처해진다.[CT2]
+전제: 갑이 경비업법 제4조 제1항에 따른 허가를 받지 않은 상태에서 경비업을 영위했다는 사실은 질문의 배경 시나리오에 근거한 전제이다.
+한계: 본 답변은 경비업법 제28조 제2항 제1호에 명시된 형사처벌 규정에만 한정되며, 민사적 책임이나 행정적 제재는 다루지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.14814814814814817,False,,,True,,True,True,True,1,1,10,10,161587.739,True,1.0,True,1.0,True,0.5,False,1.0,True,1.0,True,/root/Legal Harness/records/runs/2146d2a4-11bc-4b69-b3c5-81d1915f802d
+103,qa_105_1hop_183,1,5ef7b7fb-1f88-43c1-b6aa-efab23c8d0cf,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,2,1,0.5,1.0,0.6666666666666666,False,True,0.17142857142857143,0.17142857142857143,"제6조에 따른 등록을 한 사람이 아니면 세무대리를 할 수 없다.[CT1]
+세무사 자격이 없으면서 세무대리를 한 자는 3년 이하의 징역 또는 3천만원 이하의 벌금에 처한다.[CT2]
+전제: 갑이 세무사 자격이 없으며, 을의 세금 신고서 작성 및 제출 행위가 세무대리 업무에 해당한다고 가정합니다.
+한계: 본 답변은 제공된 법령 조항에 기반한 일반적 법적 해석이며, 구체적인 사건의 사실관계나 양형에 따른 실제 처벌 수치는 다를 수 있습니다.",PUBLISHED_ANSWER,published_answer,True,0.17142857142857143,False,,,True,,False,True,True,1,2,10,10,212806.791,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/5ef7b7fb-1f88-43c1-b6aa-efab23c8d0cf
+104,qa_152_1hop_280,1,6e4639d1-c08e-48f7-878f-d01cc51644ad,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.3373493975903614,0.3373493975903614,"법원은 제척 또는 기피신청이 있는 경우에는 그 재판이 확정될 때까지 소송절차를 정지하여야 합니다.[CT1]
+제척 또는 기피신청이 각하된 경우 또는 종국판결을 선고하거나 긴급을 요하는 행위를 하는 경우에는 소송절차를 정지하지 아니할 수 있습니다.[CT2]
+전제: 갑의 제척신청이 법원에 적법하게 접수되었음을 전제로 합니다.
+한계: 본 답변은 민사소송법 제48조에 근거한 일반적 소송절차 처리 원칙을 설명하며, 개별 사건의 구체적 사실관계나 제척신청의 적법성 판단에 대한 법적 자문이 아닙니다.",PUBLISHED_ANSWER,published_answer,True,0.3373493975903614,False,,,True,,False,True,True,1,1,10,10,131206.749,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/6e4639d1-c08e-48f7-878f-d01cc51644ad
+105,qa_17_2hop_25,2,068163b0-547f-462a-9c30-e195956377db,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T1,T2,all,2,5,1,0.2,0.5,0.28571428571428575,False,False,0.2679425837320574,0.2679425837320574,"당사자 일방이 그 채무를 이행하지 아니하는 때에는 상대방은 상당한 기간을 정하여 그 이행을 최고하고 그 기간내에 이행하지 아니한 때에는 계약을 해제할 수 있다.[CT1]
+채무자가 미리 이행하지 아니할 의사를 표시한 경우에는 최고를 요하지 아니한다.[CT2]
+계약의 성질 또는 당사자의 의사표시에 의하여 일정한 시일 또는 일정한 기간내에 이행하지 아니하면 계약의 목적을 달성할 수 없을 경우에 당사자 일방이 그 시기에 이행하지 아니한 때에는 상대방은 전조의 최고를 하지 아니하고 계약을 해제할 수 있다.[CT3]
+채무자의 책임있는 사유로 이행이 불능하게 된 때에는 채권자는 계약을 해제할 수 있다.[CT4]
+상대방이 있는 의사표시는 상대방에게 도달한 때에 그 효력이 생긴다.[CT5]
+전제: 갑과 을 간의 계약이 민법상 매매계약으로 인정된다고 가정합니다.
+전제: 갑의 물품 미공급이 채무불이행에 해당한다고 가정합니다.
+한계: 계약서에 포함된 해제 관련 특약의 효력 및 법정 해제 요건과의 관계에 대한 판단은 유보됩니다. 제공된 근거 조항이 국가계약에 한정되어 있어 일반 민사계약의 계약 자유 원칙 및 특약 효력을 판단하기에 부족합니다.
+한계: 정기행위(민법 제545조) 또는 이행불능(민법 제546조)에 해당하는지 여부는 구체적인 계약 내용과 사실관계에 따라 달라질 수 있으며, 본 답변은 일반적 법적 요건만을 제시합니다.",PUBLISHED_ANSWER,published_answer,True,0.2679425837320574,False,,,True,,True,True,True,3,7,30,28,875189.494,True,0.5,False,0.5,False,0.5,False,0.5,False,0.5,False,/root/Legal Harness/records/runs/068163b0-547f-462a-9c30-e195956377db
+106,qa_125_2hop_226,2,e0ae3de9-a707-4c43-860b-239de7ce50f5,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,3,2,0.6666666666666666,1.0,0.8,False,True,0.20408163265306126,0.20408163265306126,"형사소송법 제361조의5에 따르면, 판결에 이유를 붙이지 아니하거나 이유에 모순이 있는 때는 원심판결에 대한 항소이유로 할 수 있습니다.[CT1]
+갑의 경우, 원심판결문에 명백한 이유 모순이 발견되었다면 이를 항소이유로 주장할 수 있습니다.[CT2]
+기간의 말일이 공휴일이거나 토요일이면 그날은 기간에 산입하지 아니합니다.[CT3]
+전제: 갑의 항소기간이 시효나 구속기간에 해당하지 않는 일반적 소송기간으로 가정합니다.
+한계: 본 답변은 제공된 형사소송법 조항에 기반한 법적 해석이며, 실제 소송 절차에서의 구체적 기한 계산은 사건 기록과 관련 법령의 최신 개정 사항을 확인해야 합니다.",PUBLISHED_ANSWER,published_answer,True,0.20408163265306126,False,,,True,,False,True,True,3,5,30,27,586160.453,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/e0ae3de9-a707-4c43-860b-239de7ce50f5
+107,qa_233_2hop_388,2,d88ebb19-7b20-48e5-9dc9-6285f995f8f2,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,2,1,1,1.0,0.5,0.6666666666666666,False,False,0.12371134020618557,0.12371134020618557,"제삼자에게 타인에게 대리권을 수여함을 표시한 자는 그 대리권의 범위 내에서 행한 그 타인과 제삼자 간의 법률행위에 대하여 책임이 있다.[CT1]
+제삼자가 대리권 없음을 알았거나 알 수 있었을 때에는 본인은 책임이 없다.[CT2]
+전제: 질문 시나리오에서 병이 을의 대리권 부재를 '나중에야' 알게 되었다는 사실은 병이 거래 당시 대리권 없음을 알았거나 알 수 있었는지 여부에 대한 판단을 위한 사실관계로 가정합니다.
+한계: 본 답변은 민법 제125조에 근거한 표현대리(표시대리)의 일반 원칙과 예외만을 다루며, 다른 법적 근거(예: 부당이득, 불법행위 등)에 의한 책임은 다루지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.12371134020618557,False,,,True,,True,True,True,1,2,10,10,185970.4,True,0.5,False,0.5,False,0.5,False,0.5,False,0.5,False,/root/Legal Harness/records/runs/d88ebb19-7b20-48e5-9dc9-6285f995f8f2
+108,qa_343_2hop_541,2,6f55e3a4-bd5e-48b8-bb9c-8de2778eda3f,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,3,2,0.6666666666666666,1.0,0.8,False,True,0.02,0.02,"상행위로 인한 채권은 상법 제64조에 따라 5년간 행사하지 아니하면 소멸시효가 완성됩니다.[CT1]
+민법 제163조는 이자, 부양료, 급료, 사용료 기타 1년 이내의 기간으로 정한 금전 또는 물건의 지급을 목적으로 한 채권에 대하여 3년간 행사하지 아니하면 소멸시효가 완성된다고 규정하고 있습니다.[CT2][CT3]
+전제: 갑의 상사채권이 상행위로 인한 채권임을 전제로 함
+전제: 갑의 이자채권이 1년 이내의 기간으로 정한 금전의 지급을 목적으로 한 채권임을 전제로 함
+한계: 상법 제64조 단서에 따라 다른 법령에 이보다 단기의 시효 규정이 있는 경우 그 규정에 따르므로, 해당 상사채권에 더 짧은 시효가 적용되는 다른 법령 규정이 존재하는지 여부는 확인되지 않음",PUBLISHED_ANSWER,published_answer,True,0.02,False,,,True,,False,True,True,1,2,10,10,235392.384,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/6f55e3a4-bd5e-48b8-bb9c-8de2778eda3f
+109,qa_423_2hop_656,2,b5d7bc5f-d281-4b39-b8df-cc9ef6967a2e,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,5,2,0.4,1.0,0.5714285714285715,False,True,0.11627906976744186,0.11627906976744186,"수탁자는 수익자의 이익을 위하여 신탁사무를 처리하여야 한다.[CT1]
+신탁업자는 수익자에 대하여 선량한 관리자의 주의로써 신탁재산을 운용하여야 한다.[CT2]
+수익채권의 소멸시효는 채권의 예에 따른다.[CT3]
+채권은 10년간 행사하지 아니하면 소멸시효가 완성한다.[CT4]
+수익채권의 소멸시효는 수익자가 수익자로 된 사실을 알게 된 때부터 진행한다.[CT5]
+전제: 을이 신탁업자로서 신탁법 및 자본시장과 금융투자업에 관한 법률의 적용을 받는다고 가정합니다.
+한계: 본 답변은 제공된 법령 조항에 기반한 일반적 법적 원칙을 설명하며, 구체적인 사안에 대한 법적 자문이 아닙니다.",PUBLISHED_ANSWER,published_answer,True,0.11627906976744186,False,,,True,,False,True,True,2,3,20,18,472666.805,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/b5d7bc5f-d281-4b39-b8df-cc9ef6967a2e
+110,qa_8_2hop_33_rand,2,69c82f9b-fd05-4060-a675-5520c40ab037,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,5,2,0.4,1.0,0.5714285714285715,False,True,0.34594594594594597,0.34594594594594597,"청원주는 청원경찰에게 무기와 탄약을 지급하지 않거나 회수한 경우 7일 이내에 관할 경찰서장에게 결정 통보서를 작성하여 통보해야 한다.[CT1]
+통보를 받은 관할 경찰서장은 통보받은 날부터 14일 이내에 무기와 탄약의 지급 제한 또는 회수의 적정성을 판단하기 위해 현장을 방문하여 해당 청원경찰의 의견을 청취하고 필요한 조치를 할 수 있다.[CT2]
+청원주가 청원경찰에게 무기와 탄약을 출납하려는 경우에는 무기·탄약 출납부에 출납사항을 기록하여야 하며, 소총의 탄약은 1정당 15발 이내, 권총의 탄약은 1정당 7발 이내로 출납하여야 한다.[CT3]
+청원경찰은 무기를 지급받거나 반납할 때 또는 인계인수할 때 반드시 ""앞에 총"" 자세에서 ""검사 총""을 하여야 하며, 무기와 탄약을 반납할 때에는 손질을 철저히 하여야 한다.[CT4]
+청원주는 무기·탄약 출납부를 갖춰 두어야 한다.[CT5]
+전제: 을 회사가 갑에게 무기와 탄약을 지급하지 않거나 회수하는 행위가 청원경찰법 시행규칙 제16조 제4항에 따른 지급 제한 또는 회수에 해당한다고 가정함.
+한계: 본 답변은 청원경찰법 시행규칙의 문언에 기반한 법적 규정 해석이며, 구체적인 사건의 사실관계에 따른 법적 효력 판단은 아님.",PUBLISHED_ANSWER,published_answer,True,0.34594594594594597,False,,,True,,False,True,True,1,2,10,10,312787.737,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/69c82f9b-fd05-4060-a675-5520c40ab037
+111,qa_70_2hop_273_rand,2,7f10167d-920c-4114-bc8b-089401b9e068,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.40983606557377045,0.40983606557377045,"수용자가 교도소 소장의 허가 없이 무인비행장치를 지닌 경우, 형의 집행 및 수용자의 처우에 관한 법률 제132조 제1항에 따라 2년 이하의 징역 또는 2천만원 이하의 벌금에 처해집니다.[CT1]
+수용자가 주류와 담배를 지닌 경우, 형의 집행 및 수용자의 처우에 관한 법률 제132조 제2항에 따라 1년 이하의 징역 또는 1천만원 이하의 벌금에 처해집니다.[CT2]
+전제: 을이 형의 집행 및 수용자의 처우에 관한 법률상 '수용자'에 해당한다고 가정합니다.
+전제: 을이 소지한 주류와 담배가 제92조제1항제3호에서 금지하는 물품에 해당한다고 가정합니다.
+한계: 본 답변은 제공된 법률 조항에 기반한 법적 처벌 수위만을 설명하며, 실제 사법 절차에서의 양형이나 면책 사유 등은 다루지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.40983606557377045,False,,,True,,False,True,True,1,2,10,10,209076.312,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/7f10167d-920c-4114-bc8b-089401b9e068
+112,qa_134_2hop_515_rand,2,e25658ab-119e-4991-924d-c1f4b5013110,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.33333333333333337,0.33333333333333337,"조건부등록을 한 자가 제2항에 따른 기간 이내에 시설 및 설비 등을 갖출 수 없는 부득이한 사유로 조건부등록 기간의 연장을 신청한 경우, 시·도경찰청장은 한 차례만 6개월의 범위에서 그 기간을 연장할 수 있다.[CT1]
+조건부등록을 한 자는 제2항 및 제3항에 따른 기간 만료 후 10일 이내에 시설·설비 완성신고서에 행정안전부령으로 정하는 서류를 첨부하여 시·도경찰청장에게 제출하여야 한다.[CT2]
+전제: 갑이 '부득이한 사유'에 해당하는지 여부는 사실관계에 따라 판단되어야 하며, 본 답변은 질문의 전제에 따라 갑이 부득이한 사유를 가진 것으로 가정한다.
+한계: 본 답변은 도로교통법 시행령 제62조 제3항 및 제4항의 문언에 기반한 일반적 법적 해석이며, 개별 사건의 구체적 사실관계나 행정청의 재량 판단에 따라 결과가 달라질 수 있다.",PUBLISHED_ANSWER,published_answer,True,0.33333333333333337,False,,,True,,False,True,True,1,2,10,10,211602.414,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/e25658ab-119e-4991-924d-c1f4b5013110
+113,qa_197_2hop_752_rand,2,774faefb-6f1a-44c8-b89b-3754d3f4dd72,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,4,2,0.5,1.0,0.6666666666666666,False,True,0.20408163265306123,0.20408163265306123,"조성용지를 공급받은 자는 그 용지를 공급받은 용도대로 농어촌 주택이나 그 밖의 시설물을 건축하여 소유권 이전등기를 완료하기 전까지는 이를 전매할 수 없습니다.[CT1]
+제1항을 위반하여 조성용지를 전매하는 경우 해당 법률행위는 무효로 합니다.[CT2]
+농림축산식품부장관은 생활환경정비사업의 생활환경정비계획, 생활환경정비사업 기본계획, 농어촌마을정비계획 및 생활환경정비사업 시행계획의 수립과 조사·설계 등 사업의 원활한 추진과 생활환경정비사업으로 조성되는 시설물의 품질관리를 위하여 기획·기술지원을 하여야 하며, 이에 필요한 경비를 예산의 범위에서 지원할 수 있습니다.[CT3]
+농림축산식품부장관은 제1항에 따라 생활환경정비계획, 생활환경정비사업 기본계획, 농어촌마을정비계획 및 생활환경정비사업 시행계획을 세우는 데에 필요한 설계 및 집행상의 기술지원을 하기 위하여 대통령령으로 정하는 바에 따라 기획기술지원단을 설치하여 운영할 수 있습니다.[CT4]
+전제: 갑이 매입한 조성용지에 대해 소유권 이전등기가 완료되지 않은 상태임을 가정합니다.
+전제: 갑의 전매 행위가 농어촌정비법 제70조 제1항 단서에 규정된 예외 사유(생업상의 사정 등)에 해당하지 않음을 가정합니다.
+한계: 본 답변은 제공된 농어촌정비법 조항에 기반한 법적 해석이며, 개별 사건의 구체적 사실관계(예: 전매 시점, 등기 상태, 예외 사유 해당 여부 등)에 따라 결론이 달라질 수 있습니다.",PUBLISHED_ANSWER,published_answer,True,0.20408163265306123,False,,,True,,False,True,True,1,2,10,10,337968.188,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/774faefb-6f1a-44c8-b89b-3754d3f4dd72
+114,qa_239_2hop_912_rand,2,10fa93dc-f577-4501-a197-d9d201be1f12,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,MAX_RETRIEVAL_ROUNDS_REACHED,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,2,6,2,0.3333333333333333,1.0,0.5,False,True,0.0,0.0,"구치소 소장은 수용자가 건강유지에 필요한 운동 및 목욕을 정기적으로 할 수 있도록 하여야 한다.[CT1]
+구치소 소장은 수용자가 건강한 생활을 하는 데에 필요한 위생 및 의료상의 적절한 조치를 하여야 한다.[CT2]
+운동시간 및 목욕횟수 등 구체적 기준은 대통령령으로 정해진다.[CT3]
+수용자가 부상을 당하거나 질병에 걸리면 소장은 적절한 치료를 받도록 하여야 한다.[CT4]
+수용자가 진료 또는 음식물의 섭취를 거부하는 경우, 소장은 의무관으로 하여금 관찰·조언 또는 설득을 하도록 하여야 한다.[CT5]
+전제: 갑이 구치소 수용자이며, 을이 해당 구치소 소장임을 전제로 한다.
+한계: 운동시간 및 목욕횟수 등 구체적 기준은 대통령령으로 위임되어 있어, 본 후보 조문에는 해당 하위법령의 내용이 포함되어 있지 않다.
+한계: 부상 또는 질병 발생 시 치료의 구체적 절차(이송, 보고 등)에 대한 포괄적 기준은 후보 조문에 부족하다.",GENERATED,retrieved_candidates,True,0.2657342657342657,False,,,False,,False,False,,3,6,30,14,968775.775,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/10fa93dc-f577-4501-a197-d9d201be1f12
+115,qa_366_3hop_580,3,9ae11257-65d8-44af-9478-e0b325f45e95,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,171803.849,False,,,,,,,,,,,/root/Legal Harness/records/runs/9ae11257-65d8-44af-9478-e0b325f45e95
+116,qa_32_3hop_51,3,d2423faf-9a78-470a-9db3-12dfc075f0a7,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,201532.953,False,,,,,,,,,,,/root/Legal Harness/records/runs/d2423faf-9a78-470a-9db3-12dfc075f0a7
+117,qa_495_3hop_777,3,214bb03b-cb74-4741-9caa-627c23a86bb3,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,185918.262,False,,,,,,,,,,,/root/Legal Harness/records/runs/214bb03b-cb74-4741-9caa-627c23a86bb3
+118,qa_1_1hop_2,1,47937033-b33f-4251-b9da-1ff8574ca66a,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.16666666666666669,0.16666666666666669,"사람을 살해한 자는 사형, 무기 또는 5년 이상의 징역에 처한다.[CT1]
+갑이 을을 살해한 행위는 형법 제250조 제1항의 구성요건에 해당하므로, 갑은 사형, 무기 또는 5년 이상의 징역 중 하나를 선고받을 수 있다.[CT2]
+전제: 갑이 을을 살해했다는 사실관계가 질문의 배경 시나리오에 따라 성립한다고 가정한다.
+한계: 감경 또는 가중 사유에 대한 법적 근거가 제공된 법규에 포함되어 있지 않아, 실제 양형에 영향을 미치는 부수적 요인에 대해서는 판단을 유보한다.",PUBLISHED_ANSWER,published_answer,True,0.16666666666666669,False,,,True,,False,True,True,1,2,10,10,243867.828,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/47937033-b33f-4251-b9da-1ff8574ca66a
+119,qa_72_1hop_108,1,2ad66878-2be2-4157-bf2e-70e8272aff3f,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,2,1,0.5,1.0,0.6666666666666666,False,True,0.2518518518518519,0.2518518518518519,"경사진 곳에 정차하거나 주차하려는 자동차의 운전자는 대통령령으로 정하는 바에 따라 고임목을 설치하거나 조향장치를 도로의 가장자리 방향으로 돌려놓는 등 미끄럼 사고의 발생을 방지하기 위한 조치를 취하여야 한다.[CT1]
+자동차의 운전자는 경사진 곳에 정차하거나 주차하려는 경우 자동차의 주차제동장치를 작동한 후에 경사의 내리막 방향으로 바퀴에 고임목 등을 설치하거나, 조향장치를 도로의 가장자리 방향으로 돌려놓거나, 그 밖에 미끄럼 사고의 발생 방지를 위한 조치를 취하여야 한다.[CT2]
+전제: 질문에서 제시된 '산속의 오르막길에 위치한 작은 주차장'이 도로교통법상 '경사진 곳'에 해당한다고 가정한다.
+전제: 갑이 정차 후 운전석을 떠났거나, 운전석에 남아 직접 제동장치를 작동하지 않았다고 가정한다.
+한계: 본 답변은 도로교통법 및 시행령의 일반적 정차 의무 규정에 기반하며, 특정 지역 조례나 현장의 구체적인 안전 시설물 상태 등 추가적 사실관계에 따른 예외나 세부 적용은 다루지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.2518518518518519,False,,,True,,False,True,True,1,1,10,10,188376.985,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/2ad66878-2be2-4157-bf2e-70e8272aff3f
+120,qa_116_1hop_207,1,c87d2ad1-9d07-407b-8431-12642ea51bbb,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.17647058823529413,0.17647058823529413,"헌법재판소는 심판사건을 접수한 날부터 180일 이내에 종국결정의 선고를 하여야 한다.[CT1]
+재판관의 궐위로 7명의 출석이 불가능한 경우에는 그 궐위된 기간은 심판기간에 산입하지 아니한다.[CT2]
+전제: 의뢰인 을이 제기한 헌법소원 사건이 헌법재판소법 제38조에서 규정하는 '심판사건'에 해당한다고 가정한다.
+한계: 재판관의 궐위로 7명의 출석이 불가능한 경우, 해당 궐위 기간은 180일 기한에 산입되지 않으므로 실제 소요 기간은 180일을 초과할 수 있다.",PUBLISHED_ANSWER,published_answer,True,0.17647058823529413,False,,,True,,False,True,True,1,1,10,10,170557.668,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/c87d2ad1-9d07-407b-8431-12642ea51bbb
+121,qa_155_1hop_283,1,91960805-e4d8-4e1f-9a43-4ec7f5975df8,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.23076923076923075,0.23076923076923075,"자(子)를 직접 양육하지 아니하는 부모 일방의 직계존속은 그 부모 일방이 사망하였거나 질병, 외국거주, 그 밖에 불가피한 사정으로 자(子)를 면접교섭할 수 없는 경우 가정법원에 자(子)와의 면접교섭을 청구할 수 있다.[CT1]
+조부모의 면접교섭 청구 시 가정법원은 자(子)의 의사(意思), 면접교섭을 청구한 사람과 자(子)의 관계, 청구의 동기, 그 밖의 사정을 참작하여야 한다.[CT2]
+전제: 병(父)의 해외 장기 출장이 민법 제837조의2 제2항에서 규정하는 '불가피한 사정'에 해당하는지 여부는 사실관계에 따라 달라질 수 있으며, 본 답변에서는 이를 확정된 사실로 보지 않습니다.
+한계: 본 답변은 제공된 민법 조항에 기반한 법적 요건 설명이며, 구체적인 사안에 대한 법원의 최종 판단(예: '불가피한 사정' 인정 여부, 자의 의사 참작 결과 등)을 보장하지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.23076923076923075,False,,,True,,False,True,True,1,2,10,10,193041.179,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/91960805-e4d8-4e1f-9a43-4ec7f5975df8
+122,qa_249_2hop_406,2,93835c49-3660-45cd-8f76-57189d6b9cea,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,2,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,171241.779,False,,,,,,,,,,,/root/Legal Harness/records/runs/93835c49-3660-45cd-8f76-57189d6b9cea
+123,qa_356_2hop_565,2,8eaf63f8-b297-4c08-856b-294ff486f462,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,MAX_RETRIEVAL_ROUNDS_REACHED,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,2,7,2,0.2857142857142857,1.0,0.4444444444444445,False,True,0.0,0.0,"채무자가 판결에 따라 확정된 청구에 관하여 이의하려면 제1심 판결법원에 청구에 관한 이의의 소를 제기하여야 한다.[CT1]
+집행문을 내어 달라는 신청에 관한 법원사무관등의 처분에 대하여 이의신청이 있는 경우에는 그 법원사무관등이 속한 법원이 결정으로 재판한다.[CT2]
+집행문부여에 대한 이의신청이 있는 경우에는 법원은 제16조제2항의 처분에 준하는 결정을 할 수 있다.[CT3]
+전제: 갑이 판결에 따라 확정된 채무자임을 전제로 한다.
+전제: 을이 집행문을 부여받았음을 전제로 한다.
+한계: 이의제기 기한 및 제출서류와 방식에 대한 구체적 규정은 후보 조항에 포함되어 있지 않아 법적 근거가 불완전하다.
+한계: 본 답변은 비공개 벤치마크 후보이며, 공개 가능한 답변이 아니다.",GENERATED,retrieved_candidates,True,0.1724137931034483,False,,,False,,False,False,,3,9,30,18,930063.81,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/8eaf63f8-b297-4c08-856b-294ff486f462
+124,qa_430_2hop_668,2,816d1d4d-9c8c-4ec6-a648-c3f65bdf8f8d,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.2694300518134715,0.2694300518134715,"손해가 제3자의 행위로 인하여 발생한 경우에 보험금을 지급한 보험자는 그 지급한 금액의 한도에서 그 제3자에 대한 보험계약자 또는 피보험자의 권리를 취득한다.[CT1]
+을 보험회사는 갑이 병에 대해 가지는 권리를 대위하여, 보험금 지급액의 한도 내에서 병에 대해 손해배상청구권을 행사할 수 있다.[CT2]
+제3자는 피보험자가 책임을 질 사고로 입은 손해에 대하여 보험금액의 한도내에서 보험자에게 직접 보상을 청구할 수 있다.[CT3]
+정은 갑이 책임을 질 사고로 입은 부상에 대해, 보험금액의 한도 내에서 을 보험회사에 직접 보상을 청구할 수 있는 권리를 가진다.[CT4]
+전제: 갑이 을 보험회사와 체결한 보험계약이 유효하게 성립되어 있고, 보험금 지급 의무가 발생했다는 점을 전제한다.
+전제: 을 보험회사가 갑에게 보험금을 전액 지급하였다는 점을 전제한다.
+전제: 정이 입은 부상이 갑(피보험자)이 책임을 질 사고로 인해 발생했다는 점을 전제한다.
+한계: 을 보험회사의 대위권 행사는 보험금 지급액의 한도 내에서만 가능하다.
+한계: 정이 을 보험회사에 대해 행사할 수 있는 직접청구권은 보험금액의 한도 내에서만 가능하다.
+한계: 을 보험회사는 갑이 해당 사고에 관하여 가지는 항변으로 정에게 대항할 수 있다.",PUBLISHED_ANSWER,published_answer,True,0.2694300518134715,False,,,True,,False,True,True,2,4,20,20,453400.26,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/816d1d4d-9c8c-4ec6-a648-c3f65bdf8f8d
+125,qa_552_2hop_839,2,af65c4fa-93ee-48ed-be58-f68191e3acd7,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T2,T1,all,2,8,1,0.125,0.5,0.2,False,False,0.1422924901185771,0.16438356164383564,"국가와 지방자치단체는 장애인학대의 예방과 방지를 위하여 다음 각 호의 조치를 취하여야 한다.[CT1]
+국가와 지방자치단체는 장애인학대 및 장애인 대상 성범죄를 예방하고 수시로 신고를 받을 수 있도록 필요한 조치를 하여야 한다.[CT2]
+국가 및 지방자치단체는 장애인에 대한 괴롭힘 등을 근절하기 위한 인식개선 및 괴롭힘 등 방지 교육을 실시하고 적절한 시책을 강구하여야 한다.[CT3]
+국가는 지역 간의 연계체계를 구축하고 장애인학대를 예방하기 위하여 다음 각 호의 업무를 담당하는 중앙장애인권익옹호기관을 설치·운영하여야 한다.[CT4]
+학대받은 장애인을 신속히 발견·보호·치료하고 장애인학대를 예방하기 위하여 다음 각 호의 업무를 담당하는 지역장애인권익옹호기관을 특별시·광역시·특별자치시·도·특별자치도에 둔다.[CT5]
+장애인학대의 예방과 방지를 위한 관계 기관 간의 협력체계 구축은 국가와 지방자치단체가 취해야 할 조치에 포함된다.[CT6]
+장애인학대 예방 관계 기관·법인·단체·시설 등에 대한 지원은 국가와 지방자치단체가 취해야 할 조치에 포함된다.[CT7]
+갑의 신체적 학대 행위는 상해죄에 해당할 수 있으며, 사람의 신체를 상해한 자는 7년 이하의 징역, 10년 이하의 자격정지 또는 1천만원 이하의 벌금에 처할 수 있다. 다만, 갑이 을에게 가한 '직장 내 불이익 조치'에 대한 형사처벌 규정은 현재 제공된 증거 범위 내에서 확인되지 않아, 해당 사항에 대한 법적 결론을 내릴 수 없다.[CT8]
+전제: 을이 장애인복지법상 '장애인'에 해당한다고 가정한다.
+한계: 갑의 직장 내 불이익 조치에 대한 형사처벌 규정은 현재 제공된 증거 범위 내에서 확인되지 않아, 해당 사항에 대한 법적 결론을 내릴 수 없다.
+한계: 본 답변은 국가와 지방자치단체의 장애인학대 예방 의무 및 조치(T2)에 한정되며, 갑의 형사처벌(T1)에 대한 내용은 제외된다.",PUBLISHED_ANSWER,published_answer,True,0.16438356164383564,False,,,True,,True,True,True,3,7,30,27,1078026.513,True,0.5,False,0.5,False,0.5,False,0.5,False,0.5,False,/root/Legal Harness/records/runs/af65c4fa-93ee-48ed-be58-f68191e3acd7
+126,qa_23_2hop_93_rand,2,1efec089-dde7-4dd5-b124-778d0c877a58,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,3,2,0.6666666666666666,1.0,0.8,False,True,0.3068181818181818,0.3068181818181818,"안전교육 위탁기관으로 지정받으려는 자는 해양수산부령으로 정하는 바에 따라 해양경찰청장에게 그 지정을 신청해야 한다.[CT1]
+해양경찰청장은 법 제13조제2항에 따라 다음 각 호의 기준을 모두 갖춘 기관이나 단체를 수상안전교육 사무를 위탁받아 실시하는 기관이나 단체(안전교육 위탁기관)로 지정할 수 있다. 1. 제11조제1항제1호 각 목의 어느 하나에 해당하는 기관이나 단체일 것 2. 최근 3년 이내에 안전교육 위탁기관의 지정이 취소된 사실이 없을 것 3. 별표 7에 따른 인적기준ㆍ시설기준 및 장비기준을 갖출 것[CT2]
+해양경찰청장은 안전교육 위탁기관을 지정할 때에는 해양수산부령으로 정하는 지정서를 신청인에게 발급하고, 그 사실을 관보에 고시하거나 수상레저종합정보시스템 또는 해양경찰청 인터넷 홈페이지에 게시해야 한다.[CT3]
+전제: 갑이 해양수산부령으로 정하는 신청 절차 및 형식을 준수하여 신청한다는 가정
+한계: 별표 7의 구체적인 인적기준, 시설기준, 장비기준의 상세 내용은 본 답변의 인용 범위(수상레저안전법 시행령 제15조)에 포함되어 있지 않아 확인이 불가함
+한계: 제11조제1항제1호에 해당하는 기관이나 단체의 구체적 범위는 본 답변의 인용 범위(수상레저안전법 시행령 제15조)에 포함되어 있지 않아 확인이 불가함",PUBLISHED_ANSWER,published_answer,True,0.3068181818181818,False,,,True,,False,True,True,1,2,10,10,229303.551,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/1efec089-dde7-4dd5-b124-778d0c877a58
+127,qa_80_2hop_313_rand,2,f2eca0e4-0b06-4aeb-b932-c377bf044921,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.75,0.75,"사형집행의 명령은 판결이 확정된 날부터 6개월 이내에 하여야 한다.[CT1]
+국방부장관이 사형의 집행을 명령하였을 때에는 5일 이내에 집행하여야 한다.[CT2]",PUBLISHED_ANSWER,published_answer,True,0.75,False,,,True,,False,True,True,1,2,10,10,178296.328,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/f2eca0e4-0b06-4aeb-b932-c377bf044921
+128,qa_139_2hop_535_rand,2,f9275820-d6ec-46e9-ab8c-764a68f64d6a,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.5066666666666667,0.5066666666666667,"국가인권위원회가 진정 없이 직권으로 조사를 개시할 수 있는 법적 요건은 인권침해나 차별행위가 있다고 믿을 만한 상당한 근거가 있고 그 내용이 중대하다고 인정할 때입니다.[CT1]
+국가인권위원회의 권고를 받은 관계기관등의 장이 그 권고의 내용을 이행하지 아니할 경우에는 그 이유를 위원회에 통지하여야 합니다.[CT2]",PUBLISHED_ANSWER,published_answer,True,0.5066666666666667,False,,,True,,False,True,True,1,2,10,10,195688.205,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/f9275820-d6ec-46e9-ab8c-764a68f64d6a
+129,qa_242_2hop_923_rand,2,e83bebe3-2cfe-488a-a50b-55139f7c97a4,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,3,2,0.6666666666666666,1.0,0.8,False,True,0.33557046979865773,0.33557046979865773,"상속인 또는 수유자는 상속개시일이 속하는 달의 말일부터 6개월 이내에 납세지 관할세무서장에게 상속세의 과세가액 및 과세표준을 신고하여야 한다.[CT1]
+상속세 과세표준 신고를 할 때에는 그 신고서에 상속세 과세표준의 계산에 필요한 상속재산의 종류, 수량, 평가가액, 재산분할 및 각종 공제 등을 증명할 수 있는 서류 등 대통령령으로 정하는 것을 첨부하여야 한다.[CT2]
+상속세 신고 시 첨부해야 할 서류에는 피상속인의 제적등본 및 상속인의 가족관계기록사항에 관한 증명서, 기획재정부령이 정하는 상속재산명세 및 그 평가명세서, 채무사실을 입증할 수 있는 서류, 배우자의 상속재산이 분할된 경우의 상속재산분할명세 및 그 평가명세서, 그리고 법에 따라 제출하는 기타 서류가 포함된다.[CT3]
+전제: 을이 상속세 납부의무가 있는 상속인 또는 수유자임을 전제한다.
+한계: 본 답변은 제공된 법령 조문에 근거한 일반적 법적 요건이며, 개별 사안에 따른 세무 당국의 추가 요구 사항이나 예외적 상황은 포함하지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.33557046979865773,False,,,True,,False,True,True,2,3,20,16,425984.792,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/e83bebe3-2cfe-488a-a50b-55139f7c97a4
+130,qa_33_3hop_52,3,cba8fe80-3c68-443d-97b1-fc8bbf8250f8,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,conditional,T1;T2,,all,3,3,2,0.6666666666666666,0.6666666666666666,0.6666666666666666,False,False,0.18867924528301885,0.18867924528301885,"일반 형사재판에서 범죄사실의 증명이 없는 때에는 판결로써 무죄를 선고하여야 한다.[CT1]
+군사재판에서 범죄사실이 증명되지 아니할 때에는 판결로 무죄를 선고하여야 한다.[CT2]
+무죄의 판결을 선고하는 경우에는 무죄판결공시의 취지를 선고하여야 한다. 다만, 피고인이 무죄판결공시 취지의 선고에 동의하지 아니하거나 동의를 받을 수 없는 경우에는 그러하지 아니하다.[CT3]
+전제: 질문의 사실관계에서 관할 법원 유형(일반 법원 또는 군사법원)이 명시되지 않아, 해당 사건의 관할을 특정할 수 없는 것으로 가정합니다.
+한계: E1(범죄사실 미입증 시 무죄 선고 근거)에 대해, 질문의 사실관계상 관할 법원 유형이 불명확하여 형사소송법 제325조와 군사법원법 제380조 중 어느 것이 적용되는지 확정할 수 없습니다. 따라서 해당 법적 근거의 적용은 관할 법원 유형이 확인될 때까지 조건부로 판단됩니다.",PUBLISHED_ANSWER,published_answer,True,0.18867924528301885,False,,,True,,True,True,True,1,2,10,10,296444.028,True,0.6666666666666666,False,0.6666666666666666,False,0.6666666666666666,False,0.6666666666666666,False,0.6666666666666666,False,/root/Legal Harness/records/runs/cba8fe80-3c68-443d-97b1-fc8bbf8250f8
+131,qa_209_3hop_360,3,b8ad8d4e-1e3a-4751-aa09-3563435a9f95,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,224946.14,False,,,,,,,,,,,/root/Legal Harness/records/runs/b8ad8d4e-1e3a-4751-aa09-3563435a9f95
+132,qa_498_3hop_782,3,71f7a798-d913-455a-8b2c-ff19fd73c713,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,3,3,2,0.6666666666666666,0.6666666666666666,0.6666666666666666,False,False,0.4055944055944056,0.4055944055944056,"법원은 필요하다고 인정한 때에는 직권 또는 검사, 피고인이나 변호인의 신청에 의하여 결정으로 변론을 분리하거나 병합할 수 있다.[CT1]
+항소이유가 있다고 인정한 때에는 원심판결을 파기하고 다시 판결을 하여야 한다.[CT2]
+피고인을 위하여 원심판결을 파기하는 경우에 파기의 이유가 항소한 공동피고인에게 공통되는 때에는 그 공동피고인에게 대하여도 원심판결을 파기하여야 한다.[CT3]
+전제: 갑과 을이 공동피고인으로서 하나의 사건에서 재판을 받고 있는 것으로 가정한다.
+한계: 본 답변은 제공된 형사소송법 조항에 기반한 법적 기준만을 설명하며, 구체적 사건의 사실관계에 따른 법원의 재량 판단이나 판례적 해석은 포함하지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.4055944055944056,False,,,True,,True,True,True,1,2,10,10,307724.937,True,0.6666666666666666,False,0.6666666666666666,False,0.6666666666666666,False,0.6666666666666666,False,0.6666666666666666,False,/root/Legal Harness/records/runs/71f7a798-d913-455a-8b2c-ff19fd73c713
+133,qa_2_1hop_4,1,7074c846-db76-41d8-964f-a9b360ebf2b9,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,1,2,1,0.5,1.0,0.6666666666666666,False,True,0.0,0.0,"형사소송법 제308조의2에 따르면, 적법한 절차에 따르지 아니하고 수집한 증거는 증거로 할 수 없다.[CT1]
+경찰이 을의 동의 없이 사무실에 무단 침입하여 CCTV 영상을 확보한 행위는 적법한 절차에 따르지 않은 것으로 판단될 수 있으므로, 해당 영상은 원칙적으로 증거로 사용할 수 없다.[CT2]
+전제: 경찰의 사무실 침입 및 영상 확보 행위가 법원의 영장이나 기타 적법한 절차 없이 이루어졌다고 가정한다.
+한계: 제공된 후보 조문에는 위법 수집 증거의 예외적 증거능력 인정 기준(비례의 원칙, 중대한 이익 등)에 대한 규정이 포함되어 있지 않아, 예외적 적용 여부에 대해 결론을 내릴 수 없다.
+한계: 본 답변은 벤치마크 진단용 후보이며, 공개 가능한 공식 답변이 아니다.",GENERATED,retrieved_candidates,True,0.07843137254901959,False,,,False,,False,False,,3,6,30,23,650533.147,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/7074c846-db76-41d8-964f-a9b360ebf2b9
+134,qa_48_1hop_73,1,5f686e30-1517-4a44-9514-145ac398b437,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.09448818897637795,0.09448818897637795,"형법 제355조 제1항에 따르면, 타인의 재물을 보관하는 자가 그 재물을 횡령하거나 그 반환을 거부한 때에는 5년 이하의 징역 또는 1천500만원 이하의 벌금에 처합니다.[CT1]
+본 사안에서 을은 갑에게서 그림을 보관하게 된 자로서, 갑의 반환 요청에도 불구하고 그림을 제3자에게 매각하는 행위를 한 것은 보관 중인 타인의 재물을 횡령하거나 반환을 거부한 경우에 해당할 수 있습니다.[CT2]
+따라서 을의 행위가 횡령죄의 구성요건을 충족하는 것으로 판단되면, 을은 5년 이하의 징역 또는 1천500만원 이하의 벌금에 처해질 수 있습니다.[CT3]
+전제: 을이 갑에게서 그림을 보관하게 된 사실과 갑의 반환 요청에도 불구하고 그림을 제3자에게 매각한 사실은 질문의 배경 시나리오에 근거한 가정입니다.
+한계: 본 답변은 형법 제355조 제1항의 일반적 횡령죄 규정에 기반하며, 특정 사건의 구체적 양형이나 다른 법률적 쟁점(예: 배임죄와의 경계, 민사적 구제 등)은 다루지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.09448818897637795,False,,,True,,False,True,True,1,2,10,10,213077.108,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/5f686e30-1517-4a44-9514-145ac398b437
+135,qa_74_1hop_114,1,a09c8865-6427-4b18-b39d-21b5b04714bc,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,2,1,0.5,1.0,0.6666666666666666,False,True,0.2105263157894737,0.2105263157894737,"성폭력범죄의 처벌 등에 관한 특례법상 등록대상자가 6개월 이상 국외에 체류하기 위하여 출국하는 경우에는 미리 관할경찰관서의 장에게 체류국가 및 체류기간 등을 신고하여야 합니다.[CT1]
+등록대상자는 6개월 이상 국외에 체류하기 위하여 출국하는 경우 출국하기 전까지 관할경찰관서의 장에게 법무부령으로 정하는 출국신고서를 제출하여야 합니다.[CT2]
+전제: 갑이 성폭력범죄의 처벌 등에 관한 특례법상 '등록대상자'에 해당한다고 가정합니다.
+한계: 출국신고서의 구체적 기재 사항은 법무부령에 위임되어 있어 본 답변에서 상세 내용을 확인하지 못합니다.",PUBLISHED_ANSWER,published_answer,True,0.2105263157894737,False,,,True,,False,True,True,1,1,10,10,198041.81,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/a09c8865-6427-4b18-b39d-21b5b04714bc
+136,qa_124_1hop_223,1,826224af-12b3-4018-ac88-fe4925e9bfe7,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.3963963963963964,0.3963963963963964,"임대차는 당사자 일방이 상대방에게 목적물을 사용, 수익하게 할 것을 약정하고 상대방이 이에 대하여 차임을 지급할 것을 약정함으로써 그 효력이 생긴다.[CT1]
+갑과 을 사이의 임대차 계약은 갑이 을에게 토지를 사용·수익하게 할 것을 약정하고, 을이 이에 대하여 차임을 지급할 것을 약정함으로써 성립한다.[CT2]
+전제: 갑과 을 사이에 토지 사용·수익에 관한 합의와 임대료 지급에 관한 합의가 유효하게 이루어졌다고 가정한다.
+한계: 본 답변은 임대차 계약의 일반적 성립 요건에 관한 민법 제618조에 근거하며, 계약의 유효성(사기, 강박, 무효 사유 등)이나 대항력, 우선변제권 등 다른 법적 효과에 대해서는 다루지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.3963963963963964,False,,,True,,False,True,True,1,1,10,10,142170.012,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/826224af-12b3-4018-ac88-fe4925e9bfe7
+137,qa_49_2hop_75,2,e19b8b22-e8e5-42fb-93f9-cc36dee99e84,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,3,1,0.3333333333333333,0.5,0.4,False,False,0.15789473684210525,0.15789473684210525,"농지를 전용하고자 하는 자는 대통령령이 정하는 바에 의하여 농수산부장관의 허가를 받아야 한다.[CT1]
+농지전용허가를 받는 자는 농지의 보전·관리 및 조성을 위한 부담금(농지보전부담금)을 농지관리기금을 운용·관리하는 자에게 내야 한다.[CT2][CT3]
+농지를 전용하려는 자는 농지보전부담금의 전부 또는 일부를 농지전용허가 전까지 납부하여야 한다.[CT4]
+전제: 갑이 전용하고자 하는 농지가 농지의보전및이용에관한법률 제4조 제1항 각 호의 예외 사항(도시계획구역, 일정면적 이하 농가주택 부지 등)에 해당하지 않는다고 가정합니다.
+한계: 본 답변은 제공된 법령 조항에 기반한 일반적 법적 요건 및 절차에 관한 것이며, 구체적인 면적, 지역 구분, 또는 최신 개정 사항에 따른 예외 규정은 확인되지 않았습니다.",PUBLISHED_ANSWER,published_answer,True,0.15789473684210525,False,,,True,,True,True,True,1,2,10,10,224669.64,True,1.0,True,1.0,True,0.5,False,1.0,True,1.0,True,/root/Legal Harness/records/runs/e19b8b22-e8e5-42fb-93f9-cc36dee99e84
+138,qa_143_2hop_261,2,eb065b5a-bb1b-44d9-bd7f-7ffaa292e93f,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.31683168316831684,0.31683168316831684,"지명채권을 목적으로 한 질권의 설정은 설정자가 제삼채무자에게 질권설정의 사실을 통지하거나 제삼채무자가 이를 승낙함이 아니면 이로써 제삼채무자 기타 제삼자에게 대항하지 못한다.[CT1]
+질권설정자는 질권자의 동의없이 질권의 목적된 권리를 소멸하게 하거나 질권자의 이익을 해하는 변경을 할 수 없다.[CT2]
+전제: 을이 병에 대한 채권을 포기하는 행위는 질권의 목적된 권리를 소멸하게 하는 행위에 해당한다고 가정합니다.
+한계: 본 답변은 제공된 민법 조항에 근거한 법적 요건 및 금지 행위에 대한 일반적 설명이며, 구체적인 사건의 사실관계에 따른 최종 법적 판단을 대체하지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.31683168316831684,False,,,True,,False,True,True,2,4,20,18,410274.126,True,1.0,True,1.0,True,0.5,False,0.5,False,1.0,True,/root/Legal Harness/records/runs/eb065b5a-bb1b-44d9-bd7f-7ffaa292e93f
+139,qa_365_2hop_578,2,a92ad15c-cde1-4957-8b9d-5c79c3af07f9,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,2,3,2,0.6666666666666666,1.0,0.8,False,True,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,3,4,30,20,650965.72,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/a92ad15c-cde1-4957-8b9d-5c79c3af07f9
+140,qa_435_2hop_678,2,bf43b6f7-c5ef-4785-b378-dbb3e286694d,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T1,T2,all,2,8,2,0.25,1.0,0.4,False,True,0.2727272727272727,0.2938775510204082,"터미널사용자는 터미널사업자에게 승차권 판매를 위탁하여야 한다. 다만, 여객의 편의를 위하여 필요하다고 인정하면 국토교통부령으로 정하는 바에 따라 운송사업자가 직접 판매하거나 터미널사업자가 아닌 자에게 승차권 판매를 위탁할 수 있다.[CT1]
+법 제46조제1항 단서에 따라 운송사업자가 승차권을 직접 판매하거나 터미널사업자 외의 자에게 승차권판매를 위탁할 수 있는 경우는 다음 각 호와 같다: 1. 터미널사업자가 여객의 승차권 구입 편의를 위하여 여객자동차터미널 외의 장소에 승차권판매소를 갖추지 아니한 경우, 2. 터미널사업자가 승차권을 판매할 때에는 운송질서의 확립에 어려움이 있다고 시ㆍ도지사가 인정하는 경우, 3. 터미널사업자가 승차권판매금액의 정산을 상습적으로 지연시키는 등 터미널사용자에게 큰 손해를 끼칠 우려가 있다고 시ㆍ도지사가 인정하는 경우.[CT2][CT3][CT4]
+제1항에 따라 승차권 판매를 위탁하는 경우 그 위탁 판매 수수료는 운송사업자와 승차권 판매를 위탁받는 자가 서로 협의하여 정한다.[CT5]
+터미널사업의 면허기준은 여객자동차 운수사업법 제37조에 규정되어 있으며, 터미널의 위치가 여객이 이용하기 편리하고 다른 교통수단과 쉽게 연계될 것 등의 요건을 포함한다.[CT6][CT7]
+전제: 질문에서 '갑'을 터미널사업자, '을'을 터미널사용자(운송사업자)로 가정하여 법적 관계를 해석함.
+한계: 터미널 확장 시 적용되는 면허 변경 또는 재면허 요건에 대한 법적 근거가 제공된 조항에 포함되어 있지 않아, 해당 사항에 대한 법적 결론을 내릴 수 없음.
+한계: 터미널 면허기준 중 위치 요건 외의 다른 기준(면적, 시설, 인력 등)에 대한 법적 근거가 제공된 조항에 포함되어 있지 않아, 면허기준의 전체 내용을 설명할 수 없음.",PUBLISHED_ANSWER,published_answer,True,0.2938775510204082,False,,,True,,False,True,True,3,6,30,20,787207.087,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/bf43b6f7-c5ef-4785-b378-dbb3e286694d
+141,qa_566_2hop_861,2,533b0ff5-c204-42c6-9109-ba04d2f588ac,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,2,4,0,0.0,0.0,0.0,False,False,0.11392405063291139,0.11392405063291139,"2인 이상이 공동하여 죄를 범한 때에는 각자를 그 죄의 정범으로 처벌한다.[CT1]
+수인이 공동의 불법행위로 타인에게 손해를 가한 때에는 연대하여 그 손해를 배상할 책임이 있다.[CT2]
+불법행위로 인한 손해배상에 대하여 민법 제393조, 제394조, 제396조, 제399조의 규정을 준용한다.[CT3]
+타인의 재물을 보관하는 자가 그 재물을 횡령하거나 그 반환을 거부한 때에는 5년 이하의 징역 또는 1천500만원 이하의 벌금에 처한다.[CT4]
+전제: 질문에서 '훔치기로 공모' 및 '물건을 훔칠 수 있도록 방해'한 사실은 갑과 을이 공동으로 불법행위를 의도하고 실행에 옮겼다는 전제 하에 분석한다.
+한계: 형법상 재물횡령죄(제355조)의 적용은 가해자가 피해자의 재물을 '보관'하고 있어야 한다는 요건을 충족해야 한다. 질문의 사실관계(가게에서 물건 훔침)가 단순 절도인지, 보관 관계가 전제된 횡령인지에 따라 적용되는 형법 조항이 달라질 수 있으므로, 횡령죄 적용은 조건부로 제시한다.
+한계: 민사상 손해배상의 구체적 금액과 범위는 민법 제393조 등의 준용 규정에 따라 개별 사건의 사실관계에 따라 결정되며, 본 답변에서는 법적 근거만 제시한다.",PUBLISHED_ANSWER,published_answer,True,0.11392405063291139,False,,,True,,True,True,True,2,5,20,19,515746.389,True,1.0,True,1.0,True,0.5,False,0.5,False,0.5,False,/root/Legal Harness/records/runs/533b0ff5-c204-42c6-9109-ba04d2f588ac
+142,qa_83_2hop_325_rand,2,5f111061-9a7a-4203-ae83-8dfe12d85656,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.5606060606060607,0.5606060606060607,"해양항만관청은 「병역법」 제76조제1항 각 호의 어느 하나에 해당하는 사람에게 선원수첩을 발급하지 아니할 수 있다.[CT1]
+해양항만관청은 선원수첩을 발급할 때 필요하다고 인정하면 해양수산부령으로 정하는 바에 따라 승선선박 또는 승선구역을 한정하거나 유효기간을 정하여 발급할 수 있다.[CT2]
+전제: 갑이 「병역법」 제76조제1항 각 호에 해당하는 사유로 병역의무를 이행하지 않은 사실은 질문의 배경 시나리오에서 주어진 전제로 간주한다.
+한계: 선원법 제46조 제1항은 '발급하지 아니할 수 있다'고 규정하고 있어, 해양항만관청의 재량에 따라 발급이 가능할 수도 있다.
+한계: 선원법 제46조 제2항의 유효기간 제한은 '필요하다고 인정하면'이라는 조건에 따라 해양항만관청의 재량에 의해 이루어진다.",PUBLISHED_ANSWER,published_answer,True,0.5606060606060607,False,,,True,,False,True,True,2,4,20,13,328585.729,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/5f111061-9a7a-4203-ae83-8dfe12d85656
+143,qa_144_2hop_555_rand,2,5fcb00dd-370b-4c33-aab5-8ff2920238f7,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.5384615384615384,0.5384615384615384,"자산운용협회가 정관 중 대통령령이 정하는 사항을 변경하고자 하는 때에는 금융위원회의 인가를 받아야 합니다.[CT1]
+자산운용협회가 업무에 관한 규정을 제정·변경 또는 폐지한 때에는 금융위원회에 이를 보고하여야 합니다.[CT2]",PUBLISHED_ANSWER,published_answer,True,0.5384615384615384,False,,,True,,False,True,True,1,2,10,10,180431.71,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/5fcb00dd-370b-4c33-aab5-8ff2920238f7
+144,qa_243_2hop_927_rand,2,f8fac43a-640d-4bae-abd4-007cb2f0fce9,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.3655913978494623,0.3655913978494623,"의료기기 품질관리심사기관으로 지정된 을 회사는 대표자 변경과 같이 지정사항이 변경된 경우, 변경 사유가 발생한 날부터 30일 이내에 식품의약품안전처장에게 변경신청서를 제출해야 합니다.[CT1]
+품질관리심사기관은 적합인정서 사본 및 심사자료 등 품질심사에 관한 기록을 5년 동안 보존해야 합니다.[CT2]
+전제: 을 회사가 의료기기 품질관리심사기관으로 적법하게 지정되어 있는 것으로 가정합니다.
+한계: 본 답변은 제공된 시행규칙 조항에 근거한 법적 요건 및 기한에 관한 것입니다. 실제 제출 절차나 행정적 세부 사항은 식품의약품안전처의 별도 안내를 확인해야 할 수 있습니다.",PUBLISHED_ANSWER,published_answer,True,0.3655913978494623,False,,,True,,False,True,True,1,2,10,10,159833.545,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/f8fac43a-640d-4bae-abd4-007cb2f0fce9
+145,qa_242_3hop_399,3,09740ea7-0eac-45cb-8dff-e5598e0025c3,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T1,T2,all,3,4,3,0.75,1.0,0.8571428571428571,False,True,0.17391304347826084,0.17391304347826084,"가압류는 민법상 소멸시효의 중단사유에 해당한다.[CT1]
+가압류가 권리자의 청구에 의하여 또는 법률의 규정에 따르지 아니함으로 인하여 취소된 때에는 시효중단의 효력이 없다.[CT2]
+가압류가 시효의 이익을 받은 자에 대하여 하지 아니한 때에는 이를 그에게 통지한 후가 아니면 시효중단의 효력이 없다.[CT3]
+전제: 질문에서 제시된 '가압류 결정은 내려졌으나, 절차상 을에게 가압류 사실이 즉시 통지되지 않았다'는 사실은 가압류가 채무자에게 직접 이루어지지 않은 경우로 가정합니다.
+한계: 가압류로 시효가 중단된 후의 시효 계산 방법(T2)은 가압류 해제 또는 확정 시점에 따른 구체적 시효 계산 규칙에 대한 법적 근거가 불완전하여 본 답변에서 유보됩니다.",PUBLISHED_ANSWER,published_answer,True,0.17391304347826084,False,,,True,,False,True,True,3,6,30,21,719672.95,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/09740ea7-0eac-45cb-8dff-e5598e0025c3
+146,qa_6_1hop_9,1,74e961ee-7e12-40cb-bf20-6aec2f951df7,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.07207207207207207,0.07207207207207207,"국가의 존립·안전이나 자유민주적 기본질서를 위태롭게 한다는 정을 알면서 반국가단체나 그 구성원 또는 그 지령을 받은 자의 활동을 찬양·고무·선전 또는 이에 동조하거나 국가변란을 선전·선동한 자는 7년 이하의 징역에 처한다.[CT1]
+본 사안에서 갑이 반국가단체의 활동을 찬양하는 글을 작성한 행위는 위 조항의 금지 대상에 해당하며, 해당 행위로 인해 7년 이하의 징역형에 처해질 수 있습니다.[CT2]
+전제: 갑이 작성한 글이 '반국가단체의 활동'에 해당하며, 갑이 국가의 존립이나 자유민주적 기본질서를 위태롭게 한다는 정을 알았다는 사실은 문제의 배경 시나리오에서 주어진 전제로 간주한다.
+한계: 본 답변은 제공된 국가보안법 제7조 제1항의 법정형(7년 이하 징역)에 한하여 기술하며, 감경·가중 사유나 다른 법률과의 관계, 실제 재판에서의 양형 결과는 다루지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.07207207207207207,False,,,True,,False,True,True,1,1,10,10,144501.727,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/74e961ee-7e12-40cb-bf20-6aec2f951df7
+147,qa_50_1hop_78,1,fa768651-b848-4571-9847-5db674b8f5d9,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.06896551724137931,0.06896551724137931,"지명채권의 양도는 양도인이 채무자에게 통지하거나 채무자가 승낙하지 아니하면 채무자 기타 제삼자에게 대항하지 못한다.[CT1]
+전제: 갑과 을 사이의 채권이 지명채권(채무자가 특정된 채권)임을 전제로 한다.
+한계: 본 답변은 민법 제450조 제1항에 근거한 일반적 대항요건만을 다루며, 채권양도의 유효성 자체나 양도인·양수인 간의 내부 관계에 관한 사항은 포함하지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.06896551724137931,False,,,True,,False,True,True,1,1,10,10,109370.688,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/fa768651-b848-4571-9847-5db674b8f5d9
+148,qa_76_1hop_118,1,db93c48a-7e3e-41ee-91e3-8c1c94fdc35e,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,0,0.0,0.0,0.0,False,False,0.0,0.0,"채권은 10년간 행사하지 아니하면 소멸시효가 완성된다.[CT1]
+전제: 갑과 을 사이의 계약상 금전 지급 청구권이 민법 제162조 제1항의 일반 규정이 적용되는 '채권'에 해당한다고 가정한다.
+한계: 본 답변은 민법 제162조 제1항의 일반 규정에 기반하며, 특정 채권에 대한 특별 시효 규정(예: 상사채권, 보험금 등)이나 시효 중단·정지 사유가 존재하는지 여부는 검토하지 않았다.",PUBLISHED_ANSWER,published_answer,True,0.0,False,,,True,,True,True,True,1,1,10,10,115019.674,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/db93c48a-7e3e-41ee-91e3-8c1c94fdc35e
+149,qa_125_1hop_225,1,ae0499f9-3d8b-47ef-b43f-57ed7b52107f,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,1,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,51772.269,False,,,,,,,,,,,/root/Legal Harness/records/runs/ae0499f9-3d8b-47ef-b43f-57ed7b52107f
+150,qa_160_1hop_289,1,66087e99-d797-4a26-ac7b-06afd4abcc5c,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.19354838709677416,0.19354838709677416,"선의의 점유자라도 본권에 관한 소에 패소한 때에는 그 소가 제기된 때로부터 악의의 점유자로 본다.[CT1]
+갑은 병이 본권에 관한 소송을 제기한 시점부터 악의의 점유자로 간주됩니다.[CT2]
+전제: 갑이 본권소송 제기 시점까지 선의의 점유자였다고 가정합니다.
+한계: 본 답변은 민법 제197조 제2항의 일반적 적용 기준에 근거하며, 구체적인 소송 절차의 진행 상황이나 기타 특수한 사정은 고려하지 않았습니다.",PUBLISHED_ANSWER,published_answer,True,0.19354838709677416,False,,,True,,False,True,True,1,1,10,10,118525.676,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/66087e99-d797-4a26-ac7b-06afd4abcc5c
+151,qa_58_2hop_88,2,5a9b3266-c605-41ce-814e-ef19d0b33a09,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,6,2,0.3333333333333333,1.0,0.5,False,True,0.22377622377622375,0.25833333333333336,"적법한 절차에 따르지 아니하고 수집한 증거는 증거로 할 수 없다.[CT1]
+군사법원에서도 적법한 절차에 따르지 아니하고 수집한 증거는 증거로 할 수 없다.[CT2]
+진술을 요하는 자가 사망 등으로 진술할 수 없는 때에는 그 조서 및 서류를 증거로 할 수 있으나, 진술 또는 작성이 특히 신빙할 수 있는 상태하에서 행하여졌음이 증명된 때에 한한다.[CT3]
+피고인 아닌 자의 진술이 타인의 진술을 내용으로 하는 전문진술인 경우, 원진술자가 사망 등으로 진술할 수 없고 그 진술이 특히 신빙할 수 있는 상태하에서 행하여졌음이 증명된 때에 한하여 증거로 할 수 있다.[CT4]
+군사법원법상 진술을 하여야 할 사람이 사망 등으로 진술할 수 없을 때에는 그 조서나 서류를 증거로 할 수 있으나, 진술 또는 작성이 특별히 신빙할 수 있는 상태에서 이루어졌을 때에만 증거로 할 수 있다.[CT5]
+군사법원법상 피고인이 아닌 사람의 진술이 타인의 진술을 내용으로 하는 전문진술인 경우, 원진술자가 사망 등으로 진술할 수 없고 그 진술이 특별히 신빙할 수 있는 상태에서 이루어졌을 때에만 증거로 할 수 있다.[CT6]
+전제: 갑의 사건이 일반 형사재판 또는 군사재판 중 어느 하나에 해당하는지 구체적으로 명시되지 않았으므로, 양쪽 법체계(형사소송법, 군사법원법)의 관련 조항을 모두 제시하였다.
+전제: 을의 진술이 포함된 문서가 형사소송법 제312조 또는 제313조, 군사법원법 제365조 또는 제366조에 해당하는 조서나 서류에 해당한다고 가정하였다.
+한계: 위법수집증거의 배제는 원칙적 규정이며, 예외적 허용 여부는 개별 사건의 구체적 정황에 따라 법원의 재량에 달려 있을 수 있으나, 본 답변은 제공된 조문의 원칙적 규정에 한정한다.
+한계: 증인 사망 시 예외적 증거 사용은 '특히 신빙할 수 있는 상태' 또는 '특별히 신빙할 수 있는 상태'라는 요건이 충족되어야 하며, 이 요건의 충족 여부는 개별 사건의 증거에 의해 입증되어야 한다.",PUBLISHED_ANSWER,published_answer,True,0.25833333333333336,False,,,True,,False,True,True,1,2,10,10,286597.825,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/5a9b3266-c605-41ce-814e-ef19d0b33a09
+152,qa_273_2hop_431,2,3387cc35-db75-4d9a-a0f9-f498b447785a,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.17560975609756097,0.17560975609756097,"당사자의 궁박, 경솔 또는 무경험으로 인하여 현저하게 공정을 잃은 법률행위는 무효로 합니다.[CT1]
+을이 갑의 궁박한 상황을 이용하여 시장 가격의 1/10도 안 되는 가격에 부동산을 매입한 행위는 당사자의 궁박으로 인해 현저하게 공정을 잃은 법률행위에 해당하므로, 갑과 을 간의 부동산 매매 계약은 무효입니다.[CT2]
+선량한 풍속 기타 사회질서에 위반한 사항을 내용으로 하는 법률행위는 무효로 합니다.[CT3]
+청소년 불법 도박 사이트 운영을 위한 협업 계약은 선량한 풍속 및 사회질서에 중대하게 위반되는 사항을 내용으로 하므로, 병과 을 간의 불법 도박 사이트 운영 계약은 무효입니다.[CT4]
+전제: 을이 갑의 궁박한 상황을 인지하고 이를 이용하여 계약을 체결했다는 사실은 질문의 배경 시나리오에 근거한 전제입니다.
+전제: 부동산 매매 가격이 시장 가격의 1/10 미만이라는 사실은 질문의 배경 시나리오에 근거한 전제입니다.
+전제: 병과 을 간의 계약 내용이 청소년 불법 도박 사이트 운영을 위한 협업이라는 사실은 질문의 배경 시나리오에 근거한 전제입니다.
+한계: 본 답변은 제공된 민법 제103조 및 제104조 조문 텍스트에만 기반하여 작성되었으며, 구체적인 사법부 판례나 행정해석은 포함되지 않았습니다.
+한계: 민법 제104조 적용 시 '현저하게 공정을 잃은' 정도에 대한 구체적인 판단 기준은 조문 자체에 명시되어 있지 않으므로, 개별 사건의 구체적 정황에 따라 추가적인 법적 검토가 필요할 수 있습니다.",PUBLISHED_ANSWER,published_answer,True,0.17560975609756097,False,,,True,,False,True,True,2,4,20,17,396368.333,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/3387cc35-db75-4d9a-a0f9-f498b447785a
+153,qa_584_2hop_884,2,8449a267-aeac-46e8-a070-9afa7f93b596,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T1,T2,all,2,3,2,0.6666666666666666,1.0,0.8,False,True,0.22900763358778628,0.22900763358778628,"갑은 을의 법정대리인으로서 을을 위해 병을 상대로 인지청구의 소를 제기할 수 있다.[CT1]
+자가 인지된 경우에 자의 양육책임과 면접교섭권에 관하여 민법 제837조 및 제837조의2를 준용한다.[CT2]
+자를 직접 양육하지 아니하는 부모의 일방과 자는 상호 면접교섭할 수 있는 권리를 가진다.[CT3]
+전제: 갑이 을의 법정대리인으로서 적법한 대리 권한을 보유하고 있다고 가정한다.
+전제: 병이 을의 친생부로서 인지청구의 상대방이 될 수 있는 법적 지위를 가진다고 가정한다.
+한계: 양육책임의 구체적 내용을 규정한 민법 제837조 본문이 제공되지 않아, 인지 후 병의 양육책임 발생 여부 및 구체적 범위에 대해 확정적인 결론을 내릴 수 없다.
+한계: 본 답변은 제한된 모드(limited mode)로 생성되어, T2(인지 후 양육책임과 면접교섭권의 구체적 적용)에 대한 실질적 결론은 보류된다.",PUBLISHED_ANSWER,published_answer,True,0.22900763358778628,False,,,True,,False,True,True,3,5,30,22,673610.739,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/8449a267-aeac-46e8-a070-9afa7f93b596
+154,qa_26_2hop_104_rand,2,5e15aea1-935b-41d7-9545-a9c7d576c320,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,2,5,1,0.2,0.5,0.28571428571428575,False,False,0.0,0.0,"사모간접투자기구의 자산운용회사는 운용실적에 따라 보수 또는 수수료를 취득할 수 있으며, 이 경우 투자자 보호를 위한 필요한 사항은 대통령령으로 정합니다.[CT1]
+자산운용·투자신탁·투자회사·투자자문 또는 투자일임의 명칭을 사용한 자는 형사처벌 대상이 됩니다.[CT2]
+금융위원회의 자료제출 요구를 거부하거나 허위로 응한 자산운용회사 등은 1천만원 이하의 과태료에 처해질 수 있습니다.[CT3]
+전제: 질문에서 언급된 '갑'의 구체적인 위반 행위가 명칭 무단 사용이나 자료제출 거부 등 특정 조항에 해당하는지 여부는 사실관계 확인이 필요합니다.
+한계: 본 답변은 벤치마크 진단용 후보이며, 공개 가능한 공식 답변이 아닙니다.
+한계: 보수 및 수수료의 구체적 산정 기준과 지급 조건은 대통령령에 위임되어 있어 후보 규정만으로는 상세한 기준을 확인하기 어렵습니다.
+한계: 형사처벌의 구체적 수위(징역, 벌금 액수)는 후보 규정 내에 명시되어 있지 않아 확인이 불가능합니다.",GENERATED,retrieved_candidates,True,0.18309859154929575,False,,,False,,False,False,,3,8,30,26,817827.187,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/5e15aea1-935b-41d7-9545-a9c7d576c320
+155,qa_85_2hop_333_rand,2,154b3819-fc13-4dd4-9ca1-da0739205dbe,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T2,T1,all,2,4,2,0.5,1.0,0.6666666666666666,False,True,0.3065693430656934,0.3065693430656934,"과세기간 종료일 이전에 혼인·이혼·별거·취업 등의 사유로 기본공제대상자에 해당되지 아니하게 되는 종전의 부양가족을 위하여 이미 지급한 금액이 있는 경우에는 그 사유가 발생한 날까지 지급한 금액에 제1항부터 제3항까지의 규정에 따른 율을 적용한 금액을 해당 과세기간의 종합소득산출세액에서 공제한다.[CT1][CT2]
+전제: 을이 갑의 '부양가족'에 해당하며, 전학으로 인한 기본공제대상자 제외 사유가 소득세법 제59조 제4항 제5항에서 규정한 '혼인·이혼·별거·취업 등의 사유'에 포함되는 것으로 가정합니다.
+한계: 기본공제대상자가 아닌 자녀를 위한 교육비 세액공제 한도(T1)에 대한 구체적인 금액은 제공된 조항에서 명시적으로 분리되어 있지 않아 확인이 불가능합니다. 일반적 한도(초·중·고등학생 1명당 연 300만원)가 적용되는지 여부는 추가적인 법령 해석이 필요합니다.",PUBLISHED_ANSWER,published_answer,True,0.3065693430656934,False,,,True,,False,True,True,3,5,30,13,665659.838,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/154b3819-fc13-4dd4-9ca1-da0739205dbe
+156,qa_145_2hop_559_rand,2,53eea263-7bb8-4ef8-a5a6-1d5ad5c9dca1,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,2,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,EXECUTION_FAILURE,retrieved_candidates,False,,,,,False,,False,False,,2,3,20,16,241645.556,True,0.5,False,0.5,False,0.5,False,0.5,False,0.5,False,/root/Legal Harness/records/runs/53eea263-7bb8-4ef8-a5a6-1d5ad5c9dca1
+157,qa_206_2hop_786_rand,2,97b5189a-1af3-4d66-a7fc-8e8711648763,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,3,1,0.3333333333333333,0.5,0.4,False,False,0.25882352941176473,0.25882352941176473,"냉매회수업을 등록하려는 자가 갖추어야 하는 시설ㆍ장비 및 기술인력 기준은 대기환경보전법 시행령 제60조의4제1항에 따라 별표 14의2와 같습니다.[CT1]
+냉매사용기기의 냉매를 회수하는 영업(냉매회수업)을 하려는 자는 대통령령으로 정하는 시설ㆍ장비 및 기술인력의 기준을 갖추어 환경부장관에게 등록하여야 합니다.[CT2]
+냉매회수업 등록 신청 시에는 별지 제64호서식의 신청서에 시설ㆍ장비 및 기술인력의 보유현황과 이를 증명할 수 있는 서류를 첨부하여 한국환경공단에 제출해야 합니다.[CT3]",PUBLISHED_ANSWER,published_answer,True,0.25882352941176473,False,,,True,,True,True,True,1,2,10,10,204845.411,True,0.5,False,0.5,False,0.5,False,0.5,False,0.5,False,/root/Legal Harness/records/runs/97b5189a-1af3-4d66-a7fc-8e8711648763
+158,qa_244_2hop_931_rand,2,8924c183-6e8c-4a4c-aecc-2c11008927b0,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,2,4,2,0.5,1.0,0.6666666666666666,False,True,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,3,6,30,19,603291.236,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/8924c183-6e8c-4a4c-aecc-2c11008927b0
+159,qa_608_3hop_919,3,b3ac165d-2f7d-4f02-a2bd-a431d516d5e4,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,145174.92,False,,,,,,,,,,,/root/Legal Harness/records/runs/b3ac165d-2f7d-4f02-a2bd-a431d516d5e4
+160,qa_274_3hop_434,3,bfc6d05d-7881-4e36-a87f-72d149913159,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,139157.585,False,,,,,,,,,,,/root/Legal Harness/records/runs/bfc6d05d-7881-4e36-a87f-72d149913159
+161,qa_550_3hop_837,3,f1a7a0a9-6010-4873-9bcf-f1e093fd20fc,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,137466.111,False,,,,,,,,,,,/root/Legal Harness/records/runs/f1a7a0a9-6010-4873-9bcf-f1e093fd20fc
+162,qa_13_1hop_18,1,bf05345a-1feb-4200-8382-1e1ff04483da,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,1,3,1,0.3333333333333333,1.0,0.5,False,True,0.0,0.0,"갑과 을은 공동하여 죄를 범한 경우 각자를 그 죄의 정범으로 처벌받습니다[CT1]
+야간에 사람의 주거, 관리하는 건조물, 선박, 항공기 또는 점유하는 방실에 침입하여 타인의 재물을 절취한 자는 10년 이하의 징역에 처합니다[CT2]
+전제: 범행이 야간에 이루어졌다고 가정합니다.
+전제: 을의 사무실이 형법상 '주거' 또는 '관리하는 건조물'에 해당한다고 가정합니다.
+한계: 사무실이 형법상 '주거'에 해당하는지 여부에 대한 법적 정의나 판단 기준이 후보 조문에 포함되어 있지 않아, 해당 적용은 조건부로 제시됩니다.
+한계: 주간 주거침입절도죄의 법정형이 후보 조문에 포함되어 있지 않아, 야간 범행에 한해 처벌 수위가 제시됩니다.",GENERATED,retrieved_candidates,True,0.04545454545454545,False,,,False,,False,False,,3,6,30,19,676409.239,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/bf05345a-1feb-4200-8382-1e1ff04483da
+163,qa_52_1hop_80,1,b54af308-afd6-4359-9fb3-5ce8e64bcf70,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,1,1,0,0.0,0.0,0.0,False,False,0.0,0.0,"공무원에 대하여 허위신고를 하여 면허증, 허가증, 등록증 또는 여권에 부실의 사실을 기재하게 한 자는 3년 이하의 징역 또는 700만원 이하의 벌금에 처한다.[CT1][CT2]
+전제: 갑이 제출한 서류가 형법 제228조 제2항에서 규정하는 '허위신고'에 해당하며, 을이 처리한 허가서가 '허가증'에 포함된다고 가정합니다.
+한계: 본 답변은 비공개 벤치마크 후보이며, 공개 가능한 답변이 아닙니다.
+한계: 수집된 후보 조항 중 갑의 행위를 포괄적으로 규정하는 공무집행방해죄 등 다른 관련 조항이 부족하여, 형법 제228조 제2항에 한정하여 분석하였습니다.",GENERATED,retrieved_candidates,True,0.10126582278481013,False,,,False,,False,False,,3,6,30,19,521943.19,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/b54af308-afd6-4359-9fb3-5ce8e64bcf70
+164,qa_80_1hop_125,1,53a00b03-a8bf-4d7c-8094-3e95de6bdc28,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.07272727272727274,0.07272727272727274,"폭행 또는 협박으로 타인의 재물을 강취한 자는 강도죄에 해당합니다.[CT1]
+강도죄에 해당하는 자는 3년 이상의 유기징역에 처해집니다.[CT2]
+전제: 갑이 을에게 행사한 폭력이 형법상 '폭행'에 해당한다고 가정합니다.
+전제: 갑이 빼앗은 현금이 형법상 '재물'에 해당한다고 가정합니다.
+한계: 본 답변은 제공된 형법 제333조 조문에만 근거하며, 가중처벌 사유나 다른 관련 조항은 다루지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.07272727272727274,False,,,True,,False,True,True,1,2,10,10,158603.249,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/53a00b03-a8bf-4d7c-8094-3e95de6bdc28
+165,qa_162_1hop_291,1,b1512552-7e67-4f4f-8d09-586aaf5c4950,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,1,2,1,0.5,1.0,0.6666666666666666,False,True,0.0,0.0,"형사소송법 제326조 제3호에 따르면, 공소의 시효가 완성되었을 때에는 면소의 판결을 하여야 합니다.[CT1]
+따라서 공소시효가 만료된 갑의 절도 혐의에 대해 법원은 면소 판결을 내려야 합니다.[CT2]
+전제: 갑의 절도 혐의에 대해 공소시효가 기소 시점에 이미 완성되었음을 전제로 합니다.
+한계: 본 답변은 비공개 벤치마크 후보이며, 공개 가능한 답변이 아닙니다.
+한계: 제시된 후보 조항 중 형사소송법 제327조(공소기각)와 제326조(면소)의 관계에 대한 구체적인 판례나 해석이 포함되어 있지 않아, 면소 판결이 유일한 결론인지에 대한 추가 검증이 필요합니다.",GENERATED,retrieved_candidates,True,0.0,False,,,False,,False,False,,3,4,30,17,465715.509,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/b1512552-7e67-4f4f-8d09-586aaf5c4950
+166,qa_59_2hop_90,2,3c7c241c-8e3a-490a-bc2a-155a60b83b65,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,2,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,157552.742,False,,,,,,,,,,,/root/Legal Harness/records/runs/3c7c241c-8e3a-490a-bc2a-155a60b83b65
+167,qa_158_2hop_287,2,04149467-4f0f-4a29-b4ee-3e62a1d7ce8e,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.24444444444444446,0.24444444444444446,"환어음의 점유를 잃은 경우, 소지인이 제3자에게 권리를 증명할 때 그 어음을 반환할 의무가 없습니다.[CT1]
+소지인이 악의 또는 중대한 과실로 어음을 취득한 경우에는 어음을 반환할 의무가 있습니다.[CT2]
+약속어음에 대하여는 배서에 관한 규정(제11조부터 제20조까지)을 준용하므로, 환어음에 적용되는 반환 의무 규정이 약속어음에도 적용됩니다.[CT3]
+전제: 갑이 환어음의 점유를 잃은 사실과 소지인 지위를 전제로 합니다.
+한계: 소지인이 악의 또는 중대한 과실로 어음을 취득했는지 여부에 따라 반환 의무가 발생할 수 있습니다.",PUBLISHED_ANSWER,published_answer,True,0.24444444444444446,False,,,True,,False,True,True,1,2,10,10,183252.993,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/04149467-4f0f-4a29-b4ee-3e62a1d7ce8e
+168,qa_281_2hop_441,2,e657a9f8-1a2e-487c-80b9-e791372b0404,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,2,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,154170.706,False,,,,,,,,,,,/root/Legal Harness/records/runs/e657a9f8-1a2e-487c-80b9-e791372b0404
+169,qa_368_2hop_584,2,6837f5c2-f55e-4a6c-9766-d75c86638e3c,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,MAX_RETRIEVAL_ROUNDS_REACHED,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,2,3,2,0.6666666666666666,1.0,0.8,False,True,0.0,0.0,"수인이 불가분채무를 부담한 경우에는 제413조 내지 제415조, 제422조, 제424조 내지 제427조 및 전조의 규정을 준용한다.[CT1]
+채권자는 어느 연대채무자에 대하여 또는 동시나 순차로 모든 연대채무자에 대하여 채무의 전부나 일부의 이행을 청구할 수 있다.[CT2]
+A 회사는 갑, 을, 병 중 한 명에게 채무의 전부 또는 일부의 이행을 청구할 수 있다.[CT3][CT4]
+전제: 갑, 을, 병이 A 회사에 대해 불가분채무를 부담하고 있다는 사실은 질문의 전제로 가정한다.
+한계: 본 답변은 벤치마크 진단용 후보이며, 공개 가능한 답변이 아니다.
+한계: 불가분채무의 직접적 정의 조항이 후보에 부재하여, 준용 규정을 통한 간접적 근거에 의존한다.",GENERATED,retrieved_candidates,True,0.3652173913043478,False,,,False,,False,False,,3,6,30,14,522367.318,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/6837f5c2-f55e-4a6c-9766-d75c86638e3c
+170,qa_602_2hop_910,2,c73dad57-0118-4b29-aefc-3b7aa65b0e5f,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T1,T2,all,2,1,1,1.0,0.5,0.6666666666666666,False,False,0.28,0.28,"피고인이 항소한 사건에 대해서는 원심판결의 형보다 무거운 형을 선고할 수 없다.[CT1]
+전제: 갑이 피고인으로서 단독으로 항소한 것으로 가정합니다.
+한계: 상고심에서의 불이익변경 금지 여부에 대한 법적 근거가 제공되지 않아 해당 부분(T2)에 대한 답변은 보류됩니다.",PUBLISHED_ANSWER,published_answer,True,0.28,False,,,True,,True,True,True,3,5,30,15,461686.491,True,0.5,False,0.5,False,0.5,False,0.5,False,0.5,False,/root/Legal Harness/records/runs/c73dad57-0118-4b29-aefc-3b7aa65b0e5f
+171,qa_28_2hop_112_rand,2,324c2c68-1c94-409c-b946-cb1d6a78aae0,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,3,2,0.6666666666666666,1.0,0.8,False,True,0.3720930232558139,0.3720930232558139,"전시할 목적으로 의료기기를 진열하려는 자는 미리 지방식품의약품안전청장에게 승인을 받아야 한다.[CT1]
+제1항에 따라 승인받은 의료기기를 진열하려는 자는 사용방법 등을 설명하기 위하여 단순하게 작동시키는 행위, 신고한 내용에 관한 홍보물을 부착하거나 비치하는 행위 등 식품의약품안전처장이 정하여 고시하는 행위 외의 행위를 해서는 아니 된다.[CT2]
+지방식품의약품안전청장은 제1항에 따라 승인받은 의료기기가 다음 각 호의 어느 하나에 해당하는 경우에는 그 승인을 취소하여야 하고, 해당 의료기기를 봉함ㆍ봉인하거나 진열을 중지시키는 등의 조치를 할 수 있다. 1. 승인받은 내용과 다르게 진열하거나 사용한 경우 2. 제2항에 따라 허용된 행위 외의 행위를 한 경우 3. 그 밖에 국민 건강에 위해를 끼칠 우려가 있는 행위를 한 경우[CT3]",PUBLISHED_ANSWER,published_answer,True,0.3720930232558139,False,,,True,,False,True,True,1,2,10,10,189521.276,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/324c2c68-1c94-409c-b946-cb1d6a78aae0
+172,qa_157_2hop_606_rand,2,0f8ee106-fd23-4c91-9988-60d74fbcdb88,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T1,T2,all,2,4,2,0.5,1.0,0.6666666666666666,False,True,0.3333333333333333,0.3333333333333333,"군사법경찰관은 범죄 수사에 관하여 직무상 상관의 명령에 복종하여야 한다.[CT1]
+갑은 군사법경찰관으로서 이 절도 사건 수사에 관하여 직무상 상관인 을의 명령에 복종하여야 한다.[CT2]
+국방부장관은 군검찰사무의 최고감독자로서 일반적으로 군검사를 지휘·감독하며, 구체적 사건에 관하여는 각 군 참모총장과 국방부검찰단장만을 지휘·감독한다.[CT3]
+전제: 을이 갑의 직무상 상관이라는 사실은 질문의 배경 시나리오에서 주어진 전제로 간주합니다.
+한계: 국방부장관의 군사사법 관련 지휘·감독 권한 범위(T2)에 대한 증거(E2)가 부분적으로만 충족되어 있어, 해당 질문에 대한 법적 결론은 보류됩니다.",PUBLISHED_ANSWER,published_answer,True,0.3333333333333333,False,,,True,,False,True,True,3,6,30,16,697383.687,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/0f8ee106-fd23-4c91-9988-60d74fbcdb88
+173,qa_207_2hop_790_rand,2,dc7e61b1-59ef-4505-917b-927a1f7d147e,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,MAX_RETRIEVAL_ROUNDS_REACHED,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,2,4,1,0.25,0.5,0.3333333333333333,False,False,0.0,0.0,"선박소유자와 선원 간에 생긴 근로관계에 관한 분쟁의 해결을 해양항만관청이 주선할 수 있다.[CT1]
+해양항만관청이 심사나 조정을 하지 아니하거나 그 결과에 이의가 있는 자는 선원노동위원회에 심사나 중재를 청구할 수 있다.[CT2]
+선원의 근로관계에 관하여는 근로기준법의 특정 조항을 적용한다.[CT3]
+전제: 본 답변은 제공된 후보 조항들만을 근거로 작성된 벤치마크 진단용 답변입니다.
+한계: 선원법과 근로기준법 간의 일반적인 우선 적용 관계에 대한 명시적 조항이 부재하여, 법적 체계의 우선순위를 특정하는 데 한계가 있습니다.
+한계: 1차적 해결 기관의 명확한 우선순위를 포괄적으로 특정하는 조항이 제공되지 않아, 분쟁 해결 절차의 단계적 우선순위를 단정할 수 없습니다.",GENERATED,retrieved_candidates,True,0.14678899082568808,False,,,False,,False,False,,3,5,30,18,501222.054,True,0.5,False,0.5,False,0.5,False,0.5,False,0.5,False,/root/Legal Harness/records/runs/dc7e61b1-59ef-4505-917b-927a1f7d147e
+174,qa_14_3hop_58_rand,3,a695ab89-4a14-4573-adc7-f64af093ab42,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,148022.78,False,,,,,,,,,,,/root/Legal Harness/records/runs/a695ab89-4a14-4573-adc7-f64af093ab42
+175,qa_73_3hop_113,3,90caa18d-0e4d-4009-8b47-d0d9801ee274,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,142555.779,False,,,,,,,,,,,/root/Legal Harness/records/runs/90caa18d-0e4d-4009-8b47-d0d9801ee274
+176,qa_314_3hop_503,3,e0582609-2441-4ebd-bdd3-68f6b43bae53,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,153705.559,False,,,,,,,,,,,/root/Legal Harness/records/runs/e0582609-2441-4ebd-bdd3-68f6b43bae53
+177,qa_16_1hop_22,1,5ce335c2-0d67-48c5-80ec-c345ce1bce75,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.3373493975903615,0.3373493975903615,"검사가 사법경찰관이 신청한 영장을 정당한 이유 없이 판사에게 청구하지 아니한 경우 사법경찰관은 그 검사 소속의 지방검찰청 소재지를 관할하는 고등검찰청에 영장 청구 여부에 대한 심의를 신청할 수 있다.[CT1]
+전제: 담당 검사 병의 영장 청구 거부가 '정당한 이유 없이' 이루어졌다는 사실은 질문의 전제에 따라 가정합니다.
+한계: 본 답변은 형사소송법 제221조 제5항 제1호에 명시된 심의 신청 절차에 한정됩니다. 심의 신청 이후의 절차적 결과나 다른 구제 수단에 대해서는 언급하지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.3373493975903615,False,,,True,,False,True,True,1,1,10,10,103422.008,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/5ce335c2-0d67-48c5-80ec-c345ce1bce75
+178,qa_55_1hop_83,1,aeee542d-271b-465d-881b-87566dcfa180,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.3611111111111111,0.3611111111111111,"피고사건이 법원의 관할에 속하지 아니한 때에는 판결로써 관할위반의 선고를 하여야 한다.[CT1]
+A시 지방법원은 관할권이 없는 것으로 밝혀진 본 사건에 대해 관할위반의 선고를 하는 판결을 내려야 한다.[CT2]
+전제: A시 지방법원이 해당 사건에 대해 관할권이 없음을 법원이 확인한 것으로 가정한다.
+한계: 본 답변은 형사소송법 제319조에 근거한 관할위반의 선고 절차에 한정되며, 관할 이송 또는 지정에 관한 별도 절차는 다루지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.3611111111111111,False,,,True,,False,True,True,1,1,10,10,124718.867,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/aeee542d-271b-465d-881b-87566dcfa180
+179,qa_135_1hop_245,1,8ba1fd2b-54e7-423c-9130-518caa5ecaa0,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,2,1,0.5,1.0,0.6666666666666666,False,True,0.15533980582524273,0.15533980582524273,"전자금융거래법 제6조 제3항에 따르면, 누구든지 접근매체를 사용 및 관리함에 있어서 다른 법률에 특별한 규정이 없는 한 접근매체를 대여받거나 대여하는 행위를 하여서는 아니 됩니다.[CT1]
+전자금융거래법 제49조 제4항 제2호에 따르면, 제6조 제3항 제2호 또는 제3호를 위반하여 접근매체를 대여받거나 대여한 자는 5년 이하의 징역 또는 3천만원 이하의 벌금에 처합니다.[CT2]
+전제: 갑이 을에게 접근매체를 대여한 행위가 대가 수수나 범죄 이용 목적과 무관하게 이루어졌다고 가정합니다. (제6조 제3항 제2호 또는 제3호 위반으로 간주)
+한계: 본 답변은 제공된 법 조항에 기반한 일반적 법적 해석이며, 구체적인 사건의 사실관계(대가 여부, 고의성 등)에 따라 적용 조항이 달라질 수 있습니다.",PUBLISHED_ANSWER,published_answer,True,0.15533980582524273,False,,,True,,False,True,True,1,2,10,10,175014.413,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/8ba1fd2b-54e7-423c-9130-518caa5ecaa0
+180,qa_165_1hop_293,1,78a70b86-6061-48fd-a5e1-47fa892d1937,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,1,1,0,0.0,0.0,0.0,False,False,0.0,0.0,"배상신청은 민사소송에서의 소의 제기와 동일한 효력이 있다.[CT1]
+전제: 갑이 을의 범죄행위로 인해 발생한 피해에 대해 형사소송이 진행 중이라는 사실은 질문의 배경 시나리오로 가정함
+한계: 형사배상명령의 구체적 신청 요건 및 민사소송과의 관계(민사소송 진행 중일 때의 신청 가능 여부)에 관한 명시적 규정이 후보 조항에 포함되어 있지 않아, 해당 쟁점에 대한 법적 결론을 도출할 수 없음
+한계: 본 답변은 비공개 벤치마크 진단용이며, 공개 가능한 답변으로 승인되지 않음",GENERATED,retrieved_candidates,True,0.028169014084507043,False,,,False,,False,False,,3,5,30,23,343550.918,True,1.0,True,1.0,True,0.0,False,0.0,False,0.0,False,/root/Legal Harness/records/runs/78a70b86-6061-48fd-a5e1-47fa892d1937
+181,qa_69_2hop_103,2,3d2587d0-f99c-4e00-b21d-6040d8dbe410,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.29457364341085274,0.29457364341085274,"경비업 허가를 받지 않고 경비업을 영위한 자는 3년 이하의 징역 또는 3천만원 이하의 벌금에 처해집니다.[CT1]
+자기의 행위가 법령에 의하여 죄가 되지 아니하는 것으로 오인한 행위는 그 오인에 정당한 이유가 있는 때에 한하여 벌하지 아니합니다.[CT2]
+전제: 갑이 제공한 보안 서비스가 경비업법상 '경비업'에 해당한다고 가정합니다.
+전제: 갑이 경비업법 제4조 제1항에 따른 허가를 받지 않은 상태라고 가정합니다.
+한계: 형법 제16조에 따른 벌하지 아니함의 효과는 오인에 '정당한 이유'가 있는 경우에 한하여 적용됩니다. 갑의 오인에 정당한 이유가 있는지 여부는 개별 사건의 사실관계에 따라 판단되어야 하며, 본 답변에서는 그 인정 여부를 확정하지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.29457364341085274,False,,,True,,False,True,True,1,2,10,10,192983.985,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/3d2587d0-f99c-4e00-b21d-6040d8dbe410
+182,qa_168_2hop_300,2,59f5a7a4-83ab-4d77-9e98-a1e0aa7a6950,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,4,1,0.25,0.5,0.3333333333333333,False,False,0.13513513513513514,0.13513513513513514,"특정공무원범죄에 관한 몰수·추징의 시효는 형법 제78조에도 불구하고 10년으로 한다.[CT1]
+몰수할 수 없을 때에는 그 가액을 추징한다.[CT2][CT3]
+전제: 갑의 횡령 범죄가 '특정공무원범죄'에 해당한다고 가정한다.
+한계: 형법 제78조 제6호의 일반 몰수 시효(5년)는 공무원범죄에 관한 몰수 특례법 제9조의4의 특별 규정(10년)에 의해 배제된다.",PUBLISHED_ANSWER,published_answer,True,0.13513513513513514,False,,,True,,True,True,True,2,4,20,19,332075.145,True,1.0,True,1.0,True,0.5,False,0.5,False,0.5,False,/root/Legal Harness/records/runs/59f5a7a4-83ab-4d77-9e98-a1e0aa7a6950
+183,qa_290_2hop_453,2,9aaeb47d-3db7-4c85-8829-235082ca89c7,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,5,2,0.4,1.0,0.5714285714285715,False,True,0.3063829787234043,0.31718061674008813,"신탁업자가 사업시행자로 지정된 경우, 해당 정비사업의 토지등소유자 전원으로 구성되는 회의(토지등소유자 전체회의)의 의결을 거쳐야 하는 사항은 시행규정의 확정 및 변경, 정비사업비의 사용 및 변경, 정비사업전문관리업자와의 계약 등 토지등소유자의 부담이 될 계약, 시공자의 선정 및 변경, 정비사업비의 토지등소유자별 분담내역, 자금의 차입과 그 방법·이자율 및 상환방법, 사업시행계획서의 작성 및 변경, 관리처분계획의 수립 및 변경, 청산금의 징수·지급과 조합 해산 시의 회계보고, 비용의 금액 및 징수방법, 그 밖에 토지등소유자에게 부담이 되는 것으로 시행규정으로 정하는 사항입니다.[CT1]
+정비구역의 지정권자가 정비구역을 지정하거나 변경지정하려면 지방도시계획위원회의 심의를 거쳐야 합니다.[CT2]
+정비구역의 지정권자가 정비구역을 지정하려면 주민 및 지방의회의 의견을 들어야 하며, 지방도시계획위원회의 심의를 거쳐야 합니다.[CT3]
+사업시행계획인가에 앞서 정비계획의 변경(정비구역의 변경 포함, 경미한 변경 제외)이 필요한 경우, 지정권자는 정비계획의 변경을 위한 지방도시계획위원회 심의를 사업시행계획인가와 관련된 심의와 함께 통합하여 검토 및 심의할 수 있습니다.[CT4]
+전제: 질문에서 '재개발 사업'이라고 표현했으나, 신탁업자가 사업시행자로 지정된 경우를 전제로 하므로 도시 및 주거환경정비법 제48조가 적용되는 것으로 가정합니다.
+한계: 정비구역 지정 또는 변경 시 '경미한 사항'의 범위는 제15조제3항에 따라 정해지며, 본 답변에서는 그 구체적 내용을 다루지 않습니다.
+한계: 통합 심의 특례(제50조 제3항)는 사업시행계획인가에 앞서 정비계획 변경이 필요한 경우에 한하여 적용됩니다.",PUBLISHED_ANSWER,published_answer,True,0.31718061674008813,False,,,True,,False,True,True,1,2,10,10,273735.87,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/9aaeb47d-3db7-4c85-8829-235082ca89c7
+184,qa_450_2hop_717,2,878204cd-508e-43ba-8200-49063ca10d73,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.2241379310344828,0.2241379310344828,"공무원이 정당한 이유없이 그 직무수행을 거부하거나 그 직무를 유기한 때에는 1년 이하의 징역이나 금고 또는 3년 이하의 자격정지에 처한다.[CT1]
+사무처리를 그르치게 할 목적으로 공무원 또는 공무소의 전자기록등 특수매체기록을 위작 또는 변작한 자는 10년 이하의 징역에 처한다.[CT2]
+전제: 갑의 상사 지시 무시 및 직무 불이행이 '정당한 이유'가 없는 직무수행 거부 또는 유기로 인정된다고 가정합니다.
+전제: 을의 허위 결산서 입력 행위가 '사무처리를 그르치게 할 목적'을 가지고 이루어진 것으로 인정된다고 가정합니다.
+한계: 본 답변은 제공된 형법 조항에 기반한 일반적 법적 적용이며, 구체적인 사건의 유죄 여부는 법원의 사실 인정을 통해 결정됩니다.",PUBLISHED_ANSWER,published_answer,True,0.2241379310344828,False,,,True,,False,True,True,2,4,20,19,418320.55,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/878204cd-508e-43ba-8200-49063ca10d73
+185,qa_41_2hop_160_rand,2,ceaeebea-e7d7-494d-836e-52878ff616ec,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.76,0.76,"장내기능시험에 불합격한 사람은 불합격한 날부터 3일이 지난 후에 다시 장내기능시험에 응시할 수 있다.[CT1]
+도로주행시험에 불합격한 사람은 불합격한 날부터 3일이 지난 후에 다시 도로주행시험에 응시할 수 있다.[CT2]",PUBLISHED_ANSWER,published_answer,True,0.76,False,,,True,,False,True,True,1,2,10,10,146237.806,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/ceaeebea-e7d7-494d-836e-52878ff616ec
+186,qa_92_2hop_361_rand,2,44150cb3-afaf-4f95-8edf-0cebe3ef4875,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T2,T1,all,2,6,2,0.3333333333333333,1.0,0.5,False,True,0.2680412371134021,0.2680412371134021,"도로관리청은 법 제86조제2항에 따라 보조금을 지원받아 국가지원지방도의 건설에 관한 사업을 하려는 경우에는 「보조금 관리에 관한 법률」 제4조에 따라 보조금의 예산 계상(計上) 신청을 하여야 한다.[CT1]
+국가지원지방도의 도로관리청은 제6조제1항 단서에 따라 국토교통부장관이 수립한 건설ㆍ관리계획과 제3항에 따른 조사ㆍ설계에 따라 국가지원지방도의 도로공사를 시행하여야 한다.[CT2]
+국가지원지방도의 건설에 관한 공사착공보고는 착공일부터 10일 이내에, 분기별 공정보고는 분기 종료일부터 10일 이내에 정해진 서식에 따라 보고하여야 한다.[CT3]
+국토교통부장관은 국가지원지방도에 관한 공사착공보고 및 분기별 공정보고의 접수 권한을 지방국토관리청장에게 위임한다.[CT4]
+특별시장 또는 광역시장이 국가지원지방도의 조사ㆍ설계를 실시하는 경우 그 조사ㆍ설계에 관한 비용은 국고에서 부담한다.[CT5]
+전제: 을시가 국가지원지방도의 도로관리청에 해당하거나 도로관리청으로서 사업을 수행하는 주체임을 전제로 함
+한계: 갑시의 조사 및 설계 비용 처리 방식(T1)에 관한 근거가 불완전하여(partially_covered) 해당 항목에 대한 답변을 보류함. 이는 법적 결론이 아닌 증거 범위 제한임.
+한계: 조사 및 설계 비용의 부담 주체와 처리 방식에 관한 규정은 특별시장 또는 광역시장이 실시하는 경우에만 명시되어 있으며, 국토교통부장관이 실시하는 일반적 경우의 비용 처리 방식은 제공된 근거 자료에서 확인되지 않아 해당 부분의 법적 결론을 유보함.",PUBLISHED_ANSWER,published_answer,True,0.2680412371134021,False,,,True,,False,True,True,3,6,30,15,817270.086,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/44150cb3-afaf-4f95-8edf-0cebe3ef4875
+187,qa_159_2hop_614_rand,2,fc2fd7ab-f951-4a2a-97f0-78d876359ec3,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.16279069767441862,0.16279069767441862,"신탁채권은 수익자가 수탁자에게 신탁재산에 속한 재산의 인도와 그 밖에 신탁재산에 기한 급부를 요구하는 청구권(수익채권)보다 우선합니다.[CT1]
+수탁자가 변경된 경우 신수탁자는 전수탁자가 신탁행위로 인하여 수익자에게 부담하는 채무를 승계합니다.[CT2]
+전제: 을이 갑의 재산을 관리하는 기간에 발생한 제3자에 대한 채권이 신탁행위로 인하여 발생한 신탁채권에 해당한다고 가정합니다.
+한계: 본 답변은 제공된 신탁법 조항에 근거한 일반적 법적 관계와 승계 방식을 설명하며, 구체적인 사건의 사실관계나 다른 법적 쟁점에 대한 판단을 포함하지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.16279069767441862,False,,,True,,False,True,True,1,2,10,10,165283.151,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/fc2fd7ab-f951-4a2a-97f0-78d876359ec3
+188,qa_209_2hop_798_rand,2,752cd954-cc31-4a58-a15b-1da313930e5b,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,6,2,0.3333333333333333,1.0,0.5,False,True,0.30851063829787234,0.30851063829787234,"후보자등록기간이 지난 후에 후보자가 사퇴·사망하거나 등록이 무효로 된 때라도 투표용지에서 그 기호·정당명 및 성명을 말소하지 아니한다.[CT1]
+구·시·군선거관리위원회는 선상투표신고인명부에 올라 있는 선거인에게 보낼 투표용지를 작성하여 해당 선상투표자가 승선하고 있는 선박의 선장에게 선거일 전 9일까지 팩시밀리를 이용하여 전송하여야 한다.[CT2]
+선장이 제1항에 따라 선상투표용지를 받은 때에는 즉시 해당 선상투표자에게 인계하여야 한다.[CT3]
+구·시·군선거관리위원회는 선상투표용지를 작성할 때 표지부분과 투표부분을 구분하고, 표지부분에는 선거인 확인란과 해당 선거구의 정당·후보자에 관한 정보를 열람할 수 있는 중앙선거관리위원회 인터넷 홈페이지 주소, 선상투표방법에 관한 사항 등을 게재하여야 한다.[CT4]
+제4항에 따라 선상투표용지를 교부받은 선상투표자는 선거인 확인란에 서명한 후 1명의 후보자(비례대표국회의원선거에서는 하나의 정당을 말한다)를 선택하여 선상투표용지의 해당란에 기표한 다음 선상투표소에 설치된 팩시밀리로 직접 해당 시·도선거관리위원회에 전송하여야 한다.[CT5]
+전제: 후보자 갑이 후보자등록기간이 종료된 후에 사망한 것으로 가정합니다.
+전제: 을이 적법하게 선상투표신고를 마친 선상투표자로 가정합니다.
+한계: 본 답변은 제공된 법령 조항에 기반한 일반적 법적 근거를 설명하며, 개별 선거의 구체적 행정 절차나 예외적 상황은 다루지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.30851063829787234,False,,,True,,False,True,True,1,2,10,10,252289.139,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/752cd954-cc31-4a58-a15b-1da313930e5b
+189,qa_248_2hop_947_rand,2,414be43d-7548-4652-aeea-02b2846f53d5,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.2962962962962963,0.2962962962962963,"갑이 잡종재산의 대금을 일시에 전액 납부하는 경우, 제6조제1항 또는 제2항의 규정에 의하여 결정된 가격에서 3할(30%)을 공제한 차액을 매각대금으로 징수합니다.[CT1]
+잡종재산의 매각 가격은 시가를 기준으로 지방관재국장이 결정하며, 이때 시가의 기준은 재무부장관이 고시하는 가격기준표에 의하여 산출한 평가액 이상이 되어야 합니다.[CT2]
+전제: 질문에서 언급된 '갑'과 '을' 간의 계약이 국공유재산처리임시특례법의 적용 대상인 잡종재산 매각 계약임을 전제합니다.
+한계: 본 답변은 제공된 법령 조항에 근거한 법적 규칙의 해석이며, 실제 사건의 구체적 사실관계(예: 재산의 종류, 지역, 시점 등)에 따른 개별적 적용 결과는 다를 수 있습니다.",PUBLISHED_ANSWER,published_answer,True,0.2962962962962963,False,,,True,,False,True,True,1,2,10,10,161566.987,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/414be43d-7548-4652-aeea-02b2846f53d5
+190,qa_32_3hop_125_rand,3,70dbea52-cb7c-41cc-84bd-745d3687be4d,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,141247.654,False,,,,,,,,,,,/root/Legal Harness/records/runs/70dbea52-cb7c-41cc-84bd-745d3687be4d
+191,qa_74_3hop_116,3,306df00e-0161-4983-a04a-7947ed9c2e35,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,3,2,1,0.5,0.3333333333333333,0.4,False,False,0.0,0.0,,EXECUTION_FAILURE,retrieved_candidates,False,,,,,False,,False,False,,3,6,30,25,537206.634,True,1.0,True,1.0,True,0.3333333333333333,False,0.6666666666666666,False,0.6666666666666666,False,/root/Legal Harness/records/runs/306df00e-0161-4983-a04a-7947ed9c2e35
+192,qa_321_3hop_511,3,5a62144d-ced5-4a8e-8d4e-3e39d99eb0b8,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,MAX_RETRIEVAL_ROUNDS_REACHED,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,3,1,1,1.0,0.3333333333333333,0.5,False,False,0.0,0.0,"악의의 수익자는 그 받은 이익에 이자를 붙여 반환하고 손해가 있으면 이를 배상하여야 한다.[CT1]
+점유자가 점유물을 개량하기 위하여 지출한 금액 기타 유익비에 관하여는 그 가액의 증가가 현존한 경우에 한하여 회복자의 선택에 좇아 그 지출금액이나 증가액의 상환을 청구할 수 있다.[CT2]
+전제: 갑이 을의 부동산을 점유하여 얻은 수익이 '이익'에 해당한다고 가정한다.
+전제: 갑이 점유 당시 및 점유 기간 중 악의였다고 가정한다.
+한계: 본 답변은 벤치마크 후보이며, 법적 효력이 없다.
+한계: 이자율의 구체적 산정 기준(법정이율 등)은 제공된 후보 조항에 명시되지 않아, 일반적인 민법 원칙에 기반한 추론이다.
+한계: 실제 사건의 구체적 사실관계(예: 점유 기간, 수익의 종류, 손해의 규모)에 따라 반환 범위가 달라질 수 있다.",GENERATED,retrieved_candidates,True,0.18791946308724833,False,,,False,,False,False,,3,6,30,21,544717.201,True,0.6666666666666666,False,0.6666666666666666,False,0.3333333333333333,False,0.3333333333333333,False,0.3333333333333333,False,/root/Legal Harness/records/runs/5a62144d-ced5-4a8e-8d4e-3e39d99eb0b8
+193,qa_17_1hop_24,1,f7a388b5-13fb-4b7a-bfa1-94dbe4533dbc,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,1,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,149376.497,False,,,,,,,,,,,/root/Legal Harness/records/runs/f7a388b5-13fb-4b7a-bfa1-94dbe4533dbc
+194,qa_56_1hop_86,1,f13be57a-5b8a-4a15-aa13-1b22f86c56a9,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.1818181818181818,0.1818181818181818,"소형선박 등록관청은 법원에서 압류등록을 위촉받은 경우, 해당 소형선박의 등록원부에 대통령령으로 정하는 바에 따라 압류등록을 하고 선박소유자에게 통지하여야 합니다.[CT1]
+전제: 질문 시나리오에서 '을'이 법원으로부터 압류등록을 위촉받았다고 명시되어 있으므로, 이는 민사집행법에 따른 법원의 위촉으로 가정합니다.
+한계: 압류등록의 구체적 기재 방식은 대통령령으로 정하는 바에 따르므로, 본 답변에서는 법률에 명시된 의무 사항만 기재합니다.",PUBLISHED_ANSWER,published_answer,True,0.1818181818181818,False,,,True,,False,True,True,1,1,10,10,100340.958,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/f13be57a-5b8a-4a15-aa13-1b22f86c56a9
+195,qa_85_1hop_135,1,3a85a8f0-59cd-4740-b95a-12375be18962,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,conditional,T1,,all,1,3,1,0.3333333333333333,1.0,0.5,False,True,0.08791208791208792,0.08791208791208792,"공중위생영업자가 그 공중위생영업을 양도하거나 사망한 때에는 그 양수인 또는 상속인은 그 공중위생영업자의 지위를 승계한다.[CT1]
+미용업의 경우에는 제6조의 규정에 의한 면허를 소지한 자에 한하여 공중위생영업자의 지위를 승계할 수 있다.[CT2]
+공중위생영업자의 지위를 승계한 자는 1월 이내에 시장·군수 또는 구청장에게 신고하여야 한다.[CT3]
+전제: 을이 갑의 이발소(미용업)를 양수한 사실과 갑의 사망 사실은 질문의 배경 시나리오에 따라 사실로 가정합니다.
+한계: 을이 미용업 면허를 소지하고 있는지 여부가 확인되지 않아, 공중위생관리법 제3조 제3항에 따른 승계 가능 여부에 대한 최종 결론을 내릴 수 없습니다.",PUBLISHED_ANSWER,published_answer,True,0.08791208791208792,False,,,True,,False,True,True,1,1,10,10,209160.935,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/3a85a8f0-59cd-4740-b95a-12375be18962
+196,qa_138_1hop_252,1,fe2ab4ae-6e90-4dea-aa8f-629fe5cc15a0,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.05479452054794521,0.05479452054794521,"강제집행에 필요한 비용은 채무자가 부담하고 그 집행에 의하여 우선적으로 변상을 받는다.[CT1]
+본 사안에서 을은 채무자에 해당하므로, 을의 자산에 대한 강제집행에 소요된 비용은 을이 부담한다.[CT2]
+전제: 갑과 을 사이의 채권채무 관계가 유효하게 성립되어 있고, 을이 채무자 지위에 있음을 전제한다.
+한계: 본 답변은 민사집행법 제53조 제1항의 일반 규정에 기반하며, 파산절차 개시나 기타 특수한 법적 상황(예: 채무자 재산 부족으로 인한 비용 전가 등)이 존재하는 경우 다른 규정이 적용될 수 있다.",PUBLISHED_ANSWER,published_answer,True,0.05479452054794521,False,,,True,,False,True,True,1,1,10,10,116423.541,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/fe2ab4ae-6e90-4dea-aa8f-629fe5cc15a0
+197,qa_168_1hop_299,1,4460aabb-436f-4d18-8fb2-d370efb68ec9,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,2,1,0.5,1.0,0.6666666666666666,False,True,0.03636363636363636,0.03636363636363636,"특정공무원범죄에 관한 몰수·추징의 시효는 「형법」 제78조에도 불구하고 10년으로 한다.[CT1]
+갑의 부정부패 행위와 관련된 몰수·추징의 시효는 10년이다.[CT2]
+전제: 갑의 부정부패 행위가 「공무원범죄에 관한 몰수 특례법」에서 규정하는 '특정공무원범죄'에 해당한다고 가정한다.
+한계: 본 답변은 제공된 법령 조항에 기반한 법적 규칙의 적용이며, 갑의 구체적 범죄 구성요건 충족 여부나 사법적 판단은 포함하지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.03636363636363636,False,,,True,,False,True,True,1,1,10,10,133083.374,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/4460aabb-436f-4d18-8fb2-d370efb68ec9
+198,qa_299_2hop_473,2,7cb280b7-35f9-4c94-a200-05b5d61695d8,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,4,2,0.5,1.0,0.6666666666666666,False,True,0.19230769230769232,0.19230769230769232,"사람의 주거에 침입한 자는 3년 이하의 징역 또는 500만원 이하의 벌금에 처한다.[CT1]
+폭행 또는 협박으로 사람을 강간한 자는 3년 이상의 유기징역에 처한다.[CT2]
+주거침입죄를 범한 사람이 강간죄를 범한 경우에는 무기징역 또는 7년 이상의 징역에 처한다.[CT3]
+폭행 또는 협박으로 사람에 대하여 추행을 한 자는 10년 이하의 징역 또는 1천500만원 이하의 벌금에 처한다.[CT4]
+전제: 갑의 '몰래 침입' 행위가 형법상 주거침입죄의 구성요건인 '침입'에 해당한다고 가정합니다.
+전제: 갑의 강간 행위가 형법상 '폭행 또는 협박'에 해당한다고 가정합니다.
+전제: 병의 폭행 행위가 형법상 강제추행죄의 구성요건인 '폭행 또는 협박'에 해당한다고 가정합니다.
+한계: 본 답변은 제공된 법률 조항에 기반한 일반적 법적 해석이며, 구체적인 사건의 사실관계에 따른 최종 법적 판단은 법원의 재량에 따릅니다.
+한계: 특수강간 등 가중처벌 규정은 주거침입죄와 강간죄가 모두 성립해야 적용되므로, 개별 범죄의 성립 여부에 따라 적용이 달라질 수 있습니다.",PUBLISHED_ANSWER,published_answer,True,0.19230769230769232,False,,,True,,False,True,True,2,3,20,19,551546.757,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/7cb280b7-35f9-4c94-a200-05b5d61695d8
+199,qa_473_2hop_745,2,9834da6c-44a3-4ad6-9f2b-2f3e6a075a2d,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,3,1,0.3333333333333333,0.5,0.4,False,False,0.33333333333333337,0.33333333333333337,"주식을 질권의 목적으로 하는 때에는 주권을 질권자에게 교부하여야 한다.[CT1]
+질권은 재산권을 그 목적으로 할 수 있다. 그러나 부동산의 사용, 수익을 목적으로 하는 권리는 그러하지 아니하다.[CT2]
+지분은 질권의 목적으로 할 수 있다.[CT3]
+전제: 질문에서 언급된 '주식'이 상법상 주권을 발행하는 주식회사의 주식임을 전제합니다.
+한계: 본 답변은 제공된 법령 조항에 기반한 법적 규정 해석이며, 구체적인 사안에 대한 법적 자문이 아닙니다.",PUBLISHED_ANSWER,published_answer,True,0.33333333333333337,False,,,True,,True,True,True,1,2,10,10,193329.252,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/9834da6c-44a3-4ad6-9f2b-2f3e6a075a2d
+200,qa_608_2hop_918,2,fd812f93-40ba-48b3-a07e-df579fd3819b,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,3,2,0.6666666666666666,1.0,0.8,False,True,0.7058823529411764,0.7058823529411764,"퇴직금제도를 설정하려는 사용자는 계속근로기간 1년에 대하여 30일분 이상의 평균임금을 퇴직금으로 퇴직 근로자에게 지급할 수 있는 제도를 설정하여야 한다.[CT1]
+평균임금은 이를 산정하여야 할 사유가 발생한 날 이전 3개월 동안에 그 근로자에게 지급된 임금의 총액을 그 기간의 총일수로 나눈 금액을 말한다.[CT2]
+근로자퇴직급여 보장법상 평균임금은 근로기준법 제2조제1항제6호에 따른 평균임금을 말한다.[CT3]",PUBLISHED_ANSWER,published_answer,True,0.7058823529411764,False,,,True,,False,True,True,1,2,10,10,236222.718,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/fd812f93-40ba-48b3-a07e-df579fd3819b
+201,qa_47_2hop_184_rand,2,30775af0-935c-4756-b29e-52d2f59e3b1e,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T1,T2,all,2,5,2,0.4,1.0,0.5714285714285715,False,True,0.2644628099173554,0.2644628099173554,"구·시·군선거관리위원회는 사전투표소를 설치할 때 선거일 전 9일까지 그 명칭, 소재지 및 설치·운영기간을 공고하고, 선거사무장 또는 선거연락소장에게 이를 통지해야 하며, 관할구역 안의 투표구마다 5개소에 공고문을 첩부해야 합니다.[CT1]
+사전투표소의 설치장소를 변경한 경우에도 명칭, 소재지 및 설치·운영기간에 대한 공고와 통지, 그리고 투표구별 5개소 공고문 첩부 의무가 동일하게 적용됩니다.[CT2]
+전제: 질문에서 언급된 '을 선거관리위원회'가 구·시·군선거관리위원회에 해당한다고 가정합니다.
+한계: 사전투표사무원의 구체적인 임명 절차(행정적 단계, 내부 위원회 절차 등)에 관한 명시적 조항이 제공된 증거에 포함되어 있지 않아, 해당 부분(T2)에 대한 법적 결론을 내리지 못합니다.",PUBLISHED_ANSWER,published_answer,True,0.2644628099173554,False,,,True,,False,True,True,3,6,30,18,741467.592,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/30775af0-935c-4756-b29e-52d2f59e3b1e
+202,qa_102_2hop_400_rand,2,b9c0223f-102a-4f53-9720-8f1ec43c6db9,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T2,T1,all,2,4,2,0.5,1.0,0.6666666666666666,False,True,0.27710843373493976,0.27710843373493976,"대기오염경보의 대상 오염물질은 「환경정책기본법」 제12조에 따라 환경기준이 설정된 오염물질 중 미세먼지(PM-10), 초미세먼지(PM-2.5), 오존(O3)으로 한정됩니다.[CT1]
+대기오염경보 발령 시 사업장의 조치 의무에 관한 법적 근거는 부분적으로만 확인되었으며, '사업장'의 법적 정의나 자동차 정비소가 해당 사업장 범위에 포함되는지를 명시하는 조항이 부재하여, 자동차 정비소의 구체적 조치 의무에 대해 법적 결론을 내릴 수 없습니다.[CT2]
+한계: 대기오염경보 발령 시 사업장의 조치 의무에 관한 근거(E1)는 부분적으로만 확인되었습니다. '사업장'의 법적 정의나 자동차 정비소가 해당 사업장 범위에 포함되는지를 명시하는 조항이 부재하여, 자동차 정비소의 구체적 조치 의무에 대해 법적 결론을 내릴 수 없습니다.",PUBLISHED_ANSWER,published_answer,True,0.27710843373493976,False,,,True,,False,True,True,3,6,30,24,645587.505,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/b9c0223f-102a-4f53-9720-8f1ec43c6db9
+203,qa_211_2hop_804_rand,2,0397fa06-592a-4eb4-83e3-e15ff7747080,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.6986301369863014,0.6986301369863014,"환경부장관은 제1항에 따른 인증을 받지 아니한 배출가스저감장치, 저공해엔진 또는 공회전제한장치를 제조, 수입, 공급 또는 판매하려는 자에게 환경부령으로 정하는 바에 따라 일정한 기간을 정하여 제품의 회수, 폐기 등의 필요한 조치를 명할 수 있다.[CT1]
+배출가스저감장치, 저공해엔진 또는 공회전제한장치의 판매를 중개하거나 구매를 대행하는 자는 제1항에 따른 인증을 받지 아니한 제품의 판매를 중개(「전자상거래 등에서의 소비자보호에 관한 법률」에 따른 통신판매중개자가 자신이 운영하는 사이버몰에서 해당 제품을 발견하는 즉시 삭제하고, 소비자가 이러한 정보를 확인할 수 있도록 기술적 조치를 한 경우는 제외한다. 이하 같다)하거나 구매를 대행하여서는 아니 된다.[CT2]",PUBLISHED_ANSWER,published_answer,True,0.6986301369863014,False,,,True,,False,True,True,1,2,10,10,265490.482,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/0397fa06-592a-4eb4-83e3-e15ff7747080
+204,qa_250_2hop_955_rand,2,f4316520-4c0a-451b-ab49-36c4afd5c9be,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.6183574879227054,0.6183574879227054,"하천공사시행계획에는 하천공사의 명칭, 목적 및 개요, 시행지역의 위치, 시행자의 명칭 및 주소, 착수 및 준공예정연월일, 수용 또는 사용할 물건 또는 권리에 관한 명세와 소유자 등의 성명 및 주소를 적은 서류, 실시설계도서, 사업비 및 자금조달계획서, 공사예정공정표, 하천시설의 관리에 관한 사항, 폐천부지등의 발생 예상 면적이 포함되어야 합니다[CT1]
+을(하천관리청)이 하천공사시행계획을 수립하거나 변경한 경우에는 위 사항 중 제1호(하천공사의 명칭)부터 제6호(수용하거나 사용할 물건 또는 권리에 관한 명세와 그 소유자 또는 소유자 외의 권리자의 성명 및 주소를 적은 서류)까지의 사항을 관보 또는 공보에 고시하여야 합니다[CT2]
+전제: 질문에서 '을'이 하천관리청임을 전제로 합니다.
+한계: 본 답변은 하천법 시행령 제26조 제1항 및 제3항의 문언에 기반한 법적 요건 및 절차에 관한 것입니다. 개별 하천공사에 따른 구체적인 사실관계(예: 실제 공사 내용, 지역 특성 등)에 따른 해석은 포함되지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.6183574879227054,False,,,True,,False,True,True,1,2,10,10,197759.462,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/f4316520-4c0a-451b-ab49-36c4afd5c9be
+205,qa_132_3hop_508_rand,3,998253e2-9c24-44b3-ab36-64884e68ba9f,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,166687.598,False,,,,,,,,,,,/root/Legal Harness/records/runs/998253e2-9c24-44b3-ab36-64884e68ba9f
+206,qa_77_3hop_121,3,51efbe79-587a-48a8-a343-8c171151f8f0,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,204302.435,False,,,,,,,,,,,/root/Legal Harness/records/runs/51efbe79-587a-48a8-a343-8c171151f8f0
+207,qa_329_3hop_523,3,9b533304-263e-42d0-acc8-2873677dee00,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,"지방세징수법 시행령 제53조 제1항은 채무자가 채무이행의 기한이 지나도 이행하지 아니하는 경우에는 최고를 하여야 한다고 규정합니다.[CT1]
+상법 제143조는 운송물의 수령거부, 수령불능의 경우를 규정하고 있습니다.[CT2]
+전제: 갑과 을 사이의 계약이 유효하게 성립하였고, 을의 서면 통지가 갑에게 도달한 것으로 가정합니다.
+한계: 본 응답은 벤치마크 진단용 후보이며, 공개 가능한 답변이 아닙니다.
+한계: 제공된 후보 조문에는 일반 민법상 채무불이행의 정의, 성립 요건, 채무자의 이행거절 통지의 효력, 채권자의 수령최고 요건 및 수령거부 시 채무불이행 성립에 관한 규정이 포함되어 있지 않습니다.",GENERATED,retrieved_candidates,True,0.048780487804878044,False,,,False,,False,False,,2,4,20,10,404073.603,True,1.0,True,1.0,True,0.6666666666666666,False,0.6666666666666666,False,0.6666666666666666,False,/root/Legal Harness/records/runs/9b533304-263e-42d0-acc8-2873677dee00
+208,qa_0_1hop_0,1,feff8889-0728-4be1-8673-33bd6104da14,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,2,1,0.5,1.0,0.6666666666666666,False,True,0.18,0.18,"계속보험료가 약정한 시기에 지급되지 아니한 때에는 보험자는 상당한 기간을 정하여 보험계약자에게 최고하고 그 기간내에 지급되지 아니한 때에는 그 계약을 해지할 수 있다.[CT1]
+특정한 타인을 위한 보험의 경우에 보험계약자가 보험료의 지급을 지체한 때에는 보험자는 그 타인에게도 상당한 기간을 정하여 보험료의 지급을 최고한 후가 아니면 그 계약을 해제 또는 해지하지 못한다.[CT2]
+전제: 갑과 을 사이의 자동차 보험 계약이 상법상 보험계약에 해당한다고 가정합니다.
+한계: 미납 보험료에 대한 이자 청구 또는 손해배상 청구에 관한 법적 근거가 제공된 조문에 포함되어 있지 않아, 해당 사항에 대해서는 답변을 보류합니다.",PUBLISHED_ANSWER,published_answer,True,0.18,False,,,True,,False,True,True,1,2,10,10,323201.478,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/feff8889-0728-4be1-8673-33bd6104da14
+209,qa_45_1hop_69,1,070d5f2e-e98c-49c6-9011-997aac94284b,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,MAX_RETRIEVAL_ROUNDS_REACHED,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,1,4,1,0.25,1.0,0.4,False,True,0.0,0.0,"보험회사는 보험사고가 발생한 후에도 상법 제651조에 따라 계약을 해지한 경우 원칙적으로 보험금을 지급할 책임이 없습니다.[CT1]
+고지의무 위반 사실이 보험사고 발생에 영향을 미치지 아니하였음이 증명된 경우에는 보험금을 지급할 책임이 있습니다.[CT2]
+보험금 지급 시기는 약정기간이 있는 경우 그 기간 내에, 약정기간이 없는 경우 통지를 받은 후 정하여진 날부터 10일 이내에 이루어져야 합니다.[CT3]
+전제: 질문에서 제시된 '자동차 사고'가 보험계약상 보험사고에 해당한다고 가정합니다.
+한계: 본 답변은 벤치마크 진단용 후보이며, 공개 가능한 공식 답변이 아닙니다.
+한계: 보험금 지급 의무의 핵심 발생 요건인 '보험사고 발생'을 명시적으로 규정하는 조항이 후보 목록에 부재하여, 해당 요건에 대한 법적 근거는 제한적으로 제시되었습니다.",GENERATED,retrieved_candidates,True,0.21666666666666667,False,,,False,,False,False,,3,6,30,22,617853.583,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/070d5f2e-e98c-49c6-9011-997aac94284b
+210,qa_70_1hop_106,1,77530195-9a90-498e-a79d-ae7b82523aba,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.13186813186813187,0.13186813186813187,"수임인이 위임사무를 처리하는 중에 수임인의 책임없는 사유로 인하여 위임이 종료된 때에는 수임인은 이미 처리한 사무의 비율에 따른 보수를 청구할 수 있다.[CT1]
+갑의 책임 없는 사유로 위임이 종료된 경우, 갑은 이미 처리한 사무의 비율에 따른 보수를 을에게 청구할 수 있습니다.[CT2]
+전제: 갑이 진행한 개조 작업이 민법상 '위임사무'에 해당한다고 가정합니다.
+전제: 갑의 과실이 아닌 사유로 위임이 종료되었다는 사실관계가 성립한다고 가정합니다.
+한계: 본 답변은 제공된 민법 제686조 제3항에 근거한 법적 원칙과 적용에 한정됩니다. 구체적인 보수 금액 산정 방법이나 계약상 특약에 따른 변동 사항은 다루지 않습니다.",PUBLISHED_ANSWER,published_answer,True,0.13186813186813187,False,,,True,,False,True,True,1,1,10,10,171758.209,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/77530195-9a90-498e-a79d-ae7b82523aba
+211,qa_110_1hop_193,1,6f35a2d7-409b-444d-a2f6-1771495bb00f,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,1,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,169580.903,False,,,,,,,,,,,/root/Legal Harness/records/runs/6f35a2d7-409b-444d-a2f6-1771495bb00f
+212,qa_154_1hop_281,1,926cc795-897b-4ac3-b859-aa51b8b2aa22,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,1,1,1,1.0,1.0,1.0,True,True,0.20183486238532108,0.20183486238532108,"형법 제243조에 따르면, 음란한 문서, 도화, 필름 기타 물건을 반포, 판매 또는 임대하거나 공연히 전시 또는 상영한 자는 1년 이하의 징역 또는 500만원 이하의 벌금에 처합니다.[CT1]
+갑이 음란한 잡지를 손님에게 판매한 행위는 동조에서 규정하는 '음란한 문서 기타 물건'의 '판매'에 해당하므로, 해당 조항의 처벌 대상이 됩니다.[CT2]
+따라서 갑은 1년 이하의 징역 또는 500만원 이하의 벌금에 처해질 수 있습니다.[CT3]
+전제: 갑이 판매한 잡지가 형법 제243조에서 규정하는 '음란한 문서 기타 물건'에 해당한다고 가정합니다.
+한계: 본 답변은 형법 제243조에 근거한 일반적 법정형이며, 실제 형량은 사건의 구체적 정황, 전과 여부, 양형 기준 등에 따라 달라질 수 있습니다.",PUBLISHED_ANSWER,published_answer,True,0.20183486238532108,False,,,True,,False,True,True,1,2,10,10,190926.413,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/926cc795-897b-4ac3-b859-aa51b8b2aa22
+213,qa_22_2hop_33,2,415c6c95-0fda-4b95-9b26-46db9175f6f6,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,MAX_RETRIEVAL_ROUNDS_REACHED,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,2,4,2,0.5,1.0,0.6666666666666666,False,True,0.0,0.0,"공소사실의 기재는 범죄의 시일, 장소와 방법을 명시하여 사실을 특정할 수 있도록 하여야 한다.[CT1]
+공소제기의 절차가 법률의 규정을 위반하여 무효일 때 공소를 기각하여야 한다.[CT2]
+공소가 제기된 사건에 대하여 다시 공소가 제기되었을 때 공소를 기각하여야 한다.[CT3]
+전제: 이 사건이 군사법원 관할이 아닌 일반 형사사건으로 가정한다.
+한계: 공소사실 특정 부족이 반드시 공소제기 절차의 무효에 해당하는지 여부는 구체적 사안에 따라 달라질 수 있으며, 본 후보 답변은 법적 지원이 불완전한 상태이다.
+한계: 이전 공소기각 전력이 현 공소기각 주장에 미치는 구체적인 법적 영향(예: 기각 확정 시 재기소 금지 등)은 제공된 후보 조항으로 완전히 규명되지 않았다.",GENERATED,retrieved_candidates,True,0.1044776119402985,False,,,False,,False,False,,3,7,30,27,667871.649,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/415c6c95-0fda-4b95-9b26-46db9175f6f6
+214,qa_244_2hop_400,2,0ab33bc9-4916-4c3b-a79f-cec3d7bee9c4,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,2,1.0,1.0,1.0,True,True,0.8275862068965518,0.8275862068965518,"행정소송법의 목적은 행정소송절차를 통하여 행정청의 위법한 처분 그 밖에 공권력의 행사·불행사등으로 인한 국민의 권리 또는 이익의 침해를 구제하고, 공법상의 권리관계 또는 법적용에 관한 다툼을 적정하게 해결하는 것입니다.[CT1]
+행정심판법상 위원회는 필요하면 관련되는 심판청구를 병합하여 심리하거나 병합된 관련 청구를 분리하여 심리할 수 있습니다.[CT2]",PUBLISHED_ANSWER,published_answer,True,0.8275862068965518,False,,,True,,False,True,True,1,2,10,10,194677.396,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/0ab33bc9-4916-4c3b-a79f-cec3d7bee9c4
+215,qa_344_2hop_543,2,6c5a1944-96fa-4ae9-a870-22c913ba4f19,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,3,4,2,0.5,0.6666666666666666,0.5714285714285715,False,False,0.0,0.0,"소송능력에 흠이 있는 사람의 소송행위는 추인 전까지 효력이 없으나, 추인 시 그 행위를 한 때에 소급하여 효력이 생깁니다.[CT1]
+소송절차의 수계신청은 상대방도 할 수 있습니다.[CT2]
+소송절차의 수계신청이 있는 때에는 법원은 상대방에게 이를 통지하여야 합니다.[CT3]
+소송절차의 수계신청은 법원이 직권으로 조사하여 이유가 없다고 인정한 때에는 결정으로 기각하여야 합니다.[CT4]
+전제: 갑의 소송능력 흠결이 보정되었고, 갑이 자신의 소송행위를 추인했다는 사실은 질문의 배경 시나리오에 따라 전제합니다.
+한계: 후보 조항에는 소송절차 수계의 정의나 목적을 명시적으로 규정한 조항이 포함되어 있지 않아, 수계의 법적 성격에 대한 설명은 제한적입니다.
+한계: 수계신청이 허용되기 위한 구체적 실질적 요건을 명시적으로 규정한 조항이 후보군에 없어, 신청의 허용 여부는 법원의 직권 조사 결과에 따라 판단됩니다.",GENERATED,retrieved_candidates,True,0.08547008547008547,False,,,False,,False,False,,3,6,30,18,880134.888,True,1.0,True,1.0,True,0.6666666666666666,False,0.6666666666666666,False,1.0,True,/root/Legal Harness/records/runs/6c5a1944-96fa-4ae9-a870-22c913ba4f19
+216,qa_429_2hop_665,2,e6b190a0-61c9-4170-8546-2c206a5c7c8c,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T1,T2,all,2,3,1,0.3333333333333333,0.5,0.4,False,False,0.18032786885245902,0.18032786885245902,"부동산의 소유자는 그 부동산에 부합한 물건의 소유권을 취득한다. 그러나 타인의 권원에 의하여 부속된 것은 그러하지 아니하다.[CT1]
+을이 갑의 부동산에 태양광 패널을 설치한 행위는 갑의 동의나 권원 없이 이루어진 것으로 보이며, 이는 '타인의 권원에 의하여 부속된 것'에 해당하지 않으므로, 갑은 해당 태양광 패널의 소유권을 취득할 수 있다.[CT2]
+전제: 을이 태양광 패널을 설치할 때 갑의 동의나 기타 법적 권원이 없었던 것으로 가정한다.
+한계: 갑이 태양광 패널로 인해 입은 손해에 대한 보상 청구 방법 및 요건에 대한 법적 근거가 불완전하여, 해당 부분(T2)에 대해서는 구체적인 법적 결론을 내리지 못하고 보류한다.",PUBLISHED_ANSWER,published_answer,True,0.18032786885245902,False,,,True,,True,True,True,3,6,30,25,693273.607,True,0.5,False,0.5,False,0.5,False,0.5,False,0.5,False,/root/Legal Harness/records/runs/e6b190a0-61c9-4170-8546-2c206a5c7c8c
+217,qa_549_2hop_834,2,6f39fdfd-be62-4c12-977d-e25c01b5351a,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,2,1,0.5,0.5,0.5,False,False,0.13559322033898305,0.13559322033898305,"채무이행의 기한이 없는 경우에는 채무자는 이행청구를 받은 때로부터 지체책임이 있다.[CT1]
+법원은 당사자가 신청하지 아니한 사항에 대하여는 판결하지 못한다.[CT2]
+전제: 갑과 을 사이의 대출 계약이 유효하게 성립되었고, 갑이 을에게 일정 금액을 빌려준 사실이 존재한다고 가정한다.
+전제: 을이 갑에게 일부 금액만 변제하고 나머지 금액에 대해 장래 변제를 약속한 사실이 존재한다고 가정한다.
+한계: 본 답변은 제공된 민법 제387조 제2항과 민사소송법 제203조에 근거한 법적 규범의 해석에 한정되며, 구체적인 사건의 사실관계에 따른 추가적인 법적 쟁점(예: 계약 위반의 구체적 내용, 손해액 산정 등)은 다루지 않는다.",PUBLISHED_ANSWER,published_answer,True,0.13559322033898305,False,,,True,,True,True,True,2,4,20,20,335629.786,True,0.5,False,0.5,False,0.5,False,0.5,False,0.5,False,/root/Legal Harness/records/runs/6f39fdfd-be62-4c12-977d-e25c01b5351a
+218,qa_19_2hop_77_rand,2,79f7add1-2a28-4b68-a66e-9e5ce0acbb15,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,3,2,2,1.0,0.6666666666666666,0.8,False,False,0.35051546391752575,0.35051546391752575,"개인인 먹는샘물등의 제조업자가 제4항에 따른 품질관리인의 자격을 갖추고 제2항에 따른 업무를 직접 수행하는 경우에는 품질관리인을 따로 두지 아니할 수 있다.[CT1]
+품질관리인은 먹는샘물등을 제조하는 과정에서 품질을 관리하고, 제조 시설을 위생적으로 관리하여야 한다.[CT2]
+전제: 갑이 '개인인 먹는샘물등의 제조업자'에 해당한다고 가정함
+전제: 갑이 제4항에 따른 품질관리인의 자격을 갖추고 있다고 가정함
+한계: 제4항의 구체적 자격 요건은 본 답변에 포함된 조항에 명시되어 있지 않으므로, 해당 조항을 별도로 확인해야 함",PUBLISHED_ANSWER,published_answer,True,0.35051546391752575,False,,,True,,True,True,True,1,2,10,10,205925.813,True,0.6666666666666666,False,0.6666666666666666,False,0.6666666666666666,False,0.6666666666666666,False,0.6666666666666666,False,/root/Legal Harness/records/runs/79f7add1-2a28-4b68-a66e-9e5ce0acbb15
+219,qa_71_2hop_277_rand,2,f4bbb241-79f6-4c36-95ff-9dc23c6ef419,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,limited,T1,T2,all,2,8,1,0.125,0.5,0.2,False,False,0.24050632911392406,0.24050632911392406,"도로관리청은 점용료를 내지 아니하는 자에게 납부기간을 정하여 독촉하여야 한다.[CT1]
+도로관리청은 점용료를 내야 하는 자가 그 납부기한까지 점용료를 내지 아니하면 국세 또는 지방세 체납처분의 예에 따라 징수할 수 있다.[CT2]
+도로점용허가를 받은 자가 제66조에 따른 점용료를 납부하지 아니하는 경우, 도로관리청은 도로점용허가를 취소할 수 있다.[CT3]
+도로점용허가를 취소할 경우, 도로관리청은 도로점용허가를 받은 자에게 3회 이상 점용료 납부를 촉구하고 기한 내에 납부하지 아니한 사실을 확인한 후 취소 절차를 거쳐야 한다.[CT4]
+도로점용료의 산정기준은 해당 도로관리청이 속하는 지방자치단체의 조례로 정하며, 농어촌도로의 경우 해당 군의 조례로 정한다.[CT5]
+전제: 갑이 도로 점용료를 실제로 납부하지 않은 상태가 지속되고 있다고 가정함.
+한계: 도로 점용료의 구체적 산정 기준(면적, 용도, 지역 등)에 관한 증거가 불완전하여(partially_covered), 해당 항목(T2)에 대한 답변은 보류함. 이는 법적 근거의 공백으로 인한 한계이며, 확정된 법적 결론이 아님.",PUBLISHED_ANSWER,published_answer,True,0.24050632911392406,False,,,True,,True,True,True,3,6,30,23,1155099.262,True,0.5,False,0.5,False,0.5,False,0.5,False,0.5,False,/root/Legal Harness/records/runs/f4bbb241-79f6-4c36-95ff-9dc23c6ef419
+220,qa_136_2hop_523_rand,2,58d9fce4-95a6-4d9c-9783-8b1b5a0cb09a,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,2,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,93217.129,False,,,,,,,,,,,/root/Legal Harness/records/runs/58d9fce4-95a6-4d9c-9783-8b1b5a0cb09a
+221,qa_198_2hop_756_rand,2,f0682969-f649-4817-986b-b3549630a5c2,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ABSTAIN,NO_RETRIEVAL_PROGRESS,INSUFFICIENT_CRITICAL_EVIDENCE,,,,all,2,4,2,0.5,1.0,0.6666666666666666,False,True,0.0,0.0,"수용자는 소장의 허가를 받아 교정시설의 외부에 있는 사람과 전화통화를 할 수 있다.[CT1]
+제1항에 따른 허가에는 통화내용의 청취 또는 녹음을 조건으로 붙일 수 있다.[CT2]
+전화통화의 허가범위, 통화내용의 청취ㆍ녹음 등에 관하여 필요한 사항은 법무부령으로 정한다.[CT3]
+제42조는 수용자의 전화통화에 관하여 준용한다.[CT4]
+전제: 갑이 교정시설 수용자이며, 을이 교정시설 외부에 있는 사람이라는 사실은 질문의 배경 시나리오에 근거한 가정입니다.
+한계: 전화통화의 구체적 허가 범위, 시간, 횟수, 상대방 제한 등 상세 절차는 법무부령에 위임되어 있어 본 후보 답변에서는 확인되지 않습니다.
+한계: 통화내용 청취 및 녹음의 구체적 범위와 한계는 법무부령에 위임되어 있어 본 후보 답변에서는 확인되지 않습니다.
+한계: 제42조의 구체적 내용은 제공된 후보 조문에 포함되어 있지 않아, 준용되는 세부 절차는 확인되지 않습니다.",GENERATED,retrieved_candidates,True,0.25954198473282447,False,,,False,,False,False,,3,6,30,19,660375.271,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/f0682969-f649-4817-986b-b3549630a5c2
+222,qa_240_2hop_916_rand,2,c8d204f1-0fa5-4aa8-838d-a1e3bf7dc1ef,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,2,5,2,0.4,1.0,0.5714285714285715,False,True,0.189873417721519,0.189873417721519,"주택담보노후연금이자비용공제를 받으려는 자는 과세표준확정신고서에 주택담보노후연금이자비용증명서를 첨부하여 납세지관할세무서장에게 제출하여야 한다.[CT1]
+주택담보노후연금이자비용증명서는 해당 주택담보노후연금을 지급한 금융회사 등 또는 한국주택금융공사가 발급한다.[CT2]
+주택담보노후연금이자비용증명서는 소득세법 시행규칙 별지 제38호의3서식에 따른다.[CT3]
+주택담보노후연금이자비용공제 대상 주택은 가입 당시 담보권의 설정대상이 되는 주택의 기준시가가 12억원 이하이어야 한다.[CT4]
+기준시가가 10억 원인 갑의 아파트는 주택담보노후연금이자비용공제 대상 주택의 기준시가 요건(12억원 이하)을 충족한다.[CT5]
+주택담보노후연금이자비용공제 대상 연금은 「한국주택금융공사법」 제2조제8호의2에 따른 주택담보노후연금보증을 받아 지급받거나 같은 법 제2조제11호에 따른 금융기관의 주택담보노후연금이어야 한다.[CT6]
+전제: 갑이 주택담보노후연금 가입 당시 해당 아파트를 담보로 설정했다는 사실은 질문의 배경 시나리오에 근거하여 가정한다.
+전제: 갑이 「한국주택금융공사법」에 따른 보증이나 금융기관의 주택담보노후연금을 수령하고 있다는 사실은 질문의 맥락상 가정한다.
+한계: 본 답변은 제공된 법령 조항에 기반하여 서류 제출 절차와 주택 기준시가 요건에 한하여 작성되었다. 연금 수령자의 연령, 소득 수준 등 다른 공제 요건은 확인되지 않았다.",PUBLISHED_ANSWER,published_answer,True,0.189873417721519,False,,,True,,False,True,True,1,2,10,10,313769.553,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/c8d204f1-0fa5-4aa8-838d-a1e3bf7dc1ef
+223,qa_297_2hop_1135_rand,2,84e6bf85-aa4c-4f57-82e5-7a370ea63a13,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1,,all,2,3,1,0.3333333333333333,0.5,0.4,False,False,0.18333333333333335,0.18333333333333335,"등록대상자가 6개월 이상 국외에 체류하기 위하여 출국하는 경우에는 미리 관할경찰관서의 장에게 체류국가 및 체류기간 등을 신고하여야 한다.[CT1]
+등록대상자는 6개월 이상 국외에 체류하기 위하여 출국하는 경우 출국하기 전까지 관할경찰관서의 장에게 법무부령으로 정하는 출국신고서를 제출하여야 한다.[CT2]
+제1항에 따라 신고한 등록대상자가 입국하였을 때에는 특별한 사정이 없으면 14일 이내에 관할경찰관서의 장에게 입국 사실을 신고하여야 한다.[CT3]
+전제: 질문에서 '등록 대상자'라고 언급된 갑이 성폭력범죄의 처벌 등에 관한 특례법상 등록대상자에 해당한다고 가정함.
+한계: 본 답변은 성폭력범죄의 처벌 등에 관한 특례법 및 시행령에 근거한 신고 의무만을 다루며, 기타 법률에 따른 별도 신고 의무는 포함되지 않음.",PUBLISHED_ANSWER,published_answer,True,0.18333333333333335,False,,,True,,True,True,True,1,2,10,10,322990.554,True,1.0,True,1.0,True,0.5,False,1.0,True,1.0,True,/root/Legal Harness/records/runs/84e6bf85-aa4c-4f57-82e5-7a370ea63a13
+224,qa_293_3hop_839_rand2,3,cf632b79-8ee8-4728-9359-212e94ffffa7,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,180286.772,False,,,,,,,,,,,/root/Legal Harness/records/runs/cf632b79-8ee8-4728-9359-212e94ffffa7
+225,qa_136_3hop_249,3,7f2cf8f2-ca7a-4f6e-9388-e1f381cd1ce2,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,ANSWER,COMPLETED,,full,T1;T2,,all,3,5,3,0.6,1.0,0.7499999999999999,False,True,0.16260162601626016,0.15584415584415584,"상장회사는 주요주주 및 그의 특수관계인을 상대방으로 하거나 그를 위하여 신용공여를 하여서는 아니 된다.[CT1]
+상법 제542조의9 제1항을 위반하여 신용공여를 한 자는 5년 이하의 징역 또는 2억원 이하의 벌금에 처한다.[CT2]
+이사가 고의 또는 과실로 법령 또는 정관에 위반한 행위를 하거나 그 임무를 게을리한 경우에는 그 이사는 회사에 대하여 연대하여 손해를 배상할 책임이 있다.[CT3]
+회사의 대표자나 대리인, 사용인, 그 밖의 종업원이 그 회사의 업무에 관하여 제624조의2의 위반행위를 하면 그 행위자를 벌하는 외에 그 회사에도 해당 조문의 벌금형을 과한다.[CT4]
+제622조, 제623조, 제625조, 제627조, 제628조 또는 제630조제1항에 규정된 자가 법인인 경우에는 이 장의 벌칙은 그 행위를 한 이사, 집행임원, 감사, 그 밖에 업무를 집행한 사원 또는 지배인에게 적용한다.[CT5]
+전제: XYZ 주식회사가 상법상 '상장회사'에 해당하며, 을이 '주요주주' 또는 그 '특수관계인'에 해당한다고 가정합니다.
+전제: 갑의 신용공여 행위가 상법 제542조의9 제1항에서 금지하는 '신용공여'의 범주에 해당한다고 가정합니다.
+전제: XYZ 회사가 제542조의13에 따른 의무를 성실히 이행하지 않았거나, 위반행위를 방지하기 위한 상당한 주의와 감독을 게을리하였다고 가정합니다.
+한계: 본 답변은 제공된 법령 조항에 기반한 법적 분석이며, 구체적인 사실관계(예: 신용공여의 구체적 형태, 회사의 내부 통제 시스템의 적정성 등)에 따라 최종 법적 판단은 달라질 수 있습니다.
+한계: 상법 제634조의3 단서에 따라 회사가 상당한 주의와 감독을 게을리하지 않았음을 입증할 경우 회사에 대한 형사처벌이 면제될 수 있습니다.",PUBLISHED_ANSWER,published_answer,True,0.15584415584415584,False,,,True,,False,True,True,3,6,30,24,766602.777,True,1.0,True,1.0,True,1.0,True,1.0,True,1.0,True,/root/Legal Harness/records/runs/7f2cf8f2-ca7a-4f6e-9388-e1f381cd1ce2
+226,qa_443_3hop_703,3,ebdabe05-cede-47ae-a230-0cf27a5acf1c,D4-abstain-repair-KURE-v1-Qwen3.8-Q8_0,kure,0,EXECUTION_FAILURE,INVALID_SKILL_OUTPUT,,,,,all,3,0,0,0.0,0.0,0.0,False,False,0.0,0.0,,NOT_NORMAL_OUTCOME,,False,,,,,False,,False,False,,0,0,0,0,197965.822,False,,,,,,,,,,,/root/Legal Harness/records/runs/ebdabe05-cede-47ae-a230-0cf27a5acf1c

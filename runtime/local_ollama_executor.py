@@ -13,6 +13,7 @@ import hashlib
 import importlib.util
 import json
 import re
+import unicodedata
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -56,6 +57,7 @@ class LocalOllamaSkillExecutor:
         self.num_ctx = num_ctx
         self.max_attempts = max_attempts
         self.generator = generator
+        self._last_generation_metadata: Dict[str, Any] = {}
         self._resources: Dict[str, Dict[str, str]] = {}
         self._validators: Dict[str, Callable[[Mapping[str, Any], Mapping[str, Any]], List[str]]] = {}
         for skill_name in SKILL_IDS:
@@ -99,8 +101,22 @@ class LocalOllamaSkillExecutor:
                     )
                 return self._adapt_output(skill_name, entry_point, skill_output, skill_input)
             except (SkillExecutionError, ValueError) as exc:
-                errors = [str(exc)]
-                repair_note = "Your previous response was unusable: " + str(exc)
+                error_message = str(exc)
+                if (
+                    isinstance(exc, ValueError)
+                    and self._last_generation_metadata.get("done_reason") == "length"
+                ):
+                    error_message = (
+                        "MODEL_OUTPUT_TRUNCATED: done_reason=length, "
+                        "eval_count=%s, num_predict=%s; %s"
+                        % (
+                            self._last_generation_metadata.get("eval_count"),
+                            self._last_generation_metadata.get("num_predict"),
+                            error_message,
+                        )
+                    )
+                errors = [error_message]
+                repair_note = "Your previous response was unusable: " + error_message
         raise SkillExecutionError(
             "%s did not produce a valid %s result after %d attempts: %s"
             % (skill_name, entry_point, self.max_attempts, "; ".join(errors))
@@ -129,6 +145,20 @@ class LocalOllamaSkillExecutor:
         for index, request in enumerate(requests, start=1):
             if isinstance(request, dict):
                 request["request_id"] = ("GRQ-R%d-%d" % (int(skill_input.get("next_retrieval_round", 1)), index) if entry_point == "GAP_QUERY_PLAN" else "RQ%d" % index)
+                for key in ("query_terms", "statute_hints"):
+                    values = request.get(key)
+                    if isinstance(values, list):
+                        unique_values = []
+                        seen_values = set()
+                        for value in values:
+                            if not isinstance(value, str) or not value.strip():
+                                continue
+                            normalized_value = self._normalized_query(value)
+                            if normalized_value in seen_values:
+                                continue
+                            seen_values.add(normalized_value)
+                            unique_values.append(value.strip())
+                        request[key] = unique_values
         if entry_point == "INITIAL_PLAN":
             issues_by_id = {
                 issue.get("issue_id"): issue
@@ -201,6 +231,9 @@ class LocalOllamaSkillExecutor:
 
         claim_id_map: Dict[str, str] = {}
         normalized_claims: List[Dict[str, Any]] = []
+        answered_target_ids = self._list(
+            skill_input, "answered_target_ids", required=False
+        )
         for index, raw_claim in enumerate(claims, start=1):
             if not isinstance(raw_claim, Mapping):
                 return output
@@ -216,6 +249,13 @@ class LocalOllamaSkillExecutor:
             claim_id_map[claim_id] = "C%d" % index
             claim = dict(raw_claim)
             claim["claim_id"] = claim_id_map[claim_id]
+            claim_target_ids = claim.get("answer_target_ids")
+            if len(answered_target_ids) == 1 and (
+                not isinstance(claim_target_ids, list)
+                or not claim_target_ids
+                or set(claim_target_ids) - set(answered_target_ids)
+            ):
+                claim["answer_target_ids"] = list(answered_target_ids)
             normalized_claims.append(claim)
 
         provision_key = (
@@ -258,6 +298,7 @@ class LocalOllamaSkillExecutor:
             )
 
         notes: List[str] = []
+        seen_notes = set()
         for key, prefix in (("assumptions", "전제:"), ("limitations", "한계:")):
             raw_notes = output.get(key)
             if not isinstance(raw_notes, list):
@@ -268,7 +309,10 @@ class LocalOllamaSkillExecutor:
                 message = note.get("message")
                 if not isinstance(message, str) or not message.strip():
                     return output
-                notes.append("%s %s" % (prefix, message.strip()))
+                normalized_message = (key, self._normalized_query(message))
+                if normalized_message not in seen_notes:
+                    seen_notes.add(normalized_message)
+                    notes.append("%s %s" % (prefix, message.strip()))
         answer_lines = [
             "%s%s" % (
                 claim.get("text"),
@@ -276,12 +320,27 @@ class LocalOllamaSkillExecutor:
             )
             for claim in normalized_claims
         ]
+        if skill_input.get("answer_mode") == "limited":
+            targets_by_id = {
+                target.get("answer_target_id"): target
+                for target in self._list(
+                    skill_input, "answer_targets", required=False
+                )
+                if isinstance(target, Mapping)
+                and isinstance(target.get("answer_target_id"), str)
+            }
+            for target_id in self._list(
+                skill_input, "deferred_target_ids", required=False
+            ):
+                target = targets_by_id.get(target_id, {})
+                label = (
+                    target.get("requested_output")
+                    or target.get("question_anchor")
+                    or target_id
+                )
+                if isinstance(label, str) and label.strip():
+                    answer_lines.append("제외: %s" % label.strip())
         answer = "\n".join(answer_lines + notes)
-        max_answer_chars = skill_input.get("generation_constraints", {}).get(
-            "max_answer_chars"
-        )
-        if isinstance(max_answer_chars, int) and len(answer) > max_answer_chars:
-            return output
         normalized = dict(output)
         normalized["claims"] = normalized_claims
         normalized["claim_citations"] = normalized_citations
@@ -366,6 +425,42 @@ class LocalOllamaSkillExecutor:
                 assessment["linked_provision_ids"] = list(
                     dict.fromkeys(links_by_evidence.get(evidence_id, []))
                 )
+                requirement_ids = [
+                    requirement.get("requirement_id")
+                    for requirement in evidence_by_id[evidence_id].get(
+                        "completion_requirements", []
+                    )
+                    if isinstance(requirement, Mapping)
+                    and isinstance(requirement.get("requirement_id"), str)
+                ]
+                criterion_results = assessment.get("criterion_results")
+                if requirement_ids and isinstance(criterion_results, list):
+                    results_by_id = {
+                        result.get("requirement_id"): result
+                        for result in criterion_results
+                        if isinstance(result, Mapping)
+                        and isinstance(result.get("requirement_id"), str)
+                    }
+                    if (
+                        len(criterion_results) == len(requirement_ids)
+                        and set(results_by_id) == set(requirement_ids)
+                    ):
+                        assessment["criterion_results"] = [
+                            dict(results_by_id[requirement_id])
+                            for requirement_id in requirement_ids
+                        ]
+                        assessment["satisfied_aspects"] = [
+                            requirement_id
+                            for requirement_id in requirement_ids
+                            if results_by_id[requirement_id].get("status")
+                            == "satisfied"
+                        ]
+                        assessment["missing_aspects"] = [
+                            requirement_id
+                            for requirement_id in requirement_ids
+                            if results_by_id[requirement_id].get("status")
+                            != "satisfied"
+                        ]
                 first_assessment[evidence_id] = assessment
         output["coverage_assessments"] = [
             first_assessment[evidence_id]
@@ -433,7 +528,7 @@ class LocalOllamaSkillExecutor:
 
     @staticmethod
     def _normalized_query(query: str) -> str:
-        return " ".join(query.lower().split())
+        return " ".join(unicodedata.normalize("NFKC", query).lower().split())
 
     @staticmethod
     def _source_context_excerpt(source: str) -> str:
@@ -514,9 +609,11 @@ class LocalOllamaSkillExecutor:
 
     @staticmethod
     def _max_tokens(skill_name: str) -> int:
-        return {"legal_issue_and_query_planning": 1600,
-                "provision_coverage_assessment": 3072,
-                "grounded_legal_answer_generation": 3072}[skill_name]
+        return {
+            "legal_issue_and_query_planning": 3072,
+            "provision_coverage_assessment": 3072,
+            "grounded_legal_answer_generation": 3072,
+        }[skill_name]
 
     def _load_skill(self, skill_name: str) -> None:
         directory = self.skills_root / skill_name
@@ -776,9 +873,6 @@ SKILL INSTRUCTIONS:
 CONTRACT:
 {contract}
 
-INPUT JSON SCHEMA:
-{input_schema}
-
 OUTPUT JSON SCHEMA:
 {output_schema}
 
@@ -793,7 +887,6 @@ FINAL OUTPUT INVARIANTS:
 """.format(
             instructions=resources["instructions"],
             contract=resources["contract"],
-            input_schema=resources["input_schema"],
             output_schema=resources["output_schema"],
             entry_point=entry_point,
             repair_note=repair_note,
@@ -822,6 +915,9 @@ FINAL OUTPUT INVARIANTS:
             deferred_target_ids = self._list(
                 skill_input, "deferred_target_ids", required=False
             )
+            max_answer_chars = skill_input.get("generation_constraints", {}).get(
+                "max_answer_chars", 800
+            )
             partial_ids = [
                 item.get("evidence_item_id")
                 for item in self._list(skill_input, "coverage_assessments")
@@ -830,12 +926,11 @@ FINAL OUTPUT INVARIANTS:
             ]
             if partial_ids:
                 return (
-                    "Use only accepted provision IDs supplied in INPUT. Answer mode is %s; substantive claims may name only answered target IDs %s and must not name deferred target IDs %s. Critical partial evidence IDs are %s. "
-                    "Do not assert their missing facts. Include at least one cited conditional legal claim and a non-empty "
-                    "limitations array that states each unresolved condition. Every claims[] item must set citation_required "
-                    "true and have at least one claim_citation. Keep uncited missing-fact and limitation prose out of claims[]; "
-                    "put it only in answer, assumptions[], or limitations[]."
+                    "Use only accepted provisions. Put the conclusion first and stay within %s characters. "
+                    "Answer mode is %s; claims may name only answered targets %s, not deferred targets %s. "
+                    "For partial evidence %s, do not invent the missing fact: state it in a cited conditional claim and in limitations. Cite every claim."
                     % (
+                        max_answer_chars,
                         answer_mode,
                         json.dumps(answered_target_ids),
                         json.dumps(deferred_target_ids),
@@ -843,8 +938,14 @@ FINAL OUTPUT INVARIANTS:
                     )
                 )
             return (
-                "Use only accepted provision IDs supplied in INPUT. Answer mode is %s; substantive claims may name only answered target IDs %s and must not name deferred target IDs %s. Every claims[] item must set citation_required true and have at least one claim_citation; keep uncited factual or limitation prose out of claims[]."
-                % (answer_mode, json.dumps(answered_target_ids), json.dumps(deferred_target_ids))
+                "Use only accepted provisions. Put the conclusion first, use the fewest claims, and stay within %s characters. "
+                "Answer mode is %s; claims may name only answered targets %s, not deferred targets %s. Cite every claim."
+                % (
+                    max_answer_chars,
+                    answer_mode,
+                    json.dumps(answered_target_ids),
+                    json.dumps(deferred_target_ids),
+                )
             )
         if skill_name != "provision_coverage_assessment":
             return "Use only the identifiers and fields supplied in INPUT."
@@ -859,7 +960,9 @@ FINAL OUTPUT INVARIANTS:
             if isinstance(item, Mapping)
         ]
         return (
-            "For S2, use only these evidence_item_id values: %s. Use only these candidate provision_id values: %s. Never invent an ID, requirement, or missing aspect. Each evidence item appears in exactly one coverage assessment. For every non-covered item, copy issue_id and critical exactly from this evidence ledger: %s. Every evidence link must use quoted_text exactly '[FULL_TEXT]'. Emit legal_status, applicability_status, gap_type, and one criterion result per supplied completion requirement; retain the derived legacy status and partial_kind for compatibility. If the supplied provisions give complete alternative rules and only a missing question fact selects the branch (for example maritime versus air carriage), use legal_status covered, applicability_status conditional, gap_type missing_fact, status partially_covered, partial_kind factual_condition, link every supported branch, and state the missing selector fact; do not classify that situation as conflicting. Use conflicting only for incompatible legal rules under the same established facts or unresolved legal interpretation."
+            "Use only evidence IDs %s and candidate IDs %s. Assess each ledger item exactly once: %s. "
+            "Use '[FULL_TEXT]' in links and one criterion result per supplied requirement; never invent IDs or missing aspects. "
+            "Follow the contract's closed-requirement coverage mapping."
             % (
                 json.dumps([item["evidence_item_id"] for item in evidence_ledger]),
                 json.dumps(candidate_ids),
@@ -869,7 +972,9 @@ FINAL OUTPUT INVARIANTS:
         )
     def _s1_output_invariants(self, skill_input: Mapping[str, Any]) -> str:
         if skill_input.get("mode") != "GAP_QUERY_PLAN":
-            return "Copy run_id exactly from INPUT. First emit question-scoped answer_targets with literal question anchors. Each new critical evidence item must name answer_target_ids, necessity_reason, scope_source, and atomic completion_requirements; never make supporting_context critical or add procedure/document details outside the requested answer."
+            return (
+                "Copy run_id. Keep one target per requested conclusion, but preserve separate critical evidence for distinct rules, exceptions, cross-references, or legal effects. Give every critical item a request. Follow the supplied query-field contract without assuming a retriever-specific override."
+            )
         prior_queries = []
         for item in self._list(skill_input, "query_history"):
             if isinstance(item, Mapping):
@@ -883,7 +988,8 @@ FINAL OUTPUT INVARIANTS:
             if isinstance(item, Mapping)
         ]
         return (
-            "For S1 GAP_QUERY_PLAN, target only these unresolved evidence IDs: %s. Every gap query must be genuinely new and must not equal any of these prior queries after lowercase and whitespace normalization: %s. Use the exact input run_id. Use GRQ-style request IDs, never a mode name."
+            "Target only unresolved statute-evidence IDs %s. Do not search for missing facts or scope excess. "
+            "Each KURE semantic gap query must differ from prior queries %s. Copy run_id and stay within budget."
             % (
                 json.dumps(unresolved),
                 json.dumps(prior_queries, ensure_ascii=False),
@@ -891,6 +997,7 @@ FINAL OUTPUT INVARIANTS:
         )
 
     def _generate(self, prompt: str, max_tokens: int) -> str:
+        self._last_generation_metadata = {"num_predict": max_tokens}
         if self.generator is not None:
             return self.generator(prompt)
         request_data = json.dumps(
@@ -914,6 +1021,13 @@ FINAL OUTPUT INVARIANTS:
                 payload = json.loads(response.read().decode("utf-8"))
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
             raise SkillExecutionError("local Ollama request failed: %s" % exc) from exc
+        self._last_generation_metadata.update(
+            {
+                "done_reason": payload.get("done_reason"),
+                "eval_count": payload.get("eval_count"),
+                "prompt_eval_count": payload.get("prompt_eval_count"),
+            }
+        )
         generated = payload.get("response")
         if not isinstance(generated, str) or not generated.strip():
             raise SkillExecutionError("local Ollama returned no JSON response")

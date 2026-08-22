@@ -2,6 +2,7 @@ import json
 import unittest
 from pathlib import Path
 
+from harness.interfaces import SkillExecutionError
 from runtime.local_ollama_executor import LocalOllamaSkillExecutor
 
 
@@ -227,13 +228,14 @@ class LocalOllamaExecutorTests(unittest.TestCase):
             "required_evidence_items": [
                 {"evidence_item_id": "E1", "issue_id": "I1", "critical": True}
             ],
+            "answer_targets": [{"answer_target_id": "T1"}],
             "coverage_assessments": [
                 {"evidence_item_id": "E1", "status": "covered"}
             ],
             "accepted_provisions": [] if benchmark else [source],
             "candidate_provisions": [] if question_only else ([source] if benchmark else []),
             "answer_mode": "abstain_candidate" if benchmark else "full",
-            "answered_target_ids": [],
+            "answered_target_ids": ["T1"],
             "deferred_target_ids": [],
             "authorization": {
                 "action": (
@@ -255,7 +257,7 @@ class LocalOllamaExecutorTests(unittest.TestCase):
             ),
             "generation_constraints": {
                 "language": "ko",
-                "max_answer_chars": 6000,
+                "max_answer_chars": 800 if benchmark else 6000,
                 "citation_marker_style": "citation_id",
             },
         }
@@ -400,8 +402,84 @@ class LocalOllamaExecutorTests(unittest.TestCase):
             "전제: 사실관계는 추가 확인이 필요합니다.\n한계: 판례 판단은 포함하지 않습니다.",
         )
         self.assertEqual(
+            [claim["answer_target_ids"] for claim in normalized["claims"]],
+            [["T1"], ["T1"]],
+        )
+        self.assertEqual(normalized["assumptions"], raw["assumptions"])
+        self.assertEqual(normalized["limitations"], raw["limitations"])
+        self.assertEqual(
             normalized["claim_citations"][0]["quoted_text"],
             "고의 또는 과실로 손해를 배상한다.",
+        )
+        self.assertEqual(
+            self.executor._validators["grounded_legal_answer_generation"](
+                normalized, skill_input
+            ),
+            [],
+        )
+
+    def test_s3_transport_retains_limited_scope_and_material_audit_notes(self):
+        skill_input = self._s3_transport_input()
+        skill_input.update(
+            {
+                "answer_mode": "limited",
+                "answer_targets": [
+                    {"answer_target_id": "T1"},
+                    {
+                        "answer_target_id": "T2",
+                        "requested_output": "T2 청구 범위",
+                    },
+                ],
+                "answered_target_ids": ["T1"],
+                "deferred_target_ids": ["T2"],
+            }
+        )
+        raw = {
+            "schema_version": "1.0",
+            "skill_id": "S3",
+            "mode": "GENERATE_ANSWER",
+            "status": "ok",
+            "run_id": "run-1",
+            "answer": "모델 원문",
+            "claims": [
+                {
+                    "claim_id": "rule",
+                    "text": "손해를 배상해야 합니다.",
+                    "claim_type": "legal_rule",
+                    "applicability": "direct",
+                    "citation_required": True,
+                }
+            ],
+            "claim_citations": [
+                {
+                    "citation_id": "raw",
+                    "claim_id": "rule",
+                    "provision_id": "P1",
+                    "quoted_text": "축약 인용",
+                    "support_description": "배상 의무",
+                    "answer_marker": "[raw]",
+                }
+            ],
+            "assumptions": [
+                {"code": "A1", "message": "사실관계는 추가 확인이 필요합니다."}
+            ],
+            "limitations": [
+                {"code": "L1", "message": "T2 청구 범위는 답변에서 제외합니다."}
+            ],
+        }
+
+        normalized = self.executor._normalize_harness_owned_fields(
+            "grounded_legal_answer_generation",
+            "GENERATE_ANSWER",
+            skill_input,
+            raw,
+        )
+
+        self.assertEqual(
+            normalized["answer"],
+            "손해를 배상해야 합니다.[CT1]\n제외: T2 청구 범위\n"
+            "전제: 사실관계는 추가 확인이 필요합니다.\n"
+            "한계: T2 청구 범위는 답변에서 제외합니다.",
         )
         self.assertEqual(
             self.executor._validators["grounded_legal_answer_generation"](
@@ -703,6 +781,62 @@ class LocalOllamaExecutorTests(unittest.TestCase):
         self.assertEqual(len(result["evidence_links"]), 1)
         self.assertEqual(len(result["coverage_assessments"]), 1)
 
+    def test_s2_derives_aspect_ids_from_complete_criterion_results(self):
+        skill_input = {
+            "run_id": "run-1",
+            "required_evidence_items": [
+                {
+                    "evidence_item_id": "E1",
+                    "issue_id": "I1",
+                    "critical": True,
+                    "completion_requirements": [
+                        {"requirement_id": "E1-R1", "text": "책임 근거"},
+                        {"requirement_id": "E1-R2", "text": "적용 요건"},
+                    ],
+                }
+            ],
+            "candidate_provisions": [{"provision_id": "C001"}],
+        }
+        raw = {
+            "status": "ok",
+            "evidence_links": [
+                {
+                    "evidence_item_id": "E1",
+                    "provision_id": "C001",
+                    "relation": "partially_supports",
+                }
+            ],
+            "coverage_assessments": [
+                {
+                    "evidence_item_id": "E1",
+                    "status": "partially_covered",
+                    "satisfied_aspects": ["책임 근거는 확인됨"],
+                    "missing_aspects": ["적용 요건이 부족함"],
+                    "criterion_results": [
+                        {"requirement_id": "E1-R2", "status": "unsatisfied"},
+                        {"requirement_id": "E1-R1", "status": "satisfied"},
+                    ],
+                }
+            ],
+            "missing_evidence_items": [],
+            "evidence_conflicts": [],
+        }
+
+        normalized = self.executor._normalize_harness_owned_fields(
+            "provision_coverage_assessment",
+            "ASSESS_COVERAGE",
+            skill_input,
+            raw,
+        )
+        assessment = normalized["coverage_assessments"][0]
+
+        self.assertEqual(assessment["satisfied_aspects"], ["E1-R1"])
+        self.assertEqual(assessment["missing_aspects"], ["E1-R2"])
+        self.assertEqual(
+            [item["requirement_id"] for item in assessment["criterion_results"]],
+            ["E1-R1", "E1-R2"],
+        )
+
     def test_s3_accepts_cited_partial_critical_evidence_only_conditionally(self):
         skill_input = {
             "schema_version": "1.0",
@@ -736,7 +870,7 @@ class LocalOllamaExecutorTests(unittest.TestCase):
             "candidate_answer_basis": "published_answer",
             "generation_constraints": {
                 "language": "ko",
-                "max_answer_chars": 6000,
+                "max_answer_chars": 800,
                 "citation_marker_style": "citation_id",
             },
         }
@@ -780,8 +914,8 @@ class LocalOllamaExecutorTests(unittest.TestCase):
         invariants = self.executor._output_invariants(
             "grounded_legal_answer_generation", skill_input
         )
-        self.assertIn("Every claims[] item must set citation_required true", invariants)
-        self.assertIn("Keep uncited missing-fact and limitation prose out of claims[]", invariants)
+        self.assertIn("state it in a cited conditional claim and in limitations", invariants)
+        self.assertIn("Cite every claim", invariants)
 
         uncited_limitation = dict(output)
         uncited_limitation["answer"] = (
@@ -803,7 +937,7 @@ class LocalOllamaExecutorTests(unittest.TestCase):
         self.assertIn("claim lacks citation: C2", errors)
 
 
-    def test_s2_invariants_distinguish_missing_fact_branches_from_legal_conflict(self):
+    def test_s2_invariants_delegate_to_closed_requirement_mapping(self):
         skill_input = {
             "required_evidence_items": [
                 {"evidence_item_id": "E1", "issue_id": "I1", "critical": True}
@@ -818,9 +952,8 @@ class LocalOllamaExecutorTests(unittest.TestCase):
             "provision_coverage_assessment", skill_input
         )
 
-        self.assertIn("maritime versus air carriage", invariants)
-        self.assertIn("partial_kind factual_condition", invariants)
-        self.assertIn("do not classify that situation as conflicting", invariants)
+        self.assertIn("closed-requirement coverage mapping", invariants)
+        self.assertIn("never invent IDs or missing aspects", invariants)
 
     def test_s1_normalizes_initial_and_gap_queries(self):
         initial = self.executor._normalize_harness_owned_fields(
@@ -833,7 +966,12 @@ class LocalOllamaExecutorTests(unittest.TestCase):
                     {"issue_id": "I2", "decision_question": "도박죄 성립 요건"},
                 ],
                 "retrieval_requests": [
-                    {"issue_id": "I1", "query_text": "도박죄 처벌 규정"},
+                    {
+                        "issue_id": "I1",
+                        "query_text": "도박죄 처벌 규정",
+                        "query_terms": ["도박죄", "도박죄", " 처벌 ", ""],
+                        "statute_hints": ["형법", "형법", " 형법 "],
+                    },
                     {"issue_id": "I2", "query_text": "도박죄 처벌 규정"},
                 ],
             },
@@ -841,6 +979,9 @@ class LocalOllamaExecutorTests(unittest.TestCase):
         initial_requests = initial["retrieval_requests"]
         self.assertEqual([item["request_id"] for item in initial_requests], ["RQ1", "RQ2"])
         self.assertNotEqual(initial_requests[0]["query_text"], initial_requests[1]["query_text"])
+        self.assertEqual(initial_requests[0]["query_terms"], ["도박죄", "처벌"])
+        self.assertEqual(initial_requests[0]["statute_hints"], ["형법"])
+        self.assertEqual(self.executor._max_tokens("legal_issue_and_query_planning"), 3072)
 
         gap = self.executor._normalize_harness_owned_fields(
             "legal_issue_and_query_planning",
@@ -885,6 +1026,37 @@ class LocalOllamaExecutorTests(unittest.TestCase):
         self.assertEqual(gap_request["evidence_item_id"], "E1")
         self.assertNotEqual(gap_request["query_text"], "기존 질의")
         self.assertEqual(gap["target_evidence_item_ids"], ["E1"])
+
+    def test_s1_reports_ollama_length_truncation_separately(self):
+        truncated_executor = None
+
+        def truncated_json(_prompt):
+            truncated_executor._last_generation_metadata.update(
+                {"done_reason": "length", "eval_count": 3072}
+            )
+            return '{"schema_version":"1.0"'
+
+        truncated_executor = LocalOllamaSkillExecutor(
+            skills_root=PROJECT_ROOT / "skills",
+            model="test-model",
+            max_attempts=1,
+            generator=truncated_json,
+        )
+
+        with self.assertRaisesRegex(
+            SkillExecutionError,
+            "MODEL_OUTPUT_TRUNCATED: done_reason=length, eval_count=3072, num_predict=3072",
+        ):
+            truncated_executor.execute(
+                "legal_issue_and_query_planning",
+                "INITIAL_PLAN",
+                {
+                    "run_id": "run-1",
+                    "question": "손해배상 책임은 무엇인가",
+                    "normalized_question": "손해배상 책임은 무엇인가",
+                    "query_history": [],
+                },
+            )
 
     def test_gap_fallback_deduplicates_after_context_is_attached(self):
         source = (

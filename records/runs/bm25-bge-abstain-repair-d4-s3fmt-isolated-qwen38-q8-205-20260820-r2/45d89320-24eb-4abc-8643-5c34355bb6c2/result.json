@@ -1,0 +1,999 @@
+{
+  "abstention_reason": null,
+  "answer": "귀속재산은 정부의 지시하에 보존되어야 하며, 정부의 승인 없이 그 재산의 이동, 전대 또는 처분을 할 수 없습니다.[CT1]\n귀속재산의 임대차 또는 관리 대상자의 자격 제한에 관한 법적 근거는 존재하나, 제한 대상의 구체적 범위가 완전히 확인되지 않아 을의 자격 여부에 대한 결론은 보류됩니다.[CT2]\n전제: 갑이 소유 또는 관리하는 재산이 '귀속재산'에 해당한다고 가정합니다.\n한계: 귀속재산의 임대차 또는 관리 대상자의 자격 제한에 관한 근거(귀속재산처리법 제26조, 제9조)가 부분적으로만 확인되어, 을의 자격 여부에 대한 법적 결론은 보류됩니다.",
+  "answer_mode": "limited",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "귀속재산은 정부의 지시하에 보존되어야 하며, 정부의 승인 없이 그 재산의 이동, 전대 또는 처분을 할 수 없습니다.[CT1]\n귀속재산의 임대차 또는 관리 대상자의 자격 제한에 관한 법적 근거는 존재하나, 제한 대상의 구체적 범위가 완전히 확인되지 않아 을의 자격 여부에 대한 결론은 보류됩니다.[CT2]\n전제: 갑이 소유 또는 관리하는 재산이 '귀속재산'에 해당한다고 가정합니다.\n한계: 귀속재산의 임대차 또는 관리 대상자의 자격 제한에 관한 근거(귀속재산처리법 제26조, 제9조)가 부분적으로만 확인되어, 을의 자격 여부에 대한 법적 결론은 보류됩니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T21:39:17.322466+00:00",
+  "deferred_target_ids": [
+    "T2"
+  ],
+  "end_to_end_latency_ms": 606154.656,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 379,
+      "dedup_collapse": 66,
+      "evidence_fusion": 379,
+      "first_stage": 500,
+      "request_rerank": 500,
+      "round_selected": 30,
+      "rrf": 400,
+      "selected": 379
+    }
+  },
+  "run_id": "45d89320-24eb-4abc-8643-5c34355bb6c2",
+  "state": {
+    "accepted_provision_ids": [
+      "귀속재산처리법 9조#KOBLEX-048067",
+      "귀속재산처리법 34조#KOBLEX-048105",
+      "귀속재산처리법 26조#KOBLEX-048095"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 2,
+          "request_count": 1,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 5,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [
+            "T2"
+          ],
+          "explanation": "Only the citable answer targets will be answered; remaining targets are deferred.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": [
+            "T2"
+          ]
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "limited",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_rule",
+        "question_anchor": "정부의 승인 없이 어떻게 처리할 수 없으며",
+        "requested_output": "정부 승인 없이 처리할 수 없는 귀속재산 처분 행위의 법적 근거 및 범위"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_rule",
+        "question_anchor": "을과 같은 자는 귀속재산의 임대차 또는 관리를 받을 수 없는 이유는 무엇인가",
+        "requested_output": "특정 자격 요건을 갖추지 못한 자가 귀속재산의 임대차 또는 관리를 받을 수 없는 법적 이유"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "귀속재산처리법 34조#KOBLEX-048105"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 80,
+        "first_stage_score": 17.1236865529653,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "귀속재산처리법 34조#KOBLEX-048105",
+        "provision_text": "2. 정부의 지시하에 그 재산을 보존하며 정부의 승인없이 그 재산의 이동, 전대 또는 처분을 하지 못할 것",
+        "rerank_rank": 1,
+        "rerank_score": 0.9765086770057678,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "귀속재산처리법 34조 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "귀속재산처리법 26조#KOBLEX-048095"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 32.187078278906135,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "귀속재산처리법 26조#KOBLEX-048095",
+        "provision_text": "제26조 제9조각호의 1에 해당하는 자는 귀속재산의 임대차 또는 관리를 받을 수 없다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999791383743286,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "귀속재산처리법 26조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "귀속재산처리법 29조#KOBLEX-048098"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 35.05158791051962,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "귀속재산처리법 29조#KOBLEX-048098",
+        "provision_text": "제29조 제15조의 규정은 귀속재산의 임대차 또는 관리에 적용한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9878923892974854,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "귀속재산처리법 29조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "귀속재산처리법 28조#KOBLEX-048097"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "귀속재산처리법 28조#KOBLEX-048097",
+        "provision_text": "제28조 전2조의 규정은 본법 시행전에 귀속재산의 임대 또는 관리를 받은 자에게도 적용한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9674262404441833,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "귀속재산처리법 28조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "귀속재산처리법 9조#KOBLEX-048067"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 100,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "귀속재산처리법 9조#KOBLEX-048067",
+        "provision_text": "6. 귀속재산의 매수 또는 대차, 관리에 관하여 제21조, 제22조말항 또는 제36조에 해당함으로써 계약의 해제 또는 취소를 당한 사실이 있는 자",
+        "rerank_rank": 4,
+        "rerank_score": 0.616912841796875,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "귀속재산처리법 9조 6호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "귀속재산처리법 27조#KOBLEX-048096"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 22.972973955781573,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "귀속재산처리법 27조#KOBLEX-048096",
+        "provision_text": "제27조 제10조 내지 제12조의 규정은 본장 임대차 또는 관리에 준용한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.3845173120498657,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "귀속재산처리법 27조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "귀속재산처리법 35조#KOBLEX-048108"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 29.203811205152704,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "귀속재산처리법 35조#KOBLEX-048108",
+        "provision_text": "제35조 좌의 각호의 1에 해당하는 경우에는 그 임대차 또는 관리계약을 취소하며 그 귀속재산의 반환을 명할 수 있다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.32844117283821106,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "귀속재산처리법 35조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "귀속재산처리법 36조#KOBLEX-048112"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 2.0,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "귀속재산처리법 36조#KOBLEX-048112",
+        "provision_text": "제36조 제23조의 규정은 전조에 의하여 계약을 취소당하거나 또는 전업, 이주 기타로 인하여 그 임차 또는 관리계약을 포기하는 자에게 그 정상에 의하여 적용할 수 있다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.17368747293949127,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "귀속재산처리법 36조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "귀속재산처리법 34조#KOBLEX-048103"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 91,
+        "first_stage_score": 2.0,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "귀속재산처리법 34조#KOBLEX-048103",
+        "provision_text": "제34조 귀속재산의 임차인 또는 관리인은 좌의 사항을 준수하여야 한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.059545163065195084,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "귀속재산처리법 34조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "귀속재산처리법 25조#KOBLEX-048094"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 2.0,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "귀속재산처리법 25조#KOBLEX-048094",
+        "provision_text": "제25조 정부는 전조의 규정에 의하여 임대하기에 적당하지 아니하는 귀속재산에 대하여서는 관리인을 선정하여 관리한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.04463788866996765,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "귀속재산처리법 25조",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "귀속재산처리법 24조#KOBLEX-048091"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 1.0,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "귀속재산처리법 24조#KOBLEX-048091",
+        "provision_text": "①본법 제4조의 규정에 의하여 국가가 관리하는 귀속재산은 대한민국의 국민 또는 법인에게 임대할 수 있다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.09094160795211792,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "귀속재산처리법 24조 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "귀속재산처리법 13조#KOBLEX-048072"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 2.0,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "귀속재산처리법 13조#KOBLEX-048072",
+        "provision_text": "제13조 본법에 있어서 동일가족에 속함으로써 임차, 관리, 매수를 금지당한 사항은 동족회사를 조직한 때에도 또한 같다. 전항의 동족회사라 함은 주주 또는 사원의 일원이나 주주 또는 사원의 일원과 그 가족의 주식금액 또는 출자금액의 합계가 그 법인의 주식금액 또는 출자금액의 2분지1이상에 해당하는 회사를 말한다. 귀속재산의 임차, 관리, 매각을 수함으로써 2개이상 기업체에 전항 동족회사와 같은 결과를 생할 수 없다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.008542629890143871,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "귀속재산처리법 13조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "귀속재산처리법 41조#KOBLEX-048120"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 91,
+        "first_stage_score": 17.501858769388996,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "귀속재산처리법 41조#KOBLEX-048120",
+        "provision_text": "제41조 고의로 귀속재산의 임차, 관리 또는 매각에 관하여 허위보고 또는 허위진술을 한 자는 3년이하의 징역 또는 15만환이하의 벌금에 처한다.<개정 1956ㆍ12ㆍ31>",
+        "rerank_rank": 5,
+        "rerank_score": 0.2807997763156891,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "귀속재산처리법 41조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 46조  기본적 상행위#KOBLEX-113649"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 32,
+        "first_stage_score": 19.827598851130645,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "상법 46조  기본적 상행위#KOBLEX-113649",
+        "provision_text": "2. 동산, 부동산, 유가증권 기타의 재산의 임대차",
+        "rerank_rank": 7,
+        "rerank_score": 3.826529791695066e-05,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상법 46조  기본적 상행위 2호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "귀속재산처리에관한특별조치법 2조  (用語의 定義)#KOBLEX-014729",
+          "귀속재산처리에관한특별조치법 2조  (用語의 定義)#KOBLEX-094479"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 27.638691780367623,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "귀속재산처리에관한특별조치법 2조  (用語의 定義)#KOBLEX-014729",
+        "provision_text": "1. \"귀속재산\"이라 함은 귀속재산처리법 제2조에 규정된 재산을 말한다.",
+        "rerank_rank": 6,
+        "rerank_score": 3.218800702597946e-05,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "귀속재산처리에관한특별조치법 2조  (用語의 定義) 1호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상가건물 임대차보호법 10조 5 권리금 적용 제외#KOBLEX-201707"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 31,
+        "first_stage_score": 19.992016110758733,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "상가건물 임대차보호법 10조 5 권리금 적용 제외#KOBLEX-201707",
+        "provision_text": "2. 임대차 목적물인 상가건물이 「국유재산법」에 따른 국유재산 또는 「공유재산 및 물품 관리법」에 따른 공유재산인 경우",
+        "rerank_rank": 8,
+        "rerank_score": 3.1372161174658686e-05,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상가건물 임대차보호법 10조 5 권리금 적용 제외 2호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농지법 23조  농지의 임대차 또는 사용대차#KOBLEX-173048"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 20.77298522503431,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "농지법 23조  농지의 임대차 또는 사용대차#KOBLEX-173048",
+        "provision_text": "제23조(농지의 임대차 또는 사용대차)",
+        "rerank_rank": 9,
+        "rerank_score": 1.3017800483794417e-05,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "농지법 23조  농지의 임대차 또는 사용대차",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "귀속재산처리법 13조#KOBLEX-048072": "제13조 본법에 있어서 동일가족에 속함으로써 임차, 관리, 매수를 금지당한 사항은 동족회사를 조직한 때에도 또한 같다. 전항의 동족회사라 함은 주주 또는 사원의 일원이나 주주 또는 사원의 일원과 그 가족의 주식금액 또는 출자금액의 합계가 그 법인의 주식금액 또는 출자금액의 2분지1이상에 해당하는 회사를 말한다. 귀속재산의 임차, 관리, 매각을 수함으로써 2개이상 기업체에 전항 동족회사와 같은 결과를 생할 수 없다.",
+      "귀속재산처리법 24조#KOBLEX-048091": "①본법 제4조의 규정에 의하여 국가가 관리하는 귀속재산은 대한민국의 국민 또는 법인에게 임대할 수 있다.",
+      "귀속재산처리법 25조#KOBLEX-048094": "제25조 정부는 전조의 규정에 의하여 임대하기에 적당하지 아니하는 귀속재산에 대하여서는 관리인을 선정하여 관리한다.",
+      "귀속재산처리법 26조#KOBLEX-048095": "제26조 제9조각호의 1에 해당하는 자는 귀속재산의 임대차 또는 관리를 받을 수 없다.",
+      "귀속재산처리법 27조#KOBLEX-048096": "제27조 제10조 내지 제12조의 규정은 본장 임대차 또는 관리에 준용한다.",
+      "귀속재산처리법 28조#KOBLEX-048097": "제28조 전2조의 규정은 본법 시행전에 귀속재산의 임대 또는 관리를 받은 자에게도 적용한다.",
+      "귀속재산처리법 29조#KOBLEX-048098": "제29조 제15조의 규정은 귀속재산의 임대차 또는 관리에 적용한다.",
+      "귀속재산처리법 34조#KOBLEX-048103": "제34조 귀속재산의 임차인 또는 관리인은 좌의 사항을 준수하여야 한다.",
+      "귀속재산처리법 34조#KOBLEX-048105": "2. 정부의 지시하에 그 재산을 보존하며 정부의 승인없이 그 재산의 이동, 전대 또는 처분을 하지 못할 것",
+      "귀속재산처리법 35조#KOBLEX-048108": "제35조 좌의 각호의 1에 해당하는 경우에는 그 임대차 또는 관리계약을 취소하며 그 귀속재산의 반환을 명할 수 있다.",
+      "귀속재산처리법 36조#KOBLEX-048112": "제36조 제23조의 규정은 전조에 의하여 계약을 취소당하거나 또는 전업, 이주 기타로 인하여 그 임차 또는 관리계약을 포기하는 자에게 그 정상에 의하여 적용할 수 있다.",
+      "귀속재산처리법 41조#KOBLEX-048120": "제41조 고의로 귀속재산의 임차, 관리 또는 매각에 관하여 허위보고 또는 허위진술을 한 자는 3년이하의 징역 또는 15만환이하의 벌금에 처한다.<개정 1956ㆍ12ㆍ31>",
+      "귀속재산처리법 9조#KOBLEX-048067": "6. 귀속재산의 매수 또는 대차, 관리에 관하여 제21조, 제22조말항 또는 제36조에 해당함으로써 계약의 해제 또는 취소를 당한 사실이 있는 자",
+      "귀속재산처리에관한특별조치법 2조  (用語의 定義)#KOBLEX-014729": "1. \"귀속재산\"이라 함은 귀속재산처리법 제2조에 규정된 재산을 말한다.",
+      "농지법 23조  농지의 임대차 또는 사용대차#KOBLEX-173048": "제23조(농지의 임대차 또는 사용대차)",
+      "상가건물 임대차보호법 10조 5 권리금 적용 제외#KOBLEX-201707": "2. 임대차 목적물인 상가건물이 「국유재산법」에 따른 국유재산 또는 「공유재산 및 물품 관리법」에 따른 공유재산인 경우",
+      "상법 46조  기본적 상행위#KOBLEX-113649": "2. 동산, 부동산, 유가증권 기타의 재산의 임대차"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "귀속재산처리법 34조#KOBLEX-048105"
+            ],
+            "rationale": "C001은 '이동, 전대 또는 처분'을 정부 승인 없이 금지되는 행위로 구체적으로 명시한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "귀속재산처리법 34조#KOBLEX-048105"
+            ],
+            "rationale": "C001은 귀속재산처리법 제34조 제2호로서 정부 승인 요건을 규정한 법적 근거를 제공한다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "귀속재산처리법 34조#KOBLEX-048105"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001은 정부 승인 없이 금지되는 귀속재산 처분 행위(이동, 전대, 처분)를 명시하고 있으며, 이는 E1의 완료 기준인 '정부 승인이 필요한 처분 행위의 유형'과 '법적 근거'를 모두 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "귀속재산처리법 9조#KOBLEX-048067"
+            ],
+            "rationale": "C005는 제9조 제6호에 해당하는 자만 명시하며, 제9조 전체의 각 호를 포함하지 않아 제외 대상의 전체 범위를 충족하지 못한다.",
+            "requirement_id": "E2-R1",
+            "status": "partially_satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "귀속재산처리법 26조#KOBLEX-048095"
+            ],
+            "rationale": "C002는 제26조로서 자격 제한의 법적 근거를 명확히 제공한다.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "귀속재산처리법 26조#KOBLEX-048095",
+          "귀속재산처리법 9조#KOBLEX-048067"
+        ],
+        "missing_aspects": [
+          "E2-R1"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C002는 자격 제한의 법적 근거를 제공하지만, 제한 대상의 구체적 범위를 제9조 각 호에 위임한다. C005는 제9조 제6호만 제공하여 전체 범위를 충족하지 못하므로, 자격 제한 대상의 완전한 범위 확인이 부족하다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [
+      "T2"
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "귀속재산처리법 34조#KOBLEX-048105",
+        "support_spans": [
+          {
+            "end_char": 59,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "귀속재산처리법 26조#KOBLEX-048095",
+        "support_spans": [
+          {
+            "end_char": 48,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "귀속재산처리법 9조#KOBLEX-048067",
+        "support_spans": [
+          {
+            "end_char": 81,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 5,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "귀속재산의 처분 또는 용도변경 시 정부 승인의 법적 요건",
+        "issue_id": "I1"
+      },
+      {
+        "description": "귀속재산의 임대차 또는 관리 대상자의 자격 제한",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "임대차 또는 관리 대상에서 제외되는 자의 범위를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "귀속재산 임대차 또는 관리 대상에서 제외되는 자의 범위를 명시"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "자격 제한의 법적 근거 조항을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "귀속재산의 임대차 또는 관리를 받을 수 없는 자의 자격 제한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "limitation",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 을과 같은 자가 임대차 또는 관리를 받을 수 없는 이유를 묻고 있으므로, 자격 제한 조문이 핵심 결론에 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 갑은 귀속재산을 임차하여 운영하고 있는 사업가이며, 을은 과거에 특정한 법률적 문제로 인해 신뢰를 잃은 상태이다. 갑은 갑의 사업이 확장됨에 따라 을에게 일부 귀속재산을 전대하여 사용하도록 하려고 하지만, 을이 이러한 재산을 관리할 수 있는 자격이 있는지 의문을 가지고 있다. 또한 갑은 귀속재산을 다른 용도로 사용하고자 하지만, 이 과정에서 정부의 승인을 받아야 하는지에 대한 법적 조언이 필요하다. [질문] 갑은 귀속재산을 정부의 승인 없이 어떻게 처리할 수 없으며, 을과 같은 자는 귀속재산의 임대차 또는 관리를 받을 수 없는 이유는 무엇인가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "귀속재산 처분 용도변경 정부 승인 허가",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "귀속재산",
+          "처분",
+          "용도변경",
+          "정부승인",
+          "허가"
+        ],
+        "query_text": "귀속재산 처분 또는 용도변경 시 정부 승인 요건 [원문 맥락] 또한 갑은 귀속재산을 다른 용도로 사용하고자 하지만, 이 과정에서 정부의 승인을 받아야 하는지에 대한 법적 조언이 필요하다. 갑은 귀속재산을 정부의 승인 없이 어떻게 처리할 수 없으며, 을과 같은 자는 귀속재산의 임대차 또는 관리를 받을 수 없는 이유는 무엇인가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "정부 승인 없이 처리할 수 없는 귀속재산 처분 행위 법적 근거",
+        "statute_hints": [
+          "귀속재산처리법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "귀속재산 임대차 관리 대상 자격 제한 제외",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "귀속재산",
+          "임대차",
+          "관리",
+          "자격제한",
+          "대상제외"
+        ],
+        "query_text": "귀속재산 임대차 또는 관리 대상자 자격 제한 [원문 맥락] 또한 갑은 귀속재산을 다른 용도로 사용하고자 하지만, 이 과정에서 정부의 승인을 받아야 하는지에 대한 법적 조언이 필요하다. 갑은 귀속재산을 정부의 승인 없이 어떻게 처리할 수 없으며, 을과 같은 자는 귀속재산의 임대차 또는 관리를 받을 수 없는 이유는 무엇인가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "을과 같은 자가 귀속재산 임대차 또는 관리를 받을 수 없는 법적 이유",
+        "statute_hints": [
+          "귀속재산처리법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "귀속재산처리법 제9조 임대차 관리 금지 대상자 범위",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "귀속재산처리법",
+          "제9조",
+          "임대차",
+          "관리",
+          "금지",
+          "대상자"
+        ],
+        "query_text": "귀속재산처리법 제9조 각 호 임대차 관리 금지 대상자 범위 [원문 맥락] 또한 갑은 귀속재산을 다른 용도로 사용하고자 하지만, 이 과정에서 정부의 승인을 받아야 하는지에 대한 법적 조언이 필요하다. 갑은 귀속재산을 정부의 승인 없이 어떻게 처리할 수 없으며, 을과 같은 자는 귀속재산의 임대차 또는 관리를 받을 수 없는 이유는 무엇인가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "귀속재산 임대차 또는 관리 대상에서 제외되는 자의 전체 범위",
+        "statute_hints": [
+          "귀속재산처리법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "귀속재산 임대차 관리 금지 대상자 범위",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "귀속재산",
+          "임대차",
+          "관리",
+          "금지",
+          "대상자",
+          "범위"
+        ],
+        "query_text": "귀속재산 임대차 관리 금지 대상자 전체 범위 [원문 맥락] 또한 갑은 귀속재산을 다른 용도로 사용하고자 하지만, 이 과정에서 정부의 승인을 받아야 하는지에 대한 법적 조언이 필요하다. 갑은 귀속재산을 정부의 승인 없이 어떻게 처리할 수 없으며, 을과 같은 자는 귀속재산의 임대차 또는 관리를 받을 수 없는 이유는 무엇인가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "귀속재산 임대차 또는 관리 대상에서 제외되는 자의 전체 범위",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "귀속재산 임대차 관리 종사 금지 자격 요건",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "귀속재산",
+          "임대차",
+          "관리",
+          "종사",
+          "금지",
+          "자격",
+          "요건"
+        ],
+        "query_text": "귀속재산의 임대차 또는 관리에 종사할 수 없는 자의 자격 요건 [원문 맥락] 또한 갑은 귀속재산을 다른 용도로 사용하고자 하지만, 이 과정에서 정부의 승인을 받아야 하는지에 대한 법적 조언이 필요하다. 갑은 귀속재산을 정부의 승인 없이 어떻게 처리할 수 없으며, 을과 같은 자는 귀속재산의 임대차 또는 관리를 받을 수 없는 이유는 무엇인가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "귀속재산 임대차 또는 관리를 받을 수 없는 자의 법적 자격 요건",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 귀속재산을 임차하여 운영하고 있는 사업가이며, 을은 과거에 특정한 법률적 문제로 인해 신뢰를 잃은 상태이다. 갑은 갑의 사업이 확장됨에 따라 을에게 일부 귀속재산을 전대하여 사용하도록 하려고 하지만, 을이 이러한 재산을 관리할 수 있는 자격이 있는지 의문을 가지고 있다. 또한 갑은 귀속재산을 다른 용도로 사용하고자 하지만, 이 과정에서 정부의 승인을 받아야 하는지에 대한 법적 조언이 필요하다.\n\n[질문]\n갑은 귀속재산을 정부의 승인 없이 어떻게 처리할 수 없으며, 을과 같은 자는 귀속재산의 임대차 또는 관리를 받을 수 없는 이유는 무엇인가?",
+    "remaining_request_budget": 4,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "정부 승인이 필요한 귀속재산 처분 행위의 유형과 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "정부 승인이 필요한 귀속재산 처분 행위의 구체적 유형을 명시"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "정부 승인 요건을 규정한 법률 조항의 근거를 확인"
+          }
+        ],
+        "critical": true,
+        "description": "귀속재산의 처분 또는 용도변경 시 정부 승인을 요구하는 법적 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 정부 승인 없이 처리할 수 없는 행위를 묻고 있으므로, 승인 요건을 규정한 조문이 핵심 결론에 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "임대차 또는 관리 대상에서 제외되는 자의 범위를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "귀속재산 임대차 또는 관리 대상에서 제외되는 자의 범위를 명시"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "자격 제한의 법적 근거 조항을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "귀속재산의 임대차 또는 관리를 받을 수 없는 자의 자격 제한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "limitation",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 을과 같은 자가 임대차 또는 관리를 받을 수 없는 이유를 묻고 있으므로, 자격 제한 조문이 핵심 결론에 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "45d89320-24eb-4abc-8643-5c34355bb6c2",
+    "seen_provision_ids": [
+      "귀속재산처리법 9조#KOBLEX-048067",
+      "귀속재산처리법 34조#KOBLEX-048103",
+      "귀속재산처리법 41조#KOBLEX-048120",
+      "귀속재산처리법 35조#KOBLEX-048108",
+      "상가건물 임대차보호법 10조 5 권리금 적용 제외#KOBLEX-201707",
+      "귀속재산처리법 29조#KOBLEX-048098",
+      "농지법 23조  농지의 임대차 또는 사용대차#KOBLEX-173048",
+      "귀속재산처리법 13조#KOBLEX-048072",
+      "상법 46조  기본적 상행위#KOBLEX-113649",
+      "귀속재산처리법 34조#KOBLEX-048105",
+      "귀속재산처리법 26조#KOBLEX-048095",
+      "귀속재산처리법 36조#KOBLEX-048112",
+      "귀속재산처리법 25조#KOBLEX-048094",
+      "귀속재산처리에관한특별조치법 2조  (用語의 定義)#KOBLEX-014729",
+      "귀속재산처리법 28조#KOBLEX-048097",
+      "귀속재산처리법 24조#KOBLEX-048091",
+      "귀속재산처리법 27조#KOBLEX-048096"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

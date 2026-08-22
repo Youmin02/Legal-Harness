@@ -1,0 +1,626 @@
+{
+  "abstention_reason": null,
+  "answer": "소송무능력자에게 할 송달은 그의 법정대리인에게 한다.[CT1]\n군사용 청사에 있는 사람에 대한 송달은 그 청사의 장이나 그를 대리하는 사람에게 촉탁하여야 한다.[CT2]\n전제: 을이 군사용 청사에 소속되어 근무하고 있다는 사실은 질문의 배경 시나리오에서 주어진 전제로 간주한다.\n전제: 을과 병이 갑의 공동 법정대리인으로서 소송 관련 행위를 공동으로 수행하도록 지정되어 있다는 사실은 질문의 배경 시나리오에서 주어진 전제로 간주한다.\n한계: 본 답변은 제공된 민사소송법 및 군사법원법 조항에 근거하여 법적 원칙을 설명한 것이며, 구체적인 송달 절차의 실무적 세부사항이나 예외적 상황은 다루지 않는다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "소송무능력자에게 할 송달은 그의 법정대리인에게 한다.[CT1]\n군사용 청사에 있는 사람에 대한 송달은 그 청사의 장이나 그를 대리하는 사람에게 촉탁하여야 한다.[CT2]\n전제: 을이 군사용 청사에 소속되어 근무하고 있다는 사실은 질문의 배경 시나리오에서 주어진 전제로 간주한다.\n전제: 을과 병이 갑의 공동 법정대리인으로서 소송 관련 행위를 공동으로 수행하도록 지정되어 있다는 사실은 질문의 배경 시나리오에서 주어진 전제로 간주한다.\n한계: 본 답변은 제공된 민사소송법 및 군사법원법 조항에 근거하여 법적 원칙을 설명한 것이며, 구체적인 송달 절차의 실무적 세부사항이나 예외적 상황은 다루지 않는다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T00:25:49.046012+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 183642.484,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 184,
+      "dedup_collapse": 32,
+      "evidence_fusion": 184,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 184
+    }
+  },
+  "run_id": "49d07afc-1d43-45b2-b77f-c347f411167a",
+  "state": {
+    "accepted_provision_ids": [
+      "군사법원법 97조  병영 등에 있는 사람에 대한 송달#KOBLEX-092447",
+      "민사소송법 179조  소송무능력자에게 할 송달#KOBLEX-064008",
+      "민사소송법 183조  송달장소#KOBLEX-064013"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_rule",
+        "question_anchor": "송달은 누구를 통해 어떻게 해야 하는가",
+        "requested_output": "소송무능력자에게 소송문서를 송달할 때, 공동 법정대리인 중 한 명이 군사용 청사에 소속되어 근무 중인 경우의 송달 대상자 및 송달 방법"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민사소송법 179조  소송무능력자에게 할 송달#KOBLEX-064008"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 65,
+        "first_stage_score": 18.39218650443376,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 179조  소송무능력자에게 할 송달#KOBLEX-064008",
+        "provision_text": "제179조(소송무능력자에게 할 송달) 소송무능력자에게 할 송달은 그의 법정대리인에게 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9990230798721313,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 179조  소송무능력자에게 할 송달",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 176조  송달기관#KOBLEX-064000"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 1.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 176조  송달기관#KOBLEX-064000",
+        "provision_text": "②우편에 의한 송달은 우편집배원이 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.0005590342916548252,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "민사소송법 176조  송달기관 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 183조  송달장소#KOBLEX-064013"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 100,
+        "first_stage_score": 1.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 183조  송달장소#KOBLEX-064013",
+        "provision_text": "①송달은 받을 사람의 주소ㆍ거소ㆍ영업소 또는 사무소(이하 \"주소등\"이라 한다)에서 한다. 다만, 법정대리인에게 할 송달은 본인의 영업소나 사무소에서도 할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.003162151435390115,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 183조  송달장소 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 124조  병영 등에 있는 사람에 대한 영장의 집행절차#KOBLEX-092524",
+          "군사법원법 124조  병영 등에 있는 사람에 대한 영장의 집행절차#KOBLEX-158489"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 26.459863126105237,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 124조  병영 등에 있는 사람에 대한 영장의 집행절차#KOBLEX-092524",
+        "provision_text": "② 군사용 청사나 함선 밖에 있는 사람이라도 현재 근무 중인 사람에 대하여 구속영장을 집행할 때에는 그 소속의 장 또는 그를 대리하는 사람에게 구속영장을 제시하고 인도를 요구하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.000486218516016379,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "군사법원법 124조  병영 등에 있는 사람에 대한 영장의 집행절차 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 97조  병영 등에 있는 사람에 대한 송달#KOBLEX-092447",
+          "군사법원법 97조  병영 등에 있는 사람에 대한 송달#KOBLEX-158412"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 46.43768484267325,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 97조  병영 등에 있는 사람에 대한 송달#KOBLEX-092447",
+        "provision_text": "① 병영이나 그 밖의 군사용 청사나 함선에 있는 사람에 대한 송달은 그 병영, 청사 또는 함선의 장이나 그를 대리하는 사람에게 촉탁하여야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.00045208955998532474,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "군사법원법 97조  병영 등에 있는 사람에 대한 송달 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 108조  소환장의 송달#KOBLEX-092478",
+          "군사법원법 108조  소환장의 송달#KOBLEX-158443"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 44.56436565982655,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 108조  소환장의 송달#KOBLEX-092478",
+        "provision_text": "④ 병영이나 그 밖의 군사용 청사 또는 함선에 있는 피고인은 그 병영, 청사 또는 함선의 장이나 그를 대리하는 사람에게 통지하여 소환한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.00039670756086707115,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "군사법원법 108조  소환장의 송달 4항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 176조  송달기관#KOBLEX-063999"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 1.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 176조  송달기관#KOBLEX-063999",
+        "provision_text": "①송달은 우편 또는 집행관에 의하거나, 그 밖에 대법원규칙이 정하는 방법에 따라서 하여야 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.00022873468697071075,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "민사소송법 176조  송달기관 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 177조  법원사무관등에 의한 송달#KOBLEX-064004"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 93,
+        "first_stage_score": 1.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 177조  법원사무관등에 의한 송달#KOBLEX-064004",
+        "provision_text": "②법원사무관등이 그 법원안에서 송달받을 사람에게 서류를 교부하고 영수증을 받은 때에는 송달의 효력을 가진다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.00013891361595597118,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "민사소송법 177조  법원사무관등에 의한 송달 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 60조#KOBLEX-231606"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 20.063485697623566,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 60조#KOBLEX-231606",
+        "provision_text": "제7장 송달",
+        "rerank_rank": 6,
+        "rerank_score": 0.00013380452583078295,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 60조",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 27조  청구서의 송달#KOBLEX-187967"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 28,
+        "first_stage_score": 19.561220774632666,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 27조  청구서의 송달#KOBLEX-187967",
+        "provision_text": "제27조(청구서의 송달)",
+        "rerank_rank": 7,
+        "rerank_score": 0.00010384252527728677,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "헌법재판소법 27조  청구서의 송달",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "군사법원법 108조  소환장의 송달#KOBLEX-092478": "④ 병영이나 그 밖의 군사용 청사 또는 함선에 있는 피고인은 그 병영, 청사 또는 함선의 장이나 그를 대리하는 사람에게 통지하여 소환한다.",
+      "군사법원법 124조  병영 등에 있는 사람에 대한 영장의 집행절차#KOBLEX-092524": "② 군사용 청사나 함선 밖에 있는 사람이라도 현재 근무 중인 사람에 대하여 구속영장을 집행할 때에는 그 소속의 장 또는 그를 대리하는 사람에게 구속영장을 제시하고 인도를 요구하여야 한다.",
+      "군사법원법 97조  병영 등에 있는 사람에 대한 송달#KOBLEX-092447": "① 병영이나 그 밖의 군사용 청사나 함선에 있는 사람에 대한 송달은 그 병영, 청사 또는 함선의 장이나 그를 대리하는 사람에게 촉탁하여야 한다.",
+      "민사소송법 176조  송달기관#KOBLEX-063999": "①송달은 우편 또는 집행관에 의하거나, 그 밖에 대법원규칙이 정하는 방법에 따라서 하여야 한다.",
+      "민사소송법 176조  송달기관#KOBLEX-064000": "②우편에 의한 송달은 우편집배원이 한다.",
+      "민사소송법 177조  법원사무관등에 의한 송달#KOBLEX-064004": "②법원사무관등이 그 법원안에서 송달받을 사람에게 서류를 교부하고 영수증을 받은 때에는 송달의 효력을 가진다.",
+      "민사소송법 179조  소송무능력자에게 할 송달#KOBLEX-064008": "제179조(소송무능력자에게 할 송달) 소송무능력자에게 할 송달은 그의 법정대리인에게 한다.",
+      "민사소송법 183조  송달장소#KOBLEX-064013": "①송달은 받을 사람의 주소ㆍ거소ㆍ영업소 또는 사무소(이하 \"주소등\"이라 한다)에서 한다. 다만, 법정대리인에게 할 송달은 본인의 영업소나 사무소에서도 할 수 있다.",
+      "헌법재판소법 27조  청구서의 송달#KOBLEX-187967": "제27조(청구서의 송달)",
+      "형사소송법 60조#KOBLEX-231606": "제7장 송달"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민사소송법 179조  소송무능력자에게 할 송달#KOBLEX-064008"
+            ],
+            "rationale": "C001(민사소송법 179조)이 소송무능력자에게 법정대리인을 통해 송달할 수 있는 법적 근거를 명시한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "민사소송법 183조  송달장소#KOBLEX-064013"
+            ],
+            "rationale": "C003(민사소송법 183조 1항)이 법정대리인에게 할 송달의 장소 요건을 규정하여 송달의 형식적 요건을 충족한다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민사소송법 179조  소송무능력자에게 할 송달#KOBLEX-064008",
+          "민사소송법 183조  송달장소#KOBLEX-064013"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001은 소송무능력자에게 법정대리인을 통해 송달할 수 있는 법적 근거를, C003은 법정대리인 송달의 장소 요건을 제공하여 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "군사법원법 97조  병영 등에 있는 사람에 대한 송달#KOBLEX-092447"
+            ],
+            "rationale": "C005는 군사용 청사에 있는 사람에 대한 송달이 청사의 장이나 대리인에게 촉탁되어야 한다고 규정하여 적법한 방법을 명시한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "군사법원법 97조  병영 등에 있는 사람에 대한 송달#KOBLEX-092447"
+            ],
+            "rationale": "C005는 송달의 수령 주체를 '그 병영, 청사 또는 함선의 장이나 그를 대리하는 사람'으로 규정한다.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "군사법원법 97조  병영 등에 있는 사람에 대한 송달#KOBLEX-092447"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C005(군사법원법 97조 1항)은 군사용 청사에 있는 사람에 대한 송달이 청사의 장이나 대리인을 통해 촉탁되어야 한다고 규정하여, 군사용 청사 소속 법정대리인(을)을 통한 송달 방법과 수령 주체를 명확히 한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민사소송법 179조  소송무능력자에게 할 송달#KOBLEX-064008",
+        "support_spans": [
+          {
+            "end_char": 50,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민사소송법 183조  송달장소#KOBLEX-064013",
+        "support_spans": [
+          {
+            "end_char": 91,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "군사법원법 97조  병영 등에 있는 사람에 대한 송달#KOBLEX-092447",
+        "support_spans": [
+          {
+            "end_char": 80,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "소송무능력자에게 소송문서를 송달할 때 법정대리인을 통한 송달의 법적 근거와 요건",
+        "issue_id": "I1"
+      },
+      {
+        "description": "공동 법정대리인 중 한 명이 군사용 청사에 소속되어 근무 중인 경우의 송달 방법",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 소송능력이 없는 자로서 소송 절차에서는 법정대리인의 도움이 필요하다. 갑에게는 을과 병이라는 두 명의 공동 법정대리인이 지정되어 있으며, 이들은 소송과 관련한 모든 행위를 공동으로 수행하도록 되어 있다. 그런데 을은 현재 군사용 청사에 소속되어 근무하고 있어 외부에서 직접 문서를 송달받기 어려운 상황이다. 갑에게 소송문서를 송달해야 하는 상황에서, 누가 이를 수령할 수 있는지 문제가 발생하였다. [질문] 소송무능력자인 갑에게 소송 문서를 송달할 때, 두 명의 공동 법정대리인 중 한 명인 을이 군사용 청사에 소속되어 근무 중인 경우, 송달은 누구를 통해 어떻게 해야 하는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "소송무능력자 송달 법정대리인 대리송달 민사소송법",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "소송무능력자",
+          "송달",
+          "법정대리인",
+          "대리송달",
+          "민사소송법"
+        ],
+        "query_text": "소송무능력자에게 소송문서를 법정대리인을 통해 송달할 수 있는 경우와 요건 [원문 맥락] 갑에게 소송문서를 송달해야 하는 상황에서, 누가 이를 수령할 수 있는지 문제가 발생하였다. 소송무능력자인 갑에게 소송 문서를 송달할 때, 두 명의 공동 법정대리인 중 한 명인 을이 군사용 청사에 소속되어 근무 중인 경우, 송달은 누구를 통해 어떻게 해야 하는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "소송무능력자에게 소송문서를 법정대리인을 통해 송달할 수 있는 법적 근거와 요건",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "공동 법정대리인 군사용 청사 송달 수령 민사소송법",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "공동 법정대리인",
+          "군사용 청사",
+          "송달",
+          "수령",
+          "민사소송법"
+        ],
+        "query_text": "공동 법정대리인 중 한 명이 군사용 청사에 소속되어 근무 중인 경우 소송문서 송달 방법 [원문 맥락] 갑에게 소송문서를 송달해야 하는 상황에서, 누가 이를 수령할 수 있는지 문제가 발생하였다. 소송무능력자인 갑에게 소송 문서를 송달할 때, 두 명의 공동 법정대리인 중 한 명인 을이 군사용 청사에 소속되어 근무 중인 경우, 송달은 누구를 통해 어떻게 해야 하는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "공동 법정대리인 중 한 명이 군사용 청사에 소속되어 근무 중인 경우 소송문서의 송달 방법과 수령 주체",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 소송능력이 없는 자로서 소송 절차에서는 법정대리인의 도움이 필요하다. 갑에게는 을과 병이라는 두 명의 공동 법정대리인이 지정되어 있으며, 이들은 소송과 관련한 모든 행위를 공동으로 수행하도록 되어 있다. 그런데 을은 현재 군사용 청사에 소속되어 근무하고 있어 외부에서 직접 문서를 송달받기 어려운 상황이다. 갑에게 소송문서를 송달해야 하는 상황에서, 누가 이를 수령할 수 있는지 문제가 발생하였다.\n\n[질문]\n소송무능력자인 갑에게 소송 문서를 송달할 때, 두 명의 공동 법정대리인 중 한 명인 을이 군사용 청사에 소속되어 근무 중인 경우, 송달은 누구를 통해 어떻게 해야 하는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "소송무능력자에게 소송문서를 법정대리인을 통해 송달할 수 있는 법적 근거와 요건을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "소송무능력자에게 소송문서를 법정대리인을 통해 송달할 수 있는 법적 근거 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "법정대리인을 통한 송달의 요건 및 효과 확인"
+          }
+        ],
+        "critical": true,
+        "description": "소송무능력자에게 소송문서를 송달할 때 법정대리인을 통한 송달을 규정하는 민사소송법 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "소송무능력자의 송달 대리인 자격을 확인해야 공동 법정대리인 중 한 명을 통한 송달의 적법성을 판단할 수 있음",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "군사용 청사 소속 공동 법정대리인 중 한 명을 통한 송달의 적법한 방법과 수령 주체를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "군사용 청사 소속 공동 법정대리인 중 한 명을 통한 송달의 적법한 방법 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "군사용 청사 소속 공동 법정대리인 중 한 명을 통한 송달의 수령 주체 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공동 법정대리인 중 한 명이 군사용 청사에 소속되어 근무 중인 경우의 송달 방법 및 수령 주체",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "군사용 청사 소속이라는 특수한 상황에서의 송달 방법을 확인해야 질문의 핵심인 '누구를 통해 어떻게'에 답할 수 있음",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "49d07afc-1d43-45b2-b77f-c347f411167a",
+    "seen_provision_ids": [
+      "헌법재판소법 27조  청구서의 송달#KOBLEX-187967",
+      "형사소송법 60조#KOBLEX-231606",
+      "민사소송법 176조  송달기관#KOBLEX-063999",
+      "민사소송법 177조  법원사무관등에 의한 송달#KOBLEX-064004",
+      "민사소송법 179조  소송무능력자에게 할 송달#KOBLEX-064008",
+      "민사소송법 183조  송달장소#KOBLEX-064013",
+      "민사소송법 176조  송달기관#KOBLEX-064000",
+      "군사법원법 108조  소환장의 송달#KOBLEX-092478",
+      "군사법원법 97조  병영 등에 있는 사람에 대한 송달#KOBLEX-092447",
+      "군사법원법 124조  병영 등에 있는 사람에 대한 영장의 집행절차#KOBLEX-092524"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

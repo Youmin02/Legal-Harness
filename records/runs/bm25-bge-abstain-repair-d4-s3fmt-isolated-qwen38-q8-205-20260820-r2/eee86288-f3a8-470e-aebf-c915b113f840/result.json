@@ -1,0 +1,589 @@
+{
+  "abstention_reason": null,
+  "answer": "국가인권위원회가 진정 없이 직권으로 조사를 개시할 수 있는 법적 요건은 인권침해나 차별행위가 있다고 믿을 만한 상당한 근거가 있고 그 내용이 중대하다고 인정할 때입니다.[CT1]\n국가인권위원회의 권고를 받은 관계기관등의 장이 그 권고의 내용을 이행하지 아니할 경우에는 그 이유를 위원회에 통지하여야 합니다.[CT2]",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "국가인권위원회가 진정 없이 직권으로 조사를 개시할 수 있는 법적 요건은 인권침해나 차별행위가 있다고 믿을 만한 상당한 근거가 있고 그 내용이 중대하다고 인정할 때입니다.[CT1]\n국가인권위원회의 권고를 받은 관계기관등의 장이 그 권고의 내용을 이행하지 아니할 경우에는 그 이유를 위원회에 통지하여야 합니다.[CT2]",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T00:12:28.083523+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 145010.241,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 189,
+      "dedup_collapse": 22,
+      "evidence_fusion": 189,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 189
+    }
+  },
+  "run_id": "eee86288-f3a8-470e-aebf-c915b113f840",
+  "state": {
+    "accepted_provision_ids": [
+      "국가인권위원회법 25조  정책과 관행의 개선 또는 시정 권고#KOBLEX-168360",
+      "국가인권위원회법 30조  위원회의 조사대상#KOBLEX-168394"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_condition",
+        "question_anchor": "직권으로 조사를 시작한 조건은 무엇이며",
+        "requested_output": "국가인권위원회가 진정 없이 직권으로 조사를 개시할 수 있는 법적 요건"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_obligation",
+        "question_anchor": "갑의 소속 기관의 장은 어떻게 해야 하는가",
+        "requested_output": "국가인권위원회의 권고가 이행되지 않을 경우 기관의 장이 취해야 할 법적 조치"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "국가인권위원회법 30조  위원회의 조사대상#KOBLEX-168394"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "국가인권위원회법 30조  위원회의 조사대상#KOBLEX-168394",
+        "provision_text": "③ 위원회는 제1항의 진정이 없는 경우에도 인권침해나 차별행위가 있다고 믿을 만한 상당한 근거가 있고 그 내용이 중대하다고 인정할 때에는 직권으로 조사할 수 있다. <개정 2011.5.19>",
+        "rerank_rank": 1,
+        "rerank_score": 0.8343775272369385,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "국가인권위원회법 30조  위원회의 조사대상 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국가인권위원회법 25조  정책과 관행의 개선 또는 시정 권고#KOBLEX-168360"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 1.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "국가인권위원회법 25조  정책과 관행의 개선 또는 시정 권고#KOBLEX-168360",
+        "provision_text": "④ 제1항에 따라 권고를 받은 관계기관등의 장은 그 권고의 내용을 이행하지 아니할 경우에는 그 이유를 위원회에 통지하여야 한다. <신설 2012.3.21>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9308540225028992,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "국가인권위원회법 25조  정책과 관행의 개선 또는 시정 권고 4항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국가인권위원회법 25조  정책과 관행의 개선 또는 시정 권고#KOBLEX-168358"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 1.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "국가인권위원회법 25조  정책과 관행의 개선 또는 시정 권고#KOBLEX-168358",
+        "provision_text": "② 제1항에 따라 권고를 받은 관계기관등의 장은 그 권고사항을 존중하고 이행하기 위하여 노력하여야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.23248909413814545,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "국가인권위원회법 25조  정책과 관행의 개선 또는 시정 권고 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국가인권위원회법 25조  정책과 관행의 개선 또는 시정 권고#KOBLEX-168359"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 88,
+        "first_stage_score": 1.0,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "국가인권위원회법 25조  정책과 관행의 개선 또는 시정 권고#KOBLEX-168359",
+        "provision_text": "③ 제1항에 따라 권고를 받은 관계기관등의 장은 권고를 받은 날부터 90일 이내에 그 권고사항의 이행계획을 위원회에 통지하여야 한다. <개정 2012.3.21>",
+        "rerank_rank": 3,
+        "rerank_score": 0.07166698575019836,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "국가인권위원회법 25조  정책과 관행의 개선 또는 시정 권고 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국가인권위원회법 34조  수사기관과 위원회의 협조#KOBLEX-168416"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 99,
+        "first_stage_score": 1.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "국가인권위원회법 34조  수사기관과 위원회의 협조#KOBLEX-168416",
+        "provision_text": "① 진정의 원인이 된 사실이 범죄행위에 해당한다고 믿을 만한 상당한 이유가 있고 그 혐의자의 도주 또는 증거 인멸 등을 방지하거나 증거 확보를 위하여 필요하다고 인정할 경우에 위원회는 검찰총장 또는 관할 수사기관의 장에게 수사의 개시와 필요한 조치를 의뢰할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.01538801845163107,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "국가인권위원회법 34조  수사기관과 위원회의 협조 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국가인권위원회법 32조  진정의 각하 등#KOBLEX-168408"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 1.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "국가인권위원회법 32조  진정의 각하 등#KOBLEX-168408",
+        "provision_text": "③ 위원회가 진정에 대한 조사를 시작한 후에도 그 진정이 제1항 각 호의 어느 하나에 해당하게 된 경우에는 그 진정을 각하할 수 있다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.01172398030757904,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "국가인권위원회법 32조  진정의 각하 등 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국가인권위원회법 44조  구제조치 등의 권고#KOBLEX-168454"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 19.97196958924496,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "국가인권위원회법 44조  구제조치 등의 권고#KOBLEX-168454",
+        "provision_text": "제44조(구제조치 등의 권고)",
+        "rerank_rank": 4,
+        "rerank_score": 0.0026672626845538616,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "국가인권위원회법 44조  구제조치 등의 권고",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국가인권위원회법 19조  업무#KOBLEX-168326"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 1.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "국가인권위원회법 19조  업무#KOBLEX-168326",
+        "provision_text": "1. 인권에 관한 법령(입법과정 중에 있는 법령안을 포함한다)ㆍ제도ㆍ정책ㆍ관행의 조사와 연구 및 그 개선이 필요한 사항에 관한 권고 또는 의견의 표명",
+        "rerank_rank": 4,
+        "rerank_score": 0.002599871950224042,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "국가인권위원회법 19조  업무 1호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국가인권위원회법 35조  조사 목적의 한계#KOBLEX-168418"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 100,
+        "first_stage_score": 1.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "국가인권위원회법 35조  조사 목적의 한계#KOBLEX-168418",
+        "provision_text": "제35조(조사 목적의 한계)",
+        "rerank_rank": 5,
+        "rerank_score": 0.0024680064525455236,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "국가인권위원회법 35조  조사 목적의 한계",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국가인권위원회법 30조  위원회의 조사대상#KOBLEX-168395"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 94,
+        "first_stage_score": 1.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "국가인권위원회법 30조  위원회의 조사대상#KOBLEX-168395",
+        "provision_text": "④ 제1항에 따른 진정의 절차와 방법에 관하여 필요한 사항은 위원회 규칙으로 정한다. <개정 2011.5.19>",
+        "rerank_rank": 6,
+        "rerank_score": 0.0014381544897332788,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "국가인권위원회법 30조  위원회의 조사대상 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "국가인권위원회법 19조  업무#KOBLEX-168326": "1. 인권에 관한 법령(입법과정 중에 있는 법령안을 포함한다)ㆍ제도ㆍ정책ㆍ관행의 조사와 연구 및 그 개선이 필요한 사항에 관한 권고 또는 의견의 표명",
+      "국가인권위원회법 25조  정책과 관행의 개선 또는 시정 권고#KOBLEX-168358": "② 제1항에 따라 권고를 받은 관계기관등의 장은 그 권고사항을 존중하고 이행하기 위하여 노력하여야 한다.",
+      "국가인권위원회법 25조  정책과 관행의 개선 또는 시정 권고#KOBLEX-168359": "③ 제1항에 따라 권고를 받은 관계기관등의 장은 권고를 받은 날부터 90일 이내에 그 권고사항의 이행계획을 위원회에 통지하여야 한다. <개정 2012.3.21>",
+      "국가인권위원회법 25조  정책과 관행의 개선 또는 시정 권고#KOBLEX-168360": "④ 제1항에 따라 권고를 받은 관계기관등의 장은 그 권고의 내용을 이행하지 아니할 경우에는 그 이유를 위원회에 통지하여야 한다. <신설 2012.3.21>",
+      "국가인권위원회법 30조  위원회의 조사대상#KOBLEX-168394": "③ 위원회는 제1항의 진정이 없는 경우에도 인권침해나 차별행위가 있다고 믿을 만한 상당한 근거가 있고 그 내용이 중대하다고 인정할 때에는 직권으로 조사할 수 있다. <개정 2011.5.19>",
+      "국가인권위원회법 30조  위원회의 조사대상#KOBLEX-168395": "④ 제1항에 따른 진정의 절차와 방법에 관하여 필요한 사항은 위원회 규칙으로 정한다. <개정 2011.5.19>",
+      "국가인권위원회법 32조  진정의 각하 등#KOBLEX-168408": "③ 위원회가 진정에 대한 조사를 시작한 후에도 그 진정이 제1항 각 호의 어느 하나에 해당하게 된 경우에는 그 진정을 각하할 수 있다.",
+      "국가인권위원회법 34조  수사기관과 위원회의 협조#KOBLEX-168416": "① 진정의 원인이 된 사실이 범죄행위에 해당한다고 믿을 만한 상당한 이유가 있고 그 혐의자의 도주 또는 증거 인멸 등을 방지하거나 증거 확보를 위하여 필요하다고 인정할 경우에 위원회는 검찰총장 또는 관할 수사기관의 장에게 수사의 개시와 필요한 조치를 의뢰할 수 있다.",
+      "국가인권위원회법 35조  조사 목적의 한계#KOBLEX-168418": "제35조(조사 목적의 한계)",
+      "국가인권위원회법 44조  구제조치 등의 권고#KOBLEX-168454": "제44조(구제조치 등의 권고)"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "국가인권위원회법 30조  위원회의 조사대상#KOBLEX-168394"
+            ],
+            "rationale": "C001은 직권 조사 개시 요건(상당한 근거, 중대성)을 명시하고 있어 해당 요건을 충족한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "국가인권위원회법 30조  위원회의 조사대상#KOBLEX-168394"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001은 국가인권위원회가 진정 없이 직권으로 조사를 개시할 수 있는 법적 요건을 명확히 규정하고 있어 E1의 모든 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "국가인권위원회법 25조  정책과 관행의 개선 또는 시정 권고#KOBLEX-168360"
+            ],
+            "rationale": "C002는 권고 미이행 시 기관장의 법적 의무(이유 통지)를 명시하고 있어 해당 요건을 충족한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "국가인권위원회법 25조  정책과 관행의 개선 또는 시정 권고#KOBLEX-168360"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C002는 국가인권위원회의 권고가 이행되지 않을 경우 기관의 장이 취해야 할 법적 조치(이유 통지)를 명확히 규정하고 있어 E2의 모든 완료 기준을 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "국가인권위원회법 30조  위원회의 조사대상#KOBLEX-168394",
+        "support_spans": [
+          {
+            "end_char": 106,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "국가인권위원회법 25조  정책과 관행의 개선 또는 시정 권고#KOBLEX-168360",
+        "support_spans": [
+          {
+            "end_char": 86,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "국가인권위원회가 진정 없이 직권으로 조사를 개시할 수 있는 법적 요건이 무엇인지",
+        "issue_id": "I1"
+      },
+      {
+        "description": "국가인권위원회의 권고가 이행되지 않을 경우 기관의 장이 취해야 할 법적 조치가 무엇인지",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 지방자치단체의 소속 공무원이고, 을은 지역사회에서 활동하는 인권단체의 대표입니다. 최근 을은 갑의 소속 기관에서 인권침해 사례가 발생하고 있다는 소문을 들었습니다. 이에 을은 국가인권위원회에 진정을 넣으려 했으나, 충분한 증거를 확보하지 못해 주저하고 있었습니다. 하지만 위원회는 이미 독자적으로 조사를 시작하였고, 그 결과 특정 개선 조치를 권고하였습니다. 시간이 지나도 그 권고 사항이 이행되지 않았고, 을은 이에 대해 궁금해졌습니다. [질문] 을이 진정을 넣지 않았음에도 위원회가 갑의 소속 기관에 대해 직권으로 조사를 시작한 조건은 무엇이며, 만약 위원회의 권고가 이행되지 않을 경우 갑의 소속 기관의 장은 어떻게 해야 하는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "국가인권위원회 직권 조사 개시 요건",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "국가인권위원회",
+          "직권",
+          "조사",
+          "개시",
+          "요건"
+        ],
+        "query_text": "국가인권위원회 직권 조사 개시 요건 [원문 맥락] 시간이 지나도 그 권고 사항이 이행되지 않았고, 을은 이에 대해 궁금해졌습니다. 을이 진정을 넣지 않았음에도 위원회가 갑의 소속 기관에 대해 직권으로 조사를 시작한 조건은 무엇이며, 만약 위원회의 권고가 이행되지 않을 경우 갑의 소속 기관의 장은 어떻게 해야 하는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "국가인권위원회 직권 조사 개시 요건",
+        "statute_hints": [
+          "국가인권위원회법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "국가인권위원회 권고 미이행 기관장 조치",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "국가인권위원회",
+          "권고",
+          "미이행",
+          "기관장",
+          "조치"
+        ],
+        "query_text": "국가인권위원회 권고 미이행 기관장 조치 [원문 맥락] 시간이 지나도 그 권고 사항이 이행되지 않았고, 을은 이에 대해 궁금해졌습니다. 을이 진정을 넣지 않았음에도 위원회가 갑의 소속 기관에 대해 직권으로 조사를 시작한 조건은 무엇이며, 만약 위원회의 권고가 이행되지 않을 경우 갑의 소속 기관의 장은 어떻게 해야 하는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "국가인권위원회 권고 미이행 기관장 조치",
+        "statute_hints": [
+          "국가인권위원회법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 지방자치단체의 소속 공무원이고, 을은 지역사회에서 활동하는 인권단체의 대표입니다. 최근 을은 갑의 소속 기관에서 인권침해 사례가 발생하고 있다는 소문을 들었습니다. 이에 을은 국가인권위원회에 진정을 넣으려 했으나, 충분한 증거를 확보하지 못해 주저하고 있었습니다. 하지만 위원회는 이미 독자적으로 조사를 시작하였고, 그 결과 특정 개선 조치를 권고하였습니다. 시간이 지나도 그 권고 사항이 이행되지 않았고, 을은 이에 대해 궁금해졌습니다.\n\n[질문]\n을이 진정을 넣지 않았음에도 위원회가 갑의 소속 기관에 대해 직권으로 조사를 시작한 조건은 무엇이며, 만약 위원회의 권고가 이행되지 않을 경우 갑의 소속 기관의 장은 어떻게 해야 하는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "직권 조사 개시 요건이 명시된 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "직권 조사 개시 요건이 명시된 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "국가인권위원회가 진정 없이 직권으로 조사를 개시할 수 있는 법적 요건",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 직권 조사 개시 조건을 직접 묻고 있어 해당 조항 없이는 답변 불가",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "권고 미이행 시 기관장의 법적 의무가 명시된 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "권고 미이행 시 기관장의 법적 의무가 명시된 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "국가인권위원회의 권고가 이행되지 않을 경우 기관의 장이 취해야 할 법적 조치",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 권고 미이행 시 기관장의 조치를 직접 묻고 있어 해당 조항 없이는 답변 불가",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "eee86288-f3a8-470e-aebf-c915b113f840",
+    "seen_provision_ids": [
+      "국가인권위원회법 32조  진정의 각하 등#KOBLEX-168408",
+      "국가인권위원회법 19조  업무#KOBLEX-168326",
+      "국가인권위원회법 34조  수사기관과 위원회의 협조#KOBLEX-168416",
+      "국가인권위원회법 30조  위원회의 조사대상#KOBLEX-168395",
+      "국가인권위원회법 25조  정책과 관행의 개선 또는 시정 권고#KOBLEX-168359",
+      "국가인권위원회법 30조  위원회의 조사대상#KOBLEX-168394",
+      "국가인권위원회법 35조  조사 목적의 한계#KOBLEX-168418",
+      "국가인권위원회법 25조  정책과 관행의 개선 또는 시정 권고#KOBLEX-168358",
+      "국가인권위원회법 44조  구제조치 등의 권고#KOBLEX-168454",
+      "국가인권위원회법 25조  정책과 관행의 개선 또는 시정 권고#KOBLEX-168360"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

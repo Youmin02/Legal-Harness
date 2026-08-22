@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T06:26:29.254152+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 98765.247,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Expecting property name enclosed in double quotes: line 137 column 32 (char 4166)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "d7474c24-1cec-4e64-9e46-83686ca4ad79",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Expecting property name enclosed in double quotes: line 137 column 32 (char 4166)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] A시의 시장인 갑은 A시 내 신도심 개발계획에 따라 기존에 존재하지 않던 새로운 용도 지구를 신설하여 이를 지형도면에 반영하고 고시하고자 한다. 하지만 해당 지역은 B군의 경계와 인접해 있어 B군의 행정에 영향을 줄 수 있는 상황이다. 을(B군 군수)은 이러한 중요한 행정결정에 대해 사전에 어떠한 통보도 받지 못했다며 이의를 제기하였다. 또한, 갑이 신설하려는 지구는 관련 별표에도 규정되지 않았고, 다른 법령의 위임도 없이 자체적으로 추진한 것으로 나타났다. 나아가 을은 일반 국민의 알 권리 측면에서도 절차상 문제가 있다고 지적하였다. [질문] 갑이 A시의 일부 지역에 대해 새로운 지역·지구를 신설하고 이를 지형도면에 고시하려는 경우, 관계 지방자치단체장인 을에게 어떤 절차적 통보를 해야 하는가? 그리고 갑이 신설하려는 지역·지구가 유효하게 성립되기 위한 요건은 무엇이며, 이를 국민에게 제공하는 방식은 무엇인가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\nA시의 시장인 갑은 A시 내 신도심 개발계획에 따라 기존에 존재하지 않던 새로운 용도 지구를 신설하여 이를 지형도면에 반영하고 고시하고자 한다. 하지만 해당 지역은 B군의 경계와 인접해 있어 B군의 행정에 영향을 줄 수 있는 상황이다. 을(B군 군수)은 이러한 중요한 행정결정에 대해 사전에 어떠한 통보도 받지 못했다며 이의를 제기하였다. 또한, 갑이 신설하려는 지구는 관련 별표에도 규정되지 않았고, 다른 법령의 위임도 없이 자체적으로 추진한 것으로 나타났다. 나아가 을은 일반 국민의 알 권리 측면에서도 절차상 문제가 있다고 지적하였다.\n\n[질문]\n갑이 A시의 일부 지역에 대해 새로운 지역·지구를 신설하고 이를 지형도면에 고시하려는 경우, 관계 지방자치단체장인 을에게 어떤 절차적 통보를 해야 하는가? 그리고 갑이 신설하려는 지역·지구가 유효하게 성립되기 위한 요건은 무엇이며, 이를 국민에게 제공하는 방식은 무엇인가?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "d7474c24-1cec-4e64-9e46-83686ca4ad79",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

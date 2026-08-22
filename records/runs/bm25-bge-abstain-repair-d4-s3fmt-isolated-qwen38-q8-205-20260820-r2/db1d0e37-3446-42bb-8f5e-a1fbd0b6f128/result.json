@@ -1,0 +1,1205 @@
+{
+  "abstention_reason": null,
+  "answer": "납세지 관할세무서장은 종합소득 과세표준 확정신고서를 제출받은 경우 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 그 과세기간 종료일 현재 신고인의 주민등록표 등본을 확인하여야 한다.[CT1]\n신고인이 전산 확인에 동의하지 아니하거나 그의 주민등록표 등본으로 부양가족의 유무를 판단할 수 없는 경우에는 그의 주민등록표 등본 또는 가족관계등록부 증명서를 첨부하도록 하여야 한다.[CT2]\n전제: 갑이 2023년도 종합소득 과세표준확정신고를 위해 서류를 제출했다는 사실은 질문의 배경 시나리오에 근거한 전제입니다.\n한계: 중간예납추계액신고서 미제출 시 처리 방법(T2)은 핵심 증거(E2)가 부분적으로만 충족되어 법적 근거가 불완전하므로, 본 답변에서는 해당 주장을 하지 않고 보류합니다.",
+  "answer_mode": "limited",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "납세지 관할세무서장은 종합소득 과세표준 확정신고서를 제출받은 경우 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 그 과세기간 종료일 현재 신고인의 주민등록표 등본을 확인하여야 한다.[CT1]\n신고인이 전산 확인에 동의하지 아니하거나 그의 주민등록표 등본으로 부양가족의 유무를 판단할 수 없는 경우에는 그의 주민등록표 등본 또는 가족관계등록부 증명서를 첨부하도록 하여야 한다.[CT2]\n전제: 갑이 2023년도 종합소득 과세표준확정신고를 위해 서류를 제출했다는 사실은 질문의 배경 시나리오에 근거한 전제입니다.\n한계: 중간예납추계액신고서 미제출 시 처리 방법(T2)은 핵심 증거(E2)가 부분적으로만 충족되어 법적 근거가 불완전하므로, 본 답변에서는 해당 주장을 하지 않고 보류합니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T19:16:48.534059+00:00",
+  "deferred_target_ids": [
+    "T2"
+  ],
+  "end_to_end_latency_ms": 800483.808,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 386,
+      "dedup_collapse": 74,
+      "evidence_fusion": 386,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "round_selected": 30,
+      "rrf": 400,
+      "selected": 386
+    }
+  },
+  "run_id": "db1d0e37-3446-42bb-8f5e-a1fbd0b6f128",
+  "state": {
+    "accepted_provision_ids": [
+      "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정#KOBLEX-141785",
+      "소득세법 시행령 130조  종합소득 과세표준확정신고#KOBLEX-141805",
+      "소득세법 167조  주민등록표 등본 등의 제출#KOBLEX-154193",
+      "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정#KOBLEX-141784"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 4,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [
+            "T2"
+          ],
+          "explanation": "Only the citable answer targets will be answered; remaining targets are deferred.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": [
+            "T2"
+          ]
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "limited",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "procedure",
+        "question_anchor": "주민등록표 등본을 확인하기 위해 어떤 절차를 거쳐야 하며",
+        "requested_output": "세무서 담당자가 납세자의 주민등록표 등본을 확인하기 위한 법적 절차"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "rule",
+        "question_anchor": "중간예납추계액신고서를 제출하지 않은 경우 어떻게 처리해야 하는가",
+        "requested_output": "중간예납추계액신고서 미제출 시 세무서 담당자의 처리 방법 및 법적 효과"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "부가가치세법 시행령 11조  사업자등록 신청과 사업자등록증 발급#KOBLEX-054381"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 24.466326496523113,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "부가가치세법 시행령 11조  사업자등록 신청과 사업자등록증 발급#KOBLEX-054381",
+        "provision_text": "⑫ 법 제8조제1항 단서에 따라 사업자등록을 신청받은 사업장 관할 세무서장은 「전자정부법」에 따른 행정정보의 공동이용을 통하여 발기인의 주민등록표 등본을 확인하여야 한다. 다만, 등록을 신청하는 자가 확인에 동의하지 아니하는 경우에는 발기인의 주민등록표 등본을 첨부하게 하여야 한다. <개정 2022.2.15>",
+        "rerank_rank": 1,
+        "rerank_score": 0.16219525039196014,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "부가가치세법 시행령 11조  사업자등록 신청과 사업자등록증 발급 12항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "조세특례제한법 90조 2 세금우대자료 미제출 가산세#KOBLEX-099667",
+          "조세특례제한법 90조 2 세금우대자료 미제출 가산세#KOBLEX-151648"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 52.00287787947009,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "조세특례제한법 90조 2 세금우대자료 미제출 가산세#KOBLEX-099667",
+        "provision_text": "제90조의2(세금우대자료 미제출 가산세)",
+        "rerank_rank": 1,
+        "rerank_score": 3.066472345381044e-06,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "조세특례제한법 90조 2 세금우대자료 미제출 가산세",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 167조  주민등록표 등본 등의 제출#KOBLEX-154193"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 31.760113393384078,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "소득세법 167조  주민등록표 등본 등의 제출#KOBLEX-154193",
+        "provision_text": "① 납세지 관할 세무서장은 거주자가 과세표준확정신고를 한 경우에는 주민등록표 등본(주민등록표 등본에 의하여 가족관계가 확인되지 아니하는 경우에는 가족관계 기록 사항에 관한 증명서를 말하며, 이하 \"주민등록표 등본등\"이라 한다)에 의하여 배우자, 공제대상 부양가족, 공제대상 장애인 또는 공제대상 경로우대자에 해당하는지를 전산으로 확인하여야 한다. 다만, 납세지 관할 세무서장의 전산 확인에 동의하지 아니하는 거주자는 과세표준확정신고서에 주민등록표 등본등을 첨부하여 제출하되, 이전에 주민등록표 등본등을 제출한 경우로서 공제대상 배우자, 공제대상 부양가족, 공제대상 장애인 또는 공제대상 경로우대자가 변동되지 아니한 경우에는 주민등록표 등본등을 제출하지 아니한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.09152588248252869,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "소득세법 167조  주민등록표 등본 등의 제출 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 시행령 130조  종합소득 과세표준확정신고#KOBLEX-141805"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 28.200256131408942,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "소득세법 시행령 130조  종합소득 과세표준확정신고#KOBLEX-141805",
+        "provision_text": "⑤ 법 제70조에 따라 종합소득 과세표준 확정신고서를 제출받은 납세지 관할세무서장은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 그 과세기간 종료일 현재 신고인의 주민등록표 등본을 확인하여야 한다. 다만, 신고인이 확인에 동의하지 아니하거나 그의 주민등록표 등본으로 부양가족의 유무를 판단할 수 없는 경우에는 그의 주민등록표 등본 또는 가족관계등록부 증명서를 첨부하도록 하여야 한다. <개정 2008.12.31, 2010.2.18, 2010.5.4>",
+        "rerank_rank": 3,
+        "rerank_score": 0.03276578709483147,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "소득세법 시행령 130조  종합소득 과세표준확정신고 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 시행령 108조  부녀자공제등#KOBLEX-141626"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 60,
+        "first_stage_score": 20.753945529716297,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "소득세법 시행령 108조  부녀자공제등#KOBLEX-141626",
+        "provision_text": "제108조(부녀자공제등) 법 제51조제1항의 규정을 적용함에 있어서 배우자의 유무 및 부양가족이 있는 세대주인지의 여부는 당해 과세기간 종료일 현재의 주민등록표등본 또는 가족관계등록부 증명서에 의한다. 이 경우 납세지 관할세무서장은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 거주자의 주민등록표 등본을 확인하여야 하며, 거주자가 확인에 동의하지 아니하거나 그의 주민등록표 등본으로 배우자의 유무 및 부양가족이 있는 세대주인지의 여부를 판단할 수 없는 경우 또는 근로소득자가 법 제140조에 따라 소득공제신고를 하는 경우에는 주민등록표 등본 또는 가족관계등록부 증명서를 제출하도록 하여야 한다. <개정 1995.12.30, 2006.6.12, 2008.12.31, 2010.5.4>",
+        "rerank_rank": 4,
+        "rerank_score": 0.026081880554556847,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "소득세법 시행령 108조  부녀자공제등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 시행규칙 83조 3 농지의 범위 등#KOBLEX-036212"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 28.49795865103008,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "소득세법 시행규칙 83조 3 농지의 범위 등#KOBLEX-036212",
+        "provision_text": "⑤영 제168조의8제7항에 따라 서류를 제출받은 납세지 관할세무서장은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 다음 각 호의 서류를 확인하여야 한다. 다만, 제1호에 따른 주민등록표 등본은 영 제168조의8제3항제7호의 적용을 받으려는 자가 확인에 동의하지 아니하는 경우에는 그 서류를 제출하도록 하여야 한다. <신설 2006.7.5, 2008.4.29, 2011.3.28> 1. 주민등록표 등본 2. 토지등기부 등본 또는 토지대장 등본",
+        "rerank_rank": 5,
+        "rerank_score": 0.02204270474612713,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "소득세법 시행규칙 83조 3 농지의 범위 등 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 시행규칙 83조 5 부득이한 사유가 있어 비사업용 토지로 보지 아니하는 토지의 판정기준 등#KOBLEX-036239"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 29.102820032387907,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "소득세법 시행규칙 83조 5 부득이한 사유가 있어 비사업용 토지로 보지 아니하는 토지의 판정기준 등#KOBLEX-036239",
+        "provision_text": "⑥제5항에 따라 신청서를 제출받은 납세지 관할세무서장은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 다음 각 호의 서류를 확인하여야 한다. 다만, 제1호에 따른 주민등록표 등본은 신청인이 확인에 동의하지 아니하는 경우에는 이를 제출하도록 하여야 한다. <신설 2006.7.5, 2008.4.29, 2009.4.14, 2011.3.28> 1. 주민등록표 등본 2. 토지등기부 등본 또는 토지대장 등본",
+        "rerank_rank": 6,
+        "rerank_score": 0.01790281943976879,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "소득세법 시행규칙 83조 5 부득이한 사유가 있어 비사업용 토지로 보지 아니하는 토지의 판정기준 등 6항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 시행규칙 83조 4 사업에 사용되는 그 밖의 토지의 범위#KOBLEX-036232"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 29.933897074882253,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "소득세법 시행규칙 83조 4 사업에 사용되는 그 밖의 토지의 범위#KOBLEX-036232",
+        "provision_text": "⑲제18항에 따라 신청서를 제출받은 납세지 관할세무서장은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 다음 각 호의 서류를 확인하여야 한다. 다만, 제1호에 따른 주민등록표 등본은 신청인이 확인에 동의하지 아니하는 경우에는 이를 제출하도록 하여야 한다. <신설 2006.7.5, 2008.4.29, 2011.3.28> 1. 주민등록표 등본 2. 토지등기부 등본 또는 토지대장 등본(토지이용계획 확인서를 포함한다)",
+        "rerank_rank": 7,
+        "rerank_score": 0.013598693534731865,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "소득세법 시행규칙 83조 4 사업에 사용되는 그 밖의 토지의 범위 19항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 시행령 156조 3 주택과 분양권을 소유한 경우 1세대 1주택의 특례#KOBLEX-142107"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 28.133720150434833,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "소득세법 시행령 156조 3 주택과 분양권을 소유한 경우 1세대 1주택의 특례#KOBLEX-142107",
+        "provision_text": "⑪ 제9항에 따라 분양권 소유자 1세대1주택 특례적용신고서를 제출받은 납세지 관할 세무서장은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 다음 각 호의 서류를 확인해야 한다. 다만, 신고인이 제1호의 서류 확인에 동의하지 않는 경우에는 이를 제출하도록 해야 한다. 1. 주민등록표 등본 2. 양도하는 주택의 토지 및 건축물대장 등본 3. 농어촌주택의 토지 및 건축물대장등본(제8항을 적용받는 경우로 한정한다)",
+        "rerank_rank": 8,
+        "rerank_score": 0.01084954384714365,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "소득세법 시행령 156조 3 주택과 분양권을 소유한 경우 1세대 1주택의 특례 11항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 시행령 156조 2 주택과 조합원입주권을 소유한 경우 1세대1주택의 특례#KOBLEX-142094"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 23.368472425161002,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "소득세법 시행령 156조 2 주택과 조합원입주권을 소유한 경우 1세대1주택의 특례#KOBLEX-142094",
+        "provision_text": "⑭제12항에 따라 조합원입주권 소유자 1세대1주택 특례적용신고서를 제출받은 납세지 관할세무서장은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 다음 각 호의 서류를 확인하여야 한다. 다만, 제1호의 경우 신고인이 확인에 동의하지 아니하는 경우에는 이를 제출하도록 하여야 한다. <신설 2006.6.12, 2008.12.31, 2010.5.4> 1. 주민등록표 등본 2. 양도하는 주택의 토지 및 건축물대장 등본 3. 농어촌주택의 토지 및 건축물대장등본(제11항의 경우에 한한다)",
+        "rerank_rank": 9,
+        "rerank_score": 0.005059095565229654,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "소득세법 시행령 156조 2 주택과 조합원입주권을 소유한 경우 1세대1주택의 특례 14항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 시행규칙 100조  일반서식#KOBLEX-036384"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "소득세법 시행규칙 100조  일반서식#KOBLEX-036384",
+        "provision_text": "13. 영 제125조제1항에 따른 중간예납추계액신고서는 별지 제14호서식에 의한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.0019253806676715612,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "소득세법 시행규칙 100조  일반서식 23호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정#KOBLEX-141784"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 100,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정#KOBLEX-141784",
+        "provision_text": "①법 제65조제3항 또는 제5항의 규정에 의하여 중간예납추계액을 신고하고자 하는 자는 기획재정부령이 정하는 중간예납추계액신고서를 납세지 관할세무서장에게 제출하여야 한다. <개정 1998.4.1, 2000.12.29, 2008.2.29>",
+        "rerank_rank": 5,
+        "rerank_score": 0.0010602130787447095,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세기본법 47조 4 납부지연가산세#KOBLEX-147575"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 26.81130081710313,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "국세기본법 47조 4 납부지연가산세#KOBLEX-147575",
+        "provision_text": "⑤ 중간예납, 예정신고납부 및 중간신고납부와 관련하여 제1항에 따른 가산세가 부과되는 부분에 대해서는 확정신고납부와 관련하여 제1항에 따른 가산세를 부과하지 아니한다. <개정 2018.12.31>",
+        "rerank_rank": 6,
+        "rerank_score": 0.0001794430718291551,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "국세기본법 47조 4 납부지연가산세 5항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 시행령 123조#KOBLEX-141775"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 2.0,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "소득세법 시행령 123조#KOBLEX-141775",
+        "provision_text": "제7절 중간예납ㆍ예정신고 및 세액납부",
+        "rerank_rank": 7,
+        "rerank_score": 7.203385030152276e-05,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "소득세법 시행령 123조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정#KOBLEX-141783"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 99,
+        "first_stage_score": 2.0,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정#KOBLEX-141783",
+        "provision_text": "제125조(중간예납추계액의 신고와 조사결정)",
+        "rerank_rank": 10,
+        "rerank_score": 3.8260586734395474e-05,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세기본법 47조  가산세 부과#KOBLEX-147550"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 32,
+        "first_stage_score": 21.3617845259612,
+        "fusion_rank": 12,
+        "issue_id": "I2",
+        "provision_id": "국세기본법 47조  가산세 부과#KOBLEX-147550",
+        "provision_text": "제47조(가산세 부과)",
+        "rerank_rank": 12,
+        "rerank_score": 1.5732759493403137e-05,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "국세기본법 47조  가산세 부과",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부가가치세법 60조#KOBLEX-127057"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 21.91028173804696,
+        "fusion_rank": 13,
+        "issue_id": "I2",
+        "provision_id": "부가가치세법 60조#KOBLEX-127057",
+        "provision_text": "제2절 가산세",
+        "rerank_rank": 13,
+        "rerank_score": 1.0361197382735554e-05,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "부가가치세법 60조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부가가치세법 시행령 108조#KOBLEX-054935"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 21.91028173804696,
+        "fusion_rank": 16,
+        "issue_id": "I2",
+        "provision_id": "부가가치세법 시행령 108조#KOBLEX-054935",
+        "provision_text": "제2절 가산세",
+        "rerank_rank": 16,
+        "rerank_score": 9.221666914527304e-06,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "부가가치세법 시행령 108조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세기본법 시행령 25조 4 기한 후 과세표준신고#KOBLEX-029691"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 30.66238891982376,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "국세기본법 시행령 25조 4 기한 후 과세표준신고#KOBLEX-029691",
+        "provision_text": "① 법 제45조의3에 따라 기한 후 과세표준신고를 하려는 자는 기한후과세표준신고서를 관할 세무서장에게 제출하여야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 7.228671165648848e-06,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "국세기본법 시행령 25조 4 기한 후 과세표준신고 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세징수법 3조  징수의 순위#KOBLEX-026028"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 21.91028173804696,
+        "fusion_rank": 18,
+        "issue_id": "I2",
+        "provision_id": "국세징수법 3조  징수의 순위#KOBLEX-026028",
+        "provision_text": "3. 가산세",
+        "rerank_rank": 18,
+        "rerank_score": 5.345527370081982e-06,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "국세징수법 3조  징수의 순위 3호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정#KOBLEX-141785"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정#KOBLEX-141785",
+        "provision_text": "②납세지 관할세무서장은 법 제65조제5항의 규정에 의하여 중간예납기간의 종합소득금액을 신고하여야 할 자가 그 신고를 하지 아니한 때에는 법 제80조의 규정을 준용하여 그 종합소득금액을 조사 결정할 수 있다. <개정 2000.12.29>",
+        "rerank_rank": 4,
+        "rerank_score": 0.0069686477072536945,
+        "retrieval_round": 3,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 시행령 147조 5 경정 등의 경우 가산세 적용특례#KOBLEX-141905"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 61,
+        "first_stage_score": 19.86955426824683,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "소득세법 시행령 147조 5 경정 등의 경우 가산세 적용특례#KOBLEX-141905",
+        "provision_text": "제147조의5(경정 등의 경우 가산세 적용특례)",
+        "rerank_rank": 7,
+        "rerank_score": 8.193009307433385e-06,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "소득세법 시행령 147조 5 경정 등의 경우 가산세 적용특례",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "조세특례제한법 시행령 100조 11 가산세#KOBLEX-070840"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 24,
+        "first_stage_score": 21.91028173804696,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "조세특례제한법 시행령 100조 11 가산세#KOBLEX-070840",
+        "provision_text": "제100조의11(가산세)",
+        "rerank_rank": 10,
+        "rerank_score": 7.742184607195668e-06,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "조세특례제한법 시행령 100조 11 가산세",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "조세특례제한법 시행령 100조 26 가산세#KOBLEX-070903"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 21.91028173804696,
+        "fusion_rank": 12,
+        "issue_id": "I2",
+        "provision_id": "조세특례제한법 시행령 100조 26 가산세#KOBLEX-070903",
+        "provision_text": "제100조의26(가산세)",
+        "rerank_rank": 12,
+        "rerank_score": 7.657023161300458e-06,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "조세특례제한법 시행령 100조 26 가산세",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "국세기본법 47조  가산세 부과#KOBLEX-147550": "제47조(가산세 부과)",
+      "국세기본법 47조 4 납부지연가산세#KOBLEX-147575": "⑤ 중간예납, 예정신고납부 및 중간신고납부와 관련하여 제1항에 따른 가산세가 부과되는 부분에 대해서는 확정신고납부와 관련하여 제1항에 따른 가산세를 부과하지 아니한다. <개정 2018.12.31>",
+      "국세기본법 시행령 25조 4 기한 후 과세표준신고#KOBLEX-029691": "① 법 제45조의3에 따라 기한 후 과세표준신고를 하려는 자는 기한후과세표준신고서를 관할 세무서장에게 제출하여야 한다.",
+      "국세징수법 3조  징수의 순위#KOBLEX-026028": "3. 가산세",
+      "부가가치세법 60조#KOBLEX-127057": "제2절 가산세",
+      "부가가치세법 시행령 108조#KOBLEX-054935": "제2절 가산세",
+      "부가가치세법 시행령 11조  사업자등록 신청과 사업자등록증 발급#KOBLEX-054381": "⑫ 법 제8조제1항 단서에 따라 사업자등록을 신청받은 사업장 관할 세무서장은 「전자정부법」에 따른 행정정보의 공동이용을 통하여 발기인의 주민등록표 등본을 확인하여야 한다. 다만, 등록을 신청하는 자가 확인에 동의하지 아니하는 경우에는 발기인의 주민등록표 등본을 첨부하게 하여야 한다. <개정 2022.2.15>",
+      "소득세법 167조  주민등록표 등본 등의 제출#KOBLEX-154193": "① 납세지 관할 세무서장은 거주자가 과세표준확정신고를 한 경우에는 주민등록표 등본(주민등록표 등본에 의하여 가족관계가 확인되지 아니하는 경우에는 가족관계 기록 사항에 관한 증명서를 말하며, 이하 \"주민등록표 등본등\"이라 한다)에 의하여 배우자, 공제대상 부양가족, 공제대상 장애인 또는 공제대상 경로우대자에 해당하는지를 전산으로 확인하여야 한다. 다만, 납세지 관할 세무서장의 전산 확인에 동의하지 아니하는 거주자는 과세표준확정신고서에 주민등록표 등본등을 첨부하여 제출하되, 이전에 주민등록표 등본등을 제출한 경우로서 공제대상 배우자, 공제대상 부양가족, 공제대상 장애인 또는 공제대상 경로우대자가 변동되지 아니한 경우에는 주민등록표 등본등을 제출하지 아니한다.",
+      "소득세법 시행규칙 100조  일반서식#KOBLEX-036384": "13. 영 제125조제1항에 따른 중간예납추계액신고서는 별지 제14호서식에 의한다.",
+      "소득세법 시행규칙 83조 3 농지의 범위 등#KOBLEX-036212": "⑤영 제168조의8제7항에 따라 서류를 제출받은 납세지 관할세무서장은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 다음 각 호의 서류를 확인하여야 한다. 다만, 제1호에 따른 주민등록표 등본은 영 제168조의8제3항제7호의 적용을 받으려는 자가 확인에 동의하지 아니하는 경우에는 그 서류를 제출하도록 하여야 한다. <신설 2006.7.5, 2008.4.29, 2011.3.28> 1. 주민등록표 등본 2. 토지등기부 등본 또는 토지대장 등본",
+      "소득세법 시행규칙 83조 4 사업에 사용되는 그 밖의 토지의 범위#KOBLEX-036232": "⑲제18항에 따라 신청서를 제출받은 납세지 관할세무서장은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 다음 각 호의 서류를 확인하여야 한다. 다만, 제1호에 따른 주민등록표 등본은 신청인이 확인에 동의하지 아니하는 경우에는 이를 제출하도록 하여야 한다. <신설 2006.7.5, 2008.4.29, 2011.3.28> 1. 주민등록표 등본 2. 토지등기부 등본 또는 토지대장 등본(토지이용계획 확인서를 포함한다)",
+      "소득세법 시행규칙 83조 5 부득이한 사유가 있어 비사업용 토지로 보지 아니하는 토지의 판정기준 등#KOBLEX-036239": "⑥제5항에 따라 신청서를 제출받은 납세지 관할세무서장은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 다음 각 호의 서류를 확인하여야 한다. 다만, 제1호에 따른 주민등록표 등본은 신청인이 확인에 동의하지 아니하는 경우에는 이를 제출하도록 하여야 한다. <신설 2006.7.5, 2008.4.29, 2009.4.14, 2011.3.28> 1. 주민등록표 등본 2. 토지등기부 등본 또는 토지대장 등본",
+      "소득세법 시행령 108조  부녀자공제등#KOBLEX-141626": "제108조(부녀자공제등) 법 제51조제1항의 규정을 적용함에 있어서 배우자의 유무 및 부양가족이 있는 세대주인지의 여부는 당해 과세기간 종료일 현재의 주민등록표등본 또는 가족관계등록부 증명서에 의한다. 이 경우 납세지 관할세무서장은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 거주자의 주민등록표 등본을 확인하여야 하며, 거주자가 확인에 동의하지 아니하거나 그의 주민등록표 등본으로 배우자의 유무 및 부양가족이 있는 세대주인지의 여부를 판단할 수 없는 경우 또는 근로소득자가 법 제140조에 따라 소득공제신고를 하는 경우에는 주민등록표 등본 또는 가족관계등록부 증명서를 제출하도록 하여야 한다. <개정 1995.12.30, 2006.6.12, 2008.12.31, 2010.5.4>",
+      "소득세법 시행령 123조#KOBLEX-141775": "제7절 중간예납ㆍ예정신고 및 세액납부",
+      "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정#KOBLEX-141783": "제125조(중간예납추계액의 신고와 조사결정)",
+      "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정#KOBLEX-141784": "①법 제65조제3항 또는 제5항의 규정에 의하여 중간예납추계액을 신고하고자 하는 자는 기획재정부령이 정하는 중간예납추계액신고서를 납세지 관할세무서장에게 제출하여야 한다. <개정 1998.4.1, 2000.12.29, 2008.2.29>",
+      "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정#KOBLEX-141785": "②납세지 관할세무서장은 법 제65조제5항의 규정에 의하여 중간예납기간의 종합소득금액을 신고하여야 할 자가 그 신고를 하지 아니한 때에는 법 제80조의 규정을 준용하여 그 종합소득금액을 조사 결정할 수 있다. <개정 2000.12.29>",
+      "소득세법 시행령 130조  종합소득 과세표준확정신고#KOBLEX-141805": "⑤ 법 제70조에 따라 종합소득 과세표준 확정신고서를 제출받은 납세지 관할세무서장은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 그 과세기간 종료일 현재 신고인의 주민등록표 등본을 확인하여야 한다. 다만, 신고인이 확인에 동의하지 아니하거나 그의 주민등록표 등본으로 부양가족의 유무를 판단할 수 없는 경우에는 그의 주민등록표 등본 또는 가족관계등록부 증명서를 첨부하도록 하여야 한다. <개정 2008.12.31, 2010.2.18, 2010.5.4>",
+      "소득세법 시행령 147조 5 경정 등의 경우 가산세 적용특례#KOBLEX-141905": "제147조의5(경정 등의 경우 가산세 적용특례)",
+      "소득세법 시행령 156조 2 주택과 조합원입주권을 소유한 경우 1세대1주택의 특례#KOBLEX-142094": "⑭제12항에 따라 조합원입주권 소유자 1세대1주택 특례적용신고서를 제출받은 납세지 관할세무서장은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 다음 각 호의 서류를 확인하여야 한다. 다만, 제1호의 경우 신고인이 확인에 동의하지 아니하는 경우에는 이를 제출하도록 하여야 한다. <신설 2006.6.12, 2008.12.31, 2010.5.4> 1. 주민등록표 등본 2. 양도하는 주택의 토지 및 건축물대장 등본 3. 농어촌주택의 토지 및 건축물대장등본(제11항의 경우에 한한다)",
+      "소득세법 시행령 156조 3 주택과 분양권을 소유한 경우 1세대 1주택의 특례#KOBLEX-142107": "⑪ 제9항에 따라 분양권 소유자 1세대1주택 특례적용신고서를 제출받은 납세지 관할 세무서장은 「전자정부법」 제36조제1항에 따른 행정정보의 공동이용을 통하여 다음 각 호의 서류를 확인해야 한다. 다만, 신고인이 제1호의 서류 확인에 동의하지 않는 경우에는 이를 제출하도록 해야 한다. 1. 주민등록표 등본 2. 양도하는 주택의 토지 및 건축물대장 등본 3. 농어촌주택의 토지 및 건축물대장등본(제8항을 적용받는 경우로 한정한다)",
+      "조세특례제한법 90조 2 세금우대자료 미제출 가산세#KOBLEX-099667": "제90조의2(세금우대자료 미제출 가산세)",
+      "조세특례제한법 시행령 100조 11 가산세#KOBLEX-070840": "제100조의11(가산세)",
+      "조세특례제한법 시행령 100조 26 가산세#KOBLEX-070903": "제100조의26(가산세)"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "소득세법 167조  주민등록표 등본 등의 제출#KOBLEX-154193",
+              "소득세법 시행령 130조  종합소득 과세표준확정신고#KOBLEX-141805"
+            ],
+            "rationale": "C003(소득세법 제167조)과 C004(소득세법 시행령 제130조)가 확인 절차의 법적 근거를 명시하고 있습니다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "소득세법 167조  주민등록표 등본 등의 제출#KOBLEX-154193",
+              "소득세법 시행령 130조  종합소득 과세표준확정신고#KOBLEX-141805"
+            ],
+            "rationale": "C003과 C004는 전산 확인을 원칙으로 하고, 동의하지 않거나 확인이 불가능할 경우 등본을 첨부하도록 하는 구체적 절차를 규정하고 있습니다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "소득세법 167조  주민등록표 등본 등의 제출#KOBLEX-154193",
+          "소득세법 시행령 130조  종합소득 과세표준확정신고#KOBLEX-141805"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C003과 C004는 질문의 배경(종합소득 과세표준확정신고)에 부합하는 주민등록표 등본 확인의 법적 근거와 구체적 절차(전산 확인 및 동의 시 첨부)를 명확히 규정하고 있어 모든 완료 기준이 충족되었습니다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정#KOBLEX-141785"
+            ],
+            "rationale": "C021(소득세법 시행령 제125조 제2항)은 미신고 시 세무서장이 소득세법 제80조를 준용하여 조사 결정할 수 있는 절차를 명시합니다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "중간예납추계액신고서 미제출 시 발생하는 법적 효과(가산세, 추징 등)를 규정한 조항이 후보 목록에 없습니다.",
+            "requirement_id": "E2-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정#KOBLEX-141784",
+          "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정#KOBLEX-141785"
+        ],
+        "missing_aspects": [
+          "E2-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C012와 C021은 중간예납추계액신고서 미제출 시 세무서 담당자가 취해야 할 조사 결정 절차를 규정하여 E2-R1을 충족합니다. 그러나 미제출 시 발생하는 구체적인 법적 효과(예: 가산세 부과 여부, 추징 절차 등)를 명시하는 조항이 후보 목록에 포함되어 있지 않아 E2-R2는 미충족 상태입니다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [
+      "T2"
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "소득세법 167조  주민등록표 등본 등의 제출#KOBLEX-154193",
+        "support_spans": [
+          {
+            "end_char": 370,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "소득세법 시행령 130조  종합소득 과세표준확정신고#KOBLEX-141805",
+        "support_spans": [
+          {
+            "end_char": 262,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정#KOBLEX-141784",
+        "support_spans": [
+          {
+            "end_char": 131,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정#KOBLEX-141785",
+        "support_spans": [
+          {
+            "end_char": 131,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 4,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "세무서 담당자가 납세자의 주민등록표 등본을 확인하기 위한 법적 절차",
+        "issue_id": "I1"
+      },
+      {
+        "description": "중간예납추계액신고서 미제출 시 처리 방법",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "중간예납추계액신고서 미제출 시 처리 절차와 법적 효과(예: 가산세, 추징 등)가 명시된 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "중간예납추계액신고서 미제출 시 처리 절차 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "미제출 시 법적 효과(가산세, 추징 등) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "중간예납추계액신고서 미제출 시 세무서 담당자의 처리 방법 및 법적 효과",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 직접적으로 중간예납추계액신고서 미제출 시 처리 방법을 묻고 있으므로, 이를 해결하기 위한 핵심 법적 근거가 필요함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 2023년도 종합소득 과세표준확정신고를 위해 서류를 제출했다. 그러나, 주민등록표 등본을 직접 제출하지 않고, 중간예납추계액신고서도 누락된 상태였다. 을은 납세지 관할세무서의 담당자로서 이 상황을 해결해야 했다. [질문] 을은 갑의 주민등록표 등본을 확인하기 위해 어떤 절차를 거쳐야 하며, 갑이 중간예납추계액신고서를 제출하지 않은 경우 어떻게 처리해야 하는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "주민등록표 등본 확인 절차 세무서 납세자 종합소득세 신고",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "주민등록표",
+          "등본",
+          "확인",
+          "절차",
+          "세무서",
+          "납세자"
+        ],
+        "query_text": "세무서 담당자가 납세자의 주민등록표 등본을 확인하기 위한 절차 [원문 맥락] 을은 납세지 관할세무서의 담당자로서 이 상황을 해결해야 했다. 을은 갑의 주민등록표 등본을 확인하기 위해 어떤 절차를 거쳐야 하며, 갑이 중간예납추계액신고서를 제출하지 않은 경우 어떻게 처리해야 하는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "주민등록표 등본 확인 절차 세무서 담당자 법적 근거",
+        "statute_hints": [
+          "국세기본법",
+          "소득세법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "중간예납추계액신고서 미제출 처리 세무서 가산세 추징",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "중간예납",
+          "추계액",
+          "신고서",
+          "미제출",
+          "처리",
+          "법적효과"
+        ],
+        "query_text": "중간예납추계액신고서 미제출 시 처리 방법 및 법적 효과 [원문 맥락] 을은 납세지 관할세무서의 담당자로서 이 상황을 해결해야 했다. 을은 갑의 주민등록표 등본을 확인하기 위해 어떤 절차를 거쳐야 하며, 갑이 중간예납추계액신고서를 제출하지 않은 경우 어떻게 처리해야 하는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "중간예납추계액신고서 미제출 처리 절차 법적 효과",
+        "statute_hints": [
+          "소득세법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "소득세법 중간예납 가산세 미납부 납세자",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "소득세법",
+          "중간예납",
+          "가산세",
+          "미납부",
+          "부과"
+        ],
+        "query_text": "소득세법 중간예납 미납부 가산세 부과 규정 [원문 맥락] 을은 납세지 관할세무서의 담당자로서 이 상황을 해결해야 했다. 을은 갑의 주민등록표 등본을 확인하기 위해 어떤 절차를 거쳐야 하며, 갑이 중간예납추계액신고서를 제출하지 않은 경우 어떻게 처리해야 하는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "중간예납추계액신고서 미제출 시 가산세 부과 및 처리 절차",
+        "statute_hints": [
+          "소득세법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "중간예납추계액신고서 기한 후 제출 미제출 세무서 조치",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "중간예납추계액신고서",
+          "기한",
+          "제출",
+          "세무서",
+          "조치"
+        ],
+        "query_text": "중간예납추계액신고서 기한 후 제출 또는 미제출 시 세무서 조치 [원문 맥락] 을은 납세지 관할세무서의 담당자로서 이 상황을 해결해야 했다. 을은 갑의 주민등록표 등본을 확인하기 위해 어떤 절차를 거쳐야 하며, 갑이 중간예납추계액신고서를 제출하지 않은 경우 어떻게 처리해야 하는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "중간예납추계액신고서 미제출 시 세무서 담당자의 구체적 처리 절차",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "소득세법 125조 중간예납추계액 미신고 조사결정 세무서",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "소득세법",
+          "제125조",
+          "중간예납추계액",
+          "미신고",
+          "조사결정",
+          "세무서"
+        ],
+        "query_text": "소득세법 제125조 중간예납추계액 미신고 시 세무서 조사결정 절차 [원문 맥락] 을은 납세지 관할세무서의 담당자로서 이 상황을 해결해야 했다. 을은 갑의 주민등록표 등본을 확인하기 위해 어떤 절차를 거쳐야 하며, 갑이 중간예납추계액신고서를 제출하지 않은 경우 어떻게 처리해야 하는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "중간예납추계액신고서 미제출 시 세무서 조사결정 및 처리 절차",
+        "statute_hints": [
+          "소득세법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "중간예납추계액 미신고 가산세 부과 요건 세액",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "중간예납추계액",
+          "미신고",
+          "가산세",
+          "부과",
+          "요건",
+          "세액"
+        ],
+        "query_text": "중간예납추계액 미신고 가산세 부과 요건 및 세액 [원문 맥락] 을은 납세지 관할세무서의 담당자로서 이 상황을 해결해야 했다. 을은 갑의 주민등록표 등본을 확인하기 위해 어떤 절차를 거쳐야 하며, 갑이 중간예납추계액신고서를 제출하지 않은 경우 어떻게 처리해야 하는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "중간예납추계액신고서 미제출 시 발생하는 가산세 법적 효과",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 2023년도 종합소득 과세표준확정신고를 위해 서류를 제출했다. 그러나, 주민등록표 등본을 직접 제출하지 않고, 중간예납추계액신고서도 누락된 상태였다. 을은 납세지 관할세무서의 담당자로서 이 상황을 해결해야 했다.\n\n[질문]\n을은 갑의 주민등록표 등본을 확인하기 위해 어떤 절차를 거쳐야 하며, 갑이 중간예납추계액신고서를 제출하지 않은 경우 어떻게 처리해야 하는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "주민등록표 등본 확인 절차의 법적 근거와 구체적 방법(예: 정보공유, 확인 요청 등)이 명시된 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "주민등록표 등본 확인을 위한 법적 근거 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "세무서 담당자가 취해야 할 구체적 확인 절차 확인"
+          }
+        ],
+        "critical": true,
+        "description": "세무서 담당자가 납세자의 주민등록표 등본을 확인하기 위한 법적 절차 및 근거",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 직접적으로 주민등록표 등본 확인 절차를 묻고 있으므로, 이를 해결하기 위한 핵심 법적 근거가 필요함",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "중간예납추계액신고서 미제출 시 처리 절차와 법적 효과(예: 가산세, 추징 등)가 명시된 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "중간예납추계액신고서 미제출 시 처리 절차 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "미제출 시 법적 효과(가산세, 추징 등) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "중간예납추계액신고서 미제출 시 세무서 담당자의 처리 방법 및 법적 효과",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 직접적으로 중간예납추계액신고서 미제출 시 처리 방법을 묻고 있으므로, 이를 해결하기 위한 핵심 법적 근거가 필요함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "db1d0e37-3446-42bb-8f5e-a1fbd0b6f128",
+    "seen_provision_ids": [
+      "국세기본법 시행령 25조 4 기한 후 과세표준신고#KOBLEX-029691",
+      "조세특례제한법 90조 2 세금우대자료 미제출 가산세#KOBLEX-099667",
+      "소득세법 시행령 123조#KOBLEX-141775",
+      "부가가치세법 시행령 108조#KOBLEX-054935",
+      "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정#KOBLEX-141785",
+      "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정#KOBLEX-141784",
+      "부가가치세법 60조#KOBLEX-127057",
+      "조세특례제한법 시행령 100조 11 가산세#KOBLEX-070840",
+      "소득세법 167조  주민등록표 등본 등의 제출#KOBLEX-154193",
+      "소득세법 시행령 125조  중간예납추계액의 신고와 조사결정#KOBLEX-141783",
+      "소득세법 시행령 156조 3 주택과 분양권을 소유한 경우 1세대 1주택의 특례#KOBLEX-142107",
+      "국세기본법 47조 4 납부지연가산세#KOBLEX-147575",
+      "소득세법 시행령 108조  부녀자공제등#KOBLEX-141626",
+      "국세기본법 47조  가산세 부과#KOBLEX-147550",
+      "조세특례제한법 시행령 100조 26 가산세#KOBLEX-070903",
+      "소득세법 시행규칙 83조 5 부득이한 사유가 있어 비사업용 토지로 보지 아니하는 토지의 판정기준 등#KOBLEX-036239",
+      "국세징수법 3조  징수의 순위#KOBLEX-026028",
+      "소득세법 시행규칙 83조 3 농지의 범위 등#KOBLEX-036212",
+      "소득세법 시행규칙 83조 4 사업에 사용되는 그 밖의 토지의 범위#KOBLEX-036232",
+      "소득세법 시행령 156조 2 주택과 조합원입주권을 소유한 경우 1세대1주택의 특례#KOBLEX-142094",
+      "부가가치세법 시행령 11조  사업자등록 신청과 사업자등록증 발급#KOBLEX-054381",
+      "소득세법 시행령 147조 5 경정 등의 경우 가산세 적용특례#KOBLEX-141905",
+      "소득세법 시행규칙 100조  일반서식#KOBLEX-036384",
+      "소득세법 시행령 130조  종합소득 과세표준확정신고#KOBLEX-141805"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

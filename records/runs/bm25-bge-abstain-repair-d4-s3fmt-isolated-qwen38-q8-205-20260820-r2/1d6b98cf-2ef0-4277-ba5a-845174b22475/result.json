@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T23:19:57.353587+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 137841.589,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 147 column 33 (char 4124)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "1d6b98cf-2ef0-4277-ba5a-845174b22475",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 147 column 33 (char 4124)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 컴퓨터를 해킹하여 을의 온라인 은행 계좌에서 자신의 계좌로 500만원을 이체하였고, 다른 사건에서는 을을 속여 1000만원을 자신의 계좌로 송금하게 하였다. 또한, 갑은 길거리에서 을의 가방을 훔쳤다. [질문] 갑이 컴퓨터 해킹으로 을의 계좌에서 돈을 이체한 경우, 을을 속여 돈을 송금하게 한 경우, 그리고 가방을 훔친 경우 각각 어떤 처벌을 받게 되는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n갑은 컴퓨터를 해킹하여 을의 온라인 은행 계좌에서 자신의 계좌로 500만원을 이체하였고, 다른 사건에서는 을을 속여 1000만원을 자신의 계좌로 송금하게 하였다. 또한, 갑은 길거리에서 을의 가방을 훔쳤다.\n\n[질문]\n갑이 컴퓨터 해킹으로 을의 계좌에서 돈을 이체한 경우, 을을 속여 돈을 송금하게 한 경우, 그리고 가방을 훔친 경우 각각 어떤 처벌을 받게 되는가?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "1d6b98cf-2ef0-4277-ba5a-845174b22475",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

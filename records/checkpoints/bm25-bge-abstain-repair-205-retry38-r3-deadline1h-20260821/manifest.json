@@ -1,0 +1,287 @@
+{
+  "manifest_schema_version": "1.0",
+  "name": "bm25-bge-abstain-repair-d4-s3fmt-isolated-qwen38-q8-205-s1retry38-20260821",
+  "purpose": "Targeted operational retry of exactly the 38 non-normal rows from the immutable-order 205-item r2 batch (31 EXECUTION_FAILURE, 1 NO_FINAL_RESULT, and 6 NO_UNIQUE_RECORD). It preserves the 205 condition except for an explicit 4096-to-8192-token S1 truncation retry and is only for replacement-adjusted evaluation of the original 205 batch, not an independent evaluation sample.",
+  "source_dataset": {
+    "path": "data/koblex/qa/test-00000-of-00001.parquet",
+    "sha256": "afdaff3a8000cdf5e0a64adbcfc8e6aff0042b318bf03718155f2b70f551c47b"
+  },
+  "selection": {
+    "method": "filter the original 205 manifest in its immutable order to exactly the question IDs whose r2 summary status was not ANSWER or ABSTAIN; renumber retained entries 1..38",
+    "parent_manifest": "data/koblex/manifests/bm25_bge_abstain_repair_d4_s3fmt_isolated_qwen38_q8_205_20260820.json",
+    "primary_batch_directory": "records/batches/bm25-bge-abstain-repair-d4-s3fmt-isolated-qwen38-q8-205-20260820-r2/bm25-bge-abstain-repair-d4-s3fmt-isolated-qwen38-q8-205-20260820-r2-79fc0bfb-6c44-493f-a307-a54f00b7983b",
+    "source_status_counts": {
+      "EXECUTION_FAILURE": 31,
+      "NO_FINAL_RESULT": 1,
+      "NO_UNIQUE_RECORD": 6
+    },
+    "entry_count": 38,
+    "input_correction": "Each model input contains KoBLEX background plus question; answers and gold contexts remain hidden.",
+    "interpretation": "Operational retry subset; replace matching rows in the original 205 batch before aggregate evaluation."
+  },
+  "frozen_configuration": {
+    "condition": "D4-abstain-repair-s3fmt-isolated-205-s1retry38-Qwen3.8-Q8_0",
+    "retriever": "bm25",
+    "reranker": "dragonkue--bge-reranker-v2-m3-ko",
+    "model": "legal-harness-qwen38-q8",
+    "seed": 0,
+    "num_ctx": 32768,
+    "total_retrieval_rounds": 3,
+    "total_retrieval_requests": 9,
+    "rerank_pool_k": 100,
+    "final_top_k": 10,
+    "bm25_korean_ending_prefixes": "deterministic_small_suffix_set",
+    "statute_hint_candidate_quota": 0.2,
+    "source_context_anchor": "last_fact_sentence_plus_question_max_1200_chars",
+    "focus_bare_term_prefixes": "2_to_4_chars_excluding_stoplist",
+    "planned_actor_term_prefixes": "2_to_6_chars_actor_suffixes_only",
+    "conditional_generation": "answer_target_full_conditional_limited",
+    "planning_contract": "answer_targets_required",
+    "coverage_contract": "legal_applicability_criterion_results",
+    "factual_branch_classification": "missing_selector_is_partial_not_legal_conflict",
+    "s3_claim_contract": "all_claims_cited_uncited_limitations_outside_claims",
+    "contextual_query_dedup": "after_source_context_attachment",
+    "monotonic_coverage": true,
+    "input_format": "koblex_background_plus_question",
+    "rerank_query_mode": "per_request",
+    "candidate_selection": "evidence_balanced",
+    "per_evidence_min_k": 1,
+    "rerank_document_mode": "statute_and_body",
+    "candidate_budget_scope": "per_round",
+    "model_provenance": {
+      "original_repo": "Qwen/Qwen3.8-27B",
+      "original_revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+      "gguf_repo": "ggml-org/Qwen3.8-27B-GGUF",
+      "gguf_revision": "0669b98607d47046c7c2b3f801011d54a08cfccf",
+      "file": "Qwen3.8-27B-Q8_0.gguf",
+      "sha256": "f5c702d8820d36fb55985bb238fc83ee3a313e920f4b752a437c3a6a9e14e4c8",
+      "bytes": 28595763552,
+      "quantization": "Q8_0",
+      "ollama_version": "0.20.5",
+      "ollama_model_blob": "/root/.ollama/models/blobs/sha256-f5c702d8820d36fb55985bb238fc83ee3a313e920f4b752a437c3a6a9e14e4c8",
+      "runtime_mode": "text_only",
+      "vision_projector_loaded": false,
+      "prompt_template_mode": "qwen38_official_chat_tokens_non_thinking",
+      "stop_sequences": [
+        "<|im_end|>",
+        "<|endoftext|>",
+        "<|im_start|>"
+      ],
+      "note": "Applied after raw-completion framing produced malformed JSON on two qa_92 S1 attempts."
+    },
+    "dedup_mode": "legal_text_alias",
+    "s3_transport_format": "deterministic_claim_citation_ids_markers_snapshots_answer_serialization",
+    "record_root_scope": "dedicated_batch_root",
+    "ollama_endpoint": "http://127.0.0.1:11435/api/generate",
+    "runtime_isolation": "dedicated_record_root_and_ollama_endpoint",
+    "s1_max_tokens": 4096,
+    "s1_truncation_retry_max_tokens": 8192,
+    "skill_max_tokens": {
+      "legal_issue_and_query_planning": 4096,
+      "provision_coverage_assessment": 3072,
+      "grounded_legal_answer_generation": 3072
+    },
+    "s3_public_answer_max_characters": 800,
+    "s3_public_answer_max_claims": 3,
+    "s3_public_answer_format": "conclusion_first_1_to_3_short_sentences",
+    "s3_audit_fields": [
+      "assumptions",
+      "limitations",
+      "claims",
+      "claim_citations"
+    ],
+    "retrieval_stage_provenance_required_for_evaluation": true
+  },
+  "entries": [
+    {
+      "ordinal": 1,
+      "question_id": "qa_213_2hop_812_rand",
+      "n_hops": 2
+    },
+    {
+      "ordinal": 2,
+      "question_id": "qa_140_3hop_540_rand",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 3,
+      "question_id": "qa_215_2hop_820_rand",
+      "n_hops": 2
+    },
+    {
+      "ordinal": 4,
+      "question_id": "qa_279_3hop_1064_rand",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 5,
+      "question_id": "qa_82_3hop_235_rand2",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 6,
+      "question_id": "qa_127_3hop_230",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 7,
+      "question_id": "qa_64_1hop_95",
+      "n_hops": 1
+    },
+    {
+      "ordinal": 8,
+      "question_id": "qa_144_3hop_410_rand2",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 9,
+      "question_id": "qa_131_3hop_237",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 10,
+      "question_id": "qa_441_3hop_696",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 11,
+      "question_id": "qa_41_3hop_66",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 12,
+      "question_id": "qa_304_3hop_869_rand2",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 13,
+      "question_id": "qa_309_3hop_881_rand2",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 14,
+      "question_id": "qa_168_3hop_301",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 15,
+      "question_id": "qa_493_3hop_773",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 16,
+      "question_id": "qa_366_3hop_580",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 17,
+      "question_id": "qa_32_3hop_51",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 18,
+      "question_id": "qa_495_3hop_777",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 19,
+      "question_id": "qa_249_2hop_406",
+      "n_hops": 2
+    },
+    {
+      "ordinal": 20,
+      "question_id": "qa_566_2hop_861",
+      "n_hops": 2
+    },
+    {
+      "ordinal": 21,
+      "question_id": "qa_608_3hop_919",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 22,
+      "question_id": "qa_274_3hop_434",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 23,
+      "question_id": "qa_550_3hop_837",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 24,
+      "question_id": "qa_13_1hop_18",
+      "n_hops": 1
+    },
+    {
+      "ordinal": 25,
+      "question_id": "qa_14_3hop_58_rand",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 26,
+      "question_id": "qa_73_3hop_113",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 27,
+      "question_id": "qa_314_3hop_503",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 28,
+      "question_id": "qa_32_3hop_125_rand",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 29,
+      "question_id": "qa_132_3hop_508_rand",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 30,
+      "question_id": "qa_77_3hop_121",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 31,
+      "question_id": "qa_110_1hop_193",
+      "n_hops": 1
+    },
+    {
+      "ordinal": 32,
+      "question_id": "qa_71_2hop_277_rand",
+      "n_hops": 2
+    },
+    {
+      "ordinal": 33,
+      "question_id": "qa_198_2hop_756_rand",
+      "n_hops": 2
+    },
+    {
+      "ordinal": 34,
+      "question_id": "qa_240_2hop_916_rand",
+      "n_hops": 2
+    },
+    {
+      "ordinal": 35,
+      "question_id": "qa_297_2hop_1135_rand",
+      "n_hops": 2
+    },
+    {
+      "ordinal": 36,
+      "question_id": "qa_293_3hop_839_rand2",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 37,
+      "question_id": "qa_136_3hop_249",
+      "n_hops": 3
+    },
+    {
+      "ordinal": 38,
+      "question_id": "qa_443_3hop_703",
+      "n_hops": 3
+    }
+  ]
+}

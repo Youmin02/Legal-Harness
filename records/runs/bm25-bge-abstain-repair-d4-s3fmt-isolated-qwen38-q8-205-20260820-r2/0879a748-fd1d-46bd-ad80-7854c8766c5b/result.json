@@ -1,0 +1,631 @@
+{
+  "abstention_reason": null,
+  "answer": "근로자퇴직급여 보장법 제8조제1항에 따라 계속근로기간 1년에 대하여 30일분 이상의 평균임금을 퇴직금으로 퇴직 근로자에게 지급할 수 있는 제도를 설정하여야 합니다.[CT1]\n평균임금은 근로기준법 제2조제1항제6호에 따라 이를 산정하여야 할 사유가 발생한 날 이전 3개월 동안에 그 근로자에게 지급된 임금의 총액을 그 기간의 총일수로 나눈 금액으로 정의됩니다.[CT2]\n근로자퇴직급여 보장법 제2조제4호에 따르면, 퇴직급여 보장법에서 사용하는 '평균임금'은 근로기준법 제2조제1항제6호에 따른 평균임금을 의미합니다.[CT3]",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "근로자퇴직급여 보장법 제8조제1항에 따라 계속근로기간 1년에 대하여 30일분 이상의 평균임금을 퇴직금으로 퇴직 근로자에게 지급할 수 있는 제도를 설정하여야 합니다.[CT1]\n평균임금은 근로기준법 제2조제1항제6호에 따라 이를 산정하여야 할 사유가 발생한 날 이전 3개월 동안에 그 근로자에게 지급된 임금의 총액을 그 기간의 총일수로 나눈 금액으로 정의됩니다.[CT2]\n근로자퇴직급여 보장법 제2조제4호에 따르면, 퇴직급여 보장법에서 사용하는 '평균임금'은 근로기준법 제2조제1항제6호에 따른 평균임금을 의미합니다.[CT3]",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T06:08:16.990997+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 138847.979,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 191,
+      "dedup_collapse": 18,
+      "evidence_fusion": 191,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 191
+    }
+  },
+  "run_id": "0879a748-fd1d-46bd-ad80-7854c8766c5b",
+  "state": {
+    "accepted_provision_ids": [
+      "근로자퇴직급여 보장법 8조  퇴직금제도의 설정 등#KOBLEX-091180",
+      "근로자퇴직급여 보장법 2조  정의#KOBLEX-091152",
+      "근로기준법 2조  정의#KOBLEX-095820"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 3,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "rule",
+        "question_anchor": "어떤 기준으로 퇴직금을 지급하는 제도를 설정해야 하며",
+        "requested_output": "퇴직금 지급 기준 및 계산 방법"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "definition",
+        "question_anchor": "평균임금은 어떻게 정의되는가",
+        "requested_output": "평균임금의 법적 정의"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "근로자퇴직급여 보장법 8조  퇴직금제도의 설정 등#KOBLEX-091180"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 63.11864045795162,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "근로자퇴직급여 보장법 8조  퇴직금제도의 설정 등#KOBLEX-091180",
+        "provision_text": "① 퇴직금제도를 설정하려는 사용자는 계속근로기간 1년에 대하여 30일분 이상의 평균임금을 퇴직금으로 퇴직 근로자에게 지급할 수 있는 제도를 설정하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9998979568481445,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "근로자퇴직급여 보장법 8조  퇴직금제도의 설정 등 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "근로기준법 2조  정의#KOBLEX-095820"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 5.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "근로기준법 2조  정의#KOBLEX-095820",
+        "provision_text": "① 이 법에서 사용하는 용어의 뜻은 다음과 같다. <개정 2018.3.20, 2019.1.15, 2020.5.26> 1. \"근로자\"란 직업의 종류와 관계없이 임금을 목적으로 사업이나 사업장에 근로를 제공하는 사람을 말한다. 2. \"사용자\"란 사업주 또는 사업 경영 담당자, 그 밖에 근로자에 관한 사항에 대하여 사업주를 위하여 행위하는 자를 말한다. 3. \"근로\"란 정신노동과 육체노동을 말한다. 4. \"근로계약\"이란 근로자가 사용자에게 근로를 제공하고 사용자는 이에 대하여 임금을 지급하는 것을 목적으로 체결된 계약을 말한다. 5. \"임금\"이란 사용자가 근로의 대가로 근로자에게 임금, 봉급, 그 밖에 어떠한 명칭으로든지 지급하는 모든 금품을 말한다. 6. \"평균임금\"이란 이를 산정하여야 할 사유가 발생한 날 이전 3개월 동안에 그 근로자에게 지급된 임금의 총액을 그 기간의 총일수로 나눈 금액을 말한다. 근로자가 취업한 후 3개월 미만인 경우도 이에 준한다. 7. \"1주\"란 휴일을 포함한 7일을 말한다. 8. \"소정(所定)근로시간\"이란 제50조, 제69조 본문 또는 「산업안전보건법」 제139조제1항에 따른 근로시간의 범위에서 근로자와 사용자 사이에 정한 근로시간을 말한다. 9. \"단시간근로자\"란 1주 동안의 소정근로시간이 그 사업장에서 같은 종류의 업무에 종사하는 통상 근로자의 1주 동안의 소정근로시간에 비하여 짧은 근로자를 말한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.39475226402282715,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "근로기준법 2조  정의 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "근로자퇴직급여 보장법 12조  퇴직급여등의 우선변제#KOBLEX-091191"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 58.004464242657924,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "근로자퇴직급여 보장법 12조  퇴직급여등의 우선변제#KOBLEX-091191",
+        "provision_text": "③ 퇴직급여등 중 퇴직금, 제15조에 따른 확정급여형퇴직연금제도의 급여는 계속근로기간 1년에 대하여 30일분의 평균임금으로 계산한 금액으로 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9994839429855347,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "근로자퇴직급여 보장법 12조  퇴직급여등의 우선변제 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "근로자퇴직급여 보장법 15조  급여수준#KOBLEX-091210"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 47.76725042997789,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "근로자퇴직급여 보장법 15조  급여수준#KOBLEX-091210",
+        "provision_text": "제15조(급여수준) 제13조제4호의 급여 수준은 가입자의 퇴직일을 기준으로 산정한 일시금이 계속근로기간 1년에 대하여 30일분 이상의 평균임금이 되도록 하여야 한다. <개정 2021.4.13>",
+        "rerank_rank": 3,
+        "rerank_score": 0.9987334609031677,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "근로자퇴직급여 보장법 15조  급여수준",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 55조  퇴직금제도#KOBLEX-067361"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 38.07066635092662,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "선원법 55조  퇴직금제도#KOBLEX-067361",
+        "provision_text": "① 선박소유자는 계속근로기간이 1년 이상인 선원이 퇴직하는 경우에는 계속근로기간 1년에 대하여 승선평균임금의 30일분에 상당하는 금액을 퇴직금으로 지급하는 제도를 마련하여야 한다. 다만, 이와 같은 수준을 밑돌지 아니하는 범위에서 선원노동위원회의 승인을 받아 단체협약이나 선원근로계약에 의하여 퇴직금제도를 갈음하는 제도를 시행하는 경우에는 그러하지 아니하다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.8749485611915588,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "선원법 55조  퇴직금제도 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "근로자퇴직급여 보장법 2조  정의#KOBLEX-091152"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 34.34664696876253,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "근로자퇴직급여 보장법 2조  정의#KOBLEX-091152",
+        "provision_text": "4. \"평균임금\"이란 「근로기준법」 제2조제1항제6호에 따른 평균임금을 말한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.004693878814578056,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "근로자퇴직급여 보장법 2조  정의 4호",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "고용보험법 45조  급여의 기초가 되는 임금일액#KOBLEX-206639"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 28.92315098458074,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "고용보험법 45조  급여의 기초가 되는 임금일액#KOBLEX-206639",
+        "provision_text": "①구직급여의 산정 기초가 되는 임금일액[이하 \"기초일액(基礎日額)\"이라 한다]은 제43조제1항에 따른 수급자격의 인정과 관련된 마지막 이직 당시 「근로기준법」 제2조제1항제6호에 따라 산정된 평균임금으로 한다. 다만, 마지막 이직일 이전 3개월 이내에 피보험자격을 취득한 사실이 2회 이상인 경우에는 마지막 이직일 이전 3개월간(일용근로자의 경우에는 마지막 이직일 이전 4개월 중 최종 1개월을 제외한 기간)에 그 근로자에게 지급된 임금 총액을 그 산정의 기준이 되는 3개월의 총 일수로 나눈 금액을 기초일액으로 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.0018127961084246635,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "고용보험법 45조  급여의 기초가 되는 임금일액 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "근로기준법 2조  정의#KOBLEX-095821"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "근로기준법 2조  정의#KOBLEX-095821",
+        "provision_text": "② 제1항제6호에 따라 산출된 금액이 그 근로자의 통상임금보다 적으면 그 통상임금액을 평균임금으로 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.0010319032007828355,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "근로기준법 2조  정의 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 55조  퇴직금제도#KOBLEX-067363"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 27,
+        "first_stage_score": 23.80817883664969,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "선원법 55조  퇴직금제도#KOBLEX-067363",
+        "provision_text": "③ 퇴직금을 산정할 경우 계속근로기간이 1년 이상인 선원의 계속근로기간을 계산할 때 1년 미만의 기간에 대하여는 6개월 미만은 6개월로 보고, 6개월 이상은 1년으로 본다. 다만, 제2항에 따라 퇴직금을 미리 정산하기 위한 계속근로기간을 계산할 때 1년 미만의 기간은 제외한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.00047334330156445503,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "선원법 55조  퇴직금제도 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "석탄산업법 시행령 41조  폐광대책비#KOBLEX-026680"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 30.26437125818562,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "석탄산업법 시행령 41조  폐광대책비#KOBLEX-026680",
+        "provision_text": "①법 제39조의3제1항제1호에서 \"2월분 범위안의 임금\"은 「근로기준법」 제2조제1항제6호의 규정에 의한 평균임금(이하 \"평균임금\"이라 한다)2월분 해당액으로 한다. <개정 2007.6.29>",
+        "rerank_rank": 5,
+        "rerank_score": 0.0003257139469496906,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "석탄산업법 시행령 41조  폐광대책비 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "고용보험법 45조  급여의 기초가 되는 임금일액#KOBLEX-206639": "①구직급여의 산정 기초가 되는 임금일액[이하 \"기초일액(基礎日額)\"이라 한다]은 제43조제1항에 따른 수급자격의 인정과 관련된 마지막 이직 당시 「근로기준법」 제2조제1항제6호에 따라 산정된 평균임금으로 한다. 다만, 마지막 이직일 이전 3개월 이내에 피보험자격을 취득한 사실이 2회 이상인 경우에는 마지막 이직일 이전 3개월간(일용근로자의 경우에는 마지막 이직일 이전 4개월 중 최종 1개월을 제외한 기간)에 그 근로자에게 지급된 임금 총액을 그 산정의 기준이 되는 3개월의 총 일수로 나눈 금액을 기초일액으로 한다.",
+      "근로기준법 2조  정의#KOBLEX-095820": "① 이 법에서 사용하는 용어의 뜻은 다음과 같다. <개정 2018.3.20, 2019.1.15, 2020.5.26> 1. \"근로자\"란 직업의 종류와 관계없이 임금을 목적으로 사업이나 사업장에 근로를 제공하는 사람을 말한다. 2. \"사용자\"란 사업주 또는 사업 경영 담당자, 그 밖에 근로자에 관한 사항에 대하여 사업주를 위하여 행위하는 자를 말한다. 3. \"근로\"란 정신노동과 육체노동을 말한다. 4. \"근로계약\"이란 근로자가 사용자에게 근로를 제공하고 사용자는 이에 대하여 임금을 지급하는 것을 목적으로 체결된 계약을 말한다. 5. \"임금\"이란 사용자가 근로의 대가로 근로자에게 임금, 봉급, 그 밖에 어떠한 명칭으로든지 지급하는 모든 금품을 말한다. 6. \"평균임금\"이란 이를 산정하여야 할 사유가 발생한 날 이전 3개월 동안에 그 근로자에게 지급된 임금의 총액을 그 기간의 총일수로 나눈 금액을 말한다. 근로자가 취업한 후 3개월 미만인 경우도 이에 준한다. 7. \"1주\"란 휴일을 포함한 7일을 말한다. 8. \"소정(所定)근로시간\"이란 제50조, 제69조 본문 또는 「산업안전보건법」 제139조제1항에 따른 근로시간의 범위에서 근로자와 사용자 사이에 정한 근로시간을 말한다. 9. \"단시간근로자\"란 1주 동안의 소정근로시간이 그 사업장에서 같은 종류의 업무에 종사하는 통상 근로자의 1주 동안의 소정근로시간에 비하여 짧은 근로자를 말한다.",
+      "근로기준법 2조  정의#KOBLEX-095821": "② 제1항제6호에 따라 산출된 금액이 그 근로자의 통상임금보다 적으면 그 통상임금액을 평균임금으로 한다.",
+      "근로자퇴직급여 보장법 12조  퇴직급여등의 우선변제#KOBLEX-091191": "③ 퇴직급여등 중 퇴직금, 제15조에 따른 확정급여형퇴직연금제도의 급여는 계속근로기간 1년에 대하여 30일분의 평균임금으로 계산한 금액으로 한다.",
+      "근로자퇴직급여 보장법 15조  급여수준#KOBLEX-091210": "제15조(급여수준) 제13조제4호의 급여 수준은 가입자의 퇴직일을 기준으로 산정한 일시금이 계속근로기간 1년에 대하여 30일분 이상의 평균임금이 되도록 하여야 한다. <개정 2021.4.13>",
+      "근로자퇴직급여 보장법 2조  정의#KOBLEX-091152": "4. \"평균임금\"이란 「근로기준법」 제2조제1항제6호에 따른 평균임금을 말한다.",
+      "근로자퇴직급여 보장법 8조  퇴직금제도의 설정 등#KOBLEX-091180": "① 퇴직금제도를 설정하려는 사용자는 계속근로기간 1년에 대하여 30일분 이상의 평균임금을 퇴직금으로 퇴직 근로자에게 지급할 수 있는 제도를 설정하여야 한다.",
+      "석탄산업법 시행령 41조  폐광대책비#KOBLEX-026680": "①법 제39조의3제1항제1호에서 \"2월분 범위안의 임금\"은 「근로기준법」 제2조제1항제6호의 규정에 의한 평균임금(이하 \"평균임금\"이라 한다)2월분 해당액으로 한다. <개정 2007.6.29>",
+      "선원법 55조  퇴직금제도#KOBLEX-067361": "① 선박소유자는 계속근로기간이 1년 이상인 선원이 퇴직하는 경우에는 계속근로기간 1년에 대하여 승선평균임금의 30일분에 상당하는 금액을 퇴직금으로 지급하는 제도를 마련하여야 한다. 다만, 이와 같은 수준을 밑돌지 아니하는 범위에서 선원노동위원회의 승인을 받아 단체협약이나 선원근로계약에 의하여 퇴직금제도를 갈음하는 제도를 시행하는 경우에는 그러하지 아니하다.",
+      "선원법 55조  퇴직금제도#KOBLEX-067363": "③ 퇴직금을 산정할 경우 계속근로기간이 1년 이상인 선원의 계속근로기간을 계산할 때 1년 미만의 기간에 대하여는 6개월 미만은 6개월로 보고, 6개월 이상은 1년으로 본다. 다만, 제2항에 따라 퇴직금을 미리 정산하기 위한 계속근로기간을 계산할 때 1년 미만의 기간은 제외한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "근로자퇴직급여 보장법 8조  퇴직금제도의 설정 등#KOBLEX-091180"
+            ],
+            "rationale": "C001에서 '계속근로기간 1년에 대하여'라는 문구로 지급 대상 요건을 명시하고 있다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "근로자퇴직급여 보장법 8조  퇴직금제도의 설정 등#KOBLEX-091180"
+            ],
+            "rationale": "C001에서 '30일분 이상의 평균임금을 퇴직금으로... 지급할 수 있는 제도를 설정하여야 한다'고 명시하고 있어 지급액 산정 기준을 충족한다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "근로자퇴직급여 보장법 8조  퇴직금제도의 설정 등#KOBLEX-091180"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001은 퇴직금 지급의 핵심 요건인 '계속근로기간 1년'과 지급액 기준인 '30일분 이상의 평균임금'을 모두 명시하고 있어, E1의 완료 기준을 완전히 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "근로기준법 2조  정의#KOBLEX-095820"
+            ],
+            "rationale": "C002 제6호에서 평균임금을 '지급된 임금의 총액을 그 기간의 총일수로 나눈 금액'으로 정의하고 있다. (참고: 질문의 '90으로 나눈' 표현은 통상 3개월 기준일 경우의 계산 예시이며, 법문은 총일수로 나누는 것을 규정한다.)",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "근로기준법 2조  정의#KOBLEX-095820"
+            ],
+            "rationale": "C002 제6호에서 '산정하여야 할 사유가 발생한 날 이전 3개월 동안'이라고 기준 기간을 명시하고 있다.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "근로기준법 2조  정의#KOBLEX-095820",
+          "근로자퇴직급여 보장법 2조  정의#KOBLEX-091152"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C002는 평균임금의 일반적 정의(이전 3개월 총임금/총일수)를, C006은 퇴직급여 보장법상 평균임금이 근로기준법상 평균임금을 준용함을 명시하여, E2의 완료 기준을 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "근로자퇴직급여 보장법 8조  퇴직금제도의 설정 등#KOBLEX-091180",
+        "support_spans": [
+          {
+            "end_char": 87,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "근로기준법 2조  정의#KOBLEX-095820",
+        "support_spans": [
+          {
+            "end_char": 697,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "근로자퇴직급여 보장법 2조  정의#KOBLEX-091152",
+        "support_spans": [
+          {
+            "end_char": 44,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "근로기준법상 퇴직금 지급의 법적 기준과 계산 방식",
+        "issue_id": "I1"
+      },
+      {
+        "description": "퇴직금 산정의 기초가 되는 평균임금의 법적 정의",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을 주식회사의 인사부장으로, 퇴직금 제도를 새로 설정해야 하는 임무를 맡게 되었습니다. 을 주식회사는 퇴직금 지급 기준과 평균임금 계산에 대한 명확한 이해가 필요한 상황입니다. 을 주식회사는 각 직원의 계속근로기간 1년에 대해 퇴직금을 얼마나 지급해야 할지 고민하고 있으며, 평균임금이 무엇인지 명확히 하고자 합니다. [질문] 갑이 을 주식회사의 퇴직금 제도를 설정할 때 어떤 기준으로 퇴직금을 지급하는 제도를 설정해야 하며, 평균임금은 어떻게 정의되는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "퇴직금 지급 기준 계속근로기간 1년 30일분 평균임금 근로기준법",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "퇴직금",
+          "지급기준",
+          "계속근로기간",
+          "30일분",
+          "평균임금",
+          "근로기준법"
+        ],
+        "query_text": "근로기준법 퇴직금 지급 기준 계속근로기간 1년 30일분 평균임금 [원문 맥락] 을 주식회사는 각 직원의 계속근로기간 1년에 대해 퇴직금을 얼마나 지급해야 할지 고민하고 있으며, 평균임금이 무엇인지 명확히 하고자 합니다. 갑이 을 주식회사의 퇴직금 제도를 설정할 때 어떤 기준으로 퇴직금을 지급하는 제도를 설정해야 하며, 평균임금은 어떻게 정의되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "퇴직금 지급 기준 및 계산 방법: 계속근로기간 1년 이상 근로자에게 30일분 평균임금 지급",
+        "statute_hints": [
+          "근로기준법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "평균임금 정의 3개월 총임금 90으로 나눈 금액 근로기준법",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "평균임금",
+          "정의",
+          "3개월",
+          "총임금",
+          "90으로",
+          "근로기준법"
+        ],
+        "query_text": "근로기준법 평균임금 정의 3개월 총임금 90으로 나눈 금액 [원문 맥락] 을 주식회사는 각 직원의 계속근로기간 1년에 대해 퇴직금을 얼마나 지급해야 할지 고민하고 있으며, 평균임금이 무엇인지 명확히 하고자 합니다. 갑이 을 주식회사의 퇴직금 제도를 설정할 때 어떤 기준으로 퇴직금을 지급하는 제도를 설정해야 하며, 평균임금은 어떻게 정의되는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "평균임금의 법적 정의: 지급일 이전 3개월분의 총임금을 90으로 나눈 금액",
+        "statute_hints": [
+          "근로기준법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을 주식회사의 인사부장으로, 퇴직금 제도를 새로 설정해야 하는 임무를 맡게 되었습니다. 을 주식회사는 퇴직금 지급 기준과 평균임금 계산에 대한 명확한 이해가 필요한 상황입니다. 을 주식회사는 각 직원의 계속근로기간 1년에 대해 퇴직금을 얼마나 지급해야 할지 고민하고 있으며, 평균임금이 무엇인지 명확히 하고자 합니다.\n\n[질문]\n갑이 을 주식회사의 퇴직금 제도를 설정할 때 어떤 기준으로 퇴직금을 지급하는 제도를 설정해야 하며, 평균임금은 어떻게 정의되는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "퇴직금 지급 요건(계속근로기간)과 지급액 산정 공식(30일분 평균임금)을 명시하는 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "퇴직금 지급 대상이 되는 계속근로기간 요건 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "퇴직금 지급액이 30일분 평균임금 이상이어야 한다는 규정 확인"
+          }
+        ],
+        "critical": true,
+        "description": "근로기준법상 퇴직금 지급의무 및 계산 기준(계속근로기간 1년 이상, 30일분 평균임금)",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 퇴직금 지급 기준을 직접적으로 규정하는 핵심 근거",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "평균임금이 지급일 이전 3개월분의 총임금을 90으로 나눈 금액임을 명시하는 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "평균임금의 정의(총임금/90) 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "평균임금 계산에 사용되는 기준 기간(3개월) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "근로기준법상 평균임금의 정의 및 계산 기간",
+        "evidence_item_id": "E2",
+        "evidence_type": "definition",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 직접적으로 묻고 있는 평균임금의 법적 정의",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "0879a748-fd1d-46bd-ad80-7854c8766c5b",
+    "seen_provision_ids": [
+      "근로자퇴직급여 보장법 2조  정의#KOBLEX-091152",
+      "근로기준법 2조  정의#KOBLEX-095821",
+      "근로자퇴직급여 보장법 15조  급여수준#KOBLEX-091210",
+      "석탄산업법 시행령 41조  폐광대책비#KOBLEX-026680",
+      "근로자퇴직급여 보장법 12조  퇴직급여등의 우선변제#KOBLEX-091191",
+      "근로자퇴직급여 보장법 8조  퇴직금제도의 설정 등#KOBLEX-091180",
+      "선원법 55조  퇴직금제도#KOBLEX-067361",
+      "고용보험법 45조  급여의 기초가 되는 임금일액#KOBLEX-206639",
+      "선원법 55조  퇴직금제도#KOBLEX-067363",
+      "근로기준법 2조  정의#KOBLEX-095820"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

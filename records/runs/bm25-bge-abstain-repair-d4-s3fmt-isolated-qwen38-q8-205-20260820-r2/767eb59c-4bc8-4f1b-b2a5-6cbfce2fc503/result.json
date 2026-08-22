@@ -1,0 +1,926 @@
+{
+  "abstention_reason": null,
+  "answer": "수용자는 교도소 소장의 허가 없이 무인비행장치를 지녀서는 아니 됩니다.[CT1]\n소장의 허가 없이 무인비행장치를 지닌 경우, 2년 이하의 징역 또는 2천만원 이하의 벌금에 처해집니다.[CT2]\n수용자는 주류와 담배를 지녀서는 아니 됩니다.[CT3]\n주류 또는 담배를 지닌 경우, 1년 이하의 징역 또는 1천만원 이하의 벌금에 처해집니다.[CT4]\n전제: 을이 형의 집행 및 수용자의 처우에 관한 법률상 '수용자'에 해당한다고 가정합니다.\n전제: 을이 소지한 무인비행장치, 주류, 담배가 해당 법률에서 금지하는 물품에 해당한다고 가정합니다.\n한계: 본 답변은 제공된 법률 조항에 기반한 일반적 법적 기준을 설명하며, 개별 사건의 구체적 양형이나 형사소송 절차상의 세부 사항은 다루지 않습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "수용자는 교도소 소장의 허가 없이 무인비행장치를 지녀서는 아니 됩니다.[CT1]\n소장의 허가 없이 무인비행장치를 지닌 경우, 2년 이하의 징역 또는 2천만원 이하의 벌금에 처해집니다.[CT2]\n수용자는 주류와 담배를 지녀서는 아니 됩니다.[CT3]\n주류 또는 담배를 지닌 경우, 1년 이하의 징역 또는 1천만원 이하의 벌금에 처해집니다.[CT4]\n전제: 을이 형의 집행 및 수용자의 처우에 관한 법률상 '수용자'에 해당한다고 가정합니다.\n전제: 을이 소지한 무인비행장치, 주류, 담배가 해당 법률에서 금지하는 물품에 해당한다고 가정합니다.\n한계: 본 답변은 제공된 법률 조항에 기반한 일반적 법적 기준을 설명하며, 개별 사건의 구체적 양형이나 형사소송 절차상의 세부 사항은 다루지 않습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T23:06:03.750196+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 380450.058,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 272,
+      "dedup_collapse": 129,
+      "evidence_fusion": 272,
+      "first_stage": 400,
+      "request_rerank": 400,
+      "round_selected": 20,
+      "rrf": 300,
+      "selected": 272
+    }
+  },
+  "run_id": "767eb59c-4bc8-4f1b-b2a5-6cbfce2fc503",
+  "state": {
+    "accepted_provision_ids": [
+      "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우#KOBLEX-075811",
+      "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우#KOBLEX-075812",
+      "형의 집행 및 수용자의 처우에 관한 법률 92조  금지물품#KOBLEX-075615"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 7,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 4,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "penalty",
+        "question_anchor": "무인비행장치를 소지하고",
+        "requested_output": "무인비행장치 소지에 대한 처벌 내용"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "penalty",
+        "question_anchor": "주류와 담배를 소지한 경우",
+        "requested_output": "주류와 담배 소지에 대한 처벌 내용"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우#KOBLEX-075811",
+          "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우#KOBLEX-213998"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 34,
+        "first_stage_score": 20.26216777107657,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우#KOBLEX-075811",
+        "provision_text": "① 수용자가 제92조제2항을 위반하여 소장의 허가 없이 무인비행장치, 전자ㆍ통신기기를 지닌 경우 2년 이하의 징역 또는 2천만원 이하의 벌금에 처한다. <개정 2020.2.4>",
+        "rerank_rank": 1,
+        "rerank_score": 0.7801821827888489,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 205조  아편 등의 소지#KOBLEX-193100"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 100,
+        "first_stage_score": 17.843907585464144,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형법 205조  아편 등의 소지#KOBLEX-193100",
+        "provision_text": "제205조(아편 등의 소지) 아편, 몰핀이나 그 화합물 또는 아편흡식기구를 소지한 자는 1년 이하의 징역 또는 500만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 1,
+        "rerank_score": 7.574142364319414e-05,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형법 205조  아편 등의 소지",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형의 집행 및 수용자의 처우에 관한 법률 133조  금지물품의 반입#KOBLEX-075814",
+          "형의 집행 및 수용자의 처우에 관한 법률 133조  금지물품의 반입#KOBLEX-214001"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 22.51577242933852,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 133조  금지물품의 반입#KOBLEX-075814",
+        "provision_text": "① 소장의 허가 없이 무인비행장치, 전자ㆍ통신기기를 교정시설에 반입한 사람은 3년 이하의 징역 또는 3천만원 이하의 벌금에 처한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.5999009609222412,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 133조  금지물품의 반입 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "조세범 처벌법 6조  무면허 주류의 제조 및 판매#KOBLEX-205226",
+          "조세범 처벌법 6조  무면허 주류의 제조 및 판매#KOBLEX-219249"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 19.475831424487293,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "조세범 처벌법 6조  무면허 주류의 제조 및 판매#KOBLEX-205226",
+        "provision_text": "제6조(무면허 주류의 제조 및 판매) 「주류 면허 등에 관한 법률」에 따른 면허를 받지 아니하고 주류, 밑술ㆍ술덧을 제조(개인의 자가소비를 위한 제조는 제외한다)하거나 판매한 자는 3년 이하의 징역 또는 3천만원(해당 주세 상당액의 3배의 금액이 3천만원을 초과할 때에는 그 주세 상당액의 3배의 금액) 이하의 벌금에 처한다. 이 경우 밑술과 술덧은 탁주로 본다. <개정 2020.12.29>",
+        "rerank_rank": 2,
+        "rerank_score": 1.3546282389143016e-05,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "조세범 처벌법 6조  무면허 주류의 제조 및 판매",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방세법 시행령 61조  조정세율#KOBLEX-077617"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 44,
+        "first_stage_score": 22.200423845493976,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "지방세법 시행령 61조  조정세율#KOBLEX-077617",
+        "provision_text": "2. 씹거나 머금는 담배: 1그램당 364원",
+        "rerank_rank": 3,
+        "rerank_score": 6.928020411578473e-06,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "지방세법 시행령 61조  조정세율 2호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방세법 시행령 61조  조정세율#KOBLEX-077618"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 45,
+        "first_stage_score": 22.200423845493976,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "지방세법 시행령 61조  조정세율#KOBLEX-077618",
+        "provision_text": "3. 냄새 맡는 담배: 1그램당 26원",
+        "rerank_rank": 4,
+        "rerank_score": 4.659898877434898e-06,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "지방세법 시행령 61조  조정세율 3호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "담배사업법 19조  특수용 담배#KOBLEX-143441"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 24,
+        "first_stage_score": 23.867705544372903,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "담배사업법 19조  특수용 담배#KOBLEX-143441",
+        "provision_text": "제19조(특수용 담배)",
+        "rerank_rank": 5,
+        "rerank_score": 3.185085915902164e-06,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "담배사업법 19조  특수용 담배",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방세기본법 102조#KOBLEX-121009"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 57,
+        "first_stage_score": 20.926700738541015,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "지방세기본법 102조#KOBLEX-121009",
+        "provision_text": "제2절 범칙행위 처벌",
+        "rerank_rank": 6,
+        "rerank_score": 3.1609260986442678e-06,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "지방세기본법 102조",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방세법 시행령 61조  조정세율#KOBLEX-077616"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 23.867705544372903,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "지방세법 시행령 61조  조정세율#KOBLEX-077616",
+        "provision_text": "1. 피우는 담배",
+        "rerank_rank": 7,
+        "rerank_score": 3.032374934264226e-06,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "지방세법 시행령 61조  조정세율 1호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "변호사법 115조  법무법인 등의 처벌#KOBLEX-087338"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 63,
+        "first_stage_score": 20.41562054853029,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "변호사법 115조  법무법인 등의 처벌#KOBLEX-087338",
+        "provision_text": "제115조(법무법인 등의 처벌)",
+        "rerank_rank": 8,
+        "rerank_score": 2.387173026363598e-06,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "변호사법 115조  법무법인 등의 처벌",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형의 집행 및 수용자의 처우에 관한 법률 133조  금지물품의 반입#KOBLEX-075815",
+          "형의 집행 및 수용자의 처우에 관한 법률 133조  금지물품의 반입#KOBLEX-214002"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 72,
+        "first_stage_score": 9.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 133조  금지물품의 반입#KOBLEX-075815",
+        "provision_text": "② 주류ㆍ담배ㆍ화기ㆍ현금ㆍ수표ㆍ음란물ㆍ사행행위에 사용되는 물품을 수용자에게 전달할 목적으로 교정시설에 반입한 사람은 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.4355437457561493,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 133조  금지물품의 반입 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우#KOBLEX-075812",
+          "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우#KOBLEX-213999"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 76,
+        "first_stage_score": 9.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우#KOBLEX-075812",
+        "provision_text": "② 수용자가 제92조제1항제3호를 위반하여 주류ㆍ담배ㆍ화기ㆍ현금ㆍ수표를 지닌 경우 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 2020.2.4>",
+        "rerank_rank": 2,
+        "rerank_score": 0.31361547112464905,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형의 집행 및 수용자의 처우에 관한 법률 92조  금지물품#KOBLEX-075615",
+          "형의 집행 및 수용자의 처우에 관한 법률 92조  금지물품#KOBLEX-213802"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 9.0,
+        "fusion_rank": 13,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 92조  금지물품#KOBLEX-075615",
+        "provision_text": "① 수용자는 다음 각 호의 물품을 지녀서는 아니 된다. <개정 2019.4.23, 2020.2.4> 1. 마약ㆍ총기ㆍ도검ㆍ폭발물ㆍ흉기ㆍ독극물, 그 밖에 범죄의 도구로 이용될 우려가 있는 물품 2. 무인비행장치, 전자ㆍ통신기기, 그 밖에 도주나 다른 사람과의 연락에 이용될 우려가 있는 물품 3. 주류ㆍ담배ㆍ화기ㆍ현금ㆍ수표, 그 밖에 시설의 안전 또는 질서를 해칠 우려가 있는 물품 4. 음란물, 사행행위에 사용되는 물품, 그 밖에 수형자의 교화 또는 건전한 사회복귀를 해칠 우려가 있는 물품",
+        "rerank_rank": 13,
+        "rerank_score": 2.4160648536053486e-05,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 92조  금지물품 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 66조#KOBLEX-192813"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 31,
+        "first_stage_score": 35.60954886047404,
+        "fusion_rank": 17,
+        "issue_id": "I2",
+        "provision_id": "형법 66조#KOBLEX-192813",
+        "provision_text": "제5절 형의 집행",
+        "rerank_rank": 17,
+        "rerank_score": 1.8917966372100636e-05,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 66조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "방송법 시행령 39조  등록이 면제되는 수상기#KOBLEX-233262"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 45,
+        "first_stage_score": 19.653931382771376,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "방송법 시행령 39조  등록이 면제되는 수상기#KOBLEX-233262",
+        "provision_text": "11. 교도소의 수용자 또는 소년원 원생의 시청을 위해 갖추고 있는 수상기",
+        "rerank_rank": 3,
+        "rerank_score": 1.8494549294700846e-05,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "방송법 시행령 39조  등록이 면제되는 수상기 11호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형의 집행 및 수용자의 처우에 관한 법률 93조  신체검사 등#KOBLEX-075620",
+          "형의 집행 및 수용자의 처우에 관한 법률 93조  신체검사 등#KOBLEX-213807"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 38,
+        "first_stage_score": 20.01290927184921,
+        "fusion_rank": 14,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 93조  신체검사 등#KOBLEX-075620",
+        "provision_text": "③ 교도관은 시설의 안전과 질서유지를 위하여 필요하면 교정시설을 출입하는 수용자 외의 사람에 대하여 의류와 휴대품을 검사할 수 있다. 이 경우 출입자가 제92조의 금지물품을 지니고 있으면 교정시설에 맡기도록 하여야 하며, 이에 따르지 아니하면 출입을 금지할 수 있다. <개정 2020.2.4>",
+        "rerank_rank": 14,
+        "rerank_score": 1.6616553693893366e-05,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 93조  신체검사 등 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형의 집행 및 수용자의 처우에 관한 법률 11조  구분수용#KOBLEX-075329",
+          "형의 집행 및 수용자의 처우에 관한 법률 11조  구분수용#KOBLEX-213516"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 37.51966499859925,
+        "fusion_rank": 19,
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 11조  구분수용#KOBLEX-075329",
+        "provision_text": "② 교도소 및 구치소의 각 지소에는 교도소 또는 구치소에 준하여 수용자를 수용한다.",
+        "rerank_rank": 19,
+        "rerank_score": 1.2039198736601975e-05,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 11조  구분수용 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "담배사업법 19조  특수용 담배#KOBLEX-143441": "제19조(특수용 담배)",
+      "방송법 시행령 39조  등록이 면제되는 수상기#KOBLEX-233262": "11. 교도소의 수용자 또는 소년원 원생의 시청을 위해 갖추고 있는 수상기",
+      "변호사법 115조  법무법인 등의 처벌#KOBLEX-087338": "제115조(법무법인 등의 처벌)",
+      "조세범 처벌법 6조  무면허 주류의 제조 및 판매#KOBLEX-205226": "제6조(무면허 주류의 제조 및 판매) 「주류 면허 등에 관한 법률」에 따른 면허를 받지 아니하고 주류, 밑술ㆍ술덧을 제조(개인의 자가소비를 위한 제조는 제외한다)하거나 판매한 자는 3년 이하의 징역 또는 3천만원(해당 주세 상당액의 3배의 금액이 3천만원을 초과할 때에는 그 주세 상당액의 3배의 금액) 이하의 벌금에 처한다. 이 경우 밑술과 술덧은 탁주로 본다. <개정 2020.12.29>",
+      "지방세기본법 102조#KOBLEX-121009": "제2절 범칙행위 처벌",
+      "지방세법 시행령 61조  조정세율#KOBLEX-077616": "1. 피우는 담배",
+      "지방세법 시행령 61조  조정세율#KOBLEX-077617": "2. 씹거나 머금는 담배: 1그램당 364원",
+      "지방세법 시행령 61조  조정세율#KOBLEX-077618": "3. 냄새 맡는 담배: 1그램당 26원",
+      "형법 205조  아편 등의 소지#KOBLEX-193100": "제205조(아편 등의 소지) 아편, 몰핀이나 그 화합물 또는 아편흡식기구를 소지한 자는 1년 이하의 징역 또는 500만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 66조#KOBLEX-192813": "제5절 형의 집행",
+      "형의 집행 및 수용자의 처우에 관한 법률 11조  구분수용#KOBLEX-075329": "② 교도소 및 구치소의 각 지소에는 교도소 또는 구치소에 준하여 수용자를 수용한다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우#KOBLEX-075811": "① 수용자가 제92조제2항을 위반하여 소장의 허가 없이 무인비행장치, 전자ㆍ통신기기를 지닌 경우 2년 이하의 징역 또는 2천만원 이하의 벌금에 처한다. <개정 2020.2.4>",
+      "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우#KOBLEX-075812": "② 수용자가 제92조제1항제3호를 위반하여 주류ㆍ담배ㆍ화기ㆍ현금ㆍ수표를 지닌 경우 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 2020.2.4>",
+      "형의 집행 및 수용자의 처우에 관한 법률 133조  금지물품의 반입#KOBLEX-075814": "① 소장의 허가 없이 무인비행장치, 전자ㆍ통신기기를 교정시설에 반입한 사람은 3년 이하의 징역 또는 3천만원 이하의 벌금에 처한다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 133조  금지물품의 반입#KOBLEX-075815": "② 주류ㆍ담배ㆍ화기ㆍ현금ㆍ수표ㆍ음란물ㆍ사행행위에 사용되는 물품을 수용자에게 전달할 목적으로 교정시설에 반입한 사람은 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 92조  금지물품#KOBLEX-075615": "① 수용자는 다음 각 호의 물품을 지녀서는 아니 된다. <개정 2019.4.23, 2020.2.4> 1. 마약ㆍ총기ㆍ도검ㆍ폭발물ㆍ흉기ㆍ독극물, 그 밖에 범죄의 도구로 이용될 우려가 있는 물품 2. 무인비행장치, 전자ㆍ통신기기, 그 밖에 도주나 다른 사람과의 연락에 이용될 우려가 있는 물품 3. 주류ㆍ담배ㆍ화기ㆍ현금ㆍ수표, 그 밖에 시설의 안전 또는 질서를 해칠 우려가 있는 물품 4. 음란물, 사행행위에 사용되는 물품, 그 밖에 수형자의 교화 또는 건전한 사회복귀를 해칠 우려가 있는 물품",
+      "형의 집행 및 수용자의 처우에 관한 법률 93조  신체검사 등#KOBLEX-075620": "③ 교도관은 시설의 안전과 질서유지를 위하여 필요하면 교정시설을 출입하는 수용자 외의 사람에 대하여 의류와 휴대품을 검사할 수 있다. 이 경우 출입자가 제92조의 금지물품을 지니고 있으면 교정시설에 맡기도록 하여야 하며, 이에 따르지 아니하면 출입을 금지할 수 있다. <개정 2020.2.4>"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형의 집행 및 수용자의 처우에 관한 법률 92조  금지물품#KOBLEX-075615"
+            ],
+            "rationale": "C013 explicitly prohibits inmates from possessing unmanned aerial vehicles (Article 92, Paragraph 1, Item 2).",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우#KOBLEX-075811"
+            ],
+            "rationale": "C001 explicitly states the penalty: imprisonment up to 2 years or a fine up to 20 million KRW for violating the prohibition.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우#KOBLEX-075811",
+          "형의 집행 및 수용자의 처우에 관한 법률 92조  금지물품#KOBLEX-075615"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "The supplied provisions fully cover the legal rule for possessing an unmanned aerial vehicle without permission. C013 provides the prohibition, and C001 provides the specific criminal penalty. The prior assessment is preserved as the linked provisions remain in the candidate set and no new conflicts arise.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형의 집행 및 수용자의 처우에 관한 법률 92조  금지물품#KOBLEX-075615"
+            ],
+            "rationale": "C013 explicitly prohibits inmates from possessing alcohol and tobacco (Article 92, Paragraph 1, Item 3).",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우#KOBLEX-075812"
+            ],
+            "rationale": "C012 explicitly states the penalty: imprisonment up to 1 year or a fine up to 10 million KRW for violating the prohibition.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우#KOBLEX-075812",
+          "형의 집행 및 수용자의 처우에 관한 법률 92조  금지물품#KOBLEX-075615"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "The newly supplied provisions C012 and C013 fully cover the legal rule for possessing alcohol and tobacco without permission. C013 provides the prohibition, and C012 provides the specific criminal penalty. This resolves the previously uncovered status.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우#KOBLEX-075811",
+        "support_spans": [
+          {
+            "end_char": 98,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 92조  금지물품#KOBLEX-075615",
+        "support_spans": [
+          {
+            "end_char": 274,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우#KOBLEX-075812",
+        "support_spans": [
+          {
+            "end_char": 90,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 92조  금지물품#KOBLEX-075615",
+        "support_spans": [
+          {
+            "end_char": 274,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 7,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "교도소 소장의 허가 없이 무인비행장치를 소지한 행위의 법적 성질과 처벌",
+        "issue_id": "I1"
+      },
+      {
+        "description": "교도소 소장의 허가 없이 주류와 담배를 소지한 행위의 법적 성질과 처벌",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 수감 중인 을의 친구로, 을에게 편지를 전달하기 위해 무인비행장치(드론)를 보냈다. 을은 교도소 내부에서 갑으로부터 받은 드론 외에도 주류와 담배를 소지하고 있었다. 그러나 교도소 소장의 허가를 받지 않은 상태였다. 을의 행동이 교도소 규정을 위반한 것으로 밝혀지자, 을에게 법적 처벌이 부과될 가능성이 제기되었다. [질문] 을이 교도소 소장의 허가 없이 무인비행장치를 소지하고, 또한 주류와 담배를 소지한 경우 각각 어떤 처벌을 받게 되는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "교도소 무인비행장치 드론 소지 금지 허가 처벌",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "교도소",
+          "무인비행장치",
+          "드론",
+          "소지",
+          "허가",
+          "처벌"
+        ],
+        "query_text": "교도소 소장 허가 없이 무인비행장치 소지 처벌 [원문 맥락] 을의 행동이 교도소 규정을 위반한 것으로 밝혀지자, 을에게 법적 처벌이 부과될 가능성이 제기되었다. 을이 교도소 소장의 허가 없이 무인비행장치를 소지하고, 또한 주류와 담배를 소지한 경우 각각 어떤 처벌을 받게 되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "무인비행장치 무단 소지 시 형사처벌 수위",
+        "statute_hints": [
+          "교도소법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "교도소 주류 담배 소지 금지 허가 처벌",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "교도소",
+          "주류",
+          "담배",
+          "소지",
+          "허가",
+          "처벌"
+        ],
+        "query_text": "교도소 소장 허가 없이 주류 담배 소지 처벌 [원문 맥락] 을의 행동이 교도소 규정을 위반한 것으로 밝혀지자, 을에게 법적 처벌이 부과될 가능성이 제기되었다. 을이 교도소 소장의 허가 없이 무인비행장치를 소지하고, 또한 주류와 담배를 소지한 경우 각각 어떤 처벌을 받게 되는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "주류 담배 무단 소지 시 형사처벌 수위",
+        "statute_hints": [
+          "교도소법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "형의 집행 및 수용자의 처우에 관한 법률 교도소 수용자 주류 담배 소지 금지 처벌",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형의 집행 및 수용자의 처우에 관한 법률",
+          "교도소",
+          "수용자",
+          "주류",
+          "담배",
+          "소지",
+          "금지",
+          "처벌"
+        ],
+        "query_text": "형의 집행 및 수용자의 처우에 관한 법률 교도소 수용자 주류 담배 소지 금지 처벌 [원문 맥락] 을의 행동이 교도소 규정을 위반한 것으로 밝혀지자, 을에게 법적 처벌이 부과될 가능성이 제기되었다. 을이 교도소 소장의 허가 없이 무인비행장치를 소지하고, 또한 주류와 담배를 소지한 경우 각각 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "교도소 수용자 주류 담배 무단 소지 시 형사처벌 수위",
+        "statute_hints": [
+          "형의 집행 및 수용자의 처우에 관한 법률"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "수용자 주류 담배 소지 금지물품 형사처벌",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "수용자",
+          "주류",
+          "담배",
+          "소지",
+          "금지물품",
+          "형사처벌"
+        ],
+        "query_text": "수용자 주류 담배 소지 금지물품 형사처벌 [원문 맥락] 을의 행동이 교도소 규정을 위반한 것으로 밝혀지자, 을에게 법적 처벌이 부과될 가능성이 제기되었다. 을이 교도소 소장의 허가 없이 무인비행장치를 소지하고, 또한 주류와 담배를 소지한 경우 각각 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "교도소 내 주류 담배 소지 금지 및 위반 시 처벌",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 수감 중인 을의 친구로, 을에게 편지를 전달하기 위해 무인비행장치(드론)를 보냈다. 을은 교도소 내부에서 갑으로부터 받은 드론 외에도 주류와 담배를 소지하고 있었다. 그러나 교도소 소장의 허가를 받지 않은 상태였다. 을의 행동이 교도소 규정을 위반한 것으로 밝혀지자, 을에게 법적 처벌이 부과될 가능성이 제기되었다.\n\n[질문]\n을이 교도소 소장의 허가 없이 무인비행장치를 소지하고, 또한 주류와 담배를 소지한 경우 각각 어떤 처벌을 받게 되는가?",
+    "remaining_request_budget": 5,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "무인비행장치 소지 금지 및 위반 시 처벌 수위를 명시하는 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "무인비행장치 소지 금지 및 허가 요건 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "무인비행장치 무단 소지 시 처벌 수위 확인"
+          }
+        ],
+        "critical": true,
+        "description": "교도소 소장의 허가 없이 무인비행장치를 소지한 행위에 대한 형사처벌 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 무인비행장치 소지에 대한 처벌을 직접적으로 묻고 있으므로, 해당 행위의 처벌 근거가 없으면 답변이 불가능함",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "주류 및 담배 소지 금지 및 위반 시 처벌 수위를 명시하는 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "주류 및 담배 소지 금지 및 허가 요건 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "주류 및 담배 무단 소지 시 처벌 수위 확인"
+          }
+        ],
+        "critical": true,
+        "description": "교도소 소장의 허가 없이 주류와 담배를 소지한 행위에 대한 형사처벌 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 주류와 담배 소지에 대한 처벌을 직접적으로 묻고 있으므로, 해당 행위의 처벌 근거가 없으면 답변이 불가능함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "767eb59c-4bc8-4f1b-b2a5-6cbfce2fc503",
+    "seen_provision_ids": [
+      "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우#KOBLEX-075811",
+      "형의 집행 및 수용자의 처우에 관한 법률 133조  금지물품의 반입#KOBLEX-075814",
+      "형의 집행 및 수용자의 처우에 관한 법률 132조  금지물품을 지닌 경우#KOBLEX-075812",
+      "형의 집행 및 수용자의 처우에 관한 법률 92조  금지물품#KOBLEX-075615",
+      "형의 집행 및 수용자의 처우에 관한 법률 11조  구분수용#KOBLEX-075329",
+      "지방세법 시행령 61조  조정세율#KOBLEX-077617",
+      "방송법 시행령 39조  등록이 면제되는 수상기#KOBLEX-233262",
+      "형법 205조  아편 등의 소지#KOBLEX-193100",
+      "형의 집행 및 수용자의 처우에 관한 법률 93조  신체검사 등#KOBLEX-075620",
+      "지방세기본법 102조#KOBLEX-121009",
+      "지방세법 시행령 61조  조정세율#KOBLEX-077618",
+      "형의 집행 및 수용자의 처우에 관한 법률 133조  금지물품의 반입#KOBLEX-075815",
+      "변호사법 115조  법무법인 등의 처벌#KOBLEX-087338",
+      "지방세법 시행령 61조  조정세율#KOBLEX-077616",
+      "담배사업법 19조  특수용 담배#KOBLEX-143441",
+      "조세범 처벌법 6조  무면허 주류의 제조 및 판매#KOBLEX-205226",
+      "형법 66조#KOBLEX-192813"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

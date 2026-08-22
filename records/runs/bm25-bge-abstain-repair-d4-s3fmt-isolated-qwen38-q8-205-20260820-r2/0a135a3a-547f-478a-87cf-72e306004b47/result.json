@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T19:25:00.420415+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 162401.233,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 147 column 28 (char 4042)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "0a135a3a-547f-478a-87cf-72e306004b47",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 147 column 28 (char 4042)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 2022년 3월 1일 사망하였고, 그의 법정 상속인은 자녀 을과 병이다. 그런데 갑은 생전에 친구 정에게 2021년 5월, 즉 사망 10개월 전 1억 원을 증여하였다. 을은 2022년 4월 1일에 이 증여 사실을 처음 알게 되었고, 정에게 유류분 반환을 청구하는 방안을 검토하고 있다. 갑의 상속재산에는 채무도 일부 존재하는 상황이다. [질문] 을이 정을 상대로 유류분 반환청구를 하려는 경우, 소멸시효는 언제까지이며, 갑의 생전 증여가 유류분 산정에 포함될 수 있는지 여부는 어떻게 되는가? 또, 유류분은 어떤 방식으로 계산되는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n갑은 2022년 3월 1일 사망하였고, 그의 법정 상속인은 자녀 을과 병이다. 그런데 갑은 생전에 친구 정에게 2021년 5월, 즉 사망 10개월 전 1억 원을 증여하였다. 을은 2022년 4월 1일에 이 증여 사실을 처음 알게 되었고, 정에게 유류분 반환을 청구하는 방안을 검토하고 있다. 갑의 상속재산에는 채무도 일부 존재하는 상황이다.\n\n[질문]\n을이 정을 상대로 유류분 반환청구를 하려는 경우, 소멸시효는 언제까지이며, 갑의 생전 증여가 유류분 산정에 포함될 수 있는지 여부는 어떻게 되는가? 또, 유류분은 어떤 방식으로 계산되는가?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "0a135a3a-547f-478a-87cf-72e306004b47",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

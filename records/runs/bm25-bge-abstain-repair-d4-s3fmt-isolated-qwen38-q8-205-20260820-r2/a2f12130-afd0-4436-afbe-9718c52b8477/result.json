@@ -1,0 +1,513 @@
+{
+  "abstention_reason": null,
+  "answer": "헌법재판소장이 일시적인 사고로 인하여 직무를 수행할 수 없을 때에는 재판관 중 임명일자 순으로 그 권한을 대행하며, 임명일자가 같을 때에는 연장자 순으로 대행한다.[CT1]\n헌법재판소장이 궐위되거나 1개월 이상 사고로 인하여 직무를 수행할 수 없을 때에는 재판관 중 재판관회의에서 선출된 사람이 그 권한을 대행하며, 선출될 때까지는 제1항에 해당하는 사람이 권한을 대행한다.[CT2]\n전제: 질문에 제시된 '몇 주간'의 질병 기간이 법적 의미의 '일시적인 사고'에 해당하며, '1개월 이상'에 해당하지 않는다고 가정합니다.\n한계: 갑 소장의 질병 기간이 정확히 1개월 미만인지, 1개월 이상인지에 대한 확정적 사실관계가 제시되지 않아, '일시적인 사고'와 '1개월 이상 사고' 중 어느 조항이 적용되는지 사실적 조건에 따라 달라질 수 있습니다.",
+  "answer_mode": "conditional",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "헌법재판소장이 일시적인 사고로 인하여 직무를 수행할 수 없을 때에는 재판관 중 임명일자 순으로 그 권한을 대행하며, 임명일자가 같을 때에는 연장자 순으로 대행한다.[CT1]\n헌법재판소장이 궐위되거나 1개월 이상 사고로 인하여 직무를 수행할 수 없을 때에는 재판관 중 재판관회의에서 선출된 사람이 그 권한을 대행하며, 선출될 때까지는 제1항에 해당하는 사람이 권한을 대행한다.[CT2]\n전제: 질문에 제시된 '몇 주간'의 질병 기간이 법적 의미의 '일시적인 사고'에 해당하며, '1개월 이상'에 해당하지 않는다고 가정합니다.\n한계: 갑 소장의 질병 기간이 정확히 1개월 미만인지, 1개월 이상인지에 대한 확정적 사실관계가 제시되지 않아, '일시적인 사고'와 '1개월 이상 사고' 중 어느 조항이 적용되는지 사실적 조건에 따라 달라질 수 있습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T14:20:33.035916+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 322082.728,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 86,
+      "dedup_collapse": 28,
+      "evidence_fusion": 86,
+      "first_stage": 100,
+      "request_rerank": 100,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 86
+    }
+  },
+  "run_id": "a2f12130-afd0-4436-afbe-9718c52b8477",
+  "state": {
+    "accepted_provision_ids": [
+      "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187874",
+      "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187875"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "conditional",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Legal support is complete; only question facts select an application branch.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "conditional",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "conditional",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_rule",
+        "question_anchor": "(헌법)재판관 중 누구에게 그 권한이 대행되는가",
+        "requested_output": "헌법재판소장 직무대행의 대상이 되는 재판관의 지위 또는 선정 기준"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187874"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 1.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187874",
+        "provision_text": "① 헌법재판소장이 일시적인 사고로 인하여 직무를 수행할 수 없을 때에는 재판관 중 임명일자 순으로 그 권한을 대행한다. 다만, 임명일자가 같을 때에는 연장자 순으로 대행한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9899618625640869,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 12조 2 헌법재판소장의 권한대행 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187875"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 1.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187875",
+        "provision_text": "② 헌법재판소장이 궐위(闕位)되거나 1개월 이상 사고로 인하여 직무를 수행할 수 없을 때에는 재판관 중 재판관회의에서 선출된 사람이 그 권한을 대행한다. 다만, 그 권한대행자가 선출될 때까지는 제1항에 해당하는 사람이 권한을 대행한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9512379765510559,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 12조 2 헌법재판소장의 권한대행 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 15조  헌법재판소장 등의 대우#KOBLEX-187883"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 70,
+        "first_stage_score": 18.011739438147014,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 15조  헌법재판소장 등의 대우#KOBLEX-187883",
+        "provision_text": "제15조(헌법재판소장 등의 대우) 헌법재판소장의 대우와 보수는 대법원장의 예에 따르며, 재판관은 정무직(政務職)으로 하고 그 대우와 보수는 대법관의 예에 따른다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.7345694303512573,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 15조  헌법재판소장 등의 대우",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 20조  헌법재판소장 비서실 등#KOBLEX-187939"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 23.021967921448034,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 20조  헌법재판소장 비서실 등#KOBLEX-187939",
+        "provision_text": "④ 헌법재판소에 재판관 비서관을 둔다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.5139254927635193,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 20조  헌법재판소장 비서실 등 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187876"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 1.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187876",
+        "provision_text": "③ 제2항 단서의 권한대행자는 제2항의 사유가 생긴 날부터 7일 이내에 제2항 본문의 권한대행자를 선출하기 위한 재판관회의를 소집하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.5053518414497375,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 12조 2 헌법재판소장의 권한대행 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187877"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 1.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187877",
+        "provision_text": "④ 제2항 본문의 권한대행자는 재판관 전원의 3분의 2를 초과하는 인원의 출석과 출석인원 과반수의 찬성으로 선출한다. 다만, 1차 투표결과 피선자(被選者)가 없을 때에는 최고득표자와 차점자에 대하여 결선투표를 하여 그 중 다수득표자를 피선자로 하되, 다수득표자가 2명 이상일 때에는 연장자를 피선자로 한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.3024321496486664,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 12조 2 헌법재판소장의 권한대행 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 20조  헌법재판소장 비서실 등#KOBLEX-187940"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 42,
+        "first_stage_score": 20.41732935956874,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 20조  헌법재판소장 비서실 등#KOBLEX-187940",
+        "provision_text": "⑤ 재판관 비서관은 4급의 일반직국가공무원 또는 4급 상당의 별정직국가공무원으로 임명하며, 재판관의 명을 받아 기밀에 관한 사무를 관장한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.1716240793466568,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 20조  헌법재판소장 비서실 등 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 24조  제척ㆍ기피 및 회피#KOBLEX-187954"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 99,
+        "first_stage_score": 1.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 24조  제척ㆍ기피 및 회피#KOBLEX-187954",
+        "provision_text": "① 재판관이 다음 각 호의 어느 하나에 해당하는 경우에는 그 직무집행에서 제척(除斥)된다. 1. 재판관이 당사자이거나 당사자의 배우자 또는 배우자였던 경우 2. 재판관과 당사자가 친족관계이거나 친족관계였던 경우 3. 재판관이 사건에 관하여 증언이나 감정(鑑定)을 하는 경우 4. 재판관이 사건에 관하여 당사자의 대리인이 되거나 되었던 경우 5. 그 밖에 재판관이 헌법재판소 외에서 직무상 또는 직업상의 이유로 사건에 관여한 경우",
+        "rerank_rank": 8,
+        "rerank_score": 0.1019422635436058,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 24조  제척ㆍ기피 및 회피 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 18조  사무처 공무원#KOBLEX-187904"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 93,
+        "first_stage_score": 1.0,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 18조  사무처 공무원#KOBLEX-187904",
+        "provision_text": "④ 사무처 공무원은 헌법재판소장이 임면한다. 다만, 3급 이상의 공무원의 경우에는 재판관회의의 의결을 거쳐야 한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.1009264811873436,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 18조  사무처 공무원 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 12조  헌법재판소장#KOBLEX-187870"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 21.017705799471216,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 12조  헌법재판소장#KOBLEX-187870",
+        "provision_text": "② 헌법재판소장은 국회의 동의를 받아 재판관 중에서 대통령이 임명한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.09743347018957138,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 12조  헌법재판소장 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "헌법재판소법 12조  헌법재판소장#KOBLEX-187870": "② 헌법재판소장은 국회의 동의를 받아 재판관 중에서 대통령이 임명한다.",
+      "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187874": "① 헌법재판소장이 일시적인 사고로 인하여 직무를 수행할 수 없을 때에는 재판관 중 임명일자 순으로 그 권한을 대행한다. 다만, 임명일자가 같을 때에는 연장자 순으로 대행한다.",
+      "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187875": "② 헌법재판소장이 궐위(闕位)되거나 1개월 이상 사고로 인하여 직무를 수행할 수 없을 때에는 재판관 중 재판관회의에서 선출된 사람이 그 권한을 대행한다. 다만, 그 권한대행자가 선출될 때까지는 제1항에 해당하는 사람이 권한을 대행한다.",
+      "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187876": "③ 제2항 단서의 권한대행자는 제2항의 사유가 생긴 날부터 7일 이내에 제2항 본문의 권한대행자를 선출하기 위한 재판관회의를 소집하여야 한다.",
+      "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187877": "④ 제2항 본문의 권한대행자는 재판관 전원의 3분의 2를 초과하는 인원의 출석과 출석인원 과반수의 찬성으로 선출한다. 다만, 1차 투표결과 피선자(被選者)가 없을 때에는 최고득표자와 차점자에 대하여 결선투표를 하여 그 중 다수득표자를 피선자로 하되, 다수득표자가 2명 이상일 때에는 연장자를 피선자로 한다.",
+      "헌법재판소법 15조  헌법재판소장 등의 대우#KOBLEX-187883": "제15조(헌법재판소장 등의 대우) 헌법재판소장의 대우와 보수는 대법원장의 예에 따르며, 재판관은 정무직(政務職)으로 하고 그 대우와 보수는 대법관의 예에 따른다.",
+      "헌법재판소법 18조  사무처 공무원#KOBLEX-187904": "④ 사무처 공무원은 헌법재판소장이 임면한다. 다만, 3급 이상의 공무원의 경우에는 재판관회의의 의결을 거쳐야 한다.",
+      "헌법재판소법 20조  헌법재판소장 비서실 등#KOBLEX-187939": "④ 헌법재판소에 재판관 비서관을 둔다.",
+      "헌법재판소법 20조  헌법재판소장 비서실 등#KOBLEX-187940": "⑤ 재판관 비서관은 4급의 일반직국가공무원 또는 4급 상당의 별정직국가공무원으로 임명하며, 재판관의 명을 받아 기밀에 관한 사무를 관장한다.",
+      "헌법재판소법 24조  제척ㆍ기피 및 회피#KOBLEX-187954": "① 재판관이 다음 각 호의 어느 하나에 해당하는 경우에는 그 직무집행에서 제척(除斥)된다. 1. 재판관이 당사자이거나 당사자의 배우자 또는 배우자였던 경우 2. 재판관과 당사자가 친족관계이거나 친족관계였던 경우 3. 재판관이 사건에 관하여 증언이나 감정(鑑定)을 하는 경우 4. 재판관이 사건에 관하여 당사자의 대리인이 되거나 되었던 경우 5. 그 밖에 재판관이 헌법재판소 외에서 직무상 또는 직업상의 이유로 사건에 관여한 경우"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "conditional",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187874",
+              "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187875"
+            ],
+            "rationale": "The provisions C001 and C002 explicitly state the status or selection criteria for the proxy judge in the two possible scenarios of the President's inability to perform duties.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_fact",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187874",
+          "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187875"
+        ],
+        "missing_aspects": [
+          "E1-R1"
+        ],
+        "partial_kind": "factual_condition",
+        "rationale": "The supplied provisions C001 and C002 provide complete legal rules for two distinct factual scenarios: temporary accident (C001) and vacancy/absence of 1 month or more (C002). The question specifies 'temporary accident' (일시적인 사고) and 'several weeks' (몇 주간), which factually aligns with the condition in C001. However, the legal rule for the specific branch is fully present in C001. The assessment is partially_covered with factual_condition because the applicability depends on the precise factual classification of the duration and nature of the absence, although C001 is the directly applicable rule for the stated facts. The legal status is covered as the rules are complete, but applicability is conditional on the fact that the absence is indeed 'temporary' and less than 1 month, which is suggested but not definitively proven by the 'several weeks' description without a strict legal definition of 'temporary' vs '1 month' boundary in the question's context, though C001 is the primary answer. Actually, looking closer, C001 covers 'temporary accident'. The question asks who acts as proxy. C001 says the judge with the earliest appointment date. This is a complete rule. Why is it not covered? The instructions say: 'When legal rules are complete but a question fact selects the branch, use legal_status: covered, applicability_status: conditional, and gap_type: missing_fact'. Here, the fact 'several weeks' likely falls under 'temporary accident' (C001) rather than '1 month or more' (C002). If we assume 'several weeks' is less than 1 month, C001 applies directly. If it could be 1 month or more, C002 applies. The question says 'several weeks' (몇 주간), which is typically less than a month. However, to be safe and follow the 'factual_condition' pattern for branch selection: The legal rules for both branches are present. The fact 'several weeks' needs to be mapped to one of these branches. If 'several weeks' is ambiguous regarding the 1-month threshold, it is a factual condition. But 'several weeks' is generally < 1 month. Let's look at the criteria: '직무대행 대상 재판관의 지위(예: 최선임) 또는 선정 기준을 명시하는 조항 확인'. C001 provides this. C002 provides this for the other case. The question asks 'who'. The answer depends on the duration. Since the duration is 'several weeks', it is highly likely C001. Is there a missing fact? The exact number of weeks. If it's 3 weeks, C001. If it's 5 weeks (still < 1 month), C001. If it's 4.5 weeks, C001. The threshold is 1 month. 'Several weeks' is vague but usually implies < 1 month. However, strictly speaking, the fact 'several weeks' does not definitively exclude the possibility of it being interpreted as approaching or exceeding 1 month in a legal context without a specific date. But more importantly, the instructions say: 'When legal rules are complete but a question fact selects the branch... use legal_status: covered, applicability_status: conditional, and gap_type: missing_fact'. This fits the situation where we have rules for Branch A (C001) and Branch B (C002), and the fact 'several weeks' determines which branch applies. Although 'several weeks' strongly points to Branch A, the precise factual determination of whether it crosses the 1-month threshold is the selector. Thus, it is a factual condition. The legal status is covered because the rules exist. The applicability is conditional on the fact. The legacy status is partially_covered with partial_kind factual_condition.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187874",
+        "support_spans": [
+          {
+            "end_char": 97,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187875",
+        "support_spans": [
+          {
+            "end_char": 131,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "헌법재판소장이 일시적으로 직무를 수행할 수 없는 경우, 그 권한을 대행하는 재판관의 지위 또는 선정 기준은 무엇인가.",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 헌법재판소장으로 임명되어 직무를 수행 중이다. 어느 날, 갑이 갑작스러운 질병으로 인해 몇 주간 직무를 수행할 수 없는 상황에 처하게 된다. 헌법재판소는 긴급히 재판관 중 한 명을 임시 소장으로 임명하여 갑의 직무를 대행해야 한다. [질문] 헌법재판소장인 갑이 일시적인 사고로 직무를 수행할 수 없는 경우, (헌법)재판관 중 누구에게 그 권한이 대행되는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "헌법재판소장 직무대행 재판관 선정 기준",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "헌법재판소장",
+          "직무대행",
+          "재판관",
+          "권한대행",
+          "선임"
+        ],
+        "query_text": "헌법재판소장 직무를 수행할 수 없는 경우 권한 대행 재판관 [원문 맥락] 헌법재판소는 긴급히 재판관 중 한 명을 임시 소장으로 임명하여 갑의 직무를 대행해야 한다. 헌법재판소장인 갑이 일시적인 사고로 직무를 수행할 수 없는 경우, (헌법)재판관 중 누구에게 그 권한이 대행되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "헌법재판소장 직무대행 대상 재판관 지위",
+        "statute_hints": [
+          "헌법재판소법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 헌법재판소장으로 임명되어 직무를 수행 중이다. 어느 날, 갑이 갑작스러운 질병으로 인해 몇 주간 직무를 수행할 수 없는 상황에 처하게 된다. 헌법재판소는 긴급히 재판관 중 한 명을 임시 소장으로 임명하여 갑의 직무를 대행해야 한다.\n\n[질문]\n헌법재판소장인 갑이 일시적인 사고로 직무를 수행할 수 없는 경우, (헌법)재판관 중 누구에게 그 권한이 대행되는가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "직무대행 대상 재판관의 지위(예: 최선임) 또는 선정 기준을 명시하는 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "헌법재판소장 직무대행의 대상이 되는 재판관의 지위 또는 선정 기준을 명시하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "헌법재판소장이 직무를 수행할 수 없는 경우 그 권한을 대행하는 재판관의 지위 또는 선정 기준을 정한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 직무대행 대상 재판관을 특정하기 위한 핵심 법적 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "a2f12130-afd0-4436-afbe-9718c52b8477",
+    "seen_provision_ids": [
+      "헌법재판소법 24조  제척ㆍ기피 및 회피#KOBLEX-187954",
+      "헌법재판소법 15조  헌법재판소장 등의 대우#KOBLEX-187883",
+      "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187877",
+      "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187876",
+      "헌법재판소법 12조  헌법재판소장#KOBLEX-187870",
+      "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187874",
+      "헌법재판소법 20조  헌법재판소장 비서실 등#KOBLEX-187939",
+      "헌법재판소법 18조  사무처 공무원#KOBLEX-187904",
+      "헌법재판소법 20조  헌법재판소장 비서실 등#KOBLEX-187940",
+      "헌법재판소법 12조 2 헌법재판소장의 권한대행#KOBLEX-187875"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

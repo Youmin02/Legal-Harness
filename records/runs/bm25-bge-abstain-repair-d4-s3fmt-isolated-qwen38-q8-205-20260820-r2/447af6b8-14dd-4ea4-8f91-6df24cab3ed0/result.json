@@ -1,0 +1,1121 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "공소사실의 기재는 범죄의 시일, 장소와 방법을 명시하여 사실을 특정할 수 있도록 하여야 한다.[CT1]\n공소제기의 절차가 법률의 규정을 위반하여 무효일 때에는 판결로써 공소기각의 선고를 하여야 한다.[CT2]\n공소취소에 의한 공소기각의 결정이 확정된 때에는 공소취소 후 그 범죄사실에 대한 다른 중요한 증거를 발견한 경우에 한하여 다시 공소를 제기할 수 있으며, 이를 위반하여 공소가 제기된 때에는 공소기각의 선고를 하여야 한다.[CT3]\n전제: 질문에 제시된 '이전 공소기각'이 형사소송법 제329조에서 규정하는 '공소취소에 의한 공소기각'에 해당하는지 여부는 사실적으로 확인되지 않았으므로, 해당 조항의 적용은 조건부로 가정한다.\n한계: 본 답변은 벤치마크 진단용 후보이며, 공개 가능한 공식 답변이 아니다.\n한계: 공소사실 특정 부족이 반드시 공소기각 사유에 해당하는지에 대한 명시적 조항이 부족하여, 절차 위반 무효와의 연결은 해석에 의존한다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T07:02:14.375193+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 451902.278,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 499,
+      "dedup_collapse": 190,
+      "evidence_fusion": 499,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "round_selected": 30,
+      "rrf": 600,
+      "selected": 499
+    }
+  },
+  "run_id": "447af6b8-14dd-4ea4-8f91-6df24cab3ed0",
+  "state": {
+    "accepted_provision_ids": [
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232626",
+      "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232291",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232630",
+      "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232290",
+      "형사소송법 329조  공소취소와 재기소#KOBLEX-232636",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232628",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232629"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 8,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 0,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 18
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 18,
+          "claim_count": 3
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_grounds",
+        "question_anchor": "어떤 이유로 공소기각을 주장할 수 있는가",
+        "requested_output": "을의 변호인이 공소기각을 주장할 수 있는 법적 근거와 사유"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "형사소송법 329조  공소취소와 재기소#KOBLEX-232636"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 96,
+        "first_stage_score": 31.024999291851856,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 329조  공소취소와 재기소#KOBLEX-232636",
+        "provision_text": "제329조(공소취소와 재기소) 공소취소에 의한 공소기각의 결정이 확정된 때에는 공소취소 후 그 범죄사실에 대한 다른 중요한 증거를 발견한 경우에 한하여 다시 공소를 제기할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.00012122763291699812,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형사소송법 329조  공소취소와 재기소",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 325조  경미사건 등과 피고인의 불출석#KOBLEX-093239",
+          "군사법원법 325조  경미사건 등과 피고인의 불출석#KOBLEX-159204"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 24.242189903531525,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 325조  경미사건 등과 피고인의 불출석#KOBLEX-093239",
+        "provision_text": "2. 공소기각 또는 면소의 재판을 할 것이 명백한 사건",
+        "rerank_rank": 2,
+        "rerank_score": 0.00011654088302748278,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "군사법원법 325조  경미사건 등과 피고인의 불출석 2호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232291"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 49.17495565792085,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232291",
+        "provision_text": "④공소사실의 기재는 범죄의 시일, 장소와 방법을 명시하여 사실을 특정할 수 있도록 하여야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 9.45318242884241e-05,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 254조  공소제기의 방식과 공소장 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 384조  공소취소와 재기소#KOBLEX-093426",
+          "군사법원법 384조  공소취소와 재기소#KOBLEX-159391"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 31.53405629408558,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 384조  공소취소와 재기소#KOBLEX-093426",
+        "provision_text": "제384조(공소취소와 재기소) 공소취소에 따른 공소기각의 결정이 확정되었을 때에는 공소취소 후 그 범죄사실에 대한 다른 중요한 증거를 발견한 경우에만 다시 공소를 제기할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 6.51316877338104e-05,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "군사법원법 384조  공소취소와 재기소",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공무원범죄에 관한 몰수 특례법 33조  몰수보전명령의 실효#KOBLEX-038640"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 20.62298264028777,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "공무원범죄에 관한 몰수 특례법 33조  몰수보전명령의 실효#KOBLEX-038640",
+        "provision_text": "② 「형사소송법」 제327조제2호에 따른 공소기각(公訴棄却)의 판결이 있은 경우 공소기각의 판결이 확정된 날부터 30일 이내에 해당 사건에 대하여 공소가 제기되지 아니한 때에는 몰수보전명령은 그 효력을 잃는다.",
+        "rerank_rank": 4,
+        "rerank_score": 5.3657575335819274e-05,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공무원범죄에 관한 몰수 특례법 33조  몰수보전명령의 실효 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 277조  경미사건 등과 피고인의 불출석#KOBLEX-232441"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 24.242189903531525,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 277조  경미사건 등과 피고인의 불출석#KOBLEX-232441",
+        "provision_text": "2. 공소기각 또는 면소의 재판을 할 것이 명백한 사건",
+        "rerank_rank": 5,
+        "rerank_score": 4.3703228584490716e-05,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 277조  경미사건 등과 피고인의 불출석 2호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 296조  공소제기의 방식과 공소장#KOBLEX-093090",
+          "군사법원법 296조  공소제기의 방식과 공소장#KOBLEX-159055"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 35,
+        "first_stage_score": 19.131579045059603,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 296조  공소제기의 방식과 공소장#KOBLEX-093090",
+        "provision_text": "④ 공소사실은 범죄의 일시, 장소와 방법을 구체적으로 밝혀 사실을 특정할 수 있도록 적어야 한다.",
+        "rerank_rank": 6,
+        "rerank_score": 3.648702477221377e-05,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "군사법원법 296조  공소제기의 방식과 공소장 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232290"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232290",
+        "provision_text": "③공소장에는 다음 사항을 기재하여야 한다. 1. 피고인의 성명 기타 피고인을 특정할 수 있는 사항 2. 죄명 3. 공소사실 4. 적용법조",
+        "rerank_rank": 7,
+        "rerank_score": 2.3608927222085185e-05,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 254조  공소제기의 방식과 공소장 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232292"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 3.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232292",
+        "provision_text": "⑤수개의 범죄사실과 적용법조를 예비적 또는 택일적으로 기재할 수 있다.",
+        "rerank_rank": 8,
+        "rerank_score": 2.29667220992269e-05,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 254조  공소제기의 방식과 공소장 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "마약류 불법거래 방지에 관한 특례법 43조  몰수보전명령의 실효#KOBLEX-006635"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 80,
+        "first_stage_score": 17.418318704762903,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "마약류 불법거래 방지에 관한 특례법 43조  몰수보전명령의 실효#KOBLEX-006635",
+        "provision_text": "② 「형사소송법」 제327조제2호에 따른 공소기각(公訴棄却)의 판결이 있는 경우 그 판결이 확정된 날부터 30일 이내에 그 사건에 대하여 공소가 제기되지 아니한 때에는 몰수보전명령은 그 효력을 잃는다.",
+        "rerank_rank": 9,
+        "rerank_score": 1.8606779121910222e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "마약류 불법거래 방지에 관한 특례법 43조  몰수보전명령의 실효 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 327조  공소기각의 판결#KOBLEX-232630"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 327조  공소기각의 판결#KOBLEX-232630",
+        "provision_text": "4. 제329조를 위반하여 공소가 제기되었을 때",
+        "rerank_rank": 1,
+        "rerank_score": 0.5157485008239746,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 327조  공소기각의 판결 4호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 327조  공소기각의 판결#KOBLEX-232627"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 327조  공소기각의 판결#KOBLEX-232627",
+        "provision_text": "1. 피고인에 대하여 재판권이 없을 때",
+        "rerank_rank": 2,
+        "rerank_score": 0.4415307343006134,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 327조  공소기각의 판결 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 327조  공소기각의 판결#KOBLEX-232628"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 327조  공소기각의 판결#KOBLEX-232628",
+        "provision_text": "2. 공소제기의 절차가 법률의 규정을 위반하여 무효일 때",
+        "rerank_rank": 3,
+        "rerank_score": 0.3102758824825287,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 327조  공소기각의 판결 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 327조  공소기각의 판결#KOBLEX-232626"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 327조  공소기각의 판결#KOBLEX-232626",
+        "provision_text": "제327조(공소기각의 판결) 다음 각 호의 경우에는 판결로써 공소기각의 선고를 하여야 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.11343665421009064,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 327조  공소기각의 판결",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 327조  공소기각의 판결#KOBLEX-232629"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 327조  공소기각의 판결#KOBLEX-232629",
+        "provision_text": "3. 공소가 제기된 사건에 대하여 다시 공소가 제기되었을 때",
+        "rerank_rank": 5,
+        "rerank_score": 0.051272787153720856,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 327조  공소기각의 판결 3호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 327조  공소기각의 판결#KOBLEX-232631"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 88,
+        "first_stage_score": 2.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 327조  공소기각의 판결#KOBLEX-232631",
+        "provision_text": "5. 고소가 있어야 공소를 제기할 수 있는 사건에서 고소가 취소되었을 때",
+        "rerank_rank": 6,
+        "rerank_score": 0.023985471576452255,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 327조  공소기각의 판결 5호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 327조  공소기각의 판결#KOBLEX-232632"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 2.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 327조  공소기각의 판결#KOBLEX-232632",
+        "provision_text": "6. 피해자의 명시한 의사에 반하여 공소를 제기할 수 없는 사건에서 처벌을 원하지 아니하는 의사표시를 하거나 처벌을 원하는 의사표시를 철회하였을 때",
+        "rerank_rank": 7,
+        "rerank_score": 0.006757018156349659,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 327조  공소기각의 판결 6호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공무원범죄에 관한 몰수 특례법 48조  추징보전명령의 실효#KOBLEX-038695"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 19.396997620528115,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "공무원범죄에 관한 몰수 특례법 48조  추징보전명령의 실효#KOBLEX-038695",
+        "provision_text": "② 「형사소송법」 제327조제2호에 따른 공소기각의 판결이 있은 경우 추징보전명령의 효력에 관하여는 제33조제2항을 준용한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.0036679215263575315,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "공무원범죄에 관한 몰수 특례법 48조  추징보전명령의 실효 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공무원범죄에 관한 몰수 특례법 33조  몰수보전명령의 실효#KOBLEX-038640": "② 「형사소송법」 제327조제2호에 따른 공소기각(公訴棄却)의 판결이 있은 경우 공소기각의 판결이 확정된 날부터 30일 이내에 해당 사건에 대하여 공소가 제기되지 아니한 때에는 몰수보전명령은 그 효력을 잃는다.",
+      "공무원범죄에 관한 몰수 특례법 48조  추징보전명령의 실효#KOBLEX-038695": "② 「형사소송법」 제327조제2호에 따른 공소기각의 판결이 있은 경우 추징보전명령의 효력에 관하여는 제33조제2항을 준용한다.",
+      "군사법원법 296조  공소제기의 방식과 공소장#KOBLEX-093090": "④ 공소사실은 범죄의 일시, 장소와 방법을 구체적으로 밝혀 사실을 특정할 수 있도록 적어야 한다.",
+      "군사법원법 325조  경미사건 등과 피고인의 불출석#KOBLEX-093239": "2. 공소기각 또는 면소의 재판을 할 것이 명백한 사건",
+      "군사법원법 384조  공소취소와 재기소#KOBLEX-093426": "제384조(공소취소와 재기소) 공소취소에 따른 공소기각의 결정이 확정되었을 때에는 공소취소 후 그 범죄사실에 대한 다른 중요한 증거를 발견한 경우에만 다시 공소를 제기할 수 있다.",
+      "마약류 불법거래 방지에 관한 특례법 43조  몰수보전명령의 실효#KOBLEX-006635": "② 「형사소송법」 제327조제2호에 따른 공소기각(公訴棄却)의 판결이 있는 경우 그 판결이 확정된 날부터 30일 이내에 그 사건에 대하여 공소가 제기되지 아니한 때에는 몰수보전명령은 그 효력을 잃는다.",
+      "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232290": "③공소장에는 다음 사항을 기재하여야 한다. 1. 피고인의 성명 기타 피고인을 특정할 수 있는 사항 2. 죄명 3. 공소사실 4. 적용법조",
+      "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232291": "④공소사실의 기재는 범죄의 시일, 장소와 방법을 명시하여 사실을 특정할 수 있도록 하여야 한다.",
+      "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232292": "⑤수개의 범죄사실과 적용법조를 예비적 또는 택일적으로 기재할 수 있다.",
+      "형사소송법 277조  경미사건 등과 피고인의 불출석#KOBLEX-232441": "2. 공소기각 또는 면소의 재판을 할 것이 명백한 사건",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232626": "제327조(공소기각의 판결) 다음 각 호의 경우에는 판결로써 공소기각의 선고를 하여야 한다.",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232627": "1. 피고인에 대하여 재판권이 없을 때",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232628": "2. 공소제기의 절차가 법률의 규정을 위반하여 무효일 때",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232629": "3. 공소가 제기된 사건에 대하여 다시 공소가 제기되었을 때",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232630": "4. 제329조를 위반하여 공소가 제기되었을 때",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232631": "5. 고소가 있어야 공소를 제기할 수 있는 사건에서 고소가 취소되었을 때",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232632": "6. 피해자의 명시한 의사에 반하여 공소를 제기할 수 없는 사건에서 처벌을 원하지 아니하는 의사표시를 하거나 처벌을 원하는 의사표시를 철회하였을 때",
+      "형사소송법 329조  공소취소와 재기소#KOBLEX-232636": "제329조(공소취소와 재기소) 공소취소에 의한 공소기각의 결정이 확정된 때에는 공소취소 후 그 범죄사실에 대한 다른 중요한 증거를 발견한 경우에 한하여 다시 공소를 제기할 수 있다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232291",
+              "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232290"
+            ],
+            "rationale": "C003(형사소송법 254조 4항)은 범죄의 시일, 장소, 방법의 명시 의무를, C008(형사소송법 254조 3항)은 공소사실 기재 의무를 규정하여 요건을 충족한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형사소송법 327조  공소기각의 판결#KOBLEX-232628",
+              "형사소송법 327조  공소기각의 판결#KOBLEX-232626"
+            ],
+            "rationale": "C013과 C014는 공소기각의 법적 근거를 제공하지만, 공소사실 특정 부족이 공소기각 사유에 해당하는지 여부에 대한 명시적 조항이 부족하다.",
+            "requirement_id": "E1-R2",
+            "status": "partially_satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232291",
+          "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232290",
+          "형사소송법 327조  공소기각의 판결#KOBLEX-232628",
+          "형사소송법 327조  공소기각의 판결#KOBLEX-232626"
+        ],
+        "missing_aspects": [
+          "E1-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "공소장 기재 요건(E1-R1)은 C003과 C008에 의해 충족된다. 그러나 공소사실 특정 부족 시 공소기각이 가능한지 여부(E1-R2)를 직접적으로 명시하는 조항이 부족하며, C013과 C014는 공소기각의 일반적 근거를 제공하지만 특정 부족과의 직접적 연결은 해석에 의존한다.",
+        "status": "partially_covered"
+      },
+      {
+        "applicability_status": "conditional",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형사소송법 329조  공소취소와 재기소#KOBLEX-232636",
+              "형사소송법 327조  공소기각의 판결#KOBLEX-232630"
+            ],
+            "rationale": "C001과 C011은 공소취소라는 특정 유형의 공소기각에 한해 법적 효과를 규정한다. 질문의 '이전 공소기각'이 공소취소에 해당하는지 여부가 사실적으로 확인되지 않아 완전한 법적 효과를 도출할 수 없다.",
+            "requirement_id": "E2-R1",
+            "status": "partially_satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형사소송법 329조  공소취소와 재기소#KOBLEX-232636",
+              "형사소송법 327조  공소기각의 판결#KOBLEX-232630",
+              "형사소송법 327조  공소기각의 판결#KOBLEX-232629"
+            ],
+            "rationale": "C001, C011, C015는 재기소 제한 및 이중기소 금지에 관한 법적 근거를 제공한다.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_fact",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "형사소송법 329조  공소취소와 재기소#KOBLEX-232636",
+          "형사소송법 327조  공소기각의 판결#KOBLEX-232630",
+          "형사소송법 327조  공소기각의 판결#KOBLEX-232629"
+        ],
+        "missing_aspects": [
+          "E2-R1"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C001과 C011은 공소취소에 의한 공소기각 후 재기소 제한을 규정하여 일부 법적 맥락을 제공한다. C015는 이중기소 금지 원칙을 제공한다. 그러나 질문의 '이전 공소기각'이 공소취소에 의한 것인지 여부가 불분명하며, 공소취소가 아닌 일반적 공소기각의 법적 효과나 재기소 제한에 관한 조항이 부족하다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232291",
+        "support_spans": [
+          {
+            "end_char": 53,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232290",
+        "support_spans": [
+          {
+            "end_char": 76,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 327조  공소기각의 판결#KOBLEX-232628",
+        "support_spans": [
+          {
+            "end_char": 31,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 327조  공소기각의 판결#KOBLEX-232626",
+        "support_spans": [
+          {
+            "end_char": 51,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형사소송법 329조  공소취소와 재기소#KOBLEX-232636",
+        "support_spans": [
+          {
+            "end_char": 101,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형사소송법 327조  공소기각의 판결#KOBLEX-232630",
+        "support_spans": [
+          {
+            "end_char": 26,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형사소송법 327조  공소기각의 판결#KOBLEX-232629",
+        "support_spans": [
+          {
+            "end_char": 33,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "공소장에 범죄의 시일과 장소를 정확히 기재하지 않아 공소사실이 특정되지 않은 경우, 이는 공소기각 사유에 해당하는가?",
+        "issue_id": "I1"
+      },
+      {
+        "description": "이미 같은 사건에 대해 공소기각된 전력이 있는 경우, 이는 공소기각 주장에 어떠한 법적 영향을 미치는가?",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "공소장 기재 요건과 특정 부족 시 공소기각 가능성을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "공소장에 기재해야 할 범죄의 시일과 장소에 관한 법적 요건 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "공소사실 특정 부족 시 공소기각이 가능한지 여부 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공소장에 범죄의 시일과 장소를 기재해야 하는 법적 의무 및 특정 부족 시 공소기각에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 제시된 '범죄의 시일과 장소를 정확히 기재하지 않아 공소사실이 특정되지 않았다'는 사실에 대한 법적 효과를 판단하기 위해 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "이전 공소기각이 현 공소기각 주장의 근거가 되는지 또는 재기소/공소 유지에 영향을 미치는지 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "이전 공소기각 전력이 현 공소기각 주장에 미치는 법적 효과 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "같은 사건에 대한 공소기각 후 재기소 또는 공소 유지의 법적 제한 확인"
+          }
+        ],
+        "critical": true,
+        "description": "같은 사건에 대한 이전 공소기각 전력이 현 공소기각 주장에 미치는 법적 효과 및 재기소 제한에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 제시된 '이미 같은 사건에 대해 이전에 공소기각된 바 있었다'는 사실의 법적 의미를 판단하기 위해 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 1,
+    "normalized_question": "[배경 시나리오] 갑은 을을 상대로 형사 고소를 진행하였습니다. 이후 사건은 검찰에 의해 공소가 제기되었지만, 검사가 공소장에 범죄의 시일과 장소를 정확히 기재하지 않아 공소사실이 특정되지 않았습니다. 또한, 을은 이미 같은 사건에 대해 이전에 공소기각된 바 있었습니다. 이 상황에서 을의 변호인은 공소기각을 주장하고 있습니다. [질문] 이 사건에서 을의 변호인은 어떤 이유로 공소기각을 주장할 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "공소장 기재 요건 범죄 시일 장소 특정 부족 공소기각",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "공소장",
+          "기재",
+          "범죄",
+          "시일",
+          "장소",
+          "특정",
+          "공소기각"
+        ],
+        "query_text": "공소장에 범죄의 시일과 장소를 기재하지 않아 공소사실이 특정되지 않은 경우 공소기각 사유 [원문 맥락] 이 상황에서 을의 변호인은 공소기각을 주장하고 있습니다. 이 사건에서 을의 변호인은 어떤 이유로 공소기각을 주장할 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "공소사실 특정 부족 공소기각 법적 근거",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "이전 공소기각 전력이 현 공소기각 주장에 미치는 영향 재기소 제한",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "공소기각",
+          "이전",
+          "같은",
+          "사건",
+          "전력",
+          "법적",
+          "효과"
+        ],
+        "query_text": "같은 사건에 대해 이전에 공소기각된 경우 현 공소기각 주장의 법적 근거 [원문 맥락] 이 상황에서 을의 변호인은 공소기각을 주장하고 있습니다. 이 사건에서 을의 변호인은 어떤 이유로 공소기각을 주장할 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "이전 공소기각 전력이 현 공소기각 주장에 미치는 법적 효과",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형사소송법 327조 공소기각 사유 공소사실 특정 부족",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사소송법",
+          "327조",
+          "공소기각",
+          "공소사실",
+          "특정",
+          "부족"
+        ],
+        "query_text": "형사소송법 제327조 제2호 공소사실 특정 부족 공소기각 [원문 맥락] 이 상황에서 을의 변호인은 공소기각을 주장하고 있습니다. 이 사건에서 을의 변호인은 어떤 이유로 공소기각을 주장할 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "공소사실 특정 부족 시 공소기각 법적 근거 형사소송법 327조",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "공소기각 재기소 제한 일사부재리 형사소송법",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "공소기각",
+          "재기소",
+          "제한",
+          "일사부재리",
+          "공소유지"
+        ],
+        "query_text": "공소기각 후 재기소 제한 일사부재리 원칙 [원문 맥락] 이 상황에서 을의 변호인은 공소기각을 주장하고 있습니다. 이 사건에서 을의 변호인은 어떤 이유로 공소기각을 주장할 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "이전 공소기각 전력이 재기소 또는 공소 유지에 미치는 법적 제한",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형사소송법 327조 공소기각 사유 공소사실 특정 부족",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사소송법",
+          "327조",
+          "공소기각",
+          "공소사실",
+          "특정",
+          "부족"
+        ],
+        "query_text": "공소장 기재 요건과 특정 부족 시 공소기각 가능성을 명시하는 조항을 확인 법률 조문 [원문 맥락] 이 상황에서 을의 변호인은 공소기각을 주장하고 있습니다. 이 사건에서 을의 변호인은 어떤 이유로 공소기각을 주장할 수 있는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "공소사실 특정 부족 시 공소기각 법적 근거 형사소송법 327조",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "공소기각 재기소 제한 일사부재리 형사소송법",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "공소기각",
+          "재기소",
+          "제한",
+          "일사부재리",
+          "공소유지"
+        ],
+        "query_text": "이전 공소기각이 현 공소기각 주장의 근거가 되는지 또는 재기소/공소 유지에 영향을 미치는지 확인 법률 조문 [원문 맥락] 이 상황에서 을의 변호인은 공소기각을 주장하고 있습니다. 이 사건에서 을의 변호인은 어떤 이유로 공소기각을 주장할 수 있는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "이전 공소기각 전력이 재기소 또는 공소 유지에 미치는 법적 제한",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을을 상대로 형사 고소를 진행하였습니다. 이후 사건은 검찰에 의해 공소가 제기되었지만, 검사가 공소장에 범죄의 시일과 장소를 정확히 기재하지 않아 공소사실이 특정되지 않았습니다. 또한, 을은 이미 같은 사건에 대해 이전에 공소기각된 바 있었습니다. 이 상황에서 을의 변호인은 공소기각을 주장하고 있습니다.\n\n[질문]\n이 사건에서 을의 변호인은 어떤 이유로 공소기각을 주장할 수 있는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "공소장 기재 요건과 특정 부족 시 공소기각 가능성을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "공소장에 기재해야 할 범죄의 시일과 장소에 관한 법적 요건 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "공소사실 특정 부족 시 공소기각이 가능한지 여부 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공소장에 범죄의 시일과 장소를 기재해야 하는 법적 의무 및 특정 부족 시 공소기각에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 제시된 '범죄의 시일과 장소를 정확히 기재하지 않아 공소사실이 특정되지 않았다'는 사실에 대한 법적 효과를 판단하기 위해 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "이전 공소기각이 현 공소기각 주장의 근거가 되는지 또는 재기소/공소 유지에 영향을 미치는지 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "이전 공소기각 전력이 현 공소기각 주장에 미치는 법적 효과 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "같은 사건에 대한 공소기각 후 재기소 또는 공소 유지의 법적 제한 확인"
+          }
+        ],
+        "critical": true,
+        "description": "같은 사건에 대한 이전 공소기각 전력이 현 공소기각 주장에 미치는 법적 효과 및 재기소 제한에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 제시된 '이미 같은 사건에 대해 이전에 공소기각된 바 있었다'는 사실의 법적 의미를 판단하기 위해 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "447af6b8-14dd-4ea4-8f91-6df24cab3ed0",
+    "seen_provision_ids": [
+      "군사법원법 296조  공소제기의 방식과 공소장#KOBLEX-093090",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232626",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232630",
+      "군사법원법 384조  공소취소와 재기소#KOBLEX-093426",
+      "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232291",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232631",
+      "형사소송법 329조  공소취소와 재기소#KOBLEX-232636",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232628",
+      "마약류 불법거래 방지에 관한 특례법 43조  몰수보전명령의 실효#KOBLEX-006635",
+      "형사소송법 277조  경미사건 등과 피고인의 불출석#KOBLEX-232441",
+      "공무원범죄에 관한 몰수 특례법 48조  추징보전명령의 실효#KOBLEX-038695",
+      "공무원범죄에 관한 몰수 특례법 33조  몰수보전명령의 실효#KOBLEX-038640",
+      "군사법원법 325조  경미사건 등과 피고인의 불출석#KOBLEX-093239",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232629",
+      "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232290",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232632",
+      "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232292",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232627"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

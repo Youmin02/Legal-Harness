@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T19:22:16.974907+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 150853.087,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 134 column 7 (char 4116)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "799da32a-d26e-402d-bc28-90414240105c",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 134 column 7 (char 4116)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을을 상대로 대여금 반환 청구소송을 제기하였고, 법원은 을이 갑에게 금전을 반환하라는 판결을 선고하였다. 그러나 판결서에는 이유가 충분히 설명되지 않았고, 일부 판단은 서로 모순되거나 전혀 기술되지 않아 을은 납득하기 어려웠다. 또한 을은 판결서의 형식상 기재사항이 제대로 갖추어졌는지에도 의문을 제기하며, 상고를 검토하고 있다. [질문] 민사소송에서 내려진 판결서에 반드시 포함되어야 할 형식적 요건은 무엇이며, 그 중 '이유'가 누락되거나 모순될 경우 어떤 법적 효과가 발생하는가? 이 경우 을은 어떤 절차를 통해 대응할 수 있는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n갑은 을을 상대로 대여금 반환 청구소송을 제기하였고, 법원은 을이 갑에게 금전을 반환하라는 판결을 선고하였다. 그러나 판결서에는 이유가 충분히 설명되지 않았고, 일부 판단은 서로 모순되거나 전혀 기술되지 않아 을은 납득하기 어려웠다. 또한 을은 판결서의 형식상 기재사항이 제대로 갖추어졌는지에도 의문을 제기하며, 상고를 검토하고 있다.\n\n[질문]\n민사소송에서 내려진 판결서에 반드시 포함되어야 할 형식적 요건은 무엇이며, 그 중 '이유'가 누락되거나 모순될 경우 어떤 법적 효과가 발생하는가? 이 경우 을은 어떤 절차를 통해 대응할 수 있는가?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "799da32a-d26e-402d-bc28-90414240105c",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

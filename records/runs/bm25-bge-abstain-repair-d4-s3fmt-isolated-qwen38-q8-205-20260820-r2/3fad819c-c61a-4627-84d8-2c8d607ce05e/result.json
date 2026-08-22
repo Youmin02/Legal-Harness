@@ -1,0 +1,1116 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "병은 민사소송법 제79조 제1항에 따라 소송목적의 전부나 일부가 자기의 권리라고 주장하는 제3자로서, 당사자의 양쪽 또는 한쪽을 상대방으로 하여 당사자로서 소송에 참가할 수 있습니다[CT1]\n병이 제기하려는 여러 개의 청구는 민사소송법 제253조에 따라 같은 종류의 소송절차에 따르는 경우에만 하나의 소로 병합하여 제기할 수 있습니다[CT2]\n전제: 병이 주장하는 금전 채권이 소송목적의 전부나 일부에 해당한다고 가정함\n한계: 본 답변은 비공개 벤치마크 후보이며, 공개 가능한 답변이 아님\n한계: 후보 조문에는 병합 신청 또는 병합 소의 제기에 관한 구체적인 절차적 규정이 포함되어 있지 않음",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T14:46:07.327809+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 730385.181,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 378,
+      "dedup_collapse": 88,
+      "evidence_fusion": 378,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "round_selected": 30,
+      "rrf": 400,
+      "selected": 378
+    }
+  },
+  "run_id": "3fad819c-c61a-4627-84d8-2c8d607ce05e",
+  "state": {
+    "accepted_provision_ids": [
+      "민사소송법 79조  독립당사자참가#KOBLEX-063719",
+      "민사소송법 253조  소의 객관적 병합#KOBLEX-064194"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 8,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 4,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "Two consecutive retrieval rounds did not improve critical evidence.",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 22
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 22,
+          "claim_count": 2
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "procedure",
+        "question_anchor": "병이 갑과 을을 상대로 여러 개의 청구를 제기하려면, 어떤 절차를 따라야 하는가?",
+        "requested_output": "병이 제3자로서 소송에 참가하여 원고와 피고를 상대로 여러 청구를 병합하여 제기하기 위한 절차적 요건 및 방법"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민사소송법 253조  소의 객관적 병합#KOBLEX-064194"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 37.08580594703466,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 253조  소의 객관적 병합#KOBLEX-064194",
+        "provision_text": "제253조(소의 객관적 병합) 여러 개의 청구는 같은 종류의 소송절차에 따르는 경우에만 하나의 소로 제기할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9997515082359314,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사소송법 253조  소의 객관적 병합",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정소송법 16조  제3자의 소송참가#KOBLEX-011450"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 36,
+        "first_stage_score": 29.746345255514985,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "행정소송법 16조  제3자의 소송참가#KOBLEX-011450",
+        "provision_text": "①법원은 소송의 결과에 따라 권리 또는 이익의 침해를 받을 제3자가 있는 경우에는 당사자 또는 제3자의 신청 또는 직권에 의하여 결정으로써 그 제3자를 소송에 참가시킬 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.44752442836761475,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "행정소송법 16조  제3자의 소송참가 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 79조  독립당사자참가#KOBLEX-063719"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 4.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 79조  독립당사자참가#KOBLEX-063719",
+        "provision_text": "①소송목적의 전부나 일부가 자기의 권리라고 주장하거나, 소송결과에 따라 권리가 침해된다고 주장하는 제3자는 당사자의 양 쪽 또는 한 쪽을 상대방으로 하여 당사자로서 소송에 참가할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.1548527181148529,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 79조  독립당사자참가 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 249조  추심의 소#KOBLEX-128886"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 37.49776585951596,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민사집행법 249조  추심의 소#KOBLEX-128886",
+        "provision_text": "③소를 제기당한 제3채무자는 제2항의 채권자를 공동소송인으로 원고 쪽에 참가하도록 명할 것을 첫 변론기일까지 신청할 수 있다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.12049243599176407,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사집행법 249조  추심의 소 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정심판법 37조  절차의 병합 또는 분리#KOBLEX-182919"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 22.868479908215733,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "행정심판법 37조  절차의 병합 또는 분리#KOBLEX-182919",
+        "provision_text": "제37조(절차의 병합 또는 분리) 위원회는 필요하면 관련되는 심판청구를 병합하여 심리하거나 병합된 관련 청구를 분리하여 심리할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.06535504758358002,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "행정심판법 37조  절차의 병합 또는 분리",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정절차법 32조  청문의 병합ㆍ분리#KOBLEX-098085"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 77,
+        "first_stage_score": 19.92986702903867,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "행정절차법 32조  청문의 병합ㆍ분리#KOBLEX-098085",
+        "provision_text": "제32조(청문의 병합ㆍ분리) 행정청은 직권으로 또는 당사자의 신청에 따라 여러 개의 사안을 병합하거나 분리하여 청문을 할 수 있다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.03306957706809044,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "행정절차법 32조  청문의 병합ㆍ분리",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공무원범죄에 관한 몰수 특례법 13조#KOBLEX-038554"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 37.477348003195004,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "공무원범죄에 관한 몰수 특례법 13조#KOBLEX-038554",
+        "provision_text": "제4장 제3자 참가 절차 등의 특례 <개정 2009.11.2>",
+        "rerank_rank": 4,
+        "rerank_score": 0.006906751077622175,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공무원범죄에 관한 몰수 특례법 13조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정소송법 10조  관련청구소송의 이송 및 병합#KOBLEX-011430"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 24.58973011375812,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "행정소송법 10조  관련청구소송의 이송 및 병합#KOBLEX-011430",
+        "provision_text": "제10조(관련청구소송의 이송 및 병합)",
+        "rerank_rank": 4,
+        "rerank_score": 0.004592305049300194,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "행정소송법 10조  관련청구소송의 이송 및 병합",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 64조  이의신청의 병합 또는 분리#KOBLEX-057196"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 39,
+        "first_stage_score": 22.88807014603178,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "상표법 64조  이의신청의 병합 또는 분리#KOBLEX-057196",
+        "provision_text": "제64조(이의신청의 병합 또는 분리) 심사관합의체는 둘 이상의 이의신청을 병합하거나 분리하여 심사ㆍ결정할 수 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0038052331656217575,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상표법 64조  이의신청의 병합 또는 분리",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "가사소송법 14조  관련 사건의 병합#KOBLEX-064828"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 30,
+        "first_stage_score": 23.637288999289588,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "가사소송법 14조  관련 사건의 병합#KOBLEX-064828",
+        "provision_text": "③ 가류 또는 나류 가사소송사건의 소의 제기가 있고, 그 사건과 제1항의 관계에 있는 다류 가사소송사건 또는 가사비송사건이 각각 다른 가정법원에 계속(係屬)된 경우에는 가류 또는 나류 가사소송사건의 수소법원(受訴法院)은 직권으로 또는 당사자의 신청에 의하여 결정으로 다류 가사소송사건 또는 가사비송사건을 병합할 수 있다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.003158429404720664,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "가사소송법 14조  관련 사건의 병합 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 79조  독립당사자참가#KOBLEX-063718"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 37.567198254861275,
+        "fusion_rank": 14,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 79조  독립당사자참가#KOBLEX-063718",
+        "provision_text": "제79조(독립당사자참가)",
+        "rerank_rank": 14,
+        "rerank_score": 0.018824441358447075,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사소송법 79조  독립당사자참가",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "가사소송법 14조  관련 사건의 병합#KOBLEX-064825"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 25.19027026081085,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "가사소송법 14조  관련 사건의 병합#KOBLEX-064825",
+        "provision_text": "제14조(관련 사건의 병합)",
+        "rerank_rank": 3,
+        "rerank_score": 0.0038628585170954466,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "가사소송법 14조  관련 사건의 병합",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "특허법 132조 11 특허취소신청의 병합 또는 분리#KOBLEX-156022"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 24.58973011375812,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "특허법 132조 11 특허취소신청의 병합 또는 분리#KOBLEX-156022",
+        "provision_text": "제132조의11(특허취소신청의 병합 또는 분리)",
+        "rerank_rank": 6,
+        "rerank_score": 0.0018689138814806938,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "특허법 132조 11 특허취소신청의 병합 또는 분리",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 188조  소의 병합심리#KOBLEX-114027"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 35.59995174906598,
+        "fusion_rank": 16,
+        "issue_id": "I2",
+        "provision_id": "상법 188조  소의 병합심리#KOBLEX-114027",
+        "provision_text": "제188조(소의 병합심리) 수개의 설립무효의 소 또는 설립취소의 소가 제기된 때에는 법원은 이를 병합심리하여야 한다.",
+        "rerank_rank": 16,
+        "rerank_score": 0.0014879105146974325,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "상법 188조  소의 병합심리",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "증권관련 집단소송법 7조  소의 제기 및 소송허가 신청#KOBLEX-178503"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 34.56511871998376,
+        "fusion_rank": 18,
+        "issue_id": "I2",
+        "provision_id": "증권관련 집단소송법 7조  소의 제기 및 소송허가 신청#KOBLEX-178503",
+        "provision_text": "제7조(소의 제기 및 소송허가 신청)",
+        "rerank_rank": 18,
+        "rerank_score": 0.0005759792984463274,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "증권관련 집단소송법 7조  소의 제기 및 소송허가 신청",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 519조  배당액의 임치#KOBLEX-033100"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 25.61753677563477,
+        "fusion_rank": 20,
+        "issue_id": "I2",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 519조  배당액의 임치#KOBLEX-033100",
+        "provision_text": "1. 제462조 내지 제464조 또는 제466조의 규정에 의하여 이의가 있는 채권에 관하여 채권조사확정재판의 신청, 소의 제기 또는 소송의 수계가 있는 경우",
+        "rerank_rank": 20,
+        "rerank_score": 0.00037661613896489143,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 519조  배당액의 임치 1호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "증권관련 집단소송법 7조#KOBLEX-178502"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 31.49391890213158,
+        "fusion_rank": 22,
+        "issue_id": "I2",
+        "provision_id": "증권관련 집단소송법 7조#KOBLEX-178502",
+        "provision_text": "제2장 소의 제기 및 허가 절차 <개정 2010.3.31>",
+        "rerank_rank": 22,
+        "rerank_score": 0.00017312515410594642,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "증권관련 집단소송법 7조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "증권관련 집단소송법 14조  소송허가 신청이 경합된 경우의 처리#KOBLEX-178537"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 80,
+        "first_stage_score": 22.72157322186854,
+        "fusion_rank": 24,
+        "issue_id": "I2",
+        "provision_id": "증권관련 집단소송법 14조  소송허가 신청이 경합된 경우의 처리#KOBLEX-178537",
+        "provision_text": "① 동일한 분쟁에 관하여 여러 개의 증권관련집단소송의 소송허가신청서가 동일한 법원에 제출된 경우 법원은 이를 병합심리(倂合審理)하여야 한다.",
+        "rerank_rank": 24,
+        "rerank_score": 0.00014806432591285557,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "증권관련 집단소송법 14조  소송허가 신청이 경합된 경우의 처리 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정소송법 21조  소의 변경#KOBLEX-011469"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 24.26249958967561,
+        "fusion_rank": 23,
+        "issue_id": "I2",
+        "provision_id": "행정소송법 21조  소의 변경#KOBLEX-011469",
+        "provision_text": "제21조(소의 변경)",
+        "rerank_rank": 23,
+        "rerank_score": 0.0023522961419075727,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "행정소송법 21조  소의 변경",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정소송법 18조#KOBLEX-011458"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 24.26249958967561,
+        "fusion_rank": 26,
+        "issue_id": "I2",
+        "provision_id": "행정소송법 18조#KOBLEX-011458",
+        "provision_text": "제3절 소의 제기",
+        "rerank_rank": 26,
+        "rerank_score": 0.0013782248133793473,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "행정소송법 18조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 388조  소제기신청#KOBLEX-064547"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 51,
+        "first_stage_score": 20.987619333958556,
+        "fusion_rank": 29,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 388조  소제기신청#KOBLEX-064547",
+        "provision_text": "③제1항의 신청은 제387조제3항의 조서등본이 송달된 날부터 2주 이내에 하여야 한다. 다만, 조서등본이 송달되기 전에도 신청할 수 있다.",
+        "rerank_rank": 29,
+        "rerank_score": 0.0007651030900888145,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민사소송법 388조  소제기신청 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 248조#KOBLEX-064181"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 24.26249958967561,
+        "fusion_rank": 30,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 248조#KOBLEX-064181",
+        "provision_text": "제1장 소의 제기",
+        "rerank_rank": 30,
+        "rerank_score": 0.0006689174333587289,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민사소송법 248조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "가사소송법 14조  관련 사건의 병합#KOBLEX-064825": "제14조(관련 사건의 병합)",
+      "가사소송법 14조  관련 사건의 병합#KOBLEX-064828": "③ 가류 또는 나류 가사소송사건의 소의 제기가 있고, 그 사건과 제1항의 관계에 있는 다류 가사소송사건 또는 가사비송사건이 각각 다른 가정법원에 계속(係屬)된 경우에는 가류 또는 나류 가사소송사건의 수소법원(受訴法院)은 직권으로 또는 당사자의 신청에 의하여 결정으로 다류 가사소송사건 또는 가사비송사건을 병합할 수 있다.",
+      "공무원범죄에 관한 몰수 특례법 13조#KOBLEX-038554": "제4장 제3자 참가 절차 등의 특례 <개정 2009.11.2>",
+      "민사소송법 248조#KOBLEX-064181": "제1장 소의 제기",
+      "민사소송법 253조  소의 객관적 병합#KOBLEX-064194": "제253조(소의 객관적 병합) 여러 개의 청구는 같은 종류의 소송절차에 따르는 경우에만 하나의 소로 제기할 수 있다.",
+      "민사소송법 388조  소제기신청#KOBLEX-064547": "③제1항의 신청은 제387조제3항의 조서등본이 송달된 날부터 2주 이내에 하여야 한다. 다만, 조서등본이 송달되기 전에도 신청할 수 있다.",
+      "민사소송법 79조  독립당사자참가#KOBLEX-063718": "제79조(독립당사자참가)",
+      "민사소송법 79조  독립당사자참가#KOBLEX-063719": "①소송목적의 전부나 일부가 자기의 권리라고 주장하거나, 소송결과에 따라 권리가 침해된다고 주장하는 제3자는 당사자의 양 쪽 또는 한 쪽을 상대방으로 하여 당사자로서 소송에 참가할 수 있다.",
+      "민사집행법 249조  추심의 소#KOBLEX-128886": "③소를 제기당한 제3채무자는 제2항의 채권자를 공동소송인으로 원고 쪽에 참가하도록 명할 것을 첫 변론기일까지 신청할 수 있다.",
+      "상법 188조  소의 병합심리#KOBLEX-114027": "제188조(소의 병합심리) 수개의 설립무효의 소 또는 설립취소의 소가 제기된 때에는 법원은 이를 병합심리하여야 한다.",
+      "상표법 64조  이의신청의 병합 또는 분리#KOBLEX-057196": "제64조(이의신청의 병합 또는 분리) 심사관합의체는 둘 이상의 이의신청을 병합하거나 분리하여 심사ㆍ결정할 수 있다.",
+      "증권관련 집단소송법 14조  소송허가 신청이 경합된 경우의 처리#KOBLEX-178537": "① 동일한 분쟁에 관하여 여러 개의 증권관련집단소송의 소송허가신청서가 동일한 법원에 제출된 경우 법원은 이를 병합심리(倂合審理)하여야 한다.",
+      "증권관련 집단소송법 7조  소의 제기 및 소송허가 신청#KOBLEX-178503": "제7조(소의 제기 및 소송허가 신청)",
+      "증권관련 집단소송법 7조#KOBLEX-178502": "제2장 소의 제기 및 허가 절차 <개정 2010.3.31>",
+      "채무자 회생 및 파산에 관한 법률 519조  배당액의 임치#KOBLEX-033100": "1. 제462조 내지 제464조 또는 제466조의 규정에 의하여 이의가 있는 채권에 관하여 채권조사확정재판의 신청, 소의 제기 또는 소송의 수계가 있는 경우",
+      "특허법 132조 11 특허취소신청의 병합 또는 분리#KOBLEX-156022": "제132조의11(특허취소신청의 병합 또는 분리)",
+      "행정소송법 10조  관련청구소송의 이송 및 병합#KOBLEX-011430": "제10조(관련청구소송의 이송 및 병합)",
+      "행정소송법 16조  제3자의 소송참가#KOBLEX-011450": "①법원은 소송의 결과에 따라 권리 또는 이익의 침해를 받을 제3자가 있는 경우에는 당사자 또는 제3자의 신청 또는 직권에 의하여 결정으로써 그 제3자를 소송에 참가시킬 수 있다.",
+      "행정소송법 18조#KOBLEX-011458": "제3절 소의 제기",
+      "행정소송법 21조  소의 변경#KOBLEX-011469": "제21조(소의 변경)",
+      "행정심판법 37조  절차의 병합 또는 분리#KOBLEX-182919": "제37조(절차의 병합 또는 분리) 위원회는 필요하면 관련되는 심판청구를 병합하여 심리하거나 병합된 관련 청구를 분리하여 심리할 수 있다.",
+      "행정절차법 32조  청문의 병합ㆍ분리#KOBLEX-098085": "제32조(청문의 병합ㆍ분리) 행정청은 직권으로 또는 당사자의 신청에 따라 여러 개의 사안을 병합하거나 분리하여 청문을 할 수 있다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민사소송법 79조  독립당사자참가#KOBLEX-063719"
+            ],
+            "rationale": "C003은 제3자 참가의 법적 근거를 명시한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "민사소송법 79조  독립당사자참가#KOBLEX-063719"
+            ],
+            "rationale": "C003은 참가인이 당사자의 양쪽 또는 한쪽을 상대방으로 할 수 있음을 규정하여 청구 대상 범위를 확인시킨다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민사소송법 79조  독립당사자참가#KOBLEX-063719"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C003(민사소송법 제79조 제1항)은 제3자 독립당사자참가의 요건과 절차적 근거를 명확히 규정하고 있어, E1의 완료 기준인 법적 근거 조항 확인과 청구 대상 범위 확인을 모두 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민사소송법 253조  소의 객관적 병합#KOBLEX-064194"
+            ],
+            "rationale": "C001은 여러 개의 청구를 하나의 소로 제기할 수 있는 요건(같은 종류의 소송절차)을 규정한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "후보 조문 중 병합 신청 또는 병합 소의 제기에 관한 구체적인 절차적 규정이 없다.",
+            "requirement_id": "E2-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "민사소송법 253조  소의 객관적 병합#KOBLEX-064194"
+        ],
+        "missing_aspects": [
+          "E2-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C001(민사소송법 제253조)은 소의 객관적 병합 요건을 규정하여 E2-R1을 충족하지만, E2-R2에서 요구하는 구체적인 병합 절차(신청 또는 소의 제기 방식)에 대한 명시적 규정이 후보 조문에 포함되어 있지 않아 법적 지원이 불완전하다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민사소송법 79조  독립당사자참가#KOBLEX-063719",
+        "support_spans": [
+          {
+            "end_char": 105,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민사소송법 253조  소의 객관적 병합#KOBLEX-064194",
+        "support_spans": [
+          {
+            "end_char": 65,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 4,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "제3자가 진행 중인 소송에 참가하여 원고와 피고를 상대로 청구를 제기할 수 있는 법적 근거와 절차",
+        "issue_id": "I1"
+      },
+      {
+        "description": "여러 개의 청구를 하나의 소송절차에서 병합하여 진행하기 위한 요건",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "소의 병합 요건(관할, 소송물, 당사자 등)과 병합 신청 또는 병합 소의 제기 절차 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "소의 병합 요건 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "병합 절차(신청 또는 소의 제기) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "여러 개의 소를 하나의 소송절차에서 병합하여 진행할 수 있는 요건과 절차",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 '여러 개의 청구를 병합하여 진행'을 명시하고 있으므로, 병합 요건과 절차가 핵심 답변에 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 갑은 을에게 금전 채권을 가지고 있으며, 그에 따라 소송을 진행 중입니다. 이 와중에 병은 그 금전 채권이 자신의 권리라고 주장하며, 갑과 을에게 동시에 여러 개의 청구를 제기하려고 합니다. 병은 소송에 참가하면서 절차상 올바르게 여러 청구를 병합하여 진행하려고 합니다. [질문] 병이 갑과 을을 상대로 여러 개의 청구를 제기하려면, 어떤 절차를 따라야 하는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "제3자 참가 소송 참가 신청 소의 제기 원고 피고 상대 청구",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "제3자 참가",
+          "소송 참가",
+          "참가 신청",
+          "원고 피고 청구",
+          "민사소송법"
+        ],
+        "query_text": "제3자 참가 절차 원고 피고 청구 제기 민사소송법 [원문 맥락] 병은 소송에 참가하면서 절차상 올바르게 여러 청구를 병합하여 진행하려고 합니다. 병이 갑과 을을 상대로 여러 개의 청구를 제기하려면, 어떤 절차를 따라야 하는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "제3자가 진행 중인 소송에 참가하여 원고와 피고를 상대로 청구를 제기하는 절차",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "소의 병합 요건 관할 소송물 당사자 병합 신청 병합 소",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "소의 병합",
+          "병합 요건",
+          "여러 청구",
+          "병합 절차",
+          "민사소송법"
+        ],
+        "query_text": "소의 병합 요건 절차 여러 청구 병합 진행 [원문 맥락] 병은 소송에 참가하면서 절차상 올바르게 여러 청구를 병합하여 진행하려고 합니다. 병이 갑과 을을 상대로 여러 개의 청구를 제기하려면, 어떤 절차를 따라야 하는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "여러 개의 청구를 하나의 소송절차에서 병합하여 진행하기 위한 요건과 절차",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "소의 병합 신청 절차 요건 관할 법원 동일",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "소의 병합",
+          "병합 신청",
+          "병합 절차",
+          "관할",
+          "민사소송법"
+        ],
+        "query_text": "이미 제기된 소에 다른 소를 병합하기 위한 신청 절차 및 요건 [원문 맥락] 병은 소송에 참가하면서 절차상 올바르게 여러 청구를 병합하여 진행하려고 합니다. 병이 갑과 을을 상대로 여러 개의 청구를 제기하려면, 어떤 절차를 따라야 하는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "병합 절차(신청 또는 소의 제기) 확인",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "독립당사자참가 병합 절차 방법 민사소송법",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "독립당사자참가",
+          "병합",
+          "절차",
+          "방법",
+          "민사소송법"
+        ],
+        "query_text": "독립당사자참가 소의 병합 절차 방법 [원문 맥락] 병은 소송에 참가하면서 절차상 올바르게 여러 청구를 병합하여 진행하려고 합니다. 병이 갑과 을을 상대로 여러 개의 청구를 제기하려면, 어떤 절차를 따라야 하는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "독립당사자참가 시 여러 청구 병합 절차",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "민사소송법 253조 2항 소의 병합 신청 기한 2주",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "소의 병합",
+          "병합 신청",
+          "민사소송법 253조",
+          "신청 기한",
+          "2주"
+        ],
+        "query_text": "민사소송법 제253조 제2항에 따른 소의 병합 신청 절차 및 기한 [원문 맥락] 병은 소송에 참가하면서 절차상 올바르게 여러 청구를 병합하여 진행하려고 합니다. 병이 갑과 을을 상대로 여러 개의 청구를 제기하려면, 어떤 절차를 따라야 하는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "이미 제기된 소에 다른 소를 병합하기 위한 신청 절차 및 기한",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "독립당사자참가 병합 신청서 제출 관할 법원",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "독립당사자참가",
+          "병합 신청서",
+          "제출",
+          "관할 법원",
+          "절차"
+        ],
+        "query_text": "독립당사자참가 소의 병합 신청서 제출 방법 [원문 맥락] 병은 소송에 참가하면서 절차상 올바르게 여러 청구를 병합하여 진행하려고 합니다. 병이 갑과 을을 상대로 여러 개의 청구를 제기하려면, 어떤 절차를 따라야 하는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "독립당사자참가 시 여러 청구를 병합하여 진행하기 위한 신청서 제출 절차",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을에게 금전 채권을 가지고 있으며, 그에 따라 소송을 진행 중입니다. 이 와중에 병은 그 금전 채권이 자신의 권리라고 주장하며, 갑과 을에게 동시에 여러 개의 청구를 제기하려고 합니다. 병은 소송에 참가하면서 절차상 올바르게 여러 청구를 병합하여 진행하려고 합니다.\n\n[질문]\n병이 갑과 을을 상대로 여러 개의 청구를 제기하려면, 어떤 절차를 따라야 하는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "제3자 참가의 요건, 참가 방식(참가신청 또는 소의 제기), 그리고 참가인의 청구 대상(원고 및 피고)에 대한 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "제3자 참가의 법적 근거 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "참가인이 원고와 피고를 상대로 청구를 제기할 수 있는 범위 확인"
+          }
+        ],
+        "critical": true,
+        "description": "제3자가 진행 중인 소송에 참가하여 원고와 피고를 상대로 청구를 제기할 수 있는 절차적 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "병이 소송에 참가하여 청구를 제기할 수 있는 절차적 근거가 없으면 질문의 핵심인 '어떤 절차를 따라야 하는가'에 답할 수 없음",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "소의 병합 요건(관할, 소송물, 당사자 등)과 병합 신청 또는 병합 소의 제기 절차 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "소의 병합 요건 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "병합 절차(신청 또는 소의 제기) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "여러 개의 소를 하나의 소송절차에서 병합하여 진행할 수 있는 요건과 절차",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 '여러 개의 청구를 병합하여 진행'을 명시하고 있으므로, 병합 요건과 절차가 핵심 답변에 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "3fad819c-c61a-4627-84d8-2c8d607ce05e",
+    "seen_provision_ids": [
+      "민사소송법 248조#KOBLEX-064181",
+      "특허법 132조 11 특허취소신청의 병합 또는 분리#KOBLEX-156022",
+      "공무원범죄에 관한 몰수 특례법 13조#KOBLEX-038554",
+      "상법 188조  소의 병합심리#KOBLEX-114027",
+      "행정절차법 32조  청문의 병합ㆍ분리#KOBLEX-098085",
+      "채무자 회생 및 파산에 관한 법률 519조  배당액의 임치#KOBLEX-033100",
+      "증권관련 집단소송법 14조  소송허가 신청이 경합된 경우의 처리#KOBLEX-178537",
+      "가사소송법 14조  관련 사건의 병합#KOBLEX-064828",
+      "민사소송법 79조  독립당사자참가#KOBLEX-063718",
+      "증권관련 집단소송법 7조#KOBLEX-178502",
+      "행정심판법 37조  절차의 병합 또는 분리#KOBLEX-182919",
+      "가사소송법 14조  관련 사건의 병합#KOBLEX-064825",
+      "행정소송법 18조#KOBLEX-011458",
+      "민사소송법 79조  독립당사자참가#KOBLEX-063719",
+      "민사소송법 388조  소제기신청#KOBLEX-064547",
+      "상표법 64조  이의신청의 병합 또는 분리#KOBLEX-057196",
+      "행정소송법 16조  제3자의 소송참가#KOBLEX-011450",
+      "행정소송법 10조  관련청구소송의 이송 및 병합#KOBLEX-011430",
+      "행정소송법 21조  소의 변경#KOBLEX-011469",
+      "민사소송법 253조  소의 객관적 병합#KOBLEX-064194",
+      "증권관련 집단소송법 7조  소의 제기 및 소송허가 신청#KOBLEX-178503",
+      "민사집행법 249조  추심의 소#KOBLEX-128886"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "NO_RETRIEVAL_PROGRESS"
+}

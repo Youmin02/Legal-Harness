@@ -1,0 +1,512 @@
+{
+  "abstention_reason": null,
+  "answer": "특정공무원범죄에 관한 몰수·추징의 시효는 「형법」 제78조에도 불구하고 10년으로 한다.[CT1]\n전제: 질문에서 언급된 '공무원의 직무 관련 부정부패 행위'가 「공무원범죄에 관한 몰수 특례법」에서 규정하는 '특정공무원범죄'에 해당한다고 가정합니다.\n한계: 본 답변은 제공된 법령 조항에 기반하여 시효 기간만을 명시하며, 실제 사건의 구체적 사실관계나 다른 법적 쟁점에 대한 판단을 포함하지 않습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "특정공무원범죄에 관한 몰수·추징의 시효는 「형법」 제78조에도 불구하고 10년으로 한다.[CT1]\n전제: 질문에서 언급된 '공무원의 직무 관련 부정부패 행위'가 「공무원범죄에 관한 몰수 특례법」에서 규정하는 '특정공무원범죄'에 해당한다고 가정합니다.\n한계: 본 답변은 제공된 법령 조항에 기반하여 시효 기간만을 명시하며, 실제 사건의 구체적 사실관계나 다른 법적 쟁점에 대한 판단을 포함하지 않습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T05:55:11.292469+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 83796.9,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 87,
+      "dedup_collapse": 22,
+      "evidence_fusion": 87,
+      "first_stage": 100,
+      "request_rerank": 100,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 87
+    }
+  },
+  "run_id": "efd625b8-55f1-4ced-9fbe-8f4f3e6d663e",
+  "state": {
+    "accepted_provision_ids": [
+      "공무원범죄에 관한 몰수 특례법 9조 4 몰수ㆍ추징의 시효#KOBLEX-038546",
+      "형법 78조  형의 시효의 기간#KOBLEX-192847"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 1,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "statutory_period",
+        "question_anchor": "몰수ㆍ추징의 시효는 몇 년인가",
+        "requested_output": "부정부패 행위와 관련된 몰수 및 추징의 시효 기간(연 단위)"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "공무원범죄에 관한 몰수 특례법 9조 4 몰수ㆍ추징의 시효#KOBLEX-038546"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 31.173919552335178,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "공무원범죄에 관한 몰수 특례법 9조 4 몰수ㆍ추징의 시효#KOBLEX-038546",
+        "provision_text": "제9조의4(몰수ㆍ추징의 시효) 특정공무원범죄에 관한 몰수ㆍ추징의 시효는 「형법」 제78조에도 불구하고 10년으로 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9975883960723877,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공무원범죄에 관한 몰수 특례법 9조 4 몰수ㆍ추징의 시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 78조  형의 시효의 기간#KOBLEX-192847"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 36.78561405003801,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형법 78조  형의 시효의 기간#KOBLEX-192847",
+        "provision_text": "6. 5년 미만의 자격정지, 벌금, 몰수 또는 추징: 5년",
+        "rerank_rank": 2,
+        "rerank_score": 0.9796808958053589,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 78조  형의 시효의 기간 6호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "마약류 불법거래 방지에 관한 특례법 73조  공소 제기 전의 보전기간#KOBLEX-006739",
+          "마약류 불법거래 방지에 관한 특례법 73조  공소 제기 전의 보전기간#KOBLEX-045489"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 53,
+        "first_stage_score": 23.344841050692935,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "마약류 불법거래 방지에 관한 특례법 73조  공소 제기 전의 보전기간#KOBLEX-006739",
+        "provision_text": "① 몰수 또는 추징을 목적으로 하는 보전공조요청이 공소가 제기되지 아니한 사건에 대한 것인 경우에는 몰수보전명령 또는 추징보전명령이 내려진 날부터 45일 이내에 요청국으로부터 그 사건에 대하여 공소가 제기되었다는 취지의 통지가 없을 때에는 그 몰수보전명령 또는 추징보전명령은 효력을 잃는다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.19801129400730133,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "마약류 불법거래 방지에 관한 특례법 73조  공소 제기 전의 보전기간 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "담배사업법 30조  몰수와 추징#KOBLEX-143499"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 30.424388906969114,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "담배사업법 30조  몰수와 추징#KOBLEX-143499",
+        "provision_text": "제30조(몰수와 추징)",
+        "rerank_rank": 4,
+        "rerank_score": 0.011811673641204834,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "담배사업법 30조  몰수와 추징",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부패재산의 몰수 및 회복에 관한 특례법 7조#KOBLEX-073066"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 38.53013639394828,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "부패재산의 몰수 및 회복에 관한 특례법 7조#KOBLEX-073066",
+        "provision_text": "제3장 몰수 및 추징 보전절차, 몰수재판 및 추징재판의 집행과 보전에 관한 국제공조절차",
+        "rerank_rank": 5,
+        "rerank_score": 0.006697800941765308,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "부패재산의 몰수 및 회복에 관한 특례법 7조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "특정경제범죄 가중처벌 등에 관한 법률 10조  (몰수·추징)#KOBLEX-029500",
+          "특정경제범죄 가중처벌 등에 관한 법률 10조  (몰수·추징)#KOBLEX-106542"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 42.310912261864786,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "특정경제범죄 가중처벌 등에 관한 법률 10조  (몰수·추징)#KOBLEX-029500",
+        "provision_text": "제10조(몰수·추징)",
+        "rerank_rank": 6,
+        "rerank_score": 0.005207262933254242,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "특정경제범죄 가중처벌 등에 관한 법률 10조  (몰수·추징)",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 48조  몰수의 대상과 추징#KOBLEX-192752"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 22,
+        "first_stage_score": 29.681352407436407,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형법 48조  몰수의 대상과 추징#KOBLEX-192752",
+        "provision_text": "제48조(몰수의 대상과 추징)",
+        "rerank_rank": 7,
+        "rerank_score": 0.0051656062714755535,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 48조  몰수의 대상과 추징",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "마약류 불법거래 방지에 관한 특례법 65조  추징으로 보는 몰수#KOBLEX-006710",
+          "마약류 불법거래 방지에 관한 특례법 65조  추징으로 보는 몰수#KOBLEX-045460"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 29.614918505643487,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "마약류 불법거래 방지에 관한 특례법 65조  추징으로 보는 몰수#KOBLEX-006710",
+        "provision_text": "제65조(추징으로 보는 몰수)",
+        "rerank_rank": 8,
+        "rerank_score": 0.003835787298157811,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "마약류 불법거래 방지에 관한 특례법 65조  추징으로 보는 몰수",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사기밀 보호법 20조 2 몰수 및 추징 등#KOBLEX-194087"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 40.29351417850991,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "군사기밀 보호법 20조 2 몰수 및 추징 등#KOBLEX-194087",
+        "provision_text": "제20조의2(몰수 및 추징 등)",
+        "rerank_rank": 9,
+        "rerank_score": 0.0028504880610853434,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "군사기밀 보호법 20조 2 몰수 및 추징 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 80조  형의 시효의 중단#KOBLEX-192852"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 29.788937708975322,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "형법 80조  형의 시효의 중단#KOBLEX-192852",
+        "provision_text": "제80조(형의 시효의 중단) 시효는 징역, 금고 및 구류의 경우에는 수형자를 체포한 때, 벌금, 과료, 몰수 및 추징의 경우에는 강제처분을 개시한 때에 중단된다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.0018094590632244945,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 80조  형의 시효의 중단",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공무원범죄에 관한 몰수 특례법 9조 4 몰수ㆍ추징의 시효#KOBLEX-038546": "제9조의4(몰수ㆍ추징의 시효) 특정공무원범죄에 관한 몰수ㆍ추징의 시효는 「형법」 제78조에도 불구하고 10년으로 한다.",
+      "군사기밀 보호법 20조 2 몰수 및 추징 등#KOBLEX-194087": "제20조의2(몰수 및 추징 등)",
+      "담배사업법 30조  몰수와 추징#KOBLEX-143499": "제30조(몰수와 추징)",
+      "마약류 불법거래 방지에 관한 특례법 65조  추징으로 보는 몰수#KOBLEX-006710": "제65조(추징으로 보는 몰수)",
+      "마약류 불법거래 방지에 관한 특례법 73조  공소 제기 전의 보전기간#KOBLEX-006739": "① 몰수 또는 추징을 목적으로 하는 보전공조요청이 공소가 제기되지 아니한 사건에 대한 것인 경우에는 몰수보전명령 또는 추징보전명령이 내려진 날부터 45일 이내에 요청국으로부터 그 사건에 대하여 공소가 제기되었다는 취지의 통지가 없을 때에는 그 몰수보전명령 또는 추징보전명령은 효력을 잃는다.",
+      "부패재산의 몰수 및 회복에 관한 특례법 7조#KOBLEX-073066": "제3장 몰수 및 추징 보전절차, 몰수재판 및 추징재판의 집행과 보전에 관한 국제공조절차",
+      "특정경제범죄 가중처벌 등에 관한 법률 10조  (몰수·추징)#KOBLEX-029500": "제10조(몰수·추징)",
+      "형법 48조  몰수의 대상과 추징#KOBLEX-192752": "제48조(몰수의 대상과 추징)",
+      "형법 78조  형의 시효의 기간#KOBLEX-192847": "6. 5년 미만의 자격정지, 벌금, 몰수 또는 추징: 5년",
+      "형법 80조  형의 시효의 중단#KOBLEX-192852": "제80조(형의 시효의 중단) 시효는 징역, 금고 및 구류의 경우에는 수형자를 체포한 때, 벌금, 과료, 몰수 및 추징의 경우에는 강제처분을 개시한 때에 중단된다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "공무원범죄에 관한 몰수 특례법 9조 4 몰수ㆍ추징의 시효#KOBLEX-038546"
+            ],
+            "rationale": "C001은 공무원범죄에 관한 몰수·추징의 시효를 10년으로 명시하여 요구된 시효 기간을 명확히 제공한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "공무원범죄에 관한 몰수 특례법 9조 4 몰수ㆍ추징의 시효#KOBLEX-038546",
+          "형법 78조  형의 시효의 기간#KOBLEX-192847"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "질문은 공무원의 직무 관련 부정부패 행위에 대한 몰수·추징 시효를 묻고 있다. C001(공무원범죄에 관한 몰수 특례법 제9조의4)은 해당 범죄 유형에 대해 시효를 10년으로 명확히 규정하고 있어 증거 항목의 완료 기준을 충족한다. C002(형법 제78조)는 일반 시효를 규정하지만 특별법에 의해 배제되므로, C001이 지배적인 근거가 된다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "공무원범죄에 관한 몰수 특례법 9조 4 몰수ㆍ추징의 시효#KOBLEX-038546",
+        "support_spans": [
+          {
+            "end_char": 66,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형법 78조  형의 시효의 기간#KOBLEX-192847",
+        "support_spans": [
+          {
+            "end_char": 32,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "공무원의 직무 관련 부정부패 행위로 인한 몰수 및 추징에 적용되는 시효 기간은 얼마인지",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 시청의 공무원으로 근무하던 중, 직무와 관련된 부정부패 혐의로 조사를 받게 되었다. 검찰은 갑의 부패 행위와 관련된 불법 이득을 몰수하고자 했으며, 갑의 혐의가 확정된 후, 몰수 절차를 진행하려고 하였다. 이 과정에서 몰수ㆍ추징의 시효가 몇 년인지에 대한 논의가 필요하게 되었다. [질문] 갑의 부정부패 행위와 관련된 몰수ㆍ추징의 시효는 몇 년인가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "몰수 추징 시효",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "몰수",
+          "추징",
+          "시효",
+          "기간"
+        ],
+        "query_text": "몰수 추징 시효 기간 [원문 맥락] 이 과정에서 몰수ㆍ추징의 시효가 몇 년인지에 대한 논의가 필요하게 되었다. 갑의 부정부패 행위와 관련된 몰수ㆍ추징의 시효는 몇 년인가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "몰수 추징 시효 기간 연",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 시청의 공무원으로 근무하던 중, 직무와 관련된 부정부패 혐의로 조사를 받게 되었다. 검찰은 갑의 부패 행위와 관련된 불법 이득을 몰수하고자 했으며, 갑의 혐의가 확정된 후, 몰수 절차를 진행하려고 하였다. 이 과정에서 몰수ㆍ추징의 시효가 몇 년인지에 대한 논의가 필요하게 되었다.\n\n[질문]\n갑의 부정부패 행위와 관련된 몰수ㆍ추징의 시효는 몇 년인가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "몰수 및 추징의 시효 기간이 명시된 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "몰수 및 추징의 시효 기간(년)을 명시하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "몰수 및 추징의 시효 기간을 정한 법령 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 직접적으로 묻고 있는 시효 기간을 결정하기 위해 필수적인 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "efd625b8-55f1-4ced-9fbe-8f4f3e6d663e",
+    "seen_provision_ids": [
+      "마약류 불법거래 방지에 관한 특례법 73조  공소 제기 전의 보전기간#KOBLEX-006739",
+      "담배사업법 30조  몰수와 추징#KOBLEX-143499",
+      "부패재산의 몰수 및 회복에 관한 특례법 7조#KOBLEX-073066",
+      "공무원범죄에 관한 몰수 특례법 9조 4 몰수ㆍ추징의 시효#KOBLEX-038546",
+      "형법 48조  몰수의 대상과 추징#KOBLEX-192752",
+      "형법 78조  형의 시효의 기간#KOBLEX-192847",
+      "형법 80조  형의 시효의 중단#KOBLEX-192852",
+      "마약류 불법거래 방지에 관한 특례법 65조  추징으로 보는 몰수#KOBLEX-006710",
+      "군사기밀 보호법 20조 2 몰수 및 추징 등#KOBLEX-194087",
+      "특정경제범죄 가중처벌 등에 관한 법률 10조  (몰수·추징)#KOBLEX-029500"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

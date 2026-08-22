@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/root/Legal Harness/runtime/local_ollama_executor.py", line 128, in execute
+    diagnostic.update(self._generation_diagnostic(generation))
+AttributeError: 'LocalOllamaSkillExecutor' object has no attribute '_generation_diagnostic'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/Legal Harness/scripts/run_local_harness.py", line 199, in <module>
+    raise SystemExit(main())
+  File "/root/Legal Harness/scripts/run_local_harness.py", line 159, in main
+    outcome = runner.run(args.question, run_id=run_id)
+  File "/root/Legal Harness/harness/runner.py", line 125, in run
+    initial_raw = self._execute(
+  File "/root/Legal Harness/harness/runner.py", line 441, in _execute
+    result = self.skill_executor.execute(skill_name, entry_point, payload)
+  File "/root/Legal Harness/runtime/local_ollama_executor.py", line 180, in execute
+    self._record_diagnostic(diagnostic)
+AttributeError: 'LocalOllamaSkillExecutor' object has no attribute '_record_diagnostic'

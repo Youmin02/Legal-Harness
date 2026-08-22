@@ -1,0 +1,509 @@
+{
+  "abstention_reason": null,
+  "answer": "제삼자에 대하여 타인에게 대리권을 수여함을 표시한 자는 그 대리권의 범위 내에서 행한 그 타인과 제삼자 간의 법률행위에 대하여 책임이 있다.[CT1]\n제삼자가 대리권 없음을 알았거나 알 수 있었을 때에는 대리권 수여를 표시한 자의 책임이 성립하지 않는다.[CT2]\n전제: 질문에서 제시된 '갑이 병에게 을에게 대리권을 주었다고 말한 사실'이 민법 제125조에서 말하는 '제삼자에 대하여 타인에게 대리권을 수여함을 표시한 것'에 해당한다고 가정합니다.\n한계: 본 답변은 민법 제125조에 근거한 법적 요건과 예외만을 다루며, 구체적인 사안에서 '알 수 있었는지'를 판단하는 사실관계의 입증이나 다른 법적 쟁점(예: 부당이득, 불법행위 등)은 다루지 않습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "제삼자에 대하여 타인에게 대리권을 수여함을 표시한 자는 그 대리권의 범위 내에서 행한 그 타인과 제삼자 간의 법률행위에 대하여 책임이 있다.[CT1]\n제삼자가 대리권 없음을 알았거나 알 수 있었을 때에는 대리권 수여를 표시한 자의 책임이 성립하지 않는다.[CT2]\n전제: 질문에서 제시된 '갑이 병에게 을에게 대리권을 주었다고 말한 사실'이 민법 제125조에서 말하는 '제삼자에 대하여 타인에게 대리권을 수여함을 표시한 것'에 해당한다고 가정합니다.\n한계: 본 답변은 민법 제125조에 근거한 법적 요건과 예외만을 다루며, 구체적인 사안에서 '알 수 있었는지'를 판단하는 사실관계의 입증이나 다른 법적 쟁점(예: 부당이득, 불법행위 등)은 다루지 않습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T22:50:43.290052+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 120712.468,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 92,
+      "dedup_collapse": 16,
+      "evidence_fusion": 92,
+      "first_stage": 100,
+      "request_rerank": 100,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 92
+    }
+  },
+  "run_id": "1d7f4c15-eacf-4c1d-b276-a54426893be0",
+  "state": {
+    "accepted_provision_ids": [
+      "민법 125조  대리권수여의 표시에 의한 표현대리#KOBLEX-058636"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_condition",
+        "question_anchor": "병이 어떤 경우에 갑에게 책임을 묻지 못하는가",
+        "requested_output": "표시대리인의 책임이 성립하지 않는 법적 요건 및 예외 상황"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민법 126조  권한을 넘은 표현대리#KOBLEX-058637"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 126조  권한을 넘은 표현대리#KOBLEX-058637",
+        "provision_text": "제126조(권한을 넘은 표현대리) 대리인이 그 권한외의 법률행위를 한 경우에 제삼자가 그 권한이 있다고 믿을 만한 정당한 이유가 있는 때에는 본인은 그 행위에 대하여 책임이 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.103658027946949,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 126조  권한을 넘은 표현대리",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 121조  임의대리인의 복대리인선임의 책임#KOBLEX-058630"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 121조  임의대리인의 복대리인선임의 책임#KOBLEX-058630",
+        "provision_text": "②대리인이 본인의 지명에 의하여 복대리인을 선임한 경우에는 그 부적임 또는 불성실함을 알고 본인에게 대한 통지나 그 해임을 태만한 때가 아니면 책임이 없다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.013679970987141132,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 121조  임의대리인의 복대리인선임의 책임 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 125조  대리권수여의 표시에 의한 표현대리#KOBLEX-058636"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민법 125조  대리권수여의 표시에 의한 표현대리#KOBLEX-058636",
+        "provision_text": "제125조(대리권수여의 표시에 의한 표현대리) 제삼자에 대하여 타인에게 대리권을 수여함을 표시한 자는 그 대리권의 범위내에서 행한 그 타인과 그 제삼자간의 법률행위에 대하여 책임이 있다. 그러나 제삼자가 대리권없음을 알았거나 알 수 있었을 때에는 그러하지 아니하다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.010124833323061466,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 125조  대리권수여의 표시에 의한 표현대리",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 135조  상대방에 대한 무권대리인의 책임#KOBLEX-058649"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 88,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민법 135조  상대방에 대한 무권대리인의 책임#KOBLEX-058649",
+        "provision_text": "① 다른 자의 대리인으로서 계약을 맺은 자가 그 대리권을 증명하지 못하고 또 본인의 추인을 받지 못한 경우에는 그는 상대방의 선택에 따라 계약을 이행할 책임 또는 손해를 배상할 책임이 있다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.00548963388428092,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 135조  상대방에 대한 무권대리인의 책임 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 135조  상대방에 대한 무권대리인의 책임#KOBLEX-058650"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "민법 135조  상대방에 대한 무권대리인의 책임#KOBLEX-058650",
+        "provision_text": "② 대리인으로서 계약을 맺은 자에게 대리권이 없다는 사실을 상대방이 알았거나 알 수 있었을 때 또는 대리인으로서 계약을 맺은 사람이 제한능력자일 때에는 제1항을 적용하지 아니한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0016947725089266896,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 135조  상대방에 대한 무권대리인의 책임 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 122조  법정대리인의 복임권과 그 책임#KOBLEX-058631"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 2.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "민법 122조  법정대리인의 복임권과 그 책임#KOBLEX-058631",
+        "provision_text": "제122조(법정대리인의 복임권과 그 책임) 법정대리인은 그 책임으로 복대리인을 선임할 수 있다. 그러나 부득이한 사유로 인한 때에는 전조제1항에 정한 책임만이 있다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.00023967729066498578,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 122조  법정대리인의 복임권과 그 책임",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 135조  상대방에 대한 무권대리인의 책임#KOBLEX-058648"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 2.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "민법 135조  상대방에 대한 무권대리인의 책임#KOBLEX-058648",
+        "provision_text": "제135조(상대방에 대한 무권대리인의 책임)",
+        "rerank_rank": 7,
+        "rerank_score": 0.0001912253355840221,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 135조  상대방에 대한 무권대리인의 책임",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 121조  임의대리인의 복대리인선임의 책임#KOBLEX-058628"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 2.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "민법 121조  임의대리인의 복대리인선임의 책임#KOBLEX-058628",
+        "provision_text": "제121조(임의대리인의 복대리인선임의 책임)",
+        "rerank_rank": 8,
+        "rerank_score": 9.518663136987016e-05,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 121조  임의대리인의 복대리인선임의 책임",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "중소기업협동조합법 61조  감사의 책임#KOBLEX-030876"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 29.948124739767472,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "중소기업협동조합법 61조  감사의 책임#KOBLEX-030876",
+        "provision_text": "제61조(감사의 책임) 감사가 그 임무를 게을리한 때에는 「민법」 제65조를 준용한다.",
+        "rerank_rank": 9,
+        "rerank_score": 8.025144779821858e-05,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "중소기업협동조합법 61조  감사의 책임",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 121조  임의대리인의 복대리인선임의 책임#KOBLEX-058629"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 2.0,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "민법 121조  임의대리인의 복대리인선임의 책임#KOBLEX-058629",
+        "provision_text": "①전조의 규정에 의하여 대리인이 복대리인을 선임한 때에는 본인에게 대하여 그 선임감독에 관한 책임이 있다.",
+        "rerank_rank": 10,
+        "rerank_score": 5.539857011171989e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 121조  임의대리인의 복대리인선임의 책임 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "민법 121조  임의대리인의 복대리인선임의 책임#KOBLEX-058628": "제121조(임의대리인의 복대리인선임의 책임)",
+      "민법 121조  임의대리인의 복대리인선임의 책임#KOBLEX-058629": "①전조의 규정에 의하여 대리인이 복대리인을 선임한 때에는 본인에게 대하여 그 선임감독에 관한 책임이 있다.",
+      "민법 121조  임의대리인의 복대리인선임의 책임#KOBLEX-058630": "②대리인이 본인의 지명에 의하여 복대리인을 선임한 경우에는 그 부적임 또는 불성실함을 알고 본인에게 대한 통지나 그 해임을 태만한 때가 아니면 책임이 없다.",
+      "민법 122조  법정대리인의 복임권과 그 책임#KOBLEX-058631": "제122조(법정대리인의 복임권과 그 책임) 법정대리인은 그 책임으로 복대리인을 선임할 수 있다. 그러나 부득이한 사유로 인한 때에는 전조제1항에 정한 책임만이 있다.",
+      "민법 125조  대리권수여의 표시에 의한 표현대리#KOBLEX-058636": "제125조(대리권수여의 표시에 의한 표현대리) 제삼자에 대하여 타인에게 대리권을 수여함을 표시한 자는 그 대리권의 범위내에서 행한 그 타인과 그 제삼자간의 법률행위에 대하여 책임이 있다. 그러나 제삼자가 대리권없음을 알았거나 알 수 있었을 때에는 그러하지 아니하다.",
+      "민법 126조  권한을 넘은 표현대리#KOBLEX-058637": "제126조(권한을 넘은 표현대리) 대리인이 그 권한외의 법률행위를 한 경우에 제삼자가 그 권한이 있다고 믿을 만한 정당한 이유가 있는 때에는 본인은 그 행위에 대하여 책임이 있다.",
+      "민법 135조  상대방에 대한 무권대리인의 책임#KOBLEX-058648": "제135조(상대방에 대한 무권대리인의 책임)",
+      "민법 135조  상대방에 대한 무권대리인의 책임#KOBLEX-058649": "① 다른 자의 대리인으로서 계약을 맺은 자가 그 대리권을 증명하지 못하고 또 본인의 추인을 받지 못한 경우에는 그는 상대방의 선택에 따라 계약을 이행할 책임 또는 손해를 배상할 책임이 있다.",
+      "민법 135조  상대방에 대한 무권대리인의 책임#KOBLEX-058650": "② 대리인으로서 계약을 맺은 자에게 대리권이 없다는 사실을 상대방이 알았거나 알 수 있었을 때 또는 대리인으로서 계약을 맺은 사람이 제한능력자일 때에는 제1항을 적용하지 아니한다.",
+      "중소기업협동조합법 61조  감사의 책임#KOBLEX-030876": "제61조(감사의 책임) 감사가 그 임무를 게을리한 때에는 「민법」 제65조를 준용한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 125조  대리권수여의 표시에 의한 표현대리#KOBLEX-058636"
+            ],
+            "rationale": "C003은 제3자에 대하여 타인에게 대리권을 수여함을 표시한 자의 책임을 규정하여 성립 요건을 확인한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "민법 125조  대리권수여의 표시에 의한 표현대리#KOBLEX-058636"
+            ],
+            "rationale": "C003은 '제삼자가 대리권없음을 알았거나 알 수 있었을 때에는 그러하지 아니하다'고 규정하여 예외 상황을 확인한다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민법 125조  대리권수여의 표시에 의한 표현대리#KOBLEX-058636"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C003(민법 제125조)은 표시대리인의 책임 성립 요건과 책임이 성립하지 않는 예외 상황을 모두 포함하고 있어 E1의 모든 완료 기준을 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 125조  대리권수여의 표시에 의한 표현대리#KOBLEX-058636",
+        "support_spans": [
+          {
+            "end_char": 148,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "표시대리인의 책임 성립 요건 및 예외",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 \"을에게 갑 소유 자동차를 팔라고 대리권을 주었다\"고 친구 병에게 말했습니다. 병은 을이 갑의 대리인이라고 믿고 자동차를 구매하기로 했습니다. 그러나 을은 실제로 갑으로부터 대리권을 받지 않았습니다. 병은 나중에야 을에게 대리권이 없다는 것을 알게 되었습니다. [질문] 갑이 병에 대하여 \"을에게 대리권을 수여했다\"고 표시했을 때, 병이 어떤 경우에 갑에게 책임을 묻지 못하는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "표시대리인 책임 예외 민법 제126조",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "표시대리인",
+          "책임",
+          "예외",
+          "민법",
+          "대리권",
+          "본인"
+        ],
+        "query_text": "표시대리인의 책임 예외 민법 [원문 맥락] 병은 나중에야 을에게 대리권이 없다는 것을 알게 되었습니다. 갑이 병에 대하여 \"을에게 대리권을 수여했다\"고 표시했을 때, 병이 어떤 경우에 갑에게 책임을 묻지 못하는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "표시대리인의 책임이 성립하지 않는 경우 민법",
+        "statute_hints": [
+          "민법 제126조"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 \"을에게 갑 소유 자동차를 팔라고 대리권을 주었다\"고 친구 병에게 말했습니다. 병은 을이 갑의 대리인이라고 믿고 자동차를 구매하기로 했습니다. 그러나 을은 실제로 갑으로부터 대리권을 받지 않았습니다. 병은 나중에야 을에게 대리권이 없다는 것을 알게 되었습니다.\n\n[질문]\n갑이 병에 대하여 \"을에게 대리권을 수여했다\"고 표시했을 때, 병이 어떤 경우에 갑에게 책임을 묻지 못하는가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "표시대리인의 책임이 성립하지 않는 경우를 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "표시대리인의 책임 성립 요건 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "표시대리인의 책임이 성립하지 않는 예외 상황 확인"
+          }
+        ],
+        "critical": true,
+        "description": "표시대리인의 책임 성립 요건 및 예외에 관한 민법 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문은 병이 갑에게 책임을 묻지 못하는 경우를 묻고 있으므로, 표시대리인의 책임 예외를 규정한 조항이 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "1d7f4c15-eacf-4c1d-b276-a54426893be0",
+    "seen_provision_ids": [
+      "민법 121조  임의대리인의 복대리인선임의 책임#KOBLEX-058628",
+      "민법 135조  상대방에 대한 무권대리인의 책임#KOBLEX-058649",
+      "민법 125조  대리권수여의 표시에 의한 표현대리#KOBLEX-058636",
+      "민법 121조  임의대리인의 복대리인선임의 책임#KOBLEX-058629",
+      "민법 135조  상대방에 대한 무권대리인의 책임#KOBLEX-058650",
+      "민법 122조  법정대리인의 복임권과 그 책임#KOBLEX-058631",
+      "민법 121조  임의대리인의 복대리인선임의 책임#KOBLEX-058630",
+      "민법 126조  권한을 넘은 표현대리#KOBLEX-058637",
+      "중소기업협동조합법 61조  감사의 책임#KOBLEX-030876",
+      "민법 135조  상대방에 대한 무권대리인의 책임#KOBLEX-058648"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

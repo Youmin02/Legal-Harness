@@ -1,0 +1,1626 @@
+{
+  "abstention_reason": null,
+  "answer": "피의자를 구속한 때에는 즉시 공소사실의 요지와 변호인을 선임할 수 있음을 알려야 한다.[CT1]\n피의자를 구속하려면 범죄사실의 요지, 구속의 이유와 변호인을 선임할 수 있음을 말하고 변명할 기회를 주어야 한다.[CT2]",
+  "answer_mode": "limited",
+  "answered_target_ids": [
+    "T2"
+  ],
+  "assumptions": [],
+  "candidate_answer": "피의자를 구속한 때에는 즉시 공소사실의 요지와 변호인을 선임할 수 있음을 알려야 한다.[CT1]\n피의자를 구속하려면 범죄사실의 요지, 구속의 이유와 변호인을 선임할 수 있음을 말하고 변명할 기회를 주어야 한다.[CT2]",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "candidate_assumptions": [],
+  "candidate_claim_citations": [],
+  "candidate_claims": [],
+  "candidate_limitations": [],
+  "claim_citations": [
+    {
+      "answer_marker": "[CT1]",
+      "citation_id": "CT1",
+      "claim_id": "C1",
+      "provision_id": "형사소송법 88조  구속과 공소사실 등의 고지#KOBLEX-231686",
+      "quoted_text": "제88조(구속과 공소사실 등의 고지) 피고인을 구속한 때에는 즉시 공소사실의 요지와 변호인을 선임할 수 있음을 알려야 한다.",
+      "support_description": "형사소송법 제88조는 구속 후 즉시 고지해야 할 사항(공소사실 요지, 변호인 선임 가능 여부)을 명시하여 T2의 질문에 대한 법적 근거를 제공한다."
+    },
+    {
+      "answer_marker": "[CT2]",
+      "citation_id": "CT2",
+      "claim_id": "C2",
+      "provision_id": "형사소송법 72조  구속과 이유의 고지#KOBLEX-231640",
+      "quoted_text": "제72조(구속과 이유의 고지) 피고인에 대하여 범죄사실의 요지, 구속의 이유와 변호인을 선임할 수 있음을 말하고 변명할 기회를 준 후가 아니면 구속할 수 없다. 다만, 피고인이 도망한 경우에는 그러하지 아니하다. <개정 1987.11.28, 2007.6.1>",
+      "support_description": "형사소송법 제72조는 구속 전 고지 및 변명 기회 부여 의무를 규정하여 구속 절차의 요건을 명시한다."
+    }
+  ],
+  "claims": [
+    {
+      "answer_target_ids": [
+        "T2"
+      ],
+      "applicability": "direct",
+      "citation_required": true,
+      "claim_id": "C1",
+      "claim_type": "legal_rule",
+      "text": "피의자를 구속한 때에는 즉시 공소사실의 요지와 변호인을 선임할 수 있음을 알려야 한다."
+    },
+    {
+      "answer_target_ids": [
+        "T2"
+      ],
+      "applicability": "conditional",
+      "citation_required": true,
+      "claim_id": "C2",
+      "claim_type": "legal_rule",
+      "text": "피의자를 구속하려면 범죄사실의 요지, 구속의 이유와 변호인을 선임할 수 있음을 말하고 변명할 기회를 주어야 한다."
+    }
+  ],
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T13:02:51.118219+00:00",
+  "deferred_target_ids": [
+    "T1",
+    "T3"
+  ],
+  "end_to_end_latency_ms": 536540.971,
+  "errors": [],
+  "limitations": [
+    {
+      "code": "LIMITED_SCOPE_T1",
+      "message": "소환, 체포, 구금 시 경찰이 준수해야 할 절차(T1)에 관한 핵심 조항(예: 소환 절차, 구금 절차)이 제공된 증거에 포함되어 있지 않아 해당 부분은 답변에서 제외됩니다."
+    },
+    {
+      "code": "LIMITED_SCOPE_T3",
+      "message": "자택 압수 및 수색 시 필요한 절차와 요건(T3)에 관한 일반적 요건(영장 발부 요건 등)이 제공된 증거에 포함되어 있지 않아 해당 부분은 답변에서 제외됩니다."
+    }
+  ],
+  "record_schema_version": "1.4",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 475,
+      "dedup_collapse": 258,
+      "evidence_fusion": 475,
+      "first_stage": 830,
+      "request_rerank": 830,
+      "round_selected": 30,
+      "rrf": 530,
+      "selected": 475
+    }
+  },
+  "run_id": "32670349-8144-4053-b82b-bce60a9079ff",
+  "skill_generation_diagnostics": {
+    "attempt_count": 9,
+    "attempt_file": "skill_attempts.jsonl",
+    "schema_version": "1.0"
+  },
+  "state": {
+    "accepted_provision_ids": [
+      "형사소송법 88조  구속과 공소사실 등의 고지#KOBLEX-231686",
+      "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232045",
+      "형사소송법 200조 3 긴급체포#KOBLEX-232053",
+      "형사소송법 119조  집행 중의 출입금지#KOBLEX-231784",
+      "형사소송법 200조 3 긴급체포#KOBLEX-232051",
+      "형사소송법 120조  집행과 필요한 처분#KOBLEX-231787",
+      "형사소송법 72조  구속과 이유의 고지#KOBLEX-231640",
+      "형사소송법 200조 3 긴급체포#KOBLEX-232052",
+      "형사소송법 200조 6 준용규정#KOBLEX-232063"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 3,
+          "issue_count": 3
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 3,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 5,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 1,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T2"
+          ],
+          "deferred_target_ids": [
+            "T1",
+            "T3"
+          ],
+          "explanation": "Only the citable answer targets will be answered; remaining targets are deferred.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T2"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": [
+            "T1",
+            "T3"
+          ]
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "limited",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "procedure",
+        "question_anchor": "경찰이 갑을 소환하거나 체포, 구금할 때 필요한 절차",
+        "requested_output": "소환, 체포, 구금 시 경찰이 준수해야 할 법적 절차"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "element",
+        "question_anchor": "구속 시 고지해야 할 내용",
+        "requested_output": "구속 시 피의자에게 고지해야 할 사항"
+      },
+      {
+        "answer_target_id": "T3",
+        "answer_type": "procedure",
+        "question_anchor": "갑의 자택을 압수나 수색할 때 필요한 절차",
+        "requested_output": "자택 압수 및 수색 시 필요한 법적 절차와 요건"
+      }
+    ],
+    "answered_target_ids": [
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "국회법 26조  체포동의 요청의 절차#KOBLEX-131884"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 22.95334255204609,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "국회법 26조  체포동의 요청의 절차#KOBLEX-131884",
+        "provision_text": "제26조(체포동의 요청의 절차)",
+        "rerank_rank": 1,
+        "rerank_score": 0.022099174559116364,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "국회법 26조  체포동의 요청의 절차",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 72조  구속과 이유의 고지#KOBLEX-231640"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 33,
+        "first_stage_score": 20.03282327999256,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 72조  구속과 이유의 고지#KOBLEX-231640",
+        "provision_text": "제72조(구속과 이유의 고지) 피고인에 대하여 범죄사실의 요지, 구속의 이유와 변호인을 선임할 수 있음을 말하고 변명할 기회를 준 후가 아니면 구속할 수 없다. 다만, 피고인이 도망한 경우에는 그러하지 아니하다. <개정 1987.11.28, 2007.6.1>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9580880403518677,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 72조  구속과 이유의 고지",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 106조#KOBLEX-231752"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 35.61889767949083,
+        "fusion_rank": 1,
+        "issue_id": "I3",
+        "provision_id": "형사소송법 106조#KOBLEX-231752",
+        "provision_text": "제10장 압수와 수색",
+        "rerank_rank": 1,
+        "rerank_score": 0.014275195077061653,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "critical_quota:E3",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "형사소송법 106조",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 112조  구속과 이유의 고지 등#KOBLEX-092488",
+          "군사법원법 112조  구속과 이유의 고지 등#KOBLEX-158453"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 22.503250614124518,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 112조  구속과 이유의 고지 등#KOBLEX-092488",
+        "provision_text": "제112조(구속과 이유의 고지 등) 피고인에게 범죄사실의 요지, 구속이유 및 변호인을 선임할 수 있음을 말하고 변명할 기회를 주기 전에는 구속할 수 없다. 다만, 피고인이 도주한 경우에는 구속할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9173678755760193,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "군사법원법 112조  구속과 이유의 고지 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 88조  구속과 공소사실 등의 고지#KOBLEX-231686"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 24.378835085944058,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 88조  구속과 공소사실 등의 고지#KOBLEX-231686",
+        "provision_text": "제88조(구속과 공소사실 등의 고지) 피고인을 구속한 때에는 즉시 공소사실의 요지와 변호인을 선임할 수 있음을 알려야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.7776209712028503,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 88조  구속과 공소사실 등의 고지",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 128조  구속과 공소사실 등의 고지#KOBLEX-092531",
+          "군사법원법 128조  구속과 공소사실 등의 고지#KOBLEX-158496"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 24.378835085944058,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 128조  구속과 공소사실 등의 고지#KOBLEX-092531",
+        "provision_text": "제128조(구속과 공소사실 등의 고지) 피고인을 구속한 경우에는 즉시 공소사실의 요지와 변호인을 선임할 수 있음을 알려야 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.7193002700805664,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "군사법원법 128조  구속과 공소사실 등의 고지",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "질서위반행위규제법 37조  결정의 고지#KOBLEX-022868"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 27,
+        "first_stage_score": 20.182733370318818,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "질서위반행위규제법 37조  결정의 고지#KOBLEX-022868",
+        "provision_text": "제37조(결정의 고지)",
+        "rerank_rank": 5,
+        "rerank_score": 0.03568179905414581,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "질서위반행위규제법 37조  결정의 고지",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소년법 13조  소환 및 동행영장#KOBLEX-190525"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 24.770834221748707,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "소년법 13조  소환 및 동행영장#KOBLEX-190525",
+        "provision_text": "제13조(소환 및 동행영장)",
+        "rerank_rank": 2,
+        "rerank_score": 0.010807957500219345,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "소년법 13조  소환 및 동행영장",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 153조  압수ㆍ수색영장#KOBLEX-092619",
+          "군사법원법 153조  압수ㆍ수색영장#KOBLEX-158584"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 30.48938997287364,
+        "fusion_rank": 2,
+        "issue_id": "I3",
+        "provision_id": "군사법원법 153조  압수ㆍ수색영장#KOBLEX-092619",
+        "provision_text": "제153조(압수ㆍ수색영장) 공판정 밖에서의 압수 또는 수색은 영장을 발부하여 하여야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.009027626365423203,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "군사법원법 153조  압수ㆍ수색영장",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 473조  집행하기 위한 소환#KOBLEX-232980"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 75,
+        "first_stage_score": 17.019736862946985,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 473조  집행하기 위한 소환#KOBLEX-232980",
+        "provision_text": "①사형, 징역, 금고 또는 구류의 선고를 받은 자가 구금되지 아니한 때에는 검사는 형을 집행하기 위하여 이를 소환하여야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.008953387849032879,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 473조  집행하기 위한 소환 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 200조 3 긴급체포#KOBLEX-232052"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 2.0,
+        "fusion_rank": 47,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 200조 3 긴급체포#KOBLEX-232052",
+        "provision_text": "②사법경찰관이 제1항의 규정에 의하여 피의자를 체포한 경우에는 즉시 검사의 승인을 얻어야 한다.",
+        "rerank_rank": 47,
+        "rerank_score": 0.9216686487197876,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형사소송법 200조 3 긴급체포 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 120조  집행과 필요한 처분#KOBLEX-231788"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 98,
+        "first_stage_score": 2.0,
+        "fusion_rank": 56,
+        "issue_id": "I3",
+        "provision_id": "형사소송법 120조  집행과 필요한 처분#KOBLEX-231788",
+        "provision_text": "②전항의 처분은 압수물에 대하여도 할 수 있다.",
+        "rerank_rank": 56,
+        "rerank_score": 0.27538949251174927,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E3",
+        "source_request_id": "GRQ-R2-5",
+        "source_request_ids": [
+          "GRQ-R2-5"
+        ],
+        "statute_name": "형사소송법 120조  집행과 필요한 처분 2항",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 200조 3 긴급체포#KOBLEX-232053"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 31,
+        "first_stage_score": 20.141689261248214,
+        "fusion_rank": 50,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 200조 3 긴급체포#KOBLEX-232053",
+        "provision_text": "③검사 또는 사법경찰관은 제1항의 규정에 의하여 피의자를 체포한 경우에는 즉시 긴급체포서를 작성하여야 한다.",
+        "rerank_rank": 50,
+        "rerank_score": 0.7307702898979187,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형사소송법 200조 3 긴급체포 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232044"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 22.869476579752426,
+        "fusion_rank": 53,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232044",
+        "provision_text": "제200조의2(영장에 의한 체포)",
+        "rerank_rank": 53,
+        "rerank_score": 0.6578290462493896,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형사소송법 200조 2 영장에 의한 체포",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 200조 3 긴급체포#KOBLEX-232050"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 31.185032357040498,
+        "fusion_rank": 57,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 200조 3 긴급체포#KOBLEX-232050",
+        "provision_text": "제200조의3(긴급체포)",
+        "rerank_rank": 57,
+        "rerank_score": 0.35981160402297974,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형사소송법 200조 3 긴급체포",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 200조 6 준용규정#KOBLEX-232063"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 71,
+        "first_stage_score": 15.200380653500982,
+        "fusion_rank": 61,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 200조 6 준용규정#KOBLEX-232063",
+        "provision_text": "제200조의6(준용규정) 제75조, 제81조제1항 본문 및 제3항, 제82조, 제83조, 제85조제1항ㆍ제3항 및 제4항, 제86조, 제87조, 제89조부터 제91조까지, 제93조, 제101조제4항 및 제102조제2항 단서의 규정은 검사 또는 사법경찰관이 피의자를 체포하는 경우에 이를 준용한다. 이 경우 \"구속\"은 이를 \"체포\"로, \"구속영장\"은 이를 \"체포영장\"으로 본다. <개정 2007.6.1>",
+        "rerank_rank": 61,
+        "rerank_score": 0.1475343555212021,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 200조 6 준용규정",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 120조  집행과 필요한 처분#KOBLEX-231787"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I3",
+        "provision_id": "형사소송법 120조  집행과 필요한 처분#KOBLEX-231787",
+        "provision_text": "①압수ㆍ수색영장의 집행에 있어서는 건정을 열거나 개봉 기타 필요한 처분을 할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.1064557358622551,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-4",
+        "source_request_ids": [
+          "GRQ-R2-4",
+          "GRQ-R2-5"
+        ],
+        "statute_name": "형사소송법 120조  집행과 필요한 처분 1항",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 119조  집행 중의 출입금지#KOBLEX-231784"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 2.0,
+        "fusion_rank": 14,
+        "issue_id": "I3",
+        "provision_id": "형사소송법 119조  집행 중의 출입금지#KOBLEX-231784",
+        "provision_text": "①압수ㆍ수색영장의 집행 중에는 타인의 출입을 금지할 수 있다.",
+        "rerank_rank": 14,
+        "rerank_score": 0.10150272399187088,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-4",
+        "source_request_ids": [
+          "GRQ-R2-4",
+          "GRQ-R2-5"
+        ],
+        "statute_name": "형사소송법 119조  집행 중의 출입금지 1항",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형의 집행 및 수용자의 처우에 관한 법률 16조 2 간이입소절차#KOBLEX-075348",
+          "형의 집행 및 수용자의 처우에 관한 법률 16조 2 간이입소절차#KOBLEX-213535"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 18.073028570507454,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 16조 2 간이입소절차#KOBLEX-075348",
+        "provision_text": "1. 「형사소송법」 제200조의2, 제200조의3 또는 제212조에 따라 체포되어 교정시설에 유치된 피의자",
+        "rerank_rank": 4,
+        "rerank_score": 0.1006535142660141,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R2-3"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 16조 2 간이입소절차 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 200조 4 긴급체포와 영장청구기간#KOBLEX-232058"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 2.0,
+        "fusion_rank": 66,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 200조 4 긴급체포와 영장청구기간#KOBLEX-232058",
+        "provision_text": "③제2항의 규정에 의하여 석방된 자는 영장없이는 동일한 범죄사실에 관하여 체포하지 못한다.",
+        "rerank_rank": 66,
+        "rerank_score": 0.09329813718795776,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형사소송법 200조 4 긴급체포와 영장청구기간 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232047"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 10.253892410192199,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232047",
+        "provision_text": "③제1항의 청구를 받은 지방법원판사가 체포영장을 발부하지 아니할 때에는 청구서에 그 취지 및 이유를 기재하고 서명날인하여 청구한 검사에게 교부한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.00011383241508156061,
+        "retrieval_round": 3,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 200조 2 영장에 의한 체포 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232046"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 10.253892410192199,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232046",
+        "provision_text": "②제1항의 청구를 받은 지방법원판사는 상당하다고 인정할 때에는 체포영장을 발부한다. 다만, 명백히 체포의 필요가 인정되지 아니하는 경우에는 그러하지 아니하다.",
+        "rerank_rank": 2,
+        "rerank_score": 4.5359523937804624e-05,
+        "retrieval_round": 3,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 200조 2 영장에 의한 체포 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232048"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 12.33304200450205,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232048",
+        "provision_text": "④검사가 제1항의 청구를 함에 있어서 동일한 범죄사실에 관하여 그 피의자에 대하여 전에 체포영장을 청구하였거나 발부받은 사실이 있는 때에는 다시 체포영장을 청구하는 취지 및 이유를 기재하여야 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 9.280556696467102e-06,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 200조 2 영장에 의한 체포 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 214조 2 체포와 구속의 적부심사#KOBLEX-232109"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 12.395074280822072,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 214조 2 체포와 구속의 적부심사#KOBLEX-232109",
+        "provision_text": "③법원은 제1항에 따른 청구가 다음 각 호의 어느 하나에 해당하는 때에는 제4항에 따른 심문 없이 결정으로 청구를 기각할 수 있다. <개정 1987.11.28, 1995.12.29, 2007.6.1, 2020.12.8> 1. 청구권자 아닌 사람이 청구하거나 동일한 체포영장 또는 구속영장의 발부에 대하여 재청구한 때 2. 공범이나 공동피의자의 순차청구(順次請求)가 수사 방해를 목적으로 하고 있음이 명백한 때",
+        "rerank_rank": 5,
+        "rerank_score": 6.709351509925909e-06,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 214조 2 체포와 구속의 적부심사 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 204조  영장발부와 법원에 대한 통지#KOBLEX-232084"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 16.30326146331631,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 204조  영장발부와 법원에 대한 통지#KOBLEX-232084",
+        "provision_text": "제204조(영장발부와 법원에 대한 통지) 체포영장 또는 구속영장의 발부를 받은 후 피의자를 체포 또는 구속하지 아니하거나 체포 또는 구속한 피의자를 석방한 때에는 지체없이 검사는 영장을 발부한 법원에 그 사유를 서면으로 통지하여야 한다. <개정 1995.12.29>",
+        "rerank_rank": 6,
+        "rerank_score": 4.761931904795347e-06,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 204조  영장발부와 법원에 대한 통지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232045"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 8.386205363552282,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232045",
+        "provision_text": "①피의자가 죄를 범하였다고 의심할 만한 상당한 이유가 있고, 정당한 이유없이 제200조의 규정에 의한 출석요구에 응하지 아니하거나 응하지 아니할 우려가 있는 때에는 검사는 관할 지방법원판사에게 청구하여 체포영장을 발부받아 피의자를 체포할 수 있고, 사법경찰관은 검사에게 신청하여 검사의 청구로 관할지방법원판사의 체포영장을 발부받아 피의자를 체포할 수 있다. 다만, 다액 50만원이하의 벌금, 구류 또는 과료에 해당하는 사건에 관하여는 피의자가 일정한 주거가 없는 경우 또는 정당한 이유없이 제200조의 규정에 의한 출석요구에 응하지 아니한 경우에 한한다.",
+        "rerank_rank": 7,
+        "rerank_score": 4.06779645345523e-06,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 200조 2 영장에 의한 체포 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 214조 2 체포와 구속의 적부심사#KOBLEX-232118"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 12.068855108904124,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 214조 2 체포와 구속의 적부심사#KOBLEX-232118",
+        "provision_text": "⑫ 체포영장이나 구속영장을 발부한 법관은 제4항부터 제6항까지의 심문ㆍ조사ㆍ결정에 관여할 수 없다. 다만, 체포영장이나 구속영장을 발부한 법관 외에는 심문ㆍ조사ㆍ결정을 할 판사가 없는 경우에는 그러하지 아니하다. <개정 2020.12.8>",
+        "rerank_rank": 8,
+        "rerank_score": 3.7433985653478885e-06,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 214조 2 체포와 구속의 적부심사 12항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 200조 3 긴급체포#KOBLEX-232051"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 7.8597498042310505,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 200조 3 긴급체포#KOBLEX-232051",
+        "provision_text": "①검사 또는 사법경찰관은 피의자가 사형ㆍ무기 또는 장기 3년이상의 징역이나 금고에 해당하는 죄를 범하였다고 의심할 만한 상당한 이유가 있고, 다음 각 호의 어느 하나에 해당하는 사유가 있는 경우에 긴급을 요하여 지방법원판사의 체포영장을 받을 수 없는 때에는 그 사유를 알리고 영장없이 피의자를 체포할 수 있다. 이 경우 긴급을 요한다 함은 피의자를 우연히 발견한 경우등과 같이 체포영장을 받을 시간적 여유가 없는 때를 말한다. <개정 2007.6.1> 1. 피의자가 증거를 인멸할 염려가 있는 때 2. 피의자가 도망하거나 도망할 우려가 있는 때",
+        "rerank_rank": 9,
+        "rerank_score": 3.1157780995272333e-06,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 200조 3 긴급체포 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 232조 6 준용규정#KOBLEX-092885",
+          "군사법원법 232조 6 준용규정#KOBLEX-158850"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 14.337734840471075,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 232조 6 준용규정#KOBLEX-092885",
+        "provision_text": "제232조의6(준용규정) 군검사 또는 군사법경찰관이 피의자를 체포하는 경우에는 제114조, 제119조제1항 본문, 같은 조 제3항, 제120조, 제121조, 제123조제1항ㆍ제3항ㆍ제4항, 제124조부터 제127조까지, 제129조부터 제131조까지, 제133조, 제141조제5항 및 제142조제2항 단서를 준용한다. 이 경우 \"구속\"은 \"체포\"로, \"구속영장\"은 \"체포영장\"으로, \"피고인\"은 \"피의자\"로 본다. <개정 2016.1.6>",
+        "rerank_rank": 10,
+        "rerank_score": 3.093421355515602e-06,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "군사법원법 232조 6 준용규정",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "국회법 26조  체포동의 요청의 절차#KOBLEX-131884": "제26조(체포동의 요청의 절차)",
+      "군사법원법 112조  구속과 이유의 고지 등#KOBLEX-092488": "제112조(구속과 이유의 고지 등) 피고인에게 범죄사실의 요지, 구속이유 및 변호인을 선임할 수 있음을 말하고 변명할 기회를 주기 전에는 구속할 수 없다. 다만, 피고인이 도주한 경우에는 구속할 수 있다.",
+      "군사법원법 128조  구속과 공소사실 등의 고지#KOBLEX-092531": "제128조(구속과 공소사실 등의 고지) 피고인을 구속한 경우에는 즉시 공소사실의 요지와 변호인을 선임할 수 있음을 알려야 한다.",
+      "군사법원법 153조  압수ㆍ수색영장#KOBLEX-092619": "제153조(압수ㆍ수색영장) 공판정 밖에서의 압수 또는 수색은 영장을 발부하여 하여야 한다.",
+      "군사법원법 232조 6 준용규정#KOBLEX-092885": "제232조의6(준용규정) 군검사 또는 군사법경찰관이 피의자를 체포하는 경우에는 제114조, 제119조제1항 본문, 같은 조 제3항, 제120조, 제121조, 제123조제1항ㆍ제3항ㆍ제4항, 제124조부터 제127조까지, 제129조부터 제131조까지, 제133조, 제141조제5항 및 제142조제2항 단서를 준용한다. 이 경우 \"구속\"은 \"체포\"로, \"구속영장\"은 \"체포영장\"으로, \"피고인\"은 \"피의자\"로 본다. <개정 2016.1.6>",
+      "소년법 13조  소환 및 동행영장#KOBLEX-190525": "제13조(소환 및 동행영장)",
+      "질서위반행위규제법 37조  결정의 고지#KOBLEX-022868": "제37조(결정의 고지)",
+      "형사소송법 106조#KOBLEX-231752": "제10장 압수와 수색",
+      "형사소송법 119조  집행 중의 출입금지#KOBLEX-231784": "①압수ㆍ수색영장의 집행 중에는 타인의 출입을 금지할 수 있다.",
+      "형사소송법 120조  집행과 필요한 처분#KOBLEX-231787": "①압수ㆍ수색영장의 집행에 있어서는 건정을 열거나 개봉 기타 필요한 처분을 할 수 있다.",
+      "형사소송법 120조  집행과 필요한 처분#KOBLEX-231788": "②전항의 처분은 압수물에 대하여도 할 수 있다.",
+      "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232044": "제200조의2(영장에 의한 체포)",
+      "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232045": "①피의자가 죄를 범하였다고 의심할 만한 상당한 이유가 있고, 정당한 이유없이 제200조의 규정에 의한 출석요구에 응하지 아니하거나 응하지 아니할 우려가 있는 때에는 검사는 관할 지방법원판사에게 청구하여 체포영장을 발부받아 피의자를 체포할 수 있고, 사법경찰관은 검사에게 신청하여 검사의 청구로 관할지방법원판사의 체포영장을 발부받아 피의자를 체포할 수 있다. 다만, 다액 50만원이하의 벌금, 구류 또는 과료에 해당하는 사건에 관하여는 피의자가 일정한 주거가 없는 경우 또는 정당한 이유없이 제200조의 규정에 의한 출석요구에 응하지 아니한 경우에 한한다.",
+      "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232046": "②제1항의 청구를 받은 지방법원판사는 상당하다고 인정할 때에는 체포영장을 발부한다. 다만, 명백히 체포의 필요가 인정되지 아니하는 경우에는 그러하지 아니하다.",
+      "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232047": "③제1항의 청구를 받은 지방법원판사가 체포영장을 발부하지 아니할 때에는 청구서에 그 취지 및 이유를 기재하고 서명날인하여 청구한 검사에게 교부한다.",
+      "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232048": "④검사가 제1항의 청구를 함에 있어서 동일한 범죄사실에 관하여 그 피의자에 대하여 전에 체포영장을 청구하였거나 발부받은 사실이 있는 때에는 다시 체포영장을 청구하는 취지 및 이유를 기재하여야 한다.",
+      "형사소송법 200조 3 긴급체포#KOBLEX-232050": "제200조의3(긴급체포)",
+      "형사소송법 200조 3 긴급체포#KOBLEX-232051": "①검사 또는 사법경찰관은 피의자가 사형ㆍ무기 또는 장기 3년이상의 징역이나 금고에 해당하는 죄를 범하였다고 의심할 만한 상당한 이유가 있고, 다음 각 호의 어느 하나에 해당하는 사유가 있는 경우에 긴급을 요하여 지방법원판사의 체포영장을 받을 수 없는 때에는 그 사유를 알리고 영장없이 피의자를 체포할 수 있다. 이 경우 긴급을 요한다 함은 피의자를 우연히 발견한 경우등과 같이 체포영장을 받을 시간적 여유가 없는 때를 말한다. <개정 2007.6.1> 1. 피의자가 증거를 인멸할 염려가 있는 때 2. 피의자가 도망하거나 도망할 우려가 있는 때",
+      "형사소송법 200조 3 긴급체포#KOBLEX-232052": "②사법경찰관이 제1항의 규정에 의하여 피의자를 체포한 경우에는 즉시 검사의 승인을 얻어야 한다.",
+      "형사소송법 200조 3 긴급체포#KOBLEX-232053": "③검사 또는 사법경찰관은 제1항의 규정에 의하여 피의자를 체포한 경우에는 즉시 긴급체포서를 작성하여야 한다.",
+      "형사소송법 200조 4 긴급체포와 영장청구기간#KOBLEX-232058": "③제2항의 규정에 의하여 석방된 자는 영장없이는 동일한 범죄사실에 관하여 체포하지 못한다.",
+      "형사소송법 200조 6 준용규정#KOBLEX-232063": "제200조의6(준용규정) 제75조, 제81조제1항 본문 및 제3항, 제82조, 제83조, 제85조제1항ㆍ제3항 및 제4항, 제86조, 제87조, 제89조부터 제91조까지, 제93조, 제101조제4항 및 제102조제2항 단서의 규정은 검사 또는 사법경찰관이 피의자를 체포하는 경우에 이를 준용한다. 이 경우 \"구속\"은 이를 \"체포\"로, \"구속영장\"은 이를 \"체포영장\"으로 본다. <개정 2007.6.1>",
+      "형사소송법 204조  영장발부와 법원에 대한 통지#KOBLEX-232084": "제204조(영장발부와 법원에 대한 통지) 체포영장 또는 구속영장의 발부를 받은 후 피의자를 체포 또는 구속하지 아니하거나 체포 또는 구속한 피의자를 석방한 때에는 지체없이 검사는 영장을 발부한 법원에 그 사유를 서면으로 통지하여야 한다. <개정 1995.12.29>",
+      "형사소송법 214조 2 체포와 구속의 적부심사#KOBLEX-232109": "③법원은 제1항에 따른 청구가 다음 각 호의 어느 하나에 해당하는 때에는 제4항에 따른 심문 없이 결정으로 청구를 기각할 수 있다. <개정 1987.11.28, 1995.12.29, 2007.6.1, 2020.12.8> 1. 청구권자 아닌 사람이 청구하거나 동일한 체포영장 또는 구속영장의 발부에 대하여 재청구한 때 2. 공범이나 공동피의자의 순차청구(順次請求)가 수사 방해를 목적으로 하고 있음이 명백한 때",
+      "형사소송법 214조 2 체포와 구속의 적부심사#KOBLEX-232118": "⑫ 체포영장이나 구속영장을 발부한 법관은 제4항부터 제6항까지의 심문ㆍ조사ㆍ결정에 관여할 수 없다. 다만, 체포영장이나 구속영장을 발부한 법관 외에는 심문ㆍ조사ㆍ결정을 할 판사가 없는 경우에는 그러하지 아니하다. <개정 2020.12.8>",
+      "형사소송법 473조  집행하기 위한 소환#KOBLEX-232980": "①사형, 징역, 금고 또는 구류의 선고를 받은 자가 구금되지 아니한 때에는 검사는 형을 집행하기 위하여 이를 소환하여야 한다.",
+      "형사소송법 72조  구속과 이유의 고지#KOBLEX-231640": "제72조(구속과 이유의 고지) 피고인에 대하여 범죄사실의 요지, 구속의 이유와 변호인을 선임할 수 있음을 말하고 변명할 기회를 준 후가 아니면 구속할 수 없다. 다만, 피고인이 도망한 경우에는 그러하지 아니하다. <개정 1987.11.28, 2007.6.1>",
+      "형사소송법 88조  구속과 공소사실 등의 고지#KOBLEX-231686": "제88조(구속과 공소사실 등의 고지) 피고인을 구속한 때에는 즉시 공소사실의 요지와 변호인을 선임할 수 있음을 알려야 한다.",
+      "형의 집행 및 수용자의 처우에 관한 법률 16조 2 간이입소절차#KOBLEX-075348": "1. 「형사소송법」 제200조의2, 제200조의3 또는 제212조에 따라 체포되어 교정시설에 유치된 피의자"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "conditional",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "일반 형사절차에서의 소환 절차(예: 형사소송법 제150조)를 규정한 조항이 후보에 없습니다.",
+            "requirement_id": "E1-R1",
+            "status": "unsatisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232045",
+              "형사소송법 200조 3 긴급체포#KOBLEX-232051",
+              "형사소송법 200조 3 긴급체포#KOBLEX-232052",
+              "형사소송법 200조 3 긴급체포#KOBLEX-232053",
+              "형사소송법 200조 6 준용규정#KOBLEX-232063"
+            ],
+            "rationale": "영장 체포 및 긴급체포의 요건과 절차가 명시되어 있으나, 체포의 일반적 정의나 다른 형태의 체포 절차가 불완전하여 부분적으로만 충족됩니다.",
+            "requirement_id": "E1-R2",
+            "status": "partially_satisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "구금 시 준수해야 할 절차(예: 형사소송법 제208조)를 규정한 조항이 후보에 없습니다.",
+            "requirement_id": "E1-R3",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232045",
+          "형사소송법 200조 3 긴급체포#KOBLEX-232051",
+          "형사소송법 200조 3 긴급체포#KOBLEX-232052",
+          "형사소송법 200조 3 긴급체포#KOBLEX-232053",
+          "형사소송법 200조 6 준용규정#KOBLEX-232063"
+        ],
+        "missing_aspects": [
+          "E1-R1",
+          "E1-R3"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "체포 절차에 관한 조항(C026, C028, C011, C013, C016)이 제공되어 체포 요건(E1-R2)이 부분적으로 충족되었으나, 소환 절차(E1-R1)와 구금 절차(E1-R3)에 관한 핵심 조항이 후보에 부재하여 완료 기준을 충족하지 못합니다.",
+        "status": "partially_covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형사소송법 72조  구속과 이유의 고지#KOBLEX-231640",
+              "형사소송법 88조  구속과 공소사실 등의 고지#KOBLEX-231686"
+            ],
+            "rationale": "C002와 C005는 구속 시 고지 의무의 내용을 구체적으로 명시하고 있습니다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형사소송법 72조  구속과 이유의 고지#KOBLEX-231640",
+          "형사소송법 88조  구속과 공소사실 등의 고지#KOBLEX-231686"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "형사소송법 제72조(C002)와 제88조(C005)는 구속 시 피의자에게 고지해야 할 사항(범죄사실/공소사실 요지, 구속 이유, 변호인 선임 가능성)을 명확히 규정하고 있어 완료 기준을 충족합니다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "conditional",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형사소송법 120조  집행과 필요한 처분#KOBLEX-231787",
+              "형사소송법 119조  집행 중의 출입금지#KOBLEX-231784"
+            ],
+            "rationale": "압수·수색영장 집행 시의 일부 처분(개봉, 출입 금지)이 명시되었으나, 자택 압수의 일반적 절차 및 요건은 불완전합니다.",
+            "requirement_id": "E3-R1",
+            "status": "partially_satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형사소송법 120조  집행과 필요한 처분#KOBLEX-231787",
+              "형사소송법 119조  집행 중의 출입금지#KOBLEX-231784"
+            ],
+            "rationale": "압수·수색영장 집행 시의 일부 처분(개봉, 출입 금지)이 명시되었으나, 자택 수색의 일반적 절차 및 요건은 불완전합니다.",
+            "requirement_id": "E3-R2",
+            "status": "partially_satisfied"
+          }
+        ],
+        "evidence_item_id": "E3",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "형사소송법 120조  집행과 필요한 처분#KOBLEX-231787",
+          "형사소송법 119조  집행 중의 출입금지#KOBLEX-231784"
+        ],
+        "missing_aspects": [
+          "E3-R1",
+          "E3-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "형사소송법 제119조(C018)와 제120조(C017)는 압수·수색영장 집행 시의 일부 절차(출입 금지, 개봉 등)를 규정하지만, 자택 압수 및 수색의 일반적 요건(영장 발부 요건, 주거지 수색 특칙 등)을 완전히 명시하지 않아 법적 지원이 불완전합니다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [
+      "T1",
+      "T3"
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232045",
+        "support_spans": [
+          {
+            "end_char": 310,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 200조 3 긴급체포#KOBLEX-232051",
+        "support_spans": [
+          {
+            "end_char": 304,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 200조 3 긴급체포#KOBLEX-232052",
+        "support_spans": [
+          {
+            "end_char": 53,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 200조 3 긴급체포#KOBLEX-232053",
+        "support_spans": [
+          {
+            "end_char": 60,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 200조 6 준용규정#KOBLEX-232063",
+        "support_spans": [
+          {
+            "end_char": 224,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형사소송법 72조  구속과 이유의 고지#KOBLEX-231640",
+        "support_spans": [
+          {
+            "end_char": 144,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형사소송법 88조  구속과 공소사실 등의 고지#KOBLEX-231686",
+        "support_spans": [
+          {
+            "end_char": 69,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E3",
+        "issue_id": "I3",
+        "provision_id": "형사소송법 120조  집행과 필요한 처분#KOBLEX-231787",
+        "support_spans": [
+          {
+            "end_char": 48,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E3",
+        "issue_id": "I3",
+        "provision_id": "형사소송법 119조  집행 중의 출입금지#KOBLEX-231784",
+        "support_spans": [
+          {
+            "end_char": 34,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 9,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "경찰이 피의자를 소환, 체포, 구금할 때 준수해야 할 절차적 요건",
+        "issue_id": "I1"
+      },
+      {
+        "description": "구속 시 피의자에게 고지해야 할 사항",
+        "issue_id": "I2"
+      },
+      {
+        "description": "피의자의 자택을 압수하거나 수색할 때 필요한 절차",
+        "issue_id": "I3"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "소환, 체포, 구금 각각의 절차적 요건이 명시된 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "소환 시 경찰이 준수해야 할 절차"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "체포 시 경찰이 준수해야 할 절차"
+          },
+          {
+            "requirement_id": "E1-R3",
+            "text": "구금 시 경찰이 준수해야 할 절차"
+          }
+        ],
+        "critical": true,
+        "description": "소환, 체포, 구금 시 경찰이 준수해야 할 절차적 요건",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 소환, 체포, 구금 시 필요한 절차를 직접적으로 묻고 있으므로 핵심 결론에 필수",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T3"
+        ],
+        "completion_criteria": "자택 압수 및 수색 시 필요한 법적 절차와 요건이 명시된 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E3-R1",
+            "text": "자택 압수 시 필요한 절차"
+          },
+          {
+            "requirement_id": "E3-R2",
+            "text": "자택 수색 시 필요한 절차"
+          }
+        ],
+        "critical": true,
+        "description": "자택 압수 및 수색 시 필요한 절차와 요건",
+        "evidence_item_id": "E3",
+        "evidence_type": "procedure",
+        "issue_id": "I3",
+        "necessity_reason": "질문에서 자택 압수 및 수색 시 필요한 절차를 직접적으로 묻고 있으므로 핵심 결론에 필수",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 경찰로부터 절도 혐의를 받고 있는 상황입니다. 경찰은 갑을 체포하기 위해 그의 자택으로 가기로 결정합니다. 또한, 경찰은 그의 집을 수색하여 도난 물품을 찾으려고 합니다. 하지만, 이 모든 절차에서 필요한 법적 요건을 반드시 따라야 합니다. [질문] 경찰이 갑을 소환하거나 체포, 구금할 때 필요한 절차와 구속 시 고지해야 할 내용은 무엇이며, 갑의 자택을 압수나 수색할 때 필요한 절차는 무엇인가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "소환 체포 구금 절차",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "소환",
+          "체포",
+          "구금",
+          "절차"
+        ],
+        "query_text": "소환 체포 구금 절차 [원문 맥락] 하지만, 이 모든 절차에서 필요한 법적 요건을 반드시 따라야 합니다. 경찰이 갑을 소환하거나 체포, 구금할 때 필요한 절차와 구속 시 고지해야 할 내용은 무엇이며, 갑의 자택을 압수나 수색할 때 필요한 절차는 무엇인가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "소환 체포 구금 절차",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "구속 고지 내용",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "구속",
+          "고지",
+          "내용"
+        ],
+        "query_text": "구속 고지 내용 [원문 맥락] 하지만, 이 모든 절차에서 필요한 법적 요건을 반드시 따라야 합니다. 경찰이 갑을 소환하거나 체포, 구금할 때 필요한 절차와 구속 시 고지해야 할 내용은 무엇이며, 갑의 자택을 압수나 수색할 때 필요한 절차는 무엇인가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "구속 고지 내용",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "first_stage_query_text": "자택 압수 수색 절차",
+        "issue_id": "I3",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "자택",
+          "압수",
+          "수색",
+          "절차"
+        ],
+        "query_text": "자택 압수 수색 절차 [원문 맥락] 하지만, 이 모든 절차에서 필요한 법적 요건을 반드시 따라야 합니다. 경찰이 갑을 소환하거나 체포, 구금할 때 필요한 절차와 구속 시 고지해야 할 내용은 무엇이며, 갑의 자택을 압수나 수색할 때 필요한 절차는 무엇인가?",
+        "request_id": "RQ3",
+        "rerank_query_text": "자택 압수 수색 절차",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형사소송법 소환 절차 피의자",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사소송법",
+          "소환",
+          "절차",
+          "피의자"
+        ],
+        "query_text": "형사소송법 제150조 소환 절차 [원문 맥락] 하지만, 이 모든 절차에서 필요한 법적 요건을 반드시 따라야 합니다. 경찰이 갑을 소환하거나 체포, 구금할 때 필요한 절차와 구속 시 고지해야 할 내용은 무엇이며, 갑의 자택을 압수나 수색할 때 필요한 절차는 무엇인가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "소환 시 경찰이 준수해야 할 절차 형사소송법 제150조",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형사소송법 체포 절차 긴급체포",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사소송법",
+          "체포",
+          "절차",
+          "긴급체포"
+        ],
+        "query_text": "형사소송법 제200조 체포 절차 [원문 맥락] 하지만, 이 모든 절차에서 필요한 법적 요건을 반드시 따라야 합니다. 경찰이 갑을 소환하거나 체포, 구금할 때 필요한 절차와 구속 시 고지해야 할 내용은 무엇이며, 갑의 자택을 압수나 수색할 때 필요한 절차는 무엇인가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "체포 시 경찰이 준수해야 할 절차 형사소송법 제200조",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형사소송법 구금 절차 피의자",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사소송법",
+          "구금",
+          "절차",
+          "피의자"
+        ],
+        "query_text": "형사소송법 제208조 구금 절차 [원문 맥락] 하지만, 이 모든 절차에서 필요한 법적 요건을 반드시 따라야 합니다. 경찰이 갑을 소환하거나 체포, 구금할 때 필요한 절차와 구속 시 고지해야 할 내용은 무엇이며, 갑의 자택을 압수나 수색할 때 필요한 절차는 무엇인가?",
+        "request_id": "GRQ-R2-3",
+        "rerank_query_text": "구금 시 경찰이 준수해야 할 절차 형사소송법 제208조",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "first_stage_query_text": "형사소송법 압수 수색 영장 주거지",
+        "issue_id": "I3",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사소송법",
+          "압수",
+          "수색",
+          "영장",
+          "주거지"
+        ],
+        "query_text": "형사소송법 제119조 압수 수색 영장 [원문 맥락] 하지만, 이 모든 절차에서 필요한 법적 요건을 반드시 따라야 합니다. 경찰이 갑을 소환하거나 체포, 구금할 때 필요한 절차와 구속 시 고지해야 할 내용은 무엇이며, 갑의 자택을 압수나 수색할 때 필요한 절차는 무엇인가?",
+        "request_id": "GRQ-R2-4",
+        "rerank_query_text": "자택 압수 및 수색 시 필요한 절차 형사소송법 제119조",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "first_stage_query_text": "형사소송법 압수 수색 절차 집행",
+        "issue_id": "I3",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사소송법",
+          "압수",
+          "수색",
+          "절차",
+          "집행"
+        ],
+        "query_text": "형사소송법 제120조 압수 수색 절차 [원문 맥락] 하지만, 이 모든 절차에서 필요한 법적 요건을 반드시 따라야 합니다. 경찰이 갑을 소환하거나 체포, 구금할 때 필요한 절차와 구속 시 고지해야 할 내용은 무엇이며, 갑의 자택을 압수나 수색할 때 필요한 절차는 무엇인가?",
+        "request_id": "GRQ-R2-5",
+        "rerank_query_text": "자택 압수 및 수색 시 필요한 절차 형사소송법 제120조",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "소환서 체포영장 구금기간",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "소환서",
+          "체포영장",
+          "구금기간",
+          "피의자",
+          "절차"
+        ],
+        "query_text": "피의자 소환서 발부 체포영장 청구 구금기간 제한 [원문 맥락] 하지만, 이 모든 절차에서 필요한 법적 요건을 반드시 따라야 합니다. 경찰이 갑을 소환하거나 체포, 구금할 때 필요한 절차와 구속 시 고지해야 할 내용은 무엇이며, 갑의 자택을 압수나 수색할 때 필요한 절차는 무엇인가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "소환 체포 구금 시 경찰 준수 절차 형사소송법",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 경찰로부터 절도 혐의를 받고 있는 상황입니다. 경찰은 갑을 체포하기 위해 그의 자택으로 가기로 결정합니다. 또한, 경찰은 그의 집을 수색하여 도난 물품을 찾으려고 합니다. 하지만, 이 모든 절차에서 필요한 법적 요건을 반드시 따라야 합니다.\n\n[질문]\n경찰이 갑을 소환하거나 체포, 구금할 때 필요한 절차와 구속 시 고지해야 할 내용은 무엇이며, 갑의 자택을 압수나 수색할 때 필요한 절차는 무엇인가?",
+    "remaining_request_budget": 0,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "소환, 체포, 구금 각각의 절차적 요건이 명시된 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "소환 시 경찰이 준수해야 할 절차"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "체포 시 경찰이 준수해야 할 절차"
+          },
+          {
+            "requirement_id": "E1-R3",
+            "text": "구금 시 경찰이 준수해야 할 절차"
+          }
+        ],
+        "critical": true,
+        "description": "소환, 체포, 구금 시 경찰이 준수해야 할 절차적 요건",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 소환, 체포, 구금 시 필요한 절차를 직접적으로 묻고 있으므로 핵심 결론에 필수",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "구속 시 고지해야 할 법적 내용이 명시된 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "구속 시 고지해야 할 법적 내용"
+          }
+        ],
+        "critical": true,
+        "description": "구속 시 피의자에게 고지해야 할 사항",
+        "evidence_item_id": "E2",
+        "evidence_type": "element",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 구속 시 고지해야 할 내용을 직접적으로 묻고 있으므로 핵심 결론에 필수",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T3"
+        ],
+        "completion_criteria": "자택 압수 및 수색 시 필요한 법적 절차와 요건이 명시된 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E3-R1",
+            "text": "자택 압수 시 필요한 절차"
+          },
+          {
+            "requirement_id": "E3-R2",
+            "text": "자택 수색 시 필요한 절차"
+          }
+        ],
+        "critical": true,
+        "description": "자택 압수 및 수색 시 필요한 절차와 요건",
+        "evidence_item_id": "E3",
+        "evidence_type": "procedure",
+        "issue_id": "I3",
+        "necessity_reason": "질문에서 자택 압수 및 수색 시 필요한 절차를 직접적으로 묻고 있으므로 핵심 결론에 필수",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "32670349-8144-4053-b82b-bce60a9079ff",
+    "seen_provision_ids": [
+      "형사소송법 88조  구속과 공소사실 등의 고지#KOBLEX-231686",
+      "형사소송법 473조  집행하기 위한 소환#KOBLEX-232980",
+      "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232046",
+      "형사소송법 119조  집행 중의 출입금지#KOBLEX-231784",
+      "군사법원법 128조  구속과 공소사실 등의 고지#KOBLEX-092531",
+      "군사법원법 153조  압수ㆍ수색영장#KOBLEX-092619",
+      "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232047",
+      "형의 집행 및 수용자의 처우에 관한 법률 16조 2 간이입소절차#KOBLEX-075348",
+      "형사소송법 200조 6 준용규정#KOBLEX-232063",
+      "질서위반행위규제법 37조  결정의 고지#KOBLEX-022868",
+      "형사소송법 120조  집행과 필요한 처분#KOBLEX-231788",
+      "군사법원법 112조  구속과 이유의 고지 등#KOBLEX-092488",
+      "형사소송법 200조 3 긴급체포#KOBLEX-232053",
+      "소년법 13조  소환 및 동행영장#KOBLEX-190525",
+      "형사소송법 200조 3 긴급체포#KOBLEX-232051",
+      "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232044",
+      "형사소송법 214조 2 체포와 구속의 적부심사#KOBLEX-232109",
+      "형사소송법 200조 4 긴급체포와 영장청구기간#KOBLEX-232058",
+      "형사소송법 200조 3 긴급체포#KOBLEX-232050",
+      "국회법 26조  체포동의 요청의 절차#KOBLEX-131884",
+      "군사법원법 232조 6 준용규정#KOBLEX-092885",
+      "형사소송법 72조  구속과 이유의 고지#KOBLEX-231640",
+      "형사소송법 200조 3 긴급체포#KOBLEX-232052",
+      "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232048",
+      "형사소송법 204조  영장발부와 법원에 대한 통지#KOBLEX-232084",
+      "형사소송법 106조#KOBLEX-231752",
+      "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232045",
+      "형사소송법 214조 2 체포와 구속의 적부심사#KOBLEX-232118",
+      "형사소송법 120조  집행과 필요한 처분#KOBLEX-231787"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

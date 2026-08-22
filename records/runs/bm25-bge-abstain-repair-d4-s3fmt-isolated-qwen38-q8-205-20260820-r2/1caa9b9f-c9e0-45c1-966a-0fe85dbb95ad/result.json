@@ -1,0 +1,587 @@
+{
+  "abstention_reason": null,
+  "answer": "농어촌정비사업의 시행으로 토지의 이동이 있는 때에는 그 정비사업의 시행자가 시장·군수에게 신고하여야 한다.[CT1]\n지역·지구등에서의 해당 사업이 완료된 날의 다음 날에 그 지역·지구등의 지정은 해제된 것으로 본다.[CT2]\n전제: 을이 농어촌정비사업의 '시행자'에 해당하는 것으로 가정합니다.\n전제: 해당 지역이 농어촌정비법상 '지역·지구등'에 해당하며, 사업 완료 시점이 명확히 확정된 것으로 가정합니다.\n한계: 본 답변은 제공된 법령 조항에 기반한 일반적 법적 해석이며, 구체적인 행정 절차나 개별 사안에 따른 예외적 상황은 다루지 않습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "농어촌정비사업의 시행으로 토지의 이동이 있는 때에는 그 정비사업의 시행자가 시장·군수에게 신고하여야 한다.[CT1]\n지역·지구등에서의 해당 사업이 완료된 날의 다음 날에 그 지역·지구등의 지정은 해제된 것으로 본다.[CT2]\n전제: 을이 농어촌정비사업의 '시행자'에 해당하는 것으로 가정합니다.\n전제: 해당 지역이 농어촌정비법상 '지역·지구등'에 해당하며, 사업 완료 시점이 명확히 확정된 것으로 가정합니다.\n한계: 본 답변은 제공된 법령 조항에 기반한 일반적 법적 해석이며, 구체적인 행정 절차나 개별 사안에 따른 예외적 상황은 다루지 않습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T17:41:42.524370+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 229123.549,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 183,
+      "dedup_collapse": 34,
+      "evidence_fusion": 183,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 183
+    }
+  },
+  "run_id": "1caa9b9f-c9e0-45c1-966a-0fe85dbb95ad",
+  "state": {
+    "accepted_provision_ids": [
+      "농어촌정비법 117조  지정 해제#KOBLEX-025884",
+      "농어촌정비법 121조  토지 이동의 신청 특례#KOBLEX-025910"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_obligation",
+        "question_anchor": "누구에게 신고하여야",
+        "requested_output": "농어촌정비사업 시행으로 토지의 이동이 있는 경우 신고의무자가 신고를 해야 하는 상대방(관할 기관 또는 주체)"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_effect",
+        "question_anchor": "지정은 해제되는가",
+        "requested_output": "농어촌정비사업 시행이 완료된 경우 해당 지역의 지정이 해제되는지 여부 및 법적 근거"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "농어촌정비법 121조  토지 이동의 신청 특례#KOBLEX-025910"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 3.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "농어촌정비법 121조  토지 이동의 신청 특례#KOBLEX-025910",
+        "provision_text": "② 농어촌정비사업의 시행으로 토지의 이동이 있는 때에는 그 정비사업의 시행자가 시장ㆍ군수에게 신고하여야 한다. <개정 2016.12.2>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9997761845588684,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "농어촌정비법 121조  토지 이동의 신청 특례 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농어촌정비법 117조  지정 해제#KOBLEX-025884"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 4.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 117조  지정 해제#KOBLEX-025884",
+        "provision_text": "① 지역ㆍ지구등은 다음 각 호의 어느 하나에 해당하는 날의 다음 날에 해제된 것으로 본다. 1. 제101조에 따른 마을정비구역이 지정ㆍ고시된 날부터 1년이 되는 날까지 제59조에 따른 생활환경정비사업 시행계획 승인을 신청하지 아니하는 경우에는 1년이 되는 날 2. 제82조에 따른 농어촌 관광휴양단지와 제94조에 따른 한계농지등 정비지구의 고시가 있는 날부터 2년이 되는 날까지 사업 시행을 하지 아니하는 경우에는 2년이 되는 날 3. 지역ㆍ지구등에서의 해당 사업이 완료된 날",
+        "rerank_rank": 1,
+        "rerank_score": 0.970523476600647,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "농어촌정비법 117조  지정 해제 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농어촌정비법 33조  권리 변동의 신고#KOBLEX-025468"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "농어촌정비법 33조  권리 변동의 신고#KOBLEX-025468",
+        "provision_text": "제33조(권리 변동의 신고) 제26조제1항에 따른 인가 전에 이미 농업생산기반 정비사업 시행지역에 있는 토지에 대하여 권리의 이전, 설정, 변경, 소멸 또는 처분에 제한이 있었으면 그 당사자는 그 농업생산기반 정비사업 시행자에게 그 사실을 신고하여야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.7769872546195984,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "농어촌정비법 33조  권리 변동의 신고",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농어촌정비법 117조  지정 해제#KOBLEX-025883"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 30.202735932343835,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 117조  지정 해제#KOBLEX-025883",
+        "provision_text": "제117조(지정 해제)",
+        "rerank_rank": 2,
+        "rerank_score": 0.431453138589859,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "농어촌정비법 117조  지정 해제",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농어촌정비법 50조  지역권의 효력#KOBLEX-025536"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 92,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 50조  지역권의 효력#KOBLEX-025536",
+        "provision_text": "② 농업생산기반 정비사업 시행으로 인하여 지역권자가 그 권리를 행사하는 이익을 받을 필요가 없게 된 때에는 그 지역권은 소멸된다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.290810763835907,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "농어촌정비법 50조  지역권의 효력 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농어촌정비법 106조  다른 법률에 따른 지정 등의 의제#KOBLEX-025821"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 3.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 106조  다른 법률에 따른 지정 등의 의제#KOBLEX-025821",
+        "provision_text": "② 제9조, 제58조, 제59조, 제82조, 제83조 또는 제96조에 따라 농어촌정비사업의 시행자가 농어촌정비사업의 계획 승인을 받은 경우 제4항에 따른 협의를 거친 사항은 다음 각 호의 허가, 인가, 협의, 동의, 면허, 해제, 신고 또는 승인 등(이하 \"인ㆍ허가등\"이라 한다)을 받은 것으로 보며, 농어촌정비사업의 계획을 고시하였을 때에는 관계 법률에 따른 인ㆍ허가등의 고시 또는 공고를 한 것으로 본다. <개정 2009.6.9, 2010.4.15, 2010.5.31, 2011.4.14, 2012.2.17, 2012.2.22, 2014.1.14, 2014.1.21, 2014.6.3, 2016.1.19, 2020.2.11, 2020.3.31, 2021.7.20, 2021.11.30, 2022.12.27, 2023.3.21, 2023.8.8, 2024.2.6> 1. 「건축법」 제11조에 따른 건축허가, 같은 법 제14조에 따른 건축신고 및 같은 법 제20조에 따른 가설건축물 건축허가 또는 신고 2. 「골재채취법」 제22조에 따른 골재채취의 허가 및 같은 법 제32조에 따른 골재의 선별ㆍ세척 등의 신고 3. 「공유수면 관리 및 매립에 관한 법률」 제8조에 따른 공유수면의 점용ㆍ사용허가, 같은 법 제17조에 따른 점용ㆍ사용 실시계획의 승인 또는 신고, 같은 법 제28조에 따른 공유수면의 매립면허, 같은 법 제33조에 따른 매립면허의 고시, 같은 법 제35조에 따른 국가 등이 시행하는 매립의 협의 또는 승인 및 같은 법 제38조에 따른 공유수면매립실시계획의 승인ㆍ고시 4. 삭제 <2010.4.15> 5. 「공유재산 및 물품 관리법」 제20조에 따른 사용ㆍ수익의 허가 6. 「관광진흥법」 제15조에 따른 휴양 콘도미니엄 사업계획의 승인 7. 「국유재산법」 제30조에 따른 사용허가 8. 「국토의 계획 및 이용에 관한 법률」 제30조에 따른 도시ㆍ군관리계획의 결정(용도지역, 용도지구 및 용도구역의 결정 및 변경은 제외한다), 같은 법 제43조에 따른 도시ㆍ군계획시설의 설치에 관한 도시ㆍ군관리계획의 결정, 같은 법 제56조에 따른 개발행위의 허가, 같은 법 제86조에 따른 도시ㆍ군계획시설사업시행자의 지정 및 같은 법 제88조에 따른 실시계획의 인가 9. 「농지법」 제34조제1항에 따른 농지전용의 허가 및 같은 법 제35조에 따른 농지전용의 신고 10. 「도로법」 제36조에 따른 도로관리청이 아닌 자에 대한 도로공사 시행의 허가, 같은 법 제40조에 따른 접도구역(接道區域)에서의 행위에 대한 허가, 같은 법 제61조에 따른 도로의 점용 허가 및 같은 법 제107조에 따른 도로관리청과의 협의 또는 승인 11. 「도시개발법」 제11조에 따른 도시개발사업 시행자 지정 및 같은 법 제17조에 따른 도시개발사업실시계획의 인가 12. 「문화유산의 보존 및 활용에 관한 법률」 제35조제1항제1호ㆍ제2호에 따른 허가 및 같은 법 제66조 단서(「자연유산의 보존 및 활용에 관한 법률」 제63조에 따라 준용하는 경우를 포함한다)에 따른 국유지 사용허가와 「자연유산의 보존 및 활용에 관한 법률」 제17조제1항제1호ㆍ제2호ㆍ제4호 및 제5호에 따른 허가 13. 「사도법」 제4조에 따른 사도(私道)의 개설 허가 14. 「사방사업법」 제14조에 따른 벌채 등의 허가 및 같은 법 제20조에 따른 사방지(砂防地) 지정의 해제 15. 「산림자원의 조성 및 관리에 관한 법률」 제36조제1항ㆍ제5항에 따른 입목벌채등의 허가ㆍ신고 및 「산림보호법」 제9조제1항 및 제2항제1호ㆍ제2호에 따른 산림보호구역(산림유전자원보호구역은 제외한다)에서의 행위의 허가ㆍ신고 16. 「산업입지 및 개발에 관한 법률」 제12조에 따른 산업단지에서의 토지형질변경 등의 허가 17. 「산지관리법」 제6조에 따른 보전산지의 변경ㆍ해제, 같은 법 제11조에 따른 산지전용ㆍ일시사용제한지역 지정의 해제, 같은 법 제14조에 따른 산지전용허가, 같은 법 제15조에 따른 산지전용신고, 같은 법 제15조의2에 따른 산지일시사용허가ㆍ신고 및 같은 법 제25조에 따른 토석채취허가 18. 「소방시설 설치 및 관리에 관한 법률」 제6조에 따른 건축허가등의 동의 19. 「소하천정비법」 제10조에 따른 소하천공사의 시행허가 및 같은 법 제14조에 따른 소하천점용 등의 허가 20. 「수도법」 제17조에 따른 일반수도사업의 인가 및 같은 법 제52조에 따른 전용수도사업의 인가 21. 「수산자원관리법」 제47조제2항에 따른 보호수면구역에서의 공사 시행의 승인 22. 「자연공원법」 제23조에 따른 공원구역에서의 행위허가 22의2. 「자연유산의 보존 및 활용에 관한 법률」 제17조제1항에 따른 허가 23. 「장사 등에 관한 법률」 제27조에 따른 무연분묘(無緣墳墓)의 개장(改葬) 허가 24. 「전기사업법」 제61조에 따른 전기사업용전기설비의 공사계획 인가 또는 신고 및 「전기안전관리법」 제8조에 따른 자가용전기설비의 공사계획 인가 또는 신고 25. 「주택법」 제15조에 따른 사업계획의 승인 26. 「청소년활동 진흥법」 제11조에 따른 청소년 수련시설의 설치ㆍ운영의 허가 27. 「체육시설의 설치ㆍ이용에 관한 법률」 제12조에 따른 사업계획의 승인 28. 「초지법」 제21조의2에 따른 토지의 형질변경 등의 허가와 같은 법 제23조에 따른 초지전용 허가ㆍ신고 또는 협의 29. 「공간정보의 구축 및 관리 등에 관한 법률」 제15조제4항에 따른 지도등의 간행 심사 및 같은 법 제86조제1항에 따른 사업의 시작ㆍ변경 또는 완료의 신고 30. 「폐기물관리법」 제29조에 따른 폐기물처리시설의 설치 승인 또는 신고 31. 「하수도법」 제6조ㆍ제11조ㆍ제16조ㆍ제24조ㆍ제27조 및 제34조에 따른 하수도정비기본계획의 협의ㆍ승인, 공공하수도 설치인가, 공사시행 허가, 점용허가, 배수설비의 설치신고 및 개인하수처리시설의 설치신고 32. 「하천법」 제6조에 따른 하천관리청과의 협의 또는 승인, 같은 법 제30조에 따른 하천공사 시행의 허가, 같은 법 제33조에 따른 하천의 점용허가, 같은 법 제38조에 따른 홍수관리구역에서의 행위허가, 같은 법 제50조에 따른 하천수의 사용허가 및 같은 법 제85조에 따른 폐천부지등의 양여",
+        "rerank_rank": 4,
+        "rerank_score": 0.05623824521899223,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "농어촌정비법 106조  다른 법률에 따른 지정 등의 의제 2항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농어촌정비법 117조  지정 해제#KOBLEX-025885"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 88,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 117조  지정 해제#KOBLEX-025885",
+        "provision_text": "② 제1항제1호에 따라 마을정비구역의 지정이 해제된 경우로서 제106조제1항 각 호에 따른 지정ㆍ결정ㆍ확정 등이 있으면 해당 마을정비구역 지정 전의 상태로 환원 또는 폐지된 것으로 본다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.014672083780169487,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "농어촌정비법 117조  지정 해제 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농어촌정비법 117조  지정 해제#KOBLEX-025886"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 3.0,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 117조  지정 해제#KOBLEX-025886",
+        "provision_text": "③ 지역ㆍ지구등의 지정권자는 제1항에 따라 지역ㆍ지구등의 지정이 해제되면 대통령령으로 정하는 바에 따라 이를 고시하고 관계 행정기관의 장에게 통보하여야 하며, 시장ㆍ군수ㆍ구청장은 관계 서류를 일반인에게 열람하도록 하여야 한다. 이 경우 해제에 따른 지형도면 고시, 주민 의견 청취 등에 관하여는 「토지이용규제 기본법」 제8조에 따른다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.008477319031953812,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "농어촌정비법 117조  지정 해제 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농어촌정비법 121조  토지 이동의 신청 특례#KOBLEX-025908"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 22.069488431028674,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "농어촌정비법 121조  토지 이동의 신청 특례#KOBLEX-025908",
+        "provision_text": "제121조(토지 이동의 신청 특례)",
+        "rerank_rank": 3,
+        "rerank_score": 0.0014629900688305497,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "농어촌정비법 121조  토지 이동의 신청 특례",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농어촌정비법 110조  토지 등의 수용#KOBLEX-025840"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 99,
+        "first_stage_score": 1.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "농어촌정비법 110조  토지 등의 수용#KOBLEX-025840",
+        "provision_text": "① 농어촌정비사업에 필요한 토지, 건축물과 부속토지는 협의매수하는 것을 원칙으로 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.0008187013445422053,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "농어촌정비법 110조  토지 등의 수용 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "농어촌정비법 106조  다른 법률에 따른 지정 등의 의제#KOBLEX-025821": "② 제9조, 제58조, 제59조, 제82조, 제83조 또는 제96조에 따라 농어촌정비사업의 시행자가 농어촌정비사업의 계획 승인을 받은 경우 제4항에 따른 협의를 거친 사항은 다음 각 호의 허가, 인가, 협의, 동의, 면허, 해제, 신고 또는 승인 등(이하 \"인ㆍ허가등\"이라 한다)을 받은 것으로 보며, 농어촌정비사업의 계획을 고시하였을 때에는 관계 법률에 따른 인ㆍ허가등의 고시 또는 공고를 한 것으로 본다. <개정 2009.6.9, 2010.4.15, 2010.5.31, 2011.4.14, 2012.2.17, 2012.2.22, 2014.1.14, 2014.1.21, 2014.6.3, 2016.1.19, 2020.2.11, 2020.3.31, 2021.7.20, 2021.11.30, 2022.12.27, 2023.3.21, 2023.8.8, 2024.2.6> 1. 「건축법」 제11조에 따른 건축허가, 같은 법 제14조에 따른 건축신고 및 같은 법 제20조에 따른 가설건축물 건축허가 또는 신고 2. 「골재채취법」 제22조에 따른 골재채취의 허가 및 같은 법 제32조에 따른 골재의 선별ㆍ세척 등의 신고 3. 「공유수면 관리 및 매립에 관한 법률」 제8조에 따른 공유수면의 점용ㆍ사용허가, 같은 법 제17조에 따른 점용ㆍ사용 실시계획의 승인 또는 신고, 같은 법 제28조에 따른 공유수면의 매립면허, 같은 법 제33조에 따른 매립면허의 고시, 같은 법 제35조에 따른 국가 등이 시행하는 매립의 협의 또는 승인 및 같은 법 제38조에 따른 공유수면매립실시계획의 승인ㆍ고시 4. 삭제 <2010.4.15> 5. 「공유재산 및 물품 관리법」 제20조에 따른 사용ㆍ수익의 허가 6. 「관광진흥법」 제15조에 따른 휴양 콘도미니엄 사업계획의 승인 7. 「국유재산법」 제30조에 따른 사용허가 8. 「국토의 계획 및 이용에 관한 법률」 제30조에 따른 도시ㆍ군관리계획의 결정(용도지역, 용도지구 및 용도구역의 결정 및 변경은 제외한다), 같은 법 제43조에 따른 도시ㆍ군계획시설의 설치에 관한 도시ㆍ군관리계획의 결정, 같은 법 제56조에 따른 개발행위의 허가, 같은 법 제86조에 따른 도시ㆍ군계획시설사업시행자의 지정 및 같은 법 제88조에 따른 실시계획의 인가 9. 「농지법」 제34조제1항에 따른 농지전용의 허가 및 같은 법 제35조에 따른 농지전용의 신고 10. 「도로법」 제36조에 따른 도로관리청이 아닌 자에 대한 도로공사 시행의 허가, 같은 법 제40조에 따른 접도구역(接道區域)에서의 행위에 대한 허가, 같은 법 제61조에 따른 도로의 점용 허가 및 같은 법 제107조에 따른 도로관리청과의 협의 또는 승인 11. 「도시개발법」 제11조에 따른 도시개발사업 시행자 지정 및 같은 법 제17조에 따른 도시개발사업실시계획의 인가 12. 「문화유산의 보존 및 활용에 관한 법률」 제35조제1항제1호ㆍ제2호에 따른 허가 및 같은 법 제66조 단서(「자연유산의 보존 및 활용에 관한 법률」 제63조에 따라 준용하는 경우를 포함한다)에 따른 국유지 사용허가와 「자연유산의 보존 및 활용에 관한 법률」 제17조제1항제1호ㆍ제2호ㆍ제4호 및 제5호에 따른 허가 13. 「사도법」 제4조에 따른 사도(私道)의 개설 허가 14. 「사방사업법」 제14조에 따른 벌채 등의 허가 및 같은 법 제20조에 따른 사방지(砂防地) 지정의 해제 15. 「산림자원의 조성 및 관리에 관한 법률」 제36조제1항ㆍ제5항에 따른 입목벌채등의 허가ㆍ신고 및 「산림보호법」 제9조제1항 및 제2항제1호ㆍ제2호에 따른 산림보호구역(산림유전자원보호구역은 제외한다)에서의 행위의 허가ㆍ신고 16. 「산업입지 및 개발에 관한 법률」 제12조에 따른 산업단지에서의 토지형질변경 등의 허가 17. 「산지관리법」 제6조에 따른 보전산지의 변경ㆍ해제, 같은 법 제11조에 따른 산지전용ㆍ일시사용제한지역 지정의 해제, 같은 법 제14조에 따른 산지전용허가, 같은 법 제15조에 따른 산지전용신고, 같은 법 제15조의2에 따른 산지일시사용허가ㆍ신고 및 같은 법 제25조에 따른 토석채취허가 18. 「소방시설 설치 및 관리에 관한 법률」 제6조에 따른 건축허가등의 동의 19. 「소하천정비법」 제10조에 따른 소하천공사의 시행허가 및 같은 법 제14조에 따른 소하천점용 등의 허가 20. 「수도법」 제17조에 따른 일반수도사업의 인가 및 같은 법 제52조에 따른 전용수도사업의 인가 21. 「수산자원관리법」 제47조제2항에 따른 보호수면구역에서의 공사 시행의 승인 22. 「자연공원법」 제23조에 따른 공원구역에서의 행위허가 22의2. 「자연유산의 보존 및 활용에 관한 법률」 제17조제1항에 따른 허가 23. 「장사 등에 관한 법률」 제27조에 따른 무연분묘(無緣墳墓)의 개장(改葬) 허가 24. 「전기사업법」 제61조에 따른 전기사업용전기설비의 공사계획 인가 또는 신고 및 「전기안전관리법」 제8조에 따른 자가용전기설비의 공사계획 인가 또는 신고 25. 「주택법」 제15조에 따른 사업계획의 승인 26. 「청소년활동 진흥법」 제11조에 따른 청소년 수련시설의 설치ㆍ운영의 허가 27. 「체육시설의 설치ㆍ이용에 관한 법률」 제12조에 따른 사업계획의 승인 28. 「초지법」 제21조의2에 따른 토지의 형질변경 등의 허가와 같은 법 제23조에 따른 초지전용 허가ㆍ신고 또는 협의 29. 「공간정보의 구축 및 관리 등에 관한 법률」 제15조제4항에 따른 지도등의 간행 심사 및 같은 법 제86조제1항에 따른 사업의 시작ㆍ변경 또는 완료의 신고 30. 「폐기물관리법」 제29조에 따른 폐기물처리시설의 설치 승인 또는 신고 31. 「하수도법」 제6조ㆍ제11조ㆍ제16조ㆍ제24조ㆍ제27조 및 제34조에 따른 하수도정비기본계획의 협의ㆍ승인, 공공하수도 설치인가, 공사시행 허가, 점용허가, 배수설비의 설치신고 및 개인하수처리시설의 설치신고 32. 「하천법」 제6조에 따른 하천관리청과의 협의 또는 승인, 같은 법 제30조에 따른 하천공사 시행의 허가, 같은 법 제33조에 따른 하천의 점용허가, 같은 법 제38조에 따른 홍수관리구역에서의 행위허가, 같은 법 제50조에 따른 하천수의 사용허가 및 같은 법 제85조에 따른 폐천부지등의 양여",
+      "농어촌정비법 110조  토지 등의 수용#KOBLEX-025840": "① 농어촌정비사업에 필요한 토지, 건축물과 부속토지는 협의매수하는 것을 원칙으로 한다.",
+      "농어촌정비법 117조  지정 해제#KOBLEX-025883": "제117조(지정 해제)",
+      "농어촌정비법 117조  지정 해제#KOBLEX-025884": "① 지역ㆍ지구등은 다음 각 호의 어느 하나에 해당하는 날의 다음 날에 해제된 것으로 본다. 1. 제101조에 따른 마을정비구역이 지정ㆍ고시된 날부터 1년이 되는 날까지 제59조에 따른 생활환경정비사업 시행계획 승인을 신청하지 아니하는 경우에는 1년이 되는 날 2. 제82조에 따른 농어촌 관광휴양단지와 제94조에 따른 한계농지등 정비지구의 고시가 있는 날부터 2년이 되는 날까지 사업 시행을 하지 아니하는 경우에는 2년이 되는 날 3. 지역ㆍ지구등에서의 해당 사업이 완료된 날",
+      "농어촌정비법 117조  지정 해제#KOBLEX-025885": "② 제1항제1호에 따라 마을정비구역의 지정이 해제된 경우로서 제106조제1항 각 호에 따른 지정ㆍ결정ㆍ확정 등이 있으면 해당 마을정비구역 지정 전의 상태로 환원 또는 폐지된 것으로 본다.",
+      "농어촌정비법 117조  지정 해제#KOBLEX-025886": "③ 지역ㆍ지구등의 지정권자는 제1항에 따라 지역ㆍ지구등의 지정이 해제되면 대통령령으로 정하는 바에 따라 이를 고시하고 관계 행정기관의 장에게 통보하여야 하며, 시장ㆍ군수ㆍ구청장은 관계 서류를 일반인에게 열람하도록 하여야 한다. 이 경우 해제에 따른 지형도면 고시, 주민 의견 청취 등에 관하여는 「토지이용규제 기본법」 제8조에 따른다.",
+      "농어촌정비법 121조  토지 이동의 신청 특례#KOBLEX-025908": "제121조(토지 이동의 신청 특례)",
+      "농어촌정비법 121조  토지 이동의 신청 특례#KOBLEX-025910": "② 농어촌정비사업의 시행으로 토지의 이동이 있는 때에는 그 정비사업의 시행자가 시장ㆍ군수에게 신고하여야 한다. <개정 2016.12.2>",
+      "농어촌정비법 33조  권리 변동의 신고#KOBLEX-025468": "제33조(권리 변동의 신고) 제26조제1항에 따른 인가 전에 이미 농업생산기반 정비사업 시행지역에 있는 토지에 대하여 권리의 이전, 설정, 변경, 소멸 또는 처분에 제한이 있었으면 그 당사자는 그 농업생산기반 정비사업 시행자에게 그 사실을 신고하여야 한다.",
+      "농어촌정비법 50조  지역권의 효력#KOBLEX-025536": "② 농업생산기반 정비사업 시행으로 인하여 지역권자가 그 권리를 행사하는 이익을 받을 필요가 없게 된 때에는 그 지역권은 소멸된다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "농어촌정비법 121조  토지 이동의 신청 특례#KOBLEX-025910"
+            ],
+            "rationale": "C001 explicitly mandates reporting to the Mayor or County Head, satisfying the requirement to identify the reporting authority.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "농어촌정비법 121조  토지 이동의 신청 특례#KOBLEX-025910"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "The supplied provision C001 clearly identifies the Mayor or County Head as the authority to whom the project implementer must report land movement caused by the project. This satisfies the completion criteria for identifying the reporting counterpart.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "농어촌정비법 117조  지정 해제#KOBLEX-025884"
+            ],
+            "rationale": "C002 Article 117(1)3 explicitly states that the designation is deemed released upon project completion, satisfying the requirement to confirm the legal effect.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "농어촌정비법 117조  지정 해제#KOBLEX-025884"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "The supplied provision C002 explicitly provides that the designation of a region or zone is deemed released on the day following the completion of the project. This satisfies the completion criteria regarding the legal effect of project completion on the designation.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "농어촌정비법 121조  토지 이동의 신청 특례#KOBLEX-025910",
+        "support_spans": [
+          {
+            "end_char": 76,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 117조  지정 해제#KOBLEX-025884",
+        "support_spans": [
+          {
+            "end_char": 266,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "농어촌정비사업 시행 과정에서 토지의 이동이 발생했을 때, 사업 시행자가 누구에게 신고해야 하는지",
+        "issue_id": "I1"
+      },
+      {
+        "description": "농어촌정비사업 시행이 완료된 경우 해당 지역의 지정이 해제되는지 여부",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 자신이 소유한 농지를 을에게 매도하고, 을은 그 농지에 대해 농어촌정비사업을 시행하기로 하였습니다. 을은 정비사업을 통해 일부 토지의 경계를 변경하고자 하였고, 이 과정에서 토지의 이동이 발생하게 되었습니다. 사업이 완료된 후 을은 그 지역의 기존 지정이 해제될 수 있는지를 궁금해 하였습니다. [질문] 을의 농어촌정비사업 시행으로 토지의 이동이 있는 경우 을은 누구에게 신고하여야 하며, 이러한 사업 시행이 완료된 경우 그 지역의 지정은 해제되는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "농어촌정비사업 토지 이동 신고 의무 신고 대상 기관",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "농어촌정비사업",
+          "토지 이동",
+          "신고",
+          "신고 대상",
+          "사업시행자"
+        ],
+        "query_text": "농어촌정비사업 시행으로 토지의 이동이 있는 경우 사업시행자는 관할 기관에 신고하여야 한다 [원문 맥락] 사업이 완료된 후 을은 그 지역의 기존 지정이 해제될 수 있는지를 궁금해 하였습니다. 을의 농어촌정비사업 시행으로 토지의 이동이 있는 경우 을은 누구에게 신고하여야 하며, 이러한 사업 시행이 완료된 경우 그 지역의 지정은 해제되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "농어촌정비사업 토지 이동 시 신고 상대방 특정",
+        "statute_hints": [
+          "농어촌정비법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "농어촌정비사업 완료 지역 지정 해제 효력",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "농어촌정비사업",
+          "사업 완료",
+          "지역 지정",
+          "지정 해제",
+          "법적 효력"
+        ],
+        "query_text": "농어촌정비사업 시행이 완료된 경우 해당 지역의 지정은 해제된다 [원문 맥락] 사업이 완료된 후 을은 그 지역의 기존 지정이 해제될 수 있는지를 궁금해 하였습니다. 을의 농어촌정비사업 시행으로 토지의 이동이 있는 경우 을은 누구에게 신고하여야 하며, 이러한 사업 시행이 완료된 경우 그 지역의 지정은 해제되는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "농어촌정비사업 완료 시 지역 지정 해제 여부",
+        "statute_hints": [
+          "농어촌정비법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 자신이 소유한 농지를 을에게 매도하고, 을은 그 농지에 대해 농어촌정비사업을 시행하기로 하였습니다. 을은 정비사업을 통해 일부 토지의 경계를 변경하고자 하였고, 이 과정에서 토지의 이동이 발생하게 되었습니다. 사업이 완료된 후 을은 그 지역의 기존 지정이 해제될 수 있는지를 궁금해 하였습니다.\n\n[질문]\n을의 농어촌정비사업 시행으로 토지의 이동이 있는 경우 을은 누구에게 신고하여야 하며, 이러한 사업 시행이 완료된 경우 그 지역의 지정은 해제되는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "신고 대상 기관 또는 주체가 명확히 특정되어야 함",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "농어촌정비사업으로 인한 토지 이동 시 신고 대상 기관 또는 주체를 명시하는 조항을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "농어촌정비사업 시행으로 토지의 이동이 있는 경우 신고의무자가 신고를 해야 하는 상대방을 규정하는 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 '누구에게 신고하여야'라고 명시적으로 묻고 있으므로, 신고 상대방을 특정하는 법적 근거가 없으면 답변이 불가능함",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "사업 완료 시 지정이 해제되는지, 유지되는지, 또는 별도 해제 절차가 필요한지가 명확히 규정되어야 함",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "농어촌정비사업 완료 시 해당 지역 지정의 법적 효력(해제 여부)을 명시하는 조항을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "농어촌정비사업 시행 완료 시 해당 지역의 지정 해제 여부를 규정하는 조항",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 '지정은 해제되는가'라고 명시적으로 묻고 있으므로, 지정 해제 여부에 대한 법적 근거가 없으면 답변이 불가능함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "1caa9b9f-c9e0-45c1-966a-0fe85dbb95ad",
+    "seen_provision_ids": [
+      "농어촌정비법 106조  다른 법률에 따른 지정 등의 의제#KOBLEX-025821",
+      "농어촌정비법 121조  토지 이동의 신청 특례#KOBLEX-025908",
+      "농어촌정비법 121조  토지 이동의 신청 특례#KOBLEX-025910",
+      "농어촌정비법 110조  토지 등의 수용#KOBLEX-025840",
+      "농어촌정비법 117조  지정 해제#KOBLEX-025884",
+      "농어촌정비법 50조  지역권의 효력#KOBLEX-025536",
+      "농어촌정비법 117조  지정 해제#KOBLEX-025885",
+      "농어촌정비법 117조  지정 해제#KOBLEX-025886",
+      "농어촌정비법 117조  지정 해제#KOBLEX-025883",
+      "농어촌정비법 33조  권리 변동의 신고#KOBLEX-025468"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

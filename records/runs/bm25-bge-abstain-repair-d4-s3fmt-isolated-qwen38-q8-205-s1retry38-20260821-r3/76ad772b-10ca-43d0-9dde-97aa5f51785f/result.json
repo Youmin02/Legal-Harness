@@ -1,0 +1,1081 @@
+{
+  "abstention_reason": null,
+  "answer": "신탁행위로 정한 바에 따라 수익자로 지정된 자는 당연히 수익권을 취득한다.[CT1]\n수익자가 포기의 의사표시를 한 경우에는 처음부터 수익권을 가지지 아니하였던 것으로 본다.[CT2]\n수탁자가 변경된 경우 신수탁자는 전수탁자가 신탁행위로 인하여 수익자에게 부담하는 채무를 승계한다.[CT3]",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2",
+    "T3"
+  ],
+  "assumptions": [
+    {
+      "code": "ASSUMPTION_1",
+      "message": "질문에서 제시된 '을'이 신탁행위로 정한 바에 따라 수익자로 지정된 자임을 전제한다."
+    },
+    {
+      "code": "ASSUMPTION_2",
+      "message": "질문에서 제시된 '병'이 수탁자 변경에 따라 신수탁자로 지정된 자임을 전제한다."
+    }
+  ],
+  "candidate_answer": "신탁행위로 정한 바에 따라 수익자로 지정된 자는 당연히 수익권을 취득한다.[CT1]\n수익자가 포기의 의사표시를 한 경우에는 처음부터 수익권을 가지지 아니하였던 것으로 본다.[CT2]\n수탁자가 변경된 경우 신수탁자는 전수탁자가 신탁행위로 인하여 수익자에게 부담하는 채무를 승계한다.[CT3]",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "candidate_assumptions": [],
+  "candidate_claim_citations": [],
+  "candidate_claims": [],
+  "candidate_limitations": [],
+  "claim_citations": [
+    {
+      "answer_marker": "[CT1]",
+      "citation_id": "CT1",
+      "claim_id": "C1",
+      "provision_id": "신탁법 56조  수익권의 취득#KOBLEX-107279",
+      "quoted_text": "① 신탁행위로 정한 바에 따라 수익자로 지정된 자(제58조제1항 및 제2항에 따라 수익자로 지정된 자를 포함한다)는 당연히 수익권을 취득한다. 다만, 신탁행위로 달리 정한 경우에는 그에 따른다.",
+      "support_description": "수익권 취득의 자동성 및 시점에 대한 법적 근거를 제공한다."
+    },
+    {
+      "answer_marker": "[CT2]",
+      "citation_id": "CT2",
+      "claim_id": "C2",
+      "provision_id": "신탁법 57조  수익권의 포기#KOBLEX-107283",
+      "quoted_text": "② 수익자가 제1항에 따른 포기의 의사표시를 한 경우에는 처음부터 수익권을 가지지 아니하였던 것으로 본다. 다만, 제3자의 권리를 해치지 못한다.",
+      "support_description": "수익권 포기에 따른 소급적 소멸 효과를 규정한다."
+    },
+    {
+      "answer_marker": "[CT3]",
+      "citation_id": "CT3",
+      "claim_id": "C3",
+      "provision_id": "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107267",
+      "quoted_text": "① 수탁자가 변경된 경우 신수탁자는 전수탁자(前受託者)가 신탁행위로 인하여 수익자에게 부담하는 채무를 승계한다. 수탁자가 여럿인 경우 일부의 수탁자가 변경된 경우에도 또한 같다.",
+      "support_description": "신수탁자의 채무 승계 원칙 및 범위를 규정한다."
+    }
+  ],
+  "claims": [
+    {
+      "answer_target_ids": [
+        "T1"
+      ],
+      "applicability": "direct",
+      "citation_required": true,
+      "claim_id": "C1",
+      "claim_type": "legal_rule",
+      "text": "신탁행위로 정한 바에 따라 수익자로 지정된 자는 당연히 수익권을 취득한다."
+    },
+    {
+      "answer_target_ids": [
+        "T2"
+      ],
+      "applicability": "direct",
+      "citation_required": true,
+      "claim_id": "C2",
+      "claim_type": "legal_rule",
+      "text": "수익자가 포기의 의사표시를 한 경우에는 처음부터 수익권을 가지지 아니하였던 것으로 본다."
+    },
+    {
+      "answer_target_ids": [
+        "T3"
+      ],
+      "applicability": "direct",
+      "citation_required": true,
+      "claim_id": "C3",
+      "claim_type": "legal_rule",
+      "text": "수탁자가 변경된 경우 신수탁자는 전수탁자가 신탁행위로 인하여 수익자에게 부담하는 채무를 승계한다."
+    }
+  ],
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T12:35:58.944696+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 365623.385,
+  "errors": [],
+  "limitations": [
+    {
+      "code": "LIMITATION_1",
+      "message": "신탁행위로 달리 정한 경우 수익권 취득 방식이 달라질 수 있으므로, 신탁계약의 구체적 약정 내용은 확인이 필요하다."
+    },
+    {
+      "code": "LIMITATION_2",
+      "message": "수익권 포기는 제3자의 권리를 해치지 못하므로, 제3자 권리 침해 여부는 별도 검토가 필요하다."
+    },
+    {
+      "code": "LIMITATION_3",
+      "message": "신탁사무 처리에 관하여 발생한 채권은 신탁재산의 한도 내에서 신수탁자에게 행사될 수 있으나, 이는 채권 승계의 범위와 관련되며 채무 승계와 구별되어야 한다."
+    }
+  ],
+  "record_schema_version": "1.4",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 382,
+      "dedup_collapse": 43,
+      "evidence_fusion": 382,
+      "first_stage": 500,
+      "request_rerank": 500,
+      "round_selected": 20,
+      "rrf": 400,
+      "selected": 382
+    }
+  },
+  "run_id": "76ad772b-10ca-43d0-9dde-97aa5f51785f",
+  "skill_generation_diagnostics": {
+    "attempt_count": 6,
+    "attempt_file": "skill_attempts.jsonl",
+    "schema_version": "1.0"
+  },
+  "state": {
+    "accepted_provision_ids": [
+      "신탁법 56조  수익권의 취득#KOBLEX-107279",
+      "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107268",
+      "신탁법 57조  수익권의 포기#KOBLEX-107283",
+      "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107498",
+      "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107267"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 3,
+          "issue_count": 3
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 3,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 6,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2",
+            "T3"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2",
+            "T3"
+          ],
+          "claim_count": 3,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "자동적으로 수익권을 취득하게 되는가",
+        "requested_output": "수익권 취득의 법적 성질 및 시점에 대한 판단"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "어떤 법적 효과를 가지는가",
+        "requested_output": "수익권 포기에 따른 법적 효과 및 귀속 주체에 대한 판단"
+      },
+      {
+        "answer_target_id": "T3",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "어떤 기준에 따라 이루어지는가",
+        "requested_output": "신수탁자의 기존 신탁사무 관련 채무 승계 기준에 대한 판단"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2",
+      "T3"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "신탁법 56조  수익권의 취득#KOBLEX-107279"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 30.65169406575279,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "신탁법 56조  수익권의 취득#KOBLEX-107279",
+        "provision_text": "① 신탁행위로 정한 바에 따라 수익자로 지정된 자(제58조제1항 및 제2항에 따라 수익자로 지정된 자를 포함한다)는 당연히 수익권을 취득한다. 다만, 신탁행위로 달리 정한 경우에는 그에 따른다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.8391332626342773,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "신탁법 56조  수익권의 취득 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107498"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 3.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107498",
+        "provision_text": "② 수익자와 귀속권리자로 지정된 자가 신탁의 잔여재산에 대한 권리를 포기한 경우 잔여재산은 위탁자와 그 상속인에게 귀속한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9721695780754089,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "신탁법 101조  신탁종료 후의 신탁재산의 귀속 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107268"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 22.019789495719134,
+        "fusion_rank": 1,
+        "issue_id": "I3",
+        "provision_id": "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107268",
+        "provision_text": "② 신탁사무의 처리에 관하여 발생한 채권은 신탁재산의 한도 내에서 신수탁자에게도 행사할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9383784532546997,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "critical_quota:E3",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "신탁법 53조  신수탁자의 의무의 승계 2항",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "법인세법 109조 2 법인과세 신탁재산의 수탁자 변경신고#KOBLEX-209589"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 31.74152134927671,
+        "fusion_rank": 2,
+        "issue_id": "I3",
+        "provision_id": "법인세법 109조 2 법인과세 신탁재산의 수탁자 변경신고#KOBLEX-209589",
+        "provision_text": "② 법인과세 신탁재산에 대하여 전수탁자의 임무가 종료된 경우 그 임무의 종료에 따라 신탁사무를 승계한 신수탁자는 승계일 이후 2개월 이내에 다음 각 호의 사항을 적은 신고서에 전수탁자의 임무가 종료된 사실을 증명하는 서류 등을 첨부하여 납세지 관할 세무서장에게 신고하여야 한다. 1. 전수탁자의 명칭과 대표자의 성명 2. 법인과세 신탁재산의 명칭 3. 전수탁자의 본점이나 주사무소 또는 사업의 실질적 관리장소의 소재지 4. 신탁사무를 승계받은 신수탁자의 명칭 5. 신탁사무 승계일 6. 전수탁자 종료사유",
+        "rerank_rank": 2,
+        "rerank_score": 0.46718618273735046,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "법인세법 109조 2 법인과세 신탁재산의 수탁자 변경신고 2항",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 102조  준용규정#KOBLEX-107502"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "신탁법 102조  준용규정#KOBLEX-107502",
+        "provision_text": "제102조(준용규정) 신탁의 종료로 인하여 신탁재산이 수익자나 그 밖의 자에게 귀속한 경우에는 제53조제3항 및 제54조를 준용한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.4531465470790863,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "신탁법 102조  준용규정",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107497"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 18.7384323972166,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107497",
+        "provision_text": "① 제98조제1호, 제4호부터 제6호까지, 제99조 또는 제100조에 따라 신탁이 종료된 경우 신탁재산은 수익자(잔여재산수익자를 정한 경우에는 그 잔여재산수익자를 말한다)에게 귀속한다. 다만, 신탁행위로 신탁재산의 잔여재산이 귀속될 자(이하 \"귀속권리자\"라 한다)를 정한 경우에는 그 귀속권리자에게 귀속한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.44234248995780945,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "신탁법 101조  신탁종료 후의 신탁재산의 귀속 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 46조  비용상환청구권#KOBLEX-107244"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "신탁법 46조  비용상환청구권#KOBLEX-107244",
+        "provision_text": "④ 수탁자는 신탁재산이 신탁사무의 처리에 관하여 필요한 비용을 충당하기에 부족하게 될 우려가 있을 때에는 수익자에게 그가 얻은 이익의 범위에서 그 비용을 청구하거나 그에 상당하는 담보의 제공을 요구할 수 있다. 다만, 수익자가 특정되어 있지 아니하거나 존재하지 아니하는 경우 또는 수익자가 수익권을 포기한 경우에는 그러하지 아니하다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.42692333459854126,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "신탁법 46조  비용상환청구권 4항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107266"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 32.55372604030424,
+        "fusion_rank": 3,
+        "issue_id": "I3",
+        "provision_id": "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107266",
+        "provision_text": "제53조(신수탁자의 의무의 승계)",
+        "rerank_rank": 3,
+        "rerank_score": 0.34424206614494324,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "신탁법 53조  신수탁자의 의무의 승계",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107267"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 22,
+        "first_stage_score": 19.89851072413634,
+        "fusion_rank": 4,
+        "issue_id": "I3",
+        "provision_id": "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107267",
+        "provision_text": "① 수탁자가 변경된 경우 신수탁자는 전수탁자(前受託者)가 신탁행위로 인하여 수익자에게 부담하는 채무를 승계한다. 수탁자가 여럿인 경우 일부의 수탁자가 변경된 경우에도 또한 같다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.2276441752910614,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "RQ1"
+        ],
+        "statute_name": "신탁법 53조  신수탁자의 의무의 승계 1항",
+        "target_evidence_item_ids": [
+          "E3",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107500"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107500",
+        "provision_text": "④ 신탁이 종료된 경우 신탁재산이 제1항부터 제3항까지의 규정에 따라 귀속될 자에게 이전될 때까지 그 신탁은 존속하는 것으로 본다. 이 경우 신탁재산이 귀속될 자를 수익자로 본다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.10622969269752502,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "신탁법 101조  신탁종료 후의 신탁재산의 귀속 4항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 73조  수익자집회의 의결권 등#KOBLEX-107366"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 29,
+        "first_stage_score": 28.866910685517862,
+        "fusion_rank": 22,
+        "issue_id": "I2",
+        "provision_id": "신탁법 73조  수익자집회의 의결권 등#KOBLEX-107366",
+        "provision_text": "② 수익권이 그 수익권에 관한 신탁의 신탁재산에 속한 경우 수탁자는 그 수익권에 대하여 의결권을 행사하지 못한다.",
+        "rerank_rank": 22,
+        "rerank_score": 0.346724271774292,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "신탁법 73조  수익자집회의 의결권 등 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 2조 3 신탁재산 귀속 소득에 대한 납세의무의 범위#KOBLEX-152979"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 72,
+        "first_stage_score": 23.80932864666196,
+        "fusion_rank": 23,
+        "issue_id": "I2",
+        "provision_id": "소득세법 2조 3 신탁재산 귀속 소득에 대한 납세의무의 범위#KOBLEX-152979",
+        "provision_text": "① 신탁재산에 귀속되는 소득은 그 신탁의 이익을 받을 수익자(수익자가 사망하는 경우에는 그 상속인)에게 귀속되는 것으로 본다.",
+        "rerank_rank": 23,
+        "rerank_score": 0.2832866311073303,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "소득세법 2조 3 신탁재산 귀속 소득에 대한 납세의무의 범위 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107499"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 53,
+        "first_stage_score": 25.415356591593163,
+        "fusion_rank": 24,
+        "issue_id": "I2",
+        "provision_id": "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107499",
+        "provision_text": "③ 제3조제3항에 따라 신탁이 종료된 경우 신탁재산은 위탁자에게 귀속한다.",
+        "rerank_rank": 24,
+        "rerank_score": 0.07830222696065903,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "신탁법 101조  신탁종료 후의 신탁재산의 귀속 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 59조  유언대용신탁#KOBLEX-107291"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 30,
+        "first_stage_score": 28.484271868214055,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "신탁법 59조  유언대용신탁#KOBLEX-107291",
+        "provision_text": "① 다음 각 호의 어느 하나에 해당하는 신탁의 경우에는 위탁자가 수익자를 변경할 권리를 갖는다. 다만, 신탁행위로 달리 정한 경우에는 그에 따른다. 1. 수익자가 될 자로 지정된 자가 위탁자의 사망 시에 수익권을 취득하는 신탁 2. 수익자가 위탁자의 사망 이후에 신탁재산에 기한 급부를 받는 신탁",
+        "rerank_rank": 10,
+        "rerank_score": 0.055628519505262375,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "신탁법 59조  유언대용신탁 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 57조  수익권의 포기#KOBLEX-107283"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "신탁법 57조  수익권의 포기#KOBLEX-107283",
+        "provision_text": "② 수익자가 제1항에 따른 포기의 의사표시를 한 경우에는 처음부터 수익권을 가지지 아니하였던 것으로 본다. 다만, 제3자의 권리를 해치지 못한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.045658472925424576,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "신탁법 57조  수익권의 포기 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 89조  반대수익자의 수익권매수청구권#KOBLEX-107457"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 2.0,
+        "fusion_rank": 19,
+        "issue_id": "I2",
+        "provision_id": "신탁법 89조  반대수익자의 수익권매수청구권#KOBLEX-107457",
+        "provision_text": "⑧ 제1항의 청구에 의하여 수탁자가 수익권을 취득한 경우 그 수익권은 소멸한다. 다만, 신탁행위 또는 신탁변경의 합의로 달리 정한 경우에는 그에 따른다.",
+        "rerank_rank": 19,
+        "rerank_score": 0.03181516006588936,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "신탁법 89조  반대수익자의 수익권매수청구권 8항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "법인세법 109조 2 법인과세 신탁재산의 수탁자 변경신고#KOBLEX-209589": "② 법인과세 신탁재산에 대하여 전수탁자의 임무가 종료된 경우 그 임무의 종료에 따라 신탁사무를 승계한 신수탁자는 승계일 이후 2개월 이내에 다음 각 호의 사항을 적은 신고서에 전수탁자의 임무가 종료된 사실을 증명하는 서류 등을 첨부하여 납세지 관할 세무서장에게 신고하여야 한다. 1. 전수탁자의 명칭과 대표자의 성명 2. 법인과세 신탁재산의 명칭 3. 전수탁자의 본점이나 주사무소 또는 사업의 실질적 관리장소의 소재지 4. 신탁사무를 승계받은 신수탁자의 명칭 5. 신탁사무 승계일 6. 전수탁자 종료사유",
+      "소득세법 2조 3 신탁재산 귀속 소득에 대한 납세의무의 범위#KOBLEX-152979": "① 신탁재산에 귀속되는 소득은 그 신탁의 이익을 받을 수익자(수익자가 사망하는 경우에는 그 상속인)에게 귀속되는 것으로 본다.",
+      "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107497": "① 제98조제1호, 제4호부터 제6호까지, 제99조 또는 제100조에 따라 신탁이 종료된 경우 신탁재산은 수익자(잔여재산수익자를 정한 경우에는 그 잔여재산수익자를 말한다)에게 귀속한다. 다만, 신탁행위로 신탁재산의 잔여재산이 귀속될 자(이하 \"귀속권리자\"라 한다)를 정한 경우에는 그 귀속권리자에게 귀속한다.",
+      "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107498": "② 수익자와 귀속권리자로 지정된 자가 신탁의 잔여재산에 대한 권리를 포기한 경우 잔여재산은 위탁자와 그 상속인에게 귀속한다.",
+      "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107499": "③ 제3조제3항에 따라 신탁이 종료된 경우 신탁재산은 위탁자에게 귀속한다.",
+      "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107500": "④ 신탁이 종료된 경우 신탁재산이 제1항부터 제3항까지의 규정에 따라 귀속될 자에게 이전될 때까지 그 신탁은 존속하는 것으로 본다. 이 경우 신탁재산이 귀속될 자를 수익자로 본다.",
+      "신탁법 102조  준용규정#KOBLEX-107502": "제102조(준용규정) 신탁의 종료로 인하여 신탁재산이 수익자나 그 밖의 자에게 귀속한 경우에는 제53조제3항 및 제54조를 준용한다.",
+      "신탁법 46조  비용상환청구권#KOBLEX-107244": "④ 수탁자는 신탁재산이 신탁사무의 처리에 관하여 필요한 비용을 충당하기에 부족하게 될 우려가 있을 때에는 수익자에게 그가 얻은 이익의 범위에서 그 비용을 청구하거나 그에 상당하는 담보의 제공을 요구할 수 있다. 다만, 수익자가 특정되어 있지 아니하거나 존재하지 아니하는 경우 또는 수익자가 수익권을 포기한 경우에는 그러하지 아니하다.",
+      "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107266": "제53조(신수탁자의 의무의 승계)",
+      "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107267": "① 수탁자가 변경된 경우 신수탁자는 전수탁자(前受託者)가 신탁행위로 인하여 수익자에게 부담하는 채무를 승계한다. 수탁자가 여럿인 경우 일부의 수탁자가 변경된 경우에도 또한 같다.",
+      "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107268": "② 신탁사무의 처리에 관하여 발생한 채권은 신탁재산의 한도 내에서 신수탁자에게도 행사할 수 있다.",
+      "신탁법 56조  수익권의 취득#KOBLEX-107279": "① 신탁행위로 정한 바에 따라 수익자로 지정된 자(제58조제1항 및 제2항에 따라 수익자로 지정된 자를 포함한다)는 당연히 수익권을 취득한다. 다만, 신탁행위로 달리 정한 경우에는 그에 따른다.",
+      "신탁법 57조  수익권의 포기#KOBLEX-107283": "② 수익자가 제1항에 따른 포기의 의사표시를 한 경우에는 처음부터 수익권을 가지지 아니하였던 것으로 본다. 다만, 제3자의 권리를 해치지 못한다.",
+      "신탁법 59조  유언대용신탁#KOBLEX-107291": "① 다음 각 호의 어느 하나에 해당하는 신탁의 경우에는 위탁자가 수익자를 변경할 권리를 갖는다. 다만, 신탁행위로 달리 정한 경우에는 그에 따른다. 1. 수익자가 될 자로 지정된 자가 위탁자의 사망 시에 수익권을 취득하는 신탁 2. 수익자가 위탁자의 사망 이후에 신탁재산에 기한 급부를 받는 신탁",
+      "신탁법 73조  수익자집회의 의결권 등#KOBLEX-107366": "② 수익권이 그 수익권에 관한 신탁의 신탁재산에 속한 경우 수탁자는 그 수익권에 대하여 의결권을 행사하지 못한다.",
+      "신탁법 89조  반대수익자의 수익권매수청구권#KOBLEX-107457": "⑧ 제1항의 청구에 의하여 수탁자가 수익권을 취득한 경우 그 수익권은 소멸한다. 다만, 신탁행위 또는 신탁변경의 합의로 달리 정한 경우에는 그에 따른다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "신탁법 56조  수익권의 취득#KOBLEX-107279"
+            ],
+            "rationale": "C001은 신탁행위로 정한 바에 따라 수익자로 지정된 자는 당연히 수익권을 취득한다고 규정한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "신탁법 56조  수익권의 취득#KOBLEX-107279"
+            ],
+            "rationale": "C001의 '당연히 수익권을 취득한다'는 표현은 신탁행위 완료 시점에 수익권이 자동적으로 취득됨을 의미한다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "신탁법 56조  수익권의 취득#KOBLEX-107279"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001(신탁법 제56조 제1항)은 수익자로 지정된 자가 당연히 수익권을 취득한다고 명시하여, 수익권 취득의 시점과 방식에 대한 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107498"
+            ],
+            "rationale": "C002는 수익자와 귀속권리자가 잔여재산에 대한 권리를 포기한 경우 잔여재산이 위탁자와 그 상속인에게 귀속된다고 규정하여, 포기 시 귀속 주체를 명시한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "신탁법 57조  수익권의 포기#KOBLEX-107283"
+            ],
+            "rationale": "C015는 수익자가 포기의 의사표시를 한 경우 처음부터 수익권을 가지지 아니하였던 것으로 본다고 규정하여, 포기된 수익권의 법적 지위를 명확히 한다.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "신탁법 57조  수익권의 포기#KOBLEX-107283",
+          "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107498"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C015(신탁법 제57조 제2항)은 수익권 포기에 따른 법적 지위(소급적 소멸)를 규정하고, C002(신탁법 제101조 제2항)는 잔여재산 포기 시 귀속 주체를 규정하여, 수익권 포기에 따른 법적 효과 및 귀속 주체에 대한 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107267"
+            ],
+            "rationale": "C009는 수탁자가 변경된 경우 신수탁자는 전수탁자가 신탁행위로 인하여 수익자에게 부담하는 채무를 승계한다고 명시한다.",
+            "requirement_id": "E3-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107267",
+              "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107268"
+            ],
+            "rationale": "C009는 채무 승계의 범위를 신탁행위로 인한 채무로 한정하고, C003은 신탁사무 처리에 관한 채권의 승계 범위를 신탁재산 한도 내로 규정하여 기준을 명확히 한다.",
+            "requirement_id": "E3-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E3",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107267",
+          "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107268"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C009(신탁법 제53조 제1항)은 신수탁자의 채무 승계 원칙을, C003(신탁법 제53조 제2항)은 채권 승계의 범위를 규정하여, 신수탁자의 기존 신탁사무 관련 채무 승계 기준에 대한 완료 기준을 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "신탁법 56조  수익권의 취득#KOBLEX-107279",
+        "support_spans": [
+          {
+            "end_char": 108,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "신탁법 57조  수익권의 포기#KOBLEX-107283",
+        "support_spans": [
+          {
+            "end_char": 81,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107498",
+        "support_spans": [
+          {
+            "end_char": 69,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E3",
+        "issue_id": "I3",
+        "provision_id": "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107267",
+        "support_spans": [
+          {
+            "end_char": 99,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E3",
+        "issue_id": "I3",
+        "provision_id": "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107268",
+        "support_spans": [
+          {
+            "end_char": 54,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 6,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "신탁행위 완료 시 수익자의 수익권 취득 방식",
+        "issue_id": "I1"
+      },
+      {
+        "description": "수익권 포기에 따른 법적 효과",
+        "issue_id": "I2"
+      },
+      {
+        "description": "신수탁자의 신탁사무 관련 채무 승계 범위",
+        "issue_id": "I3"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을을 수익자로 지정한 신탁을 설정하였다. 그러나 이후 을은 수익권을 포기하겠다는 의사를 표시하였다. 이 과정에서 기존 수탁자가 사임하였고, 신탁사무 처리를 둘러싼 채권 관계가 일부 발생한 상태에서 병이 신수탁자로 새롭게 지정되었다. 병은 기존 신탁사무 처리와 관련된 채무 승계 여부에 대해 확인이 필요한 상황이다. [질문] 신탁행위에 따라 수익자로 지정된 을은 자동적으로 수익권을 취득하게 되는가? 또, 을이 수익권을 포기한 경우 해당 수익권은 어떤 법적 효과를 가지는가? 또한, 병이 신수탁자로 지정된 경우 기존 신탁사무 처리로 발생한 채권에 대한 병의 채무 승계는 어떤 기준에 따라 이루어지는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "신탁행위 완료 수익자 수익권 취득 시점",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "신탁행위",
+          "수익자",
+          "수익권",
+          "취득",
+          "완료"
+        ],
+        "query_text": "신탁행위가 완료된 때 수익자는 수익권을 취득한다 [원문 맥락] 또, 을이 수익권을 포기한 경우 해당 수익권은 어떤 법적 효과를 가지는가? 또한, 병이 신수탁자로 지정된 경우 기존 신탁사무 처리로 발생한 채권에 대한 병의 채무 승계는 어떤 기준에 따라 이루어지는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "신탁행위 완료 시 수익권 자동 취득 여부",
+        "statute_hints": [
+          "신탁법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "수익권 포기 신탁재산 귀속 법적 효과",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "수익권",
+          "포기",
+          "신탁재산",
+          "귀속",
+          "법적효과"
+        ],
+        "query_text": "수익자가 수익권을 포기한 경우 신탁재산에 귀속된다 [원문 맥락] 또, 을이 수익권을 포기한 경우 해당 수익권은 어떤 법적 효과를 가지는가? 또한, 병이 신수탁자로 지정된 경우 기존 신탁사무 처리로 발생한 채권에 대한 병의 채무 승계는 어떤 기준에 따라 이루어지는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "수익권 포기 시 신탁재산 귀속 여부",
+        "statute_hints": [
+          "신탁법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "first_stage_query_text": "신수탁자 채무 승계 신탁사무 기존",
+        "issue_id": "I3",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "신수탁자",
+          "채무",
+          "승계",
+          "신탁사무",
+          "기존"
+        ],
+        "query_text": "신수탁자는 기존 신탁사무 처리로 인한 채무를 승계한다 [원문 맥락] 또, 을이 수익권을 포기한 경우 해당 수익권은 어떤 법적 효과를 가지는가? 또한, 병이 신수탁자로 지정된 경우 기존 신탁사무 처리로 발생한 채권에 대한 병의 채무 승계는 어떤 기준에 따라 이루어지는가?",
+        "request_id": "RQ3",
+        "rerank_query_text": "신수탁자 기존 신탁사무 채무 승계 기준",
+        "statute_hints": [
+          "신탁법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "신탁 존속 중 수익권 포기 신탁재산 귀속",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "신탁",
+          "존속",
+          "수익권",
+          "포기",
+          "신탁재산",
+          "귀속"
+        ],
+        "query_text": "신탁 존속 중 수익권 포기 신탁재산 귀속 [원문 맥락] 또, 을이 수익권을 포기한 경우 해당 수익권은 어떤 법적 효과를 가지는가? 또한, 병이 신수탁자로 지정된 경우 기존 신탁사무 처리로 발생한 채권에 대한 병의 채무 승계는 어떤 기준에 따라 이루어지는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "신탁 존속 중 수익권 포기 시 신탁재산 귀속 여부",
+        "statute_hints": [
+          "신탁법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "수익권 포기 소멸 법적 지위",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "수익권",
+          "포기",
+          "소멸",
+          "법적지위"
+        ],
+        "query_text": "수익자가 수익권을 포기한 때 수익권은 소멸한다 [원문 맥락] 또, 을이 수익권을 포기한 경우 해당 수익권은 어떤 법적 효과를 가지는가? 또한, 병이 신수탁자로 지정된 경우 기존 신탁사무 처리로 발생한 채권에 대한 병의 채무 승계는 어떤 기준에 따라 이루어지는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "수익권 포기 시 법적 지위 소멸 여부",
+        "statute_hints": [
+          "신탁법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을을 수익자로 지정한 신탁을 설정하였다. 그러나 이후 을은 수익권을 포기하겠다는 의사를 표시하였다. 이 과정에서 기존 수탁자가 사임하였고, 신탁사무 처리를 둘러싼 채권 관계가 일부 발생한 상태에서 병이 신수탁자로 새롭게 지정되었다. 병은 기존 신탁사무 처리와 관련된 채무 승계 여부에 대해 확인이 필요한 상황이다.\n\n[질문]\n신탁행위에 따라 수익자로 지정된 을은 자동적으로 수익권을 취득하게 되는가? 또, 을이 수익권을 포기한 경우 해당 수익권은 어떤 법적 효과를 가지는가? 또한, 병이 신수탁자로 지정된 경우 기존 신탁사무 처리로 발생한 채권에 대한 병의 채무 승계는 어떤 기준에 따라 이루어지는가?",
+    "remaining_request_budget": 4,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "수익권 취득의 시점과 방식(자동 취득 여부)을 명시하는 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "신탁행위 완료 시 수익자가 수익권을 취득한다는 규정을 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "수익권 취득이 신탁행위와 동시에 이루어진다는 점을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "신탁행위 완료 시 수익자의 수익권 취득에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 수익권 취득의 자동성을 묻고 있으므로, 취득 시점과 방식을 규정한 조항 없이는 결론 도출 불가",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "수익권 포기 시 신탁재산에 귀속된다는 규정을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "수익자가 수익권을 포기한 경우 신탁재산에 귀속된다는 규정을 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "포기된 수익권의 법적 지위(소멸 또는 귀속)를 확인"
+          }
+        ],
+        "critical": true,
+        "description": "수익권 포기에 따른 법적 효과 및 신탁재산 귀속 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 수익권 포기의 법적 효과를 묻고 있으므로, 포기에 따른 귀속 주체를 규정한 조항 없이는 결론 도출 불가",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T3"
+        ],
+        "completion_criteria": "신수탁자가 기존 신탁사무로 인한 채무를 승계한다는 규정을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E3-R1",
+            "text": "신수탁자가 기존 신탁사무 처리로 발생한 채무를 승계한다는 규정을 확인"
+          },
+          {
+            "requirement_id": "E3-R2",
+            "text": "채무 승계의 범위와 기준(신탁사무 관련성)을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "신수탁자의 기존 신탁사무 관련 채무 승계에 관한 규정",
+        "evidence_item_id": "E3",
+        "evidence_type": "rule",
+        "issue_id": "I3",
+        "necessity_reason": "질문에서 신수탁자의 채무 승계 기준을 묻고 있으므로, 승계 범위를 규정한 조항 없이는 결론 도출 불가",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "76ad772b-10ca-43d0-9dde-97aa5f51785f",
+    "seen_provision_ids": [
+      "신탁법 56조  수익권의 취득#KOBLEX-107279",
+      "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107500",
+      "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107268",
+      "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107497",
+      "신탁법 57조  수익권의 포기#KOBLEX-107283",
+      "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107498",
+      "신탁법 101조  신탁종료 후의 신탁재산의 귀속#KOBLEX-107499",
+      "법인세법 109조 2 법인과세 신탁재산의 수탁자 변경신고#KOBLEX-209589",
+      "소득세법 2조 3 신탁재산 귀속 소득에 대한 납세의무의 범위#KOBLEX-152979",
+      "신탁법 59조  유언대용신탁#KOBLEX-107291",
+      "신탁법 89조  반대수익자의 수익권매수청구권#KOBLEX-107457",
+      "신탁법 102조  준용규정#KOBLEX-107502",
+      "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107266",
+      "신탁법 73조  수익자집회의 의결권 등#KOBLEX-107366",
+      "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107267",
+      "신탁법 46조  비용상환청구권#KOBLEX-107244"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

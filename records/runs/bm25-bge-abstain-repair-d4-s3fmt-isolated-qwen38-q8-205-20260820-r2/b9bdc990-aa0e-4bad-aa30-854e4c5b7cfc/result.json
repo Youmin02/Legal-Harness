@@ -1,0 +1,1030 @@
+{
+  "abstention_reason": null,
+  "answer": "범죄의 성립과 처벌은 원칙적으로 행위 시의 법률에 따른다.[CT1]\n범죄 후 법률이 변경되어 그 행위가 범죄를 구성하지 아니하게 되거나 형이 구법보다 가벼워진 경우에는 신법에 따른다.[CT2]\n전제: 갑의 행위가 2020년에 이루어졌으며, 당시 법률에 따라 기소되었다는 사실은 질문의 배경 시나리오에 근거한 전제이다.\n전제: 재판 중 형벌이 '더 무겁게' 변경되었다는 사실은 질문의 배경 시나리오에 근거한 전제이다.\n한계: 공소장 변경 시 '상해의 정도' 변경이 공소사실의 동일성을 해치는지 판단하는 구체적 법적 기준이 제공된 조문에 포함되어 있지 않아, T2에 대한 결론은 유보된다.\n한계: 본 답변은 형법 제1조에 근거한 법률 적용 시점 원칙에 한정되며, 형사소송법 제298조의 공소장 변경 절차에 대한 구체적 적용 여부는 별도 검토가 필요하다.",
+  "answer_mode": "limited",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "범죄의 성립과 처벌은 원칙적으로 행위 시의 법률에 따른다.[CT1]\n범죄 후 법률이 변경되어 그 행위가 범죄를 구성하지 아니하게 되거나 형이 구법보다 가벼워진 경우에는 신법에 따른다.[CT2]\n전제: 갑의 행위가 2020년에 이루어졌으며, 당시 법률에 따라 기소되었다는 사실은 질문의 배경 시나리오에 근거한 전제이다.\n전제: 재판 중 형벌이 '더 무겁게' 변경되었다는 사실은 질문의 배경 시나리오에 근거한 전제이다.\n한계: 공소장 변경 시 '상해의 정도' 변경이 공소사실의 동일성을 해치는지 판단하는 구체적 법적 기준이 제공된 조문에 포함되어 있지 않아, T2에 대한 결론은 유보된다.\n한계: 본 답변은 형법 제1조에 근거한 법률 적용 시점 원칙에 한정되며, 형사소송법 제298조의 공소장 변경 절차에 대한 구체적 적용 여부는 별도 검토가 필요하다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T01:09:35.464344+00:00",
+  "deferred_target_ids": [
+    "T2"
+  ],
+  "end_to_end_latency_ms": 764850.97,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 368,
+      "dedup_collapse": 156,
+      "evidence_fusion": 368,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "round_selected": 30,
+      "rrf": 400,
+      "selected": 368
+    }
+  },
+  "run_id": "b9bdc990-aa0e-4bad-aa30-854e4c5b7cfc",
+  "state": {
+    "accepted_provision_ids": [
+      "형법 1조  범죄의 성립과 처벌#KOBLEX-192646",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232544",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232543",
+      "형법 1조  범죄의 성립과 처벌#KOBLEX-192645"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 4,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 2,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [
+            "T2"
+          ],
+          "explanation": "Only the citable answer targets will be answered; remaining targets are deferred.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": [
+            "T2"
+          ]
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "limited",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_rule",
+        "question_anchor": "범죄의 성립과 처벌은 어떤 시점의 법률에 따르며",
+        "requested_output": "범죄 성립과 처벌에 적용되는 법률의 시점 기준"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_procedure",
+        "question_anchor": "검사가 공소장을 변경하려면 어떤 조건을 충족해야 하는가",
+        "requested_output": "공소장 변경을 위한 법적 요건 및 절차적 조건"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "형법 1조  범죄의 성립과 처벌#KOBLEX-192645"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형법 1조  범죄의 성립과 처벌#KOBLEX-192645",
+        "provision_text": "① 범죄의 성립과 처벌은 행위 시의 법률에 따른다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.955944836139679,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 1조  범죄의 성립과 처벌 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 298조  공소장의 변경#KOBLEX-232543"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 40.74899233471676,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 298조  공소장의 변경#KOBLEX-232543",
+        "provision_text": "①검사는 법원의 허가를 얻어 공소장에 기재한 공소사실 또는 적용법조의 추가, 철회 또는 변경을 할 수 있다. 이 경우에 법원은 공소사실의 동일성을 해하지 아니하는 한도에서 허가하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9972361922264099,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형사소송법 298조  공소장의 변경 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 355조  공소장의 변경#KOBLEX-093341",
+          "군사법원법 355조  공소장의 변경#KOBLEX-159306"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 38.51510968431969,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 355조  공소장의 변경#KOBLEX-093341",
+        "provision_text": "① 군검사는 군사법원의 허가를 받아 공소장에 적은 공소사실 또는 적용법조의 추가ㆍ철회 또는 변경을 할 수 있다. 이 경우 군사법원은 공소사실의 동일성을 해치지 아니하는 한도에서 허가하여야 한다. <개정 2016.1.6>",
+        "rerank_rank": 2,
+        "rerank_score": 0.9907426238059998,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "군사법원법 355조  공소장의 변경 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 298조  공소장의 변경#KOBLEX-232544"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 29,
+        "first_stage_score": 24.68251324924009,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 298조  공소장의 변경#KOBLEX-232544",
+        "provision_text": "②법원은 심리의 경과에 비추어 상당하다고 인정할 때에는 공소사실 또는 적용법조의 추가 또는 변경을 요구하여야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.6988362669944763,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형사소송법 298조  공소장의 변경 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 355조  공소장의 변경#KOBLEX-093340",
+          "군사법원법 355조  공소장의 변경#KOBLEX-159305"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 26.23037242970508,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 355조  공소장의 변경#KOBLEX-093340",
+        "provision_text": "제355조(공소장의 변경)",
+        "rerank_rank": 4,
+        "rerank_score": 0.5023045539855957,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "군사법원법 355조  공소장의 변경",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 355조  공소장의 변경#KOBLEX-093342",
+          "군사법원법 355조  공소장의 변경#KOBLEX-159307"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 27,
+        "first_stage_score": 24.68251324924009,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 355조  공소장의 변경#KOBLEX-093342",
+        "provision_text": "② 군사법원은 심리의 경과에 비추어 상당하다고 인정하면 공소사실 또는 적용법조의 추가 또는 변경을 요구하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.47978219389915466,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "군사법원법 355조  공소장의 변경 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 298조  공소장의 변경#KOBLEX-232542"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 26.23037242970508,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 298조  공소장의 변경#KOBLEX-232542",
+        "provision_text": "제298조(공소장의 변경)",
+        "rerank_rank": 6,
+        "rerank_score": 0.4231371581554413,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 298조  공소장의 변경",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 298조  공소장의 변경#KOBLEX-232545"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 45,
+        "first_stage_score": 23.334871746521447,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 298조  공소장의 변경#KOBLEX-232545",
+        "provision_text": "③법원은 공소사실 또는 적용법조의 추가, 철회 또는 변경이 있을 때에는 그 사유를 신속히 피고인 또는 변호인에게 고지하여야 한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.1032506600022316,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형사소송법 298조  공소장의 변경 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 1조  범죄의 성립과 처벌#KOBLEX-192646"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형법 1조  범죄의 성립과 처벌#KOBLEX-192646",
+        "provision_text": "② 범죄 후 법률이 변경되어 그 행위가 범죄를 구성하지 아니하게 되거나 형이 구법(舊法)보다 가벼워진 경우에는 신법(新法)에 따른다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.07305773347616196,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 1조  범죄의 성립과 처벌 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 355조  공소장의 변경#KOBLEX-093343",
+          "군사법원법 355조  공소장의 변경#KOBLEX-159308"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 36,
+        "first_stage_score": 23.76743138395383,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 355조  공소장의 변경#KOBLEX-093343",
+        "provision_text": "③ 군사법원은 공소사실 또는 적용법조의 추가ㆍ철회 또는 변경을 할 때에는 그 사유를 신속히 피고인이나 변호인에게 고지하여야 한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.05419560894370079,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "군사법원법 355조  공소장의 변경 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국민의 형사재판 참여에 관한 법률 6조  공소사실의 변경 등#KOBLEX-219854"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 25.025367426177908,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "국민의 형사재판 참여에 관한 법률 6조  공소사실의 변경 등#KOBLEX-219854",
+        "provision_text": "제6조(공소사실의 변경 등)",
+        "rerank_rank": 5,
+        "rerank_score": 0.00023770600091665983,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "국민의 형사재판 참여에 관한 법률 6조  공소사실의 변경 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 257조  상해, 존속상해#KOBLEX-193191"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 24.695852904913252,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "형법 257조  상해, 존속상해#KOBLEX-193191",
+        "provision_text": "제257조(상해, 존속상해)",
+        "rerank_rank": 6,
+        "rerank_score": 4.348467700765468e-05,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형법 257조  상해, 존속상해",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 298조  공소장의 변경#KOBLEX-232546"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 99,
+        "first_stage_score": 16.88249552805202,
+        "fusion_rank": 29,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 298조  공소장의 변경#KOBLEX-232546",
+        "provision_text": "④법원은 전3항의 규정에 의한 공소사실 또는 적용법조의 추가, 철회 또는 변경이 피고인의 불이익을 증가할 염려가 있다고 인정한 때에는 직권 또는 피고인이나 변호인의 청구에 의하여 피고인으로 하여금 필요한 방어의 준비를 하게 하기 위하여 결정으로 필요한 기간 공판절차를 정지할 수 있다.",
+        "rerank_rank": 29,
+        "rerank_score": 1.3716209650738165e-05,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형사소송법 298조  공소장의 변경 4항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 355조  공소장의 변경#KOBLEX-093344",
+          "군사법원법 355조  공소장의 변경#KOBLEX-159309"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 16.88249552805202,
+        "fusion_rank": 30,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 355조  공소장의 변경#KOBLEX-093344",
+        "provision_text": "④ 군사법원은 제1항부터 제3항까지의 규정에 따른 공소사실 또는 적용법조의 추가ㆍ철회 또는 변경이 피고인의 불이익을 증가시킬 우려가 있다고 인정하면 직권으로 또는 피고인이나 변호인의 청구에 따라 피고인이 필요한 방어 준비를 하게 하기 위하여 결정으로 필요한 기간 동안 공판절차를 정지할 수 있다.",
+        "rerank_rank": 30,
+        "rerank_score": 1.3416788533504587e-05,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "군사법원법 355조  공소장의 변경 4항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 296조  공소제기의 방식과 공소장#KOBLEX-093089",
+          "군사법원법 296조  공소제기의 방식과 공소장#KOBLEX-159054"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 35.622177906392686,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 296조  공소제기의 방식과 공소장#KOBLEX-093089",
+        "provision_text": "③ 공소장에는 다음 각 호의 사항을 적어야 한다. 1. 피고인의 성명이나 그 밖에 피고인을 특정할 수 있는 사항 2. 죄명 3. 공소사실 4. 적용법조",
+        "rerank_rank": 9,
+        "rerank_score": 2.4254746676888317e-05,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "군사법원법 296조  공소제기의 방식과 공소장 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232290"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 38.12434937424668,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232290",
+        "provision_text": "③공소장에는 다음 사항을 기재하여야 한다. 1. 피고인의 성명 기타 피고인을 특정할 수 있는 사항 2. 죄명 3. 공소사실 4. 적용법조",
+        "rerank_rank": 8,
+        "rerank_score": 1.5028732377686538e-05,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형사소송법 254조  공소제기의 방식과 공소장 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "국민의 형사재판 참여에 관한 법률 6조  공소사실의 변경 등#KOBLEX-219854": "제6조(공소사실의 변경 등)",
+      "군사법원법 296조  공소제기의 방식과 공소장#KOBLEX-093089": "③ 공소장에는 다음 각 호의 사항을 적어야 한다. 1. 피고인의 성명이나 그 밖에 피고인을 특정할 수 있는 사항 2. 죄명 3. 공소사실 4. 적용법조",
+      "군사법원법 355조  공소장의 변경#KOBLEX-093340": "제355조(공소장의 변경)",
+      "군사법원법 355조  공소장의 변경#KOBLEX-093341": "① 군검사는 군사법원의 허가를 받아 공소장에 적은 공소사실 또는 적용법조의 추가ㆍ철회 또는 변경을 할 수 있다. 이 경우 군사법원은 공소사실의 동일성을 해치지 아니하는 한도에서 허가하여야 한다. <개정 2016.1.6>",
+      "군사법원법 355조  공소장의 변경#KOBLEX-093342": "② 군사법원은 심리의 경과에 비추어 상당하다고 인정하면 공소사실 또는 적용법조의 추가 또는 변경을 요구하여야 한다.",
+      "군사법원법 355조  공소장의 변경#KOBLEX-093343": "③ 군사법원은 공소사실 또는 적용법조의 추가ㆍ철회 또는 변경을 할 때에는 그 사유를 신속히 피고인이나 변호인에게 고지하여야 한다.",
+      "군사법원법 355조  공소장의 변경#KOBLEX-093344": "④ 군사법원은 제1항부터 제3항까지의 규정에 따른 공소사실 또는 적용법조의 추가ㆍ철회 또는 변경이 피고인의 불이익을 증가시킬 우려가 있다고 인정하면 직권으로 또는 피고인이나 변호인의 청구에 따라 피고인이 필요한 방어 준비를 하게 하기 위하여 결정으로 필요한 기간 동안 공판절차를 정지할 수 있다.",
+      "형법 1조  범죄의 성립과 처벌#KOBLEX-192645": "① 범죄의 성립과 처벌은 행위 시의 법률에 따른다.",
+      "형법 1조  범죄의 성립과 처벌#KOBLEX-192646": "② 범죄 후 법률이 변경되어 그 행위가 범죄를 구성하지 아니하게 되거나 형이 구법(舊法)보다 가벼워진 경우에는 신법(新法)에 따른다.",
+      "형법 257조  상해, 존속상해#KOBLEX-193191": "제257조(상해, 존속상해)",
+      "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232290": "③공소장에는 다음 사항을 기재하여야 한다. 1. 피고인의 성명 기타 피고인을 특정할 수 있는 사항 2. 죄명 3. 공소사실 4. 적용법조",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232542": "제298조(공소장의 변경)",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232543": "①검사는 법원의 허가를 얻어 공소장에 기재한 공소사실 또는 적용법조의 추가, 철회 또는 변경을 할 수 있다. 이 경우에 법원은 공소사실의 동일성을 해하지 아니하는 한도에서 허가하여야 한다.",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232544": "②법원은 심리의 경과에 비추어 상당하다고 인정할 때에는 공소사실 또는 적용법조의 추가 또는 변경을 요구하여야 한다.",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232545": "③법원은 공소사실 또는 적용법조의 추가, 철회 또는 변경이 있을 때에는 그 사유를 신속히 피고인 또는 변호인에게 고지하여야 한다.",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232546": "④법원은 전3항의 규정에 의한 공소사실 또는 적용법조의 추가, 철회 또는 변경이 피고인의 불이익을 증가할 염려가 있다고 인정한 때에는 직권 또는 피고인이나 변호인의 청구에 의하여 피고인으로 하여금 필요한 방어의 준비를 하게 하기 위하여 결정으로 필요한 기간 공판절차를 정지할 수 있다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형법 1조  범죄의 성립과 처벌#KOBLEX-192645"
+            ],
+            "rationale": "C001(형법 제1조 제1항)이 행위 시 법률 적용 원칙을 명시적으로 규정합니다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형법 1조  범죄의 성립과 처벌#KOBLEX-192646"
+            ],
+            "rationale": "C009(형법 제1조 제2항)이 형이 가벼워진 경우 신법 적용이라는 유리한 법률 적용 원칙을 명시적으로 규정합니다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형법 1조  범죄의 성립과 처벌#KOBLEX-192645",
+          "형법 1조  범죄의 성립과 처벌#KOBLEX-192646"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "형법 제1조 제1항과 제2항은 범죄 성립과 처벌의 시점 기준 및 법률 변경 시 유리한 법률 적용 원칙을 명확히 규정하여 모든 완료 기준을 충족합니다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "conditional",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형사소송법 298조  공소장의 변경#KOBLEX-232543"
+            ],
+            "rationale": "C002(형사소송법 제298조 제1항)이 검사의 공소장 변경 권한과 법원 허가 요건을 규정합니다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형사소송법 298조  공소장의 변경#KOBLEX-232543"
+            ],
+            "rationale": "C002(형사소송법 제298조 제1항)이 '공소사실의 동일성을 해하지 아니하는 한도'라는 일반적 동일성 유지 조건을 규정합니다.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "제공된 조문들은 공소사실 동일성의 일반적 원칙만 제시할 뿐, '상해의 정도' 변경이 동일성을 해치는지 여부를 판단하는 구체적 법적 기준이나 예외 규정을 포함하지 않습니다.",
+            "requirement_id": "E2-R3",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "형사소송법 298조  공소장의 변경#KOBLEX-232543",
+          "형사소송법 298조  공소장의 변경#KOBLEX-232544"
+        ],
+        "missing_aspects": [
+          "E2-R3"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "공소장 변경의 법적 근거와 일반적 동일성 유지 조건은 확인되었으나, '상해의 정도' 변경이 공소사실의 동일성을 해치는지 판단하는 구체적 법적 기준은 제공된 조문 내에 명시적으로 포함되어 있지 않아 법적 지원이 불완전합니다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [
+      "T2"
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형법 1조  범죄의 성립과 처벌#KOBLEX-192645",
+        "support_spans": [
+          {
+            "end_char": 28,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형법 1조  범죄의 성립과 처벌#KOBLEX-192646",
+        "support_spans": [
+          {
+            "end_char": 74,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형사소송법 298조  공소장의 변경#KOBLEX-232543",
+        "support_spans": [
+          {
+            "end_char": 105,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형사소송법 298조  공소장의 변경#KOBLEX-232544",
+        "support_spans": [
+          {
+            "end_char": 64,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 2,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "재판 중 형벌이 변경된 경우, 범죄 성립과 처벌에 적용될 법률의 시점을 어떻게 결정하는가",
+        "issue_id": "I1"
+      },
+      {
+        "description": "검사가 공소장을 변경하여 상해의 정도를 수정하기 위해 충족해야 할 법적 조건은 무엇인가",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "공소장 변경이 허용되는 경우와 제한, 공소사실 동일성 판단 기준을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "공소장 변경의 법적 근거와 허용 범위를 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "공소사실의 동일성을 유지하는 조건을 확인"
+          },
+          {
+            "requirement_id": "E2-R3",
+            "text": "상해의 정도 변경이 공소사실 동일성을 해치지 않는지 판단 기준을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공소장 변경의 요건과 절차, 특히 공소사실의 동일성 유지 조건",
+        "evidence_item_id": "E2",
+        "evidence_type": "procedure",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 명시적으로 공소장 변경 조건을 묻고 있으므로, 이 절차적 요건 없이는 T2에 대한 결론을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 갑은 2020년에 을에게 심각한 신체적 상해를 입혀 기소되었습니다. 당시 갑의 행위는 그 해의 형법에 따라 기소되었습니다. 그러나 재판이 진행되는 동안, 갑이 기소된 근거 조문의 형벌이 더 무겁게 변경되었습니다. 검사는 공소장을 변경하여 을에게 입힌 상해의 정도를 심각한 수준에서 중간 수준으로 수정하고자 하였습니다. [질문] 갑의 행위에 대한 범죄의 성립과 처벌은 어떤 시점의 법률에 따르며, 검사가 공소장을 변경하려면 어떤 조건을 충족해야 하는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형법 법률적용 시점 행위시 판결시 유리한 법률 원칙",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형법",
+          "법률적용",
+          "시점",
+          "유리한법률",
+          "행위시",
+          "판결시"
+        ],
+        "query_text": "범죄 성립 처벌 법률 적용 시점 행위시 판결시 유리한 법률 형법 [원문 맥락] 검사는 공소장을 변경하여 을에게 입힌 상해의 정도를 심각한 수준에서 중간 수준으로 수정하고자 하였습니다. 갑의 행위에 대한 범죄의 성립과 처벌은 어떤 시점의 법률에 따르며, 검사가 공소장을 변경하려면 어떤 조건을 충족해야 하는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "범죄 성립과 처벌에 적용되는 법률의 시점 기준 및 유리한 법률 적용 원칙",
+        "statute_hints": [
+          "형법 제1조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "형사소송법 공소장 변경 공소사실 동일성 요건 절차",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사소송법",
+          "공소장변경",
+          "공소사실",
+          "동일성",
+          "요건",
+          "절차"
+        ],
+        "query_text": "공소장 변경 요건 공소사실 동일성 형사소송법 [원문 맥락] 검사는 공소장을 변경하여 을에게 입힌 상해의 정도를 심각한 수준에서 중간 수준으로 수정하고자 하였습니다. 갑의 행위에 대한 범죄의 성립과 처벌은 어떤 시점의 법률에 따르며, 검사가 공소장을 변경하려면 어떤 조건을 충족해야 하는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "공소장 변경을 위한 법적 요건과 공소사실 동일성 유지 조건",
+        "statute_hints": [
+          "형사소송법 제299조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "공소사실 동일성 판단 기준 상해 정도 변경",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "공소사실",
+          "동일성",
+          "판단기준",
+          "상해",
+          "정도변경"
+        ],
+        "query_text": "공소사실 동일성 판단 기준 상해 정도 변경 [원문 맥락] 검사는 공소장을 변경하여 을에게 입힌 상해의 정도를 심각한 수준에서 중간 수준으로 수정하고자 하였습니다. 갑의 행위에 대한 범죄의 성립과 처벌은 어떤 시점의 법률에 따르며, 검사가 공소장을 변경하려면 어떤 조건을 충족해야 하는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "상해의 정도 변경이 공소사실 동일성을 해치지 않는지 판단 기준",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "상해 정도 변경 공소장 변경 공소사실 동일성 해하지 아니하는 한도",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "상해",
+          "정도",
+          "변경",
+          "공소장",
+          "동일성",
+          "한도"
+        ],
+        "query_text": "상해의 정도를 변경하는 공소장 변경은 공소사실의 동일성을 해하지 아니하는 한도 내에서 허용된다 [원문 맥락] 검사는 공소장을 변경하여 을에게 입힌 상해의 정도를 심각한 수준에서 중간 수준으로 수정하고자 하였습니다. 갑의 행위에 대한 범죄의 성립과 처벌은 어떤 시점의 법률에 따르며, 검사가 공소장을 변경하려면 어떤 조건을 충족해야 하는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "상해의 정도 변경이 공소사실 동일성을 해치지 않는지 판단 기준",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "상해죄 공소사실 동일성 판단 기준 중상해 상해 죄명 변경",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "상해죄",
+          "공소사실",
+          "동일성",
+          "판단기준",
+          "중상해",
+          "상해",
+          "죄명변경"
+        ],
+        "query_text": "상해죄 공소사실 동일성 판단 기준 중상해 상해 죄명 변경 [원문 맥락] 검사는 공소장을 변경하여 을에게 입힌 상해의 정도를 심각한 수준에서 중간 수준으로 수정하고자 하였습니다. 갑의 행위에 대한 범죄의 성립과 처벌은 어떤 시점의 법률에 따르며, 검사가 공소장을 변경하려면 어떤 조건을 충족해야 하는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "상해의 정도 변경이 공소사실 동일성을 해치지 않는지 판단 기준",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "공소사실 동일성 해하지 아니하는 한도 죄명 변경 허용 경우",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "공소사실",
+          "동일성",
+          "죄명변경",
+          "한도",
+          "허용",
+          "예외"
+        ],
+        "query_text": "공소사실의 동일성을 해하지 아니하는 한도 내에서 죄명을 변경할 수 있는 경우 [원문 맥락] 검사는 공소장을 변경하여 을에게 입힌 상해의 정도를 심각한 수준에서 중간 수준으로 수정하고자 하였습니다. 갑의 행위에 대한 범죄의 성립과 처벌은 어떤 시점의 법률에 따르며, 검사가 공소장을 변경하려면 어떤 조건을 충족해야 하는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "공소사실 동일성을 유지하면서 죄명을 변경할 수 있는 법적 한도 및 예외",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 2020년에 을에게 심각한 신체적 상해를 입혀 기소되었습니다. 당시 갑의 행위는 그 해의 형법에 따라 기소되었습니다. 그러나 재판이 진행되는 동안, 갑이 기소된 근거 조문의 형벌이 더 무겁게 변경되었습니다. 검사는 공소장을 변경하여 을에게 입힌 상해의 정도를 심각한 수준에서 중간 수준으로 수정하고자 하였습니다.\n\n[질문]\n갑의 행위에 대한 범죄의 성립과 처벌은 어떤 시점의 법률에 따르며, 검사가 공소장을 변경하려면 어떤 조건을 충족해야 하는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "행위 시 법률과 판결 시 법률 중 유리한 법률을 적용하는 원칙 또는 관련 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "범죄 성립과 처벌에 적용되는 법률의 시점 기준을 규정하는 조항을 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "형벌이 변경된 경우 유리한 법률 적용 원칙을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "범죄의 성립과 처벌에 적용되는 법률의 시점을 정하는 형법 일반 원칙",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 명시적으로 범죄 성립과 처벌의 법률 적용 시점을 묻고 있으므로, 이 원칙 없이는 T1에 대한 결론을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "공소장 변경이 허용되는 경우와 제한, 공소사실 동일성 판단 기준을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "공소장 변경의 법적 근거와 허용 범위를 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "공소사실의 동일성을 유지하는 조건을 확인"
+          },
+          {
+            "requirement_id": "E2-R3",
+            "text": "상해의 정도 변경이 공소사실 동일성을 해치지 않는지 판단 기준을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공소장 변경의 요건과 절차, 특히 공소사실의 동일성 유지 조건",
+        "evidence_item_id": "E2",
+        "evidence_type": "procedure",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 명시적으로 공소장 변경 조건을 묻고 있으므로, 이 절차적 요건 없이는 T2에 대한 결론을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "b9bdc990-aa0e-4bad-aa30-854e4c5b7cfc",
+    "seen_provision_ids": [
+      "형사소송법 298조  공소장의 변경#KOBLEX-232544",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232546",
+      "국민의 형사재판 참여에 관한 법률 6조  공소사실의 변경 등#KOBLEX-219854",
+      "형법 1조  범죄의 성립과 처벌#KOBLEX-192646",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232542",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232543",
+      "군사법원법 355조  공소장의 변경#KOBLEX-093342",
+      "군사법원법 355조  공소장의 변경#KOBLEX-093344",
+      "형법 1조  범죄의 성립과 처벌#KOBLEX-192645",
+      "군사법원법 296조  공소제기의 방식과 공소장#KOBLEX-093089",
+      "군사법원법 355조  공소장의 변경#KOBLEX-093343",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232545",
+      "군사법원법 355조  공소장의 변경#KOBLEX-093341",
+      "형사소송법 254조  공소제기의 방식과 공소장#KOBLEX-232290",
+      "형법 257조  상해, 존속상해#KOBLEX-193191",
+      "군사법원법 355조  공소장의 변경#KOBLEX-093340"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

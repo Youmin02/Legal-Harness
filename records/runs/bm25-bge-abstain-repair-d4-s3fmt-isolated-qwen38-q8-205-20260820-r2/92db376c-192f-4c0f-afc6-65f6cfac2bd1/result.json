@@ -1,0 +1,970 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "민법 제168조에 따르면, 채권자는 소멸시효를 중단시키기 위해 채무에 대한 청구(1호) 또는 압류, 가압류, 가처분(2호)을 취할 수 있습니다.[CT1][CT2]\n전제: 갑과 을 사이의 채권관계가 민법상 소멸시효의 적용 대상임을 전제로 합니다.\n한계: 본 답변은 비공개 벤치마크 후보(benchmark candidate)이며, 공개 가능한 답변이 아닙니다.\n한계: 후보 조항에는 소멸시효 중단 효과의 범위와 중단 기간의 계산 방식에 대한 명시적 규정이 포함되어 있지 않아, 해당 부분은 확인되지 않았습니다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T20:31:21.398849+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 538530.506,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 288,
+      "dedup_collapse": 57,
+      "evidence_fusion": 288,
+      "first_stage": 400,
+      "request_rerank": 400,
+      "round_selected": 30,
+      "rrf": 300,
+      "selected": 288
+    }
+  },
+  "run_id": "92db376c-192f-4c0f-afc6-65f6cfac2bd1",
+  "state": {
+    "accepted_provision_ids": [
+      "민법 168조  소멸시효의 중단사유#KOBLEX-058732",
+      "민법 168조  소멸시효의 중단사유#KOBLEX-058731"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 8,
+          "request_count": 1,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 2,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "Two consecutive retrieval rounds did not improve critical evidence.",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 20
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 20,
+          "claim_count": 1
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_measures",
+        "question_anchor": "소멸시효를 중단하기 위해 어떤 조치를 취할 수 있습니까",
+        "requested_output": "채권자가 채무의 소멸시효를 중단할 수 있는 법적 조치의 종류 및 요건"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "전자문서 및 전자거래 기본법 36조 2 소멸시효의 중단#KOBLEX-166091"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 38.0158963002298,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "전자문서 및 전자거래 기본법 36조 2 소멸시효의 중단#KOBLEX-166091",
+        "provision_text": "제36조의2(소멸시효의 중단) 제33조제1항에 따른 분쟁조정의 신청은 소멸시효 중단의 효력이 있다. 다만, 분쟁조정의 신청을 취하하는 경우에는 그러하지 아니하다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9343768358230591,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "전자문서 및 전자거래 기본법 36조 2 소멸시효의 중단",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군인연금법 52조  시효#KOBLEX-150137"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 33.43456835795904,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "군인연금법 52조  시효#KOBLEX-150137",
+        "provision_text": "⑥ 이 법에 따른 기여금과 환수금, 그 밖의 징수금의 납입 고지 및 독촉과 급여의 지급 청구 또는 과납금 등의 반환 청구는 소멸시효 중단의 효력을 가진다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9072351455688477,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "군인연금법 52조  시효 6항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 168조  소멸시효의 중단사유#KOBLEX-058732"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 48.64810111889591,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민법 168조  소멸시효의 중단사유#KOBLEX-058732",
+        "provision_text": "2. 압류 또는 가압류, 가처분",
+        "rerank_rank": 3,
+        "rerank_score": 0.8940057754516602,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 168조  소멸시효의 중단사유 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공무원연금법 88조  시효#KOBLEX-149106"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 42,
+        "first_stage_score": 25.50707256872148,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "공무원연금법 88조  시효#KOBLEX-149106",
+        "provision_text": "④ 이 법에 따른 기여금, 환수금 및 그 밖의 징수금 등의 납입 고지 및 독촉과 급여의 지급 또는 과납금 등의 반환 청구는 소멸시효 중단의 효력을 가진다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.866801917552948,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "공무원연금법 88조  시효 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 326조  피담보채권의 소멸시효#KOBLEX-059069"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 76,
+        "first_stage_score": 22.96222735523642,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "민법 326조  피담보채권의 소멸시효#KOBLEX-059069",
+        "provision_text": "제326조(피담보채권의 소멸시효) 유치권의 행사는 채권의 소멸시효의 진행에 영향을 미치지 아니한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.8571913242340088,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 326조  피담보채권의 소멸시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "사립학교교직원 연금법 54조  시효#KOBLEX-190353"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 22,
+        "first_stage_score": 32.439566356786635,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "사립학교교직원 연금법 54조  시효#KOBLEX-190353",
+        "provision_text": "④ 부담금이나 그 밖에 이 법에 따른 환수금 등의 납부 고지 및 독촉, 급여의 지급 청구 또는 잘못 납부한 부담금 등의 반환 청구는 소멸시효 중단의 효력을 가진다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.844449520111084,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "사립학교교직원 연금법 54조  시효 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 168조  소멸시효의 중단사유#KOBLEX-058731"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 4.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "민법 168조  소멸시효의 중단사유#KOBLEX-058731",
+        "provision_text": "1. 청구",
+        "rerank_rank": 7,
+        "rerank_score": 0.7584689259529114,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 168조  소멸시효의 중단사유 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 165조  판결 등에 의하여 확정된 채권의 소멸시효#KOBLEX-058722"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 77,
+        "first_stage_score": 22.459760422000162,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "민법 165조  판결 등에 의하여 확정된 채권의 소멸시효#KOBLEX-058722",
+        "provision_text": "제165조(판결 등에 의하여 확정된 채권의 소멸시효)",
+        "rerank_rank": 8,
+        "rerank_score": 0.7578555345535278,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 165조  판결 등에 의하여 확정된 채권의 소멸시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "임금채권보장법 26조  소멸시효#KOBLEX-040111"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 49,
+        "first_stage_score": 25.213938450258134,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "임금채권보장법 26조  소멸시효#KOBLEX-040111",
+        "provision_text": "③ 소멸시효의 중단 등에 관하여는 고용산재보험료징수법 제42조 및 제43조를 준용한다. <개정 2021.4.13>",
+        "rerank_rank": 9,
+        "rerank_score": 0.6564063429832458,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "임금채권보장법 26조  소멸시효 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방재정법 82조  금전채권과 채무의 소멸시효#KOBLEX-196612"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 65,
+        "first_stage_score": 24.10532396794374,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "지방재정법 82조  금전채권과 채무의 소멸시효#KOBLEX-196612",
+        "provision_text": "제82조(금전채권과 채무의 소멸시효)",
+        "rerank_rank": 10,
+        "rerank_score": 0.5256978273391724,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "지방재정법 82조  금전채권과 채무의 소멸시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "발명진흥법 47조  소멸시효의 중단 등#KOBLEX-089083"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 31.371786557840487,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "발명진흥법 47조  소멸시효의 중단 등#KOBLEX-089083",
+        "provision_text": "제47조(소멸시효의 중단 등)",
+        "rerank_rank": 1,
+        "rerank_score": 0.657343327999115,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "발명진흥법 47조  소멸시효의 중단 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사조정법 35조  소멸시효의 중단#KOBLEX-195958"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 32.15714101703234,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민사조정법 35조  소멸시효의 중단#KOBLEX-195958",
+        "provision_text": "제35조(소멸시효의 중단)",
+        "rerank_rank": 2,
+        "rerank_score": 0.5659531354904175,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사조정법 35조  소멸시효의 중단",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 247조  소유권취득의 소급효, 중단사유#KOBLEX-058902"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민법 247조  소유권취득의 소급효, 중단사유#KOBLEX-058902",
+        "provision_text": "②소멸시효의 중단에 관한 규정은 전2조의 소유권취득기간에 준용한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.44090184569358826,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 247조  소유권취득의 소급효, 중단사유 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국유재산법 73조 3 소멸시효#KOBLEX-124874"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 25.34320772028407,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "국유재산법 73조 3 소멸시효#KOBLEX-124874",
+        "provision_text": "제73조의3(소멸시효)",
+        "rerank_rank": 5,
+        "rerank_score": 0.11570468544960022,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "국유재산법 73조 3 소멸시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국민건강보험법 91조  시효#KOBLEX-208577"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 42,
+        "first_stage_score": 21.791968645910448,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "국민건강보험법 91조  시효#KOBLEX-208577",
+        "provision_text": "④ 제1항에 따른 소멸시효기간, 제2항에 따른 시효 중단 및 제3항에 따른 시효 정지에 관하여 이 법에서 정한 사항 외에는 「민법」에 따른다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.09535835683345795,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "국민건강보험법 91조  시효 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "의료급여법 31조  소멸시효#KOBLEX-029107"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 25.34320772028407,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "의료급여법 31조  소멸시효#KOBLEX-029107",
+        "provision_text": "제31조(소멸시효)",
+        "rerank_rank": 7,
+        "rerank_score": 0.09262983500957489,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "의료급여법 31조  소멸시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "고용보험법 107조  소멸시효#KOBLEX-206956"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 25.34320772028407,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "고용보험법 107조  소멸시효#KOBLEX-206956",
+        "provision_text": "제107조(소멸시효)",
+        "rerank_rank": 8,
+        "rerank_score": 0.08802676200866699,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "고용보험법 107조  소멸시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "임금채권보장법 26조  소멸시효#KOBLEX-040108"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 25.34320772028407,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "임금채권보장법 26조  소멸시효#KOBLEX-040108",
+        "provision_text": "제26조(소멸시효)",
+        "rerank_rank": 10,
+        "rerank_score": 0.07602746784687042,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "임금채권보장법 26조  소멸시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세기본법 28조  소멸시효의 중단과 정지#KOBLEX-147477"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 46,
+        "first_stage_score": 22.46245104536844,
+        "fusion_rank": 52,
+        "issue_id": "I1",
+        "provision_id": "국세기본법 28조  소멸시효의 중단과 정지#KOBLEX-147477",
+        "provision_text": "② 제1항에 따라 중단된 소멸시효는 다음 각 호의 기간이 지난 때부터 새로 진행한다. <개정 2020.12.29> 1. 고지한 납부기간 2. 독촉에 의한 납부기간 3. 교부청구 중의 기간 4. 압류해제까지의 기간",
+        "rerank_rank": 52,
+        "rerank_score": 0.6274459958076477,
+        "retrieval_round": 3,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "국세기본법 28조  소멸시효의 중단과 정지 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국유재산법 73조 3 소멸시효#KOBLEX-124877"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 39,
+        "first_stage_score": 23.618596935667295,
+        "fusion_rank": 57,
+        "issue_id": "I1",
+        "provision_id": "국유재산법 73조 3 소멸시효#KOBLEX-124877",
+        "provision_text": "③ 제2항에 따라 중단된 소멸시효는 다음 각 호의 어느 하나의 기간이 지난 때부터 새로 진행한다. 1. 납부고지나 독촉에 따른 납입기간 2. 교부청구 중의 기간 3. 압류해제까지의 기간",
+        "rerank_rank": 57,
+        "rerank_score": 0.4525824189186096,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "국유재산법 73조 3 소멸시효 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "고용보험법 107조  소멸시효#KOBLEX-206956": "제107조(소멸시효)",
+      "공무원연금법 88조  시효#KOBLEX-149106": "④ 이 법에 따른 기여금, 환수금 및 그 밖의 징수금 등의 납입 고지 및 독촉과 급여의 지급 또는 과납금 등의 반환 청구는 소멸시효 중단의 효력을 가진다.",
+      "국민건강보험법 91조  시효#KOBLEX-208577": "④ 제1항에 따른 소멸시효기간, 제2항에 따른 시효 중단 및 제3항에 따른 시효 정지에 관하여 이 법에서 정한 사항 외에는 「민법」에 따른다.",
+      "국세기본법 28조  소멸시효의 중단과 정지#KOBLEX-147477": "② 제1항에 따라 중단된 소멸시효는 다음 각 호의 기간이 지난 때부터 새로 진행한다. <개정 2020.12.29> 1. 고지한 납부기간 2. 독촉에 의한 납부기간 3. 교부청구 중의 기간 4. 압류해제까지의 기간",
+      "국유재산법 73조 3 소멸시효#KOBLEX-124874": "제73조의3(소멸시효)",
+      "국유재산법 73조 3 소멸시효#KOBLEX-124877": "③ 제2항에 따라 중단된 소멸시효는 다음 각 호의 어느 하나의 기간이 지난 때부터 새로 진행한다. 1. 납부고지나 독촉에 따른 납입기간 2. 교부청구 중의 기간 3. 압류해제까지의 기간",
+      "군인연금법 52조  시효#KOBLEX-150137": "⑥ 이 법에 따른 기여금과 환수금, 그 밖의 징수금의 납입 고지 및 독촉과 급여의 지급 청구 또는 과납금 등의 반환 청구는 소멸시효 중단의 효력을 가진다.",
+      "민법 165조  판결 등에 의하여 확정된 채권의 소멸시효#KOBLEX-058722": "제165조(판결 등에 의하여 확정된 채권의 소멸시효)",
+      "민법 168조  소멸시효의 중단사유#KOBLEX-058731": "1. 청구",
+      "민법 168조  소멸시효의 중단사유#KOBLEX-058732": "2. 압류 또는 가압류, 가처분",
+      "민법 247조  소유권취득의 소급효, 중단사유#KOBLEX-058902": "②소멸시효의 중단에 관한 규정은 전2조의 소유권취득기간에 준용한다.",
+      "민법 326조  피담보채권의 소멸시효#KOBLEX-059069": "제326조(피담보채권의 소멸시효) 유치권의 행사는 채권의 소멸시효의 진행에 영향을 미치지 아니한다.",
+      "민사조정법 35조  소멸시효의 중단#KOBLEX-195958": "제35조(소멸시효의 중단)",
+      "발명진흥법 47조  소멸시효의 중단 등#KOBLEX-089083": "제47조(소멸시효의 중단 등)",
+      "사립학교교직원 연금법 54조  시효#KOBLEX-190353": "④ 부담금이나 그 밖에 이 법에 따른 환수금 등의 납부 고지 및 독촉, 급여의 지급 청구 또는 잘못 납부한 부담금 등의 반환 청구는 소멸시효 중단의 효력을 가진다.",
+      "의료급여법 31조  소멸시효#KOBLEX-029107": "제31조(소멸시효)",
+      "임금채권보장법 26조  소멸시효#KOBLEX-040108": "제26조(소멸시효)",
+      "임금채권보장법 26조  소멸시효#KOBLEX-040111": "③ 소멸시효의 중단 등에 관하여는 고용산재보험료징수법 제42조 및 제43조를 준용한다. <개정 2021.4.13>",
+      "전자문서 및 전자거래 기본법 36조 2 소멸시효의 중단#KOBLEX-166091": "제36조의2(소멸시효의 중단) 제33조제1항에 따른 분쟁조정의 신청은 소멸시효 중단의 효력이 있다. 다만, 분쟁조정의 신청을 취하하는 경우에는 그러하지 아니하다.",
+      "지방재정법 82조  금전채권과 채무의 소멸시효#KOBLEX-196612": "제82조(금전채권과 채무의 소멸시효)"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 168조  소멸시효의 중단사유#KOBLEX-058732",
+              "민법 168조  소멸시효의 중단사유#KOBLEX-058731"
+            ],
+            "rationale": "C003과 C007은 가압류와 청구를 중단 사유로 열거하여 요구사항을 충족한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "공급된 후보 조항 중 소멸시효 중단 효과의 범위나 중단 기간 계산 방식을 명시하는 조항이 존재하지 않는다.",
+            "requirement_id": "E1-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "민법 168조  소멸시효의 중단사유#KOBLEX-058732",
+          "민법 168조  소멸시효의 중단사유#KOBLEX-058731"
+        ],
+        "missing_aspects": [
+          "E1-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "공급된 후보 조항들은 민법 제168조에 근거한 소멸시효 중단 사유(청구, 가압류 등)를 일부 열거하고 있으나, 중단 효과의 범위와 중단 기간의 계산 방식에 대한 명시적 규정이 포함되어 있지 않아 법적 근거가 불완전하다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 168조  소멸시효의 중단사유#KOBLEX-058732",
+        "support_spans": [
+          {
+            "end_char": 17,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 168조  소멸시효의 중단사유#KOBLEX-058731",
+        "support_spans": [
+          {
+            "end_char": 5,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 2,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "민법상 소멸시효의 중단 사유와 법적 효과",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "소멸시효 중단 사유의 법적 근거와 중단 효과의 범위를 명확히 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "소멸시효를 중단시키는 구체적 법적 조치(청구, 가압류, 가처분 등)를 열거"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "조치 취행 시 소멸시효가 중단되는 법적 효과와 중단 기간의 계산 방식 확인"
+          }
+        ],
+        "critical": true,
+        "description": "소멸시효를 중단시키는 사유(청구, 가압류, 가처분, 채무인정 등) 및 그 법적 효과에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 '조치'의 법적 근거와 효과를 입증하기 위해 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 갑은 을에게 5년 전 돈을 빌려주었지만 을이 갚지 않고 있습니다. 갑은 채무의 시효가 다가오는 것을 우려하여, 소멸시효를 중단하기 위해 법적 조치를 취하고자 합니다. 갑은 먼저 가압류를 신청하기로 결정하였습니다. [질문] 갑이 을에 대한 채무의 소멸시효를 중단하기 위해 어떤 조치를 취할 수 있습니까?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "소멸시효 중단 사유 청구 가압류 가처분 채무인정 민법",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "소멸시효",
+          "중단",
+          "청구",
+          "가압류",
+          "가처분",
+          "채무인정"
+        ],
+        "query_text": "민법 소멸시효 중단 사유 청구 가압류 가처분 채무인정 [원문 맥락] 갑은 먼저 가압류를 신청하기로 결정하였습니다. 갑이 을에 대한 채무의 소멸시효를 중단하기 위해 어떤 조치를 취할 수 있습니까?",
+        "request_id": "RQ1",
+        "rerank_query_text": "채권자가 채무의 소멸시효를 중단하기 위해 취할 수 있는 법적 조치와 그 효과",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "소멸시효 중단 효과 중단기간 계산 시효기간 재개시 가산",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "소멸시효",
+          "중단",
+          "효과",
+          "기간",
+          "계산",
+          "가산"
+        ],
+        "query_text": "소멸시효 중단 사유 발생 시 중단된 기간을 가산하여 시효기간을 다시 계산하는 규정 [원문 맥락] 갑은 먼저 가압류를 신청하기로 결정하였습니다. 갑이 을에 대한 채무의 소멸시효를 중단하기 위해 어떤 조치를 취할 수 있습니까?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "소멸시효 중단 효과의 범위와 중단 기간의 계산 방식",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "소멸시효 중단 효과 중단 전 경과기간 중단 후 경과기간 합산 시효완성",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "소멸시효",
+          "중단",
+          "경과기간",
+          "합산",
+          "시효완성",
+          "재개시"
+        ],
+        "query_text": "소멸시효 중단 사유가 소멸된 후 시효기간이 다시 진행되고 중단 전 경과기간과 중단 후 경과기간을 합산하여 시효완성을 판단하는 규정 [원문 맥락] 갑은 먼저 가압류를 신청하기로 결정하였습니다. 갑이 을에 대한 채무의 소멸시효를 중단하기 위해 어떤 조치를 취할 수 있습니까?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "소멸시효 중단 효과의 범위와 중단 기간의 계산 방식",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "소멸시효 중단 효과 중단 전 기간 중단 후 기간 합산 계산",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "소멸시효",
+          "중단",
+          "효과",
+          "합산",
+          "계산",
+          "기간"
+        ],
+        "query_text": "소멸시효 중단 효과 중단 전 기간 중단 후 기간 합산 계산 [원문 맥락] 갑은 먼저 가압류를 신청하기로 결정하였습니다. 갑이 을에 대한 채무의 소멸시효를 중단하기 위해 어떤 조치를 취할 수 있습니까?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "소멸시효 중단 효과의 범위와 중단 기간의 계산 방식",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을에게 5년 전 돈을 빌려주었지만 을이 갚지 않고 있습니다. 갑은 채무의 시효가 다가오는 것을 우려하여, 소멸시효를 중단하기 위해 법적 조치를 취하고자 합니다. 갑은 먼저 가압류를 신청하기로 결정하였습니다.\n\n[질문]\n갑이 을에 대한 채무의 소멸시효를 중단하기 위해 어떤 조치를 취할 수 있습니까?",
+    "remaining_request_budget": 5,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "소멸시효 중단 사유의 법적 근거와 중단 효과의 범위를 명확히 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "소멸시효를 중단시키는 구체적 법적 조치(청구, 가압류, 가처분 등)를 열거"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "조치 취행 시 소멸시효가 중단되는 법적 효과와 중단 기간의 계산 방식 확인"
+          }
+        ],
+        "critical": true,
+        "description": "소멸시효를 중단시키는 사유(청구, 가압류, 가처분, 채무인정 등) 및 그 법적 효과에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 '조치'의 법적 근거와 효과를 입증하기 위해 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "92db376c-192f-4c0f-afc6-65f6cfac2bd1",
+    "seen_provision_ids": [
+      "고용보험법 107조  소멸시효#KOBLEX-206956",
+      "지방재정법 82조  금전채권과 채무의 소멸시효#KOBLEX-196612",
+      "국유재산법 73조 3 소멸시효#KOBLEX-124877",
+      "임금채권보장법 26조  소멸시효#KOBLEX-040108",
+      "민법 168조  소멸시효의 중단사유#KOBLEX-058732",
+      "의료급여법 31조  소멸시효#KOBLEX-029107",
+      "민사조정법 35조  소멸시효의 중단#KOBLEX-195958",
+      "민법 168조  소멸시효의 중단사유#KOBLEX-058731",
+      "민법 326조  피담보채권의 소멸시효#KOBLEX-059069",
+      "공무원연금법 88조  시효#KOBLEX-149106",
+      "국민건강보험법 91조  시효#KOBLEX-208577",
+      "국유재산법 73조 3 소멸시효#KOBLEX-124874",
+      "사립학교교직원 연금법 54조  시효#KOBLEX-190353",
+      "민법 247조  소유권취득의 소급효, 중단사유#KOBLEX-058902",
+      "민법 165조  판결 등에 의하여 확정된 채권의 소멸시효#KOBLEX-058722",
+      "국세기본법 28조  소멸시효의 중단과 정지#KOBLEX-147477",
+      "임금채권보장법 26조  소멸시효#KOBLEX-040111",
+      "군인연금법 52조  시효#KOBLEX-150137",
+      "발명진흥법 47조  소멸시효의 중단 등#KOBLEX-089083",
+      "전자문서 및 전자거래 기본법 36조 2 소멸시효의 중단#KOBLEX-166091"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "NO_RETRIEVAL_PROGRESS"
+}

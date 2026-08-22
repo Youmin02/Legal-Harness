@@ -1,0 +1,977 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "선박소유자와 선원 간에 생긴 근로관계에 관한 분쟁(노동쟁의 제외)의 해결을 해양항만관청이 주선할 수 있다[CT1]\n전제: 본 진단은 후보 조항(C001)만을 근거로 작성되었으며, 해당 조항이 최종적으로 채택된 근거가 아님을 전제로 함\n한계: 본 답변은 공개 가능한 공식 답변이 아닌 벤치마크 진단용 후보이며, 정책 상태는 ABSTAIN으로 유지됨\n한계: 선원법 제130조는 해양항만관청의 '주선' 권한만 규정하고 있어, 분쟁 해결의 강제적 절차나 배타적 관할 기관에 대한 완전한 법적 근거를 제공하지 못함",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T04:23:07.907911+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 381649.914,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 294,
+      "dedup_collapse": 73,
+      "evidence_fusion": 294,
+      "first_stage": 500,
+      "request_rerank": 500,
+      "round_selected": 30,
+      "rrf": 300,
+      "selected": 294
+    }
+  },
+  "run_id": "37448b2a-94e2-46a8-ae66-9e8b3104da22",
+  "state": {
+    "accepted_provision_ids": [
+      "선원법 130조  해양항만관청의 주선#KOBLEX-067697"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 1,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "Two consecutive retrieval rounds did not improve critical evidence.",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 21
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 21,
+          "claim_count": 1
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "procedure",
+        "question_anchor": "어떻게 해결되는가",
+        "requested_output": "선박 소유자와 선원 간 근로관계 분쟁의 해결 절차 및 관할 규정"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "선원법 130조  해양항만관청의 주선#KOBLEX-067697"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 40.777893586890826,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "선원법 130조  해양항만관청의 주선#KOBLEX-067697",
+        "provision_text": "제130조(해양항만관청의 주선) 해양항만관청은 선박소유자와 선원 간에 생긴 근로관계에 관한 분쟁(「노동조합 및 노동관계조정법」 제2조제5호에 따른 노동쟁의는 제외한다)의 해결을 주선할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9994469285011292,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "선원법 130조  해양항만관청의 주선",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 60조  근로시간 및 휴식시간#KOBLEX-067406"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 63,
+        "first_stage_score": 21.379717085421852,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "선원법 60조  근로시간 및 휴식시간#KOBLEX-067406",
+        "provision_text": "⑦ 선박소유자는 제6항에 따라 휴식시간에도 불구하고 필요한 작업을 한 선원 또는 휴식시간 중에 작업에 호출되어 정상적인 휴식을 취하지 못한 선원에게 작업시간에 상응한 보상휴식을 주어야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.04148263856768608,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "선원법 60조  근로시간 및 휴식시간 7항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 25조 4 선내 괴롭힘 발생 시 조치#KOBLEX-067262"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 59,
+        "first_stage_score": 21.55018523025993,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "선원법 25조 4 선내 괴롭힘 발생 시 조치#KOBLEX-067262",
+        "provision_text": "⑥ 선박소유자는 선내 괴롭힘 발생 사실을 신고한 선원 및 피해선원등에게 해고나 그 밖의 불리한 처우를 하여서는 아니 된다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.02499288320541382,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "선원법 25조 4 선내 괴롭힘 발생 시 조치 6항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 86조  응급처치 담당자#KOBLEX-067522"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 61,
+        "first_stage_score": 21.55018523025993,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "선원법 86조  응급처치 담당자#KOBLEX-067522",
+        "provision_text": "② 선박소유자는 응급처치 담당자를 해양수산부령으로 정하는 응급처치에 관한 교육을 이수한 선원 중에서 선임하여야 한다. <개정 2013.3.23>",
+        "rerank_rank": 4,
+        "rerank_score": 0.01265054102987051,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "선원법 86조  응급처치 담당자 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 36조  선원근로계약 종료의 특례#KOBLEX-067287"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 33,
+        "first_stage_score": 23.791634725360847,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "선원법 36조  선원근로계약 종료의 특례#KOBLEX-067287",
+        "provision_text": "제36조(선원근로계약 종료의 특례) 상속 등 포괄승계에 의한 경우를 제외하고 선박소유자가 변경된 경우에는 옛 선박소유자와 체결한 선원근로계약은 종료하며, 그때부터 새로운 선박소유자와 선원 간에 종전의 선원근로계약과 같은 조건의 새로운 선원근로계약이 체결된 것으로 본다. 다만, 새로운 선박소유자나 선원은 72시간 이상의 예고기간을 두고 서면으로 알림으로써 선원근로계약을 해지할 수 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0023451007436960936,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "선원법 36조  선원근로계약 종료의 특례",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 62조  시간외근로수당 등#KOBLEX-067415"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 50,
+        "first_stage_score": 22.378092213131836,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "선원법 62조  시간외근로수당 등#KOBLEX-067415",
+        "provision_text": "① 선박소유자는 다음 각 호의 어느 하나에 해당하는 선원에게 시간외근로나 휴일근로에 대하여 통상임금의 100분의 150에 상당하는 금액 이상을 시간외근로수당으로 지급하여야 한다. 1. 제60조제1항ㆍ제2항 및 제6항에 따라 시간외근로를 한 선원(같은 조 제7항에 따라 보상휴식을 받은 선원은 제외한다) 2. 휴일에 근로를 한 선원",
+        "rerank_rank": 6,
+        "rerank_score": 0.002210731152445078,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "선원법 62조  시간외근로수당 등 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 25조 4 선내 괴롭힘 발생 시 조치#KOBLEX-067258"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 33.11180321603228,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "선원법 25조 4 선내 괴롭힘 발생 시 조치#KOBLEX-067258",
+        "provision_text": "② 선박소유자는 제1항에 따른 신고를 접수하거나 선내 괴롭힘 발생 사실을 인지한 경우에는 지체 없이 당사자 등을 대상으로 그 사실 확인을 위하여 객관적으로 조사를 실시하여야 한다. 다만, 해당 선박이 조업 중, 항해 중 또는 외국 항만에 있는 경우에는 피해를 입은 선원 또는 피해를 입었다고 주장하는 선원(이하 \"피해선원등\"이라 한다)의 의견을 들어 다음 기항 예정 항만 또는 국내 항만 입항 시 조사를 실시할 수 있다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.0003341367992106825,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "선원법 25조 4 선내 괴롭힘 발생 시 조치 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 126조  선원근로감독관의 권한#KOBLEX-067675"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 41,
+        "first_stage_score": 23.07256036552458,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "선원법 126조  선원근로감독관의 권한#KOBLEX-067675",
+        "provision_text": "① 선원근로감독관은 이 법에 따른 선원근로감독을 위하여 선박소유자, 선원 또는 그 밖의 관계인에게 출석을 요구하거나 장부나 서류의 제출을 명할 수 있으며, 선박이나 그 밖의 사업장을 출입하여 검사하거나 질문할 수 있다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.0003160308115184307,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "선원법 126조  선원근로감독관의 권한 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 77조  선내 급식비#KOBLEX-067484"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 24.19189350233829,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "선원법 77조  선내 급식비#KOBLEX-067484",
+        "provision_text": "② 선박소유자는 선내 급식비를 지급할 때에는 선원 1인당 1일 기준액을 밝혀야 한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.0002441801771055907,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "선원법 77조  선내 급식비 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 시행령 2조  선원이 아닌 사람#KOBLEX-122192"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 67,
+        "first_stage_score": 21.1649892067753,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "선원법 시행령 2조  선원이 아닌 사람#KOBLEX-122192",
+        "provision_text": "7. 제1호부터 제6호까지의 어느 하나에 준하는 사람으로서 선박소유자 단체 및 선원 단체의 대표자와 협의를 거쳐 해양수산부장관이 정하여 고시하는 사람",
+        "rerank_rank": 10,
+        "rerank_score": 0.00023445169790647924,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "선원법 시행령 2조  선원이 아닌 사람 7호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "최저임금법 3조  적용 범위#KOBLEX-176097"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 21.255303122538432,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "최저임금법 3조  적용 범위#KOBLEX-176097",
+        "provision_text": "② 이 법은 「선원법」의 적용을 받는 선원과 선원을 사용하는 선박의 소유자에게는 적용하지 아니한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.005424537230283022,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "최저임금법 3조  적용 범위 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "병역법 시행령 40조 9 승선근무예비역의 실태조사 등#KOBLEX-001480"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 65,
+        "first_stage_score": 16.725105097523233,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "병역법 시행령 40조 9 승선근무예비역의 실태조사 등#KOBLEX-001480",
+        "provision_text": "④ 법 제23조의5제3항에서 \"승선근무예비역이 제2항의 실태조사 등 대통령령으로 정하는 바에 따라 확인한 결과 인권침해를 입었다고 인정되는 경우\"란 다음 각 호의 어느 하나에 해당하는 경우를 말한다. <신설 2024.7.2> 1. 법 제23조의5제2항에 따른 관할 지방병무청장의 실태조사 결과 해운업체등의 장(선박소유자 및 선원을 포함한다. 이하 이 항에서 같다)의 「근로기준법」, 「선원법」 또는 「성폭력범죄의 처벌 등에 관한 특례법」 위반행위로 인권침해가 있는 것으로 확인되거나 이에 준하는 인권침해가 있는 것으로 관할 지방병무청장이 인정하는 경우 2. 다음 각 목의 어느 하나에 해당하는 경우로서 승선근무예비역이 인권침해를 입었다고 관할 지방병무청장이 인정하는 경우",
+        "rerank_rank": 3,
+        "rerank_score": 0.0011399491922929883,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "병역법 시행령 40조 9 승선근무예비역의 실태조사 등 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 120조  취업규칙의 작성 절차#KOBLEX-067657"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 92,
+        "first_stage_score": 2.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "선원법 120조  취업규칙의 작성 절차#KOBLEX-067657",
+        "provision_text": "① 제119조제1항에 따라 취업규칙을 작성하거나 변경하려는 선박소유자는 그 취업규칙이 적용되는 선박소유자가 사용하는 선원의 과반수로써 조직되는 노동조합이 있는 경우에는 그 노동조합의 의견을 들어야 하며, 선원의 과반수로써 조직되는 노동조합이 없는 경우에는 선원 과반수의 의견을 들어야 한다. 다만, 취업규칙을 선원에게 불리하게 변경하는 경우에는 그 동의를 받아야 한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.0001472088333684951,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "선원법 120조  취업규칙의 작성 절차 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "가사소송법 44조  관할 등#KOBLEX-064925"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 28,
+        "first_stage_score": 11.878002888133407,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "가사소송법 44조  관할 등#KOBLEX-064925",
+        "provision_text": "제44조(관할 등)",
+        "rerank_rank": 1,
+        "rerank_score": 0.00010578132059890777,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "가사소송법 44조  관할 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정절차법 6조  관할#KOBLEX-097957"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 12.182989180892328,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "행정절차법 6조  관할#KOBLEX-097957",
+        "provision_text": "제6조(관할)",
+        "rerank_rank": 4,
+        "rerank_score": 8.528971375199035e-05,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "행정절차법 6조  관할",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "가사소송법 13조  관할#KOBLEX-064819"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 12.182989180892328,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "가사소송법 13조  관할#KOBLEX-064819",
+        "provision_text": "제13조(관할)",
+        "rerank_rank": 5,
+        "rerank_score": 7.330333755817264e-05,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "가사소송법 13조  관할",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "가사소송법 51조  관할#KOBLEX-064970"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 12.182989180892328,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "가사소송법 51조  관할#KOBLEX-064970",
+        "provision_text": "제51조(관할)",
+        "rerank_rank": 7,
+        "rerank_score": 6.725019920850173e-05,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "가사소송법 51조  관할",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "가사소송법 35조  관할#KOBLEX-064891"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 12.182989180892328,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "가사소송법 35조  관할#KOBLEX-064891",
+        "provision_text": "제35조(관할)",
+        "rerank_rank": 9,
+        "rerank_score": 6.262247188715264e-05,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "가사소송법 35조  관할",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "가사소송법 26조  관할#KOBLEX-064865"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 12.182989180892328,
+        "fusion_rank": 11,
+        "issue_id": "I1",
+        "provision_id": "가사소송법 26조  관할#KOBLEX-064865",
+        "provision_text": "제26조(관할)",
+        "rerank_rank": 11,
+        "rerank_score": 6.0741702327504754e-05,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "가사소송법 26조  관할",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 129조  감독기관 등에 대한 신고 등#KOBLEX-067690"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 94,
+        "first_stage_score": 2.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "선원법 129조  감독기관 등에 대한 신고 등#KOBLEX-067690",
+        "provision_text": "③ 제1항에 따라 신고된 사항에 대한 처리 절차는 해양수산부령으로 정한다. <개정 2013.3.23>",
+        "rerank_rank": 8,
+        "rerank_score": 5.600512304226868e-05,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "선원법 129조  감독기관 등에 대한 신고 등 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 134조  외국선박의 선원 불만 처리절차#KOBLEX-067710"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 46,
+        "first_stage_score": 17.422784756415695,
+        "fusion_rank": 13,
+        "issue_id": "I1",
+        "provision_id": "선원법 134조  외국선박의 선원 불만 처리절차#KOBLEX-067710",
+        "provision_text": "제134조(외국선박의 선원 불만 처리절차) 해양수산부장관은 국내 항에 정박 중이거나 계류 중인 외국선박이 해사노동협약의 기준을 위반하였다는 신고를 선원 등으로부터 받은 경우 제132조에 따라 점검을 시작하는 등 대통령령으로 정하는 조치를 하여야 한다. <개정 2013.3.23>",
+        "rerank_rank": 13,
+        "rerank_score": 0.00032033215393312275,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "선원법 134조  외국선박의 선원 불만 처리절차",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "가사소송법 13조  관할#KOBLEX-064819": "제13조(관할)",
+      "가사소송법 26조  관할#KOBLEX-064865": "제26조(관할)",
+      "가사소송법 35조  관할#KOBLEX-064891": "제35조(관할)",
+      "가사소송법 44조  관할 등#KOBLEX-064925": "제44조(관할 등)",
+      "가사소송법 51조  관할#KOBLEX-064970": "제51조(관할)",
+      "병역법 시행령 40조 9 승선근무예비역의 실태조사 등#KOBLEX-001480": "④ 법 제23조의5제3항에서 \"승선근무예비역이 제2항의 실태조사 등 대통령령으로 정하는 바에 따라 확인한 결과 인권침해를 입었다고 인정되는 경우\"란 다음 각 호의 어느 하나에 해당하는 경우를 말한다. <신설 2024.7.2> 1. 법 제23조의5제2항에 따른 관할 지방병무청장의 실태조사 결과 해운업체등의 장(선박소유자 및 선원을 포함한다. 이하 이 항에서 같다)의 「근로기준법」, 「선원법」 또는 「성폭력범죄의 처벌 등에 관한 특례법」 위반행위로 인권침해가 있는 것으로 확인되거나 이에 준하는 인권침해가 있는 것으로 관할 지방병무청장이 인정하는 경우 2. 다음 각 목의 어느 하나에 해당하는 경우로서 승선근무예비역이 인권침해를 입었다고 관할 지방병무청장이 인정하는 경우",
+      "선원법 120조  취업규칙의 작성 절차#KOBLEX-067657": "① 제119조제1항에 따라 취업규칙을 작성하거나 변경하려는 선박소유자는 그 취업규칙이 적용되는 선박소유자가 사용하는 선원의 과반수로써 조직되는 노동조합이 있는 경우에는 그 노동조합의 의견을 들어야 하며, 선원의 과반수로써 조직되는 노동조합이 없는 경우에는 선원 과반수의 의견을 들어야 한다. 다만, 취업규칙을 선원에게 불리하게 변경하는 경우에는 그 동의를 받아야 한다.",
+      "선원법 126조  선원근로감독관의 권한#KOBLEX-067675": "① 선원근로감독관은 이 법에 따른 선원근로감독을 위하여 선박소유자, 선원 또는 그 밖의 관계인에게 출석을 요구하거나 장부나 서류의 제출을 명할 수 있으며, 선박이나 그 밖의 사업장을 출입하여 검사하거나 질문할 수 있다.",
+      "선원법 129조  감독기관 등에 대한 신고 등#KOBLEX-067690": "③ 제1항에 따라 신고된 사항에 대한 처리 절차는 해양수산부령으로 정한다. <개정 2013.3.23>",
+      "선원법 130조  해양항만관청의 주선#KOBLEX-067697": "제130조(해양항만관청의 주선) 해양항만관청은 선박소유자와 선원 간에 생긴 근로관계에 관한 분쟁(「노동조합 및 노동관계조정법」 제2조제5호에 따른 노동쟁의는 제외한다)의 해결을 주선할 수 있다.",
+      "선원법 134조  외국선박의 선원 불만 처리절차#KOBLEX-067710": "제134조(외국선박의 선원 불만 처리절차) 해양수산부장관은 국내 항에 정박 중이거나 계류 중인 외국선박이 해사노동협약의 기준을 위반하였다는 신고를 선원 등으로부터 받은 경우 제132조에 따라 점검을 시작하는 등 대통령령으로 정하는 조치를 하여야 한다. <개정 2013.3.23>",
+      "선원법 25조 4 선내 괴롭힘 발생 시 조치#KOBLEX-067258": "② 선박소유자는 제1항에 따른 신고를 접수하거나 선내 괴롭힘 발생 사실을 인지한 경우에는 지체 없이 당사자 등을 대상으로 그 사실 확인을 위하여 객관적으로 조사를 실시하여야 한다. 다만, 해당 선박이 조업 중, 항해 중 또는 외국 항만에 있는 경우에는 피해를 입은 선원 또는 피해를 입었다고 주장하는 선원(이하 \"피해선원등\"이라 한다)의 의견을 들어 다음 기항 예정 항만 또는 국내 항만 입항 시 조사를 실시할 수 있다.",
+      "선원법 25조 4 선내 괴롭힘 발생 시 조치#KOBLEX-067262": "⑥ 선박소유자는 선내 괴롭힘 발생 사실을 신고한 선원 및 피해선원등에게 해고나 그 밖의 불리한 처우를 하여서는 아니 된다.",
+      "선원법 36조  선원근로계약 종료의 특례#KOBLEX-067287": "제36조(선원근로계약 종료의 특례) 상속 등 포괄승계에 의한 경우를 제외하고 선박소유자가 변경된 경우에는 옛 선박소유자와 체결한 선원근로계약은 종료하며, 그때부터 새로운 선박소유자와 선원 간에 종전의 선원근로계약과 같은 조건의 새로운 선원근로계약이 체결된 것으로 본다. 다만, 새로운 선박소유자나 선원은 72시간 이상의 예고기간을 두고 서면으로 알림으로써 선원근로계약을 해지할 수 있다.",
+      "선원법 60조  근로시간 및 휴식시간#KOBLEX-067406": "⑦ 선박소유자는 제6항에 따라 휴식시간에도 불구하고 필요한 작업을 한 선원 또는 휴식시간 중에 작업에 호출되어 정상적인 휴식을 취하지 못한 선원에게 작업시간에 상응한 보상휴식을 주어야 한다.",
+      "선원법 62조  시간외근로수당 등#KOBLEX-067415": "① 선박소유자는 다음 각 호의 어느 하나에 해당하는 선원에게 시간외근로나 휴일근로에 대하여 통상임금의 100분의 150에 상당하는 금액 이상을 시간외근로수당으로 지급하여야 한다. 1. 제60조제1항ㆍ제2항 및 제6항에 따라 시간외근로를 한 선원(같은 조 제7항에 따라 보상휴식을 받은 선원은 제외한다) 2. 휴일에 근로를 한 선원",
+      "선원법 77조  선내 급식비#KOBLEX-067484": "② 선박소유자는 선내 급식비를 지급할 때에는 선원 1인당 1일 기준액을 밝혀야 한다.",
+      "선원법 86조  응급처치 담당자#KOBLEX-067522": "② 선박소유자는 응급처치 담당자를 해양수산부령으로 정하는 응급처치에 관한 교육을 이수한 선원 중에서 선임하여야 한다. <개정 2013.3.23>",
+      "선원법 시행령 2조  선원이 아닌 사람#KOBLEX-122192": "7. 제1호부터 제6호까지의 어느 하나에 준하는 사람으로서 선박소유자 단체 및 선원 단체의 대표자와 협의를 거쳐 해양수산부장관이 정하여 고시하는 사람",
+      "최저임금법 3조  적용 범위#KOBLEX-176097": "② 이 법은 「선원법」의 적용을 받는 선원과 선원을 사용하는 선박의 소유자에게는 적용하지 아니한다.",
+      "행정절차법 6조  관할#KOBLEX-097957": "제6조(관할)"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "선원법 130조  해양항만관청의 주선#KOBLEX-067697"
+            ],
+            "rationale": "C001 specifies the Marine Port Authority as an entity that can mediate disputes, addressing the 'authority' component. It does not, however, specify a detailed 'procedure' or exclusive jurisdiction for resolving the dispute, which is required by the completion criteria.",
+            "requirement_id": "E1-R1",
+            "status": "partially_satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "선원법 130조  해양항만관청의 주선#KOBLEX-067697"
+        ],
+        "missing_aspects": [
+          "E1-R1"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C001 provides for optional mediation by the Marine Port Authority, which partially addresses the requirement to identify a resolution authority. However, the completion criteria require confirmation of both the resolution procedure and the jurisdictional body. C001 does not specify a mandatory procedure, exclusive jurisdiction, or other comprehensive resolution mechanisms (e.g., arbitration or court jurisdiction) for these disputes. No other supplied provisions address the resolution procedure or jurisdiction for shipowner-crew labor disputes.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "선원법 130조  해양항만관청의 주선#KOBLEX-067697",
+        "support_spans": [
+          {
+            "end_char": 108,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 1,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "선박 소유자와 선원 간의 근로관계 분쟁에 적용되는 법적 체계 및 관할 규정",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "해당 분쟁의 해결 절차와 관할 기관을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "선박 소유자와 선원 간 분쟁의 관할 기관 또는 절차가 명시된 조항을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "선박 소유자와 선원 간 근로관계 분쟁의 해결 절차 및 관할을 정하는 법령",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 분쟁 해결 방식을 특정하기 위해 필수적인 법적 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 갑(선박 소유자)은 을(선원)과 근로계약을 체결하고, 을은 갑의 선박에서 근무를 시작했다. 이 선박은 외국 항구에 정박 중인데, 을은 근로계약의 일부 조항에 대해 불만을 가지게 되었고, 갑과의 근로관계에 대한 분쟁이 발생했다. [질문] 선박 소유자 갑과 선원 을 간의 근로관계에 관한 분쟁은 어떻게 해결되는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "선박 선원 근로계약 분쟁 해결 관할 항만",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "선박",
+          "선원",
+          "근로관계",
+          "분쟁해결",
+          "관할",
+          "항만"
+        ],
+        "query_text": "선박 소유자 선원 근로관계 분쟁 해결 절차 관할 [원문 맥락] 이 선박은 외국 항구에 정박 중인데, 을은 근로계약의 일부 조항에 대해 불만을 가지게 되었고, 갑과의 근로관계에 대한 분쟁이 발생했다. 선박 소유자 갑과 선원 을 간의 근로관계에 관한 분쟁은 어떻게 해결되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "선박 소유자와 선원 간 근로관계 분쟁 해결 절차 및 관할 규정",
+        "statute_hints": [
+          "해상법",
+          "근로기준법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "선원법 근로분쟁 조정 절차 관할",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "선원법",
+          "근로분쟁",
+          "조정",
+          "절차",
+          "관할"
+        ],
+        "query_text": "선원법 근로분쟁 조정 절차 관할 [원문 맥락] 이 선박은 외국 항구에 정박 중인데, 을은 근로계약의 일부 조항에 대해 불만을 가지게 되었고, 갑과의 근로관계에 대한 분쟁이 발생했다. 선박 소유자 갑과 선원 을 간의 근로관계에 관한 분쟁은 어떻게 해결되는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "선박 소유자와 선원 간 근로관계 분쟁 해결 절차 및 관할 규정",
+        "statute_hints": [
+          "선원법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "근로분쟁조정법 관할 노동위원회",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "근로분쟁조정법",
+          "관할",
+          "노동위원회",
+          "분쟁해결"
+        ],
+        "query_text": "근로분쟁조정법 관할 노동위원회 [원문 맥락] 이 선박은 외국 항구에 정박 중인데, 을은 근로계약의 일부 조항에 대해 불만을 가지게 되었고, 갑과의 근로관계에 대한 분쟁이 발생했다. 선박 소유자 갑과 선원 을 간의 근로관계에 관한 분쟁은 어떻게 해결되는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "선박 소유자와 선원 간 근로관계 분쟁 해결 절차 및 관할 규정",
+        "statute_hints": [
+          "근로분쟁조정법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "선원법 131조 선원분쟁 조정 절차",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "선원법",
+          "제131조",
+          "선원분쟁",
+          "조정",
+          "절차"
+        ],
+        "query_text": "선원법 제131조 선원분쟁 조정 절차 [원문 맥락] 이 선박은 외국 항구에 정박 중인데, 을은 근로계약의 일부 조항에 대해 불만을 가지게 되었고, 갑과의 근로관계에 대한 분쟁이 발생했다. 선박 소유자 갑과 선원 을 간의 근로관계에 관한 분쟁은 어떻게 해결되는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "선박 소유자와 선원 간 근로관계 분쟁 해결 절차 및 관할 규정",
+        "statute_hints": [
+          "선원법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "선원 근로분쟁 관할 법원 민사소송",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "선원",
+          "근로분쟁",
+          "관할",
+          "법원",
+          "민사소송"
+        ],
+        "query_text": "선원 근로분쟁 관할 법원 민사소송 [원문 맥락] 이 선박은 외국 항구에 정박 중인데, 을은 근로계약의 일부 조항에 대해 불만을 가지게 되었고, 갑과의 근로관계에 대한 분쟁이 발생했다. 선박 소유자 갑과 선원 을 간의 근로관계에 관한 분쟁은 어떻게 해결되는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "선박 소유자와 선원 간 근로관계 분쟁 해결 절차 및 관할 규정",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑(선박 소유자)은 을(선원)과 근로계약을 체결하고, 을은 갑의 선박에서 근무를 시작했다. 이 선박은 외국 항구에 정박 중인데, 을은 근로계약의 일부 조항에 대해 불만을 가지게 되었고, 갑과의 근로관계에 대한 분쟁이 발생했다.\n\n[질문]\n선박 소유자 갑과 선원 을 간의 근로관계에 관한 분쟁은 어떻게 해결되는가?",
+    "remaining_request_budget": 4,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "해당 분쟁의 해결 절차와 관할 기관을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "선박 소유자와 선원 간 분쟁의 관할 기관 또는 절차가 명시된 조항을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "선박 소유자와 선원 간 근로관계 분쟁의 해결 절차 및 관할을 정하는 법령",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 분쟁 해결 방식을 특정하기 위해 필수적인 법적 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "37448b2a-94e2-46a8-ae66-9e8b3104da22",
+    "seen_provision_ids": [
+      "선원법 25조 4 선내 괴롭힘 발생 시 조치#KOBLEX-067258",
+      "선원법 시행령 2조  선원이 아닌 사람#KOBLEX-122192",
+      "선원법 77조  선내 급식비#KOBLEX-067484",
+      "선원법 62조  시간외근로수당 등#KOBLEX-067415",
+      "선원법 130조  해양항만관청의 주선#KOBLEX-067697",
+      "병역법 시행령 40조 9 승선근무예비역의 실태조사 등#KOBLEX-001480",
+      "가사소송법 26조  관할#KOBLEX-064865",
+      "가사소송법 13조  관할#KOBLEX-064819",
+      "선원법 126조  선원근로감독관의 권한#KOBLEX-067675",
+      "가사소송법 44조  관할 등#KOBLEX-064925",
+      "선원법 60조  근로시간 및 휴식시간#KOBLEX-067406",
+      "가사소송법 51조  관할#KOBLEX-064970",
+      "선원법 36조  선원근로계약 종료의 특례#KOBLEX-067287",
+      "행정절차법 6조  관할#KOBLEX-097957",
+      "선원법 120조  취업규칙의 작성 절차#KOBLEX-067657",
+      "선원법 25조 4 선내 괴롭힘 발생 시 조치#KOBLEX-067262",
+      "선원법 134조  외국선박의 선원 불만 처리절차#KOBLEX-067710",
+      "선원법 129조  감독기관 등에 대한 신고 등#KOBLEX-067690",
+      "선원법 86조  응급처치 담당자#KOBLEX-067522",
+      "가사소송법 35조  관할#KOBLEX-064891",
+      "최저임금법 3조  적용 범위#KOBLEX-176097"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "NO_RETRIEVAL_PROGRESS"
+}

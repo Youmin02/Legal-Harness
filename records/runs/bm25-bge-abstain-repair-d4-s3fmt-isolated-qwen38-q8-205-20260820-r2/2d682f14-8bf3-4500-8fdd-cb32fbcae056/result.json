@@ -1,0 +1,731 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "법원은 갑이 신청하지 않은 정신적 손해배상에 대해 판결할 수 없다.[CT1]\n민사소송에서 법원의 판단은 당사자의 청구에 제한되며, 청구 범위 외의 사항에 대해 판단할 수 없다.[CT2]\n전제: 갑이 정신적 손해배상을 청구항목에 추가하지 않았다는 사실은 문제의 전제로 가정한다.\n한계: 본 답변은 벤치마크 진단용 후보이며, 공개 가능한 답변이 아니다.\n한계: 제시된 후보 규정 중 청구권리주의를 직접 명시하는 민사소송법 조항(예: 제216조 1항 등)이 포함되어 있지 않아, 기판력 범위 규정을 통해 간접적으로 근거를 제시한다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T16:26:08.971764+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 253043.085,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 188,
+      "dedup_collapse": 54,
+      "evidence_fusion": 188,
+      "first_stage": 300,
+      "request_rerank": 300,
+      "round_selected": 20,
+      "rrf": 200,
+      "selected": 188
+    }
+  },
+  "run_id": "2d682f14-8bf3-4500-8fdd-cb32fbcae056",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 5,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "Two consecutive retrieval rounds did not improve critical evidence.",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 15
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 15,
+          "claim_count": 2
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "법원은 갑이 신청하지 않은 정신적 손해배상에 대해 판결할 수 있는가?",
+        "requested_output": "법원이 신청하지 않은 청구에 대해 판결할 수 있는지 여부"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "군사법원법 205조  신문의 청구#KOBLEX-092742",
+          "군사법원법 205조  신문의 청구#KOBLEX-158707"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 65,
+        "first_stage_score": 15.40399212659149,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 205조  신문의 청구#KOBLEX-092742",
+        "provision_text": "제205조(신문의 청구)",
+        "rerank_rank": 1,
+        "rerank_score": 1.543352846056223e-05,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "군사법원법 205조  신문의 청구",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 168조  소멸시효의 중단사유#KOBLEX-058731"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 42,
+        "first_stage_score": 15.799513705144921,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 168조  소멸시효의 중단사유#KOBLEX-058731",
+        "provision_text": "1. 청구",
+        "rerank_rank": 2,
+        "rerank_score": 8.93620108399773e-06,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 168조  소멸시효의 중단사유 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세기본법 69조  청구 절차#KOBLEX-147732"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 64,
+        "first_stage_score": 15.40399212659149,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "국세기본법 69조  청구 절차#KOBLEX-147732",
+        "provision_text": "제69조(청구 절차)",
+        "rerank_rank": 3,
+        "rerank_score": 8.748230357014108e-06,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "국세기본법 69조  청구 절차",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "고용보험법 시행령 141조  재결서#KOBLEX-157209"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 57,
+        "first_stage_score": 15.40399212659149,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "고용보험법 시행령 141조  재결서#KOBLEX-157209",
+        "provision_text": "6. 청구 취지",
+        "rerank_rank": 4,
+        "rerank_score": 8.575451829528902e-06,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "고용보험법 시행령 141조  재결서 6호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세기본법 62조  청구 절차#KOBLEX-147670"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 63,
+        "first_stage_score": 15.40399212659149,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "국세기본법 62조  청구 절차#KOBLEX-147670",
+        "provision_text": "제62조(청구 절차)",
+        "rerank_rank": 5,
+        "rerank_score": 8.138698831317015e-06,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "국세기본법 62조  청구 절차",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도시공원 및 녹지 등에 관한 법률 29조  토지매수의 청구#KOBLEX-119185"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 80,
+        "first_stage_score": 15.40399212659149,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "도시공원 및 녹지 등에 관한 법률 29조  토지매수의 청구#KOBLEX-119185",
+        "provision_text": "제29조(토지매수의 청구)",
+        "rerank_rank": 6,
+        "rerank_score": 7.265362910402473e-06,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "도시공원 및 녹지 등에 관한 법률 29조  토지매수의 청구",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "감사원법 36조  재심의 청구#KOBLEX-081527"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 52,
+        "first_stage_score": 15.40399212659149,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "감사원법 36조  재심의 청구#KOBLEX-081527",
+        "provision_text": "제36조(재심의 청구)",
+        "rerank_rank": 7,
+        "rerank_score": 6.716726602462586e-06,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "감사원법 36조  재심의 청구",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 216조  기판력의 객관적 범위#KOBLEX-064102"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 3.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 216조  기판력의 객관적 범위#KOBLEX-064102",
+        "provision_text": "②상계를 주장한 청구가 성립되는지 아닌지의 판단은 상계하자고 대항한 액수에 한하여 기판력을 가진다.",
+        "rerank_rank": 8,
+        "rerank_score": 6.4474193095520604e-06,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 216조  기판력의 객관적 범위 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "가등기담보 등에 관한 법률 12조  경매의 청구#KOBLEX-124198",
+          "가등기담보 등에 관한 법률 12조  경매의 청구#KOBLEX-181731"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 50,
+        "first_stage_score": 15.40399212659149,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "가등기담보 등에 관한 법률 12조  경매의 청구#KOBLEX-124198",
+        "provision_text": "제12조(경매의 청구)",
+        "rerank_rank": 9,
+        "rerank_score": 6.32399360256386e-06,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "가등기담보 등에 관한 법률 12조  경매의 청구",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "고용보험법 시행령 129조  결정서#KOBLEX-157168"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 56,
+        "first_stage_score": 15.40399212659149,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "고용보험법 시행령 129조  결정서#KOBLEX-157168",
+        "provision_text": "5. 청구 취지",
+        "rerank_rank": 10,
+        "rerank_score": 5.883784979232587e-06,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "고용보험법 시행령 129조  결정서 5호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "가사소송법 58조  조정의 원칙#KOBLEX-064985"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 21.397440823203446,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "가사소송법 58조  조정의 원칙#KOBLEX-064985",
+        "provision_text": "제58조(조정의 원칙)",
+        "rerank_rank": 1,
+        "rerank_score": 0.00023761374177411199,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "가사소송법 58조  조정의 원칙",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 1조  민사소송의 이상과 신의성실의 원칙#KOBLEX-063538"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 76,
+        "first_stage_score": 20.377203872549536,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 1조  민사소송의 이상과 신의성실의 원칙#KOBLEX-063538",
+        "provision_text": "제1조(민사소송의 이상과 신의성실의 원칙)",
+        "rerank_rank": 4,
+        "rerank_score": 7.084252138156444e-05,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민사소송법 1조  민사소송의 이상과 신의성실의 원칙",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정절차법 48조  행정지도의 원칙#KOBLEX-098195"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 48,
+        "first_stage_score": 21.397440823203446,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "행정절차법 48조  행정지도의 원칙#KOBLEX-098195",
+        "provision_text": "제48조(행정지도의 원칙)",
+        "rerank_rank": 6,
+        "rerank_score": 5.743911242461763e-05,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "행정절차법 48조  행정지도의 원칙",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 178조  교부송달의 원칙#KOBLEX-064005"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 21.397440823203446,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 178조  교부송달의 원칙#KOBLEX-064005",
+        "provision_text": "제178조(교부송달의 원칙)",
+        "rerank_rank": 8,
+        "rerank_score": 3.455178011790849e-05,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민사소송법 178조  교부송달의 원칙",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정규제기본법 5조  규제의 원칙#KOBLEX-124917"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 45,
+        "first_stage_score": 21.397440823203446,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "행정규제기본법 5조  규제의 원칙#KOBLEX-124917",
+        "provision_text": "제5조(규제의 원칙)",
+        "rerank_rank": 10,
+        "rerank_score": 3.0946292099542916e-05,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "행정규제기본법 5조  규제의 원칙",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "가등기담보 등에 관한 법률 12조  경매의 청구#KOBLEX-124198": "제12조(경매의 청구)",
+      "가사소송법 58조  조정의 원칙#KOBLEX-064985": "제58조(조정의 원칙)",
+      "감사원법 36조  재심의 청구#KOBLEX-081527": "제36조(재심의 청구)",
+      "고용보험법 시행령 129조  결정서#KOBLEX-157168": "5. 청구 취지",
+      "고용보험법 시행령 141조  재결서#KOBLEX-157209": "6. 청구 취지",
+      "국세기본법 62조  청구 절차#KOBLEX-147670": "제62조(청구 절차)",
+      "국세기본법 69조  청구 절차#KOBLEX-147732": "제69조(청구 절차)",
+      "군사법원법 205조  신문의 청구#KOBLEX-092742": "제205조(신문의 청구)",
+      "도시공원 및 녹지 등에 관한 법률 29조  토지매수의 청구#KOBLEX-119185": "제29조(토지매수의 청구)",
+      "민법 168조  소멸시효의 중단사유#KOBLEX-058731": "1. 청구",
+      "민사소송법 178조  교부송달의 원칙#KOBLEX-064005": "제178조(교부송달의 원칙)",
+      "민사소송법 1조  민사소송의 이상과 신의성실의 원칙#KOBLEX-063538": "제1조(민사소송의 이상과 신의성실의 원칙)",
+      "민사소송법 216조  기판력의 객관적 범위#KOBLEX-064102": "②상계를 주장한 청구가 성립되는지 아닌지의 판단은 상계하자고 대항한 액수에 한하여 기판력을 가진다.",
+      "행정규제기본법 5조  규제의 원칙#KOBLEX-124917": "제5조(규제의 원칙)",
+      "행정절차법 48조  행정지도의 원칙#KOBLEX-098195": "제48조(행정지도의 원칙)"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "No supplied provision defines the principle of claim limitation or provides its legal basis in civil procedure.",
+            "requirement_id": "E1-R1",
+            "status": "unsatisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "No supplied provision explicitly states the principle prohibiting judgment beyond the scope of the claim.",
+            "requirement_id": "E1-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "uncovered",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "E1-R1",
+          "E1-R2"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The supplied candidate provisions do not contain the statutory basis for the principle of claim limitation (청구권리주의) or the prohibition of judgment beyond the scope of the claim. C008 addresses the objective scope of res judica regarding set-off, which is distinct from the court's authority to adjudicate unclaimed relief. Other provisions are irrelevant to civil procedure claim scope.",
+        "status": "uncovered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 5,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "민사소송에서 법원의 판단은 당사자의 청구에 제한되는지 여부",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "청구권리주의의 법적 근거와 청구 외 판단 금지 원칙 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "청구권리주의의 정의 및 법적 근거 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "청구 범위 외 판단 금지 원칙 확인"
+          }
+        ],
+        "critical": true,
+        "description": "청구권리주의에 따라 법원의 판단이 청구의 범위 내에 제한된다는 원칙",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문은 법원이 신청하지 않은 청구에 대해 판결할 수 있는지 묻고 있으므로, 청구권리주의에 관한 규정이 핵심 결론을 위한 필수 증거이다.",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 갑은 을을 상대로 5천만 원의 대여금 반환을 요구하는 소송을 제기했습니다. 갑은 소송에서 대여금의 반환만을 청구하였고, 이외의 다른 손해배상이나 추가적인 청구는 하지 않았습니다. 을은 답변서에서 대여금 반환에 관한 항변만을 제기했습니다. 재판이 진행되는 동안, 갑은 을이 대여금을 반환하지 않음으로 인해 정신적 손해를 입었다고 주장했으나, 이를 청구항목에 추가하지 않았습니다. [질문] 법원은 갑이 신청하지 않은 정신적 손해배상에 대해 판결할 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "청구권리주의 청구 범위 제한 판단",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "청구권리주의",
+          "청구범위",
+          "판단제한",
+          "청구외판단",
+          "민사소송법"
+        ],
+        "query_text": "법원은 당사자의 청구에 한하여 판단하여야 한다 [원문 맥락] 재판이 진행되는 동안, 갑은 을이 대여금을 반환하지 않음으로 인해 정신적 손해를 입었다고 주장했으나, 이를 청구항목에 추가하지 않았습니다. 법원은 갑이 신청하지 않은 정신적 손해배상에 대해 판결할 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "청구권리주의에 따른 청구 외 판단 금지 원칙",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "민사소송법 248조 청구 범위 판단 제한",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민사소송법",
+          "제248조",
+          "청구범위",
+          "판단제한",
+          "청구권리주의"
+        ],
+        "query_text": "민사소송법 제248조 제1항 청구의 범위 내 판단 [원문 맥락] 재판이 진행되는 동안, 갑은 을이 대여금을 반환하지 않음으로 인해 정신적 손해를 입었다고 주장했으나, 이를 청구항목에 추가하지 않았습니다. 법원은 갑이 신청하지 않은 정신적 손해배상에 대해 판결할 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "청구권리주의 법적 근거 및 청구 범위 외 판단 금지 원칙",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "청구 외 판단 금지 원칙",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "청구외판단",
+          "판단금지",
+          "청구범위",
+          "민사소송"
+        ],
+        "query_text": "청구 외 판단 금지 원칙 민사소송 [원문 맥락] 재판이 진행되는 동안, 갑은 을이 대여금을 반환하지 않음으로 인해 정신적 손해를 입었다고 주장했으나, 이를 청구항목에 추가하지 않았습니다. 법원은 갑이 신청하지 않은 정신적 손해배상에 대해 판결할 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "법원이 청구하지 않은 사항에 대해 판결할 수 없는지 여부",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을을 상대로 5천만 원의 대여금 반환을 요구하는 소송을 제기했습니다. 갑은 소송에서 대여금의 반환만을 청구하였고, 이외의 다른 손해배상이나 추가적인 청구는 하지 않았습니다. 을은 답변서에서 대여금 반환에 관한 항변만을 제기했습니다. 재판이 진행되는 동안, 갑은 을이 대여금을 반환하지 않음으로 인해 정신적 손해를 입었다고 주장했으나, 이를 청구항목에 추가하지 않았습니다.\n\n[질문]\n법원은 갑이 신청하지 않은 정신적 손해배상에 대해 판결할 수 있는가?",
+    "remaining_request_budget": 6,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "청구권리주의의 법적 근거와 청구 외 판단 금지 원칙 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "청구권리주의의 정의 및 법적 근거 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "청구 범위 외 판단 금지 원칙 확인"
+          }
+        ],
+        "critical": true,
+        "description": "청구권리주의에 따라 법원의 판단이 청구의 범위 내에 제한된다는 원칙",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문은 법원이 신청하지 않은 청구에 대해 판결할 수 있는지 묻고 있으므로, 청구권리주의에 관한 규정이 핵심 결론을 위한 필수 증거이다.",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "2d682f14-8bf3-4500-8fdd-cb32fbcae056",
+    "seen_provision_ids": [
+      "가등기담보 등에 관한 법률 12조  경매의 청구#KOBLEX-124198",
+      "민사소송법 216조  기판력의 객관적 범위#KOBLEX-064102",
+      "국세기본법 69조  청구 절차#KOBLEX-147732",
+      "군사법원법 205조  신문의 청구#KOBLEX-092742",
+      "민사소송법 178조  교부송달의 원칙#KOBLEX-064005",
+      "민사소송법 1조  민사소송의 이상과 신의성실의 원칙#KOBLEX-063538",
+      "국세기본법 62조  청구 절차#KOBLEX-147670",
+      "행정절차법 48조  행정지도의 원칙#KOBLEX-098195",
+      "가사소송법 58조  조정의 원칙#KOBLEX-064985",
+      "민법 168조  소멸시효의 중단사유#KOBLEX-058731",
+      "고용보험법 시행령 141조  재결서#KOBLEX-157209",
+      "감사원법 36조  재심의 청구#KOBLEX-081527",
+      "도시공원 및 녹지 등에 관한 법률 29조  토지매수의 청구#KOBLEX-119185",
+      "고용보험법 시행령 129조  결정서#KOBLEX-157168",
+      "행정규제기본법 5조  규제의 원칙#KOBLEX-124917"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "NO_RETRIEVAL_PROGRESS"
+}

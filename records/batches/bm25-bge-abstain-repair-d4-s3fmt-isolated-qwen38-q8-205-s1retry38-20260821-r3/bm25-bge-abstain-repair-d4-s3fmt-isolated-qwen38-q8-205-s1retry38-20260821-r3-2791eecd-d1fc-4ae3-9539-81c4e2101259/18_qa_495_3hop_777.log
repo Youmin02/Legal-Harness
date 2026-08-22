@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "/root/Legal Harness/records/worktrees/bm25-bge-abstain-repair-d4-s3fmt-isolated-qwen38-q8-205-s1retry38-20260821-r3/scripts/run_local_harness.py", line 244, in <module>
+    raise SystemExit(main())
+  File "/root/Legal Harness/records/worktrees/bm25-bge-abstain-repair-d4-s3fmt-isolated-qwen38-q8-205-s1retry38-20260821-r3/scripts/run_local_harness.py", line 202, in main
+    outcome = runner.run(args.question, run_id=run_id)
+  File "/root/Legal Harness/records/worktrees/bm25-bge-abstain-repair-d4-s3fmt-isolated-qwen38-q8-205-s1retry38-20260821-r3/harness/runner.py", line 161, in run
+    assessment_error = self._assess_coverage(state)
+  File "/root/Legal Harness/records/worktrees/bm25-bge-abstain-repair-d4-s3fmt-isolated-qwen38-q8-205-s1retry38-20260821-r3/harness/runner.py", line 289, in _assess_coverage
+    raw = self._execute(S2, "ASSESS_COVERAGE", self._coverage_payload(state))
+  File "/root/Legal Harness/records/worktrees/bm25-bge-abstain-repair-d4-s3fmt-isolated-qwen38-q8-205-s1retry38-20260821-r3/harness/runner.py", line 462, in _execute
+    result = self.skill_executor.execute(skill_name, entry_point, payload)
+  File "/root/Legal Harness/records/worktrees/bm25-bge-abstain-repair-d4-s3fmt-isolated-qwen38-q8-205-s1retry38-20260821-r3/runtime/local_ollama_executor.py", line 129, in execute
+    generation = self._generate(prompt, max_tokens)
+  File "/root/Legal Harness/records/worktrees/bm25-bge-abstain-repair-d4-s3fmt-isolated-qwen38-q8-205-s1retry38-20260821-r3/runtime/local_ollama_executor.py", line 1065, in _generate
+    with urllib.request.urlopen(request, timeout=self.timeout_seconds) as response:
+  File "/usr/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.9/urllib/request.py", line 517, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.9/urllib/request.py", line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.9/urllib/request.py", line 1375, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/usr/lib/python3.9/urllib/request.py", line 1350, in do_open
+    r = h.getresponse()
+  File "/usr/lib/python3.9/http/client.py", line 1377, in getresponse
+    response.begin()
+  File "/usr/lib/python3.9/http/client.py", line 320, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.9/http/client.py", line 281, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.9/socket.py", line 716, in readinto
+    return self._sock.recv_into(b)
+KeyboardInterrupt

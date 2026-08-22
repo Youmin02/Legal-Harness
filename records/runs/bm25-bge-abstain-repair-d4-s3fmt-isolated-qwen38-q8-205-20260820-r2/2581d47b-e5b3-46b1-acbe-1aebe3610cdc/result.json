@@ -1,0 +1,765 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": "grounded_legal_answer_generation did not produce a valid GENERATE_BENCHMARK_CANDIDATE result after 2 attempts: claims must cover every answered target exactly within scope; grounded generation requires claims and claim_citations",
+  "candidate_answer_status": "EXECUTION_FAILURE",
+  "candidate_answer_termination_reason": "INVALID_SKILL_OUTPUT",
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T02:34:20.417374+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 270650.956,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 196,
+      "dedup_collapse": 25,
+      "evidence_fusion": 196,
+      "first_stage": 300,
+      "request_rerank": 300,
+      "round_selected": 20,
+      "rrf": 200,
+      "selected": 196
+    }
+  },
+  "run_id": "2581d47b-e5b3-46b1-acbe-1aebe3610cdc",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 6,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "Two consecutive retrieval rounds did not improve critical evidence.",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 16
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "error": "grounded_legal_answer_generation did not produce a valid GENERATE_BENCHMARK_CANDIDATE result after 2 attempts: claims must cover every answered target exactly within scope; grounded generation requires claims and claim_citations",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "BENCHMARK_CANDIDATE_EXECUTION_FAILURE",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_requirement",
+        "question_anchor": "안건을 의결하기 위해 필요한 조건",
+        "requested_output": "이사회 의결을 위한 정족수 및 의결권 행사 요건"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "사립학교법 18조  의사정족수와 의결정족수 등#KOBLEX-172188"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 39.800440431797185,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "사립학교법 18조  의사정족수와 의결정족수 등#KOBLEX-172188",
+        "provision_text": "① 이사회는 정관에 특별한 규정이 없으면 재적이사 과반수의 출석으로 개의(開議)하고, 정관으로 정한 이사 정수 과반수의 찬성으로 의결한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9889559149742126,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "사립학교법 18조  의사정족수와 의결정족수 등 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "간접투자자산 운용업법 84조  (이사회의 의결방법)#KOBLEX-082017"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 39.41350755050631,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "간접투자자산 운용업법 84조  (이사회의 의결방법)#KOBLEX-082017",
+        "provision_text": "①이사회의 의결은 이사 과반수의 출석과 출석한 이사과반수의 찬성으로 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9785470366477966,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "간접투자자산 운용업법 84조  (이사회의 의결방법) 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국민연금법 38조  이사회#KOBLEX-043816"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 46.26887887078569,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "국민연금법 38조  이사회#KOBLEX-043816",
+        "provision_text": "④ 이사회는 재적 구성원 과반수의 출석과 출석 구성원 과반수의 찬성으로 의결한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.8967764377593994,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "국민연금법 38조  이사회 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 200조  이사회#KOBLEX-136033"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 53.48387793533891,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 200조  이사회#KOBLEX-136033",
+        "provision_text": "⑤ 이사회 결의는 이사 과반수의 출석과 출석한 이사 과반수의 찬성으로 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.8824887275695801,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 200조  이사회 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "별정우체국법 16조 7 이사회#KOBLEX-098576"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 44.67359124136928,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "별정우체국법 16조 7 이사회#KOBLEX-098576",
+        "provision_text": "④ 이사회는 구성원 과반수의 출석으로 개의(開議)하고, 출석 구성원 과반수의 찬성으로 의결한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.8777961730957031,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "별정우체국법 16조 7 이사회 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "새마을금고법 17조  이사회#KOBLEX-096328"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 29,
+        "first_stage_score": 37.62070500370669,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "새마을금고법 17조  이사회#KOBLEX-096328",
+        "provision_text": "⑤ 이사회는 재적이사 과반수의 출석으로 개의하고 출석이사 과반수의 찬성으로 의결한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.8723376989364624,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "새마을금고법 17조  이사회 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "기술보증기금법 18조  이사회#KOBLEX-117994"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 44.67359124136928,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "기술보증기금법 18조  이사회#KOBLEX-117994",
+        "provision_text": "⑤ 이사회는 구성원 과반수의 출석으로 개의(開議)하고, 출석 구성원 과반수의 찬성으로 의결한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.8645446300506592,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "기술보증기금법 18조  이사회 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지역신용보증재단법 14조  이사회#KOBLEX-056777"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 44.67359124136928,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "지역신용보증재단법 14조  이사회#KOBLEX-056777",
+        "provision_text": "④ 이사회는 구성원 과반수의 출석으로 개의(開議)하고, 출석 구성원 과반수의 찬성으로 의결한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.8580230474472046,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "지역신용보증재단법 14조  이사회 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신용보증기금법 15조 2 이사회#KOBLEX-210890"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 44.67359124136928,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "신용보증기금법 15조 2 이사회#KOBLEX-210890",
+        "provision_text": "⑤ 이사회는 구성원 과반수의 출석으로 개의(開議)하고, 출석 구성원 과반수의 찬성으로 의결한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.8340873122215271,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "신용보증기금법 15조 2 이사회 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "협동조합 기본법 32조  이사회#KOBLEX-016064"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 27,
+        "first_stage_score": 38.161203816114835,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "협동조합 기본법 32조  이사회#KOBLEX-016064",
+        "provision_text": "④ 이사회는 구성원 과반수의 출석과 출석원 과반수의 찬성으로 의결하며, 그 밖에 이사회의 개의 및 의결방법 등 이사회의 운영에 관하여 필요한 사항은 정관으로 정한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.7762077450752258,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "협동조합 기본법 32조  이사회 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 368조 4 전자적 방법에 의한 의결권의 행사#KOBLEX-114780"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 30,
+        "first_stage_score": 24.891324593997073,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "상법 368조 4 전자적 방법에 의한 의결권의 행사#KOBLEX-114780",
+        "provision_text": "① 회사는 이사회의 결의로 주주가 총회에 출석하지 아니하고 전자적 방법으로 의결권을 행사할 수 있음을 정할 수 있다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.09202272444963455,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상법 368조 4 전자적 방법에 의한 의결권의 행사 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 574조  총회의 정족수, 결의방법#KOBLEX-115729"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 33.81531626469886,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "상법 574조  총회의 정족수, 결의방법#KOBLEX-115729",
+        "provision_text": "제574조(총회의 정족수, 결의방법) 사원총회의 결의는 정관 또는 본법에 다른 규정이 있는 경우 외에는 총사원의 의결권의 과반수를 가지는 사원이 출석하고 그 의결권의 과반수로써 하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.028302354738116264,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상법 574조  총회의 정족수, 결의방법",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 288조#KOBLEX-114351"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 54,
+        "first_stage_score": 22.389258356293347,
+        "fusion_rank": 20,
+        "issue_id": "I1",
+        "provision_id": "상법 288조#KOBLEX-114351",
+        "provision_text": "제4장 주식회사",
+        "rerank_rank": 20,
+        "rerank_score": 0.024876855313777924,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상법 288조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "중소기업협동조합법 19조  의결권과 선거권#KOBLEX-030699"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 48,
+        "first_stage_score": 23.575742875900872,
+        "fusion_rank": 23,
+        "issue_id": "I1",
+        "provision_id": "중소기업협동조합법 19조  의결권과 선거권#KOBLEX-030699",
+        "provision_text": "⑦ 제4항 단서, 제5항 및 제6항에 따라 의결권 또는 선거권을 행사하는 자는 출석자로 본다. <개정 2008.6.13, 2018.3.13, 2022.11.15>",
+        "rerank_rank": 23,
+        "rerank_score": 0.007107083220034838,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "중소기업협동조합법 19조  의결권과 선거권 7항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 112조  의결권 등#KOBLEX-135402"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 75,
+        "first_stage_score": 20.352404928901954,
+        "fusion_rank": 24,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 112조  의결권 등#KOBLEX-135402",
+        "provision_text": "제112조(의결권 등)",
+        "rerank_rank": 24,
+        "rerank_score": 0.0070306346751749516,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 112조  의결권 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 74조  수익자집회의 결의#KOBLEX-107374"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 50,
+        "first_stage_score": 22.471243779372266,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "신탁법 74조  수익자집회의 결의#KOBLEX-107374",
+        "provision_text": "① 수익자집회의 결의는 행사할 수 있는 의결권의 과반수에 해당하는 수익자가 출석하고 출석한 수익자의 의결권의 과반수로써 하여야 한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.006333646364510059,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "신탁법 74조  수익자집회의 결의 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "간접투자자산 운용업법 84조  (이사회의 의결방법)#KOBLEX-082017": "①이사회의 의결은 이사 과반수의 출석과 출석한 이사과반수의 찬성으로 한다.",
+      "국민연금법 38조  이사회#KOBLEX-043816": "④ 이사회는 재적 구성원 과반수의 출석과 출석 구성원 과반수의 찬성으로 의결한다.",
+      "기술보증기금법 18조  이사회#KOBLEX-117994": "⑤ 이사회는 구성원 과반수의 출석으로 개의(開議)하고, 출석 구성원 과반수의 찬성으로 의결한다.",
+      "별정우체국법 16조 7 이사회#KOBLEX-098576": "④ 이사회는 구성원 과반수의 출석으로 개의(開議)하고, 출석 구성원 과반수의 찬성으로 의결한다.",
+      "사립학교법 18조  의사정족수와 의결정족수 등#KOBLEX-172188": "① 이사회는 정관에 특별한 규정이 없으면 재적이사 과반수의 출석으로 개의(開議)하고, 정관으로 정한 이사 정수 과반수의 찬성으로 의결한다.",
+      "상법 288조#KOBLEX-114351": "제4장 주식회사",
+      "상법 368조 4 전자적 방법에 의한 의결권의 행사#KOBLEX-114780": "① 회사는 이사회의 결의로 주주가 총회에 출석하지 아니하고 전자적 방법으로 의결권을 행사할 수 있음을 정할 수 있다.",
+      "상법 574조  총회의 정족수, 결의방법#KOBLEX-115729": "제574조(총회의 정족수, 결의방법) 사원총회의 결의는 정관 또는 본법에 다른 규정이 있는 경우 외에는 총사원의 의결권의 과반수를 가지는 사원이 출석하고 그 의결권의 과반수로써 하여야 한다.",
+      "새마을금고법 17조  이사회#KOBLEX-096328": "⑤ 이사회는 재적이사 과반수의 출석으로 개의하고 출석이사 과반수의 찬성으로 의결한다.",
+      "신용보증기금법 15조 2 이사회#KOBLEX-210890": "⑤ 이사회는 구성원 과반수의 출석으로 개의(開議)하고, 출석 구성원 과반수의 찬성으로 의결한다.",
+      "신탁법 74조  수익자집회의 결의#KOBLEX-107374": "① 수익자집회의 결의는 행사할 수 있는 의결권의 과반수에 해당하는 수익자가 출석하고 출석한 수익자의 의결권의 과반수로써 하여야 한다.",
+      "자본시장과 금융투자업에 관한 법률 112조  의결권 등#KOBLEX-135402": "제112조(의결권 등)",
+      "자본시장과 금융투자업에 관한 법률 200조  이사회#KOBLEX-136033": "⑤ 이사회 결의는 이사 과반수의 출석과 출석한 이사 과반수의 찬성으로 한다.",
+      "중소기업협동조합법 19조  의결권과 선거권#KOBLEX-030699": "⑦ 제4항 단서, 제5항 및 제6항에 따라 의결권 또는 선거권을 행사하는 자는 출석자로 본다. <개정 2008.6.13, 2018.3.13, 2022.11.15>",
+      "지역신용보증재단법 14조  이사회#KOBLEX-056777": "④ 이사회는 구성원 과반수의 출석으로 개의(開議)하고, 출석 구성원 과반수의 찬성으로 의결한다.",
+      "협동조합 기본법 32조  이사회#KOBLEX-016064": "④ 이사회는 구성원 과반수의 출석과 출석원 과반수의 찬성으로 의결하며, 그 밖에 이사회의 개의 및 의결방법 등 이사회의 운영에 관하여 필요한 사항은 정관으로 정한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "No candidate provision from the Commercial Act is supplied to establish the quorum requirement (출석 정족수) for a joint stock company board.",
+            "requirement_id": "E1-R1",
+            "status": "unsatisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "No candidate provision from the Commercial Act is supplied to establish the voting majority requirement (의결 요건) for a joint stock company board.",
+            "requirement_id": "E1-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "uncovered",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "E1-R1",
+          "E1-R2"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The question concerns the board of directors of a joint stock company (주식회사), which is governed by the Commercial Act (상법). The newly supplied candidate provisions (C011-C016) do not contain the specific statutory rule for the quorum and voting majority requirements for a joint stock company's board of directors. C011 addresses electronic voting at shareholder meetings, C012 addresses mutual aid associations (사원총회), C013 is a chapter heading, C014 addresses cooperatives, C015 is a heading, and C016 addresses trust beneficiary meetings. The previously supplied provisions (C001-C010) govern other entity types (private schools, investment funds, etc.) and are not applicable to a joint stock company. Therefore, no supplied provision supports the required legal evidence items.",
+        "status": "uncovered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 6,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "주식회사 이사회 의결을 위한 출석 정족수 및 의결 요건",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "이사회 의결을 위한 최소 출석 이사 수와 의결을 위한 찬성 의결권 비율을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "이사회 의결을 위한 출석 정족수(전체 이사의 과반수 등) 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "이사회 의결을 위한 찬성 의결권 비율(출석 이사의 과반수 등) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "상법상 이사회 의결을 위한 출석 정족수 및 의결 요건 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 '의결을 위해 필요한 조건'의 핵심은 출석 정족수와 의결 요건이므로, 이를 규정한 조항 없이는 답변이 불가능함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 갑 주식회사의 이사회가 새로운 사업 투자 안건에 대해 의결을 진행하려고 한다. 이사회는 대표이사 갑, 전무이사 을, 그리고 세 명의 이사들로 구성되어있다. [질문] 갑 주식회사 이사회에서 안건을 의결하기 위해 필요한 조건은 무엇인가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "상법 이사회 의결 정족수 출석 이사 과반수 의결권",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "이사회",
+          "의결",
+          "정족수",
+          "출석",
+          "이사",
+          "과반수"
+        ],
+        "query_text": "주식회사 이사회 의결 정족수 출석 이사 과반수 의결 요건 [원문 맥락] 이사회는 대표이사 갑, 전무이사 을, 그리고 세 명의 이사들로 구성되어있다. 갑 주식회사 이사회에서 안건을 의결하기 위해 필요한 조건은 무엇인가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "이사회 안건 의결을 위한 출석 정족수 및 찬성 의결권 비율",
+        "statute_hints": [
+          "상법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "상법 제378조 이사회 의결 정족수 출석 이사 과반수 의결권",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "상법",
+          "제378조",
+          "이사회",
+          "의결",
+          "정족수",
+          "출석",
+          "과반수"
+        ],
+        "query_text": "상법 제378조 이사회 의결 정족수 출석 이사 과반수 의결권 [원문 맥락] 이사회는 대표이사 갑, 전무이사 을, 그리고 세 명의 이사들로 구성되어있다. 갑 주식회사 이사회에서 안건을 의결하기 위해 필요한 조건은 무엇인가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "상법 제378조 이사회 의결을 위한 출석 정족수 및 찬성 의결권 비율",
+        "statute_hints": [
+          "상법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "주식회사 이사회 의결권 행사 요건 출석 정족수",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "주식회사",
+          "이사회",
+          "의결권",
+          "행사",
+          "요건",
+          "출석",
+          "정족수"
+        ],
+        "query_text": "주식회사 이사회 의결권 행사 요건 출석 정족수 [원문 맥락] 이사회는 대표이사 갑, 전무이사 을, 그리고 세 명의 이사들로 구성되어있다. 갑 주식회사 이사회에서 안건을 의결하기 위해 필요한 조건은 무엇인가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "주식회사 이사회 의결을 위한 출석 정족수 및 의결권 행사 요건",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑 주식회사의 이사회가 새로운 사업 투자 안건에 대해 의결을 진행하려고 한다. 이사회는 대표이사 갑, 전무이사 을, 그리고 세 명의 이사들로 구성되어있다.\n\n[질문]\n갑 주식회사 이사회에서 안건을 의결하기 위해 필요한 조건은 무엇인가?",
+    "remaining_request_budget": 6,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "이사회 의결을 위한 최소 출석 이사 수와 의결을 위한 찬성 의결권 비율을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "이사회 의결을 위한 출석 정족수(전체 이사의 과반수 등) 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "이사회 의결을 위한 찬성 의결권 비율(출석 이사의 과반수 등) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "상법상 이사회 의결을 위한 출석 정족수 및 의결 요건 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 '의결을 위해 필요한 조건'의 핵심은 출석 정족수와 의결 요건이므로, 이를 규정한 조항 없이는 답변이 불가능함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "2581d47b-e5b3-46b1-acbe-1aebe3610cdc",
+    "seen_provision_ids": [
+      "중소기업협동조합법 19조  의결권과 선거권#KOBLEX-030699",
+      "간접투자자산 운용업법 84조  (이사회의 의결방법)#KOBLEX-082017",
+      "상법 288조#KOBLEX-114351",
+      "기술보증기금법 18조  이사회#KOBLEX-117994",
+      "신탁법 74조  수익자집회의 결의#KOBLEX-107374",
+      "새마을금고법 17조  이사회#KOBLEX-096328",
+      "자본시장과 금융투자업에 관한 법률 200조  이사회#KOBLEX-136033",
+      "협동조합 기본법 32조  이사회#KOBLEX-016064",
+      "국민연금법 38조  이사회#KOBLEX-043816",
+      "상법 574조  총회의 정족수, 결의방법#KOBLEX-115729",
+      "사립학교법 18조  의사정족수와 의결정족수 등#KOBLEX-172188",
+      "상법 368조 4 전자적 방법에 의한 의결권의 행사#KOBLEX-114780",
+      "별정우체국법 16조 7 이사회#KOBLEX-098576",
+      "지역신용보증재단법 14조  이사회#KOBLEX-056777",
+      "자본시장과 금융투자업에 관한 법률 112조  의결권 등#KOBLEX-135402",
+      "신용보증기금법 15조 2 이사회#KOBLEX-210890"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "NO_RETRIEVAL_PROGRESS"
+}

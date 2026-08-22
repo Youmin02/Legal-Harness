@@ -1,0 +1,509 @@
+{
+  "abstention_reason": null,
+  "answer": "사무처리를 그르치게 할 목적으로 공무원 또는 공무소의 전자기록등 특수매체기록을 위작 또는 변작한 자는 10년 이하의 징역에 처한다.[CT1]\n전제: 갑의 행위가 '사무처리를 그르치게 할 목적'을 가지고 이루어졌다고 가정한다.\n전제: 변작된 기록이 '공무원 또는 공무소의 전자기록등 특수매체기록'에 해당한다고 가정한다.\n한계: 본 답변은 제공된 형법 제227조의2 조문에만 근거하며, 실제 사법 절차에서의 유죄 판결 여부는 구체적인 사실관계와 증거에 따라 달라질 수 있다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "사무처리를 그르치게 할 목적으로 공무원 또는 공무소의 전자기록등 특수매체기록을 위작 또는 변작한 자는 10년 이하의 징역에 처한다.[CT1]\n전제: 갑의 행위가 '사무처리를 그르치게 할 목적'을 가지고 이루어졌다고 가정한다.\n전제: 변작된 기록이 '공무원 또는 공무소의 전자기록등 특수매체기록'에 해당한다고 가정한다.\n한계: 본 답변은 제공된 형법 제227조의2 조문에만 근거하며, 실제 사법 절차에서의 유죄 판결 여부는 구체적인 사실관계와 증거에 따라 달라질 수 있다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T18:14:44.446784+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 158567.778,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 93,
+      "dedup_collapse": 12,
+      "evidence_fusion": 93,
+      "first_stage": 100,
+      "request_rerank": 100,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 93
+    }
+  },
+  "run_id": "6e08f46e-a752-474c-985e-8799f6ec28ad",
+  "state": {
+    "accepted_provision_ids": [
+      "형법 227조 2 공전자기록위작ㆍ변작#KOBLEX-193138"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 1,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "penalty",
+        "question_anchor": "갑은 어떤 형벌을 받게 되는가",
+        "requested_output": "공무원이 전자기록을 변작한 행위에 적용되는 형벌의 종류와 범위"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "형법 227조 2 공전자기록위작ㆍ변작#KOBLEX-193138"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 31.240807863871243,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형법 227조 2 공전자기록위작ㆍ변작#KOBLEX-193138",
+        "provision_text": "제227조의2(공전자기록위작ㆍ변작) 사무처리를 그르치게 할 목적으로 공무원 또는 공무소의 전자기록등 특수매체기록을 위작 또는 변작한 자는 10년 이하의 징역에 처한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999418258666992,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 227조 2 공전자기록위작ㆍ변작",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193140"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193140",
+        "provision_text": "①공무원에 대하여 허위신고를 하여 공정증서원본 또는 이와 동일한 전자기록등 특수매체기록에 부실의 사실을 기재 또는 기록하게 한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 2,
+        "rerank_score": 0.9951010346412659,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 228조  공정증서원본 등의 부실기재 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 232조 2 사전자기록위작ㆍ변작#KOBLEX-193146"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 3.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형법 232조 2 사전자기록위작ㆍ변작#KOBLEX-193146",
+        "provision_text": "제232조의2(사전자기록위작ㆍ변작) 사무처리를 그르치게 할 목적으로 권리ㆍ의무 또는 사실증명에 관한 타인의 전자기록등 특수매체기록을 위작 또는 변작한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9925487041473389,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 232조 2 사전자기록위작ㆍ변작",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 140조  공무상비밀표시무효#KOBLEX-192975"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 3.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형법 140조  공무상비밀표시무효#KOBLEX-192975",
+        "provision_text": "③공무원이 그 직무에 관하여 봉함 기타 비밀장치한 문서, 도화 또는 전자기록등 특수매체기록을 기술적 수단을 이용하여 그 내용을 알아낸 자도 제1항의 형과 같다. <신설 1995.12.29>",
+        "rerank_rank": 4,
+        "rerank_score": 0.9229153394699097,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 140조  공무상비밀표시무효 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 127조  공무상 비밀의 누설#KOBLEX-192948"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형법 127조  공무상 비밀의 누설#KOBLEX-192948",
+        "provision_text": "제127조(공무상 비밀의 누설) 공무원 또는 공무원이었던 자가 법령에 의한 직무상 비밀을 누설한 때에는 2년 이하의 징역이나 금고 또는 5년 이하의 자격정지에 처한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.017681976780295372,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 127조  공무상 비밀의 누설",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 131조  수뢰후부정처사, 사후수뢰#KOBLEX-192955"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 2.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "형법 131조  수뢰후부정처사, 사후수뢰#KOBLEX-192955",
+        "provision_text": "①공무원 또는 중재인이 전2조의 죄를 범하여 부정한 행위를 한 때에는 1년 이상의 유기징역에 처한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.014632091857492924,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 131조  수뢰후부정처사, 사후수뢰 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부재선고에 관한 특별조치법 15조  벌칙#KOBLEX-089416"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 25.773262869895227,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "부재선고에 관한 특별조치법 15조  벌칙#KOBLEX-089416",
+        "provision_text": "3. 행사할 목적으로 제7조의 잔류자 확인서를 거짓으로 작성하거나 변작(變作)한 사람",
+        "rerank_rank": 7,
+        "rerank_score": 0.0005148103809915483,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "부재선고에 관한 특별조치법 15조  벌칙 3호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 122조  직무유기#KOBLEX-192941"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 2.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형법 122조  직무유기#KOBLEX-192941",
+        "provision_text": "제122조(직무유기) 공무원이 정당한 이유없이 그 직무수행을 거부하거나 그 직무를 유기한 때에는 1년 이하의 징역이나 금고 또는 3년 이하의 자격정지에 처한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.00038920127553865314,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 122조  직무유기",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 118조  공무원자격의 사칭#KOBLEX-192930"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 2.0,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "형법 118조  공무원자격의 사칭#KOBLEX-192930",
+        "provision_text": "제118조(공무원자격의 사칭) 공무원의 자격을 사칭하여 그 직권을 행사한 자는 3년 이하의 징역 또는 700만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 9,
+        "rerank_score": 0.00020688473887275904,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 118조  공무원자격의 사칭",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 129조  수뢰, 사전수뢰#KOBLEX-192951"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 92,
+        "first_stage_score": 2.0,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "형법 129조  수뢰, 사전수뢰#KOBLEX-192951",
+        "provision_text": "①공무원 또는 중재인이 그 직무에 관하여 뇌물을 수수, 요구 또는 약속한 때에는 5년 이하의 징역 또는 10년 이하의 자격정지에 처한다.",
+        "rerank_rank": 10,
+        "rerank_score": 9.65208382694982e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 129조  수뢰, 사전수뢰 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "부재선고에 관한 특별조치법 15조  벌칙#KOBLEX-089416": "3. 행사할 목적으로 제7조의 잔류자 확인서를 거짓으로 작성하거나 변작(變作)한 사람",
+      "형법 118조  공무원자격의 사칭#KOBLEX-192930": "제118조(공무원자격의 사칭) 공무원의 자격을 사칭하여 그 직권을 행사한 자는 3년 이하의 징역 또는 700만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 122조  직무유기#KOBLEX-192941": "제122조(직무유기) 공무원이 정당한 이유없이 그 직무수행을 거부하거나 그 직무를 유기한 때에는 1년 이하의 징역이나 금고 또는 3년 이하의 자격정지에 처한다.",
+      "형법 127조  공무상 비밀의 누설#KOBLEX-192948": "제127조(공무상 비밀의 누설) 공무원 또는 공무원이었던 자가 법령에 의한 직무상 비밀을 누설한 때에는 2년 이하의 징역이나 금고 또는 5년 이하의 자격정지에 처한다.",
+      "형법 129조  수뢰, 사전수뢰#KOBLEX-192951": "①공무원 또는 중재인이 그 직무에 관하여 뇌물을 수수, 요구 또는 약속한 때에는 5년 이하의 징역 또는 10년 이하의 자격정지에 처한다.",
+      "형법 131조  수뢰후부정처사, 사후수뢰#KOBLEX-192955": "①공무원 또는 중재인이 전2조의 죄를 범하여 부정한 행위를 한 때에는 1년 이상의 유기징역에 처한다.",
+      "형법 140조  공무상비밀표시무효#KOBLEX-192975": "③공무원이 그 직무에 관하여 봉함 기타 비밀장치한 문서, 도화 또는 전자기록등 특수매체기록을 기술적 수단을 이용하여 그 내용을 알아낸 자도 제1항의 형과 같다. <신설 1995.12.29>",
+      "형법 227조 2 공전자기록위작ㆍ변작#KOBLEX-193138": "제227조의2(공전자기록위작ㆍ변작) 사무처리를 그르치게 할 목적으로 공무원 또는 공무소의 전자기록등 특수매체기록을 위작 또는 변작한 자는 10년 이하의 징역에 처한다.",
+      "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193140": "①공무원에 대하여 허위신고를 하여 공정증서원본 또는 이와 동일한 전자기록등 특수매체기록에 부실의 사실을 기재 또는 기록하게 한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 232조 2 사전자기록위작ㆍ변작#KOBLEX-193146": "제232조의2(사전자기록위작ㆍ변작) 사무처리를 그르치게 할 목적으로 권리ㆍ의무 또는 사실증명에 관한 타인의 전자기록등 특수매체기록을 위작 또는 변작한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형법 227조 2 공전자기록위작ㆍ변작#KOBLEX-193138"
+            ],
+            "rationale": "C001은 '사무처리를 그르치게 할 목적으로 공무원 또는 공무소의 전자기록등 특수매체기록을 위작 또는 변작한 자'라는 구성요건을 명시하여 주체(공무원), 객체(공무원 또는 공무소의 전자기록), 행위(위작 또는 변작)를 확인시킵니다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형법 227조 2 공전자기록위작ㆍ변작#KOBLEX-193138"
+            ],
+            "rationale": "C001은 해당 범죄에 대해 '10년 이하의 징역에 처한다'고 규정하여 형벌의 종류(징역)와 기간(10년 이하)을 명확히 확인시킵니다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형법 227조 2 공전자기록위작ㆍ변작#KOBLEX-193138"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001(형법 제227조의2)은 공무원이 직무상 관장하는 전자기록을 변작한 경우의 구성요건과 법정형을 명확히 규정하고 있어, 질문의 사실관계(공무원 갑이 시청의 전자기록을 변작)에 직접 적용 가능한 법적 근거를 제공합니다. 다른 후보 조항들은 본 건의 핵심 구성요건과 무관하거나 다른 범죄 유형을 다루므로 E1의 증거 요건 충족에 기여하지 않습니다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형법 227조 2 공전자기록위작ㆍ변작#KOBLEX-193138",
+        "support_spans": [
+          {
+            "end_char": 93,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "공무원이 직무상 관장하는 전자기록을 변작한 행위의 법적 성질과 적용 법규",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 시청에서 일하는 공무원으로, 을이라는 민간인 친구로부터 시청의 허가 절차를 빠르게 처리해달라는 부탁을 받았다. 갑은 을을 돕기 위해 시청의 전자 시스템에 접속하여 허가 관련 기록을 변작하였다. 을은 이로 인해 부당하게 허가를 받았다. [질문] 갑이 을을 도와 시청의 전자기록을 변작한 경우, 갑은 어떤 형벌을 받게 되는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "공무원 전자기록 변작 전자문서 변작죄 형법 정보통신망법",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "전자기록",
+          "변작",
+          "공무원",
+          "형벌",
+          "전자문서"
+        ],
+        "query_text": "공무원 전자기록 변작죄 형벌 [원문 맥락] 을은 이로 인해 부당하게 허가를 받았다. 갑이 을을 도와 시청의 전자기록을 변작한 경우, 갑은 어떤 형벌을 받게 되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "공무원이 전자기록을 변작한 경우의 형벌",
+        "statute_hints": [
+          "형법",
+          "정보통신망 이용촉진 및 정보보호 등에 관한 법률"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 시청에서 일하는 공무원으로, 을이라는 민간인 친구로부터 시청의 허가 절차를 빠르게 처리해달라는 부탁을 받았다. 갑은 을을 돕기 위해 시청의 전자 시스템에 접속하여 허가 관련 기록을 변작하였다. 을은 이로 인해 부당하게 허가를 받았다.\n\n[질문]\n갑이 을을 도와 시청의 전자기록을 변작한 경우, 갑은 어떤 형벌을 받게 되는가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "전자기록 변작죄의 구성요건과 형벌 범위를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "전자기록 변작죄의 구성요건(주체, 객체, 행위) 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "전자기록 변작죄의 법정형(형벌 종류 및 기간) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공무원이 전자기록을 변작한 경우의 구성요건 및 법정형",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 형벌을 결정하기 위해 해당 행위의 법적 성질과 법정형이 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "6e08f46e-a752-474c-985e-8799f6ec28ad",
+    "seen_provision_ids": [
+      "형법 232조 2 사전자기록위작ㆍ변작#KOBLEX-193146",
+      "형법 131조  수뢰후부정처사, 사후수뢰#KOBLEX-192955",
+      "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193140",
+      "형법 118조  공무원자격의 사칭#KOBLEX-192930",
+      "형법 127조  공무상 비밀의 누설#KOBLEX-192948",
+      "형법 129조  수뢰, 사전수뢰#KOBLEX-192951",
+      "형법 122조  직무유기#KOBLEX-192941",
+      "부재선고에 관한 특별조치법 15조  벌칙#KOBLEX-089416",
+      "형법 227조 2 공전자기록위작ㆍ변작#KOBLEX-193138",
+      "형법 140조  공무상비밀표시무효#KOBLEX-192975"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

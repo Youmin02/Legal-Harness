@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T23:24:24.317763+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 131199.031,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 133 column 9 (char 4255)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "f2d2bf97-a966-424f-add5-784a5baecca5",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 133 column 9 (char 4255)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을 회사에서 근무 중인 직원으로, 회사가 환경 규제를 위반하고 폐기물 관련 법령을 지속적으로 위반하고 있다는 사실을 파악하고 내부 고발을 준비하고 있었다. 그러나 이와 같은 공익신고 준비 과정에서 회사가 이를 눈치채고 갑에게 부당한 인사조치 및 업무 배제를 단행하였다. 갑은 앞으로 더 큰 불이익을 받을 우려가 있어 사전에 이를 막고자 하며, 동시에 이미 받은 불이익에 대해 법적 보호조치를 받고자 위원회에 도움을 요청하고자 한다. [질문] 갑이 공익신고 준비 중 불이익조치를 받을 우려가 명백한 경우에는 어떤 신청을 할 수 있으며, 이미 불이익조치를 받은 경우에는 어떤 법적 보호를 요청할 수 있는가? 또한 위원회는 이러한 보호조치 신청을 받은 경우 어떠한 절차를 따라야 하는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n갑은 을 회사에서 근무 중인 직원으로, 회사가 환경 규제를 위반하고 폐기물 관련 법령을 지속적으로 위반하고 있다는 사실을 파악하고 내부 고발을 준비하고 있었다. 그러나 이와 같은 공익신고 준비 과정에서 회사가 이를 눈치채고 갑에게 부당한 인사조치 및 업무 배제를 단행하였다. 갑은 앞으로 더 큰 불이익을 받을 우려가 있어 사전에 이를 막고자 하며, 동시에 이미 받은 불이익에 대해 법적 보호조치를 받고자 위원회에 도움을 요청하고자 한다.\n\n[질문]\n갑이 공익신고 준비 중 불이익조치를 받을 우려가 명백한 경우에는 어떤 신청을 할 수 있으며, 이미 불이익조치를 받은 경우에는 어떤 법적 보호를 요청할 수 있는가? 또한 위원회는 이러한 보호조치 신청을 받은 경우 어떠한 절차를 따라야 하는가?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "f2d2bf97-a966-424f-add5-784a5baecca5",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

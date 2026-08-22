@@ -1,0 +1,865 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "공무소에서 사용하는 서류 기타 물건 또는 전자기록등 특수매체기록을 손상 또는 은닉하거나 기타 방법으로 그 효용을 해한 자는 7년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.[CT1][CT2]\n전제: 질문에 명시된 '을의 회사에 있는 중요한 계약 문서'가 형법 제141조에서 규정하는 '공무소에서 사용하는 서류 기타 물건'에 해당한다고 가정하여 진단한다.\n한계: 본 답변은 벤치마크 진단용 후보이며, 공개 가능한 공식 답변이 아닙니다.\n한계: 후보 조문 중 사적(私的) 서류 손괴죄(형법 제316조 등)를 명시하는 조문이 포함되어 있지 않아, 해당 문서가 공용서류에 해당하지 않는 경우의 처벌 근거는 부족합니다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T21:19:53.630052+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 299736.452,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 353,
+      "dedup_collapse": 84,
+      "evidence_fusion": 353,
+      "first_stage": 400,
+      "request_rerank": 400,
+      "round_selected": 20,
+      "rrf": 400,
+      "selected": 353
+    }
+  },
+  "run_id": "f37e4f0f-f5c9-4226-a8f2-35ad3097d5f8",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 7,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "Two consecutive retrieval rounds did not improve critical evidence.",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 17
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 17,
+          "claim_count": 1
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "penalty",
+        "question_anchor": "갑은 어떤 처벌을 받게 되는가?",
+        "requested_output": "고의적 서류손괴 행위에 대한 형사처벌 내용"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "형법 141조  공용서류 등의 무효, 공용물의 파괴#KOBLEX-192978"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형법 141조  공용서류 등의 무효, 공용물의 파괴#KOBLEX-192978",
+        "provision_text": "①공무소에서 사용하는 서류 기타 물건 또는 전자기록등 특수매체기록을 손상 또는 은닉하거나 기타 방법으로 그 효용을 해한 자는 7년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 1,
+        "rerank_score": 0.0084504634141922,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1",
+          "GRQ-R2-2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 141조  공용서류 등의 무효, 공용물의 파괴 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "귀속재산처리법 9조#KOBLEX-048066"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 19.150432665064315,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "귀속재산처리법 9조#KOBLEX-048066",
+        "provision_text": "5. 귀속재산의 관리운영에 관하여 불법처분, 고의 파괴 또는 고의 훼손, 허위보고등 사실이 있는 자와 그 가족",
+        "rerank_rank": 1,
+        "rerank_score": 0.00022733754303772002,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "귀속재산처리법 9조 5호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 41조  형의 종류#KOBLEX-192738"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 53,
+        "first_stage_score": 18.38428164530616,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "형법 41조  형의 종류#KOBLEX-192738",
+        "provision_text": "6. 벌금",
+        "rerank_rank": 2,
+        "rerank_score": 0.00015310577873606235,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형법 41조  형의 종류 6호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "비료관리법 30조  과태료#KOBLEX-149918"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 28,
+        "first_stage_score": 18.222405232221604,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "비료관리법 30조  과태료#KOBLEX-149918",
+        "provision_text": "2. 고의 또는 중대한 과실로 제4조의3제1항제2호 각 목의 서류를 사실과 다르게 발급한 자 또는 제4조의3제1항제5호에 따른 업무정지명령을 위반한 자",
+        "rerank_rank": 2,
+        "rerank_score": 6.939400191185996e-05,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "비료관리법 30조  과태료 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "경범죄 처벌법 3조#KOBLEX-049497"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 29,
+        "first_stage_score": 20.41562054853029,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "경범죄 처벌법 3조#KOBLEX-049497",
+        "provision_text": "제2장 경범죄의 종류와 처벌",
+        "rerank_rank": 3,
+        "rerank_score": 4.199375689495355e-05,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "경범죄 처벌법 3조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 151조  범인은닉과 친족간의 특례#KOBLEX-192995"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 99,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "형법 151조  범인은닉과 친족간의 특례#KOBLEX-192995",
+        "provision_text": "①벌금 이상의 형에 해당하는 죄를 범한 자를 은닉 또는 도피하게 한 자는 3년 이하의 징역 또는 500만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 4,
+        "rerank_score": 3.713850674103014e-05,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 151조  범인은닉과 친족간의 특례 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 115조  소요#KOBLEX-192924"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 3.0,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "형법 115조  소요#KOBLEX-192924",
+        "provision_text": "제115조(소요) 다중이 집합하여 폭행, 협박 또는 손괴의 행위를 한 자는 1년 이상 10년 이하의 징역이나 금고 또는 1천500만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 5,
+        "rerank_score": 3.6883782740915194e-05,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1",
+          "GRQ-R2-2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 115조  소요",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 1조  범죄의 성립과 처벌#KOBLEX-192644"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 31,
+        "first_stage_score": 20.41562054853029,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "형법 1조  범죄의 성립과 처벌#KOBLEX-192644",
+        "provision_text": "제1조(범죄의 성립과 처벌)",
+        "rerank_rank": 6,
+        "rerank_score": 3.549428947735578e-05,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 1조  범죄의 성립과 처벌",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산림법 122조  벌금#KOBLEX-008370"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 50,
+        "first_stage_score": 18.38428164530616,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "산림법 122조  벌금#KOBLEX-008370",
+        "provision_text": "제122조 (벌금)",
+        "rerank_rank": 7,
+        "rerank_score": 1.6456722732982598e-05,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "산림법 122조  벌금",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "집합건물의 소유 및 관리에 관한 법률 65조  벌금#KOBLEX-186348",
+          "집합건물의 소유 및 관리에 관한 법률 65조  벌금#KOBLEX-198657"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 51,
+        "first_stage_score": 18.38428164530616,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "집합건물의 소유 및 관리에 관한 법률 65조  벌금#KOBLEX-186348",
+        "provision_text": "제65조(벌금)",
+        "rerank_rank": 8,
+        "rerank_score": 1.376765976601746e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "집합건물의 소유 및 관리에 관한 법률 65조  벌금",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 317조  업무상비밀누설#KOBLEX-193336"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 4.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형법 317조  업무상비밀누설#KOBLEX-193336",
+        "provision_text": "①의사, 한의사, 치과의사, 약제사, 약종상, 조산사, 변호사, 변리사, 공인회계사, 공증인, 대서업자나 그 직무상 보조자 또는 차등의 직에 있던 자가 그 직무처리중 지득한 타인의 비밀을 누설한 때에는 3년 이하의 징역이나 금고, 10년 이하의 자격정지 또는 700만원 이하의 벌금에 처한다. <개정 1995.12.29, 1997.12.13>",
+        "rerank_rank": 1,
+        "rerank_score": 0.0001038041154970415,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 317조  업무상비밀누설 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국가보안법 4조  목적수행#KOBLEX-076946"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 16.961590596547133,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "국가보안법 4조  목적수행#KOBLEX-076946",
+        "provision_text": "①반국가단체의 구성원 또는 그 지령을 받은 자가 그 목적수행을 위한 행위를 한 때에는 다음의 구별에 따라 처벌한다. <개정 1991ㆍ5ㆍ31> 1. 형법 제92조 내지 제97조ㆍ제99조ㆍ제250조제2항ㆍ제338조 또는 제340조제3항에 규정된 행위를 한 때에는 그 각조에 정한 형에 처한다. 2. 형법 제98조에 규정된 행위를 하거나 국가기밀을 탐지ㆍ수집ㆍ누설ㆍ전달하거나 중개한 때에는 다음의 구별에 따라 처벌한다. 3. 형법 제115조ㆍ제119조제1항ㆍ제147조ㆍ제148조ㆍ제164조 내지 제169조ㆍ제177조 내지 제180조ㆍ제192조 내지 제195조ㆍ제207조ㆍ제208조ㆍ제210조ㆍ제250조제1항ㆍ제252조ㆍ제253조ㆍ제333조 내지 제337조ㆍ제339조 또는 제340조제1항 및 제2항에 규정된 행위를 한 때에는 사형ㆍ무기 또는 10년 이상의 징역에 처한다. 4. 교통ㆍ통신, 국가 또는 공공단체가 사용하는 건조물 기타 중요시설을 파괴하거나 사람을 약취ㆍ유인하거나 함선ㆍ항공기ㆍ자동차ㆍ무기 기타 물건을 이동ㆍ취거한 때에는 사형ㆍ무기 또는 5년 이상의 징역에 처한다. 5. 형법 제214조 내지 제217조ㆍ제257조 내지 제259조 또는 제262조에 규정된 행위를 하거나 국가기밀에 속하는 서류 또는 물품을 손괴ㆍ은닉ㆍ위조ㆍ변조한 때에는 3년 이상의 유기징역에 처한다. 6. 제1호 내지 제5호의 행위를 선동ㆍ선전하거나 사회질서의 혼란을 조성할 우려가 있는 사항에 관하여 허위사실을 날조하거나 유포한 때에는 2년 이상의 유기징역에 처한다.",
+        "rerank_rank": 2,
+        "rerank_score": 5.788849193777423e-06,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "국가보안법 4조  목적수행 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선박법 39조  「형법」 공범례의 적용 배제#KOBLEX-123042"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 17.946106478866497,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "선박법 39조  「형법」 공범례의 적용 배제#KOBLEX-123042",
+        "provision_text": "제39조(「형법」 공범례의 적용 배제) 제32조 및 제33조에서 정한 죄에 대하여는 「형법」 제30조부터 제32조까지의 규정을 적용하지 아니한다.",
+        "rerank_rank": 4,
+        "rerank_score": 3.4148299619118916e-06,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "선박법 39조  「형법」 공범례의 적용 배제",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 331조  특수절도#KOBLEX-193370"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 3.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형법 331조  특수절도#KOBLEX-193370",
+        "provision_text": "① 야간에 문이나 담 그 밖의 건조물의 일부를 손괴하고 제330조의 장소에 침입하여 타인의 재물을 절취한 자는 1년 이상 10년 이하의 징역에 처한다.",
+        "rerank_rank": 5,
+        "rerank_score": 3.3885105494846357e-06,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 331조  특수절도 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "폭력행위 등 처벌에 관한 법률 3조  집단적 폭행 등#KOBLEX-126716",
+          "폭력행위 등 처벌에 관한 법률 3조  집단적 폭행 등#KOBLEX-178706"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 31,
+        "first_stage_score": 19.770999948013884,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "폭력행위 등 처벌에 관한 법률 3조  집단적 폭행 등#KOBLEX-126716",
+        "provision_text": "④ 이 법(「형법」 각 해당 조항 및 각 해당 조항의 상습범, 특수범, 상습특수범, 각 해당 조항의 상습범의 미수범, 특수범의 미수범, 상습특수범의 미수범을 포함한다)을 위반하여 2회 이상 징역형을 받은 사람이 다시 다음 각 호의 죄를 범하여 누범으로 처벌할 경우에는 다음 각 호의 구분에 따라 가중처벌한다. <개정 2014.12.30., 2016.1.6> 1. 「형법」 제261조(특수폭행)(제260조제1항의 죄를 범한 경우에 한정한다), 제284조(특수협박)(제283조제1항의 죄를 범한 경우에 한정한다), 제320조(특수주거침입) 또는 제369조제1항(특수손괴)의 죄: 1년 이상 12년 이하의 징역 2. 「형법」 제261조(특수폭행)(제260조제2항의 죄를 범한 경우에 한정한다), 제278조(특수체포, 특수감금)(제276조제1항의 죄를 범한 경우에 한정한다), 제284조(특수협박)(제283조제2항의 죄를 범한 경우에 한정한다) 또는 제324조제2항(강요)의 죄: 2년 이상 20년 이하의 징역 3. 「형법」 제258조의2제1항(특수상해), 제278조(특수체포, 특수감금)(제276조제2항의 죄를 범한 경우에 한정한다) 또는 제350조의2(특수공갈)의 죄: 3년 이상 25년 이하의 징역",
+        "rerank_rank": 4,
+        "rerank_score": 2.9379073112068e-06,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "폭력행위 등 처벌에 관한 법률 3조  집단적 폭행 등 4항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 146조  특수도주#KOBLEX-192989"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 88,
+        "first_stage_score": 2.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "형법 146조  특수도주#KOBLEX-192989",
+        "provision_text": "제146조(특수도주) 수용설비 또는 기구를 손괴하거나 사람에게 폭행 또는 협박을 가하거나 2인 이상이 합동하여 전조제1항의 죄를 범한 자는 7년 이하의 징역에 처한다.",
+        "rerank_rank": 6,
+        "rerank_score": 2.6833045012608636e-06,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 146조  특수도주",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 179조  일반건조물 등에의 일수#KOBLEX-193061"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 2.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형법 179조  일반건조물 등에의 일수#KOBLEX-193061",
+        "provision_text": "①물을 넘겨 전2조에 기재한 이외의 건조물, 기차, 전차, 자동차, 선박, 항공기 또는 광갱 기타 타인의 재산을 침해한 자는 1년 이상 10년 이하의 징역에 처한다.",
+        "rerank_rank": 7,
+        "rerank_score": 2.6114303182112053e-06,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 179조  일반건조물 등에의 일수 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "경범죄 처벌법 3조#KOBLEX-049497": "제2장 경범죄의 종류와 처벌",
+      "국가보안법 4조  목적수행#KOBLEX-076946": "①반국가단체의 구성원 또는 그 지령을 받은 자가 그 목적수행을 위한 행위를 한 때에는 다음의 구별에 따라 처벌한다. <개정 1991ㆍ5ㆍ31> 1. 형법 제92조 내지 제97조ㆍ제99조ㆍ제250조제2항ㆍ제338조 또는 제340조제3항에 규정된 행위를 한 때에는 그 각조에 정한 형에 처한다. 2. 형법 제98조에 규정된 행위를 하거나 국가기밀을 탐지ㆍ수집ㆍ누설ㆍ전달하거나 중개한 때에는 다음의 구별에 따라 처벌한다. 3. 형법 제115조ㆍ제119조제1항ㆍ제147조ㆍ제148조ㆍ제164조 내지 제169조ㆍ제177조 내지 제180조ㆍ제192조 내지 제195조ㆍ제207조ㆍ제208조ㆍ제210조ㆍ제250조제1항ㆍ제252조ㆍ제253조ㆍ제333조 내지 제337조ㆍ제339조 또는 제340조제1항 및 제2항에 규정된 행위를 한 때에는 사형ㆍ무기 또는 10년 이상의 징역에 처한다. 4. 교통ㆍ통신, 국가 또는 공공단체가 사용하는 건조물 기타 중요시설을 파괴하거나 사람을 약취ㆍ유인하거나 함선ㆍ항공기ㆍ자동차ㆍ무기 기타 물건을 이동ㆍ취거한 때에는 사형ㆍ무기 또는 5년 이상의 징역에 처한다. 5. 형법 제214조 내지 제217조ㆍ제257조 내지 제259조 또는 제262조에 규정된 행위를 하거나 국가기밀에 속하는 서류 또는 물품을 손괴ㆍ은닉ㆍ위조ㆍ변조한 때에는 3년 이상의 유기징역에 처한다. 6. 제1호 내지 제5호의 행위를 선동ㆍ선전하거나 사회질서의 혼란을 조성할 우려가 있는 사항에 관하여 허위사실을 날조하거나 유포한 때에는 2년 이상의 유기징역에 처한다.",
+      "귀속재산처리법 9조#KOBLEX-048066": "5. 귀속재산의 관리운영에 관하여 불법처분, 고의 파괴 또는 고의 훼손, 허위보고등 사실이 있는 자와 그 가족",
+      "비료관리법 30조  과태료#KOBLEX-149918": "2. 고의 또는 중대한 과실로 제4조의3제1항제2호 각 목의 서류를 사실과 다르게 발급한 자 또는 제4조의3제1항제5호에 따른 업무정지명령을 위반한 자",
+      "산림법 122조  벌금#KOBLEX-008370": "제122조 (벌금)",
+      "선박법 39조  「형법」 공범례의 적용 배제#KOBLEX-123042": "제39조(「형법」 공범례의 적용 배제) 제32조 및 제33조에서 정한 죄에 대하여는 「형법」 제30조부터 제32조까지의 규정을 적용하지 아니한다.",
+      "집합건물의 소유 및 관리에 관한 법률 65조  벌금#KOBLEX-186348": "제65조(벌금)",
+      "폭력행위 등 처벌에 관한 법률 3조  집단적 폭행 등#KOBLEX-126716": "④ 이 법(「형법」 각 해당 조항 및 각 해당 조항의 상습범, 특수범, 상습특수범, 각 해당 조항의 상습범의 미수범, 특수범의 미수범, 상습특수범의 미수범을 포함한다)을 위반하여 2회 이상 징역형을 받은 사람이 다시 다음 각 호의 죄를 범하여 누범으로 처벌할 경우에는 다음 각 호의 구분에 따라 가중처벌한다. <개정 2014.12.30., 2016.1.6> 1. 「형법」 제261조(특수폭행)(제260조제1항의 죄를 범한 경우에 한정한다), 제284조(특수협박)(제283조제1항의 죄를 범한 경우에 한정한다), 제320조(특수주거침입) 또는 제369조제1항(특수손괴)의 죄: 1년 이상 12년 이하의 징역 2. 「형법」 제261조(특수폭행)(제260조제2항의 죄를 범한 경우에 한정한다), 제278조(특수체포, 특수감금)(제276조제1항의 죄를 범한 경우에 한정한다), 제284조(특수협박)(제283조제2항의 죄를 범한 경우에 한정한다) 또는 제324조제2항(강요)의 죄: 2년 이상 20년 이하의 징역 3. 「형법」 제258조의2제1항(특수상해), 제278조(특수체포, 특수감금)(제276조제2항의 죄를 범한 경우에 한정한다) 또는 제350조의2(특수공갈)의 죄: 3년 이상 25년 이하의 징역",
+      "형법 115조  소요#KOBLEX-192924": "제115조(소요) 다중이 집합하여 폭행, 협박 또는 손괴의 행위를 한 자는 1년 이상 10년 이하의 징역이나 금고 또는 1천500만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 141조  공용서류 등의 무효, 공용물의 파괴#KOBLEX-192978": "①공무소에서 사용하는 서류 기타 물건 또는 전자기록등 특수매체기록을 손상 또는 은닉하거나 기타 방법으로 그 효용을 해한 자는 7년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 146조  특수도주#KOBLEX-192989": "제146조(특수도주) 수용설비 또는 기구를 손괴하거나 사람에게 폭행 또는 협박을 가하거나 2인 이상이 합동하여 전조제1항의 죄를 범한 자는 7년 이하의 징역에 처한다.",
+      "형법 151조  범인은닉과 친족간의 특례#KOBLEX-192995": "①벌금 이상의 형에 해당하는 죄를 범한 자를 은닉 또는 도피하게 한 자는 3년 이하의 징역 또는 500만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 179조  일반건조물 등에의 일수#KOBLEX-193061": "①물을 넘겨 전2조에 기재한 이외의 건조물, 기차, 전차, 자동차, 선박, 항공기 또는 광갱 기타 타인의 재산을 침해한 자는 1년 이상 10년 이하의 징역에 처한다.",
+      "형법 1조  범죄의 성립과 처벌#KOBLEX-192644": "제1조(범죄의 성립과 처벌)",
+      "형법 317조  업무상비밀누설#KOBLEX-193336": "①의사, 한의사, 치과의사, 약제사, 약종상, 조산사, 변호사, 변리사, 공인회계사, 공증인, 대서업자나 그 직무상 보조자 또는 차등의 직에 있던 자가 그 직무처리중 지득한 타인의 비밀을 누설한 때에는 3년 이하의 징역이나 금고, 10년 이하의 자격정지 또는 700만원 이하의 벌금에 처한다. <개정 1995.12.29, 1997.12.13>",
+      "형법 331조  특수절도#KOBLEX-193370": "① 야간에 문이나 담 그 밖의 건조물의 일부를 손괴하고 제330조의 장소에 침입하여 타인의 재물을 절취한 자는 1년 이상 10년 이하의 징역에 처한다.",
+      "형법 41조  형의 종류#KOBLEX-192738": "6. 벌금"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "No candidate provision explicitly states the elements (act, object, intent) for the crime of destroying private documents.",
+            "requirement_id": "E1-R1",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "uncovered",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "E1-R1"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "No supplied provision defines the elements of the crime of destroying private documents (서류손괴죄). C001 addresses public documents (공용서류), which is a distinct offense. Other provisions are irrelevant to the specific legal elements of private document destruction.",
+        "status": "uncovered"
+      },
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "No candidate provision explicitly states the statutory penalty for the crime of destroying private documents.",
+            "requirement_id": "E2-R1",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "uncovered",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "E2-R1"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "No supplied provision specifies the statutory penalty for the crime of destroying private documents. C001 specifies a penalty for destroying public documents, which does not apply to the facts of the question (private contract documents).",
+        "status": "uncovered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 7,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "타인의 서류를 고의로 손괴한 행위의 법적 성질",
+        "issue_id": "I1"
+      },
+      {
+        "description": "서류손괴죄의 법정형",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "서류손괴죄의 행위주체, 객체(서류), 행위(손괴), 고의 요건을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "서류손괴죄의 구성요건(행위, 객체, 고의)을 명시하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "서류손괴죄의 구성요건 및 적용 범위",
+        "evidence_item_id": "E1",
+        "evidence_type": "element",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 처벌의 전제인 범죄 성립 여부를 판단하기 위해 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "서류손괴죄에 대한 벌금 또는 징역형의 범위를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "서류손괴죄의 법정형(징역 또는 벌금)을 명시하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "서류손괴죄의 법정형(형벌)",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 직접적으로 묻고 있는 처벌 내용을 답변하기 위해 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 갑은 을과의 계약에 대한 분쟁 중, 을의 회사에 있는 중요한 계약 문서를 파손하였다. 이 문서는 을에게 매우 중요한 정보가 담긴 서류였으며, 갑은 을에게 경제적 피해를 주기 위해 고의로 이를 손괴하였다. 을은 이 사실을 알게 되어 갑을 경찰에 신고하였다. [질문] 갑이 을의 중요한 계약 문서를 고의로 손괴한 경우, 갑은 어떤 처벌을 받게 되는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "서류 손괴 고의 행위 형법",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "서류손괴",
+          "고의",
+          "손괴",
+          "형법",
+          "구성요건"
+        ],
+        "query_text": "서류손괴죄 구성요건 고의 손괴 [원문 맥락] 을은 이 사실을 알게 되어 갑을 경찰에 신고하였다. 갑이 을의 중요한 계약 문서를 고의로 손괴한 경우, 갑은 어떤 처벌을 받게 되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "서류손괴죄 구성요건 및 고의 요건",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "서류손괴 처벌 벌금 징역 형량",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "서류손괴",
+          "법정형",
+          "벌금",
+          "징역",
+          "처벌"
+        ],
+        "query_text": "서류손괴죄 법정형 벌금 징역 [원문 맥락] 을은 이 사실을 알게 되어 갑을 경찰에 신고하였다. 갑이 을의 중요한 계약 문서를 고의로 손괴한 경우, 갑은 어떤 처벌을 받게 되는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "서류손괴죄 법정형 및 처벌 내용",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형법 317조 서류손괴죄 타인 서류 손괴",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형법",
+          "317조",
+          "서류손괴",
+          "타인",
+          "손괴"
+        ],
+        "query_text": "형법 제317조 타인의 서류를 손괴한 자의 죄 [원문 맥락] 을은 이 사실을 알게 되어 갑을 경찰에 신고하였다. 갑이 을의 중요한 계약 문서를 고의로 손괴한 경우, 갑은 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "형법 제317조 서류손괴죄 구성요건 및 적용 범위",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "형법 317조 서류손괴죄 형량 벌금 징역",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형법",
+          "317조",
+          "서류손괴",
+          "법정형",
+          "징역",
+          "벌금"
+        ],
+        "query_text": "형법 제317조 서류손괴죄 법정형 징역 벌금 [원문 맥락] 을은 이 사실을 알게 되어 갑을 경찰에 신고하였다. 갑이 을의 중요한 계약 문서를 고의로 손괴한 경우, 갑은 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "형법 제317조 서류손괴죄 법정형 및 처벌 내용",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을과의 계약에 대한 분쟁 중, 을의 회사에 있는 중요한 계약 문서를 파손하였다. 이 문서는 을에게 매우 중요한 정보가 담긴 서류였으며, 갑은 을에게 경제적 피해를 주기 위해 고의로 이를 손괴하였다. 을은 이 사실을 알게 되어 갑을 경찰에 신고하였다.\n\n[질문]\n갑이 을의 중요한 계약 문서를 고의로 손괴한 경우, 갑은 어떤 처벌을 받게 되는가?",
+    "remaining_request_budget": 5,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "서류손괴죄의 행위주체, 객체(서류), 행위(손괴), 고의 요건을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "서류손괴죄의 구성요건(행위, 객체, 고의)을 명시하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "서류손괴죄의 구성요건 및 적용 범위",
+        "evidence_item_id": "E1",
+        "evidence_type": "element",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 처벌의 전제인 범죄 성립 여부를 판단하기 위해 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "서류손괴죄에 대한 벌금 또는 징역형의 범위를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "서류손괴죄의 법정형(징역 또는 벌금)을 명시하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "서류손괴죄의 법정형(형벌)",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 직접적으로 묻고 있는 처벌 내용을 답변하기 위해 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "f37e4f0f-f5c9-4226-a8f2-35ad3097d5f8",
+    "seen_provision_ids": [
+      "형법 141조  공용서류 등의 무효, 공용물의 파괴#KOBLEX-192978",
+      "형법 115조  소요#KOBLEX-192924",
+      "귀속재산처리법 9조#KOBLEX-048066",
+      "형법 331조  특수절도#KOBLEX-193370",
+      "형법 41조  형의 종류#KOBLEX-192738",
+      "산림법 122조  벌금#KOBLEX-008370",
+      "형법 317조  업무상비밀누설#KOBLEX-193336",
+      "형법 151조  범인은닉과 친족간의 특례#KOBLEX-192995",
+      "형법 1조  범죄의 성립과 처벌#KOBLEX-192644",
+      "선박법 39조  「형법」 공범례의 적용 배제#KOBLEX-123042",
+      "비료관리법 30조  과태료#KOBLEX-149918",
+      "집합건물의 소유 및 관리에 관한 법률 65조  벌금#KOBLEX-186348",
+      "국가보안법 4조  목적수행#KOBLEX-076946",
+      "형법 179조  일반건조물 등에의 일수#KOBLEX-193061",
+      "형법 146조  특수도주#KOBLEX-192989",
+      "경범죄 처벌법 3조#KOBLEX-049497",
+      "폭력행위 등 처벌에 관한 법률 3조  집단적 폭행 등#KOBLEX-126716"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "NO_RETRIEVAL_PROGRESS"
+}

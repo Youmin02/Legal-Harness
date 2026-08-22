@@ -1,0 +1,1134 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "부동산에 관한 법률행위로 인한 물권의 득실변경은 등기하여야 그 효력이 생긴다.[CT1]\n매매계약의 성립과 대금의 완납은 매도인에게 소유권 이전 의무를 부과하지만, 부동산 소유권 자체를 이전하는 효력은 발생하지 않는다.[CT2]\n전제: 갑과 을 사이의 매매계약이 유효하게 성립하였고, 을이 대금을 전부 지급한 사실은 문제의 전제로 가정한다.\n한계: 본 답변은 비공개 벤치마크 진단용 후보이며, 공개 가능한 답변으로 승인되지 않았다.\n한계: 대금 지급이 부동산 소유권 이전에 미치는 직접적 효과에 대한 명시적 조문이 후보 자료에 포함되어 있지 않아, 등기 요건에 대한 일반 원칙에 기반하여 판단하였다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T16:21:54.588112+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 760596.033,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 467,
+      "dedup_collapse": 92,
+      "evidence_fusion": 467,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "round_selected": 30,
+      "rrf": 500,
+      "selected": 467
+    }
+  },
+  "run_id": "f300a4b0-9812-4025-8050-c4b4143ef8cb",
+  "state": {
+    "accepted_provision_ids": [
+      "민법 568조  매매의 효력#KOBLEX-059530",
+      "민법 186조  부동산물권변동의 효력#KOBLEX-058761",
+      "민법 563조  매매의 의의#KOBLEX-059518"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 7,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 4,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 21
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 21,
+          "claim_count": 2
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "을이 그 땅의 소유권을 취득한 것으로 볼 수 있는가?",
+        "requested_output": "을이 갑으로부터 토지 소유권을 취득했는지 여부에 대한 법적 판단"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "부동산등기법 99조  수용으로 인한 등기#KOBLEX-088159"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 72,
+        "first_stage_score": 21.383568793518407,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "부동산등기법 99조  수용으로 인한 등기#KOBLEX-088159",
+        "provision_text": "⑤ 부동산에 관한 소유권 외의 권리의 수용으로 인한 권리이전등기에 관하여는 제1항부터 제4항까지의 규정을 준용한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.007021266967058182,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "부동산등기법 99조  수용으로 인한 등기 5항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 563조  매매의 의의#KOBLEX-059518"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 3.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "민법 563조  매매의 의의#KOBLEX-059518",
+        "provision_text": "제563조(매매의 의의) 매매는 당사자 일방이 재산권을 상대방에게 이전할 것을 약정하고 상대방이 그 대금을 지급할 것을 약정함으로써 그 효력이 생긴다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.42903706431388855,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 563조  매매의 의의",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 590조  환매의 의의#KOBLEX-059575"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 23.53225881593898,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "민법 590조  환매의 의의#KOBLEX-059575",
+        "provision_text": "①매도인이 매매계약과 동시에 환매할 권리를 보류한 때에는 그 영수한 대금 및 매수인이 부담한 매매비용을 반환하고 그 목적물을 환매할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.18033099174499512,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 590조  환매의 의의 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 568조  매매의 효력#KOBLEX-059530"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "민법 568조  매매의 효력#KOBLEX-059530",
+        "provision_text": "①매도인은 매수인에 대하여 매매의 목적이 된 권리를 이전하여야 하며 매수인은 매도인에게 그 대금을 지급하여야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.009549547918140888,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "민법 568조  매매의 효력 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 587조  과실의 귀속, 대금의 이자#KOBLEX-059570"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 71,
+        "first_stage_score": 20.44841701791808,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "민법 587조  과실의 귀속, 대금의 이자#KOBLEX-059570",
+        "provision_text": "제587조(과실의 귀속, 대금의 이자) 매매계약있은 후에도 인도하지 아니한 목적물로부터 생긴 과실은 매도인에게 속한다. 매수인은 목적물의 인도를 받은 날로부터 대금의 이자를 지급하여야 한다. 그러나 대금의 지급에 대하여 기한이 있는 때에는 그러하지 아니하다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.008106368593871593,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "민법 587조  과실의 귀속, 대금의 이자",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부동산소유권 이전등기 등에 관한 특별조치법 8조  소유권 이전절차#KOBLEX-042535",
+          "부동산소유권 이전등기 등에 관한 특별조치법 8조  소유권 이전절차#KOBLEX-225209"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 26.871255960226556,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "부동산소유권 이전등기 등에 관한 특별조치법 8조  소유권 이전절차#KOBLEX-042535",
+        "provision_text": "제8조(소유권 이전절차)",
+        "rerank_rank": 2,
+        "rerank_score": 0.004855592269450426,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "부동산소유권 이전등기 등에 관한 특별조치법 8조  소유권 이전절차",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공유재산 및 물품 관리법 시행령 41조  소유권의 이전 등#KOBLEX-138743"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 33,
+        "first_stage_score": 21.93027621507875,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "공유재산 및 물품 관리법 시행령 41조  소유권의 이전 등#KOBLEX-138743",
+        "provision_text": "① 일반재산 매각 시 소유권 이전은 매각대금이 완전히 납부된 후에 하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0028889544773846865,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "공유재산 및 물품 관리법 시행령 41조  소유권의 이전 등 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부동산등기법 64조#KOBLEX-088015"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 28,
+        "first_stage_score": 25.85138095355701,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "부동산등기법 64조#KOBLEX-088015",
+        "provision_text": "제2관 소유권에 관한 등기",
+        "rerank_rank": 3,
+        "rerank_score": 0.002418477088212967,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "부동산등기법 64조",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "주택임대차보호법 3조  대항력 등#KOBLEX-184057"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 28.353892785263504,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "주택임대차보호법 3조  대항력 등#KOBLEX-184057",
+        "provision_text": "제3조(대항력 등)",
+        "rerank_rank": 4,
+        "rerank_score": 0.002329132752493024,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "주택임대차보호법 3조  대항력 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부동산소유권 이전등기 등에 관한 특별조치법 4조  적용범위#KOBLEX-042521",
+          "부동산소유권 이전등기 등에 관한 특별조치법 4조  적용범위#KOBLEX-225195"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 33,
+        "first_stage_score": 24.749827935405392,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "부동산소유권 이전등기 등에 관한 특별조치법 4조  적용범위#KOBLEX-042521",
+        "provision_text": "① 이 법은 부동산으로서 1995년 6월 30일 이전에 매매ㆍ증여ㆍ교환 등 법률행위로 인하여 사실상 양도된 부동산, 상속받은 부동산과 소유권보존등기가 되어 있지 아니한 부동산에 대하여 이를 적용한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0009120252216234803,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "부동산소유권 이전등기 등에 관한 특별조치법 4조  적용범위 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 267조  대금완납에 따른 부동산취득의 효과#KOBLEX-128934"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 50,
+        "first_stage_score": 23.355736818540045,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 267조  대금완납에 따른 부동산취득의 효과#KOBLEX-128934",
+        "provision_text": "제267조(대금완납에 따른 부동산취득의 효과) 매수인의 부동산 취득은 담보권 소멸로 영향을 받지 아니한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.00024008048058021814,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사집행법 267조  대금완납에 따른 부동산취득의 효과",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부동산등기법 99조  수용으로 인한 등기#KOBLEX-088158"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 32.85626996492372,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "부동산등기법 99조  수용으로 인한 등기#KOBLEX-088158",
+        "provision_text": "④ 등기관이 제1항과 제3항에 따라 수용으로 인한 소유권이전등기를 하는 경우 그 부동산의 등기기록 중 소유권, 소유권 외의 권리, 그 밖의 처분제한에 관한 등기가 있으면 그 등기를 직권으로 말소하여야 한다. 다만, 그 부동산을 위하여 존재하는 지역권의 등기 또는 토지수용위원회의 재결(裁決)로써 존속(存續)이 인정된 권리의 등기는 그러하지 아니하다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.00010860116162803024,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "부동산등기법 99조  수용으로 인한 등기 4항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부동산등기법 52조  부기로 하는 등기#KOBLEX-087973"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 27,
+        "first_stage_score": 25.59002572023574,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "부동산등기법 52조  부기로 하는 등기#KOBLEX-087973",
+        "provision_text": "2. 소유권 외의 권리의 이전등기",
+        "rerank_rank": 5,
+        "rerank_score": 8.978466939879581e-05,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "부동산등기법 52조  부기로 하는 등기 2호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 186조  부동산물권변동의 효력#KOBLEX-058761"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 3.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "민법 186조  부동산물권변동의 효력#KOBLEX-058761",
+        "provision_text": "제186조(부동산물권변동의 효력) 부동산에 관한 법률행위로 인한 물권의 득실변경은 등기하여야 그 효력이 생긴다.",
+        "rerank_rank": 6,
+        "rerank_score": 5.653112748404965e-05,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민법 186조  부동산물권변동의 효력",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "새마을금고법 80조 3 계약이전 결정의 효력#KOBLEX-096754"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 73,
+        "first_stage_score": 21.150546452555346,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "새마을금고법 80조 3 계약이전 결정의 효력#KOBLEX-096754",
+        "provision_text": "⑤ 제80조의2제1항에 따른 계약이전의 결정이 있는 경우 재산의 이전에 등기ㆍ등록을 요하는 부동산 등에 관한 권리는 제2항에 따른 공고가 있을 때에 인수금고가 이를 취득한다.",
+        "rerank_rank": 7,
+        "rerank_score": 5.510908522410318e-05,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "새마을금고법 80조 3 계약이전 결정의 효력 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 621조  임대차의 등기#KOBLEX-059634"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 3.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "민법 621조  임대차의 등기#KOBLEX-059634",
+        "provision_text": "②부동산임대차를 등기한 때에는 그때부터 제삼자에 대하여 효력이 생긴다.",
+        "rerank_rank": 8,
+        "rerank_score": 4.8845435230759904e-05,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 621조  임대차의 등기 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 592조  환매등기#KOBLEX-059582"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 94,
+        "first_stage_score": 3.0,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "민법 592조  환매등기#KOBLEX-059582",
+        "provision_text": "제592조(환매등기) 매매의 목적물이 부동산인 경우에 매매등기와 동시에 환매권의 보류를 등기한 때에는 제삼자에 대하여 그 효력이 있다.",
+        "rerank_rank": 9,
+        "rerank_score": 3.2392596040153876e-05,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 592조  환매등기",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 576조  저당권, 전세권의 행사와 매도인의 담보책임#KOBLEX-059548"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 4.0,
+        "fusion_rank": 43,
+        "issue_id": "I2",
+        "provision_id": "민법 576조  저당권, 전세권의 행사와 매도인의 담보책임#KOBLEX-059548",
+        "provision_text": "①매매의 목적이 된 부동산에 설정된 저당권 또는 전세권의 행사로 인하여 매수인이 그 소유권을 취득할 수 없거나 취득한 소유권을 잃은 때에는 매수인은 계약을 해제할 수 있다.",
+        "rerank_rank": 43,
+        "rerank_score": 9.04361604625592e-06,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 576조  저당권, 전세권의 행사와 매도인의 담보책임 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 594조  환매의 실행#KOBLEX-059585"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 54,
+        "first_stage_score": 25.169861800099298,
+        "fusion_rank": 44,
+        "issue_id": "I2",
+        "provision_id": "민법 594조  환매의 실행#KOBLEX-059585",
+        "provision_text": "①매도인은 기간내에 대금과 매매비용을 매수인에게 제공하지 아니하면 환매할 권리를 잃는다.",
+        "rerank_rank": 44,
+        "rerank_score": 8.763679034018423e-06,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 594조  환매의 실행 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 144조  매각대금 지급 뒤의 조치#KOBLEX-128558"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 32.88211737806977,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 144조  매각대금 지급 뒤의 조치#KOBLEX-128558",
+        "provision_text": "①매각대금이 지급되면 법원사무관등은 매각허가결정의 등본을 붙여 다음 각호의 등기를 촉탁하여야 한다. 1. 매수인 앞으로 소유권을 이전하는 등기 2. 매수인이 인수하지 아니한 부동산의 부담에 관한 기입을 말소하는 등기 3. 제94조 및 제139조제1항의 규정에 따른 경매개시결정등기를 말소하는 등기",
+        "rerank_rank": 5,
+        "rerank_score": 7.228781214507762e-06,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사집행법 144조  매각대금 지급 뒤의 조치 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부동산등기법 62조  소유권변경 사실의 통지#KOBLEX-088010"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 37,
+        "first_stage_score": 24.460540505851288,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "부동산등기법 62조  소유권변경 사실의 통지#KOBLEX-088010",
+        "provision_text": "1. 소유권의 보존 또는 이전",
+        "rerank_rank": 6,
+        "rerank_score": 7.178514351835474e-06,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "부동산등기법 62조  소유권변경 사실의 통지 1호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공유재산 및 물품 관리법 시행령 41조  소유권의 이전 등#KOBLEX-138743": "① 일반재산 매각 시 소유권 이전은 매각대금이 완전히 납부된 후에 하여야 한다.",
+      "민법 186조  부동산물권변동의 효력#KOBLEX-058761": "제186조(부동산물권변동의 효력) 부동산에 관한 법률행위로 인한 물권의 득실변경은 등기하여야 그 효력이 생긴다.",
+      "민법 563조  매매의 의의#KOBLEX-059518": "제563조(매매의 의의) 매매는 당사자 일방이 재산권을 상대방에게 이전할 것을 약정하고 상대방이 그 대금을 지급할 것을 약정함으로써 그 효력이 생긴다.",
+      "민법 568조  매매의 효력#KOBLEX-059530": "①매도인은 매수인에 대하여 매매의 목적이 된 권리를 이전하여야 하며 매수인은 매도인에게 그 대금을 지급하여야 한다.",
+      "민법 576조  저당권, 전세권의 행사와 매도인의 담보책임#KOBLEX-059548": "①매매의 목적이 된 부동산에 설정된 저당권 또는 전세권의 행사로 인하여 매수인이 그 소유권을 취득할 수 없거나 취득한 소유권을 잃은 때에는 매수인은 계약을 해제할 수 있다.",
+      "민법 587조  과실의 귀속, 대금의 이자#KOBLEX-059570": "제587조(과실의 귀속, 대금의 이자) 매매계약있은 후에도 인도하지 아니한 목적물로부터 생긴 과실은 매도인에게 속한다. 매수인은 목적물의 인도를 받은 날로부터 대금의 이자를 지급하여야 한다. 그러나 대금의 지급에 대하여 기한이 있는 때에는 그러하지 아니하다.",
+      "민법 590조  환매의 의의#KOBLEX-059575": "①매도인이 매매계약과 동시에 환매할 권리를 보류한 때에는 그 영수한 대금 및 매수인이 부담한 매매비용을 반환하고 그 목적물을 환매할 수 있다.",
+      "민법 592조  환매등기#KOBLEX-059582": "제592조(환매등기) 매매의 목적물이 부동산인 경우에 매매등기와 동시에 환매권의 보류를 등기한 때에는 제삼자에 대하여 그 효력이 있다.",
+      "민법 594조  환매의 실행#KOBLEX-059585": "①매도인은 기간내에 대금과 매매비용을 매수인에게 제공하지 아니하면 환매할 권리를 잃는다.",
+      "민법 621조  임대차의 등기#KOBLEX-059634": "②부동산임대차를 등기한 때에는 그때부터 제삼자에 대하여 효력이 생긴다.",
+      "민사집행법 144조  매각대금 지급 뒤의 조치#KOBLEX-128558": "①매각대금이 지급되면 법원사무관등은 매각허가결정의 등본을 붙여 다음 각호의 등기를 촉탁하여야 한다. 1. 매수인 앞으로 소유권을 이전하는 등기 2. 매수인이 인수하지 아니한 부동산의 부담에 관한 기입을 말소하는 등기 3. 제94조 및 제139조제1항의 규정에 따른 경매개시결정등기를 말소하는 등기",
+      "민사집행법 267조  대금완납에 따른 부동산취득의 효과#KOBLEX-128934": "제267조(대금완납에 따른 부동산취득의 효과) 매수인의 부동산 취득은 담보권 소멸로 영향을 받지 아니한다.",
+      "부동산등기법 52조  부기로 하는 등기#KOBLEX-087973": "2. 소유권 외의 권리의 이전등기",
+      "부동산등기법 62조  소유권변경 사실의 통지#KOBLEX-088010": "1. 소유권의 보존 또는 이전",
+      "부동산등기법 64조#KOBLEX-088015": "제2관 소유권에 관한 등기",
+      "부동산등기법 99조  수용으로 인한 등기#KOBLEX-088158": "④ 등기관이 제1항과 제3항에 따라 수용으로 인한 소유권이전등기를 하는 경우 그 부동산의 등기기록 중 소유권, 소유권 외의 권리, 그 밖의 처분제한에 관한 등기가 있으면 그 등기를 직권으로 말소하여야 한다. 다만, 그 부동산을 위하여 존재하는 지역권의 등기 또는 토지수용위원회의 재결(裁決)로써 존속(存續)이 인정된 권리의 등기는 그러하지 아니하다.",
+      "부동산등기법 99조  수용으로 인한 등기#KOBLEX-088159": "⑤ 부동산에 관한 소유권 외의 권리의 수용으로 인한 권리이전등기에 관하여는 제1항부터 제4항까지의 규정을 준용한다.",
+      "부동산소유권 이전등기 등에 관한 특별조치법 4조  적용범위#KOBLEX-042521": "① 이 법은 부동산으로서 1995년 6월 30일 이전에 매매ㆍ증여ㆍ교환 등 법률행위로 인하여 사실상 양도된 부동산, 상속받은 부동산과 소유권보존등기가 되어 있지 아니한 부동산에 대하여 이를 적용한다.",
+      "부동산소유권 이전등기 등에 관한 특별조치법 8조  소유권 이전절차#KOBLEX-042535": "제8조(소유권 이전절차)",
+      "새마을금고법 80조 3 계약이전 결정의 효력#KOBLEX-096754": "⑤ 제80조의2제1항에 따른 계약이전의 결정이 있는 경우 재산의 이전에 등기ㆍ등록을 요하는 부동산 등에 관한 권리는 제2항에 따른 공고가 있을 때에 인수금고가 이를 취득한다.",
+      "주택임대차보호법 3조  대항력 등#KOBLEX-184057": "제3조(대항력 등)"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 186조  부동산물권변동의 효력#KOBLEX-058761"
+            ],
+            "rationale": "민법 제186조는 부동산 물권변동에 등기가 필요함을 명시하여 등기 요건을 충족한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "민법 186조  부동산물권변동의 효력#KOBLEX-058761"
+            ],
+            "rationale": "민법 제186조는 등기 시에만 효력이 생긴다고 규정하여, 등기 미이행 시 소유권 이전 효력이 발생하지 않음을 명확히 한다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민법 186조  부동산물권변동의 효력#KOBLEX-058761"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "민법 제186조(C014)는 부동산 물권변동의 등기 요건과 등기 미이행 시 효력 발생 여부를 명확히 규정하여, 부동산 소유권 이전의 등기 요건 및 대항력 규정 확인이라는 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 563조  매매의 의의#KOBLEX-059518",
+              "민법 568조  매매의 효력#KOBLEX-059530"
+            ],
+            "rationale": "매매계약의 성립과 매도인의 권리 이전 의무는 확인되었으나, 부동산 소유권 이전의 구체적 방식(등기)에 대한 규정이 없어 완전한 확인이 불가하다.",
+            "requirement_id": "E2-R1",
+            "status": "partially_satisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "대금 지급이 부동산 소유권 이전에 미치는 직접적 효과에 대한 규정이 후보 조문에 없다.",
+            "requirement_id": "E2-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "민법 563조  매매의 의의#KOBLEX-059518",
+          "민법 568조  매매의 효력#KOBLEX-059530"
+        ],
+        "missing_aspects": [
+          "E2-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "매매계약의 성립(C002)과 매매의 효력으로서의 권리 이전 의무(C004)에 대한 법적 근거가 존재한다. 그러나 부동산이라는 특수한 목적물에 대해 대금 지급이나 매매계약 자체가 소유권을 이전하는지, 아니면 등기라는 별도 요건이 필요한지에 대한 명확한 법적 규정이 후보 조문에 포함되어 있지 않아 법적 지원이 불완전하다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 186조  부동산물권변동의 효력#KOBLEX-058761",
+        "support_spans": [
+          {
+            "end_char": 62,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 563조  매매의 의의#KOBLEX-059518",
+        "support_spans": [
+          {
+            "end_char": 84,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 568조  매매의 효력#KOBLEX-059530",
+        "support_spans": [
+          {
+            "end_char": 64,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 4,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "부동산 소유권 이전의 효력 발생 요건",
+        "issue_id": "I1"
+      },
+      {
+        "description": "매매계약과 대금 지급의 법적 효과",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "매매계약과 대금 지급의 소유권 이전 효과를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "매매계약의 소유권 이전 효과 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "대금 지급의 소유권 이전 효과 확인"
+          }
+        ],
+        "critical": true,
+        "description": "매매계약과 대금 지급의 소유권 이전 효과",
+        "evidence_item_id": "E2",
+        "evidence_type": "element",
+        "issue_id": "I2",
+        "necessity_reason": "매매계약과 대금 지급이 소유권 이전의 충분조건인지 확인하여 등기 미이행 시 소유권 취득 여부를 판단하기 위해 필요",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 1,
+    "normalized_question": "[배경 시나리오] 갑은 을에게 자신의 토지를 매도하기로 계약을 체결하였다. 을은 대금을 전부 지급하였으나, 아직 소유권 이전 등기를 하지 않은 상태이다. 을은 그 땅에 건물을 짓기 시작하려 한다. 이 상황에서 갑은 을에게 소유권이 이전되었는지 여부를 묻고자 한다. [질문] 을은 갑으로부터 토지를 매수하고 대금을 모두 지불하였으나, 아직 등기가 되지 않았습니다. 을이 그 땅의 소유권을 취득한 것으로 볼 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "부동산 소유권 이전 등기 요건 대항력",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "부동산",
+          "소유권",
+          "이전",
+          "등기",
+          "요건",
+          "대항력"
+        ],
+        "query_text": "부동산 소유권 이전은 등기를 요건으로 하며, 등기되지 아니한 소유권 이전은 제3자에게 대항할 수 없다 [원문 맥락] 을은 갑으로부터 토지를 매수하고 대금을 모두 지불하였으나, 아직 등기가 되지 않았습니다. 을이 그 땅의 소유권을 취득한 것으로 볼 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "부동산 소유권 이전 등기 요건 및 대항력 규정",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "매매계약 대금 지급 소유권 이전 효과",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "매매계약",
+          "대금",
+          "지급",
+          "소유권",
+          "이전",
+          "효과"
+        ],
+        "query_text": "매매계약 대금 지급 소유권 이전 효과 [원문 맥락] 을은 갑으로부터 토지를 매수하고 대금을 모두 지불하였으나, 아직 등기가 되지 않았습니다. 을이 그 땅의 소유권을 취득한 것으로 볼 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "매매계약과 대금 지급의 소유권 이전 효과",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "부동산 소유권 이전 등기 요건 민법 제187조",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "부동산",
+          "소유권",
+          "이전",
+          "등기",
+          "요건",
+          "민법",
+          "제187조"
+        ],
+        "query_text": "부동산 소유권 이전 등기 요건 민법 제187조 [원문 맥락] 을은 갑으로부터 토지를 매수하고 대금을 모두 지불하였으나, 아직 등기가 되지 않았습니다. 을이 그 땅의 소유권을 취득한 것으로 볼 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "부동산 소유권 이전 등기 요건 및 등기 미이행 시 효력",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "매매계약 대금 지급 부동산 소유권 이전 등기 필요성",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "매매계약",
+          "대금",
+          "지급",
+          "부동산",
+          "소유권",
+          "이전",
+          "등기",
+          "요건"
+        ],
+        "query_text": "매매계약과 대금 지급은 부동산 소유권 이전의 충분조건이 아니며 등기가 필요하다 [원문 맥락] 을은 갑으로부터 토지를 매수하고 대금을 모두 지불하였으나, 아직 등기가 되지 않았습니다. 을이 그 땅의 소유권을 취득한 것으로 볼 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "매매계약과 대금 지급이 부동산 소유권 이전에 미치는 직접적 효과 및 한계",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "부동산 매매 대금 완납 소유권 이전 등기 미이행 소유권 귀속 매수인 지위",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "부동산",
+          "매매",
+          "대금",
+          "완납",
+          "소유권",
+          "귀속",
+          "등기",
+          "미이행"
+        ],
+        "query_text": "부동산 매매에서 대금 완납과 소유권 이전 등기 미이행 시 소유권 귀속 및 매수인의 지위 [원문 맥락] 을은 갑으로부터 토지를 매수하고 대금을 모두 지불하였으나, 아직 등기가 되지 않았습니다. 을이 그 땅의 소유권을 취득한 것으로 볼 수 있는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "매매계약과 대금 지급이 부동산 소유권 이전에 미치는 직접적 효과 및 한계",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "매매계약 대금 지급 부동산 소유권 미이전 등기 완료 소유권 이전",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "매매계약",
+          "대금",
+          "지급",
+          "부동산",
+          "소유권",
+          "미이전",
+          "등기",
+          "완료"
+        ],
+        "query_text": "매매계약 체결과 대금 지급만으로는 부동산 소유권이 이전되지 아니하며 등기 완료 시 소유권이 이전된다 [원문 맥락] 을은 갑으로부터 토지를 매수하고 대금을 모두 지불하였으나, 아직 등기가 되지 않았습니다. 을이 그 땅의 소유권을 취득한 것으로 볼 수 있는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "매매계약과 대금 지급이 부동산 소유권 이전에 미치는 직접적 효과 및 한계",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을에게 자신의 토지를 매도하기로 계약을 체결하였다. 을은 대금을 전부 지급하였으나, 아직 소유권 이전 등기를 하지 않은 상태이다. 을은 그 땅에 건물을 짓기 시작하려 한다. 이 상황에서 갑은 을에게 소유권이 이전되었는지 여부를 묻고자 한다.\n\n[질문]\n을은 갑으로부터 토지를 매수하고 대금을 모두 지불하였으나, 아직 등기가 되지 않았습니다. 을이 그 땅의 소유권을 취득한 것으로 볼 수 있는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "부동산 소유권 이전의 등기 요건 및 대항력 규정을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "부동산 소유권 이전의 등기 요건 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "등기 미이행 시 소유권 이전 효력 확인"
+          }
+        ],
+        "critical": true,
+        "description": "부동산 소유권 이전의 등기 요건 및 대항력 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "부동산 소유권 이전의 효력 발생 요건을 확인하여 등기 미이행 시 소유권 취득 여부를 판단하기 위해 필요",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "매매계약과 대금 지급의 소유권 이전 효과를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "매매계약의 소유권 이전 효과 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "대금 지급의 소유권 이전 효과 확인"
+          }
+        ],
+        "critical": true,
+        "description": "매매계약과 대금 지급의 소유권 이전 효과",
+        "evidence_item_id": "E2",
+        "evidence_type": "element",
+        "issue_id": "I2",
+        "necessity_reason": "매매계약과 대금 지급이 소유권 이전의 충분조건인지 확인하여 등기 미이행 시 소유권 취득 여부를 판단하기 위해 필요",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "f300a4b0-9812-4025-8050-c4b4143ef8cb",
+    "seen_provision_ids": [
+      "민법 592조  환매등기#KOBLEX-059582",
+      "민법 186조  부동산물권변동의 효력#KOBLEX-058761",
+      "주택임대차보호법 3조  대항력 등#KOBLEX-184057",
+      "민법 563조  매매의 의의#KOBLEX-059518",
+      "민법 576조  저당권, 전세권의 행사와 매도인의 담보책임#KOBLEX-059548",
+      "부동산등기법 99조  수용으로 인한 등기#KOBLEX-088159",
+      "민법 568조  매매의 효력#KOBLEX-059530",
+      "공유재산 및 물품 관리법 시행령 41조  소유권의 이전 등#KOBLEX-138743",
+      "부동산등기법 64조#KOBLEX-088015",
+      "민법 621조  임대차의 등기#KOBLEX-059634",
+      "민사집행법 144조  매각대금 지급 뒤의 조치#KOBLEX-128558",
+      "부동산소유권 이전등기 등에 관한 특별조치법 8조  소유권 이전절차#KOBLEX-042535",
+      "민법 587조  과실의 귀속, 대금의 이자#KOBLEX-059570",
+      "부동산등기법 62조  소유권변경 사실의 통지#KOBLEX-088010",
+      "부동산소유권 이전등기 등에 관한 특별조치법 4조  적용범위#KOBLEX-042521",
+      "민법 590조  환매의 의의#KOBLEX-059575",
+      "새마을금고법 80조 3 계약이전 결정의 효력#KOBLEX-096754",
+      "부동산등기법 99조  수용으로 인한 등기#KOBLEX-088158",
+      "민법 594조  환매의 실행#KOBLEX-059585",
+      "민사집행법 267조  대금완납에 따른 부동산취득의 효과#KOBLEX-128934",
+      "부동산등기법 52조  부기로 하는 등기#KOBLEX-087973"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

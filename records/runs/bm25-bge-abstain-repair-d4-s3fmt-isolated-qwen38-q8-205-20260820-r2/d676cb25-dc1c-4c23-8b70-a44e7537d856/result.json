@@ -1,0 +1,895 @@
+{
+  "abstention_reason": null,
+  "answer": "상행위로 인한 채권은 상법 제64조에 따라 5년간 행사하지 아니하면 소멸시효가 완성됩니다.[CT1]\n이자를 목적으로 한 채권은 민법 제163조에 따라 3년간 행사하지 아니하면 소멸시효가 완성됩니다.[CT2][CT3]\n전제: 갑의 상사채권이 상행위로 인한 채권에 해당한다고 가정합니다.\n전제: 갑의 이자채권이 1년 이내의 기간으로 정한 금전의 지급을 목적으로 한 채권에 해당한다고 가정합니다.\n한계: 상법 제64조는 다른 법령에 이보다 단기의 시효 규정이 있는 경우 그 규정에 의하도록 하고 있으므로, 해당 상사채권에 더 짧은 시효가 적용되는 다른 법령 규정이 존재하는지 여부는 확인되지 않았습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "상행위로 인한 채권은 상법 제64조에 따라 5년간 행사하지 아니하면 소멸시효가 완성됩니다.[CT1]\n이자를 목적으로 한 채권은 민법 제163조에 따라 3년간 행사하지 아니하면 소멸시효가 완성됩니다.[CT2][CT3]\n전제: 갑의 상사채권이 상행위로 인한 채권에 해당한다고 가정합니다.\n전제: 갑의 이자채권이 1년 이내의 기간으로 정한 금전의 지급을 목적으로 한 채권에 해당한다고 가정합니다.\n한계: 상법 제64조는 다른 법령에 이보다 단기의 시효 규정이 있는 경우 그 규정에 의하도록 하고 있으므로, 해당 상사채권에 더 짧은 시효가 적용되는 다른 법령 규정이 존재하는지 여부는 확인되지 않았습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T22:56:32.448715+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 348075.695,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 280,
+      "dedup_collapse": 36,
+      "evidence_fusion": 280,
+      "first_stage": 300,
+      "request_rerank": 300,
+      "round_selected": 20,
+      "rrf": 300,
+      "selected": 280
+    }
+  },
+  "run_id": "d676cb25-dc1c-4c23-8b70-a44e7537d856",
+  "state": {
+    "accepted_provision_ids": [
+      "민법 163조  3년의 단기소멸시효#KOBLEX-058709",
+      "민법 163조  3년의 단기소멸시효#KOBLEX-058710",
+      "상법 64조  상사시효#KOBLEX-113693"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 8,
+          "request_count": 1,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "statutory_period",
+        "question_anchor": "상사채권",
+        "requested_output": "상사채권의 소멸시효 기간(년)"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "statutory_period",
+        "question_anchor": "이자채권",
+        "requested_output": "이자채권의 소멸시효 기간(년)"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민법 163조  3년의 단기소멸시효#KOBLEX-058710"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 99,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "민법 163조  3년의 단기소멸시효#KOBLEX-058710",
+        "provision_text": "1. 이자, 부양료, 급료, 사용료 기타 1년 이내의 기간으로 정한 금전 또는 물건의 지급을 목적으로 한 채권",
+        "rerank_rank": 1,
+        "rerank_score": 0.08017831295728683,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "민법 163조  3년의 단기소멸시효 1호",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 96,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707",
+        "provision_text": "①채권은 10년간 행사하지 아니하면 소멸시효가 완성한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.010424322448670864,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "민법 162조  채권, 재산권의 소멸시효 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농업협동조합법 157조  소멸시효#KOBLEX-187691"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 47,
+        "first_stage_score": 23.76763015310034,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "농업협동조합법 157조  소멸시효#KOBLEX-187691",
+        "provision_text": "제157조(소멸시효) 농업금융채권의 소멸시효는 원금은 5년, 이자는 2년으로 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.0047528669238090515,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "농업협동조합법 157조  소멸시효",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 164조  1년의 단기소멸시효#KOBLEX-058717"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 100,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "민법 164조  1년의 단기소멸시효#KOBLEX-058717",
+        "provision_text": "제164조(1년의 단기소멸시효) 다음 각호의 채권은 1년간 행사하지 아니하면 소멸시효가 완성한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.004561586305499077,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "민법 164조  1년의 단기소멸시효",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 163조  3년의 단기소멸시효#KOBLEX-058709"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 98,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "민법 163조  3년의 단기소멸시효#KOBLEX-058709",
+        "provision_text": "제163조(3년의 단기소멸시효) 다음 각호의 채권은 3년간 행사하지 아니하면 소멸시효가 완성한다. <개정 1997.12.13>",
+        "rerank_rank": 5,
+        "rerank_score": 0.0026898125652223825,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "민법 163조  3년의 단기소멸시효",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058708"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 2.0,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058708",
+        "provision_text": "②채권 및 소유권 이외의 재산권은 20년간 행사하지 아니하면 소멸시효가 완성한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.0016637342050671577,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "민법 162조  채권, 재산권의 소멸시효 2항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "수산업협동조합법 160조  소멸시효#KOBLEX-024927"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 48,
+        "first_stage_score": 23.76763015310034,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "수산업협동조합법 160조  소멸시효#KOBLEX-024927",
+        "provision_text": "제160조(소멸시효) 수산금융채권의 소멸시효는 원금은 5년, 이자는 2년으로 한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.0008091369527392089,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "수산업협동조합법 160조  소멸시효",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 162조#KOBLEX-058705"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 25.34320772028407,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "민법 162조#KOBLEX-058705",
+        "provision_text": "제7장 소멸시효",
+        "rerank_rank": 8,
+        "rerank_score": 0.000525326409842819,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "민법 162조",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 159조  기간의 만료점#KOBLEX-058699"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 88,
+        "first_stage_score": 2.0,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "민법 159조  기간의 만료점#KOBLEX-058699",
+        "provision_text": "제159조(기간의 만료점) 기간을 일, 주, 월 또는 연으로 정한 때에는 기간말일의 종료로 기간이 만료한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.00047313759569078684,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "민법 159조  기간의 만료점",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "임금채권보장법 26조  소멸시효#KOBLEX-040108"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 25.34320772028407,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "임금채권보장법 26조  소멸시효#KOBLEX-040108",
+        "provision_text": "제26조(소멸시효)",
+        "rerank_rank": 10,
+        "rerank_score": 0.00045826678979210556,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "임금채권보장법 26조  소멸시효",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 64조  상사시효#KOBLEX-113693"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 3.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "상법 64조  상사시효#KOBLEX-113693",
+        "provision_text": "제64조(상사시효) 상행위로 인한 채권은 본법에 다른 규정이 없는 때에는 5년간 행사하지 아니하면 소멸시효가 완성한다. 그러나 다른 법령에 이보다 단기의 시효의 규정이 있는 때에는 그 규정에 의한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9377503991127014,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상법 64조  상사시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 487조  원리청구권의 시효#KOBLEX-115280"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "상법 487조  원리청구권의 시효#KOBLEX-115280",
+        "provision_text": "③사채의 이자와 전조제2항의 청구권은 5년간 행사하지 아니하면 소멸시효가 완성한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.76655113697052,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상법 487조  원리청구권의 시효 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 487조  원리청구권의 시효#KOBLEX-115278"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "상법 487조  원리청구권의 시효#KOBLEX-115278",
+        "provision_text": "①사채의 상환청구권은 10년간 행사하지 아니하면 소멸시효가 완성한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.7471134066581726,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상법 487조  원리청구권의 시효 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "항만공사법 34조  사채의 발행 등#KOBLEX-097894"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 35,
+        "first_stage_score": 20.203608624417768,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "항만공사법 34조  사채의 발행 등#KOBLEX-097894",
+        "provision_text": "③ 사채의 소멸시효는 상환일부터 계산하여 원금은 5년, 이자는 2년이 지나면 완성한다. <개정 2016.12.20>",
+        "rerank_rank": 4,
+        "rerank_score": 0.03715865686535835,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "항만공사법 34조  사채의 발행 등 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산업집적활성화 및 공장설립에 관한 법률 45조 27 채권의 발행#KOBLEX-043133"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 29,
+        "first_stage_score": 21.889138122226143,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "산업집적활성화 및 공장설립에 관한 법률 45조 27 채권의 발행#KOBLEX-043133",
+        "provision_text": "⑤ 채권의 소멸시효는 상환일부터 기산하여 원금은 5년, 이자는 2년이 지나면 완성한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.0030534269753843546,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "산업집적활성화 및 공장설립에 관한 법률 45조 27 채권의 발행 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 193조  채권의 발행 등#KOBLEX-037450"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 28,
+        "first_stage_score": 22.35539995141078,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 193조  채권의 발행 등#KOBLEX-037450",
+        "provision_text": "⑤ 채권의 소멸시효는 상환일부터 기산하여 원금은 5년, 이자는 2년으로 완성된다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.0021678651683032513,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 193조  채권의 발행 등 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "한국환경공단법 27조  채권의 발행#KOBLEX-122924"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 31,
+        "first_stage_score": 21.441928375702673,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "한국환경공단법 27조  채권의 발행#KOBLEX-122924",
+        "provision_text": "④ 채권의 소멸시효는 그 상환일부터 계산하여 원금은 5년, 이자는 2년이 지나면 완성된다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.0014977504033595324,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "한국환경공단법 27조  채권의 발행 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도시철도법 20조  도시철도채권의 발행#KOBLEX-023686"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 24,
+        "first_stage_score": 24.05813729055731,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "도시철도법 20조  도시철도채권의 발행#KOBLEX-023686",
+        "provision_text": "④ 도시철도채권의 원금 및 이자의 소멸시효(消滅時效)는 상환일(償還日)부터 기산(起算)하여 5년으로 한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.0010528438724577427,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "도시철도법 20조  도시철도채권의 발행 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "농업협동조합법 157조  소멸시효#KOBLEX-187691": "제157조(소멸시효) 농업금융채권의 소멸시효는 원금은 5년, 이자는 2년으로 한다.",
+      "도시철도법 20조  도시철도채권의 발행#KOBLEX-023686": "④ 도시철도채권의 원금 및 이자의 소멸시효(消滅時效)는 상환일(償還日)부터 기산(起算)하여 5년으로 한다.",
+      "민법 159조  기간의 만료점#KOBLEX-058699": "제159조(기간의 만료점) 기간을 일, 주, 월 또는 연으로 정한 때에는 기간말일의 종료로 기간이 만료한다.",
+      "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707": "①채권은 10년간 행사하지 아니하면 소멸시효가 완성한다.",
+      "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058708": "②채권 및 소유권 이외의 재산권은 20년간 행사하지 아니하면 소멸시효가 완성한다.",
+      "민법 162조#KOBLEX-058705": "제7장 소멸시효",
+      "민법 163조  3년의 단기소멸시효#KOBLEX-058709": "제163조(3년의 단기소멸시효) 다음 각호의 채권은 3년간 행사하지 아니하면 소멸시효가 완성한다. <개정 1997.12.13>",
+      "민법 163조  3년의 단기소멸시효#KOBLEX-058710": "1. 이자, 부양료, 급료, 사용료 기타 1년 이내의 기간으로 정한 금전 또는 물건의 지급을 목적으로 한 채권",
+      "민법 164조  1년의 단기소멸시효#KOBLEX-058717": "제164조(1년의 단기소멸시효) 다음 각호의 채권은 1년간 행사하지 아니하면 소멸시효가 완성한다.",
+      "산업집적활성화 및 공장설립에 관한 법률 45조 27 채권의 발행#KOBLEX-043133": "⑤ 채권의 소멸시효는 상환일부터 기산하여 원금은 5년, 이자는 2년이 지나면 완성한다.",
+      "상법 487조  원리청구권의 시효#KOBLEX-115278": "①사채의 상환청구권은 10년간 행사하지 아니하면 소멸시효가 완성한다.",
+      "상법 487조  원리청구권의 시효#KOBLEX-115280": "③사채의 이자와 전조제2항의 청구권은 5년간 행사하지 아니하면 소멸시효가 완성한다.",
+      "상법 64조  상사시효#KOBLEX-113693": "제64조(상사시효) 상행위로 인한 채권은 본법에 다른 규정이 없는 때에는 5년간 행사하지 아니하면 소멸시효가 완성한다. 그러나 다른 법령에 이보다 단기의 시효의 규정이 있는 때에는 그 규정에 의한다.",
+      "수산업협동조합법 160조  소멸시효#KOBLEX-024927": "제160조(소멸시효) 수산금융채권의 소멸시효는 원금은 5년, 이자는 2년으로 한다.",
+      "임금채권보장법 26조  소멸시효#KOBLEX-040108": "제26조(소멸시효)",
+      "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 193조  채권의 발행 등#KOBLEX-037450": "⑤ 채권의 소멸시효는 상환일부터 기산하여 원금은 5년, 이자는 2년으로 완성된다.",
+      "한국환경공단법 27조  채권의 발행#KOBLEX-122924": "④ 채권의 소멸시효는 그 상환일부터 계산하여 원금은 5년, 이자는 2년이 지나면 완성된다.",
+      "항만공사법 34조  사채의 발행 등#KOBLEX-097894": "③ 사채의 소멸시효는 상환일부터 계산하여 원금은 5년, 이자는 2년이 지나면 완성한다. <개정 2016.12.20>"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "상법 64조  상사시효#KOBLEX-113693"
+            ],
+            "rationale": "상법 제64조가 상행위로 인한 채권의 소멸시효를 5년으로 규정하여 요구된 조항을 확인하였다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "상법 64조  상사시효#KOBLEX-113693"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "상법 제64조(C011)가 상사채권의 소멸시효 기간(5년)을 명시하고 있어, 이전 평가에서 부족했던 상사채권 특화 규정이 후보군에 포함되어 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 163조  3년의 단기소멸시효#KOBLEX-058710",
+              "민법 163조  3년의 단기소멸시효#KOBLEX-058709"
+            ],
+            "rationale": "민법 제163조가 이자채권에 대한 3년의 소멸시효를 규정하여 요구된 조항을 확인하였다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민법 163조  3년의 단기소멸시효#KOBLEX-058710",
+          "민법 163조  3년의 단기소멸시효#KOBLEX-058709"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "민법 제163조(C001, C005)가 이자채권에 적용되는 3년의 소멸시효 기간을 명시하고 있어, 이전 평가와 동일하게 완료 기준을 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "상법 64조  상사시효#KOBLEX-113693",
+        "support_spans": [
+          {
+            "end_char": 111,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 163조  3년의 단기소멸시효#KOBLEX-058710",
+        "support_spans": [
+          {
+            "end_char": 61,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 163조  3년의 단기소멸시효#KOBLEX-058709",
+        "support_spans": [
+          {
+            "end_char": 70,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 8,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "상사채권에 적용되는 소멸시효 기간은 몇 년인가?",
+        "issue_id": "I1"
+      },
+      {
+        "description": "이자채권에 적용되는 소멸시효 기간은 몇 년인가?",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을에 대하여 변제기를 2018년 10월 1일로 정한 5,000만 원 상당의 상사채권을 가지고 있다. 또한, 갑은 을로부터 2019년 1월 1일부터 매월 1일 이자를 받기로 하였다. 갑은 상사채권과 이자채권 모두 변제받지 못하였다. 2023년 10월 2일, 갑의 상사채권과 이자채권의 소멸시효가 문제되었다. [질문] 갑의 을에 대한 상사채권과 이자채권의 소멸시효는 각 몇 년인가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "상사채권 소멸시효 기간 민법 상법",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "상사채권",
+          "소멸시효",
+          "기간",
+          "민법",
+          "상법"
+        ],
+        "query_text": "상사채권 소멸시효 기간 민법 상법 [원문 맥락] 2023년 10월 2일, 갑의 상사채권과 이자채권의 소멸시효가 문제되었다. 갑의 을에 대한 상사채권과 이자채권의 소멸시효는 각 몇 년인가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "상사채권 소멸시효 기간(년)을 명시하는 조항",
+        "statute_hints": [
+          "민법",
+          "상법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "이자채권 소멸시효 기간 민법 상법",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "이자채권",
+          "소멸시효",
+          "기간",
+          "민법",
+          "상법"
+        ],
+        "query_text": "이자채권 소멸시효 기간 민법 상법 [원문 맥락] 2023년 10월 2일, 갑의 상사채권과 이자채권의 소멸시효가 문제되었다. 갑의 을에 대한 상사채권과 이자채권의 소멸시효는 각 몇 년인가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "이자채권 소멸시효 기간(년)을 명시하는 조항",
+        "statute_hints": [
+          "민법",
+          "상법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "상법 상사채권 소멸시효 5년",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "상법",
+          "상사채권",
+          "소멸시효",
+          "5년"
+        ],
+        "query_text": "상법 제64조 상사채권 소멸시효 5년 [원문 맥락] 2023년 10월 2일, 갑의 상사채권과 이자채권의 소멸시효가 문제되었다. 갑의 을에 대한 상사채권과 이자채권의 소멸시효는 각 몇 년인가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "상사채권의 소멸시효 기간(년)을 명시하는 상법 조항",
+        "statute_hints": [
+          "상법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을에 대하여 변제기를 2018년 10월 1일로 정한 5,000만 원 상당의 상사채권을 가지고 있다. 또한, 갑은 을로부터 2019년 1월 1일부터 매월 1일 이자를 받기로 하였다. 갑은 상사채권과 이자채권 모두 변제받지 못하였다. 2023년 10월 2일, 갑의 상사채권과 이자채권의 소멸시효가 문제되었다.\n\n[질문]\n갑의 을에 대한 상사채권과 이자채권의 소멸시효는 각 몇 년인가?",
+    "remaining_request_budget": 6,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "상사채권의 소멸시효 기간(년)을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "상사채권의 소멸시효 기간(년)을 명시하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "상사채권의 소멸시효 기간을 정하는 민법 또는 상법 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 상사채권의 소멸시효 기간을 직접 묻고 있으므로 해당 기간을 정하는 규정이 없으면 답변 불가",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "이자채권의 소멸시효 기간(년)을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "이자채권의 소멸시효 기간(년)을 명시하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "이자채권의 소멸시효 기간을 정하는 민법 또는 상법 조항",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 이자채권의 소멸시효 기간을 직접 묻고 있으므로 해당 기간을 정하는 규정이 없으면 답변 불가",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "d676cb25-dc1c-4c23-8b70-a44e7537d856",
+    "seen_provision_ids": [
+      "도시철도법 20조  도시철도채권의 발행#KOBLEX-023686",
+      "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058708",
+      "임금채권보장법 26조  소멸시효#KOBLEX-040108",
+      "수산업협동조합법 160조  소멸시효#KOBLEX-024927",
+      "민법 162조#KOBLEX-058705",
+      "항만공사법 34조  사채의 발행 등#KOBLEX-097894",
+      "한국환경공단법 27조  채권의 발행#KOBLEX-122924",
+      "민법 163조  3년의 단기소멸시효#KOBLEX-058709",
+      "민법 164조  1년의 단기소멸시효#KOBLEX-058717",
+      "상법 487조  원리청구권의 시효#KOBLEX-115280",
+      "제주특별자치도 설치 및 국제자유도시 조성을 위한 특별법 193조  채권의 발행 등#KOBLEX-037450",
+      "민법 159조  기간의 만료점#KOBLEX-058699",
+      "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707",
+      "민법 163조  3년의 단기소멸시효#KOBLEX-058710",
+      "상법 64조  상사시효#KOBLEX-113693",
+      "상법 487조  원리청구권의 시효#KOBLEX-115278",
+      "산업집적활성화 및 공장설립에 관한 법률 45조 27 채권의 발행#KOBLEX-043133",
+      "농업협동조합법 157조  소멸시효#KOBLEX-187691"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

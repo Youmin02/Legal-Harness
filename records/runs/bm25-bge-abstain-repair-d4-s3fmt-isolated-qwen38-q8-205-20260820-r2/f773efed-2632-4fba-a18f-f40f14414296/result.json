@@ -1,0 +1,632 @@
+{
+  "abstention_reason": null,
+  "answer": "위계로써 공무원의 직무집행을 방해한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.[CT1]\n직무를 집행하는 공무원에 대하여 폭행 또는 협박한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.[CT2]\n전제: 갑이 제출한 서류가 실제로 조작된 것이며, 이를 통해 공무원 을이 오판하여 업무를 진행했다는 사실은 질문의 배경 시나리오에 근거한 가정이다.\n한계: 본 답변은 제공된 형법 조항에 기반한 법적 규정의 해석이며, 실제 사건의 구체적 사실관계에 따른 최종 법적 판단은 사법부의 재량에 달려 있다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "위계로써 공무원의 직무집행을 방해한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.[CT1]\n직무를 집행하는 공무원에 대하여 폭행 또는 협박한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.[CT2]\n전제: 갑이 제출한 서류가 실제로 조작된 것이며, 이를 통해 공무원 을이 오판하여 업무를 진행했다는 사실은 질문의 배경 시나리오에 근거한 가정이다.\n한계: 본 답변은 제공된 형법 조항에 기반한 법적 규정의 해석이며, 실제 사건의 구체적 사실관계에 따른 최종 법적 판단은 사법부의 재량에 달려 있다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T03:17:44.901859+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 220680.42,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 176,
+      "dedup_collapse": 48,
+      "evidence_fusion": 176,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 176
+    }
+  },
+  "run_id": "f773efed-2632-4fba-a18f-f40f14414296",
+  "state": {
+    "accepted_provision_ids": [
+      "형법 136조  공무집행방해#KOBLEX-192967",
+      "형법 137조  위계에 의한 공무집행방해#KOBLEX-192969"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "penalty",
+        "question_anchor": "어떤 처벌을 받을 수 있는가",
+        "requested_output": "갑의 행위에 적용되는 형사처벌의 종류와 내용"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "형법 137조  위계에 의한 공무집행방해#KOBLEX-192969"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 49.06100607504228,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형법 137조  위계에 의한 공무집행방해#KOBLEX-192969",
+        "provision_text": "제137조(위계에 의한 공무집행방해) 위계로써 공무원의 직무집행을 방해한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9970570802688599,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "형법 137조  위계에 의한 공무집행방해",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 136조  공무집행방해#KOBLEX-192967"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "형법 136조  공무집행방해#KOBLEX-192967",
+        "provision_text": "①직무를 집행하는 공무원에 대하여 폭행 또는 협박한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 2,
+        "rerank_score": 0.0488271526992321,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 136조  공무집행방해 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 57조  공무원의 서류#KOBLEX-231583"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 38,
+        "first_stage_score": 20.192602608699417,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 57조  공무원의 서류#KOBLEX-231583",
+        "provision_text": "제57조(공무원의 서류)",
+        "rerank_rank": 2,
+        "rerank_score": 0.00042861251858994365,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 57조  공무원의 서류",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 58조  공무원의 서류#KOBLEX-231587"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 39,
+        "first_stage_score": 20.192602608699417,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 58조  공무원의 서류#KOBLEX-231587",
+        "provision_text": "제58조(공무원의 서류)",
+        "rerank_rank": 3,
+        "rerank_score": 0.00039622641634196043,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 58조  공무원의 서류",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 303조  업무상위력 등에 의한 간음#KOBLEX-193303"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 3.0,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "형법 303조  업무상위력 등에 의한 간음#KOBLEX-193303",
+        "provision_text": "①업무, 고용 기타 관계로 인하여 자기의 보호 또는 감독을 받는 사람에 대하여 위계 또는 위력으로써 간음한 자는 7년 이하의 징역 또는 3천만원 이하의 벌금에 처한다. <개정 1995.12.29, 2012.12.18, 2018.10.16>",
+        "rerank_rank": 3,
+        "rerank_score": 0.00028448188095353544,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "형법 303조  업무상위력 등에 의한 간음 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 226조  자격모용에 의한 공문서 등의 작성#KOBLEX-193136"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형법 226조  자격모용에 의한 공문서 등의 작성#KOBLEX-193136",
+        "provision_text": "제226조(자격모용에 의한 공문서 등의 작성) 행사할 목적으로 공무원 또는 공무소의 자격을 모용하여 문서 또는 도화를 작성한 자는 10년 이하의 징역에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 4,
+        "rerank_score": 8.171522495104e-05,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 226조  자격모용에 의한 공문서 등의 작성",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 92조  공무원의 서류 작성#KOBLEX-092422",
+          "군사법원법 92조  공무원의 서류 작성#KOBLEX-158387"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 59,
+        "first_stage_score": 19.69945085453596,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 92조  공무원의 서류 작성#KOBLEX-092422",
+        "provision_text": "제92조(공무원의 서류 작성)",
+        "rerank_rank": 5,
+        "rerank_score": 6.024121830705553e-05,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "군사법원법 92조  공무원의 서류 작성",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 41조  형의 종류#KOBLEX-192738"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 63,
+        "first_stage_score": 18.38428164530616,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "형법 41조  형의 종류#KOBLEX-192738",
+        "provision_text": "6. 벌금",
+        "rerank_rank": 4,
+        "rerank_score": 4.86618846480269e-05,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 41조  형의 종류 6호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 122조#KOBLEX-192940"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 91,
+        "first_stage_score": 1.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "형법 122조#KOBLEX-192940",
+        "provision_text": "제7장 공무원의 직무에 관한 죄",
+        "rerank_rank": 6,
+        "rerank_score": 4.3548920075409114e-05,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 122조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공직선거법 253조  성명 등의 허위표시죄#KOBLEX-052651",
+          "공직선거법 253조  성명 등의 허위표시죄#KOBLEX-175937"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 66,
+        "first_stage_score": 18.22759389411928,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "공직선거법 253조  성명 등의 허위표시죄#KOBLEX-052651",
+        "provision_text": "제253조(성명 등의 허위표시죄) 당선되거나 되게 하거나 되지 못하게 할 목적으로 진실에 반하는 성명ㆍ명칭 또는 신분의 표시를 하여 우편이나 전보 또는 전화 기타 전기통신의 방법에 의한 통신을 한 자는 3년 이하의 징역 또는 600만원 이하의 벌금에 처한다.",
+        "rerank_rank": 5,
+        "rerank_score": 3.84958075301256e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공직선거법 253조  성명 등의 허위표시죄",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공직선거법 253조  성명 등의 허위표시죄#KOBLEX-052651": "제253조(성명 등의 허위표시죄) 당선되거나 되게 하거나 되지 못하게 할 목적으로 진실에 반하는 성명ㆍ명칭 또는 신분의 표시를 하여 우편이나 전보 또는 전화 기타 전기통신의 방법에 의한 통신을 한 자는 3년 이하의 징역 또는 600만원 이하의 벌금에 처한다.",
+      "군사법원법 92조  공무원의 서류 작성#KOBLEX-092422": "제92조(공무원의 서류 작성)",
+      "형법 122조#KOBLEX-192940": "제7장 공무원의 직무에 관한 죄",
+      "형법 136조  공무집행방해#KOBLEX-192967": "①직무를 집행하는 공무원에 대하여 폭행 또는 협박한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 137조  위계에 의한 공무집행방해#KOBLEX-192969": "제137조(위계에 의한 공무집행방해) 위계로써 공무원의 직무집행을 방해한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 226조  자격모용에 의한 공문서 등의 작성#KOBLEX-193136": "제226조(자격모용에 의한 공문서 등의 작성) 행사할 목적으로 공무원 또는 공무소의 자격을 모용하여 문서 또는 도화를 작성한 자는 10년 이하의 징역에 처한다. <개정 1995.12.29>",
+      "형법 303조  업무상위력 등에 의한 간음#KOBLEX-193303": "①업무, 고용 기타 관계로 인하여 자기의 보호 또는 감독을 받는 사람에 대하여 위계 또는 위력으로써 간음한 자는 7년 이하의 징역 또는 3천만원 이하의 벌금에 처한다. <개정 1995.12.29, 2012.12.18, 2018.10.16>",
+      "형법 41조  형의 종류#KOBLEX-192738": "6. 벌금",
+      "형사소송법 57조  공무원의 서류#KOBLEX-231583": "제57조(공무원의 서류)",
+      "형사소송법 58조  공무원의 서류#KOBLEX-231587": "제58조(공무원의 서류)"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형법 137조  위계에 의한 공무집행방해#KOBLEX-192969"
+            ],
+            "rationale": "C001은 위계에 의한 공무집행방해죄의 구성요건을 명시적으로 규정한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형법 136조  공무집행방해#KOBLEX-192967"
+            ],
+            "rationale": "C002는 공무집행방해죄의 일반적 구성요건을 명시적으로 규정한다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형법 137조  위계에 의한 공무집행방해#KOBLEX-192969",
+          "형법 136조  공무집행방해#KOBLEX-192967"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "제시된 후보 규정 C001(형법 137조)과 C002(형법 136조)는 각각 위계에 의한 공무집행방해죄와 공무집행방해죄의 구성요건을 명확히 규정하고 있어, 증거 항목 E1의 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형법 136조  공무집행방해#KOBLEX-192967"
+            ],
+            "rationale": "C002는 공무집행방해죄의 법정형을 명시적으로 규정한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형법 137조  위계에 의한 공무집행방해#KOBLEX-192969"
+            ],
+            "rationale": "C001은 위계에 의한 공무집행방해죄의 법정형을 명시적으로 규정한다.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형법 137조  위계에 의한 공무집행방해#KOBLEX-192969",
+          "형법 136조  공무집행방해#KOBLEX-192967"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "제시된 후보 규정 C001(형법 137조)과 C002(형법 136조)는 각각 위계에 의한 공무집행방해죄와 공무집행방해죄에 대한 법정형을 명확히 규정하고 있어, 증거 항목 E2의 완료 기준을 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형법 137조  위계에 의한 공무집행방해#KOBLEX-192969",
+        "support_spans": [
+          {
+            "end_char": 90,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형법 136조  공무집행방해#KOBLEX-192967",
+        "support_spans": [
+          {
+            "end_char": 78,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형법 137조  위계에 의한 공무집행방해#KOBLEX-192969",
+        "support_spans": [
+          {
+            "end_char": 90,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형법 136조  공무집행방해#KOBLEX-192967",
+        "support_spans": [
+          {
+            "end_char": 78,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "갑이 공무원 을에게 조작된 서류를 제출하여 업무를 진행하게 한 행위가 공무집행방해죄 또는 위계에 의한 공무집행방해죄의 구성요건에 해당하는지 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "해당 범죄에 대해 적용되는 법정형(벌금 또는 징역)의 범위",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 자신의 사업과 관련된 허가를 더 빨리 받기 위해, 시청 공무원 을에게 잘못된 서류를 제출하여 을이 오판하게 하고 업무를 진행하도록 하였다. 을은 이 서류를 바탕으로 신속하게 허가를 처리했으나, 나중에 이 서류가 조작된 것임을 알게 되었다. [질문] 갑이 잘못된 서류를 제출하여 시청 공무원 을의 업무를 방해한 경우, 어떤 처벌을 받을 수 있는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "위계에 의한 공무집행방해죄 조작된 서류 제출 공무원 업무 진행 오판",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "위계에 의한 공무집행방해죄",
+          "조작된 서류",
+          "공무원",
+          "오판",
+          "업무 진행",
+          "형법"
+        ],
+        "query_text": "위계에 의한 공무집행방해죄 구성요건 조작된 서류 제출 공무원 오판 [원문 맥락] 을은 이 서류를 바탕으로 신속하게 허가를 처리했으나, 나중에 이 서류가 조작된 것임을 알게 되었다. 갑이 잘못된 서류를 제출하여 시청 공무원 을의 업무를 방해한 경우, 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "조작된 서류 제출로 공무원의 오판을 유발하여 업무를 진행하게 한 행위의 위계에 의한 공무집행방해죄 성립 요건",
+        "statute_hints": [
+          "형법 제136조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "위계에 의한 공무집행방해죄 처벌 벌금 징역 형량",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "위계에 의한 공무집행방해죄",
+          "법정형",
+          "벌금",
+          "징역",
+          "형법"
+        ],
+        "query_text": "위계에 의한 공무집행방해죄 법정형 벌금 징역 [원문 맥락] 을은 이 서류를 바탕으로 신속하게 허가를 처리했으나, 나중에 이 서류가 조작된 것임을 알게 되었다. 갑이 잘못된 서류를 제출하여 시청 공무원 을의 업무를 방해한 경우, 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "위계에 의한 공무집행방해죄에 적용되는 법정형(벌금 또는 징역)의 범위",
+        "statute_hints": [
+          "형법 제136조"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 자신의 사업과 관련된 허가를 더 빨리 받기 위해, 시청 공무원 을에게 잘못된 서류를 제출하여 을이 오판하게 하고 업무를 진행하도록 하였다. 을은 이 서류를 바탕으로 신속하게 허가를 처리했으나, 나중에 이 서류가 조작된 것임을 알게 되었다.\n\n[질문]\n갑이 잘못된 서류를 제출하여 시청 공무원 을의 업무를 방해한 경우, 어떤 처벌을 받을 수 있는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "조작된 서류 제출이 위계에 해당하고, 공무원의 업무 진행이 공무에 해당하며, 그로 인해 업무가 방해되었음을 입증할 수 있는 법적 근거 확보",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "위계에 의한 공무집행방해죄의 정의 및 구성요건 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "공무집행방해죄의 일반적 구성요건 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공무집행방해죄 또는 위계에 의한 공무집행방해죄의 구성요건(위계, 공무, 방해 등)",
+        "evidence_item_id": "E1",
+        "evidence_type": "element",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 처벌의 전제인 범죄 성립 여부를 판단하기 위해 필수적인 구성요건 규정이 필요함",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "해당 범죄에 대해 부과되는 벌금 또는 징역의 구체적 범위 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "공무집행방해죄의 법정형 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "위계에 의한 공무집행방해죄의 법정형 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공무집행방해죄 또는 위계에 의한 공무집행방해죄의 법정형(형량)",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 직접적으로 묻고 있는 '처벌'의 내용을 답변하기 위해 필수적인 형량 규정이 필요함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "f773efed-2632-4fba-a18f-f40f14414296",
+    "seen_provision_ids": [
+      "형법 122조#KOBLEX-192940",
+      "형법 137조  위계에 의한 공무집행방해#KOBLEX-192969",
+      "형법 41조  형의 종류#KOBLEX-192738",
+      "형사소송법 57조  공무원의 서류#KOBLEX-231583",
+      "공직선거법 253조  성명 등의 허위표시죄#KOBLEX-052651",
+      "형사소송법 58조  공무원의 서류#KOBLEX-231587",
+      "군사법원법 92조  공무원의 서류 작성#KOBLEX-092422",
+      "형법 303조  업무상위력 등에 의한 간음#KOBLEX-193303",
+      "형법 136조  공무집행방해#KOBLEX-192967",
+      "형법 226조  자격모용에 의한 공문서 등의 작성#KOBLEX-193136"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

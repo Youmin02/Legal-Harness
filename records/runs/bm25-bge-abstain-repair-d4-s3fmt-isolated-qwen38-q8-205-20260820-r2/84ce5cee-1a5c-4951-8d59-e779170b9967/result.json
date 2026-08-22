@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T06:24:49.097226+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 113253.07,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 159 column 20 (char 4365)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "84ce5cee-1a5c-4951-8d59-e779170b9967",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 159 column 20 (char 4365)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 대규모 농업단지 개발사업을 진행하는 시행자로, 개발과정에서 환지로 인해 지역 주민인 을과 병 사이에 토지 사용과 관련된 분쟁이 발생하였다. 갑은 이 문제를 해결하고자 법적인 조치를 취해야 한다. 또한, 갑은 환지 처분이 완료되었음을 확인받은 상태다. [질문] 갑은 을과 병 사이의 환지로 인한 분쟁을 조정하기 위해 무엇을 해야 하며, 환지 처분과 관련된 토지 및 건물의 등기는 언제 이루어져야 하고, 환지심의위원회의 구성과 운영에 관한 사항은 어떻게 정해지는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n갑은 대규모 농업단지 개발사업을 진행하는 시행자로, 개발과정에서 환지로 인해 지역 주민인 을과 병 사이에 토지 사용과 관련된 분쟁이 발생하였다. 갑은 이 문제를 해결하고자 법적인 조치를 취해야 한다. 또한, 갑은 환지 처분이 완료되었음을 확인받은 상태다.\n\n[질문]\n갑은 을과 병 사이의 환지로 인한 분쟁을 조정하기 위해 무엇을 해야 하며, 환지 처분과 관련된 토지 및 건물의 등기는 언제 이루어져야 하고, 환지심의위원회의 구성과 운영에 관한 사항은 어떻게 정해지는가?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "84ce5cee-1a5c-4951-8d59-e779170b9967",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

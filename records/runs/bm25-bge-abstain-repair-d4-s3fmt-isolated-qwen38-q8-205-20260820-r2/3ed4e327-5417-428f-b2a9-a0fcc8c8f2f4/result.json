@@ -1,0 +1,508 @@
+{
+  "abstention_reason": null,
+  "answer": "피고사건이 법원의 관할에 속하지 아니한 때에는 판결로써 관할위반의 선고를 하여야 한다.[CT1]\nA시 지방법원은 관할위반의 선고를 하는 판결을 내려야 한다.[CT2]\n전제: A시 지방법원이 해당 사건에 대해 관할이 없음을 법원이 확인한 것으로 가정한다.\n한계: 본 답변은 형사소송법 제319조에 근거한 관할위반의 선고 절차에 한정되며, 관할 이송 또는 다른 절차적 처분에 대한 내용은 포함하지 않는다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "피고사건이 법원의 관할에 속하지 아니한 때에는 판결로써 관할위반의 선고를 하여야 한다.[CT1]\nA시 지방법원은 관할위반의 선고를 하는 판결을 내려야 한다.[CT2]\n전제: A시 지방법원이 해당 사건에 대해 관할이 없음을 법원이 확인한 것으로 가정한다.\n한계: 본 답변은 형사소송법 제319조에 근거한 관할위반의 선고 절차에 한정되며, 관할 이송 또는 다른 절차적 처분에 대한 내용은 포함하지 않는다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T04:37:28.212926+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 171174.497,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 86,
+      "dedup_collapse": 28,
+      "evidence_fusion": 86,
+      "first_stage": 100,
+      "request_rerank": 100,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 86
+    }
+  },
+  "run_id": "3ed4e327-5417-428f-b2a9-a0fcc8c8f2f4",
+  "state": {
+    "accepted_provision_ids": [
+      "형사소송법 319조  관할위반의 판결#KOBLEX-232608"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "judgment_type",
+        "question_anchor": "A시 지방법원은 어떤 판결을 내려야 하는가",
+        "requested_output": "A시 지방법원이 내려야 할 판결의 종류 및 법적 근거"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "형사소송법 14조  관할지정의 청구#KOBLEX-231443"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 94,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 14조  관할지정의 청구#KOBLEX-231443",
+        "provision_text": "2. 관할위반을 선고한 재판이 확정된 사건에 관하여 다른 관할법원이 없는 때",
+        "rerank_rank": 1,
+        "rerank_score": 8.697606244822964e-05,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 14조  관할지정의 청구 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "질서위반행위규제법 25조  관할 법원#KOBLEX-022843"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 32,
+        "first_stage_score": 21.88020170826251,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "질서위반행위규제법 25조  관할 법원#KOBLEX-022843",
+        "provision_text": "제25조(관할 법원) 과태료 사건은 다른 법령에 특별한 규정이 있는 경우를 제외하고는 당사자의 주소지의 지방법원 또는 그 지원의 관할로 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 6.264720286708325e-05,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "질서위반행위규제법 25조  관할 법원",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 319조  관할위반의 판결#KOBLEX-232608"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 26.998325632731458,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 319조  관할위반의 판결#KOBLEX-232608",
+        "provision_text": "제319조(관할위반의 판결) 피고사건이 법원의 관할에 속하지 아니한 때에는 판결로써 관할위반의 선고를 하여야 한다. <개정 2007.12.21>",
+        "rerank_rank": 3,
+        "rerank_score": 5.249490277492441e-05,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 319조  관할위반의 판결",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 394조  관할인정과 이송의 판결#KOBLEX-232805"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 26.250379097907924,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 394조  관할인정과 이송의 판결#KOBLEX-232805",
+        "provision_text": "제394조(관할인정과 이송의 판결) 관할의 인정이 법률에 위반됨을 이유로 원심판결 또는 제1심판결을 파기하는 경우에는 판결로써 사건을 관할있는 법원에 이송하여야 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 8.883358532330021e-06,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 394조  관할인정과 이송의 판결",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 395조  관할위반과 환송의 판결#KOBLEX-232806"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 65,
+        "first_stage_score": 20.633047936494386,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 395조  관할위반과 환송의 판결#KOBLEX-232806",
+        "provision_text": "제395조(관할위반과 환송의 판결) 관할위반의 인정이 법률에 위반됨을 이유로 원심판결 또는 제1심판결을 파기하는 경우에는 판결로써 사건을 원심법원 또는 제1심법원에 환송하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 7.684947377128992e-06,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 395조  관할위반과 환송의 판결",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 136조  수명법관, 수탁판사#KOBLEX-231817"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 2.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 136조  수명법관, 수탁판사#KOBLEX-231817",
+        "provision_text": "①법원은 압수 또는 수색을 합의부원에게 명할 수 있고 그 목적물의 소재지를 관할하는 지방법원 판사에게 촉탁할 수 있다.",
+        "rerank_rank": 6,
+        "rerank_score": 4.068475391250104e-06,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 136조  수명법관, 수탁판사 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부재선고에 관한 특별조치법 6조  부재선고의 관할 법원#KOBLEX-089401"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 24.240515444275868,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "부재선고에 관한 특별조치법 6조  부재선고의 관할 법원#KOBLEX-089401",
+        "provision_text": "제6조(부재선고의 관할 법원) 부재선고 또는 그 취소에 관한 사건은 잔류자의 등록기준지의 가정법원이 관할한다.",
+        "rerank_rank": 7,
+        "rerank_score": 2.730514097493142e-06,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "부재선고에 관한 특별조치법 6조  부재선고의 관할 법원",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 15조  관할이전의 신청#KOBLEX-231445"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 96,
+        "first_stage_score": 2.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 15조  관할이전의 신청#KOBLEX-231445",
+        "provision_text": "1. 관할법원이 법률상의 이유 또는 특별한 사정으로 재판권을 행할 수 없는 때",
+        "rerank_rank": 8,
+        "rerank_score": 2.589922132756328e-06,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 15조  관할이전의 신청 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 13조  관할의 경합#KOBLEX-231440"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 92,
+        "first_stage_score": 2.0,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 13조  관할의 경합#KOBLEX-231440",
+        "provision_text": "제13조(관할의 경합) 같은 사건이 사물관할이 같은 여러 개의 법원에 계속된 때에는 먼저 공소를 받은 법원이 심판한다. 다만, 각 법원에 공통되는 바로 위의 상급법원은 검사나 피고인의 신청에 의하여 결정으로 뒤에 공소를 받은 법원으로 하여금 심판하게 할 수 있다.",
+        "rerank_rank": 9,
+        "rerank_score": 1.94178824131086e-06,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 13조  관할의 경합",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "광업법 81조  관할 법원#KOBLEX-134138"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 29.358378032502525,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "광업법 81조  관할 법원#KOBLEX-134138",
+        "provision_text": "제81조(관할 법원)",
+        "rerank_rank": 10,
+        "rerank_score": 1.764035346241144e-06,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "광업법 81조  관할 법원",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "광업법 81조  관할 법원#KOBLEX-134138": "제81조(관할 법원)",
+      "부재선고에 관한 특별조치법 6조  부재선고의 관할 법원#KOBLEX-089401": "제6조(부재선고의 관할 법원) 부재선고 또는 그 취소에 관한 사건은 잔류자의 등록기준지의 가정법원이 관할한다.",
+      "질서위반행위규제법 25조  관할 법원#KOBLEX-022843": "제25조(관할 법원) 과태료 사건은 다른 법령에 특별한 규정이 있는 경우를 제외하고는 당사자의 주소지의 지방법원 또는 그 지원의 관할로 한다.",
+      "형사소송법 136조  수명법관, 수탁판사#KOBLEX-231817": "①법원은 압수 또는 수색을 합의부원에게 명할 수 있고 그 목적물의 소재지를 관할하는 지방법원 판사에게 촉탁할 수 있다.",
+      "형사소송법 13조  관할의 경합#KOBLEX-231440": "제13조(관할의 경합) 같은 사건이 사물관할이 같은 여러 개의 법원에 계속된 때에는 먼저 공소를 받은 법원이 심판한다. 다만, 각 법원에 공통되는 바로 위의 상급법원은 검사나 피고인의 신청에 의하여 결정으로 뒤에 공소를 받은 법원으로 하여금 심판하게 할 수 있다.",
+      "형사소송법 14조  관할지정의 청구#KOBLEX-231443": "2. 관할위반을 선고한 재판이 확정된 사건에 관하여 다른 관할법원이 없는 때",
+      "형사소송법 15조  관할이전의 신청#KOBLEX-231445": "1. 관할법원이 법률상의 이유 또는 특별한 사정으로 재판권을 행할 수 없는 때",
+      "형사소송법 319조  관할위반의 판결#KOBLEX-232608": "제319조(관할위반의 판결) 피고사건이 법원의 관할에 속하지 아니한 때에는 판결로써 관할위반의 선고를 하여야 한다. <개정 2007.12.21>",
+      "형사소송법 394조  관할인정과 이송의 판결#KOBLEX-232805": "제394조(관할인정과 이송의 판결) 관할의 인정이 법률에 위반됨을 이유로 원심판결 또는 제1심판결을 파기하는 경우에는 판결로써 사건을 관할있는 법원에 이송하여야 한다.",
+      "형사소송법 395조  관할위반과 환송의 판결#KOBLEX-232806": "제395조(관할위반과 환송의 판결) 관할위반의 인정이 법률에 위반됨을 이유로 원심판결 또는 제1심판결을 파기하는 경우에는 판결로써 사건을 원심법원 또는 제1심법원에 환송하여야 한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형사소송법 319조  관할위반의 판결#KOBLEX-232608"
+            ],
+            "rationale": "형사소송법 제319조는 관할 없는 법원이 '판결로써 관할위반의 선고를 하여야 한다'고 규정하여 판결의 종류를 명시한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형사소송법 319조  관할위반의 판결#KOBLEX-232608"
+            ],
+            "rationale": "형사소송법 제319조는 '피고사건이 법원의 관할에 속하지 아니한 때'를 적용 요건으로 규정하며, 이는 심리 중 관할 부재가 밝혀진 경우를 포괄한다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형사소송법 319조  관할위반의 판결#KOBLEX-232608"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "제시된 형사소송법 제319조(C003)는 관할 없는 법원이 내려야 할 판결의 종류(관할위반의 선고)를 명확히 규정하고 있으며, '피고사건이 법원의 관할에 속하지 아니한 때'라는 요건은 질문의 배경(심리 중 전속관할 위반 발견)에 직접 적용된다. 따라서 관할 없는 법원의 처분 방식에 대한 법적 근거가 충족되었다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 319조  관할위반의 판결#KOBLEX-232608",
+        "support_spans": [
+          {
+            "end_char": 80,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "심리 중 전속관할 위반이 밝혀진 경우, 관할 없는 법원이 내려야 할 절차적 처분",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을을 폭행한 혐의로 A시 지방법원에 기소되었습니다. 그러나 법원의 심리중 해당 사건은 B시의 전속관할임이 밝혀졌습니다. 이로 인해 A시 지방법원은 이 사건을 계속 심리할 권한이 없게 되었습니다. [질문] 이 경우, A시 지방법원은 어떤 판결을 내려야 하는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "관할 없는 법원 관할부존재 판결 심리 중 발견",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "관할 없는 법원",
+          "관할부존재 판결",
+          "전속관할",
+          "심리 중 관할 발견",
+          "형사소송법"
+        ],
+        "query_text": "관할 없는 법원은 관할부존재 판결을 선고한다 [원문 맥락] 이로 인해 A시 지방법원은 이 사건을 계속 심리할 권한이 없게 되었습니다. 이 경우, A시 지방법원은 어떤 판결을 내려야 하는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "A시 지방법원 관할 없는 사건 판결 종류 관할부존재",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을을 폭행한 혐의로 A시 지방법원에 기소되었습니다. 그러나 법원의 심리중 해당 사건은 B시의 전속관할임이 밝혀졌습니다.\r\n이로 인해 A시 지방법원은 이 사건을 계속 심리할 권한이 없게 되었습니다.\n\n[질문]\n이 경우, A시 지방법원은 어떤 판결을 내려야 하는가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "관할 없는 법원이 내려야 할 판결의 종류(예: 관할부존재 판결)와 그 법적 근거 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "관할 없는 법원이 내려야 할 판결의 종류를 명시하는 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "해당 판결이 적용되는 시점(심리 중 발견) 및 요건 확인"
+          }
+        ],
+        "critical": true,
+        "description": "관할 없는 법원이 심리 중 관할 부재를 발견했을 때 내려야 할 판결의 종류 및 요건",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 '어떤 판결을 내려야 하는가'에 대한 직접적인 법적 근거가 되어야 하므로 핵심 결론을 위해 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "3ed4e327-5417-428f-b2a9-a0fcc8c8f2f4",
+    "seen_provision_ids": [
+      "부재선고에 관한 특별조치법 6조  부재선고의 관할 법원#KOBLEX-089401",
+      "형사소송법 319조  관할위반의 판결#KOBLEX-232608",
+      "형사소송법 13조  관할의 경합#KOBLEX-231440",
+      "형사소송법 136조  수명법관, 수탁판사#KOBLEX-231817",
+      "형사소송법 395조  관할위반과 환송의 판결#KOBLEX-232806",
+      "광업법 81조  관할 법원#KOBLEX-134138",
+      "형사소송법 14조  관할지정의 청구#KOBLEX-231443",
+      "질서위반행위규제법 25조  관할 법원#KOBLEX-022843",
+      "형사소송법 15조  관할이전의 신청#KOBLEX-231445",
+      "형사소송법 394조  관할인정과 이송의 판결#KOBLEX-232805"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

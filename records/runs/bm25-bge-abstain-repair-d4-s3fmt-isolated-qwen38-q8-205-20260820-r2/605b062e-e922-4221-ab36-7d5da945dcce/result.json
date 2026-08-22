@@ -1,0 +1,814 @@
+{
+  "abstention_reason": null,
+  "answer": "임대차는 당사자 일방이 상대방에게 목적물을 사용, 수익하게 할 것을 약정하고 상대방이 이에 대하여 차임을 지급할 것을 약정함으로써 그 효력이 생긴다.[CT1]\n갑과 을 사이의 임대차 계약은 갑이 을에게 토지를 사용·수익하게 할 것을 약정하고, 을이 이에 대하여 차임을 지급할 것을 약정함으로써 성립한다.[CT2]\n전제: 갑과 을 사이에 토지 사용·수익에 관한 합의와 임대료 지급에 관한 합의가 유효하게 이루어졌다고 가정한다.\n한계: 본 답변은 민법 제618조에 근거한 임대차 계약의 일반적 성립 요건만을 다루며, 계약의 유효성(사기, 강박, 무효 사유 등)이나 특약에 따른 추가 요건은 검토하지 않는다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "임대차는 당사자 일방이 상대방에게 목적물을 사용, 수익하게 할 것을 약정하고 상대방이 이에 대하여 차임을 지급할 것을 약정함으로써 그 효력이 생긴다.[CT1]\n갑과 을 사이의 임대차 계약은 갑이 을에게 토지를 사용·수익하게 할 것을 약정하고, 을이 이에 대하여 차임을 지급할 것을 약정함으로써 성립한다.[CT2]\n전제: 갑과 을 사이에 토지 사용·수익에 관한 합의와 임대료 지급에 관한 합의가 유효하게 이루어졌다고 가정한다.\n한계: 본 답변은 민법 제618조에 근거한 임대차 계약의 일반적 성립 요건만을 다루며, 계약의 유효성(사기, 강박, 무효 사유 등)이나 특약에 따른 추가 요건은 검토하지 않는다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T00:50:27.814916+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 195420.704,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 189,
+      "dedup_collapse": 49,
+      "evidence_fusion": 189,
+      "first_stage": 300,
+      "request_rerank": 300,
+      "round_selected": 20,
+      "rrf": 200,
+      "selected": 189
+    }
+  },
+  "run_id": "605b062e-e922-4221-ab36-7d5da945dcce",
+  "state": {
+    "accepted_provision_ids": [
+      "민법 618조  임대차의 의의#KOBLEX-059625"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_requirements",
+        "question_anchor": "임대차 계약이 성립하기 위해 필요한 조건",
+        "requested_output": "임대차 계약 성립에 필요한 법적 요건"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민법 618조#KOBLEX-059624"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 24,
+        "first_stage_score": 22.37312183376887,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 618조#KOBLEX-059624",
+        "provision_text": "제7절 임대차",
+        "rerank_rank": 1,
+        "rerank_score": 0.48565050959587097,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 618조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 527조#KOBLEX-059453"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 28.26712351743055,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 527조#KOBLEX-059453",
+        "provision_text": "제1관 계약의 성립",
+        "rerank_rank": 2,
+        "rerank_score": 0.14286327362060547,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 527조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 848조  법적 성질#KOBLEX-116481"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 22.482221163109188,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "상법 848조  법적 성질#KOBLEX-116481",
+        "provision_text": "①선체용선계약은 그 성질에 반하지 아니하는 한 「민법」상 임대차에 관한 규정을 준용한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.05805128812789917,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상법 848조  법적 성질 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 640조  차임연체와 해지#KOBLEX-059671"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 3.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민법 640조  차임연체와 해지#KOBLEX-059671",
+        "provision_text": "제640조(차임연체와 해지) 건물 기타 공작물의 임대차에는 임차인의 차임연체액이 2기의 차임액에 달하는 때에는 임대인은 계약을 해지할 수 있다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.004976344760507345,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 640조  차임연체와 해지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상가건물 임대차보호법 3조  대항력 등#KOBLEX-201654"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 67,
+        "first_stage_score": 19.669232101056863,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "상가건물 임대차보호법 3조  대항력 등#KOBLEX-201654",
+        "provision_text": "③ 이 법에 따라 임대차의 목적이 된 건물이 매매 또는 경매의 목적물이 된 경우에는 「민법」 제575조제1항ㆍ제3항 및 제578조를 준용한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.002996436320245266,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상가건물 임대차보호법 3조  대항력 등 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 635조  기간의 약정없는 임대차의 해지통고#KOBLEX-059659"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 3.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "민법 635조  기간의 약정없는 임대차의 해지통고#KOBLEX-059659",
+        "provision_text": "①임대차기간의 약정이 없는 때에는 당사자는 언제든지 계약해지의 통고를 할 수 있다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.002002783352509141,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 635조  기간의 약정없는 임대차의 해지통고 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "주택임대차보호법 1조  목적#KOBLEX-184055"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 27.331951916836534,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "주택임대차보호법 1조  목적#KOBLEX-184055",
+        "provision_text": "제1조(목적) 이 법은 주거용 건물의 임대차(賃貸借)에 관하여 「민법」에 대한 특례를 규정함으로써 국민 주거생활의 안정을 보장함을 목적으로 한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.0018634204752743244,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "주택임대차보호법 1조  목적",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상가건물 임대차보호법 7조  「민법」에 따른 임대차등기의 효력 등#KOBLEX-201682"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 25.040157024570924,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "상가건물 임대차보호법 7조  「민법」에 따른 임대차등기의 효력 등#KOBLEX-201682",
+        "provision_text": "제7조(「민법」에 따른 임대차등기의 효력 등)",
+        "rerank_rank": 8,
+        "rerank_score": 0.0014352902071550488,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상가건물 임대차보호법 7조  「민법」에 따른 임대차등기의 효력 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공공주택 특별법 40조 15 지상권 등 계약의 해지#KOBLEX-058125",
+          "공공주택 특별법 40조 15 지상권 등 계약의 해지#KOBLEX-140156",
+          "공공주택 특별법 40조 15 지상권 등 계약의 해지#KOBLEX-221481"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 26.017022301362413,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "공공주택 특별법 40조 15 지상권 등 계약의 해지#KOBLEX-058125",
+        "provision_text": "⑤ 제40조의8에 따라 복합사업계획의 승인을 받은 경우 지상권ㆍ전세권의 존속기간 또는 임대차계약의 계약기간은 「민법」 제280조ㆍ제281조ㆍ제312조제2항, 「주택임대차보호법」 제4조제1항, 「상가건물 임대차보호법」 제9조제1항을 적용하지 아니한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.0009535167482681572,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공공주택 특별법 40조 15 지상권 등 계약의 해지 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상가건물 임대차보호법 1조  목적#KOBLEX-201646"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 61,
+        "first_stage_score": 20.027205824374334,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "상가건물 임대차보호법 1조  목적#KOBLEX-201646",
+        "provision_text": "제1조(목적) 이 법은 상가건물 임대차에 관하여 「민법」에 대한 특례를 규정하여 국민 경제생활의 안정을 보장함을 목적으로 한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.0007476445171050727,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상가건물 임대차보호법 1조  목적",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059626"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 3.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059626",
+        "provision_text": "제619조(처분능력, 권한없는 자의 할 수 있는 단기임대차) 처분의 능력 또는 권한없는 자가 임대차를 하는 경우에는 그 임대차는 다음 각호의 기간을 넘지 못한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.1271653026342392,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059627"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059627",
+        "provision_text": "1. 식목, 채염 또는 석조, 석회조, 연와조 및 이와 유사한 건축을 목적으로 한 토지의 임대차는 10년",
+        "rerank_rank": 4,
+        "rerank_score": 0.09138593822717667,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059628"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 3.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059628",
+        "provision_text": "2. 기타 토지의 임대차는 5년",
+        "rerank_rank": 5,
+        "rerank_score": 0.06639715284109116,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059629"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 3.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059629",
+        "provision_text": "3. 건물 기타 공작물의 임대차는 3년",
+        "rerank_rank": 8,
+        "rerank_score": 0.06119981035590172,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차 3호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059630"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 3.0,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059630",
+        "provision_text": "4. 동산의 임대차는 6월",
+        "rerank_rank": 9,
+        "rerank_score": 0.043410904705524445,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차 4호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 618조  임대차의 의의#KOBLEX-059625"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 88,
+        "first_stage_score": 2.0,
+        "fusion_rank": 13,
+        "issue_id": "I1",
+        "provision_id": "민법 618조  임대차의 의의#KOBLEX-059625",
+        "provision_text": "제618조(임대차의 의의) 임대차는 당사자 일방이 상대방에게 목적물을 사용, 수익하게 할 것을 약정하고 상대방이 이에 대하여 차임을 지급할 것을 약정함으로써 그 효력이 생긴다.",
+        "rerank_rank": 13,
+        "rerank_score": 0.010140825994312763,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 618조  임대차의 의의",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 621조  임대차의 등기#KOBLEX-059632"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 2.0,
+        "fusion_rank": 15,
+        "issue_id": "I1",
+        "provision_id": "민법 621조  임대차의 등기#KOBLEX-059632",
+        "provision_text": "제621조(임대차의 등기)",
+        "rerank_rank": 15,
+        "rerank_score": 0.0022393737453967333,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 621조  임대차의 등기",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 621조  임대차의 등기#KOBLEX-059633"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 2.0,
+        "fusion_rank": 17,
+        "issue_id": "I1",
+        "provision_id": "민법 621조  임대차의 등기#KOBLEX-059633",
+        "provision_text": "①부동산임차인은 당사자간에 반대약정이 없으면 임대인에 대하여 그 임대차등기절차에 협력할 것을 청구할 수 있다.",
+        "rerank_rank": 17,
+        "rerank_score": 0.00039589530206285417,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 621조  임대차의 등기 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 575조  제한물권있는 경우와 매도인의 담보책임#KOBLEX-059545"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 2.0,
+        "fusion_rank": 20,
+        "issue_id": "I1",
+        "provision_id": "민법 575조  제한물권있는 경우와 매도인의 담보책임#KOBLEX-059545",
+        "provision_text": "②전항의 규정은 매매의 목적이 된 부동산을 위하여 존재할 지역권이 없거나 그 부동산에 등기된 임대차계약이 있는 경우에 준용한다.",
+        "rerank_rank": 20,
+        "rerank_score": 0.00014773686416447163,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 575조  제한물권있는 경우와 매도인의 담보책임 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공공주택 특별법 40조 15 지상권 등 계약의 해지#KOBLEX-058125": "⑤ 제40조의8에 따라 복합사업계획의 승인을 받은 경우 지상권ㆍ전세권의 존속기간 또는 임대차계약의 계약기간은 「민법」 제280조ㆍ제281조ㆍ제312조제2항, 「주택임대차보호법」 제4조제1항, 「상가건물 임대차보호법」 제9조제1항을 적용하지 아니한다.",
+      "민법 527조#KOBLEX-059453": "제1관 계약의 성립",
+      "민법 575조  제한물권있는 경우와 매도인의 담보책임#KOBLEX-059545": "②전항의 규정은 매매의 목적이 된 부동산을 위하여 존재할 지역권이 없거나 그 부동산에 등기된 임대차계약이 있는 경우에 준용한다.",
+      "민법 618조  임대차의 의의#KOBLEX-059625": "제618조(임대차의 의의) 임대차는 당사자 일방이 상대방에게 목적물을 사용, 수익하게 할 것을 약정하고 상대방이 이에 대하여 차임을 지급할 것을 약정함으로써 그 효력이 생긴다.",
+      "민법 618조#KOBLEX-059624": "제7절 임대차",
+      "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059626": "제619조(처분능력, 권한없는 자의 할 수 있는 단기임대차) 처분의 능력 또는 권한없는 자가 임대차를 하는 경우에는 그 임대차는 다음 각호의 기간을 넘지 못한다.",
+      "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059627": "1. 식목, 채염 또는 석조, 석회조, 연와조 및 이와 유사한 건축을 목적으로 한 토지의 임대차는 10년",
+      "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059628": "2. 기타 토지의 임대차는 5년",
+      "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059629": "3. 건물 기타 공작물의 임대차는 3년",
+      "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059630": "4. 동산의 임대차는 6월",
+      "민법 621조  임대차의 등기#KOBLEX-059632": "제621조(임대차의 등기)",
+      "민법 621조  임대차의 등기#KOBLEX-059633": "①부동산임차인은 당사자간에 반대약정이 없으면 임대인에 대하여 그 임대차등기절차에 협력할 것을 청구할 수 있다.",
+      "민법 635조  기간의 약정없는 임대차의 해지통고#KOBLEX-059659": "①임대차기간의 약정이 없는 때에는 당사자는 언제든지 계약해지의 통고를 할 수 있다.",
+      "민법 640조  차임연체와 해지#KOBLEX-059671": "제640조(차임연체와 해지) 건물 기타 공작물의 임대차에는 임차인의 차임연체액이 2기의 차임액에 달하는 때에는 임대인은 계약을 해지할 수 있다.",
+      "상가건물 임대차보호법 1조  목적#KOBLEX-201646": "제1조(목적) 이 법은 상가건물 임대차에 관하여 「민법」에 대한 특례를 규정하여 국민 경제생활의 안정을 보장함을 목적으로 한다.",
+      "상가건물 임대차보호법 3조  대항력 등#KOBLEX-201654": "③ 이 법에 따라 임대차의 목적이 된 건물이 매매 또는 경매의 목적물이 된 경우에는 「민법」 제575조제1항ㆍ제3항 및 제578조를 준용한다.",
+      "상가건물 임대차보호법 7조  「민법」에 따른 임대차등기의 효력 등#KOBLEX-201682": "제7조(「민법」에 따른 임대차등기의 효력 등)",
+      "상법 848조  법적 성질#KOBLEX-116481": "①선체용선계약은 그 성질에 반하지 아니하는 한 「민법」상 임대차에 관한 규정을 준용한다.",
+      "주택임대차보호법 1조  목적#KOBLEX-184055": "제1조(목적) 이 법은 주거용 건물의 임대차(賃貸借)에 관하여 「민법」에 대한 특례를 규정함으로써 국민 주거생활의 안정을 보장함을 목적으로 한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 618조  임대차의 의의#KOBLEX-059625"
+            ],
+            "rationale": "C016은 임대차 계약의 성립 요건을 명확히 규정하고 있어 요구사항을 충족한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민법 618조  임대차의 의의#KOBLEX-059625"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C016(민법 제618조)은 임대차 계약의 성립에 필요한 필수 요건인 당사자 간 합의(사용·수익 약정 및 차임 지급 약정)를 명시적으로 규정하고 있어, E1의 완료 기준이 충족된다. 이전 평가에서 미확인(uncovered)으로 판단되었으나, 이번 후보 조항에 C016이 포함되어 해당 법적 근거가 확인되었으므로 covered로 변경한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 618조  임대차의 의의#KOBLEX-059625",
+        "support_spans": [
+          {
+            "end_char": 98,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 9,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "민법상 임대차 계약의 성립 요건",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 자신의 소유인 토지를 을에게 임대하기로 하였습니다. 갑은 을에게 매월 일정 금액의 임대료를 지급받기로 약정하고, 을은 위 토지를 자신의 카페 운영을 위해 사용하기로 했습니다. 계약서를 작성하기 위해 갑과 을은 임대차 계약이 성립하기 위한 조건을 확인하고자 합니다. [질문] 갑과 을 사이의 임대차 계약이 성립하기 위해 필요한 조건은 무엇인가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "임대차 계약 성립 요건 민법",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "임대차",
+          "계약",
+          "성립",
+          "요건",
+          "민법"
+        ],
+        "query_text": "임대차 계약 성립 요건 민법 [원문 맥락] 계약서를 작성하기 위해 갑과 을은 임대차 계약이 성립하기 위한 조건을 확인하고자 합니다. 갑과 을 사이의 임대차 계약이 성립하기 위해 필요한 조건은 무엇인가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "임대차 계약 성립 요건 민법",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "민법 619조 임대차 정의",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민법",
+          "619조",
+          "임대차",
+          "정의"
+        ],
+        "query_text": "민법 제619조 임대차의 정의 [원문 맥락] 계약서를 작성하기 위해 갑과 을은 임대차 계약이 성립하기 위한 조건을 확인하고자 합니다. 갑과 을 사이의 임대차 계약이 성립하기 위해 필요한 조건은 무엇인가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "임대차 계약 성립 요건 정의 민법 619조",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "계약 성립 합의 의사표시 민법",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "계약",
+          "성립",
+          "합의",
+          "의사표시"
+        ],
+        "query_text": "당사자 간 합의에 의해 성립하는 계약 [원문 맥락] 계약서를 작성하기 위해 갑과 을은 임대차 계약이 성립하기 위한 조건을 확인하고자 합니다. 갑과 을 사이의 임대차 계약이 성립하기 위해 필요한 조건은 무엇인가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "임대차 계약 성립 요건 합의 의사표시",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 자신의 소유인 토지를 을에게 임대하기로 하였습니다. 갑은 을에게 매월 일정 금액의 임대료를 지급받기로 약정하고, 을은 위 토지를 자신의 카페 운영을 위해 사용하기로 했습니다. 계약서를 작성하기 위해 갑과 을은 임대차 계약이 성립하기 위한 조건을 확인하고자 합니다.\n\n[질문]\n갑과 을 사이의 임대차 계약이 성립하기 위해 필요한 조건은 무엇인가?",
+    "remaining_request_budget": 6,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "임대차 계약 성립에 필요한 필수 요건이 명시적으로 확인됨",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "임대차 계약의 정의 및 성립 요건(당사자 간 합의, 대가)을 규정한 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "임대차 계약의 성립에 필요한 당사자의 의사표시 및 대가(임대료)의 존재",
+        "evidence_item_id": "E1",
+        "evidence_type": "element",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 직접적으로 임대차 계약 성립 조건을 묻고 있으므로, 계약 성립의 법적 요건을 확인해야 함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "605b062e-e922-4221-ab36-7d5da945dcce",
+    "seen_provision_ids": [
+      "공공주택 특별법 40조 15 지상권 등 계약의 해지#KOBLEX-058125",
+      "민법 575조  제한물권있는 경우와 매도인의 담보책임#KOBLEX-059545",
+      "민법 621조  임대차의 등기#KOBLEX-059632",
+      "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059629",
+      "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059626",
+      "민법 635조  기간의 약정없는 임대차의 해지통고#KOBLEX-059659",
+      "상가건물 임대차보호법 7조  「민법」에 따른 임대차등기의 효력 등#KOBLEX-201682",
+      "민법 640조  차임연체와 해지#KOBLEX-059671",
+      "민법 527조#KOBLEX-059453",
+      "상가건물 임대차보호법 3조  대항력 등#KOBLEX-201654",
+      "민법 621조  임대차의 등기#KOBLEX-059633",
+      "상법 848조  법적 성질#KOBLEX-116481",
+      "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059627",
+      "상가건물 임대차보호법 1조  목적#KOBLEX-201646",
+      "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059628",
+      "민법 618조#KOBLEX-059624",
+      "주택임대차보호법 1조  목적#KOBLEX-184055",
+      "민법 618조  임대차의 의의#KOBLEX-059625",
+      "민법 619조  처분능력, 권한없는 자의 할 수 있는 단기임대차#KOBLEX-059630"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

@@ -1,0 +1,1203 @@
+{
+  "abstention_reason": null,
+  "answer": "공무원이 정당한 이유없이 그 직무수행을 거부하거나 그 직무를 유기한 때에는 1년 이하의 징역이나 금고 또는 3년 이하의 자격정지에 처한다[CT1]\n을의 행위(전자시스템에 결산서 전자기록을 허위로 입력)에 대해 형법 제225조 또는 전자문서 및 전자거래 기본법 제43조가 적용될 수 있으나, 해당 조항의 직접적 적용 여부와 형량 범위는 불확실하다[CT2]\n전제: 갑이 시청 공무원으로서 예산 관리 업무를 담당하고 있었으며, 상사의 지시를 무시하고 직무를 수행하지 않은 사실은 질문의 배경 시나리오에 근거한 전제로 간주됩니다.\n한계: 을의 행위(전자시스템에 결산서 전자기록을 허위로 입력)에 대한 처벌은 현재 제공된 근거 자료(형법 제225조, 전자문서 및 전자거래 기본법 제43조)만으로 명확한 법적 성질과 형량 범위를 확정할 수 없으므로, 해당 부분(T2)의 답변은 유보됩니다.\n한계: 을의 행위에 대한 형량 범위(E2-R2)가 확인되지 않아 해당 조항의 직접적 적용 여부가 불확실합니다.",
+  "answer_mode": "limited",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "공무원이 정당한 이유없이 그 직무수행을 거부하거나 그 직무를 유기한 때에는 1년 이하의 징역이나 금고 또는 3년 이하의 자격정지에 처한다[CT1]\n을의 행위(전자시스템에 결산서 전자기록을 허위로 입력)에 대해 형법 제225조 또는 전자문서 및 전자거래 기본법 제43조가 적용될 수 있으나, 해당 조항의 직접적 적용 여부와 형량 범위는 불확실하다[CT2]\n전제: 갑이 시청 공무원으로서 예산 관리 업무를 담당하고 있었으며, 상사의 지시를 무시하고 직무를 수행하지 않은 사실은 질문의 배경 시나리오에 근거한 전제로 간주됩니다.\n한계: 을의 행위(전자시스템에 결산서 전자기록을 허위로 입력)에 대한 처벌은 현재 제공된 근거 자료(형법 제225조, 전자문서 및 전자거래 기본법 제43조)만으로 명확한 법적 성질과 형량 범위를 확정할 수 없으므로, 해당 부분(T2)의 답변은 유보됩니다.\n한계: 을의 행위에 대한 형량 범위(E2-R2)가 확인되지 않아 해당 조항의 직접적 적용 여부가 불확실합니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T05:03:22.759490+00:00",
+  "deferred_target_ids": [
+    "T2"
+  ],
+  "end_to_end_latency_ms": 922221.168,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 382,
+      "dedup_collapse": 65,
+      "evidence_fusion": 382,
+      "first_stage": 500,
+      "request_rerank": 500,
+      "round_selected": 30,
+      "rrf": 400,
+      "selected": 382
+    }
+  },
+  "run_id": "c5011748-430f-4c64-a76d-e0fbb23a3f5a",
+  "state": {
+    "accepted_provision_ids": [
+      "전자문서 및 전자거래 기본법 43조  벌칙#KOBLEX-166112",
+      "형법 122조  직무유기#KOBLEX-192941",
+      "형법 225조  공문서등의 위조ㆍ변조#KOBLEX-193135"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 5,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [
+            "T2"
+          ],
+          "explanation": "Only the citable answer targets will be answered; remaining targets are deferred.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": [
+            "T2"
+          ]
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "limited",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "penalty",
+        "question_anchor": "갑과 을은 각자 어떤 처벌을 받을 수 있는가?",
+        "requested_output": "갑의 처벌 내용"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "penalty",
+        "question_anchor": "갑과 을은 각자 어떤 처벌을 받을 수 있는가?",
+        "requested_output": "을의 처벌 내용"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "형법 122조  직무유기#KOBLEX-192941"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 26.836978466921487,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형법 122조  직무유기#KOBLEX-192941",
+        "provision_text": "제122조(직무유기) 공무원이 정당한 이유없이 그 직무수행을 거부하거나 그 직무를 유기한 때에는 1년 이하의 징역이나 금고 또는 3년 이하의 자격정지에 처한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.06251473724842072,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형법 122조  직무유기",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 136조  공무집행방해#KOBLEX-192967"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 100,
+        "first_stage_score": 1.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형법 136조  공무집행방해#KOBLEX-192967",
+        "provision_text": "①직무를 집행하는 공무원에 대하여 폭행 또는 협박한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 2,
+        "rerank_score": 7.87469616625458e-05,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 136조  공무집행방해 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 122조#KOBLEX-192940"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 1.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형법 122조#KOBLEX-192940",
+        "provision_text": "제7장 공무원의 직무에 관한 죄",
+        "rerank_rank": 3,
+        "rerank_score": 7.101703522494063e-05,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형법 122조",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군형법 24조  직무유기#KOBLEX-140617"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 29.739513167972795,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "군형법 24조  직무유기#KOBLEX-140617",
+        "provision_text": "제24조(직무유기) 지휘관이 정당한 사유 없이 직무수행을 거부하거나 직무를 유기(遺棄)한 경우에는 다음 각 호의 구분에 따라 처벌한다.",
+        "rerank_rank": 4,
+        "rerank_score": 2.7195286747883074e-05,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "군형법 24조  직무유기",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방자치법 125조  행정기구와 공무원#KOBLEX-076612"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 63,
+        "first_stage_score": 14.831438356560447,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "지방자치법 125조  행정기구와 공무원#KOBLEX-076612",
+        "provision_text": "제125조(행정기구와 공무원)",
+        "rerank_rank": 5,
+        "rerank_score": 1.2139734280935954e-05,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "지방자치법 125조  행정기구와 공무원",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공무원연금법 83조#KOBLEX-149085"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 75,
+        "first_stage_score": 14.469219083292828,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "공무원연금법 83조#KOBLEX-149085",
+        "provision_text": "제7장 공무원 후생복지 등",
+        "rerank_rank": 6,
+        "rerank_score": 1.1076315786340274e-05,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공무원연금법 83조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 18조  사무처 공무원#KOBLEX-187900"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 64,
+        "first_stage_score": 14.831438356560447,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 18조  사무처 공무원#KOBLEX-187900",
+        "provision_text": "제18조(사무처 공무원)",
+        "rerank_rank": 7,
+        "rerank_score": 1.098448319680756e-05,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 18조  사무처 공무원",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공무원연금법 시행령 85조#KOBLEX-003647"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 76,
+        "first_stage_score": 14.469219083292828,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "공무원연금법 시행령 85조#KOBLEX-003647",
+        "provision_text": "제7장 공무원 후생복지 등",
+        "rerank_rank": 8,
+        "rerank_score": 8.953176802606322e-06,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공무원연금법 시행령 85조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 230조  공문서 등의 부정행사#KOBLEX-193143"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 28.95506652552111,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형법 230조  공문서 등의 부정행사#KOBLEX-193143",
+        "provision_text": "제230조(공문서 등의 부정행사) 공무원 또는 공무소의 문서 또는 도화를 부정행사한 자는 2년 이하의 징역이나 금고 또는 500만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 1,
+        "rerank_score": 7.621507393196225e-06,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 230조  공문서 등의 부정행사",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 123조  직권남용#KOBLEX-192942"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 88,
+        "first_stage_score": 1.0,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "형법 123조  직권남용#KOBLEX-192942",
+        "provision_text": "제123조(직권남용) 공무원이 직권을 남용하여 사람으로 하여금 의무없는 일을 하게 하거나 사람의 권리행사를 방해한 때에는 5년 이하의 징역, 10년 이하의 자격정지 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 9,
+        "rerank_score": 6.690872396575287e-06,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형법 123조  직권남용",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "관세법 268조 2 전자문서 위조ㆍ변조죄 등#KOBLEX-105910"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 29.053405609060302,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "관세법 268조 2 전자문서 위조ㆍ변조죄 등#KOBLEX-105910",
+        "provision_text": "① 제327조의4제1항을 위반하여 국가관세종합정보시스템이나 전자문서중계사업자의 전산처리설비에 기록된 전자문서 등 관련 정보를 위조 또는 변조하거나 위조 또는 변조된 정보를 행사한 자는 1년 이상 10년 이하의 징역 또는 1억원 이하의 벌금에 처한다. <개정 2023.12.31>",
+        "rerank_rank": 1,
+        "rerank_score": 0.02850966714322567,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "관세법 268조 2 전자문서 위조ㆍ변조죄 등 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 225조  공문서등의 위조ㆍ변조#KOBLEX-193135"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 36.64976495225138,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "형법 225조  공문서등의 위조ㆍ변조#KOBLEX-193135",
+        "provision_text": "제225조(공문서등의 위조ㆍ변조) 행사할 목적으로 공무원 또는 공무소의 문서 또는 도화를 위조 또는 변조한 자는 10년 이하의 징역에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 2,
+        "rerank_score": 0.004662873689085245,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형법 225조  공문서등의 위조ㆍ변조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 238조  공인 등의 위조, 부정사용#KOBLEX-193155"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 28.25600885659991,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "형법 238조  공인 등의 위조, 부정사용#KOBLEX-193155",
+        "provision_text": "①행사할 목적으로 공무원 또는 공무소의 인장, 서명, 기명  또는 기호를 위조 또는 부정사용한 자는 5년 이하의 징역에 처한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.0006208819686435163,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형법 238조  공인 등의 위조, 부정사용 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 238조  공인 등의 위조, 부정사용#KOBLEX-193156"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 3.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "형법 238조  공인 등의 위조, 부정사용#KOBLEX-193156",
+        "provision_text": "②위조 또는 부정사용한 공무원 또는 공무소의 인장, 서명, 기명 또는 기호를 행사한 자도 전항의 형과 같다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.00023529617465101182,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 238조  공인 등의 위조, 부정사용 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 231조  사문서등의 위조ㆍ변조#KOBLEX-193144"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 4.0,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "형법 231조  사문서등의 위조ㆍ변조#KOBLEX-193144",
+        "provision_text": "제231조(사문서등의 위조ㆍ변조) 행사할 목적으로 권리ㆍ의무 또는 사실증명에 관한 타인의 문서 또는 도화를 위조 또는 변조한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 5,
+        "rerank_score": 0.00018173387798015028,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형법 231조  사문서등의 위조ㆍ변조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 217조  위조유가증권 등의 행사 등#KOBLEX-193122"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 35.8676866336657,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "형법 217조  위조유가증권 등의 행사 등#KOBLEX-193122",
+        "provision_text": "제217조(위조유가증권 등의 행사 등) 위조, 변조, 작성 또는 허위기재한 전3조 기재의 유가증권을 행사하거나 행사할 목적으로 수입 또는 수출한 자는 10년 이하의 징역에 처한다.",
+        "rerank_rank": 6,
+        "rerank_score": 2.113623486366123e-05,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형법 217조  위조유가증권 등의 행사 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 214조  유가증권의 위조 등#KOBLEX-193119"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 28.90041805696427,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "형법 214조  유가증권의 위조 등#KOBLEX-193119",
+        "provision_text": "②행사할 목적으로 유가증권의 권리의무에 관한 기재를 위조 또는 변조한 자도 전항의 형과 같다.",
+        "rerank_rank": 7,
+        "rerank_score": 1.529809924250003e-05,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 214조  유가증권의 위조 등 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 214조  유가증권의 위조 등#KOBLEX-193118"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 27.262877581118147,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "형법 214조  유가증권의 위조 등#KOBLEX-193118",
+        "provision_text": "①행사할 목적으로 대한민국 또는 외국의 공채증서 기타 유가증권을 위조 또는 변조한 자는 10년 이하의 징역에 처한다.",
+        "rerank_rank": 8,
+        "rerank_score": 1.439295920135919e-05,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 214조  유가증권의 위조 등 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 218조  인지ㆍ우표의 위조등#KOBLEX-193124"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "형법 218조  인지ㆍ우표의 위조등#KOBLEX-193124",
+        "provision_text": "①행사할 목적으로 대한민국 또는 외국의 인지, 우표 기타 우편요금을 표시하는 증표를 위조 또는 변조한 자는 10년 이하의 징역에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 9,
+        "rerank_score": 1.1374244422768243e-05,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 218조  인지ㆍ우표의 위조등 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "전자문서 및 전자거래 기본법 31조 12 전자문서 등 관련 정보의 보안#KOBLEX-166018"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 34.219004102010565,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "전자문서 및 전자거래 기본법 31조 12 전자문서 등 관련 정보의 보안#KOBLEX-166018",
+        "provision_text": "① 누구든지 공인전자문서센터에 보관된 전자문서나 그 밖의 관련 정보를 위조 또는 변조하거나 위조 또는 변조된 정보를 행사하여서는 아니 된다.",
+        "rerank_rank": 10,
+        "rerank_score": 9.563897037878633e-06,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "전자문서 및 전자거래 기본법 31조 12 전자문서 등 관련 정보의 보안 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "전자문서 및 전자거래 기본법 43조  벌칙#KOBLEX-166112"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 30.68008999404043,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "전자문서 및 전자거래 기본법 43조  벌칙#KOBLEX-166112",
+        "provision_text": "① 다음 각 호의 어느 하나에 해당하는 자는 10년 이하의 징역 또는 1억원 이하의 벌금에 처한다. 1. 제31조의12제1항을 위반하여 공인전자문서센터에 보관된 전자문서나 그 밖의 관련 정보를 위조 또는 변조하거나 위조 또는 변조된 정보를 행사한 자 2. 제31조의12제2항을 위반하여 공인전자문서센터의 정보처리시스템에 거짓 정보나 부정한 명령을 입력하는 등의 방법으로 제31조의7제2항에 따른 증명서가 거짓으로 발급되게 한 자",
+        "rerank_rank": 3,
+        "rerank_score": 0.23656992614269257,
+        "retrieval_round": 3,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "전자문서 및 전자거래 기본법 43조  벌칙 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부동산소유권 이전등기 등에 관한 특별조치법 16조  벌칙#KOBLEX-042566",
+          "부동산소유권 이전등기 등에 관한 특별조치법 16조  벌칙#KOBLEX-225240"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 57,
+        "first_stage_score": 21.4239858612928,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "부동산소유권 이전등기 등에 관한 특별조치법 16조  벌칙#KOBLEX-042566",
+        "provision_text": "① 다음 각 호의 어느 하나에 해당하는 사람은 1년 이상 10년 이하의 징역 또는 1천만원 이상 1억원 이하의 벌금에 처하거나 이를 병과할 수 있다. 1. 허위의 방법으로 확인서를 발급받은 사람 2. 행사할 목적으로 제11조의 문서를 위조 또는 변조한 사람 3. 허위의 보증서를 작성한 사람 4. 타인을 기망하여 허위의 보증서를 작성하게 한 사람 5. 제1호부터 제3호까지의 문서를 행사한 사람",
+        "rerank_rank": 9,
+        "rerank_score": 0.0011989995837211609,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "부동산소유권 이전등기 등에 관한 특별조치법 16조  벌칙 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공공단체등 위탁선거에 관한 법률 64조  사위투표죄#KOBLEX-086677"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 31.32019744402622,
+        "fusion_rank": 12,
+        "issue_id": "I2",
+        "provision_id": "공공단체등 위탁선거에 관한 법률 64조  사위투표죄#KOBLEX-086677",
+        "provision_text": "① 성명을 사칭하거나 신분증명서를 위조 또는 변조하여 사용하거나 그 밖에 거짓의 방법으로 투표하거나 하게 하거나 또는 투표를 하려고 한 자는 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+        "rerank_rank": 12,
+        "rerank_score": 0.0005506108864210546,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "공공단체등 위탁선거에 관한 법률 64조  사위투표죄 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부재선고에 관한 특별조치법 15조  벌칙#KOBLEX-089415"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 64,
+        "first_stage_score": 20.34757680682744,
+        "fusion_rank": 16,
+        "issue_id": "I2",
+        "provision_id": "부재선고에 관한 특별조치법 15조  벌칙#KOBLEX-089415",
+        "provision_text": "2. 행사할 목적으로 제7조의 잔류자 확인서를 위조하거나 변조한 사람",
+        "rerank_rank": 16,
+        "rerank_score": 8.821959636406973e-05,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "부재선고에 관한 특별조치법 15조  벌칙 2호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 238조  공인 등의 위조, 부정사용#KOBLEX-193154"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 49,
+        "first_stage_score": 22.888900424060182,
+        "fusion_rank": 19,
+        "issue_id": "I2",
+        "provision_id": "형법 238조  공인 등의 위조, 부정사용#KOBLEX-193154",
+        "provision_text": "제238조(공인 등의 위조, 부정사용)",
+        "rerank_rank": 19,
+        "rerank_score": 2.753535045485478e-05,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형법 238조  공인 등의 위조, 부정사용",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공공단체등 위탁선거에 관한 법률 64조  사위투표죄#KOBLEX-086677": "① 성명을 사칭하거나 신분증명서를 위조 또는 변조하여 사용하거나 그 밖에 거짓의 방법으로 투표하거나 하게 하거나 또는 투표를 하려고 한 자는 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+      "공무원연금법 83조#KOBLEX-149085": "제7장 공무원 후생복지 등",
+      "공무원연금법 시행령 85조#KOBLEX-003647": "제7장 공무원 후생복지 등",
+      "관세법 268조 2 전자문서 위조ㆍ변조죄 등#KOBLEX-105910": "① 제327조의4제1항을 위반하여 국가관세종합정보시스템이나 전자문서중계사업자의 전산처리설비에 기록된 전자문서 등 관련 정보를 위조 또는 변조하거나 위조 또는 변조된 정보를 행사한 자는 1년 이상 10년 이하의 징역 또는 1억원 이하의 벌금에 처한다. <개정 2023.12.31>",
+      "군형법 24조  직무유기#KOBLEX-140617": "제24조(직무유기) 지휘관이 정당한 사유 없이 직무수행을 거부하거나 직무를 유기(遺棄)한 경우에는 다음 각 호의 구분에 따라 처벌한다.",
+      "부동산소유권 이전등기 등에 관한 특별조치법 16조  벌칙#KOBLEX-042566": "① 다음 각 호의 어느 하나에 해당하는 사람은 1년 이상 10년 이하의 징역 또는 1천만원 이상 1억원 이하의 벌금에 처하거나 이를 병과할 수 있다. 1. 허위의 방법으로 확인서를 발급받은 사람 2. 행사할 목적으로 제11조의 문서를 위조 또는 변조한 사람 3. 허위의 보증서를 작성한 사람 4. 타인을 기망하여 허위의 보증서를 작성하게 한 사람 5. 제1호부터 제3호까지의 문서를 행사한 사람",
+      "부재선고에 관한 특별조치법 15조  벌칙#KOBLEX-089415": "2. 행사할 목적으로 제7조의 잔류자 확인서를 위조하거나 변조한 사람",
+      "전자문서 및 전자거래 기본법 31조 12 전자문서 등 관련 정보의 보안#KOBLEX-166018": "① 누구든지 공인전자문서센터에 보관된 전자문서나 그 밖의 관련 정보를 위조 또는 변조하거나 위조 또는 변조된 정보를 행사하여서는 아니 된다.",
+      "전자문서 및 전자거래 기본법 43조  벌칙#KOBLEX-166112": "① 다음 각 호의 어느 하나에 해당하는 자는 10년 이하의 징역 또는 1억원 이하의 벌금에 처한다. 1. 제31조의12제1항을 위반하여 공인전자문서센터에 보관된 전자문서나 그 밖의 관련 정보를 위조 또는 변조하거나 위조 또는 변조된 정보를 행사한 자 2. 제31조의12제2항을 위반하여 공인전자문서센터의 정보처리시스템에 거짓 정보나 부정한 명령을 입력하는 등의 방법으로 제31조의7제2항에 따른 증명서가 거짓으로 발급되게 한 자",
+      "지방자치법 125조  행정기구와 공무원#KOBLEX-076612": "제125조(행정기구와 공무원)",
+      "헌법재판소법 18조  사무처 공무원#KOBLEX-187900": "제18조(사무처 공무원)",
+      "형법 122조  직무유기#KOBLEX-192941": "제122조(직무유기) 공무원이 정당한 이유없이 그 직무수행을 거부하거나 그 직무를 유기한 때에는 1년 이하의 징역이나 금고 또는 3년 이하의 자격정지에 처한다.",
+      "형법 122조#KOBLEX-192940": "제7장 공무원의 직무에 관한 죄",
+      "형법 123조  직권남용#KOBLEX-192942": "제123조(직권남용) 공무원이 직권을 남용하여 사람으로 하여금 의무없는 일을 하게 하거나 사람의 권리행사를 방해한 때에는 5년 이하의 징역, 10년 이하의 자격정지 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 136조  공무집행방해#KOBLEX-192967": "①직무를 집행하는 공무원에 대하여 폭행 또는 협박한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 214조  유가증권의 위조 등#KOBLEX-193118": "①행사할 목적으로 대한민국 또는 외국의 공채증서 기타 유가증권을 위조 또는 변조한 자는 10년 이하의 징역에 처한다.",
+      "형법 214조  유가증권의 위조 등#KOBLEX-193119": "②행사할 목적으로 유가증권의 권리의무에 관한 기재를 위조 또는 변조한 자도 전항의 형과 같다.",
+      "형법 217조  위조유가증권 등의 행사 등#KOBLEX-193122": "제217조(위조유가증권 등의 행사 등) 위조, 변조, 작성 또는 허위기재한 전3조 기재의 유가증권을 행사하거나 행사할 목적으로 수입 또는 수출한 자는 10년 이하의 징역에 처한다.",
+      "형법 218조  인지ㆍ우표의 위조등#KOBLEX-193124": "①행사할 목적으로 대한민국 또는 외국의 인지, 우표 기타 우편요금을 표시하는 증표를 위조 또는 변조한 자는 10년 이하의 징역에 처한다. <개정 1995.12.29>",
+      "형법 225조  공문서등의 위조ㆍ변조#KOBLEX-193135": "제225조(공문서등의 위조ㆍ변조) 행사할 목적으로 공무원 또는 공무소의 문서 또는 도화를 위조 또는 변조한 자는 10년 이하의 징역에 처한다. <개정 1995.12.29>",
+      "형법 230조  공문서 등의 부정행사#KOBLEX-193143": "제230조(공문서 등의 부정행사) 공무원 또는 공무소의 문서 또는 도화를 부정행사한 자는 2년 이하의 징역이나 금고 또는 500만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 231조  사문서등의 위조ㆍ변조#KOBLEX-193144": "제231조(사문서등의 위조ㆍ변조) 행사할 목적으로 권리ㆍ의무 또는 사실증명에 관한 타인의 문서 또는 도화를 위조 또는 변조한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 238조  공인 등의 위조, 부정사용#KOBLEX-193154": "제238조(공인 등의 위조, 부정사용)",
+      "형법 238조  공인 등의 위조, 부정사용#KOBLEX-193155": "①행사할 목적으로 공무원 또는 공무소의 인장, 서명, 기명  또는 기호를 위조 또는 부정사용한 자는 5년 이하의 징역에 처한다.",
+      "형법 238조  공인 등의 위조, 부정사용#KOBLEX-193156": "②위조 또는 부정사용한 공무원 또는 공무소의 인장, 서명, 기명 또는 기호를 행사한 자도 전항의 형과 같다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형법 122조  직무유기#KOBLEX-192941"
+            ],
+            "rationale": "형법 제122조가 공무원의 직무유기 처벌 조항으로 명시되어 있습니다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형법 122조  직무유기#KOBLEX-192941"
+            ],
+            "rationale": "형법 제122조에서 1년 이하의 징역이나 금고 또는 3년 이하의 자격정지라는 형량 범위가 명시되어 있습니다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형법 122조  직무유기#KOBLEX-192941"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "형법 제122조(직무유기)가 갑의 행위(상사 지시 무시 및 직무 수행 거부)에 대한 처벌 조항과 형량 범위를 명확히 규정하고 있어 완료 기준을 모두 충족합니다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형법 225조  공문서등의 위조ㆍ변조#KOBLEX-193135",
+              "전자문서 및 전자거래 기본법 43조  벌칙#KOBLEX-166112"
+            ],
+            "rationale": "형법 제225조는 공문서 위조·변조를 처벌하며, 전자문서 및 전자거래 기본법 제43조는 공인전자문서센터 관련 전자문서 위조·변조를 처벌하지만, 시청 내부 전자시스템에 결산서를 입력한 행위에 대한 명시적 형사처벌 조항이 부족합니다.",
+            "requirement_id": "E2-R1",
+            "status": "partially_satisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "을의 특정 행위(내부 시스템 결산서 허위 입력)에 직접 적용되는 명확한 형량 범위를 확인할 수 있는 조항이 후보군에 없습니다.",
+            "requirement_id": "E2-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "형법 225조  공문서등의 위조ㆍ변조#KOBLEX-193135",
+          "전자문서 및 전자거래 기본법 43조  벌칙#KOBLEX-166112"
+        ],
+        "missing_aspects": [
+          "E2-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "형법 제225조와 전자문서 및 전자거래 기본법 제43조가 을의 행위와 관련이 있으나, 시청 내부 전자시스템에 결산서를 입력한 행위가 공문서 위조 또는 공인전자문서센터 관련 범죄에 해당하는지 명확한 법적 근거가 부족하여 형량 범위를 확정하기 어렵습니다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [
+      "T2"
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형법 122조  직무유기#KOBLEX-192941",
+        "support_spans": [
+          {
+            "end_char": 89,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형법 225조  공문서등의 위조ㆍ변조#KOBLEX-193135",
+        "support_spans": [
+          {
+            "end_char": 95,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "전자문서 및 전자거래 기본법 43조  벌칙#KOBLEX-166112",
+        "support_spans": [
+          {
+            "end_char": 239,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 5,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "공무원이 상사의 지시를 무시하고 직무를 수행하지 않은 행위의 법적 성질과 처벌",
+        "issue_id": "I1"
+      },
+      {
+        "description": "공무원이 전자시스템에 허위로 결산서 전자기록을 입력한 행위의 법적 성질과 처벌",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "전자적 방법으로 허위 공문서를 작성·입력한 공무원의 처벌 조항과 형량 범위를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "전자적 방법으로 허위 공문서를 작성·입력한 행위의 처벌 조항 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "해당 위반 행위에 대한 형량 범위 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공무원이 전자시스템에 허위로 공문서(결산서)를 작성·입력한 행위의 처벌 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 을의 처벌을 묻고 있으므로, 을의 행위(전자적 허위 공문서 작성)에 대한 처벌 규정이 없으면 답을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 시청 공무원으로서 특정 프로젝트의 예산 관리 업무를 담당하고 있었습니다. 을은 갑의 동료로서 전자시스템을 통해 상급자에게 보고해야 하는 결산서를 작성해야 하는 책임이 있었습니다. 갑은 상사의 지시를 무시하고 직무를 수행하지 않았으며, 을은 결산서 전자기록을 허위로 작성하여 시스템에 입력했습니다. 이로 인해 시청의 재무 보고서에 오류가 발생했습니다. [질문] 갑과 을은 각자 어떤 처벌을 받을 수 있는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "공무원 직무유기 상사지시 불이행 처벌",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "공무원",
+          "직무유기",
+          "상사지시",
+          "불이행",
+          "처벌"
+        ],
+        "query_text": "공무원 직무유기 상사지시 불이행 처벌 [원문 맥락] 이로 인해 시청의 재무 보고서에 오류가 발생했습니다. 갑과 을은 각자 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "공무원 상사지시 무시 직무수행 불이행 처벌 규정",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "전자적 공문서 허위작성 입력 공무원 처벌",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "전자적",
+          "공문서",
+          "허위작성",
+          "입력",
+          "공무원",
+          "처벌"
+        ],
+        "query_text": "전자적 공문서 허위작성 입력 공무원 처벌 [원문 맥락] 이로 인해 시청의 재무 보고서에 오류가 발생했습니다. 갑과 을은 각자 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "전자시스템 결산서 허위작성 입력 공무원 처벌 규정",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "형법 231조 공전자기록 위조 변조 공무원 결산서",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형법",
+          "231조",
+          "공전자기록",
+          "위조",
+          "변조",
+          "처벌"
+        ],
+        "query_text": "형법 제231조 공전자기록 위조 변조 처벌 형량 [원문 맥락] 이로 인해 시청의 재무 보고서에 오류가 발생했습니다. 갑과 을은 각자 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "전자적 방법으로 허위 공문서 작성 입력 행위의 처벌 조항과 형량 범위",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "형법 231조 공전자기록 위조 변조 징역",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형법",
+          "231조",
+          "공전자기록",
+          "위조",
+          "변조",
+          "형량"
+        ],
+        "query_text": "형법 제231조 공전자기록 위조 변조 죄 형량 징역 [원문 맥락] 이로 인해 시청의 재무 보고서에 오류가 발생했습니다. 갑과 을은 각자 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "전자적 방법으로 허위 공문서 작성 입력 행위의 처벌 조항과 형량 범위",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "전자문서 허위 입력 공무원 형사책임 처벌",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "전자문서",
+          "허위",
+          "입력",
+          "공무원",
+          "형사책임",
+          "처벌"
+        ],
+        "query_text": "전자문서에 허위 내용을 입력한 공무원의 형사책임과 처벌 수위 [원문 맥락] 이로 인해 시청의 재무 보고서에 오류가 발생했습니다. 갑과 을은 각자 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "전자시스템 결산서 허위작성 입력 공무원 처벌 규정",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 시청 공무원으로서 특정 프로젝트의 예산 관리 업무를 담당하고 있었습니다. 을은 갑의 동료로서 전자시스템을 통해 상급자에게 보고해야 하는 결산서를 작성해야 하는 책임이 있었습니다. 갑은 상사의 지시를 무시하고 직무를 수행하지 않았으며, 을은 결산서 전자기록을 허위로 작성하여 시스템에 입력했습니다. 이로 인해 시청의 재무 보고서에 오류가 발생했습니다.\n\n[질문]\n갑과 을은 각자 어떤 처벌을 받을 수 있는가?",
+    "remaining_request_budget": 4,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "상사의 지시를 무시하고 직무를 수행하지 않은 공무원의 처벌 조항과 형량 범위를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "공무원의 직무유기 또는 상사지시 불이행에 대한 처벌 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "해당 위반 행위에 대한 형량 범위 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공무원의 직무유기 또는 상사지시 불이행에 대한 형사처벌 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 갑의 처벌을 묻고 있으므로, 갑의 행위(직무유기/상사지시 불이행)에 대한 처벌 규정이 없으면 답을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "전자적 방법으로 허위 공문서를 작성·입력한 공무원의 처벌 조항과 형량 범위를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "전자적 방법으로 허위 공문서를 작성·입력한 행위의 처벌 조항 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "해당 위반 행위에 대한 형량 범위 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공무원이 전자시스템에 허위로 공문서(결산서)를 작성·입력한 행위의 처벌 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 을의 처벌을 묻고 있으므로, 을의 행위(전자적 허위 공문서 작성)에 대한 처벌 규정이 없으면 답을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "c5011748-430f-4c64-a76d-e0fbb23a3f5a",
+    "seen_provision_ids": [
+      "형법 225조  공문서등의 위조ㆍ변조#KOBLEX-193135",
+      "전자문서 및 전자거래 기본법 31조 12 전자문서 등 관련 정보의 보안#KOBLEX-166018",
+      "관세법 268조 2 전자문서 위조ㆍ변조죄 등#KOBLEX-105910",
+      "형법 231조  사문서등의 위조ㆍ변조#KOBLEX-193144",
+      "형법 123조  직권남용#KOBLEX-192942",
+      "형법 217조  위조유가증권 등의 행사 등#KOBLEX-193122",
+      "공공단체등 위탁선거에 관한 법률 64조  사위투표죄#KOBLEX-086677",
+      "형법 122조  직무유기#KOBLEX-192941",
+      "전자문서 및 전자거래 기본법 43조  벌칙#KOBLEX-166112",
+      "군형법 24조  직무유기#KOBLEX-140617",
+      "형법 136조  공무집행방해#KOBLEX-192967",
+      "형법 230조  공문서 등의 부정행사#KOBLEX-193143",
+      "공무원연금법 시행령 85조#KOBLEX-003647",
+      "형법 238조  공인 등의 위조, 부정사용#KOBLEX-193155",
+      "형법 214조  유가증권의 위조 등#KOBLEX-193119",
+      "형법 238조  공인 등의 위조, 부정사용#KOBLEX-193154",
+      "지방자치법 125조  행정기구와 공무원#KOBLEX-076612",
+      "공무원연금법 83조#KOBLEX-149085",
+      "형법 238조  공인 등의 위조, 부정사용#KOBLEX-193156",
+      "형법 214조  유가증권의 위조 등#KOBLEX-193118",
+      "헌법재판소법 18조  사무처 공무원#KOBLEX-187900",
+      "형법 218조  인지ㆍ우표의 위조등#KOBLEX-193124",
+      "부동산소유권 이전등기 등에 관한 특별조치법 16조  벌칙#KOBLEX-042566",
+      "부재선고에 관한 특별조치법 15조  벌칙#KOBLEX-089415",
+      "형법 122조#KOBLEX-192940"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

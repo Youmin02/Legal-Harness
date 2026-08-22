@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T15:43:13.484716+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 214955.079,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 150 column 9 (char 4380)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "57a16f9e-8f69-41db-9596-49adc1b8ce89",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 150 column 9 (char 4380)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑이 을시에서 공장을 설립하고자 계획하고 있는데, 해당 지역은 이미 대기오염이 심각한 상태로 주민 건강에 해를 끼칠 우려가 있습니다. 이 지역은 특별대책지역으로 지정되어 있으며, 갑의 공장에서 나올 오염물질 중 일부는 특정대기유해물질로 분류됩니다. [질문] 갑이 을시에 공장을 설립하고자 할 때, 그 공장에서 배출되는 오염물질에 대한 규제는 어떻게 이루어질 수 있으며, 공장 설치를 위해 필요한 절차는 무엇인가요? 또한, 특정대기유해물질을 배출하는 경우 설치 제한은 어떻게 적용될 수 있나요?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n갑이 을시에서 공장을 설립하고자 계획하고 있는데, 해당 지역은 이미 대기오염이 심각한 상태로 주민 건강에 해를 끼칠 우려가 있습니다. 이 지역은 특별대책지역으로 지정되어 있으며, 갑의 공장에서 나올 오염물질 중 일부는 특정대기유해물질로 분류됩니다.\n\n[질문]\n갑이 을시에 공장을 설립하고자 할 때, 그 공장에서 배출되는 오염물질에 대한 규제는 어떻게 이루어질 수 있으며, 공장 설치를 위해 필요한 절차는 무엇인가요? 또한, 특정대기유해물질을 배출하는 경우 설치 제한은 어떻게 적용될 수 있나요?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "57a16f9e-8f69-41db-9596-49adc1b8ce89",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

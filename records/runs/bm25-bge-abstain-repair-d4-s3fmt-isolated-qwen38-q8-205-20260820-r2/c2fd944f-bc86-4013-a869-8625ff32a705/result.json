@@ -1,0 +1,511 @@
+{
+  "abstention_reason": null,
+  "answer": "지명채권의 양도는 양도인이 채무자에게 통지하거나 채무자가 승낙하지 아니하면 채무자 기타 제삼자에게 대항하지 못한다.[CT1]\n전항의 통지나 승낙은 확정일자있는 증서에 의하지 아니하면 채무자 이외의 제삼자에게 대항하지 못한다.[CT2]\n전제: 갑과 을 사이의 채권이 지명채권(채무자가 특정된 채권)임을 전제로 한다.\n한계: 본 답변은 민법 제450조 제1항 및 제2항에 근거한 채권양도 대항요건에 관한 일반적 법적 해석이며, 구체적인 통지의 방식(서면, 구두 등)이나 적법성 여부에 대한 개별적 판단은 포함하지 않는다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "지명채권의 양도는 양도인이 채무자에게 통지하거나 채무자가 승낙하지 아니하면 채무자 기타 제삼자에게 대항하지 못한다.[CT1]\n전항의 통지나 승낙은 확정일자있는 증서에 의하지 아니하면 채무자 이외의 제삼자에게 대항하지 못한다.[CT2]\n전제: 갑과 을 사이의 채권이 지명채권(채무자가 특정된 채권)임을 전제로 한다.\n한계: 본 답변은 민법 제450조 제1항 및 제2항에 근거한 채권양도 대항요건에 관한 일반적 법적 해석이며, 구체적인 통지의 방식(서면, 구두 등)이나 적법성 여부에 대한 개별적 판단은 포함하지 않는다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T01:51:16.125603+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 125471.215,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 89,
+      "dedup_collapse": 22,
+      "evidence_fusion": 89,
+      "first_stage": 100,
+      "request_rerank": 100,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 89
+    }
+  },
+  "run_id": "c2fd944f-bc86-4013-a869-8625ff32a705",
+  "state": {
+    "accepted_provision_ids": [
+      "민법 450조  지명채권양도의 대항요건#KOBLEX-059310",
+      "민법 450조  지명채권양도의 대항요건#KOBLEX-059309"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_requirements",
+        "question_anchor": "병이 을에게 채권양도로써 대항할 수 있도록 하기 위해 필요한 요건은 무엇인가?",
+        "requested_output": "채권양도 대항요건"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민법 450조  지명채권양도의 대항요건#KOBLEX-059310"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 3.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 450조  지명채권양도의 대항요건#KOBLEX-059310",
+        "provision_text": "②전항의 통지나 승낙은 확정일자있는 증서에 의하지 아니하면 채무자 이외의 제삼자에게 대항하지 못한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.996058464050293,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 450조  지명채권양도의 대항요건 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 450조  지명채권양도의 대항요건#KOBLEX-059309"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 3.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 450조  지명채권양도의 대항요건#KOBLEX-059309",
+        "provision_text": "①지명채권의 양도는 양도인이 채무자에게 통지하거나 채무자가 승낙하지 아니하면 채무자 기타 제삼자에게 대항하지 못한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9824575781822205,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 450조  지명채권양도의 대항요건 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 450조  지명채권양도의 대항요건#KOBLEX-059308"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 29.38432689455243,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민법 450조  지명채권양도의 대항요건#KOBLEX-059308",
+        "provision_text": "제450조(지명채권양도의 대항요건)",
+        "rerank_rank": 3,
+        "rerank_score": 0.9738572835922241,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 450조  지명채권양도의 대항요건",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "전자금융거래법 20조  전자채권양도의 대항요건#KOBLEX-186723"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 27.88409617205822,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "전자금융거래법 20조  전자채권양도의 대항요건#KOBLEX-186723",
+        "provision_text": "②제1항의 규정에 따른 통지 또는 승낙이 기재된 전자문서에 「전자서명법」 제18조에 따른 시점확인이 있고 제1항의 요건을 모두 갖춘 때에 「민법」 제450조제2항의 규정에 따른 대항요건을 갖춘 것으로 본다. <개정 2020.6.9>",
+        "rerank_rank": 4,
+        "rerank_score": 0.7937861084938049,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "전자금융거래법 20조  전자채권양도의 대항요건 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "전자금융거래법 20조  전자채권양도의 대항요건#KOBLEX-186722"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 30.054847137948755,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "전자금융거래법 20조  전자채권양도의 대항요건#KOBLEX-186722",
+        "provision_text": "①전자채권의 양도는 다음 각 호의 요건을 모두 갖춘 때에 「민법」 제450조제1항의 규정에 따른 대항요건을 갖춘 것으로 본다. <개정 2020.6.9> 1. 양도인의 채권양도의 통지 또는 채무자의 승낙이 「전자서명법」 제2조제2호에 따른 전자서명(서명자의 실지명의를 확인할 수 있는 것을 말한다)을 한 전자문서에 의하여 이루어질 것 2. 제1호의 규정에 따른 통지 또는 승낙이 기재된 전자문서가 전자채권관리기관에 등록될 것",
+        "rerank_rank": 5,
+        "rerank_score": 0.7000833749771118,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "전자금융거래법 20조  전자채권양도의 대항요건 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "새마을금고법 80조 3 계약이전 결정의 효력#KOBLEX-096753"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 24,
+        "first_stage_score": 19.112195876152633,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "새마을금고법 80조 3 계약이전 결정의 효력#KOBLEX-096753",
+        "provision_text": "④ 제2항에 따른 공고가 있을 때에는 그 공고로써 「민법」 제450조에 따른 지명채권양도의 대항요건을 갖춘 것으로 본다. 다만, 채권자등은 공고 전에 해당 부실금고와의 사이에 발생한 사유로 인수금고에 대항할 수 있다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.4055008888244629,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "새마을금고법 80조 3 계약이전 결정의 효력 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신용협동조합법 86조 5 계약이전 결정의 효력#KOBLEX-063443"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 19.112195876152633,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "신용협동조합법 86조 5 계약이전 결정의 효력#KOBLEX-063443",
+        "provision_text": "④ 제2항에 따른 공고가 있는 때에는 그 공고로써 「민법」 제450조에 따른 지명채권양도의 대항요건을 갖춘 것으로 본다. 다만, 채권자등은 공고 전에 해당 부실조합과의 사이에 발생한 사유로 인수조합에 대항할 수 있다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.30643022060394287,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "신용협동조합법 86조 5 계약이전 결정의 효력 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 337조  전질의 대항요건#KOBLEX-059084"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "민법 337조  전질의 대항요건#KOBLEX-059084",
+        "provision_text": "②채무자가 전항의 통지를 받거나 승낙을 한 때에는 전질권자의 동의없이 질권자에게 채무를 변제하여도 이로써 전질권자에게 대항하지 못한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.11088934540748596,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 337조  전질의 대항요건 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 452조  양도통지와 금반언#KOBLEX-059315"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 3.0,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "민법 452조  양도통지와 금반언#KOBLEX-059315",
+        "provision_text": "①양도인이 채무자에게 채권양도를 통지한 때에는 아직 양도하지 아니하였거나 그 양도가 무효인 경우에도 선의인 채무자는 양수인에게 대항할 수 있는 사유로 양도인에게 대항할 수 있다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.02892046794295311,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 452조  양도통지와 금반언 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "전자금융거래법 20조  전자채권양도의 대항요건#KOBLEX-186721"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 29.38432689455243,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "전자금융거래법 20조  전자채권양도의 대항요건#KOBLEX-186721",
+        "provision_text": "제20조(전자채권양도의 대항요건)",
+        "rerank_rank": 10,
+        "rerank_score": 0.011212589219212532,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "전자금융거래법 20조  전자채권양도의 대항요건",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "민법 337조  전질의 대항요건#KOBLEX-059084": "②채무자가 전항의 통지를 받거나 승낙을 한 때에는 전질권자의 동의없이 질권자에게 채무를 변제하여도 이로써 전질권자에게 대항하지 못한다.",
+      "민법 450조  지명채권양도의 대항요건#KOBLEX-059308": "제450조(지명채권양도의 대항요건)",
+      "민법 450조  지명채권양도의 대항요건#KOBLEX-059309": "①지명채권의 양도는 양도인이 채무자에게 통지하거나 채무자가 승낙하지 아니하면 채무자 기타 제삼자에게 대항하지 못한다.",
+      "민법 450조  지명채권양도의 대항요건#KOBLEX-059310": "②전항의 통지나 승낙은 확정일자있는 증서에 의하지 아니하면 채무자 이외의 제삼자에게 대항하지 못한다.",
+      "민법 452조  양도통지와 금반언#KOBLEX-059315": "①양도인이 채무자에게 채권양도를 통지한 때에는 아직 양도하지 아니하였거나 그 양도가 무효인 경우에도 선의인 채무자는 양수인에게 대항할 수 있는 사유로 양도인에게 대항할 수 있다.",
+      "새마을금고법 80조 3 계약이전 결정의 효력#KOBLEX-096753": "④ 제2항에 따른 공고가 있을 때에는 그 공고로써 「민법」 제450조에 따른 지명채권양도의 대항요건을 갖춘 것으로 본다. 다만, 채권자등은 공고 전에 해당 부실금고와의 사이에 발생한 사유로 인수금고에 대항할 수 있다.",
+      "신용협동조합법 86조 5 계약이전 결정의 효력#KOBLEX-063443": "④ 제2항에 따른 공고가 있는 때에는 그 공고로써 「민법」 제450조에 따른 지명채권양도의 대항요건을 갖춘 것으로 본다. 다만, 채권자등은 공고 전에 해당 부실조합과의 사이에 발생한 사유로 인수조합에 대항할 수 있다.",
+      "전자금융거래법 20조  전자채권양도의 대항요건#KOBLEX-186721": "제20조(전자채권양도의 대항요건)",
+      "전자금융거래법 20조  전자채권양도의 대항요건#KOBLEX-186722": "①전자채권의 양도는 다음 각 호의 요건을 모두 갖춘 때에 「민법」 제450조제1항의 규정에 따른 대항요건을 갖춘 것으로 본다. <개정 2020.6.9> 1. 양도인의 채권양도의 통지 또는 채무자의 승낙이 「전자서명법」 제2조제2호에 따른 전자서명(서명자의 실지명의를 확인할 수 있는 것을 말한다)을 한 전자문서에 의하여 이루어질 것 2. 제1호의 규정에 따른 통지 또는 승낙이 기재된 전자문서가 전자채권관리기관에 등록될 것",
+      "전자금융거래법 20조  전자채권양도의 대항요건#KOBLEX-186723": "②제1항의 규정에 따른 통지 또는 승낙이 기재된 전자문서에 「전자서명법」 제18조에 따른 시점확인이 있고 제1항의 요건을 모두 갖춘 때에 「민법」 제450조제2항의 규정에 따른 대항요건을 갖춘 것으로 본다. <개정 2020.6.9>"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 450조  지명채권양도의 대항요건#KOBLEX-059309",
+              "민법 450조  지명채권양도의 대항요건#KOBLEX-059310"
+            ],
+            "rationale": "C002(민법 450조 1항)가 통지 또는 승낙이라는 기본 대항요건을, C001(민법 450조 2항)이 제3자 대항 시 추가 요건을 명시하여 완료 기준을 충족한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민법 450조  지명채권양도의 대항요건#KOBLEX-059309",
+          "민법 450조  지명채권양도의 대항요건#KOBLEX-059310"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "민법 제450조 제1항(C002)과 제2항(C001)은 지명채권 양도의 대항요건(통지 또는 승낙, 제3자 대항 시 확정일자 증서)을 명확히 규정하고 있어, 질문에서 요구하는 '채권양도 대항요건'에 대한 법적 근거가 충분히 충족된다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 450조  지명채권양도의 대항요건#KOBLEX-059309",
+        "support_spans": [
+          {
+            "end_char": 65,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 450조  지명채권양도의 대항요건#KOBLEX-059310",
+        "support_spans": [
+          {
+            "end_char": 56,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "채권양도 후 양수인이 채무자에게 대항하기 위해 필요한 법적 요건은 무엇인가",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을에게 500만 원을 받을 권리가 있는 채권자입니다. 갑은 이 채권을 병에게 양도하기로 했습니다. 그러나 을은 갑이 병에게 채권을 양도했다는 사실을 알지 못하고 있었습니다. 며칠 후, 갑이 을에게 채권이 병에게 양도되었다고 통지하려고 합니다. [질문] 병이 을에게 채권양도로써 대항할 수 있도록 하기 위해 필요한 요건은 무엇인가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "채권양도 대항요건 통지 동시 민법",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "채권양도",
+          "대항요건",
+          "통지",
+          "동시",
+          "민법"
+        ],
+        "query_text": "채권양도 대항요건 통지 동시 민법 [원문 맥락] 며칠 후, 갑이 을에게 채권이 병에게 양도되었다고 통지하려고 합니다. 병이 을에게 채권양도로써 대항할 수 있도록 하기 위해 필요한 요건은 무엇인가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "채권양도 대항요건 통지 동시 민법",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을에게 500만 원을 받을 권리가 있는 채권자입니다. 갑은 이 채권을 병에게 양도하기로 했습니다. 그러나 을은 갑이 병에게 채권을 양도했다는 사실을 알지 못하고 있었습니다. 며칠 후, 갑이 을에게 채권이 병에게 양도되었다고 통지하려고 합니다.\n\n[질문]\n병이 을에게 채권양도로써 대항할 수 있도록 하기 위해 필요한 요건은 무엇인가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "채권양도 대항요건이 명시된 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "채권양도 대항요건(통지 또는 동시)을 명시하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "채권양도 대항요건에 관한 민법 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 대항요건을 직접적으로 규정하는 핵심 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "c2fd944f-bc86-4013-a869-8625ff32a705",
+    "seen_provision_ids": [
+      "민법 450조  지명채권양도의 대항요건#KOBLEX-059309",
+      "신용협동조합법 86조 5 계약이전 결정의 효력#KOBLEX-063443",
+      "민법 337조  전질의 대항요건#KOBLEX-059084",
+      "전자금융거래법 20조  전자채권양도의 대항요건#KOBLEX-186721",
+      "새마을금고법 80조 3 계약이전 결정의 효력#KOBLEX-096753",
+      "민법 450조  지명채권양도의 대항요건#KOBLEX-059310",
+      "민법 450조  지명채권양도의 대항요건#KOBLEX-059308",
+      "전자금융거래법 20조  전자채권양도의 대항요건#KOBLEX-186723",
+      "전자금융거래법 20조  전자채권양도의 대항요건#KOBLEX-186722",
+      "민법 452조  양도통지와 금반언#KOBLEX-059315"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

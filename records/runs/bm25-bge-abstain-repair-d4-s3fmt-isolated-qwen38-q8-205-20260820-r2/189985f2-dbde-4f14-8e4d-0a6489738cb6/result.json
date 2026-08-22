@@ -1,0 +1,593 @@
+{
+  "abstention_reason": null,
+  "answer": "취소소송은 처분등의 취소를 구할 법률상 이익이 있는 자가 제기할 수 있다.[CT1]\n갑은 강제 수용 처분의 상대방으로서 해당 처분의 취소를 구할 법률상 이익이 있으므로, 갑은 이 사건 강제 수용 처분에 대한 취소소송을 제기할 수 있는 당사자 적격이 인정됩니다.[CT2]\n취소소송이 제기된 경우에 처분등이나 그 집행 또는 절차의 속행으로 인하여 생길 회복하기 어려운 손해를 예방하기 위하여 긴급한 필요가 있다고 인정할 때에는 본안이 계속되고 있는 법원은 당사자의 신청 또는 직권에 의하여 처분등의 효력이나 그 집행 또는 절차의 속행의 전부 또는 일부의 정지를 결정할 수 있다.[CT3]\n처분의 효력정지는 처분등의 집행 또는 절차의 속행을 정지함으로써 목적을 달성할 수 있는 경우에는 허용되지 아니한다.[CT4]\n전제: 갑이 강제 수용 처분의 직접적 상대방(처분등)임을 전제로 한다.\n한계: 집행정지 인용 여부는 법원의 재량에 따라 구체적 사안에 따라 판단되며, 본 답변은 법적 요건만 제시한다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "취소소송은 처분등의 취소를 구할 법률상 이익이 있는 자가 제기할 수 있다.[CT1]\n갑은 강제 수용 처분의 상대방으로서 해당 처분의 취소를 구할 법률상 이익이 있으므로, 갑은 이 사건 강제 수용 처분에 대한 취소소송을 제기할 수 있는 당사자 적격이 인정됩니다.[CT2]\n취소소송이 제기된 경우에 처분등이나 그 집행 또는 절차의 속행으로 인하여 생길 회복하기 어려운 손해를 예방하기 위하여 긴급한 필요가 있다고 인정할 때에는 본안이 계속되고 있는 법원은 당사자의 신청 또는 직권에 의하여 처분등의 효력이나 그 집행 또는 절차의 속행의 전부 또는 일부의 정지를 결정할 수 있다.[CT3]\n처분의 효력정지는 처분등의 집행 또는 절차의 속행을 정지함으로써 목적을 달성할 수 있는 경우에는 허용되지 아니한다.[CT4]\n전제: 갑이 강제 수용 처분의 직접적 상대방(처분등)임을 전제로 한다.\n한계: 집행정지 인용 여부는 법원의 재량에 따라 구체적 사안에 따라 판단되며, 본 답변은 법적 요건만 제시한다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T13:48:22.089875+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 274119.8,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 179,
+      "dedup_collapse": 38,
+      "evidence_fusion": 179,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 179
+    }
+  },
+  "run_id": "189985f2-dbde-4f14-8e4d-0a6489738cb6",
+  "state": {
+    "accepted_provision_ids": [
+      "행정소송법 12조  원고적격#KOBLEX-011437",
+      "행정소송법 23조  집행정지#KOBLEX-011480"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 4,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "취소소송을 제기할 수 있는 자격이 있는가",
+        "requested_output": "강제 수용 처분에 대한 취소소송 제기 자격(소송적격)의 유무 및 법적 근거"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_requirements",
+        "question_anchor": "집행정지가 인정될 수 있는 요건은 무엇인가",
+        "requested_output": "취소소송 진행 중 집행정지 신청의 인정 요건"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "행정소송법 23조  집행정지#KOBLEX-011480"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 28,
+        "first_stage_score": 22.008491580826995,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "행정소송법 23조  집행정지#KOBLEX-011480",
+        "provision_text": "②취소소송이 제기된 경우에 처분등이나 그 집행 또는 절차의 속행으로 인하여 생길 회복하기 어려운 손해를 예방하기 위하여 긴급한 필요가 있다고 인정할 때에는 본안이 계속되고 있는 법원은 당사자의 신청 또는 직권에 의하여 처분등의 효력이나 그 집행 또는 절차의 속행의 전부 또는 일부의 정지(이하 \"執行停止\"라 한다)를 결정할 수 있다. 다만, 처분의 효력정지는 처분등의 집행 또는 절차의 속행을 정지함으로써 목적을 달성할 수 있는 경우에는 허용되지 아니한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9965997338294983,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "행정소송법 23조  집행정지 2항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정소송법 9조  재판관할#KOBLEX-011429"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "행정소송법 9조  재판관할#KOBLEX-011429",
+        "provision_text": "③토지의 수용 기타 부동산 또는 특정의 장소에 관계되는 처분등에 대한 취소소송은 그 부동산 또는 장소의 소재지를 관할하는 행정법원에 이를 제기할 수 있다. <개정 2014.5.20>",
+        "rerank_rank": 1,
+        "rerank_score": 0.11391794681549072,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "행정소송법 9조  재판관할 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정소송법 23조  집행정지#KOBLEX-011479"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 88,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "행정소송법 23조  집행정지#KOBLEX-011479",
+        "provision_text": "①취소소송의 제기는 처분등의 효력이나 그 집행 또는 절차의 속행에 영향을 주지 아니한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.0388614758849144,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "행정소송법 23조  집행정지 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정소송법 20조  제소기간#KOBLEX-011466"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "행정소송법 20조  제소기간#KOBLEX-011466",
+        "provision_text": "①취소소송은 처분등이 있음을 안 날부터 90일 이내에 제기하여야 한다. 다만, 제18조제1항 단서에 규정한 경우와 그 밖에 행정심판청구를 할 수 있는 경우 또는 행정청이 행정심판청구를 할 수 있다고 잘못 알린 경우에 행정심판청구가 있은 때의 기간은 재결서의 정본을 송달받은 날부터 기산한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.01673288457095623,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "행정소송법 20조  제소기간 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정소송법 20조  제소기간#KOBLEX-011467"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "행정소송법 20조  제소기간#KOBLEX-011467",
+        "provision_text": "②취소소송은 처분등이 있은 날부터 1년(第1項 但書의 경우는 裁決이 있은 날부터 1年)을 경과하면 이를 제기하지 못한다. 다만, 정당한 사유가 있는 때에는 그러하지 아니하다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.013083604164421558,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "행정소송법 20조  제소기간 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정소송법 12조  원고적격#KOBLEX-011437"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 20.751450122965224,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "행정소송법 12조  원고적격#KOBLEX-011437",
+        "provision_text": "제12조(원고적격) 취소소송은 처분등의 취소를 구할 법률상 이익이 있는 자가 제기할 수 있다. 처분등의 효과가 기간의 경과, 처분등의 집행 그 밖의 사유로 인하여 소멸된 뒤에도 그 처분등의 취소로 인하여 회복되는 법률상 이익이 있는 자의 경우에는 또한 같다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.011031493544578552,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "행정소송법 12조  원고적격",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정소송법 19조  취소소송의 대상#KOBLEX-011464"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 38,
+        "first_stage_score": 17.772373587633627,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "행정소송법 19조  취소소송의 대상#KOBLEX-011464",
+        "provision_text": "제19조(취소소송의 대상) 취소소송은 처분등을 대상으로 한다. 다만, 재결취소소송의 경우에는 재결 자체에 고유한 위법이 있음을 이유로 하는 경우에 한한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.007607273757457733,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "행정소송법 19조  취소소송의 대상",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정소송법 13조  피고적격#KOBLEX-011439"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 2.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "행정소송법 13조  피고적격#KOBLEX-011439",
+        "provision_text": "①취소소송은 다른 법률에 특별한 규정이 없는 한 그 처분등을 행한 행정청을 피고로 한다. 다만, 처분등이 있은 뒤에 그 처분등에 관계되는 권한이 다른 행정청에 승계된 때에는 이를 승계한 행정청을 피고로 한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.006941388826817274,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "행정소송법 13조  피고적격 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정소송법 18조  행정심판과의 관계#KOBLEX-011461"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 2.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "행정소송법 18조  행정심판과의 관계#KOBLEX-011461",
+        "provision_text": "②제1항 단서의 경우에도 다음 각호의 1에 해당하는 사유가 있는 때에는 행정심판의 재결을 거치지 아니하고 취소소송을 제기할 수 있다. <개정 1994.7.27> 1. 행정심판청구가 있은 날로부터 60일이 지나도 재결이 없는 때 2. 처분의 집행 또는 절차의 속행으로 생길 중대한 손해를 예방하여야 할 긴급한 필요가 있는 때 3. 법령의 규정에 의한 행정심판기관이 의결 또는 재결을 하지 못할 사유가 있는 때 4. 그 밖의 정당한 사유가 있는 때",
+        "rerank_rank": 8,
+        "rerank_score": 0.0061498903669416904,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "행정소송법 18조  행정심판과의 관계 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정소송법 9조#KOBLEX-011424"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 30.325185466153044,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "행정소송법 9조#KOBLEX-011424",
+        "provision_text": "제2장 취소소송",
+        "rerank_rank": 9,
+        "rerank_score": 0.004594532772898674,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "행정소송법 9조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "행정소송법 12조  원고적격#KOBLEX-011437": "제12조(원고적격) 취소소송은 처분등의 취소를 구할 법률상 이익이 있는 자가 제기할 수 있다. 처분등의 효과가 기간의 경과, 처분등의 집행 그 밖의 사유로 인하여 소멸된 뒤에도 그 처분등의 취소로 인하여 회복되는 법률상 이익이 있는 자의 경우에는 또한 같다.",
+      "행정소송법 13조  피고적격#KOBLEX-011439": "①취소소송은 다른 법률에 특별한 규정이 없는 한 그 처분등을 행한 행정청을 피고로 한다. 다만, 처분등이 있은 뒤에 그 처분등에 관계되는 권한이 다른 행정청에 승계된 때에는 이를 승계한 행정청을 피고로 한다.",
+      "행정소송법 18조  행정심판과의 관계#KOBLEX-011461": "②제1항 단서의 경우에도 다음 각호의 1에 해당하는 사유가 있는 때에는 행정심판의 재결을 거치지 아니하고 취소소송을 제기할 수 있다. <개정 1994.7.27> 1. 행정심판청구가 있은 날로부터 60일이 지나도 재결이 없는 때 2. 처분의 집행 또는 절차의 속행으로 생길 중대한 손해를 예방하여야 할 긴급한 필요가 있는 때 3. 법령의 규정에 의한 행정심판기관이 의결 또는 재결을 하지 못할 사유가 있는 때 4. 그 밖의 정당한 사유가 있는 때",
+      "행정소송법 19조  취소소송의 대상#KOBLEX-011464": "제19조(취소소송의 대상) 취소소송은 처분등을 대상으로 한다. 다만, 재결취소소송의 경우에는 재결 자체에 고유한 위법이 있음을 이유로 하는 경우에 한한다.",
+      "행정소송법 20조  제소기간#KOBLEX-011466": "①취소소송은 처분등이 있음을 안 날부터 90일 이내에 제기하여야 한다. 다만, 제18조제1항 단서에 규정한 경우와 그 밖에 행정심판청구를 할 수 있는 경우 또는 행정청이 행정심판청구를 할 수 있다고 잘못 알린 경우에 행정심판청구가 있은 때의 기간은 재결서의 정본을 송달받은 날부터 기산한다.",
+      "행정소송법 20조  제소기간#KOBLEX-011467": "②취소소송은 처분등이 있은 날부터 1년(第1項 但書의 경우는 裁決이 있은 날부터 1年)을 경과하면 이를 제기하지 못한다. 다만, 정당한 사유가 있는 때에는 그러하지 아니하다.",
+      "행정소송법 23조  집행정지#KOBLEX-011479": "①취소소송의 제기는 처분등의 효력이나 그 집행 또는 절차의 속행에 영향을 주지 아니한다.",
+      "행정소송법 23조  집행정지#KOBLEX-011480": "②취소소송이 제기된 경우에 처분등이나 그 집행 또는 절차의 속행으로 인하여 생길 회복하기 어려운 손해를 예방하기 위하여 긴급한 필요가 있다고 인정할 때에는 본안이 계속되고 있는 법원은 당사자의 신청 또는 직권에 의하여 처분등의 효력이나 그 집행 또는 절차의 속행의 전부 또는 일부의 정지(이하 \"執行停止\"라 한다)를 결정할 수 있다. 다만, 처분의 효력정지는 처분등의 집행 또는 절차의 속행을 정지함으로써 목적을 달성할 수 있는 경우에는 허용되지 아니한다.",
+      "행정소송법 9조  재판관할#KOBLEX-011429": "③토지의 수용 기타 부동산 또는 특정의 장소에 관계되는 처분등에 대한 취소소송은 그 부동산 또는 장소의 소재지를 관할하는 행정법원에 이를 제기할 수 있다. <개정 2014.5.20>",
+      "행정소송법 9조#KOBLEX-011424": "제2장 취소소송"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "행정소송법 12조  원고적격#KOBLEX-011437"
+            ],
+            "rationale": "C006은 '취소소송은 처분등의 취소를 구할 법률상 이익이 있는 자가 제기할 수 있다'고 규정하여 원고 적격 요건을 충족한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "행정소송법 12조  원고적격#KOBLEX-011437"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C006(행정소송법 제12조)은 취소소송의 원고적격 요건을 명확히 규정하고 있어, 갑의 소송 제기 자격을 판단하기 위한 법적 근거가 충족되었다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "행정소송법 23조  집행정지#KOBLEX-011480"
+            ],
+            "rationale": "C001은 '회복하기 어려운 손해를 예방하기 위하여 긴급한 필요가 있다고 인정할 때' 집행정지를 결정할 수 있다고 규정하여 요건을 명시한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "행정소송법 23조  집행정지#KOBLEX-011480"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001(행정소송법 제23조 제2항)은 집행정지 신청의 인용 요건인 긴급성 및 회복하기 어려운 손해 예방 필요성을 규정하고 있어, 질문에서 요구하는 법적 요건이 충족되었다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "행정소송법 12조  원고적격#KOBLEX-011437",
+        "support_spans": [
+          {
+            "end_char": 144,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "행정소송법 23조  집행정지#KOBLEX-011480",
+        "support_spans": [
+          {
+            "end_char": 255,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "강제 수용 처분에 대한 취소소송을 제기할 수 있는 당사자 적격(소송적격)이 인정되는지 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "취소소송 진행 중 집행정지 신청이 인용되기 위한 법적 요건",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑의 소유지 일부가 지역 개발 사업으로 인하여 강제 수용되었다. 갑은 해당 절차가 부당하다고 생각하여 행정 소송을 통해 위 강제수용의 취소를 구하고자 한다. 한편 갑은 이 소송이 진행되는 동안 개발 사업이 진행되어 자신에게 회복하기 어려운 손해가 발생할 것을 우려하여 집행정지도 함께 신청하였다. [질문] 갑에게 지역 개발 사업에 대한 강제 수용 절차에 대하여 취소소송을 제기할 수 있는 자격이 있는가? 그리고 취소 소송이 제기된 경우에 집행정지가 인정될 수 있는 요건은 무엇인가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "행정소송법 취소소송 원고 적격 이해관계인 처분 상대방",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "행정소송법",
+          "취소소송",
+          "당사자적격",
+          "소송적격",
+          "이해관계인",
+          "처분상대방"
+        ],
+        "query_text": "행정소송법 취소소송 당사자 적격 소송적격 요건 [원문 맥락] 갑에게 지역 개발 사업에 대한 강제 수용 절차에 대하여 취소소송을 제기할 수 있는 자격이 있는가? 그리고 취소 소송이 제기된 경우에 집행정지가 인정될 수 있는 요건은 무엇인가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "강제 수용 처분에 대한 취소소송 제기 자격 소송적격 요건",
+        "statute_hints": [
+          "행정소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "행정소송법 집행정지 요건 긴급성 회복하기 어려운 손해 공익 저해",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "행정소송법",
+          "집행정지",
+          "인정요건",
+          "긴급성",
+          "회복하기어려운손해",
+          "공익저해"
+        ],
+        "query_text": "행정소송법 집행정지 신청 인용 요건 긴급성 회복하기 어려운 손해 [원문 맥락] 갑에게 지역 개발 사업에 대한 강제 수용 절차에 대하여 취소소송을 제기할 수 있는 자격이 있는가? 그리고 취소 소송이 제기된 경우에 집행정지가 인정될 수 있는 요건은 무엇인가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "취소소송 진행 중 집행정지 인정 요건 긴급성 회복하기 어려운 손해",
+        "statute_hints": [
+          "행정소송법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑의 소유지 일부가 지역 개발 사업으로 인하여 강제 수용되었다. 갑은 해당 절차가 부당하다고 생각하여 행정 소송을 통해 위 강제수용의 취소를 구하고자 한다. 한편 갑은 이 소송이 진행되는 동안 개발 사업이 진행되어 자신에게  회복하기 어려운 손해가 발생할 것을 우려하여 집행정지도 함께 신청하였다.\n\n[질문]\n갑에게 지역 개발 사업에 대한 강제 수용 절차에 대하여 취소소송을 제기할 수 있는 자격이 있는가? 그리고 취소 소송이 제기된 경우에 집행정지가 인정될 수 있는 요건은 무엇인가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "취소소송을 제기할 수 있는 자의 범위를 규정하는 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "취소소송의 원고 적격 요건(처분 상대방 또는 이해관계인)을 명시하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "행정소송법상 취소소송의 당사자 적격(소송적격) 요건",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 갑의 소송 제기 자격을 묻고 있으므로, 적격 요건을 확인하지 않으면 결론을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "집행정지 신청이 인용되기 위한 요건(긴급성, 회복하기 어려운 손해, 공익 저해 여부 등)을 규정하는 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "집행정지 신청의 요건(긴급성, 회복하기 어려운 손해, 공익 저해 등)을 명시하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "집행정지 신청의 인용 요건",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 집행정지 인정 요건을 직접 묻고 있으므로, 해당 요건을 규정하는 조항이 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "189985f2-dbde-4f14-8e4d-0a6489738cb6",
+    "seen_provision_ids": [
+      "행정소송법 19조  취소소송의 대상#KOBLEX-011464",
+      "행정소송법 18조  행정심판과의 관계#KOBLEX-011461",
+      "행정소송법 13조  피고적격#KOBLEX-011439",
+      "행정소송법 20조  제소기간#KOBLEX-011466",
+      "행정소송법 9조#KOBLEX-011424",
+      "행정소송법 23조  집행정지#KOBLEX-011480",
+      "행정소송법 20조  제소기간#KOBLEX-011467",
+      "행정소송법 12조  원고적격#KOBLEX-011437",
+      "행정소송법 23조  집행정지#KOBLEX-011479",
+      "행정소송법 9조  재판관할#KOBLEX-011429"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

@@ -1,0 +1,508 @@
+{
+  "abstention_reason": null,
+  "answer": "채권은 10년간 행사하지 아니하면 소멸시효가 완성한다.[CT1]\n전제: 갑과 을 사이의 금전 지급 청구권이 민법 제162조 제1항에 따른 일반 채권에 해당하며, 더 짧은 기간의 특수한 소멸시효 규정이 적용되지 않는다고 가정한다.\n한계: 본 답변은 민법 제162조 제1항의 일반 규정만을 근거로 하며, 채권의 종류에 따라 적용될 수 있는 특수한 소멸시효 기간(예: 상사채권 등)이나 시효 중단·정지 사유에 대한 검토는 포함하지 않는다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "채권은 10년간 행사하지 아니하면 소멸시효가 완성한다.[CT1]\n전제: 갑과 을 사이의 금전 지급 청구권이 민법 제162조 제1항에 따른 일반 채권에 해당하며, 더 짧은 기간의 특수한 소멸시효 규정이 적용되지 않는다고 가정한다.\n한계: 본 답변은 민법 제162조 제1항의 일반 규정만을 근거로 하며, 채권의 종류에 따라 적용될 수 있는 특수한 소멸시효 기간(예: 상사채권 등)이나 시효 중단·정지 사유에 대한 검토는 포함하지 않는다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T01:53:09.617380+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 112197.095,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 96,
+      "dedup_collapse": 8,
+      "evidence_fusion": 96,
+      "first_stage": 100,
+      "request_rerank": 100,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 96
+    }
+  },
+  "run_id": "b7b9e14c-4ab6-4df0-b4f3-259371e28525",
+  "state": {
+    "accepted_provision_ids": [
+      "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 1,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "statutory_period",
+        "question_anchor": "몇 년간 행사하지 않으면 소멸시효가 완성되는가",
+        "requested_output": "금전 지급 청구권의 소멸시효 완성 기간(연수)"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "상법 662조  소멸시효#KOBLEX-115968"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 64,
+        "first_stage_score": 18.641950586550116,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "상법 662조  소멸시효#KOBLEX-115968",
+        "provision_text": "제662조(소멸시효) 보험금청구권은 3년간, 보험료 또는 적립금의 반환청구권은 3년간, 보험료청구권은 2년간 행사하지 아니하면 시효의 완성으로 소멸한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.8309890627861023,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상법 662조  소멸시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "징발법 23조  보상청구권의 소멸시효#KOBLEX-073245"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 34,
+        "first_stage_score": 21.856145802530893,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "징발법 23조  보상청구권의 소멸시효#KOBLEX-073245",
+        "provision_text": "제23조(보상청구권의 소멸시효) 보상청구권은 제22조제1항에 따른 공고기간이 끝난 날부터 5년간 행사하지 아니하면 소멸시효가 완성된다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.30727362632751465,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "징발법 23조  보상청구권의 소멸시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 163조  3년의 단기소멸시효#KOBLEX-058710"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 3.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민법 163조  3년의 단기소멸시효#KOBLEX-058710",
+        "provision_text": "1. 이자, 부양료, 급료, 사용료 기타 1년 이내의 기간으로 정한 금전 또는 물건의 지급을 목적으로 한 채권",
+        "rerank_rank": 3,
+        "rerank_score": 0.01669987291097641,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 163조  3년의 단기소멸시효 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지적재조사에 관한 특별법 22조  조정금의 소멸시효#KOBLEX-213382"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 51,
+        "first_stage_score": 19.373782035992015,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "지적재조사에 관한 특별법 22조  조정금의 소멸시효#KOBLEX-213382",
+        "provision_text": "제22조(조정금의 소멸시효) 조정금을 받을 권리나 징수할 권리는 5년간 행사하지 아니하면 시효의 완성으로 소멸한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.009688815101981163,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "지적재조사에 관한 특별법 22조  조정금의 소멸시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 3.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707",
+        "provision_text": "①채권은 10년간 행사하지 아니하면 소멸시효가 완성한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.007363514509052038,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 162조  채권, 재산권의 소멸시효 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058708"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058708",
+        "provision_text": "②채권 및 소유권 이외의 재산권은 20년간 행사하지 아니하면 소멸시효가 완성한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.004461184144020081,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 162조  채권, 재산권의 소멸시효 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 164조  1년의 단기소멸시효#KOBLEX-058717"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 3.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "민법 164조  1년의 단기소멸시효#KOBLEX-058717",
+        "provision_text": "제164조(1년의 단기소멸시효) 다음 각호의 채권은 1년간 행사하지 아니하면 소멸시효가 완성한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.002885357942432165,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 164조  1년의 단기소멸시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 163조  3년의 단기소멸시효#KOBLEX-058709"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 3.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "민법 163조  3년의 단기소멸시효#KOBLEX-058709",
+        "provision_text": "제163조(3년의 단기소멸시효) 다음 각호의 채권은 3년간 행사하지 아니하면 소멸시효가 완성한다. <개정 1997.12.13>",
+        "rerank_rank": 8,
+        "rerank_score": 0.00225456478074193,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 163조  3년의 단기소멸시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도시개발법 47조  청산금의 소멸시효#KOBLEX-003017"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 46,
+        "first_stage_score": 19.761676431460256,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "도시개발법 47조  청산금의 소멸시효#KOBLEX-003017",
+        "provision_text": "제47조(청산금의 소멸시효) 청산금을 받을 권리나 징수할 권리를 5년간 행사하지 아니하면 시효로 소멸한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.00011837954662041739,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "도시개발법 47조  청산금의 소멸시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도시철도법 20조  도시철도채권의 발행#KOBLEX-023686"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 63,
+        "first_stage_score": 18.641950586550116,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "도시철도법 20조  도시철도채권의 발행#KOBLEX-023686",
+        "provision_text": "④ 도시철도채권의 원금 및 이자의 소멸시효(消滅時效)는 상환일(償還日)부터 기산(起算)하여 5년으로 한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.00011111162893939763,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "도시철도법 20조  도시철도채권의 발행 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "도시개발법 47조  청산금의 소멸시효#KOBLEX-003017": "제47조(청산금의 소멸시효) 청산금을 받을 권리나 징수할 권리를 5년간 행사하지 아니하면 시효로 소멸한다.",
+      "도시철도법 20조  도시철도채권의 발행#KOBLEX-023686": "④ 도시철도채권의 원금 및 이자의 소멸시효(消滅時效)는 상환일(償還日)부터 기산(起算)하여 5년으로 한다.",
+      "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707": "①채권은 10년간 행사하지 아니하면 소멸시효가 완성한다.",
+      "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058708": "②채권 및 소유권 이외의 재산권은 20년간 행사하지 아니하면 소멸시효가 완성한다.",
+      "민법 163조  3년의 단기소멸시효#KOBLEX-058709": "제163조(3년의 단기소멸시효) 다음 각호의 채권은 3년간 행사하지 아니하면 소멸시효가 완성한다. <개정 1997.12.13>",
+      "민법 163조  3년의 단기소멸시효#KOBLEX-058710": "1. 이자, 부양료, 급료, 사용료 기타 1년 이내의 기간으로 정한 금전 또는 물건의 지급을 목적으로 한 채권",
+      "민법 164조  1년의 단기소멸시효#KOBLEX-058717": "제164조(1년의 단기소멸시효) 다음 각호의 채권은 1년간 행사하지 아니하면 소멸시효가 완성한다.",
+      "상법 662조  소멸시효#KOBLEX-115968": "제662조(소멸시효) 보험금청구권은 3년간, 보험료 또는 적립금의 반환청구권은 3년간, 보험료청구권은 2년간 행사하지 아니하면 시효의 완성으로 소멸한다.",
+      "지적재조사에 관한 특별법 22조  조정금의 소멸시효#KOBLEX-213382": "제22조(조정금의 소멸시효) 조정금을 받을 권리나 징수할 권리는 5년간 행사하지 아니하면 시효의 완성으로 소멸한다.",
+      "징발법 23조  보상청구권의 소멸시효#KOBLEX-073245": "제23조(보상청구권의 소멸시효) 보상청구권은 제22조제1항에 따른 공고기간이 끝난 날부터 5년간 행사하지 아니하면 소멸시효가 완성된다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707"
+            ],
+            "rationale": "C005(민법 162조 1항)은 채권의 소멸시효 기간을 10년으로 명시하고 있다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707"
+            ],
+            "rationale": "C005(민법 162조 1항)은 '행사하지 아니하면' 소멸시효가 완성된다고 규정하여, 기산점이 채권을 행사할 수 있는 때임을 확인시켜 준다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "민법 제162조 제1항(C005)은 채권의 일반 소멸시효 기간(10년)과 기산점(행사할 수 있는 때)을 명확히 규정하고 있어, 질문에서 요구하는 일반 채권 소멸시효에 관한 증거 요건을 충족한다. 다른 후보 조항들은 특수한 채권이나 다른 법률의 규정이므로 일반 채권 소멸시효의 근거로 적합하지 않다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707",
+        "support_spans": [
+          {
+            "end_char": 31,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "계약상 금전 지급 청구권의 소멸시효 기간이 민법상 일반 채권 소멸시효에 해당하는지 여부",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑(지방자치단체)와 을(지역 사업가) 사이에 계약이 체결되어 을이 갑에게 일정 금액을 지급해야 하는 상황이 발생했습니다. 을은 계약 체결 후 금전 지급 의무를 이행하지 않았고, 갑은 이 사실을 알고도 5년 동안 아무런 조치를 취하지 않았습니다. 이제 갑은 을에게 지급을 요구하고자 합니다. [질문] 갑이 을에게 금전 지급을 요구할 수 있는 권리는 몇 년간 행사하지 않으면 소멸시효가 완성되는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "채권 소멸시효 기간 민법",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "채권",
+          "소멸시효",
+          "기간",
+          "민법",
+          "청구권"
+        ],
+        "query_text": "민법 채권 소멸시효 일반 기간 10년 [원문 맥락] 이제 갑은 을에게 지급을 요구하고자 합니다. 갑이 을에게 금전 지급을 요구할 수 있는 권리는 몇 년간 행사하지 않으면 소멸시효가 완성되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "금전 지급 청구권 소멸시효 완성 기간 연수",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑(지방자치단체)와 을(지역 사업가) 사이에 계약이 체결되어 을이 갑에게 일정 금액을 지급해야 하는 상황이 발생했습니다. 을은 계약 체결 후 금전 지급 의무를 이행하지 않았고, 갑은 이 사실을 알고도 5년 동안 아무런 조치를 취하지 않았습니다. 이제 갑은 을에게 지급을 요구하고자 합니다.\n\n[질문]\n갑이 을에게 금전 지급을 요구할 수 있는 권리는 몇 년간 행사하지 않으면 소멸시효가 완성되는가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "채권 소멸시효의 일반 기간(연수)과 기산점(행사할 수 있는 때)을 특정할 수 있는 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "채권 소멸시효의 일반 기간이 몇 년인지 명시"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "소멸시효 기산점이 채권 행사 가능 시점인지 확인"
+          }
+        ],
+        "critical": true,
+        "description": "민법상 채권 소멸시효의 일반 기간 및 기산점에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문은 금전 지급 청구권의 소멸시효 완성 기간을 묻고 있으므로, 해당 채권에 적용되는 소멸시효 기간을 정하는 규정이 없으면 결론을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "b7b9e14c-4ab6-4df0-b4f3-259371e28525",
+    "seen_provision_ids": [
+      "민법 163조  3년의 단기소멸시효#KOBLEX-058710",
+      "징발법 23조  보상청구권의 소멸시효#KOBLEX-073245",
+      "지적재조사에 관한 특별법 22조  조정금의 소멸시효#KOBLEX-213382",
+      "도시개발법 47조  청산금의 소멸시효#KOBLEX-003017",
+      "상법 662조  소멸시효#KOBLEX-115968",
+      "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058707",
+      "도시철도법 20조  도시철도채권의 발행#KOBLEX-023686",
+      "민법 163조  3년의 단기소멸시효#KOBLEX-058709",
+      "민법 162조  채권, 재산권의 소멸시효#KOBLEX-058708",
+      "민법 164조  1년의 단기소멸시효#KOBLEX-058717"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

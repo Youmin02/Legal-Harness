@@ -1,0 +1,1300 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "자산운용협회가 정관 중 대통령령으로 정하는 사항을 변경하고자 하는 경우에는 금융위원회의 승인을 받아야 합니다.[CT1]\n협회가 업무에 관한 규정을 제정·변경하거나 폐지한 경우에는 지체 없이 금융위원회에 이를 보고하여야 합니다.[CT2]\n전제: 질문에서 '갑 주식회사'가 자산운용협회로 명시되어 있으므로, 자본시장과 금융투자업에 관한 법률상 협회 규정이 적용된다고 가정합니다.\n한계: 본 답변은 벤치마크 진단용 후보이며, 공개 가능한 공식 답변이 아닙니다.\n한계: 정관 변경 승인 및 업무 규정 보고의 구체적 신청 서류, 심사 절차, 기한 등 세부 행정적 사항은 대통령령 또는 하위 규정에서 정해지며, 현재 제공된 후보 조문에는 포함되어 있지 않습니다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T01:35:07.639767+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 546456.937,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 567,
+      "dedup_collapse": 56,
+      "evidence_fusion": 567,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "round_selected": 30,
+      "rrf": 600,
+      "selected": 567
+    }
+  },
+  "run_id": "7fc5c3d3-96e9-4a68-b88c-14953b17c72c",
+  "state": {
+    "accepted_provision_ids": [
+      "자본시장과 금융투자업에 관한 법률 290조  업무규정의 보고#KOBLEX-136626",
+      "자본시장과 금융투자업에 관한 법률 287조  정관#KOBLEX-136612"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 8,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "Two consecutive retrieval rounds did not improve critical evidence.",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 27
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 27,
+          "claim_count": 2
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "procedure",
+        "question_anchor": "정관 중 대통령령이 정하는 사항을 변경하려면 어떤 절차를 따라야 하며",
+        "requested_output": "자산운용협회 정관의 대통령령 정한 사항 변경 절차"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "procedure",
+        "question_anchor": "내부 업무에 관한 규정을 변경한 경우 어떤 절차를 따라야 하는가",
+        "requested_output": "자산운용협회 내부 업무 규정 변경 절차"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 287조  정관#KOBLEX-136612"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 5.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 287조  정관#KOBLEX-136612",
+        "provision_text": "② 협회는 정관 중 대통령령으로 정하는 사항을 변경하고자 하는 경우에는 금융위원회의 승인을 받아야 한다. <개정 2008.2.29>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9994829893112183,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 287조  정관 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "보험업법 115조  자회사의 소유#KOBLEX-022271"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 35.66608637997189,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "보험업법 115조  자회사의 소유#KOBLEX-022271",
+        "provision_text": "⑦ 제1항부터 제3항까지의 규정에 따른 승인, 신고 또는 보고의 요건, 절차 등 필요한 사항은 대통령령으로 정한다. <개정 2020.12.8>",
+        "rerank_rank": 3,
+        "rerank_score": 0.006482877768576145,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "보험업법 115조  자회사의 소유 7항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "방송법 15조 2 최다액출자자 등 변경승인 등#KOBLEX-047027"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 56,
+        "first_stage_score": 27.02585169457613,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "방송법 15조 2 최다액출자자 등 변경승인 등#KOBLEX-047027",
+        "provision_text": "⑤제1항 및 제3항에 따른 경영권을 실질적으로 지배하는 자에 해당하는 경우와 승인 및 신고의 절차 등에 관하여 필요한 사항은 대통령령으로 정한다. <개정 2020.6.9, 2022.1.11>",
+        "rerank_rank": 2,
+        "rerank_score": 0.04367655888199806,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "방송법 15조 2 최다액출자자 등 변경승인 등 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 290조  업무규정의 보고#KOBLEX-136626"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 91,
+        "first_stage_score": 3.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 290조  업무규정의 보고#KOBLEX-136626",
+        "provision_text": "제290조(업무규정의 보고) 협회는 업무에 관한 규정(規程)을 제정ㆍ변경하거나 폐지한 경우에는 지체 없이 금융위원회에 이를 보고하여야 한다. <개정 2008.2.29>",
+        "rerank_rank": 1,
+        "rerank_score": 0.004929433576762676,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 290조  업무규정의 보고",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 195조  정관의 변경 등#KOBLEX-136002"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 5.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 195조  정관의 변경 등#KOBLEX-136002",
+        "provision_text": "① 투자회사는 이사회 결의로 정관을 변경할 수 있다. 다만, 정관의 내용 중 다음 각 호의 어느 하나에 해당하는 사항을 변경하고자 하는 경우에는 제201조제2항 본문에 따른 주주총회의 결의를 거쳐야 한다. <개정 2013.5.28> 1. 집합투자업자ㆍ신탁업자 등이 받는 보수, 그 밖의 수수료의 인상 2. 집합투자업자 또는 신탁업자의 변경 3. 정관으로 투자회사의 존속기간 또는 해산사유를 정한 경우 존속기간 또는 해산사유의 변경 4. 그 밖에 주주의 이익과 관련된 중요한 사항으로서 대통령령으로 정하는 사항",
+        "rerank_rank": 4,
+        "rerank_score": 0.00403885031118989,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 195조  정관의 변경 등 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 13조  인가의 신청 및 심사#KOBLEX-134906"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 5.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 13조  인가의 신청 및 심사#KOBLEX-134906",
+        "provision_text": "⑦ 제1항부터 제6항까지의 규정에 따른 인가신청서 또는 조건의 취소ㆍ변경 신청서의 기재사항ㆍ첨부서류 등 인가신청 또는 조건의 취소ㆍ변경의 신청에 관한 사항과 심사의 방법ㆍ절차, 그 밖에 필요한 사항은 대통령령으로 정한다. <개정 2013.5.28>",
+        "rerank_rank": 5,
+        "rerank_score": 0.001974331447854638,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 13조  인가의 신청 및 심사 7항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "근로자퇴직급여 보장법 23조 5 중소기업퇴직연금기금표준계약서의 기재사항 등#KOBLEX-091282"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 32.74238709867997,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "근로자퇴직급여 보장법 23조 5 중소기업퇴직연금기금표준계약서의 기재사항 등#KOBLEX-091282",
+        "provision_text": "③ 제1항 및 제2항에 따른 승인 또는 변경승인의 방법 및 절차 등에 필요한 사항은 대통령령으로 정한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.0015378688694909215,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "근로자퇴직급여 보장법 23조 5 중소기업퇴직연금기금표준계약서의 기재사항 등 3항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세기본법 45조 3 기한 후 신고#KOBLEX-147543"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 31,
+        "first_stage_score": 29.476174755293776,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "국세기본법 45조 3 기한 후 신고#KOBLEX-147543",
+        "provision_text": "④ 기한후과세표준신고서의 기재사항 및 신고 절차 등에 관하여 필요한 사항은 대통령령으로 정한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.001492389477789402,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "국세기본법 45조 3 기한 후 신고 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도시 및 주거환경정비법 35조  조합설립인가 등#KOBLEX-148154",
+          "도시 및 주거환경정비법 35조  조합설립인가 등#KOBLEX-228726"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 75,
+        "first_stage_score": 26.193898942167795,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "도시 및 주거환경정비법 35조  조합설립인가 등#KOBLEX-148154",
+        "provision_text": "⑨ 제2항부터 제5항까지의 규정에 따른 토지등소유자에 대한 동의의 대상 및 절차, 조합설립 신청 및 인가 절차, 인가받은 사항의 변경 등에 필요한 사항은 대통령령으로 정한다. <개정 2021.3.16>",
+        "rerank_rank": 8,
+        "rerank_score": 0.0005477794329635799,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "도시 및 주거환경정비법 35조  조합설립인가 등 9항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "은행법 16조 2 비금융주력자의 주식보유제한 등#KOBLEX-143585"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 57,
+        "first_stage_score": 26.897290268285072,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "은행법 16조 2 비금융주력자의 주식보유제한 등#KOBLEX-143585",
+        "provision_text": "⑦ 제3항제1호에 따른 전환계획의 승인 요건 및 제3항제3호의 승인의 절차ㆍ방법, 그 밖에 승인 심사에 필요한 사항은 대통령령으로 정한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.00021681674115825444,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "은행법 16조 2 비금융주력자의 주식보유제한 등 7항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 418조  보고사항#KOBLEX-137271"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 22.301794893736975,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 418조  보고사항#KOBLEX-137271",
+        "provision_text": "2. 정관 중 대통령령으로 정하는 중요한 사항을 변경한 때",
+        "rerank_rank": 2,
+        "rerank_score": 0.0011090481420978904,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 418조  보고사항 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 323조 11 청산업무규정 등#KOBLEX-136778"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 28,
+        "first_stage_score": 23.413005217287875,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 323조 11 청산업무규정 등#KOBLEX-136778",
+        "provision_text": "② 금융투자상품거래청산회사는 정관 및 제1항의 청산업무규정을 변경하려는 경우에는 금융위원회의 승인을 받아야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 3.096193904639222e-05,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 323조 11 청산업무규정 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "간접투자자산 운용업법 160조#KOBLEX-082463"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 34,
+        "first_stage_score": 17.833375138109396,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "간접투자자산 운용업법 160조#KOBLEX-082463",
+        "provision_text": "제8장 자산운용협회",
+        "rerank_rank": 2,
+        "rerank_score": 2.4808356101857498e-05,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "간접투자자산 운용업법 160조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "증권거래법 175조  규정의 보고<개정 2000.1.21>#KOBLEX-227253"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 18.36839750628112,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "증권거래법 175조  규정의 보고<개정 2000.1.21>#KOBLEX-227253",
+        "provision_text": "제175조 (규정의 보고<개정 2000.1.21>) 예탁원은 예탁 기타 업무에 관한 규정을 정하거나 변경 또는 폐지한 때에는 금융위원회에 보고하여야 한다.<개정 2000.1.21, 2008.2.29>",
+        "rerank_rank": 3,
+        "rerank_score": 1.5275489204213955e-05,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "증권거래법 175조  규정의 보고<개정 2000.1.21>",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "증권거래법 115조  규정의 승인#KOBLEX-227061"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 36,
+        "first_stage_score": 17.704791443604385,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "증권거래법 115조  규정의 승인#KOBLEX-227061",
+        "provision_text": "①거래소가 유가증권시장을 관리하기 위하여 필요한 업무규정·상장규정 및 공시규정 기타 업무에 관한 규정(規則을 포함한다. 이하 같다)을 제정하고자 할 때에는 금융위원회의 승인을 얻어야 한다. 이를 변경 또는 폐지하고자 할 때에도 또한 같다. <개정 1987.11.28, 1997.1.13, 1998.1.8, 1998.5.25, 1999.2.1, 1999.5.24, 2004.1.29, 2008.2.29>",
+        "rerank_rank": 4,
+        "rerank_score": 9.736821994010825e-06,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "증권거래법 115조  규정의 승인 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "금융위원회의 설치 등에 관한 법률 18조  금융감독원에 대한 지도ㆍ감독#KOBLEX-219480"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 34.66704397283064,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "금융위원회의 설치 등에 관한 법률 18조  금융감독원에 대한 지도ㆍ감독#KOBLEX-219480",
+        "provision_text": "1. 금융감독원의 정관 변경에 대한 승인",
+        "rerank_rank": 4,
+        "rerank_score": 5.6818985285644885e-06,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "금융위원회의 설치 등에 관한 법률 18조  금융감독원에 대한 지도ㆍ감독 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 584조#KOBLEX-115761"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 68,
+        "first_stage_score": 20.039480783061368,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "상법 584조#KOBLEX-115761",
+        "provision_text": "제4절 정관의 변경",
+        "rerank_rank": 5,
+        "rerank_score": 5.397799668571679e-06,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상법 584조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 433조#KOBLEX-115099"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 67,
+        "first_stage_score": 20.039480783061368,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "상법 433조#KOBLEX-115099",
+        "provision_text": "제5절 정관의 변경",
+        "rerank_rank": 6,
+        "rerank_score": 4.579855612973915e-06,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상법 433조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 시행령 159조 2 파생상품등의 범위#KOBLEX-142142"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 45.64543890429145,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "소득세법 시행령 159조 2 파생상품등의 범위#KOBLEX-142142",
+        "provision_text": "② 법률 제11845호 자본시장과 금융투자업에 관한 법률 일부개정법률 부칙 제15조제1항에 따라 거래소허가를 받은 것으로 보는 한국거래소가 장내파생상품시장을 개설하기 위해 「자본시장과 금융투자업에 관한 법률」 제412조에 따라 파생상품시장업무규정의 변경 승인을 금융위원회에 요청하는 경우에는 파생상품의 유형, 품목, 기초자산 등 주요명세를 기획재정부장관에게 제출해야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 3.73501461581327e-06,
+        "retrieval_round": 3,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "소득세법 시행령 159조 2 파생상품등의 범위 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세징수법 시행령 21조  납세담보의 변경과 보충#KOBLEX-000083"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 31.312721369059062,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "국세징수법 시행령 21조  납세담보의 변경과 보충#KOBLEX-000083",
+        "provision_text": "② 법 제21조제1항 또는 제2항에 따른 납세담보의 변경 승인 신청 또는 납세담보물의 추가 제공이나 보증인의 변경 요구는 문서로 해야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 2.0877550923614763e-06,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "국세징수법 시행령 21조  납세담보의 변경과 보충 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상속세 및 증여세법 82조  지급명세서 등의 제출#KOBLEX-207606",
+          "상속세 및 증여세법 82조  지급명세서 등의 제출#KOBLEX-219214"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 32.04291430342112,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "상속세 및 증여세법 82조  지급명세서 등의 제출#KOBLEX-207606",
+        "provision_text": "③ 다음 각 호의 자는 대통령령으로 정하는 바에 따라 명의개서 또는 변경 내용을 관할 세무서장에게 제출하여야 한다. <개정 2020.12.22> 1. 국내에서 다음 각 목의 어느 하나에 해당하는 권리 등의 명의개서 또는 변경을 취급하는 자(명의개서 또는 변경에 관한 확인업무를 국가나 지방자치단체로부터 위탁받은 자 및 「자본시장과 금융투자업에 관한 법률」 제6조제1항제1호에 따른 투자매매업 또는 같은 항 제2호에 따른 투자중개업을 하는 자를 포함한다) 2. 국내에서 투자자로부터 예탁받은 「외국환거래법」 제3조제1항제8호에 따른 외화증권을 「자본시장과 금융투자업에 관한 법률」 제294조에 따른 한국예탁결제원에 다시 예탁하는 예탁자",
+        "rerank_rank": 4,
+        "rerank_score": 1.8812401094692177e-06,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상속세 및 증여세법 82조  지급명세서 등의 제출 3항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "의료법 시행령 14조  정관 변경의 허가신청#KOBLEX-107884"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 32.16749970928341,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "의료법 시행령 14조  정관 변경의 허가신청#KOBLEX-107884",
+        "provision_text": "1. 정관 변경의 내용과 그 이유를 적은 서류",
+        "rerank_rank": 5,
+        "rerank_score": 1.500074745308666e-06,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "의료법 시행령 14조  정관 변경의 허가신청 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상속세 및 증여세법 시행령 29조  증자에 따른 이익의 계산방법 등#KOBLEX-212191"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 42.0475204402206,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "상속세 및 증여세법 시행령 29조  증자에 따른 이익의 계산방법 등#KOBLEX-212191",
+        "provision_text": "③ 법 제39조제1항제1호가목에서 \"대통령령으로 정하는 경우\"란 「자본시장과 금융투자업에 관한 법률 시행령」 제11조제3항에 따라 모집하는 경우를 말한다. <신설 2016.2.5>",
+        "rerank_rank": 6,
+        "rerank_score": 1.0557358791629667e-06,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상속세 및 증여세법 시행령 29조  증자에 따른 이익의 계산방법 등 3항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상속세 및 증여세법 시행령 30조  전환사채등의 주식전환등에 따른 이익의 계산방법 등#KOBLEX-212205"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 42.0475204402206,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "상속세 및 증여세법 시행령 30조  전환사채등의 주식전환등에 따른 이익의 계산방법 등#KOBLEX-212205",
+        "provision_text": "④ 법 제40조제1항제1호나목에서 \"대통령령으로 정하는 경우\"란 「자본시장과 금융투자업에 관한 법률 시행령」 제11조제3항에 따라 모집하는 경우를 말한다. <신설 2016.2.5>",
+        "rerank_rank": 7,
+        "rerank_score": 9.776176739251241e-07,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상속세 및 증여세법 시행령 30조  전환사채등의 주식전환등에 따른 이익의 계산방법 등 4항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "금융위원회의 설치 등에 관한 법률 38조  검사 대상 기관#KOBLEX-219557"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 32,
+        "first_stage_score": 36.320997249353276,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "금융위원회의 설치 등에 관한 법률 38조  검사 대상 기관#KOBLEX-219557",
+        "provision_text": "2. 「자본시장과 금융투자업에 관한 법률」에 따른 금융투자업자, 증권금융회사, 종합금융회사 및 명의개서대행회사(名義改書代行會社)",
+        "rerank_rank": 8,
+        "rerank_score": 8.82258632373123e-07,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "금융위원회의 설치 등에 관한 법률 38조  검사 대상 기관 2호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "보험업법 시행령 16조  겸영업무의 범위#KOBLEX-121265"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 38.18517676854606,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "보험업법 시행령 16조  겸영업무의 범위#KOBLEX-121265",
+        "provision_text": "② 법 제11조제2호에서 \"대통령령으로 정하는 금융업\"이란 다음 각 호의 업무를 말한다. <개정 2012.7.24, 2022.4.19> 1. 「자본시장과 금융투자업에 관한 법률」 제6조제4항에 따른 집합투자업 2. 「자본시장과 금융투자업에 관한 법률」 제6조제6항에 따른 투자자문업 3. 「자본시장과 금융투자업에 관한 법률」 제6조제7항에 따른 투자일임업 4. 「자본시장과 금융투자업에 관한 법률」 제6조제8항에 따른 신탁업 5. 「자본시장과 금융투자업에 관한 법률」 제9조제21항에 따른 집합투자증권에 대한 투자매매업 6. 「자본시장과 금융투자업에 관한 법률」 제9조제21항에 따른 집합투자증권에 대한 투자중개업 7. 「외국환거래법」 제3조제16호에 따른 외국환업무 8. 「근로자퇴직급여 보장법」 제2조제13호에 따른 퇴직연금사업자의 업무 9. 보험업의 경영이나 법 제11조의2에 따라 보험업에 부수(附隨)하는 업무의 수행에 필요한 범위에서 영위하는 「전자금융거래법」에 따른 선불전자지급수단의 발행 및 관리 업무",
+        "rerank_rank": 9,
+        "rerank_score": 8.397522606173879e-07,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "보험업법 시행령 16조  겸영업무의 범위 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세기본법 시행규칙 1조 2 기한연장신청#KOBLEX-213112"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 66,
+        "first_stage_score": 33.70347921680474,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "국세기본법 시행규칙 1조 2 기한연장신청#KOBLEX-213112",
+        "provision_text": "제1조의2(기한연장신청) 「국세기본법 시행령」(이하 \"영\"이라 한다) 제3조에 따른 기한연장의 신청은 별지 제1호서식의 기한연장 승인 신청서에 따른다. <개정 2021.3.16>",
+        "rerank_rank": 10,
+        "rerank_score": 8.267347197943309e-07,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "국세기본법 시행규칙 1조 2 기한연장신청",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "간접투자자산 운용업법 160조#KOBLEX-082463": "제8장 자산운용협회",
+      "국세기본법 45조 3 기한 후 신고#KOBLEX-147543": "④ 기한후과세표준신고서의 기재사항 및 신고 절차 등에 관하여 필요한 사항은 대통령령으로 정한다.",
+      "국세기본법 시행규칙 1조 2 기한연장신청#KOBLEX-213112": "제1조의2(기한연장신청) 「국세기본법 시행령」(이하 \"영\"이라 한다) 제3조에 따른 기한연장의 신청은 별지 제1호서식의 기한연장 승인 신청서에 따른다. <개정 2021.3.16>",
+      "국세징수법 시행령 21조  납세담보의 변경과 보충#KOBLEX-000083": "② 법 제21조제1항 또는 제2항에 따른 납세담보의 변경 승인 신청 또는 납세담보물의 추가 제공이나 보증인의 변경 요구는 문서로 해야 한다.",
+      "근로자퇴직급여 보장법 23조 5 중소기업퇴직연금기금표준계약서의 기재사항 등#KOBLEX-091282": "③ 제1항 및 제2항에 따른 승인 또는 변경승인의 방법 및 절차 등에 필요한 사항은 대통령령으로 정한다.",
+      "금융위원회의 설치 등에 관한 법률 18조  금융감독원에 대한 지도ㆍ감독#KOBLEX-219480": "1. 금융감독원의 정관 변경에 대한 승인",
+      "금융위원회의 설치 등에 관한 법률 38조  검사 대상 기관#KOBLEX-219557": "2. 「자본시장과 금융투자업에 관한 법률」에 따른 금융투자업자, 증권금융회사, 종합금융회사 및 명의개서대행회사(名義改書代行會社)",
+      "도시 및 주거환경정비법 35조  조합설립인가 등#KOBLEX-148154": "⑨ 제2항부터 제5항까지의 규정에 따른 토지등소유자에 대한 동의의 대상 및 절차, 조합설립 신청 및 인가 절차, 인가받은 사항의 변경 등에 필요한 사항은 대통령령으로 정한다. <개정 2021.3.16>",
+      "방송법 15조 2 최다액출자자 등 변경승인 등#KOBLEX-047027": "⑤제1항 및 제3항에 따른 경영권을 실질적으로 지배하는 자에 해당하는 경우와 승인 및 신고의 절차 등에 관하여 필요한 사항은 대통령령으로 정한다. <개정 2020.6.9, 2022.1.11>",
+      "보험업법 115조  자회사의 소유#KOBLEX-022271": "⑦ 제1항부터 제3항까지의 규정에 따른 승인, 신고 또는 보고의 요건, 절차 등 필요한 사항은 대통령령으로 정한다. <개정 2020.12.8>",
+      "보험업법 시행령 16조  겸영업무의 범위#KOBLEX-121265": "② 법 제11조제2호에서 \"대통령령으로 정하는 금융업\"이란 다음 각 호의 업무를 말한다. <개정 2012.7.24, 2022.4.19> 1. 「자본시장과 금융투자업에 관한 법률」 제6조제4항에 따른 집합투자업 2. 「자본시장과 금융투자업에 관한 법률」 제6조제6항에 따른 투자자문업 3. 「자본시장과 금융투자업에 관한 법률」 제6조제7항에 따른 투자일임업 4. 「자본시장과 금융투자업에 관한 법률」 제6조제8항에 따른 신탁업 5. 「자본시장과 금융투자업에 관한 법률」 제9조제21항에 따른 집합투자증권에 대한 투자매매업 6. 「자본시장과 금융투자업에 관한 법률」 제9조제21항에 따른 집합투자증권에 대한 투자중개업 7. 「외국환거래법」 제3조제16호에 따른 외국환업무 8. 「근로자퇴직급여 보장법」 제2조제13호에 따른 퇴직연금사업자의 업무 9. 보험업의 경영이나 법 제11조의2에 따라 보험업에 부수(附隨)하는 업무의 수행에 필요한 범위에서 영위하는 「전자금융거래법」에 따른 선불전자지급수단의 발행 및 관리 업무",
+      "상법 433조#KOBLEX-115099": "제5절 정관의 변경",
+      "상법 584조#KOBLEX-115761": "제4절 정관의 변경",
+      "상속세 및 증여세법 82조  지급명세서 등의 제출#KOBLEX-207606": "③ 다음 각 호의 자는 대통령령으로 정하는 바에 따라 명의개서 또는 변경 내용을 관할 세무서장에게 제출하여야 한다. <개정 2020.12.22> 1. 국내에서 다음 각 목의 어느 하나에 해당하는 권리 등의 명의개서 또는 변경을 취급하는 자(명의개서 또는 변경에 관한 확인업무를 국가나 지방자치단체로부터 위탁받은 자 및 「자본시장과 금융투자업에 관한 법률」 제6조제1항제1호에 따른 투자매매업 또는 같은 항 제2호에 따른 투자중개업을 하는 자를 포함한다) 2. 국내에서 투자자로부터 예탁받은 「외국환거래법」 제3조제1항제8호에 따른 외화증권을 「자본시장과 금융투자업에 관한 법률」 제294조에 따른 한국예탁결제원에 다시 예탁하는 예탁자",
+      "상속세 및 증여세법 시행령 29조  증자에 따른 이익의 계산방법 등#KOBLEX-212191": "③ 법 제39조제1항제1호가목에서 \"대통령령으로 정하는 경우\"란 「자본시장과 금융투자업에 관한 법률 시행령」 제11조제3항에 따라 모집하는 경우를 말한다. <신설 2016.2.5>",
+      "상속세 및 증여세법 시행령 30조  전환사채등의 주식전환등에 따른 이익의 계산방법 등#KOBLEX-212205": "④ 법 제40조제1항제1호나목에서 \"대통령령으로 정하는 경우\"란 「자본시장과 금융투자업에 관한 법률 시행령」 제11조제3항에 따라 모집하는 경우를 말한다. <신설 2016.2.5>",
+      "소득세법 시행령 159조 2 파생상품등의 범위#KOBLEX-142142": "② 법률 제11845호 자본시장과 금융투자업에 관한 법률 일부개정법률 부칙 제15조제1항에 따라 거래소허가를 받은 것으로 보는 한국거래소가 장내파생상품시장을 개설하기 위해 「자본시장과 금융투자업에 관한 법률」 제412조에 따라 파생상품시장업무규정의 변경 승인을 금융위원회에 요청하는 경우에는 파생상품의 유형, 품목, 기초자산 등 주요명세를 기획재정부장관에게 제출해야 한다.",
+      "은행법 16조 2 비금융주력자의 주식보유제한 등#KOBLEX-143585": "⑦ 제3항제1호에 따른 전환계획의 승인 요건 및 제3항제3호의 승인의 절차ㆍ방법, 그 밖에 승인 심사에 필요한 사항은 대통령령으로 정한다.",
+      "의료법 시행령 14조  정관 변경의 허가신청#KOBLEX-107884": "1. 정관 변경의 내용과 그 이유를 적은 서류",
+      "자본시장과 금융투자업에 관한 법률 13조  인가의 신청 및 심사#KOBLEX-134906": "⑦ 제1항부터 제6항까지의 규정에 따른 인가신청서 또는 조건의 취소ㆍ변경 신청서의 기재사항ㆍ첨부서류 등 인가신청 또는 조건의 취소ㆍ변경의 신청에 관한 사항과 심사의 방법ㆍ절차, 그 밖에 필요한 사항은 대통령령으로 정한다. <개정 2013.5.28>",
+      "자본시장과 금융투자업에 관한 법률 195조  정관의 변경 등#KOBLEX-136002": "① 투자회사는 이사회 결의로 정관을 변경할 수 있다. 다만, 정관의 내용 중 다음 각 호의 어느 하나에 해당하는 사항을 변경하고자 하는 경우에는 제201조제2항 본문에 따른 주주총회의 결의를 거쳐야 한다. <개정 2013.5.28> 1. 집합투자업자ㆍ신탁업자 등이 받는 보수, 그 밖의 수수료의 인상 2. 집합투자업자 또는 신탁업자의 변경 3. 정관으로 투자회사의 존속기간 또는 해산사유를 정한 경우 존속기간 또는 해산사유의 변경 4. 그 밖에 주주의 이익과 관련된 중요한 사항으로서 대통령령으로 정하는 사항",
+      "자본시장과 금융투자업에 관한 법률 287조  정관#KOBLEX-136612": "② 협회는 정관 중 대통령령으로 정하는 사항을 변경하고자 하는 경우에는 금융위원회의 승인을 받아야 한다. <개정 2008.2.29>",
+      "자본시장과 금융투자업에 관한 법률 290조  업무규정의 보고#KOBLEX-136626": "제290조(업무규정의 보고) 협회는 업무에 관한 규정(規程)을 제정ㆍ변경하거나 폐지한 경우에는 지체 없이 금융위원회에 이를 보고하여야 한다. <개정 2008.2.29>",
+      "자본시장과 금융투자업에 관한 법률 323조 11 청산업무규정 등#KOBLEX-136778": "② 금융투자상품거래청산회사는 정관 및 제1항의 청산업무규정을 변경하려는 경우에는 금융위원회의 승인을 받아야 한다.",
+      "자본시장과 금융투자업에 관한 법률 418조  보고사항#KOBLEX-137271": "2. 정관 중 대통령령으로 정하는 중요한 사항을 변경한 때",
+      "증권거래법 115조  규정의 승인#KOBLEX-227061": "①거래소가 유가증권시장을 관리하기 위하여 필요한 업무규정·상장규정 및 공시규정 기타 업무에 관한 규정(規則을 포함한다. 이하 같다)을 제정하고자 할 때에는 금융위원회의 승인을 얻어야 한다. 이를 변경 또는 폐지하고자 할 때에도 또한 같다. <개정 1987.11.28, 1997.1.13, 1998.1.8, 1998.5.25, 1999.2.1, 1999.5.24, 2004.1.29, 2008.2.29>",
+      "증권거래법 175조  규정의 보고<개정 2000.1.21>#KOBLEX-227253": "제175조 (규정의 보고<개정 2000.1.21>) 예탁원은 예탁 기타 업무에 관한 규정을 정하거나 변경 또는 폐지한 때에는 금융위원회에 보고하여야 한다.<개정 2000.1.21, 2008.2.29>"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "자본시장과 금융투자업에 관한 법률 287조  정관#KOBLEX-136612"
+            ],
+            "rationale": "C001 explicitly states that approval from the Financial Services Commission is required for changes to articles of association prescribed by presidential decree.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "자본시장과 금융투자업에 관한 법률 287조  정관#KOBLEX-136612"
+            ],
+            "rationale": "C001 identifies the subject (Association) and authority (Financial Services Commission) but does not specify the deadline or detailed administrative steps.",
+            "requirement_id": "E1-R2",
+            "status": "partially_satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 287조  정관#KOBLEX-136612"
+        ],
+        "missing_aspects": [
+          "E1-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C001 provides the primary legal basis requiring approval from the Financial Services Commission for changes to articles of association prescribed by presidential decree. However, it does not specify the deadline or detailed administrative procedure (e.g., application documents, review process) required by the completion criteria, which are typically found in the presidential decree or related regulations not present in the candidate set.",
+        "status": "partially_covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "자본시장과 금융투자업에 관한 법률 290조  업무규정의 보고#KOBLEX-136626"
+            ],
+            "rationale": "C004 explicitly states that the Association must report changes to internal business regulations to the Financial Services Commission.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "자본시장과 금융투자업에 관한 법률 290조  업무규정의 보고#KOBLEX-136626"
+            ],
+            "rationale": "C004 identifies the subject (Association) and authority (Financial Services Commission) and the timing ('without delay'), but does not specify a fixed deadline or detailed administrative steps.",
+            "requirement_id": "E2-R2",
+            "status": "partially_satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 290조  업무규정의 보고#KOBLEX-136626"
+        ],
+        "missing_aspects": [
+          "E2-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C004 provides the primary legal basis requiring reporting to the Financial Services Commission for changes to internal business regulations. However, it only specifies 'without delay' (지체 없이) rather than a fixed deadline, and does not provide detailed administrative procedures, which are required by the completion criteria.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 287조  정관#KOBLEX-136612",
+        "support_spans": [
+          {
+            "end_char": 73,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 290조  업무규정의 보고#KOBLEX-136626",
+        "support_spans": [
+          {
+            "end_char": 93,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 9,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "자산운용협회의 정관 중 대통령령이 정하는 사항을 변경하기 위한 법적 절차가 무엇인지",
+        "issue_id": "I1"
+      },
+      {
+        "description": "자산운용협회의 내부 업무에 관한 규정을 변경하기 위한 법적 절차가 무엇인지",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "대통령령이 정하는 정관 사항 변경 시 필요한 행정적 절차(승인, 신고 등)와 주체, 기한을 특정할 수 있어야 한다.",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "대통령령이 정하는 정관 사항 변경 시 필요한 행정적 절차(승인, 신고 등)를 확인한다."
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "해당 절차의 주체(협회, 금융위원회 등)와 기한을 확인한다."
+          }
+        ],
+        "critical": true,
+        "description": "자산운용협회 정관의 대통령령이 정하는 사항 변경에 관한 절차 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 명시적으로 요구하는 정관 변경 절차의 핵심 근거이다.",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "내부 업무 규정 변경 시 필요한 행정적 절차(승인, 신고 등)와 주체, 기한을 특정할 수 있어야 한다.",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "내부 업무 규정 변경 시 필요한 행정적 절차(승인, 신고 등)를 확인한다."
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "해당 절차의 주체(협회, 금융위원회 등)와 기한을 확인한다."
+          }
+        ],
+        "critical": true,
+        "description": "자산운용협회 내부 업무에 관한 규정 변경에 관한 절차 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "procedure",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 명시적으로 요구하는 내부 업무 규정 변경 절차의 핵심 근거이다.",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 갑 주식회사는 자산운용협회로, 최근 새로운 사업 분야에 진출하기 위해 회사의 정관을 변경하려고 계획하고 있습니다. 변경하고자 하는 정관은 대통령령이 정하는 사항에 해당합니다. 또한, 갑 주식회사는 내부 업무 절차를 업데이트하여 업무에 관한 규정을 변경했습니다. [질문] 갑 주식회사가 정관 중 대통령령이 정하는 사항을 변경하려면 어떤 절차를 따라야 하며, 내부 업무에 관한 규정을 변경한 경우 어떤 절차를 따라야 하는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "자산운용협회 정관 변경 대통령령 정한 사항 승인 신고 절차 금융위원회",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "자산운용협회",
+          "정관변경",
+          "대통령령",
+          "승인",
+          "신고",
+          "금융위원회"
+        ],
+        "query_text": "자산운용협회 정관 변경 대통령령 정한 사항 승인 절차 [원문 맥락] 또한, 갑 주식회사는 내부 업무 절차를 업데이트하여 업무에 관한 규정을 변경했습니다. 갑 주식회사가 정관 중 대통령령이 정하는 사항을 변경하려면 어떤 절차를 따라야 하며, 내부 업무에 관한 규정을 변경한 경우 어떤 절차를 따라야 하는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "자산운용협회 정관 중 대통령령이 정하는 사항 변경 시 필요한 승인 또는 신고 절차",
+        "statute_hints": [
+          "자본시장과 금융투자업에 관한 법률"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "자산운용협회 업무 규정 변경 승인 신고 절차 금융위원회",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "자산운용협회",
+          "업무규정",
+          "변경",
+          "승인",
+          "신고",
+          "금융위원회"
+        ],
+        "query_text": "자산운용협회 내부 업무 규정 변경 승인 절차 [원문 맥락] 또한, 갑 주식회사는 내부 업무 절차를 업데이트하여 업무에 관한 규정을 변경했습니다. 갑 주식회사가 정관 중 대통령령이 정하는 사항을 변경하려면 어떤 절차를 따라야 하며, 내부 업무에 관한 규정을 변경한 경우 어떤 절차를 따라야 하는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "자산운용협회 내부 업무에 관한 규정 변경 시 필요한 승인 또는 신고 절차",
+        "statute_hints": [
+          "자본시장과 금융투자업에 관한 법률"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "자산운용협회 정관 변경 승인 신청 기한 대통령령",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "자산운용협회",
+          "정관변경",
+          "금융위원회",
+          "승인신청",
+          "기한",
+          "대통령령"
+        ],
+        "query_text": "자산운용협회 정관 변경 금융위원회 승인 신청 기한 대통령령 [원문 맥락] 또한, 갑 주식회사는 내부 업무 절차를 업데이트하여 업무에 관한 규정을 변경했습니다. 갑 주식회사가 정관 중 대통령령이 정하는 사항을 변경하려면 어떤 절차를 따라야 하며, 내부 업무에 관한 규정을 변경한 경우 어떤 절차를 따라야 하는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "자산운용협회 정관 중 대통령령이 정하는 사항 변경 시 금융위원회 승인 신청 기한",
+        "statute_hints": [
+          "자본시장과 금융투자업에 관한 법률 시행령"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "자산운용협회 업무규정 변경 보고 기한 대통령령",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "자산운용협회",
+          "업무규정",
+          "금융위원회",
+          "보고",
+          "기한",
+          "대통령령"
+        ],
+        "query_text": "자산운용협회 업무규정 변경 금융위원회 보고 기한 대통령령 [원문 맥락] 또한, 갑 주식회사는 내부 업무 절차를 업데이트하여 업무에 관한 규정을 변경했습니다. 갑 주식회사가 정관 중 대통령령이 정하는 사항을 변경하려면 어떤 절차를 따라야 하며, 내부 업무에 관한 규정을 변경한 경우 어떤 절차를 따라야 하는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "자산운용협회 내부 업무 규정 변경 시 금융위원회 보고 기한",
+        "statute_hints": [
+          "자본시장과 금융투자업에 관한 법률 시행령"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "자본시장과 금융투자업에 관한 법률 시행령 자산운용협회 정관 변경 승인 신청 서류 기한",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "자본시장과 금융투자업에 관한 법률 시행령",
+          "자산운용협회",
+          "정관변경",
+          "승인신청",
+          "기한",
+          "서류"
+        ],
+        "query_text": "자본시장과 금융투자업에 관한 법률 시행령 자산운용협회 정관 변경 승인 신청 서류 기한 [원문 맥락] 또한, 갑 주식회사는 내부 업무 절차를 업데이트하여 업무에 관한 규정을 변경했습니다. 갑 주식회사가 정관 중 대통령령이 정하는 사항을 변경하려면 어떤 절차를 따라야 하며, 내부 업무에 관한 규정을 변경한 경우 어떤 절차를 따라야 하는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "자산운용협회 정관 중 대통령령이 정하는 사항 변경 시 금융위원회 승인 신청 기한 및 절차",
+        "statute_hints": [
+          "자본시장과 금융투자업에 관한 법률 시행령"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "자본시장과 금융투자업에 관한 법률 시행령 자산운용협회 업무규정 변경 보고 기한 절차",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "자본시장과 금융투자업에 관한 법률 시행령",
+          "자산운용협회",
+          "업무규정",
+          "보고",
+          "기한",
+          "절차"
+        ],
+        "query_text": "자본시장과 금융투자업에 관한 법률 시행령 자산운용협회 업무규정 변경 보고 기한 절차 [원문 맥락] 또한, 갑 주식회사는 내부 업무 절차를 업데이트하여 업무에 관한 규정을 변경했습니다. 갑 주식회사가 정관 중 대통령령이 정하는 사항을 변경하려면 어떤 절차를 따라야 하며, 내부 업무에 관한 규정을 변경한 경우 어떤 절차를 따라야 하는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "자산운용협회 내부 업무 규정 변경 시 금융위원회 보고 기한 및 절차",
+        "statute_hints": [
+          "자본시장과 금융투자업에 관한 법률 시행령"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑 주식회사는 자산운용협회로, 최근 새로운 사업 분야에 진출하기 위해 회사의 정관을 변경하려고 계획하고 있습니다. 변경하고자 하는 정관은 대통령령이 정하는 사항에 해당합니다. 또한, 갑 주식회사는 내부 업무 절차를 업데이트하여 업무에 관한 규정을 변경했습니다.\n\n[질문]\n갑 주식회사가 정관 중 대통령령이 정하는 사항을 변경하려면 어떤 절차를 따라야 하며, 내부 업무에 관한 규정을 변경한 경우 어떤 절차를 따라야 하는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "대통령령이 정하는 정관 사항 변경 시 필요한 행정적 절차(승인, 신고 등)와 주체, 기한을 특정할 수 있어야 한다.",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "대통령령이 정하는 정관 사항 변경 시 필요한 행정적 절차(승인, 신고 등)를 확인한다."
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "해당 절차의 주체(협회, 금융위원회 등)와 기한을 확인한다."
+          }
+        ],
+        "critical": true,
+        "description": "자산운용협회 정관의 대통령령이 정하는 사항 변경에 관한 절차 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 명시적으로 요구하는 정관 변경 절차의 핵심 근거이다.",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "내부 업무 규정 변경 시 필요한 행정적 절차(승인, 신고 등)와 주체, 기한을 특정할 수 있어야 한다.",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "내부 업무 규정 변경 시 필요한 행정적 절차(승인, 신고 등)를 확인한다."
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "해당 절차의 주체(협회, 금융위원회 등)와 기한을 확인한다."
+          }
+        ],
+        "critical": true,
+        "description": "자산운용협회 내부 업무에 관한 규정 변경에 관한 절차 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "procedure",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 명시적으로 요구하는 내부 업무 규정 변경 절차의 핵심 근거이다.",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "7fc5c3d3-96e9-4a68-b88c-14953b17c72c",
+    "seen_provision_ids": [
+      "상속세 및 증여세법 82조  지급명세서 등의 제출#KOBLEX-207606",
+      "국세징수법 시행령 21조  납세담보의 변경과 보충#KOBLEX-000083",
+      "간접투자자산 운용업법 160조#KOBLEX-082463",
+      "근로자퇴직급여 보장법 23조 5 중소기업퇴직연금기금표준계약서의 기재사항 등#KOBLEX-091282",
+      "자본시장과 금융투자업에 관한 법률 13조  인가의 신청 및 심사#KOBLEX-134906",
+      "은행법 16조 2 비금융주력자의 주식보유제한 등#KOBLEX-143585",
+      "자본시장과 금융투자업에 관한 법률 195조  정관의 변경 등#KOBLEX-136002",
+      "자본시장과 금융투자업에 관한 법률 418조  보고사항#KOBLEX-137271",
+      "증권거래법 115조  규정의 승인#KOBLEX-227061",
+      "자본시장과 금융투자업에 관한 법률 290조  업무규정의 보고#KOBLEX-136626",
+      "보험업법 시행령 16조  겸영업무의 범위#KOBLEX-121265",
+      "자본시장과 금융투자업에 관한 법률 323조 11 청산업무규정 등#KOBLEX-136778",
+      "상속세 및 증여세법 시행령 29조  증자에 따른 이익의 계산방법 등#KOBLEX-212191",
+      "도시 및 주거환경정비법 35조  조합설립인가 등#KOBLEX-148154",
+      "금융위원회의 설치 등에 관한 법률 18조  금융감독원에 대한 지도ㆍ감독#KOBLEX-219480",
+      "상법 584조#KOBLEX-115761",
+      "의료법 시행령 14조  정관 변경의 허가신청#KOBLEX-107884",
+      "상법 433조#KOBLEX-115099",
+      "상속세 및 증여세법 시행령 30조  전환사채등의 주식전환등에 따른 이익의 계산방법 등#KOBLEX-212205",
+      "증권거래법 175조  규정의 보고<개정 2000.1.21>#KOBLEX-227253",
+      "자본시장과 금융투자업에 관한 법률 287조  정관#KOBLEX-136612",
+      "국세기본법 시행규칙 1조 2 기한연장신청#KOBLEX-213112",
+      "방송법 15조 2 최다액출자자 등 변경승인 등#KOBLEX-047027",
+      "국세기본법 45조 3 기한 후 신고#KOBLEX-147543",
+      "금융위원회의 설치 등에 관한 법률 38조  검사 대상 기관#KOBLEX-219557",
+      "보험업법 115조  자회사의 소유#KOBLEX-022271",
+      "소득세법 시행령 159조 2 파생상품등의 범위#KOBLEX-142142"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "NO_RETRIEVAL_PROGRESS"
+}

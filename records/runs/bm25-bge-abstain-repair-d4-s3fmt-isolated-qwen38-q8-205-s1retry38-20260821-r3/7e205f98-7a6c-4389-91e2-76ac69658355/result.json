@@ -1,0 +1,1046 @@
+{
+  "abstention_reason": null,
+  "answer": "고의 또는 과실로 인한 위법행위로 타인에게 손해를 가한 자는 그 손해를 배상할 책임이 있다.[CT1]\n타인의 생명을 해한 자는 피해자의 직계존속, 직계비속 및 배우자에 대하여는 재산상의 손해없는 경우에도 손해배상의 책임이 있다.[CT2]\n갑의 행위는 을의 생명을 해한 불법행위에 해당하며, 을의 배우자 병과 자녀 정은 민법 제752조에 따라 재산상의 손해 유무와 무관하게 손해배상을 청구할 수 있다.[CT3]",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "assumptions": [
+    {
+      "code": "A1",
+      "message": "갑의 행위가 고의 또는 과실로 인한 위법행위이며, 을의 사망과 인과관계가 성립한다고 가정한다."
+    }
+  ],
+  "candidate_answer": "고의 또는 과실로 인한 위법행위로 타인에게 손해를 가한 자는 그 손해를 배상할 책임이 있다.[CT1]\n타인의 생명을 해한 자는 피해자의 직계존속, 직계비속 및 배우자에 대하여는 재산상의 손해없는 경우에도 손해배상의 책임이 있다.[CT2]\n갑의 행위는 을의 생명을 해한 불법행위에 해당하며, 을의 배우자 병과 자녀 정은 민법 제752조에 따라 재산상의 손해 유무와 무관하게 손해배상을 청구할 수 있다.[CT3]",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "candidate_assumptions": [],
+  "candidate_claim_citations": [],
+  "candidate_claims": [],
+  "candidate_limitations": [],
+  "claim_citations": [
+    {
+      "answer_marker": "[CT1]",
+      "citation_id": "CT1",
+      "claim_id": "C1",
+      "provision_id": "민법 750조  불법행위의 내용#KOBLEX-059905",
+      "quoted_text": "제750조(불법행위의 내용) 고의 또는 과실로 인한 위법행위로 타인에게 손해를 가한 자는 그 손해를 배상할 책임이 있다.",
+      "support_description": "불법행위 성립 시 손해배상 책임의 일반적 근거를 제공한다."
+    },
+    {
+      "answer_marker": "[CT2]",
+      "citation_id": "CT2",
+      "claim_id": "C2",
+      "provision_id": "민법 752조  생명침해로 인한 위자료#KOBLEX-059909",
+      "quoted_text": "제752조(생명침해로 인한 위자료) 타인의 생명을 해한 자는 피해자의 직계존속, 직계비속 및 배우자에 대하여는 재산상의 손해없는 경우에도 손해배상의 책임이 있다.",
+      "support_description": "생명 침해 시 배우자와 자녀의 독립적 손해배상 청구권 및 재산상 손해 부존재 시에도 책임이 있음을 명시한다."
+    },
+    {
+      "answer_marker": "[CT3]",
+      "citation_id": "CT3",
+      "claim_id": "C3",
+      "provision_id": "민법 752조  생명침해로 인한 위자료#KOBLEX-059909",
+      "quoted_text": "제752조(생명침해로 인한 위자료) 타인의 생명을 해한 자는 피해자의 직계존속, 직계비속 및 배우자에 대하여는 재산상의 손해없는 경우에도 손해배상의 책임이 있다.",
+      "support_description": "갑의 행위가 을의 생명을 해한 경우에 해당하므로, 배우자와 자녀의 청구권이 인정됨을 뒷받침한다."
+    }
+  ],
+  "claims": [
+    {
+      "answer_target_ids": [
+        "T1"
+      ],
+      "applicability": "direct",
+      "citation_required": true,
+      "claim_id": "C1",
+      "claim_type": "legal_rule",
+      "text": "고의 또는 과실로 인한 위법행위로 타인에게 손해를 가한 자는 그 손해를 배상할 책임이 있다."
+    },
+    {
+      "answer_target_ids": [
+        "T1"
+      ],
+      "applicability": "direct",
+      "citation_required": true,
+      "claim_id": "C2",
+      "claim_type": "legal_rule",
+      "text": "타인의 생명을 해한 자는 피해자의 직계존속, 직계비속 및 배우자에 대하여는 재산상의 손해없는 경우에도 손해배상의 책임이 있다."
+    },
+    {
+      "answer_target_ids": [
+        "T1"
+      ],
+      "applicability": "direct",
+      "citation_required": true,
+      "claim_id": "C3",
+      "claim_type": "application",
+      "text": "갑의 행위는 을의 생명을 해한 불법행위에 해당하며, 을의 배우자 병과 자녀 정은 민법 제752조에 따라 재산상의 손해 유무와 무관하게 손해배상을 청구할 수 있다."
+    }
+  ],
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T12:29:51.619198+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 304393.257,
+  "errors": [],
+  "limitations": [
+    {
+      "code": "L1",
+      "message": "본 답변은 제공된 민법 조항에 기반한 법적 책임의 존재와 범위에 관한 것이며, 구체적인 배상 금액 산정이나 형사 책임에 대해서는 다루지 않는다."
+    }
+  ],
+  "record_schema_version": "1.4",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 354,
+      "dedup_collapse": 92,
+      "evidence_fusion": 354,
+      "first_stage": 400,
+      "request_rerank": 400,
+      "round_selected": 20,
+      "rrf": 400,
+      "selected": 354
+    }
+  },
+  "run_id": "7e205f98-7a6c-4389-91e2-76ac69658355",
+  "skill_generation_diagnostics": {
+    "attempt_count": 6,
+    "attempt_file": "skill_attempts.jsonl",
+    "schema_version": "1.0"
+  },
+  "state": {
+    "accepted_provision_ids": [
+      "민법 752조  생명침해로 인한 위자료#KOBLEX-059909",
+      "민법 750조  불법행위의 내용#KOBLEX-059905"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 3,
+          "issue_count": 3
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 3,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 1,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 3,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_liability",
+        "question_anchor": "을의 배우자와 자녀에게 어떤 책임을 지는가",
+        "requested_output": "갑이 을의 배우자와 자녀에 대해 부담하는 법적 책임의 종류와 범위"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민법 752조  생명침해로 인한 위자료#KOBLEX-059909"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 38.188876434068455,
+        "fusion_rank": 1,
+        "issue_id": "I3",
+        "provision_id": "민법 752조  생명침해로 인한 위자료#KOBLEX-059909",
+        "provision_text": "제752조(생명침해로 인한 위자료) 타인의 생명을 해한 자는 피해자의 직계존속, 직계비속 및 배우자에 대하여는 재산상의 손해없는 경우에도 손해배상의 책임이 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9468410015106201,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E3",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "RQ1"
+        ],
+        "statute_name": "민법 752조  생명침해로 인한 위자료",
+        "target_evidence_item_ids": [
+          "E3",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 225조  비피해자인 고소권자#KOBLEX-232179"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 19.4592678981461,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 225조  비피해자인 고소권자#KOBLEX-232179",
+        "provision_text": "②피해자가 사망한 때에는 그 배우자, 직계친족 또는 형제자매는 고소할 수 있다. 단, 피해자의 명시한 의사에 반하지 못한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.31778621673583984,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 225조  비피해자인 고소권자 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 806조  약혼해제와 손해배상청구권#KOBLEX-060015"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 26.456910771554394,
+        "fusion_rank": 2,
+        "issue_id": "I3",
+        "provision_id": "민법 806조  약혼해제와 손해배상청구권#KOBLEX-060015",
+        "provision_text": "②전항의 경우에는 재산상 손해외에 정신상 고통에 대하여도 손해배상의 책임이 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.2022000253200531,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "RQ1"
+        ],
+        "statute_name": "민법 806조  약혼해제와 손해배상청구권 2항",
+        "target_evidence_item_ids": [
+          "E3",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "경비업법 26조  손해배상 등#KOBLEX-219816"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 56,
+        "first_stage_score": 20.821500775528467,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "경비업법 26조  손해배상 등#KOBLEX-219816",
+        "provision_text": "제26조(손해배상 등)",
+        "rerank_rank": 2,
+        "rerank_score": 0.0393325500190258,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "경비업법 26조  손해배상 등",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 750조#KOBLEX-059904"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 29.720622457574528,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 750조#KOBLEX-059904",
+        "provision_text": "제5장 불법행위",
+        "rerank_rank": 1,
+        "rerank_score": 0.02026154287159443,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 750조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "중재법 18조 6 비용 및 손해배상#KOBLEX-118728"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 71,
+        "first_stage_score": 20.3129898207621,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "중재법 18조 6 비용 및 손해배상#KOBLEX-118728",
+        "provision_text": "제18조의6(비용 및 손해배상)",
+        "rerank_rank": 3,
+        "rerank_score": 0.006232726853340864,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "중재법 18조 6 비용 및 손해배상",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "변호사법 58조 12 손해배상 준비금 등#KOBLEX-087020"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 66,
+        "first_stage_score": 20.3129898207621,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "변호사법 58조 12 손해배상 준비금 등#KOBLEX-087020",
+        "provision_text": "제58조의12(손해배상 준비금 등)",
+        "rerank_rank": 4,
+        "rerank_score": 0.006063139997422695,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "변호사법 58조 12 손해배상 준비금 등",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "보훈보상대상자 지원에 관한 법률 56조  대부 대상자#KOBLEX-072194"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 30,
+        "first_stage_score": 23.3557953999468,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "보훈보상대상자 지원에 관한 법률 56조  대부 대상자#KOBLEX-072194",
+        "provision_text": "3. 제1호에 해당하는 사람이 사망한 경우 그 배우자",
+        "rerank_rank": 5,
+        "rerank_score": 0.005525576416403055,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "보훈보상대상자 지원에 관한 법률 56조  대부 대상자 3호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "전기통신사업법 33조  손해배상#KOBLEX-204017"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 52,
+        "first_stage_score": 21.356125357708827,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "전기통신사업법 33조  손해배상#KOBLEX-204017",
+        "provision_text": "제33조(손해배상)",
+        "rerank_rank": 6,
+        "rerank_score": 0.005039866082370281,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "전기통신사업법 33조  손해배상",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "정보통신망 이용촉진 및 정보보호 등에 관한 법률 60조  손해배상 등#KOBLEX-177142"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 58,
+        "first_stage_score": 20.821500775528467,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 60조  손해배상 등#KOBLEX-177142",
+        "provision_text": "제60조(손해배상 등)",
+        "rerank_rank": 7,
+        "rerank_score": 0.0050027137622237206,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 60조  손해배상 등",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 750조  불법행위의 내용#KOBLEX-059905"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 49.43433257424788,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 750조  불법행위의 내용#KOBLEX-059905",
+        "provision_text": "제750조(불법행위의 내용) 고의 또는 과실로 인한 위법행위로 타인에게 손해를 가한 자는 그 손해를 배상할 책임이 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.447154700756073,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 750조  불법행위의 내용",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 763조  준용규정#KOBLEX-059935"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 22,
+        "first_stage_score": 31.307112054481898,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민법 763조  준용규정#KOBLEX-059935",
+        "provision_text": "제763조(준용규정) 제393조, 제394조, 제396조, 제399조의 규정은 불법행위로 인한 손해배상에 준용한다.",
+        "rerank_rank": 3,
+        "rerank_score": 3.293734698672779e-05,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 763조  준용규정",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국제사법 52조  불법행위#KOBLEX-127881",
+          "국제사법 52조  불법행위#KOBLEX-200562"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 29.720622457574528,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "국제사법 52조  불법행위#KOBLEX-127881",
+        "provision_text": "제52조(불법행위)",
+        "rerank_rank": 4,
+        "rerank_score": 1.688356678641867e-05,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "국제사법 52조  불법행위",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 760조  공동불법행위자의 책임#KOBLEX-059929"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 4.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "민법 760조  공동불법행위자의 책임#KOBLEX-059929",
+        "provision_text": "②공동 아닌 수인의 행위중 어느 자의 행위가 그 손해를 가한 것인지를 알 수 없는 때에도 전항과 같다.",
+        "rerank_rank": 5,
+        "rerank_score": 1.2018951565551106e-05,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 760조  공동불법행위자의 책임 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 760조  공동불법행위자의 책임#KOBLEX-059928"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 4.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "민법 760조  공동불법행위자의 책임#KOBLEX-059928",
+        "provision_text": "①수인이 공동의 불법행위로 타인에게 손해를 가한 때에는 연대하여 그 손해를 배상할 책임이 있다.",
+        "rerank_rank": 6,
+        "rerank_score": 9.420205060450826e-06,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 760조  공동불법행위자의 책임 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 761조  정당방위, 긴급피난#KOBLEX-059932"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 91,
+        "first_stage_score": 4.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "민법 761조  정당방위, 긴급피난#KOBLEX-059932",
+        "provision_text": "①타인의 불법행위에 대하여 자기 또는 제삼자의 이익을 방위하기 위하여 부득이 타인에게 손해를 가한 자는 배상할 책임이 없다. 그러나 피해자는 불법행위에 대하여 손해의 배상을 청구할 수 있다.",
+        "rerank_rank": 7,
+        "rerank_score": 8.538932888768613e-06,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 761조  정당방위, 긴급피난 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 1038조  부당변제 등으로 인한 책임#KOBLEX-060651"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 80,
+        "first_stage_score": 24.929602369998015,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "민법 1038조  부당변제 등으로 인한 책임#KOBLEX-060651",
+        "provision_text": "제1038조(부당변제 등으로 인한 책임)",
+        "rerank_rank": 8,
+        "rerank_score": 7.162423571571708e-06,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 1038조  부당변제 등으로 인한 책임",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국가배상법 3조  배상기준#KOBLEX-073115"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 33.2579766037786,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "국가배상법 3조  배상기준#KOBLEX-073115",
+        "provision_text": "④ 생명ㆍ신체에 대한 침해와 물건의 멸실ㆍ훼손으로 인한 손해 외의 손해는 불법행위와 상당한 인과관계가 있는 범위에서 배상한다.",
+        "rerank_rank": 9,
+        "rerank_score": 6.0020920500392094e-06,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "국가배상법 3조  배상기준 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059942"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 92,
+        "first_stage_score": 4.0,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059942",
+        "provision_text": "②불법행위를 한 날로부터 10년을 경과한 때에도 전항과 같다.",
+        "rerank_rank": 10,
+        "rerank_score": 4.779539722221671e-06,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 766조  손해배상청구권의 소멸시효 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "경비업법 26조  손해배상 등#KOBLEX-219816": "제26조(손해배상 등)",
+      "국가배상법 3조  배상기준#KOBLEX-073115": "④ 생명ㆍ신체에 대한 침해와 물건의 멸실ㆍ훼손으로 인한 손해 외의 손해는 불법행위와 상당한 인과관계가 있는 범위에서 배상한다.",
+      "국제사법 52조  불법행위#KOBLEX-127881": "제52조(불법행위)",
+      "민법 1038조  부당변제 등으로 인한 책임#KOBLEX-060651": "제1038조(부당변제 등으로 인한 책임)",
+      "민법 750조  불법행위의 내용#KOBLEX-059905": "제750조(불법행위의 내용) 고의 또는 과실로 인한 위법행위로 타인에게 손해를 가한 자는 그 손해를 배상할 책임이 있다.",
+      "민법 750조#KOBLEX-059904": "제5장 불법행위",
+      "민법 752조  생명침해로 인한 위자료#KOBLEX-059909": "제752조(생명침해로 인한 위자료) 타인의 생명을 해한 자는 피해자의 직계존속, 직계비속 및 배우자에 대하여는 재산상의 손해없는 경우에도 손해배상의 책임이 있다.",
+      "민법 760조  공동불법행위자의 책임#KOBLEX-059928": "①수인이 공동의 불법행위로 타인에게 손해를 가한 때에는 연대하여 그 손해를 배상할 책임이 있다.",
+      "민법 760조  공동불법행위자의 책임#KOBLEX-059929": "②공동 아닌 수인의 행위중 어느 자의 행위가 그 손해를 가한 것인지를 알 수 없는 때에도 전항과 같다.",
+      "민법 761조  정당방위, 긴급피난#KOBLEX-059932": "①타인의 불법행위에 대하여 자기 또는 제삼자의 이익을 방위하기 위하여 부득이 타인에게 손해를 가한 자는 배상할 책임이 없다. 그러나 피해자는 불법행위에 대하여 손해의 배상을 청구할 수 있다.",
+      "민법 763조  준용규정#KOBLEX-059935": "제763조(준용규정) 제393조, 제394조, 제396조, 제399조의 규정은 불법행위로 인한 손해배상에 준용한다.",
+      "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059942": "②불법행위를 한 날로부터 10년을 경과한 때에도 전항과 같다.",
+      "민법 806조  약혼해제와 손해배상청구권#KOBLEX-060015": "②전항의 경우에는 재산상 손해외에 정신상 고통에 대하여도 손해배상의 책임이 있다.",
+      "변호사법 58조 12 손해배상 준비금 등#KOBLEX-087020": "제58조의12(손해배상 준비금 등)",
+      "보훈보상대상자 지원에 관한 법률 56조  대부 대상자#KOBLEX-072194": "3. 제1호에 해당하는 사람이 사망한 경우 그 배우자",
+      "전기통신사업법 33조  손해배상#KOBLEX-204017": "제33조(손해배상)",
+      "정보통신망 이용촉진 및 정보보호 등에 관한 법률 60조  손해배상 등#KOBLEX-177142": "제60조(손해배상 등)",
+      "중재법 18조 6 비용 및 손해배상#KOBLEX-118728": "제18조의6(비용 및 손해배상)",
+      "형사소송법 225조  비피해자인 고소권자#KOBLEX-232179": "②피해자가 사망한 때에는 그 배우자, 직계친족 또는 형제자매는 고소할 수 있다. 단, 피해자의 명시한 의사에 반하지 못한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 750조  불법행위의 내용#KOBLEX-059905"
+            ],
+            "rationale": "C011(민법 제750조)이 고의 또는 과실, 위법행위, 손해, 배상책임의 관계를 명확히 규정하여 구성요건 확인을 가능하게 한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민법 750조  불법행위의 내용#KOBLEX-059905"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "민법 제750조(C011)가 불법행위의 일반적 구성요건을 명시적으로 규정하여, 이전 평가에서 지적된 법적 근거 부재 문제를 해결하고 완결 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 752조  생명침해로 인한 위자료#KOBLEX-059909"
+            ],
+            "rationale": "C001(민법 제752조)이 피해자의 직계비속 및 배우자의 청구권을 명시적으로 규정하고 있다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민법 752조  생명침해로 인한 위자료#KOBLEX-059909"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "민법 제752조(C001)가 사망 피해자의 배우자와 직계비속(자녀)의 손해배상 청구권을 명시적으로 인정하여, 해당 증거 항목의 완결 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 752조  생명침해로 인한 위자료#KOBLEX-059909"
+            ],
+            "rationale": "C001(민법 제752조)이 '재산상의 손해없는 경우에도 손해배상의 책임이 있다'고 규정하여 정신적 손해 배상의 근거를 제공한다.",
+            "requirement_id": "E3-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E3",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민법 752조  생명침해로 인한 위자료#KOBLEX-059909"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "민법 제752조(C001)가 재산상 손해가 없는 경우에도 손해배상 책임이 있음을 명시하여, 재산상 손해 부존재 시에도 인정되는 손해배상(정신적 손해 등)의 범위를 확인하는 완결 기준을 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 750조  불법행위의 내용#KOBLEX-059905",
+        "support_spans": [
+          {
+            "end_char": 67,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 752조  생명침해로 인한 위자료#KOBLEX-059909",
+        "support_spans": [
+          {
+            "end_char": 90,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E3",
+        "issue_id": "I3",
+        "provision_id": "민법 752조  생명침해로 인한 위자료#KOBLEX-059909",
+        "support_spans": [
+          {
+            "end_char": 90,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 9,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "살인 또는 상해치사 행위로 인한 불법행위 성립 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "피해자의 사망으로 인한 제3자(배우자, 자녀)의 손해배상 청구권 존재 여부",
+        "issue_id": "I2"
+      },
+      {
+        "description": "재산상 손해의 부존재가 손해배상 책임을 배제하는지 여부",
+        "issue_id": "I3"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을과 다툼 끝에 을을 심하게 다치게 하였고, 결국 을은 병원에서 사망하게 되었다. 을에게는 배우자인 병과 자녀인 정이 있었다. 병과 정은 갑에게 을의 사망으로 인한 손해배상을 청구하였다. 갑은 을의 사망으로 인해 병과 정이 구체적인 재산상의 손해를 입지 않았다는 이유로 손해배상의 책임이 없다고 주장한다. [질문] 갑은 을을 사망에 이르게 한 경우, 을의 배우자와 자녀에게 어떤 책임을 지는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "민법 불법행위 손해배상 책임 위법성 과실",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "불법행위",
+          "손해배상",
+          "위법성",
+          "과실",
+          "민법"
+        ],
+        "query_text": "위법한 행위로 타인의 권리를 침해한 자는 손해배상의 책임을 진다 [원문 맥락] 갑은 을의 사망으로 인해 병과 정이 구체적인 재산상의 손해를 입지 않았다는 이유로 손해배상의 책임이 없다고 주장한다. 갑은 을을 사망에 이르게 한 경우, 을의 배우자와 자녀에게 어떤 책임을 지는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "불법행위 일반적 구성요건 및 책임 발생 근거",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "사망 손해배상 청구권자 배우자 자녀 제3자",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "사망",
+          "배우자",
+          "자녀",
+          "손해배상",
+          "청구권"
+        ],
+        "query_text": "사망 피해자 배우자 자녀 손해배상 청구권 [원문 맥락] 갑은 을의 사망으로 인해 병과 정이 구체적인 재산상의 손해를 입지 않았다는 이유로 손해배상의 책임이 없다고 주장한다. 갑은 을을 사망에 이르게 한 경우, 을의 배우자와 자녀에게 어떤 책임을 지는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "피해자 사망 시 배우자와 자녀의 독립적 손해배상 청구권",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "first_stage_query_text": "사망 위자료 정신적 손해 재산상 손해 구별",
+        "issue_id": "I3",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "위자료",
+          "정신적손해",
+          "재산상손해",
+          "사망",
+          "손해배상"
+        ],
+        "query_text": "재산상 손해 없음에도 인정되는 정신적 손해배상 위자료 [원문 맥락] 갑은 을의 사망으로 인해 병과 정이 구체적인 재산상의 손해를 입지 않았다는 이유로 손해배상의 책임이 없다고 주장한다. 갑은 을을 사망에 이르게 한 경우, 을의 배우자와 자녀에게 어떤 책임을 지는가?",
+        "request_id": "RQ3",
+        "rerank_query_text": "재산상 손해 부존재 시에도 청구 가능한 손해배상 범위",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "민법 제750조 불법행위 손해배상 책임 위법한 행위로 인한 손해",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민법",
+          "제750조",
+          "불법행위",
+          "손해배상",
+          "위법한행위",
+          "손해"
+        ],
+        "query_text": "민법 제750조 불법행위 손해배상 책임 위법한 행위로 인한 손해 [원문 맥락] 갑은 을의 사망으로 인해 병과 정이 구체적인 재산상의 손해를 입지 않았다는 이유로 손해배상의 책임이 없다고 주장한다. 갑은 을을 사망에 이르게 한 경우, 을의 배우자와 자녀에게 어떤 책임을 지는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "민법 제750조 불법행위 일반적 구성요건 및 책임 발생 근거",
+        "statute_hints": [
+          "민법 제750조"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을과 다툼 끝에 을을 심하게 다치게 하였고, 결국 을은 병원에서 사망하게 되었다. 을에게는 배우자인 병과 자녀인 정이 있었다. 병과 정은 갑에게 을의 사망으로 인한 손해배상을 청구하였다. 갑은 을의 사망으로 인해 병과 정이 구체적인 재산상의 손해를 입지 않았다는 이유로 손해배상의 책임이 없다고 주장한다.\n\n[질문]\n갑은 을을 사망에 이르게 한 경우, 을의 배우자와 자녀에게 어떤 책임을 지는가?",
+    "remaining_request_budget": 5,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "불법행위 성립 요건(위법성, 과실, 손해, 인과관계)을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "민법상 불법행위의 일반적 구성요건 확인"
+          }
+        ],
+        "critical": true,
+        "description": "불법행위의 일반적 구성요건 및 책임 발생 근거",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "책임의 기초가 되는 불법행위 성립 여부를 판단하기 위해 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "배우자와 자녀가 독립적인 손해배상 청구권을 가지는지 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "사망 피해자의 배우자 및 자녀의 손해배상 청구권 인정 여부 확인"
+          }
+        ],
+        "critical": true,
+        "description": "사망에 따른 제3자(배우자, 자녀)의 손해배상 청구권 인정 근거",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 묻는 '배우자와 자녀에게 어떤 책임'의 주체와 범위를 결정하기 위해 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "재산상 손해가 없더라도 청구 가능한 손해의 종류(예: 위자료) 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E3-R1",
+            "text": "재산상 손해와 무관하게 인정되는 손해배상 항목(정신적 손해 등) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "재산상 손해의 부존재 시에도 인정되는 손해배상(정신적 손해 등)의 범위",
+        "evidence_item_id": "E3",
+        "evidence_type": "exception",
+        "issue_id": "I3",
+        "necessity_reason": "갑의 항변(재산상 손해 없음)을 반박하고 실제 책임 범위를 특정하기 위해 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "7e205f98-7a6c-4389-91e2-76ac69658355",
+    "seen_provision_ids": [
+      "민법 763조  준용규정#KOBLEX-059935",
+      "정보통신망 이용촉진 및 정보보호 등에 관한 법률 60조  손해배상 등#KOBLEX-177142",
+      "국제사법 52조  불법행위#KOBLEX-127881",
+      "민법 806조  약혼해제와 손해배상청구권#KOBLEX-060015",
+      "민법 760조  공동불법행위자의 책임#KOBLEX-059928",
+      "민법 1038조  부당변제 등으로 인한 책임#KOBLEX-060651",
+      "보훈보상대상자 지원에 관한 법률 56조  대부 대상자#KOBLEX-072194",
+      "국가배상법 3조  배상기준#KOBLEX-073115",
+      "민법 760조  공동불법행위자의 책임#KOBLEX-059929",
+      "민법 752조  생명침해로 인한 위자료#KOBLEX-059909",
+      "전기통신사업법 33조  손해배상#KOBLEX-204017",
+      "변호사법 58조 12 손해배상 준비금 등#KOBLEX-087020",
+      "형사소송법 225조  비피해자인 고소권자#KOBLEX-232179",
+      "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059942",
+      "민법 750조#KOBLEX-059904",
+      "중재법 18조 6 비용 및 손해배상#KOBLEX-118728",
+      "민법 761조  정당방위, 긴급피난#KOBLEX-059932",
+      "경비업법 26조  손해배상 등#KOBLEX-219816",
+      "민법 750조  불법행위의 내용#KOBLEX-059905"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

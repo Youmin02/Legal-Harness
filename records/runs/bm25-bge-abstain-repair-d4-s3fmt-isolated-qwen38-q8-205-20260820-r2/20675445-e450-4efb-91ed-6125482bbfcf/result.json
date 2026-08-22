@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T15:35:46.570827+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 158290.36,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 144 column 20 (char 4237)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "20675445-e450-4efb-91ed-6125482bbfcf",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 144 column 20 (char 4237)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 대통령 선거에 출마하기로 결심하고 후보자로 등록하고자 한다. 을은 국회의원 선거에 출마하기로 결심하고 후보자로 등록하고자 한다. 두 사람은 선거운동을 언제부터 할 수 있는지와 후보자 등록 시 납부해야 하는 기탁금의 액수를 알고 싶어 한다. [질문] 갑과 을은 각자의 선거운동을 언제부터 할 수 있으며, 후보자 등록 시 납부해야 하는 기탁금은 각각 얼마인가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n갑은 대통령 선거에 출마하기로 결심하고 후보자로 등록하고자 한다. 을은 국회의원 선거에 출마하기로 결심하고 후보자로 등록하고자 한다. 두 사람은 선거운동을 언제부터 할 수 있는지와 후보자 등록 시 납부해야 하는 기탁금의 액수를 알고 싶어 한다.\n\n[질문]\n갑과 을은 각자의 선거운동을 언제부터 할 수 있으며, 후보자 등록 시 납부해야 하는 기탁금은 각각 얼마인가?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "20675445-e450-4efb-91ed-6125482bbfcf",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

@@ -1,0 +1,997 @@
+{
+  "abstention_reason": null,
+  "answer": "피고인이 항소한 사건에 대해서는 원심판결의 형보다 무거운 형을 선고할 수 없다.[CT1]\n전제: 갑이 단독으로 항소한 것으로 가정합니다.\n한계: 상고심에서의 형량 가중 제한 여부에 대한 법적 근거가 제공되지 않아 해당 부분(T2)에 대한 답변을 보류합니다.",
+  "answer_mode": "limited",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "피고인이 항소한 사건에 대해서는 원심판결의 형보다 무거운 형을 선고할 수 없다.[CT1]\n전제: 갑이 단독으로 항소한 것으로 가정합니다.\n한계: 상고심에서의 형량 가중 제한 여부에 대한 법적 근거가 제공되지 않아 해당 부분(T2)에 대한 답변을 보류합니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T03:58:14.138492+00:00",
+  "deferred_target_ids": [
+    "T2"
+  ],
+  "end_to_end_latency_ms": 568043.508,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 380,
+      "dedup_collapse": 131,
+      "evidence_fusion": 380,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "round_selected": 30,
+      "rrf": 400,
+      "selected": 380
+    }
+  },
+  "run_id": "cd4aa380-6766-432c-9d70-36f89bbce489",
+  "state": {
+    "accepted_provision_ids": [
+      "형사소송법 368조  불이익변경의 금지#KOBLEX-232756"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 5,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 3,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [
+            "T2"
+          ],
+          "explanation": "Only the citable answer targets will be answered; remaining targets are deferred.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 1,
+          "deferred_target_ids": [
+            "T2"
+          ]
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "limited",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "원심판결보다 무거운 형을 선고할 수 있는가",
+        "requested_output": "항소심에서 피고인만 항소한 경우 원심보다 무거운 형을 선고할 수 있는지 여부"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "상고의 경우에도 같은 규정이 적용되는가",
+        "requested_output": "상고심에서 피고인만 상고한 경우 원심보다 무거운 형을 선고할 수 있는지 여부"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "형사소송법 368조  불이익변경의 금지#KOBLEX-232756"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 29.83694430769112,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 368조  불이익변경의 금지#KOBLEX-232756",
+        "provision_text": "제368조(불이익변경의 금지) 피고인이 항소한 사건과 피고인을 위하여 항소한 사건에 대해서는 원심판결의 형보다 무거운 형을 선고할 수 없다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999858140945435,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형사소송법 368조  불이익변경의 금지",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 437조  불이익변경의 금지#KOBLEX-093548",
+          "군사법원법 437조  불이익변경의 금지#KOBLEX-159513"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 30.27066142954355,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 437조  불이익변경의 금지#KOBLEX-093548",
+        "provision_text": "제437조(불이익변경의 금지) 피고인이 항소한 사건과 피고인을 위하여 항소한 사건에 대하여는 원심판결의 형보다 무거운 형을 선고하지 못한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9999814033508301,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "군사법원법 437조  불이익변경의 금지",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 387조  변론능력#KOBLEX-232793"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 30.11756796390371,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 387조  변론능력#KOBLEX-232793",
+        "provision_text": "제387조(변론능력) 상고심에는 변호인 아니면 피고인을 위하여 변론하지 못한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.025753507390618324,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형사소송법 387조  변론능력",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 339조  항고권자#KOBLEX-232666"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 66,
+        "first_stage_score": 20.13845305970939,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 339조  항고권자#KOBLEX-232666",
+        "provision_text": "제339조(항고권자) 검사 또는 피고인 아닌 자가 결정을 받은 때에는 항고할 수 있다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.0034039258025586605,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 339조  항고권자",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 430조  상고심의 심리절차#KOBLEX-064627"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 26.255737781171256,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 430조  상고심의 심리절차#KOBLEX-064627",
+        "provision_text": "제430조(상고심의 심리절차)",
+        "rerank_rank": 5,
+        "rerank_score": 0.0004121216188650578,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사소송법 430조  상고심의 심리절차",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 423조  변호인의 자격과 변론능력#KOBLEX-093528",
+          "군사법원법 423조  변호인의 자격과 변론능력#KOBLEX-159493"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 29.53793950833157,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 423조  변호인의 자격과 변론능력#KOBLEX-093528",
+        "provision_text": "② 항소심에서는 변호인이 아니면 피고인을 위하여 변론하지 못한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.0003879076102748513,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "군사법원법 423조  변호인의 자격과 변론능력 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 13조  관할의 경합#KOBLEX-231440"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 13조  관할의 경합#KOBLEX-231440",
+        "provision_text": "제13조(관할의 경합) 같은 사건이 사물관할이 같은 여러 개의 법원에 계속된 때에는 먼저 공소를 받은 법원이 심판한다. 다만, 각 법원에 공통되는 바로 위의 상급법원은 검사나 피고인의 신청에 의하여 결정으로 뒤에 공소를 받은 법원으로 하여금 심판하게 할 수 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0003783476131502539,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 13조  관할의 경합",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 248조  공소의 효력 범위#KOBLEX-232271"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 44,
+        "first_stage_score": 21.849360980588703,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 248조  공소의 효력 범위#KOBLEX-232271",
+        "provision_text": "①공소의 효력은 검사가 피고인으로 지정한 자에게만 미친다. <개정 2020.12.8>",
+        "rerank_rank": 6,
+        "rerank_score": 0.000364345294656232,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 248조  공소의 효력 범위 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 389조 2 피고인의 소환 여부#KOBLEX-232798"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 31.229966529850884,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 389조 2 피고인의 소환 여부#KOBLEX-232798",
+        "provision_text": "제389조의2(피고인의 소환 여부) 상고심의 공판기일에는 피고인의 소환을 요하지 아니한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.00036327081033959985,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형사소송법 389조 2 피고인의 소환 여부",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "가사소송법 19조  항소#KOBLEX-064839"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 26.449589442683738,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "가사소송법 19조  항소#KOBLEX-064839",
+        "provision_text": "제19조(항소)",
+        "rerank_rank": 7,
+        "rerank_score": 0.0002382732491241768,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "가사소송법 19조  항소",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 501조 12 불이익 변경의 금지#KOBLEX-093717",
+          "군사법원법 501조 12 불이익 변경의 금지#KOBLEX-159682"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 39,
+        "first_stage_score": 18.26753935556614,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 501조 12 불이익 변경의 금지#KOBLEX-093717",
+        "provision_text": "제501조의12(불이익 변경의 금지) 피고인이 정식재판을 청구한 사건에 대하여는 약식명령의 형보다 무거운 형을 선고하지 못한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.8587931394577026,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "군사법원법 501조 12 불이익 변경의 금지",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 457조 2 형종 상향의 금지 등#KOBLEX-232942"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 2.0,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 457조 2 형종 상향의 금지 등#KOBLEX-232942",
+        "provision_text": "① 피고인이 정식재판을 청구한 사건에 대하여는 약식명령의 형보다 중한 종류의 형을 선고하지 못한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.7079326510429382,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형사소송법 457조 2 형종 상향의 금지 등 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 457조 2 형종 상향의 금지 등#KOBLEX-232943"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 2.0,
+        "fusion_rank": 13,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 457조 2 형종 상향의 금지 등#KOBLEX-232943",
+        "provision_text": "② 피고인이 정식재판을 청구한 사건에 대하여 약식명령의 형보다 중한 형을 선고하는 경우에는 판결서에 양형의 이유를 적어야 한다.",
+        "rerank_rank": 13,
+        "rerank_score": 0.12476316094398499,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형사소송법 457조 2 형종 상향의 금지 등 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 386조  변호인의 자격#KOBLEX-232792"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 22,
+        "first_stage_score": 22.34081258893287,
+        "fusion_rank": 16,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 386조  변호인의 자격#KOBLEX-232792",
+        "provision_text": "제386조(변호인의 자격) 상고심에는 변호사 아닌 자를 변호인으로 선임하지 못한다.",
+        "rerank_rank": 16,
+        "rerank_score": 0.0011474256170913577,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형사소송법 386조  변호인의 자격",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 422조#KOBLEX-064611"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 27.800605483463315,
+        "fusion_rank": 19,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 422조#KOBLEX-064611",
+        "provision_text": "제2장 상고",
+        "rerank_rank": 19,
+        "rerank_score": 0.0003715715429279953,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사소송법 422조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 371조#KOBLEX-232759"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 27.800605483463315,
+        "fusion_rank": 14,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 371조#KOBLEX-232759",
+        "provision_text": "제3장 상고",
+        "rerank_rank": 14,
+        "rerank_score": 0.0005383334355428815,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형사소송법 371조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 450조  준용규정#KOBLEX-093583",
+          "군사법원법 450조  준용규정#KOBLEX-159548"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 22.85314960784759,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 450조  준용규정#KOBLEX-093583",
+        "provision_text": "② 상고심의 절차에 관하여 이 절에 특별한 규정이 없으면 「형사소송법」 중 상고심에 관한 규정에 따른다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.0004884182708337903,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "군사법원법 450조  준용규정 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상고심절차에 관한 특례법 5조  판결의 특례#KOBLEX-027564"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 31,
+        "first_stage_score": 25.442668856013416,
+        "fusion_rank": 18,
+        "issue_id": "I2",
+        "provision_id": "상고심절차에 관한 특례법 5조  판결의 특례#KOBLEX-027564",
+        "provision_text": "② 제1항의 판결은 선고(宣告)가 필요하지 아니하며, 상고인에게 송달됨으로써 그 효력이 생긴다.",
+        "rerank_rank": 18,
+        "rerank_score": 0.00023705347848590463,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상고심절차에 관한 특례법 5조  판결의 특례 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "가사소송법 19조  항소#KOBLEX-064839": "제19조(항소)",
+      "군사법원법 423조  변호인의 자격과 변론능력#KOBLEX-093528": "② 항소심에서는 변호인이 아니면 피고인을 위하여 변론하지 못한다.",
+      "군사법원법 437조  불이익변경의 금지#KOBLEX-093548": "제437조(불이익변경의 금지) 피고인이 항소한 사건과 피고인을 위하여 항소한 사건에 대하여는 원심판결의 형보다 무거운 형을 선고하지 못한다.",
+      "군사법원법 450조  준용규정#KOBLEX-093583": "② 상고심의 절차에 관하여 이 절에 특별한 규정이 없으면 「형사소송법」 중 상고심에 관한 규정에 따른다.",
+      "군사법원법 501조 12 불이익 변경의 금지#KOBLEX-093717": "제501조의12(불이익 변경의 금지) 피고인이 정식재판을 청구한 사건에 대하여는 약식명령의 형보다 무거운 형을 선고하지 못한다.",
+      "민사소송법 422조#KOBLEX-064611": "제2장 상고",
+      "민사소송법 430조  상고심의 심리절차#KOBLEX-064627": "제430조(상고심의 심리절차)",
+      "상고심절차에 관한 특례법 5조  판결의 특례#KOBLEX-027564": "② 제1항의 판결은 선고(宣告)가 필요하지 아니하며, 상고인에게 송달됨으로써 그 효력이 생긴다.",
+      "형사소송법 13조  관할의 경합#KOBLEX-231440": "제13조(관할의 경합) 같은 사건이 사물관할이 같은 여러 개의 법원에 계속된 때에는 먼저 공소를 받은 법원이 심판한다. 다만, 각 법원에 공통되는 바로 위의 상급법원은 검사나 피고인의 신청에 의하여 결정으로 뒤에 공소를 받은 법원으로 하여금 심판하게 할 수 있다.",
+      "형사소송법 248조  공소의 효력 범위#KOBLEX-232271": "①공소의 효력은 검사가 피고인으로 지정한 자에게만 미친다. <개정 2020.12.8>",
+      "형사소송법 339조  항고권자#KOBLEX-232666": "제339조(항고권자) 검사 또는 피고인 아닌 자가 결정을 받은 때에는 항고할 수 있다.",
+      "형사소송법 368조  불이익변경의 금지#KOBLEX-232756": "제368조(불이익변경의 금지) 피고인이 항소한 사건과 피고인을 위하여 항소한 사건에 대해서는 원심판결의 형보다 무거운 형을 선고할 수 없다.",
+      "형사소송법 371조#KOBLEX-232759": "제3장 상고",
+      "형사소송법 386조  변호인의 자격#KOBLEX-232792": "제386조(변호인의 자격) 상고심에는 변호사 아닌 자를 변호인으로 선임하지 못한다.",
+      "형사소송법 387조  변론능력#KOBLEX-232793": "제387조(변론능력) 상고심에는 변호인 아니면 피고인을 위하여 변론하지 못한다.",
+      "형사소송법 389조 2 피고인의 소환 여부#KOBLEX-232798": "제389조의2(피고인의 소환 여부) 상고심의 공판기일에는 피고인의 소환을 요하지 아니한다.",
+      "형사소송법 457조 2 형종 상향의 금지 등#KOBLEX-232942": "① 피고인이 정식재판을 청구한 사건에 대하여는 약식명령의 형보다 중한 종류의 형을 선고하지 못한다.",
+      "형사소송법 457조 2 형종 상향의 금지 등#KOBLEX-232943": "② 피고인이 정식재판을 청구한 사건에 대하여 약식명령의 형보다 중한 형을 선고하는 경우에는 판결서에 양형의 이유를 적어야 한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형사소송법 368조  불이익변경의 금지#KOBLEX-232756"
+            ],
+            "rationale": "C001은 피고인 단독 항소 시 형량 가중 금지 원칙을 직접 규정하고 있다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형사소송법 368조  불이익변경의 금지#KOBLEX-232756"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001(형사소송법 제368조)은 피고인 단독 항소 시 항소심에서 원심보다 무거운 형을 선고할 수 없음을 명확히 규정하고 있어, E1의 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "상고심 형량 가중 제한에 관한 규정이 후보 목록에 포함되어 있지 않다.",
+            "requirement_id": "E2-R1",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "uncovered",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "E2-R1"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "제출된 후보 규정 중 상고심에서의 형량 가중 제한(불이익변경의 금지)에 대한 명시적 규정이 없다. C001은 항소심에 한정되어 있으며, C003, C009 등은 상고심 절차의 다른 측면(변론능력, 소환)만을 다루고 있어 형량 가중 제한에 대한 법적 근거를 제공하지 못한다.",
+        "status": "uncovered"
+      }
+    ],
+    "deferred_target_ids": [
+      "T2"
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 368조  불이익변경의 금지#KOBLEX-232756",
+        "support_spans": [
+          {
+            "end_char": 78,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 3,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "피고인 단독 항소 시 항소심의 형량 가중 제한",
+        "issue_id": "I1"
+      },
+      {
+        "description": "피고인 단독 상고 시 상고심의 형량 가중 제한",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "피고인만 상고한 경우 상고심에서 원심보다 무거운 형을 선고할 수 있는지 여부에 대한 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "피고인 단독 상고 시 상고심의 형량 가중 제한 여부 확인"
+          }
+        ],
+        "critical": true,
+        "description": "피고인 단독 상고 시 상고심의 형량 가중 제한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문 T2의 핵심 결론인 상고심 형량 가중 가능 여부를 판단하기 위해 필수적인 규정",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 갑은 폭행죄로 1심에서 징역 1년을 선고받았다. 갑은 형이 너무 무겁다고 판단하여 항소를 제기하였고, 검사는 이에 대해 항소를 제기하지 않았다. 항소심에서 갑의 형량이 더 무거워질 수 있는지,그리고 만약 상고를 한다면 같은 규정이 적용되는지에 대해 궁금해졌다. [질문] 갑이 항소한 사건에서 원심판결보다 무거운 형을 선고할 수 있는가, 그리고 상고의 경우에도 같은 규정이 적용되는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "항소심 형량 가중 금지 피고인 항소 검사가 항소하지 않은 경우",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "항소심",
+          "형량",
+          "가중",
+          "금지",
+          "피고인",
+          "단독",
+          "항소"
+        ],
+        "query_text": "피고인 단독 항소 시 항소심 형량 가중 금지 규정 [원문 맥락] 항소심에서 갑의 형량이 더 무거워질 수 있는지,그리고 만약 상고를 한다면 같은 규정이 적용되는지에 대해 궁금해졌다. 갑이 항소한 사건에서 원심판결보다 무거운 형을 선고할 수 있는가, 그리고 상고의 경우에도 같은 규정이 적용되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "피고인만 항소한 사건에서 항소심 법원이 원심보다 무거운 형을 선고할 수 있는지 여부",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "상고심 형량 가중 금지 피고인 상고 검사가 상고하지 않은 경우",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "상고심",
+          "형량",
+          "가중",
+          "제한",
+          "피고인",
+          "단독",
+          "상고"
+        ],
+        "query_text": "피고인 단독 상고 시 상고심 형량 가중 제한 규정 [원문 맥락] 항소심에서 갑의 형량이 더 무거워질 수 있는지,그리고 만약 상고를 한다면 같은 규정이 적용되는지에 대해 궁금해졌다. 갑이 항소한 사건에서 원심판결보다 무거운 형을 선고할 수 있는가, 그리고 상고의 경우에도 같은 규정이 적용되는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "피고인만 상고한 사건에서 상고심 법원이 원심보다 무거운 형을 선고할 수 있는지 여부",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "형사소송법 상고심 불이익변경 금지 피고인 단독 상고",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사소송법",
+          "상고심",
+          "불이익변경",
+          "금지",
+          "피고인",
+          "단독",
+          "상고"
+        ],
+        "query_text": "형사소송법 상고심 불이익변경의 금지 규정 [원문 맥락] 항소심에서 갑의 형량이 더 무거워질 수 있는지,그리고 만약 상고를 한다면 같은 규정이 적용되는지에 대해 궁금해졌다. 갑이 항소한 사건에서 원심판결보다 무거운 형을 선고할 수 있는가, 그리고 상고의 경우에도 같은 규정이 적용되는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "피고인만 상고한 경우 상고심에서 원심보다 무거운 형을 선고할 수 있는지 여부",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "상고심 형량 가중 금지 원칙 피고인 이익",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "상고심",
+          "형량",
+          "가중",
+          "금지",
+          "원칙",
+          "불이익"
+        ],
+        "query_text": "상고심 형량 가중 금지 원칙 [원문 맥락] 항소심에서 갑의 형량이 더 무거워질 수 있는지,그리고 만약 상고를 한다면 같은 규정이 적용되는지에 대해 궁금해졌다. 갑이 항소한 사건에서 원심판결보다 무거운 형을 선고할 수 있는가, 그리고 상고의 경우에도 같은 규정이 적용되는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "상고심에서 피고인에게 불리한 형량 변경을 금지하는 법적 원칙",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "형사소송법 368조 항소심 불이익변경 금지 상고심 적용",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사소송법",
+          "제368조",
+          "상고심",
+          "불이익변경",
+          "금지",
+          "적용"
+        ],
+        "query_text": "형사소송법 제368조 항소심 불이익변경 금지 상고심 적용 여부 [원문 맥락] 항소심에서 갑의 형량이 더 무거워질 수 있는지,그리고 만약 상고를 한다면 같은 규정이 적용되는지에 대해 궁금해졌다. 갑이 항소한 사건에서 원심판결보다 무거운 형을 선고할 수 있는가, 그리고 상고의 경우에도 같은 규정이 적용되는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "상고심에서 피고인 단독 상고 시 원심보다 무거운 형 선고 금지 규정",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "상고심 피고인 단독 상고 원심보다 무거운 형 선고 금지",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "상고심",
+          "피고인",
+          "단독",
+          "상고",
+          "형량",
+          "가중",
+          "금지"
+        ],
+        "query_text": "상고심에서 피고인만 상고한 경우 원심판결보다 무거운 형을 선고할 수 없다 [원문 맥락] 항소심에서 갑의 형량이 더 무거워질 수 있는지,그리고 만약 상고를 한다면 같은 규정이 적용되는지에 대해 궁금해졌다. 갑이 항소한 사건에서 원심판결보다 무거운 형을 선고할 수 있는가, 그리고 상고의 경우에도 같은 규정이 적용되는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "상고심에서 피고인 단독 상고 시 형량 가중 금지 원칙",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 폭행죄로 1심에서 징역 1년을 선고받았다. 갑은 형이 너무 무겁다고 판단하여 항소를 제기하였고, 검사는  이에 대해 항소를  제기하지 않았다. 항소심에서 갑의 형량이 더 무거워질 수 있는지,그리고 만약 상고를 한다면 같은 규정이 적용되는지에 대해 궁금해졌다.\n\n[질문]\n갑이 항소한 사건에서 원심판결보다 무거운 형을 선고할 수 있는가, 그리고 상고의 경우에도 같은 규정이 적용되는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "피고인만 항소한 경우 항소심에서 원심보다 무거운 형을 선고할 수 없다는 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "피고인 단독 항소 시 항소심의 형량 가중 금지 원칙 확인"
+          }
+        ],
+        "critical": true,
+        "description": "피고인 단독 항소 시 항소심의 형량 가중을 금지하는 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문 T1의 핵심 결론인 항소심 형량 가중 가능 여부를 판단하기 위해 필수적인 규정",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "피고인만 상고한 경우 상고심에서 원심보다 무거운 형을 선고할 수 있는지 여부에 대한 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "피고인 단독 상고 시 상고심의 형량 가중 제한 여부 확인"
+          }
+        ],
+        "critical": true,
+        "description": "피고인 단독 상고 시 상고심의 형량 가중 제한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문 T2의 핵심 결론인 상고심 형량 가중 가능 여부를 판단하기 위해 필수적인 규정",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "cd4aa380-6766-432c-9d70-36f89bbce489",
+    "seen_provision_ids": [
+      "민사소송법 430조  상고심의 심리절차#KOBLEX-064627",
+      "군사법원법 423조  변호인의 자격과 변론능력#KOBLEX-093528",
+      "가사소송법 19조  항소#KOBLEX-064839",
+      "형사소송법 248조  공소의 효력 범위#KOBLEX-232271",
+      "형사소송법 13조  관할의 경합#KOBLEX-231440",
+      "군사법원법 501조 12 불이익 변경의 금지#KOBLEX-093717",
+      "형사소송법 457조 2 형종 상향의 금지 등#KOBLEX-232942",
+      "형사소송법 386조  변호인의 자격#KOBLEX-232792",
+      "형사소송법 371조#KOBLEX-232759",
+      "민사소송법 422조#KOBLEX-064611",
+      "형사소송법 389조 2 피고인의 소환 여부#KOBLEX-232798",
+      "형사소송법 387조  변론능력#KOBLEX-232793",
+      "군사법원법 450조  준용규정#KOBLEX-093583",
+      "형사소송법 339조  항고권자#KOBLEX-232666",
+      "군사법원법 437조  불이익변경의 금지#KOBLEX-093548",
+      "형사소송법 368조  불이익변경의 금지#KOBLEX-232756",
+      "상고심절차에 관한 특례법 5조  판결의 특례#KOBLEX-027564",
+      "형사소송법 457조 2 형종 상향의 금지 등#KOBLEX-232943"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

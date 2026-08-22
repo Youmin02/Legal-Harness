@@ -1,0 +1,614 @@
+{
+  "abstention_reason": null,
+  "answer": "특정공무원범죄에 관한 몰수 및 추징의 시효는 「형법」 제78조에도 불구하고 10년으로 규정되어 있습니다.[CT1]\n몰수 대상 재산을 몰수할 수 없는 경우에는 그 가액을 추징하는 법적 조치를 취할 수 있습니다.[CT2]\n전제: 갑의 횡령 범죄가 「공무원범죄에 관한 몰수 특례법」에서 규정하는 '특정공무원범죄'에 해당한다고 가정합니다.\n한계: 본 답변은 제공된 법령 조항에 기반한 법적 규칙과 절차적 조치에 한정되며, 개별 사건의 구체적 사실관계에 따른 최종 법적 판단을 대체하지 않습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "특정공무원범죄에 관한 몰수 및 추징의 시효는 「형법」 제78조에도 불구하고 10년으로 규정되어 있습니다.[CT1]\n몰수 대상 재산을 몰수할 수 없는 경우에는 그 가액을 추징하는 법적 조치를 취할 수 있습니다.[CT2]\n전제: 갑의 횡령 범죄가 「공무원범죄에 관한 몰수 특례법」에서 규정하는 '특정공무원범죄'에 해당한다고 가정합니다.\n한계: 본 답변은 제공된 법령 조항에 기반한 법적 규칙과 절차적 조치에 한정되며, 개별 사건의 구체적 사실관계에 따른 최종 법적 판단을 대체하지 않습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T04:47:59.406081+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 204467.325,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 172,
+      "dedup_collapse": 48,
+      "evidence_fusion": 172,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 172
+    }
+  },
+  "run_id": "22777381-b072-4a87-93ec-0959b510b4d1",
+  "state": {
+    "accepted_provision_ids": [
+      "형법 78조  형의 시효의 기간#KOBLEX-192847",
+      "형법 48조  몰수의 대상과 추징#KOBLEX-192754",
+      "공무원범죄에 관한 몰수 특례법 9조 4 몰수ㆍ추징의 시효#KOBLEX-038546"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "statutory_period",
+        "question_anchor": "불법 재산 몰수의 시효는 몇 년이며",
+        "requested_output": "불법 재산 몰수 청구의 소멸시효 기간"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_remedy",
+        "question_anchor": "재산을 몰수할 수 없는 경우에는 어떤 법적 조치를 취할 수 있는가",
+        "requested_output": "몰수가 불가능할 때 적용되는 대체 법적 조치(대체추징 등)"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "공무원범죄에 관한 몰수 특례법 9조 4 몰수ㆍ추징의 시효#KOBLEX-038546"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 24.647629557924184,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "공무원범죄에 관한 몰수 특례법 9조 4 몰수ㆍ추징의 시효#KOBLEX-038546",
+        "provision_text": "제9조의4(몰수ㆍ추징의 시효) 특정공무원범죄에 관한 몰수ㆍ추징의 시효는 「형법」 제78조에도 불구하고 10년으로 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.05126408115029335,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "공무원범죄에 관한 몰수 특례법 9조 4 몰수ㆍ추징의 시효",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 655조  파산수뢰죄#KOBLEX-033586"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 73,
+        "first_stage_score": 15.922395959454072,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 655조  파산수뢰죄#KOBLEX-033586",
+        "provision_text": "②제1항의 경우 범인 또는 그 정을 아는 제3자가 수수한 뇌물은 몰수한다. 이 경우 몰수가 불가능한 때에는 그 가액을 추징한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.03372735157608986,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 655조  파산수뢰죄 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 78조  형의 시효의 기간#KOBLEX-192847"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 63,
+        "first_stage_score": 18.37282953059318,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형법 78조  형의 시효의 기간#KOBLEX-192847",
+        "provision_text": "6. 5년 미만의 자격정지, 벌금, 몰수 또는 추징: 5년",
+        "rerank_rank": 2,
+        "rerank_score": 0.03133416175842285,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형법 78조  형의 시효의 기간 6호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 48조  몰수의 대상과 추징#KOBLEX-192754"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "형법 48조  몰수의 대상과 추징#KOBLEX-192754",
+        "provision_text": "② 제1항 각 호의 물건을 몰수할 수 없을 때에는 그 가액(價額)을 추징한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.018682148307561874,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "형법 48조  몰수의 대상과 추징 2항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "특정범죄 가중처벌 등에 관한 법률 13조  몰수#KOBLEX-050730",
+          "특정범죄 가중처벌 등에 관한 법률 13조  몰수#KOBLEX-080762",
+          "특정범죄 가중처벌 등에 관한 법률 13조  몰수#KOBLEX-107098",
+          "특정범죄 가중처벌 등에 관한 법률 13조  몰수#KOBLEX-107700"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 17.84705729741844,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "특정범죄 가중처벌 등에 관한 법률 13조  몰수#KOBLEX-050730",
+        "provision_text": "제13조(몰수) 제3조 또는 제12조의 죄를 범하여 범인이 취득한 해당 재산은 몰수하며, 몰수할 수 없을 때에는 그 가액을 추징(追徵)한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.014233706519007683,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "특정범죄 가중처벌 등에 관한 법률 13조  몰수",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "증권관련 집단소송법 62조  몰수·추징#KOBLEX-178691"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 68,
+        "first_stage_score": 16.224087809450417,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "증권관련 집단소송법 62조  몰수·추징#KOBLEX-178691",
+        "provision_text": "제62조(몰수·추징) 제60조 및 제61조의 죄를 범한 자 또는 그 정을 아는 제3자가 취득한 금품 또는 재산상의 이익은 몰수하며, 몰수할 수 없을 때에는 그 가액을 추징(追徵)한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.005403574556112289,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "증권관련 집단소송법 62조  몰수·추징",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 633조  몰수, 추징#KOBLEX-115889"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 44,
+        "first_stage_score": 17.6246776090369,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "상법 633조  몰수, 추징#KOBLEX-115889",
+        "provision_text": "제633조(몰수, 추징) 제630조제1항 또는 제631조제1항의 경우에는 범인이 수수한 이익은 이를 몰수한다. 그 전부 또는 일부를 몰수하기 불능한 때에는 그 가액을 추징한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.004483393393456936,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "상법 633조  몰수, 추징",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 145조  몰수ㆍ추징#KOBLEX-107612"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 46,
+        "first_stage_score": 17.209139811120384,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "신탁법 145조  몰수ㆍ추징#KOBLEX-107612",
+        "provision_text": "제145조(몰수ㆍ추징) 제143조제1항의 경우 범인이 수수한 이익은 몰수한다. 그 전부 또는 일부를 몰수하기 불가능한 경우에는 그 가액을 추징한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.0035659365821629763,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "신탁법 145조  몰수ㆍ추징",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 206조  몰수, 추징#KOBLEX-193101"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 37,
+        "first_stage_score": 18.07578455282164,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "형법 206조  몰수, 추징#KOBLEX-193101",
+        "provision_text": "제206조(몰수, 추징) 본장의 죄에 제공한 아편, 몰핀이나 그 화합물 또는 아편흡식기구는 몰수한다. 그를 몰수하기 불능한 때에는 그 가액을 추징한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.0015422167489305139,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "형법 206조  몰수, 추징",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "성매매알선 등 행위의 처벌에 관한 법률 25조  몰수 및 추징#KOBLEX-191476"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 63,
+        "first_stage_score": 16.409047844535564,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "성매매알선 등 행위의 처벌에 관한 법률 25조  몰수 및 추징#KOBLEX-191476",
+        "provision_text": "제25조(몰수 및 추징) 제18조부터 제20조까지에 규정된 죄를 범한 사람이 그 범죄로 인하여 얻은 금품이나 그 밖의 재산은 몰수하고, 몰수할 수 없는 경우에는 그 가액(價額)을 추징한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.0014941393164917827,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "성매매알선 등 행위의 처벌에 관한 법률 25조  몰수 및 추징",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공무원범죄에 관한 몰수 특례법 9조 4 몰수ㆍ추징의 시효#KOBLEX-038546": "제9조의4(몰수ㆍ추징의 시효) 특정공무원범죄에 관한 몰수ㆍ추징의 시효는 「형법」 제78조에도 불구하고 10년으로 한다.",
+      "상법 633조  몰수, 추징#KOBLEX-115889": "제633조(몰수, 추징) 제630조제1항 또는 제631조제1항의 경우에는 범인이 수수한 이익은 이를 몰수한다. 그 전부 또는 일부를 몰수하기 불능한 때에는 그 가액을 추징한다.",
+      "성매매알선 등 행위의 처벌에 관한 법률 25조  몰수 및 추징#KOBLEX-191476": "제25조(몰수 및 추징) 제18조부터 제20조까지에 규정된 죄를 범한 사람이 그 범죄로 인하여 얻은 금품이나 그 밖의 재산은 몰수하고, 몰수할 수 없는 경우에는 그 가액(價額)을 추징한다.",
+      "신탁법 145조  몰수ㆍ추징#KOBLEX-107612": "제145조(몰수ㆍ추징) 제143조제1항의 경우 범인이 수수한 이익은 몰수한다. 그 전부 또는 일부를 몰수하기 불가능한 경우에는 그 가액을 추징한다.",
+      "증권관련 집단소송법 62조  몰수·추징#KOBLEX-178691": "제62조(몰수·추징) 제60조 및 제61조의 죄를 범한 자 또는 그 정을 아는 제3자가 취득한 금품 또는 재산상의 이익은 몰수하며, 몰수할 수 없을 때에는 그 가액을 추징(追徵)한다.",
+      "채무자 회생 및 파산에 관한 법률 655조  파산수뢰죄#KOBLEX-033586": "②제1항의 경우 범인 또는 그 정을 아는 제3자가 수수한 뇌물은 몰수한다. 이 경우 몰수가 불가능한 때에는 그 가액을 추징한다.",
+      "특정범죄 가중처벌 등에 관한 법률 13조  몰수#KOBLEX-050730": "제13조(몰수) 제3조 또는 제12조의 죄를 범하여 범인이 취득한 해당 재산은 몰수하며, 몰수할 수 없을 때에는 그 가액을 추징(追徵)한다.",
+      "형법 206조  몰수, 추징#KOBLEX-193101": "제206조(몰수, 추징) 본장의 죄에 제공한 아편, 몰핀이나 그 화합물 또는 아편흡식기구는 몰수한다. 그를 몰수하기 불능한 때에는 그 가액을 추징한다.",
+      "형법 48조  몰수의 대상과 추징#KOBLEX-192754": "② 제1항 각 호의 물건을 몰수할 수 없을 때에는 그 가액(價額)을 추징한다.",
+      "형법 78조  형의 시효의 기간#KOBLEX-192847": "6. 5년 미만의 자격정지, 벌금, 몰수 또는 추징: 5년"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "공무원범죄에 관한 몰수 특례법 9조 4 몰수ㆍ추징의 시효#KOBLEX-038546",
+              "형법 78조  형의 시효의 기간#KOBLEX-192847"
+            ],
+            "rationale": "C001이 공무원범죄에 관한 몰수 시효를 10년으로 명시하여 요구사항을 충족한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "공무원범죄에 관한 몰수 특례법 9조 4 몰수ㆍ추징의 시효#KOBLEX-038546",
+          "형법 78조  형의 시효의 기간#KOBLEX-192847"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "공무원범죄에 관한 몰수 특례법 제9조의4(C001)가 공무원 횡령 범죄에 적용되는 몰수 시효를 10년으로 명확히 규정하고 있어, 질문에서 요구하는 몰수 시효 기간에 대한 법적 근거가 충족된다. 형법 제78조(C003)는 일반법적 시효를 제공하지만, 특별법(C001)이 우선 적용되는 점을 고려할 때 C001이 핵심 근거가 된다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형법 48조  몰수의 대상과 추징#KOBLEX-192754"
+            ],
+            "rationale": "C004가 몰수 불가능 시 가액 추징을 규정하여 요구사항을 충족한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형법 48조  몰수의 대상과 추징#KOBLEX-192754"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "형법 제48조 제2항(C004)은 몰수할 수 없을 때 그 가액을 추징하도록 규정하여, 몰수 불가능 시 적용되는 대체 법적 조치(대체추징)의 법적 근거를 명확히 제공한다. 이는 질문에서 요구하는 몰수 불가능 시의 법적 조치에 대한 근거를 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "공무원범죄에 관한 몰수 특례법 9조 4 몰수ㆍ추징의 시효#KOBLEX-038546",
+        "support_spans": [
+          {
+            "end_char": 66,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형법 78조  형의 시효의 기간#KOBLEX-192847",
+        "support_spans": [
+          {
+            "end_char": 32,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형법 48조  몰수의 대상과 추징#KOBLEX-192754",
+        "support_spans": [
+          {
+            "end_char": 43,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "공무원 횡령 범죄로 취득한 불법 재산에 대한 몰수 청구의 소멸시효 기간은 얼마인지",
+        "issue_id": "I1"
+      },
+      {
+        "description": "몰수 대상 재산을 몰수할 수 없는 경우 법원이 취할 수 있는 대체적 법적 조치는 무엇인지",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 재직 중 자금을 횡령한 혐의로 유죄 판결을 받은 공무원이다. 이 범죄를 통해 취득한 불법 재산은 몰수 대상이지만, 법적 복잡성으로 인해 직접적으로 몰수하는 것이 어려울 수 있다. 갑은 이러한 재산 몰수 또는 그에 대한 대체 추징에 있어 소멸시효가 어떻게 되는지 걱정하고 있다. [질문] 공무원인 갑의 횡령 사건에서, 불법 재산 몰수의 시효는 몇 년이며, 재산을 몰수할 수 없는 경우에는 어떤 법적 조치를 취할 수 있는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "몰수 소멸시효 기간 형법",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "몰수",
+          "소멸시효",
+          "기간",
+          "형법"
+        ],
+        "query_text": "형법 몰수 청구 소멸시효 기간 [원문 맥락] 갑은 이러한 재산 몰수 또는 그에 대한 대체 추징에 있어 소멸시효가 어떻게 되는지 걱정하고 있다. 공무원인 갑의 횡령 사건에서, 불법 재산 몰수의 시효는 몇 년이며, 재산을 몰수할 수 없는 경우에는 어떤 법적 조치를 취할 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "몰수 청구 소멸시효 기간 몇 년",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "대체추징 몰수 불가능 형법",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "대체추징",
+          "몰수",
+          "불가능",
+          "법적조치",
+          "형법"
+        ],
+        "query_text": "몰수 불가능 시 대체추징 법적 조치 [원문 맥락] 갑은 이러한 재산 몰수 또는 그에 대한 대체 추징에 있어 소멸시효가 어떻게 되는지 걱정하고 있다. 공무원인 갑의 횡령 사건에서, 불법 재산 몰수의 시효는 몇 년이며, 재산을 몰수할 수 없는 경우에는 어떤 법적 조치를 취할 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "몰수 불가능 시 대체추징 또는 기타 법적 조치",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 재직 중 자금을 횡령한 혐의로 유죄 판결을 받은 공무원이다. 이 범죄를 통해 취득한 불법 재산은 몰수 대상이지만, 법적 복잡성으로 인해 직접적으로 몰수하는 것이 어려울 수 있다. 갑은 이러한 재산 몰수 또는 그에 대한 대체 추징에 있어 소멸시효가 어떻게 되는지 걱정하고 있다.\n\n[질문]\n공무원인 갑의 횡령 사건에서, 불법 재산 몰수의 시효는 몇 년이며, 재산을 몰수할 수 없는 경우에는 어떤 법적 조치를 취할 수 있는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "몰수 청구의 소멸시효 기간(년 단위)을 명시하는 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "몰수 청구의 소멸시효 기간을 명시하는 조항의 내용을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "형법상 몰수 청구의 소멸시효 기간을 규정하는 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "limitation",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 직접적으로 몰수 시효 기간을 묻고 있으므로, 해당 기간을 확정하기 위한 핵심 근거",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "몰수 불가능 시 적용되는 대체 법적 조치의 종류와 요건을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "몰수 불가능 시 적용되는 대체추징 또는 기타 법적 조치의 법적 근거를 확인"
+          }
+        ],
+        "critical": true,
+        "description": "몰수 대상 재산을 몰수할 수 없는 경우 적용되는 대체추징 또는 기타 법적 조치에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "remedy",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 몰수 불가능 시의 법적 조치를 묻고 있으므로, 해당 조치의 법적 근거가 필수적",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "22777381-b072-4a87-93ec-0959b510b4d1",
+    "seen_provision_ids": [
+      "형법 48조  몰수의 대상과 추징#KOBLEX-192754",
+      "채무자 회생 및 파산에 관한 법률 655조  파산수뢰죄#KOBLEX-033586",
+      "신탁법 145조  몰수ㆍ추징#KOBLEX-107612",
+      "상법 633조  몰수, 추징#KOBLEX-115889",
+      "공무원범죄에 관한 몰수 특례법 9조 4 몰수ㆍ추징의 시효#KOBLEX-038546",
+      "특정범죄 가중처벌 등에 관한 법률 13조  몰수#KOBLEX-050730",
+      "성매매알선 등 행위의 처벌에 관한 법률 25조  몰수 및 추징#KOBLEX-191476",
+      "형법 78조  형의 시효의 기간#KOBLEX-192847",
+      "형법 206조  몰수, 추징#KOBLEX-193101",
+      "증권관련 집단소송법 62조  몰수·추징#KOBLEX-178691"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

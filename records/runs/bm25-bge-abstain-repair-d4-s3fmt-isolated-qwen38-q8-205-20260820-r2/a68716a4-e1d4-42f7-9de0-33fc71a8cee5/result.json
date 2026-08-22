@@ -1,0 +1,598 @@
+{
+  "abstention_reason": null,
+  "answer": "신탁채권은 수익자가 수탁자에게 신탁재산에 속한 재산의 인도와 그 밖에 신탁재산에 기한 급부를 요구하는 청구권(수익채권)보다 우선합니다.[CT1]\n수탁자가 변경된 경우, 신수탁자는 전수탁자가 신탁행위로 인하여 수익자에게 부담하는 채무를 승계합니다.[CT2]\n전제: 을이 갑의 재산을 관리하는 기간에 발생한 제3자에 대한 채권이 '신탁채권'에 해당한다고 가정합니다.\n전제: 병이 정에게 요구하는 신탁재산 일부에 대한 인도 청구가 '수익채권'에 해당한다고 가정합니다.\n한계: 본 답변은 제공된 신탁법 조항에 근거한 일반적 법적 관계 설명이며, 구체적인 사건의 사실관계(예: 채권의 발생 시점, 신탁계약의 특수한 약정 등)에 따른 예외나 세부적 적용은 다루지 않습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "신탁채권은 수익자가 수탁자에게 신탁재산에 속한 재산의 인도와 그 밖에 신탁재산에 기한 급부를 요구하는 청구권(수익채권)보다 우선합니다.[CT1]\n수탁자가 변경된 경우, 신수탁자는 전수탁자가 신탁행위로 인하여 수익자에게 부담하는 채무를 승계합니다.[CT2]\n전제: 을이 갑의 재산을 관리하는 기간에 발생한 제3자에 대한 채권이 '신탁채권'에 해당한다고 가정합니다.\n전제: 병이 정에게 요구하는 신탁재산 일부에 대한 인도 청구가 '수익채권'에 해당한다고 가정합니다.\n한계: 본 답변은 제공된 신탁법 조항에 근거한 일반적 법적 관계 설명이며, 구체적인 사건의 사실관계(예: 채권의 발생 시점, 신탁계약의 특수한 약정 등)에 따른 예외나 세부적 적용은 다루지 않습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T05:26:17.393992+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 239204.112,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 197,
+      "dedup_collapse": 6,
+      "evidence_fusion": 197,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 197
+    }
+  },
+  "run_id": "a68716a4-e1d4-42f7-9de0-33fc71a8cee5",
+  "state": {
+    "accepted_provision_ids": [
+      "신탁법 62조  수익채권과 신탁채권의 관계#KOBLEX-107305",
+      "채무자 회생 및 파산에 관한 법률 578조 16 신탁재산 파산 시 파산채권의 순위#KOBLEX-033286",
+      "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107267"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_relationship",
+        "question_anchor": "어느 쪽이 우선순위가 있으며",
+        "requested_output": "수익채권과 신탁채권 간 우선순위 관계"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_rule",
+        "question_anchor": "어떻게 승계하는가",
+        "requested_output": "수탁자 변경 시 채무 승계 방식"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "신탁법 62조  수익채권과 신탁채권의 관계#KOBLEX-107305"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 38.42456848697633,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "신탁법 62조  수익채권과 신탁채권의 관계#KOBLEX-107305",
+        "provision_text": "제62조(수익채권과 신탁채권의 관계) 신탁채권은 수익자가 수탁자에게 신탁재산에 속한 재산의 인도와 그 밖에 신탁재산에 기한 급부를 요구하는 청구권(이하 \"수익채권\"이라 한다)보다 우선한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.999964714050293,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "신탁법 62조  수익채권과 신탁채권의 관계",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107267"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 30.43504594848705,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107267",
+        "provision_text": "① 수탁자가 변경된 경우 신수탁자는 전수탁자(前受託者)가 신탁행위로 인하여 수익자에게 부담하는 채무를 승계한다. 수탁자가 여럿인 경우 일부의 수탁자가 변경된 경우에도 또한 같다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9994955062866211,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "신탁법 53조  신수탁자의 의무의 승계 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 578조 16 신탁재산 파산 시 파산채권의 순위#KOBLEX-033286"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 24.674516040152866,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 578조 16 신탁재산 파산 시 파산채권의 순위#KOBLEX-033286",
+        "provision_text": "① 유한책임신탁재산에 대하여 파산선고가 있는 경우 신탁채권은 「신탁법」 제62조에 따른 수익채권보다 우선한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9994282126426697,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 578조 16 신탁재산 파산 시 파산채권의 순위 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "종합부동산세법 16조 2 물적납세의무에 대한 납부특례#KOBLEX-210794"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 27.72410829684374,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "종합부동산세법 16조 2 물적납세의무에 대한 납부특례#KOBLEX-210794",
+        "provision_text": "③ 신탁재산의 수탁자가 변경되는 경우에 새로운 수탁자는 제1항에 따라 이전의 수탁자에게 고지된 납세의무를 승계한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9749379754066467,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "종합부동산세법 16조 2 물적납세의무에 대한 납부특례 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방세법 119조 2 신탁재산 수탁자의 물적납세의무#KOBLEX-102571"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 27.72410829684374,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "지방세법 119조 2 신탁재산 수탁자의 물적납세의무#KOBLEX-102571",
+        "provision_text": "④ 신탁재산의 수탁자가 변경되는 경우에 새로운 수탁자는 제2항에 따라 이전의 수탁자에게 고지된 납세의무를 승계한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9639754891395569,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "지방세법 119조 2 신탁재산 수탁자의 물적납세의무 4항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부가가치세법 52조 2 신탁 관련 제2차 납세의무 등에 대한 납부 특례#KOBLEX-127006"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 26.097926367693447,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "부가가치세법 52조 2 신탁 관련 제2차 납세의무 등에 대한 납부 특례#KOBLEX-127006",
+        "provision_text": "④ 신탁재산의 수탁자가 변경되는 경우에 새로운 수탁자는 제2항에 따라 이전의 수탁자에게 고지된 납세의무를 승계한다. <개정 2020.12.22>",
+        "rerank_rank": 4,
+        "rerank_score": 0.949883759021759,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "부가가치세법 52조 2 신탁 관련 제2차 납세의무 등에 대한 납부 특례 4항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 55조  사무의 인계#KOBLEX-107274"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 3.0,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "신탁법 55조  사무의 인계#KOBLEX-107274",
+        "provision_text": "① 수탁자가 변경된 경우 전수탁자와 그 밖의 관계자는 신탁사무의 계산을 하고, 수익자의 입회하에 신수탁자에게 사무를 인계하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.9498497843742371,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "신탁법 55조  사무의 인계 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "법인세법 75조 16 법인과세 신탁재산의 소득금액 계산#KOBLEX-209310"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 28.495212456965028,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "법인세법 75조 16 법인과세 신탁재산의 소득금액 계산#KOBLEX-209310",
+        "provision_text": "① 수탁자의 변경에 따라 법인과세 신탁재산의 수탁자가 그 법인과세 신탁재산에 대한 자산과 부채를 변경되는 수탁자에게 이전하는 경우 그 자산과 부채의 이전가액을 수탁자 변경일 현재의 장부가액으로 보아 이전에 따른 손익은 없는 것으로 한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.13809503614902496,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "법인세법 75조 16 법인과세 신탁재산의 소득금액 계산 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 89조  반대수익자의 수익권매수청구권#KOBLEX-107456"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 70,
+        "first_stage_score": 20.865150887285075,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "신탁법 89조  반대수익자의 수익권매수청구권#KOBLEX-107456",
+        "provision_text": "⑦ 수탁자는 수익권매수청구에 대한 채무의 경우 신탁재산만으로 책임을 진다. 다만, 신탁행위 또는 신탁변경의 합의로 달리 정한 경우에는 그에 따른다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.02876044064760208,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "신탁법 89조  반대수익자의 수익권매수청구권 7항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 66조  수익권에 대한 질권#KOBLEX-107323"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 1.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "신탁법 66조  수익권에 대한 질권#KOBLEX-107323",
+        "provision_text": "④ 수익권을 목적으로 하는 질권은 그 수익권에 기한 수익채권과 이 법 또는 신탁행위에 따라 그 수익권을 갈음하여 수익자가 받을 금전이나 그 밖의 재산에도 존재한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.013761302456259727,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "신탁법 66조  수익권에 대한 질권 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "법인세법 75조 16 법인과세 신탁재산의 소득금액 계산#KOBLEX-209310": "① 수탁자의 변경에 따라 법인과세 신탁재산의 수탁자가 그 법인과세 신탁재산에 대한 자산과 부채를 변경되는 수탁자에게 이전하는 경우 그 자산과 부채의 이전가액을 수탁자 변경일 현재의 장부가액으로 보아 이전에 따른 손익은 없는 것으로 한다.",
+      "부가가치세법 52조 2 신탁 관련 제2차 납세의무 등에 대한 납부 특례#KOBLEX-127006": "④ 신탁재산의 수탁자가 변경되는 경우에 새로운 수탁자는 제2항에 따라 이전의 수탁자에게 고지된 납세의무를 승계한다. <개정 2020.12.22>",
+      "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107267": "① 수탁자가 변경된 경우 신수탁자는 전수탁자(前受託者)가 신탁행위로 인하여 수익자에게 부담하는 채무를 승계한다. 수탁자가 여럿인 경우 일부의 수탁자가 변경된 경우에도 또한 같다.",
+      "신탁법 55조  사무의 인계#KOBLEX-107274": "① 수탁자가 변경된 경우 전수탁자와 그 밖의 관계자는 신탁사무의 계산을 하고, 수익자의 입회하에 신수탁자에게 사무를 인계하여야 한다.",
+      "신탁법 62조  수익채권과 신탁채권의 관계#KOBLEX-107305": "제62조(수익채권과 신탁채권의 관계) 신탁채권은 수익자가 수탁자에게 신탁재산에 속한 재산의 인도와 그 밖에 신탁재산에 기한 급부를 요구하는 청구권(이하 \"수익채권\"이라 한다)보다 우선한다.",
+      "신탁법 66조  수익권에 대한 질권#KOBLEX-107323": "④ 수익권을 목적으로 하는 질권은 그 수익권에 기한 수익채권과 이 법 또는 신탁행위에 따라 그 수익권을 갈음하여 수익자가 받을 금전이나 그 밖의 재산에도 존재한다.",
+      "신탁법 89조  반대수익자의 수익권매수청구권#KOBLEX-107456": "⑦ 수탁자는 수익권매수청구에 대한 채무의 경우 신탁재산만으로 책임을 진다. 다만, 신탁행위 또는 신탁변경의 합의로 달리 정한 경우에는 그에 따른다.",
+      "종합부동산세법 16조 2 물적납세의무에 대한 납부특례#KOBLEX-210794": "③ 신탁재산의 수탁자가 변경되는 경우에 새로운 수탁자는 제1항에 따라 이전의 수탁자에게 고지된 납세의무를 승계한다.",
+      "지방세법 119조 2 신탁재산 수탁자의 물적납세의무#KOBLEX-102571": "④ 신탁재산의 수탁자가 변경되는 경우에 새로운 수탁자는 제2항에 따라 이전의 수탁자에게 고지된 납세의무를 승계한다.",
+      "채무자 회생 및 파산에 관한 법률 578조 16 신탁재산 파산 시 파산채권의 순위#KOBLEX-033286": "① 유한책임신탁재산에 대하여 파산선고가 있는 경우 신탁채권은 「신탁법」 제62조에 따른 수익채권보다 우선한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "신탁법 62조  수익채권과 신탁채권의 관계#KOBLEX-107305",
+              "채무자 회생 및 파산에 관한 법률 578조 16 신탁재산 파산 시 파산채권의 순위#KOBLEX-033286"
+            ],
+            "rationale": "C001과 C003은 신탁채권이 수익채권보다 우선한다는 점을 명확히 규정하고 있어, 요구된 우선순위 관계 확인 기준을 충족한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "신탁법 62조  수익채권과 신탁채권의 관계#KOBLEX-107305",
+          "채무자 회생 및 파산에 관한 법률 578조 16 신탁재산 파산 시 파산채권의 순위#KOBLEX-033286"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "신탁법 제62조(C001)가 신탁채권의 우선성을 일반 원칙으로 명시하고, 채무자 회생 및 파산에 관한 법률 제578조 제16항(C003)이 파산 상황에서의 우선성을 재확인함으로써, 수익채권과 신탁채권 간 우선순위 관계에 대한 법적 근거가 충분히 확보되었다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107267"
+            ],
+            "rationale": "C002는 수탁자 변경 시 채무 승계 방식을 명확히 규정하고 있어, 요구된 기준을 충족한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107267"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "신탁법 제53조 제1항(C002)은 수탁자 변경 시 신수탁자가 전수탁자의 채무를 승계한다고 명시하여, 질문에서 요구하는 채무 승계 방식에 대한 법적 근거를 완전히 제공한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "신탁법 62조  수익채권과 신탁채권의 관계#KOBLEX-107305",
+        "support_spans": [
+          {
+            "end_char": 105,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 578조 16 신탁재산 파산 시 파산채권의 순위#KOBLEX-033286",
+        "support_spans": [
+          {
+            "end_char": 61,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107267",
+        "support_spans": [
+          {
+            "end_char": 99,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "수익자의 수익채권과 신탁채권 간 우선순위",
+        "issue_id": "I1"
+      },
+      {
+        "description": "수탁자 변경 시 채무 승계",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 자신의 재산을 을을 수탁자로 하여 신탁을 설정하고 병을 수익자로 지정하였다. 을은 신탁 재산을 관리하며, 병은 신탁 재산에서 이익을 얻을 권리가 있다. 시간이 흘러, 을의 개인 사정으로 인해 신탁의 수탁자가 정으로 변경되었다. 이후, 병은 신탁 재산의 일부에 대한 인도를 정에게 요구하였다. 한편, 을이 신탁 재산을 관리하는 동안 발생한 제3자에 대한 신탁채권이 남아 있는 상황이다. [질문] 병이 정에게 신탁 재산의 일부에 대한 인도를 요구할 수 있는 수익채권과 을이 갑의 재산을 관리하는 기간에 발생한 신탁채권 중 어느 쪽이 우선순위가 있으며, 정이 수탁자로 변경된 경우, 정은 을이 신탁행위로 인하여 병에게 부담하는 채무를 어떻게 승계하는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "수익채권 신탁채권 우선순위 변제",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "수익채권",
+          "신탁채권",
+          "우선순위",
+          "변제"
+        ],
+        "query_text": "수익채권 신탁채권 우선순위 [원문 맥락] 한편, 을이 신탁 재산을 관리하는 동안 발생한 제3자에 대한 신탁채권이 남아 있는 상황이다. 병이 정에게 신탁 재산의 일부에 대한 인도를 요구할 수 있는 수익채권과 을이 갑의 재산을 관리하는 기간에 발생한 신탁채권 중 어느 쪽이 우선순위가 있으며, 정이 수탁자로 변경된 경우, 정은 을이 신탁행위로 인하여 병에게 부담하는 채무를 어떻게 승계하는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "수익채권과 신탁채권 간 우선순위 관계",
+        "statute_hints": [
+          "신탁법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "수탁자 변경 채무 승계 신탁",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "수탁자",
+          "변경",
+          "채무",
+          "승계"
+        ],
+        "query_text": "수탁자 변경 채무 승계 [원문 맥락] 한편, 을이 신탁 재산을 관리하는 동안 발생한 제3자에 대한 신탁채권이 남아 있는 상황이다. 병이 정에게 신탁 재산의 일부에 대한 인도를 요구할 수 있는 수익채권과 을이 갑의 재산을 관리하는 기간에 발생한 신탁채권 중 어느 쪽이 우선순위가 있으며, 정이 수탁자로 변경된 경우, 정은 을이 신탁행위로 인하여 병에게 부담하는 채무를 어떻게 승계하는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "수탁자 변경 시 채무 승계 방식",
+        "statute_hints": [
+          "신탁법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 자신의 재산을 을을 수탁자로 하여 신탁을 설정하고 병을 수익자로 지정하였다. 을은 신탁 재산을 관리하며, 병은 신탁 재산에서 이익을 얻을 권리가 있다. 시간이 흘러, 을의 개인 사정으로 인해 신탁의 수탁자가 정으로 변경되었다. 이후, 병은 신탁 재산의 일부에 대한 인도를 정에게 요구하였다. 한편, 을이 신탁 재산을 관리하는 동안 발생한 제3자에 대한 신탁채권이 남아 있는 상황이다.\n\n[질문]\n병이 정에게 신탁 재산의 일부에 대한 인도를 요구할 수 있는 수익채권과 을이 갑의 재산을 관리하는 기간에 발생한 신탁채권 중 어느 쪽이 우선순위가 있으며, 정이 수탁자로 변경된 경우, 정은 을이 신탁행위로 인하여 병에게 부담하는 채무를 어떻게 승계하는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "수익채권과 신탁채권 간 우선순위 관계를 명시하는 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "수익채권과 신탁채권 간 우선순위 관계가 명시된 조항을 확인한다"
+          }
+        ],
+        "critical": true,
+        "description": "수익채권과 신탁채권 간 우선순위 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 우선순위 결론을 도출하기 위한 핵심 근거",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "수탁자 변경 시 채무 승계 방식을 명시하는 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "수탁자 변경 시 채무 승계 방식이 명시된 조항을 확인한다"
+          }
+        ],
+        "critical": true,
+        "description": "수탁자 변경 시 채무 승계 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 요구하는 채무 승계 방식을 설명하기 위한 핵심 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "a68716a4-e1d4-42f7-9de0-33fc71a8cee5",
+    "seen_provision_ids": [
+      "신탁법 62조  수익채권과 신탁채권의 관계#KOBLEX-107305",
+      "신탁법 53조  신수탁자의 의무의 승계#KOBLEX-107267",
+      "종합부동산세법 16조 2 물적납세의무에 대한 납부특례#KOBLEX-210794",
+      "채무자 회생 및 파산에 관한 법률 578조 16 신탁재산 파산 시 파산채권의 순위#KOBLEX-033286",
+      "지방세법 119조 2 신탁재산 수탁자의 물적납세의무#KOBLEX-102571",
+      "부가가치세법 52조 2 신탁 관련 제2차 납세의무 등에 대한 납부 특례#KOBLEX-127006",
+      "법인세법 75조 16 법인과세 신탁재산의 소득금액 계산#KOBLEX-209310",
+      "신탁법 89조  반대수익자의 수익권매수청구권#KOBLEX-107456",
+      "신탁법 66조  수익권에 대한 질권#KOBLEX-107323",
+      "신탁법 55조  사무의 인계#KOBLEX-107274"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

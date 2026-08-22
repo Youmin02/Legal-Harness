@@ -1,0 +1,616 @@
+{
+  "abstention_reason": null,
+  "answer": "사무처리를 그르치게 할 목적으로 공무원 또는 공무소의 전자기록등 특수매체기록을 위작 또는 변작한 자는 10년 이하의 징역에 처한다.[CT1]\n제225조 내지 제228조의 죄에 의하여 만들어진 전자기록등 특수매체기록을 행사한 자는 그 각 죄에 정한 형에 처한다.[CT2]\n전제: 갑의 행위가 '사무처리를 그르치게 할 목적'을 가지고 이루어졌다고 가정합니다.\n전제: 을이 행사한 전자기록이 형법 제225조 내지 제228조의 죄에 의하여 만들어진 것임을 전제합니다.\n한계: 본 답변은 제공된 형법 조문에 근거한 일반적 법적 규정을 설명하며, 개별 사건의 구체적 사실관계에 따른 최종 법적 판단을 대체하지 않습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "사무처리를 그르치게 할 목적으로 공무원 또는 공무소의 전자기록등 특수매체기록을 위작 또는 변작한 자는 10년 이하의 징역에 처한다.[CT1]\n제225조 내지 제228조의 죄에 의하여 만들어진 전자기록등 특수매체기록을 행사한 자는 그 각 죄에 정한 형에 처한다.[CT2]\n전제: 갑의 행위가 '사무처리를 그르치게 할 목적'을 가지고 이루어졌다고 가정합니다.\n전제: 을이 행사한 전자기록이 형법 제225조 내지 제228조의 죄에 의하여 만들어진 것임을 전제합니다.\n한계: 본 답변은 제공된 형법 조문에 근거한 일반적 법적 규정을 설명하며, 개별 사건의 구체적 사실관계에 따른 최종 법적 판단을 대체하지 않습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T13:30:21.676021+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 276119.961,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 188,
+      "dedup_collapse": 22,
+      "evidence_fusion": 188,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 188
+    }
+  },
+  "run_id": "5cd545b7-b010-40fc-b231-11457b2d20fc",
+  "state": {
+    "accepted_provision_ids": [
+      "형법 229조  위조등 공문서의 행사#KOBLEX-193142",
+      "형법 227조 2 공전자기록위작ㆍ변작#KOBLEX-193138"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "penalty",
+        "question_anchor": "갑과 을은 각각 어떤 형벌을 받게 되는가",
+        "requested_output": "갑과 을의 각각의 형벌 내용"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "형법 227조 2 공전자기록위작ㆍ변작#KOBLEX-193138"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 55.41293557311799,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형법 227조 2 공전자기록위작ㆍ변작#KOBLEX-193138",
+        "provision_text": "제227조의2(공전자기록위작ㆍ변작) 사무처리를 그르치게 할 목적으로 공무원 또는 공무소의 전자기록등 특수매체기록을 위작 또는 변작한 자는 10년 이하의 징역에 처한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9998489618301392,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형법 227조 2 공전자기록위작ㆍ변작",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 141조  공용서류 등의 무효, 공용물의 파괴#KOBLEX-192978"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 74,
+        "first_stage_score": 8.335251161076295,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형법 141조  공용서류 등의 무효, 공용물의 파괴#KOBLEX-192978",
+        "provision_text": "①공무소에서 사용하는 서류 기타 물건 또는 전자기록등 특수매체기록을 손상 또는 은닉하거나 기타 방법으로 그 효용을 해한 자는 7년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 2,
+        "rerank_score": 0.785297691822052,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형법 141조  공용서류 등의 무효, 공용물의 파괴 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 232조 2 사전자기록위작ㆍ변작#KOBLEX-193146"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 40.56746504287268,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형법 232조 2 사전자기록위작ㆍ변작#KOBLEX-193146",
+        "provision_text": "제232조의2(사전자기록위작ㆍ변작) 사무처리를 그르치게 할 목적으로 권리ㆍ의무 또는 사실증명에 관한 타인의 전자기록등 특수매체기록을 위작 또는 변작한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.6258789300918579,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형법 232조 2 사전자기록위작ㆍ변작",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 225조  공문서등의 위조ㆍ변조#KOBLEX-193135"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 9.794481958621821,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "형법 225조  공문서등의 위조ㆍ변조#KOBLEX-193135",
+        "provision_text": "제225조(공문서등의 위조ㆍ변조) 행사할 목적으로 공무원 또는 공무소의 문서 또는 도화를 위조 또는 변조한 자는 10년 이하의 징역에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 2,
+        "rerank_score": 0.1960648000240326,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "형법 225조  공문서등의 위조ㆍ변조",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 229조  위조등 공문서의 행사#KOBLEX-193142"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 21.864572155033507,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "형법 229조  위조등 공문서의 행사#KOBLEX-193142",
+        "provision_text": "제229조(위조등 공문서의 행사) 제225조 내지 제228조의 죄에 의하여 만들어진 문서, 도화, 전자기록등 특수매체기록, 공정증서원본, 면허증, 허가증, 등록증 또는 여권을 행사한 자는 그 각 죄에 정한 형에 처한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.048638273030519485,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "형법 229조  위조등 공문서의 행사",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국회법 166조  국회 회의 방해죄#KOBLEX-132606"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 19.106538979112084,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "국회법 166조  국회 회의 방해죄#KOBLEX-132606",
+        "provision_text": "② 제165조를 위반하여 국회의 회의를 방해할 목적으로 회의장 또는 그 부근에서 사람을 상해하거나, 폭행으로 상해에 이르게 하거나, 단체 또는 다중의 위력을 보이거나 위험한 물건을 휴대하여 사람을 폭행 또는 재물을 손괴하거나, 공무소에서 사용하는 서류, 그 밖의 물건 또는 전자기록 등 특수매체기록을 손상ㆍ은닉하거나 그 밖의 방법으로 그 효용을 해한 사람은 7년 이하의 징역 또는 2천만원 이하의 벌금에 처한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.02413993887603283,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "국회법 166조  국회 회의 방해죄 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "유통산업발전법 49조  벌칙#KOBLEX-101273"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 57.08414158767343,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "유통산업발전법 49조  벌칙#KOBLEX-101273",
+        "provision_text": "① 제22조제1항을 위반하여 유통표준전자문서를 위작 또는 변작하거나 위작 또는 변작된 전자문서를 사용하거나 유통시킨 자는 10년 이하의 징역 또는 1억원 이하의 벌금에 처한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.01260825153440237,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "유통산업발전법 49조  벌칙 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193140"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 75,
+        "first_stage_score": 8.335251161076295,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193140",
+        "provision_text": "①공무원에 대하여 허위신고를 하여 공정증서원본 또는 이와 동일한 전자기록등 특수매체기록에 부실의 사실을 기재 또는 기록하게 한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 7,
+        "rerank_score": 0.011446231976151466,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 228조  공정증서원본 등의 부실기재 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 230조  공문서 등의 부정행사#KOBLEX-193143"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 51,
+        "first_stage_score": 9.478255617310728,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형법 230조  공문서 등의 부정행사#KOBLEX-193143",
+        "provision_text": "제230조(공문서 등의 부정행사) 공무원 또는 공무소의 문서 또는 도화를 부정행사한 자는 2년 이하의 징역이나 금고 또는 500만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 8,
+        "rerank_score": 0.0033302137162536383,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 230조  공문서 등의 부정행사",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 238조  공인 등의 위조, 부정사용#KOBLEX-193155"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 10.685764128835594,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "형법 238조  공인 등의 위조, 부정사용#KOBLEX-193155",
+        "provision_text": "①행사할 목적으로 공무원 또는 공무소의 인장, 서명, 기명  또는 기호를 위조 또는 부정사용한 자는 5년 이하의 징역에 처한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0029839519411325455,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "형법 238조  공인 등의 위조, 부정사용 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "국회법 166조  국회 회의 방해죄#KOBLEX-132606": "② 제165조를 위반하여 국회의 회의를 방해할 목적으로 회의장 또는 그 부근에서 사람을 상해하거나, 폭행으로 상해에 이르게 하거나, 단체 또는 다중의 위력을 보이거나 위험한 물건을 휴대하여 사람을 폭행 또는 재물을 손괴하거나, 공무소에서 사용하는 서류, 그 밖의 물건 또는 전자기록 등 특수매체기록을 손상ㆍ은닉하거나 그 밖의 방법으로 그 효용을 해한 사람은 7년 이하의 징역 또는 2천만원 이하의 벌금에 처한다.",
+      "유통산업발전법 49조  벌칙#KOBLEX-101273": "① 제22조제1항을 위반하여 유통표준전자문서를 위작 또는 변작하거나 위작 또는 변작된 전자문서를 사용하거나 유통시킨 자는 10년 이하의 징역 또는 1억원 이하의 벌금에 처한다.",
+      "형법 141조  공용서류 등의 무효, 공용물의 파괴#KOBLEX-192978": "①공무소에서 사용하는 서류 기타 물건 또는 전자기록등 특수매체기록을 손상 또는 은닉하거나 기타 방법으로 그 효용을 해한 자는 7년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 225조  공문서등의 위조ㆍ변조#KOBLEX-193135": "제225조(공문서등의 위조ㆍ변조) 행사할 목적으로 공무원 또는 공무소의 문서 또는 도화를 위조 또는 변조한 자는 10년 이하의 징역에 처한다. <개정 1995.12.29>",
+      "형법 227조 2 공전자기록위작ㆍ변작#KOBLEX-193138": "제227조의2(공전자기록위작ㆍ변작) 사무처리를 그르치게 할 목적으로 공무원 또는 공무소의 전자기록등 특수매체기록을 위작 또는 변작한 자는 10년 이하의 징역에 처한다.",
+      "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193140": "①공무원에 대하여 허위신고를 하여 공정증서원본 또는 이와 동일한 전자기록등 특수매체기록에 부실의 사실을 기재 또는 기록하게 한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 229조  위조등 공문서의 행사#KOBLEX-193142": "제229조(위조등 공문서의 행사) 제225조 내지 제228조의 죄에 의하여 만들어진 문서, 도화, 전자기록등 특수매체기록, 공정증서원본, 면허증, 허가증, 등록증 또는 여권을 행사한 자는 그 각 죄에 정한 형에 처한다.",
+      "형법 230조  공문서 등의 부정행사#KOBLEX-193143": "제230조(공문서 등의 부정행사) 공무원 또는 공무소의 문서 또는 도화를 부정행사한 자는 2년 이하의 징역이나 금고 또는 500만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 232조 2 사전자기록위작ㆍ변작#KOBLEX-193146": "제232조의2(사전자기록위작ㆍ변작) 사무처리를 그르치게 할 목적으로 권리ㆍ의무 또는 사실증명에 관한 타인의 전자기록등 특수매체기록을 위작 또는 변작한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+      "형법 238조  공인 등의 위조, 부정사용#KOBLEX-193155": "①행사할 목적으로 공무원 또는 공무소의 인장, 서명, 기명  또는 기호를 위조 또는 부정사용한 자는 5년 이하의 징역에 처한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형법 227조 2 공전자기록위작ㆍ변작#KOBLEX-193138"
+            ],
+            "rationale": "C001은 공무원 또는 공무소의 전자기록등 특수매체기록을 위작 또는 변작한 행위를 명시합니다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형법 227조 2 공전자기록위작ㆍ변작#KOBLEX-193138"
+            ],
+            "rationale": "C001은 해당 행위에 대해 10년 이하의 징역에 처한다고 법정형을 명시합니다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형법 227조 2 공전자기록위작ㆍ변작#KOBLEX-193138"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "공무소 전자기록의 위작 또는 변작 행위에 대한 형벌 규정이 C001에 의해 완전히 충족되었습니다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형법 229조  위조등 공문서의 행사#KOBLEX-193142"
+            ],
+            "rationale": "C005는 제225조 내지 제228조의 죄에 의하여 만들어진 전자기록등 특수매체기록을 행사한 행위를 명시합니다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형법 229조  위조등 공문서의 행사#KOBLEX-193142"
+            ],
+            "rationale": "C005는 행사한 자에 대해 그 각 죄에 정한 형에 처한다고 법정형을 명시합니다.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형법 229조  위조등 공문서의 행사#KOBLEX-193142"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "위작 또는 변작된 공무소 전자기록의 행사 행위에 대한 형벌 규정이 C005에 의해 완전히 충족되었습니다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형법 227조 2 공전자기록위작ㆍ변작#KOBLEX-193138",
+        "support_spans": [
+          {
+            "end_char": 93,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형법 229조  위조등 공문서의 행사#KOBLEX-193142",
+        "support_spans": [
+          {
+            "end_char": 122,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "공무소 전자기록의 위작 또는 변작 행위에 대한 형사책임",
+        "issue_id": "I1"
+      },
+      {
+        "description": "위작 또는 변작된 공무소 전자기록의 행사 행위에 대한 형사책임",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 지역 행정기관 소속 공무원으로서, 을의 요청을 받고 을에게 유리한 결정을 유도하기 위해 공문서에 포함된 전자기록을 조작하였다. 을은 이 조작된 전자기록을 이용해 행정기관으로부터 허가를 받았다. 이와 같은 상황에서 갑과 을은 각각 어떤 형사처벌을 받게 되는가? [질문] 갑이 공무소의 전자기록을 위작하거나 변작하여 을이 이를 행사한 경우, 갑과 을은 각각 어떤 형벌을 받게 되는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "공무소 전자기록 위작 변작 형사처벌",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "공무소",
+          "전자기록",
+          "위작",
+          "변작",
+          "형벌"
+        ],
+        "query_text": "공무소 전자기록 위작 변작 형벌 [원문 맥락] 이와 같은 상황에서 갑과 을은 각각 어떤 형사처벌을 받게 되는가? 갑이 공무소의 전자기록을 위작하거나 변작하여 을이 이를 행사한 경우, 갑과 을은 각각 어떤 형벌을 받게 되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "공무소 전자기록 위작 변작 행위 형벌",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "위작 변작된 공무소 전자기록 행사 형사처벌",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "위작",
+          "변작",
+          "공무소",
+          "전자기록",
+          "행사",
+          "형벌"
+        ],
+        "query_text": "위작 변작된 공무소 전자기록 행사 형벌 [원문 맥락] 이와 같은 상황에서 갑과 을은 각각 어떤 형사처벌을 받게 되는가? 갑이 공무소의 전자기록을 위작하거나 변작하여 을이 이를 행사한 경우, 갑과 을은 각각 어떤 형벌을 받게 되는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "위작 변작된 공무소 전자기록 행사 행위 형벌",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 지역 행정기관 소속 공무원으로서, 을의 요청을 받고 을에게 유리한 결정을 유도하기 위해 공문서에 포함된 전자기록을 조작하였다. 을은 이 조작된 전자기록을 이용해 행정기관으로부터 허가를 받았다. 이와 같은 상황에서 갑과 을은 각각 어떤 형사처벌을 받게 되는가?\n\n[질문]\n갑이 공무소의 전자기록을 위작하거나 변작하여 을이 이를 행사한 경우, 갑과 을은 각각 어떤 형벌을 받게 되는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "공무소 전자기록 위작 또는 변작의 구성요건과 법정형을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "공무소 전자기록 위작 또는 변작의 행위 유형을 명시"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "해당 행위에 대한 법정형(형벌)을 명시"
+          }
+        ],
+        "critical": true,
+        "description": "공무소의 전자기록을 위작하거나 변작한 자에 대한 형벌 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 갑의 행위에 대한 형벌을 묻고 있으므로, 해당 행위의 법적 효과와 형벌을 규정한 조문이 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "위작 또는 변작된 공무소 전자기록의 행사 행위에 대한 법정형을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "위작 또는 변작된 공무소 전자기록의 행사 행위를 명시"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "해당 행위에 대한 법정형(형벌)을 명시"
+          }
+        ],
+        "critical": true,
+        "description": "위작 또는 변작된 공무소 전자기록을 행사한 자에 대한 형벌 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 을의 행위에 대한 형벌을 묻고 있으므로, 해당 행위의 법적 효과와 형벌을 규정한 조문이 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "5cd545b7-b010-40fc-b231-11457b2d20fc",
+    "seen_provision_ids": [
+      "국회법 166조  국회 회의 방해죄#KOBLEX-132606",
+      "형법 229조  위조등 공문서의 행사#KOBLEX-193142",
+      "형법 225조  공문서등의 위조ㆍ변조#KOBLEX-193135",
+      "형법 230조  공문서 등의 부정행사#KOBLEX-193143",
+      "형법 227조 2 공전자기록위작ㆍ변작#KOBLEX-193138",
+      "형법 238조  공인 등의 위조, 부정사용#KOBLEX-193155",
+      "유통산업발전법 49조  벌칙#KOBLEX-101273",
+      "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193140",
+      "형법 232조 2 사전자기록위작ㆍ변작#KOBLEX-193146",
+      "형법 141조  공용서류 등의 무효, 공용물의 파괴#KOBLEX-192978"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

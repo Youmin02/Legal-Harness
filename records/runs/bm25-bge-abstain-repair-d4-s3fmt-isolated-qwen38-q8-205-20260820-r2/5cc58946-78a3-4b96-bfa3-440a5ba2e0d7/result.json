@@ -1,0 +1,1087 @@
+{
+  "abstention_reason": null,
+  "answer": "산업통상자원부장관은 제23조제1항 및 제5항에 따른 석유 수입·판매 부과금의 징수 대상에 대하여 2015년 1월 1일을 기준으로 2년마다(매 2년이 되는 해의 1월 1일 전까지) 그 타당성을 검토하여 개선 등의 조치를 하여야 한다.[CT1]\n한계: 갑의 공제조합 설립인가 타당성 검토 시기(T1)에 대한 법적 근거가 부족하여 해당 항목은 답변에서 제외되었습니다.",
+  "answer_mode": "limited",
+  "answered_target_ids": [
+    "T2"
+  ],
+  "candidate_answer": "산업통상자원부장관은 제23조제1항 및 제5항에 따른 석유 수입·판매 부과금의 징수 대상에 대하여 2015년 1월 1일을 기준으로 2년마다(매 2년이 되는 해의 1월 1일 전까지) 그 타당성을 검토하여 개선 등의 조치를 하여야 한다.[CT1]\n한계: 갑의 공제조합 설립인가 타당성 검토 시기(T1)에 대한 법적 근거가 부족하여 해당 항목은 답변에서 제외되었습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T21:50:38.760611+00:00",
+  "deferred_target_ids": [
+    "T1"
+  ],
+  "end_to_end_latency_ms": 358152.159,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 378,
+      "dedup_collapse": 128,
+      "evidence_fusion": 378,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "round_selected": 30,
+      "rrf": 400,
+      "selected": 378
+    }
+  },
+  "run_id": "5cc58946-78a3-4b96-bfa3-440a5ba2e0d7",
+  "state": {
+    "accepted_provision_ids": [
+      "석유 및 석유대체연료 사업법 시행령 46조 3 규제의 재검토#KOBLEX-012406"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 3,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T2"
+          ],
+          "deferred_target_ids": [
+            "T1"
+          ],
+          "explanation": "Only the citable answer targets will be answered; remaining targets are deferred.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T2"
+          ],
+          "claim_count": 1,
+          "deferred_target_ids": [
+            "T1"
+          ]
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "limited",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_deadline",
+        "question_anchor": "공제조합 설립인가 타당성 검토 시기",
+        "requested_output": "공제조합 설립인가에 대한 규제 재검토(타당성 검토)의 법적 기한"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_deadline",
+        "question_anchor": "석유 수입·판매 부과금의 징수 대상 검토 시기",
+        "requested_output": "석유 수입·판매 부과금의 징수 대상에 대한 규제 재검토의 법적 기한"
+      }
+    ],
+    "answered_target_ids": [
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "공인중개사법 시행령 37조 3 규제의 재검토#KOBLEX-043655"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 59,
+        "first_stage_score": 29.54690382738349,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "공인중개사법 시행령 37조 3 규제의 재검토#KOBLEX-043655",
+        "provision_text": "제37조의3(규제의 재검토) 국토교통부장관은 다음 각 호의 사항에 대하여 다음 각 호의 기준일을 기준으로 3년마다(매 3년이 되는 해의 기준일과 같은 날 전까지를 말한다) 그 타당성을 검토하여 개선 등의 조치를 해야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.3019687831401825,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "공인중개사법 시행령 37조 3 규제의 재검토",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "석유 및 석유대체연료 사업법 시행령 46조 3 규제의 재검토#KOBLEX-012406"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 35.127433233105236,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "석유 및 석유대체연료 사업법 시행령 46조 3 규제의 재검토#KOBLEX-012406",
+        "provision_text": "② 산업통상자원부장관은 다음 각 호의 사항에 대하여 다음 각 호의 기준일을 기준으로 2년마다(매 2년이 되는 해의 1월 1일 전까지를 말한다) 그 타당성을 검토하여 개선 등의 조치를 하여야 한다. <신설 2014.12.9, 2025.3.12> 1. 제23조제1항 및 제5항에 따른 석유 수입ㆍ판매 부과금의 징수 대상: 2015년 1월 1일 2. 제24조제1항에 따른 부과금의 금액: 2015년 1월 1일 3. 제39조제1항 및 별표 3에 따른 수입부과금의 징수 대상: 2015년 1월 1일 4. 제40조제1항에 따른 부과금의 금액: 2015년 1월 1일 5. 삭제 <2025.3.12>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9998260140419006,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "석유 및 석유대체연료 사업법 시행령 46조 3 규제의 재검토 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공인중개사법 시행규칙 29조  규제의 재검토#KOBLEX-111244"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 50,
+        "first_stage_score": 29.98176230663259,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "공인중개사법 시행규칙 29조  규제의 재검토#KOBLEX-111244",
+        "provision_text": "제29조(규제의 재검토) 국토교통부장관은 다음 각 호의 사항에 대하여 2017년 1월 1일을 기준으로 3년마다(매 3년이 되는 해의 기준일과 같은 날 전까지를 말한다) 그 타당성을 검토하여 개선 등의 조치를 하여야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.11543933302164078,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "공인중개사법 시행규칙 29조  규제의 재검토",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "석유 및 석유대체연료 사업법 시행령 23조  부과금의 징수대상자#KOBLEX-012228"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 60,
+        "first_stage_score": 31.936104258220826,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "석유 및 석유대체연료 사업법 시행령 23조  부과금의 징수대상자#KOBLEX-012228",
+        "provision_text": "① 법 제18조제1항제1호에 따른 석유 수입ㆍ판매 부과금의 징수대상자는 다음 각 호와 같다. <개정 2010.12.9, 2013.3.23> 1. 별표 3에서 정하는 원유, 석유제품 및 천연가스를 수입하는 석유정제업자 및 석유수출입업자 2. 고급휘발유(자동차용 휘발유 중 산업통상자원부장관이 고시하는 규격의 것을 말한다)와 부탄을 판매하는 석유정제업자, 석유수출입업자 및 부산물인 석유제품 생산판매업자",
+        "rerank_rank": 2,
+        "rerank_score": 0.03423965722322464,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "석유 및 석유대체연료 사업법 시행령 23조  부과금의 징수대상자 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "석유 및 석유대체연료 사업법 18조  석유의 수입ㆍ판매 부과금#KOBLEX-075060",
+          "석유 및 석유대체연료 사업법 18조  석유의 수입ㆍ판매 부과금#KOBLEX-085536"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 80,
+        "first_stage_score": 26.02140503350484,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "석유 및 석유대체연료 사업법 18조  석유의 수입ㆍ판매 부과금#KOBLEX-075060",
+        "provision_text": "⑤ 산업통상자원부장관은 제1항에 따른 부과금 징수대상자가 납부기한까지 부과금을 내지 아니하면 기간을 정하여 독촉을 하고, 그 기간 이내에 부과금 및 제4항에 따른 가산금을 내지 아니하면 국세 체납처분의 예에 따라 징수할 수 있다. <개정 2013.3.23>",
+        "rerank_rank": 3,
+        "rerank_score": 0.011185528710484505,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "석유 및 석유대체연료 사업법 18조  석유의 수입ㆍ판매 부과금 5항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "석유 및 석유대체연료 사업법 시행령 23조#KOBLEX-012226"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 46.05575472668946,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "석유 및 석유대체연료 사업법 시행령 23조#KOBLEX-012226",
+        "provision_text": "제4장 석유 수입ㆍ판매 부과금 <개정 2009.4.30>",
+        "rerank_rank": 4,
+        "rerank_score": 0.01029594149440527,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "석유 및 석유대체연료 사업법 시행령 23조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "석유 및 석유대체연료 사업법 18조  석유의 수입ㆍ판매 부과금#KOBLEX-075055",
+          "석유 및 석유대체연료 사업법 18조  석유의 수입ㆍ판매 부과금#KOBLEX-085531"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 39.28525435139631,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "석유 및 석유대체연료 사업법 18조  석유의 수입ㆍ판매 부과금#KOBLEX-075055",
+        "provision_text": "제18조(석유의 수입ㆍ판매 부과금)",
+        "rerank_rank": 5,
+        "rerank_score": 0.010257539339363575,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "석유 및 석유대체연료 사업법 18조  석유의 수입ㆍ판매 부과금",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "석유 및 석유대체연료 사업법 18조#KOBLEX-075054",
+          "석유 및 석유대체연료 사업법 18조#KOBLEX-085530"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 46.05575472668946,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "석유 및 석유대체연료 사업법 18조#KOBLEX-075054",
+        "provision_text": "제4장 석유 수입ㆍ판매 부과금 <개정 2009.1.30>",
+        "rerank_rank": 6,
+        "rerank_score": 0.008443474769592285,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "석유 및 석유대체연료 사업법 18조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산업집적활성화 및 공장설립에 관한 법률 51조 4 규제의 재검토#KOBLEX-043162"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 41.13900469951896,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "산업집적활성화 및 공장설립에 관한 법률 51조 4 규제의 재검토#KOBLEX-043162",
+        "provision_text": "제51조의4(규제의 재검토) 산업통상자원부장관은 제31조제6항에 따른 관리공단등의 설립인가 취소 사유에 대하여 2016년 1월 1일을 기준으로 2년마다(매 2년이 되는 해의 1월 1일 전까지를 말한다) 그 타당성을 검토하여 필요한 조치를 하여야 한다. <개정 2019.12.10>",
+        "rerank_rank": 3,
+        "rerank_score": 0.006860898807644844,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "산업집적활성화 및 공장설립에 관한 법률 51조 4 규제의 재검토",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "중소기업협동조합법 136조 2 규제의 재검토#KOBLEX-031173"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 28.314859178705802,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "중소기업협동조합법 136조 2 규제의 재검토#KOBLEX-031173",
+        "provision_text": "제136조의2(규제의 재검토) 중소벤처기업부장관은 다음 각 호의 사항에 대하여 2016년 1월 1일을 기준으로 3년마다(매 3년이 되는 해의 기준일과 같은 날 전까지를 말한다) 그 타당성을 검토하여 개선 등의 조치를 하여야 한다. <개정 2017.7.26>",
+        "rerank_rank": 4,
+        "rerank_score": 0.005471085198223591,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "중소기업협동조합법 136조 2 규제의 재검토",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "여객자동차 운수사업법 89조 2 규제의 재검토#KOBLEX-019240",
+          "여객자동차 운수사업법 89조 2 규제의 재검토#KOBLEX-088740",
+          "여객자동차 운수사업법 89조 2 규제의 재검토#KOBLEX-147252"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 39.762207298613475,
+        "fusion_rank": 38,
+        "issue_id": "I1",
+        "provision_id": "여객자동차 운수사업법 89조 2 규제의 재검토#KOBLEX-019240",
+        "provision_text": "13. 제61조에 따른 공제조합의 설립 인가",
+        "rerank_rank": 38,
+        "rerank_score": 0.705105721950531,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "여객자동차 운수사업법 89조 2 규제의 재검토 14호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "건축사법 38조 4 공제조합의 설립인가#KOBLEX-120342"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 31,
+        "first_stage_score": 32.63357655976211,
+        "fusion_rank": 39,
+        "issue_id": "I1",
+        "provision_id": "건축사법 38조 4 공제조합의 설립인가#KOBLEX-120342",
+        "provision_text": "제38조의4(공제조합의 설립인가)",
+        "rerank_rank": 39,
+        "rerank_score": 0.013816476799547672,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "건축사법 38조 4 공제조합의 설립인가",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "석유 및 석유대체연료 사업법 시행령 17조 3 공제조합의 설립인가 등#KOBLEX-012173"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 32,
+        "first_stage_score": 31.836586402676524,
+        "fusion_rank": 40,
+        "issue_id": "I1",
+        "provision_id": "석유 및 석유대체연료 사업법 시행령 17조 3 공제조합의 설립인가 등#KOBLEX-012173",
+        "provision_text": "제17조의3(공제조합의 설립인가 등)",
+        "rerank_rank": 40,
+        "rerank_score": 0.005643891170620918,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "석유 및 석유대체연료 사업법 시행령 17조 3 공제조합의 설립인가 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "건설기술 진흥법 74조#KOBLEX-062864",
+          "건설기술 진흥법 74조#KOBLEX-170658"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 74,
+        "first_stage_score": 22.10083154738356,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "건설기술 진흥법 74조#KOBLEX-062864",
+        "provision_text": "제2절 공제조합",
+        "rerank_rank": 1,
+        "rerank_score": 0.002513197483494878,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "건설기술 진흥법 74조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산지관리법 시행규칙 51조 3 규제의 재검토#KOBLEX-223580"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 32.905179344803074,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "산지관리법 시행규칙 51조 3 규제의 재검토#KOBLEX-223580",
+        "provision_text": "제51조의3(규제의 재검토)",
+        "rerank_rank": 2,
+        "rerank_score": 0.0017273739213123918,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "산지관리법 시행규칙 51조 3 규제의 재검토",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산지관리법 시행령 52조 2 규제의 재검토#KOBLEX-090853"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 32.905179344803074,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "산지관리법 시행령 52조 2 규제의 재검토#KOBLEX-090853",
+        "provision_text": "제52조의2(규제의 재검토)",
+        "rerank_rank": 3,
+        "rerank_score": 0.0016839505406096578,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "산지관리법 시행령 52조 2 규제의 재검토",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농업협동조합법 169조 2 규제의 재검토#KOBLEX-187789"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 38,
+        "first_stage_score": 27.840139534708374,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "농업협동조합법 169조 2 규제의 재검토#KOBLEX-187789",
+        "provision_text": "제169조의2(규제의 재검토) 농림축산식품부장관은 제166조의 경영지도에 대하여 2015년 1월 1일부터 3년마다 그 타당성을 재검토하여야 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.001553246984258294,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "농업협동조합법 169조 2 규제의 재검토",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "온천법 시행규칙 20조  규제의 재검토#KOBLEX-022744"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 32.905179344803074,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "온천법 시행규칙 20조  규제의 재검토#KOBLEX-022744",
+        "provision_text": "제20조(규제의 재검토)",
+        "rerank_rank": 5,
+        "rerank_score": 0.0011489622993394732,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "온천법 시행규칙 20조  규제의 재검토",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "석유 및 석유대체연료 사업법 시행령 46조 3 규제의 재검토#KOBLEX-012404"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 32.905179344803074,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "석유 및 석유대체연료 사업법 시행령 46조 3 규제의 재검토#KOBLEX-012404",
+        "provision_text": "제46조의3(규제의 재검토)",
+        "rerank_rank": 6,
+        "rerank_score": 0.0009443670860491693,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "석유 및 석유대체연료 사업법 시행령 46조 3 규제의 재검토",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "세무사법 21조  규제의 재검토#KOBLEX-177504"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 68,
+        "first_stage_score": 25.629750804086058,
+        "fusion_rank": 43,
+        "issue_id": "I1",
+        "provision_id": "세무사법 21조  규제의 재검토#KOBLEX-177504",
+        "provision_text": "제21조(규제의 재검토) 기획재정부장관은 다음 각 호의 사항에 대하여 다음 각 호의 기준일을 기준으로 3년마다(매 3년이 되는 해의 기준일과 같은 날 전까지를 말한다) 그 타당성을 검토하여 개선 등의 조치를 하여야 한다.",
+        "rerank_rank": 43,
+        "rerank_score": 0.004005064722150564,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "세무사법 21조  규제의 재검토",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농지법 시행령 77조  규제의 재검토#KOBLEX-199848"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 64,
+        "first_stage_score": 25.629750804086058,
+        "fusion_rank": 44,
+        "issue_id": "I1",
+        "provision_id": "농지법 시행령 77조  규제의 재검토#KOBLEX-199848",
+        "provision_text": "제77조(규제의 재검토) 농림축산식품부장관은 다음 각 호의 사항에 대하여 다음 각 호의 기준일을 기준으로 3년마다(매 3년이 되는 해의 기준일과 같은 날 전까지를 말한다) 그 타당성을 검토하여 개선 등의 조치를 해야 한다.",
+        "rerank_rank": 44,
+        "rerank_score": 0.0024643840733915567,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "농지법 시행령 77조  규제의 재검토",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "전자금융거래법 시행령 32조  규제의 재검토#KOBLEX-034158"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 70,
+        "first_stage_score": 25.629750804086058,
+        "fusion_rank": 45,
+        "issue_id": "I1",
+        "provision_id": "전자금융거래법 시행령 32조  규제의 재검토#KOBLEX-034158",
+        "provision_text": "제32조(규제의 재검토) 금융위원회는 다음 각 호의 사항에 대하여 다음 각 호의 기준일을 기준으로 3년마다(매 3년이 되는 해의 기준일과 같은 날 전까지를 말한다) 그 타당성을 검토하여 개선 등의 조치를 해야 한다.",
+        "rerank_rank": 45,
+        "rerank_score": 0.0021434989757835865,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "전자금융거래법 시행령 32조  규제의 재검토",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "건설기술 진흥법 74조#KOBLEX-062864": "제2절 공제조합",
+      "건축사법 38조 4 공제조합의 설립인가#KOBLEX-120342": "제38조의4(공제조합의 설립인가)",
+      "공인중개사법 시행규칙 29조  규제의 재검토#KOBLEX-111244": "제29조(규제의 재검토) 국토교통부장관은 다음 각 호의 사항에 대하여 2017년 1월 1일을 기준으로 3년마다(매 3년이 되는 해의 기준일과 같은 날 전까지를 말한다) 그 타당성을 검토하여 개선 등의 조치를 하여야 한다.",
+      "공인중개사법 시행령 37조 3 규제의 재검토#KOBLEX-043655": "제37조의3(규제의 재검토) 국토교통부장관은 다음 각 호의 사항에 대하여 다음 각 호의 기준일을 기준으로 3년마다(매 3년이 되는 해의 기준일과 같은 날 전까지를 말한다) 그 타당성을 검토하여 개선 등의 조치를 해야 한다.",
+      "농업협동조합법 169조 2 규제의 재검토#KOBLEX-187789": "제169조의2(규제의 재검토) 농림축산식품부장관은 제166조의 경영지도에 대하여 2015년 1월 1일부터 3년마다 그 타당성을 재검토하여야 한다.",
+      "농지법 시행령 77조  규제의 재검토#KOBLEX-199848": "제77조(규제의 재검토) 농림축산식품부장관은 다음 각 호의 사항에 대하여 다음 각 호의 기준일을 기준으로 3년마다(매 3년이 되는 해의 기준일과 같은 날 전까지를 말한다) 그 타당성을 검토하여 개선 등의 조치를 해야 한다.",
+      "산업집적활성화 및 공장설립에 관한 법률 51조 4 규제의 재검토#KOBLEX-043162": "제51조의4(규제의 재검토) 산업통상자원부장관은 제31조제6항에 따른 관리공단등의 설립인가 취소 사유에 대하여 2016년 1월 1일을 기준으로 2년마다(매 2년이 되는 해의 1월 1일 전까지를 말한다) 그 타당성을 검토하여 필요한 조치를 하여야 한다. <개정 2019.12.10>",
+      "산지관리법 시행규칙 51조 3 규제의 재검토#KOBLEX-223580": "제51조의3(규제의 재검토)",
+      "산지관리법 시행령 52조 2 규제의 재검토#KOBLEX-090853": "제52조의2(규제의 재검토)",
+      "석유 및 석유대체연료 사업법 18조  석유의 수입ㆍ판매 부과금#KOBLEX-075055": "제18조(석유의 수입ㆍ판매 부과금)",
+      "석유 및 석유대체연료 사업법 18조  석유의 수입ㆍ판매 부과금#KOBLEX-075060": "⑤ 산업통상자원부장관은 제1항에 따른 부과금 징수대상자가 납부기한까지 부과금을 내지 아니하면 기간을 정하여 독촉을 하고, 그 기간 이내에 부과금 및 제4항에 따른 가산금을 내지 아니하면 국세 체납처분의 예에 따라 징수할 수 있다. <개정 2013.3.23>",
+      "석유 및 석유대체연료 사업법 18조#KOBLEX-075054": "제4장 석유 수입ㆍ판매 부과금 <개정 2009.1.30>",
+      "석유 및 석유대체연료 사업법 시행령 17조 3 공제조합의 설립인가 등#KOBLEX-012173": "제17조의3(공제조합의 설립인가 등)",
+      "석유 및 석유대체연료 사업법 시행령 23조  부과금의 징수대상자#KOBLEX-012228": "① 법 제18조제1항제1호에 따른 석유 수입ㆍ판매 부과금의 징수대상자는 다음 각 호와 같다. <개정 2010.12.9, 2013.3.23> 1. 별표 3에서 정하는 원유, 석유제품 및 천연가스를 수입하는 석유정제업자 및 석유수출입업자 2. 고급휘발유(자동차용 휘발유 중 산업통상자원부장관이 고시하는 규격의 것을 말한다)와 부탄을 판매하는 석유정제업자, 석유수출입업자 및 부산물인 석유제품 생산판매업자",
+      "석유 및 석유대체연료 사업법 시행령 23조#KOBLEX-012226": "제4장 석유 수입ㆍ판매 부과금 <개정 2009.4.30>",
+      "석유 및 석유대체연료 사업법 시행령 46조 3 규제의 재검토#KOBLEX-012404": "제46조의3(규제의 재검토)",
+      "석유 및 석유대체연료 사업법 시행령 46조 3 규제의 재검토#KOBLEX-012406": "② 산업통상자원부장관은 다음 각 호의 사항에 대하여 다음 각 호의 기준일을 기준으로 2년마다(매 2년이 되는 해의 1월 1일 전까지를 말한다) 그 타당성을 검토하여 개선 등의 조치를 하여야 한다. <신설 2014.12.9, 2025.3.12> 1. 제23조제1항 및 제5항에 따른 석유 수입ㆍ판매 부과금의 징수 대상: 2015년 1월 1일 2. 제24조제1항에 따른 부과금의 금액: 2015년 1월 1일 3. 제39조제1항 및 별표 3에 따른 수입부과금의 징수 대상: 2015년 1월 1일 4. 제40조제1항에 따른 부과금의 금액: 2015년 1월 1일 5. 삭제 <2025.3.12>",
+      "세무사법 21조  규제의 재검토#KOBLEX-177504": "제21조(규제의 재검토) 기획재정부장관은 다음 각 호의 사항에 대하여 다음 각 호의 기준일을 기준으로 3년마다(매 3년이 되는 해의 기준일과 같은 날 전까지를 말한다) 그 타당성을 검토하여 개선 등의 조치를 하여야 한다.",
+      "여객자동차 운수사업법 89조 2 규제의 재검토#KOBLEX-019240": "13. 제61조에 따른 공제조합의 설립 인가",
+      "온천법 시행규칙 20조  규제의 재검토#KOBLEX-022744": "제20조(규제의 재검토)",
+      "전자금융거래법 시행령 32조  규제의 재검토#KOBLEX-034158": "제32조(규제의 재검토) 금융위원회는 다음 각 호의 사항에 대하여 다음 각 호의 기준일을 기준으로 3년마다(매 3년이 되는 해의 기준일과 같은 날 전까지를 말한다) 그 타당성을 검토하여 개선 등의 조치를 해야 한다.",
+      "중소기업협동조합법 136조 2 규제의 재검토#KOBLEX-031173": "제136조의2(규제의 재검토) 중소벤처기업부장관은 다음 각 호의 사항에 대하여 2016년 1월 1일을 기준으로 3년마다(매 3년이 되는 해의 기준일과 같은 날 전까지를 말한다) 그 타당성을 검토하여 개선 등의 조치를 하여야 한다. <개정 2017.7.26>"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "공제조합 설립인가 관련 규제 재검토 규정이 후보 목록에 없어 기준을 충족할 수 없다.",
+            "requirement_id": "E1-R1",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "uncovered",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "E1-R1"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "공제조합 설립인가에 대한 규제 재검토 기한을 정한 규정이 후보 목록에 존재하지 않는다. C011은 여객자동차 운수사업법 관련 항목으로 질문의 대상인 '중소기업 지원 목적 공제조합'과 관련이 없으며, C010은 중소기업협동조합법 관련 규정으로 공제조합 설립인가와 직접적인 관련이 없다.",
+        "status": "uncovered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "석유 및 석유대체연료 사업법 시행령 46조 3 규제의 재검토#KOBLEX-012406"
+            ],
+            "rationale": "C002 제1호에서 해당 사항의 재검토 주기와 기준일을 명시하고 있다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "석유 및 석유대체연료 사업법 시행령 46조 3 규제의 재검토#KOBLEX-012406"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C002는 석유 수입·판매 부과금의 징수 대상에 대한 규제 재검토 기한(2년마다)을 명확히 규정하고 있어 완료 기준을 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [
+      "T1"
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "석유 및 석유대체연료 사업법 시행령 46조 3 규제의 재검토#KOBLEX-012406",
+        "support_spans": [
+          {
+            "end_char": 327,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 3,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "공제조합 설립인가에 대한 규제 재검토(타당성 검토)의 법적 기한은 언제입니까?",
+        "issue_id": "I1"
+      },
+      {
+        "description": "석유 수입·판매 부과금의 징수 대상에 대한 규제 재검토의 법적 기한은 언제입니까?",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "공제조합 설립인가에 대한 규제 재검토(타당성 검토)의 법적 기한을 정한 규정을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "공제조합 설립인가에 대한 규제 재검토(타당성 검토)의 법적 기한을 정한 규정을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공제조합 설립인가에 대한 규제 재검토(타당성 검토)의 법적 기한을 정한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 공제조합 설립인가 타당성 검토 시기를 결정하기 위해 필수적인 법적 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 갑은 중소기업 지원을 목적으로 공제조합을 설립하고자 하는 회사 대표입니다. 을은 석유 제품을 수입하여 국내에 판매하는 회사의 대표로, 석유 수입 및 판매와 관련된 부과금 납부를 책임지고 있습니다. 두 사람은 각각의 사업과 관련하여 정부의 규제 재검토 시기를 정확히 알고 싶어 합니다. [질문] 갑의 공제조합 설립인가 타당성 검토 시기와 을의 석유 수입·판매 부과금의 징수 대상 검토 시기는 각각 언제입니까?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "공제조합 설립인가 규제 재검토 타당성 검토 기한",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "공제조합",
+          "설립인가",
+          "규제재검토",
+          "타당성검토",
+          "기한"
+        ],
+        "query_text": "공제조합 설립인가 규제 재검토 타당성 검토 기한 [원문 맥락] 두 사람은 각각의 사업과 관련하여 정부의 규제 재검토 시기를 정확히 알고 싶어 합니다. 갑의 공제조합 설립인가 타당성 검토 시기와 을의 석유 수입·판매 부과금의 징수 대상 검토 시기는 각각 언제입니까?",
+        "request_id": "RQ1",
+        "rerank_query_text": "공제조합 설립인가 타당성 검토 시기와 규제 재검토 기한",
+        "statute_hints": [
+          "공제조합법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "석유 수입 판매 부과금 징수 대상 규제 재검토 기한",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "석유",
+          "부과금",
+          "징수대상",
+          "규제재검토",
+          "기한"
+        ],
+        "query_text": "석유 수입 판매 부과금 징수 대상 규제 재검토 기한 [원문 맥락] 두 사람은 각각의 사업과 관련하여 정부의 규제 재검토 시기를 정확히 알고 싶어 합니다. 갑의 공제조합 설립인가 타당성 검토 시기와 을의 석유 수입·판매 부과금의 징수 대상 검토 시기는 각각 언제입니까?",
+        "request_id": "RQ2",
+        "rerank_query_text": "석유 수입·판매 부과금의 징수 대상 검토 시기와 규제 재검토 기한",
+        "statute_hints": [
+          "석유수입판매부과금법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "공제조합 설립 인가 규제 재검토",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "공제조합",
+          "설립인가",
+          "규제재검토",
+          "재검토기한"
+        ],
+        "query_text": "공제조합 설립 인가 규제 재검토 [원문 맥락] 두 사람은 각각의 사업과 관련하여 정부의 규제 재검토 시기를 정확히 알고 싶어 합니다. 갑의 공제조합 설립인가 타당성 검토 시기와 을의 석유 수입·판매 부과금의 징수 대상 검토 시기는 각각 언제입니까?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "공제조합 설립인가에 대한 규제 재검토(타당성 검토)의 법적 기한을 정한 규정",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "공제조합 설립인가 규제 재검토 기한",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "공제조합",
+          "설립인가",
+          "규제",
+          "재검토",
+          "기한"
+        ],
+        "query_text": "공제조합의 설립인가에 관한 규제는 재검토 대상이며 그 기한은 [원문 맥락] 두 사람은 각각의 사업과 관련하여 정부의 규제 재검토 시기를 정확히 알고 싶어 합니다. 갑의 공제조합 설립인가 타당성 검토 시기와 을의 석유 수입·판매 부과금의 징수 대상 검토 시기는 각각 언제입니까?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "공제조합 설립인가에 대한 규제 재검토(타당성 검토)의 법적 기한을 정한 규정",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "공제조합법 시행령 규제의 재검토 공제조합 설립인가",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "공제조합법",
+          "시행령",
+          "규제의재검토",
+          "설립인가",
+          "재검토기한"
+        ],
+        "query_text": "공제조합법 시행령 규제의 재검토 공제조합 설립인가 [원문 맥락] 두 사람은 각각의 사업과 관련하여 정부의 규제 재검토 시기를 정확히 알고 싶어 합니다. 갑의 공제조합 설립인가 타당성 검토 시기와 을의 석유 수입·판매 부과금의 징수 대상 검토 시기는 각각 언제입니까?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "공제조합 설립인가에 대한 규제 재검토(타당성 검토)의 법적 기한을 정한 규정",
+        "statute_hints": [
+          "공제조합법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "공제조합 설립인가 재검토 주기",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "공제조합",
+          "설립인가",
+          "재검토",
+          "주기",
+          "기한"
+        ],
+        "query_text": "공제조합 설립인가 재검토 주기 [원문 맥락] 두 사람은 각각의 사업과 관련하여 정부의 규제 재검토 시기를 정확히 알고 싶어 합니다. 갑의 공제조합 설립인가 타당성 검토 시기와 을의 석유 수입·판매 부과금의 징수 대상 검토 시기는 각각 언제입니까?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "공제조합 설립인가에 대한 규제 재검토(타당성 검토)의 법적 기한을 정한 규정",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 중소기업 지원을 목적으로 공제조합을 설립하고자 하는 회사 대표입니다. 을은 석유 제품을 수입하여 국내에 판매하는 회사의 대표로, 석유 수입 및 판매와 관련된 부과금 납부를 책임지고 있습니다. 두 사람은 각각의 사업과 관련하여 정부의 규제 재검토 시기를 정확히 알고 싶어 합니다.\n\n[질문]\n갑의 공제조합 설립인가 타당성 검토 시기와 을의 석유 수입·판매 부과금의 징수 대상 검토 시기는 각각 언제입니까?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "공제조합 설립인가에 대한 규제 재검토(타당성 검토)의 법적 기한을 정한 규정을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "공제조합 설립인가에 대한 규제 재검토(타당성 검토)의 법적 기한을 정한 규정을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공제조합 설립인가에 대한 규제 재검토(타당성 검토)의 법적 기한을 정한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 공제조합 설립인가 타당성 검토 시기를 결정하기 위해 필수적인 법적 근거",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "석유 수입·판매 부과금의 징수 대상에 대한 규제 재검토의 법적 기한을 정한 규정을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "석유 수입·판매 부과금의 징수 대상에 대한 규제 재검토의 법적 기한을 정한 규정을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "석유 수입·판매 부과금의 징수 대상에 대한 규제 재검토의 법적 기한을 정한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 요구하는 석유 수입·판매 부과금의 징수 대상 검토 시기를 결정하기 위해 필수적인 법적 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "5cc58946-78a3-4b96-bfa3-440a5ba2e0d7",
+    "seen_provision_ids": [
+      "산업집적활성화 및 공장설립에 관한 법률 51조 4 규제의 재검토#KOBLEX-043162",
+      "산지관리법 시행령 52조 2 규제의 재검토#KOBLEX-090853",
+      "석유 및 석유대체연료 사업법 시행령 46조 3 규제의 재검토#KOBLEX-012406",
+      "석유 및 석유대체연료 사업법 18조  석유의 수입ㆍ판매 부과금#KOBLEX-075055",
+      "산지관리법 시행규칙 51조 3 규제의 재검토#KOBLEX-223580",
+      "농지법 시행령 77조  규제의 재검토#KOBLEX-199848",
+      "석유 및 석유대체연료 사업법 시행령 46조 3 규제의 재검토#KOBLEX-012404",
+      "중소기업협동조합법 136조 2 규제의 재검토#KOBLEX-031173",
+      "석유 및 석유대체연료 사업법 시행령 23조#KOBLEX-012226",
+      "석유 및 석유대체연료 사업법 시행령 17조 3 공제조합의 설립인가 등#KOBLEX-012173",
+      "석유 및 석유대체연료 사업법 18조  석유의 수입ㆍ판매 부과금#KOBLEX-075060",
+      "공인중개사법 시행규칙 29조  규제의 재검토#KOBLEX-111244",
+      "석유 및 석유대체연료 사업법 18조#KOBLEX-075054",
+      "전자금융거래법 시행령 32조  규제의 재검토#KOBLEX-034158",
+      "여객자동차 운수사업법 89조 2 규제의 재검토#KOBLEX-019240",
+      "농업협동조합법 169조 2 규제의 재검토#KOBLEX-187789",
+      "세무사법 21조  규제의 재검토#KOBLEX-177504",
+      "건설기술 진흥법 74조#KOBLEX-062864",
+      "건축사법 38조 4 공제조합의 설립인가#KOBLEX-120342",
+      "온천법 시행규칙 20조  규제의 재검토#KOBLEX-022744",
+      "공인중개사법 시행령 37조 3 규제의 재검토#KOBLEX-043655",
+      "석유 및 석유대체연료 사업법 시행령 23조  부과금의 징수대상자#KOBLEX-012228"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

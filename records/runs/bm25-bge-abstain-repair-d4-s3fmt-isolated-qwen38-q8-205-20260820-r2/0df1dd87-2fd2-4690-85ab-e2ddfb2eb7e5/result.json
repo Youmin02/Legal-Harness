@@ -1,0 +1,624 @@
+{
+  "abstention_reason": null,
+  "answer": "군사법경찰관은 범죄 수사에 관하여 직무상 상관의 명령에 복종하여야 합니다.[CT1]\n국방부장관은 군검찰사무의 최고감독자로서 일반적으로 군검사를 지휘·감독합니다. 다만, 구체적 사건에 관하여는 각 군 참모총장과 국방부검찰단장만을 지휘·감독합니다.[CT2]\n전제: 을이 갑의 직무상 상관이라는 사실은 질문의 배경 시나리오에서 주어진 전제로 간주합니다.\n한계: 본 답변은 제공된 군사법원법 조항에 근거한 법적 규칙의 해석이며, 실제 사건에서의 구체적 적용 여부는 추가적인 사실관계 확인이 필요할 수 있습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "군사법경찰관은 범죄 수사에 관하여 직무상 상관의 명령에 복종하여야 합니다.[CT1]\n국방부장관은 군검찰사무의 최고감독자로서 일반적으로 군검사를 지휘·감독합니다. 다만, 구체적 사건에 관하여는 각 군 참모총장과 국방부검찰단장만을 지휘·감독합니다.[CT2]\n전제: 을이 갑의 직무상 상관이라는 사실은 질문의 배경 시나리오에서 주어진 전제로 간주합니다.\n한계: 본 답변은 제공된 군사법원법 조항에 근거한 법적 규칙의 해석이며, 실제 사건에서의 구체적 적용 여부는 추가적인 사실관계 확인이 필요할 수 있습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T04:16:44.860057+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 211093.265,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 171,
+      "dedup_collapse": 50,
+      "evidence_fusion": 171,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 171
+    }
+  },
+  "run_id": "0df1dd87-2fd2-4690-85ab-e2ddfb2eb7e5",
+  "state": {
+    "accepted_provision_ids": [
+      "군사법원법 45조  군사법경찰관과 상관의 명령#KOBLEX-092248",
+      "군사법원법 38조  국방부장관의 군검찰사무 지휘ㆍ감독#KOBLEX-092225"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "누구의 명령에 복종하여야 하며",
+        "requested_output": "군사법경찰관이 절도 사건 수사에 관하여 복종해야 하는 명령권자"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "국방부장관은 누구를 지휘ㆍ감독할 수 있는가",
+        "requested_output": "국방부장관이 해당 사건에 관하여 지휘·감독할 수 있는 대상"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "군사법원법 45조  군사법경찰관과 상관의 명령#KOBLEX-092248",
+          "군사법원법 45조  군사법경찰관과 상관의 명령#KOBLEX-158213"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 27.039141483847693,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 45조  군사법경찰관과 상관의 명령#KOBLEX-092248",
+        "provision_text": "제45조(군사법경찰관과 상관의 명령) 군사법경찰관은 범죄 수사에 관하여 직무상 상관의 명령에 복종하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999934434890747,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "군사법원법 45조  군사법경찰관과 상관의 명령",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 534조 17 군검찰사무 지휘ㆍ감독#KOBLEX-093906"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 534조 17 군검찰사무 지휘ㆍ감독#KOBLEX-093906",
+        "provision_text": "① 국방부장관은 군검찰사무의 최고감독자로서 일반적으로 군검사를 지휘ㆍ감독한다. 다만, 구체적 사건에 관하여는 각 군 참모총장만을 지휘ㆍ감독한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9911323189735413,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "군사법원법 534조 17 군검찰사무 지휘ㆍ감독 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 38조  국방부장관의 군검찰사무 지휘ㆍ감독#KOBLEX-092225"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 38조  국방부장관의 군검찰사무 지휘ㆍ감독#KOBLEX-092225",
+        "provision_text": "제38조(국방부장관의 군검찰사무 지휘ㆍ감독) 국방부장관은 군검찰사무의 최고감독자로서 일반적으로 군검사를 지휘ㆍ감독한다. 다만, 구체적 사건에 관하여는 각 군 참모총장과 국방부검찰단장만을 지휘ㆍ감독한다. <개정 2016.1.6, 2021.9.24>",
+        "rerank_rank": 2,
+        "rerank_score": 0.9711331129074097,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "군사법원법 38조  국방부장관의 군검찰사무 지휘ㆍ감독",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국군조직법 8조  국방부장관의 권한#KOBLEX-211966"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 20.9204604986105,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "국군조직법 8조  국방부장관의 권한#KOBLEX-211966",
+        "provision_text": "제8조(국방부장관의 권한) 국방부장관은 대통령의 명을 받아 군사에 관한 사항을 관장하고 합동참모의장과 각군 참모총장을 지휘ㆍ감독한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.8153886795043945,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "국군조직법 8조  국방부장관의 권한",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 7조  군사법원장#KOBLEX-092105",
+          "군사법원법 7조  군사법원장#KOBLEX-158070"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 94,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 7조  군사법원장#KOBLEX-092105",
+        "provision_text": "③ 중앙지역군사법원장은 국방부장관의 명을 받아 군사법원의 사법행정사무를 총괄하고, 각 군사법원의 사법행정사무에 관하여 직원을 지휘ㆍ감독한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.29283764958381653,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "군사법원법 7조  군사법원장 3항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군인사법 59조 3 감사원의 조사와의 관계 등#KOBLEX-007115"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 33,
+        "first_stage_score": 19.89829502576804,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "군인사법 59조 3 감사원의 조사와의 관계 등#KOBLEX-007115",
+        "provision_text": "① 감사원이나 군검찰, 군사법경찰관, 그 밖의 수사기관은 군인의 비행사실에 대한 조사나 수사를 시작한 때와 마친 때에는 10일 이내에 그 군인의 소속 또는 감독 부대나 기관의 장에게 그 사실을 통보하여야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.06654773652553558,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "군인사법 59조 3 감사원의 조사와의 관계 등 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 156조  영장과 집행#KOBLEX-092625"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 156조  영장과 집행#KOBLEX-092625",
+        "provision_text": "① 압수ㆍ수색영장은 군검사의 지휘에 따라 군사법경찰관리가 집행한다. 다만, 필요할 때에는 재판장이나 군판사는 서기에게 집행을 명령할 수 있다. <개정 2016.1.6>",
+        "rerank_rank": 3,
+        "rerank_score": 0.03296054154634476,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "군사법원법 156조  영장과 집행 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 40조  군검찰사무에 대한 지휘ㆍ감독#KOBLEX-092228"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 40조  군검찰사무에 대한 지휘ㆍ감독#KOBLEX-092228",
+        "provision_text": "① 군검사는 군검찰사무에 관하여 소속 상급자의 지휘ㆍ감독에 따른다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.006572753190994263,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "군사법원법 40조  군검찰사무에 대한 지휘ㆍ감독 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 40조  군검찰사무에 대한 지휘ㆍ감독#KOBLEX-092227"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 2.0,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 40조  군검찰사무에 대한 지휘ㆍ감독#KOBLEX-092227",
+        "provision_text": "제40조(군검찰사무에 대한 지휘ㆍ감독)",
+        "rerank_rank": 6,
+        "rerank_score": 0.00629441300407052,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "군사법원법 40조  군검찰사무에 대한 지휘ㆍ감독",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 40조  군검찰사무에 대한 지휘ㆍ감독#KOBLEX-092230"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 40조  군검찰사무에 대한 지휘ㆍ감독#KOBLEX-092230",
+        "provision_text": "③ 검찰단장은 소속 군검사로 하여금 그 권한에 속하는 직무의 일부를 처리하게 할 수 있다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.004866985138505697,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "군사법원법 40조  군검찰사무에 대한 지휘ㆍ감독 3항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "국군조직법 8조  국방부장관의 권한#KOBLEX-211966": "제8조(국방부장관의 권한) 국방부장관은 대통령의 명을 받아 군사에 관한 사항을 관장하고 합동참모의장과 각군 참모총장을 지휘ㆍ감독한다.",
+      "군사법원법 156조  영장과 집행#KOBLEX-092625": "① 압수ㆍ수색영장은 군검사의 지휘에 따라 군사법경찰관리가 집행한다. 다만, 필요할 때에는 재판장이나 군판사는 서기에게 집행을 명령할 수 있다. <개정 2016.1.6>",
+      "군사법원법 38조  국방부장관의 군검찰사무 지휘ㆍ감독#KOBLEX-092225": "제38조(국방부장관의 군검찰사무 지휘ㆍ감독) 국방부장관은 군검찰사무의 최고감독자로서 일반적으로 군검사를 지휘ㆍ감독한다. 다만, 구체적 사건에 관하여는 각 군 참모총장과 국방부검찰단장만을 지휘ㆍ감독한다. <개정 2016.1.6, 2021.9.24>",
+      "군사법원법 40조  군검찰사무에 대한 지휘ㆍ감독#KOBLEX-092227": "제40조(군검찰사무에 대한 지휘ㆍ감독)",
+      "군사법원법 40조  군검찰사무에 대한 지휘ㆍ감독#KOBLEX-092228": "① 군검사는 군검찰사무에 관하여 소속 상급자의 지휘ㆍ감독에 따른다.",
+      "군사법원법 40조  군검찰사무에 대한 지휘ㆍ감독#KOBLEX-092230": "③ 검찰단장은 소속 군검사로 하여금 그 권한에 속하는 직무의 일부를 처리하게 할 수 있다.",
+      "군사법원법 45조  군사법경찰관과 상관의 명령#KOBLEX-092248": "제45조(군사법경찰관과 상관의 명령) 군사법경찰관은 범죄 수사에 관하여 직무상 상관의 명령에 복종하여야 한다.",
+      "군사법원법 534조 17 군검찰사무 지휘ㆍ감독#KOBLEX-093906": "① 국방부장관은 군검찰사무의 최고감독자로서 일반적으로 군검사를 지휘ㆍ감독한다. 다만, 구체적 사건에 관하여는 각 군 참모총장만을 지휘ㆍ감독한다.",
+      "군사법원법 7조  군사법원장#KOBLEX-092105": "③ 중앙지역군사법원장은 국방부장관의 명을 받아 군사법원의 사법행정사무를 총괄하고, 각 군사법원의 사법행정사무에 관하여 직원을 지휘ㆍ감독한다.",
+      "군인사법 59조 3 감사원의 조사와의 관계 등#KOBLEX-007115": "① 감사원이나 군검찰, 군사법경찰관, 그 밖의 수사기관은 군인의 비행사실에 대한 조사나 수사를 시작한 때와 마친 때에는 10일 이내에 그 군인의 소속 또는 감독 부대나 기관의 장에게 그 사실을 통보하여야 한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "군사법원법 45조  군사법경찰관과 상관의 명령#KOBLEX-092248"
+            ],
+            "rationale": "C001은 군사법경찰관이 직무상 상관의 명령에 복종한다고 하여 지휘·감독 주체를 명시합니다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "군사법원법 45조  군사법경찰관과 상관의 명령#KOBLEX-092248"
+            ],
+            "rationale": "C001은 범죄 수사 시 복종해야 하는 명령권자를 '직무상 상관'으로 특정합니다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "군사법원법 45조  군사법경찰관과 상관의 명령#KOBLEX-092248"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001(군사법원법 제45조)은 군사법경찰관의 수사 시 명령 복종 대상을 '직무상 상관'으로 명확히 규정하고 있어, E1의 모든 완료 기준을 충족합니다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "군사법원법 38조  국방부장관의 군검찰사무 지휘ㆍ감독#KOBLEX-092225"
+            ],
+            "rationale": "C003은 국방부장관을 군검찰사무의 최고감독자로 규정하여 지휘·감독 권한의 근거를 제공합니다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "군사법원법 38조  국방부장관의 군검찰사무 지휘ㆍ감독#KOBLEX-092225"
+            ],
+            "rationale": "C003은 구체적 사건에 관하여 국방부장관이 각 군 참모총장과 국방부검찰단장을 지휘·감독할 수 있음을 명시하여 대상을 특정합니다.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "군사법원법 38조  국방부장관의 군검찰사무 지휘ㆍ감독#KOBLEX-092225"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C003(군사법원법 제38조)은 국방부장관의 군검찰사무에 대한 지휘·감독 권한과 구체적 사건에서의 지휘·감독 대상(각 군 참모총장, 국방부검찰단장)을 명확히 규정하여, E2의 모든 완료 기준을 충족합니다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "군사법원법 45조  군사법경찰관과 상관의 명령#KOBLEX-092248",
+        "support_spans": [
+          {
+            "end_char": 61,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "군사법원법 38조  국방부장관의 군검찰사무 지휘ㆍ감독#KOBLEX-092225",
+        "support_spans": [
+          {
+            "end_char": 137,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "군사법경찰관의 수사 지휘체계와 명령 복종 대상",
+        "issue_id": "I1"
+      },
+      {
+        "description": "국방부장관의 군사법경찰에 대한 지휘·감독 권한 범위",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 군사법경찰관으로, 을은 그의 직무상 상관이다. 최근 군 내부에서 발생한 절도 사건을 수사 중인 갑은, 상관인 을의 명령을 따르며 수사를 진행하고 있다. 동시에, 이 사건은 국방부장관이 특별히 관심을 가지고 있는 사건으로 알려져 있다. 갑은 사건의 진행과정에서 자신이 누구의 명령에 복종해야 하는지, 그리고 국방부장관이 이 사건과 관련하여 누구를 지휘ㆍ감독할 수 있는지를 명확히 하고자 한다. [질문] 갑은 군사법경찰관으로서 이 절도 사건 수사에 관하여 누구의 명령에 복종하여야 하며, 이 사건에 관하여 국방부장관은 누구를 지휘ㆍ감독할 수 있는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "군사법경찰관 지휘 감독 명령 복종 대상",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "군사법경찰관",
+          "지휘",
+          "감독",
+          "명령",
+          "복종",
+          "수사"
+        ],
+        "query_text": "군사법경찰관 지휘 감독 명령 복종 대상 [원문 맥락] 갑은 사건의 진행과정에서 자신이 누구의 명령에 복종해야 하는지, 그리고 국방부장관이 이 사건과 관련하여 누구를 지휘ㆍ감독할 수 있는지를 명확히 하고자 한다. 갑은 군사법경찰관으로서 이 절도 사건 수사에 관하여 누구의 명령에 복종하여야 하며, 이 사건에 관하여 국방부장관은 누구를 지휘ㆍ감독할 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "군사법경찰관이 수사에 관하여 복종해야 하는 명령권자",
+        "statute_hints": [
+          "군사법원법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "국방부장관 군사법경찰 지휘 감독 권한",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "국방부장관",
+          "군사법경찰",
+          "지휘",
+          "감독",
+          "권한"
+        ],
+        "query_text": "국방부장관 군사법경찰 지휘 감독 권한 [원문 맥락] 갑은 사건의 진행과정에서 자신이 누구의 명령에 복종해야 하는지, 그리고 국방부장관이 이 사건과 관련하여 누구를 지휘ㆍ감독할 수 있는지를 명확히 하고자 한다. 갑은 군사법경찰관으로서 이 절도 사건 수사에 관하여 누구의 명령에 복종하여야 하며, 이 사건에 관하여 국방부장관은 누구를 지휘ㆍ감독할 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "국방부장관이 군사법경찰 수사에 관하여 지휘·감독할 수 있는 대상",
+        "statute_hints": [
+          "군사법원법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 군사법경찰관으로, 을은 그의 직무상 상관이다. 최근 군 내부에서 발생한 절도 사건을 수사 중인 갑은, 상관인 을의 명령을 따르며 수사를 진행하고 있다. 동시에, 이 사건은 국방부장관이 특별히 관심을 가지고 있는 사건으로 알려져 있다. 갑은 사건의 진행과정에서 자신이 누구의 명령에 복종해야 하는지, 그리고 국방부장관이 이 사건과 관련하여 누구를 지휘ㆍ감독할 수 있는지를 명확히 하고자 한다.\n\n[질문]\n갑은 군사법경찰관으로서 이 절도 사건 수사에 관하여 누구의 명령에 복종하여야 하며, 이 사건에 관하여 국방부장관은 누구를 지휘ㆍ감독할 수 있는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "군사법경찰관이 수사에 관하여 복종해야 하는 명령권자를 특정할 수 있는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "군사법경찰관의 지휘·감독 주체를 명시한 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "수사 시 군사법경찰관이 복종해야 하는 명령권자 확인"
+          }
+        ],
+        "critical": true,
+        "description": "군사법경찰관의 지휘·감독 체계 및 수사 시 명령 복종 대상을 정한 법령 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 군사법경찰관의 명령 복종 대상을 직접 묻고 있으므로, 이를 결정하는 핵심 근거가 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "국방부장관이 지휘·감독할 수 있는 대상(직위 또는 기관)을 특정할 수 있는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "국방부장관의 군사법경찰 지휘·감독 권한 근거 조항 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "국방부장관이 지휘·감독할 수 있는 구체적 대상 확인"
+          }
+        ],
+        "critical": true,
+        "description": "국방부장관의 군사법경찰에 대한 지휘·감독 권한을 정한 법령 조항",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 국방부장관의 지휘·감독 대상을 직접 묻고 있으므로, 이를 결정하는 핵심 근거가 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "0df1dd87-2fd2-4690-85ab-e2ddfb2eb7e5",
+    "seen_provision_ids": [
+      "군사법원법 40조  군검찰사무에 대한 지휘ㆍ감독#KOBLEX-092228",
+      "군사법원법 7조  군사법원장#KOBLEX-092105",
+      "군사법원법 156조  영장과 집행#KOBLEX-092625",
+      "군사법원법 45조  군사법경찰관과 상관의 명령#KOBLEX-092248",
+      "국군조직법 8조  국방부장관의 권한#KOBLEX-211966",
+      "군사법원법 38조  국방부장관의 군검찰사무 지휘ㆍ감독#KOBLEX-092225",
+      "군사법원법 534조 17 군검찰사무 지휘ㆍ감독#KOBLEX-093906",
+      "군사법원법 40조  군검찰사무에 대한 지휘ㆍ감독#KOBLEX-092227",
+      "군사법원법 40조  군검찰사무에 대한 지휘ㆍ감독#KOBLEX-092230",
+      "군인사법 59조 3 감사원의 조사와의 관계 등#KOBLEX-007115"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

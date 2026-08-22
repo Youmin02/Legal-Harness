@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T20:48:12.417233+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 169216.802,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 159 column 7 (char 4335)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "486f41c7-d681-4a9e-b936-bc141bf8e6b6",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 159 column 7 (char 4335)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 경찰로부터 절도 혐의를 받고 있는 상황입니다. 경찰은 갑을 체포하기 위해 그의 자택으로 가기로 결정합니다. 또한, 경찰은 그의 집을 수색하여 도난 물품을 찾으려고 합니다. 하지만, 이 모든 절차에서 필요한 법적 요건을 반드시 따라야 합니다. [질문] 경찰이 갑을 소환하거나 체포, 구금할 때 필요한 절차와 구속 시 고지해야 할 내용은 무엇이며, 갑의 자택을 압수나 수색할 때 필요한 절차는 무엇인가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n갑은 경찰로부터 절도 혐의를 받고 있는 상황입니다. 경찰은 갑을 체포하기 위해 그의 자택으로 가기로 결정합니다. 또한, 경찰은 그의 집을 수색하여 도난 물품을 찾으려고 합니다. 하지만, 이 모든 절차에서 필요한 법적 요건을 반드시 따라야 합니다.\n\n[질문]\n경찰이 갑을 소환하거나 체포, 구금할 때 필요한 절차와 구속 시 고지해야 할 내용은 무엇이며, 갑의 자택을 압수나 수색할 때 필요한 절차는 무엇인가?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "486f41c7-d681-4a9e-b936-bc141bf8e6b6",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

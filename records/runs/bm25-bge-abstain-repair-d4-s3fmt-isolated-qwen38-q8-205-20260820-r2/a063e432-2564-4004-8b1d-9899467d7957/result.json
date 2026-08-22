@@ -1,0 +1,1248 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "을이 확정된 판결에 대해 이의하려면, 민사소송법 제461조에 따라 제451조 내지 제460조의 규정에 준하여 재심을 제기할 수 있습니다.[CT1]\n법원은 강제집행이 정지되거나 제한되어야 하는 경우, 민사집행법 제49조 각 호에 해당하는 서류를 제출받아야 합니다.[CT2]\n또한, 이의의 소를 제기한 경우 정당한 이유가 인정되고 사실에 대한 소명이 있을 때, 법원은 담보 제공 여부에 따라 강제집행을 정지하도록 명할 수 있습니다.[CT3]\n전제: 을이 발견한 새로운 증거가 민사소송법 제451조제1항에 규정된 재심사유에 해당하는 것으로 가정합니다.\n한계: 본 답변은 벤치마크 진단용 후보 조문(Candidate Provisions)에 기반한 비공개(Non-publishable) 진단 결과입니다.\n한계: 민사소송법 제447조 등 일반적 재심청구 사유 및 기한에 대한 명시적 조문이 후보 목록에 포함되어 있지 않아, 해당 절차적 요건은 조건부로만 서술되었습니다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T17:29:28.911268+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 657883.094,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 549,
+      "dedup_collapse": 123,
+      "evidence_fusion": 549,
+      "first_stage": 700,
+      "request_rerank": 700,
+      "round_selected": 30,
+      "rrf": 600,
+      "selected": 549
+    }
+  },
+  "run_id": "a063e432-2564-4004-8b1d-9899467d7957",
+  "state": {
+    "accepted_provision_ids": [
+      "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128184",
+      "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128183",
+      "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128185",
+      "민사집행법 46조  이의의 소와 잠정처분#KOBLEX-128171"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 7,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 7,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 24
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 24,
+          "claim_count": 3
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "procedure",
+        "question_anchor": "을이 확정된 판결에 대해 이의하려면 어떻게 해야 하며",
+        "requested_output": "확정판결에 대한 이의제기 절차 및 요건"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "rule",
+        "question_anchor": "법원은 어떤 경우에 강제집행을 정지할 수 있는가",
+        "requested_output": "강제집행 정지 사유 및 법원의 판단 기준"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민사소송법 461조  준재심#KOBLEX-064693"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 461조  준재심#KOBLEX-064693",
+        "provision_text": "제461조(준재심) 제220조의 조서 또는 즉시항고로 불복할 수 있는 결정이나 명령이 확정된 경우에 제451조제1항에 규정된 사유가 있는 때에는 확정판결에 대한 제451조 내지 제460조의 규정에 준하여 재심을 제기할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.04360273852944374,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 461조  준재심",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공무원범죄에 관한 몰수 특례법 38조  강제집행의 정지#KOBLEX-038657"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 23.675235720171166,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "공무원범죄에 관한 몰수 특례법 38조  강제집행의 정지#KOBLEX-038657",
+        "provision_text": "① 법원은 강제경매 개시의 결정 또는 강제집행에 의하여 압류된 재산에 관하여 몰수보전명령을 한 경우 또는 하려는 경우 제37조제1항 단서에 규정된 사유가 있다고 판단할 만한 상당한 이유가 있다고 인정할 때에는 검사의 청구 또는 법원의 직권에 의한 결정으로 강제집행의 정지를 명할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9998217225074768,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "공무원범죄에 관한 몰수 특례법 38조  강제집행의 정지 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "마약류 불법거래 방지에 관한 특례법 48조  강제집행의 정지#KOBLEX-006654",
+          "마약류 불법거래 방지에 관한 특례법 48조  강제집행의 정지#KOBLEX-045404"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 23.937514682440206,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "마약류 불법거래 방지에 관한 특례법 48조  강제집행의 정지#KOBLEX-006654",
+        "provision_text": "① 법원은 강제경매 개시 결정 또는 강제집행에 의하여 압류된 재산에 대하여 몰수보전명령을 한 경우 또는 하려는 경우, 제47조제1항 단서에 따른 사유가 있다고 판단할 만한 상당한 이유가 있을 때에는 검사의 청구 또는 법원의 직권에 의한 결정으로 강제집행의 정지를 명할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9998052716255188,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "마약류 불법거래 방지에 관한 특례법 48조  강제집행의 정지 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 71조  등재신청에 대한 재판#KOBLEX-128281"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 3.0,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 71조  등재신청에 대한 재판#KOBLEX-128281",
+        "provision_text": "②등재신청에 정당한 이유가 없거나 쉽게 강제집행할 수 있다고 인정할 만한 명백한 사유가 있는 때에는 법원은 결정으로 이를 기각하여야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9485202431678772,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "민사집행법 71조  등재신청에 대한 재판 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128183"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 100,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128183",
+        "provision_text": "제49조(집행의 필수적 정지ㆍ제한) 강제집행은 다음 각호 가운데 어느 하나에 해당하는 서류를 제출한 경우에 정지하거나 제한하여야 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.7576858997344971,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사집행법 49조  집행의 필수적 정지ㆍ제한",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 46조  이의의 소와 잠정처분#KOBLEX-128171"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 3.0,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 46조  이의의 소와 잠정처분#KOBLEX-128171",
+        "provision_text": "②제1항의 이의를 주장한 사유가 법률상 정당한 이유가 있다고 인정되고, 사실에 대한 소명(疎明)이 있을 때에는 수소법원(受訴法院)은 당사자의 신청에 따라 판결이 있을 때까지 담보를 제공하게 하거나 담보를 제공하게 하지 아니하고 강제집행을 정지하도록 명할 수 있으며, 담보를 제공하게 하고 그 집행을 계속하도록 명하거나 실시한 집행처분을 취소하도록 명할 수 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.7117562294006348,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사집행법 46조  이의의 소와 잠정처분 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 26조  외국재판의 강제집행#KOBLEX-128114"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 94,
+        "first_stage_score": 2.0,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 26조  외국재판의 강제집행#KOBLEX-128114",
+        "provision_text": "①외국법원의 확정판결 또는 이와 동일한 효력이 인정되는 재판(이하 \"확정재판등\"이라 한다)에 기초한 강제집행은 대한민국 법원에서 집행판결로 그 강제집행을 허가하여야 할 수 있다. <개정 2014.5.20>",
+        "rerank_rank": 6,
+        "rerank_score": 0.26355481147766113,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "민사집행법 26조  외국재판의 강제집행 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공무원범죄에 관한 몰수 특례법 38조  강제집행의 정지#KOBLEX-038656"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 28.047232735110242,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "공무원범죄에 관한 몰수 특례법 38조  강제집행의 정지#KOBLEX-038656",
+        "provision_text": "제38조(강제집행의 정지)",
+        "rerank_rank": 7,
+        "rerank_score": 0.23628929257392883,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공무원범죄에 관한 몰수 특례법 38조  강제집행의 정지",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 145조  법정추인#KOBLEX-058671"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 23.96457384057706,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "민법 145조  법정추인#KOBLEX-058671",
+        "provision_text": "6. 강제집행",
+        "rerank_rank": 8,
+        "rerank_score": 0.1571667492389679,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "민법 145조  법정추인 6호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 24조#KOBLEX-128107"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 23.96457384057706,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 24조#KOBLEX-128107",
+        "provision_text": "제2편 강제집행",
+        "rerank_rank": 9,
+        "rerank_score": 0.12984591722488403,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "민사집행법 24조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 147조#KOBLEX-058673"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 37,
+        "first_stage_score": 18.736908466915178,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 147조#KOBLEX-058673",
+        "provision_text": "제5절 조건과 기한",
+        "rerank_rank": 1,
+        "rerank_score": 0.007885233499109745,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 147조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정소송법 31조  제3자에 의한 재심청구#KOBLEX-011507"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 25.51061834832037,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "행정소송법 31조  제3자에 의한 재심청구#KOBLEX-011507",
+        "provision_text": "제31조(제3자에 의한 재심청구)",
+        "rerank_rank": 2,
+        "rerank_score": 0.006274640094488859,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "행정소송법 31조  제3자에 의한 재심청구",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "디자인보호법 158조  재심의 청구#KOBLEX-126403",
+          "디자인보호법 158조  재심의 청구#KOBLEX-129666"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 29,
+        "first_stage_score": 19.3540513566305,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "디자인보호법 158조  재심의 청구#KOBLEX-126403",
+        "provision_text": "② 제1항의 재심청구에 관하여는 「민사소송법」 제451조 및 제453조를 준용한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.0046956948935985565,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "디자인보호법 158조  재심의 청구 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "특허법 178조  재심의 청구#KOBLEX-156255"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 31,
+        "first_stage_score": 19.3540513566305,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "특허법 178조  재심의 청구#KOBLEX-156255",
+        "provision_text": "② 제1항의 재심청구에 관하여는 「민사소송법」 제451조 및 제453조를 준용한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.004281856119632721,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "특허법 178조  재심의 청구 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "특허법 185조  「민사소송법」의 준용#KOBLEX-156273"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 21.523118051193087,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "특허법 185조  「민사소송법」의 준용#KOBLEX-156273",
+        "provision_text": "제185조(「민사소송법」의 준용) 재심청구에 관하여는 「민사소송법」 제459조제1항을 준용한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0036888164468109608,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "특허법 185조  「민사소송법」의 준용",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "초ㆍ중등교육법 18조 2 재심청구#KOBLEX-164826"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 24.60659228710664,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "초ㆍ중등교육법 18조 2 재심청구#KOBLEX-164826",
+        "provision_text": "④ 제1항에 따른 재심청구, 제2항에 따른 심사 절차와 결정 통보 등에 필요한 사항은 대통령령으로 정한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.003460358828306198,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "초ㆍ중등교육법 18조 2 재심청구 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "디자인보호법 165조  「민사소송법」의 준용#KOBLEX-126421",
+          "디자인보호법 165조  「민사소송법」의 준용#KOBLEX-129684"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 21.523118051193087,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "디자인보호법 165조  「민사소송법」의 준용#KOBLEX-126421",
+        "provision_text": "제165조(「민사소송법」의 준용) 재심청구에 관하여는 「민사소송법」 제459조제1항을 준용한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.003302361350506544,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "디자인보호법 165조  「민사소송법」의 준용",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128185"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 88,
+        "first_stage_score": 2.0,
+        "fusion_rank": 27,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128185",
+        "provision_text": "2. 강제집행의 일시정지를 명한 취지를 적은 재판의 정본",
+        "rerank_rank": 27,
+        "rerank_score": 0.8538904786109924,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사집행법 49조  집행의 필수적 정지ㆍ제한 2호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128184"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 2.0,
+        "fusion_rank": 28,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128184",
+        "provision_text": "1. 집행할 판결 또는 그 가집행을 취소하는 취지나, 강제집행을 허가하지 아니하거나 그 정지를 명하는 취지 또는 집행처분의 취소를 명한 취지를 적은 집행력 있는 재판의 정본",
+        "rerank_rank": 28,
+        "rerank_score": 0.7467769980430603,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사집행법 49조  집행의 필수적 정지ㆍ제한 1호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128189"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 2.0,
+        "fusion_rank": 30,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128189",
+        "provision_text": "6. 강제집행을 하지 아니한다거나 강제집행의 신청이나 위임을 취하한다는 취지를 적은 화해조서(和解調書)의 정본 또는 공정증서(公正證書)의 정본",
+        "rerank_rank": 30,
+        "rerank_score": 0.4367070198059082,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사집행법 49조  집행의 필수적 정지ㆍ제한 6호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 121조  매각허가에 대한 이의신청사유#KOBLEX-128474"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 99,
+        "first_stage_score": 1.0,
+        "fusion_rank": 31,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 121조  매각허가에 대한 이의신청사유#KOBLEX-128474",
+        "provision_text": "1. 강제집행을 허가할 수 없거나 집행을 계속 진행할 수 없을 때",
+        "rerank_rank": 31,
+        "rerank_score": 0.15761539340019226,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사집행법 121조  매각허가에 대한 이의신청사유 1호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 51조  변제증서 등의 제출에 의한 집행정지의 제한#KOBLEX-128194"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 91,
+        "first_stage_score": 2.0,
+        "fusion_rank": 32,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 51조  변제증서 등의 제출에 의한 집행정지의 제한#KOBLEX-128194",
+        "provision_text": "①제49조제4호의 증서 가운데 변제를 받았다는 취지를 적은 증서를 제출하여 강제집행이 정지되는 경우 그 정지기간은 2월로 한다.",
+        "rerank_rank": 32,
+        "rerank_score": 0.13219548761844635,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사집행법 51조  변제증서 등의 제출에 의한 집행정지의 제한 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 557조  강제집행의 정지#KOBLEX-033182"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 28.047232735110242,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 557조  강제집행의 정지#KOBLEX-033182",
+        "provision_text": "제557조(강제집행의 정지)",
+        "rerank_rank": 1,
+        "rerank_score": 0.10718008875846863,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 557조  강제집행의 정지",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 51조  변제증서 등의 제출에 의한 집행정지의 제한#KOBLEX-128195"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 92,
+        "first_stage_score": 2.0,
+        "fusion_rank": 33,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 51조  변제증서 등의 제출에 의한 집행정지의 제한#KOBLEX-128195",
+        "provision_text": "②제49조제4호의 증서 가운데 의무이행을 미루도록 승낙하였다는 취지를 적은 증서를 제출하여 강제집행이 정지되는 경우 그 정지는 2회에 한하며 통산하여 6월을 넘길 수 없다.",
+        "rerank_rank": 33,
+        "rerank_score": 0.1015511080622673,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사집행법 51조  변제증서 등의 제출에 의한 집행정지의 제한 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공무원범죄에 관한 몰수 특례법 38조  강제집행의 정지#KOBLEX-038656": "제38조(강제집행의 정지)",
+      "공무원범죄에 관한 몰수 특례법 38조  강제집행의 정지#KOBLEX-038657": "① 법원은 강제경매 개시의 결정 또는 강제집행에 의하여 압류된 재산에 관하여 몰수보전명령을 한 경우 또는 하려는 경우 제37조제1항 단서에 규정된 사유가 있다고 판단할 만한 상당한 이유가 있다고 인정할 때에는 검사의 청구 또는 법원의 직권에 의한 결정으로 강제집행의 정지를 명할 수 있다.",
+      "디자인보호법 158조  재심의 청구#KOBLEX-126403": "② 제1항의 재심청구에 관하여는 「민사소송법」 제451조 및 제453조를 준용한다.",
+      "디자인보호법 165조  「민사소송법」의 준용#KOBLEX-126421": "제165조(「민사소송법」의 준용) 재심청구에 관하여는 「민사소송법」 제459조제1항을 준용한다.",
+      "마약류 불법거래 방지에 관한 특례법 48조  강제집행의 정지#KOBLEX-006654": "① 법원은 강제경매 개시 결정 또는 강제집행에 의하여 압류된 재산에 대하여 몰수보전명령을 한 경우 또는 하려는 경우, 제47조제1항 단서에 따른 사유가 있다고 판단할 만한 상당한 이유가 있을 때에는 검사의 청구 또는 법원의 직권에 의한 결정으로 강제집행의 정지를 명할 수 있다.",
+      "민법 145조  법정추인#KOBLEX-058671": "6. 강제집행",
+      "민법 147조#KOBLEX-058673": "제5절 조건과 기한",
+      "민사소송법 461조  준재심#KOBLEX-064693": "제461조(준재심) 제220조의 조서 또는 즉시항고로 불복할 수 있는 결정이나 명령이 확정된 경우에 제451조제1항에 규정된 사유가 있는 때에는 확정판결에 대한 제451조 내지 제460조의 규정에 준하여 재심을 제기할 수 있다.",
+      "민사집행법 121조  매각허가에 대한 이의신청사유#KOBLEX-128474": "1. 강제집행을 허가할 수 없거나 집행을 계속 진행할 수 없을 때",
+      "민사집행법 24조#KOBLEX-128107": "제2편 강제집행",
+      "민사집행법 26조  외국재판의 강제집행#KOBLEX-128114": "①외국법원의 확정판결 또는 이와 동일한 효력이 인정되는 재판(이하 \"확정재판등\"이라 한다)에 기초한 강제집행은 대한민국 법원에서 집행판결로 그 강제집행을 허가하여야 할 수 있다. <개정 2014.5.20>",
+      "민사집행법 46조  이의의 소와 잠정처분#KOBLEX-128171": "②제1항의 이의를 주장한 사유가 법률상 정당한 이유가 있다고 인정되고, 사실에 대한 소명(疎明)이 있을 때에는 수소법원(受訴法院)은 당사자의 신청에 따라 판결이 있을 때까지 담보를 제공하게 하거나 담보를 제공하게 하지 아니하고 강제집행을 정지하도록 명할 수 있으며, 담보를 제공하게 하고 그 집행을 계속하도록 명하거나 실시한 집행처분을 취소하도록 명할 수 있다.",
+      "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128183": "제49조(집행의 필수적 정지ㆍ제한) 강제집행은 다음 각호 가운데 어느 하나에 해당하는 서류를 제출한 경우에 정지하거나 제한하여야 한다.",
+      "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128184": "1. 집행할 판결 또는 그 가집행을 취소하는 취지나, 강제집행을 허가하지 아니하거나 그 정지를 명하는 취지 또는 집행처분의 취소를 명한 취지를 적은 집행력 있는 재판의 정본",
+      "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128185": "2. 강제집행의 일시정지를 명한 취지를 적은 재판의 정본",
+      "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128189": "6. 강제집행을 하지 아니한다거나 강제집행의 신청이나 위임을 취하한다는 취지를 적은 화해조서(和解調書)의 정본 또는 공정증서(公正證書)의 정본",
+      "민사집행법 51조  변제증서 등의 제출에 의한 집행정지의 제한#KOBLEX-128194": "①제49조제4호의 증서 가운데 변제를 받았다는 취지를 적은 증서를 제출하여 강제집행이 정지되는 경우 그 정지기간은 2월로 한다.",
+      "민사집행법 51조  변제증서 등의 제출에 의한 집행정지의 제한#KOBLEX-128195": "②제49조제4호의 증서 가운데 의무이행을 미루도록 승낙하였다는 취지를 적은 증서를 제출하여 강제집행이 정지되는 경우 그 정지는 2회에 한하며 통산하여 6월을 넘길 수 없다.",
+      "민사집행법 71조  등재신청에 대한 재판#KOBLEX-128281": "②등재신청에 정당한 이유가 없거나 쉽게 강제집행할 수 있다고 인정할 만한 명백한 사유가 있는 때에는 법원은 결정으로 이를 기각하여야 한다.",
+      "채무자 회생 및 파산에 관한 법률 557조  강제집행의 정지#KOBLEX-033182": "제557조(강제집행의 정지)",
+      "초ㆍ중등교육법 18조 2 재심청구#KOBLEX-164826": "④ 제1항에 따른 재심청구, 제2항에 따른 심사 절차와 결정 통보 등에 필요한 사항은 대통령령으로 정한다.",
+      "특허법 178조  재심의 청구#KOBLEX-156255": "② 제1항의 재심청구에 관하여는 「민사소송법」 제451조 및 제453조를 준용한다.",
+      "특허법 185조  「민사소송법」의 준용#KOBLEX-156273": "제185조(「민사소송법」의 준용) 재심청구에 관하여는 「민사소송법」 제459조제1항을 준용한다.",
+      "행정소송법 31조  제3자에 의한 재심청구#KOBLEX-011507": "제31조(제3자에 의한 재심청구)"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "새로운 증거 발견 등 재심청구 사유를 규정하는 조문이 후보 목록에 포함되어 있지 않다.",
+            "requirement_id": "E1-R1",
+            "status": "unsatisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "재심청구의 기한과 청구 방법을 규정하는 조문이 후보 목록에 포함되어 있지 않다.",
+            "requirement_id": "E1-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "uncovered",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "E1-R1",
+          "E1-R2"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "제출된 후보 조문 중 확정판결에 대한 일반적 재심청구의 사유(민사소송법 제447조 등)와 절차(제448조 등)를 명시하는 조문이 없다. C001은 준재심에 관한 조항으로, 확정판결에 대한 일반적 재심청구 사유와 절차를 다루지 않으므로 E1의 완료 기준을 충족하지 못한다.",
+        "status": "uncovered"
+      },
+      {
+        "applicability_status": "conditional",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128183",
+              "민사집행법 46조  이의의 소와 잠정처분#KOBLEX-128171",
+              "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128184",
+              "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128185"
+            ],
+            "rationale": "C006은 이의의 소를 전제로 한 강제집행 정지 사유를, C005/C019/C018은 필수적 정지 사유를 제공하지만, 질문에서 요구하는 민사집행법 제13조 등 포괄적 정지 사유 조항은 누락되어 있다.",
+            "requirement_id": "E2-R1",
+            "status": "partially_satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "민사집행법 46조  이의의 소와 잠정처분#KOBLEX-128171"
+            ],
+            "rationale": "C006은 '정당한 이유'와 '소명'이라는 판단 기준을 제시하지만, 피해의 회복 가능성 등 더 구체적인 재량 판단 기준에 대한 명시적 규정은 부족하다.",
+            "requirement_id": "E2-R2",
+            "status": "partially_satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "민사집행법 46조  이의의 소와 잠정처분#KOBLEX-128171",
+          "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128183",
+          "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128184",
+          "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128185"
+        ],
+        "missing_aspects": [
+          "E2-R1",
+          "E2-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C006(민사집행법 제46조 제2항)은 이의의 소를 통한 강제집행 정지 사유와 법원의 판단 기준(정당한 이유, 소명)을 일부 제공한다. C005, C019, C018(민사집행법 제49조 및 각 호)은 필수적 정지 사유를 규정한다. 그러나 질문이 요구하는 '강제집행 정지 사유'의 포괄적 법적 근거(예: 민사집행법 제13조 등)와 법원이 고려하는 더 구체적인 판단 기준(피해의 회복 가능성 등)에 대한 명시적 조문이 부족하여 법적 지원이 불완전하다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민사집행법 46조  이의의 소와 잠정처분#KOBLEX-128171",
+        "support_spans": [
+          {
+            "end_char": 202,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128183",
+        "support_spans": [
+          {
+            "end_char": 75,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128184",
+        "support_spans": [
+          {
+            "end_char": 96,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128185",
+        "support_spans": [
+          {
+            "end_char": 31,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 7,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "확정된 민사판결에 대해 채무자가 새로운 증거를 근거로 이의를 제기할 수 있는 법적 절차와 요건",
+        "issue_id": "I1"
+      },
+      {
+        "description": "강제집행 정지를 명할 수 있는 법원의 재량권 범위와 구체적 사유",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "재심청구 사유(민사소송법 제447조 등)와 청구 절차(소송법 제448조 등)를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "재심청구의 사유(새로운 증거 발견 등)를 명시하는 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "재심청구의 기한과 절차(소송법상 청구방법) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "확정판결에 대한 재심청구 사유 및 절차",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 '확정된 판결에 대해 이의하려면 어떻게 해야 하는지'를 묻고 있으므로, 확정판결의 기판력 예외인 재심청구 절차가 핵심",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "강제집행 정지 사유(민사집행법 제13조 등)와 법원의 재량 판단 기준 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "강제집행 정지를 명할 수 있는 구체적 사유(민사집행법 제13조 등) 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "법원이 강제집행 정지를 판단할 때 고려하는 기준(피해의 회복 가능성 등) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "강제집행 정지 요건 및 법원의 판단 기준",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 '법원은 어떤 경우에 강제집행을 정지할 수 있는가'를 묻고 있으므로, 강제집행 정지의 법적 근거와 요건이 핵심",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을에게 돈을 빌려주고 갚지 않자 법원에 소송을 제기하여 승소 판결을 받았습니다. 을은 판결에 불복하여 항소하지 않았고, 판결은 확정되었습니다. 그러나 을은 그 후에 채무의 존재에 대해 새로운 증거를 발견하여 판결에 이의를 제기하려고 합니다. 이를 통해 강제집행이 이루어지지 않도록 하고자 합니다. [질문] 을이 확정된 판결에 대해 이의하려면 어떻게 해야 하며, 법원은 어떤 경우에 강제집행을 정지할 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "민사소송법 재심청구 사유 새로운 증거 발견 확정판결 기판력 예외",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "재심청구",
+          "확정판결",
+          "새로운 증거",
+          "기판력",
+          "민사소송법"
+        ],
+        "query_text": "확정판결 재심청구 사유 새로운 증거 발견 절차 [원문 맥락] 이를 통해 강제집행이 이루어지지 않도록 하고자 합니다. 을이 확정된 판결에 대해 이의하려면 어떻게 해야 하며, 법원은 어떤 경우에 강제집행을 정지할 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "확정판결에 대한 이의제기 절차 및 새로운 증거를 근거로 한 재심청구 요건",
+        "statute_hints": [
+          "민사소송법 제447조",
+          "민사소송법 제448조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "민사집행법 강제집행 정지 사유 법원 재량 판단 기준 피해 회복",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "강제집행 정지",
+          "민사집행법",
+          "법원 판단",
+          "집행 정지 사유"
+        ],
+        "query_text": "강제집행 정지 사유 법원 판단 기준 [원문 맥락] 이를 통해 강제집행이 이루어지지 않도록 하고자 합니다. 을이 확정된 판결에 대해 이의하려면 어떻게 해야 하며, 법원은 어떤 경우에 강제집행을 정지할 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "법원이 강제집행을 정지할 수 있는 법적 요건과 판단 기준",
+        "statute_hints": [
+          "민사집행법 제13조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "민사소송법 제447조 제448조 재심청구 사유 기한 절차",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "재심청구",
+          "사유",
+          "기한",
+          "절차",
+          "민사소송법"
+        ],
+        "query_text": "민사소송법 재심청구 사유 기한 절차 [원문 맥락] 이를 통해 강제집행이 이루어지지 않도록 하고자 합니다. 을이 확정된 판결에 대해 이의하려면 어떻게 해야 하며, 법원은 어떤 경우에 강제집행을 정지할 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "확정판결에 대한 재심청구 사유와 기한 및 절차",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "민사집행법 강제집행 정지 신청 요건 법원 판단 기준 피해 회복",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "강제집행",
+          "정지",
+          "신청",
+          "요건",
+          "판단",
+          "기준"
+        ],
+        "query_text": "강제집행 정지 신청 요건 및 법원의 판단 기준 [원문 맥락] 이를 통해 강제집행이 이루어지지 않도록 하고자 합니다. 을이 확정된 판결에 대해 이의하려면 어떻게 해야 하며, 법원은 어떤 경우에 강제집행을 정지할 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "강제집행 정지를 명할 수 있는 구체적 사유와 법원의 재량 판단 기준",
+        "statute_hints": [
+          "민사집행법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "민사소송법 제447조 제448조 재심청구 사유 기한 절차",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민사소송법",
+          "제447조",
+          "제448조",
+          "재심청구",
+          "사유",
+          "기한"
+        ],
+        "query_text": "민사소송법 제447조 재심청구 사유 제448조 청구 기한 [원문 맥락] 이를 통해 강제집행이 이루어지지 않도록 하고자 합니다. 을이 확정된 판결에 대해 이의하려면 어떻게 해야 하며, 법원은 어떤 경우에 강제집행을 정지할 수 있는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "확정판결에 대한 재심청구 사유와 기한 및 절차",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "민사집행법 제13조 강제집행 정지 사유",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민사집행법",
+          "제13조",
+          "강제집행",
+          "정지",
+          "사유"
+        ],
+        "query_text": "민사집행법 제13조 강제집행 정지 사유 [원문 맥락] 이를 통해 강제집행이 이루어지지 않도록 하고자 합니다. 을이 확정된 판결에 대해 이의하려면 어떻게 해야 하며, 법원은 어떤 경우에 강제집행을 정지할 수 있는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "강제집행 정지를 명할 수 있는 구체적 사유",
+        "statute_hints": [
+          "민사집행법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "강제집행 정지 재량 판단 기준 피해 회복 가능성",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "강제집행",
+          "정지",
+          "재량",
+          "판단",
+          "기준",
+          "피해",
+          "회복"
+        ],
+        "query_text": "강제집행 정지 재량 판단 기준 피해 회복 가능성 [원문 맥락] 이를 통해 강제집행이 이루어지지 않도록 하고자 합니다. 을이 확정된 판결에 대해 이의하려면 어떻게 해야 하며, 법원은 어떤 경우에 강제집행을 정지할 수 있는가?",
+        "request_id": "GRQ-R3-3",
+        "rerank_query_text": "법원이 강제집행 정지를 판단할 때 고려하는 기준",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을에게 돈을 빌려주고 갚지 않자 법원에 소송을 제기하여 승소 판결을 받았습니다. 을은 판결에 불복하여 항소하지 않았고, 판결은 확정되었습니다. 그러나 을은 그 후에 채무의 존재에 대해 새로운 증거를 발견하여 판결에 이의를 제기하려고 합니다. 이를 통해 강제집행이 이루어지지 않도록 하고자 합니다.\n\n[질문]\n을이 확정된 판결에 대해 이의하려면 어떻게 해야 하며, 법원은 어떤 경우에 강제집행을 정지할 수 있는가?",
+    "remaining_request_budget": 2,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "재심청구 사유(민사소송법 제447조 등)와 청구 절차(소송법 제448조 등)를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "재심청구의 사유(새로운 증거 발견 등)를 명시하는 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "재심청구의 기한과 절차(소송법상 청구방법) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "확정판결에 대한 재심청구 사유 및 절차",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 '확정된 판결에 대해 이의하려면 어떻게 해야 하는지'를 묻고 있으므로, 확정판결의 기판력 예외인 재심청구 절차가 핵심",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "강제집행 정지 사유(민사집행법 제13조 등)와 법원의 재량 판단 기준 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "강제집행 정지를 명할 수 있는 구체적 사유(민사집행법 제13조 등) 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "법원이 강제집행 정지를 판단할 때 고려하는 기준(피해의 회복 가능성 등) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "강제집행 정지 요건 및 법원의 판단 기준",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 '법원은 어떤 경우에 강제집행을 정지할 수 있는가'를 묻고 있으므로, 강제집행 정지의 법적 근거와 요건이 핵심",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "a063e432-2564-4004-8b1d-9899467d7957",
+    "seen_provision_ids": [
+      "민사집행법 46조  이의의 소와 잠정처분#KOBLEX-128171",
+      "마약류 불법거래 방지에 관한 특례법 48조  강제집행의 정지#KOBLEX-006654",
+      "채무자 회생 및 파산에 관한 법률 557조  강제집행의 정지#KOBLEX-033182",
+      "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128184",
+      "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128185",
+      "행정소송법 31조  제3자에 의한 재심청구#KOBLEX-011507",
+      "민사집행법 26조  외국재판의 강제집행#KOBLEX-128114",
+      "특허법 185조  「민사소송법」의 준용#KOBLEX-156273",
+      "민사소송법 461조  준재심#KOBLEX-064693",
+      "민법 147조#KOBLEX-058673",
+      "민법 145조  법정추인#KOBLEX-058671",
+      "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128183",
+      "디자인보호법 165조  「민사소송법」의 준용#KOBLEX-126421",
+      "민사집행법 24조#KOBLEX-128107",
+      "민사집행법 49조  집행의 필수적 정지ㆍ제한#KOBLEX-128189",
+      "민사집행법 51조  변제증서 등의 제출에 의한 집행정지의 제한#KOBLEX-128195",
+      "공무원범죄에 관한 몰수 특례법 38조  강제집행의 정지#KOBLEX-038657",
+      "민사집행법 121조  매각허가에 대한 이의신청사유#KOBLEX-128474",
+      "특허법 178조  재심의 청구#KOBLEX-156255",
+      "민사집행법 51조  변제증서 등의 제출에 의한 집행정지의 제한#KOBLEX-128194",
+      "초ㆍ중등교육법 18조 2 재심청구#KOBLEX-164826",
+      "민사집행법 71조  등재신청에 대한 재판#KOBLEX-128281",
+      "디자인보호법 158조  재심의 청구#KOBLEX-126403",
+      "공무원범죄에 관한 몰수 특례법 38조  강제집행의 정지#KOBLEX-038656"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

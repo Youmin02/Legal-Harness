@@ -1,0 +1,1344 @@
+{
+  "abstention_reason": null,
+  "answer": "부동산의 소유자는 그 부동산에 부합한 물건의 소유권을 취득한다. 그러나 타인의 권원에 의하여 부속된 것은 그러하지 아니하다.[CT1]\n을의 소유인 태양광 패널은 갑의 부동산에 부합되었으나, 타인의 권원에 의하여 부속된 것이므로 갑은 소유권을 취득할 수 없다.[CT2]\n전제: 태양광 패널이 갑의 부동산에 물리적으로 부합(부속)된 상태임을 전제한다.\n전제: 태양광 패널의 소유권이 을에게 귀속되어 있음을 전제한다.\n한계: T2(손해배상 청구)에 대한 답변은 보류된다. E2(불법행위 손해배상 및 물권적 침해)에 대한 증거가 부분적으로만 커버되어 있으며, 부동산 소유자의 물권적 침해에 기한 구체적인 손해배상 청구권에 대한 명시적 규정이 부족하여 법적 결론을 도출할 수 없다.",
+  "answer_mode": "limited",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "부동산의 소유자는 그 부동산에 부합한 물건의 소유권을 취득한다. 그러나 타인의 권원에 의하여 부속된 것은 그러하지 아니하다.[CT1]\n을의 소유인 태양광 패널은 갑의 부동산에 부합되었으나, 타인의 권원에 의하여 부속된 것이므로 갑은 소유권을 취득할 수 없다.[CT2]\n전제: 태양광 패널이 갑의 부동산에 물리적으로 부합(부속)된 상태임을 전제한다.\n전제: 태양광 패널의 소유권이 을에게 귀속되어 있음을 전제한다.\n한계: T2(손해배상 청구)에 대한 답변은 보류된다. E2(불법행위 손해배상 및 물권적 침해)에 대한 증거가 부분적으로만 커버되어 있으며, 부동산 소유자의 물권적 침해에 기한 구체적인 손해배상 청구권에 대한 명시적 규정이 부족하여 법적 결론을 도출할 수 없다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T07:19:49.091598+00:00",
+  "deferred_target_ids": [
+    "T2"
+  ],
+  "end_to_end_latency_ms": 515134.523,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 553,
+      "dedup_collapse": 156,
+      "evidence_fusion": 553,
+      "first_stage": 800,
+      "request_rerank": 800,
+      "round_selected": 30,
+      "rrf": 600,
+      "selected": 553
+    }
+  },
+  "run_id": "29794b8d-b02f-4314-8b9f-2342a5ffe7a7",
+  "state": {
+    "accepted_provision_ids": [
+      "민법 256조  부동산에의 부합#KOBLEX-058916",
+      "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059941",
+      "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059942",
+      "민법 252조  무주물의 귀속#KOBLEX-058908",
+      "민법 750조  불법행위의 내용#KOBLEX-059905"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 4,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 7,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [
+            "T2"
+          ],
+          "explanation": "Only the citable answer targets will be answered; remaining targets are deferred.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": [
+            "T2"
+          ]
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "limited",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "소유권을 취득할 수 있는가",
+        "requested_output": "갑이 을의 태양광 패널에 대한 소유권을 취득할 수 있는지 여부 및 법적 근거"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_procedure_and_basis",
+        "question_anchor": "어떻게 보상을 청구할 수 있는가",
+        "requested_output": "갑이 태양광 패널로 인한 부동산 손해에 대해 보상을 청구할 수 있는 법적 방법 및 요건"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민법 99조  부동산, 동산#KOBLEX-058577"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 40.478430721452455,
+        "fusion_rank": 14,
+        "issue_id": "I2",
+        "provision_id": "민법 99조  부동산, 동산#KOBLEX-058577",
+        "provision_text": "제99조(부동산, 동산)",
+        "rerank_rank": 14,
+        "rerank_score": 4.98529971082462e-06,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "민법 99조  부동산, 동산",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "광업법 79조  손해배상 예정액#KOBLEX-134134"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 62,
+        "first_stage_score": 24.533809744102353,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "광업법 79조  손해배상 예정액#KOBLEX-134134",
+        "provision_text": "제79조(손해배상 예정액) 손해배상의 액수가 예정되어 있는 경우에 그 금액이 현저하게 부적당하면 당사자는 그 증감을 청구할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 2.0030653104186058e-05,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "광업법 79조  손해배상 예정액",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "경비업법 26조  손해배상 등#KOBLEX-219816"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 28.486263409574903,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "경비업법 26조  손해배상 등#KOBLEX-219816",
+        "provision_text": "제26조(손해배상 등)",
+        "rerank_rank": 2,
+        "rerank_score": 1.414858070347691e-05,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "경비업법 26조  손해배상 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 206조  점유의 보전#KOBLEX-058808"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "민법 206조  점유의 보전#KOBLEX-058808",
+        "provision_text": "①점유자가 점유의 방해를 받을 염려가 있는 때에는 그 방해의 예방 또는 손해배상의 담보를 청구할 수 있다.",
+        "rerank_rank": 3,
+        "rerank_score": 1.1850957889691927e-05,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "민법 206조  점유의 보전 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "중재법 18조 6 비용 및 손해배상#KOBLEX-118728"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 34,
+        "first_stage_score": 27.790560580067332,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "중재법 18조 6 비용 및 손해배상#KOBLEX-118728",
+        "provision_text": "제18조의6(비용 및 손해배상)",
+        "rerank_rank": 4,
+        "rerank_score": 9.455351573706139e-06,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "중재법 18조 6 비용 및 손해배상",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정소송법 28조  사정판결#KOBLEX-011498"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 36,
+        "first_stage_score": 27.209271053162894,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "행정소송법 28조  사정판결#KOBLEX-011498",
+        "provision_text": "③원고는 피고인 행정청이 속하는 국가 또는 공공단체를 상대로 손해배상, 제해시설의 설치 그 밖에 적당한 구제방법의 청구를 당해 취소소송등이 계속된 법원에 병합하여 제기할 수 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 8.05629497335758e-06,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "행정소송법 28조  사정판결 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "하도급거래 공정화에 관한 법률 35조  손해배상 책임#KOBLEX-228492"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 22,
+        "first_stage_score": 28.486263409574903,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "하도급거래 공정화에 관한 법률 35조  손해배상 책임#KOBLEX-228492",
+        "provision_text": "제35조(손해배상 책임)",
+        "rerank_rank": 6,
+        "rerank_score": 7.0952555688563734e-06,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "하도급거래 공정화에 관한 법률 35조  손해배상 책임",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "전기통신사업법 33조  손해배상#KOBLEX-204017"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 29.217692754529846,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "전기통신사업법 33조  손해배상#KOBLEX-204017",
+        "provision_text": "제33조(손해배상)",
+        "rerank_rank": 7,
+        "rerank_score": 6.910823231009999e-06,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "전기통신사업법 33조  손해배상",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "전기통신사업법 55조  손해배상#KOBLEX-204219"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 29.217692754529846,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "전기통신사업법 55조  손해배상#KOBLEX-204219",
+        "provision_text": "제55조(손해배상)",
+        "rerank_rank": 8,
+        "rerank_score": 6.3997836150520016e-06,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "전기통신사업법 55조  손해배상",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "정보통신망 이용촉진 및 정보보호 등에 관한 법률 60조  손해배상 등#KOBLEX-177142"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 28.486263409574903,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 60조  손해배상 등#KOBLEX-177142",
+        "provision_text": "제60조(손해배상 등)",
+        "rerank_rank": 9,
+        "rerank_score": 6.399442099791486e-06,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 60조  손해배상 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 256조  부동산에의 부합#KOBLEX-058916"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 23.230935404016357,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민법 256조  부동산에의 부합#KOBLEX-058916",
+        "provision_text": "제256조(부동산에의 부합) 부동산의 소유자는 그 부동산에 부합한 물건의 소유권을 취득한다. 그러나 타인의 권원에 의하여 부속된 것은 그러하지 아니하다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.3155692219734192,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "민법 256조  부동산에의 부합",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 763조  준용규정#KOBLEX-059935"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 67,
+        "first_stage_score": 18.200398630105926,
+        "fusion_rank": 25,
+        "issue_id": "I2",
+        "provision_id": "민법 763조  준용규정#KOBLEX-059935",
+        "provision_text": "제763조(준용규정) 제393조, 제394조, 제396조, 제399조의 규정은 불법행위로 인한 손해배상에 준용한다.",
+        "rerank_rank": 25,
+        "rerank_score": 0.9456983208656311,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3"
+        ],
+        "statute_name": "민법 763조  준용규정",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 566조  면책의 효력#KOBLEX-033212"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 30.723514418023246,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 566조  면책의 효력#KOBLEX-033212",
+        "provision_text": "3. 채무자가 고의로 가한 불법행위로 인한 손해배상",
+        "rerank_rank": 6,
+        "rerank_score": 0.48994195461273193,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 566조  면책의 효력 3호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 750조  불법행위의 내용#KOBLEX-059905"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 28.52199980657605,
+        "fusion_rank": 27,
+        "issue_id": "I2",
+        "provision_id": "민법 750조  불법행위의 내용#KOBLEX-059905",
+        "provision_text": "제750조(불법행위의 내용) 고의 또는 과실로 인한 위법행위로 타인에게 손해를 가한 자는 그 손해를 배상할 책임이 있다.",
+        "rerank_rank": 27,
+        "rerank_score": 0.4076981544494629,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3"
+        ],
+        "statute_name": "민법 750조  불법행위의 내용",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 566조  면책의 효력#KOBLEX-033213"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 27.03270824614653,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 566조  면책의 효력#KOBLEX-033213",
+        "provision_text": "4. 채무자가 중대한 과실로 타인의 생명 또는 신체를 침해한 불법행위로 인하여 발생한 손해배상",
+        "rerank_rank": 5,
+        "rerank_score": 0.37659308314323425,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 566조  면책의 효력 4호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 625조  면책결정의 효력#KOBLEX-033477"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 22.925165493690862,
+        "fusion_rank": 12,
+        "issue_id": "I2",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 625조  면책결정의 효력#KOBLEX-033477",
+        "provision_text": "②면책을 받은 채무자는 변제계획에 따라 변제한 것을 제외하고 개인회생채권자에 대한 채무에 관하여 그 책임이 면제된다. 다만, 다음 각호의 청구권에 관하여는 책임이 면제되지 아니한다. 1. 개인회생채권자목록에 기재되지 아니한 청구권 2. 제583조제1항제2호의 규정에 의한 조세 등의 청구권 3. 벌금ㆍ과료ㆍ형사소송비용ㆍ추징금 및 과태료 4. 채무자가 고의로 가한 불법행위로 인한 손해배상 5. 채무자가 중대한 과실로 타인의 생명 또는 신체를 침해한 불법행위로 인하여 발생한 손해배상 6. 채무자의 근로자의 임금ㆍ퇴직금 및 재해보상금 7. 채무자의 근로자의 임치금 및 신원보증금 8. 채무자가 양육자 또는 부양의무자로서 부담하여야 할 비용",
+        "rerank_rank": 12,
+        "rerank_score": 0.33030378818511963,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 625조  면책결정의 효력 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059941"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 88,
+        "first_stage_score": 3.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059941",
+        "provision_text": "①불법행위로 인한 손해배상의 청구권은 피해자나 그 법정대리인이 그 손해 및 가해자를 안 날로부터 3년간 이를 행사하지 아니하면 시효로 인하여 소멸한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.3140133023262024,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3",
+          "GRQ-R2-4"
+        ],
+        "statute_name": "민법 766조  손해배상청구권의 소멸시효 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059942"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 3.0,
+        "fusion_rank": 28,
+        "issue_id": "I2",
+        "provision_id": "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059942",
+        "provision_text": "②불법행위를 한 날로부터 10년을 경과한 때에도 전항과 같다.",
+        "rerank_rank": 28,
+        "rerank_score": 0.12961821258068085,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3"
+        ],
+        "statute_name": "민법 766조  손해배상청구권의 소멸시효 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 760조  공동불법행위자의 책임#KOBLEX-059928"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 3.0,
+        "fusion_rank": 29,
+        "issue_id": "I2",
+        "provision_id": "민법 760조  공동불법행위자의 책임#KOBLEX-059928",
+        "provision_text": "①수인이 공동의 불법행위로 타인에게 손해를 가한 때에는 연대하여 그 손해를 배상할 책임이 있다.",
+        "rerank_rank": 29,
+        "rerank_score": 0.11441045999526978,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3"
+        ],
+        "statute_name": "민법 760조  공동불법행위자의 책임 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 761조  정당방위, 긴급피난#KOBLEX-059932"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 3.0,
+        "fusion_rank": 31,
+        "issue_id": "I2",
+        "provision_id": "민법 761조  정당방위, 긴급피난#KOBLEX-059932",
+        "provision_text": "①타인의 불법행위에 대하여 자기 또는 제삼자의 이익을 방위하기 위하여 부득이 타인에게 손해를 가한 자는 배상할 책임이 없다. 그러나 피해자는 불법행위에 대하여 손해의 배상을 청구할 수 있다.",
+        "rerank_rank": 31,
+        "rerank_score": 0.0861821398139,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3"
+        ],
+        "statute_name": "민법 761조  정당방위, 긴급피난 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 252조  무주물의 귀속#KOBLEX-058907"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 43,
+        "first_stage_score": 17.913595773480115,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 252조  무주물의 귀속#KOBLEX-058907",
+        "provision_text": "제252조(무주물의 귀속)",
+        "rerank_rank": 1,
+        "rerank_score": 0.008557958528399467,
+        "retrieval_round": 3,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 252조  무주물의 귀속",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 252조  무주물의 귀속#KOBLEX-058908"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 4.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 252조  무주물의 귀속#KOBLEX-058908",
+        "provision_text": "①무주의 동산을 소유의 의사로 점유한 자는 그 소유권을 취득한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.001039917697198689,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 252조  무주물의 귀속 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 252조  무주물의 귀속#KOBLEX-058910"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 32,
+        "first_stage_score": 18.74070990320008,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민법 252조  무주물의 귀속#KOBLEX-058910",
+        "provision_text": "③야생하는 동물은 무주물로 하고 사양하는 야생동물도 다시 야생상태로 돌아가면 무주물로 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.000532760692294687,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 252조  무주물의 귀속 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "근로기준법 시행령 59조 2 민감정보 및 고유식별정보의 처리#KOBLEX-011331"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 98,
+        "first_stage_score": 18.50522229106456,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "근로기준법 시행령 59조 2 민감정보 및 고유식별정보의 처리#KOBLEX-011331",
+        "provision_text": "1. 법 제19조제2항에 따른 손해배상 청구에 관한 사무",
+        "rerank_rank": 3,
+        "rerank_score": 3.425842442084104e-05,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "근로기준법 시행령 59조 2 민감정보 및 고유식별정보의 처리 1호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "수산업법 89조  수질오염에 따른 손해배상#KOBLEX-034932"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 49,
+        "first_stage_score": 20.3129898207621,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "수산업법 89조  수질오염에 따른 손해배상#KOBLEX-034932",
+        "provision_text": "제89조(수질오염에 따른 손해배상)",
+        "rerank_rank": 5,
+        "rerank_score": 2.4188129827962257e-05,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "수산업법 89조  수질오염에 따른 손해배상",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "독점규제 및 공정거래에 관한 법률 108조#KOBLEX-020955",
+          "독점규제 및 공정거래에 관한 법률 108조#KOBLEX-039383"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 46,
+        "first_stage_score": 20.3129898207621,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "독점규제 및 공정거래에 관한 법률 108조#KOBLEX-020955",
+        "provision_text": "제12장 금지청구 및 손해배상",
+        "rerank_rank": 6,
+        "rerank_score": 1.9087969121756032e-05,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "독점규제 및 공정거래에 관한 법률 108조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "변호사법 58조 12 손해배상 준비금 등#KOBLEX-087020"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 48,
+        "first_stage_score": 20.3129898207621,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "변호사법 58조 12 손해배상 준비금 등#KOBLEX-087020",
+        "provision_text": "제58조의12(손해배상 준비금 등)",
+        "rerank_rank": 7,
+        "rerank_score": 1.6494619558216073e-05,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "변호사법 58조 12 손해배상 준비금 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "경비업법 26조  손해배상 등#KOBLEX-219816": "제26조(손해배상 등)",
+      "광업법 79조  손해배상 예정액#KOBLEX-134134": "제79조(손해배상 예정액) 손해배상의 액수가 예정되어 있는 경우에 그 금액이 현저하게 부적당하면 당사자는 그 증감을 청구할 수 있다.",
+      "근로기준법 시행령 59조 2 민감정보 및 고유식별정보의 처리#KOBLEX-011331": "1. 법 제19조제2항에 따른 손해배상 청구에 관한 사무",
+      "독점규제 및 공정거래에 관한 법률 108조#KOBLEX-020955": "제12장 금지청구 및 손해배상",
+      "민법 206조  점유의 보전#KOBLEX-058808": "①점유자가 점유의 방해를 받을 염려가 있는 때에는 그 방해의 예방 또는 손해배상의 담보를 청구할 수 있다.",
+      "민법 252조  무주물의 귀속#KOBLEX-058907": "제252조(무주물의 귀속)",
+      "민법 252조  무주물의 귀속#KOBLEX-058908": "①무주의 동산을 소유의 의사로 점유한 자는 그 소유권을 취득한다.",
+      "민법 252조  무주물의 귀속#KOBLEX-058910": "③야생하는 동물은 무주물로 하고 사양하는 야생동물도 다시 야생상태로 돌아가면 무주물로 한다.",
+      "민법 256조  부동산에의 부합#KOBLEX-058916": "제256조(부동산에의 부합) 부동산의 소유자는 그 부동산에 부합한 물건의 소유권을 취득한다. 그러나 타인의 권원에 의하여 부속된 것은 그러하지 아니하다.",
+      "민법 750조  불법행위의 내용#KOBLEX-059905": "제750조(불법행위의 내용) 고의 또는 과실로 인한 위법행위로 타인에게 손해를 가한 자는 그 손해를 배상할 책임이 있다.",
+      "민법 760조  공동불법행위자의 책임#KOBLEX-059928": "①수인이 공동의 불법행위로 타인에게 손해를 가한 때에는 연대하여 그 손해를 배상할 책임이 있다.",
+      "민법 761조  정당방위, 긴급피난#KOBLEX-059932": "①타인의 불법행위에 대하여 자기 또는 제삼자의 이익을 방위하기 위하여 부득이 타인에게 손해를 가한 자는 배상할 책임이 없다. 그러나 피해자는 불법행위에 대하여 손해의 배상을 청구할 수 있다.",
+      "민법 763조  준용규정#KOBLEX-059935": "제763조(준용규정) 제393조, 제394조, 제396조, 제399조의 규정은 불법행위로 인한 손해배상에 준용한다.",
+      "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059941": "①불법행위로 인한 손해배상의 청구권은 피해자나 그 법정대리인이 그 손해 및 가해자를 안 날로부터 3년간 이를 행사하지 아니하면 시효로 인하여 소멸한다.",
+      "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059942": "②불법행위를 한 날로부터 10년을 경과한 때에도 전항과 같다.",
+      "민법 99조  부동산, 동산#KOBLEX-058577": "제99조(부동산, 동산)",
+      "변호사법 58조 12 손해배상 준비금 등#KOBLEX-087020": "제58조의12(손해배상 준비금 등)",
+      "수산업법 89조  수질오염에 따른 손해배상#KOBLEX-034932": "제89조(수질오염에 따른 손해배상)",
+      "전기통신사업법 33조  손해배상#KOBLEX-204017": "제33조(손해배상)",
+      "전기통신사업법 55조  손해배상#KOBLEX-204219": "제55조(손해배상)",
+      "정보통신망 이용촉진 및 정보보호 등에 관한 법률 60조  손해배상 등#KOBLEX-177142": "제60조(손해배상 등)",
+      "중재법 18조 6 비용 및 손해배상#KOBLEX-118728": "제18조의6(비용 및 손해배상)",
+      "채무자 회생 및 파산에 관한 법률 566조  면책의 효력#KOBLEX-033212": "3. 채무자가 고의로 가한 불법행위로 인한 손해배상",
+      "채무자 회생 및 파산에 관한 법률 566조  면책의 효력#KOBLEX-033213": "4. 채무자가 중대한 과실로 타인의 생명 또는 신체를 침해한 불법행위로 인하여 발생한 손해배상",
+      "채무자 회생 및 파산에 관한 법률 625조  면책결정의 효력#KOBLEX-033477": "②면책을 받은 채무자는 변제계획에 따라 변제한 것을 제외하고 개인회생채권자에 대한 채무에 관하여 그 책임이 면제된다. 다만, 다음 각호의 청구권에 관하여는 책임이 면제되지 아니한다. 1. 개인회생채권자목록에 기재되지 아니한 청구권 2. 제583조제1항제2호의 규정에 의한 조세 등의 청구권 3. 벌금ㆍ과료ㆍ형사소송비용ㆍ추징금 및 과태료 4. 채무자가 고의로 가한 불법행위로 인한 손해배상 5. 채무자가 중대한 과실로 타인의 생명 또는 신체를 침해한 불법행위로 인하여 발생한 손해배상 6. 채무자의 근로자의 임금ㆍ퇴직금 및 재해보상금 7. 채무자의 근로자의 임치금 및 신원보증금 8. 채무자가 양육자 또는 부양의무자로서 부담하여야 할 비용",
+      "하도급거래 공정화에 관한 법률 35조  손해배상 책임#KOBLEX-228492": "제35조(손해배상 책임)",
+      "행정소송법 28조  사정판결#KOBLEX-011498": "③원고는 피고인 행정청이 속하는 국가 또는 공공단체를 상대로 손해배상, 제해시설의 설치 그 밖에 적당한 구제방법의 청구를 당해 취소소송등이 계속된 법원에 병합하여 제기할 수 있다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 252조  무주물의 귀속#KOBLEX-058908"
+            ],
+            "rationale": "C022(민법 제252조 제1항)은 무주의 동산을 소유의 의사로 점유한 자의 소유권 취득 요건과 효과를 명확히 규정한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "민법 256조  부동산에의 부합#KOBLEX-058916"
+            ],
+            "rationale": "C011(민법 제256조)은 부동산에 부합한 물건의 소유권 귀속 원칙을 명확히 규정한다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민법 256조  부동산에의 부합#KOBLEX-058916",
+          "민법 252조  무주물의 귀속#KOBLEX-058908"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C011(민법 제256조)은 타인 부동산에 부합한 동산의 소유권 귀속 원칙을, C022(민법 제252조 제1항)은 무주물 선점의 요건과 법적 효과를 규정하여 E1의 모든 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 750조  불법행위의 내용#KOBLEX-059905"
+            ],
+            "rationale": "C014(민법 제750조)는 고의 또는 과실, 위법행위, 손해, 인과관계 등 불법행위 손해배상의 핵심 구성요건을 규정한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "부동산 소유자의 물권적 침해에 기한 구체적인 손해배상 청구권 또는 물권적 청구권과 불법행위 손해배상의 관계에 대한 명시적 규정이 후보군에 없다.",
+            "requirement_id": "E2-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "민법 750조  불법행위의 내용#KOBLEX-059905",
+          "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059941",
+          "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059942"
+        ],
+        "missing_aspects": [
+          "E2-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C014(민법 제750조)는 불법행위 손해배상의 일반적 구성요건을 제공하여 E2-R1을 충족한다. C017, C018은 소멸시효를 규정하여 청구권 행사 요건을 일부 제공한다. 그러나 부동산 소유자의 물권적 침해에 기한 구체적인 손해배상 청구권(물권적 청구권과 불법행위 손해배상의 관계 등)에 대한 명시적 규정이 후보군에 없어 E2-R2는 미충족 상태이다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [
+      "T2"
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 256조  부동산에의 부합#KOBLEX-058916",
+        "support_spans": [
+          {
+            "end_char": 85,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 252조  무주물의 귀속#KOBLEX-058908",
+        "support_spans": [
+          {
+            "end_char": 36,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 750조  불법행위의 내용#KOBLEX-059905",
+        "support_spans": [
+          {
+            "end_char": 67,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059941",
+        "support_spans": [
+          {
+            "end_char": 84,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059942",
+        "support_spans": [
+          {
+            "end_char": 34,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 7,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "타인의 부동산에 무단으로 설치된 동산(태양광 패널)에 대해 부동산 소유자가 소유권을 취득할 수 있는지 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "무단 설치된 태양광 패널로 인해 부동산에 손해가 발생한 경우, 부동산 소유자의 손해배상 청구권 및 그 법적 근거",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "불법행위 손해배상 요건, 물권적 침해에 기한 손해배상, 부동산 소유자의 청구권",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "불법행위 손해배상의 구성요건"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "부동산 소유자의 물권적 침해에 기한 손해배상 청구권"
+          }
+        ],
+        "critical": true,
+        "description": "부동산에 대한 불법행위 또는 물권적 침해에 기한 손해배상 청구권 및 그 요건",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "갑이 태양광 패널로 인한 부동산 손해에 대해 보상을 청구할 수 있는 법적 방법과 요건에 대한 핵심 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 자신의 부동산에 새로운 태양광 패널을 설치하려고 했다. 그러나 을이 잘못된 정보로 갑의 부동산에 태양광 패널을 설치하였다. 나중에 갑은 이 태양광 패널이 을의 소유라는 것을 알게 되었고, 태양광 패널로 인해 부동산에 문제가 발생하여 손해를 입었다. [질문] 갑은 부동산에 설치된 을의 태양광 패널의 소유권을 취득할 수 있는가, 만약 이로 인해 손해를 입었다면 갑은 어떻게 보상을 청구할 수 있는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "무주물 선점 소유권 취득 요건 타인 부동산 부착 동산 소유권 귀속",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "무주물",
+          "선점",
+          "소유권취득",
+          "부동산",
+          "부착",
+          "동산"
+        ],
+        "query_text": "무주물 선점 소유권 취득 타인 부동산 부착 동산 [원문 맥락] 나중에 갑은 이 태양광 패널이 을의 소유라는 것을 알게 되었고, 태양광 패널로 인해 부동산에 문제가 발생하여 손해를 입었다. 갑은 부동산에 설치된 을의 태양광 패널의 소유권을 취득할 수 있는가, 만약 이로 인해 손해를 입었다면 갑은 어떻게 보상을 청구할 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "갑이 을의 태양광 패널 소유권을 취득할 수 있는지 여부 및 무주물 선점 요건",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "부동산 불법행위 손해배상 청구권 무단 설치 동산 부동산 손해",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "부동산",
+          "불법행위",
+          "손해배상",
+          "청구권",
+          "무단설치",
+          "동산"
+        ],
+        "query_text": "부동산 불법행위 손해배상 청구권 무단 설치 [원문 맥락] 나중에 갑은 이 태양광 패널이 을의 소유라는 것을 알게 되었고, 태양광 패널로 인해 부동산에 문제가 발생하여 손해를 입었다. 갑은 부동산에 설치된 을의 태양광 패널의 소유권을 취득할 수 있는가, 만약 이로 인해 손해를 입었다면 갑은 어떻게 보상을 청구할 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "갑이 태양광 패널로 인한 부동산 손해에 대해 보상을 청구할 수 있는 법적 방법 및 요건",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "민법 제250조 무주물 선점 소유권 취득",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민법",
+          "무주물",
+          "선점",
+          "소유권취득",
+          "요건"
+        ],
+        "query_text": "민법 무주물 선점 소유권 취득 요건 [원문 맥락] 나중에 갑은 이 태양광 패널이 을의 소유라는 것을 알게 되었고, 태양광 패널로 인해 부동산에 문제가 발생하여 손해를 입었다. 갑은 부동산에 설치된 을의 태양광 패널의 소유권을 취득할 수 있는가, 만약 이로 인해 손해를 입었다면 갑은 어떻게 보상을 청구할 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "무주물 선점의 요건과 법적 효과",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "부동산에 부착된 동산 소유권 귀속 민법",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "부동산",
+          "부착",
+          "동산",
+          "소유권귀속",
+          "원칙"
+        ],
+        "query_text": "부동산에 부착된 동산의 소유권 귀속 원칙 [원문 맥락] 나중에 갑은 이 태양광 패널이 을의 소유라는 것을 알게 되었고, 태양광 패널로 인해 부동산에 문제가 발생하여 손해를 입었다. 갑은 부동산에 설치된 을의 태양광 패널의 소유권을 취득할 수 있는가, 만약 이로 인해 손해를 입었다면 갑은 어떻게 보상을 청구할 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "타인 부동산에 부착된 동산의 소유권 귀속 원칙",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "민법 제750조 불법행위 손해배상 책임",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민법",
+          "불법행위",
+          "손해배상",
+          "구성요건",
+          "책임"
+        ],
+        "query_text": "민법 불법행위 손해배상 구성요건 [원문 맥락] 나중에 갑은 이 태양광 패널이 을의 소유라는 것을 알게 되었고, 태양광 패널로 인해 부동산에 문제가 발생하여 손해를 입었다. 갑은 부동산에 설치된 을의 태양광 패널의 소유권을 취득할 수 있는가, 만약 이로 인해 손해를 입었다면 갑은 어떻게 보상을 청구할 수 있는가?",
+        "request_id": "GRQ-R2-3",
+        "rerank_query_text": "불법행위 손해배상의 구성요건",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "부동산 소유권 침해 손해배상 청구권",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "부동산",
+          "소유자",
+          "물권적침해",
+          "손해배상",
+          "청구권"
+        ],
+        "query_text": "부동산 소유자 물권적 침해 손해배상 청구 [원문 맥락] 나중에 갑은 이 태양광 패널이 을의 소유라는 것을 알게 되었고, 태양광 패널로 인해 부동산에 문제가 발생하여 손해를 입었다. 갑은 부동산에 설치된 을의 태양광 패널의 소유권을 취득할 수 있는가, 만약 이로 인해 손해를 입었다면 갑은 어떻게 보상을 청구할 수 있는가?",
+        "request_id": "GRQ-R2-4",
+        "rerank_query_text": "부동산 소유자의 물권적 침해에 기한 손해배상 청구권",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "민법 제250조 무주물 선점 소유권 취득",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민법",
+          "제250조",
+          "무주물",
+          "선점",
+          "소유권"
+        ],
+        "query_text": "민법 제250조 무주물 선점 [원문 맥락] 나중에 갑은 이 태양광 패널이 을의 소유라는 것을 알게 되었고, 태양광 패널로 인해 부동산에 문제가 발생하여 손해를 입었다. 갑은 부동산에 설치된 을의 태양광 패널의 소유권을 취득할 수 있는가, 만약 이로 인해 손해를 입었다면 갑은 어떻게 보상을 청구할 수 있는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "무주물 선점의 요건과 법적 효과",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "부동산 소유권 침해 손해배상 청구권 물권적 보호",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "부동산",
+          "소유권",
+          "침해",
+          "손해배상",
+          "청구권",
+          "물권적"
+        ],
+        "query_text": "부동산 소유권 침해에 기한 손해배상 청구권 [원문 맥락] 나중에 갑은 이 태양광 패널이 을의 소유라는 것을 알게 되었고, 태양광 패널로 인해 부동산에 문제가 발생하여 손해를 입었다. 갑은 부동산에 설치된 을의 태양광 패널의 소유권을 취득할 수 있는가, 만약 이로 인해 손해를 입었다면 갑은 어떻게 보상을 청구할 수 있는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "부동산 소유자의 물권적 침해에 기한 손해배상 청구권",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 자신의 부동산에 새로운 태양광 패널을 설치하려고 했다. 그러나 을이 잘못된 정보로 갑의 부동산에 태양광 패널을 설치하였다. 나중에 갑은 이 태양광 패널이 을의 소유라는 것을 알게 되었고, 태양광 패널로 인해 부동산에 문제가 발생하여 손해를 입었다.\n\n[질문]\n갑은 부동산에 설치된 을의 태양광 패널의 소유권을 취득할 수 있는가, 만약 이로 인해 손해를 입었다면 갑은 어떻게 보상을 청구할 수 있는가?",
+    "remaining_request_budget": 1,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "무주물 선점 요건, 타인 부동산에 부착된 동산의 소유권 귀속 원칙, 선점의 법적 효과",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "무주물 선점의 요건과 법적 효과"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "타인 부동산에 부착된 동산의 소유권 귀속 원칙"
+          }
+        ],
+        "critical": true,
+        "description": "동산의 점유를 통한 소유권 취득(선점) 요건 및 타인 부동산에 부착된 동산의 소유권 귀속 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "갑이 을의 태양광 패널 소유권을 취득할 수 있는지 여부에 대한 핵심 법적 판단 근거",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "불법행위 손해배상 요건, 물권적 침해에 기한 손해배상, 부동산 소유자의 청구권",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "불법행위 손해배상의 구성요건"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "부동산 소유자의 물권적 침해에 기한 손해배상 청구권"
+          }
+        ],
+        "critical": true,
+        "description": "부동산에 대한 불법행위 또는 물권적 침해에 기한 손해배상 청구권 및 그 요건",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "갑이 태양광 패널로 인한 부동산 손해에 대해 보상을 청구할 수 있는 법적 방법과 요건에 대한 핵심 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "29794b8d-b02f-4314-8b9f-2342a5ffe7a7",
+    "seen_provision_ids": [
+      "민법 256조  부동산에의 부합#KOBLEX-058916",
+      "경비업법 26조  손해배상 등#KOBLEX-219816",
+      "채무자 회생 및 파산에 관한 법률 625조  면책결정의 효력#KOBLEX-033477",
+      "전기통신사업법 33조  손해배상#KOBLEX-204017",
+      "정보통신망 이용촉진 및 정보보호 등에 관한 법률 60조  손해배상 등#KOBLEX-177142",
+      "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059941",
+      "채무자 회생 및 파산에 관한 법률 566조  면책의 효력#KOBLEX-033213",
+      "광업법 79조  손해배상 예정액#KOBLEX-134134",
+      "민법 252조  무주물의 귀속#KOBLEX-058907",
+      "민법 252조  무주물의 귀속#KOBLEX-058908",
+      "행정소송법 28조  사정판결#KOBLEX-011498",
+      "중재법 18조 6 비용 및 손해배상#KOBLEX-118728",
+      "채무자 회생 및 파산에 관한 법률 566조  면책의 효력#KOBLEX-033212",
+      "민법 766조  손해배상청구권의 소멸시효#KOBLEX-059942",
+      "민법 252조  무주물의 귀속#KOBLEX-058910",
+      "전기통신사업법 55조  손해배상#KOBLEX-204219",
+      "민법 763조  준용규정#KOBLEX-059935",
+      "하도급거래 공정화에 관한 법률 35조  손해배상 책임#KOBLEX-228492",
+      "민법 206조  점유의 보전#KOBLEX-058808",
+      "독점규제 및 공정거래에 관한 법률 108조#KOBLEX-020955",
+      "근로기준법 시행령 59조 2 민감정보 및 고유식별정보의 처리#KOBLEX-011331",
+      "변호사법 58조 12 손해배상 준비금 등#KOBLEX-087020",
+      "민법 760조  공동불법행위자의 책임#KOBLEX-059928",
+      "수산업법 89조  수질오염에 따른 손해배상#KOBLEX-034932",
+      "민법 99조  부동산, 동산#KOBLEX-058577",
+      "민법 750조  불법행위의 내용#KOBLEX-059905",
+      "민법 761조  정당방위, 긴급피난#KOBLEX-059932"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

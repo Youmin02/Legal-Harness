@@ -1,0 +1,587 @@
+{
+  "abstention_reason": null,
+  "answer": "하천공사시행계획에는 하천공사의 명칭, 목적 및 개요, 시행지역의 위치, 시행자의 명칭 및 주소, 착수 및 준공예정연월일, 수용 또는 사용할 물건 또는 권리에 관한 명세와 소유자 등의 성명 및 주소를 적은 서류, 실시설계도서, 사업비 및 자금조달계획서, 공사예정공정표, 하천시설의 관리에 관한 사항, 폐천부지등의 발생 예상 면적이 포함되어야 합니다.[CT1]\n하천관리청은 하천공사시행계획을 수립하거나 변경한 경우에는 제1항제1호부터 제6호까지의 사항을 관보 또는 공보에 고시하여야 합니다.[CT2]",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "하천공사시행계획에는 하천공사의 명칭, 목적 및 개요, 시행지역의 위치, 시행자의 명칭 및 주소, 착수 및 준공예정연월일, 수용 또는 사용할 물건 또는 권리에 관한 명세와 소유자 등의 성명 및 주소를 적은 서류, 실시설계도서, 사업비 및 자금조달계획서, 공사예정공정표, 하천시설의 관리에 관한 사항, 폐천부지등의 발생 예상 면적이 포함되어야 합니다.[CT1]\n하천관리청은 하천공사시행계획을 수립하거나 변경한 경우에는 제1항제1호부터 제6호까지의 사항을 관보 또는 공보에 고시하여야 합니다.[CT2]",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T06:22:54.536925+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 164663.979,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 184,
+      "dedup_collapse": 30,
+      "evidence_fusion": 184,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 184
+    }
+  },
+  "run_id": "56908dbc-7122-49d9-a659-99e6b1afdce4",
+  "state": {
+    "accepted_provision_ids": [
+      "하천법 시행령 26조  하천공사시행계획의 수립#KOBLEX-122570",
+      "하천법 시행령 26조  하천공사시행계획의 수립#KOBLEX-122568"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "statutory_requirement",
+        "question_anchor": "하천공사시행계획에 어떤 구체적인 사항을 포함해야",
+        "requested_output": "하천공사시행계획에 포함해야 하는 법적 요건 사항 목록"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "statutory_requirement",
+        "question_anchor": "어떤 사항을 관보 또는 공보에 고시해야",
+        "requested_output": "관보 또는 공보에 고시해야 하는 하천공사시행계획의 특정 사항"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "하천법 시행령 26조  하천공사시행계획의 수립#KOBLEX-122570"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 32.959721657336694,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "하천법 시행령 26조  하천공사시행계획의 수립#KOBLEX-122570",
+        "provision_text": "③ 하천관리청은 하천공사시행계획을 수립하거나 변경한 경우에는 제1항제1호부터 제6호까지의 사항을 관보 또는 공보에 고시하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999991655349731,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "하천법 시행령 26조  하천공사시행계획의 수립 3항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "하천법 시행령 26조  하천공사시행계획의 수립#KOBLEX-122568"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 3.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "하천법 시행령 26조  하천공사시행계획의 수립#KOBLEX-122568",
+        "provision_text": "① 법 제27조제1항에 따른 하천공사시행계획(이하 \"하천공사시행계획\"이라 한다)에는 다음 각 호의 사항이 포함되어야 한다. 1. 하천공사의 명칭 2. 하천공사의 목적 및 개요 3. 하천공사시행지역의 위치 4. 하천공사시행자의 명칭 및 주소 5. 하천공사의 착수 및 준공예정연월일 6. 수용하거나 사용할 다음 각 목의 물건 또는 권리에 관한 명세와 그 소유자 또는 소유자 외의 권리자의 성명 및 주소를 적은 서류 7. 실시설계도서(2개 이상의 공사구역으로 분할하는 경우에는 공사구역별로 작성한다) 8. 사업비 및 자금조달계획서(연차별투자계획을 포함한다) 9. 공사예정공정표 10. 하천시설의 관리에 관한 사항 11. 법 제84조제1항에 따른 폐천부지등의 발생 예상 면적",
+        "rerank_rank": 1,
+        "rerank_score": 0.999971866607666,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "하천법 시행령 26조  하천공사시행계획의 수립 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "하천법 시행령 27조  다른 공작물의 공사 등#KOBLEX-122580"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 4.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "하천법 시행령 27조  다른 공작물의 공사 등#KOBLEX-122580",
+        "provision_text": "⑤ 하천관리청은 법 제27조제8항에 따라 다음 각 호의 사항을 관보 또는 공보에 고시하여야 한다. <개정 2023.12.12> 1. 하천공사의 명칭 2. 하천공사의 목적 및 개요 3. 하천공사시행지역의 위치 4. 하천공사시행자의 명칭 및 주소 5. 하천공사의 착수 및 준공 연월일 6. 하천구역에 편입된 토지의 세목조서 7. 하천구역에 관한 축척 1천 5백분의 1 이상의 지적이 표시된 지형도면 8. 법 제84조제1항에 따른 폐천부지등의 발생 면적 및 보전ㆍ처분계획 9. 준공된 시설물의 관리에 관한 사항",
+        "rerank_rank": 2,
+        "rerank_score": 0.9999595880508423,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "하천법 시행령 27조  다른 공작물의 공사 등 5항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "하천법 시행령 38조  하천점용허가의 고시#KOBLEX-122618"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 41.30836242118064,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "하천법 시행령 38조  하천점용허가의 고시#KOBLEX-122618",
+        "provision_text": "제38조(하천점용허가의 고시) 하천관리청이 하천점용허가를 한 경우에는 다음 각 호의 사항을 관보 또는 공보에 고시하여야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9997949004173279,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "하천법 시행령 38조  하천점용허가의 고시",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "하천법 27조  하천관리청의 하천공사 및 유지ㆍ보수#KOBLEX-117195"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "하천법 27조  하천관리청의 하천공사 및 유지ㆍ보수#KOBLEX-117195",
+        "provision_text": "①하천관리청(제28조제1항에 따라 환경부장관이 하천공사를 대행하는 경우 환경부장관을 포함한다. 이하 이 조에서 같다)이 하천공사를 시행하려는 때에는 대통령령으로 정하는 바에 따라 하천공사의 시행에 관한 계획(이하 \"하천공사시행계획\"이라 한다)을 수립하여야 한다. 다만, 대통령령으로 정하는 경미한 하천공사를 시행하려는 때에는 그러하지 아니하다. <개정 2009.4.1, 2013.3.23, 2020.12.31>",
+        "rerank_rank": 3,
+        "rerank_score": 0.9782543182373047,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "하천법 27조  하천관리청의 하천공사 및 유지ㆍ보수 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "하천법 32조  다른 법률에 따른 인ㆍ허가등의 의제#KOBLEX-117231"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 3.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "하천법 32조  다른 법률에 따른 인ㆍ허가등의 의제#KOBLEX-117231",
+        "provision_text": "③ 환경부장관 또는 하천관리청은 제27조제1항에 따라 하천공사시행계획을 수립하려는 경우 또는 제30조제5항에 따라 하천관리청이 아닌 자의 하천공사실시계획을 인가하려는 경우에 제1항 각 호의 사항이 포함되어 있을 때에는 미리 관계 행정기관의 장과 협의하여야 한다. <개정 2017.1.17, 2020.12.31>",
+        "rerank_rank": 4,
+        "rerank_score": 0.9663186073303223,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "하천법 32조  다른 법률에 따른 인ㆍ허가등의 의제 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산업입지 및 개발에 관한 법률 19조 2 실시계획 승인의 고시 등#KOBLEX-078716"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 68,
+        "first_stage_score": 20.24408965060841,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "산업입지 및 개발에 관한 법률 19조 2 실시계획 승인의 고시 등#KOBLEX-078716",
+        "provision_text": "① 산업단지지정권자 또는 해양수산부장관은 제17조, 제18조, 제18조의2 또는 제19조에 따라 실시계획을 승인하였을 때에는 대통령령으로 정하는 사항을 관보 또는 공보에 고시하여야 하며, 국토교통부장관, 해양수산부장관 또는 시ㆍ도지사(특별자치도지사는 제외한다)가 승인한 경우에는 관계 서류의 사본을 관할 시장ㆍ군수 또는 구청장에게 보내야 한다. <개정 2013.3.23, 2014.1.14>",
+        "rerank_rank": 4,
+        "rerank_score": 0.9609194993972778,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "산업입지 및 개발에 관한 법률 19조 2 실시계획 승인의 고시 등 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "하천법 27조  하천관리청의 하천공사 및 유지ㆍ보수#KOBLEX-117197"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 96,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "하천법 27조  하천관리청의 하천공사 및 유지ㆍ보수#KOBLEX-117197",
+        "provision_text": "③하천관리청은 하천공사시행계획을 수립하거나 변경한 때에는 대통령령으로 정하는 바에 따라 이를 고시하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.9528322219848633,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "하천법 27조  하천관리청의 하천공사 및 유지ㆍ보수 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민간임대주택에 관한 특별법 시행령 33조  감독#KOBLEX-214674"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 27.551703128953157,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "민간임대주택에 관한 특별법 시행령 33조  감독#KOBLEX-214674",
+        "provision_text": "제33조(감독) 지정권자는 법 제40조제1항에 따라 처분 또는 명령을 하였을 때에는 같은 조 제3항에 따라 다음 각 호의 사항을 관보 또는 공보에 고시하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.935724675655365,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "민간임대주택에 관한 특별법 시행령 33조  감독",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산업입지 및 개발에 관한 법률 13조 3 산업단지의 통합#KOBLEX-078678"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 26.258503659696476,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "산업입지 및 개발에 관한 법률 13조 3 산업단지의 통합#KOBLEX-078678",
+        "provision_text": "③ 산업단지지정권자는 산업단지통합을 하는 경우에는 대통령령으로 정하는 사항을 관보 또는 공보에 고시하여야 한다. 이 경우 그 고시일에 산업단지가 통합된 것으로 보며, 통합 전의 산업단지에 대한 실시계획은 통합된 산업단지에 대한 실시계획으로 본다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.9014290571212769,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "산업입지 및 개발에 관한 법률 13조 3 산업단지의 통합 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "민간임대주택에 관한 특별법 시행령 33조  감독#KOBLEX-214674": "제33조(감독) 지정권자는 법 제40조제1항에 따라 처분 또는 명령을 하였을 때에는 같은 조 제3항에 따라 다음 각 호의 사항을 관보 또는 공보에 고시하여야 한다.",
+      "산업입지 및 개발에 관한 법률 13조 3 산업단지의 통합#KOBLEX-078678": "③ 산업단지지정권자는 산업단지통합을 하는 경우에는 대통령령으로 정하는 사항을 관보 또는 공보에 고시하여야 한다. 이 경우 그 고시일에 산업단지가 통합된 것으로 보며, 통합 전의 산업단지에 대한 실시계획은 통합된 산업단지에 대한 실시계획으로 본다.",
+      "산업입지 및 개발에 관한 법률 19조 2 실시계획 승인의 고시 등#KOBLEX-078716": "① 산업단지지정권자 또는 해양수산부장관은 제17조, 제18조, 제18조의2 또는 제19조에 따라 실시계획을 승인하였을 때에는 대통령령으로 정하는 사항을 관보 또는 공보에 고시하여야 하며, 국토교통부장관, 해양수산부장관 또는 시ㆍ도지사(특별자치도지사는 제외한다)가 승인한 경우에는 관계 서류의 사본을 관할 시장ㆍ군수 또는 구청장에게 보내야 한다. <개정 2013.3.23, 2014.1.14>",
+      "하천법 27조  하천관리청의 하천공사 및 유지ㆍ보수#KOBLEX-117195": "①하천관리청(제28조제1항에 따라 환경부장관이 하천공사를 대행하는 경우 환경부장관을 포함한다. 이하 이 조에서 같다)이 하천공사를 시행하려는 때에는 대통령령으로 정하는 바에 따라 하천공사의 시행에 관한 계획(이하 \"하천공사시행계획\"이라 한다)을 수립하여야 한다. 다만, 대통령령으로 정하는 경미한 하천공사를 시행하려는 때에는 그러하지 아니하다. <개정 2009.4.1, 2013.3.23, 2020.12.31>",
+      "하천법 27조  하천관리청의 하천공사 및 유지ㆍ보수#KOBLEX-117197": "③하천관리청은 하천공사시행계획을 수립하거나 변경한 때에는 대통령령으로 정하는 바에 따라 이를 고시하여야 한다.",
+      "하천법 32조  다른 법률에 따른 인ㆍ허가등의 의제#KOBLEX-117231": "③ 환경부장관 또는 하천관리청은 제27조제1항에 따라 하천공사시행계획을 수립하려는 경우 또는 제30조제5항에 따라 하천관리청이 아닌 자의 하천공사실시계획을 인가하려는 경우에 제1항 각 호의 사항이 포함되어 있을 때에는 미리 관계 행정기관의 장과 협의하여야 한다. <개정 2017.1.17, 2020.12.31>",
+      "하천법 시행령 26조  하천공사시행계획의 수립#KOBLEX-122568": "① 법 제27조제1항에 따른 하천공사시행계획(이하 \"하천공사시행계획\"이라 한다)에는 다음 각 호의 사항이 포함되어야 한다. 1. 하천공사의 명칭 2. 하천공사의 목적 및 개요 3. 하천공사시행지역의 위치 4. 하천공사시행자의 명칭 및 주소 5. 하천공사의 착수 및 준공예정연월일 6. 수용하거나 사용할 다음 각 목의 물건 또는 권리에 관한 명세와 그 소유자 또는 소유자 외의 권리자의 성명 및 주소를 적은 서류 7. 실시설계도서(2개 이상의 공사구역으로 분할하는 경우에는 공사구역별로 작성한다) 8. 사업비 및 자금조달계획서(연차별투자계획을 포함한다) 9. 공사예정공정표 10. 하천시설의 관리에 관한 사항 11. 법 제84조제1항에 따른 폐천부지등의 발생 예상 면적",
+      "하천법 시행령 26조  하천공사시행계획의 수립#KOBLEX-122570": "③ 하천관리청은 하천공사시행계획을 수립하거나 변경한 경우에는 제1항제1호부터 제6호까지의 사항을 관보 또는 공보에 고시하여야 한다.",
+      "하천법 시행령 27조  다른 공작물의 공사 등#KOBLEX-122580": "⑤ 하천관리청은 법 제27조제8항에 따라 다음 각 호의 사항을 관보 또는 공보에 고시하여야 한다. <개정 2023.12.12> 1. 하천공사의 명칭 2. 하천공사의 목적 및 개요 3. 하천공사시행지역의 위치 4. 하천공사시행자의 명칭 및 주소 5. 하천공사의 착수 및 준공 연월일 6. 하천구역에 편입된 토지의 세목조서 7. 하천구역에 관한 축척 1천 5백분의 1 이상의 지적이 표시된 지형도면 8. 법 제84조제1항에 따른 폐천부지등의 발생 면적 및 보전ㆍ처분계획 9. 준공된 시설물의 관리에 관한 사항",
+      "하천법 시행령 38조  하천점용허가의 고시#KOBLEX-122618": "제38조(하천점용허가의 고시) 하천관리청이 하천점용허가를 한 경우에는 다음 각 호의 사항을 관보 또는 공보에 고시하여야 한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "하천법 시행령 26조  하천공사시행계획의 수립#KOBLEX-122568"
+            ],
+            "rationale": "C002가 하천공사시행계획의 필수 기재 사항을 명시하는 조항으로 확인되었습니다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "하천법 시행령 26조  하천공사시행계획의 수립#KOBLEX-122568"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C002는 하천공사시행계획에 포함해야 하는 법적 사항(명칭, 목적, 위치, 시행자, 일정, 물건 명세, 설계도서, 사업비, 공정표, 관리사항, 폐천부지 면적)을 구체적으로 열거하고 있어 질문에서 요구하는 법적 근거를 완전히 제공합니다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "하천법 시행령 26조  하천공사시행계획의 수립#KOBLEX-122570"
+            ],
+            "rationale": "C001이 관보 또는 공보 고시 대상 사항을 명시하는 조항으로 확인되었습니다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "하천법 시행령 26조  하천공사시행계획의 수립#KOBLEX-122570"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001은 하천공사시행계획 수립 또는 변경 시 관보 또는 공보에 고시해야 하는 사항이 제1항 제1호부터 제6호까지임을 명확히 규정하고 있어, 질문에서 요구하는 고시 요건을 완전히 충족합니다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "하천법 시행령 26조  하천공사시행계획의 수립#KOBLEX-122568",
+        "support_spans": [
+          {
+            "end_char": 373,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "하천법 시행령 26조  하천공사시행계획의 수립#KOBLEX-122570",
+        "support_spans": [
+          {
+            "end_char": 73,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "하천공사시행계획의 수립 또는 변경 시 계획서에 기재해야 하는 법적 사항이 무엇인지",
+        "issue_id": "I1"
+      },
+      {
+        "description": "하천공사시행계획의 수립 또는 변경 시 관보 또는 공보에 고시해야 하는 사항이 무엇인지",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 을 하천관리청은 새로운 하천공사시행계획을 수립하면서 이를 변경할 필요가 생겼습니다. 을은 하천공사시행계획을 관보 또는 공보에 어떻게 고시해야 하는지 궁금합니다. [질문] 을이 하천공사시행계획을 수립하거나 변경한 경우, 을은 하천공사시행계획에 어떤 구체적인 사항을 포함해야 하며, 이 중 어떤 사항을 관보 또는 공보에 고시해야 합니까?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "하천공사시행계획 수립 변경 포함 사항 기재",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "하천공사시행계획",
+          "포함사항",
+          "기재사항",
+          "수립",
+          "변경"
+        ],
+        "query_text": "하천공사시행계획 포함 사항 [원문 맥락] 을은 하천공사시행계획을 관보 또는 공보에 어떻게 고시해야 하는지 궁금합니다. 을이 하천공사시행계획을 수립하거나 변경한 경우, 을은 하천공사시행계획에 어떤 구체적인 사항을 포함해야 하며, 이 중 어떤 사항을 관보 또는 공보에 고시해야 합니까?",
+        "request_id": "RQ1",
+        "rerank_query_text": "하천공사시행계획에 포함해야 하는 구체적 사항",
+        "statute_hints": [
+          "하천법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "하천공사시행계획 관보 공보 고시 대상 사항",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "하천공사시행계획",
+          "관보",
+          "공보",
+          "고시",
+          "고시사항"
+        ],
+        "query_text": "하천공사시행계획 관보 공보 고시 [원문 맥락] 을은 하천공사시행계획을 관보 또는 공보에 어떻게 고시해야 하는지 궁금합니다. 을이 하천공사시행계획을 수립하거나 변경한 경우, 을은 하천공사시행계획에 어떤 구체적인 사항을 포함해야 하며, 이 중 어떤 사항을 관보 또는 공보에 고시해야 합니까?",
+        "request_id": "RQ2",
+        "rerank_query_text": "관보 또는 공보에 고시해야 하는 하천공사시행계획 사항",
+        "statute_hints": [
+          "하천법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n을 하천관리청은 새로운 하천공사시행계획을 수립하면서 이를 변경할 필요가 생겼습니다. 을은 하천공사시행계획을 관보 또는 공보에 어떻게 고시해야 하는지 궁금합니다.\n\n[질문]\n을이 하천공사시행계획을 수립하거나 변경한 경우, 을은 하천공사시행계획에 어떤 구체적인 사항을 포함해야 하며, 이 중 어떤 사항을 관보 또는 공보에 고시해야 합니까?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "하천공사시행계획의 필수 기재 사항을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "하천공사시행계획에 포함해야 하는 사항의 법적 근거 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "하천공사시행계획에 포함해야 하는 법적 사항에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "element",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 하천공사시행계획에 포함해야 하는 구체적 사항을 직접적으로 묻고 있으므로, 해당 법적 요건을 확인해야 함",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "관보 또는 공보에 고시해야 하는 하천공사시행계획의 특정 사항을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "관보 또는 공보 고시 대상 하천공사시행계획 사항의 법적 근거 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "하천공사시행계획의 관보 또는 공보 고시 대상 사항에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "procedure",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 관보 또는 공보에 고시해야 하는 사항을 직접적으로 묻고 있으므로, 해당 고시 요건을 확인해야 함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "56908dbc-7122-49d9-a659-99e6b1afdce4",
+    "seen_provision_ids": [
+      "하천법 시행령 26조  하천공사시행계획의 수립#KOBLEX-122568",
+      "하천법 시행령 27조  다른 공작물의 공사 등#KOBLEX-122580",
+      "민간임대주택에 관한 특별법 시행령 33조  감독#KOBLEX-214674",
+      "하천법 27조  하천관리청의 하천공사 및 유지ㆍ보수#KOBLEX-117195",
+      "하천법 32조  다른 법률에 따른 인ㆍ허가등의 의제#KOBLEX-117231",
+      "하천법 시행령 26조  하천공사시행계획의 수립#KOBLEX-122570",
+      "산업입지 및 개발에 관한 법률 19조 2 실시계획 승인의 고시 등#KOBLEX-078716",
+      "하천법 시행령 38조  하천점용허가의 고시#KOBLEX-122618",
+      "산업입지 및 개발에 관한 법률 13조 3 산업단지의 통합#KOBLEX-078678",
+      "하천법 27조  하천관리청의 하천공사 및 유지ㆍ보수#KOBLEX-117197"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

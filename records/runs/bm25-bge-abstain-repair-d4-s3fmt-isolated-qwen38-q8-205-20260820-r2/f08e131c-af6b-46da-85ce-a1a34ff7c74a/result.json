@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T17:50:01.957284+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 179101.235,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 139 column 20 (char 4203)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "f08e131c-af6b-46da-85ce-a1a34ff7c74a",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 139 column 20 (char 4203)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 학교법인 갑학원의 이사장인 갑은, 학교의 기본재산으로 등록된 도심지의 부지를 매도하여 그 대금으로 장학기금을 조성하고자 한다. 해당 부지는 현재 갑의 배우자가 실질적으로 운영하는 법인이 추진 중인 인근 개발사업과 직접적으로 연계되어 있어, 부지의 매도는 갑의 가족에게 상당한 이익을 가져다줄 가능성이 있는 상황이다. 이에 따라 갑은 해당 매각 안건을 이사회에 부의하려고 하며, 관할청의 허가 여부와 이사회의 심의 절차, 그리고 자신의 의결 참여 가능 여부에 대해 의문을 갖게 되었다. [질문] 학교법인의 이사장인 갑이 기본재산인 부지를 매도하려는 경우, 해당 매각이 대통령령으로 정하는 경미한 사항이 아니라면, 관할청의 허가 대상에 해당하는가? 또 이는 이사회에서 심의·의결해야 하는 안건인가? 또한, 위 기본재산 부지 매도를 통해 갑의 가족이 상당한 이익을 얻을 가능성이 있는 경우, 갑은 해당 안건에 대한 의결에 참여할 수 있는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n학교법인 갑학원의 이사장인 갑은, 학교의 기본재산으로 등록된 도심지의 부지를 매도하여 그 대금으로 장학기금을 조성하고자 한다. 해당 부지는 현재 갑의 배우자가 실질적으로 운영하는 법인이 추진 중인 인근 개발사업과 직접적으로 연계되어 있어, 부지의 매도는 갑의 가족에게 상당한 이익을 가져다줄 가능성이 있는 상황이다. 이에 따라 갑은 해당 매각 안건을 이사회에 부의하려고 하며, 관할청의 허가 여부와 이사회의 심의 절차, 그리고 자신의 의결 참여 가능 여부에 대해 의문을 갖게 되었다.\n\n[질문]\n학교법인의 이사장인 갑이 기본재산인 부지를 매도하려는 경우, 해당 매각이 대통령령으로 정하는 경미한 사항이 아니라면, 관할청의 허가 대상에 해당하는가? 또 이는 이사회에서 심의·의결해야 하는 안건인가? 또한, 위 기본재산 부지 매도를 통해 갑의 가족이 상당한 이익을 얻을 가능성이 있는 경우, 갑은 해당 안건에 대한 의결에 참여할 수 있는가?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "f08e131c-af6b-46da-85ce-a1a34ff7c74a",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

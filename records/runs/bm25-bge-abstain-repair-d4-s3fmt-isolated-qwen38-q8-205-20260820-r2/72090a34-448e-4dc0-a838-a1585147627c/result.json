@@ -1,0 +1,993 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "사법경찰관 갑은 검사가 정당한 이유 없이 영장을 청구하지 않은 경우, 해당 검사 소속 지방검찰청 소재지를 관할하는 고등검찰청에 영장 청구 여부에 대한 심의를 신청할 수 있습니다[CT1]\n피의자 을이 정신적 장애로 사물을 변별하거나 의사를 결정·전달할 능력이 미약한 경우, 갑은 을을 신문할 때 직권 또는 신청에 따라 신뢰관계인의 동석을 허용할 수 있습니다[CT2][CT3]\n전제: 피의자 을이 형사소송법 제244조의5 제1호에 정한 바와 같이 '사물을 변별하거나 의사를 결정·전달할 능력이 미약한' 상태에 해당한다고 가정합니다.\n한계: 본 답변은 벤치마크 진단용 후보이며, 공개 가능한 공식 답변이 아닙니다.\n한계: 사법경찰관의 법원 직접 영장 청구 권한 및 요건에 대한 법적 근거가 후보 조문에 포함되어 있지 않아 해당 부분은 답변에서 제외되었습니다.\n한계: 정신적 장애 피의자에 대한 보호 조치의 전체 범위(보호자 지정, 의료 조치 등) 및 절차에 대한 포괄적 법적 근거가 부족하여, 신문 시 신뢰관계인 동석 조치에 한하여 답변했습니다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T20:07:53.604167+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 663546.825,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 505,
+      "dedup_collapse": 184,
+      "evidence_fusion": 505,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "round_selected": 30,
+      "rrf": 600,
+      "selected": 505
+    }
+  },
+  "run_id": "72090a34-448e-4dc0-a838-a1585147627c",
+  "state": {
+    "accepted_provision_ids": [
+      "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232231",
+      "형사소송법 221조 5 사법경찰관이 신청한 영장의 청구 여부에 대한 심의#KOBLEX-232166",
+      "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232230"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 3,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 3,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 16
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 16,
+          "claim_count": 2
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_action",
+        "question_anchor": "갑은 어떤 추가적인 조치를 취할 수 있는가",
+        "requested_output": "사법경찰관이 취할 수 있는 추가적 법적 조치의 종류 및 요건"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "형사소송법 221조 5 사법경찰관이 신청한 영장의 청구 여부에 대한 심의#KOBLEX-232166"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 29.399798229876325,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 221조 5 사법경찰관이 신청한 영장의 청구 여부에 대한 심의#KOBLEX-232166",
+        "provision_text": "① 검사가 사법경찰관이 신청한 영장을 정당한 이유 없이 판사에게 청구하지 아니한 경우 사법경찰관은 그 검사 소속의 지방검찰청 소재지를 관할하는 고등검찰청에 영장 청구 여부에 대한 심의를 신청할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.999270498752594,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 221조 5 사법경찰관이 신청한 영장의 청구 여부에 대한 심의 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232231"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 34.76199235561455,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232231",
+        "provision_text": "1. 피의자가 신체적 또는 정신적 장애로 사물을 변별하거나 의사를 결정ㆍ전달할 능력이 미약한 때",
+        "rerank_rank": 1,
+        "rerank_score": 0.7164902091026306,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙 1호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 197조 2 보완수사요구#KOBLEX-232017"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 93,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 197조 2 보완수사요구#KOBLEX-232017",
+        "provision_text": "① 검사는 다음 각 호의 어느 하나에 해당하는 경우에 사법경찰관에게 보완수사를 요구할 수 있다. 1. 송치사건의 공소제기 여부 결정 또는 공소의 유지에 관하여 필요한 경우 2. 사법경찰관이 신청한 영장의 청구 여부 결정에 관하여 필요한 경우",
+        "rerank_rank": 2,
+        "rerank_score": 0.8121904730796814,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 197조 2 보완수사요구 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 197조 4 수사의 경합#KOBLEX-232031"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 94,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 197조 4 수사의 경합#KOBLEX-232031",
+        "provision_text": "② 제1항의 요구를 받은 사법경찰관은 지체 없이 검사에게 사건을 송치하여야 한다. 다만, 검사가 영장을 청구하기 전에 동일한 범죄사실에 관하여 사법경찰관이 영장을 신청한 경우에는 해당 영장에 기재된 범죄사실을 계속 수사할 수 있다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.7755220532417297,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 197조 4 수사의 경합 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 236조 5 장애인 등 특별히 보호하여야 할 사람에 대한 특칙#KOBLEX-092911",
+          "군사법원법 236조 5 장애인 등 특별히 보호하여야 할 사람에 대한 특칙#KOBLEX-158876"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 34.76199235561455,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 236조 5 장애인 등 특별히 보호하여야 할 사람에 대한 특칙#KOBLEX-092911",
+        "provision_text": "1. 피의자가 신체적 또는 정신적 장애로 사물을 변별하거나 의사를 결정ㆍ전달할 능력이 미약할 때",
+        "rerank_rank": 2,
+        "rerank_score": 0.6024545431137085,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "군사법원법 236조 5 장애인 등 특별히 보호하여야 할 사람에 대한 특칙 1호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232045"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232045",
+        "provision_text": "①피의자가 죄를 범하였다고 의심할 만한 상당한 이유가 있고, 정당한 이유없이 제200조의 규정에 의한 출석요구에 응하지 아니하거나 응하지 아니할 우려가 있는 때에는 검사는 관할 지방법원판사에게 청구하여 체포영장을 발부받아 피의자를 체포할 수 있고, 사법경찰관은 검사에게 신청하여 검사의 청구로 관할지방법원판사의 체포영장을 발부받아 피의자를 체포할 수 있다. 다만, 다액 50만원이하의 벌금, 구류 또는 과료에 해당하는 사건에 관하여는 피의자가 일정한 주거가 없는 경우 또는 정당한 이유없이 제200조의 규정에 의한 출석요구에 응하지 아니한 경우에 한한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.4706073999404907,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 200조 2 영장에 의한 체포 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 221조 5 사법경찰관이 신청한 영장의 청구 여부에 대한 심의#KOBLEX-232165"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 24.076907875259728,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 221조 5 사법경찰관이 신청한 영장의 청구 여부에 대한 심의#KOBLEX-232165",
+        "provision_text": "제221조의5(사법경찰관이 신청한 영장의 청구 여부에 대한 심의)",
+        "rerank_rank": 5,
+        "rerank_score": 0.28643134236335754,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 221조 5 사법경찰관이 신청한 영장의 청구 여부에 대한 심의",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 200조 4 긴급체포와 영장청구기간#KOBLEX-232056"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 100,
+        "first_stage_score": 2.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 200조 4 긴급체포와 영장청구기간#KOBLEX-232056",
+        "provision_text": "①검사 또는 사법경찰관이 제200조의3의 규정에 의하여 피의자를 체포한 경우 피의자를 구속하고자 할 때에는 지체 없이 검사는 관할지방법원판사에게 구속영장을 청구하여야 하고, 사법경찰관은 검사에게 신청하여 검사의 청구로 관할지방법원판사에게 구속영장을 청구하여야 한다. 이 경우 구속영장은 피의자를 체포한 때부터 48시간 이내에 청구하여야 하며, 제200조의3제3항에 따른 긴급체포서를 첨부하여야 한다. <개정 2007.6.1>",
+        "rerank_rank": 6,
+        "rerank_score": 0.09261181950569153,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형사소송법 200조 4 긴급체포와 영장청구기간 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 218조 2 압수물의 환부, 가환부#KOBLEX-232141"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 218조 2 압수물의 환부, 가환부#KOBLEX-232141",
+        "provision_text": "② 제1항의 청구에 대하여 검사가 이를 거부하는 경우에는 신청인은 해당 검사의 소속 검찰청에 대응한 법원에 압수물의 환부 또는 가환부 결정을 청구할 수 있다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.013328928500413895,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 218조 2 압수물의 환부, 가환부 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 200조 4 긴급체포와 영장청구기간#KOBLEX-232059"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 3.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 200조 4 긴급체포와 영장청구기간#KOBLEX-232059",
+        "provision_text": "④검사는 제1항에 따른 구속영장을 청구하지 아니하고 피의자를 석방한 경우에는 석방한 날부터 30일 이내에 서면으로 다음 각 호의 사항을 법원에 통지하여야 한다. 이 경우 긴급체포서의 사본을 첨부하여야 한다. <신설 2007.6.1> 1. 긴급체포 후 석방된 자의 인적사항 2. 긴급체포의 일시ㆍ장소와 긴급체포하게 된 구체적 이유 3. 석방의 일시ㆍ장소 및 사유 4. 긴급체포 및 석방한 검사 또는 사법경찰관의 성명",
+        "rerank_rank": 8,
+        "rerank_score": 0.012616196647286415,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형사소송법 200조 4 긴급체포와 영장청구기간 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232230"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 3.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232230",
+        "provision_text": "제244조의5(장애인 등 특별히 보호를 요하는 자에 대한 특칙) 검사 또는 사법경찰관은 피의자를 신문하는 경우 다음 각 호의 어느 하나에 해당하는 때에는 직권 또는 피의자ㆍ법정대리인의 신청에 따라 피의자와 신뢰관계에 있는 자를 동석하게 할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.8247941136360168,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232232"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232232",
+        "provision_text": "2. 피의자의 연령ㆍ성별ㆍ국적 등의 사정을 고려하여 그 심리적 안정의 도모와 원활한 의사소통을 위하여 필요한 경우",
+        "rerank_rank": 4,
+        "rerank_score": 0.08272594213485718,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙 2호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 276조 2 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232437"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 3.0,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 276조 2 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232437",
+        "provision_text": "①재판장 또는 법관은 피고인을 신문하는 경우 다음 각 호의 어느 하나에 해당하는 때에는 직권 또는 피고인ㆍ법정대리인ㆍ검사의 신청에 따라 피고인과 신뢰관계에 있는 자를 동석하게 할 수 있다. 1. 피고인이 신체적 또는 정신적 장애로 사물을 변별하거나 의사를 결정ㆍ전달할 능력이 미약한 경우 2. 피고인의 연령ㆍ성별ㆍ국적 등의 사정을 고려하여 그 심리적 안정의 도모와 원활한 의사소통을 위하여 필요한 경우",
+        "rerank_rank": 5,
+        "rerank_score": 0.003628728212788701,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형사소송법 276조 2 장애인 등 특별히 보호를 요하는 자에 대한 특칙 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 215조  압수, 수색, 검증#KOBLEX-232129"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 98,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 215조  압수, 수색, 검증#KOBLEX-232129",
+        "provision_text": "② 사법경찰관이 범죄수사에 필요한 때에는 피의자가 죄를 범하였다고 의심할 만한 정황이 있고 해당 사건과 관계가 있다고 인정할 수 있는 것에 한정하여 검사에게 신청하여 검사의 청구로 지방법원판사가 발부한 영장에 의하여 압수, 수색 또는 검증을 할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9846974611282349,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 215조  압수, 수색, 검증 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 217조  영장에 의하지 아니하는 강제처분#KOBLEX-232137"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 100,
+        "first_stage_score": 2.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 217조  영장에 의하지 아니하는 강제처분#KOBLEX-232137",
+        "provision_text": "③검사 또는 사법경찰관은 제2항에 따라 청구한 압수수색영장을 발부받지 못한 때에는 압수한 물건을 즉시 반환하여야 한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.3762909173965454,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 217조  영장에 의하지 아니하는 강제처분 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 217조  영장에 의하지 아니하는 강제처분#KOBLEX-232136"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 99,
+        "first_stage_score": 2.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 217조  영장에 의하지 아니하는 강제처분#KOBLEX-232136",
+        "provision_text": "②검사 또는 사법경찰관은 제1항 또는 제216조제1항제2호에 따라 압수한 물건을 계속 압수할 필요가 있는 경우에는 지체 없이 압수수색영장을 청구하여야 한다. 이 경우 압수수색영장의 청구는 체포한 때부터 48시간 이내에 하여야 한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.12174884974956512,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 217조  영장에 의하지 아니하는 강제처분 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "군사법원법 236조 5 장애인 등 특별히 보호하여야 할 사람에 대한 특칙#KOBLEX-092911": "1. 피의자가 신체적 또는 정신적 장애로 사물을 변별하거나 의사를 결정ㆍ전달할 능력이 미약할 때",
+      "형사소송법 197조 2 보완수사요구#KOBLEX-232017": "① 검사는 다음 각 호의 어느 하나에 해당하는 경우에 사법경찰관에게 보완수사를 요구할 수 있다. 1. 송치사건의 공소제기 여부 결정 또는 공소의 유지에 관하여 필요한 경우 2. 사법경찰관이 신청한 영장의 청구 여부 결정에 관하여 필요한 경우",
+      "형사소송법 197조 4 수사의 경합#KOBLEX-232031": "② 제1항의 요구를 받은 사법경찰관은 지체 없이 검사에게 사건을 송치하여야 한다. 다만, 검사가 영장을 청구하기 전에 동일한 범죄사실에 관하여 사법경찰관이 영장을 신청한 경우에는 해당 영장에 기재된 범죄사실을 계속 수사할 수 있다.",
+      "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232045": "①피의자가 죄를 범하였다고 의심할 만한 상당한 이유가 있고, 정당한 이유없이 제200조의 규정에 의한 출석요구에 응하지 아니하거나 응하지 아니할 우려가 있는 때에는 검사는 관할 지방법원판사에게 청구하여 체포영장을 발부받아 피의자를 체포할 수 있고, 사법경찰관은 검사에게 신청하여 검사의 청구로 관할지방법원판사의 체포영장을 발부받아 피의자를 체포할 수 있다. 다만, 다액 50만원이하의 벌금, 구류 또는 과료에 해당하는 사건에 관하여는 피의자가 일정한 주거가 없는 경우 또는 정당한 이유없이 제200조의 규정에 의한 출석요구에 응하지 아니한 경우에 한한다.",
+      "형사소송법 200조 4 긴급체포와 영장청구기간#KOBLEX-232056": "①검사 또는 사법경찰관이 제200조의3의 규정에 의하여 피의자를 체포한 경우 피의자를 구속하고자 할 때에는 지체 없이 검사는 관할지방법원판사에게 구속영장을 청구하여야 하고, 사법경찰관은 검사에게 신청하여 검사의 청구로 관할지방법원판사에게 구속영장을 청구하여야 한다. 이 경우 구속영장은 피의자를 체포한 때부터 48시간 이내에 청구하여야 하며, 제200조의3제3항에 따른 긴급체포서를 첨부하여야 한다. <개정 2007.6.1>",
+      "형사소송법 200조 4 긴급체포와 영장청구기간#KOBLEX-232059": "④검사는 제1항에 따른 구속영장을 청구하지 아니하고 피의자를 석방한 경우에는 석방한 날부터 30일 이내에 서면으로 다음 각 호의 사항을 법원에 통지하여야 한다. 이 경우 긴급체포서의 사본을 첨부하여야 한다. <신설 2007.6.1> 1. 긴급체포 후 석방된 자의 인적사항 2. 긴급체포의 일시ㆍ장소와 긴급체포하게 된 구체적 이유 3. 석방의 일시ㆍ장소 및 사유 4. 긴급체포 및 석방한 검사 또는 사법경찰관의 성명",
+      "형사소송법 215조  압수, 수색, 검증#KOBLEX-232129": "② 사법경찰관이 범죄수사에 필요한 때에는 피의자가 죄를 범하였다고 의심할 만한 정황이 있고 해당 사건과 관계가 있다고 인정할 수 있는 것에 한정하여 검사에게 신청하여 검사의 청구로 지방법원판사가 발부한 영장에 의하여 압수, 수색 또는 검증을 할 수 있다.",
+      "형사소송법 217조  영장에 의하지 아니하는 강제처분#KOBLEX-232136": "②검사 또는 사법경찰관은 제1항 또는 제216조제1항제2호에 따라 압수한 물건을 계속 압수할 필요가 있는 경우에는 지체 없이 압수수색영장을 청구하여야 한다. 이 경우 압수수색영장의 청구는 체포한 때부터 48시간 이내에 하여야 한다.",
+      "형사소송법 217조  영장에 의하지 아니하는 강제처분#KOBLEX-232137": "③검사 또는 사법경찰관은 제2항에 따라 청구한 압수수색영장을 발부받지 못한 때에는 압수한 물건을 즉시 반환하여야 한다.",
+      "형사소송법 218조 2 압수물의 환부, 가환부#KOBLEX-232141": "② 제1항의 청구에 대하여 검사가 이를 거부하는 경우에는 신청인은 해당 검사의 소속 검찰청에 대응한 법원에 압수물의 환부 또는 가환부 결정을 청구할 수 있다.",
+      "형사소송법 221조 5 사법경찰관이 신청한 영장의 청구 여부에 대한 심의#KOBLEX-232165": "제221조의5(사법경찰관이 신청한 영장의 청구 여부에 대한 심의)",
+      "형사소송법 221조 5 사법경찰관이 신청한 영장의 청구 여부에 대한 심의#KOBLEX-232166": "① 검사가 사법경찰관이 신청한 영장을 정당한 이유 없이 판사에게 청구하지 아니한 경우 사법경찰관은 그 검사 소속의 지방검찰청 소재지를 관할하는 고등검찰청에 영장 청구 여부에 대한 심의를 신청할 수 있다.",
+      "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232230": "제244조의5(장애인 등 특별히 보호를 요하는 자에 대한 특칙) 검사 또는 사법경찰관은 피의자를 신문하는 경우 다음 각 호의 어느 하나에 해당하는 때에는 직권 또는 피의자ㆍ법정대리인의 신청에 따라 피의자와 신뢰관계에 있는 자를 동석하게 할 수 있다.",
+      "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232231": "1. 피의자가 신체적 또는 정신적 장애로 사물을 변별하거나 의사를 결정ㆍ전달할 능력이 미약한 때",
+      "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232232": "2. 피의자의 연령ㆍ성별ㆍ국적 등의 사정을 고려하여 그 심리적 안정의 도모와 원활한 의사소통을 위하여 필요한 경우",
+      "형사소송법 276조 2 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232437": "①재판장 또는 법관은 피고인을 신문하는 경우 다음 각 호의 어느 하나에 해당하는 때에는 직권 또는 피고인ㆍ법정대리인ㆍ검사의 신청에 따라 피고인과 신뢰관계에 있는 자를 동석하게 할 수 있다. 1. 피고인이 신체적 또는 정신적 장애로 사물을 변별하거나 의사를 결정ㆍ전달할 능력이 미약한 경우 2. 피고인의 연령ㆍ성별ㆍ국적 등의 사정을 고려하여 그 심리적 안정의 도모와 원활한 의사소통을 위하여 필요한 경우"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형사소송법 221조 5 사법경찰관이 신청한 영장의 청구 여부에 대한 심의#KOBLEX-232166"
+            ],
+            "rationale": "C001은 법원 직접 청구가 아닌 고등검찰청 심의 신청을 규정하므로, 법원 직접 영장 청구 가능 여부에 대한 직접적 근거가 되지 못한다.",
+            "requirement_id": "E1-R1",
+            "status": "unsatisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형사소송법 221조 5 사법경찰관이 신청한 영장의 청구 여부에 대한 심의#KOBLEX-232166"
+            ],
+            "rationale": "법원 직접 영장 청구의 요건 및 절차에 대한 규정이 제시된 후보 조문에 포함되어 있지 않다.",
+            "requirement_id": "E1-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "형사소송법 221조 5 사법경찰관이 신청한 영장의 청구 여부에 대한 심의#KOBLEX-232166"
+        ],
+        "missing_aspects": [
+          "E1-R1",
+          "E1-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C001은 검사의 영장 청구 거부 시 사법경찰관이 취할 수 있는 '고등검찰청 심의 신청'이라는 구제 수단을 규정하고 있으나, 질문에서 요구하는 '법원에 직접 영장 청구' 권한 및 요건에 대한 법적 근거는 제공하지 않는다. 따라서 법적 근거가 일부만 충족되어 법적 지원 공백(legal_support_gap)으로 평가된다.",
+        "status": "partially_covered"
+      },
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232231",
+              "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232230"
+            ],
+            "rationale": "C002는 보호 대상 요건을, C011은 사법경찰관의 보호 의무(신뢰관계인 동석)를 규정하여 보호 의무의 존재와 대상을 확인한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232230"
+            ],
+            "rationale": "C011은 신문 시 신뢰관계인 동석이라는 구체적 조치를 제공하지만, 보호 조치의 전체 범위와 절차에 대한 포괄적 규정은 부족하다.",
+            "requirement_id": "E2-R2",
+            "status": "partially_satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232231",
+          "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232230"
+        ],
+        "missing_aspects": [
+          "E2-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C002와 C011은 정신적 장애 피의자가 특별히 보호를 요하는 자에 해당함을 규정하고, 신문 시 신뢰관계인 동석이라는 구체적 보호 조치를 제공한다. 그러나 사법경찰관이 취해야 할 보호 조치의 전체 범위(예: 보호자 지정, 의료 조치 등) 및 절차에 대한 포괄적 법적 근거는 부족하여 법적 지원 공백(legal_support_gap)으로 평가된다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 221조 5 사법경찰관이 신청한 영장의 청구 여부에 대한 심의#KOBLEX-232166",
+        "support_spans": [
+          {
+            "end_char": 113,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232231",
+        "support_spans": [
+          {
+            "end_char": 53,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232230",
+        "support_spans": [
+          {
+            "end_char": 139,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 3,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "사법경찰관이 검사의 영장 청구 거부 시 취할 수 있는 법적 구제 수단이 무엇인지",
+        "issue_id": "I1"
+      },
+      {
+        "description": "정신적 장애로 특별한 보호가 필요한 피의자에 대한 사법경찰관의 보호 의무 및 절차",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "사법경찰관이 검사의 영장 청구 거부 시 법원에 직접 구속영장 또는 체포영장을 청구할 수 있는 법적 근거와 요건을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "사법경찰관의 법원 직접 영장 청구 가능 여부 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "직접 영장 청구 시 필요한 요건 및 절차 확인"
+          }
+        ],
+        "critical": true,
+        "description": "사법경찰관의 법원 직접 영장 청구 권한 및 요건",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 '추가적인 조치'의 핵심 법적 근거가 됨",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "정신적 장애로 특별한 보호가 필요한 피의자에 대해 사법경찰관이 취해야 할 보호 조치의 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "정신적 장애 피의자에 대한 사법경찰관의 보호 의무 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "보호 조치의 구체적 내용 및 절차 확인"
+          }
+        ],
+        "critical": true,
+        "description": "정신적 장애가 있는 피의자에 대한 사법경찰관의 보호 의무",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 명시한 '정신적 장애로 특별한 보호가 필요할 경우'의 조건에 따른 조치 확인 필요",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 1,
+    "normalized_question": "[배경 시나리오] 사법경찰관 갑은 강도 혐의로 을을 체포하여 영장을 신청했으나, 검사는 정당한 이유 없이 영장을 판사에게 청구하지 않았습니다. 한편, 을은 정신적 장애로 인해 특별한 보호가 필요한 상황입니다. 을의 변호인은 이 사안에 대해 추가적인 조치를 요구하고 있습니다. [질문] 갑 사법경찰관이 검사로부터 영장 청구가 거부된 상황에서, 을이 정신적 장애로 특별한 보호가 필요할 경우, 갑은 어떤 추가적인 조치를 취할 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "사법경찰관 영장 청구 거부 법원 직접 청구",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "사법경찰관",
+          "영장청구",
+          "법원직접청구",
+          "구속영장",
+          "체포영장"
+        ],
+        "query_text": "사법경찰관 법원 직접 영장 청구 권한 [원문 맥락] 을의 변호인은 이 사안에 대해 추가적인 조치를 요구하고 있습니다. 갑 사법경찰관이 검사로부터 영장 청구가 거부된 상황에서, 을이 정신적 장애로 특별한 보호가 필요할 경우, 갑은 어떤 추가적인 조치를 취할 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "사법경찰관이 검사의 영장 청구 거부 시 법원에 직접 영장을 청구할 수 있는 권한과 요건",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "정신적 장애 피의자 보호 조치 사법경찰관",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "정신적장애",
+          "피의자보호",
+          "사법경찰관",
+          "보호조치",
+          "특별보호"
+        ],
+        "query_text": "정신적 장애 피의자 사법경찰관 보호 의무 [원문 맥락] 을의 변호인은 이 사안에 대해 추가적인 조치를 요구하고 있습니다. 갑 사법경찰관이 검사로부터 영장 청구가 거부된 상황에서, 을이 정신적 장애로 특별한 보호가 필요할 경우, 갑은 어떤 추가적인 조치를 취할 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "정신적 장애로 특별한 보호가 필요한 피의자에 대한 사법경찰관의 보호 의무와 조치",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "사법경찰관 법원 직접 영장 청구 구속영장 체포영장",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "사법경찰관",
+          "법원직접청구",
+          "구속영장",
+          "체포영장",
+          "영장청구거부"
+        ],
+        "query_text": "사법경찰관이 검사의 영장 청구 거부 시 법원에 직접 구속영장 또는 체포영장을 청구할 수 있는 권한과 절차 [원문 맥락] 을의 변호인은 이 사안에 대해 추가적인 조치를 요구하고 있습니다. 갑 사법경찰관이 검사로부터 영장 청구가 거부된 상황에서, 을이 정신적 장애로 특별한 보호가 필요할 경우, 갑은 어떤 추가적인 조치를 취할 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "사법경찰관이 검사의 영장 청구 거부 시 법원에 직접 영장을 청구할 수 있는 법적 근거와 요건",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "정신적 장애 피의자 보호 조치 사법경찰관 절차",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "정신적장애",
+          "피의자보호",
+          "보호조치",
+          "사법경찰관",
+          "보호절차"
+        ],
+        "query_text": "정신적 장애 피의자 사법경찰관 보호 조치 구체적 내용 절차 [원문 맥락] 을의 변호인은 이 사안에 대해 추가적인 조치를 요구하고 있습니다. 갑 사법경찰관이 검사로부터 영장 청구가 거부된 상황에서, 을이 정신적 장애로 특별한 보호가 필요할 경우, 갑은 어떤 추가적인 조치를 취할 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "정신적 장애로 특별한 보호가 필요한 피의자에 대해 사법경찰관이 취해야 할 구체적 보호 조치의 내용과 절차",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형사소송법 200조 사법경찰관 영장 청구",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사소송법",
+          "제200조",
+          "사법경찰관",
+          "영장청구",
+          "법원직접청구"
+        ],
+        "query_text": "형사소송법 제200조 사법경찰관 영장 청구 의무 및 예외 [원문 맥락] 을의 변호인은 이 사안에 대해 추가적인 조치를 요구하고 있습니다. 갑 사법경찰관이 검사로부터 영장 청구가 거부된 상황에서, 을이 정신적 장애로 특별한 보호가 필요할 경우, 갑은 어떤 추가적인 조치를 취할 수 있는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "사법경찰관이 검사의 영장 청구 거부 시 법원에 직접 영장을 청구할 수 있는 법적 근거와 요건",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "정신적 장애 피의자 보호자 지정 의료 조치",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "정신적장애",
+          "보호자지정",
+          "의료조치",
+          "사법경찰관",
+          "피의자보호"
+        ],
+        "query_text": "정신적 장애 피의자 보호자 지정 의료 조치 사법경찰관 [원문 맥락] 을의 변호인은 이 사안에 대해 추가적인 조치를 요구하고 있습니다. 갑 사법경찰관이 검사로부터 영장 청구가 거부된 상황에서, 을이 정신적 장애로 특별한 보호가 필요할 경우, 갑은 어떤 추가적인 조치를 취할 수 있는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "정신적 장애로 특별한 보호가 필요한 피의자에 대해 사법경찰관이 취해야 할 구체적 보호 조치의 내용과 절차",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n사법경찰관 갑은 강도 혐의로 을을 체포하여 영장을 신청했으나, 검사는 정당한 이유 없이 영장을 판사에게 청구하지 않았습니다. 한편, 을은 정신적 장애로 인해 특별한 보호가 필요한 상황입니다. 을의 변호인은 이 사안에 대해 추가적인 조치를 요구하고 있습니다.\n\n[질문]\n갑 사법경찰관이 검사로부터 영장 청구가 거부된 상황에서, 을이 정신적 장애로 특별한 보호가 필요할 경우, 갑은 어떤 추가적인 조치를 취할 수 있는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "사법경찰관이 검사의 영장 청구 거부 시 법원에 직접 구속영장 또는 체포영장을 청구할 수 있는 법적 근거와 요건을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "사법경찰관의 법원 직접 영장 청구 가능 여부 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "직접 영장 청구 시 필요한 요건 및 절차 확인"
+          }
+        ],
+        "critical": true,
+        "description": "사법경찰관의 법원 직접 영장 청구 권한 및 요건",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 '추가적인 조치'의 핵심 법적 근거가 됨",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "정신적 장애로 특별한 보호가 필요한 피의자에 대해 사법경찰관이 취해야 할 보호 조치의 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "정신적 장애 피의자에 대한 사법경찰관의 보호 의무 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "보호 조치의 구체적 내용 및 절차 확인"
+          }
+        ],
+        "critical": true,
+        "description": "정신적 장애가 있는 피의자에 대한 사법경찰관의 보호 의무",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 명시한 '정신적 장애로 특별한 보호가 필요할 경우'의 조건에 따른 조치 확인 필요",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "72090a34-448e-4dc0-a838-a1585147627c",
+    "seen_provision_ids": [
+      "형사소송법 197조 4 수사의 경합#KOBLEX-232031",
+      "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232230",
+      "형사소송법 217조  영장에 의하지 아니하는 강제처분#KOBLEX-232136",
+      "형사소송법 218조 2 압수물의 환부, 가환부#KOBLEX-232141",
+      "형사소송법 276조 2 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232437",
+      "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232231",
+      "군사법원법 236조 5 장애인 등 특별히 보호하여야 할 사람에 대한 특칙#KOBLEX-092911",
+      "형사소송법 217조  영장에 의하지 아니하는 강제처분#KOBLEX-232137",
+      "형사소송법 200조 4 긴급체포와 영장청구기간#KOBLEX-232056",
+      "형사소송법 221조 5 사법경찰관이 신청한 영장의 청구 여부에 대한 심의#KOBLEX-232166",
+      "형사소송법 197조 2 보완수사요구#KOBLEX-232017",
+      "형사소송법 221조 5 사법경찰관이 신청한 영장의 청구 여부에 대한 심의#KOBLEX-232165",
+      "형사소송법 244조 5 장애인 등 특별히 보호를 요하는 자에 대한 특칙#KOBLEX-232232",
+      "형사소송법 200조 4 긴급체포와 영장청구기간#KOBLEX-232059",
+      "형사소송법 200조 2 영장에 의한 체포#KOBLEX-232045",
+      "형사소송법 215조  압수, 수색, 검증#KOBLEX-232129"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

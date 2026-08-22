@@ -1,0 +1,614 @@
+{
+  "abstention_reason": null,
+  "answer": "해원 수가 10명 이내인 경우, 선장은 미리 3명 이상의 해원으로 구성되는 징계위원회의 의결을 거쳐야 한다.[CT1]\n해원이 선내에서 폭력행위를 하거나 선내 질서를 어지럽히는 행위를 한 경우, 선장은 해원을 징계할 수 있다.[CT2]\n해원이 폭력행위 등으로 선내 질서를 어지럽힌 행위가 명백한 경우, 선장은 하선의 징계를 부과할 수 있으며, 이 경우 지체 없이 선박소유자에게 그 사실을 알려야 한다.[CT3]\n전제: 을의 행위가 '폭력행위'에 해당하며, 이로 인해 선내 질서가 어지러워졌다고 가정함.\n전제: 해원 수가 총 8명이며, 이는 10명 이내이므로 3명 이상의 징계위원회 구성 요건이 적용된다고 가정함.\n한계: 본 답변은 제공된 선원법 조항에 근거한 법적 절차와 징계 범위에 한정되며, 실제 사건의 구체적 사실관계(예: 폭력의 정도, 선내 질서 문란의 구체적 양상 등)에 따른 추가적인 법적 판단은 포함하지 않음.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "해원 수가 10명 이내인 경우, 선장은 미리 3명 이상의 해원으로 구성되는 징계위원회의 의결을 거쳐야 한다.[CT1]\n해원이 선내에서 폭력행위를 하거나 선내 질서를 어지럽히는 행위를 한 경우, 선장은 해원을 징계할 수 있다.[CT2]\n해원이 폭력행위 등으로 선내 질서를 어지럽힌 행위가 명백한 경우, 선장은 하선의 징계를 부과할 수 있으며, 이 경우 지체 없이 선박소유자에게 그 사실을 알려야 한다.[CT3]\n전제: 을의 행위가 '폭력행위'에 해당하며, 이로 인해 선내 질서가 어지러워졌다고 가정함.\n전제: 해원 수가 총 8명이며, 이는 10명 이내이므로 3명 이상의 징계위원회 구성 요건이 적용된다고 가정함.\n한계: 본 답변은 제공된 선원법 조항에 근거한 법적 절차와 징계 범위에 한정되며, 실제 사건의 구체적 사실관계(예: 폭력의 정도, 선내 질서 문란의 구체적 양상 등)에 따른 추가적인 법적 판단은 포함하지 않음.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T15:39:37.337390+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 229729.074,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 180,
+      "dedup_collapse": 38,
+      "evidence_fusion": 180,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 180
+    }
+  },
+  "run_id": "0e56de54-5d87-40a8-9001-f6c8fb655bc5",
+  "state": {
+    "accepted_provision_ids": [
+      "선원법 22조  해원의 징계#KOBLEX-067237",
+      "선원법 22조  해원의 징계#KOBLEX-067238",
+      "선원법 22조  해원의 징계#KOBLEX-067235"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 3,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "procedure",
+        "question_anchor": "따라야 하는 절차는 무엇이며",
+        "requested_output": "선장이 해원에게 징계를 내릴 때 준수해야 하는 법적 절차"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "remedy",
+        "question_anchor": "가능한 징계는 무엇인가",
+        "requested_output": "해원의 폭력행위에 대해 선장이 부과할 수 있는 징계의 종류"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "선원법 22조  해원의 징계#KOBLEX-067238"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 41.76195214807562,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "선원법 22조  해원의 징계#KOBLEX-067238",
+        "provision_text": "④ 선장은 해원을 징계할 경우에는 미리 5명(해원 수가 10명 이내인 경우에는 3명) 이상의 해원으로 구성되는 징계위원회의 의결을 거쳐야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999440908432007,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "선원법 22조  해원의 징계 4항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 22조  해원의 징계#KOBLEX-067237"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 51.446453862324525,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "선원법 22조  해원의 징계#KOBLEX-067237",
+        "provision_text": "③ 제2항에 따른 하선의 징계는 해원이 폭력행위 등으로 선내 질서를 어지럽히거나 고의로 선박 운항에 현저한 지장을 준 행위가 명백한 경우에만 하여야 한다. 이 경우 선장은 지체 없이 선박소유자에게 하선의 징계를 한 사실을 알려야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999173879623413,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "선원법 22조  해원의 징계 3항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 22조  해원의 징계#KOBLEX-067235"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 25.960726609762464,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "선원법 22조  해원의 징계#KOBLEX-067235",
+        "provision_text": "① 선장은 해원이 다음 각 호의 어느 하나에 해당할 경우에는 해원을 징계할 수 있다. 1. 상급자의 직무상 명령에 따르지 아니하였을 경우 2. 선장의 허가 없이 선박을 떠났을 경우 3. 선장의 허가 없이 흉기나 「마약류 불법거래 방지에 관한 특례법」 제2조제1항에 따른 마약류를 선박에 들여왔을 경우 4. 선내에서 싸움, 폭행, 음주, 소란행위를 하거나 고의로 시설물을 파손하였을 경우 5. 직무를 게을리하거나 다른 해원의 직무수행을 방해하였을 경우 6. 정당한 사유 없이 선장이 지정한 시간까지 선박에 승선하지 아니하였을 경우 7. 그 밖에 선내 질서를 어지럽히는 행위로서 단체협약, 취업규칙 또는 선원근로계약에서 금지하는 행위를 하였을 경우",
+        "rerank_rank": 2,
+        "rerank_score": 0.9987248778343201,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "선원법 22조  해원의 징계 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 889조  1선박 내부의 구조료 분배#KOBLEX-116585"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 21.52960995990236,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "상법 889조  1선박 내부의 구조료 분배#KOBLEX-116585",
+        "provision_text": "②제1항에 따라 해원에게 지급할 구조료의 분배는 선장이 각 해원의 노력, 그 효과와 사정을 참작하여 그 항해의 종료 전에 분배안을 작성하여 해원에게 고시하여야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9016650915145874,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상법 889조  1선박 내부의 구조료 분배 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 22조  해원의 징계#KOBLEX-067234"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 22,
+        "first_stage_score": 33.27634042429546,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "선원법 22조  해원의 징계#KOBLEX-067234",
+        "provision_text": "제22조(해원의 징계)",
+        "rerank_rank": 4,
+        "rerank_score": 0.7895112633705139,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "선원법 22조  해원의 징계",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 161조  벌칙#KOBLEX-067808"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 65,
+        "first_stage_score": 20.426112042152766,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "선원법 161조  벌칙#KOBLEX-067808",
+        "provision_text": "2. 인명을 구조하는 데 필요한 조치를 다하지 아니하였거나 필요한 조치를 다하지 아니하고 선박을 떠나 사람을 사망에 이르게 한 해원: 3년 이상의 징역",
+        "rerank_rank": 5,
+        "rerank_score": 0.6094644665718079,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "선원법 161조  벌칙 2호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 6조  지휘명령권#KOBLEX-067191"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 20.833732379762573,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "선원법 6조  지휘명령권#KOBLEX-067191",
+        "provision_text": "제6조(지휘명령권) 선장은 해원을 지휘ㆍ감독하며, 선내에 있는 사람에게 선장의 직무를 수행하기 위하여 필요한 명령을 할 수 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.5097195506095886,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "선원법 6조  지휘명령권",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 24조  행정기관에 대한 원조 요청#KOBLEX-067245"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 37.77030206302672,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "선원법 24조  행정기관에 대한 원조 요청#KOBLEX-067245",
+        "provision_text": "① 선장은 해원이나 그 밖에 선박에 있는 사람의 행위가 인명이나 선박에 위해를 미치거나 선내 질서를 매우 어지럽게 할 때에는 관계 행정기관의 장에게 선내 질서의 유지 등을 위하여 필요한 원조를 요청할 수 있다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.39665576815605164,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "선원법 24조  행정기관에 대한 원조 요청 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국제사법 94조  해상#KOBLEX-128027",
+          "국제사법 94조  해상#KOBLEX-200708"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 35.62218332407805,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "국제사법 94조  해상#KOBLEX-128027",
+        "provision_text": "3. 선장과 해원(海員)의 행위에 대한 선박소유자의 책임범위",
+        "rerank_rank": 7,
+        "rerank_score": 0.23747675120830536,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "국제사법 94조  해상 3호",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 2조  정의#KOBLEX-067155"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 42.72382384032303,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "선원법 2조  정의#KOBLEX-067155",
+        "provision_text": "3. \"선장\"이란 해원(海員)을 지휘ㆍ감독하며 선박의 운항관리에 관하여 책임을 지는 선원을 말한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.10445225238800049,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "선원법 2조  정의 3호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "국제사법 94조  해상#KOBLEX-128027": "3. 선장과 해원(海員)의 행위에 대한 선박소유자의 책임범위",
+      "상법 889조  1선박 내부의 구조료 분배#KOBLEX-116585": "②제1항에 따라 해원에게 지급할 구조료의 분배는 선장이 각 해원의 노력, 그 효과와 사정을 참작하여 그 항해의 종료 전에 분배안을 작성하여 해원에게 고시하여야 한다.",
+      "선원법 161조  벌칙#KOBLEX-067808": "2. 인명을 구조하는 데 필요한 조치를 다하지 아니하였거나 필요한 조치를 다하지 아니하고 선박을 떠나 사람을 사망에 이르게 한 해원: 3년 이상의 징역",
+      "선원법 22조  해원의 징계#KOBLEX-067234": "제22조(해원의 징계)",
+      "선원법 22조  해원의 징계#KOBLEX-067235": "① 선장은 해원이 다음 각 호의 어느 하나에 해당할 경우에는 해원을 징계할 수 있다. 1. 상급자의 직무상 명령에 따르지 아니하였을 경우 2. 선장의 허가 없이 선박을 떠났을 경우 3. 선장의 허가 없이 흉기나 「마약류 불법거래 방지에 관한 특례법」 제2조제1항에 따른 마약류를 선박에 들여왔을 경우 4. 선내에서 싸움, 폭행, 음주, 소란행위를 하거나 고의로 시설물을 파손하였을 경우 5. 직무를 게을리하거나 다른 해원의 직무수행을 방해하였을 경우 6. 정당한 사유 없이 선장이 지정한 시간까지 선박에 승선하지 아니하였을 경우 7. 그 밖에 선내 질서를 어지럽히는 행위로서 단체협약, 취업규칙 또는 선원근로계약에서 금지하는 행위를 하였을 경우",
+      "선원법 22조  해원의 징계#KOBLEX-067237": "③ 제2항에 따른 하선의 징계는 해원이 폭력행위 등으로 선내 질서를 어지럽히거나 고의로 선박 운항에 현저한 지장을 준 행위가 명백한 경우에만 하여야 한다. 이 경우 선장은 지체 없이 선박소유자에게 하선의 징계를 한 사실을 알려야 한다.",
+      "선원법 22조  해원의 징계#KOBLEX-067238": "④ 선장은 해원을 징계할 경우에는 미리 5명(해원 수가 10명 이내인 경우에는 3명) 이상의 해원으로 구성되는 징계위원회의 의결을 거쳐야 한다.",
+      "선원법 24조  행정기관에 대한 원조 요청#KOBLEX-067245": "① 선장은 해원이나 그 밖에 선박에 있는 사람의 행위가 인명이나 선박에 위해를 미치거나 선내 질서를 매우 어지럽게 할 때에는 관계 행정기관의 장에게 선내 질서의 유지 등을 위하여 필요한 원조를 요청할 수 있다.",
+      "선원법 2조  정의#KOBLEX-067155": "3. \"선장\"이란 해원(海員)을 지휘ㆍ감독하며 선박의 운항관리에 관하여 책임을 지는 선원을 말한다.",
+      "선원법 6조  지휘명령권#KOBLEX-067191": "제6조(지휘명령권) 선장은 해원을 지휘ㆍ감독하며, 선내에 있는 사람에게 선장의 직무를 수행하기 위하여 필요한 명령을 할 수 있다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "선원법 22조  해원의 징계#KOBLEX-067238"
+            ],
+            "rationale": "C001 provides the exact rule for the disciplinary committee size (3 members) applicable to the 8-crew scenario.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "선원법 22조  해원의 징계#KOBLEX-067238"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "The supplied provision C001 explicitly states the procedural requirement for the disciplinary committee when the crew size is 10 or fewer (3 members). Since the question specifies 8 crew members, this provision directly satisfies the completion criteria for the procedural requirements.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "선원법 22조  해원의 징계#KOBLEX-067235",
+              "선원법 22조  해원의 징계#KOBLEX-067237"
+            ],
+            "rationale": "C003 confirms that violent behavior and order disruption are disciplinable offenses. C002 details the specific discipline of disembarkation applicable to such offenses. This satisfies the requirement to identify possible disciplines.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "선원법 22조  해원의 징계#KOBLEX-067235",
+          "선원법 22조  해원의 징계#KOBLEX-067237"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C003 establishes the general authority to discipline for violent behavior and order disruption. C002 specifies the conditions for the specific discipline of disembarkation in such cases. Together, they confirm the types of discipline available (general discipline authority and specific disembarkation conditions) for the described conduct.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "선원법 22조  해원의 징계#KOBLEX-067238",
+        "support_spans": [
+          {
+            "end_char": 80,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "선원법 22조  해원의 징계#KOBLEX-067235",
+        "support_spans": [
+          {
+            "end_char": 360,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "선원법 22조  해원의 징계#KOBLEX-067237",
+        "support_spans": [
+          {
+            "end_char": 131,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "선장이 해원의 폭력행위에 대해 징계를 부과할 때 준수해야 하는 절차적 요건",
+        "issue_id": "I1"
+      },
+      {
+        "description": "해원의 폭력행위 및 선내 질서 문란에 대해 선장이 부과할 수 있는 징계의 범위",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 해상 운송 회사의 선장이고, 을은 그 선박의 해원이다. 어느 날 을은 다른 해원들과의 심각한 갈등 끝에 폭력행위를 벌여 선내 질서를 심각하게 어지럽혔다. 이를 목격한 갑은 을에게 징계를 내리기로 결정하였다. 선내에 있는 해원의 수는 총 8명이다. [질문] 갑이 을에게 징계를 내릴 때 따라야 하는 절차는 무엇이며, 을의 폭력행위에 대해 가능한 징계는 무엇인가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "선장 해원 징계 절차 해원회의 소집 의견 청취",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "선장",
+          "해원",
+          "징계",
+          "절차",
+          "해원회의",
+          "의견청취"
+        ],
+        "query_text": "선장이 해원에게 징계를 내릴 때 해원회의를 소집하고 의견을 청취해야 하는 절차 [원문 맥락] 선내에 있는 해원의 수는 총 8명이다. 갑이 을에게 징계를 내릴 때 따라야 하는 절차는 무엇이며, 을의 폭력행위에 대해 가능한 징계는 무엇인가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "선장이 해원에게 징계를 내릴 때의 절차적 요건",
+        "statute_hints": [
+          "해상법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "해원 폭력행위 선내 질서 문란 징계 종류",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "해원",
+          "폭력행위",
+          "선내질서",
+          "징계",
+          "징계종류"
+        ],
+        "query_text": "해원의 폭력행위 및 선내 질서 문란에 대해 선장이 부과할 수 있는 징계의 종류 [원문 맥락] 선내에 있는 해원의 수는 총 8명이다. 갑이 을에게 징계를 내릴 때 따라야 하는 절차는 무엇이며, 을의 폭력행위에 대해 가능한 징계는 무엇인가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "해원의 폭력행위에 대해 선장이 부과할 수 있는 징계의 종류",
+        "statute_hints": [
+          "해상법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 해상 운송 회사의 선장이고, 을은 그 선박의 해원이다. 어느 날 을은 다른 해원들과의 심각한 갈등 끝에 폭력행위를 벌여 선내 질서를 심각하게 어지럽혔다. 이를 목격한 갑은 을에게 징계를 내리기로 결정하였다. 선내에 있는 해원의 수는 총 8명이다.\n\n[질문]\n갑이 을에게 징계를 내릴 때 따라야 하는 절차는 무엇이며, 을의 폭력행위에 대해 가능한 징계는 무엇인가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "해원 수(8명)에 따른 징계 절차의 구체적 요건이 확인되어야 함",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "해원 수 8명인 경우 선장이 징계를 내릴 때의 절차적 요건(해원회의, 의견 청취 등) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "선장이 해원에게 징계를 부과할 때의 절차적 요건 (예: 해원회의 소집, 의견 청취, 징계 결정 방식 등)",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 징계 절차를 명시적으로 요구하므로, 절차적 요건 없이는 답변이 불가능함",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "폭력행위에 해당하는 징계의 종류가 확인되어야 함",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "해원의 폭력행위 및 선내 질서 문란에 대해 선장이 부과할 수 있는 징계의 종류 확인"
+          }
+        ],
+        "critical": true,
+        "description": "해원의 폭력행위 및 선내 질서 문란에 대해 선장이 부과할 수 있는 징계의 종류",
+        "evidence_item_id": "E2",
+        "evidence_type": "remedy",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 가능한 징계의 종류를 명시적으로 요구하므로, 징계 종류 없이는 답변이 불가능함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "0e56de54-5d87-40a8-9001-f6c8fb655bc5",
+    "seen_provision_ids": [
+      "상법 889조  1선박 내부의 구조료 분배#KOBLEX-116585",
+      "선원법 2조  정의#KOBLEX-067155",
+      "선원법 22조  해원의 징계#KOBLEX-067237",
+      "선원법 24조  행정기관에 대한 원조 요청#KOBLEX-067245",
+      "선원법 22조  해원의 징계#KOBLEX-067234",
+      "선원법 22조  해원의 징계#KOBLEX-067235",
+      "선원법 6조  지휘명령권#KOBLEX-067191",
+      "선원법 22조  해원의 징계#KOBLEX-067238",
+      "국제사법 94조  해상#KOBLEX-128027",
+      "선원법 161조  벌칙#KOBLEX-067808"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

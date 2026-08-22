@@ -1,0 +1,498 @@
+{
+  "abstention_reason": null,
+  "answer": "선의의 점유자라도 본권에 관한 소에 패소한 때에는 그 소가 제기된 때로부터 악의의 점유자로 본다.[CT1]\n갑은 본권에 관한 소송에서 패소한 경우, 해당 소송이 제기된 때로부터 악의의 점유자로 간주됩니다.[CT2]\n전제: 갑이 본권소송 제기 시점까지 선의의 점유자였다고 가정합니다.\n한계: 본 답변은 민법 제197조 제2항의 일반적 적용에 한정되며, 특수한 사정(예: 점유자의 고의적 은폐 등)에 따른 예외적 판단은 포함하지 않습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "선의의 점유자라도 본권에 관한 소에 패소한 때에는 그 소가 제기된 때로부터 악의의 점유자로 본다.[CT1]\n갑은 본권에 관한 소송에서 패소한 경우, 해당 소송이 제기된 때로부터 악의의 점유자로 간주됩니다.[CT2]\n전제: 갑이 본권소송 제기 시점까지 선의의 점유자였다고 가정합니다.\n한계: 본 답변은 민법 제197조 제2항의 일반적 적용에 한정되며, 특수한 사정(예: 점유자의 고의적 은폐 등)에 따른 예외적 판단은 포함하지 않습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T01:57:37.739191+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 119173.08,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 94,
+      "dedup_collapse": 12,
+      "evidence_fusion": 94,
+      "first_stage": 100,
+      "request_rerank": 100,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 94
+    }
+  },
+  "run_id": "23d482a5-27ab-4ed6-becc-8e49d67451b1",
+  "state": {
+    "accepted_provision_ids": [
+      "민법 197조  점유의 태양#KOBLEX-058784"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "temporal_point",
+        "question_anchor": "갑은 언제부터 악의의 점유자로 간주되는가",
+        "requested_output": "본권소송 패소 시점에서의 악의 점유자 간시 시점"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민법 197조  점유의 태양#KOBLEX-058784"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 33.985850472074866,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 197조  점유의 태양#KOBLEX-058784",
+        "provision_text": "②선의의 점유자라도 본권에 관한 소에 패소한 때에는 그 소가 제기된 때로부터 악의의 점유자로 본다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.998611330986023,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 197조  점유의 태양 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 749조  수익자의 악의인정#KOBLEX-059903"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 24.38311200345353,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 749조  수익자의 악의인정#KOBLEX-059903",
+        "provision_text": "②선의의 수익자가 패소한 때에는 그 소를 제기한 때부터 악의의 수익자로 본다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.0026865373365581036,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 749조  수익자의 악의인정 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 405조  제소주주의 권리의무#KOBLEX-114937"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 21.276758211110018,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "상법 405조  제소주주의 권리의무#KOBLEX-114937",
+        "provision_text": "②제403조제3항과 제4항의 규정에 의하여 소를 제기한 주주가 패소한 때에는 악의인 경우 외에는 회사에 대하여 손해를 배상할 책임이 없다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.0007017950993031263,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상법 405조  제소주주의 권리의무 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 201조  점유자와 과실#KOBLEX-058790"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민법 201조  점유자와 과실#KOBLEX-058790",
+        "provision_text": "제201조(점유자와 과실)",
+        "rerank_rank": 4,
+        "rerank_score": 2.7508815037435852e-05,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 201조  점유자와 과실",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 201조  점유자와 과실#KOBLEX-058791"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 88,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "민법 201조  점유자와 과실#KOBLEX-058791",
+        "provision_text": "①선의의 점유자는 점유물의 과실을 취득한다.",
+        "rerank_rank": 5,
+        "rerank_score": 1.9484701624605805e-05,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 201조  점유자와 과실 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 204조  점유의 회수#KOBLEX-058801"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 2.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "민법 204조  점유의 회수#KOBLEX-058801",
+        "provision_text": "②전항의 청구권은 침탈자의 특별승계인에 대하여는 행사하지 못한다. 그러나 승계인이 악의인 때에는 그러하지 아니하다.",
+        "rerank_rank": 6,
+        "rerank_score": 1.7279640815104358e-05,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 204조  점유의 회수 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 197조  점유의 태양#KOBLEX-058783"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 2.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "민법 197조  점유의 태양#KOBLEX-058783",
+        "provision_text": "①점유자는 소유의 의사로 선의, 평온 및 공연하게 점유한 것으로 추정한다.",
+        "rerank_rank": 7,
+        "rerank_score": 1.6795498595456593e-05,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 197조  점유의 태양 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 191조  패소원고의 책임#KOBLEX-114030"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 32.76131623313773,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "상법 191조  패소원고의 책임#KOBLEX-114030",
+        "provision_text": "제191조(패소원고의 책임) 설립무효의 소 또는 설립취소의 소를 제기한 자가 패소한 경우에 악의 또는 중대한 과실이 있는 때에는 회사에 대하여 연대하여 손해를 배상할 책임이 있다.",
+        "rerank_rank": 8,
+        "rerank_score": 1.0039538210548926e-05,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상법 191조  패소원고의 책임",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 202조  점유자의 회복자에 대한 책임#KOBLEX-058794"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 18.7761478927052,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "민법 202조  점유자의 회복자에 대한 책임#KOBLEX-058794",
+        "provision_text": "제202조(점유자의 회복자에 대한 책임) 점유물이 점유자의 책임있는 사유로 인하여 멸실 또는 훼손한 때에는 악의의 점유자는 그 손해의 전부를 배상하여야 하며 선의의 점유자는 이익이 현존하는 한도에서 배상하여야 한다. 소유의 의사가 없는 점유자는 선의인 경우에도 손해의 전부를 배상하여야 한다.",
+        "rerank_rank": 9,
+        "rerank_score": 9.582677193975542e-06,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 202조  점유자의 회복자에 대한 책임",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 201조  점유자와 과실#KOBLEX-058793"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 2.0,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "민법 201조  점유자와 과실#KOBLEX-058793",
+        "provision_text": "③전항의 규정은 폭력 또는 은비에 의한 점유자에 준용한다.",
+        "rerank_rank": 10,
+        "rerank_score": 9.544844942865893e-06,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 201조  점유자와 과실 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "민법 197조  점유의 태양#KOBLEX-058783": "①점유자는 소유의 의사로 선의, 평온 및 공연하게 점유한 것으로 추정한다.",
+      "민법 197조  점유의 태양#KOBLEX-058784": "②선의의 점유자라도 본권에 관한 소에 패소한 때에는 그 소가 제기된 때로부터 악의의 점유자로 본다.",
+      "민법 201조  점유자와 과실#KOBLEX-058790": "제201조(점유자와 과실)",
+      "민법 201조  점유자와 과실#KOBLEX-058791": "①선의의 점유자는 점유물의 과실을 취득한다.",
+      "민법 201조  점유자와 과실#KOBLEX-058793": "③전항의 규정은 폭력 또는 은비에 의한 점유자에 준용한다.",
+      "민법 202조  점유자의 회복자에 대한 책임#KOBLEX-058794": "제202조(점유자의 회복자에 대한 책임) 점유물이 점유자의 책임있는 사유로 인하여 멸실 또는 훼손한 때에는 악의의 점유자는 그 손해의 전부를 배상하여야 하며 선의의 점유자는 이익이 현존하는 한도에서 배상하여야 한다. 소유의 의사가 없는 점유자는 선의인 경우에도 손해의 전부를 배상하여야 한다.",
+      "민법 204조  점유의 회수#KOBLEX-058801": "②전항의 청구권은 침탈자의 특별승계인에 대하여는 행사하지 못한다. 그러나 승계인이 악의인 때에는 그러하지 아니하다.",
+      "민법 749조  수익자의 악의인정#KOBLEX-059903": "②선의의 수익자가 패소한 때에는 그 소를 제기한 때부터 악의의 수익자로 본다.",
+      "상법 191조  패소원고의 책임#KOBLEX-114030": "제191조(패소원고의 책임) 설립무효의 소 또는 설립취소의 소를 제기한 자가 패소한 경우에 악의 또는 중대한 과실이 있는 때에는 회사에 대하여 연대하여 손해를 배상할 책임이 있다.",
+      "상법 405조  제소주주의 권리의무#KOBLEX-114937": "②제403조제3항과 제4항의 규정에 의하여 소를 제기한 주주가 패소한 때에는 악의인 경우 외에는 회사에 대하여 손해를 배상할 책임이 없다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 197조  점유의 태양#KOBLEX-058784"
+            ],
+            "rationale": "민법 제197조 제2항이 본권소송 패소 시 선의의 점유자가 악의의 점유자로 간주되는 시점을 소 제기 시점으로 규정하고 있어 요구사항을 충족한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민법 197조  점유의 태양#KOBLEX-058784"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001(민법 제197조 제2항)은 본권소송 패소 시점에서의 점유자의 악의 발생 시점을 '소가 제기된 때로부터'라고 명확히 규정하고 있어, 증거 항목의 완료 기준을 충족한다. 다른 후보 조항들은 수익자(민법 749조)나 상법상 주주(상법 405조, 191조)에 관한 것이거나, 점유의 태양 추정(민법 197조 1항) 및 과실 취득(민법 201조) 등 본 질문의 핵심인 '악의 간시 시점'과 무관하거나 간접적이다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 197조  점유의 태양#KOBLEX-058784",
+        "support_spans": [
+          {
+            "end_char": 55,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "본권소송 패소 시점에서의 점유자의 악의 발생 시점",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을에게서 토지를 구매하여 점유하고 있었으나, 을이 소유자가 아님이 밝혀져 병이 갑에 대하여 본권에 관한 소송을 제기하였다. 병은 토지의 진정한 소유자로 판결받았다. [질문] 갑이 본권에 관한 소송에서 패소한 경우, 갑은 언제부터 악의의 점유자로 간주되는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "본권소송 패소 점유자 악의 발생 시점 민법",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "본권소송",
+          "패소",
+          "점유자",
+          "악의",
+          "발생",
+          "시점",
+          "민법"
+        ],
+        "query_text": "본권소송 패소 시점에서의 점유자의 악의 발생 시점 [원문 맥락] 병은 토지의 진정한 소유자로 판결받았다. 갑이 본권에 관한 소송에서 패소한 경우, 갑은 언제부터 악의의 점유자로 간주되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "본권소송 패소 시점에서의 점유자의 악의 발생 시점",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을에게서 토지를 구매하여 점유하고 있었으나, 을이 소유자가 아님이 밝혀져 병이 갑에 대하여 본권에 관한 소송을 제기하였다. 병은 토지의 진정한 소유자로 판결받았다.\n\n[질문]\n갑이 본권에 관한 소송에서 패소한 경우, 갑은 언제부터 악의의 점유자로 간주되는가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "본권소송 패소 시점에서의 점유자의 악의 발생 시점을 명확히 규정하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "본권소송 패소 시점에서의 점유자의 악의 발생 시점을 규정하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "본권소송 패소 시점에서의 점유자의 악의 발생 시점을 규정하는 민법 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 악의 점유자 간시 시점을 결정하기 위한 핵심 법적 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "23d482a5-27ab-4ed6-becc-8e49d67451b1",
+    "seen_provision_ids": [
+      "민법 197조  점유의 태양#KOBLEX-058784",
+      "민법 202조  점유자의 회복자에 대한 책임#KOBLEX-058794",
+      "민법 197조  점유의 태양#KOBLEX-058783",
+      "민법 201조  점유자와 과실#KOBLEX-058791",
+      "상법 405조  제소주주의 권리의무#KOBLEX-114937",
+      "민법 201조  점유자와 과실#KOBLEX-058793",
+      "상법 191조  패소원고의 책임#KOBLEX-114030",
+      "민법 749조  수익자의 악의인정#KOBLEX-059903",
+      "민법 204조  점유의 회수#KOBLEX-058801",
+      "민법 201조  점유자와 과실#KOBLEX-058790"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

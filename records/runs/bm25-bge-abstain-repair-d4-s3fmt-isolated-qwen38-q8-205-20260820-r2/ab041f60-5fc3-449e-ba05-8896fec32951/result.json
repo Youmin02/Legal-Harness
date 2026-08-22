@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T03:08:10.423739+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 162246.428,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Expecting value: line 154 column 7 (char 4288)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "ab041f60-5fc3-449e-ba05-8896fec32951",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Expecting value: line 154 column 7 (char 4288)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 회사 직원인 갑은 회사의 내부 컴퓨터 시스템에 허위의 매출 정보를 입력하고, 부정한 명령을 실행하여 회사 자금 수천만 원을 자신의 계좌로 송금하려 했다. 이는 전산처리를 통한 회사 자금 탈취를 목적으로 한 것이었다. 다만 송금 절차 도중 시스템 오류로 인해 실제 자금 이전은 이루어지지 않았고, 범행은 미수에 그쳤다. 이후 내부 감사로 해당 행위가 적발되자 검찰은 갑의 행위에 대해 수사를 개시했다. [질문] 만약 갑의 컴퓨터 입력 행위로 실제로 자금이 송금되어 이익을 취득했을 경우, 어떤 처벌을 받을 수 있는가? 갑처럼 이익을 실제로 취득하지 못한 경우에도 처벌이 가능한가? 이 때의 시효는 언제부터 진행되는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n회사 직원인 갑은 회사의 내부 컴퓨터 시스템에 허위의 매출 정보를 입력하고, 부정한 명령을 실행하여 회사 자금 수천만 원을 자신의 계좌로 송금하려 했다. 이는 전산처리를 통한 회사 자금 탈취를 목적으로 한 것이었다. 다만 송금 절차 도중 시스템 오류로 인해 실제 자금 이전은 이루어지지 않았고, 범행은 미수에 그쳤다. 이후 내부 감사로 해당 행위가 적발되자 검찰은 갑의 행위에 대해 수사를 개시했다.\n\n[질문]\n만약 갑의 컴퓨터 입력 행위로 실제로 자금이 송금되어 이익을 취득했을 경우, 어떤 처벌을 받을 수 있는가? 갑처럼 이익을 실제로 취득하지 못한 경우에도 처벌이 가능한가? 이 때의 시효는 언제부터 진행되는가?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "ab041f60-5fc3-449e-ba05-8896fec32951",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

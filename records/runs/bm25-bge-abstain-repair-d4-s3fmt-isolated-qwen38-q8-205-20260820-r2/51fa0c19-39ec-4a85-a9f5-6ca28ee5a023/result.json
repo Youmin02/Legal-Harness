@@ -1,0 +1,511 @@
+{
+  "abstention_reason": null,
+  "answer": "업무상 재해의 구체적인 인정 기준은 대통령령으로 정한다.[CT1]\n요양 중인 산재보험 의료기관 내에서 업무상 부상 또는 질병의 요양과 관련하여 발생한 사고는 업무상 재해로 인정된다.[CT2]\n산재로 요양 중인 근로자가 산재보험 의료기관에서 치료를 받다 발생한 사고는 업무상 재해로 인정될 수 있다.[CT3]\n전제: 갑이 산재보험 의료기관에서 치료를 받고 있었으며, 추가 상해가 해당 의료기관 내에서 요양과 관련하여 발생했다는 사실은 질문의 전제로 가정한다.\n한계: 본 답변은 제공된 법령 조항에 기반한 법적 기준 해석이며, 개별 사건의 구체적 사실관계(예: 의료과실의 정도, 인과관계의 구체적 입증 등)에 따른 최종 행정 또는 사법적 판단을 대체하지 않는다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "업무상 재해의 구체적인 인정 기준은 대통령령으로 정한다.[CT1]\n요양 중인 산재보험 의료기관 내에서 업무상 부상 또는 질병의 요양과 관련하여 발생한 사고는 업무상 재해로 인정된다.[CT2]\n산재로 요양 중인 근로자가 산재보험 의료기관에서 치료를 받다 발생한 사고는 업무상 재해로 인정될 수 있다.[CT3]\n전제: 갑이 산재보험 의료기관에서 치료를 받고 있었으며, 추가 상해가 해당 의료기관 내에서 요양과 관련하여 발생했다는 사실은 질문의 전제로 가정한다.\n한계: 본 답변은 제공된 법령 조항에 기반한 법적 기준 해석이며, 개별 사건의 구체적 사실관계(예: 의료과실의 정도, 인과관계의 구체적 입증 등)에 따른 최종 행정 또는 사법적 판단을 대체하지 않는다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T14:15:09.486550+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 208915.062,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 100,
+      "evidence_fusion": 100,
+      "first_stage": 100,
+      "request_rerank": 100,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 100
+    }
+  },
+  "run_id": "51fa0c19-39ec-4a85-a9f5-6ca28ee5a023",
+  "state": {
+    "accepted_provision_ids": [
+      "산업재해보상보험법 37조  업무상의 재해의 인정 기준#KOBLEX-166719",
+      "산업재해보상보험법 시행령 32조  요양 중의 사고#KOBLEX-191610"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 3,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "이 사고는 업무상 재해로 인정될 수 있는가",
+        "requested_output": "산재보험 의료기관 내 의료사고로 인한 추가 상해의 업무상 재해 인정 여부"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "산업재해보상보험법 41조  요양급여의 신청#KOBLEX-166736"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 38.31833889723625,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "산업재해보상보험법 41조  요양급여의 신청#KOBLEX-166736",
+        "provision_text": "② 근로자를 진료한 제43조제1항에 따른 산재보험 의료기관은 그 근로자의 재해가 업무상의 재해로 판단되면 그 근로자의 동의를 받아 요양급여의 신청을 대행할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.17051099240779877,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "산업재해보상보험법 41조  요양급여의 신청 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산업재해보상보험법 시행령 32조  요양 중의 사고#KOBLEX-191610"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 62.41056620313458,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "산업재해보상보험법 시행령 32조  요양 중의 사고#KOBLEX-191610",
+        "provision_text": "2. 요양 중인 산재보험 의료기관(산재보험 의료기관이 아닌 의료기관에서 응급진료 등을 받는 경우에는 그 의료기관을 말한다. 이하 이 조에서 같다) 내에서 업무상 부상 또는 질병의 요양과 관련하여 발생한 사고",
+        "rerank_rank": 2,
+        "rerank_score": 0.16267244517803192,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "산업재해보상보험법 시행령 32조  요양 중의 사고 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산업재해보상보험법 시행령 27조#KOBLEX-191593"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 45.49737111261781,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "산업재해보상보험법 시행령 27조#KOBLEX-191593",
+        "provision_text": "제2절 업무상의 재해의 인정 기준",
+        "rerank_rank": 3,
+        "rerank_score": 0.12210634350776672,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "산업재해보상보험법 시행령 27조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산업재해보상보험법 40조  요양급여#KOBLEX-166733"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 46,
+        "first_stage_score": 28.125125803453976,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "산업재해보상보험법 40조  요양급여#KOBLEX-166733",
+        "provision_text": "⑥ 업무상의 재해를 입은 근로자가 요양할 산재보험 의료기관이 제43조제1항제2호에 따른 상급종합병원인 경우에는 「응급의료에 관한 법률」 제2조제1호에 따른 응급환자이거나 그 밖에 부득이한 사유가 있는 경우를 제외하고는 그 근로자가 상급종합병원에서 요양할 필요가 있다는 의학적 소견이 있어야 한다. <개정 2010.5.20>",
+        "rerank_rank": 4,
+        "rerank_score": 0.08027907460927963,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "산업재해보상보험법 40조  요양급여 6항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산업재해보상보험법 시행령 46조  평가 대상 산재보험 의료기관#KOBLEX-191667"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 37.30972394133393,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "산업재해보상보험법 시행령 46조  평가 대상 산재보험 의료기관#KOBLEX-191667",
+        "provision_text": "② 공단은 제1항에 따른 평가 대상 산재보험 의료기관 중에서 인력, 시설, 규모, 업무상의 재해를 입은 근로자에 대한 진료 실적, 진료비 청구 금액 또는 요양급여 등에 관한 종전의 평가결과 등을 고려하여 평가할 의료기관을 선정할 수 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.03294731304049492,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "산업재해보상보험법 시행령 46조  평가 대상 산재보험 의료기관 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산업재해보상보험법 시행령 32조  요양 중의 사고#KOBLEX-191611"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 62.42300251425412,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "산업재해보상보험법 시행령 32조  요양 중의 사고#KOBLEX-191611",
+        "provision_text": "3. 업무상 부상 또는 질병의 치료를 위하여 거주지 또는 근무지에서 요양 중인 산재보험 의료기관으로 통원하는 과정에서 발생한 사고",
+        "rerank_rank": 6,
+        "rerank_score": 0.029504595324397087,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "산업재해보상보험법 시행령 32조  요양 중의 사고 3호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산업재해보상보험법 43조  산재보험 의료기관의 지정 및 지정취소 등#KOBLEX-166745"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 36.982238341768614,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "산업재해보상보험법 43조  산재보험 의료기관의 지정 및 지정취소 등#KOBLEX-166745",
+        "provision_text": "① 업무상의 재해를 입은 근로자의 요양을 담당할 의료기관(이하 \"산재보험 의료기관\"이라 한다)은 다음 각 호와 같다. <개정 2010.1.27, 2010.5.20, 2010.6.4, 2015.5.18> 1. 제11조제2항에 따라 공단에 두는 의료기관 2. 「의료법」 제3조의4에 따른 상급종합병원 3. 「의료법」 제3조에 따른 의료기관과 「지역보건법」 제10조에 따른 보건소(「지역보건법」 제12조에 따른 보건의료원을 포함한다. 이하 같다)로서 고용노동부령으로 정하는 인력ㆍ시설 등의 기준에 해당하는 의료기관 또는 보건소 중 공단이 지정한 의료기관 또는 보건소",
+        "rerank_rank": 7,
+        "rerank_score": 0.021881062537431717,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "산업재해보상보험법 43조  산재보험 의료기관의 지정 및 지정취소 등 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산업재해보상보험법 43조  산재보험 의료기관의 지정 및 지정취소 등#KOBLEX-166747"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 5.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "산업재해보상보험법 43조  산재보험 의료기관의 지정 및 지정취소 등#KOBLEX-166747",
+        "provision_text": "③ 공단은 제1항제2호 및 제3호에 따른 산재보험 의료기관이 다음 각 호의 어느 하나의 사유에 해당하면 그 지정을 취소(제1항제3호의 경우만 해당된다)하거나 12개월의 범위에서 업무상의 재해를 입은 근로자를 진료할 수 없도록 하는 진료제한 조치 또는 개선명령(이하 \"진료제한등의 조치\"라 한다)을 할 수 있다. 1. 업무상의 재해와 관련된 사항을 거짓이나 그 밖에 부정한 방법으로 진단하거나 증명한 경우 2. 제45조에 따른 진료비를 거짓이나 그 밖에 부정한 방법으로 청구한 경우 3. 제50조에 따른 평가 결과 지정취소나 진료제한등의 조치가 필요한 경우 4. 「의료법」 위반이나 그 밖의 사유로 의료업을 일시적 또는 영구적으로 할 수 없게 되거나, 소속 의사가 의료행위를 일시적 또는 영구적으로 할 수 없게 된 경우 5. 제1항제3호에 따른 인력ㆍ시설 등의 기준에 미치지 못하게 되는 경우 6. 진료제한등의 조치를 위반하는 경우",
+        "rerank_rank": 8,
+        "rerank_score": 0.01578564941883087,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "산업재해보상보험법 43조  산재보험 의료기관의 지정 및 지정취소 등 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산업재해보상보험법 50조  산재보험 의료기관의 평가#KOBLEX-166773"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 42.58697456658761,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "산업재해보상보험법 50조  산재보험 의료기관의 평가#KOBLEX-166773",
+        "provision_text": "① 공단은 업무상의 재해에 대한 의료의 질 향상을 촉진하기 위하여 제43조제1항제3호의 산재보험 의료기관 중 대통령령으로 정하는 의료기관에 대하여 인력ㆍ시설ㆍ의료서비스나 그 밖에 요양의 질과 관련된 사항을 평가할 수 있다. 이 경우 평가의 방법 및 기준은 대통령령으로 정한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.005152370780706406,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "산업재해보상보험법 50조  산재보험 의료기관의 평가 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산업재해보상보험법 37조  업무상의 재해의 인정 기준#KOBLEX-166719"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 32.857785350001,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "산업재해보상보험법 37조  업무상의 재해의 인정 기준#KOBLEX-166719",
+        "provision_text": "⑤ 업무상의 재해의 구체적인 인정 기준은 대통령령으로 정한다. <개정 2017.10.24>",
+        "rerank_rank": 10,
+        "rerank_score": 0.004135148134082556,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "산업재해보상보험법 37조  업무상의 재해의 인정 기준 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "산업재해보상보험법 37조  업무상의 재해의 인정 기준#KOBLEX-166719": "⑤ 업무상의 재해의 구체적인 인정 기준은 대통령령으로 정한다. <개정 2017.10.24>",
+      "산업재해보상보험법 40조  요양급여#KOBLEX-166733": "⑥ 업무상의 재해를 입은 근로자가 요양할 산재보험 의료기관이 제43조제1항제2호에 따른 상급종합병원인 경우에는 「응급의료에 관한 법률」 제2조제1호에 따른 응급환자이거나 그 밖에 부득이한 사유가 있는 경우를 제외하고는 그 근로자가 상급종합병원에서 요양할 필요가 있다는 의학적 소견이 있어야 한다. <개정 2010.5.20>",
+      "산업재해보상보험법 41조  요양급여의 신청#KOBLEX-166736": "② 근로자를 진료한 제43조제1항에 따른 산재보험 의료기관은 그 근로자의 재해가 업무상의 재해로 판단되면 그 근로자의 동의를 받아 요양급여의 신청을 대행할 수 있다.",
+      "산업재해보상보험법 43조  산재보험 의료기관의 지정 및 지정취소 등#KOBLEX-166745": "① 업무상의 재해를 입은 근로자의 요양을 담당할 의료기관(이하 \"산재보험 의료기관\"이라 한다)은 다음 각 호와 같다. <개정 2010.1.27, 2010.5.20, 2010.6.4, 2015.5.18> 1. 제11조제2항에 따라 공단에 두는 의료기관 2. 「의료법」 제3조의4에 따른 상급종합병원 3. 「의료법」 제3조에 따른 의료기관과 「지역보건법」 제10조에 따른 보건소(「지역보건법」 제12조에 따른 보건의료원을 포함한다. 이하 같다)로서 고용노동부령으로 정하는 인력ㆍ시설 등의 기준에 해당하는 의료기관 또는 보건소 중 공단이 지정한 의료기관 또는 보건소",
+      "산업재해보상보험법 43조  산재보험 의료기관의 지정 및 지정취소 등#KOBLEX-166747": "③ 공단은 제1항제2호 및 제3호에 따른 산재보험 의료기관이 다음 각 호의 어느 하나의 사유에 해당하면 그 지정을 취소(제1항제3호의 경우만 해당된다)하거나 12개월의 범위에서 업무상의 재해를 입은 근로자를 진료할 수 없도록 하는 진료제한 조치 또는 개선명령(이하 \"진료제한등의 조치\"라 한다)을 할 수 있다. 1. 업무상의 재해와 관련된 사항을 거짓이나 그 밖에 부정한 방법으로 진단하거나 증명한 경우 2. 제45조에 따른 진료비를 거짓이나 그 밖에 부정한 방법으로 청구한 경우 3. 제50조에 따른 평가 결과 지정취소나 진료제한등의 조치가 필요한 경우 4. 「의료법」 위반이나 그 밖의 사유로 의료업을 일시적 또는 영구적으로 할 수 없게 되거나, 소속 의사가 의료행위를 일시적 또는 영구적으로 할 수 없게 된 경우 5. 제1항제3호에 따른 인력ㆍ시설 등의 기준에 미치지 못하게 되는 경우 6. 진료제한등의 조치를 위반하는 경우",
+      "산업재해보상보험법 50조  산재보험 의료기관의 평가#KOBLEX-166773": "① 공단은 업무상의 재해에 대한 의료의 질 향상을 촉진하기 위하여 제43조제1항제3호의 산재보험 의료기관 중 대통령령으로 정하는 의료기관에 대하여 인력ㆍ시설ㆍ의료서비스나 그 밖에 요양의 질과 관련된 사항을 평가할 수 있다. 이 경우 평가의 방법 및 기준은 대통령령으로 정한다.",
+      "산업재해보상보험법 시행령 27조#KOBLEX-191593": "제2절 업무상의 재해의 인정 기준",
+      "산업재해보상보험법 시행령 32조  요양 중의 사고#KOBLEX-191610": "2. 요양 중인 산재보험 의료기관(산재보험 의료기관이 아닌 의료기관에서 응급진료 등을 받는 경우에는 그 의료기관을 말한다. 이하 이 조에서 같다) 내에서 업무상 부상 또는 질병의 요양과 관련하여 발생한 사고",
+      "산업재해보상보험법 시행령 32조  요양 중의 사고#KOBLEX-191611": "3. 업무상 부상 또는 질병의 치료를 위하여 거주지 또는 근무지에서 요양 중인 산재보험 의료기관으로 통원하는 과정에서 발생한 사고",
+      "산업재해보상보험법 시행령 46조  평가 대상 산재보험 의료기관#KOBLEX-191667": "② 공단은 제1항에 따른 평가 대상 산재보험 의료기관 중에서 인력, 시설, 규모, 업무상의 재해를 입은 근로자에 대한 진료 실적, 진료비 청구 금액 또는 요양급여 등에 관한 종전의 평가결과 등을 고려하여 평가할 의료기관을 선정할 수 있다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "산업재해보상보험법 시행령 32조  요양 중의 사고#KOBLEX-191610",
+              "산업재해보상보험법 37조  업무상의 재해의 인정 기준#KOBLEX-166719"
+            ],
+            "rationale": "시행령 제32조 제2호는 산재보험 의료기관 내 요양 관련 사고를 업무상 재해로 인정하는 명시적 조항을 포함하고 있어, 산재보험 의료기관에서 치료를 받다 발생한 사고가 업무상 재해로 인정되는지 여부를 명시하는 조항 확인이라는 요구사항을 충족한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "산업재해보상보험법 시행령 32조  요양 중의 사고#KOBLEX-191610",
+          "산업재해보상보험법 37조  업무상의 재해의 인정 기준#KOBLEX-166719"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "산업재해보상보험법 시행령 제32조 제2호(C002)는 산재보험 의료기관 내에서 요양과 관련하여 발생한 사고가 업무상 재해에 해당함을 명확히 규정하고 있으며, 산업재해보상보험법 제37조 제5항(C010)은 이러한 구체적 인정 기준의 법적 근거를 제공한다. 질문에서 요구하는 '산재보험 의료기관 내 치료 중 사고의 업무상 재해 인정 기준'에 대한 법적 근거가 충분히 확보되었다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "산업재해보상보험법 시행령 32조  요양 중의 사고#KOBLEX-191610",
+        "support_spans": [
+          {
+            "end_char": 115,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "산업재해보상보험법 37조  업무상의 재해의 인정 기준#KOBLEX-166719",
+        "support_spans": [
+          {
+            "end_char": 50,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "산재보험 의료기관에서 치료를 받다 발생한 의료사고로 인한 추가 상해가 업무상 재해에 해당하는지 여부",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 제조업체에서 일하는 근로자 갑은 업무 중 기계에 손을 다쳐 산업재해로 인정받아 요양 중에 있다. 갑은 정기적인 치료를 위해 지정된 산재보험 의료기관에 통원하고 있으며, 최근 병원 내 시술 중 의료과실로 인해 새로운 상해를 입었다. 이로 인해 갑은 기존 재해 외에 추가 상해까지 입게 되었고, 해당 사고도 산재로 인정받을 수 있는지 궁금해졌다. [질문] 산재로 요양 중인 근로자 갑이 산재보험 의료기관에서 치료를 받다 의료사고로 추가 상해를 입은 경우, 이 사고는 업무상 재해로 인정될 수 있는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "산재보험 의료기관 치료 중 사고 업무상 재해 인정 기준",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "산재보험",
+          "의료기관",
+          "치료",
+          "사고",
+          "업무상 재해",
+          "인정"
+        ],
+        "query_text": "산재보험 의료기관에서 치료를 받다 발생한 사고 업무상 재해 인정 [원문 맥락] 이로 인해 갑은 기존 재해 외에 추가 상해까지 입게 되었고, 해당 사고도 산재로 인정받을 수 있는지 궁금해졌다. 산재로 요양 중인 근로자 갑이 산재보험 의료기관에서 치료를 받다 의료사고로 추가 상해를 입은 경우, 이 사고는 업무상 재해로 인정될 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "산재보험 의료기관 내 의료사고 추가 상해 업무상 재해 인정 여부",
+        "statute_hints": [
+          "산업재해보상보험법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n제조업체에서 일하는 근로자 갑은 업무 중 기계에 손을 다쳐 산업재해로 인정받아 요양 중에 있다. 갑은 정기적인 치료를 위해 지정된 산재보험 의료기관에 통원하고 있으며, 최근 병원 내 시술 중 의료과실로 인해 새로운 상해를 입었다. 이로 인해 갑은 기존 재해 외에 추가 상해까지 입게 되었고, 해당 사고도 산재로 인정받을 수 있는지 궁금해졌다.\n\n[질문]\n산재로 요양 중인 근로자 갑이 산재보험 의료기관에서 치료를 받다 의료사고로 추가 상해를 입은 경우, 이 사고는 업무상 재해로 인정될 수 있는가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "산재보험 의료기관 내 치료 중 사고의 업무상 재해 인정 기준을 명확히 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "산재보험 의료기관에서 치료를 받다 발생한 사고가 업무상 재해로 인정되는지 여부를 명시하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "산재보험 의료기관에서 치료를 받다 발생한 사고가 업무상 재해로 인정되는지 여부를 규정하는 법적 근거",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 추가 상해의 업무상 재해 인정 여부에 대한 핵심 법적 판단 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "51fa0c19-39ec-4a85-a9f5-6ca28ee5a023",
+    "seen_provision_ids": [
+      "산업재해보상보험법 시행령 32조  요양 중의 사고#KOBLEX-191610",
+      "산업재해보상보험법 시행령 46조  평가 대상 산재보험 의료기관#KOBLEX-191667",
+      "산업재해보상보험법 50조  산재보험 의료기관의 평가#KOBLEX-166773",
+      "산업재해보상보험법 시행령 27조#KOBLEX-191593",
+      "산업재해보상보험법 41조  요양급여의 신청#KOBLEX-166736",
+      "산업재해보상보험법 43조  산재보험 의료기관의 지정 및 지정취소 등#KOBLEX-166745",
+      "산업재해보상보험법 43조  산재보험 의료기관의 지정 및 지정취소 등#KOBLEX-166747",
+      "산업재해보상보험법 37조  업무상의 재해의 인정 기준#KOBLEX-166719",
+      "산업재해보상보험법 시행령 32조  요양 중의 사고#KOBLEX-191611",
+      "산업재해보상보험법 40조  요양급여#KOBLEX-166733"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

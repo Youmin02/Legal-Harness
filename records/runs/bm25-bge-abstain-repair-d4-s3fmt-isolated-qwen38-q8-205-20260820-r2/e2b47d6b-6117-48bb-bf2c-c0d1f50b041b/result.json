@@ -1,0 +1,1153 @@
+{
+  "abstention_reason": null,
+  "answer": "갑의 행위가 한 개의 행위로 평가되어 저작권 침해와 상표권 침해의 여러 죄에 해당하는 경우, 가장 무거운 죄에 대하여 정한 형으로 처벌한다.[CT1]\n갑의 행위가 수개의 행위로 평가되어 각각 저작권 침해와 상표권 침해의 죄를 구성하는 경우, 형법 제38조에 따른 경합범의 처벌례에 따라 처벌한다.[CT2]\n전제: 갑의 행위가 저작권 침해와 상표권 침해에 해당한다는 전제 하에 처벌 방식을 분석함.\n한계: 갑의 행위가 '한 개의 행위'인지 '수개의 행위'인지에 대한 사실관계가 불명확하여, 형법 제40조(상상적 경합)와 제38조(경합범) 중 어느 것이 적용되는지 확정할 수 없음.\n한계: 법 개정 후에 저작권법에 따라 처벌받아야 하는지(T1)에 관한 핵심 증거가 미충족 상태이므로, 해당 사안에 대한 법적 결론을 제시하지 않음.",
+  "answer_mode": "limited",
+  "answered_target_ids": [
+    "T2"
+  ],
+  "candidate_answer": "갑의 행위가 한 개의 행위로 평가되어 저작권 침해와 상표권 침해의 여러 죄에 해당하는 경우, 가장 무거운 죄에 대하여 정한 형으로 처벌한다.[CT1]\n갑의 행위가 수개의 행위로 평가되어 각각 저작권 침해와 상표권 침해의 죄를 구성하는 경우, 형법 제38조에 따른 경합범의 처벌례에 따라 처벌한다.[CT2]\n전제: 갑의 행위가 저작권 침해와 상표권 침해에 해당한다는 전제 하에 처벌 방식을 분석함.\n한계: 갑의 행위가 '한 개의 행위'인지 '수개의 행위'인지에 대한 사실관계가 불명확하여, 형법 제40조(상상적 경합)와 제38조(경합범) 중 어느 것이 적용되는지 확정할 수 없음.\n한계: 법 개정 후에 저작권법에 따라 처벌받아야 하는지(T1)에 관한 핵심 증거가 미충족 상태이므로, 해당 사안에 대한 법적 결론을 제시하지 않음.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T15:09:11.876000+00:00",
+  "deferred_target_ids": [
+    "T1"
+  ],
+  "end_to_end_latency_ms": 629124.781,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 373,
+      "dedup_collapse": 95,
+      "evidence_fusion": 373,
+      "first_stage": 500,
+      "request_rerank": 500,
+      "round_selected": 30,
+      "rrf": 400,
+      "selected": 373
+    }
+  },
+  "run_id": "e2b47d6b-6117-48bb-bf2c-c0d1f50b041b",
+  "state": {
+    "accepted_provision_ids": [
+      "형법 40조  상상적 경합#KOBLEX-192729",
+      "형법 38조  경합범과 처벌례#KOBLEX-192721"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 5,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T2"
+          ],
+          "deferred_target_ids": [
+            "T1"
+          ],
+          "explanation": "Only the citable answer targets will be answered; remaining targets are deferred.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T2"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": [
+            "T1"
+          ]
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "limited",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "법 개정 후에 저작권법에 따라 처벌받아야 하는지",
+        "requested_output": "법 개정 후 저작권법 형벌 적용 여부"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "저작권 침해와 상표권 침해에 모두 해당하는 경우 어떻게 처벌해야 하는지",
+        "requested_output": "저작권 침해와 상표권 침해 경합 시 처벌 방식"
+      }
+    ],
+    "answered_target_ids": [
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "행정기본법 11조  성실의무 및 권한남용금지의 원칙#KOBLEX-201339"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 20.377203872549536,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "행정기본법 11조  성실의무 및 권한남용금지의 원칙#KOBLEX-201339",
+        "provision_text": "제11조(성실의무 및 권한남용금지의 원칙)",
+        "rerank_rank": 1,
+        "rerank_score": 2.784081516438164e-06,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "행정기본법 11조  성실의무 및 권한남용금지의 원칙",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 40조  상상적 경합#KOBLEX-192729"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 50.270848371339866,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형법 40조  상상적 경합#KOBLEX-192729",
+        "provision_text": "제40조(상상적 경합) 한 개의 행위가 여러 개의 죄에 해당하는 경우에는 가장 무거운 죄에 대하여 정한 형으로 처벌한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9611321687698364,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 40조  상상적 경합",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공무원범죄에 관한 몰수 특례법 2조  정의#KOBLEX-038521"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 36.27432503720257,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "공무원범죄에 관한 몰수 특례법 2조  정의#KOBLEX-038521",
+        "provision_text": "1. \"특정공무원범죄\"란 다음 각 목의 어느 하나에 해당하는 죄[해당 죄와 다른 죄가 「형법」 제40조에 따른 상상적 경합(想像的 競合) 관계인 경우에는 그 다른 죄를 포함한다]를 말한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.30983778834342957,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공무원범죄에 관한 몰수 특례법 2조  정의 1호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "마약류 불법거래 방지에 관한 특례법 2조  정의#KOBLEX-006491",
+          "마약류 불법거래 방지에 관한 특례법 2조  정의#KOBLEX-045241"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 30.68979501374114,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "마약류 불법거래 방지에 관한 특례법 2조  정의#KOBLEX-006491",
+        "provision_text": "② 이 법에서 \"마약류범죄\"란 다음 각 호의 죄[그 죄와 다른 죄가 「형법」 제40조에 따른 상상적 경합(想像的 競合) 관계에 있는 경우에는 그 다른 죄를 포함한다]를 말한다. 1. 제6조ㆍ제9조 또는 제10조의 죄 2. 「마약류관리에 관한 법률」 제58조부터 제61조까지의 죄",
+        "rerank_rank": 3,
+        "rerank_score": 0.13261859118938446,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "마약류 불법거래 방지에 관한 특례법 2조  정의 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 37조#KOBLEX-192719"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 40.17509274740861,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "형법 37조#KOBLEX-192719",
+        "provision_text": "제5절 경합범",
+        "rerank_rank": 4,
+        "rerank_score": 0.00013891441631130874,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 37조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 38조  경합범과 처벌례#KOBLEX-192721"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 34.38243825693003,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "형법 38조  경합범과 처벌례#KOBLEX-192721",
+        "provision_text": "제38조(경합범과 처벌례)",
+        "rerank_rank": 5,
+        "rerank_score": 8.94754339242354e-05,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 38조  경합범과 처벌례",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 38조  경합범과 처벌례#KOBLEX-192723"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "형법 38조  경합범과 처벌례#KOBLEX-192723",
+        "provision_text": "② 제1항 각 호의 경우에 징역과 금고는 같은 종류의 형으로 보아 징역형으로 처벌한다.",
+        "rerank_rank": 6,
+        "rerank_score": 7.238385296659544e-05,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 38조  경합범과 처벌례 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 56조  가중ㆍ감경의 순서#KOBLEX-192780"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 39.169358241997145,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "형법 56조  가중ㆍ감경의 순서#KOBLEX-192780",
+        "provision_text": "5. 경합범 가중",
+        "rerank_rank": 7,
+        "rerank_score": 5.268416498438455e-05,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 56조  가중ㆍ감경의 순서 5호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 39조  판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범#KOBLEX-192724"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 44.795847124265336,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "형법 39조  판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범#KOBLEX-192724",
+        "provision_text": "제39조(판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범)",
+        "rerank_rank": 8,
+        "rerank_score": 4.581154280458577e-05,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 39조  판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 393조  경합범 중 다시 형을 정하는 절차#KOBLEX-093446",
+          "군사법원법 393조  경합범 중 다시 형을 정하는 절차#KOBLEX-159411"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 35.60413377807092,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 393조  경합범 중 다시 형을 정하는 절차#KOBLEX-093446",
+        "provision_text": "제393조(경합범 중 다시 형을 정하는 절차)",
+        "rerank_rank": 9,
+        "rerank_score": 3.241181548219174e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "군사법원법 393조  경합범 중 다시 형을 정하는 절차",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "가사소송법 58조  조정의 원칙#KOBLEX-064985"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 21.397440823203446,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "가사소송법 58조  조정의 원칙#KOBLEX-064985",
+        "provision_text": "제58조(조정의 원칙)",
+        "rerank_rank": 1,
+        "rerank_score": 5.713342943636235e-06,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "가사소송법 58조  조정의 원칙",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192893"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 1.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192893",
+        "provision_text": "제101조(예비, 음모, 선동, 선전)",
+        "rerank_rank": 2,
+        "rerank_score": 3.990952791355085e-06,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 101조  예비, 음모, 선동, 선전",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정기본법 8조#KOBLEX-201332"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 71,
+        "first_stage_score": 20.874864032036097,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "행정기본법 8조#KOBLEX-201332",
+        "provision_text": "제2장 행정의 법 원칙",
+        "rerank_rank": 3,
+        "rerank_score": 3.6520441426546313e-06,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "행정기본법 8조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 104조 2#KOBLEX-192901"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 91,
+        "first_stage_score": 1.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형법 104조 2#KOBLEX-192901",
+        "provision_text": "제104조의2 삭제 <1988.12.31>",
+        "rerank_rank": 4,
+        "rerank_score": 3.1678005143476184e-06,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 104조 2",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "관세법 5조#KOBLEX-104389"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 74,
+        "first_stage_score": 20.377203872549536,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "관세법 5조#KOBLEX-104389",
+        "provision_text": "제2절 법 적용의 원칙 등",
+        "rerank_rank": 5,
+        "rerank_score": 2.574410700617591e-06,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "관세법 5조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 104조  동맹국#KOBLEX-192900"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 1.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "형법 104조  동맹국#KOBLEX-192900",
+        "provision_text": "제104조(동맹국) 본장의 규정은 동맹국에 대한 행위에 적용한다.",
+        "rerank_rank": 6,
+        "rerank_score": 2.451820364512969e-06,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 104조  동맹국",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 1조  범죄의 성립과 처벌#KOBLEX-192644"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 2.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형법 1조  범죄의 성립과 처벌#KOBLEX-192644",
+        "provision_text": "제1조(범죄의 성립과 처벌)",
+        "rerank_rank": 7,
+        "rerank_score": 2.266022192998207e-06,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 1조  범죄의 성립과 처벌",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 100조  미수범#KOBLEX-192892"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 1.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형법 100조  미수범#KOBLEX-192892",
+        "provision_text": "제100조(미수범) 전8조의 미수범은 처벌한다.",
+        "rerank_rank": 8,
+        "rerank_score": 2.193980435549747e-06,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 100조  미수범",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정규제기본법 5조 2 우선허용ㆍ사후규제 원칙#KOBLEX-124921"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 47,
+        "first_stage_score": 21.397440823203446,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "행정규제기본법 5조 2 우선허용ㆍ사후규제 원칙#KOBLEX-124921",
+        "provision_text": "제5조의2(우선허용ㆍ사후규제 원칙)",
+        "rerank_rank": 9,
+        "rerank_score": 2.1846540221304167e-06,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "행정규제기본법 5조 2 우선허용ㆍ사후규제 원칙",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192895"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 1.0,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192895",
+        "provision_text": "②제92조 내지 제99조의 죄를 선동 또는 선전한 자도 전항의 형과 같다.",
+        "rerank_rank": 10,
+        "rerank_score": 1.942458766279742e-06,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 101조  예비, 음모, 선동, 선전 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형의 집행 및 수용자의 처우에 관한 법률 12조  구분수용의 예외#KOBLEX-075330",
+          "형의 집행 및 수용자의 처우에 관한 법률 12조  구분수용의 예외#KOBLEX-213517"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 22.13510392743384,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 12조  구분수용의 예외#KOBLEX-075330",
+        "provision_text": "제12조(구분수용의 예외)",
+        "rerank_rank": 2,
+        "rerank_score": 5.555743427976267e-06,
+        "retrieval_round": 3,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 12조  구분수용의 예외",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "대외무역법 3조  자유롭고 공정한 무역의 원칙 등#KOBLEX-083379"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 92,
+        "first_stage_score": 19.902719790172142,
+        "fusion_rank": 12,
+        "issue_id": "I1",
+        "provision_id": "대외무역법 3조  자유롭고 공정한 무역의 원칙 등#KOBLEX-083379",
+        "provision_text": "제3조(자유롭고 공정한 무역의 원칙 등)",
+        "rerank_rank": 12,
+        "rerank_score": 1.8110785049429978e-06,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "대외무역법 3조  자유롭고 공정한 무역의 원칙 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 178조  교부송달의 원칙#KOBLEX-064005"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 24,
+        "first_stage_score": 21.397440823203446,
+        "fusion_rank": 13,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 178조  교부송달의 원칙#KOBLEX-064005",
+        "provision_text": "제178조(교부송달의 원칙)",
+        "rerank_rank": 13,
+        "rerank_score": 1.7691586435830686e-06,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민사소송법 178조  교부송달의 원칙",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정절차법 48조  행정지도의 원칙#KOBLEX-098195"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 47,
+        "first_stage_score": 21.397440823203446,
+        "fusion_rank": 16,
+        "issue_id": "I1",
+        "provision_id": "행정절차법 48조  행정지도의 원칙#KOBLEX-098195",
+        "provision_text": "제48조(행정지도의 원칙)",
+        "rerank_rank": 16,
+        "rerank_score": 1.633719193705474e-06,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "행정절차법 48조  행정지도의 원칙",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "저작권법 39조  보호기간의 원칙#KOBLEX-084657"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 31,
+        "first_stage_score": 21.397440823203446,
+        "fusion_rank": 18,
+        "issue_id": "I1",
+        "provision_id": "저작권법 39조  보호기간의 원칙#KOBLEX-084657",
+        "provision_text": "제39조(보호기간의 원칙)",
+        "rerank_rank": 18,
+        "rerank_score": 1.587616225151578e-06,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "저작권법 39조  보호기간의 원칙",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "가사소송법 58조  조정의 원칙#KOBLEX-064985": "제58조(조정의 원칙)",
+      "공무원범죄에 관한 몰수 특례법 2조  정의#KOBLEX-038521": "1. \"특정공무원범죄\"란 다음 각 목의 어느 하나에 해당하는 죄[해당 죄와 다른 죄가 「형법」 제40조에 따른 상상적 경합(想像的 競合) 관계인 경우에는 그 다른 죄를 포함한다]를 말한다.",
+      "관세법 5조#KOBLEX-104389": "제2절 법 적용의 원칙 등",
+      "군사법원법 393조  경합범 중 다시 형을 정하는 절차#KOBLEX-093446": "제393조(경합범 중 다시 형을 정하는 절차)",
+      "대외무역법 3조  자유롭고 공정한 무역의 원칙 등#KOBLEX-083379": "제3조(자유롭고 공정한 무역의 원칙 등)",
+      "마약류 불법거래 방지에 관한 특례법 2조  정의#KOBLEX-006491": "② 이 법에서 \"마약류범죄\"란 다음 각 호의 죄[그 죄와 다른 죄가 「형법」 제40조에 따른 상상적 경합(想像的 競合) 관계에 있는 경우에는 그 다른 죄를 포함한다]를 말한다. 1. 제6조ㆍ제9조 또는 제10조의 죄 2. 「마약류관리에 관한 법률」 제58조부터 제61조까지의 죄",
+      "민사소송법 178조  교부송달의 원칙#KOBLEX-064005": "제178조(교부송달의 원칙)",
+      "저작권법 39조  보호기간의 원칙#KOBLEX-084657": "제39조(보호기간의 원칙)",
+      "행정규제기본법 5조 2 우선허용ㆍ사후규제 원칙#KOBLEX-124921": "제5조의2(우선허용ㆍ사후규제 원칙)",
+      "행정기본법 11조  성실의무 및 권한남용금지의 원칙#KOBLEX-201339": "제11조(성실의무 및 권한남용금지의 원칙)",
+      "행정기본법 8조#KOBLEX-201332": "제2장 행정의 법 원칙",
+      "행정절차법 48조  행정지도의 원칙#KOBLEX-098195": "제48조(행정지도의 원칙)",
+      "형법 100조  미수범#KOBLEX-192892": "제100조(미수범) 전8조의 미수범은 처벌한다.",
+      "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192893": "제101조(예비, 음모, 선동, 선전)",
+      "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192895": "②제92조 내지 제99조의 죄를 선동 또는 선전한 자도 전항의 형과 같다.",
+      "형법 104조  동맹국#KOBLEX-192900": "제104조(동맹국) 본장의 규정은 동맹국에 대한 행위에 적용한다.",
+      "형법 104조 2#KOBLEX-192901": "제104조의2 삭제 <1988.12.31>",
+      "형법 1조  범죄의 성립과 처벌#KOBLEX-192644": "제1조(범죄의 성립과 처벌)",
+      "형법 37조#KOBLEX-192719": "제5절 경합범",
+      "형법 38조  경합범과 처벌례#KOBLEX-192721": "제38조(경합범과 처벌례)",
+      "형법 38조  경합범과 처벌례#KOBLEX-192723": "② 제1항 각 호의 경우에 징역과 금고는 같은 종류의 형으로 보아 징역형으로 처벌한다.",
+      "형법 39조  판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범#KOBLEX-192724": "제39조(판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범)",
+      "형법 40조  상상적 경합#KOBLEX-192729": "제40조(상상적 경합) 한 개의 행위가 여러 개의 죄에 해당하는 경우에는 가장 무거운 죄에 대하여 정한 형으로 처벌한다.",
+      "형법 56조  가중ㆍ감경의 순서#KOBLEX-192780": "5. 경합범 가중",
+      "형의 집행 및 수용자의 처우에 관한 법률 12조  구분수용의 예외#KOBLEX-075330": "제12조(구분수용의 예외)"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "형벌법규의 소급적용 금지 원칙을 명시한 조항의 본문이 후보 조항에 존재하지 않는다.",
+            "requirement_id": "E1-R1",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "uncovered",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "E1-R1"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "후보 조항 중 형벌법규의 소급적용 금지 원칙(사후법 금지 원칙)을 명시한 조항의 본문이 존재하지 않는다. 형법 제1조(C017)는 제목만 제시되어 실질적인 법적 내용을 포함하지 않으며, 다른 조항들은 행정법, 마약법, 관세법 등 관련성이 없거나 형벌의 소급적용 원칙을 직접 규정하지 않는다.",
+        "status": "uncovered"
+      },
+      {
+        "applicability_status": "conditional",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형법 40조  상상적 경합#KOBLEX-192729",
+              "형법 38조  경합범과 처벌례#KOBLEX-192721"
+            ],
+            "rationale": "상상적 경합과 경합범에 대한 처벌 규정이 모두 제시되었으나, 해당 규정이 적용되는지 여부는 사실관계(행위의 단일성 여부)에 따라 결정되므로 부분적으로만 충족된다.",
+            "requirement_id": "E2-R1",
+            "status": "partially_satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_fact",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형법 40조  상상적 경합#KOBLEX-192729",
+          "형법 38조  경합범과 처벌례#KOBLEX-192721"
+        ],
+        "missing_aspects": [
+          "E2-R1"
+        ],
+        "partial_kind": "factual_condition",
+        "rationale": "상상적 경합(C002)과 경합범(C006)에 대한 처벌 규정이 모두 제시되어 법적 규칙은 완비되어 있다. 그러나 갑의 행위가 '한 개의 행위'인지 '수개의 행위'인지에 따라 적용될 조항이 달라지므로, 해당 사실관계가 불명확하여 특정 처벌 방식을 확정할 수 없다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [
+      "T1"
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형법 40조  상상적 경합#KOBLEX-192729",
+        "support_spans": [
+          {
+            "end_char": 67,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형법 38조  경합범과 처벌례#KOBLEX-192721",
+        "support_spans": [
+          {
+            "end_char": 14,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 5,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "사후에 형벌 조항이 삭제된 경우, 개정 전 행위에 대한 형사처벌 가능 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "저작권 침해와 상표권 침해가 동시에 성립하는 경우의 형사처벌 방식",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "형벌법규의 소급적용 금지 원칙이 명시된 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "형벌법규의 소급적용 금지 원칙을 명시한 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "형벌법규의 소급적용 금지 원칙 및 사후법 금지 원칙",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "법 개정 후 처벌 가능 여부를 판단하기 위해 형벌법규의 소급적용 금지 원칙이 필요하다",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 갑은 오래된 컴퓨터 프로그램을 무단으로 복제하여 판매하는 행위를 하였습니다. 사건 발생 이후, 정부는 해당 프로그램에 대한 저작권법을 개정하여 무단 복제에 대한 형벌 조항을 삭제하였습니다. 동시에, 갑의 행위는 저작권 침해와 동시에 상표권 침해에 해당할 수 있습니다. [질문] 갑이 법 개정 후에 저작권법에 따라 처벌받아야 하는지, 그리고 갑의 행위가 저작권 침해와 상표권 침해에 모두 해당하는 경우 어떻게 처벌해야 하는지?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형벌법규 소급적용 금지 사후법 원칙",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "형벌법규",
+          "소급적용",
+          "금지",
+          "사후법",
+          "원칙"
+        ],
+        "query_text": "형벌법규의 소급적용은 금지된다 [원문 맥락] 동시에, 갑의 행위는 저작권 침해와 동시에 상표권 침해에 해당할 수 있습니다. 갑이 법 개정 후에 저작권법에 따라 처벌받아야 하는지, 그리고 갑의 행위가 저작권 침해와 상표권 침해에 모두 해당하는 경우 어떻게 처벌해야 하는지?",
+        "request_id": "RQ1",
+        "rerank_query_text": "형벌법규 소급적용 금지 원칙 조항",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "상상적 경합 경합범 처벌 규정",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "상상적",
+          "경합",
+          "경합범",
+          "처벌",
+          "규정"
+        ],
+        "query_text": "상상적 경합범은 가장 무거운 죄로 처벌한다 [원문 맥락] 동시에, 갑의 행위는 저작권 침해와 동시에 상표권 침해에 해당할 수 있습니다. 갑이 법 개정 후에 저작권법에 따라 처벌받아야 하는지, 그리고 갑의 행위가 저작권 침해와 상표권 침해에 모두 해당하는 경우 어떻게 처벌해야 하는지?",
+        "request_id": "RQ2",
+        "rerank_query_text": "상상적 경합 경합범 처벌 방식 조항",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형법 제1조 형벌법규 소급적용 금지 사후법 원칙",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형법",
+          "제1조",
+          "형벌법규",
+          "소급적용",
+          "금지",
+          "사후법"
+        ],
+        "query_text": "형법 제1조 형벌법규의 소급적용 금지 원칙 [원문 맥락] 동시에, 갑의 행위는 저작권 침해와 동시에 상표권 침해에 해당할 수 있습니다. 갑이 법 개정 후에 저작권법에 따라 처벌받아야 하는지, 그리고 갑의 행위가 저작권 침해와 상표권 침해에 모두 해당하는 경우 어떻게 처벌해야 하는지?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "형벌법규 소급적용 금지 원칙 명시 조항",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "사후법 금지 형벌법규 소급적용 원칙",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "사후법",
+          "금지",
+          "형벌법규",
+          "소급적용",
+          "원칙"
+        ],
+        "query_text": "사후법 금지 원칙 형벌법규 소급적용 [원문 맥락] 동시에, 갑의 행위는 저작권 침해와 동시에 상표권 침해에 해당할 수 있습니다. 갑이 법 개정 후에 저작권법에 따라 처벌받아야 하는지, 그리고 갑의 행위가 저작권 침해와 상표권 침해에 모두 해당하는 경우 어떻게 처벌해야 하는지?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "형벌법규 소급적용 금지 원칙 명시 조항",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "법률 소급적용 금지 형벌법규 예외",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "법률",
+          "소급적용",
+          "금지",
+          "형벌법규",
+          "예외"
+        ],
+        "query_text": "법률의 소급적용은 금지되나 형벌법규에 대하여는 그러하지 아니하다 [원문 맥락] 동시에, 갑의 행위는 저작권 침해와 동시에 상표권 침해에 해당할 수 있습니다. 갑이 법 개정 후에 저작권법에 따라 처벌받아야 하는지, 그리고 갑의 행위가 저작권 침해와 상표권 침해에 모두 해당하는 경우 어떻게 처벌해야 하는지?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "형벌법규 소급적용 금지 원칙 조항 본문",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 오래된 컴퓨터 프로그램을 무단으로 복제하여 판매하는 행위를 하였습니다. 사건 발생 이후, 정부는 해당 프로그램에 대한 저작권법을 개정하여 무단 복제에 대한 형벌 조항을 삭제하였습니다. 동시에, 갑의 행위는 저작권 침해와 동시에 상표권 침해에 해당할 수 있습니다.\n\n[질문]\n갑이 법 개정 후에 저작권법에 따라 처벌받아야 하는지, 그리고 갑의 행위가 저작권 침해와 상표권 침해에 모두 해당하는 경우 어떻게 처벌해야 하는지?",
+    "remaining_request_budget": 4,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "형벌법규의 소급적용 금지 원칙이 명시된 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "형벌법규의 소급적용 금지 원칙을 명시한 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "형벌법규의 소급적용 금지 원칙 및 사후법 금지 원칙",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "법 개정 후 처벌 가능 여부를 판단하기 위해 형벌법규의 소급적용 금지 원칙이 필요하다",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "상상적 경합 또는 경합범에 대한 처벌 방식을 명시한 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "상상적 경합 또는 경합범에 대한 처벌 방식을 명시한 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "상상적 경합 또는 경합범에 대한 처벌 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "저작권 침해와 상표권 침해가 동시에 성립할 때의 처벌 방식을 판단하기 위해 경합범 처벌 규정이 필요하다",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "e2b47d6b-6117-48bb-bf2c-c0d1f50b041b",
+    "seen_provision_ids": [
+      "형법 38조  경합범과 처벌례#KOBLEX-192721",
+      "행정절차법 48조  행정지도의 원칙#KOBLEX-098195",
+      "행정기본법 8조#KOBLEX-201332",
+      "민사소송법 178조  교부송달의 원칙#KOBLEX-064005",
+      "형의 집행 및 수용자의 처우에 관한 법률 12조  구분수용의 예외#KOBLEX-075330",
+      "형법 40조  상상적 경합#KOBLEX-192729",
+      "대외무역법 3조  자유롭고 공정한 무역의 원칙 등#KOBLEX-083379",
+      "군사법원법 393조  경합범 중 다시 형을 정하는 절차#KOBLEX-093446",
+      "행정기본법 11조  성실의무 및 권한남용금지의 원칙#KOBLEX-201339",
+      "형법 100조  미수범#KOBLEX-192892",
+      "행정규제기본법 5조 2 우선허용ㆍ사후규제 원칙#KOBLEX-124921",
+      "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192893",
+      "가사소송법 58조  조정의 원칙#KOBLEX-064985",
+      "관세법 5조#KOBLEX-104389",
+      "공무원범죄에 관한 몰수 특례법 2조  정의#KOBLEX-038521",
+      "형법 56조  가중ㆍ감경의 순서#KOBLEX-192780",
+      "형법 39조  판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범#KOBLEX-192724",
+      "형법 38조  경합범과 처벌례#KOBLEX-192723",
+      "저작권법 39조  보호기간의 원칙#KOBLEX-084657",
+      "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192895",
+      "형법 1조  범죄의 성립과 처벌#KOBLEX-192644",
+      "형법 104조  동맹국#KOBLEX-192900",
+      "마약류 불법거래 방지에 관한 특례법 2조  정의#KOBLEX-006491",
+      "형법 104조 2#KOBLEX-192901",
+      "형법 37조#KOBLEX-192719"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

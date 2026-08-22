@@ -1,0 +1,644 @@
+{
+  "abstention_reason": null,
+  "answer": "지방자치단체의 장은 법률 또는 조례에 따르지 아니하고는 물품을 출자의 목적으로 하거나 물품에 사권을 설정할 수 없다.[CT1]\n지방자치단체의 장은 소관 물품의 관리 사무를 소속 공무원에게 위임하여 물품을 관리하게 할 수 있다.[CT2]\n지방자치단체의 장은 2명 이상의 소속 공무원에게 물품의 관리에 관한 사무를 위임하는 경우에는 그 중 1명을 지정하여 물품의 관리에 관한 사무를 총괄·조정하게 하여야 한다.[CT3]\n물품관리관은 물품의 출납 및 보관에 관한 사무나 물품의 사용에 관한 사무를 위임할 때에는 지방자치단체의 장이 정하는 바에 따라 하여야 한다.[CT4]\n전제: 질문에 제시된 '관련 법률이나 조례가 없는 상황'이라는 사실 전제를 사실로 간주함.\n한계: 본 답변은 제공된 법률 조항에 기반한 일반적 법적 요건과 절차에 관한 것이며, 구체적인 행정 절차나 내부 규정의 세부 사항은 다루지 않음.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "지방자치단체의 장은 법률 또는 조례에 따르지 아니하고는 물품을 출자의 목적으로 하거나 물품에 사권을 설정할 수 없다.[CT1]\n지방자치단체의 장은 소관 물품의 관리 사무를 소속 공무원에게 위임하여 물품을 관리하게 할 수 있다.[CT2]\n지방자치단체의 장은 2명 이상의 소속 공무원에게 물품의 관리에 관한 사무를 위임하는 경우에는 그 중 1명을 지정하여 물품의 관리에 관한 사무를 총괄·조정하게 하여야 한다.[CT3]\n물품관리관은 물품의 출납 및 보관에 관한 사무나 물품의 사용에 관한 사무를 위임할 때에는 지방자치단체의 장이 정하는 바에 따라 하여야 한다.[CT4]\n전제: 질문에 제시된 '관련 법률이나 조례가 없는 상황'이라는 사실 전제를 사실로 간주함.\n한계: 본 답변은 제공된 법률 조항에 기반한 일반적 법적 요건과 절차에 관한 것이며, 구체적인 행정 절차나 내부 규정의 세부 사항은 다루지 않음.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T17:33:40.516576+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 250105.513,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 188,
+      "dedup_collapse": 22,
+      "evidence_fusion": 188,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 188
+    }
+  },
+  "run_id": "68ddab2b-89c2-4e35-91f5-29d63b12e9af",
+  "state": {
+    "accepted_provision_ids": [
+      "공유재산 및 물품 관리법 52조  물품관리관#KOBLEX-205523",
+      "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138835",
+      "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138834",
+      "공유재산 및 물품 관리법 50조  출자 등의 금지#KOBLEX-205520"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 4,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_condition",
+        "question_anchor": "출자 목적으로 제공하거나 위 장비에 사권을 설정할 수 있는 조건은 무엇이며",
+        "requested_output": "지방자치단체의 장이 소유한 물품을 출자 목적으로 제공하거나 사권을 설정할 수 있는 법적 요건 및 절차"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_permissibility",
+        "question_anchor": "을에게 물품의 관리 사무를 위임할 수 있는가",
+        "requested_output": "지방자치단체의 장이 물품 관리 사무를 소속 공무원에게 위임할 수 있는 법적 근거 및 한계"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "공유재산 및 물품 관리법 50조  출자 등의 금지#KOBLEX-205520"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 35.88612044040066,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "공유재산 및 물품 관리법 50조  출자 등의 금지#KOBLEX-205520",
+        "provision_text": "제50조(출자 등의 금지) 지방자치단체의 장은 법률 또는 조례에 따르지 아니하고는 물품을 출자의 목적으로 하거나 물품에 사권을 설정할 수 없다. <개정 2021.4.20>",
+        "rerank_rank": 1,
+        "rerank_score": 0.19755347073078156,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공유재산 및 물품 관리법 50조  출자 등의 금지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138833"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 24.560855705661528,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138833",
+        "provision_text": "제56조(물품관리사무의 위임 등)",
+        "rerank_rank": 1,
+        "rerank_score": 0.9122856259346008,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공유재산 및 물품 관리법 52조  물품관리관#KOBLEX-205523"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 27.584760224439833,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "공유재산 및 물품 관리법 52조  물품관리관#KOBLEX-205523",
+        "provision_text": "① 지방자치단체의 장은 소관 물품의 관리 사무를 소속 공무원에게 위임하여 물품을 관리하게 할 수 있다. <개정 2021.4.20>",
+        "rerank_rank": 2,
+        "rerank_score": 0.6016110181808472,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공유재산 및 물품 관리법 52조  물품관리관 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138834"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 38,
+        "first_stage_score": 21.33672411283918,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138834",
+        "provision_text": "① 지방자치단체의 장은 법 제52조제1항에 따라 2명 이상의 소속 공무원에게 물품의 관리에 관한 사무를 위임하는 경우에는 그 중 1명을 지정하여 물품의 관리에 관한 사무를 총괄ㆍ조정하게 하여야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.5885790586471558,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138835"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 28,
+        "first_stage_score": 22.760835523679766,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138835",
+        "provision_text": "② 물품관리관(법 제55조제1항에 따라 물품관리의 사무의 일부를 분장하는 공무원을 포함한다. 이하 같다)은 그가 소속하는 관서의 공무원에게 법 제53조제1항에 따라 물품의 출납 및 보관에 관한 사무(출납명령에 관한 사무는 제외한다)를 위임하거나 법 제54조제1항에 따라 물품의 사용에 관한 사무를 위임할 때에는 지방자치단체의 장이 정하는 바에 따라 하여야 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.5782318115234375,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공유재산 및 물품 관리법 57조#KOBLEX-205535"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 54,
+        "first_stage_score": 20.35526222262675,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "공유재산 및 물품 관리법 57조#KOBLEX-205535",
+        "provision_text": "제7장 물품의 관리",
+        "rerank_rank": 5,
+        "rerank_score": 0.47915440797805786,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공유재산 및 물품 관리법 57조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공유재산 및 물품 관리법 54조  물품운용관#KOBLEX-205529"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 25.020949046120275,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "공유재산 및 물품 관리법 54조  물품운용관#KOBLEX-205529",
+        "provision_text": "① 물품관리관은 필요하면 대통령령으로 정하는 바에 따라 그가 소속한 관서의 공무원에게 지방자치단체의 사무 또는 사업의 목적과 용도에 따라 물품을 사용하게 하거나 사용 중인 물품의 유지ㆍ보존 및 운용에 관한 사무(이하 \"물품의 사용 사무\"라 한다)를 위임할 수 있다. <개정 2021.4.20>",
+        "rerank_rank": 6,
+        "rerank_score": 0.41674238443374634,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공유재산 및 물품 관리법 54조  물품운용관 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공유재산 및 물품 관리법 14조  공유재산의 관리와 사무의 위임#KOBLEX-205325"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 28.173625310041253,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "공유재산 및 물품 관리법 14조  공유재산의 관리와 사무의 위임#KOBLEX-205325",
+        "provision_text": "제14조(공유재산의 관리와 사무의 위임)",
+        "rerank_rank": 7,
+        "rerank_score": 0.2927505373954773,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공유재산 및 물품 관리법 14조  공유재산의 관리와 사무의 위임",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공유재산 및 물품 관리법 시행령 57조#KOBLEX-138836"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 55,
+        "first_stage_score": 20.35526222262675,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "공유재산 및 물품 관리법 시행령 57조#KOBLEX-138836",
+        "provision_text": "제7장 물품의 관리",
+        "rerank_rank": 8,
+        "rerank_score": 0.2752101719379425,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공유재산 및 물품 관리법 시행령 57조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공유재산 및 물품 관리법 53조  물품출납공무원#KOBLEX-205526"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 30,
+        "first_stage_score": 22.692286970643778,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "공유재산 및 물품 관리법 53조  물품출납공무원#KOBLEX-205526",
+        "provision_text": "① 물품관리관(제55조제1항에 따라 물품관리사무의 일부를 분장하는 공무원을 포함한다. 이하 같다)은 대통령령으로 정하는 바에 따라 그가 소속한 관서의 공무원에게 그 관리하는 물품의 출납 및 보관에 관한 사무(출납명령에 관한 사무는 제외한다. 이하 같다)를 위임할 수 있다. <개정 2021.4.20>",
+        "rerank_rank": 9,
+        "rerank_score": 0.16194571554660797,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공유재산 및 물품 관리법 53조  물품출납공무원 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공유재산 및 물품 관리법 14조  공유재산의 관리와 사무의 위임#KOBLEX-205325": "제14조(공유재산의 관리와 사무의 위임)",
+      "공유재산 및 물품 관리법 50조  출자 등의 금지#KOBLEX-205520": "제50조(출자 등의 금지) 지방자치단체의 장은 법률 또는 조례에 따르지 아니하고는 물품을 출자의 목적으로 하거나 물품에 사권을 설정할 수 없다. <개정 2021.4.20>",
+      "공유재산 및 물품 관리법 52조  물품관리관#KOBLEX-205523": "① 지방자치단체의 장은 소관 물품의 관리 사무를 소속 공무원에게 위임하여 물품을 관리하게 할 수 있다. <개정 2021.4.20>",
+      "공유재산 및 물품 관리법 53조  물품출납공무원#KOBLEX-205526": "① 물품관리관(제55조제1항에 따라 물품관리사무의 일부를 분장하는 공무원을 포함한다. 이하 같다)은 대통령령으로 정하는 바에 따라 그가 소속한 관서의 공무원에게 그 관리하는 물품의 출납 및 보관에 관한 사무(출납명령에 관한 사무는 제외한다. 이하 같다)를 위임할 수 있다. <개정 2021.4.20>",
+      "공유재산 및 물품 관리법 54조  물품운용관#KOBLEX-205529": "① 물품관리관은 필요하면 대통령령으로 정하는 바에 따라 그가 소속한 관서의 공무원에게 지방자치단체의 사무 또는 사업의 목적과 용도에 따라 물품을 사용하게 하거나 사용 중인 물품의 유지ㆍ보존 및 운용에 관한 사무(이하 \"물품의 사용 사무\"라 한다)를 위임할 수 있다. <개정 2021.4.20>",
+      "공유재산 및 물품 관리법 57조#KOBLEX-205535": "제7장 물품의 관리",
+      "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138833": "제56조(물품관리사무의 위임 등)",
+      "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138834": "① 지방자치단체의 장은 법 제52조제1항에 따라 2명 이상의 소속 공무원에게 물품의 관리에 관한 사무를 위임하는 경우에는 그 중 1명을 지정하여 물품의 관리에 관한 사무를 총괄ㆍ조정하게 하여야 한다.",
+      "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138835": "② 물품관리관(법 제55조제1항에 따라 물품관리의 사무의 일부를 분장하는 공무원을 포함한다. 이하 같다)은 그가 소속하는 관서의 공무원에게 법 제53조제1항에 따라 물품의 출납 및 보관에 관한 사무(출납명령에 관한 사무는 제외한다)를 위임하거나 법 제54조제1항에 따라 물품의 사용에 관한 사무를 위임할 때에는 지방자치단체의 장이 정하는 바에 따라 하여야 한다.",
+      "공유재산 및 물품 관리법 시행령 57조#KOBLEX-138836": "제7장 물품의 관리"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "공유재산 및 물품 관리법 50조  출자 등의 금지#KOBLEX-205520"
+            ],
+            "rationale": "C001은 물품의 출자 제공에 필요한 법적 요건인 '법률 또는 조례에 따름'을 명시하고 있다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "공유재산 및 물품 관리법 50조  출자 등의 금지#KOBLEX-205520"
+            ],
+            "rationale": "C001은 물품에 사권을 설정할 수 있는 법적 요건인 '법률 또는 조례에 따름'을 명시하고 있다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "공유재산 및 물품 관리법 50조  출자 등의 금지#KOBLEX-205520"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001(공유재산 및 물품 관리법 제50조)은 물품의 출자 제공 및 사권 설정에 필요한 법률상 조건(법률 또는 조례에 따름)을 명확히 규정하고 있어 E1의 모든 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "공유재산 및 물품 관리법 52조  물품관리관#KOBLEX-205523"
+            ],
+            "rationale": "C003은 지방자치단체의 장이 물품 관리 사무를 소속 공무원에게 위임할 수 있음을 명시하여 법적 근거를 제공한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138834",
+              "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138835"
+            ],
+            "rationale": "C004와 C005는 다수 위임 시 총괄자 지정 의무와 재위임 시 장의 규정 준수 의무를 통해 위임의 범위와 한계를 명확히 규정한다.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "공유재산 및 물품 관리법 52조  물품관리관#KOBLEX-205523",
+          "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138834",
+          "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138835"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C003(법 제52조)은 물품 관리 사무 위임의 법적 근거를, C004 및 C005(시행령 제56조)는 위임 시 총괄자 지정 및 재위임 제한 등 위임의 범위와 한계에 대한 구체적 요건을 규정하여 E2의 완료 기준을 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "공유재산 및 물품 관리법 50조  출자 등의 금지#KOBLEX-205520",
+        "support_spans": [
+          {
+            "end_char": 95,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "공유재산 및 물품 관리법 52조  물품관리관#KOBLEX-205523",
+        "support_spans": [
+          {
+            "end_char": 72,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138834",
+        "support_spans": [
+          {
+            "end_char": 111,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138835",
+        "support_spans": [
+          {
+            "end_char": 202,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "지방자치단체의 장이 소유한 물품을 제3자에게 출자 목적으로 제공하거나 사권을 설정할 수 있는 법적 요건과 절차는 무엇인가",
+        "issue_id": "I1"
+      },
+      {
+        "description": "지방자치단체의 장이 물품 관리 사무를 소속 공무원에게 위임할 수 있는 법적 근거와 한계는 무엇인가",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 지방자치단체의 장으로서 새로 구입한 IT 장비를 사용하여 지역 스타트업을 지원하고자 했다. 그는 이 장비를 출자의 목적으로 지역 벤처 투자 회사에 제공하고자 했으나, 관련 법률이나 조례가 없는 상황이었다. 동시에, 물품의 관리를 효율적으로 하기 위해 물품 관리 업무를 을이라는 소속 공무원에게 위임하려고 계획하고 있었다. [질문] 갑이 해당 IT 장비를 지역 벤처 투자 회사에 출자 목적으로 제공하거나 위 장비에 사권을 설정할 수 있는 조건은 무엇이며, 갑은 을에게 물품의 관리 사무를 위임할 수 있는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "지방자치단체 물품 출자 제공 사권 설정 법적 요건 절차",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "지방자치단체",
+          "물품",
+          "출자",
+          "제공",
+          "사권",
+          "설정",
+          "법적요건",
+          "절차"
+        ],
+        "query_text": "지방자치단체의 장이 소유한 물품을 출자 목적으로 제공하거나 사권을 설정할 수 있는 법적 요건과 절차 [원문 맥락] 동시에, 물품의 관리를 효율적으로 하기 위해 물품 관리 업무를 을이라는 소속 공무원에게 위임하려고 계획하고 있었다. 갑이 해당 IT 장비를 지역 벤처 투자 회사에 출자 목적으로 제공하거나 위 장비에 사권을 설정할 수 있는 조건은 무엇이며, 갑은 을에게 물품의 관리 사무를 위임할 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "물품의 출자 제공 및 사권 설정에 필요한 법률상 조건과 절차적 요건",
+        "statute_hints": [
+          "지방재정법",
+          "지방자치법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "지방자치단체 물품 관리 사무 위임 법적 근거 한계",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "지방자치단체",
+          "물품관리",
+          "사무위임",
+          "공무원",
+          "법적근거",
+          "한계"
+        ],
+        "query_text": "지방자치단체의 장이 물품 관리 사무를 소속 공무원에게 위임할 수 있는 법적 근거와 한계 [원문 맥락] 동시에, 물품의 관리를 효율적으로 하기 위해 물품 관리 업무를 을이라는 소속 공무원에게 위임하려고 계획하고 있었다. 갑이 해당 IT 장비를 지역 벤처 투자 회사에 출자 목적으로 제공하거나 위 장비에 사권을 설정할 수 있는 조건은 무엇이며, 갑은 을에게 물품의 관리 사무를 위임할 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "물품 관리 사무의 위임이 허용되는 법적 근거와 위임의 범위, 한계",
+        "statute_hints": [
+          "지방재정법",
+          "지방자치법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 지방자치단체의 장으로서 새로 구입한 IT 장비를 사용하여 지역 스타트업을 지원하고자 했다. 그는 이 장비를 출자의 목적으로 지역 벤처 투자 회사에 제공하고자 했으나, 관련 법률이나 조례가 없는 상황이었다. 동시에, 물품의 관리를 효율적으로 하기 위해 물품 관리 업무를 을이라는 소속 공무원에게 위임하려고 계획하고 있었다.\n\n[질문]\n갑이 해당 IT 장비를 지역 벤처 투자 회사에 출자 목적으로 제공하거나 위 장비에 사권을 설정할 수 있는 조건은 무엇이며, 갑은 을에게 물품의 관리 사무를 위임할 수 있는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "물품의 출자 제공 및 사권 설정에 필요한 법률상 조건과 절차적 요건을 명확히 규정한 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "물품의 출자 제공에 필요한 법적 요건(예: 의회 의결, 조례 근거 등)을 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "물품에 사권을 설정할 수 있는 법적 요건과 절차를 확인"
+          }
+        ],
+        "critical": true,
+        "description": "지방자치단체의 장이 소유한 물품을 출자 목적으로 제공하거나 사권을 설정할 수 있는 법적 요건과 절차",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 직접적으로 물품의 출자 제공 및 사권 설정의 조건을 묻고 있으므로, 이를 판단하기 위한 핵심 법적 근거가 필요함",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "물품 관리 사무의 위임이 허용되는 법적 근거와 위임의 범위, 한계를 명확히 규정한 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "물품 관리 사무의 위임이 허용되는 법적 근거를 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "위임의 범위와 한계(예: 최종 책임 소재, 재위임 금지 등)를 확인"
+          }
+        ],
+        "critical": true,
+        "description": "지방자치단체의 장이 물품 관리 사무를 소속 공무원에게 위임할 수 있는 법적 근거와 한계",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 물품 관리 사무의 위임 가능성을 묻고 있으므로, 이를 판단하기 위한 핵심 법적 근거가 필요함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "68ddab2b-89c2-4e35-91f5-29d63b12e9af",
+    "seen_provision_ids": [
+      "공유재산 및 물품 관리법 50조  출자 등의 금지#KOBLEX-205520",
+      "공유재산 및 물품 관리법 54조  물품운용관#KOBLEX-205529",
+      "공유재산 및 물품 관리법 14조  공유재산의 관리와 사무의 위임#KOBLEX-205325",
+      "공유재산 및 물품 관리법 시행령 57조#KOBLEX-138836",
+      "공유재산 및 물품 관리법 52조  물품관리관#KOBLEX-205523",
+      "공유재산 및 물품 관리법 53조  물품출납공무원#KOBLEX-205526",
+      "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138835",
+      "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138833",
+      "공유재산 및 물품 관리법 시행령 56조  물품관리사무의 위임 등#KOBLEX-138834",
+      "공유재산 및 물품 관리법 57조#KOBLEX-205535"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

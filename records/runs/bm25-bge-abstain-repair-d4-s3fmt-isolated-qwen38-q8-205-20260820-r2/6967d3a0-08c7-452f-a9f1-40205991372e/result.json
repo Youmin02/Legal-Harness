@@ -1,0 +1,1228 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "채무자가 미리 이행하지 아니할 의사를 표시한 경우에는 상대방이 상당한 기간을 정하여 이행을 최고할 필요가 없다.[CT1]\n을의 납품 의사 포기 의사표시로 인해 갑은 최고 절차 없이 계약을 해제할 수 있는 권리를 취득한다.[CT2]\n전제: 을이 갑에게 납품 의사를 포기한다는 명확한 의사표시를 했다는 사실은 질문의 배경 시나리오에 근거한 가정이다.\n한계: 계약해제권 행사 방법(통지 등)에 대한 구체적 법적 근거가 후보 조문에 포함되어 있지 않아, 해제권 행사 절차에 관한 법적 요건은 확인되지 않았다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T05:51:18.429230+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 424465.448,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 385,
+      "dedup_collapse": 59,
+      "evidence_fusion": 385,
+      "first_stage": 500,
+      "request_rerank": 500,
+      "round_selected": 30,
+      "rrf": 400,
+      "selected": 385
+    }
+  },
+  "run_id": "6967d3a0-08c7-452f-a9f1-40205991372e",
+  "state": {
+    "accepted_provision_ids": [
+      "민법 544조  이행지체와 해제#KOBLEX-059486"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 1,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 8,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "Two consecutive retrieval rounds did not improve critical evidence.",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 27
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 27,
+          "claim_count": 2
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conditions",
+        "question_anchor": "어떤 조건 하에 을과의 계약을 해제할 수 있는가",
+        "requested_output": "을의 납품 의사 포기 상황에서 갑이 계약을 해제하기 위한 법적 요건 및 절차"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민법 544조  이행지체와 해제#KOBLEX-059486"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 3.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 544조  이행지체와 해제#KOBLEX-059486",
+        "provision_text": "제544조(이행지체와 해제) 당사자 일방이 그 채무를 이행하지 아니하는 때에는 상대방은 상당한 기간을 정하여 그 이행을 최고하고 그 기간내에 이행하지 아니한 때에는 계약을 해제할 수 있다. 그러나 채무자가 미리 이행하지 아니할 의사를 표시한 경우에는 최고를 요하지 아니한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.8213937878608704,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 544조  이행지체와 해제",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "약관의 규제에 관한 법률 9조  계약의 해제ㆍ해지#KOBLEX-103921",
+          "약관의 규제에 관한 법률 9조  계약의 해제ㆍ해지#KOBLEX-167836"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 41.03499510651123,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "약관의 규제에 관한 법률 9조  계약의 해제ㆍ해지#KOBLEX-103921",
+        "provision_text": "3. 법률에 따른 사업자의 해제권 또는 해지권의 행사 요건을 완화하여 고객에게 부당하게 불이익을 줄 우려가 있는 조항",
+        "rerank_rank": 1,
+        "rerank_score": 0.9220210909843445,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "약관의 규제에 관한 법률 9조  계약의 해제ㆍ해지 3호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "약관의 규제에 관한 법률 9조  계약의 해제ㆍ해지#KOBLEX-103919",
+          "약관의 규제에 관한 법률 9조  계약의 해제ㆍ해지#KOBLEX-167834"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 30.697813603960626,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "약관의 규제에 관한 법률 9조  계약의 해제ㆍ해지#KOBLEX-103919",
+        "provision_text": "1. 법률에 따른 고객의 해제권 또는 해지권을 배제하거나 그 행사를 제한하는 조항",
+        "rerank_rank": 2,
+        "rerank_score": 0.1351417750120163,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "약관의 규제에 관한 법률 9조  계약의 해제ㆍ해지 1호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "약관의 규제에 관한 법률 9조  계약의 해제ㆍ해지#KOBLEX-103920",
+          "약관의 규제에 관한 법률 9조  계약의 해제ㆍ해지#KOBLEX-167835"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 22.080746181346147,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "약관의 규제에 관한 법률 9조  계약의 해제ㆍ해지#KOBLEX-103920",
+        "provision_text": "2. 사업자에게 법률에서 규정하고 있지 아니하는 해제권 또는 해지권을 부여하여 고객에게 부당하게 불이익을 줄 우려가 있는 조항",
+        "rerank_rank": 3,
+        "rerank_score": 0.015202450565993786,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "약관의 규제에 관한 법률 9조  계약의 해제ㆍ해지 2호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 674조  도급인의 파산과 해제권#KOBLEX-059740"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "민법 674조  도급인의 파산과 해제권#KOBLEX-059740",
+        "provision_text": "②전항의 경우에는 각 당사자는 상대방에 대하여 계약해제로 인한 손해의 배상을 청구하지 못한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.002254153834655881,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "민법 674조  도급인의 파산과 해제권 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 339조  「민법」상의 해지 또는 해제권이 있는 경우#KOBLEX-032624"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 26.06324288735035,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 339조  「민법」상의 해지 또는 해제권이 있는 경우#KOBLEX-032624",
+        "provision_text": "제339조(「민법」상의 해지 또는 해제권이 있는 경우) 제335조제2항의 규정은 「민법」 제637조(임차인의 파산과 해지통고), 제663조(사용자파산과 해지통고) 또는 제674조(도급인의 파산과 해제권)제1항의 규정에 의하여 상대방 또는 파산관재인이 갖는 해지권 또는 해제권의 행사에 관하여 준용한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.001936267944984138,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 339조  「민법」상의 해지 또는 해제권이 있는 경우",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 601조  무이자소비대차와 해제권#KOBLEX-059595"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 20.207782967985622,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "민법 601조  무이자소비대차와 해제권#KOBLEX-059595",
+        "provision_text": "제601조(무이자소비대차와 해제권) 이자없는 소비대차의 당사자는 목적물의 인도전에는 언제든지 계약을 해제할 수 있다. 그러나 상대방에게 생긴 손해가 있는 때에는 이를 배상하여야 한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.001812230795621872,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "민법 601조  무이자소비대차와 해제권",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 833조  일부용선과 발항 전의 계약해제 등#KOBLEX-116437"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 27.718951716000845,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "상법 833조  일부용선과 발항 전의 계약해제 등#KOBLEX-116437",
+        "provision_text": "제833조(일부용선과 발항 전의 계약해제 등)",
+        "rerank_rank": 7,
+        "rerank_score": 0.001515606651082635,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "상법 833조  일부용선과 발항 전의 계약해제 등",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 832조  전부용선의 발항 전의 계약해제 등#KOBLEX-116433"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 27.718951716000845,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "상법 832조  전부용선의 발항 전의 계약해제 등#KOBLEX-116433",
+        "provision_text": "제832조(전부용선의 발항 전의 계약해제 등)",
+        "rerank_rank": 8,
+        "rerank_score": 0.0005973848747089505,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "상법 832조  전부용선의 발항 전의 계약해제 등",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 552조  해제권행사여부의 최고권#KOBLEX-059499"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 20.162848216416293,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "민법 552조  해제권행사여부의 최고권#KOBLEX-059499",
+        "provision_text": "①해제권의 행사의 기간을 정하지 아니한 때에는 상대방은 상당한 기간을 정하여 해제권행사여부의 확답을 해제권자에게 최고할 수 있다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.0005813822499476373,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 552조  해제권행사여부의 최고권 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농업협동조합법 시행령 44조  통지와 최고#KOBLEX-027471"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 28.19253873114759,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "농업협동조합법 시행령 44조  통지와 최고#KOBLEX-027471",
+        "provision_text": "제44조(통지와 최고)",
+        "rerank_rank": 1,
+        "rerank_score": 0.0036273356527090073,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "농업협동조합법 시행령 44조  통지와 최고",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농업협동조합법 시행령 44조  통지와 최고#KOBLEX-027474"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 29,
+        "first_stage_score": 21.247324519459994,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "농업협동조합법 시행령 44조  통지와 최고#KOBLEX-027474",
+        "provision_text": "③ 무기명식채권의 소지자에 대한 통지 또는 최고는 공고의 방법으로 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.0033820741809904575,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "농업협동조합법 시행령 44조  통지와 최고 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "보험업법 53조  통지와 최고#KOBLEX-021967"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 34.61553022486341,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "보험업법 53조  통지와 최고#KOBLEX-021967",
+        "provision_text": "제53조(통지와 최고) 상호회사의 입사청약서나 사원에 대한 통지 및 최고(催告)에 관하여는 「상법」 제353조를 준용한다. 다만, 보험관계에 속하는 사항의 통지 및 최고에 관하여는 그러하지 아니하다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.00300982384942472,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "보험업법 53조  통지와 최고",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 79조  수익자명부#KOBLEX-107399"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 41,
+        "first_stage_score": 19.579102063054872,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "신탁법 79조  수익자명부#KOBLEX-107399",
+        "provision_text": "③ 제2항 본문에 따른 통지 또는 최고는 보통 그 도달할 시기에 도달한 것으로 본다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.0028866464272141457,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "신탁법 79조  수익자명부 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "집행관법 5조  위임 사무#KOBLEX-025958"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 33,
+        "first_stage_score": 21.066836291282677,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "집행관법 5조  위임 사무#KOBLEX-025958",
+        "provision_text": "1. 고지 및 최고(催告)",
+        "rerank_rank": 5,
+        "rerank_score": 0.0024891046341508627,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "집행관법 5조  위임 사무 1호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 353조  주주명부의 효력#KOBLEX-114608"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 22.697785119971027,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "상법 353조  주주명부의 효력#KOBLEX-114608",
+        "provision_text": "②제304조제2항의 규정은 전항의 통지 또는 최고에 준용한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.001296359347179532,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상법 353조  주주명부의 효력 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 552조  해제권행사여부의 최고권#KOBLEX-059500"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 3.0,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "민법 552조  해제권행사여부의 최고권#KOBLEX-059500",
+        "provision_text": "②전항의 기간내에 해제의 통지를 받지 못한 때에는 해제권은 소멸한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.0012889101635664701,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 552조  해제권행사여부의 최고권 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 304조  주식인수인 등에 대한 통지, 최고#KOBLEX-114403"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 34,
+        "first_stage_score": 20.80417358423828,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "상법 304조  주식인수인 등에 대한 통지, 최고#KOBLEX-114403",
+        "provision_text": "②전항의 통지 또는 최고는 보통 그 도달할 시기에 도달한 것으로 본다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.0004774713597726077,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상법 304조  주식인수인 등에 대한 통지, 최고 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농업협동조합법 시행령 31조  통지와 최고#KOBLEX-027442"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 23.592944653242093,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "농업협동조합법 시행령 31조  통지와 최고#KOBLEX-027442",
+        "provision_text": "제31조(통지와 최고) 우선출자신청인 또는 우선출자자에 대한 통지나 최고는 따로 그 주소를 중앙회에 통지한 때를 제외하고는 우선출자청약서 또는 우선출자자명부에 적힌 주소로 한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.0004401853948365897,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "농업협동조합법 시행령 31조  통지와 최고",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세기본법 시행령 25조 2 후발적 사유#KOBLEX-029679"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 45,
+        "first_stage_score": 20.02265975129916,
+        "fusion_rank": 34,
+        "issue_id": "I2",
+        "provision_id": "국세기본법 시행령 25조 2 후발적 사유#KOBLEX-029679",
+        "provision_text": "2. 최초의 신고ㆍ결정 또는 경정을 할 때 과세표준 및 세액의 계산 근거가 된 거래 또는 행위 등의 효력과 관계되는 계약이 해제권의 행사에 의하여 해제되거나 해당 계약의 성립 후 발생한 부득이한 사유로 해제되거나 취소된 경우",
+        "rerank_rank": 34,
+        "rerank_score": 0.0008038977975957096,
+        "retrieval_round": 3,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "국세기본법 시행령 25조 2 후발적 사유 2호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정절차법 15조  송달의 효력 발생#KOBLEX-098007"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 29,
+        "first_stage_score": 21.923544126931056,
+        "fusion_rank": 36,
+        "issue_id": "I2",
+        "provision_id": "행정절차법 15조  송달의 효력 발생#KOBLEX-098007",
+        "provision_text": "③ 제14조제4항의 경우에는 다른 법령등에 특별한 규정이 있는 경우를 제외하고는 공고일부터 14일이 지난 때에 그 효력이 발생한다. 다만, 긴급히 시행하여야 할 특별한 사유가 있어 효력 발생 시기를 달리 정하여 공고한 경우에는 그에 따른다.",
+        "rerank_rank": 36,
+        "rerank_score": 0.00035734192351810634,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "행정절차법 15조  송달의 효력 발생 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "디자인보호법 28조  서류제출의 효력 발생 시기#KOBLEX-125893",
+          "디자인보호법 28조  서류제출의 효력 발생 시기#KOBLEX-129156"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 31.242825570993887,
+        "fusion_rank": 38,
+        "issue_id": "I2",
+        "provision_id": "디자인보호법 28조  서류제출의 효력 발생 시기#KOBLEX-125893",
+        "provision_text": "제28조(서류제출의 효력 발생 시기)",
+        "rerank_rank": 38,
+        "rerank_score": 0.0002197154681198299,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "디자인보호법 28조  서류제출의 효력 발생 시기",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세기본법 12조  송달의 효력 발생#KOBLEX-147375"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 32.00585025552467,
+        "fusion_rank": 39,
+        "issue_id": "I2",
+        "provision_id": "국세기본법 12조  송달의 효력 발생#KOBLEX-147375",
+        "provision_text": "제12조(송달의 효력 발생)",
+        "rerank_rank": 39,
+        "rerank_score": 6.0105281590949744e-05,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "국세기본법 12조  송달의 효력 발생",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 288조  지상권소멸청구와 저당권자에 대한 통지#KOBLEX-058981"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 3.0,
+        "fusion_rank": 42,
+        "issue_id": "I2",
+        "provision_id": "민법 288조  지상권소멸청구와 저당권자에 대한 통지#KOBLEX-058981",
+        "provision_text": "제288조(지상권소멸청구와 저당권자에 대한 통지) 지상권이 저당권의 목적인 때 또는 그 토지에 있는 건물, 수목이 저당권의 목적이 된 때에는 전조의 청구는 저당권자에게 통지한 후 상당한 기간이 경과함으로써 그 효력이 생긴다.",
+        "rerank_rank": 42,
+        "rerank_score": 5.7729219406610355e-05,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 288조  지상권소멸청구와 저당권자에 대한 통지",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정절차법 15조  송달의 효력 발생#KOBLEX-098004"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 32.00585025552467,
+        "fusion_rank": 44,
+        "issue_id": "I2",
+        "provision_id": "행정절차법 15조  송달의 효력 발생#KOBLEX-098004",
+        "provision_text": "제15조(송달의 효력 발생)",
+        "rerank_rank": 44,
+        "rerank_score": 3.920786184608005e-05,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "행정절차법 15조  송달의 효력 발생",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 528조  승낙기간을 정한 계약의 청약#KOBLEX-059456"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 3.0,
+        "fusion_rank": 46,
+        "issue_id": "I2",
+        "provision_id": "민법 528조  승낙기간을 정한 계약의 청약#KOBLEX-059456",
+        "provision_text": "①승낙의 기간을 정한 계약의 청약은 청약자가 그 기간 내에 승낙의 통지를 받지 못한 때에는 그 효력을 잃는다.",
+        "rerank_rank": 46,
+        "rerank_score": 3.4212458558613434e-05,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 528조  승낙기간을 정한 계약의 청약 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 111조  의사표시의 효력발생시기#KOBLEX-058611"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 3.0,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "민법 111조  의사표시의 효력발생시기#KOBLEX-058611",
+        "provision_text": "② 의사표시자가 그 통지를 발송한 후 사망하거나 제한능력자가 되어도 의사표시의 효력에 영향을 미치지 아니한다.",
+        "rerank_rank": 8,
+        "rerank_score": 2.801209302560892e-05,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 111조  의사표시의 효력발생시기 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "국세기본법 12조  송달의 효력 발생#KOBLEX-147375": "제12조(송달의 효력 발생)",
+      "국세기본법 시행령 25조 2 후발적 사유#KOBLEX-029679": "2. 최초의 신고ㆍ결정 또는 경정을 할 때 과세표준 및 세액의 계산 근거가 된 거래 또는 행위 등의 효력과 관계되는 계약이 해제권의 행사에 의하여 해제되거나 해당 계약의 성립 후 발생한 부득이한 사유로 해제되거나 취소된 경우",
+      "농업협동조합법 시행령 31조  통지와 최고#KOBLEX-027442": "제31조(통지와 최고) 우선출자신청인 또는 우선출자자에 대한 통지나 최고는 따로 그 주소를 중앙회에 통지한 때를 제외하고는 우선출자청약서 또는 우선출자자명부에 적힌 주소로 한다.",
+      "농업협동조합법 시행령 44조  통지와 최고#KOBLEX-027471": "제44조(통지와 최고)",
+      "농업협동조합법 시행령 44조  통지와 최고#KOBLEX-027474": "③ 무기명식채권의 소지자에 대한 통지 또는 최고는 공고의 방법으로 한다.",
+      "디자인보호법 28조  서류제출의 효력 발생 시기#KOBLEX-125893": "제28조(서류제출의 효력 발생 시기)",
+      "민법 111조  의사표시의 효력발생시기#KOBLEX-058611": "② 의사표시자가 그 통지를 발송한 후 사망하거나 제한능력자가 되어도 의사표시의 효력에 영향을 미치지 아니한다.",
+      "민법 288조  지상권소멸청구와 저당권자에 대한 통지#KOBLEX-058981": "제288조(지상권소멸청구와 저당권자에 대한 통지) 지상권이 저당권의 목적인 때 또는 그 토지에 있는 건물, 수목이 저당권의 목적이 된 때에는 전조의 청구는 저당권자에게 통지한 후 상당한 기간이 경과함으로써 그 효력이 생긴다.",
+      "민법 528조  승낙기간을 정한 계약의 청약#KOBLEX-059456": "①승낙의 기간을 정한 계약의 청약은 청약자가 그 기간 내에 승낙의 통지를 받지 못한 때에는 그 효력을 잃는다.",
+      "민법 544조  이행지체와 해제#KOBLEX-059486": "제544조(이행지체와 해제) 당사자 일방이 그 채무를 이행하지 아니하는 때에는 상대방은 상당한 기간을 정하여 그 이행을 최고하고 그 기간내에 이행하지 아니한 때에는 계약을 해제할 수 있다. 그러나 채무자가 미리 이행하지 아니할 의사를 표시한 경우에는 최고를 요하지 아니한다.",
+      "민법 552조  해제권행사여부의 최고권#KOBLEX-059499": "①해제권의 행사의 기간을 정하지 아니한 때에는 상대방은 상당한 기간을 정하여 해제권행사여부의 확답을 해제권자에게 최고할 수 있다.",
+      "민법 552조  해제권행사여부의 최고권#KOBLEX-059500": "②전항의 기간내에 해제의 통지를 받지 못한 때에는 해제권은 소멸한다.",
+      "민법 601조  무이자소비대차와 해제권#KOBLEX-059595": "제601조(무이자소비대차와 해제권) 이자없는 소비대차의 당사자는 목적물의 인도전에는 언제든지 계약을 해제할 수 있다. 그러나 상대방에게 생긴 손해가 있는 때에는 이를 배상하여야 한다.",
+      "민법 674조  도급인의 파산과 해제권#KOBLEX-059740": "②전항의 경우에는 각 당사자는 상대방에 대하여 계약해제로 인한 손해의 배상을 청구하지 못한다.",
+      "보험업법 53조  통지와 최고#KOBLEX-021967": "제53조(통지와 최고) 상호회사의 입사청약서나 사원에 대한 통지 및 최고(催告)에 관하여는 「상법」 제353조를 준용한다. 다만, 보험관계에 속하는 사항의 통지 및 최고에 관하여는 그러하지 아니하다.",
+      "상법 304조  주식인수인 등에 대한 통지, 최고#KOBLEX-114403": "②전항의 통지 또는 최고는 보통 그 도달할 시기에 도달한 것으로 본다.",
+      "상법 353조  주주명부의 효력#KOBLEX-114608": "②제304조제2항의 규정은 전항의 통지 또는 최고에 준용한다.",
+      "상법 832조  전부용선의 발항 전의 계약해제 등#KOBLEX-116433": "제832조(전부용선의 발항 전의 계약해제 등)",
+      "상법 833조  일부용선과 발항 전의 계약해제 등#KOBLEX-116437": "제833조(일부용선과 발항 전의 계약해제 등)",
+      "신탁법 79조  수익자명부#KOBLEX-107399": "③ 제2항 본문에 따른 통지 또는 최고는 보통 그 도달할 시기에 도달한 것으로 본다.",
+      "약관의 규제에 관한 법률 9조  계약의 해제ㆍ해지#KOBLEX-103919": "1. 법률에 따른 고객의 해제권 또는 해지권을 배제하거나 그 행사를 제한하는 조항",
+      "약관의 규제에 관한 법률 9조  계약의 해제ㆍ해지#KOBLEX-103920": "2. 사업자에게 법률에서 규정하고 있지 아니하는 해제권 또는 해지권을 부여하여 고객에게 부당하게 불이익을 줄 우려가 있는 조항",
+      "약관의 규제에 관한 법률 9조  계약의 해제ㆍ해지#KOBLEX-103921": "3. 법률에 따른 사업자의 해제권 또는 해지권의 행사 요건을 완화하여 고객에게 부당하게 불이익을 줄 우려가 있는 조항",
+      "집행관법 5조  위임 사무#KOBLEX-025958": "1. 고지 및 최고(催告)",
+      "채무자 회생 및 파산에 관한 법률 339조  「민법」상의 해지 또는 해제권이 있는 경우#KOBLEX-032624": "제339조(「민법」상의 해지 또는 해제권이 있는 경우) 제335조제2항의 규정은 「민법」 제637조(임차인의 파산과 해지통고), 제663조(사용자파산과 해지통고) 또는 제674조(도급인의 파산과 해제권)제1항의 규정에 의하여 상대방 또는 파산관재인이 갖는 해지권 또는 해제권의 행사에 관하여 준용한다.",
+      "행정절차법 15조  송달의 효력 발생#KOBLEX-098004": "제15조(송달의 효력 발생)",
+      "행정절차법 15조  송달의 효력 발생#KOBLEX-098007": "③ 제14조제4항의 경우에는 다른 법령등에 특별한 규정이 있는 경우를 제외하고는 공고일부터 14일이 지난 때에 그 효력이 발생한다. 다만, 긴급히 시행하여야 할 특별한 사유가 있어 효력 발생 시기를 달리 정하여 공고한 경우에는 그에 따른다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 544조  이행지체와 해제#KOBLEX-059486"
+            ],
+            "rationale": "C001은 채무자가 미리 이행하지 아니할 의사를 표시한 경우 계약해제가 가능함을 명시한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "민법 544조  이행지체와 해제#KOBLEX-059486"
+            ],
+            "rationale": "C001은 이행지체와 이행거절(미리 이행하지 아니할 의사 표시)을 계약해제의 사유로 규정하여 채무불이행의 유형을 확인시킨다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민법 544조  이행지체와 해제#KOBLEX-059486"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001(민법 제544조)은 채무자가 미리 이행하지 아니할 의사를 표시한 경우의 계약해제 가능 여부와 법적 근거를 명확히 규정하고 있어, E1의 완료 기준을 완전히 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 544조  이행지체와 해제#KOBLEX-059486"
+            ],
+            "rationale": "C001은 채무불이행 시 해제권이 발생함을 규정하여 계약해제의 요건을 충족한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "공급된 후보 조문 중 계약해제권 행사 방법(예: 통지)을 명시적으로 규정한 조문이 없다.",
+            "requirement_id": "E2-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "민법 544조  이행지체와 해제#KOBLEX-059486"
+        ],
+        "missing_aspects": [
+          "E2-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C001은 계약해제의 요건(채무불이행)을 규정하지만, 해제권 행사 방법(통지 등)에 대한 구체적 규정은 제공하지 않아 완료 기준을 완전히 충족하지 못한다. C010과 C017은 해제권 행사 여부에 대한 최고권과 소멸에 관한 규정으로, 해제권 행사 방법 자체를 규정하지 않는다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 544조  이행지체와 해제#KOBLEX-059486",
+        "support_spans": [
+          {
+            "end_char": 153,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 544조  이행지체와 해제#KOBLEX-059486",
+        "support_spans": [
+          {
+            "end_char": 153,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 8,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "채무자의 채무불이행 의사 표시가 계약해제에 미치는 법적 효과",
+        "issue_id": "I1"
+      },
+      {
+        "description": "계약해제에 필요한 채무불이행의 유형 및 요건",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "계약해제에 필요한 요건(채무불이행, 해제권 행사 방법 등)을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "계약해제의 요건(채무불이행, 해제권 발생 시점 등) 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "계약해제권 행사 방법(통지 등) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "계약해제의 요건 및 절차",
+        "evidence_item_id": "E2",
+        "evidence_type": "element",
+        "issue_id": "I2",
+        "necessity_reason": "계약해제의 구체적 요건과 절차가 없으면 갑이 계약을 해제할 수 있는 조건을 판단할 수 없음",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 을은 갑에게 특정 상품을 납품하기로 하는 계약을 체결하였으나, 계약서에 명시된 납품 기한이 지났음에도 을은 갑에게 상품을 납품하지 않았습니다. 이에 갑은 을에게 상품을 납품할 것을 요청하는 내용증명을 보내면서, 2주 이내에 납품할 것을 요구하였습니다. 하지만 을은 이미 해당 상품을 납품할 의사가 없음을 명확히 밝혔습니다. [질문] 을이 납품 의사를 미리 포기한 경우, 갑은 어떤 조건 하에 을과의 계약을 해제할 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "채무불이행 의사 표시 계약해제 채권자 채무자",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "채무불이행",
+          "의사표시",
+          "계약해제",
+          "채권자",
+          "채무자"
+        ],
+        "query_text": "채무자가 채무불이행 의사를 표시한 경우 채권자는 계약을 해제할 수 있다 [원문 맥락] 하지만 을은 이미 해당 상품을 납품할 의사가 없음을 명확히 밝혔습니다. 을이 납품 의사를 미리 포기한 경우, 갑은 어떤 조건 하에 을과의 계약을 해제할 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "채무불이행 의사 표시 시 계약해제 가능 여부 및 법적 근거",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "계약해제 요건 채무불이행 해제권 행사 통지",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "계약해제",
+          "요건",
+          "채무불이행",
+          "해제권",
+          "행사"
+        ],
+        "query_text": "계약해제 요건 채무불이행 해제권 행사 [원문 맥락] 하지만 을은 이미 해당 상품을 납품할 의사가 없음을 명확히 밝혔습니다. 을이 납품 의사를 미리 포기한 경우, 갑은 어떤 조건 하에 을과의 계약을 해제할 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "계약해제 요건 및 해제권 행사 방법",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "계약해제권 행사 최고 통지 채무불이행 민법",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "계약해제권",
+          "행사",
+          "최고",
+          "통지",
+          "채무불이행"
+        ],
+        "query_text": "채무불이행에 기한 계약해제권 행사 방법 및 최고 절차 [원문 맥락] 하지만 을은 이미 해당 상품을 납품할 의사가 없음을 명확히 밝혔습니다. 을이 납품 의사를 미리 포기한 경우, 갑은 어떤 조건 하에 을과의 계약을 해제할 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "계약해제권 행사 방법(통지) 및 최고 절차",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "계약해제권 행사 통지 상대방 민법",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "계약해제권",
+          "행사",
+          "통지",
+          "상대방",
+          "민법"
+        ],
+        "query_text": "채무불이행에 기한 계약해제권은 상대방에게 통지함으로써 행사한다 [원문 맥락] 하지만 을은 이미 해당 상품을 납품할 의사가 없음을 명확히 밝혔습니다. 을이 납품 의사를 미리 포기한 경우, 갑은 어떤 조건 하에 을과의 계약을 해제할 수 있는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "계약해제권 행사 방법으로서의 통지 규정",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "해제권 행사 통지 효력 발생 시점 민법",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "해제권",
+          "행사",
+          "통지",
+          "효력",
+          "발생"
+        ],
+        "query_text": "해제권 행사 통지 효력 발생 시점 [원문 맥락] 하지만 을은 이미 해당 상품을 납품할 의사가 없음을 명확히 밝혔습니다. 을이 납품 의사를 미리 포기한 경우, 갑은 어떤 조건 하에 을과의 계약을 해제할 수 있는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "계약해제권 행사 통지의 효력 발생 시점",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n을은 갑에게 특정 상품을 납품하기로 하는 계약을 체결하였으나, 계약서에 명시된 납품 기한이 지났음에도 을은 갑에게 상품을 납품하지 않았습니다. 이에 갑은 을에게 상품을 납품할 것을 요청하는 내용증명을 보내면서, 2주 이내에 납품할 것을 요구하였습니다. 하지만 을은 이미 해당 상품을 납품할 의사가 없음을 명확히 밝혔습니다.\n\n[질문]\n을이 납품 의사를 미리 포기한 경우, 갑은 어떤 조건 하에 을과의 계약을 해제할 수 있는가?",
+    "remaining_request_budget": 4,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "채무자가 채무불이행 의사를 표시한 경우 계약해제가 가능한지 여부 및 그 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "채무불이행 의사 표시 시 계약해제 가능 여부 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "계약해제에 필요한 채무불이행의 유형(기한불이행, 채무불이행의 의사 등) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "채무불이행의 의사 표시에 기한 계약해제 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 을이 납품 의사를 포기한 경우의 계약해제 조건을 묻고 있으므로, 채무불이행 의사 표시의 법적 효과를 규정한 조문이 핵심 결론에 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "계약해제에 필요한 요건(채무불이행, 해제권 행사 방법 등)을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "계약해제의 요건(채무불이행, 해제권 발생 시점 등) 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "계약해제권 행사 방법(통지 등) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "계약해제의 요건 및 절차",
+        "evidence_item_id": "E2",
+        "evidence_type": "element",
+        "issue_id": "I2",
+        "necessity_reason": "계약해제의 구체적 요건과 절차가 없으면 갑이 계약을 해제할 수 있는 조건을 판단할 수 없음",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "6967d3a0-08c7-452f-a9f1-40205991372e",
+    "seen_provision_ids": [
+      "약관의 규제에 관한 법률 9조  계약의 해제ㆍ해지#KOBLEX-103919",
+      "국세기본법 시행령 25조 2 후발적 사유#KOBLEX-029679",
+      "농업협동조합법 시행령 31조  통지와 최고#KOBLEX-027442",
+      "민법 111조  의사표시의 효력발생시기#KOBLEX-058611",
+      "디자인보호법 28조  서류제출의 효력 발생 시기#KOBLEX-125893",
+      "집행관법 5조  위임 사무#KOBLEX-025958",
+      "민법 552조  해제권행사여부의 최고권#KOBLEX-059500",
+      "민법 544조  이행지체와 해제#KOBLEX-059486",
+      "민법 288조  지상권소멸청구와 저당권자에 대한 통지#KOBLEX-058981",
+      "민법 601조  무이자소비대차와 해제권#KOBLEX-059595",
+      "농업협동조합법 시행령 44조  통지와 최고#KOBLEX-027471",
+      "약관의 규제에 관한 법률 9조  계약의 해제ㆍ해지#KOBLEX-103921",
+      "상법 832조  전부용선의 발항 전의 계약해제 등#KOBLEX-116433",
+      "상법 833조  일부용선과 발항 전의 계약해제 등#KOBLEX-116437",
+      "민법 674조  도급인의 파산과 해제권#KOBLEX-059740",
+      "상법 304조  주식인수인 등에 대한 통지, 최고#KOBLEX-114403",
+      "민법 528조  승낙기간을 정한 계약의 청약#KOBLEX-059456",
+      "민법 552조  해제권행사여부의 최고권#KOBLEX-059499",
+      "상법 353조  주주명부의 효력#KOBLEX-114608",
+      "신탁법 79조  수익자명부#KOBLEX-107399",
+      "행정절차법 15조  송달의 효력 발생#KOBLEX-098004",
+      "약관의 규제에 관한 법률 9조  계약의 해제ㆍ해지#KOBLEX-103920",
+      "농업협동조합법 시행령 44조  통지와 최고#KOBLEX-027474",
+      "국세기본법 12조  송달의 효력 발생#KOBLEX-147375",
+      "행정절차법 15조  송달의 효력 발생#KOBLEX-098007",
+      "보험업법 53조  통지와 최고#KOBLEX-021967",
+      "채무자 회생 및 파산에 관한 법률 339조  「민법」상의 해지 또는 해제권이 있는 경우#KOBLEX-032624"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "NO_RETRIEVAL_PROGRESS"
+}

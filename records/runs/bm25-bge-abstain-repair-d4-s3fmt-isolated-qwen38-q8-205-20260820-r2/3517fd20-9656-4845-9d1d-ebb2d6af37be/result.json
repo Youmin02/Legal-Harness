@@ -1,0 +1,599 @@
+{
+  "abstention_reason": null,
+  "answer": "폭행 또는 협박으로 타인의 재물을 강취한 자는 3년 이상의 유기징역에 처한다.[CT1]\n2인 이상이 공동하여 죄를 범한 때에는 각자를 그 죄의 정범으로 처벌한다.[CT2]\n전제: 갑과 을이 병의 집에 침입하여 폭행 및 협박을 가하고 귀중품을 취득한 사실은 질문의 배경 시나리오에 따라 사실로 가정한다.\n한계: 본 답변은 제시된 형법 조항에 근거한 일반적 법적 기준을 설명하며, 개별 사건의 구체적 양형 요소나 감경·가중 사유는 다루지 않는다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "폭행 또는 협박으로 타인의 재물을 강취한 자는 3년 이상의 유기징역에 처한다.[CT1]\n2인 이상이 공동하여 죄를 범한 때에는 각자를 그 죄의 정범으로 처벌한다.[CT2]\n전제: 갑과 을이 병의 집에 침입하여 폭행 및 협박을 가하고 귀중품을 취득한 사실은 질문의 배경 시나리오에 따라 사실로 가정한다.\n한계: 본 답변은 제시된 형법 조항에 근거한 일반적 법적 기준을 설명하며, 개별 사건의 구체적 양형 요소나 감경·가중 사유는 다루지 않는다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T13:43:46.637408+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 240800.78,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 180,
+      "dedup_collapse": 36,
+      "evidence_fusion": 180,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 180
+    }
+  },
+  "run_id": "3517fd20-9656-4845-9d1d-ebb2d6af37be",
+  "state": {
+    "accepted_provision_ids": [
+      "형법 333조  강도#KOBLEX-193374",
+      "형법 30조  공동정범#KOBLEX-192702"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "penalty",
+        "question_anchor": "각각 어떤 처벌을 받게 되는가",
+        "requested_output": "갑과 을에 대한 강도죄의 형량 및 공동정범으로서의 처벌 기준"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "형법 333조  강도#KOBLEX-193374"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 37.49797957260277,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형법 333조  강도#KOBLEX-193374",
+        "provision_text": "제333조(강도) 폭행 또는 협박으로 타인의 재물을 강취하거나 기타 재산상의 이익을 취득하거나 제삼자로 하여금 이를 취득하게 한 자는 3년 이상의 유기징역에 처한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.04313500225543976,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 333조  강도",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 30조  공동정범#KOBLEX-192702"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 43.53391186035549,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형법 30조  공동정범#KOBLEX-192702",
+        "provision_text": "제30조(공동정범) 2인 이상이 공동하여 죄를 범한 때에는 각자를 그 죄의 정범으로 처벌한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9144517779350281,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 30조  공동정범",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 263조  동시범#KOBLEX-193212"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 57,
+        "first_stage_score": 17.89509328911503,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "형법 263조  동시범#KOBLEX-193212",
+        "provision_text": "제263조(동시범) 독립행위가 경합하여 상해의 결과를 발생하게 한 경우에 있어서 원인된 행위가 판명되지 아니한 때에는 공동정범의 예에 의한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.1504313200712204,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 263조  동시범",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 325조  점유강취, 준점유강취#KOBLEX-193357"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 34.45995847727831,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형법 325조  점유강취, 준점유강취#KOBLEX-193357",
+        "provision_text": "① 폭행 또는 협박으로 타인의 점유에 속하는 자기의 물건을 강취(强取)한 자는 7년 이하의 징역 또는 10년 이하의 자격정지에 처한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.0029019280336797237,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 325조  점유강취, 준점유강취 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 324조  강요#KOBLEX-193349"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 3.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형법 324조  강요#KOBLEX-193349",
+        "provision_text": "①폭행 또는 협박으로 사람의 권리행사를 방해하거나 의무없는 일을 하게 한 자는 5년 이하의 징역 또는 3천만원 이하의 벌금에 처한다. <개정 1995.12.29, 2016.1.6>",
+        "rerank_rank": 3,
+        "rerank_score": 0.0027509834617376328,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 324조  강요 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 331조  특수절도#KOBLEX-193370"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 96,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형법 331조  특수절도#KOBLEX-193370",
+        "provision_text": "① 야간에 문이나 담 그 밖의 건조물의 일부를 손괴하고 제330조의 장소에 침입하여 타인의 재물을 절취한 자는 1년 이상 10년 이하의 징역에 처한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.001435015583410859,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 331조  특수절도 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 340조  해상강도#KOBLEX-193384"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형법 340조  해상강도#KOBLEX-193384",
+        "provision_text": "①다중의 위력으로 해상에서 선박을 강취하거나 선박내에 침입하여 타인의 재물을 강취한 자는 무기 또는 7년 이상의 징역에 처한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.001210286864079535,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 340조  해상강도 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157532"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 39,
+        "first_stage_score": 28.15351733406974,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157532",
+        "provision_text": "① 친족관계인 사람이 폭행 또는 협박으로 사람을 강간한 경우에는 7년 이상의 유기징역에 처한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.0008415746851824224,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 297조  강간#KOBLEX-193294"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 47,
+        "first_stage_score": 26.558297359012485,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형법 297조  강간#KOBLEX-193294",
+        "provision_text": "제297조(강간) 폭행 또는 협박으로 사람을 강간한 자는 3년 이상의 유기징역에 처한다. <개정 2012.12.18>",
+        "rerank_rank": 7,
+        "rerank_score": 0.0006981940823607147,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 297조  강간",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 336조  인질강도#KOBLEX-193379"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 80,
+        "first_stage_score": 21.996094289221254,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형법 336조  인질강도#KOBLEX-193379",
+        "provision_text": "제336조(인질강도) 사람을 체포ㆍ감금ㆍ약취 또는 유인하여 이를 인질로 삼아 재물 또는 재산상의 이익을 취득하거나 제3자로 하여금 이를 취득하게 한 자는 3년 이상의 유기징역에 처한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.0006789820035919547,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 336조  인질강도",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157532": "① 친족관계인 사람이 폭행 또는 협박으로 사람을 강간한 경우에는 7년 이상의 유기징역에 처한다.",
+      "형법 263조  동시범#KOBLEX-193212": "제263조(동시범) 독립행위가 경합하여 상해의 결과를 발생하게 한 경우에 있어서 원인된 행위가 판명되지 아니한 때에는 공동정범의 예에 의한다.",
+      "형법 297조  강간#KOBLEX-193294": "제297조(강간) 폭행 또는 협박으로 사람을 강간한 자는 3년 이상의 유기징역에 처한다. <개정 2012.12.18>",
+      "형법 30조  공동정범#KOBLEX-192702": "제30조(공동정범) 2인 이상이 공동하여 죄를 범한 때에는 각자를 그 죄의 정범으로 처벌한다.",
+      "형법 324조  강요#KOBLEX-193349": "①폭행 또는 협박으로 사람의 권리행사를 방해하거나 의무없는 일을 하게 한 자는 5년 이하의 징역 또는 3천만원 이하의 벌금에 처한다. <개정 1995.12.29, 2016.1.6>",
+      "형법 325조  점유강취, 준점유강취#KOBLEX-193357": "① 폭행 또는 협박으로 타인의 점유에 속하는 자기의 물건을 강취(强取)한 자는 7년 이하의 징역 또는 10년 이하의 자격정지에 처한다.",
+      "형법 331조  특수절도#KOBLEX-193370": "① 야간에 문이나 담 그 밖의 건조물의 일부를 손괴하고 제330조의 장소에 침입하여 타인의 재물을 절취한 자는 1년 이상 10년 이하의 징역에 처한다.",
+      "형법 333조  강도#KOBLEX-193374": "제333조(강도) 폭행 또는 협박으로 타인의 재물을 강취하거나 기타 재산상의 이익을 취득하거나 제삼자로 하여금 이를 취득하게 한 자는 3년 이상의 유기징역에 처한다.",
+      "형법 336조  인질강도#KOBLEX-193379": "제336조(인질강도) 사람을 체포ㆍ감금ㆍ약취 또는 유인하여 이를 인질로 삼아 재물 또는 재산상의 이익을 취득하거나 제3자로 하여금 이를 취득하게 한 자는 3년 이상의 유기징역에 처한다.",
+      "형법 340조  해상강도#KOBLEX-193384": "①다중의 위력으로 해상에서 선박을 강취하거나 선박내에 침입하여 타인의 재물을 강취한 자는 무기 또는 7년 이상의 징역에 처한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형법 333조  강도#KOBLEX-193374"
+            ],
+            "rationale": "C001은 '폭행 또는 협박으로 타인의 재물을 강취하거나'라는 문구를 통해 구성요건을 명시한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형법 333조  강도#KOBLEX-193374"
+            ],
+            "rationale": "C001은 '3년 이상의 유기징역에 처한다'는 문구를 통해 법정형을 명시한다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형법 333조  강도#KOBLEX-193374"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "제시된 형법 제333조(C001)는 강도죄의 구성요건(폭행, 협박, 재물강취)과 법정형(3년 이상의 유기징역)을 모두 포함하고 있어 증거 항목의 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형법 30조  공동정범#KOBLEX-192702"
+            ],
+            "rationale": "C002는 '2인 이상이 공동하여 죄를 범한 때에는'이라는 문구를 통해 공동정범의 정의를 명시한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형법 30조  공동정범#KOBLEX-192702"
+            ],
+            "rationale": "C002는 '각자를 그 죄의 정범으로 처벌한다'는 문구를 통해 처벌 원칙을 명시한다.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형법 30조  공동정범#KOBLEX-192702"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "제시된 형법 제30조(C002)는 공동정범의 개념(2인 이상이 공동하여 죄를 범함)과 처벌 원칙(각자를 정범으로 처벌)을 모두 포함하고 있어 증거 항목의 완료 기준을 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형법 333조  강도#KOBLEX-193374",
+        "support_spans": [
+          {
+            "end_char": 92,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형법 30조  공동정범#KOBLEX-192702",
+        "support_spans": [
+          {
+            "end_char": 52,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "강도죄의 구성요건 및 법정형",
+        "issue_id": "I1"
+      },
+      {
+        "description": "공동정범의 처벌 원칙",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑과 을은 재산을 탈취할 목적으로 병의 집에 침입하여 병을 폭행, 협박하여 귀중품을 훔쳤다. 검찰은 갑과 을을 강도죄로 기소하였다. [질문] 갑과 을이 공동으로 강도죄를 저지른 경우, 이들은 각각 어떤 처벌을 받게 되는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "강도죄 구성요건 폭행 협박 재물 취득 법정형 징역",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "강도죄",
+          "폭행",
+          "협박",
+          "재물취득",
+          "법정형"
+        ],
+        "query_text": "폭행 협박으로 재물을 취득한 자의 강도죄 법정형 [원문 맥락] 검찰은 갑과 을을 강도죄로 기소하였다. 갑과 을이 공동으로 강도죄를 저지른 경우, 이들은 각각 어떤 처벌을 받게 되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "강도죄의 법정형 및 구성요건",
+        "statute_hints": [
+          "형법 제325조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "공동정범 공동으로 범행 저지른 자 처벌 형법",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "공동정범",
+          "공동으로",
+          "범행",
+          "처벌",
+          "형법"
+        ],
+        "query_text": "공동정범의 처벌 원칙 및 각 정범의 책임 [원문 맥락] 검찰은 갑과 을을 강도죄로 기소하였다. 갑과 을이 공동으로 강도죄를 저지른 경우, 이들은 각각 어떤 처벌을 받게 되는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "공동정범의 처벌 원칙",
+        "statute_hints": [
+          "형법 제30조"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑과 을은 재산을 탈취할 목적으로 병의 집에 침입하여 병을 폭행, 협박하여 귀중품을 훔쳤다. 검찰은 갑과 을을 강도죄로 기소하였다.\n\n[질문]\n갑과 을이 공동으로 강도죄를 저지른 경우, 이들은 각각 어떤 처벌을 받게 되는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "강도죄의 구성요건과 그에 따른 형량 범위를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "강도죄의 구성요건(폭행, 협박, 재물취득) 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "강도죄의 법정형(징역 또는 벌금) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "강도죄의 정의 및 법정형",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 처벌의 근거가 되는 핵심 법규",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "공동정범의 개념 및 각 정범에 대한 처벌 원칙 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "공동정범의 정의 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "공동정범에 대한 처벌 원칙(각자 처벌) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공동정범의 처벌 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 '공동으로' 저지른 경우의 처벌을 묻고 있으므로 공동정범 규정이 필수",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "3517fd20-9656-4845-9d1d-ebb2d6af37be",
+    "seen_provision_ids": [
+      "형법 331조  특수절도#KOBLEX-193370",
+      "형법 340조  해상강도#KOBLEX-193384",
+      "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157532",
+      "형법 333조  강도#KOBLEX-193374",
+      "형법 263조  동시범#KOBLEX-193212",
+      "형법 297조  강간#KOBLEX-193294",
+      "형법 324조  강요#KOBLEX-193349",
+      "형법 30조  공동정범#KOBLEX-192702",
+      "형법 336조  인질강도#KOBLEX-193379",
+      "형법 325조  점유강취, 준점유강취#KOBLEX-193357"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

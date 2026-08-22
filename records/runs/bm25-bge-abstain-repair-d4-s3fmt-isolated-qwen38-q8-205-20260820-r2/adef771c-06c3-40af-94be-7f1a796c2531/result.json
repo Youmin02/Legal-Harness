@@ -1,0 +1,1244 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "확정된 청구에 대해 이의를 제기하려면 민사집행법 제44조(청구에 관한 이의의 소)에 따라 소를 제기해야 합니다.[CT1]\n집행문부여에 대한 이의는 민사집행법 제34조에 따라 이의신청을 제기할 수 있습니다.[CT2]\n집행문을 내어 달라는 신청에 관한 법원사무관등의 처분에 대하여 이의신청이 있는 경우에는 그 법원사무관등이 속한 법원이 결정으로 재판합니다.[CT3]\n집행문부여에 대한 이의신청이 있는 경우에는 법원은 제16조제2항의 처분에 준하는 결정을 할 수 있습니다.[CT4]\n전제: 갑과 을 사이의 금전 거래 및 소송 경위가 사실관계로 가정됩니다.\n한계: 본 답변은 비공개 벤치마크 후보이며, 공개 가능한 답변이 아닙니다.\n한계: 민사집행법 제44조(청구에 관한 이의의 소)의 구체적 절차 및 요건에 대한 전문 조항 텍스트가 후보 자료에 포함되어 있지 않아, 해당 조항의 존재와 준용 관계만 확인됩니다.\n한계: 민사집행법 제34조 제1항 및 제2항의 전문 텍스트가 후보 자료에 포함되어 있지 않아, 해당 조항의 존재와 일부 절차적 내용만 확인됩니다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T23:48:34.457399+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 439430.202,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 540,
+      "dedup_collapse": 106,
+      "evidence_fusion": 540,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "round_selected": 30,
+      "rrf": 600,
+      "selected": 540
+    }
+  },
+  "run_id": "adef771c-06c3-40af-94be-7f1a796c2531",
+  "state": {
+    "accepted_provision_ids": [
+      "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128138",
+      "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128137",
+      "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128139"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 8,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 7,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 25
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 25,
+          "claim_count": 4
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "procedure",
+        "question_anchor": "확정된 청구에 대해 이의를 제기하려면 어떻게 해야 하며",
+        "requested_output": "확정된 청구에 대한 이의제기 절차 및 방법"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "procedure",
+        "question_anchor": "집행문부여에 대한 이의는 어떤 절차를 통해 진행해야 하는가",
+        "requested_output": "집행문부여에 대한 이의제기 절차"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "시설물의 안전 및 유지관리에 관한 특별법 61조 2 이행강제금#KOBLEX-055313"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 31.145505964226437,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "시설물의 안전 및 유지관리에 관한 특별법 61조 2 이행강제금#KOBLEX-055313",
+        "provision_text": "⑥ 이행강제금의 부과 및 징수, 이의제기 절차 등에 관한 사항은 대통령령으로 정한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.00745762512087822,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1",
+          "GRQ-R2-2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "시설물의 안전 및 유지관리에 관한 특별법 61조 2 이행강제금 6항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 30조  집행문부여#KOBLEX-128126"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 92,
+        "first_stage_score": 17.833375138109396,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 30조  집행문부여#KOBLEX-128126",
+        "provision_text": "제30조(집행문부여)",
+        "rerank_rank": 1,
+        "rerank_score": 0.5612381100654602,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민사집행법 30조  집행문부여",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자동차손해배상 보장법 시행령 16조 2 심의회에 대한 심사 청구의 대상 및 절차#KOBLEX-023931"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 39,
+        "first_stage_score": 22.80811812383051,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "자동차손해배상 보장법 시행령 16조 2 심의회에 대한 심사 청구의 대상 및 절차#KOBLEX-023931",
+        "provision_text": "② 제1항에 따라 심사를 청구하려는 보험회사등과 의료기관은 이의제기 결과에 대한 불복 사유 등을 적은 심사청구서를 심의회에 제출하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.0018761373357847333,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "자동차손해배상 보장법 시행령 16조 2 심의회에 대한 심사 청구의 대상 및 절차 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 194조 3 비용보상의 절차 등#KOBLEX-231995"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 18.886558162808726,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 194조 3 비용보상의 절차 등#KOBLEX-231995",
+        "provision_text": "②제1항에 따른 청구는 무죄판결이 확정된 사실을 안 날부터 3년, 무죄판결이 확정된 때부터 5년 이내에 하여야 한다. <개정 2014.12.30>",
+        "rerank_rank": 2,
+        "rerank_score": 0.0014070154866203666,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 194조 3 비용보상의 절차 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "전기통신금융사기 피해 방지 및 피해금 환급에 관한 특별법 7조  지급정지 등에 대한 이의제기#KOBLEX-112149"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 31.795101167771207,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "전기통신금융사기 피해 방지 및 피해금 환급에 관한 특별법 7조  지급정지 등에 대한 이의제기#KOBLEX-112149",
+        "provision_text": "③ 명의인의 이의제기 방법 및 절차 등에 필요한 사항은 대통령령으로 정한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.0012845277087762952,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "전기통신금융사기 피해 방지 및 피해금 환급에 관한 특별법 7조  지급정지 등에 대한 이의제기 3항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 245조 3 전문수사자문위원 지정 등#KOBLEX-232243"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 28.79250532335451,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 245조 3 전문수사자문위원 지정 등#KOBLEX-232243",
+        "provision_text": "⑤ 전문수사자문위원의 지정 및 지정취소, 이의제기 절차 및 방법, 수당지급, 그 밖에 필요한 사항은 법무부령으로 정한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.0012836557580158114,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 245조 3 전문수사자문위원 지정 등 5항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "질서위반행위규제법 20조  이의제기#KOBLEX-022809"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 26.06491499232055,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "질서위반행위규제법 20조  이의제기#KOBLEX-022809",
+        "provision_text": "제20조(이의제기)",
+        "rerank_rank": 5,
+        "rerank_score": 0.0012572914129123092,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "질서위반행위규제법 20조  이의제기",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "기업구조조정 촉진법 6조  신용위험평가결과에 대한 이의제기#KOBLEX-077047"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 24.791779597178714,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "기업구조조정 촉진법 6조  신용위험평가결과에 대한 이의제기#KOBLEX-077047",
+        "provision_text": "제6조(신용위험평가결과에 대한 이의제기)",
+        "rerank_rank": 6,
+        "rerank_score": 0.0010888759279623628,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "기업구조조정 촉진법 6조  신용위험평가결과에 대한 이의제기",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사보상 및 명예회복에 관한 법률 2조  보상 요건#KOBLEX-003207"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 71,
+        "first_stage_score": 20.52125901913905,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형사보상 및 명예회복에 관한 법률 2조  보상 요건#KOBLEX-003207",
+        "provision_text": "① 「형사소송법」에 따른 일반 절차 또는 재심(再審)이나 비상상고(非常上告) 절차에서 무죄재판을 받아 확정된 사건의 피고인이 미결구금(未決拘禁)을 당하였을 때에는 이 법에 따라 국가에 대하여 그 구금에 대한 보상을 청구할 수 있다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.0010597762884572148,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사보상 및 명예회복에 관한 법률 2조  보상 요건 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자동차손해배상 보장법 12조 2 업무의 위탁#KOBLEX-005295",
+          "자동차손해배상 보장법 12조 2 업무의 위탁#KOBLEX-220773"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 35.69505961942897,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "자동차손해배상 보장법 12조 2 업무의 위탁#KOBLEX-005295",
+        "provision_text": "④ 제1항에 따라 전문심사기관에 위탁한 경우 청구, 심사, 이의제기 등의 방법 및 절차 등은 국토교통부령으로 정한다. <개정 2013.3.23, 2015.6.22>",
+        "rerank_rank": 8,
+        "rerank_score": 0.0010192833142355084,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "자동차손해배상 보장법 12조 2 업무의 위탁 4항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128137"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 23.649288692671742,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128137",
+        "provision_text": "제34조(집행문부여 등에 관한 이의신청)",
+        "rerank_rank": 1,
+        "rerank_score": 0.9989908337593079,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R2-1",
+          "GRQ-R3-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민사집행법 34조  집행문부여 등에 관한 이의신청",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정심판법 50조 2 위원회의 간접강제#KOBLEX-182984"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 22.741419892450196,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "행정심판법 50조 2 위원회의 간접강제#KOBLEX-182984",
+        "provision_text": "⑥ 간접강제 결정에 기초한 강제집행에 관하여 이 법에 특별한 규정이 없는 사항에 대하여는 「민사집행법」의 규정을 준용한다. 다만, 「민사집행법」 제33조(집행문부여의 소), 제34조(집행문부여 등에 관한 이의신청), 제44조(청구에 관한 이의의 소) 및 제45조(집행문부여에 대한 이의의 소)에서 관할 법원은 피청구인의 소재지를 관할하는 행정법원으로 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.8936180472373962,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R2-1",
+          "GRQ-R3-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "행정심판법 50조 2 위원회의 간접강제 6항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사기지 및 군사시설 보호법 21조  이의신청#KOBLEX-118635"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 37,
+        "first_stage_score": 17.55926618152437,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "군사기지 및 군사시설 보호법 21조  이의신청#KOBLEX-118635",
+        "provision_text": "④ 이의신청의 절차 등에 관하여 필요한 사항은 국방부령으로 정한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.010215884074568748,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "군사기지 및 군사시설 보호법 21조  이의신청 4항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "전자금융거래법 시행령 6조 2 이의신청의 절차 등#KOBLEX-033961"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 19.70346301613923,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "전자금융거래법 시행령 6조 2 이의신청의 절차 등#KOBLEX-033961",
+        "provision_text": "제6조의2(이의신청의 절차 등)",
+        "rerank_rank": 2,
+        "rerank_score": 0.004557446110993624,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "전자금융거래법 시행령 6조 2 이의신청의 절차 등",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부동산등기법 100조#KOBLEX-088160"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 19.542184729457077,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "부동산등기법 100조#KOBLEX-088160",
+        "provision_text": "제5장 이의",
+        "rerank_rank": 3,
+        "rerank_score": 0.0042862193658947945,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "부동산등기법 100조",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산업안전보건법 시행규칙 163조  이의신청의 절차 및 비공개 승인 심사 등#KOBLEX-224364"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 32,
+        "first_stage_score": 17.94994071452482,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "산업안전보건법 시행규칙 163조  이의신청의 절차 및 비공개 승인 심사 등#KOBLEX-224364",
+        "provision_text": "제163조(이의신청의 절차 및 비공개 승인 심사 등)",
+        "rerank_rank": 4,
+        "rerank_score": 0.0029396468307822943,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "산업안전보건법 시행규칙 163조  이의신청의 절차 및 비공개 승인 심사 등",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "건축사법 38조 11 권한의 위임 및 위탁#KOBLEX-120375"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 46,
+        "first_stage_score": 17.18523521131343,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "건축사법 38조 11 권한의 위임 및 위탁#KOBLEX-120375",
+        "provision_text": "⑤ 제4항에 따른 이의신청의 절차 등에 필요한 사항은 대통령령으로 정한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0027095256373286247,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "건축사법 38조 11 권한의 위임 및 위탁 5항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정기본법 36조  처분에 대한 이의신청#KOBLEX-201437"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 79,
+        "first_stage_score": 15.531091686240618,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "행정기본법 36조  처분에 대한 이의신청#KOBLEX-201437",
+        "provision_text": "⑥ 제1항부터 제5항까지에서 규정한 사항 외에 이의신청의 방법 및 절차 등에 관한 사항은 대통령령으로 정한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.0021929186768829823,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "행정기본법 36조  처분에 대한 이의신청 6항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128139"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128139",
+        "provision_text": "②집행문부여에 대한 이의신청이 있는 경우에는 법원은 제16조제2항의 처분에 준하는 결정을 할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9988264441490173,
+        "retrieval_round": 3,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민사집행법 34조  집행문부여 등에 관한 이의신청 2항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128138"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128138",
+        "provision_text": "①집행문을 내어 달라는 신청에 관한 법원사무관등의 처분에 대하여 이의신청이 있는 경우에는 그 법원사무관등이 속한 법원이 결정으로 재판한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9981132745742798,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민사집행법 34조  집행문부여 등에 관한 이의신청 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방자치법 시행령 17조  청구인명부의 열람 및 이의신청 등#KOBLEX-196738"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 35,
+        "first_stage_score": 19.095947870834664,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "지방자치법 시행령 17조  청구인명부의 열람 및 이의신청 등#KOBLEX-196738",
+        "provision_text": "⑦ 제5항에 따라 보정된 청구인명부의 열람과 이의신청 등의 절차에 관하여는 제1항부터 제4항까지의 규정을 준용한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.03801678866147995,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "지방자치법 시행령 17조  청구인명부의 열람 및 이의신청 등 7항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사조정법 34조  이의신청#KOBLEX-195952"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 57,
+        "first_stage_score": 18.98027830006058,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민사조정법 34조  이의신청#KOBLEX-195952",
+        "provision_text": "제34조(이의신청)",
+        "rerank_rank": 2,
+        "rerank_score": 0.005429865326732397,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사조정법 34조  이의신청",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국민기초생활 보장법 38조#KOBLEX-048636"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 47,
+        "first_stage_score": 18.98027830006058,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "국민기초생활 보장법 38조#KOBLEX-048636",
+        "provision_text": "제7장 이의신청",
+        "rerank_rank": 4,
+        "rerank_score": 0.004453006200492382,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "국민기초생활 보장법 38조",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "광업법 90조#KOBLEX-134166"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 42,
+        "first_stage_score": 18.98027830006058,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "광업법 90조#KOBLEX-134166",
+        "provision_text": "제8장 이의신청",
+        "rerank_rank": 5,
+        "rerank_score": 0.00344069954007864,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "광업법 90조",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "수도권정비계획법 17조  이의신청#KOBLEX-226387"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 63,
+        "first_stage_score": 18.98027830006058,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "수도권정비계획법 17조  이의신청#KOBLEX-226387",
+        "provision_text": "제17조(이의신청)",
+        "rerank_rank": 6,
+        "rerank_score": 0.0024417785461992025,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "수도권정비계획법 17조  이의신청",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "건축사법 38조 11 권한의 위임 및 위탁#KOBLEX-120375": "⑤ 제4항에 따른 이의신청의 절차 등에 필요한 사항은 대통령령으로 정한다.",
+      "광업법 90조#KOBLEX-134166": "제8장 이의신청",
+      "국민기초생활 보장법 38조#KOBLEX-048636": "제7장 이의신청",
+      "군사기지 및 군사시설 보호법 21조  이의신청#KOBLEX-118635": "④ 이의신청의 절차 등에 관하여 필요한 사항은 국방부령으로 정한다.",
+      "기업구조조정 촉진법 6조  신용위험평가결과에 대한 이의제기#KOBLEX-077047": "제6조(신용위험평가결과에 대한 이의제기)",
+      "민사조정법 34조  이의신청#KOBLEX-195952": "제34조(이의신청)",
+      "민사집행법 30조  집행문부여#KOBLEX-128126": "제30조(집행문부여)",
+      "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128137": "제34조(집행문부여 등에 관한 이의신청)",
+      "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128138": "①집행문을 내어 달라는 신청에 관한 법원사무관등의 처분에 대하여 이의신청이 있는 경우에는 그 법원사무관등이 속한 법원이 결정으로 재판한다.",
+      "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128139": "②집행문부여에 대한 이의신청이 있는 경우에는 법원은 제16조제2항의 처분에 준하는 결정을 할 수 있다.",
+      "부동산등기법 100조#KOBLEX-088160": "제5장 이의",
+      "산업안전보건법 시행규칙 163조  이의신청의 절차 및 비공개 승인 심사 등#KOBLEX-224364": "제163조(이의신청의 절차 및 비공개 승인 심사 등)",
+      "수도권정비계획법 17조  이의신청#KOBLEX-226387": "제17조(이의신청)",
+      "시설물의 안전 및 유지관리에 관한 특별법 61조 2 이행강제금#KOBLEX-055313": "⑥ 이행강제금의 부과 및 징수, 이의제기 절차 등에 관한 사항은 대통령령으로 정한다.",
+      "자동차손해배상 보장법 12조 2 업무의 위탁#KOBLEX-005295": "④ 제1항에 따라 전문심사기관에 위탁한 경우 청구, 심사, 이의제기 등의 방법 및 절차 등은 국토교통부령으로 정한다. <개정 2013.3.23, 2015.6.22>",
+      "자동차손해배상 보장법 시행령 16조 2 심의회에 대한 심사 청구의 대상 및 절차#KOBLEX-023931": "② 제1항에 따라 심사를 청구하려는 보험회사등과 의료기관은 이의제기 결과에 대한 불복 사유 등을 적은 심사청구서를 심의회에 제출하여야 한다.",
+      "전기통신금융사기 피해 방지 및 피해금 환급에 관한 특별법 7조  지급정지 등에 대한 이의제기#KOBLEX-112149": "③ 명의인의 이의제기 방법 및 절차 등에 필요한 사항은 대통령령으로 정한다.",
+      "전자금융거래법 시행령 6조 2 이의신청의 절차 등#KOBLEX-033961": "제6조의2(이의신청의 절차 등)",
+      "지방자치법 시행령 17조  청구인명부의 열람 및 이의신청 등#KOBLEX-196738": "⑦ 제5항에 따라 보정된 청구인명부의 열람과 이의신청 등의 절차에 관하여는 제1항부터 제4항까지의 규정을 준용한다.",
+      "질서위반행위규제법 20조  이의제기#KOBLEX-022809": "제20조(이의제기)",
+      "행정기본법 36조  처분에 대한 이의신청#KOBLEX-201437": "⑥ 제1항부터 제5항까지에서 규정한 사항 외에 이의신청의 방법 및 절차 등에 관한 사항은 대통령령으로 정한다.",
+      "행정심판법 50조 2 위원회의 간접강제#KOBLEX-182984": "⑥ 간접강제 결정에 기초한 강제집행에 관하여 이 법에 특별한 규정이 없는 사항에 대하여는 「민사집행법」의 규정을 준용한다. 다만, 「민사집행법」 제33조(집행문부여의 소), 제34조(집행문부여 등에 관한 이의신청), 제44조(청구에 관한 이의의 소) 및 제45조(집행문부여에 대한 이의의 소)에서 관할 법원은 피청구인의 소재지를 관할하는 행정법원으로 한다.",
+      "형사보상 및 명예회복에 관한 법률 2조  보상 요건#KOBLEX-003207": "① 「형사소송법」에 따른 일반 절차 또는 재심(再審)이나 비상상고(非常上告) 절차에서 무죄재판을 받아 확정된 사건의 피고인이 미결구금(未決拘禁)을 당하였을 때에는 이 법에 따라 국가에 대하여 그 구금에 대한 보상을 청구할 수 있다.",
+      "형사소송법 194조 3 비용보상의 절차 등#KOBLEX-231995": "②제1항에 따른 청구는 무죄판결이 확정된 사실을 안 날부터 3년, 무죄판결이 확정된 때부터 5년 이내에 하여야 한다. <개정 2014.12.30>",
+      "형사소송법 245조 3 전문수사자문위원 지정 등#KOBLEX-232243": "⑤ 전문수사자문위원의 지정 및 지정취소, 이의제기 절차 및 방법, 수당지급, 그 밖에 필요한 사항은 법무부령으로 정한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "No candidate provision specifies the procedure and requirements for objecting to a confirmed claim.",
+            "requirement_id": "E1-R1",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "uncovered",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "E1-R1"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "No supplied candidate provision contains the procedural rules or requirements for filing an objection to a confirmed claim (확정된 청구에 대한 이의제기) in civil enforcement. The candidates are either irrelevant to civil enforcement or lack the substantive text for this specific procedure.",
+        "status": "uncovered"
+      },
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128137",
+              "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128139",
+              "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128138"
+            ],
+            "rationale": "The provisions identify the correct article and provide partial procedural rules, but lack the complete substantive text detailing all aspects of the procedure and requirements.",
+            "requirement_id": "E2-R1",
+            "status": "partially_satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128137",
+          "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128139",
+          "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128138"
+        ],
+        "missing_aspects": [
+          "E2-R1"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C011, C019, and C020 identify the relevant legal provisions (Civil Enforcement Act Article 34) for objections to the grant of an enforcement writ. C019 and C020 provide specific procedural rules for different types of objections (to the grant itself vs. to the clerk's disposition). However, the supplied texts do not contain the complete substantive procedural details or requirements (such as filing deadlines, specific grounds, or full scope of the court's decision) necessary to fully satisfy the evidence item's completion criteria for a comprehensive procedure description.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128137",
+        "support_spans": [
+          {
+            "end_char": 22,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128139",
+        "support_spans": [
+          {
+            "end_char": 57,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128138",
+        "support_spans": [
+          {
+            "end_char": 77,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 7,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "확정된 청구에 대해 이의를 제기하는 법적 절차와 요건",
+        "issue_id": "I1"
+      },
+      {
+        "description": "집행문부여에 대한 이의를 제기하는 법적 절차와 요건",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "확정된 청구에 대한 이의제기 절차와 요건을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "확정된 청구에 대한 이의제기 절차와 요건을 명시하는 조항을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "확정된 청구에 대한 이의제기 절차 및 요건",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 확정된 청구에 대한 이의제기 방법을 직접적으로 묻고 있으므로, 해당 절차와 요건을 확인하는 것이 핵심 결론에 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "집행문부여에 대한 이의제기 절차와 요건을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "집행문부여에 대한 이의제기 절차와 요건을 명시하는 조항을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "집행문부여에 대한 이의제기 절차 및 요건",
+        "evidence_item_id": "E2",
+        "evidence_type": "procedure",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 집행문부여에 대한 이의제기 절차를 직접적으로 묻고 있으므로, 해당 절차와 요건을 확인하는 것이 핵심 결론에 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑과 을은 금전 거래를 하였으나, 갑이 을에게 빌린 돈을 갚지 않아 을이 법원에 소송을 제기하였습니다. 결국 법원은 을의 손을 들어주며 전부 인용용 판결을 내렸고, 이 판결에 따라 집행문이 부여되었습니다. 하지만 갑은 판결에 대해 이의를 제기하고자 합니다. 또한, 을이 갑의 재산을 압류하기 위해 집행문을 받았는데, 갑은 이 집행문부여의 정당성에도 이의를 제기하고자 합니다. [질문] 갑은 을과의 소송에서 확정된 청구에 대해 이의를 제기하려면 어떻게 해야 하며, 을이 받은 집행문부여에 대한 이의는 어떤 절차를 통해 진행해야 하는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "확정된 청구 이의제기 절차 요건",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "확정된 청구",
+          "이의제기",
+          "절차",
+          "요건"
+        ],
+        "query_text": "확정된 청구에 대한 이의제기 절차와 요건 [원문 맥락] 또한, 을이 갑의 재산을 압류하기 위해 집행문을 받았는데, 갑은 이 집행문부여의 정당성에도 이의를 제기하고자 합니다. 갑은 을과의 소송에서 확정된 청구에 대해 이의를 제기하려면 어떻게 해야 하며, 을이 받은 집행문부여에 대한 이의는 어떤 절차를 통해 진행해야 하는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "확정된 청구에 대한 이의제기 절차와 요건",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "집행문부여 이의제기 절차 요건",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "집행문부여",
+          "이의제기",
+          "절차",
+          "요건"
+        ],
+        "query_text": "집행문부여에 대한 이의제기 절차와 요건 [원문 맥락] 또한, 을이 갑의 재산을 압류하기 위해 집행문을 받았는데, 갑은 이 집행문부여의 정당성에도 이의를 제기하고자 합니다. 갑은 을과의 소송에서 확정된 청구에 대해 이의를 제기하려면 어떻게 해야 하며, 을이 받은 집행문부여에 대한 이의는 어떤 절차를 통해 진행해야 하는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "집행문부여에 대한 이의제기 절차와 요건",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "민사집행법 확정판결 집행문부여 이의 절차",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민사집행법",
+          "확정판결",
+          "집행문부여",
+          "이의",
+          "절차"
+        ],
+        "query_text": "민사집행법 확정판결 집행문부여 이의 절차 [원문 맥락] 또한, 을이 갑의 재산을 압류하기 위해 집행문을 받았는데, 갑은 이 집행문부여의 정당성에도 이의를 제기하고자 합니다. 갑은 을과의 소송에서 확정된 청구에 대해 이의를 제기하려면 어떻게 해야 하며, 을이 받은 집행문부여에 대한 이의는 어떤 절차를 통해 진행해야 하는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "확정된 청구에 대한 이의제기 절차와 요건",
+        "statute_hints": [
+          "민사집행법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "민사집행법 집행문부여 이의 절차",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민사집행법",
+          "집행문부여",
+          "이의",
+          "절차"
+        ],
+        "query_text": "민사집행법 집행문부여 이의 절차 [원문 맥락] 또한, 을이 갑의 재산을 압류하기 위해 집행문을 받았는데, 갑은 이 집행문부여의 정당성에도 이의를 제기하고자 합니다. 갑은 을과의 소송에서 확정된 청구에 대해 이의를 제기하려면 어떻게 해야 하며, 을이 받은 집행문부여에 대한 이의는 어떤 절차를 통해 진행해야 하는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "집행문부여에 대한 이의제기 절차",
+        "statute_hints": [
+          "민사집행법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "민사집행법 34조 집행문부여 이의신청 기한 절차",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민사집행법",
+          "제34조",
+          "집행문부여",
+          "이의신청",
+          "기한",
+          "절차"
+        ],
+        "query_text": "민사집행법 제34조 집행문부여에 관한 이의신청 기한 및 절차 [원문 맥락] 또한, 을이 갑의 재산을 압류하기 위해 집행문을 받았는데, 갑은 이 집행문부여의 정당성에도 이의를 제기하고자 합니다. 갑은 을과의 소송에서 확정된 청구에 대해 이의를 제기하려면 어떻게 해야 하며, 을이 받은 집행문부여에 대한 이의는 어떤 절차를 통해 진행해야 하는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "확정된 청구에 대한 이의제기 절차와 요건",
+        "statute_hints": [
+          "민사집행법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "민사집행법 34조 집행문부여 이의신청 대상 기한",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민사집행법",
+          "제34조",
+          "집행문부여",
+          "이의신청",
+          "대상",
+          "기한"
+        ],
+        "query_text": "민사집행법 제34조 집행문부여 이의신청 대상 및 기한 [원문 맥락] 또한, 을이 갑의 재산을 압류하기 위해 집행문을 받았는데, 갑은 이 집행문부여의 정당성에도 이의를 제기하고자 합니다. 갑은 을과의 소송에서 확정된 청구에 대해 이의를 제기하려면 어떻게 해야 하며, 을이 받은 집행문부여에 대한 이의는 어떤 절차를 통해 진행해야 하는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "집행문부여에 대한 이의제기 절차",
+        "statute_hints": [
+          "민사집행법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑과 을은 금전 거래를 하였으나, 갑이 을에게 빌린 돈을 갚지 않아 을이 법원에 소송을 제기하였습니다. 결국 법원은 을의 손을 들어주며 전부 인용용 판결을 내렸고, 이 판결에 따라 집행문이 부여되었습니다. 하지만 갑은 판결에 대해 이의를 제기하고자 합니다. 또한, 을이 갑의 재산을 압류하기 위해 집행문을 받았는데, 갑은 이 집행문부여의 정당성에도 이의를 제기하고자 합니다.\n\n[질문]\n갑은 을과의 소송에서 확정된 청구에 대해 이의를 제기하려면 어떻게 해야 하며, 을이 받은 집행문부여에 대한 이의는 어떤 절차를 통해 진행해야 하는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "확정된 청구에 대한 이의제기 절차와 요건을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "확정된 청구에 대한 이의제기 절차와 요건을 명시하는 조항을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "확정된 청구에 대한 이의제기 절차 및 요건",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 확정된 청구에 대한 이의제기 방법을 직접적으로 묻고 있으므로, 해당 절차와 요건을 확인하는 것이 핵심 결론에 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "집행문부여에 대한 이의제기 절차와 요건을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "집행문부여에 대한 이의제기 절차와 요건을 명시하는 조항을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "집행문부여에 대한 이의제기 절차 및 요건",
+        "evidence_item_id": "E2",
+        "evidence_type": "procedure",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 집행문부여에 대한 이의제기 절차를 직접적으로 묻고 있으므로, 해당 절차와 요건을 확인하는 것이 핵심 결론에 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "adef771c-06c3-40af-94be-7f1a796c2531",
+    "seen_provision_ids": [
+      "질서위반행위규제법 20조  이의제기#KOBLEX-022809",
+      "수도권정비계획법 17조  이의신청#KOBLEX-226387",
+      "자동차손해배상 보장법 12조 2 업무의 위탁#KOBLEX-005295",
+      "기업구조조정 촉진법 6조  신용위험평가결과에 대한 이의제기#KOBLEX-077047",
+      "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128138",
+      "부동산등기법 100조#KOBLEX-088160",
+      "전자금융거래법 시행령 6조 2 이의신청의 절차 등#KOBLEX-033961",
+      "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128137",
+      "산업안전보건법 시행규칙 163조  이의신청의 절차 및 비공개 승인 심사 등#KOBLEX-224364",
+      "시설물의 안전 및 유지관리에 관한 특별법 61조 2 이행강제금#KOBLEX-055313",
+      "지방자치법 시행령 17조  청구인명부의 열람 및 이의신청 등#KOBLEX-196738",
+      "민사조정법 34조  이의신청#KOBLEX-195952",
+      "자동차손해배상 보장법 시행령 16조 2 심의회에 대한 심사 청구의 대상 및 절차#KOBLEX-023931",
+      "건축사법 38조 11 권한의 위임 및 위탁#KOBLEX-120375",
+      "행정심판법 50조 2 위원회의 간접강제#KOBLEX-182984",
+      "형사보상 및 명예회복에 관한 법률 2조  보상 요건#KOBLEX-003207",
+      "광업법 90조#KOBLEX-134166",
+      "행정기본법 36조  처분에 대한 이의신청#KOBLEX-201437",
+      "형사소송법 245조 3 전문수사자문위원 지정 등#KOBLEX-232243",
+      "형사소송법 194조 3 비용보상의 절차 등#KOBLEX-231995",
+      "전기통신금융사기 피해 방지 및 피해금 환급에 관한 특별법 7조  지급정지 등에 대한 이의제기#KOBLEX-112149",
+      "군사기지 및 군사시설 보호법 21조  이의신청#KOBLEX-118635",
+      "민사집행법 30조  집행문부여#KOBLEX-128126",
+      "민사집행법 34조  집행문부여 등에 관한 이의신청#KOBLEX-128139",
+      "국민기초생활 보장법 38조#KOBLEX-048636"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

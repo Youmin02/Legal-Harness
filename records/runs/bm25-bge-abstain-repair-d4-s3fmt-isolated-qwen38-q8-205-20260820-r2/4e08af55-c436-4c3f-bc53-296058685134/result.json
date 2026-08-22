@@ -1,0 +1,1402 @@
+{
+  "abstention_reason": null,
+  "answer": "자, 그 직계비속 또는 그 법정대리인은 부 또는 모를 상대로 하여 인지청구의 소를 제기할 수 있다.[CT1]\n갑은 을의 법정대리인으로서 을의 친생부인 병을 상대로 인지청구의 소를 제기할 수 있다.[CT2]\n부 또는 모가 사망한 때에는 그 사망을 안 날로부터 2년내에 검사를 상대로 하여 인지청구의 소를 제기할 수 있다.[CT3]\n전제: 갑이 을의 법정대리인으로서 적법한 자격을 보유하고 있다고 가정합니다.\n전제: 병이 을의 친생부이며 현재 생존해 있다고 가정합니다. 병이 사망한 경우 민법 제864조에 따라 검사를 상대로 소를 제기해야 합니다.\n한계: 인지 후 친생부(병)의 양육책임 발생에 관한 직접적인 법적 근거가 제공된 증거 범위 내에 포함되어 있지 않아, 해당 사항에 대한 법적 결론은 유보됩니다.\n한계: 인지 후 친생부(병)의 면접교섭권 발생에 관한 직접적인 법적 근거가 제공된 증거 범위 내에 포함되어 있지 않아, 해당 사항에 대한 법적 결론은 유보됩니다.",
+  "answer_mode": "limited",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "자, 그 직계비속 또는 그 법정대리인은 부 또는 모를 상대로 하여 인지청구의 소를 제기할 수 있다.[CT1]\n갑은 을의 법정대리인으로서 을의 친생부인 병을 상대로 인지청구의 소를 제기할 수 있다.[CT2]\n부 또는 모가 사망한 때에는 그 사망을 안 날로부터 2년내에 검사를 상대로 하여 인지청구의 소를 제기할 수 있다.[CT3]\n전제: 갑이 을의 법정대리인으로서 적법한 자격을 보유하고 있다고 가정합니다.\n전제: 병이 을의 친생부이며 현재 생존해 있다고 가정합니다. 병이 사망한 경우 민법 제864조에 따라 검사를 상대로 소를 제기해야 합니다.\n한계: 인지 후 친생부(병)의 양육책임 발생에 관한 직접적인 법적 근거가 제공된 증거 범위 내에 포함되어 있지 않아, 해당 사항에 대한 법적 결론은 유보됩니다.\n한계: 인지 후 친생부(병)의 면접교섭권 발생에 관한 직접적인 법적 근거가 제공된 증거 범위 내에 포함되어 있지 않아, 해당 사항에 대한 법적 결론은 유보됩니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T02:22:27.911164+00:00",
+  "deferred_target_ids": [
+    "T2"
+  ],
+  "end_to_end_latency_ms": 630017.444,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 383,
+      "dedup_collapse": 82,
+      "evidence_fusion": 383,
+      "first_stage": 700,
+      "request_rerank": 700,
+      "round_selected": 30,
+      "rrf": 400,
+      "selected": 383
+    }
+  },
+  "run_id": "4e08af55-c436-4c3f-bc53-296058685134",
+  "state": {
+    "accepted_provision_ids": [
+      "민법 859조  인지의 효력발생#KOBLEX-060159",
+      "민법 864조  부모의 사망과 인지청구의 소#KOBLEX-060165",
+      "민법 863조  인지청구의 소#KOBLEX-060164",
+      "민법 860조  인지의 소급효#KOBLEX-060161"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 3,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [
+            "T2"
+          ],
+          "explanation": "Only the citable answer targets will be answered; remaining targets are deferred.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 3,
+          "deferred_target_ids": [
+            "T2"
+          ]
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "limited",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_subject",
+        "question_anchor": "누구를 상대로 인지청구의 소를 제기할 수 있으며",
+        "requested_output": "인지청구의 소를 제기할 수 있는 상대방(피고)의 법적 지위"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_effect",
+        "question_anchor": "을에 대한 양육책임과 면접교섭권은 어떻게 적용되는가",
+        "requested_output": "인지 후 양육책임과 면접교섭권의 법적 적용 내용"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민법 863조  인지청구의 소#KOBLEX-060164"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 28.44442117660291,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 863조  인지청구의 소#KOBLEX-060164",
+        "provision_text": "제863조(인지청구의 소) 자와 그 직계비속 또는 그 법정대리인은 부 또는 모를 상대로 하여 인지청구의 소를 제기할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999929666519165,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 863조  인지청구의 소",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 847조  친생부인의 소#KOBLEX-060133"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "민법 847조  친생부인의 소#KOBLEX-060133",
+        "provision_text": "①친생부인(親生否認)의 소(訴)는 부(夫) 또는 처(妻)가 다른 일방 또는 자(子)를 상대로 하여 그 사유가 있음을 안 날부터 2년내에 이를 제기하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.06479745358228683,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "민법 847조  친생부인의 소 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 864조  부모의 사망과 인지청구의 소#KOBLEX-060165"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 23.04449452904654,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 864조  부모의 사망과 인지청구의 소#KOBLEX-060165",
+        "provision_text": "제864조(부모의 사망과 인지청구의 소) 제862조 및 제863조의 경우에 부 또는 모가 사망한 때에는 그 사망을 안 날로부터 2년내에 검사를 상대로 하여 인지에 대한 이의 또는 인지청구의 소를 제기할 수 있다. <개정 2005.3.31>",
+        "rerank_rank": 2,
+        "rerank_score": 0.9959303736686707,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 864조  부모의 사망과 인지청구의 소",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "가사소송법 26조  관할#KOBLEX-064867"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 30.104644514560718,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "가사소송법 26조  관할#KOBLEX-064867",
+        "provision_text": "② 인지에 대한 이의(異議)의 소, 인지청구의 소 또는 「민법」 제865조에 따른 친생자관계 존부 확인의 소는 상대방(상대방이 여러 명일 때에는 그중 1명)의 보통재판적이 있는 곳의 가정법원의 전속관할로 하고, 상대방이 모두 사망한 경우에는 그중 1명의 마지막 주소지의 가정법원의 전속관할로 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9839659929275513,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "가사소송법 26조  관할 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "가사소송법 28조  준용규정#KOBLEX-064873"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 35,
+        "first_stage_score": 19.925658917503515,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "가사소송법 28조  준용규정#KOBLEX-064873",
+        "provision_text": "제28조(준용규정) 인지무효의 소에는 제23조 및 제24조를 준용하고, 인지취소의 소, 인지에 대한 이의의 소 또는 친생자관계 존부 확인의 소에는 제24조를 준용하며, 인지청구의 소에는 제25조제1항을 준용한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.14090752601623535,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "가사소송법 28조  준용규정",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "양육비 이행확보 및 지원에 관한 법률 11조  양육비 청구 및 이행확보를 위한 법률지원 등의 신청#KOBLEX-150204"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 23.051386888287254,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "양육비 이행확보 및 지원에 관한 법률 11조  양육비 청구 및 이행확보를 위한 법률지원 등의 신청#KOBLEX-150204",
+        "provision_text": "① 양육부ㆍ모는 이행관리원의 장에게 자녀의 인지청구 및 양육비 청구를 위한 소송 대리 등 양육비 집행권원 확보를 위한 법률지원을 신청할 수 있다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.014021249487996101,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "양육비 이행확보 및 지원에 관한 법률 11조  양육비 청구 및 이행확보를 위한 법률지원 등의 신청 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 849조  자사망후의 친생부인#KOBLEX-060138"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 2.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "민법 849조  자사망후의 친생부인#KOBLEX-060138",
+        "provision_text": "제849조(자사망후의 친생부인) 자가 사망한 후에도 그 직계비속이 있는 때에는 그 모를 상대로, 모가 없으면 검사를 상대로 하여 부인의 소를 제기할 수 있다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.012696649879217148,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 849조  자사망후의 친생부인",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정소송법 18조#KOBLEX-011458"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 34,
+        "first_stage_score": 20.088384656951774,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "행정소송법 18조#KOBLEX-011458",
+        "provision_text": "제3절 소의 제기",
+        "rerank_rank": 8,
+        "rerank_score": 0.006257193628698587,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "행정소송법 18조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 846조  자의 친생부인#KOBLEX-060131"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 2.0,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "민법 846조  자의 친생부인#KOBLEX-060131",
+        "provision_text": "제846조(자의 친생부인) 부부의 일방은 제844조의 경우에 그 자가 친생자임을 부인하는 소를 제기할 수 있다. <개정 2005.3.31>",
+        "rerank_rank": 9,
+        "rerank_score": 0.005309280939400196,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "민법 846조  자의 친생부인",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "증권관련 집단소송법 10조  소 제기의 공고 및 대표당사자의 선임#KOBLEX-178518"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 71,
+        "first_stage_score": 17.49542465851415,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "증권관련 집단소송법 10조  소 제기의 공고 및 대표당사자의 선임#KOBLEX-178518",
+        "provision_text": "제10조(소 제기의 공고 및 대표당사자의 선임)",
+        "rerank_rank": 10,
+        "rerank_score": 0.0051949466578662395,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "증권관련 집단소송법 10조  소 제기의 공고 및 대표당사자의 선임",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 859조  인지의 효력발생#KOBLEX-060158"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 44,
+        "first_stage_score": 18.179707365717892,
+        "fusion_rank": 70,
+        "issue_id": "I2",
+        "provision_id": "민법 859조  인지의 효력발생#KOBLEX-060158",
+        "provision_text": "제859조(인지의 효력발생)",
+        "rerank_rank": 70,
+        "rerank_score": 0.9957529306411743,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 859조  인지의 효력발생",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 859조  인지의 효력발생#KOBLEX-060159"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 3.0,
+        "fusion_rank": 72,
+        "issue_id": "I2",
+        "provision_id": "민법 859조  인지의 효력발생#KOBLEX-060159",
+        "provision_text": "①인지는 「가족관계의 등록 등에 관한 법률」의 정하는 바에 의하여 신고함으로써 그 효력이 생긴다. <개정 2007.5.17>",
+        "rerank_rank": 72,
+        "rerank_score": 0.9918439984321594,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 859조  인지의 효력발생 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 860조  인지의 소급효#KOBLEX-060161"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 3.0,
+        "fusion_rank": 75,
+        "issue_id": "I2",
+        "provision_id": "민법 860조  인지의 소급효#KOBLEX-060161",
+        "provision_text": "제860조(인지의 소급효) 인지는 그 자의 출생시에 소급하여 효력이 생긴다. 그러나 제삼자의 취득한 권리를 해하지 못한다.",
+        "rerank_rank": 75,
+        "rerank_score": 0.9758211970329285,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 860조  인지의 소급효",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 859조  인지의 효력발생#KOBLEX-060160"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 3.0,
+        "fusion_rank": 79,
+        "issue_id": "I2",
+        "provision_id": "민법 859조  인지의 효력발생#KOBLEX-060160",
+        "provision_text": "②인지는 유언으로도 이를 할 수 있다. 이 경우에는 유언집행자가 이를 신고하여야 한다.",
+        "rerank_rank": 79,
+        "rerank_score": 0.8841251134872437,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 859조  인지의 효력발생 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송 등 인지법 13조  인지를 붙이지 아니한 경우의 효력#KOBLEX-107005"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 26.030135892454343,
+        "fusion_rank": 83,
+        "issue_id": "I2",
+        "provision_id": "민사소송 등 인지법 13조  인지를 붙이지 아니한 경우의 효력#KOBLEX-107005",
+        "provision_text": "제13조(인지를 붙이지 아니한 경우의 효력)",
+        "rerank_rank": 83,
+        "rerank_score": 0.09849010407924652,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민사소송 등 인지법 13조  인지를 붙이지 아니한 경우의 효력",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "가족관계의 등록 등에 관한 법률 55조#KOBLEX-127507"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 25.044628539185766,
+        "fusion_rank": 84,
+        "issue_id": "I2",
+        "provision_id": "가족관계의 등록 등에 관한 법률 55조#KOBLEX-127507",
+        "provision_text": "제3절 인지",
+        "rerank_rank": 84,
+        "rerank_score": 0.02897648513317108,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "가족관계의 등록 등에 관한 법률 55조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 847조  친생부인의 소#KOBLEX-060132"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 88,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "민법 847조  친생부인의 소#KOBLEX-060132",
+        "provision_text": "제847조(친생부인의 소)",
+        "rerank_rank": 5,
+        "rerank_score": 0.0158525537699461,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R2-3"
+        ],
+        "statute_name": "민법 847조  친생부인의 소",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "문화유산의 보존 및 활용에 관한 법률 30조  지정의 효력 발생 시기#KOBLEX-125453"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 22.47565094846079,
+        "fusion_rank": 86,
+        "issue_id": "I2",
+        "provision_id": "문화유산의 보존 및 활용에 관한 법률 30조  지정의 효력 발생 시기#KOBLEX-125453",
+        "provision_text": "제30조(지정의 효력 발생 시기) 제23조, 제25조부터 제27조까지의 규정에 따른 지정은 그 문화유산의 소유자, 점유자 또는 관리자에 대하여는 관보에 고시한 날부터 그 효력을 발생한다. <개정 2015.3.27, 2023.8.8>",
+        "rerank_rank": 86,
+        "rerank_score": 0.011007578112185001,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "문화유산의 보존 및 활용에 관한 법률 30조  지정의 효력 발생 시기",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 855조  인지#KOBLEX-060148"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 25.044628539185766,
+        "fusion_rank": 89,
+        "issue_id": "I2",
+        "provision_id": "민법 855조  인지#KOBLEX-060148",
+        "provision_text": "제855조(인지)",
+        "rerank_rank": 89,
+        "rerank_score": 0.010653285309672356,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 855조  인지",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "가사소송법 26조  관할#KOBLEX-064866"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 19.518234103501666,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "가사소송법 26조  관할#KOBLEX-064866",
+        "provision_text": "① 친생부인, 인지의 무효나 취소 또는 「민법」 제845조에 따른 아버지를 정하는 소는 자녀의 보통재판적이 있는 곳의 가정법원의 전속관할로 하고, 자녀가 사망한 경우에는 자녀의 마지막 주소지의 가정법원의 전속관할로 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.00735702458769083,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R2-3"
+        ],
+        "statute_name": "가사소송법 26조  관할 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 837조 2 면접교섭권#KOBLEX-060100"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 18.373555348872518,
+        "fusion_rank": 26,
+        "issue_id": "I2",
+        "provision_id": "민법 837조 2 면접교섭권#KOBLEX-060100",
+        "provision_text": "제837조의2(면접교섭권)",
+        "rerank_rank": 26,
+        "rerank_score": 0.0027655158191919327,
+        "retrieval_round": 3,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 837조 2 면접교섭권",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 844조#KOBLEX-060124"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 2.0,
+        "fusion_rank": 27,
+        "issue_id": "I2",
+        "provision_id": "민법 844조#KOBLEX-060124",
+        "provision_text": "제4장 부모와 자",
+        "rerank_rank": 27,
+        "rerank_score": 0.0007551771122962236,
+        "retrieval_round": 3,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 844조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 844조  남편의 친생자의 추정#KOBLEX-060126"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 17.476102828649868,
+        "fusion_rank": 31,
+        "issue_id": "I2",
+        "provision_id": "민법 844조  남편의 친생자의 추정#KOBLEX-060126",
+        "provision_text": "제844조(남편의 친생자의 추정)",
+        "rerank_rank": 31,
+        "rerank_score": 0.00020505773136392236,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 844조  남편의 친생자의 추정",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "새마을금고법 26조  「민법」ㆍ「상법」의 준용#KOBLEX-096396"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 50,
+        "first_stage_score": 16.589051976502056,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "새마을금고법 26조  「민법」ㆍ「상법」의 준용#KOBLEX-096396",
+        "provision_text": "제26조(「민법」ㆍ「상법」의 준용)",
+        "rerank_rank": 1,
+        "rerank_score": 0.00013325523468665779,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "새마을금고법 26조  「민법」ㆍ「상법」의 준용",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 909조  친권자#KOBLEX-060277"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 2.0,
+        "fusion_rank": 36,
+        "issue_id": "I2",
+        "provision_id": "민법 909조  친권자#KOBLEX-060277",
+        "provision_text": "③부모의 일방이 친권을 행사할 수 없을 때에는 다른 일방이 이를 행사한다.",
+        "rerank_rank": 36,
+        "rerank_score": 7.857954187784344e-05,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 909조  친권자 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 837조  이혼과 자의 양육책임#KOBLEX-060099"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 18.151194210728413,
+        "fusion_rank": 39,
+        "issue_id": "I2",
+        "provision_id": "민법 837조  이혼과 자의 양육책임#KOBLEX-060099",
+        "provision_text": "⑥ 제3항부터 제5항까지의 규정은 양육에 관한 사항 외에는 부모의 권리의무에 변경을 가져오지 아니한다. <신설 2007.12.21>",
+        "rerank_rank": 39,
+        "rerank_score": 5.118897388456389e-05,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 837조  이혼과 자의 양육책임 6항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 223조  「상법」 및 「민법」과의 관계#KOBLEX-136167"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 51,
+        "first_stage_score": 16.589051976502056,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 223조  「상법」 및 「민법」과의 관계#KOBLEX-136167",
+        "provision_text": "제223조(「상법」 및 「민법」과의 관계)",
+        "rerank_rank": 3,
+        "rerank_score": 4.215991430100985e-05,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 223조  「상법」 및 「민법」과의 관계",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "사립학교법 42조  「민법」 등의 준용#KOBLEX-172351"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 17.399340797676224,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "사립학교법 42조  「민법」 등의 준용#KOBLEX-172351",
+        "provision_text": "제42조(「민법」 등의 준용)",
+        "rerank_rank": 2,
+        "rerank_score": 3.806620588875376e-05,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "사립학교법 42조  「민법」 등의 준용",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 837조  이혼과 자의 양육책임#KOBLEX-060096"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 2.0,
+        "fusion_rank": 47,
+        "issue_id": "I2",
+        "provision_id": "민법 837조  이혼과 자의 양육책임#KOBLEX-060096",
+        "provision_text": "③ 제1항에 따른 협의가 자(子)의 복리에 반하는 경우에는 가정법원은 보정을 명하거나 직권으로 그 자(子)의 의사(意思)ㆍ나이와 부모의 재산상황, 그 밖의 사정을 참작하여 양육에 필요한 사항을 정한다. <개정 2007.12.21, 2022.12.27>",
+        "rerank_rank": 47,
+        "rerank_score": 3.486247078399174e-05,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 837조  이혼과 자의 양육책임 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 시행령 29조  유족의 범위#KOBLEX-122371"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 21.65877161609427,
+        "fusion_rank": 51,
+        "issue_id": "I2",
+        "provision_id": "선원법 시행령 29조  유족의 범위#KOBLEX-122371",
+        "provision_text": "5. 선원의 사망당시 그에 의하여 부양되고 있던 배우자의 부모, 형제자매의 자녀 및 부모의 형제자매",
+        "rerank_rank": 51,
+        "rerank_score": 3.2938889489741996e-05,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "선원법 시행령 29조  유족의 범위 5호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "가사소송법 26조  관할#KOBLEX-064866": "① 친생부인, 인지의 무효나 취소 또는 「민법」 제845조에 따른 아버지를 정하는 소는 자녀의 보통재판적이 있는 곳의 가정법원의 전속관할로 하고, 자녀가 사망한 경우에는 자녀의 마지막 주소지의 가정법원의 전속관할로 한다.",
+      "가사소송법 26조  관할#KOBLEX-064867": "② 인지에 대한 이의(異議)의 소, 인지청구의 소 또는 「민법」 제865조에 따른 친생자관계 존부 확인의 소는 상대방(상대방이 여러 명일 때에는 그중 1명)의 보통재판적이 있는 곳의 가정법원의 전속관할로 하고, 상대방이 모두 사망한 경우에는 그중 1명의 마지막 주소지의 가정법원의 전속관할로 한다.",
+      "가사소송법 28조  준용규정#KOBLEX-064873": "제28조(준용규정) 인지무효의 소에는 제23조 및 제24조를 준용하고, 인지취소의 소, 인지에 대한 이의의 소 또는 친생자관계 존부 확인의 소에는 제24조를 준용하며, 인지청구의 소에는 제25조제1항을 준용한다.",
+      "가족관계의 등록 등에 관한 법률 55조#KOBLEX-127507": "제3절 인지",
+      "문화유산의 보존 및 활용에 관한 법률 30조  지정의 효력 발생 시기#KOBLEX-125453": "제30조(지정의 효력 발생 시기) 제23조, 제25조부터 제27조까지의 규정에 따른 지정은 그 문화유산의 소유자, 점유자 또는 관리자에 대하여는 관보에 고시한 날부터 그 효력을 발생한다. <개정 2015.3.27, 2023.8.8>",
+      "민법 837조  이혼과 자의 양육책임#KOBLEX-060096": "③ 제1항에 따른 협의가 자(子)의 복리에 반하는 경우에는 가정법원은 보정을 명하거나 직권으로 그 자(子)의 의사(意思)ㆍ나이와 부모의 재산상황, 그 밖의 사정을 참작하여 양육에 필요한 사항을 정한다. <개정 2007.12.21, 2022.12.27>",
+      "민법 837조  이혼과 자의 양육책임#KOBLEX-060099": "⑥ 제3항부터 제5항까지의 규정은 양육에 관한 사항 외에는 부모의 권리의무에 변경을 가져오지 아니한다. <신설 2007.12.21>",
+      "민법 837조 2 면접교섭권#KOBLEX-060100": "제837조의2(면접교섭권)",
+      "민법 844조  남편의 친생자의 추정#KOBLEX-060126": "제844조(남편의 친생자의 추정)",
+      "민법 844조#KOBLEX-060124": "제4장 부모와 자",
+      "민법 846조  자의 친생부인#KOBLEX-060131": "제846조(자의 친생부인) 부부의 일방은 제844조의 경우에 그 자가 친생자임을 부인하는 소를 제기할 수 있다. <개정 2005.3.31>",
+      "민법 847조  친생부인의 소#KOBLEX-060132": "제847조(친생부인의 소)",
+      "민법 847조  친생부인의 소#KOBLEX-060133": "①친생부인(親生否認)의 소(訴)는 부(夫) 또는 처(妻)가 다른 일방 또는 자(子)를 상대로 하여 그 사유가 있음을 안 날부터 2년내에 이를 제기하여야 한다.",
+      "민법 849조  자사망후의 친생부인#KOBLEX-060138": "제849조(자사망후의 친생부인) 자가 사망한 후에도 그 직계비속이 있는 때에는 그 모를 상대로, 모가 없으면 검사를 상대로 하여 부인의 소를 제기할 수 있다.",
+      "민법 855조  인지#KOBLEX-060148": "제855조(인지)",
+      "민법 859조  인지의 효력발생#KOBLEX-060158": "제859조(인지의 효력발생)",
+      "민법 859조  인지의 효력발생#KOBLEX-060159": "①인지는 「가족관계의 등록 등에 관한 법률」의 정하는 바에 의하여 신고함으로써 그 효력이 생긴다. <개정 2007.5.17>",
+      "민법 859조  인지의 효력발생#KOBLEX-060160": "②인지는 유언으로도 이를 할 수 있다. 이 경우에는 유언집행자가 이를 신고하여야 한다.",
+      "민법 860조  인지의 소급효#KOBLEX-060161": "제860조(인지의 소급효) 인지는 그 자의 출생시에 소급하여 효력이 생긴다. 그러나 제삼자의 취득한 권리를 해하지 못한다.",
+      "민법 863조  인지청구의 소#KOBLEX-060164": "제863조(인지청구의 소) 자와 그 직계비속 또는 그 법정대리인은 부 또는 모를 상대로 하여 인지청구의 소를 제기할 수 있다.",
+      "민법 864조  부모의 사망과 인지청구의 소#KOBLEX-060165": "제864조(부모의 사망과 인지청구의 소) 제862조 및 제863조의 경우에 부 또는 모가 사망한 때에는 그 사망을 안 날로부터 2년내에 검사를 상대로 하여 인지에 대한 이의 또는 인지청구의 소를 제기할 수 있다. <개정 2005.3.31>",
+      "민법 909조  친권자#KOBLEX-060277": "③부모의 일방이 친권을 행사할 수 없을 때에는 다른 일방이 이를 행사한다.",
+      "민사소송 등 인지법 13조  인지를 붙이지 아니한 경우의 효력#KOBLEX-107005": "제13조(인지를 붙이지 아니한 경우의 효력)",
+      "사립학교법 42조  「민법」 등의 준용#KOBLEX-172351": "제42조(「민법」 등의 준용)",
+      "새마을금고법 26조  「민법」ㆍ「상법」의 준용#KOBLEX-096396": "제26조(「민법」ㆍ「상법」의 준용)",
+      "선원법 시행령 29조  유족의 범위#KOBLEX-122371": "5. 선원의 사망당시 그에 의하여 부양되고 있던 배우자의 부모, 형제자매의 자녀 및 부모의 형제자매",
+      "양육비 이행확보 및 지원에 관한 법률 11조  양육비 청구 및 이행확보를 위한 법률지원 등의 신청#KOBLEX-150204": "① 양육부ㆍ모는 이행관리원의 장에게 자녀의 인지청구 및 양육비 청구를 위한 소송 대리 등 양육비 집행권원 확보를 위한 법률지원을 신청할 수 있다.",
+      "자본시장과 금융투자업에 관한 법률 223조  「상법」 및 「민법」과의 관계#KOBLEX-136167": "제223조(「상법」 및 「민법」과의 관계)",
+      "증권관련 집단소송법 10조  소 제기의 공고 및 대표당사자의 선임#KOBLEX-178518": "제10조(소 제기의 공고 및 대표당사자의 선임)",
+      "행정소송법 18조#KOBLEX-011458": "제3절 소의 제기"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 863조  인지청구의 소#KOBLEX-060164"
+            ],
+            "rationale": "C001(민법 863조)에서 자, 직계비속, 법정대리인을 원고 자격자로 명시하고 있습니다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "민법 863조  인지청구의 소#KOBLEX-060164",
+              "민법 864조  부모의 사망과 인지청구의 소#KOBLEX-060165"
+            ],
+            "rationale": "C001(민법 863조)에서 부 또는 모를 피고로 명시하고 있으며, C003(민법 864조)에서 사망 시 검사를 피고로 명시하고 있습니다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민법 863조  인지청구의 소#KOBLEX-060164",
+          "민법 864조  부모의 사망과 인지청구의 소#KOBLEX-060165"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "민법 제863조와 제864조는 인지청구의 소의 원고 자격과 피고 범위를 명확히 규정하고 있어, 질문에서 요구하는 법적 근거가 충분히 확보되었습니다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 859조  인지의 효력발생#KOBLEX-060159",
+              "민법 860조  인지의 소급효#KOBLEX-060161"
+            ],
+            "rationale": "C012(민법 859조 1항)와 C013(민법 860조)가 인지의 효력 발생 시점과 소급효를 규정하고 있습니다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "인지 후 친생부의 양육책임 발생을 직접 규정하는 조문이 후보 목록에 없습니다.",
+            "requirement_id": "E2-R2",
+            "status": "unsatisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "인지 후 친생부의 면접교섭권 발생을 직접 규정하는 조문이 후보 목록에 없습니다.",
+            "requirement_id": "E2-R3",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "민법 859조  인지의 효력발생#KOBLEX-060159",
+          "민법 860조  인지의 소급효#KOBLEX-060161"
+        ],
+        "missing_aspects": [
+          "E2-R2",
+          "E2-R3"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "인지의 효력 발생(C012, C013)에 관한 근거는 확보되었으나, 질문에서 요구하는 친생부의 양육책임 발생 근거(E2-R2)와 면접교섭권 발생 근거(E2-R3)에 해당하는 조문이 후보 목록에 포함되어 있지 않아 법적 지원이 불완전합니다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [
+      "T2"
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 863조  인지청구의 소#KOBLEX-060164",
+        "support_spans": [
+          {
+            "end_char": 70,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 864조  부모의 사망과 인지청구의 소#KOBLEX-060165",
+        "support_spans": [
+          {
+            "end_char": 133,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 859조  인지의 효력발생#KOBLEX-060159",
+        "support_spans": [
+          {
+            "end_char": 69,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 860조  인지의 소급효#KOBLEX-060161",
+        "support_spans": [
+          {
+            "end_char": 68,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "비혼자녀의 친생부인 병을 상대로 인지청구의 소를 제기할 수 있는 주체와 상대방의 범위",
+        "issue_id": "I1"
+      },
+      {
+        "description": "인지가 확정된 후 친생부 병의 양육책임과 면접교섭권 발생 여부 및 내용",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "인지 후 친생부의 양육의무와 면접교섭권 발생 근거 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "인지의 효력 발생 시점과 내용을 확인한다"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "친생부의 양육책임 발생 근거를 확인한다"
+          },
+          {
+            "requirement_id": "E2-R3",
+            "text": "친생부의 면접교섭권 발생 근거를 확인한다"
+          }
+        ],
+        "critical": true,
+        "description": "인지의 효력 및 친생부모의 양육책임과 면접교섭권에 관한 민법 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 인지 후 양육책임과 면접교섭권의 적용을 묻고 있으므로, 인지의 법적 효력과 부의 권리의무 관계를 판단하기 위한 핵심 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 1,
+    "normalized_question": "[배경 시나리오] 갑은 자신의 아들 을의 법적 인지를 원하고 있으며, 을의 친생부로 알려진 병은 이를 인정하지 않고 있습니다. 갑은 을의 법정대리인으로서 병을 상대로 인지청구의 소를 제기하고자 합니다. 갑은 또한 인지 후 을에 대한 양육책임과 면접교섭권이 어떻게 되는지 알고 싶어 합니다. [질문] 갑은 아들 을의 법적 인지를 위해 누구를 상대로 인지청구의 소를 제기할 수 있으며, 인지가 된 경우 을에 대한 양육책임과 면접교섭권은 어떻게 적용되는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "인지청구 소 제기 주체 상대방 친생부 비혼자녀",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "인지청구",
+          "소제기",
+          "원고",
+          "피고",
+          "친생부",
+          "비혼자녀"
+        ],
+        "query_text": "비혼자녀 인지청구의 소 원고 피고 민법 [원문 맥락] 갑은 또한 인지 후 을에 대한 양육책임과 면접교섭권이 어떻게 되는지 알고 싶어 합니다. 갑은 아들 을의 법적 인지를 위해 누구를 상대로 인지청구의 소를 제기할 수 있으며, 인지가 된 경우 을에 대한 양육책임과 면접교섭권은 어떻게 적용되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "인지청구의 소를 제기할 수 있는 주체와 상대방",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "인지 후 친생부 양육의무 면접교섭권 발생",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "인지",
+          "효력",
+          "양육책임",
+          "면접교섭권",
+          "친생부",
+          "양육의무"
+        ],
+        "query_text": "인지 효력 양육책임 면접교섭권 친생부 민법 [원문 맥락] 갑은 또한 인지 후 을에 대한 양육책임과 면접교섭권이 어떻게 되는지 알고 싶어 합니다. 갑은 아들 을의 법적 인지를 위해 누구를 상대로 인지청구의 소를 제기할 수 있으며, 인지가 된 경우 을에 대한 양육책임과 면접교섭권은 어떻게 적용되는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "인지 후 친생부의 양육책임과 면접교섭권",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "인지 효력 친생관계 발생 시점 민법",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "인지",
+          "효력",
+          "친생관계",
+          "발생",
+          "민법"
+        ],
+        "query_text": "민법 제862조 인지의 효력 친생관계 발생 [원문 맥락] 갑은 또한 인지 후 을에 대한 양육책임과 면접교섭권이 어떻게 되는지 알고 싶어 합니다. 갑은 아들 을의 법적 인지를 위해 누구를 상대로 인지청구의 소를 제기할 수 있으며, 인지가 된 경우 을에 대한 양육책임과 면접교섭권은 어떻게 적용되는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "인지의 효력 발생 시점과 내용",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "친생부 양육의무 부양비 발생 민법",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "친생부",
+          "양육의무",
+          "부양비",
+          "양육책임",
+          "민법"
+        ],
+        "query_text": "친생부 양육의무 부양비 민법 [원문 맥락] 갑은 또한 인지 후 을에 대한 양육책임과 면접교섭권이 어떻게 되는지 알고 싶어 합니다. 갑은 아들 을의 법적 인지를 위해 누구를 상대로 인지청구의 소를 제기할 수 있으며, 인지가 된 경우 을에 대한 양육책임과 면접교섭권은 어떻게 적용되는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "친생부의 양육책임 발생 근거",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "친생부 면접교섭권 발생 민법",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "친생부",
+          "면접교섭권",
+          "면접교섭",
+          "민법"
+        ],
+        "query_text": "친생부 면접교섭권 민법 [원문 맥락] 갑은 또한 인지 후 을에 대한 양육책임과 면접교섭권이 어떻게 되는지 알고 싶어 합니다. 갑은 아들 을의 법적 인지를 위해 누구를 상대로 인지청구의 소를 제기할 수 있으며, 인지가 된 경우 을에 대한 양육책임과 면접교섭권은 어떻게 적용되는가?",
+        "request_id": "GRQ-R2-3",
+        "rerank_query_text": "친생부의 면접교섭권 발생 근거",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "민법 제844조 부모의 양육의무",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민법",
+          "제844조",
+          "부모",
+          "양육의무"
+        ],
+        "query_text": "민법 제844조 부모의 양육의무 [원문 맥락] 갑은 또한 인지 후 을에 대한 양육책임과 면접교섭권이 어떻게 되는지 알고 싶어 합니다. 갑은 아들 을의 법적 인지를 위해 누구를 상대로 인지청구의 소를 제기할 수 있으며, 인지가 된 경우 을에 대한 양육책임과 면접교섭권은 어떻게 적용되는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "친생부의 양육책임 발생 근거",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "민법 제924조 면접교섭권",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민법",
+          "제924조",
+          "면접교섭권"
+        ],
+        "query_text": "민법 제924조 면접교섭권 [원문 맥락] 갑은 또한 인지 후 을에 대한 양육책임과 면접교섭권이 어떻게 되는지 알고 싶어 합니다. 갑은 아들 을의 법적 인지를 위해 누구를 상대로 인지청구의 소를 제기할 수 있으며, 인지가 된 경우 을에 대한 양육책임과 면접교섭권은 어떻게 적용되는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "친생부의 면접교섭권 발생 근거",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 자신의 아들 을의 법적 인지를 원하고 있으며, 을의 친생부로 알려진 병은 이를 인정하지 않고 있습니다. 갑은 을의 법정대리인으로서 병을 상대로 인지청구의 소를 제기하고자 합니다. 갑은 또한 인지 후 을에 대한 양육책임과 면접교섭권이 어떻게 되는지 알고 싶어 합니다.\n\n[질문]\n갑은 아들 을의 법적 인지를 위해 누구를 상대로 인지청구의 소를 제기할 수 있으며, 인지가 된 경우 을에 대한 양육책임과 면접교섭권은 어떻게 적용되는가?",
+    "remaining_request_budget": 2,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "인지청구권자 및 피고의 법적 요건이 명시된 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "인지청구의 소를 제기할 수 있는 주체(원고)의 범위를 확인한다"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "인지청구의 소의 상대방(피고)의 범위를 확인한다"
+          }
+        ],
+        "critical": true,
+        "description": "인지청구의 소를 제기할 수 있는 주체와 상대방에 관한 민법 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 인지청구의 소의 상대방을 묻고 있으므로, 소의 적법한 피고와 원고 자격을 판단하기 위한 핵심 근거",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "인지 후 친생부의 양육의무와 면접교섭권 발생 근거 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "인지의 효력 발생 시점과 내용을 확인한다"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "친생부의 양육책임 발생 근거를 확인한다"
+          },
+          {
+            "requirement_id": "E2-R3",
+            "text": "친생부의 면접교섭권 발생 근거를 확인한다"
+          }
+        ],
+        "critical": true,
+        "description": "인지의 효력 및 친생부모의 양육책임과 면접교섭권에 관한 민법 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 인지 후 양육책임과 면접교섭권의 적용을 묻고 있으므로, 인지의 법적 효력과 부의 권리의무 관계를 판단하기 위한 핵심 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "4e08af55-c436-4c3f-bc53-296058685134",
+    "seen_provision_ids": [
+      "자본시장과 금융투자업에 관한 법률 223조  「상법」 및 「민법」과의 관계#KOBLEX-136167",
+      "민법 847조  친생부인의 소#KOBLEX-060133",
+      "가족관계의 등록 등에 관한 법률 55조#KOBLEX-127507",
+      "민법 859조  인지의 효력발생#KOBLEX-060158",
+      "양육비 이행확보 및 지원에 관한 법률 11조  양육비 청구 및 이행확보를 위한 법률지원 등의 신청#KOBLEX-150204",
+      "민법 859조  인지의 효력발생#KOBLEX-060159",
+      "민법 846조  자의 친생부인#KOBLEX-060131",
+      "문화유산의 보존 및 활용에 관한 법률 30조  지정의 효력 발생 시기#KOBLEX-125453",
+      "선원법 시행령 29조  유족의 범위#KOBLEX-122371",
+      "민법 844조  남편의 친생자의 추정#KOBLEX-060126",
+      "가사소송법 26조  관할#KOBLEX-064867",
+      "민법 859조  인지의 효력발생#KOBLEX-060160",
+      "민법 844조#KOBLEX-060124",
+      "민법 849조  자사망후의 친생부인#KOBLEX-060138",
+      "민법 909조  친권자#KOBLEX-060277",
+      "사립학교법 42조  「민법」 등의 준용#KOBLEX-172351",
+      "민법 837조  이혼과 자의 양육책임#KOBLEX-060096",
+      "민사소송 등 인지법 13조  인지를 붙이지 아니한 경우의 효력#KOBLEX-107005",
+      "행정소송법 18조#KOBLEX-011458",
+      "민법 863조  인지청구의 소#KOBLEX-060164",
+      "민법 837조  이혼과 자의 양육책임#KOBLEX-060099",
+      "새마을금고법 26조  「민법」ㆍ「상법」의 준용#KOBLEX-096396",
+      "민법 837조 2 면접교섭권#KOBLEX-060100",
+      "민법 855조  인지#KOBLEX-060148",
+      "증권관련 집단소송법 10조  소 제기의 공고 및 대표당사자의 선임#KOBLEX-178518",
+      "민법 847조  친생부인의 소#KOBLEX-060132",
+      "가사소송법 28조  준용규정#KOBLEX-064873",
+      "가사소송법 26조  관할#KOBLEX-064866",
+      "민법 860조  인지의 소급효#KOBLEX-060161",
+      "민법 864조  부모의 사망과 인지청구의 소#KOBLEX-060165"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

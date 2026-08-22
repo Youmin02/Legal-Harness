@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T14:03:52.237655+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 233111.767,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 130 column 9 (char 4079)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "97c5ac13-b55a-4074-b640-853cdc3128a5",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 130 column 9 (char 4079)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 여객자동차운송사업 면허를 받은 사업자로, 2023년 6월 1일에 자신의 운송사업에 직접 사용할 목적으로 새로운 차량을 구매하기로 결정하였다. 갑은 천연가스 버스, 전기버스, 그리고 수소전기버스 중 각각의 버스에 부과되는 취득세를 고려하여 최종 결정을 내리려고 한다. [질문] 갑이 2023. 6. 1. 천연가스 버스를 구매하는 경우, 전기버스 또는 수소전기버스를 구매할 경우와 비교하여 취득세는 어떻게 되는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n갑은 여객자동차운송사업 면허를 받은 사업자로, 2023년 6월 1일에 자신의 운송사업에 직접 사용할 목적으로 새로운 차량을 구매하기로 결정하였다.\r\n갑은 천연가스 버스, 전기버스, 그리고 수소전기버스 중 각각의 버스에 부과되는 취득세를 고려하여 최종 결정을 내리려고 한다.\n\n[질문]\n갑이 2023. 6. 1. 천연가스 버스를 구매하는 경우, 전기버스 또는 수소전기버스를 구매할 경우와 비교하여 취득세는 어떻게 되는가?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "97c5ac13-b55a-4074-b640-853cdc3128a5",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

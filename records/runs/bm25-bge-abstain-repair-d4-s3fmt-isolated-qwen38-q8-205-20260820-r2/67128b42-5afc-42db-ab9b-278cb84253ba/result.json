@@ -1,0 +1,499 @@
+{
+  "abstention_reason": null,
+  "answer": "15세 미만자의 사망을 보험사고로 한 보험계약은 무효로 규정되어 있습니다.[CT1]\n14세인 을의 사망을 보험사고로 한 생명보험계약은 법적으로 무효입니다.[CT2]\n전제: 피보험자 을의 나이가 14세이며, 계약 체결 시점에 15세 미만 상태였다고 가정합니다.\n한계: 본 답변은 상법 제732조에 근거한 법적 효력 판단에 한정되며, 계약의 다른 하자나 민법상 대리권 등 다른 법적 쟁점은 다루지 않습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "15세 미만자의 사망을 보험사고로 한 보험계약은 무효로 규정되어 있습니다.[CT1]\n14세인 을의 사망을 보험사고로 한 생명보험계약은 법적으로 무효입니다.[CT2]\n전제: 피보험자 을의 나이가 14세이며, 계약 체결 시점에 15세 미만 상태였다고 가정합니다.\n한계: 본 답변은 상법 제732조에 근거한 법적 효력 판단에 한정되며, 계약의 다른 하자나 민법상 대리권 등 다른 법적 쟁점은 다루지 않습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T22:25:19.675089+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 115264.717,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 90,
+      "dedup_collapse": 20,
+      "evidence_fusion": 90,
+      "first_stage": 100,
+      "request_rerank": 100,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 90
+    }
+  },
+  "run_id": "67128b42-5afc-42db-ab9b-278cb84253ba",
+  "state": {
+    "accepted_provision_ids": [
+      "상법 732조  15세미만자등에 대한 계약의 금지#KOBLEX-116161"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "법적으로 유효한가",
+        "requested_output": "14세 아들의 사망을 보험사고로 한 생명보험계약의 법적 효력(유효/무효) 판단"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민법 536조#KOBLEX-059468"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 24.03319061582379,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 536조#KOBLEX-059468",
+        "provision_text": "제2관 계약의 효력",
+        "rerank_rank": 1,
+        "rerank_score": 2.4525019398424774e-05,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 536조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 644조  보험사고의 객관적 확정의 효과#KOBLEX-115929"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 48,
+        "first_stage_score": 21.155258008115535,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "상법 644조  보험사고의 객관적 확정의 효과#KOBLEX-115929",
+        "provision_text": "제644조(보험사고의 객관적 확정의 효과) 보험계약당시에 보험사고가 이미 발생하였거나 또는 발생할 수 없는 것인 때에는 그 계약은 무효로 한다. 그러나 당사자 쌍방과 피보험자가 이를 알지 못한 때에는 그러하지 아니하다.",
+        "rerank_rank": 2,
+        "rerank_score": 1.4896173524903134e-05,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상법 644조  보험사고의 객관적 확정의 효과",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 732조  15세미만자등에 대한 계약의 금지#KOBLEX-116161"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 77,
+        "first_stage_score": 19.463931322652424,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "상법 732조  15세미만자등에 대한 계약의 금지#KOBLEX-116161",
+        "provision_text": "제732조(15세미만자등에 대한 계약의 금지) 15세미만자, 심신상실자 또는 심신박약자의 사망을 보험사고로 한 보험계약은 무효로 한다. 다만, 심신박약자가 보험계약을 체결하거나 제735조의3에 따른 단체보험의 피보험자가 될 때에 의사능력이 있는 경우에는 그러하지 아니하다. <개정 1962.12.12, 1991.12.31, 2014.3.11>",
+        "rerank_rank": 3,
+        "rerank_score": 8.817297384666745e-06,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상법 732조  15세미만자등에 대한 계약의 금지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "비송사건절차법 121조  청산인의 결격사유#KOBLEX-047876"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 22.675393312349076,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "비송사건절차법 121조  청산인의 결격사유#KOBLEX-047876",
+        "provision_text": "1. 미성년자",
+        "rerank_rank": 4,
+        "rerank_score": 2.2207104848348536e-06,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "비송사건절차법 121조  청산인의 결격사유 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국제사법 83조  효력#KOBLEX-127981",
+          "국제사법 83조  효력#KOBLEX-200662"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 99,
+        "first_stage_score": 17.601339479310596,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "국제사법 83조  효력#KOBLEX-127981",
+        "provision_text": "제83조(효력)",
+        "rerank_rank": 5,
+        "rerank_score": 2.137225692422362e-06,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "국제사법 83조  효력",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "세무사법 4조  세무사의 결격사유#KOBLEX-177265"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 24,
+        "first_stage_score": 22.675393312349076,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "세무사법 4조  세무사의 결격사유#KOBLEX-177265",
+        "provision_text": "1. 미성년자",
+        "rerank_rank": 6,
+        "rerank_score": 1.977487727344851e-06,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "세무사법 4조  세무사의 결격사유 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 937조  후견인의 결격사유#KOBLEX-060358"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 22.675393312349076,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "민법 937조  후견인의 결격사유#KOBLEX-060358",
+        "provision_text": "1. 미성년자",
+        "rerank_rank": 7,
+        "rerank_score": 1.7915073158292216e-06,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 937조  후견인의 결격사유 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형의 집행 및 수용자의 처우에 관한 법률 127조#KOBLEX-075792",
+          "형의 집행 및 수용자의 처우에 관한 법률 127조#KOBLEX-213979"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 18.78372779834123,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형의 집행 및 수용자의 처우에 관한 법률 127조#KOBLEX-075792",
+        "provision_text": "제3장 사망",
+        "rerank_rank": 8,
+        "rerank_score": 1.7023637610691367e-06,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형의 집행 및 수용자의 처우에 관한 법률 127조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국민건강보험법 시행령 46조  지역가입자의 보험료 연대납부의무 면제 대상 미성년자#KOBLEX-055619"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 28.17987397003578,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "국민건강보험법 시행령 46조  지역가입자의 보험료 연대납부의무 면제 대상 미성년자#KOBLEX-055619",
+        "provision_text": "2. 부모가 모두 사망한 미성년자로서 제1호가목의 요건을 갖춘 미성년자",
+        "rerank_rank": 9,
+        "rerank_score": 1.4658791087640566e-06,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "국민건강보험법 시행령 46조  지역가입자의 보험료 연대납부의무 면제 대상 미성년자 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "관세사법 5조  결격사유#KOBLEX-154974"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 22.675393312349076,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "관세사법 5조  결격사유#KOBLEX-154974",
+        "provision_text": "1. 미성년자",
+        "rerank_rank": 10,
+        "rerank_score": 1.3935788274466177e-06,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "관세사법 5조  결격사유 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "관세사법 5조  결격사유#KOBLEX-154974": "1. 미성년자",
+      "국민건강보험법 시행령 46조  지역가입자의 보험료 연대납부의무 면제 대상 미성년자#KOBLEX-055619": "2. 부모가 모두 사망한 미성년자로서 제1호가목의 요건을 갖춘 미성년자",
+      "국제사법 83조  효력#KOBLEX-127981": "제83조(효력)",
+      "민법 536조#KOBLEX-059468": "제2관 계약의 효력",
+      "민법 937조  후견인의 결격사유#KOBLEX-060358": "1. 미성년자",
+      "비송사건절차법 121조  청산인의 결격사유#KOBLEX-047876": "1. 미성년자",
+      "상법 644조  보험사고의 객관적 확정의 효과#KOBLEX-115929": "제644조(보험사고의 객관적 확정의 효과) 보험계약당시에 보험사고가 이미 발생하였거나 또는 발생할 수 없는 것인 때에는 그 계약은 무효로 한다. 그러나 당사자 쌍방과 피보험자가 이를 알지 못한 때에는 그러하지 아니하다.",
+      "상법 732조  15세미만자등에 대한 계약의 금지#KOBLEX-116161": "제732조(15세미만자등에 대한 계약의 금지) 15세미만자, 심신상실자 또는 심신박약자의 사망을 보험사고로 한 보험계약은 무효로 한다. 다만, 심신박약자가 보험계약을 체결하거나 제735조의3에 따른 단체보험의 피보험자가 될 때에 의사능력이 있는 경우에는 그러하지 아니하다. <개정 1962.12.12, 1991.12.31, 2014.3.11>",
+      "세무사법 4조  세무사의 결격사유#KOBLEX-177265": "1. 미성년자",
+      "형의 집행 및 수용자의 처우에 관한 법률 127조#KOBLEX-075792": "제3장 사망"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "상법 732조  15세미만자등에 대한 계약의 금지#KOBLEX-116161"
+            ],
+            "rationale": "상법 제732조는 15세 미만자의 사망을 보험사고로 한 보험계약의 무효를 명시적으로 규정하여, 미성년자의 사망을 보험사고로 하는 생명보험계약의 효력을 결정하는 조항 확인 요구사항을 충족한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "상법 732조  15세미만자등에 대한 계약의 금지#KOBLEX-116161"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "상법 제732조(C003)는 15세 미만자의 사망을 보험사고로 한 보험계약이 무효임을 명시하고 있어, 14세 아들의 사망을 보험사고로 한 생명보험계약의 효력을 결정하는 데 필요한 법적 근거를 완전히 충족한다. 다른 후보 조항들은 본 건의 핵심 법적 쟁점과 무관하거나 관련성이 부족하다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "상법 732조  15세미만자등에 대한 계약의 금지#KOBLEX-116161",
+        "support_spans": [
+          {
+            "end_char": 191,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "14세 미성년자의 사망을 보험사고로 하는 생명보험계약의 체결 및 효력에 관한 법적 제한",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 자신의 14세 아들 을의 사망을 보험사고로 하는 생명보험계약을 보험회사와 체결하려고 한다. 갑은 이 계약이 유효한지 여부에 대해 궁금해한다. [질문] 갑이 14세 아들 을의 사망을 보험사고로 한 생명보험계약을 체결하는 것이 법적으로 유효한가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "생명보험법 미성년자 사망 보험사고 계약 효력 무효",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "생명보험",
+          "미성년자",
+          "사망",
+          "보험사고",
+          "무효",
+          "계약효력"
+        ],
+        "query_text": "미성년자 사망 보험사고 생명보험계약 무효 [원문 맥락] 갑은 이 계약이 유효한지 여부에 대해 궁금해한다. 갑이 14세 아들 을의 사망을 보험사고로 한 생명보험계약을 체결하는 것이 법적으로 유효한가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "14세 미성년자 사망 보험사고 생명보험계약 법적 유효성 판단 근거",
+        "statute_hints": [
+          "생명보험법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 자신의 14세 아들 을의 사망을 보험사고로 하는 생명보험계약을 보험회사와 체결하려고 한다. 갑은 이 계약이 유효한지 여부에 대해 궁금해한다.\n\n[질문]\n갑이 14세 아들 을의 사망을 보험사고로 한 생명보험계약을 체결하는 것이 법적으로 유효한가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "14세 미성년자의 사망을 보험사고로 하는 생명보험계약의 효력을 결정하는 구체적 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "미성년자의 사망을 보험사고로 하는 생명보험계약의 효력(무효/유효)을 명시하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "미성년자의 사망을 보험사고로 하는 생명보험계약의 무효 또는 제한에 관한 법령 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문은 계약의 법적 유효성을 묻고 있으므로, 해당 계약의 효력을 결정하는 핵심 법적 규정이 없으면 결론을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "67128b42-5afc-42db-ab9b-278cb84253ba",
+    "seen_provision_ids": [
+      "관세사법 5조  결격사유#KOBLEX-154974",
+      "세무사법 4조  세무사의 결격사유#KOBLEX-177265",
+      "민법 536조#KOBLEX-059468",
+      "상법 732조  15세미만자등에 대한 계약의 금지#KOBLEX-116161",
+      "민법 937조  후견인의 결격사유#KOBLEX-060358",
+      "국민건강보험법 시행령 46조  지역가입자의 보험료 연대납부의무 면제 대상 미성년자#KOBLEX-055619",
+      "상법 644조  보험사고의 객관적 확정의 효과#KOBLEX-115929",
+      "국제사법 83조  효력#KOBLEX-127981",
+      "형의 집행 및 수용자의 처우에 관한 법률 127조#KOBLEX-075792",
+      "비송사건절차법 121조  청산인의 결격사유#KOBLEX-047876"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

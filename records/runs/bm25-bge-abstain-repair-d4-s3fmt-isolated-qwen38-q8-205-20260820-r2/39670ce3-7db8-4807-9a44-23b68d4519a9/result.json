@@ -1,0 +1,525 @@
+{
+  "abstention_reason": null,
+  "answer": "재심은 다음 각 호의 어느 하나에 해당하는 이유가 있는 경우에 유죄의 확정판결에 대하여 그 선고를 받은 자의 이익을 위하여 청구할 수 있다.[CT1]\n유죄를 선고받은 자에 대하여 무죄 또는 면소를, 형의 선고를 받은 자에 대하여 형의 면제 또는 원판결이 인정한 죄보다 가벼운 죄를 인정할 명백한 증거가 새로 발견된 때를 재심 사유로 규정한다.[CT2]\n전제: 갑의 유죄 판결이 확정판결 상태에 있다고 가정함\n전제: 저작권 등록의 무효 확정 판결이 원 유죄 판결의 전제가 된 사실관계와 직접적으로 관련되어 있다고 가정함\n한계: 저작권 등록의 무효 확정 판결이 형사소송법 제420조 제5호에서 요구하는 '무죄 또는 면소를 인정할 명백한 증거'에 해당하는지 여부는 개별 사건의 구체적 사실관계에 따라 판단되어야 하며, 본 답변은 법적 근거의 존재만을 확인함",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "재심은 다음 각 호의 어느 하나에 해당하는 이유가 있는 경우에 유죄의 확정판결에 대하여 그 선고를 받은 자의 이익을 위하여 청구할 수 있다.[CT1]\n유죄를 선고받은 자에 대하여 무죄 또는 면소를, 형의 선고를 받은 자에 대하여 형의 면제 또는 원판결이 인정한 죄보다 가벼운 죄를 인정할 명백한 증거가 새로 발견된 때를 재심 사유로 규정한다.[CT2]\n전제: 갑의 유죄 판결이 확정판결 상태에 있다고 가정함\n전제: 저작권 등록의 무효 확정 판결이 원 유죄 판결의 전제가 된 사실관계와 직접적으로 관련되어 있다고 가정함\n한계: 저작권 등록의 무효 확정 판결이 형사소송법 제420조 제5호에서 요구하는 '무죄 또는 면소를 인정할 명백한 증거'에 해당하는지 여부는 개별 사건의 구체적 사실관계에 따라 판단되어야 하며, 본 답변은 법적 근거의 존재만을 확인함",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T16:09:12.876462+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 154198.801,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 82,
+      "dedup_collapse": 30,
+      "evidence_fusion": 82,
+      "first_stage": 100,
+      "request_rerank": 100,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 82
+    }
+  },
+  "run_id": "39670ce3-7db8-4807-9a44-23b68d4519a9",
+  "state": {
+    "accepted_provision_ids": [
+      "형사소송법 420조  재심이유#KOBLEX-232856",
+      "형사소송법 420조  재심이유#KOBLEX-232861"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_basis",
+        "question_anchor": "어떤 근거로",
+        "requested_output": "유죄 판결에 대한 재심 청구의 법적 근거(재심 사유)"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "형사소송법 420조  재심이유#KOBLEX-232861"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 98,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 420조  재심이유#KOBLEX-232861",
+        "provision_text": "5. 유죄를 선고받은 자에 대하여 무죄 또는 면소를, 형의 선고를 받은 자에 대하여 형의 면제 또는 원판결이 인정한 죄보다 가벼운 죄를 인정할 명백한 증거가 새로 발견된 때",
+        "rerank_rank": 1,
+        "rerank_score": 0.8013792037963867,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 420조  재심이유 5호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 420조  재심이유#KOBLEX-232856"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 96,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 420조  재심이유#KOBLEX-232856",
+        "provision_text": "제420조(재심이유) 재심은 다음 각 호의 어느 하나에 해당하는 이유가 있는 경우에 유죄의 확정판결에 대하여 그 선고를 받은 자의 이익을 위하여 청구할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.18877531588077545,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 420조  재심이유",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소송촉진 등에 관한 특례법 23조 2 재심#KOBLEX-085229",
+          "소송촉진 등에 관한 특례법 23조 2 재심#KOBLEX-194134",
+          "소송촉진 등에 관한 특례법 23조 2 재심#KOBLEX-203625"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 27.898516090553116,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "소송촉진 등에 관한 특례법 23조 2 재심#KOBLEX-085229",
+        "provision_text": "① 제23조 본문에 따라 유죄판결을 받고 그 판결이 확정된 자가 책임을 질 수 없는 사유로 공판절차에 출석할 수 없었던 경우 「형사소송법」 제424조에 규정된 자는 그 판결이 있었던 사실을 안 날부터 14일 이내[재심청구인(再審請求人)이 책임을 질 수 없는 사유로 위 기간에 재심청구를 하지 못한 경우에는 그 사유가 없어진 날부터 14일 이내]에 제1심 법원에 재심을 청구할 수 있다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.18130362033843994,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "소송촉진 등에 관한 특례법 23조 2 재심 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 425조  검사만이 청구할 수 있는 재심#KOBLEX-232875"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 27.126073292334304,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 425조  검사만이 청구할 수 있는 재심#KOBLEX-232875",
+        "provision_text": "제425조(검사만이 청구할 수 있는 재심) 제420조제7호의 사유에 의한 재심의 청구는 유죄의 선고를 받은 자가 그 죄를 범하게 한 경우에는 검사가 아니면 하지 못한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.043006040155887604,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 425조  검사만이 청구할 수 있는 재심",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부마민주항쟁 관련자의 명예회복 및 보상 등에 관한 법률 11조  특별재심#KOBLEX-000425"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 56,
+        "first_stage_score": 20.6363710107434,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "부마민주항쟁 관련자의 명예회복 및 보상 등에 관한 법률 11조  특별재심#KOBLEX-000425",
+        "provision_text": "① 관련자 중 부마민주항쟁과 관련한 행위로 유죄의 확정판결, 면소판결을 선고받은 자는 「형사소송법」 제420조, 제424조 및 「군사법원법」 제469조, 제473조에도 불구하고 재심을 청구할 수 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.038143742829561234,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "부마민주항쟁 관련자의 명예회복 및 보상 등에 관한 법률 11조  특별재심 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 451조  재심사유#KOBLEX-064669"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 70,
+        "first_stage_score": 19.868351277648255,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 451조  재심사유#KOBLEX-064669",
+        "provision_text": "②제1항제4호 내지 제7호의 경우에는 처벌받을 행위에 대하여 유죄의 판결이나 과태료부과의 재판이 확정된 때 또는 증거부족 외의 이유로 유죄의 확정판결이나 과태료부과의 확정재판을 할 수 없을 때에만 재심의 소를 제기할 수 있다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.036035776138305664,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 451조  재심사유 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 438조  재심의 심판#KOBLEX-232902"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 22.67243738313997,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 438조  재심의 심판#KOBLEX-232902",
+        "provision_text": "②다음 경우에는 제306조제1항, 제328조제1항제2호의 규정은 전항의 심판에 적용하지 아니한다. <개정 2014.12.30> 1. 사망자 또는 회복할 수 없는 심신장애인을 위하여 재심의 청구가 있는 때 2. 유죄의 선고를 받은 자가 재심의 판결 전에 사망하거나 회복할 수 없는 심신장애인으로 된 때",
+        "rerank_rank": 7,
+        "rerank_score": 0.004767883103340864,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 438조  재심의 심판 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 383조  상고이유#KOBLEX-232788"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 2.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 383조  상고이유#KOBLEX-232788",
+        "provision_text": "3. 재심청구의 사유가 있는 때",
+        "rerank_rank": 8,
+        "rerank_score": 0.003870083950459957,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 383조  상고이유 3호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 361조 5 항소이유#KOBLEX-232734"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 2.0,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 361조 5 항소이유#KOBLEX-232734",
+        "provision_text": "13. 재심청구의 사유가 있는 때",
+        "rerank_rank": 9,
+        "rerank_score": 0.0030732406303286552,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 361조 5 항소이유 13호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 474조  군검사만이 청구할 수 있는 재심#KOBLEX-093647",
+          "군사법원법 474조  군검사만이 청구할 수 있는 재심#KOBLEX-159612"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 25.247249980954926,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 474조  군검사만이 청구할 수 있는 재심#KOBLEX-093647",
+        "provision_text": "제474조(군검사만이 청구할 수 있는 재심) 제469조제7호의 사유에 따른 재심청구는 유죄를 선고받은 사람이 그 죄를 범하게 한 경우에는 대검찰청 검사 또는 군검사가 아니면 하지 못한다. <개정 2016.1.6>",
+        "rerank_rank": 10,
+        "rerank_score": 0.003019938478246331,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "군사법원법 474조  군검사만이 청구할 수 있는 재심",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "군사법원법 474조  군검사만이 청구할 수 있는 재심#KOBLEX-093647": "제474조(군검사만이 청구할 수 있는 재심) 제469조제7호의 사유에 따른 재심청구는 유죄를 선고받은 사람이 그 죄를 범하게 한 경우에는 대검찰청 검사 또는 군검사가 아니면 하지 못한다. <개정 2016.1.6>",
+      "민사소송법 451조  재심사유#KOBLEX-064669": "②제1항제4호 내지 제7호의 경우에는 처벌받을 행위에 대하여 유죄의 판결이나 과태료부과의 재판이 확정된 때 또는 증거부족 외의 이유로 유죄의 확정판결이나 과태료부과의 확정재판을 할 수 없을 때에만 재심의 소를 제기할 수 있다.",
+      "부마민주항쟁 관련자의 명예회복 및 보상 등에 관한 법률 11조  특별재심#KOBLEX-000425": "① 관련자 중 부마민주항쟁과 관련한 행위로 유죄의 확정판결, 면소판결을 선고받은 자는 「형사소송법」 제420조, 제424조 및 「군사법원법」 제469조, 제473조에도 불구하고 재심을 청구할 수 있다.",
+      "소송촉진 등에 관한 특례법 23조 2 재심#KOBLEX-085229": "① 제23조 본문에 따라 유죄판결을 받고 그 판결이 확정된 자가 책임을 질 수 없는 사유로 공판절차에 출석할 수 없었던 경우 「형사소송법」 제424조에 규정된 자는 그 판결이 있었던 사실을 안 날부터 14일 이내[재심청구인(再審請求人)이 책임을 질 수 없는 사유로 위 기간에 재심청구를 하지 못한 경우에는 그 사유가 없어진 날부터 14일 이내]에 제1심 법원에 재심을 청구할 수 있다.",
+      "형사소송법 361조 5 항소이유#KOBLEX-232734": "13. 재심청구의 사유가 있는 때",
+      "형사소송법 383조  상고이유#KOBLEX-232788": "3. 재심청구의 사유가 있는 때",
+      "형사소송법 420조  재심이유#KOBLEX-232856": "제420조(재심이유) 재심은 다음 각 호의 어느 하나에 해당하는 이유가 있는 경우에 유죄의 확정판결에 대하여 그 선고를 받은 자의 이익을 위하여 청구할 수 있다.",
+      "형사소송법 420조  재심이유#KOBLEX-232861": "5. 유죄를 선고받은 자에 대하여 무죄 또는 면소를, 형의 선고를 받은 자에 대하여 형의 면제 또는 원판결이 인정한 죄보다 가벼운 죄를 인정할 명백한 증거가 새로 발견된 때",
+      "형사소송법 425조  검사만이 청구할 수 있는 재심#KOBLEX-232875": "제425조(검사만이 청구할 수 있는 재심) 제420조제7호의 사유에 의한 재심의 청구는 유죄의 선고를 받은 자가 그 죄를 범하게 한 경우에는 검사가 아니면 하지 못한다.",
+      "형사소송법 438조  재심의 심판#KOBLEX-232902": "②다음 경우에는 제306조제1항, 제328조제1항제2호의 규정은 전항의 심판에 적용하지 아니한다. <개정 2014.12.30> 1. 사망자 또는 회복할 수 없는 심신장애인을 위하여 재심의 청구가 있는 때 2. 유죄의 선고를 받은 자가 재심의 판결 전에 사망하거나 회복할 수 없는 심신장애인으로 된 때"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형사소송법 420조  재심이유#KOBLEX-232856"
+            ],
+            "rationale": "C002(형사소송법 제420조)는 재심 사유가 있는 경우 재심을 청구할 수 있음을 규정하여 재심 사유의 법적 근거를 확인시킴.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형사소송법 420조  재심이유#KOBLEX-232861"
+            ],
+            "rationale": "C001(형사소송법 제420조 제5호)은 새로 발견된 명백한 증거를 재심 사유로 규정하여, 사후적으로 발견된 새로운 사실 또는 증거에 해당하는 규범을 확인시킴.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형사소송법 420조  재심이유#KOBLEX-232856",
+          "형사소송법 420조  재심이유#KOBLEX-232861"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C002는 재심 사유의 존재를 전제로 한 재심 청구의 일반적 법적 근거를, C001은 사후적으로 발견된 새로운 증거(무죄 또는 면소를 인정할 명백한 증거)를 재심 사유로 규정하여, 질문에서 요구하는 '유죄 판결에 대한 재심 청구의 법적 근거'와 '사후적 사실관계에 해당하는 재심 사유'를 모두 충족함.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 420조  재심이유#KOBLEX-232856",
+        "support_spans": [
+          {
+            "end_char": 90,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 420조  재심이유#KOBLEX-232861",
+        "support_spans": [
+          {
+            "end_char": 96,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "유죄 판결의 전제가 된 저작권 등록의 무효 확정이라는 사후적 사실관계가 형사재심 사유에 해당하는지 여부",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을의 저작권을 침해한 혐의로 유죄 판결을 받았다. 하지만 이후 을의 저작권 등록이 부정확하다는 이유로 갑에 대한 유죄 판결이 무효로 확정되었다. 이와 관련하여 갑은 자신이 받은 유죄 판결에 대해 재심을 청구할 수 있는지 여부가 쟁점이 되었다. [질문] 갑은 어떤 근거로 유죄 판결에 대해 재심을 청구할 수 있는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형사소송법 재심 사유 유죄 판결 무효 새로운 사실",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "재심",
+          "유죄 판결",
+          "재심 사유",
+          "새로운 사실",
+          "형사소송법"
+        ],
+        "query_text": "유죄 판결에 대한 재심 사유 새로운 사실 증거 [원문 맥락] 이와 관련하여 갑은 자신이 받은 유죄 판결에 대해 재심을 청구할 수 있는지 여부가 쟁점이 되었다. 갑은 어떤 근거로 유죄 판결에 대해 재심을 청구할 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "유죄 판결 재심 청구 법적 근거 새로운 사실 발견",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을의 저작권을 침해한 혐의로 유죄 판결을 받았다. 하지만 이후 을의 저작권 등록이 부정확하다는 이유로 갑에 대한 유죄 판결이 무효로 확정되었다. 이와 관련하여 갑은 자신이 받은 유죄 판결에 대해 재심을 청구할 수 있는지 여부가 쟁점이 되었다.\n\n[질문]\n갑은 어떤 근거로 유죄 판결에 대해 재심을 청구할 수 있는가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "재심 사유의 유형과 해당 사유에 해당하는 구체적 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "형사재판에 대한 재심 사유를 열거한 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "사후적으로 발견된 새로운 사실 또는 증거에 해당하는 재심 사유 규범 확인"
+          }
+        ],
+        "critical": true,
+        "description": "유죄 판결에 대해 재심을 청구할 수 있는 법적 근거(재심 사유)를 규정한 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 '재심 청구 근거'를 직접적으로 규정한 조항 없이는 답변이 불가능함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "39670ce3-7db8-4807-9a44-23b68d4519a9",
+    "seen_provision_ids": [
+      "형사소송법 420조  재심이유#KOBLEX-232861",
+      "형사소송법 361조 5 항소이유#KOBLEX-232734",
+      "형사소송법 420조  재심이유#KOBLEX-232856",
+      "군사법원법 474조  군검사만이 청구할 수 있는 재심#KOBLEX-093647",
+      "형사소송법 383조  상고이유#KOBLEX-232788",
+      "부마민주항쟁 관련자의 명예회복 및 보상 등에 관한 법률 11조  특별재심#KOBLEX-000425",
+      "민사소송법 451조  재심사유#KOBLEX-064669",
+      "형사소송법 425조  검사만이 청구할 수 있는 재심#KOBLEX-232875",
+      "소송촉진 등에 관한 특례법 23조 2 재심#KOBLEX-085229",
+      "형사소송법 438조  재심의 심판#KOBLEX-232902"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

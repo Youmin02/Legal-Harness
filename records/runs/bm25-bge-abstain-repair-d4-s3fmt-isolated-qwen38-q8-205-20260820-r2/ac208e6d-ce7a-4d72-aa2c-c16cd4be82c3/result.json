@@ -1,0 +1,1009 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "소송능력에 흠이 있는 자의 소송행위는 보정 후 추인 시 소급하여 효력이 생깁니다[CT1]\n상대방은 소송절차의 수계신청을 할 수 있습니다[CT2]\n법원은 수계신청에 대해 직권으로 조사하여 이유가 없다고 인정하면 결정으로 기각합니다[CT3]\n전제: 갑의 소송능력 흠결이 보정되었고 추인이 이루어졌다는 사실은 질문의 전제로 가정합니다.\n한계: 본 답변은 벤치마크 진단용 후보이며, 공개 가능한 답변이 아닙니다.\n한계: 수계신청이 인용되기 위한 구체적 '이유'의 법적 요건은 제공된 후보 조항에 명시되어 있지 않아 판단할 수 없습니다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T07:11:12.552067+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 415077.199,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 559,
+      "dedup_collapse": 80,
+      "evidence_fusion": 559,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "round_selected": 30,
+      "rrf": 600,
+      "selected": 559
+    }
+  },
+  "run_id": "ac208e6d-ce7a-4d72-aa2c-c16cd4be82c3",
+  "state": {
+    "accepted_provision_ids": [
+      "민사소송법 241조  상대방의 수계신청권#KOBLEX-064167",
+      "민사소송법 60조  소송능력 등의 흠과 추인#KOBLEX-063663",
+      "민사소송법 59조  소송능력 등의 흠에 대한 조치#KOBLEX-063662",
+      "민사소송법 243조  수계신청에 대한 재판#KOBLEX-064170"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 6,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 0,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 16
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 16,
+          "claim_count": 3
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_condition",
+        "question_anchor": "소송절차의 수계를 신청할 수 있는 조건",
+        "requested_output": "소송능력 흠결 당사자의 소송행위 이후 상대방이 소송절차 수계를 신청할 수 있는 법적 요건"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민사소송법 60조  소송능력 등의 흠과 추인#KOBLEX-063663"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 65.8937373786543,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 60조  소송능력 등의 흠과 추인#KOBLEX-063663",
+        "provision_text": "제60조(소송능력 등의 흠과 추인) 소송능력, 법정대리권 또는 소송행위에 필요한 권한의 수여에 흠이 있는 사람이 소송행위를 한 뒤에 보정된 당사자나 법정대리인이 이를 추인(追認)한 경우에는, 그 소송행위는 이를 한 때에 소급하여 효력이 생긴다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9997265934944153,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민사소송법 60조  소송능력 등의 흠과 추인",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 241조  상대방의 수계신청권#KOBLEX-064167"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 32.28996351039372,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 241조  상대방의 수계신청권#KOBLEX-064167",
+        "provision_text": "제241조(상대방의 수계신청권) 소송절차의 수계신청은 상대방도 할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9993925094604492,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "민사소송법 241조  상대방의 수계신청권",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 242조  수계신청의 통지#KOBLEX-064168"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 28.85520382381692,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 242조  수계신청의 통지#KOBLEX-064168",
+        "provision_text": "제242조(수계신청의 통지) 소송절차의 수계신청이 있는 때에는 법원은 상대방에게 이를 통지하여야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9947356581687927,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사소송법 242조  수계신청의 통지",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 59조  소송절차의 중단 등#KOBLEX-031612"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 29.261892045466276,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 59조  소송절차의 중단 등#KOBLEX-031612",
+        "provision_text": "⑤제4항의 경우에는 상대방도 소송절차를 수계할 수 있다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9946909546852112,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 59조  소송절차의 중단 등 5항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 172조  이의채권에 관한 소송의 수계#KOBLEX-032014"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 22.29788482899979,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 172조  이의채권에 관한 소송의 수계#KOBLEX-032014",
+        "provision_text": "②제167조제3항 및 제170조제2항의 규정은 제1항의 규정에 의하여 소송절차를 수계하기 위한 신청에 관하여 준용한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.6117245554924011,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 172조  이의채권에 관한 소송의 수계 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 172조  이의채권에 관한 소송의 수계#KOBLEX-032013"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 36,
+        "first_stage_score": 20.75910140230285,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 172조  이의채권에 관한 소송의 수계#KOBLEX-032013",
+        "provision_text": "①회생절차개시 당시 이의채권에 관하여 소송이 계속하는 경우 회생채권자 또는 회생담보권자가 그 권리의 확정을 구하고자 하는 때에는 이의자 전원을 그 소송의 상대방으로 하여 소송절차를 수계하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.45222631096839905,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 172조  이의채권에 관한 소송의 수계 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 243조  수계신청에 대한 재판#KOBLEX-064170"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 2.0,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 243조  수계신청에 대한 재판#KOBLEX-064170",
+        "provision_text": "①소송절차의 수계신청은 법원이 직권으로 조사하여 이유가 없다고 인정한 때에는 결정으로 기각하여야 한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.27362844347953796,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사소송법 243조  수계신청에 대한 재판 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 59조  소송절차의 중단 등#KOBLEX-031609"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 30.46909089748364,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 59조  소송절차의 중단 등#KOBLEX-031609",
+        "provision_text": "②제1항의 규정에 의하여 중단한 소송절차 중 회생채권 또는 회생담보권과 관계없는 것은 관리인 또는 상대방이 이를 수계할 수 있다. 이 경우 채무자에 대한 소송비용청구권은 공익채권으로 한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.09687010198831558,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 59조  소송절차의 중단 등 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 174조  집행력있는 집행권원이 있는 채권 등에 대한 이의#KOBLEX-032018"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 78,
+        "first_stage_score": 17.62870293844393,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 174조  집행력있는 집행권원이 있는 채권 등에 대한 이의#KOBLEX-032018",
+        "provision_text": "②회생절차개시 당시 제1항의 규정에 의한 회생채권 또는 회생담보권에 관하여 법원에 소송이 계속되는 경우 이의자가 같은 항의 규정에 의한 이의를 주장하고자 하는 때에는 이의자는 그 회생채권 또는 회생담보권을 보유한 회생채권자 또는 회생담보권자를 상대방으로 하여 소송절차를 수계하여야 한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.08642888069152832,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 174조  집행력있는 집행권원이 있는 채권 등에 대한 이의 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방자치법 22조  주민소송#KOBLEX-076263"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 28.023387126495937,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "지방자치법 22조  주민소송#KOBLEX-076263",
+        "provision_text": "⑦ 감사 청구에 연대 서명한 다른 주민은 제6항에 따른 사유가 발생한 사실을 안 날부터 6개월 이내에 소송절차를 수계(受繼)할 수 있다. 이 기간에 수계절차가 이루어지지 아니할 경우 그 소송절차는 종료된다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.05466257035732269,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "지방자치법 22조  주민소송 7항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 59조  소송능력 등의 흠에 대한 조치#KOBLEX-063662"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 27.76183460136348,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 59조  소송능력 등의 흠에 대한 조치#KOBLEX-063662",
+        "provision_text": "제59조(소송능력 등의 흠에 대한 조치) 소송능력ㆍ법정대리권 또는 소송행위에 필요한 권한의 수여에 흠이 있는 경우에는 법원은 기간을 정하여 이를 보정(補正)하도록 명하여야 하며, 만일 보정하는 것이 지연됨으로써 손해가 생길 염려가 있는 경우에는 법원은 보정하기 전의 당사자 또는 법정대리인으로 하여금 일시적으로 소송행위를 하게 할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9885215759277344,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민사소송법 59조  소송능력 등의 흠에 대한 조치",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "증권관련 집단소송법 26조  소송대리인의 사임 등#KOBLEX-178578"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 31.794482809601295,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "증권관련 집단소송법 26조  소송대리인의 사임 등#KOBLEX-178578",
+        "provision_text": "⑤ 제3항에 따른 소송절차의 중단 후 1년 이내에 수계 신청이 없는 때에는 그 증권관련집단소송은 취하된 것으로 본다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.5901920199394226,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "증권관련 집단소송법 26조  소송대리인의 사임 등 5항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 2조  관할위반과 소송행위의 효력#KOBLEX-231418"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 58,
+        "first_stage_score": 12.792221073945115,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 2조  관할위반과 소송행위의 효력#KOBLEX-231418",
+        "provision_text": "제2조(관할위반과 소송행위의 효력) 소송행위는 관할위반인 경우에도 그 효력에 영향이 없다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.39669254422187805,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 2조  관할위반과 소송행위의 효력",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 76조  참가인의 소송행위#KOBLEX-063712"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 47,
+        "first_stage_score": 13.85189065671501,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 76조  참가인의 소송행위#KOBLEX-063712",
+        "provision_text": "②참가인의 소송행위가 피참가인의 소송행위에 어긋나는 경우에는 그 참가인의 소송행위는 효력을 가지지 아니한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.3726535141468048,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민사소송법 76조  참가인의 소송행위 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "증권관련 집단소송법 24조  대표당사자의 결원#KOBLEX-178571"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 31.215833407640407,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "증권관련 집단소송법 24조  대표당사자의 결원#KOBLEX-178571",
+        "provision_text": "③ 제1항에 따른 소송절차의 중단 후 1년 이내에 수계 신청이 없는 때에는 소가 취하(取下)된 것으로 본다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.3628017008304596,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "증권관련 집단소송법 24조  대표당사자의 결원 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 20조  관할위반과 소송행위의 효력#KOBLEX-092150",
+          "군사법원법 20조  관할위반과 소송행위의 효력#KOBLEX-158115"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 56,
+        "first_stage_score": 12.792221073945115,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 20조  관할위반과 소송행위의 효력#KOBLEX-092150",
+        "provision_text": "제20조(관할위반과 소송행위의 효력) 소송행위는 관할위반인 경우에도 효력에 영향을 받지 아니한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.23602046072483063,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "군사법원법 20조  관할위반과 소송행위의 효력",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "군사법원법 20조  관할위반과 소송행위의 효력#KOBLEX-092150": "제20조(관할위반과 소송행위의 효력) 소송행위는 관할위반인 경우에도 효력에 영향을 받지 아니한다.",
+      "민사소송법 241조  상대방의 수계신청권#KOBLEX-064167": "제241조(상대방의 수계신청권) 소송절차의 수계신청은 상대방도 할 수 있다.",
+      "민사소송법 242조  수계신청의 통지#KOBLEX-064168": "제242조(수계신청의 통지) 소송절차의 수계신청이 있는 때에는 법원은 상대방에게 이를 통지하여야 한다.",
+      "민사소송법 243조  수계신청에 대한 재판#KOBLEX-064170": "①소송절차의 수계신청은 법원이 직권으로 조사하여 이유가 없다고 인정한 때에는 결정으로 기각하여야 한다.",
+      "민사소송법 59조  소송능력 등의 흠에 대한 조치#KOBLEX-063662": "제59조(소송능력 등의 흠에 대한 조치) 소송능력ㆍ법정대리권 또는 소송행위에 필요한 권한의 수여에 흠이 있는 경우에는 법원은 기간을 정하여 이를 보정(補正)하도록 명하여야 하며, 만일 보정하는 것이 지연됨으로써 손해가 생길 염려가 있는 경우에는 법원은 보정하기 전의 당사자 또는 법정대리인으로 하여금 일시적으로 소송행위를 하게 할 수 있다.",
+      "민사소송법 60조  소송능력 등의 흠과 추인#KOBLEX-063663": "제60조(소송능력 등의 흠과 추인) 소송능력, 법정대리권 또는 소송행위에 필요한 권한의 수여에 흠이 있는 사람이 소송행위를 한 뒤에 보정된 당사자나 법정대리인이 이를 추인(追認)한 경우에는, 그 소송행위는 이를 한 때에 소급하여 효력이 생긴다.",
+      "민사소송법 76조  참가인의 소송행위#KOBLEX-063712": "②참가인의 소송행위가 피참가인의 소송행위에 어긋나는 경우에는 그 참가인의 소송행위는 효력을 가지지 아니한다.",
+      "증권관련 집단소송법 24조  대표당사자의 결원#KOBLEX-178571": "③ 제1항에 따른 소송절차의 중단 후 1년 이내에 수계 신청이 없는 때에는 소가 취하(取下)된 것으로 본다.",
+      "증권관련 집단소송법 26조  소송대리인의 사임 등#KOBLEX-178578": "⑤ 제3항에 따른 소송절차의 중단 후 1년 이내에 수계 신청이 없는 때에는 그 증권관련집단소송은 취하된 것으로 본다.",
+      "지방자치법 22조  주민소송#KOBLEX-076263": "⑦ 감사 청구에 연대 서명한 다른 주민은 제6항에 따른 사유가 발생한 사실을 안 날부터 6개월 이내에 소송절차를 수계(受繼)할 수 있다. 이 기간에 수계절차가 이루어지지 아니할 경우 그 소송절차는 종료된다.",
+      "채무자 회생 및 파산에 관한 법률 172조  이의채권에 관한 소송의 수계#KOBLEX-032013": "①회생절차개시 당시 이의채권에 관하여 소송이 계속하는 경우 회생채권자 또는 회생담보권자가 그 권리의 확정을 구하고자 하는 때에는 이의자 전원을 그 소송의 상대방으로 하여 소송절차를 수계하여야 한다.",
+      "채무자 회생 및 파산에 관한 법률 172조  이의채권에 관한 소송의 수계#KOBLEX-032014": "②제167조제3항 및 제170조제2항의 규정은 제1항의 규정에 의하여 소송절차를 수계하기 위한 신청에 관하여 준용한다.",
+      "채무자 회생 및 파산에 관한 법률 174조  집행력있는 집행권원이 있는 채권 등에 대한 이의#KOBLEX-032018": "②회생절차개시 당시 제1항의 규정에 의한 회생채권 또는 회생담보권에 관하여 법원에 소송이 계속되는 경우 이의자가 같은 항의 규정에 의한 이의를 주장하고자 하는 때에는 이의자는 그 회생채권 또는 회생담보권을 보유한 회생채권자 또는 회생담보권자를 상대방으로 하여 소송절차를 수계하여야 한다.",
+      "채무자 회생 및 파산에 관한 법률 59조  소송절차의 중단 등#KOBLEX-031609": "②제1항의 규정에 의하여 중단한 소송절차 중 회생채권 또는 회생담보권과 관계없는 것은 관리인 또는 상대방이 이를 수계할 수 있다. 이 경우 채무자에 대한 소송비용청구권은 공익채권으로 한다.",
+      "채무자 회생 및 파산에 관한 법률 59조  소송절차의 중단 등#KOBLEX-031612": "⑤제4항의 경우에는 상대방도 소송절차를 수계할 수 있다.",
+      "형사소송법 2조  관할위반과 소송행위의 효력#KOBLEX-231418": "제2조(관할위반과 소송행위의 효력) 소송행위는 관할위반인 경우에도 그 효력에 영향이 없다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "No supplied provision explicitly states that the litigation act is void (무효) due to lack of litigation capacity. C001 implies a prior lack of validity by providing for retroactive effect upon ratification, but does not explicitly declare the act void. C011 addresses procedural correction but not the substantive validity status of the act itself.",
+            "requirement_id": "E1-R1",
+            "status": "unsatisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "민사소송법 60조  소송능력 등의 흠과 추인#KOBLEX-063663"
+            ],
+            "rationale": "C001 explicitly states that if the defect is corrected and the party ratifies the act, it has retroactive effect from the time it was performed.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "민사소송법 60조  소송능력 등의 흠과 추인#KOBLEX-063663",
+          "민사소송법 59조  소송능력 등의 흠에 대한 조치#KOBLEX-063662"
+        ],
+        "missing_aspects": [
+          "E1-R1"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "The supplied provisions cover the ratification mechanism and its retroactive effect (C001) and the court's procedural response to defects (C011). However, they do not contain an explicit statutory provision stating that a litigation act performed with a defect in litigation capacity is void (무효) prior to correction or ratification. The completion criteria require confirmation of this voidness.",
+        "status": "partially_covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "The specific legal requirements (요건) for the continuation of litigation proceedings are not explicitly listed in the supplied general civil procedure provisions. C007 refers to 'reason' but does not define it.",
+            "requirement_id": "E2-R1",
+            "status": "unsatisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "민사소송법 241조  상대방의 수계신청권#KOBLEX-064167"
+            ],
+            "rationale": "C002 explicitly grants the opposing party the right to apply for the continuation of litigation proceedings.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "민사소송법 241조  상대방의 수계신청권#KOBLEX-064167",
+          "민사소송법 243조  수계신청에 대한 재판#KOBLEX-064170"
+        ],
+        "missing_aspects": [
+          "E2-R1"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "The supplied provisions confirm the opposing party's right to apply for continuation (C002) and the court's review mechanism (C007). However, they do not specify the substantive legal requirements (요건) that must be met for the application to be granted. C007 refers to 'reason' but does not define the conditions. Other provisions are specific to bankruptcy or other contexts and do not provide the general civil procedure requirements for this scenario.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민사소송법 60조  소송능력 등의 흠과 추인#KOBLEX-063663",
+        "support_spans": [
+          {
+            "end_char": 136,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민사소송법 59조  소송능력 등의 흠에 대한 조치#KOBLEX-063662",
+        "support_spans": [
+          {
+            "end_char": 190,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민사소송법 241조  상대방의 수계신청권#KOBLEX-064167",
+        "support_spans": [
+          {
+            "end_char": 42,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민사소송법 243조  수계신청에 대한 재판#KOBLEX-064170",
+        "support_spans": [
+          {
+            "end_char": 57,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "소송능력에 흠이 있는 자의 소송행위의 효력과 추인 가능성",
+        "issue_id": "I1"
+      },
+      {
+        "description": "소송절차 수계의 요건과 상대방의 신청권",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "소송능력 흠결자의 소송행위가 무효임을 확인하고, 추인으로 효력이 보전되는지 여부",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "소송능력에 흠이 있는 자의 소송행위는 무효임을 명시하는 규정 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "소송능력 보정 후 추인으로 소송행위의 효력이 보전되는지 여부 확인"
+          }
+        ],
+        "critical": true,
+        "description": "소송능력에 흠이 있는 자의 소송행위의 효력과 추인에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "수계 신청의 전제인 소송행위의 효력 상태를 판단하기 위해 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "상대방이 소송절차 수계를 신청할 수 있는 구체적 요건과 절차",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "소송절차 수계의 법적 요건 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "상대방의 수계 신청권과 그 행사 조건 확인"
+          }
+        ],
+        "critical": true,
+        "description": "소송절차 수계의 요건과 상대방의 신청권에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문이 직접적으로 수계 신청 조건을 묻고 있어 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 1,
+    "normalized_question": "[배경 시나리오] 갑은 을을 상대로 소송을 제기했으나, 소송 당시 갑은 소송능력에 흠결이 있었습니다. 이후 갑의 소송능력이 보정되었고, 갑은 자신의 소송행위를 추인했습니다. 이 상황에서 을은 소송절차의 수계를 원하는 상황입니다. [질문] 갑이 소송능력에 흠이 있는 상태에서 소송행위를 했을 때, 이후 을이 소송절차의 수계를 신청할 수 있는 조건은 무엇인가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "소송능력 흠결 소송행위 무효 추인 보정",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "소송능력",
+          "흠결",
+          "소송행위",
+          "무효",
+          "추인",
+          "효력보전"
+        ],
+        "query_text": "소송능력에 흠이 있는 자의 소송행위는 무효이며 추인으로 효력이 보전된다 [원문 맥락] 이 상황에서 을은 소송절차의 수계를 원하는 상황입니다. 갑이 소송능력에 흠이 있는 상태에서 소송행위를 했을 때, 이후 을이 소송절차의 수계를 신청할 수 있는 조건은 무엇인가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "소송능력 흠결자의 소송행위 무효와 추인 효력",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "소송절차 수계 신청 상대방 요건",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "소송절차",
+          "수계",
+          "신청",
+          "상대방",
+          "요건",
+          "신청권"
+        ],
+        "query_text": "상대방은 소송절차의 수계를 신청할 수 있다 [원문 맥락] 이 상황에서 을은 소송절차의 수계를 원하는 상황입니다. 갑이 소송능력에 흠이 있는 상태에서 소송행위를 했을 때, 이후 을이 소송절차의 수계를 신청할 수 있는 조건은 무엇인가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "소송절차 수계 신청 조건과 상대방 신청권",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "소송능력 흠결 소송행위 무효",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "소송능력",
+          "흠결",
+          "소송행위",
+          "무효"
+        ],
+        "query_text": "소송능력 흠결 소송행위 무효 [원문 맥락] 이 상황에서 을은 소송절차의 수계를 원하는 상황입니다. 갑이 소송능력에 흠이 있는 상태에서 소송행위를 했을 때, 이후 을이 소송절차의 수계를 신청할 수 있는 조건은 무엇인가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "소송능력에 흠이 있는 자의 소송행위 무효 규정",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "소송절차 수계 신청 이유 인정 요건",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "소송절차",
+          "수계",
+          "신청",
+          "이유",
+          "인정",
+          "요건"
+        ],
+        "query_text": "소송절차 수계 신청 이유 인정 요건 [원문 맥락] 이 상황에서 을은 소송절차의 수계를 원하는 상황입니다. 갑이 소송능력에 흠이 있는 상태에서 소송행위를 했을 때, 이후 을이 소송절차의 수계를 신청할 수 있는 조건은 무엇인가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "소송절차 수계 신청이 인용되기 위한 구체적 법적 요건",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "소송능력 없는 자 소송행위 효력 상실 무효",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "소송능력",
+          "없는",
+          "자",
+          "소송행위",
+          "효력",
+          "상실"
+        ],
+        "query_text": "소송능력 없는 자의 소송행위 효력 상실 [원문 맥락] 이 상황에서 을은 소송절차의 수계를 원하는 상황입니다. 갑이 소송능력에 흠이 있는 상태에서 소송행위를 했을 때, 이후 을이 소송절차의 수계를 신청할 수 있는 조건은 무엇인가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "소송능력에 흠이 있는 자의 소송행위가 무효임을 명시하는 규정",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "소송절차 수계 신청 기각 사유 요건",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "소송절차",
+          "수계",
+          "신청",
+          "기각",
+          "사유",
+          "요건"
+        ],
+        "query_text": "소송절차 수계 신청 기각 사유 [원문 맥락] 이 상황에서 을은 소송절차의 수계를 원하는 상황입니다. 갑이 소송능력에 흠이 있는 상태에서 소송행위를 했을 때, 이후 을이 소송절차의 수계를 신청할 수 있는 조건은 무엇인가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "소송절차 수계 신청이 기각되는 구체적 법적 사유와 요건",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을을 상대로 소송을 제기했으나, 소송 당시 갑은 소송능력에 흠결이 있었습니다. 이후 갑의 소송능력이 보정되었고, 갑은 자신의 소송행위를 추인했습니다. 이 상황에서 을은 소송절차의 수계를 원하는 상황입니다.\n\n[질문]\n갑이 소송능력에 흠이 있는 상태에서 소송행위를 했을 때, 이후 을이 소송절차의 수계를 신청할 수 있는 조건은 무엇인가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "소송능력 흠결자의 소송행위가 무효임을 확인하고, 추인으로 효력이 보전되는지 여부",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "소송능력에 흠이 있는 자의 소송행위는 무효임을 명시하는 규정 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "소송능력 보정 후 추인으로 소송행위의 효력이 보전되는지 여부 확인"
+          }
+        ],
+        "critical": true,
+        "description": "소송능력에 흠이 있는 자의 소송행위의 효력과 추인에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "수계 신청의 전제인 소송행위의 효력 상태를 판단하기 위해 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "상대방이 소송절차 수계를 신청할 수 있는 구체적 요건과 절차",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "소송절차 수계의 법적 요건 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "상대방의 수계 신청권과 그 행사 조건 확인"
+          }
+        ],
+        "critical": true,
+        "description": "소송절차 수계의 요건과 상대방의 신청권에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문이 직접적으로 수계 신청 조건을 묻고 있어 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "ac208e6d-ce7a-4d72-aa2c-c16cd4be82c3",
+    "seen_provision_ids": [
+      "채무자 회생 및 파산에 관한 법률 59조  소송절차의 중단 등#KOBLEX-031609",
+      "지방자치법 22조  주민소송#KOBLEX-076263",
+      "민사소송법 241조  상대방의 수계신청권#KOBLEX-064167",
+      "민사소송법 243조  수계신청에 대한 재판#KOBLEX-064170",
+      "증권관련 집단소송법 24조  대표당사자의 결원#KOBLEX-178571",
+      "채무자 회생 및 파산에 관한 법률 174조  집행력있는 집행권원이 있는 채권 등에 대한 이의#KOBLEX-032018",
+      "군사법원법 20조  관할위반과 소송행위의 효력#KOBLEX-092150",
+      "채무자 회생 및 파산에 관한 법률 172조  이의채권에 관한 소송의 수계#KOBLEX-032014",
+      "채무자 회생 및 파산에 관한 법률 172조  이의채권에 관한 소송의 수계#KOBLEX-032013",
+      "채무자 회생 및 파산에 관한 법률 59조  소송절차의 중단 등#KOBLEX-031612",
+      "형사소송법 2조  관할위반과 소송행위의 효력#KOBLEX-231418",
+      "민사소송법 76조  참가인의 소송행위#KOBLEX-063712",
+      "민사소송법 60조  소송능력 등의 흠과 추인#KOBLEX-063663",
+      "민사소송법 59조  소송능력 등의 흠에 대한 조치#KOBLEX-063662",
+      "증권관련 집단소송법 26조  소송대리인의 사임 등#KOBLEX-178578",
+      "민사소송법 242조  수계신청의 통지#KOBLEX-064168"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

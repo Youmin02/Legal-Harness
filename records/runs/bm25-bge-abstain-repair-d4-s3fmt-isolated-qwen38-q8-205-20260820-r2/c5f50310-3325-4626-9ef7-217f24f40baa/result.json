@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T06:50:41.471967+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 107323.769,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Expecting property name enclosed in double quotes: line 143 column 42 (char 4144)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "c5f50310-3325-4626-9ef7-217f24f40baa",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Expecting property name enclosed in double quotes: line 143 column 42 (char 4144)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 도시계획위원회에서 건축 허가를 받으려 했으나, 을 행정청은 해당 지역의 미관을 이유로 허가를 거부했습니다. 갑은 이에 불복하여 소송을 제기하였으며, 을의 결정이 재량권을 남용한 것이라고 주장했습니다. 을은 해당 지역의 미관 유지가 지역 정책에 중요하다고 항변하였습니다. [질문] 을 행정청의 건축 허가 거부 결정이 법원에 의해 취소될 수 있는 경우는 어떤 경우인가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n갑은 도시계획위원회에서 건축 허가를 받으려 했으나, 을 행정청은 해당 지역의 미관을 이유로 허가를 거부했습니다. 갑은 이에 불복하여 소송을 제기하였으며, 을의 결정이 재량권을 남용한 것이라고 주장했습니다. 을은 해당 지역의 미관 유지가 지역 정책에 중요하다고 항변하였습니다.\n\n[질문]\n을 행정청의 건축 허가 거부 결정이 법원에 의해 취소될 수 있는 경우는 어떤 경우인가?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "c5f50310-3325-4626-9ef7-217f24f40baa",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

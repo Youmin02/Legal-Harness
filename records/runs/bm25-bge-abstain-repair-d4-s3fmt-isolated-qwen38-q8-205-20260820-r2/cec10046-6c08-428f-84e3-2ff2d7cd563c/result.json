@@ -1,0 +1,584 @@
+{
+  "abstention_reason": null,
+  "answer": "행정소송법의 목적은 행정소송절차를 통하여 행정청의 위법한 처분 그 밖에 공권력의 행사·불행사등으로 인한 국민의 권리 또는 이익의 침해를 구제하고, 공법상의 권리관계 또는 법적용에 관한 다툼을 적정하게 해결하는 것입니다.[CT1]\n행정심판법상 위원회는 필요하면 관련되는 심판청구를 병합하여 심리하거나 병합된 관련 청구를 분리하여 심리할 수 있습니다.[CT2]",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "행정소송법의 목적은 행정소송절차를 통하여 행정청의 위법한 처분 그 밖에 공권력의 행사·불행사등으로 인한 국민의 권리 또는 이익의 침해를 구제하고, 공법상의 권리관계 또는 법적용에 관한 다툼을 적정하게 해결하는 것입니다.[CT1]\n행정심판법상 위원회는 필요하면 관련되는 심판청구를 병합하여 심리하거나 병합된 관련 청구를 분리하여 심리할 수 있습니다.[CT2]",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T07:04:15.880192+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 120114.651,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 165,
+      "dedup_collapse": 68,
+      "evidence_fusion": 165,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 165
+    }
+  },
+  "run_id": "cec10046-6c08-428f-84e3-2ff2d7cd563c",
+  "state": {
+    "accepted_provision_ids": [
+      "행정심판법 37조  절차의 병합 또는 분리#KOBLEX-182919",
+      "행정소송법 1조  목적#KOBLEX-011403"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "definition",
+        "question_anchor": "행정소송법의 목적이 무엇인지",
+        "requested_output": "행정소송법의 목적에 대한 법적 정의 및 내용"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "procedure",
+        "question_anchor": "여러 관련 심판청구가 어떻게 처리될 수 있는지",
+        "requested_output": "행정심판법상 관련 심판청구의 병합 또는 분리 처리 절차 및 효과"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "행정소송법 1조  목적#KOBLEX-011403"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 1.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "행정소송법 1조  목적#KOBLEX-011403",
+        "provision_text": "제1조(목적) 이 법은 행정소송절차를 통하여 행정청의 위법한 처분 그 밖에 공권력의 행사ㆍ불행사등으로 인한 국민의 권리 또는 이익의 침해를 구제하고, 공법상의 권리관계 또는 법적용에 관한 다툼을 적정하게 해결함을 목적으로 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999871253967285,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "행정소송법 1조  목적",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정심판법 37조  절차의 병합 또는 분리#KOBLEX-182919"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 48.452396787669414,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "행정심판법 37조  절차의 병합 또는 분리#KOBLEX-182919",
+        "provision_text": "제37조(절차의 병합 또는 분리) 위원회는 필요하면 관련되는 심판청구를 병합하여 심리하거나 병합된 관련 청구를 분리하여 심리할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9993915557861328,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "행정심판법 37조  절차의 병합 또는 분리",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리#KOBLEX-182842"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 1.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리#KOBLEX-182842",
+        "provision_text": "제24조(피청구인의 심판청구서 등의 접수ㆍ처리)",
+        "rerank_rank": 2,
+        "rerank_score": 0.9623809456825256,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리#KOBLEX-182843"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 98,
+        "first_stage_score": 1.0,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리#KOBLEX-182843",
+        "provision_text": "① 피청구인이 제23조제1항ㆍ제2항 또는 제26조제1항에 따라 심판청구서를 접수하거나 송부받으면 10일 이내에 심판청구서(제23조제1항ㆍ제2항의 경우만 해당된다)와 답변서를 위원회에 보내야 한다. 다만, 청구인이 심판청구를 취하한 경우에는 그러하지 아니하다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9206510782241821,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리#KOBLEX-182845"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 100,
+        "first_stage_score": 1.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리#KOBLEX-182845",
+        "provision_text": "③ 제2항에도 불구하고 위원장이 심판청구에 대하여 답변서 제출을 요구하면 피청구인은 위원장으로부터 답변서 제출을 요구받은 날부터 10일 이내에 위원회에 답변서를 제출하여야 한다. <신설 2023.3.21>",
+        "rerank_rank": 4,
+        "rerank_score": 0.8942650556564331,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정심판법 42조  심판청구 등의 취하#KOBLEX-182931"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 27,
+        "first_stage_score": 21.996756608113973,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "행정심판법 42조  심판청구 등의 취하#KOBLEX-182931",
+        "provision_text": "제42조(심판청구 등의 취하)",
+        "rerank_rank": 5,
+        "rerank_score": 0.8908005356788635,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "행정심판법 42조  심판청구 등의 취하",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정심판법 23조  심판청구서의 제출#KOBLEX-182841"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 96,
+        "first_stage_score": 1.0,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "행정심판법 23조  심판청구서의 제출#KOBLEX-182841",
+        "provision_text": "④ 제27조에 따른 심판청구 기간을 계산할 때에는 제1항에 따른 피청구인이나 위원회 또는 제2항에 따른 행정기관에 심판청구서가 제출되었을 때에 행정심판이 청구된 것으로 본다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.8797851204872131,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "행정심판법 23조  심판청구서의 제출 4항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정심판법 52조  전자정보처리조직을 통한 심판청구 등#KOBLEX-182987"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 35,
+        "first_stage_score": 21.472350346833366,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "행정심판법 52조  전자정보처리조직을 통한 심판청구 등#KOBLEX-182987",
+        "provision_text": "제52조(전자정보처리조직을 통한 심판청구 등)",
+        "rerank_rank": 7,
+        "rerank_score": 0.8631409406661987,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "행정심판법 52조  전자정보처리조직을 통한 심판청구 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정심판법 20조  심판참가#KOBLEX-182823"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 91,
+        "first_stage_score": 1.0,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "행정심판법 20조  심판참가#KOBLEX-182823",
+        "provision_text": "① 행정심판의 결과에 이해관계가 있는 제3자나 행정청은 해당 심판청구에 대한 제7조제6항 또는 제8조제7항에 따른 위원회나 소위원회의 의결이 있기 전까지 그 사건에 대하여 심판참가를 할 수 있다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.8192687034606934,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "행정심판법 20조  심판참가 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리#KOBLEX-182844"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 99,
+        "first_stage_score": 1.0,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리#KOBLEX-182844",
+        "provision_text": "② 제1항에도 불구하고 심판청구가 그 내용이 특정되지 아니하는 등 명백히 부적법하다고 판단되는 경우에 피청구인은 답변서를 위원회에 보내지 아니할 수 있다. 이 경우 심판청구서를 접수하거나 송부받은 날부터 10일 이내에 그 사유를 위원회에 문서로 통보하여야 한다. <신설 2023.3.21>",
+        "rerank_rank": 9,
+        "rerank_score": 0.6851787567138672,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "행정소송법 1조  목적#KOBLEX-011403": "제1조(목적) 이 법은 행정소송절차를 통하여 행정청의 위법한 처분 그 밖에 공권력의 행사ㆍ불행사등으로 인한 국민의 권리 또는 이익의 침해를 구제하고, 공법상의 권리관계 또는 법적용에 관한 다툼을 적정하게 해결함을 목적으로 한다.",
+      "행정심판법 20조  심판참가#KOBLEX-182823": "① 행정심판의 결과에 이해관계가 있는 제3자나 행정청은 해당 심판청구에 대한 제7조제6항 또는 제8조제7항에 따른 위원회나 소위원회의 의결이 있기 전까지 그 사건에 대하여 심판참가를 할 수 있다.",
+      "행정심판법 23조  심판청구서의 제출#KOBLEX-182841": "④ 제27조에 따른 심판청구 기간을 계산할 때에는 제1항에 따른 피청구인이나 위원회 또는 제2항에 따른 행정기관에 심판청구서가 제출되었을 때에 행정심판이 청구된 것으로 본다.",
+      "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리#KOBLEX-182842": "제24조(피청구인의 심판청구서 등의 접수ㆍ처리)",
+      "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리#KOBLEX-182843": "① 피청구인이 제23조제1항ㆍ제2항 또는 제26조제1항에 따라 심판청구서를 접수하거나 송부받으면 10일 이내에 심판청구서(제23조제1항ㆍ제2항의 경우만 해당된다)와 답변서를 위원회에 보내야 한다. 다만, 청구인이 심판청구를 취하한 경우에는 그러하지 아니하다.",
+      "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리#KOBLEX-182844": "② 제1항에도 불구하고 심판청구가 그 내용이 특정되지 아니하는 등 명백히 부적법하다고 판단되는 경우에 피청구인은 답변서를 위원회에 보내지 아니할 수 있다. 이 경우 심판청구서를 접수하거나 송부받은 날부터 10일 이내에 그 사유를 위원회에 문서로 통보하여야 한다. <신설 2023.3.21>",
+      "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리#KOBLEX-182845": "③ 제2항에도 불구하고 위원장이 심판청구에 대하여 답변서 제출을 요구하면 피청구인은 위원장으로부터 답변서 제출을 요구받은 날부터 10일 이내에 위원회에 답변서를 제출하여야 한다. <신설 2023.3.21>",
+      "행정심판법 37조  절차의 병합 또는 분리#KOBLEX-182919": "제37조(절차의 병합 또는 분리) 위원회는 필요하면 관련되는 심판청구를 병합하여 심리하거나 병합된 관련 청구를 분리하여 심리할 수 있다.",
+      "행정심판법 42조  심판청구 등의 취하#KOBLEX-182931": "제42조(심판청구 등의 취하)",
+      "행정심판법 52조  전자정보처리조직을 통한 심판청구 등#KOBLEX-182987": "제52조(전자정보처리조직을 통한 심판청구 등)"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "행정소송법 1조  목적#KOBLEX-011403"
+            ],
+            "rationale": "C001 provides the exact text of Article 1 (Purpose) of the Administrative Litigation Act.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "행정소송법 1조  목적#KOBLEX-011403"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "The supplied provision C001 contains the full text of Article 1 of the Administrative Litigation Act, which defines the purpose of the law. This fully satisfies the completion criteria for E1.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "행정심판법 37조  절차의 병합 또는 분리#KOBLEX-182919"
+            ],
+            "rationale": "C002 provides the exact text of Article 37 (Combination or Separation of Procedures) of the Administrative Review Act.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "행정심판법 37조  절차의 병합 또는 분리#KOBLEX-182919"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "The supplied provision C002 contains the full text of Article 37 of the Administrative Review Act, which governs the combination or separation of related review petitions. This fully satisfies the completion criteria for E2.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "행정소송법 1조  목적#KOBLEX-011403",
+        "support_spans": [
+          {
+            "end_char": 127,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "행정심판법 37조  절차의 병합 또는 분리#KOBLEX-182919",
+        "support_spans": [
+          {
+            "end_char": 76,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "행정소송법의 입법 목적과 기본 취지",
+        "issue_id": "I1"
+      },
+      {
+        "description": "행정심판법상 관련 심판청구의 처리 방식",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 지방자치단체의 허가를 받아 식당을 운영하고 있었습니다. 최근, 을이라는 새로운 지방자치단체장이 부임하면서 환경 관련 규정을 엄격하게 적용하여 갑의 영업 허가를 취소했습니다. 이에 불복한 갑은 행정소송을 준비하면서 동시에 행정심판을 청구했습니다. 을의 조치가 위법하다고 주장하는 갑은 행정심판위원회에 환경 규정에 관한 여러 관련 심판청구도 제기한 상황입니다. [질문] 갑이 을의 영업 허가 취소에 대해 행정소송을 제기하면서, 행정소송법의 목적이 무엇인지 알고 싶고, 또한 행정심판법에 따라 여러 관련 심판청구가 어떻게 처리될 수 있는지 알고 싶습니다.",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "행정소송법 목적 조항",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "행정소송법",
+          "제1조",
+          "목적",
+          "입법취지"
+        ],
+        "query_text": "행정소송법 제1조 목적 [원문 맥락] 을의 조치가 위법하다고 주장하는 갑은 행정심판위원회에 환경 규정에 관한 여러 관련 심판청구도 제기한 상황입니다. 갑이 을의 영업 허가 취소에 대해 행정소송을 제기하면서, 행정소송법의 목적이 무엇인지 알고 싶고, 또한 행정심판법에 따라 여러 관련 심판청구가 어떻게 처리될 수 있는지 알고 싶습니다.",
+        "request_id": "RQ1",
+        "rerank_query_text": "행정소송법 제1조 목적 정의",
+        "statute_hints": [
+          "행정소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "행정심판법 심판청구 병합 분리",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "행정심판법",
+          "심판청구",
+          "병합",
+          "분리",
+          "처리"
+        ],
+        "query_text": "행정심판법 관련 심판청구 병합 처리 [원문 맥락] 을의 조치가 위법하다고 주장하는 갑은 행정심판위원회에 환경 규정에 관한 여러 관련 심판청구도 제기한 상황입니다. 갑이 을의 영업 허가 취소에 대해 행정소송을 제기하면서, 행정소송법의 목적이 무엇인지 알고 싶고, 또한 행정심판법에 따라 여러 관련 심판청구가 어떻게 처리될 수 있는지 알고 싶습니다.",
+        "request_id": "RQ2",
+        "rerank_query_text": "행정심판법상 여러 관련 심판청구 처리 절차",
+        "statute_hints": [
+          "행정심판법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 지방자치단체의 허가를 받아 식당을 운영하고 있었습니다. 최근, 을이라는 새로운 지방자치단체장이 부임하면서 환경 관련 규정을 엄격하게 적용하여 갑의 영업 허가를 취소했습니다. 이에 불복한 갑은 행정소송을 준비하면서 동시에 행정심판을 청구했습니다. 을의 조치가 위법하다고 주장하는 갑은 행정심판위원회에 환경 규정에 관한 여러 관련 심판청구도 제기한 상황입니다.\n\n[질문]\n갑이 을의 영업 허가 취소에 대해 행정소송을 제기하면서, 행정소송법의 목적이 무엇인지 알고 싶고, 또한 행정심판법에 따라 여러 관련 심판청구가 어떻게 처리될 수 있는지 알고 싶습니다.",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "행정소송법의 목적을 명시하는 조항의 원문을 확인해야 한다.",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "행정소송법 제1조의 목적 조항 원문 확인"
+          }
+        ],
+        "critical": true,
+        "description": "행정소송법 제1조(목적)의 규정 내용",
+        "evidence_item_id": "E1",
+        "evidence_type": "definition",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 행정소송법의 목적을 직접적으로 묻고 있으므로, 이를 정의하는 법적 근거가 필수적이다.",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "여러 관련 심판청구가 함께 처리될 수 있는 법적 근거와 절차를 확인해야 한다.",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "행정심판법상 관련 심판청구 병합 또는 분리 처리 규정 확인"
+          }
+        ],
+        "critical": true,
+        "description": "행정심판법상 관련 심판청구의 병합 또는 분리 심리 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "procedure",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 여러 관련 심판청구의 처리 방식을 묻고 있으므로, 이를 규정한 행정심판법 조항이 필수적이다.",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "cec10046-6c08-428f-84e3-2ff2d7cd563c",
+    "seen_provision_ids": [
+      "행정심판법 52조  전자정보처리조직을 통한 심판청구 등#KOBLEX-182987",
+      "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리#KOBLEX-182845",
+      "행정심판법 37조  절차의 병합 또는 분리#KOBLEX-182919",
+      "행정심판법 23조  심판청구서의 제출#KOBLEX-182841",
+      "행정심판법 42조  심판청구 등의 취하#KOBLEX-182931",
+      "행정심판법 20조  심판참가#KOBLEX-182823",
+      "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리#KOBLEX-182843",
+      "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리#KOBLEX-182844",
+      "행정소송법 1조  목적#KOBLEX-011403",
+      "행정심판법 24조  피청구인의 심판청구서 등의 접수ㆍ처리#KOBLEX-182842"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

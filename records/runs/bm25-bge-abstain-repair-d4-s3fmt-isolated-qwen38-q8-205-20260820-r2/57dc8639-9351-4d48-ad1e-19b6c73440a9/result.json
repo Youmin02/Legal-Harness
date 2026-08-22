@@ -1,0 +1,1214 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "상표 등록 거절 심판이 각하된 경우, 일사부재리 원칙의 예외에 따라 같은 사실 및 증거로 다시 심판을 청구할 수 있습니다.[CT1]\n상표는 자기의 상품과 타인의 상품을 식별하기 위하여 사용하는 표장을 의미합니다.[CT2]\n단체표장, 증명표장 또는 업무표장에 관하여는 이 법에서 특별히 규정한 것을 제외하고는 상표에 관한 규정을 적용합니다.[CT3]\n전제: 갑의 심판 청구가 각하심결로 확정되었다는 사실은 질문의 배경 시나리오에 근거한 가정입니다.\n한계: 새로운 증거 제출을 조건으로 한 재청구의 구체적 허용 여부나 절차적 요건을 규정한 조항이 후보 목록에 부재하여, 새로운 증거를 통한 재청구의 법적 지원은 불완전합니다.\n한계: 상표 정의에서 예외가 인정되는 구체적인 상황과 요건을 정의하는 조항이 부재하여, 예외 인정 요건에 대한 법적 지원은 불완전합니다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T20:22:21.371955+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 866505.678,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 558,
+      "dedup_collapse": 107,
+      "evidence_fusion": 638,
+      "first_stage": 700,
+      "request_rerank": 700,
+      "round_selected": 30,
+      "rrf": 600,
+      "selected": 558
+    }
+  },
+  "run_id": "57dc8639-9351-4d48-ad1e-19b6c73440a9",
+  "state": {
+    "accepted_provision_ids": [
+      "상표법 150조  일사부재리#KOBLEX-057530",
+      "상표법 2조  정의#KOBLEX-056924",
+      "상표법 2조  정의#KOBLEX-056922"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 3,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 3,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 6,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 5,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "Two consecutive retrieval rounds did not improve critical evidence.",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 21
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 21,
+          "claim_count": 3
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_rule",
+        "question_anchor": "갑이 상표 등록 심판을 다시 청구할 수 있는 경우는 무엇이며",
+        "requested_output": "상표 등록 거절 심판 재청구의 법적 요건 및 허용 범위"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_exception",
+        "question_anchor": "상표의 정의와 관련하여 예외가 발생할 수 있는 상황은 무엇인가",
+        "requested_output": "상표의 정의에서 예외가 인정되는 법적 상황 및 요건"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "소득세법 시행령 41조  기타소득의 범위 등#KOBLEX-141223"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 35.37202187386668,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "소득세법 시행령 41조  기타소득의 범위 등#KOBLEX-141223",
+        "provision_text": "②법 제21조제1항제7호에 따른 \"상표권\"은 「상표법」에 따른 상표, 서비스표, 단체표장, 지리적 표시, 동음이의어 지리적 표시, 지리적 표시 단체표장, 등록상표 및 업무표장에 관한 권리를 말한다. <신설 2007.2.28>",
+        "rerank_rank": 8,
+        "rerank_score": 0.062319934368133545,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2,E3",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ3",
+          "RQ1"
+        ],
+        "statute_name": "소득세법 시행령 41조  기타소득의 범위 등 2항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E3",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 2조  정의#KOBLEX-056922"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "상표법 2조  정의#KOBLEX-056922",
+        "provision_text": "① 이 법에서 사용하는 용어의 뜻은 다음과 같다. <개정 2022.2.3> 1. \"상표\"란 자기의 상품(지리적 표시가 사용되는 상품의 경우를 제외하고는 서비스 또는 서비스의 제공에 관련된 물건을 포함한다. 이하 같다)과 타인의 상품을 식별하기 위하여 사용하는 표장(標章)을 말한다. 2. \"표장\"이란 기호, 문자, 도형, 소리, 냄새, 입체적 형상, 홀로그램ㆍ동작 또는 색채 등으로서 그 구성이나 표현방식에 상관없이 상품의 출처(出處)를 나타내기 위하여 사용하는 모든 표시를 말한다. 3. \"단체표장\"이란 상품을 생산ㆍ제조ㆍ가공ㆍ판매하거나 서비스를 제공하는 자가 공동으로 설립한 법인이 직접 사용하거나 그 소속 단체원에게 사용하게 하기 위한 표장을 말한다. 4. \"지리적 표시\"란 상품의 특정 품질ㆍ명성 또는 그 밖의 특성이 본질적으로 특정지역에서 비롯된 경우에 그 지역에서 생산ㆍ제조 또는 가공된 상품임을 나타내는 표시를 말한다. 5. \"동음이의어 지리적 표시\"란 같은 상품에 대한 지리적 표시가 타인의 지리적 표시와 발음은 같지만 해당 지역이 다른 지리적 표시를 말한다. 6. \"지리적 표시 단체표장\"이란 지리적 표시를 사용할 수 있는 상품을 생산ㆍ제조 또는 가공하는 자가 공동으로 설립한 법인이 직접 사용하거나 그 소속 단체원에게 사용하게 하기 위한 표장을 말한다. 7. \"증명표장\"이란 상품의 품질, 원산지, 생산방법 또는 그 밖의 특성을 증명하고 관리하는 것을 업(業)으로 하는 자가 타인의 상품에 대하여 그 상품이 품질, 원산지, 생산방법 또는 그 밖의 특성을 충족한다는 것을 증명하는 데 사용하는 표장을 말한다. 8. \"지리적 표시 증명표장\"이란 지리적 표시를 증명하는 것을 업으로 하는 자가 타인의 상품에 대하여 그 상품이 정해진 지리적 특성을 충족한다는 것을 증명하는 데 사용하는 표장을 말한다. 9. \"업무표장\"이란 영리를 목적으로 하지 아니하는 업무를 하는 자가 그 업무를 나타내기 위하여 사용하는 표장을 말한다. 10. \"등록상표\"란 상표등록을 받은 상표를 말한다. 11. \"상표의 사용\"이란 다음 각 목의 어느 하나에 해당하는 행위를 말한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9619813561439514,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ3",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상표법 2조  정의 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 2조  정의#KOBLEX-056924"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 3.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "상표법 2조  정의#KOBLEX-056924",
+        "provision_text": "③ 단체표장ㆍ증명표장 또는 업무표장에 관하여는 이 법에서 특별히 규정한 것을 제외하고는 상표에 관한 규정을 적용한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.40703821182250977,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ3",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상표법 2조  정의 3항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 54조  상표등록거절결정#KOBLEX-057152"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 23.153426898209425,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "상표법 54조  상표등록거절결정#KOBLEX-057152",
+        "provision_text": "1. 제2조제1항에 따른 상표, 단체표장, 지리적 표시, 지리적 표시 단체표장, 증명표장, 지리적 표시 증명표장 또는 업무표장의 정의에 맞지 아니하는 경우",
+        "rerank_rank": 3,
+        "rerank_score": 0.2187412530183792,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ3",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상표법 54조  상표등록거절결정 1호",
+        "target_evidence_item_ids": [
+          "E2",
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 34조  상표등록을 받을 수 없는 상표#KOBLEX-057050"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 22.4312576058597,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "상표법 34조  상표등록을 받을 수 없는 상표#KOBLEX-057050",
+        "provision_text": "① 제33조에도 불구하고 다음 각 호의 어느 하나에 해당하는 상표에 대해서는 상표등록을 받을 수 없다. <개정 2023.10.31> 1. 국가의 국기(國旗) 및 국제기구의 기장(記章) 등으로서 다음 각 목의 어느 하나에 해당하는 상표 2. 국가ㆍ인종ㆍ민족ㆍ공공단체ㆍ종교 또는 저명한 고인(故人)과의 관계를 거짓으로 표시하거나 이들을 비방 또는 모욕하거나 이들에 대한 평판을 나쁘게 할 우려가 있는 상표 3. 국가ㆍ공공단체 또는 이들의 기관과 공익법인의 비영리 업무나 공익사업을 표시하는 표장으로서 저명한 것과 동일ㆍ유사한 상표. 다만, 그 국가 등이 자기의 표장을 상표등록출원한 경우에는 상표등록을 받을 수 있다. 4. 상표 그 자체 또는 상표가 상품에 사용되는 경우 수요자에게 주는 의미와 내용 등이 일반인의 통상적인 도덕관념인 선량한 풍속에 어긋나는 등 공공의 질서를 해칠 우려가 있는 상표 5. 정부가 개최하거나 정부의 승인을 받아 개최하는 박람회 또는 외국정부가 개최하거나 외국정부의 승인을 받아 개최하는 박람회의 상패ㆍ상장 또는 포장과 동일ㆍ유사한 표장이 있는 상표. 다만, 그 박람회에서 수상한 자가 그 수상한 상품에 관하여 상표의 일부로서 그 표장을 사용하는 경우에는 상표등록을 받을 수 있다. 6. 저명한 타인의 성명ㆍ명칭 또는 상호ㆍ초상ㆍ서명ㆍ인장ㆍ아호(雅號)ㆍ예명(藝名)ㆍ필명(筆名) 또는 이들의 약칭을 포함하는 상표. 다만, 그 타인의 승낙을 받은 경우에는 상표등록을 받을 수 있다. 7. 선출원(先出願)에 의한 타인의 등록상표(등록된 지리적 표시 단체표장은 제외한다)와 동일ㆍ유사한 상표로서 그 지정상품과 동일ㆍ유사한 상품에 사용하는 상표. 다만, 그 타인으로부터 상표등록에 대한 동의를 받은 경우(동일한 상표로서 그 지정상품과 동일한 상품에 사용하는 상표에 대하여 동의를 받은 경우는 제외한다)에는 상표등록을 받을 수 있다. 8. 선출원에 의한 타인의 등록된 지리적 표시 단체표장과 동일ㆍ유사한 상표로서 그 지정상품과 동일하다고 인식되어 있는 상품에 사용하는 상표 9. 타인의 상품을 표시하는 것이라고 수요자들에게 널리 인식되어 있는 상표(지리적 표시는 제외한다)와 동일ㆍ유사한 상표로서 그 타인의 상품과 동일ㆍ유사한 상품에 사용하는 상표 10. 특정 지역의 상품을 표시하는 것이라고 수요자들에게 널리 인식되어 있는 타인의 지리적 표시와 동일ㆍ유사한 상표로서 그 지리적 표시를 사용하는 상품과 동일하다고 인정되어 있는 상품에 사용하는 상표 11. 수요자들에게 현저하게 인식되어 있는 타인의 상품이나 영업과 혼동을 일으키게 하거나 그 식별력 또는 명성을 손상시킬 염려가 있는 상표 12. 상품의 품질을 오인하게 하거나 수요자를 기만할 염려가 있는 상표 13. 국내 또는 외국의 수요자들에게 특정인의 상품을 표시하는 것이라고 인식되어 있는 상표(지리적 표시는 제외한다)와 동일ㆍ유사한 상표로서 부당한 이익을 얻으려 하거나 그 특정인에게 손해를 입히려고 하는 등 부정한 목적으로 사용하는 상표 14. 국내 또는 외국의 수요자들에게 특정 지역의 상품을 표시하는 것이라고 인식되어 있는 지리적 표시와 동일ㆍ유사한 상표로서 부당한 이익을 얻으려 하거나 그 지리적 표시의 정당한 사용자에게 손해를 입히려고 하는 등 부정한 목적으로 사용하는 상표 15. 상표등록을 받으려는 상품 또는 그 상품의 포장의 기능을 확보하는 데 꼭 필요한(서비스의 경우에는 그 이용과 목적에 꼭 필요한 경우를 말한다) 입체적 형상, 색채, 색채의 조합, 소리 또는 냄새만으로 된 상표 16. 세계무역기구 회원국 내의 포도주 또는 증류주의 산지에 관한 지리적 표시로서 구성되거나 그 지리적 표시를 포함하는 상표로서 포도주 또는 증류주에 사용하려는 상표. 다만, 지리적 표시의 정당한 사용자가 해당 상품을 지정상품으로 하여 제36조제5항에 따른 지리적 표시 단체표장등록출원을 한 경우에는 상표등록을 받을 수 있다. 17. 「식물신품종 보호법」 제109조에 따라 등록된 품종명칭과 동일ㆍ유사한 상표로서 그 품종명칭과 동일ㆍ유사한 상품에 대하여 사용하는 상표 18. 「농수산물 품질관리법」 제32조에 따라 등록된 타인의 지리적 표시와 동일ㆍ유사한 상표로서 그 지리적 표시를 사용하는 상품과 동일하다고 인정되는 상품에 사용하는 상표 19. 대한민국이 외국과 양자간(兩者間) 또는 다자간(多者間)으로 체결하여 발효된 자유무역협정에 따라 보호하는 타인의 지리적 표시와 동일ㆍ유사한 상표 또는 그 지리적 표시로 구성되거나 그 지리적 표시를 포함하는 상표로서 지리적 표시를 사용하는 상품과 동일하다고 인정되는 상품에 사용하는 상표 20. 동업ㆍ고용 등 계약관계나 업무상 거래관계 또는 그 밖의 관계를 통하여 타인이 사용하거나 사용을 준비 중인 상표임을 알면서 그 상표와 동일ㆍ유사한 상표를 동일ㆍ유사한 상품에 등록출원한 상표 21. 조약당사국에 등록된 상표와 동일ㆍ유사한 상표로서 그 등록된 상표에 관한 권리를 가진 자와의 동업ㆍ고용 등 계약관계나 업무상 거래관계 또는 그 밖의 관계에 있거나 있었던 자가 그 상표에 관한 권리를 가진 자의 동의를 받지 아니하고 그 상표의 지정상품과 동일ㆍ유사한 상품을 지정상품으로 하여 등록출원한 상표",
+        "rerank_rank": 4,
+        "rerank_score": 0.04491459205746651,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ3",
+          "RQ1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상표법 34조  상표등록을 받을 수 없는 상표 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E3",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 2조  정의#KOBLEX-056921"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 51,
+        "first_stage_score": 19.807456996764415,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "상표법 2조  정의#KOBLEX-056921",
+        "provision_text": "제2조(정의)",
+        "rerank_rank": 7,
+        "rerank_score": 0.035242266952991486,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ3",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상표법 2조  정의",
+        "target_evidence_item_ids": [
+          "E2",
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 33조  상표등록의 요건#KOBLEX-057046"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 23.154047565653713,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "상표법 33조  상표등록의 요건#KOBLEX-057046",
+        "provision_text": "① 다음 각 호의 어느 하나에 해당하는 상표를 제외하고는 상표등록을 받을 수 있다. 1. 그 상품의 보통명칭을 보통으로 사용하는 방법으로 표시한 표장만으로 된 상표 2. 그 상품에 대하여 관용(慣用)하는 상표 3. 그 상품의 산지(産地)ㆍ품질ㆍ원재료ㆍ효능ㆍ용도ㆍ수량ㆍ형상ㆍ가격ㆍ생산방법ㆍ가공방법ㆍ사용방법 또는 시기를 보통으로 사용하는 방법으로 표시한 표장만으로 된 상표 4. 현저한 지리적 명칭이나 그 약어(略語) 또는 지도만으로 된 상표 5. 흔히 있는 성(姓) 또는 명칭을 보통으로 사용하는 방법으로 표시한 표장만으로 된 상표 6. 간단하고 흔히 있는 표장만으로 된 상표 7. 제1호부터 제6호까지에 해당하는 상표 외에 수요자가 누구의 업무에 관련된 상품을 표시하는 것인가를 식별할 수 없는 상표",
+        "rerank_rank": 5,
+        "rerank_score": 0.025138191878795624,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ3",
+          "RQ1",
+          "GRQ-R2-2",
+          "GRQ-R2-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상표법 33조  상표등록의 요건 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E3",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 2조  정의#KOBLEX-056923"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 3.0,
+        "fusion_rank": 14,
+        "issue_id": "I2",
+        "provision_id": "상표법 2조  정의#KOBLEX-056923",
+        "provision_text": "② 제1항제11호 각 목에 따른 상표를 표시하는 행위에는 다음 각 호의 어느 하나의 방법으로 표시하는 행위가 포함된다. 1. 표장의 형상이나 소리 또는 냄새로 상표를 표시하는 행위 2. 전기통신회선을 통하여 제공되는 정보에 전자적 방법으로 표시하는 행위",
+        "rerank_rank": 14,
+        "rerank_score": 0.006448463071137667,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ3"
+        ],
+        "statute_name": "상표법 2조  정의 2항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 125조  상표등록의 무효심판 등에 대한 심판청구방식#KOBLEX-057427"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 3.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "상표법 125조  상표등록의 무효심판 등에 대한 심판청구방식#KOBLEX-057427",
+        "provision_text": "③ 제121조에 따른 권리범위 확인심판을 청구할 경우에는 등록상표와 대비할 수 있는 상표견본 및 그 사용상품목록을 첨부하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.005627091974020004,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "상표법 125조  상표등록의 무효심판 등에 대한 심판청구방식 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 150조  일사부재리#KOBLEX-057530"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 4.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "상표법 150조  일사부재리#KOBLEX-057530",
+        "provision_text": "제150조(일사부재리) 이 법에 따른 심판의 심결이 확정되었을 경우에는 그 사건에 대해서는 누구든지 같은 사실 및 같은 증거에 의하여 다시 심판을 청구할 수 없다. 다만, 확정된 심결이 각하심결인 경우에는 그러하지 아니하다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.0050140125676989555,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "상표법 150조  일사부재리",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 125조  상표등록의 무효심판 등에 대한 심판청구방식#KOBLEX-057426"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 23.910233940716445,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "상표법 125조  상표등록의 무효심판 등에 대한 심판청구방식#KOBLEX-057426",
+        "provision_text": "② 제1항에 따라 제출된 심판청구서를 보정하는 경우에는 요지를 변경할 수 없다. 다만, 다음 각 호의 어느 하나에 해당하는 경우에는 그러하지 아니하다. 1. 제1항제1호에 따른 당사자 중 상표권자의 기재사항을 바로 잡기 위하여 보정(추가하는 것을 포함한다)하는 경우 2. 제1항제4호에 따른 청구의 이유를 보정하는 경우 3. 상표권자 또는 전용사용권자가 제121조에 따라 청구한 권리범위 확인심판에서 심판청구서의 확인대상 상표 및 상표가 사용되고 있는 상품(청구인이 주장하는 피청구인의 상표와 그 사용상품을 말한다)에 대하여 피청구인이 자신이 실제로 사용하고 있는 상표 및 그 사용상품과 비교하여 다르다고 주장하는 경우에 청구인이 피청구인의 사용 상표 및 그 상품과 같게 하기 위하여 심판청구서의 확인대상 상표 및 사용상품을 보정하는 경우",
+        "rerank_rank": 2,
+        "rerank_score": 0.00036566320341080427,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상표법 125조  상표등록의 무효심판 등에 대한 심판청구방식 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 2조  정의#KOBLEX-056925"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 38.81272505465978,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "상표법 2조  정의#KOBLEX-056925",
+        "provision_text": "④ 지리적 표시 증명표장에 관하여는 이 법에서 특별히 규정한 것을 제외하고는 지리적 표시 단체표장에 관한 규정을 적용한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.00035688828211277723,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상표법 2조  정의 4항",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 194조  상표등록료 등의 특례#KOBLEX-057671"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 93,
+        "first_stage_score": 3.0,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "상표법 194조  상표등록료 등의 특례#KOBLEX-057671",
+        "provision_text": "③ 국제상표등록출원 또는 국제등록기초상표권에 대해서는 제72조부터 제77조까지의 규정을 적용하지 아니한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.00013648746244143695,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상표법 194조  상표등록료 등의 특례 3항",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 179조  업무표장에 대한 적용 제외#KOBLEX-057625"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 3.0,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "상표법 179조  업무표장에 대한 적용 제외#KOBLEX-057625",
+        "provision_text": "제179조(업무표장에 대한 적용 제외) 업무표장에 관하여는 제167조부터 제178조까지의 규정을 적용하지 아니한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.0001300867588724941,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상표법 179조  업무표장에 대한 적용 제외",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 149조  심결#KOBLEX-057524"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 88,
+        "first_stage_score": 3.0,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "상표법 149조  심결#KOBLEX-057524",
+        "provision_text": "① 심판은 특별한 규정이 있는 경우를 제외하고는 심결로써 종결한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.00010944771929644048,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "상표법 149조  심결 1항",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 374조  「상법」의 적용#KOBLEX-137096"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 32,
+        "first_stage_score": 22.74724823801984,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 374조  「상법」의 적용#KOBLEX-137096",
+        "provision_text": "제374조(「상법」의 적용) 거래소에 대하여는 이 법에서 특별히 정한 경우를 제외하고는 「상법」 중 주식회사에 관한 규정을 적용한다.",
+        "rerank_rank": 8,
+        "rerank_score": 8.043786510825157e-05,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 374조  「상법」의 적용",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 225조  등록상표와 유사한 상표 등에 대한 특칙#KOBLEX-057756"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 22.088218506343786,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "상표법 225조  등록상표와 유사한 상표 등에 대한 특칙#KOBLEX-057756",
+        "provision_text": "③ 제108조제2항제1호에 따른 \"타인의 지리적 표시 등록단체표장과 유사한 상표\"에는 그 등록단체표장과 유사한 상표로서 색채를 등록단체표장과 동일하게 하면 등록단체표장과 같은 상표라고 인정되는 상표가 포함되지 아니하는 것으로 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0072652124799788,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상표법 225조  등록상표와 유사한 상표 등에 대한 특칙 3항",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 225조  등록상표와 유사한 상표 등에 대한 특칙#KOBLEX-057755"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 22.343262612231296,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "상표법 225조  등록상표와 유사한 상표 등에 대한 특칙#KOBLEX-057755",
+        "provision_text": "② 제108조제1항제1호 및 제119조제1항제1호에 따른 \"등록상표와 유사한 상표\"에는 그 등록상표와 유사한 상표로서 색채를 등록상표와 동일하게 하면 등록상표와 같은 상표라고 인정되는 상표가 포함되지 아니하는 것으로 한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.003606105223298073,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상표법 225조  등록상표와 유사한 상표 등에 대한 특칙 2항",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 34조  상표등록을 받을 수 없는 상표#KOBLEX-057049"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 23.608699991438076,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "상표법 34조  상표등록을 받을 수 없는 상표#KOBLEX-057049",
+        "provision_text": "제34조(상표등록을 받을 수 없는 상표)",
+        "rerank_rank": 7,
+        "rerank_score": 0.00039773262687958777,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상표법 34조  상표등록을 받을 수 없는 상표",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 37조  상표등록출원일의 인정 등#KOBLEX-057068"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 25.015508461569297,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "상표법 37조  상표등록출원일의 인정 등#KOBLEX-057068",
+        "provision_text": "제37조(상표등록출원일의 인정 등)",
+        "rerank_rank": 8,
+        "rerank_score": 0.0003349213511683047,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상표법 37조  상표등록출원일의 인정 등",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상표법 33조  상표등록의 요건#KOBLEX-057045"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 26.259754892983807,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "상표법 33조  상표등록의 요건#KOBLEX-057045",
+        "provision_text": "제33조(상표등록의 요건)",
+        "rerank_rank": 9,
+        "rerank_score": 0.00015069279470480978,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "상표법 33조  상표등록의 요건",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "상표법 125조  상표등록의 무효심판 등에 대한 심판청구방식#KOBLEX-057426": "② 제1항에 따라 제출된 심판청구서를 보정하는 경우에는 요지를 변경할 수 없다. 다만, 다음 각 호의 어느 하나에 해당하는 경우에는 그러하지 아니하다. 1. 제1항제1호에 따른 당사자 중 상표권자의 기재사항을 바로 잡기 위하여 보정(추가하는 것을 포함한다)하는 경우 2. 제1항제4호에 따른 청구의 이유를 보정하는 경우 3. 상표권자 또는 전용사용권자가 제121조에 따라 청구한 권리범위 확인심판에서 심판청구서의 확인대상 상표 및 상표가 사용되고 있는 상품(청구인이 주장하는 피청구인의 상표와 그 사용상품을 말한다)에 대하여 피청구인이 자신이 실제로 사용하고 있는 상표 및 그 사용상품과 비교하여 다르다고 주장하는 경우에 청구인이 피청구인의 사용 상표 및 그 상품과 같게 하기 위하여 심판청구서의 확인대상 상표 및 사용상품을 보정하는 경우",
+      "상표법 125조  상표등록의 무효심판 등에 대한 심판청구방식#KOBLEX-057427": "③ 제121조에 따른 권리범위 확인심판을 청구할 경우에는 등록상표와 대비할 수 있는 상표견본 및 그 사용상품목록을 첨부하여야 한다.",
+      "상표법 149조  심결#KOBLEX-057524": "① 심판은 특별한 규정이 있는 경우를 제외하고는 심결로써 종결한다.",
+      "상표법 150조  일사부재리#KOBLEX-057530": "제150조(일사부재리) 이 법에 따른 심판의 심결이 확정되었을 경우에는 그 사건에 대해서는 누구든지 같은 사실 및 같은 증거에 의하여 다시 심판을 청구할 수 없다. 다만, 확정된 심결이 각하심결인 경우에는 그러하지 아니하다.",
+      "상표법 179조  업무표장에 대한 적용 제외#KOBLEX-057625": "제179조(업무표장에 대한 적용 제외) 업무표장에 관하여는 제167조부터 제178조까지의 규정을 적용하지 아니한다.",
+      "상표법 194조  상표등록료 등의 특례#KOBLEX-057671": "③ 국제상표등록출원 또는 국제등록기초상표권에 대해서는 제72조부터 제77조까지의 규정을 적용하지 아니한다.",
+      "상표법 225조  등록상표와 유사한 상표 등에 대한 특칙#KOBLEX-057755": "② 제108조제1항제1호 및 제119조제1항제1호에 따른 \"등록상표와 유사한 상표\"에는 그 등록상표와 유사한 상표로서 색채를 등록상표와 동일하게 하면 등록상표와 같은 상표라고 인정되는 상표가 포함되지 아니하는 것으로 한다.",
+      "상표법 225조  등록상표와 유사한 상표 등에 대한 특칙#KOBLEX-057756": "③ 제108조제2항제1호에 따른 \"타인의 지리적 표시 등록단체표장과 유사한 상표\"에는 그 등록단체표장과 유사한 상표로서 색채를 등록단체표장과 동일하게 하면 등록단체표장과 같은 상표라고 인정되는 상표가 포함되지 아니하는 것으로 한다.",
+      "상표법 2조  정의#KOBLEX-056921": "제2조(정의)",
+      "상표법 2조  정의#KOBLEX-056922": "① 이 법에서 사용하는 용어의 뜻은 다음과 같다. <개정 2022.2.3> 1. \"상표\"란 자기의 상품(지리적 표시가 사용되는 상품의 경우를 제외하고는 서비스 또는 서비스의 제공에 관련된 물건을 포함한다. 이하 같다)과 타인의 상품을 식별하기 위하여 사용하는 표장(標章)을 말한다. 2. \"표장\"이란 기호, 문자, 도형, 소리, 냄새, 입체적 형상, 홀로그램ㆍ동작 또는 색채 등으로서 그 구성이나 표현방식에 상관없이 상품의 출처(出處)를 나타내기 위하여 사용하는 모든 표시를 말한다. 3. \"단체표장\"이란 상품을 생산ㆍ제조ㆍ가공ㆍ판매하거나 서비스를 제공하는 자가 공동으로 설립한 법인이 직접 사용하거나 그 소속 단체원에게 사용하게 하기 위한 표장을 말한다. 4. \"지리적 표시\"란 상품의 특정 품질ㆍ명성 또는 그 밖의 특성이 본질적으로 특정지역에서 비롯된 경우에 그 지역에서 생산ㆍ제조 또는 가공된 상품임을 나타내는 표시를 말한다. 5. \"동음이의어 지리적 표시\"란 같은 상품에 대한 지리적 표시가 타인의 지리적 표시와 발음은 같지만 해당 지역이 다른 지리적 표시를 말한다. 6. \"지리적 표시 단체표장\"이란 지리적 표시를 사용할 수 있는 상품을 생산ㆍ제조 또는 가공하는 자가 공동으로 설립한 법인이 직접 사용하거나 그 소속 단체원에게 사용하게 하기 위한 표장을 말한다. 7. \"증명표장\"이란 상품의 품질, 원산지, 생산방법 또는 그 밖의 특성을 증명하고 관리하는 것을 업(業)으로 하는 자가 타인의 상품에 대하여 그 상품이 품질, 원산지, 생산방법 또는 그 밖의 특성을 충족한다는 것을 증명하는 데 사용하는 표장을 말한다. 8. \"지리적 표시 증명표장\"이란 지리적 표시를 증명하는 것을 업으로 하는 자가 타인의 상품에 대하여 그 상품이 정해진 지리적 특성을 충족한다는 것을 증명하는 데 사용하는 표장을 말한다. 9. \"업무표장\"이란 영리를 목적으로 하지 아니하는 업무를 하는 자가 그 업무를 나타내기 위하여 사용하는 표장을 말한다. 10. \"등록상표\"란 상표등록을 받은 상표를 말한다. 11. \"상표의 사용\"이란 다음 각 목의 어느 하나에 해당하는 행위를 말한다.",
+      "상표법 2조  정의#KOBLEX-056923": "② 제1항제11호 각 목에 따른 상표를 표시하는 행위에는 다음 각 호의 어느 하나의 방법으로 표시하는 행위가 포함된다. 1. 표장의 형상이나 소리 또는 냄새로 상표를 표시하는 행위 2. 전기통신회선을 통하여 제공되는 정보에 전자적 방법으로 표시하는 행위",
+      "상표법 2조  정의#KOBLEX-056924": "③ 단체표장ㆍ증명표장 또는 업무표장에 관하여는 이 법에서 특별히 규정한 것을 제외하고는 상표에 관한 규정을 적용한다.",
+      "상표법 2조  정의#KOBLEX-056925": "④ 지리적 표시 증명표장에 관하여는 이 법에서 특별히 규정한 것을 제외하고는 지리적 표시 단체표장에 관한 규정을 적용한다.",
+      "상표법 33조  상표등록의 요건#KOBLEX-057045": "제33조(상표등록의 요건)",
+      "상표법 33조  상표등록의 요건#KOBLEX-057046": "① 다음 각 호의 어느 하나에 해당하는 상표를 제외하고는 상표등록을 받을 수 있다. 1. 그 상품의 보통명칭을 보통으로 사용하는 방법으로 표시한 표장만으로 된 상표 2. 그 상품에 대하여 관용(慣用)하는 상표 3. 그 상품의 산지(産地)ㆍ품질ㆍ원재료ㆍ효능ㆍ용도ㆍ수량ㆍ형상ㆍ가격ㆍ생산방법ㆍ가공방법ㆍ사용방법 또는 시기를 보통으로 사용하는 방법으로 표시한 표장만으로 된 상표 4. 현저한 지리적 명칭이나 그 약어(略語) 또는 지도만으로 된 상표 5. 흔히 있는 성(姓) 또는 명칭을 보통으로 사용하는 방법으로 표시한 표장만으로 된 상표 6. 간단하고 흔히 있는 표장만으로 된 상표 7. 제1호부터 제6호까지에 해당하는 상표 외에 수요자가 누구의 업무에 관련된 상품을 표시하는 것인가를 식별할 수 없는 상표",
+      "상표법 34조  상표등록을 받을 수 없는 상표#KOBLEX-057049": "제34조(상표등록을 받을 수 없는 상표)",
+      "상표법 34조  상표등록을 받을 수 없는 상표#KOBLEX-057050": "① 제33조에도 불구하고 다음 각 호의 어느 하나에 해당하는 상표에 대해서는 상표등록을 받을 수 없다. <개정 2023.10.31> 1. 국가의 국기(國旗) 및 국제기구의 기장(記章) 등으로서 다음 각 목의 어느 하나에 해당하는 상표 2. 국가ㆍ인종ㆍ민족ㆍ공공단체ㆍ종교 또는 저명한 고인(故人)과의 관계를 거짓으로 표시하거나 이들을 비방 또는 모욕하거나 이들에 대한 평판을 나쁘게 할 우려가 있는 상표 3. 국가ㆍ공공단체 또는 이들의 기관과 공익법인의 비영리 업무나 공익사업을 표시하는 표장으로서 저명한 것과 동일ㆍ유사한 상표. 다만, 그 국가 등이 자기의 표장을 상표등록출원한 경우에는 상표등록을 받을 수 있다. 4. 상표 그 자체 또는 상표가 상품에 사용되는 경우 수요자에게 주는 의미와 내용 등이 일반인의 통상적인 도덕관념인 선량한 풍속에 어긋나는 등 공공의 질서를 해칠 우려가 있는 상표 5. 정부가 개최하거나 정부의 승인을 받아 개최하는 박람회 또는 외국정부가 개최하거나 외국정부의 승인을 받아 개최하는 박람회의 상패ㆍ상장 또는 포장과 동일ㆍ유사한 표장이 있는 상표. 다만, 그 박람회에서 수상한 자가 그 수상한 상품에 관하여 상표의 일부로서 그 표장을 사용하는 경우에는 상표등록을 받을 수 있다. 6. 저명한 타인의 성명ㆍ명칭 또는 상호ㆍ초상ㆍ서명ㆍ인장ㆍ아호(雅號)ㆍ예명(藝名)ㆍ필명(筆名) 또는 이들의 약칭을 포함하는 상표. 다만, 그 타인의 승낙을 받은 경우에는 상표등록을 받을 수 있다. 7. 선출원(先出願)에 의한 타인의 등록상표(등록된 지리적 표시 단체표장은 제외한다)와 동일ㆍ유사한 상표로서 그 지정상품과 동일ㆍ유사한 상품에 사용하는 상표. 다만, 그 타인으로부터 상표등록에 대한 동의를 받은 경우(동일한 상표로서 그 지정상품과 동일한 상품에 사용하는 상표에 대하여 동의를 받은 경우는 제외한다)에는 상표등록을 받을 수 있다. 8. 선출원에 의한 타인의 등록된 지리적 표시 단체표장과 동일ㆍ유사한 상표로서 그 지정상품과 동일하다고 인식되어 있는 상품에 사용하는 상표 9. 타인의 상품을 표시하는 것이라고 수요자들에게 널리 인식되어 있는 상표(지리적 표시는 제외한다)와 동일ㆍ유사한 상표로서 그 타인의 상품과 동일ㆍ유사한 상품에 사용하는 상표 10. 특정 지역의 상품을 표시하는 것이라고 수요자들에게 널리 인식되어 있는 타인의 지리적 표시와 동일ㆍ유사한 상표로서 그 지리적 표시를 사용하는 상품과 동일하다고 인정되어 있는 상품에 사용하는 상표 11. 수요자들에게 현저하게 인식되어 있는 타인의 상품이나 영업과 혼동을 일으키게 하거나 그 식별력 또는 명성을 손상시킬 염려가 있는 상표 12. 상품의 품질을 오인하게 하거나 수요자를 기만할 염려가 있는 상표 13. 국내 또는 외국의 수요자들에게 특정인의 상품을 표시하는 것이라고 인식되어 있는 상표(지리적 표시는 제외한다)와 동일ㆍ유사한 상표로서 부당한 이익을 얻으려 하거나 그 특정인에게 손해를 입히려고 하는 등 부정한 목적으로 사용하는 상표 14. 국내 또는 외국의 수요자들에게 특정 지역의 상품을 표시하는 것이라고 인식되어 있는 지리적 표시와 동일ㆍ유사한 상표로서 부당한 이익을 얻으려 하거나 그 지리적 표시의 정당한 사용자에게 손해를 입히려고 하는 등 부정한 목적으로 사용하는 상표 15. 상표등록을 받으려는 상품 또는 그 상품의 포장의 기능을 확보하는 데 꼭 필요한(서비스의 경우에는 그 이용과 목적에 꼭 필요한 경우를 말한다) 입체적 형상, 색채, 색채의 조합, 소리 또는 냄새만으로 된 상표 16. 세계무역기구 회원국 내의 포도주 또는 증류주의 산지에 관한 지리적 표시로서 구성되거나 그 지리적 표시를 포함하는 상표로서 포도주 또는 증류주에 사용하려는 상표. 다만, 지리적 표시의 정당한 사용자가 해당 상품을 지정상품으로 하여 제36조제5항에 따른 지리적 표시 단체표장등록출원을 한 경우에는 상표등록을 받을 수 있다. 17. 「식물신품종 보호법」 제109조에 따라 등록된 품종명칭과 동일ㆍ유사한 상표로서 그 품종명칭과 동일ㆍ유사한 상품에 대하여 사용하는 상표 18. 「농수산물 품질관리법」 제32조에 따라 등록된 타인의 지리적 표시와 동일ㆍ유사한 상표로서 그 지리적 표시를 사용하는 상품과 동일하다고 인정되는 상품에 사용하는 상표 19. 대한민국이 외국과 양자간(兩者間) 또는 다자간(多者間)으로 체결하여 발효된 자유무역협정에 따라 보호하는 타인의 지리적 표시와 동일ㆍ유사한 상표 또는 그 지리적 표시로 구성되거나 그 지리적 표시를 포함하는 상표로서 지리적 표시를 사용하는 상품과 동일하다고 인정되는 상품에 사용하는 상표 20. 동업ㆍ고용 등 계약관계나 업무상 거래관계 또는 그 밖의 관계를 통하여 타인이 사용하거나 사용을 준비 중인 상표임을 알면서 그 상표와 동일ㆍ유사한 상표를 동일ㆍ유사한 상품에 등록출원한 상표 21. 조약당사국에 등록된 상표와 동일ㆍ유사한 상표로서 그 등록된 상표에 관한 권리를 가진 자와의 동업ㆍ고용 등 계약관계나 업무상 거래관계 또는 그 밖의 관계에 있거나 있었던 자가 그 상표에 관한 권리를 가진 자의 동의를 받지 아니하고 그 상표의 지정상품과 동일ㆍ유사한 상품을 지정상품으로 하여 등록출원한 상표",
+      "상표법 37조  상표등록출원일의 인정 등#KOBLEX-057068": "제37조(상표등록출원일의 인정 등)",
+      "상표법 54조  상표등록거절결정#KOBLEX-057152": "1. 제2조제1항에 따른 상표, 단체표장, 지리적 표시, 지리적 표시 단체표장, 증명표장, 지리적 표시 증명표장 또는 업무표장의 정의에 맞지 아니하는 경우",
+      "소득세법 시행령 41조  기타소득의 범위 등#KOBLEX-141223": "②법 제21조제1항제7호에 따른 \"상표권\"은 「상표법」에 따른 상표, 서비스표, 단체표장, 지리적 표시, 동음이의어 지리적 표시, 지리적 표시 단체표장, 등록상표 및 업무표장에 관한 권리를 말한다. <신설 2007.2.28>",
+      "자본시장과 금융투자업에 관한 법률 374조  「상법」의 적용#KOBLEX-137096": "제374조(「상법」의 적용) 거래소에 대하여는 이 법에서 특별히 정한 경우를 제외하고는 「상법」 중 주식회사에 관한 규정을 적용한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "상표법 150조  일사부재리#KOBLEX-057530"
+            ],
+            "rationale": "C010(상표법 제150조)은 각하심결에 대해 일사부재리 원칙이 적용되지 않음을 명시하여 재청구의 법적 근거를 제공한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "새로운 증거 제출을 조건으로 한 재청구 허용 여부나 절차적 요건을 규정한 조항이 후보 목록에 없다.",
+            "requirement_id": "E1-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "상표법 150조  일사부재리#KOBLEX-057530"
+        ],
+        "missing_aspects": [
+          "E1-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "각하심결에 대한 재청구 허용 근거(C010)는 확인되었으나, 새로운 증거 제출을 조건으로 한 재청구의 구체적 허용 여부나 절차적 요건을 규정한 조항이 후보 목록에 부재하여 법적 지원이 불완전하다.",
+        "status": "partially_covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "상표법 2조  정의#KOBLEX-056922"
+            ],
+            "rationale": "C002(상표법 제2조 제1항)은 상표의 정의를 명확히 규정하고 있다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "상표법 2조  정의#KOBLEX-056922"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "상표의 법적 정의를 명시적으로 규정하는 조항(C002)이 제공되어 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "상표법 2조  정의#KOBLEX-056924"
+            ],
+            "rationale": "C003(상표법 제2조 제3항)은 '특별히 규정한 것을 제외'한다고 하여 예외 조항의 존재를 확인시킨다.",
+            "requirement_id": "E3-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "예외가 인정되는 구체적인 상황이나 요건을 명시한 조항이 후보 목록에 없다.",
+            "requirement_id": "E3-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E3",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "상표법 2조  정의#KOBLEX-056924"
+        ],
+        "missing_aspects": [
+          "E3-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "상표 정의 관련 예외의 존재를 시사하는 조항(C003)은 있으나, 예외가 인정되는 구체적인 상황과 요건을 정의하는 조항이 부재하여 법적 지원이 불완전하다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "상표법 150조  일사부재리#KOBLEX-057530",
+        "support_spans": [
+          {
+            "end_char": 125,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "상표법 2조  정의#KOBLEX-056922",
+        "support_spans": [
+          {
+            "end_char": 1044,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E3",
+        "issue_id": "I2",
+        "provision_id": "상표법 2조  정의#KOBLEX-056924",
+        "support_spans": [
+          {
+            "end_char": 65,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 5,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "상표 등록 거절 심판이 각하된 후 새로운 증거를 제출하여 다시 심판을 청구할 수 있는 법적 근거와 요건",
+        "issue_id": "I1"
+      },
+      {
+        "description": "상표의 법적 정의와 관련하여 예외가 인정되는 상황",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "재청구 가능 여부 및 요건 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "상표 등록 거절 심판 재청구의 법적 근거 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "새로운 증거 제출 시 재청구 허용 여부 확인"
+          }
+        ],
+        "critical": true,
+        "description": "상표 등록 거절 심판 재청구의 요건 및 절차",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 명시적으로 재청구 가능 여부를 묻고 있으므로 핵심 결론에 필수",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "상표 정의 예외 상황 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E3-R1",
+            "text": "상표 정의 예외 조항 확인"
+          },
+          {
+            "requirement_id": "E3-R2",
+            "text": "예외 인정 요건 확인"
+          }
+        ],
+        "critical": true,
+        "description": "상표의 정의에서 예외가 인정되는 상황",
+        "evidence_item_id": "E3",
+        "evidence_type": "exception",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 명시적으로 예외 상황을 묻고 있으므로 핵심 결론에 필수",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 갑은 자신의 디자인을 상표로 등록하기 위해 특허청에 신청하였으나, 을이 유사한 디자인을 이미 상표로 등록한 상태였습니다. 갑은 상표 등록 거절 결정을 받고 심판을 청구했으나, 특허청은 을의 상표와의 혼동 가능성을 이유로 심판 청구를 각하하였습니다. 이후 갑은 자신의 디자인이 을의 상품과 전혀 관련이 없는 별개의 용도로 사용된다는 새로운 증거를 제출하여 다시 심판을 청구하고자 합니다. [질문] 갑이 상표 등록 심판을 다시 청구할 수 있는 경우는 무엇이며, 이 경우 상표의 정의와 관련하여 예외가 발생할 수 있는 상황은 무엇인가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "상표 등록 거절 심판 재청구 새로운 증거 각하",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "상표",
+          "등록",
+          "거절",
+          "심판",
+          "재청구",
+          "증거",
+          "각하"
+        ],
+        "query_text": "상표 등록 거절 심판 각하 후 새로운 증거 제출 재청구 요건 [원문 맥락] 이후 갑은 자신의 디자인이 을의 상품과 전혀 관련이 없는 별개의 용도로 사용된다는 새로운 증거를 제출하여 다시 심판을 청구하고자 합니다. 갑이 상표 등록 심판을 다시 청구할 수 있는 경우는 무엇이며, 이 경우 상표의 정의와 관련하여 예외가 발생할 수 있는 상황은 무엇인가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "상표 등록 거절 심판 재청구 요건 새로운 증거",
+        "statute_hints": [
+          "상표법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "상표 정의 상표법",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "상표",
+          "정의",
+          "상표법"
+        ],
+        "query_text": "상표 정의 [원문 맥락] 이후 갑은 자신의 디자인이 을의 상품과 전혀 관련이 없는 별개의 용도로 사용된다는 새로운 증거를 제출하여 다시 심판을 청구하고자 합니다. 갑이 상표 등록 심판을 다시 청구할 수 있는 경우는 무엇이며, 이 경우 상표의 정의와 관련하여 예외가 발생할 수 있는 상황은 무엇인가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "상표의 법적 정의",
+        "statute_hints": [
+          "상표법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "first_stage_query_text": "상표 정의 예외 상표법",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "상표",
+          "정의",
+          "예외",
+          "상표법"
+        ],
+        "query_text": "상표 정의 예외 상황 [원문 맥락] 이후 갑은 자신의 디자인이 을의 상품과 전혀 관련이 없는 별개의 용도로 사용된다는 새로운 증거를 제출하여 다시 심판을 청구하고자 합니다. 갑이 상표 등록 심판을 다시 청구할 수 있는 경우는 무엇이며, 이 경우 상표의 정의와 관련하여 예외가 발생할 수 있는 상황은 무엇인가?",
+        "request_id": "RQ3",
+        "rerank_query_text": "상표의 정의 예외 인정 상황",
+        "statute_hints": [
+          "상표법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "상표 심판 재청구 새로운 증거 각하 후 허용 요건",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "상표",
+          "심판",
+          "재청구",
+          "새로운",
+          "증거",
+          "각하",
+          "허용"
+        ],
+        "query_text": "상표 등록 거절 심판 각하 후 새로운 증거 제출 시 재청구 허용 요건 [원문 맥락] 이후 갑은 자신의 디자인이 을의 상품과 전혀 관련이 없는 별개의 용도로 사용된다는 새로운 증거를 제출하여 다시 심판을 청구하고자 합니다. 갑이 상표 등록 심판을 다시 청구할 수 있는 경우는 무엇이며, 이 경우 상표의 정의와 관련하여 예외가 발생할 수 있는 상황은 무엇인가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "상표 등록 거절 심판 재청구 새로운 증거 제출 허용 여부",
+        "statute_hints": [
+          "상표법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "first_stage_query_text": "상표법 2조 3항 특별히 규정한 것을 제외 예외 요건",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "상표법",
+          "제2조",
+          "제3항",
+          "특별히",
+          "규정한",
+          "제외",
+          "예외"
+        ],
+        "query_text": "상표법 제2조 제3항 특별히 규정한 것을 제외 예외 인정 요건 [원문 맥락] 이후 갑은 자신의 디자인이 을의 상품과 전혀 관련이 없는 별개의 용도로 사용된다는 새로운 증거를 제출하여 다시 심판을 청구하고자 합니다. 갑이 상표 등록 심판을 다시 청구할 수 있는 경우는 무엇이며, 이 경우 상표의 정의와 관련하여 예외가 발생할 수 있는 상황은 무엇인가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "상표의 정의 예외 인정 상황 및 요건",
+        "statute_hints": [
+          "상표법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "상표법 심판 재청구 새로운 증거 기각 각하",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "상표법",
+          "심판",
+          "재청구",
+          "새로운",
+          "증거",
+          "기각",
+          "각하"
+        ],
+        "query_text": "상표법 심판청구 기각 후 새로운 증거 제출 재청구 허용 [원문 맥락] 이후 갑은 자신의 디자인이 을의 상품과 전혀 관련이 없는 별개의 용도로 사용된다는 새로운 증거를 제출하여 다시 심판을 청구하고자 합니다. 갑이 상표 등록 심판을 다시 청구할 수 있는 경우는 무엇이며, 이 경우 상표의 정의와 관련하여 예외가 발생할 수 있는 상황은 무엇인가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "상표 등록 거절 심판 재청구 새로운 증거 제출 허용 여부",
+        "statute_hints": [
+          "상표법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "first_stage_query_text": "상표 정의 예외 인정 상황 요건",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "상표",
+          "정의",
+          "예외",
+          "인정",
+          "상황",
+          "요건"
+        ],
+        "query_text": "상표 정의 예외 인정 상황 요건 [원문 맥락] 이후 갑은 자신의 디자인이 을의 상품과 전혀 관련이 없는 별개의 용도로 사용된다는 새로운 증거를 제출하여 다시 심판을 청구하고자 합니다. 갑이 상표 등록 심판을 다시 청구할 수 있는 경우는 무엇이며, 이 경우 상표의 정의와 관련하여 예외가 발생할 수 있는 상황은 무엇인가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "상표의 정의에서 예외가 인정되는 구체적인 상황 및 요건",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 자신의 디자인을 상표로 등록하기 위해 특허청에 신청하였으나, 을이 유사한 디자인을 이미 상표로 등록한 상태였습니다. 갑은 상표 등록 거절 결정을 받고 심판을 청구했으나, 특허청은 을의 상표와의 혼동 가능성을 이유로 심판 청구를 각하하였습니다. 이후 갑은 자신의 디자인이 을의 상품과 전혀 관련이 없는 별개의 용도로 사용된다는 새로운 증거를 제출하여 다시 심판을 청구하고자 합니다.\n\n[질문]\n갑이 상표 등록 심판을 다시 청구할 수 있는 경우는 무엇이며, 이 경우 상표의 정의와 관련하여 예외가 발생할 수 있는 상황은 무엇인가?",
+    "remaining_request_budget": 2,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "재청구 가능 여부 및 요건 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "상표 등록 거절 심판 재청구의 법적 근거 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "새로운 증거 제출 시 재청구 허용 여부 확인"
+          }
+        ],
+        "critical": true,
+        "description": "상표 등록 거절 심판 재청구의 요건 및 절차",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 명시적으로 재청구 가능 여부를 묻고 있으므로 핵심 결론에 필수",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "상표의 정의 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "상표의 법적 정의 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "상표의 법적 정의",
+        "evidence_item_id": "E2",
+        "evidence_type": "definition",
+        "issue_id": "I2",
+        "necessity_reason": "상표의 정의가 예외 판단의 전제이므로 핵심 결론에 필수",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "상표 정의 예외 상황 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E3-R1",
+            "text": "상표 정의 예외 조항 확인"
+          },
+          {
+            "requirement_id": "E3-R2",
+            "text": "예외 인정 요건 확인"
+          }
+        ],
+        "critical": true,
+        "description": "상표의 정의에서 예외가 인정되는 상황",
+        "evidence_item_id": "E3",
+        "evidence_type": "exception",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 명시적으로 예외 상황을 묻고 있으므로 핵심 결론에 필수",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "57dc8639-9351-4d48-ad1e-19b6c73440a9",
+    "seen_provision_ids": [
+      "자본시장과 금융투자업에 관한 법률 374조  「상법」의 적용#KOBLEX-137096",
+      "소득세법 시행령 41조  기타소득의 범위 등#KOBLEX-141223",
+      "상표법 150조  일사부재리#KOBLEX-057530",
+      "상표법 194조  상표등록료 등의 특례#KOBLEX-057671",
+      "상표법 2조  정의#KOBLEX-056925",
+      "상표법 125조  상표등록의 무효심판 등에 대한 심판청구방식#KOBLEX-057426",
+      "상표법 125조  상표등록의 무효심판 등에 대한 심판청구방식#KOBLEX-057427",
+      "상표법 33조  상표등록의 요건#KOBLEX-057046",
+      "상표법 2조  정의#KOBLEX-056924",
+      "상표법 33조  상표등록의 요건#KOBLEX-057045",
+      "상표법 2조  정의#KOBLEX-056921",
+      "상표법 149조  심결#KOBLEX-057524",
+      "상표법 2조  정의#KOBLEX-056922",
+      "상표법 34조  상표등록을 받을 수 없는 상표#KOBLEX-057050",
+      "상표법 179조  업무표장에 대한 적용 제외#KOBLEX-057625",
+      "상표법 54조  상표등록거절결정#KOBLEX-057152",
+      "상표법 225조  등록상표와 유사한 상표 등에 대한 특칙#KOBLEX-057755",
+      "상표법 225조  등록상표와 유사한 상표 등에 대한 특칙#KOBLEX-057756",
+      "상표법 37조  상표등록출원일의 인정 등#KOBLEX-057068",
+      "상표법 2조  정의#KOBLEX-056923",
+      "상표법 34조  상표등록을 받을 수 없는 상표#KOBLEX-057049"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "NO_RETRIEVAL_PROGRESS"
+}

@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T23:41:13.543664+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 149422.168,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 146 column 28 (char 4073)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "31613e7e-3acf-4180-94d4-771d066aebdf",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 146 column 28 (char 4073)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 A건축사사무소의 소유주로서, 여러 규정을 위반하여 시청으로부터 건축사사무소 개설신고의 효력상실처분을 받았습니다. 갑은 이 처분이 부당하다고 생각하여, 이를 취소하기 위해 행정소송을 제기하고자 합니다. [질문] 갑이 시청으로부터 받은 건축사사무소 개설신고의 효력상실처분의 취소를 구할 수 있는 법률상 이익이 있는지 여부는?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n갑은 A건축사사무소의 소유주로서, 여러 규정을 위반하여 시청으로부터 건축사사무소 개설신고의 효력상실처분을 받았습니다. 갑은 이 처분이 부당하다고 생각하여, 이를 취소하기 위해 행정소송을 제기하고자 합니다.\n\n[질문]\n갑이 시청으로부터 받은 건축사사무소 개설신고의 효력상실처분의 취소를 구할 수 있는 법률상 이익이 있는지 여부는?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "31613e7e-3acf-4180-94d4-771d066aebdf",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

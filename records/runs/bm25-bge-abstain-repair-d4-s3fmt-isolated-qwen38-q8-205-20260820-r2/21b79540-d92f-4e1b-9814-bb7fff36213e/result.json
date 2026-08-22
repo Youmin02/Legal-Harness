@@ -1,0 +1,496 @@
+{
+  "abstention_reason": null,
+  "answer": "강제집행에 필요한 비용은 채무자가 부담하고 그 집행에 의하여 우선적으로 변상을 받는다.[CT1]\n전제: 을이 채무자이고, 갑이 채권자이며, 강제집행 절차가 적법하게 진행되고 있다고 가정합니다.\n한계: 본 답변은 민사집행법 제53조 제1항의 일반적 규정에 기반하며, 판결의 파기 등 예외적 상황이나 다른 특별법 적용 가능성은 다루지 않습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "강제집행에 필요한 비용은 채무자가 부담하고 그 집행에 의하여 우선적으로 변상을 받는다.[CT1]\n전제: 을이 채무자이고, 갑이 채권자이며, 강제집행 절차가 적법하게 진행되고 있다고 가정합니다.\n한계: 본 답변은 민사집행법 제53조 제1항의 일반적 규정에 기반하며, 판결의 파기 등 예외적 상황이나 다른 특별법 적용 가능성은 다루지 않습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T05:53:46.269730+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 75111.214,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 92,
+      "dedup_collapse": 16,
+      "evidence_fusion": 92,
+      "first_stage": 100,
+      "request_rerank": 100,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 92
+    }
+  },
+  "run_id": "21b79540-d92f-4e1b-9814-bb7fff36213e",
+  "state": {
+    "accepted_provision_ids": [
+      "민사집행법 53조  집행비용의 부담#KOBLEX-128201"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 1,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_rule",
+        "question_anchor": "강제집행에 필요한 비용은 누가 부담하는가",
+        "requested_output": "강제집행 비용의 부담 주체"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민사집행법 53조  집행비용의 부담#KOBLEX-128201"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 4.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민사집행법 53조  집행비용의 부담#KOBLEX-128201",
+        "provision_text": "①강제집행에 필요한 비용은 채무자가 부담하고 그 집행에 의하여 우선적으로 변상을 받는다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9991320967674255,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사집행법 53조  집행비용의 부담 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 53조  집행비용의 부담#KOBLEX-128202"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 4.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민사집행법 53조  집행비용의 부담#KOBLEX-128202",
+        "provision_text": "②강제집행의 기초가 된 판결이 파기된 때에는 채권자는 제1항의 비용을 채무자에게 변상하여야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9662597179412842,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사집행법 53조  집행비용의 부담 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "비송사건절차법 29조  비용 채권자의 강제집행#KOBLEX-047537"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 37.98724527058164,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "비송사건절차법 29조  비용 채권자의 강제집행#KOBLEX-047537",
+        "provision_text": "제29조(비용 채권자의 강제집행)",
+        "rerank_rank": 3,
+        "rerank_score": 0.9011369347572327,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "비송사건절차법 29조  비용 채권자의 강제집행",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 24조#KOBLEX-128107"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 76,
+        "first_stage_score": 23.96457384057706,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민사집행법 24조#KOBLEX-128107",
+        "provision_text": "제2편 강제집행",
+        "rerank_rank": 4,
+        "rerank_score": 0.10708949714899063,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사집행법 24조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 258조  부동산 등의 인도청구의 집행#KOBLEX-128908"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 93,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "민사집행법 258조  부동산 등의 인도청구의 집행#KOBLEX-128908",
+        "provision_text": "③강제집행의 목적물이 아닌 동산은 집행관이 제거하여 채무자에게 인도하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.09294803440570831,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사집행법 258조  부동산 등의 인도청구의 집행 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 145조  법정추인#KOBLEX-058671"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 75,
+        "first_stage_score": 23.96457384057706,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "민법 145조  법정추인#KOBLEX-058671",
+        "provision_text": "6. 강제집행",
+        "rerank_rank": 6,
+        "rerank_score": 0.03295886889100075,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 145조  법정추인 6호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송비용법 10조  강제집행, 신청사건의 비용#KOBLEX-018678"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 37.98724527058164,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "민사소송비용법 10조  강제집행, 신청사건의 비용#KOBLEX-018678",
+        "provision_text": "제10조(강제집행, 신청사건의 비용)",
+        "rerank_rank": 7,
+        "rerank_score": 0.013279289938509464,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송비용법 10조  강제집행, 신청사건의 비용",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 566조  면책의 효력#KOBLEX-033217"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 32,
+        "first_stage_score": 27.531634978726633,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 566조  면책의 효력#KOBLEX-033217",
+        "provision_text": "8. 채무자가 양육자 또는 부양의무자로서 부담하여야 하는 비용",
+        "rerank_rank": 8,
+        "rerank_score": 0.007902003824710846,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 566조  면책의 효력 8호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 223조  채권의 압류명령#KOBLEX-128801"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 2.0,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "민사집행법 223조  채권의 압류명령#KOBLEX-128801",
+        "provision_text": "제223조(채권의 압류명령) 제3자에 대한 채무자의 금전채권 또는 유가증권, 그 밖의 유체물의 권리이전이나 인도를 목적으로 한 채권에 대한 강제집행은 집행법원의 압류명령에 의하여 개시한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.001913810265250504,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사집행법 223조  채권의 압류명령",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 26조  외국재판의 강제집행#KOBLEX-128113"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 80,
+        "first_stage_score": 23.364649928254444,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "민사집행법 26조  외국재판의 강제집행#KOBLEX-128113",
+        "provision_text": "제26조(외국재판의 강제집행)",
+        "rerank_rank": 10,
+        "rerank_score": 0.0016317624831572175,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사집행법 26조  외국재판의 강제집행",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "민법 145조  법정추인#KOBLEX-058671": "6. 강제집행",
+      "민사소송비용법 10조  강제집행, 신청사건의 비용#KOBLEX-018678": "제10조(강제집행, 신청사건의 비용)",
+      "민사집행법 223조  채권의 압류명령#KOBLEX-128801": "제223조(채권의 압류명령) 제3자에 대한 채무자의 금전채권 또는 유가증권, 그 밖의 유체물의 권리이전이나 인도를 목적으로 한 채권에 대한 강제집행은 집행법원의 압류명령에 의하여 개시한다.",
+      "민사집행법 24조#KOBLEX-128107": "제2편 강제집행",
+      "민사집행법 258조  부동산 등의 인도청구의 집행#KOBLEX-128908": "③강제집행의 목적물이 아닌 동산은 집행관이 제거하여 채무자에게 인도하여야 한다.",
+      "민사집행법 26조  외국재판의 강제집행#KOBLEX-128113": "제26조(외국재판의 강제집행)",
+      "민사집행법 53조  집행비용의 부담#KOBLEX-128201": "①강제집행에 필요한 비용은 채무자가 부담하고 그 집행에 의하여 우선적으로 변상을 받는다.",
+      "민사집행법 53조  집행비용의 부담#KOBLEX-128202": "②강제집행의 기초가 된 판결이 파기된 때에는 채권자는 제1항의 비용을 채무자에게 변상하여야 한다.",
+      "비송사건절차법 29조  비용 채권자의 강제집행#KOBLEX-047537": "제29조(비용 채권자의 강제집행)",
+      "채무자 회생 및 파산에 관한 법률 566조  면책의 효력#KOBLEX-033217": "8. 채무자가 양육자 또는 부양의무자로서 부담하여야 하는 비용"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민사집행법 53조  집행비용의 부담#KOBLEX-128201"
+            ],
+            "rationale": "C001은 '강제집행에 필요한 비용은 채무자가 부담하고'라고 명시하여, 강제집행 비용의 기본 부담 주체가 채무자임을 규정하는 조항임을 확인시켜 준다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민사집행법 53조  집행비용의 부담#KOBLEX-128201"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001(민사집행법 제53조 제1항)은 강제집행 비용의 기본 부담 주체가 채무자임을 명확히 규정하고 있어, 증거 항목 E1의 완료 기준인 '비용 부담 주체가 채무자임을 명시하는 조항 확인'을 충족한다. C002는 예외적 상황(판결 파기)에 관한 규정으로, 기본 규칙의 확인에는 직접적 기여가 없으나 C001이 이미 기준을 충족하므로 추가 링크는 불필요하다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민사집행법 53조  집행비용의 부담#KOBLEX-128201",
+        "support_spans": [
+          {
+            "end_char": 49,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "강제집행 절차에서 발생하는 비용의 부담 주체를 결정하는 법적 근거가 무엇인가",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을에게 5천만 원을 빌려주었으나, 을이 상환 기한이 지나도 돈을 갚지 않았습니다. 결국 갑은 법원에 강제집행을 신청하였고, 집행관이 을의 자산을 압류하여 경매를 통해 돈을 회수하기로 결정했습니다. 경매 절차를 진행하는 과정에서 강제집행에 소요되는 비용이 발생하였습니다. [질문] 을의 자산에 대한 강제집행에 필요한 비용은 누가 부담하는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "강제집행 비용 부담 채무자 민사집행법 조항",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "강제집행",
+          "비용",
+          "부담",
+          "채무자",
+          "민사집행법"
+        ],
+        "query_text": "강제집행 비용 부담 주체 채무자 민사집행법 [원문 맥락] 경매 절차를 진행하는 과정에서 강제집행에 소요되는 비용이 발생하였습니다. 을의 자산에 대한 강제집행에 필요한 비용은 누가 부담하는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "강제집행 비용 부담 주체 채무자",
+        "statute_hints": [
+          "민사집행법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을에게 5천만 원을 빌려주었으나, 을이 상환 기한이 지나도 돈을 갚지 않았습니다. 결국 갑은 법원에 강제집행을 신청하였고, 집행관이 을의 자산을 압류하여 경매를 통해 돈을 회수하기로 결정했습니다. 경매 절차를 진행하는 과정에서 강제집행에 소요되는 비용이 발생하였습니다.\n\n[질문]\n을의 자산에 대한 강제집행에 필요한 비용은 누가 부담하는가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "비용 부담 주체가 채무자임을 명시하는 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "강제집행 비용의 기본 부담 주체가 채무자임을 규정하는 조항을 확인한다"
+          }
+        ],
+        "critical": true,
+        "description": "강제집행 비용의 부담 주체를 명시하는 민사집행법 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 직접적으로 비용 부담 주체를 묻고 있으므로, 이를 결정하는 핵심 법적 근거가 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "21b79540-d92f-4e1b-9814-bb7fff36213e",
+    "seen_provision_ids": [
+      "민사집행법 24조#KOBLEX-128107",
+      "민사집행법 258조  부동산 등의 인도청구의 집행#KOBLEX-128908",
+      "민법 145조  법정추인#KOBLEX-058671",
+      "민사집행법 26조  외국재판의 강제집행#KOBLEX-128113",
+      "비송사건절차법 29조  비용 채권자의 강제집행#KOBLEX-047537",
+      "민사집행법 53조  집행비용의 부담#KOBLEX-128202",
+      "민사소송비용법 10조  강제집행, 신청사건의 비용#KOBLEX-018678",
+      "민사집행법 53조  집행비용의 부담#KOBLEX-128201",
+      "민사집행법 223조  채권의 압류명령#KOBLEX-128801",
+      "채무자 회생 및 파산에 관한 법률 566조  면책의 효력#KOBLEX-033217"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

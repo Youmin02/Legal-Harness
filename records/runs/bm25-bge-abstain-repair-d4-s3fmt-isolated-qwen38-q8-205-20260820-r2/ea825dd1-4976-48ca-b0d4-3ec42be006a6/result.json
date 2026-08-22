@@ -1,0 +1,1031 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "공유자는 다른 공유자의 동의없이 공유물을 처분하거나 변경하지 못한다.[CT1]\n합유물을 처분 또는 변경함에는 합유자 전원의 동의가 있어야 한다.[CT2]\n합유자는 전원의 동의없이 합유물에 대한 지분을 처분하지 못한다.[CT3]\n전제: 갑, 을, 병 사이의 공동소유 관계가 '공유'인지 '합유'인지 사실관계로 명확히 구분되지 않았다고 가정한다.\n한계: 본 답변은 비공개 벤치마크 진단용이며, 공개 가능한 답변으로 승인되지 않았다.\n한계: 동의 없이 처분한 경우의 법적 효력(무효, 취소 등)에 대한 명시적 조항이 제공되지 않아 해당 부분은 결론에서 제외되었다.\n한계: 일반적인 공유지분의 처분 자유와 우선매수권 등 제한에 대한 조항이 제공되지 않아, 공유관계에서의 지분 매각 허용 여부는 조건부로만 언급되었다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T14:58:41.461540+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 752888.703,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 579,
+      "dedup_collapse": 38,
+      "evidence_fusion": 579,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "round_selected": 30,
+      "rrf": 600,
+      "selected": 579
+    }
+  },
+  "run_id": "ea825dd1-4976-48ca-b0d4-3ec42be006a6",
+  "state": {
+    "accepted_provision_ids": [
+      "민사집행법 140조  공유자의 우선매수권#KOBLEX-128540",
+      "민법 273조  합유지분의 처분과 합유물의 분할금지#KOBLEX-058950",
+      "민법 272조  합유물의 처분, 변경과 보존#KOBLEX-058948",
+      "민법 264조  공유물의 처분, 변경#KOBLEX-058931"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 6,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 0,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 16
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 16,
+          "claim_count": 3
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "을과 병의 동의 없이 토지를 매각하거나 변경할 수 있는가",
+        "requested_output": "공동소유 토지 전체에 대한 매각 또는 변경 행위의 법적 허용 여부"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "자신의 지분을 매각할 수 있는가",
+        "requested_output": "공동소유자의 지분(지분권)에 대한 개별 매각의 법적 허용 여부"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민법 272조  합유물의 처분, 변경과 보존#KOBLEX-058948"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 24.13674715598838,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 272조  합유물의 처분, 변경과 보존#KOBLEX-058948",
+        "provision_text": "제272조(합유물의 처분, 변경과 보존) 합유물을 처분 또는 변경함에는 합유자 전원의 동의가 있어야 한다. 그러나 보존행위는 각자가 할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.0008559916168451309,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 272조  합유물의 처분, 변경과 보존",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 262조#KOBLEX-058926"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 32.75235566516504,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "민법 262조#KOBLEX-058926",
+        "provision_text": "제3절 공동소유",
+        "rerank_rank": 1,
+        "rerank_score": 0.0011474480852484703,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "민법 262조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 264조  공유물의 처분, 변경#KOBLEX-058931"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 31.20298301060532,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 264조  공유물의 처분, 변경#KOBLEX-058931",
+        "provision_text": "제264조(공유물의 처분, 변경) 공유자는 다른 공유자의 동의없이 공유물을 처분하거나 변경하지 못한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.00041683149174787104,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 264조  공유물의 처분, 변경",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "집합건물의 소유 및 관리에 관한 법률 12조  공유자의 지분권#KOBLEX-186071",
+          "집합건물의 소유 및 관리에 관한 법률 12조  공유자의 지분권#KOBLEX-198380"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 33.737583463325905,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "집합건물의 소유 및 관리에 관한 법률 12조  공유자의 지분권#KOBLEX-186071",
+        "provision_text": "제12조(공유자의 지분권)",
+        "rerank_rank": 2,
+        "rerank_score": 0.0002762131916824728,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "집합건물의 소유 및 관리에 관한 법률 12조  공유자의 지분권",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국유재산법 48조#KOBLEX-124725"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 19.156778174202366,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "국유재산법 48조#KOBLEX-124725",
+        "provision_text": "제3절 매각",
+        "rerank_rank": 3,
+        "rerank_score": 0.00010135526827070862,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1",
+          "GRQ-R2-2",
+          "GRQ-R2-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "국유재산법 48조",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 273조  합유지분의 처분과 합유물의 분할금지#KOBLEX-058950"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 96,
+        "first_stage_score": 3.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "민법 273조  합유지분의 처분과 합유물의 분할금지#KOBLEX-058950",
+        "provision_text": "①합유자는 전원의 동의없이 합유물에 대한 지분을 처분하지 못한다.",
+        "rerank_rank": 4,
+        "rerank_score": 8.25151801109314e-05,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 273조  합유지분의 처분과 합유물의 분할금지 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국유재산법 시행령 52조#KOBLEX-091701"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 19.156778174202366,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "국유재산법 시행령 52조#KOBLEX-091701",
+        "provision_text": "제3절 매각",
+        "rerank_rank": 5,
+        "rerank_score": 8.05738236522302e-05,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1",
+          "GRQ-R2-2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "국유재산법 시행령 52조",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국유재산법 48조  매각#KOBLEX-124726"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 22,
+        "first_stage_score": 19.156778174202366,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "국유재산법 48조  매각#KOBLEX-124726",
+        "provision_text": "제48조(매각)",
+        "rerank_rank": 6,
+        "rerank_score": 5.8902300224872306e-05,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1",
+          "GRQ-R2-2",
+          "GRQ-R2-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "국유재산법 48조  매각",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "귀속재산처리법 8조#KOBLEX-048055"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 19.156778174202366,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "귀속재산처리법 8조#KOBLEX-048055",
+        "provision_text": "제3장 매각",
+        "rerank_rank": 7,
+        "rerank_score": 3.8582693377975374e-05,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "귀속재산처리법 8조",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국유재산법 시행령 52조  매각#KOBLEX-091702"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 24,
+        "first_stage_score": 19.156778174202366,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "국유재산법 시행령 52조  매각#KOBLEX-091702",
+        "provision_text": "제52조(매각)",
+        "rerank_rank": 8,
+        "rerank_score": 3.398830449441448e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "국유재산법 시행령 52조  매각",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 140조  공유자의 우선매수권#KOBLEX-128540"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 61,
+        "first_stage_score": 16.993570976823897,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 140조  공유자의 우선매수권#KOBLEX-128540",
+        "provision_text": "제140조(공유자의 우선매수권)",
+        "rerank_rank": 1,
+        "rerank_score": 0.0025790194049477577,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사집행법 140조  공유자의 우선매수권",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 137조#KOBLEX-058652"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 31,
+        "first_stage_score": 23.63140698826423,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 137조#KOBLEX-058652",
+        "provision_text": "제4절 무효와 취소",
+        "rerank_rank": 2,
+        "rerank_score": 0.0027980967424809933,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 137조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방세징수법 89조  공유자ㆍ배우자의 우선매수권#KOBLEX-131440"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 63,
+        "first_stage_score": 16.993570976823897,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "지방세징수법 89조  공유자ㆍ배우자의 우선매수권#KOBLEX-131440",
+        "provision_text": "제89조(공유자ㆍ배우자의 우선매수권)",
+        "rerank_rank": 2,
+        "rerank_score": 0.0010124370455741882,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "지방세징수법 89조  공유자ㆍ배우자의 우선매수권",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세징수법 79조  공유자ㆍ배우자의 우선매수권#KOBLEX-026348"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 60,
+        "first_stage_score": 16.993570976823897,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "국세징수법 79조  공유자ㆍ배우자의 우선매수권#KOBLEX-026348",
+        "provision_text": "제79조(공유자ㆍ배우자의 우선매수권)",
+        "rerank_rank": 3,
+        "rerank_score": 0.0009334462811239064,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "국세징수법 79조  공유자ㆍ배우자의 우선매수권",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "가사소송법 30조  관할#KOBLEX-064883"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 36,
+        "first_stage_score": 23.054271388884274,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "가사소송법 30조  관할#KOBLEX-064883",
+        "provision_text": "5. 파양의 무효나 취소",
+        "rerank_rank": 3,
+        "rerank_score": 0.00037329920451156795,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "가사소송법 30조  관할 5호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세징수법 65조  매각 방법#KOBLEX-026287"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 18.677211569504202,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "국세징수법 65조  매각 방법#KOBLEX-026287",
+        "provision_text": "제65조(매각 방법)",
+        "rerank_rank": 6,
+        "rerank_score": 0.00026219181017950177,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "국세징수법 65조  매각 방법",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "가사소송법 30조  관할#KOBLEX-064883": "5. 파양의 무효나 취소",
+      "국세징수법 65조  매각 방법#KOBLEX-026287": "제65조(매각 방법)",
+      "국세징수법 79조  공유자ㆍ배우자의 우선매수권#KOBLEX-026348": "제79조(공유자ㆍ배우자의 우선매수권)",
+      "국유재산법 48조  매각#KOBLEX-124726": "제48조(매각)",
+      "국유재산법 48조#KOBLEX-124725": "제3절 매각",
+      "국유재산법 시행령 52조  매각#KOBLEX-091702": "제52조(매각)",
+      "국유재산법 시행령 52조#KOBLEX-091701": "제3절 매각",
+      "귀속재산처리법 8조#KOBLEX-048055": "제3장 매각",
+      "민법 137조#KOBLEX-058652": "제4절 무효와 취소",
+      "민법 262조#KOBLEX-058926": "제3절 공동소유",
+      "민법 264조  공유물의 처분, 변경#KOBLEX-058931": "제264조(공유물의 처분, 변경) 공유자는 다른 공유자의 동의없이 공유물을 처분하거나 변경하지 못한다.",
+      "민법 272조  합유물의 처분, 변경과 보존#KOBLEX-058948": "제272조(합유물의 처분, 변경과 보존) 합유물을 처분 또는 변경함에는 합유자 전원의 동의가 있어야 한다. 그러나 보존행위는 각자가 할 수 있다.",
+      "민법 273조  합유지분의 처분과 합유물의 분할금지#KOBLEX-058950": "①합유자는 전원의 동의없이 합유물에 대한 지분을 처분하지 못한다.",
+      "민사집행법 140조  공유자의 우선매수권#KOBLEX-128540": "제140조(공유자의 우선매수권)",
+      "지방세징수법 89조  공유자ㆍ배우자의 우선매수권#KOBLEX-131440": "제89조(공유자ㆍ배우자의 우선매수권)",
+      "집합건물의 소유 및 관리에 관한 법률 12조  공유자의 지분권#KOBLEX-186071": "제12조(공유자의 지분권)"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "conditional",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 272조  합유물의 처분, 변경과 보존#KOBLEX-058948",
+              "민법 264조  공유물의 처분, 변경#KOBLEX-058931"
+            ],
+            "rationale": "C003(민법 264조)과 C001(민법 272조)은 각각 공유물과 합유물의 처분·변경에 필요한 동의 주체(다른 공유자, 합유자 전원)를 명시하고 있다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "제공된 후보 조항 중 동의 없이 처분한 경우의 법적 효력(무효, 취소 등)을 명시적으로 규정한 조항이 없다.",
+            "requirement_id": "E1-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "민법 264조  공유물의 처분, 변경#KOBLEX-058931",
+          "민법 272조  합유물의 처분, 변경과 보존#KOBLEX-058948"
+        ],
+        "missing_aspects": [
+          "E1-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "공유물(C003)과 합유물(C001)의 처분·변경에 필요한 동의 주체를 규정한 조항은 제공되었으나, 동의 없이 처분한 경우의 법적 효력(무효, 취소 등)을 명시적으로 규정한 조항은 제공되지 않았다. 또한, 공유와 합유 중 어느 관계가 적용되는지 사실관계가 불명확하여 적용이 조건부이다.",
+        "status": "partially_covered"
+      },
+      {
+        "applicability_status": "conditional",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 273조  합유지분의 처분과 합유물의 분할금지#KOBLEX-058950"
+            ],
+            "rationale": "C006은 합유지분의 처분 제한을 규정하지만, 일반적인 공유지분의 처분 허용 여부를 직접 규정하지 않는다.",
+            "requirement_id": "E2-R1",
+            "status": "partially_satisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "제공된 후보 조항 중 지분 매각 시 다른 공동소유자의 우선매수권 등 제한을 규정한 조항이 없다.",
+            "requirement_id": "E2-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "민법 273조  합유지분의 처분과 합유물의 분할금지#KOBLEX-058950",
+          "민사집행법 140조  공유자의 우선매수권#KOBLEX-128540"
+        ],
+        "missing_aspects": [
+          "E2-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "합유지분의 처분 제한을 규정한 C006(민법 273조)은 제공되었으나, 일반적인 공유(공유지분)에 대한 지분 처분의 자유와 그 예외(우선매수권 등)를 규정한 조항은 제공되지 않았다. 또한, 공유와 합유 중 어느 관계가 적용되는지 사실관계가 불명확하여 적용이 조건부이다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 264조  공유물의 처분, 변경#KOBLEX-058931",
+        "support_spans": [
+          {
+            "end_char": 57,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 272조  합유물의 처분, 변경과 보존#KOBLEX-058948",
+        "support_spans": [
+          {
+            "end_char": 81,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 273조  합유지분의 처분과 합유물의 분할금지#KOBLEX-058950",
+        "support_spans": [
+          {
+            "end_char": 36,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민사집행법 140조  공유자의 우선매수권#KOBLEX-128540",
+        "support_spans": [
+          {
+            "end_char": 17,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "공동소유 토지 전체에 대한 처분행위(매각, 변경)에 공동소유자의 동의가 필요한지 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "공동소유자의 지분(지분권)에 대한 개별 처분행위의 허용 여부",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "공동소유 토지 전체에 대한 매각 또는 변경이 공동소유자 전원의 동의 또는 정해진 비율의 동의를 요하는지, 또는 1인의 단독 처분이 가능한지 명확히 규정한 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "공동소유물의 처분(매각, 변경)에 필요한 동의 주체(전원 또는 과반수 등)를 명시하는 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "동의 없이 처분한 경우의 법적 효력(무효, 취소 가능 등)을 규정한 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공동소유물의 관리 및 처분에 관한 일반 원칙과 공동소유자 동의를 요하는 처분행위의 범위",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 묻는 '동의 없이 토지를 매각하거나 변경할 수 있는가'에 대한 법적 결론을 도출하기 위해 공동소유물 처분의 요건을 규정한 조항이 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "공동소유자가 자신의 지분을 다른 공동소유자의 동의 없이 매각할 수 있는지, 또는 지분 매각에 대한 특별 제한이 있는지 명확히 규정한 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "공동소유자의 지분에 대한 개별 매각이 원칙적으로 허용되는지 규정한 조항 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "지분 매각 시 다른 공동소유자의 우선매수권 등 제한이 존재하는지 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공동소유자의 지분(지분권)에 대한 개별 처분(매각)의 허용 여부 및 제한",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 묻는 '자신의 지분을 매각할 수 있는가'에 대한 법적 결론을 도출하기 위해 지분권 처분의 자유와 그 예외를 규정한 조항이 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑, 을, 병은 공동으로 토지를 소유하고 있습니다. 갑은 다른 두 사람과의 협의 없이 토지를 매각하려고 합니다. 또한, 갑은 자신의 토지 지분을 개인적으로 매각하려고 합니다. [질문] 갑은 을과 병의 동의 없이 토지를 매각하거나 변경할 수 있는가, 그리고 갑은 자신의 지분을 매각할 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "공동소유물 처분 매각 변경 동의 민법 제268조",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "공동소유",
+          "토지",
+          "매각",
+          "변경",
+          "동의",
+          "민법"
+        ],
+        "query_text": "공동소유 토지 매각 변경 공동소유자 전원 동의 요건 민법 [원문 맥락] 또한, 갑은 자신의 토지 지분을 개인적으로 매각하려고 합니다. 갑은 을과 병의 동의 없이 토지를 매각하거나 변경할 수 있는가, 그리고 갑은 자신의 지분을 매각할 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "공동소유 토지 매각 또는 변경 시 공동소유자 동의 요건 및 법적 효력",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "공동소유 지분권 매각 처분 자유 민법 제268조 제2항",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "공동소유",
+          "지분",
+          "매각",
+          "개별처분",
+          "민법"
+        ],
+        "query_text": "공동소유 지분 매각 개별 처분 허용 민법 [원문 맥락] 또한, 갑은 자신의 토지 지분을 개인적으로 매각하려고 합니다. 갑은 을과 병의 동의 없이 토지를 매각하거나 변경할 수 있는가, 그리고 갑은 자신의 지분을 매각할 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "공동소유자의 지분(지분권) 개별 매각 허용 여부 및 제한",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "공유물 처분 무권리자 매각 법적 효력 무효 취소",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "공유물",
+          "처분",
+          "무권리자",
+          "매각",
+          "법적효력",
+          "무효",
+          "취소"
+        ],
+        "query_text": "공유물 처분 무권리자 매각 법적 효력 무효 취소 [원문 맥락] 또한, 갑은 자신의 토지 지분을 개인적으로 매각하려고 합니다. 갑은 을과 병의 동의 없이 토지를 매각하거나 변경할 수 있는가, 그리고 갑은 자신의 지분을 매각할 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "공동소유 토지 매각 또는 변경 시 공동소유자 동의 없이 처분한 경우의 법적 효력(무효, 취소 가능 등)",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "공유지분 매각 자유 우선매수권 제한",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "공유지분",
+          "매각",
+          "자유",
+          "우선매수권",
+          "제한"
+        ],
+        "query_text": "공유지분 매각 자유 우선매수권 제한 [원문 맥락] 또한, 갑은 자신의 토지 지분을 개인적으로 매각하려고 합니다. 갑은 을과 병의 동의 없이 토지를 매각하거나 변경할 수 있는가, 그리고 갑은 자신의 지분을 매각할 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "공동소유자의 지분(지분권) 개별 매각 시 다른 공동소유자의 우선매수권 등 제한 존재 여부",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "공유물 처분 동의 없이 매각 법적 효력 무효 취소 민법",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "공유물",
+          "처분",
+          "동의",
+          "무효",
+          "취소",
+          "법적효력"
+        ],
+        "query_text": "공유자 전원의 동의 없이 공유물을 처분한 행위는 무효 또는 취소 가능 여부 [원문 맥락] 또한, 갑은 자신의 토지 지분을 개인적으로 매각하려고 합니다. 갑은 을과 병의 동의 없이 토지를 매각하거나 변경할 수 있는가, 그리고 갑은 자신의 지분을 매각할 수 있는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "공동소유 토지 매각 또는 변경 시 공동소유자 동의 없이 처분한 경우의 법적 효력(무효, 취소 가능 등)",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "공유지분 매각 우선매수권 공유자 제한 민법",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "공유지분",
+          "매각",
+          "우선매수권",
+          "공유자",
+          "제한"
+        ],
+        "query_text": "공유지분 매각 시 다른 공유자의 우선매수권 행사 요건 및 제한 [원문 맥락] 또한, 갑은 자신의 토지 지분을 개인적으로 매각하려고 합니다. 갑은 을과 병의 동의 없이 토지를 매각하거나 변경할 수 있는가, 그리고 갑은 자신의 지분을 매각할 수 있는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "공동소유자의 지분(지분권) 개별 매각 시 다른 공동소유자의 우선매수권 등 제한 존재 여부",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑, 을, 병은 공동으로 토지를 소유하고 있습니다. 갑은 다른 두 사람과의 협의 없이 토지를 매각하려고 합니다. 또한, 갑은 자신의 토지 지분을 개인적으로 매각하려고 합니다.\n\n[질문]\n갑은 을과 병의 동의 없이 토지를 매각하거나 변경할 수 있는가, 그리고 갑은 자신의 지분을 매각할 수 있는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "공동소유 토지 전체에 대한 매각 또는 변경이 공동소유자 전원의 동의 또는 정해진 비율의 동의를 요하는지, 또는 1인의 단독 처분이 가능한지 명확히 규정한 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "공동소유물의 처분(매각, 변경)에 필요한 동의 주체(전원 또는 과반수 등)를 명시하는 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "동의 없이 처분한 경우의 법적 효력(무효, 취소 가능 등)을 규정한 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공동소유물의 관리 및 처분에 관한 일반 원칙과 공동소유자 동의를 요하는 처분행위의 범위",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 묻는 '동의 없이 토지를 매각하거나 변경할 수 있는가'에 대한 법적 결론을 도출하기 위해 공동소유물 처분의 요건을 규정한 조항이 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "공동소유자가 자신의 지분을 다른 공동소유자의 동의 없이 매각할 수 있는지, 또는 지분 매각에 대한 특별 제한이 있는지 명확히 규정한 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "공동소유자의 지분에 대한 개별 매각이 원칙적으로 허용되는지 규정한 조항 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "지분 매각 시 다른 공동소유자의 우선매수권 등 제한이 존재하는지 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공동소유자의 지분(지분권)에 대한 개별 처분(매각)의 허용 여부 및 제한",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 묻는 '자신의 지분을 매각할 수 있는가'에 대한 법적 결론을 도출하기 위해 지분권 처분의 자유와 그 예외를 규정한 조항이 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "ea825dd1-4976-48ca-b0d4-3ec42be006a6",
+    "seen_provision_ids": [
+      "민사집행법 140조  공유자의 우선매수권#KOBLEX-128540",
+      "민법 273조  합유지분의 처분과 합유물의 분할금지#KOBLEX-058950",
+      "민법 262조#KOBLEX-058926",
+      "국유재산법 48조#KOBLEX-124725",
+      "민법 264조  공유물의 처분, 변경#KOBLEX-058931",
+      "가사소송법 30조  관할#KOBLEX-064883",
+      "집합건물의 소유 및 관리에 관한 법률 12조  공유자의 지분권#KOBLEX-186071",
+      "국세징수법 79조  공유자ㆍ배우자의 우선매수권#KOBLEX-026348",
+      "국유재산법 48조  매각#KOBLEX-124726",
+      "국유재산법 시행령 52조#KOBLEX-091701",
+      "민법 272조  합유물의 처분, 변경과 보존#KOBLEX-058948",
+      "민법 137조#KOBLEX-058652",
+      "국유재산법 시행령 52조  매각#KOBLEX-091702",
+      "국세징수법 65조  매각 방법#KOBLEX-026287",
+      "지방세징수법 89조  공유자ㆍ배우자의 우선매수권#KOBLEX-131440",
+      "귀속재산처리법 8조#KOBLEX-048055"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

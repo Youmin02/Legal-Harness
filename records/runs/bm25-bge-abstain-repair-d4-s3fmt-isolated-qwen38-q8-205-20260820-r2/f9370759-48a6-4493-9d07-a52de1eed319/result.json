@@ -1,0 +1,524 @@
+{
+  "abstention_reason": null,
+  "answer": "경비업을 영위하고자 하는 법인은 경비업법 제4조 제1항에 따라 시·도경찰청장의 허가를 받아야 합니다.[CT1]\n경비업법 제4조 제1항의 허가를 받지 아니하고 경비업을 영위한 자는 3년 이하의 징역 또는 3천만원 이하의 벌금에 처해집니다.[CT2]\n전제: 질문에서 '갑'이 법인임을 전제로 경비업법 제4조 제1항의 적용 가능성을 검토합니다.\n한계: 본 답변은 제공된 법령 조항에 기반한 일반적 법적 해석이며, 구체적인 사건의 양형이나 추가적인 법적 쟁점에 대한 판단을 포함하지 않습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "경비업을 영위하고자 하는 법인은 경비업법 제4조 제1항에 따라 시·도경찰청장의 허가를 받아야 합니다.[CT1]\n경비업법 제4조 제1항의 허가를 받지 아니하고 경비업을 영위한 자는 3년 이하의 징역 또는 3천만원 이하의 벌금에 처해집니다.[CT2]\n전제: 질문에서 '갑'이 법인임을 전제로 경비업법 제4조 제1항의 적용 가능성을 검토합니다.\n한계: 본 답변은 제공된 법령 조항에 기반한 일반적 법적 해석이며, 구체적인 사건의 양형이나 추가적인 법적 쟁점에 대한 판단을 포함하지 않습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T22:27:41.192678+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 140140.956,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 90,
+      "dedup_collapse": 18,
+      "evidence_fusion": 90,
+      "first_stage": 100,
+      "request_rerank": 100,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 90
+    }
+  },
+  "run_id": "f9370759-48a6-4493-9d07-a52de1eed319",
+  "state": {
+    "accepted_provision_ids": [
+      "경비업법 4조  경비업의 허가#KOBLEX-219657",
+      "경비업법 28조  벌칙#KOBLEX-219827"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "penalty",
+        "question_anchor": "법적으로 어떤 처벌을 받게 되는가",
+        "requested_output": "경비업 허가 없이 회사를 운영한 갑에 대한 형사처벌 내용"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "경비업법 28조  벌칙#KOBLEX-219827"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 4.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "경비업법 28조  벌칙#KOBLEX-219827",
+        "provision_text": "②다음 각 호의 어느 하나에 해당하는 자는 3년 이하의 징역 또는 3천만원 이하의 벌금에 처한다. <개정 2005.8.4, 2013.6.7, 2015.7.20> 1. 제4조제1항의 규정에 의한 허가를 받지 아니하고 경비업을 영위한 자 2. 제7조제4항의 규정에 위반하여 직무상 알게 된 비밀을 누설하거나 부당한 목적을 위하여 사용한 자 3. 제7조제8항의 규정에 위반하여 경비업무의 중단을 통보하지 아니하거나 경비업무를 즉시 인수하지 아니한 특수경비업자 또는 경비대행업자 4. 집단민원현장에 경비원을 배치하면서 제7조의2제1항을 위반하여 제4조제1항에 따른 허가를 받지 아니한 자에게 경비업무를 도급한 자 5. 제7조의2제2항을 위반하여 집단민원현장에 20명 이상의 경비인력을 배치하면서 그 경비인력을 직접 고용한 자 6. 제7조의2제3항을 위반하여 경비업자의 경비원 채용 시 무자격자나 부적격자 등을 채용하도록 관여하거나 영향력을 행사한 도급인 7. 과실로 인하여 제14조제2항의 규정에 위반하여 국가중요시설의 정상적인 운영을 해치는 장해를 일으킨 특수경비원 8. 특수경비원으로서 경비구역 안에서 시설물의 절도, 손괴, 위험물의 폭발 등의 사유로 인한 위급사태가 발생한 때에 제15조제1항 또는 제2항의 규정에 위반한 자 9. 제15조의2제2항의 규정을 위반하여 경비원에게 경비업무의 범위를 벗어난 행위를 하게 한 자",
+        "rerank_rank": 1,
+        "rerank_score": 0.23792332410812378,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "경비업법 28조  벌칙 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "경비업법 4조#KOBLEX-219655"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 25.25659160606851,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "경비업법 4조#KOBLEX-219655",
+        "provision_text": "제2장 경비업의 허가 등",
+        "rerank_rank": 2,
+        "rerank_score": 0.18144121766090393,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "경비업법 4조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "경비업법 21조  청문#KOBLEX-219794"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 29.343124293980367,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "경비업법 21조  청문#KOBLEX-219794",
+        "provision_text": "3. 제19조의 규정에 의한 경비업 허가의 취소 또는 영업정지",
+        "rerank_rank": 3,
+        "rerank_score": 0.1663426160812378,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "경비업법 21조  청문 3호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "경비업법 19조  경비업 허가의 취소 등#KOBLEX-219784"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 91,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "경비업법 19조  경비업 허가의 취소 등#KOBLEX-219784",
+        "provision_text": "①허가관청은 경비업자가 다음 각 호의 어느 하나에 해당하는 때에는 그 허가를 취소하여야 한다. <개정 2002.12.18, 2013.6.7, 2017.10.24> 1. 허위 그 밖의 부정한 방법으로 허가를 받은 때 2. 삭제 <2025.1.7> 3. 제7조제9항의 규정에 위반하여 경비업 및 경비관련업외의 영업을 한 때 4. 정당한 사유없이 허가를 받은 날부터 2년 이내에 경비 도급실적이 없거나 계속하여 1년 이상 휴업한 때 5. 정당한 사유없이 최종 도급계약 종료일의 다음 날부터 2년 이내에 경비 도급실적이 없을 때 6. 영업정지처분을 받고 계속하여 영업을 한 때 7. 제15조의2제2항을 위반하여 소속 경비원으로 하여금 경비업무의 범위를 벗어난 행위를 하게 한 때 8. 제18조제8항에 따른 관할 경찰관서장의 배치폐지 명령에 따르지 아니한 때",
+        "rerank_rank": 4,
+        "rerank_score": 0.07661421597003937,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "경비업법 19조  경비업 허가의 취소 등 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "경비업법 4조  경비업의 허가#KOBLEX-219656"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 25.888859609207028,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "경비업법 4조  경비업의 허가#KOBLEX-219656",
+        "provision_text": "제4조(경비업의 허가)",
+        "rerank_rank": 5,
+        "rerank_score": 0.03664223849773407,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "경비업법 4조  경비업의 허가",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "경비업법 19조  경비업 허가의 취소 등#KOBLEX-219785"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 3.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "경비업법 19조  경비업 허가의 취소 등#KOBLEX-219785",
+        "provision_text": "② 허가관청은 경비업자가 다음 각 호의 어느 하나에 해당하는 때에는 대통령령으로 정하는 행정처분의 기준에 따라 그 허가를 취소하거나 6개월 이내의 기간을 정하여 영업의 전부 또는 일부에 대하여 영업정지를 명할 수 있다. <신설 2013.6.7, 2020.12.22, 2025.1.7> 1. 제4조제1항 후단을 위반하여 시ㆍ도경찰청장의 허가 없이 경비업무를 변경한 때 2. 제7조제2항을 위반하여 도급을 의뢰받은 경비업무가 위법한 것임에도 이를 거부하지 아니한 때 2의2. 제7조제5항을 위반하여 경비업무 또는 경비업무의 목적 달성을 침해하지 아니하는 범위에서 대통령령으로 정하는 업무 외의 업무에 경비원을 종사하게 한 때 3. 제7조제6항을 위반하여 경비지도사를 집단민원현장에 선임ㆍ배치하지 아니한 때 4. 제8조를 위반하여 경비대상 시설에 관한 경보 대응체제를 갖추지 아니한 때 5. 제9조제2항을 위반하여 관련 서류를 작성ㆍ비치하지 아니한 때 6. 제10조제3항을 위반하여 결격사유에 해당하는 경비원을 배치하거나 결격사유에 해당하는 경비지도사를 선임ㆍ배치한 때 7. 제12조제1항을 위반하여 경비지도사를 선임한 때 8. 제13조를 위반하여 경비원으로 하여금 교육을 받게 하지 아니한 때 9. 제16조에 따른 경비원의 복장 등에 관한 규정을 위반한 때 10. 제16조의2에 따른 경비원의 장비 등에 관한 규정을 위반한 때 11. 제16조의3에 따른 경비원의 출동차량 등에 관한 규정을 위반한 때 12. 제18조제1항 단서를 위반하여 집단민원현장에 일반경비원 명부를 작성ㆍ비치하지 아니한 때 13. 제18조제2항 각 호 외의 부분 단서를 위반하여 배치허가를 받지 아니하고 경비원을 배치하거나 경비원 명단 및 배치일시ㆍ배치장소 등 배치허가 신청의 내용을 거짓으로 한 때 14. 제18조제6항을 위반하여 결격사유에 해당하는 일반경비원을 집단민원현장에 배치한 때 15. 제24조에 따른 감독상 명령에 따르지 아니한 때 16. 제26조를 위반하여 손해를 배상하지 아니한 때",
+        "rerank_rank": 6,
+        "rerank_score": 0.01590624265372753,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "경비업법 19조  경비업 허가의 취소 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "경비업법 19조  경비업 허가의 취소 등#KOBLEX-219783"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 32.141303749150126,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "경비업법 19조  경비업 허가의 취소 등#KOBLEX-219783",
+        "provision_text": "제19조(경비업 허가의 취소 등)",
+        "rerank_rank": 7,
+        "rerank_score": 0.0014761756174266338,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "경비업법 19조  경비업 허가의 취소 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "집단에너지사업법 55조  벌칙#KOBLEX-134415"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 74,
+        "first_stage_score": 19.217282136926173,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "집단에너지사업법 55조  벌칙#KOBLEX-134415",
+        "provision_text": "1. 제9조제1항에 따른 허가 또는 변경허가를 받지 아니하고 사업을 영위한 자",
+        "rerank_rank": 8,
+        "rerank_score": 0.0009108459344133735,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "집단에너지사업법 55조  벌칙 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "경비업법 4조  경비업의 허가#KOBLEX-219657"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 79,
+        "first_stage_score": 18.877340646355428,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "경비업법 4조  경비업의 허가#KOBLEX-219657",
+        "provision_text": "①경비업을 영위하고자 하는 법인은 도급받아 행하고자 하는 경비업무를 특정하여 그 법인의 주사무소의 소재지를 관할하는 시ㆍ도경찰청장의 허가를 받아야 한다. 도급받아 행하고자 하는 경비업무를 변경하는 경우에도 또한 같다. <개정 2020.12.22>",
+        "rerank_rank": 9,
+        "rerank_score": 0.000384377664886415,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "경비업법 4조  경비업의 허가 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "경비업법 19조  경비업 허가의 취소 등#KOBLEX-219786"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 92,
+        "first_stage_score": 2.0,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "경비업법 19조  경비업 허가의 취소 등#KOBLEX-219786",
+        "provision_text": "③허가관청은 제1항 및 제2항에 의하여 허가취소 또는 영업정지처분을 하는 때에는 경비업자가 허가받은 경비업무중 허가취소 또는 영업정지사유에 해당되는 경비업무에 한하여 처분을 하여야 한다. 다만, 제1항제7호에 해당하여 허가취소를 하는 때에는 그러하지 아니하다. <개정 2013.6.7, 2025.1.7>",
+        "rerank_rank": 10,
+        "rerank_score": 0.0002895026409532875,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "경비업법 19조  경비업 허가의 취소 등 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "경비업법 19조  경비업 허가의 취소 등#KOBLEX-219783": "제19조(경비업 허가의 취소 등)",
+      "경비업법 19조  경비업 허가의 취소 등#KOBLEX-219784": "①허가관청은 경비업자가 다음 각 호의 어느 하나에 해당하는 때에는 그 허가를 취소하여야 한다. <개정 2002.12.18, 2013.6.7, 2017.10.24> 1. 허위 그 밖의 부정한 방법으로 허가를 받은 때 2. 삭제 <2025.1.7> 3. 제7조제9항의 규정에 위반하여 경비업 및 경비관련업외의 영업을 한 때 4. 정당한 사유없이 허가를 받은 날부터 2년 이내에 경비 도급실적이 없거나 계속하여 1년 이상 휴업한 때 5. 정당한 사유없이 최종 도급계약 종료일의 다음 날부터 2년 이내에 경비 도급실적이 없을 때 6. 영업정지처분을 받고 계속하여 영업을 한 때 7. 제15조의2제2항을 위반하여 소속 경비원으로 하여금 경비업무의 범위를 벗어난 행위를 하게 한 때 8. 제18조제8항에 따른 관할 경찰관서장의 배치폐지 명령에 따르지 아니한 때",
+      "경비업법 19조  경비업 허가의 취소 등#KOBLEX-219785": "② 허가관청은 경비업자가 다음 각 호의 어느 하나에 해당하는 때에는 대통령령으로 정하는 행정처분의 기준에 따라 그 허가를 취소하거나 6개월 이내의 기간을 정하여 영업의 전부 또는 일부에 대하여 영업정지를 명할 수 있다. <신설 2013.6.7, 2020.12.22, 2025.1.7> 1. 제4조제1항 후단을 위반하여 시ㆍ도경찰청장의 허가 없이 경비업무를 변경한 때 2. 제7조제2항을 위반하여 도급을 의뢰받은 경비업무가 위법한 것임에도 이를 거부하지 아니한 때 2의2. 제7조제5항을 위반하여 경비업무 또는 경비업무의 목적 달성을 침해하지 아니하는 범위에서 대통령령으로 정하는 업무 외의 업무에 경비원을 종사하게 한 때 3. 제7조제6항을 위반하여 경비지도사를 집단민원현장에 선임ㆍ배치하지 아니한 때 4. 제8조를 위반하여 경비대상 시설에 관한 경보 대응체제를 갖추지 아니한 때 5. 제9조제2항을 위반하여 관련 서류를 작성ㆍ비치하지 아니한 때 6. 제10조제3항을 위반하여 결격사유에 해당하는 경비원을 배치하거나 결격사유에 해당하는 경비지도사를 선임ㆍ배치한 때 7. 제12조제1항을 위반하여 경비지도사를 선임한 때 8. 제13조를 위반하여 경비원으로 하여금 교육을 받게 하지 아니한 때 9. 제16조에 따른 경비원의 복장 등에 관한 규정을 위반한 때 10. 제16조의2에 따른 경비원의 장비 등에 관한 규정을 위반한 때 11. 제16조의3에 따른 경비원의 출동차량 등에 관한 규정을 위반한 때 12. 제18조제1항 단서를 위반하여 집단민원현장에 일반경비원 명부를 작성ㆍ비치하지 아니한 때 13. 제18조제2항 각 호 외의 부분 단서를 위반하여 배치허가를 받지 아니하고 경비원을 배치하거나 경비원 명단 및 배치일시ㆍ배치장소 등 배치허가 신청의 내용을 거짓으로 한 때 14. 제18조제6항을 위반하여 결격사유에 해당하는 일반경비원을 집단민원현장에 배치한 때 15. 제24조에 따른 감독상 명령에 따르지 아니한 때 16. 제26조를 위반하여 손해를 배상하지 아니한 때",
+      "경비업법 19조  경비업 허가의 취소 등#KOBLEX-219786": "③허가관청은 제1항 및 제2항에 의하여 허가취소 또는 영업정지처분을 하는 때에는 경비업자가 허가받은 경비업무중 허가취소 또는 영업정지사유에 해당되는 경비업무에 한하여 처분을 하여야 한다. 다만, 제1항제7호에 해당하여 허가취소를 하는 때에는 그러하지 아니하다. <개정 2013.6.7, 2025.1.7>",
+      "경비업법 21조  청문#KOBLEX-219794": "3. 제19조의 규정에 의한 경비업 허가의 취소 또는 영업정지",
+      "경비업법 28조  벌칙#KOBLEX-219827": "②다음 각 호의 어느 하나에 해당하는 자는 3년 이하의 징역 또는 3천만원 이하의 벌금에 처한다. <개정 2005.8.4, 2013.6.7, 2015.7.20> 1. 제4조제1항의 규정에 의한 허가를 받지 아니하고 경비업을 영위한 자 2. 제7조제4항의 규정에 위반하여 직무상 알게 된 비밀을 누설하거나 부당한 목적을 위하여 사용한 자 3. 제7조제8항의 규정에 위반하여 경비업무의 중단을 통보하지 아니하거나 경비업무를 즉시 인수하지 아니한 특수경비업자 또는 경비대행업자 4. 집단민원현장에 경비원을 배치하면서 제7조의2제1항을 위반하여 제4조제1항에 따른 허가를 받지 아니한 자에게 경비업무를 도급한 자 5. 제7조의2제2항을 위반하여 집단민원현장에 20명 이상의 경비인력을 배치하면서 그 경비인력을 직접 고용한 자 6. 제7조의2제3항을 위반하여 경비업자의 경비원 채용 시 무자격자나 부적격자 등을 채용하도록 관여하거나 영향력을 행사한 도급인 7. 과실로 인하여 제14조제2항의 규정에 위반하여 국가중요시설의 정상적인 운영을 해치는 장해를 일으킨 특수경비원 8. 특수경비원으로서 경비구역 안에서 시설물의 절도, 손괴, 위험물의 폭발 등의 사유로 인한 위급사태가 발생한 때에 제15조제1항 또는 제2항의 규정에 위반한 자 9. 제15조의2제2항의 규정을 위반하여 경비원에게 경비업무의 범위를 벗어난 행위를 하게 한 자",
+      "경비업법 4조  경비업의 허가#KOBLEX-219656": "제4조(경비업의 허가)",
+      "경비업법 4조  경비업의 허가#KOBLEX-219657": "①경비업을 영위하고자 하는 법인은 도급받아 행하고자 하는 경비업무를 특정하여 그 법인의 주사무소의 소재지를 관할하는 시ㆍ도경찰청장의 허가를 받아야 한다. 도급받아 행하고자 하는 경비업무를 변경하는 경우에도 또한 같다. <개정 2020.12.22>",
+      "경비업법 4조#KOBLEX-219655": "제2장 경비업의 허가 등",
+      "집단에너지사업법 55조  벌칙#KOBLEX-134415": "1. 제9조제1항에 따른 허가 또는 변경허가를 받지 아니하고 사업을 영위한 자"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "경비업법 28조  벌칙#KOBLEX-219827",
+              "경비업법 4조  경비업의 허가#KOBLEX-219657"
+            ],
+            "rationale": "C001 제1호는 '제4조제1항의 규정에 의한 허가를 받지 아니하고 경비업을 영위한 자'를 처벌 대상으로 규정하고, C009는 제4조 제1항의 허가 의무를 명시하여 구성요건을 충족한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "경비업법 28조  벌칙#KOBLEX-219827"
+            ],
+            "rationale": "C001은 해당 위반 행위에 대해 '3년 이하의 징역 또는 3천만원 이하의 벌금'에 처하도록 명시하여 형사처벌 내용을 충족한다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "경비업법 28조  벌칙#KOBLEX-219827",
+          "경비업법 4조  경비업의 허가#KOBLEX-219657"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001은 경비업 허가 없이 경비업을 영위하는 행위에 대한 형사처벌(3년 이하 징역 또는 3천만원 이하 벌금)을 명시하고 있으며, C009는 해당 행위가 위반하는 허가 의무의 근거를 제공한다. 질문에서 요구하는 처벌 내용과 구성요건이 모두 충족되어 커버리지 상태는 covered이다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "경비업법 28조  벌칙#KOBLEX-219827",
+        "support_spans": [
+          {
+            "end_char": 682,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "경비업법 4조  경비업의 허가#KOBLEX-219657",
+        "support_spans": [
+          {
+            "end_char": 137,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "경비업 허가 없이 경비업을 영위하는 행위의 위법성 및 처벌 규정",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 건물 보안 회사를 운영하고자 하였으나, 경비업에 필요한 법적 허가를 받지 않고 사업을 시작했습니다. 을은 해당 회사의 직원으로, 이를 알면서도 경비 업무를 수행했습니다. 몇 달 후, 당국의 단속에 의해 갑의 회사가 불법 경비업을 운영한 사실이 적발되었습니다. [질문] 갑이 경비업의 허가를 받지 않고 회사를 운영한 경우, 법적으로 어떤 처벌을 받게 되는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "경비업 허가 없이 경비업 영위 처벌 벌칙",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "경비업",
+          "허가",
+          "무허가",
+          "벌칙",
+          "처벌",
+          "형사처벌"
+        ],
+        "query_text": "경비업 허가 없이 경비업 영위 처벌 벌칙 [원문 맥락] 몇 달 후, 당국의 단속에 의해 갑의 회사가 불법 경비업을 운영한 사실이 적발되었습니다. 갑이 경비업의 허가를 받지 않고 회사를 운영한 경우, 법적으로 어떤 처벌을 받게 되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "경비업 허가 없이 회사를 운영한 경우의 형사처벌 내용",
+        "statute_hints": [
+          "경비업법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 건물 보안 회사를 운영하고자 하였으나, 경비업에 필요한 법적 허가를 받지 않고 사업을 시작했습니다. 을은 해당 회사의 직원으로, 이를 알면서도 경비 업무를 수행했습니다. 몇 달 후, 당국의 단속에 의해 갑의 회사가 불법 경비업을 운영한 사실이 적발되었습니다.\n\n[질문]\n갑이 경비업의 허가를 받지 않고 회사를 운영한 경우, 법적으로 어떤 처벌을 받게 되는가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "허가 없이 경비업을 영위하는 행위에 대한 벌칙 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "경비업 허가 없이 경비업을 영위하는 행위의 구성요건 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "해당 위반 행위에 대한 벌금 또는 징역형 등 형사처벌 내용 확인"
+          }
+        ],
+        "critical": true,
+        "description": "경비업 허가 없이 경비업을 영위할 경우의 형사처벌 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 처벌 내용을 직접적으로 규정하는 핵심 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "f9370759-48a6-4493-9d07-a52de1eed319",
+    "seen_provision_ids": [
+      "경비업법 4조  경비업의 허가#KOBLEX-219657",
+      "경비업법 19조  경비업 허가의 취소 등#KOBLEX-219784",
+      "경비업법 4조  경비업의 허가#KOBLEX-219656",
+      "경비업법 21조  청문#KOBLEX-219794",
+      "집단에너지사업법 55조  벌칙#KOBLEX-134415",
+      "경비업법 4조#KOBLEX-219655",
+      "경비업법 19조  경비업 허가의 취소 등#KOBLEX-219783",
+      "경비업법 19조  경비업 허가의 취소 등#KOBLEX-219786",
+      "경비업법 28조  벌칙#KOBLEX-219827",
+      "경비업법 19조  경비업 허가의 취소 등#KOBLEX-219785"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

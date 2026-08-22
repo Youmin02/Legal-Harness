@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T04:26:43.365695+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 214282.292,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 151 column 9 (char 4248)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "1a9afa95-ca26-4c94-84be-6e4151618628",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 151 column 9 (char 4248)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑산림토석회사는 매년 2월 말까지 산림청장에게 필요한 서류를 제출해야 하는 의무가 있으며, 을은 산림청장으로서 산지전용이나 토석채취 관련 조사를 수행하고자 한다. 또한, 갑산림토석회사가 새로운 채석단지를 지정받기 위해 을에게 신청서를 제출하였다. [질문] 갑산림토석회사가 매년 산림청장 을에게 제출해야 하는 서류는 무엇인가? 그리고 산림청장 을이 산지전용이나 토석채취 등을 위해 수행할 수 있는 행위는 무엇인가? 마지막으로 을이 채석단지를 지정 또는 변경 지정하려면 어떤 절차를 따라야 하는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n갑산림토석회사는 매년 2월 말까지 산림청장에게 필요한 서류를 제출해야 하는 의무가 있으며, 을은 산림청장으로서 산지전용이나 토석채취 관련 조사를 수행하고자 한다. 또한, 갑산림토석회사가 새로운 채석단지를 지정받기 위해 을에게 신청서를 제출하였다.\n\n[질문]\n갑산림토석회사가 매년 산림청장 을에게 제출해야 하는 서류는 무엇인가? 그리고 산림청장 을이 산지전용이나 토석채취 등을 위해 수행할 수 있는 행위는 무엇인가? 마지막으로 을이 채석단지를 지정 또는 변경 지정하려면 어떤 절차를 따라야 하는가?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "1a9afa95-ca26-4c94-84be-6e4151618628",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

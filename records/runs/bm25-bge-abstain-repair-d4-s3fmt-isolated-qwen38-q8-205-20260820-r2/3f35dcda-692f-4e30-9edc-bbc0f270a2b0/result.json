@@ -1,0 +1,612 @@
+{
+  "abstention_reason": null,
+  "answer": "농촌개발사업 시행자는 환지에 따른 민원이나 이해관계자 간의 분쟁을 효과적으로 조정하기 위하여 환지심의위원회를 구성하여 운영하여야 합니다.[CT1]\n사업 시행자는 사업 인가를 받은 때에는 지체 없이 해당 환지 처분과 관련된 토지 및 건물의 등기를 촉탁하여야 합니다.[CT2]\n전제: 질문에서 '농촌개발사업'으로 지칭된 사업이 농어촌정비법상 '농업생산기반 정비사업'에 해당한다고 가정합니다.\n한계: 본 답변은 제공된 조항(농어촌정비법 제41조, 제42조)의 문언에 근거하며, 환지심의위원회의 구체적인 구성 요건(위원 수, 자격 등)이나 등기 촉탁의 실무적 세부 절차에 대해서는 언급하지 않습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "농촌개발사업 시행자는 환지에 따른 민원이나 이해관계자 간의 분쟁을 효과적으로 조정하기 위하여 환지심의위원회를 구성하여 운영하여야 합니다.[CT1]\n사업 시행자는 사업 인가를 받은 때에는 지체 없이 해당 환지 처분과 관련된 토지 및 건물의 등기를 촉탁하여야 합니다.[CT2]\n전제: 질문에서 '농촌개발사업'으로 지칭된 사업이 농어촌정비법상 '농업생산기반 정비사업'에 해당한다고 가정합니다.\n한계: 본 답변은 제공된 조항(농어촌정비법 제41조, 제42조)의 문언에 근거하며, 환지심의위원회의 구체적인 구성 요건(위원 수, 자격 등)이나 등기 촉탁의 실무적 세부 절차에 대해서는 언급하지 않습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T21:56:51.346066+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 182939.765,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 189,
+      "dedup_collapse": 22,
+      "evidence_fusion": 189,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 189
+    }
+  },
+  "run_id": "3f35dcda-692f-4e30-9edc-bbc0f270a2b0",
+  "state": {
+    "accepted_provision_ids": [
+      "농어촌정비법 42조  환지 처분에 따른 등기#KOBLEX-025507",
+      "농어촌정비법 41조  환지심의위원회#KOBLEX-025504"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_institution_or_procedure",
+        "question_anchor": "무엇을 구성해야 하며",
+        "requested_output": "환지에 따른 분쟁 조정을 위해 구성해야 하는 기구 또는 절차의 명칭과 법적 근거"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_deadline_or_timing",
+        "question_anchor": "등기는 언제 이루어져야 하는가",
+        "requested_output": "환지 처분에 따른 토지 및 건물 등기의 시점 또는 기한"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "농어촌정비법 41조  환지심의위원회#KOBLEX-025504"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 48,
+        "first_stage_score": 25.98027012058989,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "농어촌정비법 41조  환지심의위원회#KOBLEX-025504",
+        "provision_text": "① 농업생산기반 정비사업 시행자는 환지에 따른 민원이나 이해관계자 간의 분쟁을 효과적으로 조정하기 위하여 환지심의위원회를 구성하여 운영하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.23327457904815674,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "농어촌정비법 41조  환지심의위원회 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농어촌정비법 42조  환지 처분에 따른 등기#KOBLEX-025507"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 38.725470546202345,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 42조  환지 처분에 따른 등기#KOBLEX-025507",
+        "provision_text": "① 농업생산기반 정비사업 시행자는 제26조제1항에 따른 인가를 받은 때에는 지체 없이 해당 환지 처분과 관련된 토지 및 건물의 등기를 촉탁(囑託)하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9987251162528992,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "농어촌정비법 42조  환지 처분에 따른 등기 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도시개발법 39조  토지의 관리 등#KOBLEX-002983"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 55,
+        "first_stage_score": 26.3491836573982,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "도시개발법 39조  토지의 관리 등#KOBLEX-002983",
+        "provision_text": "① 환지 예정지의 지정이나 사용 또는 수익의 정지처분으로 이를 사용하거나 수익할 수 있는 자가 없게 된 토지 또는 해당 부분은 환지 예정지의 지정일이나 사용 또는 수익의 정지처분이 있은 날부터 환지처분을 공고한 날까지 시행자가 관리한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.13003908097743988,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "도시개발법 39조  토지의 관리 등 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도시개발법 시행규칙 30조  입체 환지 신청 시 첨부서류#KOBLEX-060968"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 35.564812488497154,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "도시개발법 시행규칙 30조  입체 환지 신청 시 첨부서류#KOBLEX-060968",
+        "provision_text": "3. 환지 전 소유하고 있던 토지 또는 건축물에 대한 등기사항 증명서",
+        "rerank_rank": 3,
+        "rerank_score": 0.09795651584863663,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "도시개발법 시행규칙 30조  입체 환지 신청 시 첨부서류 3호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농어촌정비법 42조  환지 처분에 따른 등기#KOBLEX-025506"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 43.301969869143264,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 42조  환지 처분에 따른 등기#KOBLEX-025506",
+        "provision_text": "제42조(환지 처분에 따른 등기)",
+        "rerank_rank": 4,
+        "rerank_score": 0.06327086687088013,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "농어촌정비법 42조  환지 처분에 따른 등기",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도시개발법 시행규칙 27조  환지 계획의 기준#KOBLEX-060945"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 32.083994984771124,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "도시개발법 시행규칙 27조  환지 계획의 기준#KOBLEX-060945",
+        "provision_text": "⑩ 시행자는 동일인이 소유한 2 이상의 환지 전 토지 또는 건축물에 대하여 환지 후 하나의 토지 또는 구분건축물에 환지를 지정할 수 있다. <신설 2012.3.30>",
+        "rerank_rank": 5,
+        "rerank_score": 0.03204686567187309,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "도시개발법 시행규칙 27조  환지 계획의 기준 10항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농어촌정비법 42조  환지 처분에 따른 등기#KOBLEX-025509"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 30.047977017298717,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 42조  환지 처분에 따른 등기#KOBLEX-025509",
+        "provision_text": "③ 환지 처분에 따른 등기에 관하여 필요한 사항은 대법원규칙으로 정한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.019837697967886925,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "농어촌정비법 42조  환지 처분에 따른 등기 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도시개발법 42조  환지처분의 효과#KOBLEX-002996"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 60,
+        "first_stage_score": 26.07733831216612,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "도시개발법 42조  환지처분의 효과#KOBLEX-002996",
+        "provision_text": "① 환지 계획에서 정하여진 환지는 그 환지처분이 공고된 날의 다음 날부터 종전의 토지로 보며, 환지 계획에서 환지를 정하지 아니한 종전의 토지에 있던 권리는 그 환지처분이 공고된 날이 끝나는 때에 소멸한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.007014930713921785,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "도시개발법 42조  환지처분의 효과 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "농어촌정비법 37조  환지 처분의 효과와 청산금#KOBLEX-025482"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 56,
+        "first_stage_score": 26.193256020532075,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 37조  환지 처분의 효과와 청산금#KOBLEX-025482",
+        "provision_text": "① 환지 처분의 고시가 있는 경우에는 환지계획에 따라 교부될 환지는 환지계획을 고시한 다음 날부터 종전 토지로 보며, 그 환지계획에 따라 환지를 지정하지 아니할 종전 토지에 존재하는 권리는 그 고시가 있는 날에 소멸된 것으로 본다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.002597485203295946,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "농어촌정비법 37조  환지 처분의 효과와 청산금 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도시개발법 36조  환지 예정지 지정의 효과#KOBLEX-002961"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 62,
+        "first_stage_score": 25.952826544533483,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "도시개발법 36조  환지 예정지 지정의 효과#KOBLEX-002961",
+        "provision_text": "① 환지 예정지가 지정되면 종전의 토지의 소유자와 임차권자등은 환지 예정지 지정의 효력발생일부터 환지처분이 공고되는 날까지 환지 예정지나 해당 부분에 대하여 종전과 같은 내용의 권리를 행사할 수 있으며 종전의 토지는 사용하거나 수익할 수 없다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.0010836232686415315,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "도시개발법 36조  환지 예정지 지정의 효과 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "농어촌정비법 37조  환지 처분의 효과와 청산금#KOBLEX-025482": "① 환지 처분의 고시가 있는 경우에는 환지계획에 따라 교부될 환지는 환지계획을 고시한 다음 날부터 종전 토지로 보며, 그 환지계획에 따라 환지를 지정하지 아니할 종전 토지에 존재하는 권리는 그 고시가 있는 날에 소멸된 것으로 본다.",
+      "농어촌정비법 41조  환지심의위원회#KOBLEX-025504": "① 농업생산기반 정비사업 시행자는 환지에 따른 민원이나 이해관계자 간의 분쟁을 효과적으로 조정하기 위하여 환지심의위원회를 구성하여 운영하여야 한다.",
+      "농어촌정비법 42조  환지 처분에 따른 등기#KOBLEX-025506": "제42조(환지 처분에 따른 등기)",
+      "농어촌정비법 42조  환지 처분에 따른 등기#KOBLEX-025507": "① 농업생산기반 정비사업 시행자는 제26조제1항에 따른 인가를 받은 때에는 지체 없이 해당 환지 처분과 관련된 토지 및 건물의 등기를 촉탁(囑託)하여야 한다.",
+      "농어촌정비법 42조  환지 처분에 따른 등기#KOBLEX-025509": "③ 환지 처분에 따른 등기에 관하여 필요한 사항은 대법원규칙으로 정한다.",
+      "도시개발법 36조  환지 예정지 지정의 효과#KOBLEX-002961": "① 환지 예정지가 지정되면 종전의 토지의 소유자와 임차권자등은 환지 예정지 지정의 효력발생일부터 환지처분이 공고되는 날까지 환지 예정지나 해당 부분에 대하여 종전과 같은 내용의 권리를 행사할 수 있으며 종전의 토지는 사용하거나 수익할 수 없다.",
+      "도시개발법 39조  토지의 관리 등#KOBLEX-002983": "① 환지 예정지의 지정이나 사용 또는 수익의 정지처분으로 이를 사용하거나 수익할 수 있는 자가 없게 된 토지 또는 해당 부분은 환지 예정지의 지정일이나 사용 또는 수익의 정지처분이 있은 날부터 환지처분을 공고한 날까지 시행자가 관리한다.",
+      "도시개발법 42조  환지처분의 효과#KOBLEX-002996": "① 환지 계획에서 정하여진 환지는 그 환지처분이 공고된 날의 다음 날부터 종전의 토지로 보며, 환지 계획에서 환지를 정하지 아니한 종전의 토지에 있던 권리는 그 환지처분이 공고된 날이 끝나는 때에 소멸한다.",
+      "도시개발법 시행규칙 27조  환지 계획의 기준#KOBLEX-060945": "⑩ 시행자는 동일인이 소유한 2 이상의 환지 전 토지 또는 건축물에 대하여 환지 후 하나의 토지 또는 구분건축물에 환지를 지정할 수 있다. <신설 2012.3.30>",
+      "도시개발법 시행규칙 30조  입체 환지 신청 시 첨부서류#KOBLEX-060968": "3. 환지 전 소유하고 있던 토지 또는 건축물에 대한 등기사항 증명서"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "농어촌정비법 41조  환지심의위원회#KOBLEX-025504"
+            ],
+            "rationale": "C001 names the 'Hwanji Sim-ui Committee' and cites Article 41 as the basis for its establishment.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "농어촌정비법 41조  환지심의위원회#KOBLEX-025504"
+            ],
+            "rationale": "C001 states the obligation to 'constitute and operate' the committee for effective dispute adjustment, fulfilling the core operational requirement.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "농어촌정비법 41조  환지심의위원회#KOBLEX-025504"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001 provides the legal basis for the 'Hwanji Sim-ui Committee' and its purpose (dispute adjustment), satisfying the completion criteria for identifying the body and its establishment obligation. While specific operational details (e.g., member count) are not in the text, the core requirement of identifying the legally mandated body and its basis is met.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "농어촌정비법 42조  환지 처분에 따른 등기#KOBLEX-025507"
+            ],
+            "rationale": "C002 mandates registration of land 'without delay' upon approval.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "농어촌정비법 42조  환지 처분에 따른 등기#KOBLEX-025507"
+            ],
+            "rationale": "C002 mandates registration of buildings 'without delay' upon approval.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "농어촌정비법 42조  환지 처분에 따른 등기#KOBLEX-025507"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C002 explicitly states that registration for land and buildings must be requested 'without delay' upon approval of the project. This provides the specific legal timing required by the question.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "농어촌정비법 41조  환지심의위원회#KOBLEX-025504",
+        "support_spans": [
+          {
+            "end_char": 82,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "농어촌정비법 42조  환지 처분에 따른 등기#KOBLEX-025507",
+        "support_spans": [
+          {
+            "end_char": 88,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "농촌개발사업 환지 과정에서 발생하는 이해관계인 간 분쟁을 조정하기 위해 법적으로 구성해야 하는 기구 또는 절차가 무엇인지",
+        "issue_id": "I1"
+      },
+      {
+        "description": "환지 처분에 따라 토지 및 건물의 등기가 이루어져야 하는 시점 또는 기한",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 농촌개발사업 시행자로 지정되어, 을과 병이 포함된 지역에서 토지 및 건물의 환지 처분을 진행하게 되었습니다. 환지 과정에서 갑은 지역 주민들의 불만과 을과 병 사이의 경계 분쟁을 해결해야 하는 상황에 처했습니다. 또한, 환지 처분에 따른 토지와 건물의 등기가 언제 이루어져야 하는지에 대해 혼란을 겪고 있습니다. [질문] 갑은 환지에 따른 을과 병 간의 분쟁을 조정하기 위해 무엇을 구성해야 하며, 환지 처분과 관련된 토지 및 건물의 등기는 언제 이루어져야 하는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "농촌개발사업 환지 분쟁 조정 기구 위원회 구성 설치 의무",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "농촌개발사업",
+          "환지",
+          "분쟁조정",
+          "위원회",
+          "구성",
+          "설치"
+        ],
+        "query_text": "농촌개발사업 환지 분쟁 조정 위원회 구성 설치 [원문 맥락] 또한, 환지 처분에 따른 토지와 건물의 등기가 언제 이루어져야 하는지에 대해 혼란을 겪고 있습니다. 갑은 환지에 따른 을과 병 간의 분쟁을 조정하기 위해 무엇을 구성해야 하며, 환지 처분과 관련된 토지 및 건물의 등기는 언제 이루어져야 하는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "환지 분쟁 조정 기구 명칭 및 구성 요건",
+        "statute_hints": [
+          "농촌진흥법",
+          "국토의 계획 및 이용에 관한 법률"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "환지 처분 토지 건물 등기 신청 기한 시점",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "환지처분",
+          "토지등기",
+          "건물등기",
+          "등기시점",
+          "기한"
+        ],
+        "query_text": "환지 처분 후 토지 및 건물 등기 시점 기한 [원문 맥락] 또한, 환지 처분에 따른 토지와 건물의 등기가 언제 이루어져야 하는지에 대해 혼란을 겪고 있습니다. 갑은 환지에 따른 을과 병 간의 분쟁을 조정하기 위해 무엇을 구성해야 하며, 환지 처분과 관련된 토지 및 건물의 등기는 언제 이루어져야 하는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "환지 처분 관련 토지 및 건물 등기 완료 시점",
+        "statute_hints": [
+          "국토의 계획 및 이용에 관한 법률",
+          "부동산등기법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 농촌개발사업 시행자로 지정되어, 을과 병이 포함된 지역에서 토지 및 건물의 환지 처분을 진행하게 되었습니다. 환지 과정에서 갑은 지역 주민들의 불만과 을과 병 사이의 경계 분쟁을 해결해야 하는 상황에 처했습니다. 또한, 환지 처분에 따른 토지와 건물의 등기가 언제 이루어져야 하는지에 대해 혼란을 겪고 있습니다.\n\n[질문]\n갑은 환지에 따른 을과 병 간의 분쟁을 조정하기 위해 무엇을 구성해야 하며, 환지 처분과 관련된 토지 및 건물의 등기는 언제 이루어져야 하는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "분쟁 조정 기구의 명칭, 구성 요건, 또는 설치 의무를 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "환지 분쟁 조정 기구의 명칭과 설치 근거 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "해당 기구의 구성 또는 운영 절차에 관한 핵심 요건 확인"
+          }
+        ],
+        "critical": true,
+        "description": "농촌개발사업 환지 과정에서 분쟁 조정을 위해 구성해야 하는 기구(예: 환지위원회) 또는 절차에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 분쟁 조정을 위해 구성해야 할 대상을 직접적으로 묻고 있으므로, 해당 기구의 법적 근거 없이는 답변이 불가능함",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "등기 신청 또는 등기 완료 시점을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "환지 처분 후 토지 등기의 시점 또는 기한 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "환지 처분 후 건물 등기의 시점 또는 기한 확인"
+          }
+        ],
+        "critical": true,
+        "description": "환지 처분에 따른 토지 및 건물 등기의 시점 또는 기한을 정한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 등기가 언제 이루어져야 하는지를 직접적으로 묻고 있으므로, 등기 시점을 정한 규정 없이는 답변이 불가능함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "3f35dcda-692f-4e30-9edc-bbc0f270a2b0",
+    "seen_provision_ids": [
+      "농어촌정비법 42조  환지 처분에 따른 등기#KOBLEX-025509",
+      "농어촌정비법 41조  환지심의위원회#KOBLEX-025504",
+      "도시개발법 39조  토지의 관리 등#KOBLEX-002983",
+      "농어촌정비법 42조  환지 처분에 따른 등기#KOBLEX-025507",
+      "도시개발법 시행규칙 27조  환지 계획의 기준#KOBLEX-060945",
+      "농어촌정비법 42조  환지 처분에 따른 등기#KOBLEX-025506",
+      "도시개발법 시행규칙 30조  입체 환지 신청 시 첨부서류#KOBLEX-060968",
+      "농어촌정비법 37조  환지 처분의 효과와 청산금#KOBLEX-025482",
+      "도시개발법 42조  환지처분의 효과#KOBLEX-002996",
+      "도시개발법 36조  환지 예정지 지정의 효과#KOBLEX-002961"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

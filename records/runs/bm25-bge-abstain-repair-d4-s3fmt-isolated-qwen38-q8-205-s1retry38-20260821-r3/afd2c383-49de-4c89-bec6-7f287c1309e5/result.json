@@ -1,0 +1,784 @@
+{
+  "abstention_reason": null,
+  "answer": "학교법인이 기본재산을 매도하려는 경우, 대통령령으로 정하는 경미한 사항이 아니라면 관할청의 허가를 받아야 한다.[CT1]\n학교법인의 재산 처분에 관한 사항은 이사회에서 심의·의결해야 한다.[CT2]\n이사장이 학교법인과 이해관계가 상반될 때에는 해당 사항에 관한 의결에 참여할 수 없다.[CT3]",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2",
+    "T3"
+  ],
+  "assumptions": [
+    {
+      "code": "ASSUMPTION_1",
+      "message": "질문에서 제시된 '대통령령으로 정하는 경미한 사항이 아니다'라는 전제를 사실로 가정한다."
+    },
+    {
+      "code": "ASSUMPTION_2",
+      "message": "갑의 가족이 상당한 이익을 얻을 가능성이 있는 상황이 학교법인과 이해관계가 상반되는 경우에 해당한다고 가정한다."
+    }
+  ],
+  "candidate_answer": "학교법인이 기본재산을 매도하려는 경우, 대통령령으로 정하는 경미한 사항이 아니라면 관할청의 허가를 받아야 한다.[CT1]\n학교법인의 재산 처분에 관한 사항은 이사회에서 심의·의결해야 한다.[CT2]\n이사장이 학교법인과 이해관계가 상반될 때에는 해당 사항에 관한 의결에 참여할 수 없다.[CT3]",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "candidate_assumptions": [],
+  "candidate_claim_citations": [],
+  "candidate_claims": [],
+  "candidate_limitations": [],
+  "claim_citations": [
+    {
+      "answer_marker": "[CT1]",
+      "citation_id": "CT1",
+      "claim_id": "C1",
+      "provision_id": "사립학교법 28조  재산의 관리 및 보호#KOBLEX-172270",
+      "quoted_text": "① 학교법인이 그 기본재산에 대하여 매도ㆍ증여ㆍ교환ㆍ용도변경하거나 담보로 제공하려는 경우 또는 의무를 부담하거나 권리를 포기하려는 경우에는 관할청의 허가를 받아야 한다. 다만, 대통령령으로 정하는 경미한 사항은 관할청에 신고하여야 한다.",
+      "support_description": "기본재산 매도가 관할청 허가 대상임을 규정하고, 경미한 사항 예외를 명시하여 질문의 전제 조건을 충족한다."
+    },
+    {
+      "answer_marker": "[CT2]",
+      "citation_id": "CT2",
+      "claim_id": "C2",
+      "provision_id": "사립학교법 16조  이사회의 기능#KOBLEX-172179",
+      "quoted_text": "① 이사회는 다음 각 호의 사항을 심의ㆍ의결한다. 1. 학교법인의 예산ㆍ결산ㆍ차입금 및 재산의 취득ㆍ처분과 관리에 관한 사항 2. 정관 변경에 관한 사항 3. 학교법인의 합병 또는 해산에 관한 사항 4. 임원의 임면에 관한 사항 5. 학교법인이 설치한 사립학교의 장 및 교원의 임용에 관한 사항 6. 학교법인이 설치한 사립학교의 경영에 관한 중요 사항 7. 수익사업에 관한 사항 8. 그 밖에 법령이나 정관에 따라 그 권한에 속하는 사항",
+      "support_description": "재산의 처분에 관한 사항을 이사회 심의·의결 대상으로 명시하여 기본재산 매각 안건의 절차적 요건을 뒷받침한다."
+    },
+    {
+      "answer_marker": "[CT3]",
+      "citation_id": "CT3",
+      "claim_id": "C3",
+      "provision_id": "사립학교법 16조  이사회의 기능#KOBLEX-172180",
+      "quoted_text": "② 이사장 또는 이사가 학교법인과 이해관계가 상반될 때에는 그 이사장 또는 이사는 해당 사항에 관한 의결에 참여할 수 없다.",
+      "support_description": "이해관계 상반 시 이사장의 의결 참여 금지를 규정하여, 가족 이익 취득 가능성이 있는 매각 안건에 대한 갑의 참여 제한 근거를 제공한다."
+    }
+  ],
+  "claims": [
+    {
+      "answer_target_ids": [
+        "T1"
+      ],
+      "applicability": "direct",
+      "citation_required": true,
+      "claim_id": "C1",
+      "claim_type": "legal_rule",
+      "text": "학교법인이 기본재산을 매도하려는 경우, 대통령령으로 정하는 경미한 사항이 아니라면 관할청의 허가를 받아야 한다."
+    },
+    {
+      "answer_target_ids": [
+        "T2"
+      ],
+      "applicability": "direct",
+      "citation_required": true,
+      "claim_id": "C2",
+      "claim_type": "legal_rule",
+      "text": "학교법인의 재산 처분에 관한 사항은 이사회에서 심의·의결해야 한다."
+    },
+    {
+      "answer_target_ids": [
+        "T3"
+      ],
+      "applicability": "direct",
+      "citation_required": true,
+      "claim_id": "C3",
+      "claim_type": "exception",
+      "text": "이사장이 학교법인과 이해관계가 상반될 때에는 해당 사항에 관한 의결에 참여할 수 없다."
+    }
+  ],
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T12:24:45.436725+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 157143.958,
+  "errors": [],
+  "limitations": [
+    {
+      "code": "LIMITATION_1",
+      "message": "본 답변은 제공된 사립학교법 조항에 기반한 법적 해석이며, 구체적인 행정 절차나 판례 적용은 포함하지 않는다."
+    }
+  ],
+  "record_schema_version": "1.4",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 279,
+      "dedup_collapse": 34,
+      "evidence_fusion": 279,
+      "first_stage": 300,
+      "request_rerank": 300,
+      "round_selected": 10,
+      "rrf": 300,
+      "selected": 279
+    }
+  },
+  "run_id": "afd2c383-49de-4c89-bec6-7f287c1309e5",
+  "skill_generation_diagnostics": {
+    "attempt_count": 3,
+    "attempt_file": "skill_attempts.jsonl",
+    "schema_version": "1.0"
+  },
+  "state": {
+    "accepted_provision_ids": [
+      "사립학교법 28조  재산의 관리 및 보호#KOBLEX-172270",
+      "사립학교법 16조  이사회의 기능#KOBLEX-172180",
+      "사립학교법 16조  이사회의 기능#KOBLEX-172179"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 3,
+          "issue_count": 3
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 3,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2",
+            "T3"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2",
+            "T3"
+          ],
+          "claim_count": 3,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "관할청의 허가 대상에 해당하는가",
+        "requested_output": "학교법인의 기본재산 매도가 관할청의 허가 대상인지 여부"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "이사회에서 심의·의결해야 하는 안건인가",
+        "requested_output": "학교법인의 기본재산 매도가 이사회 심의·의결 대상인지 여부"
+      },
+      {
+        "answer_target_id": "T3",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "의결에 참여할 수 있는가",
+        "requested_output": "이사장이 이해관계가 있는 안건에 대해 의결에 참여할 수 있는지 여부"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2",
+      "T3"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "사립학교법 28조  재산의 관리 및 보호#KOBLEX-172270"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 80,
+        "first_stage_score": 17.439262330260465,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "사립학교법 28조  재산의 관리 및 보호#KOBLEX-172270",
+        "provision_text": "① 학교법인이 그 기본재산에 대하여 매도ㆍ증여ㆍ교환ㆍ용도변경하거나 담보로 제공하려는 경우 또는 의무를 부담하거나 권리를 포기하려는 경우에는 관할청의 허가를 받아야 한다. 다만, 대통령령으로 정하는 경미한 사항은 관할청에 신고하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9996473789215088,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "사립학교법 28조  재산의 관리 및 보호 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "사립학교법 16조  이사회의 기능#KOBLEX-172179"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 45,
+        "first_stage_score": 21.75213041793354,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "사립학교법 16조  이사회의 기능#KOBLEX-172179",
+        "provision_text": "① 이사회는 다음 각 호의 사항을 심의ㆍ의결한다. 1. 학교법인의 예산ㆍ결산ㆍ차입금 및 재산의 취득ㆍ처분과 관리에 관한 사항 2. 정관 변경에 관한 사항 3. 학교법인의 합병 또는 해산에 관한 사항 4. 임원의 임면에 관한 사항 5. 학교법인이 설치한 사립학교의 장 및 교원의 임용에 관한 사항 6. 학교법인이 설치한 사립학교의 경영에 관한 중요 사항 7. 수익사업에 관한 사항 8. 그 밖에 법령이나 정관에 따라 그 권한에 속하는 사항",
+        "rerank_rank": 1,
+        "rerank_score": 0.0015061629237607121,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "사립학교법 16조  이사회의 기능 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "사립학교법 16조  이사회의 기능#KOBLEX-172180"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 26.885260457675592,
+        "fusion_rank": 1,
+        "issue_id": "I3",
+        "provision_id": "사립학교법 16조  이사회의 기능#KOBLEX-172180",
+        "provision_text": "② 이사장 또는 이사가 학교법인과 이해관계가 상반될 때에는 그 이사장 또는 이사는 해당 사항에 관한 의결에 참여할 수 없다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9998705387115479,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "critical_quota:E3",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "사립학교법 16조  이사회의 기능 2항",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "사립학교법 시행령 11조  기본재산의 처분#KOBLEX-189911"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 24.87177483447814,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "사립학교법 시행령 11조  기본재산의 처분#KOBLEX-189911",
+        "provision_text": "⑥ 관할청은 법 제28조제1항에 따른 학교법인의 기본재산 매도ㆍ증여ㆍ교환, 담보제공, 용도변경, 의무의 부담이나 권리의 포기에 관한 허가신청 또는 신고를 받은 날부터 14일 이내에 허가ㆍ신고수리 여부 또는 처리 지연 사유를 신청인에게 통지하여야 한다. <신설 2018.3.13>",
+        "rerank_rank": 2,
+        "rerank_score": 0.995579183101654,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "사립학교법 시행령 11조  기본재산의 처분 6항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공공기관의 운영에 관한 법률 19조  회의#KOBLEX-041806"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 24.263817817626578,
+        "fusion_rank": 2,
+        "issue_id": "I3",
+        "provision_id": "공공기관의 운영에 관한 법률 19조  회의#KOBLEX-041806",
+        "provision_text": "③이사회의 안건과 특별한 이해관계가 있는 기관장이나 이사는 그 안건의 의결에 참여할 수 없다. 이 경우 의결에 참여하지 못하는 이사 등은 제2항의 규정에 따른 재적이사 수에 포함되지 아니한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.3391174376010895,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "공공기관의 운영에 관한 법률 19조  회의 3항",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "수산업협동조합법 45조  이사회#KOBLEX-024353"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 25.568500090263615,
+        "fusion_rank": 3,
+        "issue_id": "I3",
+        "provision_id": "수산업협동조합법 45조  이사회#KOBLEX-024353",
+        "provision_text": "⑦ 이사회에서 의결할 때에는 해당 안건과 특별한 이해관계가 있는 이사회의 구성원은 그 안건의 의결에 참여할 수 없다. 이 경우 의결에 참여하지 못하는 이사 등은 제4항에 따른 이사회의 구성원 수에 포함되지 아니한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.008103658445179462,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "수산업협동조합법 45조  이사회 7항",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "한국마사회법 32조  이사회#KOBLEX-002618"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 98,
+        "first_stage_score": 18.362087325157585,
+        "fusion_rank": 4,
+        "issue_id": "I3",
+        "provision_id": "한국마사회법 32조  이사회#KOBLEX-002618",
+        "provision_text": "⑤ 이사회의 안건과 특별한 이해관계가 있는 회장ㆍ부회장 및 이사는 그 안건의 의결에 참여할 수 없다. 이 경우 의결에 참여하지 못하는 회장ㆍ부회장 및 이사는 제4항에 따른 구성원의 수에 포함되지 아니한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.005840071011334658,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "한국마사회법 32조  이사회 5항",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "사립학교법 54조 3 임명의 제한#KOBLEX-172415"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 73,
+        "first_stage_score": 19.016245881567727,
+        "fusion_rank": 5,
+        "issue_id": "I3",
+        "provision_id": "사립학교법 54조 3 임명의 제한#KOBLEX-172415",
+        "provision_text": "③ 학교법인의 이사장과 다음 각 호의 어느 하나의 관계인 사람은 해당 학교법인이 설치ㆍ경영하는 학교의 장에 임명될 수 없다. 다만, 이사 정수의 3분의 2 이상의 찬성과 관할청의 승인을 받은 사람은 그러하지 아니하다. 1. 배우자 2. 직계존속 및 직계비속과 그 배우자",
+        "rerank_rank": 5,
+        "rerank_score": 0.0018608253449201584,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "사립학교법 54조 3 임명의 제한 3항",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "사립학교법 54조 3 임명의 제한#KOBLEX-172416"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 60,
+        "first_stage_score": 19.644116531682766,
+        "fusion_rank": 6,
+        "issue_id": "I3",
+        "provision_id": "사립학교법 54조 3 임명의 제한#KOBLEX-172416",
+        "provision_text": "④ 학교의 장으로 임명되어 있는 사람이 학교법인의 이사장의 변경 또는 친족 관계의 변동 등으로 인하여 학교법인의 이사장과 제3항 각 호의 어느 하나의 관계가 된 경우에는 그 사유가 발생한 날부터 3개월 이내에 이사 정수의 3분의 2 이상의 찬성과 관할청의 승인을 받아야 한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.0009185212547890842,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3"
+        ],
+        "statute_name": "사립학교법 54조 3 임명의 제한 4항",
+        "target_evidence_item_ids": [
+          "E3"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "중소기업협동조합법 55조  이사회#KOBLEX-030856"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 22.118728674627516,
+        "fusion_rank": 7,
+        "issue_id": "I3",
+        "provision_id": "중소기업협동조합법 55조  이사회#KOBLEX-030856",
+        "provision_text": "⑤ 이사회 구성원은 자신의 신분에 관련되거나 자신의 이익이 조합의 이익과 상반되는 경우 등 특별한 이해관계가 있는 사항에 대해서는 해당 사항의 의결에 참가할 수 없다. 이 경우 의결에 참가하지 못하는 이사장ㆍ이사 및 상근 이사는 제4항에 따른 이사회 구성원 수에 포함되지 아니한다. <신설 2018.3.13>",
+        "rerank_rank": 7,
+        "rerank_score": 0.000798536988440901,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ3",
+        "source_request_ids": [
+          "RQ3",
+          "RQ2"
+        ],
+        "statute_name": "중소기업협동조합법 55조  이사회 5항",
+        "target_evidence_item_ids": [
+          "E3",
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공공기관의 운영에 관한 법률 19조  회의#KOBLEX-041806": "③이사회의 안건과 특별한 이해관계가 있는 기관장이나 이사는 그 안건의 의결에 참여할 수 없다. 이 경우 의결에 참여하지 못하는 이사 등은 제2항의 규정에 따른 재적이사 수에 포함되지 아니한다.",
+      "사립학교법 16조  이사회의 기능#KOBLEX-172179": "① 이사회는 다음 각 호의 사항을 심의ㆍ의결한다. 1. 학교법인의 예산ㆍ결산ㆍ차입금 및 재산의 취득ㆍ처분과 관리에 관한 사항 2. 정관 변경에 관한 사항 3. 학교법인의 합병 또는 해산에 관한 사항 4. 임원의 임면에 관한 사항 5. 학교법인이 설치한 사립학교의 장 및 교원의 임용에 관한 사항 6. 학교법인이 설치한 사립학교의 경영에 관한 중요 사항 7. 수익사업에 관한 사항 8. 그 밖에 법령이나 정관에 따라 그 권한에 속하는 사항",
+      "사립학교법 16조  이사회의 기능#KOBLEX-172180": "② 이사장 또는 이사가 학교법인과 이해관계가 상반될 때에는 그 이사장 또는 이사는 해당 사항에 관한 의결에 참여할 수 없다.",
+      "사립학교법 28조  재산의 관리 및 보호#KOBLEX-172270": "① 학교법인이 그 기본재산에 대하여 매도ㆍ증여ㆍ교환ㆍ용도변경하거나 담보로 제공하려는 경우 또는 의무를 부담하거나 권리를 포기하려는 경우에는 관할청의 허가를 받아야 한다. 다만, 대통령령으로 정하는 경미한 사항은 관할청에 신고하여야 한다.",
+      "사립학교법 54조 3 임명의 제한#KOBLEX-172415": "③ 학교법인의 이사장과 다음 각 호의 어느 하나의 관계인 사람은 해당 학교법인이 설치ㆍ경영하는 학교의 장에 임명될 수 없다. 다만, 이사 정수의 3분의 2 이상의 찬성과 관할청의 승인을 받은 사람은 그러하지 아니하다. 1. 배우자 2. 직계존속 및 직계비속과 그 배우자",
+      "사립학교법 54조 3 임명의 제한#KOBLEX-172416": "④ 학교의 장으로 임명되어 있는 사람이 학교법인의 이사장의 변경 또는 친족 관계의 변동 등으로 인하여 학교법인의 이사장과 제3항 각 호의 어느 하나의 관계가 된 경우에는 그 사유가 발생한 날부터 3개월 이내에 이사 정수의 3분의 2 이상의 찬성과 관할청의 승인을 받아야 한다.",
+      "사립학교법 시행령 11조  기본재산의 처분#KOBLEX-189911": "⑥ 관할청은 법 제28조제1항에 따른 학교법인의 기본재산 매도ㆍ증여ㆍ교환, 담보제공, 용도변경, 의무의 부담이나 권리의 포기에 관한 허가신청 또는 신고를 받은 날부터 14일 이내에 허가ㆍ신고수리 여부 또는 처리 지연 사유를 신청인에게 통지하여야 한다. <신설 2018.3.13>",
+      "수산업협동조합법 45조  이사회#KOBLEX-024353": "⑦ 이사회에서 의결할 때에는 해당 안건과 특별한 이해관계가 있는 이사회의 구성원은 그 안건의 의결에 참여할 수 없다. 이 경우 의결에 참여하지 못하는 이사 등은 제4항에 따른 이사회의 구성원 수에 포함되지 아니한다.",
+      "중소기업협동조합법 55조  이사회#KOBLEX-030856": "⑤ 이사회 구성원은 자신의 신분에 관련되거나 자신의 이익이 조합의 이익과 상반되는 경우 등 특별한 이해관계가 있는 사항에 대해서는 해당 사항의 의결에 참가할 수 없다. 이 경우 의결에 참가하지 못하는 이사장ㆍ이사 및 상근 이사는 제4항에 따른 이사회 구성원 수에 포함되지 아니한다. <신설 2018.3.13>",
+      "한국마사회법 32조  이사회#KOBLEX-002618": "⑤ 이사회의 안건과 특별한 이해관계가 있는 회장ㆍ부회장 및 이사는 그 안건의 의결에 참여할 수 없다. 이 경우 의결에 참여하지 못하는 회장ㆍ부회장 및 이사는 제4항에 따른 구성원의 수에 포함되지 아니한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "사립학교법 28조  재산의 관리 및 보호#KOBLEX-172270"
+            ],
+            "rationale": "C001은 기본재산 매도가 관할청 허가를 요한다고 명시한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "사립학교법 28조  재산의 관리 및 보호#KOBLEX-172270"
+            ],
+            "rationale": "C001 단서는 경미한 사항이 아닌 경우 허가, 경미한 사항인 경우 신고로 법적 효과를 구분한다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "사립학교법 28조  재산의 관리 및 보호#KOBLEX-172270"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001은 기본재산 매도가 관할청 허가 대상임을 명확히 규정하며, 경미한 사항에 대한 예외(신고)도 포함하고 있어 법적 근거가 완전하다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "사립학교법 16조  이사회의 기능#KOBLEX-172179"
+            ],
+            "rationale": "C002 제1호는 재산의 처분에 관한 사항을 이사회 심의·의결 대상으로 규정한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "사립학교법 16조  이사회의 기능#KOBLEX-172179"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C002는 재산의 처분에 관한 사항을 이사회 심의·의결 대상으로 명시하여 법적 근거가 완전하다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "사립학교법 16조  이사회의 기능#KOBLEX-172180"
+            ],
+            "rationale": "C003은 이해관계가 상반될 때 이사장의 의결 참여를 금지한다.",
+            "requirement_id": "E3-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "사립학교법 16조  이사회의 기능#KOBLEX-172180"
+            ],
+            "rationale": "가족이 이익을 얻는 상황은 학교법인과 이해관계가 상반되는 경우에 해당하므로 C003의 적용 대상이다.",
+            "requirement_id": "E3-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E3",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "사립학교법 16조  이사회의 기능#KOBLEX-172180"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C003은 이해관계가 상반되는 이사장의 의결 참여 금지를 명시하여 법적 근거가 완전하다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "사립학교법 28조  재산의 관리 및 보호#KOBLEX-172270",
+        "support_spans": [
+          {
+            "end_char": 132,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "사립학교법 16조  이사회의 기능#KOBLEX-172179",
+        "support_spans": [
+          {
+            "end_char": 244,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E3",
+        "issue_id": "I3",
+        "provision_id": "사립학교법 16조  이사회의 기능#KOBLEX-172180",
+        "support_spans": [
+          {
+            "end_char": 69,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "학교법인의 기본재산 매도가 관할청의 허가 대상인지 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "학교법인의 기본재산 매도가 이사회 심의·의결 대상인지 여부",
+        "issue_id": "I2"
+      },
+      {
+        "description": "이해관계 있는 이사장의 의결 참여 금지 여부",
+        "issue_id": "I3"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 학교법인 갑학원의 이사장인 갑은, 학교의 기본재산으로 등록된 도심지의 부지를 매도하여 그 대금으로 장학기금을 조성하고자 한다. 해당 부지는 현재 갑의 배우자가 실질적으로 운영하는 법인이 추진 중인 인근 개발사업과 직접적으로 연계되어 있어, 부지의 매도는 갑의 가족에게 상당한 이익을 가져다줄 가능성이 있는 상황이다. 이에 따라 갑은 해당 매각 안건을 이사회에 부의하려고 하며, 관할청의 허가 여부와 이사회의 심의 절차, 그리고 자신의 의결 참여 가능 여부에 대해 의문을 갖게 되었다. [질문] 학교법인의 이사장인 갑이 기본재산인 부지를 매도하려는 경우, 해당 매각이 대통령령으로 정하는 경미한 사항이 아니라면, 관할청의 허가 대상에 해당하는가? 또 이는 이사회에서 심의·의결해야 하는 안건인가? 또한, 위 기본재산 부지 매도를 통해 갑의 가족이 상당한 이익을 얻을 가능성이 있는 경우, 갑은 해당 안건에 대한 의결에 참여할 수 있는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "학교법인 기본재산 처분 허가 교육감",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "학교법인",
+          "기본재산",
+          "매도",
+          "관할청",
+          "허가"
+        ],
+        "query_text": "학교법인 기본재산 매도 관할청 허가 [원문 맥락] 또 이는 이사회에서 심의·의결해야 하는 안건인가? 또한, 위 기본재산 부지 매도를 통해 갑의 가족이 상당한 이익을 얻을 가능성이 있는 경우, 갑은 해당 안건에 대한 의결에 참여할 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "학교법인 기본재산 매도 관할청 허가 대상 여부",
+        "statute_hints": [
+          "학교법인의 설립·운영에 관한 법률"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "학교법인 이사회 의결 사항 기본재산",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "학교법인",
+          "이사회",
+          "심의",
+          "의결",
+          "기본재산"
+        ],
+        "query_text": "학교법인 이사회 심의 의결 대상 안건 [원문 맥락] 또 이는 이사회에서 심의·의결해야 하는 안건인가? 또한, 위 기본재산 부지 매도를 통해 갑의 가족이 상당한 이익을 얻을 가능성이 있는 경우, 갑은 해당 안건에 대한 의결에 참여할 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "학교법인 기본재산 매도 이사회 심의 의결 대상 여부",
+        "statute_hints": [
+          "학교법인의 설립·운영에 관한 법률"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E3",
+        "first_stage_query_text": "학교법인 이사 이해관계 의결 제한 가족 이익",
+        "issue_id": "I3",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "학교법인",
+          "이사",
+          "이해관계",
+          "의결",
+          "참여",
+          "금지"
+        ],
+        "query_text": "학교법인 이사 이해관계 의결 참여 금지 [원문 맥락] 또 이는 이사회에서 심의·의결해야 하는 안건인가? 또한, 위 기본재산 부지 매도를 통해 갑의 가족이 상당한 이익을 얻을 가능성이 있는 경우, 갑은 해당 안건에 대한 의결에 참여할 수 있는가?",
+        "request_id": "RQ3",
+        "rerank_query_text": "학교법인 이사장 이해관계 있는 안건 의결 참여 금지 여부",
+        "statute_hints": [
+          "학교법인의 설립·운영에 관한 법률"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n학교법인 갑학원의 이사장인 갑은, 학교의 기본재산으로 등록된 도심지의 부지를 매도하여 그 대금으로 장학기금을 조성하고자 한다. 해당 부지는 현재 갑의 배우자가 실질적으로 운영하는 법인이 추진 중인 인근 개발사업과 직접적으로 연계되어 있어, 부지의 매도는 갑의 가족에게 상당한 이익을 가져다줄 가능성이 있는 상황이다. 이에 따라 갑은 해당 매각 안건을 이사회에 부의하려고 하며, 관할청의 허가 여부와 이사회의 심의 절차, 그리고 자신의 의결 참여 가능 여부에 대해 의문을 갖게 되었다.\n\n[질문]\n학교법인의 이사장인 갑이 기본재산인 부지를 매도하려는 경우, 해당 매각이 대통령령으로 정하는 경미한 사항이 아니라면, 관할청의 허가 대상에 해당하는가? 또 이는 이사회에서 심의·의결해야 하는 안건인가? 또한, 위 기본재산 부지 매도를 통해 갑의 가족이 상당한 이익을 얻을 가능성이 있는 경우, 갑은 해당 안건에 대한 의결에 참여할 수 있는가?",
+    "remaining_request_budget": 6,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "기본재산 매도가 관할청 허가 대상인지, 예외가 있는지 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "학교법인의 기본재산 매도가 관할청의 허가를 요하는지 여부"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "대통령령으로 정하는 경미한 사항에 해당하지 않을 경우의 법적 효과"
+          }
+        ],
+        "critical": true,
+        "description": "학교법인의 기본재산 처분에 관한 관할청 허가 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 직접적으로 관할청 허가 대상 여부를 묻고 있으므로, 해당 법적 근거가 없으면 결론을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "기본재산 매도가 이사회 심의·의결 대상인지 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "학교법인의 기본재산 매도가 이사회 심의·의결 대상인지 여부"
+          }
+        ],
+        "critical": true,
+        "description": "학교법인 이사회 심의·의결 대상 안건 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 직접적으로 이사회 심의·의결 대상 여부를 묻고 있으므로, 해당 법적 근거가 없으면 결론을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T3"
+        ],
+        "completion_criteria": "가족이 상당한 이익을 얻을 가능성이 있는 경우 이사장의 의결 참여 금지 여부 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E3-R1",
+            "text": "이해관계 있는 이사(이사장)의 의결 참여 금지 규정"
+          },
+          {
+            "requirement_id": "E3-R2",
+            "text": "가족이 상당한 이익을 얻을 가능성이 있는 경우의 의결 참여 제한"
+          }
+        ],
+        "critical": true,
+        "description": "이해관계 있는 이사의 의결 참여 금지 규정",
+        "evidence_item_id": "E3",
+        "evidence_type": "exception",
+        "issue_id": "I3",
+        "necessity_reason": "질문에서 직접적으로 이해관계 있는 이사장의 의결 참여 가능 여부를 묻고 있으므로, 해당 법적 근거가 없으면 결론을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "afd2c383-49de-4c89-bec6-7f287c1309e5",
+    "seen_provision_ids": [
+      "사립학교법 16조  이사회의 기능#KOBLEX-172180",
+      "사립학교법 28조  재산의 관리 및 보호#KOBLEX-172270",
+      "사립학교법 시행령 11조  기본재산의 처분#KOBLEX-189911",
+      "사립학교법 54조 3 임명의 제한#KOBLEX-172416",
+      "사립학교법 16조  이사회의 기능#KOBLEX-172179",
+      "수산업협동조합법 45조  이사회#KOBLEX-024353",
+      "한국마사회법 32조  이사회#KOBLEX-002618",
+      "공공기관의 운영에 관한 법률 19조  회의#KOBLEX-041806",
+      "중소기업협동조합법 55조  이사회#KOBLEX-030856",
+      "사립학교법 54조 3 임명의 제한#KOBLEX-172415"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

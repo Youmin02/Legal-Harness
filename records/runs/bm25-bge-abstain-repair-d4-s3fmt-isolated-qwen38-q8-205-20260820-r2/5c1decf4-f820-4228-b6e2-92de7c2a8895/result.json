@@ -1,0 +1,609 @@
+{
+  "abstention_reason": null,
+  "answer": "군사법원법 제489조에 따라 재심에서는 원판결의 형보다 무거운 형을 선고하지 못한다.[CT1]\n형사소송법 제439조에 따라 재심에는 원판결의 형보다 무거운 형을 선고할 수 없다.[CT2]\n형사소송법 제435조 제2항에 따라 재심개시의 결정을 할 때에는 결정으로 형의 집행을 정지할 수 있다.[CT3]\n전제: 갑의 재심 절차가 군사법원법 및 형사소송법의 일반적 적용 대상임을 전제한다.\n한계: 형 집행 정지는 '정지할 수 있다'는 재량적 규정으로, 반드시 정지된다는 보장은 없다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "군사법원법 제489조에 따라 재심에서는 원판결의 형보다 무거운 형을 선고하지 못한다.[CT1]\n형사소송법 제439조에 따라 재심에는 원판결의 형보다 무거운 형을 선고할 수 없다.[CT2]\n형사소송법 제435조 제2항에 따라 재심개시의 결정을 할 때에는 결정으로 형의 집행을 정지할 수 있다.[CT3]\n전제: 갑의 재심 절차가 군사법원법 및 형사소송법의 일반적 적용 대상임을 전제한다.\n한계: 형 집행 정지는 '정지할 수 있다'는 재량적 규정으로, 반드시 정지된다는 보장은 없다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T20:45:22.058779+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 189241.586,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 168,
+      "dedup_collapse": 48,
+      "evidence_fusion": 168,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 168
+    }
+  },
+  "run_id": "5c1decf4-f820-4228-b6e2-92de7c2a8895",
+  "state": {
+    "accepted_provision_ids": [
+      "형사소송법 435조  재심개시의 결정#KOBLEX-232895",
+      "군사법원법 489조  불이익 변경의 금지#KOBLEX-093677",
+      "형사소송법 439조  불이익변경의 금지#KOBLEX-232905"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 3,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "원판결보다 무거운 형을 선고할 수 있는가",
+        "requested_output": "재심에서 원판결보다 무거운 형을 선고할 수 있는지 여부"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "형 집행은 어떻게 되는가",
+        "requested_output": "재심 개시 결정 시 형 집행의 법적 효과"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "군사법원법 489조  불이익 변경의 금지#KOBLEX-093677",
+          "군사법원법 489조  불이익 변경의 금지#KOBLEX-159642"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 50.01103940990426,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 489조  불이익 변경의 금지#KOBLEX-093677",
+        "provision_text": "제489조(불이익 변경의 금지) 재심에서는 원판결의 형보다 무거운 형을 선고하지 못한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "군사법원법 489조  불이익 변경의 금지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 435조  재심개시의 결정#KOBLEX-232895"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 3.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 435조  재심개시의 결정#KOBLEX-232895",
+        "provision_text": "②재심개시의 결정을 할 때에는 결정으로 형의 집행을 정지할 수 있다. <개정 1995.12.29>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9998513460159302,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 435조  재심개시의 결정 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 439조  불이익변경의 금지#KOBLEX-232905"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 50.01103940990426,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 439조  불이익변경의 금지#KOBLEX-232905",
+        "provision_text": "제439조(불이익변경의 금지) 재심에는 원판결의 형보다 무거운 형을 선고할 수 없다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9999994039535522,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 439조  불이익변경의 금지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 368조  불이익변경의 금지#KOBLEX-232756"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 37.30535173487508,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 368조  불이익변경의 금지#KOBLEX-232756",
+        "provision_text": "제368조(불이익변경의 금지) 피고인이 항소한 사건과 피고인을 위하여 항소한 사건에 대해서는 원심판결의 형보다 무거운 형을 선고할 수 없다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9997817873954773,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 368조  불이익변경의 금지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 437조  불이익변경의 금지#KOBLEX-093548",
+          "군사법원법 437조  불이익변경의 금지#KOBLEX-159513"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 37.996882830310845,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 437조  불이익변경의 금지#KOBLEX-093548",
+        "provision_text": "제437조(불이익변경의 금지) 피고인이 항소한 사건과 피고인을 위하여 항소한 사건에 대하여는 원심판결의 형보다 무거운 형을 선고하지 못한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.9992213249206543,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "군사법원법 437조  불이익변경의 금지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사보상 및 명예회복에 관한 법률 26조  면소 등의 경우#KOBLEX-003280"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 39,
+        "first_stage_score": 20.368372304413317,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형사보상 및 명예회복에 관한 법률 26조  면소 등의 경우#KOBLEX-003280",
+        "provision_text": "① 다음 각 호의 어느 하나에 해당하는 경우에도 국가에 대하여 구금에 대한 보상을 청구할 수 있다. 다만, 제3호의 경우 재심 절차에서 선고된 형을 초과하여 집행된 구금일수를 제5조제1항에 따른 구금일수로 본다. <개정 2023.12.29> 1. 「형사소송법」에 따라 면소(免訴) 또는 공소기각(公訴棄却)의 재판을 받아 확정된 피고인이 면소 또는 공소기각의 재판을 할 만한 사유가 없었더라면 무죄재판을 받을 만한 현저한 사유가 있었을 경우 2. 「치료감호법」 제7조에 따라 치료감호의 독립 청구를 받은 피치료감호청구인의 치료감호사건이 범죄로 되지 아니하거나 범죄사실의 증명이 없는 때에 해당되어 청구기각의 판결을 받아 확정된 경우 3. 「헌법재판소법」에 따른 재심 절차에서 원판결보다 가벼운 형으로 확정됨에 따라 원판결에 의한 형 집행이 재심 절차에서 선고된 형을 초과한 경우",
+        "rerank_rank": 5,
+        "rerank_score": 0.9979075193405151,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형사보상 및 명예회복에 관한 법률 26조  면소 등의 경우 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "해양사고의 조사 및 심판에 관한 법률 65조 2 불이익변경의 금지#KOBLEX-164685"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 27.775172053685218,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "해양사고의 조사 및 심판에 관한 법률 65조 2 불이익변경의 금지#KOBLEX-164685",
+        "provision_text": "제65조의2(불이익변경의 금지) 해양사고관련자인 해기사나 도선사가 제2심을 청구한 사건과 해양사고관련자인 해기사나 도선사를 위하여 제2심을 청구한 사건에 대하여는 제1심에서 재결한 징계보다 무거운 징계를 할 수 없다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.9907241463661194,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "해양사고의 조사 및 심판에 관한 법률 65조 2 불이익변경의 금지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소송촉진 등에 관한 특례법 23조 2 재심#KOBLEX-085234",
+          "소송촉진 등에 관한 특례법 23조 2 재심#KOBLEX-194139",
+          "소송촉진 등에 관한 특례법 23조 2 재심#KOBLEX-203630"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 33.743053085484185,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "소송촉진 등에 관한 특례법 23조 2 재심#KOBLEX-085234",
+        "provision_text": "⑥ 재심 개시 결정이 확정된 후 공판기일에 재심청구인이 출석하지 아니한 경우에는 「형사소송법」 제365조를 준용한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9483734965324402,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "소송촉진 등에 관한 특례법 23조 2 재심 6항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 420조  재심이유#KOBLEX-232861"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 2.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 420조  재심이유#KOBLEX-232861",
+        "provision_text": "5. 유죄를 선고받은 자에 대하여 무죄 또는 면소를, 형의 선고를 받은 자에 대하여 형의 면제 또는 원판결이 인정한 죄보다 가벼운 죄를 인정할 명백한 증거가 새로 발견된 때",
+        "rerank_rank": 7,
+        "rerank_score": 0.9370393753051758,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 420조  재심이유 5호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 501조 12 불이익 변경의 금지#KOBLEX-093717",
+          "군사법원법 501조 12 불이익 변경의 금지#KOBLEX-159682"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 39.45981998383509,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 501조 12 불이익 변경의 금지#KOBLEX-093717",
+        "provision_text": "제501조의12(불이익 변경의 금지) 피고인이 정식재판을 청구한 사건에 대하여는 약식명령의 형보다 무거운 형을 선고하지 못한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.8750460743904114,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "군사법원법 501조 12 불이익 변경의 금지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "군사법원법 437조  불이익변경의 금지#KOBLEX-093548": "제437조(불이익변경의 금지) 피고인이 항소한 사건과 피고인을 위하여 항소한 사건에 대하여는 원심판결의 형보다 무거운 형을 선고하지 못한다.",
+      "군사법원법 489조  불이익 변경의 금지#KOBLEX-093677": "제489조(불이익 변경의 금지) 재심에서는 원판결의 형보다 무거운 형을 선고하지 못한다.",
+      "군사법원법 501조 12 불이익 변경의 금지#KOBLEX-093717": "제501조의12(불이익 변경의 금지) 피고인이 정식재판을 청구한 사건에 대하여는 약식명령의 형보다 무거운 형을 선고하지 못한다.",
+      "소송촉진 등에 관한 특례법 23조 2 재심#KOBLEX-085234": "⑥ 재심 개시 결정이 확정된 후 공판기일에 재심청구인이 출석하지 아니한 경우에는 「형사소송법」 제365조를 준용한다.",
+      "해양사고의 조사 및 심판에 관한 법률 65조 2 불이익변경의 금지#KOBLEX-164685": "제65조의2(불이익변경의 금지) 해양사고관련자인 해기사나 도선사가 제2심을 청구한 사건과 해양사고관련자인 해기사나 도선사를 위하여 제2심을 청구한 사건에 대하여는 제1심에서 재결한 징계보다 무거운 징계를 할 수 없다.",
+      "형사보상 및 명예회복에 관한 법률 26조  면소 등의 경우#KOBLEX-003280": "① 다음 각 호의 어느 하나에 해당하는 경우에도 국가에 대하여 구금에 대한 보상을 청구할 수 있다. 다만, 제3호의 경우 재심 절차에서 선고된 형을 초과하여 집행된 구금일수를 제5조제1항에 따른 구금일수로 본다. <개정 2023.12.29> 1. 「형사소송법」에 따라 면소(免訴) 또는 공소기각(公訴棄却)의 재판을 받아 확정된 피고인이 면소 또는 공소기각의 재판을 할 만한 사유가 없었더라면 무죄재판을 받을 만한 현저한 사유가 있었을 경우 2. 「치료감호법」 제7조에 따라 치료감호의 독립 청구를 받은 피치료감호청구인의 치료감호사건이 범죄로 되지 아니하거나 범죄사실의 증명이 없는 때에 해당되어 청구기각의 판결을 받아 확정된 경우 3. 「헌법재판소법」에 따른 재심 절차에서 원판결보다 가벼운 형으로 확정됨에 따라 원판결에 의한 형 집행이 재심 절차에서 선고된 형을 초과한 경우",
+      "형사소송법 368조  불이익변경의 금지#KOBLEX-232756": "제368조(불이익변경의 금지) 피고인이 항소한 사건과 피고인을 위하여 항소한 사건에 대해서는 원심판결의 형보다 무거운 형을 선고할 수 없다.",
+      "형사소송법 420조  재심이유#KOBLEX-232861": "5. 유죄를 선고받은 자에 대하여 무죄 또는 면소를, 형의 선고를 받은 자에 대하여 형의 면제 또는 원판결이 인정한 죄보다 가벼운 죄를 인정할 명백한 증거가 새로 발견된 때",
+      "형사소송법 435조  재심개시의 결정#KOBLEX-232895": "②재심개시의 결정을 할 때에는 결정으로 형의 집행을 정지할 수 있다. <개정 1995.12.29>",
+      "형사소송법 439조  불이익변경의 금지#KOBLEX-232905": "제439조(불이익변경의 금지) 재심에는 원판결의 형보다 무거운 형을 선고할 수 없다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "군사법원법 489조  불이익 변경의 금지#KOBLEX-093677",
+              "형사소송법 439조  불이익변경의 금지#KOBLEX-232905"
+            ],
+            "rationale": "C001과 C003이 재심에서의 불이익변경 금지를 명시적으로 규정하여 요구사항을 충족한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "군사법원법 489조  불이익 변경의 금지#KOBLEX-093677",
+          "형사소송법 439조  불이익변경의 금지#KOBLEX-232905"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "군사법원법 제489조(C001)와 형사소송법 제439조(C003)가 재심에서 원판결보다 무거운 형을 선고할 수 없음을 명확히 규정하고 있어, 질문의 법적 근거가 충족된다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형사소송법 435조  재심개시의 결정#KOBLEX-232895"
+            ],
+            "rationale": "C002가 재심개시 결정 시 형 집행 정지 규정을 포함하여 요구사항을 충족한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형사소송법 435조  재심개시의 결정#KOBLEX-232895"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "형사소송법 제435조 제2항(C002)이 재심개시 결정 시 형 집행 정지 가능성을 규정하여, 형 집행의 법적 효과에 대한 법적 근거를 제공한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "군사법원법 489조  불이익 변경의 금지#KOBLEX-093677",
+        "support_spans": [
+          {
+            "end_char": 49,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 439조  불이익변경의 금지#KOBLEX-232905",
+        "support_spans": [
+          {
+            "end_char": 47,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형사소송법 435조  재심개시의 결정#KOBLEX-232895",
+        "support_spans": [
+          {
+            "end_char": 54,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "재심에서 원판결보다 무거운 형을 선고할 수 있는지 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "재심 개시 결정 시 형 집행의 법적 효과",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 군사법원에서 유죄 판결을 받아 징역 3년을 선고받았다. 이후 갑은 새로운 증거를 발견하여 재심을 신청했고, 재심 개시가 결정되었다. 현재 갑은 형을 집행 중이다. [질문] 갑의 재심에서 군사법원은 원판결보다 무거운 형을 선고할 수 있는가, 그리고 재심 개시가 결정된 경우 갑의 형 집행은 어떻게 되는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "재심 무거운 형 선고 금지",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "재심",
+          "무거운 형",
+          "선고",
+          "원판결",
+          "형량"
+        ],
+        "query_text": "재심에서 원판결보다 무거운 형을 선고할 수 있는가 [원문 맥락] 현재 갑은 형을 집행 중이다. 갑의 재심에서 군사법원은 원판결보다 무거운 형을 선고할 수 있는가, 그리고 재심 개시가 결정된 경우 갑의 형 집행은 어떻게 되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "재심에서 원판결보다 무거운 형을 선고할 수 있는지 여부",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "재심 개시 형 집행 정지",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "재심",
+          "개시",
+          "형 집행",
+          "정지",
+          "효력"
+        ],
+        "query_text": "재심 개시 결정 시 형 집행의 효과 [원문 맥락] 현재 갑은 형을 집행 중이다. 갑의 재심에서 군사법원은 원판결보다 무거운 형을 선고할 수 있는가, 그리고 재심 개시가 결정된 경우 갑의 형 집행은 어떻게 되는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "재심 개시 결정 시 형 집행이 어떻게 되는지",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 군사법원에서 유죄 판결을 받아 징역 3년을 선고받았다. 이후 갑은 새로운 증거를 발견하여 재심을 신청했고, 재심 개시가 결정되었다. 현재 갑은 형을 집행 중이다.\n\n[질문]\n갑의 재심에서 군사법원은 원판결보다 무거운 형을 선고할 수 있는가, 그리고 재심 개시가 결정된 경우 갑의 형 집행은 어떻게 되는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "재심에서 원판결보다 무거운 형을 선고할 수 있는지 여부에 대한 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "재심에서 원판결보다 무거운 형을 선고할 수 있는지 여부에 대한 법적 근거를 확인"
+          }
+        ],
+        "critical": true,
+        "description": "재심에서 원판결보다 무거운 형을 선고할 수 있는지에 관한 법적 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 재심에서 원판결보다 무거운 형을 선고할 수 있는지 여부를 묻고 있으므로, 이에 대한 법적 근거가 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "재심 개시 결정 시 형 집행이 어떻게 되는지에 대한 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "재심 개시 결정 시 형 집행이 어떻게 되는지에 대한 법적 근거를 확인"
+          }
+        ],
+        "critical": true,
+        "description": "재심 개시 결정 시 형 집행의 법적 효과에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 재심 개시 결정 시 형 집행의 법적 효과를 묻고 있으므로, 이에 대한 법적 근거가 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "5c1decf4-f820-4228-b6e2-92de7c2a8895",
+    "seen_provision_ids": [
+      "형사보상 및 명예회복에 관한 법률 26조  면소 등의 경우#KOBLEX-003280",
+      "형사소송법 368조  불이익변경의 금지#KOBLEX-232756",
+      "형사소송법 439조  불이익변경의 금지#KOBLEX-232905",
+      "군사법원법 501조 12 불이익 변경의 금지#KOBLEX-093717",
+      "해양사고의 조사 및 심판에 관한 법률 65조 2 불이익변경의 금지#KOBLEX-164685",
+      "소송촉진 등에 관한 특례법 23조 2 재심#KOBLEX-085234",
+      "군사법원법 489조  불이익 변경의 금지#KOBLEX-093677",
+      "형사소송법 420조  재심이유#KOBLEX-232861",
+      "형사소송법 435조  재심개시의 결정#KOBLEX-232895",
+      "군사법원법 437조  불이익변경의 금지#KOBLEX-093548"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

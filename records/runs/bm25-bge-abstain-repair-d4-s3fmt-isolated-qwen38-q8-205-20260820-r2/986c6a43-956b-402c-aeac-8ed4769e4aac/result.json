@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T03:05:27.007211+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 188179.088,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 136 column 9 (char 4127)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "986c6a43-956b-402c-aeac-8ed4769e4aac",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 136 column 9 (char 4127)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을이 운영하는 제조업체에서 5년 동안 근무하다가 퇴사하게 되었습니다. 을은 최근 퇴직금 지급 제도를 새로 설정하려고 합니다. 갑은 을이 설정할 퇴직금 제도가 법적으로 올바른지 궁금해 합니다. 특히 평균임금의 산정 방식과 퇴직연금제도의 종류에 대해 알고 싶어 합니다. [질문] 을이 퇴직금 제도를 설정한다면, 어떠한 기준에 의해 설정해야 하고, 평균임금과 퇴직연금제도는 어떻게 정의되는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n갑은 을이 운영하는 제조업체에서 5년 동안 근무하다가 퇴사하게 되었습니다. 을은 최근 퇴직금 지급 제도를 새로 설정하려고 합니다. 갑은 을이 설정할 퇴직금 제도가 법적으로 올바른지 궁금해 합니다. 특히 평균임금의 산정 방식과 퇴직연금제도의 종류에 대해 알고 싶어 합니다.\n\n[질문]\n을이 퇴직금 제도를 설정한다면, 어떠한 기준에 의해 설정해야 하고,  평균임금과 퇴직연금제도는 어떻게 정의되는가?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "986c6a43-956b-402c-aeac-8ed4769e4aac",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

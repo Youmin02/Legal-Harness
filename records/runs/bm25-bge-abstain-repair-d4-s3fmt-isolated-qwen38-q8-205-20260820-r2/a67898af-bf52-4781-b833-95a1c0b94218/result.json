@@ -1,0 +1,497 @@
+{
+  "abstention_reason": null,
+  "answer": "헌법재판소는 심판사건을 접수한 날부터 180일 이내에 종국결정의 선고를 하여야 한다.[CT1]\n재판관의 궐위로 7명의 출석이 불가능한 경우에는 그 궐위된 기간은 심판기간에 산입하지 아니한다.[CT2]\n전제: 의뢰인 을이 제기한 헌법소원 사건이 헌법재판소법 제38조에서 규정하는 '심판사건'에 해당한다고 가정한다.\n한계: 재판관의 궐위로 7명의 출석이 불가능한 경우, 해당 궐위 기간은 180일 심판기간에 포함되지 않으므로 실제 소요 기간은 180일을 초과할 수 있다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "헌법재판소는 심판사건을 접수한 날부터 180일 이내에 종국결정의 선고를 하여야 한다.[CT1]\n재판관의 궐위로 7명의 출석이 불가능한 경우에는 그 궐위된 기간은 심판기간에 산입하지 아니한다.[CT2]\n전제: 의뢰인 을이 제기한 헌법소원 사건이 헌법재판소법 제38조에서 규정하는 '심판사건'에 해당한다고 가정한다.\n한계: 재판관의 궐위로 7명의 출석이 불가능한 경우, 해당 궐위 기간은 180일 심판기간에 포함되지 않으므로 실제 소요 기간은 180일을 초과할 수 있다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T23:35:34.852255+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 112899.817,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 92,
+      "dedup_collapse": 14,
+      "evidence_fusion": 92,
+      "first_stage": 100,
+      "request_rerank": 100,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 92
+    }
+  },
+  "run_id": "a67898af-bf52-4781-b833-95a1c0b94218",
+  "state": {
+    "accepted_provision_ids": [
+      "헌법재판소법 38조  심판기간#KOBLEX-188004"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "statutory_deadline",
+        "question_anchor": "종국결정의 선고는 몇 일 이내에 이루어져야",
+        "requested_output": "헌법재판소 사건 접수 후 종국결정 선고까지의 법정 최대 기간(일수)"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 38조  심판기간#KOBLEX-188004"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 38조  심판기간#KOBLEX-188004",
+        "provision_text": "제38조(심판기간) 헌법재판소는 심판사건을 접수한 날부터 180일 이내에 종국결정의 선고를 하여야 한다. 다만, 재판관의 궐위로 7명의 출석이 불가능한 경우에는 그 궐위된 기간은 심판기간에 산입하지 아니한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9549590945243835,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 38조  심판기간",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 36조  종국결정#KOBLEX-187998"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 29,
+        "first_stage_score": 19.396439175861566,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 36조  종국결정#KOBLEX-187998",
+        "provision_text": "④ 종국결정이 선고되면 서기는 지체 없이 결정서 정본을 작성하여 당사자에게 송달하여야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.008776465430855751,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 36조  종국결정 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 36조  종국결정#KOBLEX-187995"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 1.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 36조  종국결정#KOBLEX-187995",
+        "provision_text": "① 재판부가 심리를 마쳤을 때에는 종국결정을 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.0027658024337142706,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 36조  종국결정 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 36조  종국결정#KOBLEX-187994"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 35.11720193244126,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 36조  종국결정#KOBLEX-187994",
+        "provision_text": "제36조(종국결정)",
+        "rerank_rank": 4,
+        "rerank_score": 0.0022355022374540567,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 36조  종국결정",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 54조  결정의 효력#KOBLEX-188059"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 96,
+        "first_stage_score": 1.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 54조  결정의 효력#KOBLEX-188059",
+        "provision_text": "② 탄핵결정에 의하여 파면된 사람은 결정 선고가 있은 날부터 5년이 지나지 아니하면 공무원이 될 수 없다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.00031078586471267045,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 54조  결정의 효력 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 65조  가처분#KOBLEX-188087"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 22.608927437501855,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 65조  가처분#KOBLEX-188087",
+        "provision_text": "제65조(가처분) 헌법재판소가 권한쟁의심판의 청구를 받았을 때에는 직권 또는 청구인의 신청에 의하여 종국결정의 선고 시까지 심판 대상이 된 피청구인의 처분의 효력을 정지하는 결정을 할 수 있다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.0001722073066048324,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 65조  가처분",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 36조  종국결정#KOBLEX-187999"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 1.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 36조  종국결정#KOBLEX-187999",
+        "provision_text": "⑤ 종국결정은 헌법재판소규칙으로 정하는 바에 따라 관보에 게재하거나 그 밖의 방법으로 공시한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.00013414664135780185,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 36조  종국결정 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 57조  가처분#KOBLEX-188065"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 24.143139697765132,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 57조  가처분#KOBLEX-188065",
+        "provision_text": "제57조(가처분) 헌법재판소는 정당해산심판의 청구를 받은 때에는 직권 또는 청구인의 신청에 의하여 종국결정의 선고 시까지 피청구인의 활동을 정지하는 결정을 할 수 있다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.0001118420041166246,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 57조  가처분",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 36조  종국결정#KOBLEX-187996"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 1.0,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 36조  종국결정#KOBLEX-187996",
+        "provision_text": "② 종국결정을 할 때에는 다음 각 호의 사항을 적은 결정서를 작성하고 심판에 관여한 재판관 전원이 이에 서명날인하여야 한다. 1. 사건번호와 사건명 2. 당사자와 심판수행자 또는 대리인의 표시 3. 주문(主文) 4. 이유 5. 결정일",
+        "rerank_rank": 9,
+        "rerank_score": 9.725776180857792e-05,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 36조  종국결정 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "헌법재판소법 2조  관장사항#KOBLEX-187840"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 30.426230366994062,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 2조  관장사항#KOBLEX-187840",
+        "provision_text": "5. 헌법소원(憲法訴願)에 관한 심판",
+        "rerank_rank": 10,
+        "rerank_score": 5.9624035202432424e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "헌법재판소법 2조  관장사항 5호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "헌법재판소법 2조  관장사항#KOBLEX-187840": "5. 헌법소원(憲法訴願)에 관한 심판",
+      "헌법재판소법 36조  종국결정#KOBLEX-187994": "제36조(종국결정)",
+      "헌법재판소법 36조  종국결정#KOBLEX-187995": "① 재판부가 심리를 마쳤을 때에는 종국결정을 한다.",
+      "헌법재판소법 36조  종국결정#KOBLEX-187996": "② 종국결정을 할 때에는 다음 각 호의 사항을 적은 결정서를 작성하고 심판에 관여한 재판관 전원이 이에 서명날인하여야 한다. 1. 사건번호와 사건명 2. 당사자와 심판수행자 또는 대리인의 표시 3. 주문(主文) 4. 이유 5. 결정일",
+      "헌법재판소법 36조  종국결정#KOBLEX-187998": "④ 종국결정이 선고되면 서기는 지체 없이 결정서 정본을 작성하여 당사자에게 송달하여야 한다.",
+      "헌법재판소법 36조  종국결정#KOBLEX-187999": "⑤ 종국결정은 헌법재판소규칙으로 정하는 바에 따라 관보에 게재하거나 그 밖의 방법으로 공시한다.",
+      "헌법재판소법 38조  심판기간#KOBLEX-188004": "제38조(심판기간) 헌법재판소는 심판사건을 접수한 날부터 180일 이내에 종국결정의 선고를 하여야 한다. 다만, 재판관의 궐위로 7명의 출석이 불가능한 경우에는 그 궐위된 기간은 심판기간에 산입하지 아니한다.",
+      "헌법재판소법 54조  결정의 효력#KOBLEX-188059": "② 탄핵결정에 의하여 파면된 사람은 결정 선고가 있은 날부터 5년이 지나지 아니하면 공무원이 될 수 없다.",
+      "헌법재판소법 57조  가처분#KOBLEX-188065": "제57조(가처분) 헌법재판소는 정당해산심판의 청구를 받은 때에는 직권 또는 청구인의 신청에 의하여 종국결정의 선고 시까지 피청구인의 활동을 정지하는 결정을 할 수 있다.",
+      "헌법재판소법 65조  가처분#KOBLEX-188087": "제65조(가처분) 헌법재판소가 권한쟁의심판의 청구를 받았을 때에는 직권 또는 청구인의 신청에 의하여 종국결정의 선고 시까지 심판 대상이 된 피청구인의 처분의 효력을 정지하는 결정을 할 수 있다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "헌법재판소법 38조  심판기간#KOBLEX-188004"
+            ],
+            "rationale": "C001은 헌법재판소법 제38조로서 심판사건 접수일로부터 180일 이내 종국결정 선고를 규정하여, 헌법소원 사건에 적용되는 종국결정 선고 기한을 명확히 확인시켜 준다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "헌법재판소법 38조  심판기간#KOBLEX-188004"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001(헌법재판소법 제38조)은 헌법소원 사건을 포함한 모든 심판사건에 대해 접수일로부터 180일 이내 종국결정 선고를 의무화하는 조항으로, E1의 완료 기준인 '사건 접수일로부터 종국결정 선고까지의 최대 일수를 명시하는 조항'을 충족한다. 다른 후보 조항들은 종국결정의 형식, 효력, 또는 가처분에 관한 것으로 기한 규정에 해당하지 않는다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "헌법재판소법 38조  심판기간#KOBLEX-188004",
+        "support_spans": [
+          {
+            "end_char": 116,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "헌법재판소의 헌법소원 사건에 대해 종국결정을 선고해야 하는 법정 기한이 무엇인지",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 대한민국의 변호사로서, 그의 의뢰인 을이 헌법 소원을 제기하여 헌법재판소에 사건을 접수하였다. 을은 사건의 결과가 신속히 나오기를 원하지만, 시간이 얼마나 걸릴지 궁금해하고 있다. 이 상황에서 갑은 을에게 헌법재판소가 사건 접수 후 종국결정 선고까지 걸리는 최대 기간에 대해 설명해야 한다. [질문] 갑이 의뢰인 을에게 헌법재판소가 사건을 접수한 후 종국결정의 선고는 몇 일 이내에 이루어져야 한다고 설명해야 하는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "헌법재판소 헌법소원 종국결정 선고 기한 일수",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "헌법재판소",
+          "헌법소원",
+          "종국결정",
+          "선고",
+          "기한",
+          "일수"
+        ],
+        "query_text": "헌법재판소 헌법소원 사건 종국결정 선고 기한 [원문 맥락] 이 상황에서 갑은 을에게 헌법재판소가 사건 접수 후 종국결정 선고까지 걸리는 최대 기간에 대해 설명해야 한다. 갑이 의뢰인 을에게 헌법재판소가 사건을 접수한 후 종국결정의 선고는 몇 일 이내에 이루어져야 한다고 설명해야 하는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "헌법소원 사건 접수 후 종국결정 선고까지 최대 기간",
+        "statute_hints": [
+          "헌법재판소법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 대한민국의 변호사로서, 그의 의뢰인 을이 헌법 소원을 제기하여 헌법재판소에 사건을 접수하였다. 을은 사건의 결과가 신속히 나오기를 원하지만, 시간이 얼마나 걸릴지 궁금해하고 있다. 이 상황에서 갑은 을에게 헌법재판소가 사건 접수 후 종국결정 선고까지 걸리는 최대 기간에 대해 설명해야 한다.\n\n[질문]\n갑이 의뢰인 을에게 헌법재판소가 사건을 접수한 후 종국결정의 선고는 몇 일 이내에 이루어져야 한다고 설명해야 하는가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "사건 접수일로부터 종국결정 선고까지의 최대 일수를 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "헌법소원 사건에 적용되는 종국결정 선고 기한(일수)을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "헌법재판소법에서 헌법소원 사건에 대해 종국결정을 선고해야 하는 기한을 정한 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문은 헌법재판소가 사건 접수 후 종국결정 선고를 해야 하는 최대 기간을 묻고 있으므로, 해당 기한을 정한 법령 조항 없이는 답변을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "a67898af-bf52-4781-b833-95a1c0b94218",
+    "seen_provision_ids": [
+      "헌법재판소법 38조  심판기간#KOBLEX-188004",
+      "헌법재판소법 36조  종국결정#KOBLEX-187994",
+      "헌법재판소법 36조  종국결정#KOBLEX-187999",
+      "헌법재판소법 36조  종국결정#KOBLEX-187995",
+      "헌법재판소법 65조  가처분#KOBLEX-188087",
+      "헌법재판소법 2조  관장사항#KOBLEX-187840",
+      "헌법재판소법 54조  결정의 효력#KOBLEX-188059",
+      "헌법재판소법 57조  가처분#KOBLEX-188065",
+      "헌법재판소법 36조  종국결정#KOBLEX-187998",
+      "헌법재판소법 36조  종국결정#KOBLEX-187996"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

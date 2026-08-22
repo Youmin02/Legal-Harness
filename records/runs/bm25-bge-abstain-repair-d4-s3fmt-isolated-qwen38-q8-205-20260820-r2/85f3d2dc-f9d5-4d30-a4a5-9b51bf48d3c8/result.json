@@ -1,0 +1,501 @@
+{
+  "abstention_reason": null,
+  "answer": "집행유예의 선고를 받은 자가 유예기간 중 고의로 범한 죄로 금고 이상의 실형을 선고받아 그 판결이 확정된 때에는 집행유예의 선고는 효력을 잃습니다.[CT1]\n갑은 집행유예 기간 중 고의로 상해죄를 저질러 금고 1년의 실형을 선고받고 판결이 확정되었으므로, 갑의 집행유예는 효력을 잃습니다.[CT2]\n전제: 질문에 제시된 사실관계(갑의 전과, 유예기간 중 고의 상해, 금고 1년 실형 확정)가 사실임을 전제로 합니다.\n한계: 본 답변은 형법 제63조에 근거한 집행유예의 효력 변동에 관한 법적 판단이며, 형의 집행 절차나 기타 부수적 법적 효과에 대해서는 다루지 않습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "집행유예의 선고를 받은 자가 유예기간 중 고의로 범한 죄로 금고 이상의 실형을 선고받아 그 판결이 확정된 때에는 집행유예의 선고는 효력을 잃습니다.[CT1]\n갑은 집행유예 기간 중 고의로 상해죄를 저질러 금고 1년의 실형을 선고받고 판결이 확정되었으므로, 갑의 집행유예는 효력을 잃습니다.[CT2]\n전제: 질문에 제시된 사실관계(갑의 전과, 유예기간 중 고의 상해, 금고 1년 실형 확정)가 사실임을 전제로 합니다.\n한계: 본 답변은 형법 제63조에 근거한 집행유예의 효력 변동에 관한 법적 판단이며, 형의 집행 절차나 기타 부수적 법적 효과에 대해서는 다루지 않습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T14:29:07.810766+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 167297.48,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 89,
+      "dedup_collapse": 20,
+      "evidence_fusion": 89,
+      "first_stage": 100,
+      "request_rerank": 100,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 89
+    }
+  },
+  "run_id": "85f3d2dc-f9d5-4d30-a4a5-9b51bf48d3c8",
+  "state": {
+    "accepted_provision_ids": [
+      "형법 63조  집행유예의 실효#KOBLEX-192808"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_effect",
+        "question_anchor": "갑의 집행유예는 어떻게 되는가",
+        "requested_output": "집행유예의 법적 효력 변동 여부 및 그 결과"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "형법 63조  집행유예의 실효#KOBLEX-192808"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 53.839431664663884,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형법 63조  집행유예의 실효#KOBLEX-192808",
+        "provision_text": "제63조(집행유예의 실효) 집행유예의 선고를 받은 자가 유예기간 중 고의로 범한 죄로 금고 이상의 실형을 선고받아 그 판결이 확정된 때에는 집행유예의 선고는 효력을 잃는다. <개정 2005.7.29>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9933109283447266,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 63조  집행유예의 실효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방공무원법 31조  결격사유#KOBLEX-207823"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 60,
+        "first_stage_score": 35.2489536074209,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "지방공무원법 31조  결격사유#KOBLEX-207823",
+        "provision_text": "4. 금고 이상의 형의 집행유예를 선고받고 그 집행유예기간이 끝난 날부터 2년이 지나지 아니한 사람",
+        "rerank_rank": 2,
+        "rerank_score": 0.9603520631790161,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "지방공무원법 31조  결격사유 4호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "파견근로자 보호 등에 관한 법률 8조  허가의 결격사유#KOBLEX-029331",
+          "파견근로자 보호 등에 관한 법률 8조  허가의 결격사유#KOBLEX-048211"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 36,
+        "first_stage_score": 43.15216708380423,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "파견근로자 보호 등에 관한 법률 8조  허가의 결격사유#KOBLEX-029331",
+        "provision_text": "2. 금고 이상의 형(집행유예는 제외한다)을 선고받고 그 집행이 끝나거나 집행을 받지 아니하기로 확정된 후 2년이 지나지 아니한 사람",
+        "rerank_rank": 3,
+        "rerank_score": 0.9578174352645874,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "파견근로자 보호 등에 관한 법률 8조  허가의 결격사유 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "의료법 8조  결격사유 등#KOBLEX-180024"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 46,
+        "first_stage_score": 41.34912497079214,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "의료법 8조  결격사유 등#KOBLEX-180024",
+        "provision_text": "5. 금고 이상의 형의 집행유예를 선고받고 그 유예기간이 지난 후 2년이 지나지 아니한 자",
+        "rerank_rank": 4,
+        "rerank_score": 0.9383831024169922,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "의료법 8조  결격사유 등 5호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "관세사법 5조  결격사유#KOBLEX-154978"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 41.34912497079214,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "관세사법 5조  결격사유#KOBLEX-154978",
+        "provision_text": "5. 금고 이상의 형의 집행유예를 선고받고 그 유예기간이 끝난 날부터 1년이 지나지 아니한 사람",
+        "rerank_rank": 5,
+        "rerank_score": 0.9268264770507812,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "관세사법 5조  결격사유 5호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "폐기물관리법 26조  결격 사유#KOBLEX-173962"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 38,
+        "first_stage_score": 42.79783822841142,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "폐기물관리법 26조  결격 사유#KOBLEX-173962",
+        "provision_text": "3의2. 이 법을 위반하여 금고 이상의 형의 집행유예를 선고받고 그 집행유예 기간이 끝난 날부터 5년이 지나지 아니한 자",
+        "rerank_rank": 6,
+        "rerank_score": 0.925986111164093,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "폐기물관리법 26조  결격 사유 4호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국가공무원법 33조  결격사유#KOBLEX-073474"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 41,
+        "first_stage_score": 41.34912497079214,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "국가공무원법 33조  결격사유#KOBLEX-073474",
+        "provision_text": "4. 금고 이상의 형의 집행유예를 선고받고 그 유예기간이 끝난 날부터 2년이 지나지 아니한 자",
+        "rerank_rank": 7,
+        "rerank_score": 0.9243826270103455,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "국가공무원법 33조  결격사유 4호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "법무사법 6조  결격사유#KOBLEX-061435",
+          "법무사법 6조  결격사유#KOBLEX-171399"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 42,
+        "first_stage_score": 41.34912497079214,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "법무사법 6조  결격사유#KOBLEX-061435",
+        "provision_text": "4. 금고 이상의 형의 집행유예를 선고받고 그 유예기간이 만료된 날부터 2년이 경과되지 아니한 자",
+        "rerank_rank": 8,
+        "rerank_score": 0.9225861430168152,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "법무사법 6조  결격사유 4호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "직업안정법 38조  결격사유#KOBLEX-082842",
+          "직업안정법 38조  결격사유#KOBLEX-090081"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 13,
+        "first_stage_score": 53.27217917337005,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "직업안정법 38조  결격사유#KOBLEX-082842",
+        "provision_text": "5. 금고 이상의 형의 집행유예를 선고받고 그 유예기간 중에 있는 자",
+        "rerank_rank": 9,
+        "rerank_score": 0.905602753162384,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "직업안정법 38조  결격사유 5호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "아이돌봄 지원법 6조  결격사유#KOBLEX-010466"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 53.27217917337005,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "아이돌봄 지원법 6조  결격사유#KOBLEX-010466",
+        "provision_text": "6. 금고 이상의 형의 집행유예를 선고받고 그 유예기간 중에 있는 사람",
+        "rerank_rank": 10,
+        "rerank_score": 0.8888635635375977,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "아이돌봄 지원법 6조  결격사유 6호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "관세사법 5조  결격사유#KOBLEX-154978": "5. 금고 이상의 형의 집행유예를 선고받고 그 유예기간이 끝난 날부터 1년이 지나지 아니한 사람",
+      "국가공무원법 33조  결격사유#KOBLEX-073474": "4. 금고 이상의 형의 집행유예를 선고받고 그 유예기간이 끝난 날부터 2년이 지나지 아니한 자",
+      "법무사법 6조  결격사유#KOBLEX-061435": "4. 금고 이상의 형의 집행유예를 선고받고 그 유예기간이 만료된 날부터 2년이 경과되지 아니한 자",
+      "아이돌봄 지원법 6조  결격사유#KOBLEX-010466": "6. 금고 이상의 형의 집행유예를 선고받고 그 유예기간 중에 있는 사람",
+      "의료법 8조  결격사유 등#KOBLEX-180024": "5. 금고 이상의 형의 집행유예를 선고받고 그 유예기간이 지난 후 2년이 지나지 아니한 자",
+      "지방공무원법 31조  결격사유#KOBLEX-207823": "4. 금고 이상의 형의 집행유예를 선고받고 그 집행유예기간이 끝난 날부터 2년이 지나지 아니한 사람",
+      "직업안정법 38조  결격사유#KOBLEX-082842": "5. 금고 이상의 형의 집행유예를 선고받고 그 유예기간 중에 있는 자",
+      "파견근로자 보호 등에 관한 법률 8조  허가의 결격사유#KOBLEX-029331": "2. 금고 이상의 형(집행유예는 제외한다)을 선고받고 그 집행이 끝나거나 집행을 받지 아니하기로 확정된 후 2년이 지나지 아니한 사람",
+      "폐기물관리법 26조  결격 사유#KOBLEX-173962": "3의2. 이 법을 위반하여 금고 이상의 형의 집행유예를 선고받고 그 집행유예 기간이 끝난 날부터 5년이 지나지 아니한 자",
+      "형법 63조  집행유예의 실효#KOBLEX-192808": "제63조(집행유예의 실효) 집행유예의 선고를 받은 자가 유예기간 중 고의로 범한 죄로 금고 이상의 실형을 선고받아 그 판결이 확정된 때에는 집행유예의 선고는 효력을 잃는다. <개정 2005.7.29>"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형법 63조  집행유예의 실효#KOBLEX-192808"
+            ],
+            "rationale": "C001은 '유예기간 중 고의로 범한 죄로 금고 이상의 실형을 선고받아 그 판결이 확정된 때에는 집행유예의 선고는 효력을 잃는다'고 규정하여, E1-R1의 요구사항을 완전히 충족한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형법 63조  집행유예의 실효#KOBLEX-192808"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001(형법 제63조)은 질문의 사실관계(유예기간 중 고의 상해죄로 금고 1년 실형 확정)에 정확히 적용되는 법적 근거를 제공한다. 다른 후보 조항들은 공무원 결격사유 등 관련성이 낮거나 E1의 완료 기준과 무관하다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형법 63조  집행유예의 실효#KOBLEX-192808",
+        "support_spans": [
+          {
+            "end_char": 111,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "집행유예 기간 중 금고 이상의 형을 선고받아 확정된 경우 집행유예의 효력",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 절도죄로 징역 2년에 집행유예 3년을 선고받았습니다. 집행유예 기간 중, 갑은 고의로 상해죄를 저질러 다시 재판을 받았고, 상해죄로 인해 금고 1년의 실형을 선고받았습니다. 이 판결이 확정된 상황입니다. [질문] 갑은 집행유예의 유예기간 중 상해죄로 금고 이상의 실형을 선고받고 판결이 확정되었습니다. 이 경우 갑의 집행유예는 어떻게 되는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "집행유예 취소 유예기간 중 금고 이상 형 선고 확정",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "집행유예",
+          "취소",
+          "유예기간",
+          "금고",
+          "형",
+          "선고",
+          "확정"
+        ],
+        "query_text": "집행유예 기간 중 금고 이상의 형의 선고를 확정받은 경우 집행유예 취소 [원문 맥락] 갑은 집행유예의 유예기간 중 상해죄로 금고 이상의 실형을 선고받고 판결이 확정되었습니다. 이 경우 갑의 집행유예는 어떻게 되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "집행유예 기간 중 금고 이상 형 확정 시 집행유예 취소 효과",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 절도죄로 징역 2년에 집행유예 3년을 선고받았습니다. 집행유예 기간 중, 갑은 고의로 상해죄를 저질러 다시 재판을 받았고, 상해죄로 인해 금고 1년의 실형을 선고받았습니다. 이 판결이 확정된 상황입니다.\n\n[질문]\n갑은 집행유예의 유예기간 중 상해죄로 금고 이상의 실형을 선고받고 판결이 확정되었습니다. 이 경우 갑의 집행유예는 어떻게 되는가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "유예기간 중 금고 이상 형의 확정 시 집행유예 취소 요건 및 효과를 명시하는 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "유예기간 중 금고 이상의 형의 선고를 확정받은 경우 집행유예가 취소된다는 규정을 확인한다"
+          }
+        ],
+        "critical": true,
+        "description": "집행유예 기간 중 금고 이상의 형의 선고를 확정받은 경우 집행유예 취소에 관한 법률 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 집행유예의 법적 결과를 판단하기 위한 핵심 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "85f3d2dc-f9d5-4d30-a4a5-9b51bf48d3c8",
+    "seen_provision_ids": [
+      "직업안정법 38조  결격사유#KOBLEX-082842",
+      "형법 63조  집행유예의 실효#KOBLEX-192808",
+      "폐기물관리법 26조  결격 사유#KOBLEX-173962",
+      "관세사법 5조  결격사유#KOBLEX-154978",
+      "의료법 8조  결격사유 등#KOBLEX-180024",
+      "국가공무원법 33조  결격사유#KOBLEX-073474",
+      "법무사법 6조  결격사유#KOBLEX-061435",
+      "지방공무원법 31조  결격사유#KOBLEX-207823",
+      "파견근로자 보호 등에 관한 법률 8조  허가의 결격사유#KOBLEX-029331",
+      "아이돌봄 지원법 6조  결격사유#KOBLEX-010466"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

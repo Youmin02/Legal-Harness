@@ -1,0 +1,944 @@
+{
+  "abstention_reason": null,
+  "answer": "형사소송법 제326조 제3호에 따르면, 공소의 시효가 완성되었을 때 법원은 면소의 판결을 선고해야 합니다.[CT1]\n본 사안에서 갑의 절도 혐의에 대해 공소시효가 기소 시점에 이미 만료된 것으로 확인되므로, 법원은 갑에 대해 면소 판결을 내려야 합니다.[CT2]\n전제: 질문에 제시된 '기소가 이루어진 시점에는 이미 절도죄에 대한 공소시효가 만료된 상황'이라는 사실 전제를 사실로 가정합니다.\n한계: 본 답변은 제공된 형사소송법 제326조 제3호의 텍스트에만 근거하며, 공소시효의 구체적 기산점이나 중단·정지 여부 등 다른 법적 쟁점에 대해서는 판단하지 않습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "형사소송법 제326조 제3호에 따르면, 공소의 시효가 완성되었을 때 법원은 면소의 판결을 선고해야 합니다.[CT1]\n본 사안에서 갑의 절도 혐의에 대해 공소시효가 기소 시점에 이미 만료된 것으로 확인되므로, 법원은 갑에 대해 면소 판결을 내려야 합니다.[CT2]\n전제: 질문에 제시된 '기소가 이루어진 시점에는 이미 절도죄에 대한 공소시효가 만료된 상황'이라는 사실 전제를 사실로 가정합니다.\n한계: 본 답변은 제공된 형사소송법 제326조 제3호의 텍스트에만 근거하며, 공소시효의 구체적 기산점이나 중단·정지 여부 등 다른 법적 쟁점에 대해서는 판단하지 않습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T03:28:21.173792+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 452477.8,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 264,
+      "dedup_collapse": 143,
+      "evidence_fusion": 264,
+      "first_stage": 400,
+      "request_rerank": 400,
+      "round_selected": 30,
+      "rrf": 300,
+      "selected": 264
+    }
+  },
+  "run_id": "c189adc7-8585-47f5-95f0-ec911a7480fc",
+  "state": {
+    "accepted_provision_ids": [
+      "형사소송법 326조  면소의 판결#KOBLEX-232624"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 3,
+          "request_count": 1,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 8,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "법원은 어떤 판결을 내려야 하는가",
+        "requested_output": "공소시효 만료 시 법원이 내려야 할 판결의 종류 및 법적 근거"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "군사법원법 381조  면소의 판결#KOBLEX-093414",
+          "군사법원법 381조  면소의 판결#KOBLEX-159379"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 22.490276014024527,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 381조  면소의 판결#KOBLEX-093414",
+        "provision_text": "3. 공소시효가 완성되었을 때",
+        "rerank_rank": 1,
+        "rerank_score": 0.656374454498291,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "군사법원법 381조  면소의 판결 3호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 262조 4 공소시효의 정지 등#KOBLEX-232327"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 1.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 262조 4 공소시효의 정지 등#KOBLEX-232327",
+        "provision_text": "②제262조제2항제2호의 결정이 있는 때에는 공소시효에 관하여 그 결정이 있는 날에 공소가 제기된 것으로 본다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.5970288515090942,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형사소송법 262조 4 공소시효의 정지 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 291조  공소시효의 기간#KOBLEX-093075",
+          "군사법원법 291조  공소시효의 기간#KOBLEX-159040"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 44,
+        "first_stage_score": 17.392946665594344,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 291조  공소시효의 기간#KOBLEX-093075",
+        "provision_text": "② 공소가 제기된 범죄는 판결이 확정되지 아니하고 공소를 제기한 때부터 25년이 지나면 공소시효가 완성된 것으로 본다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.025609439238905907,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "군사법원법 291조  공소시효의 기간 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 249조  공소시효의 기간#KOBLEX-232275"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 59,
+        "first_stage_score": 15.622552730042273,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 249조  공소시효의 기간#KOBLEX-232275",
+        "provision_text": "②공소가 제기된 범죄는 판결의 확정이 없이 공소를 제기한 때로부터 25년을 경과하면 공소시효가 완성한 것으로 간주한다. <신설 1961.9.1, 2007.12.21>",
+        "rerank_rank": 4,
+        "rerank_score": 0.009867032058537006,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형사소송법 249조  공소시효의 기간 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방세기본법 122조  공소시효의 중단#KOBLEX-121066"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 74,
+        "first_stage_score": 13.405975434296268,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "지방세기본법 122조  공소시효의 중단#KOBLEX-121066",
+        "provision_text": "제122조(공소시효의 중단) 제121조제1항에 따른 통고처분이 있으면 공소시효는 중단된다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0015072425594553351,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "지방세기본법 122조  공소시효의 중단",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 291조  공소시효의 기간#KOBLEX-093073",
+          "군사법원법 291조  공소시효의 기간#KOBLEX-159038"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 78,
+        "first_stage_score": 12.47870552498075,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 291조  공소시효의 기간#KOBLEX-093073",
+        "provision_text": "제291조(공소시효의 기간)",
+        "rerank_rank": 6,
+        "rerank_score": 0.0014944117283448577,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "군사법원법 291조  공소시효의 기간",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 262조 4 공소시효의 정지 등#KOBLEX-232325"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 1.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 262조 4 공소시효의 정지 등#KOBLEX-232325",
+        "provision_text": "제262조의4(공소시효의 정지 등)",
+        "rerank_rank": 7,
+        "rerank_score": 0.0013592926552519202,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형사소송법 262조 4 공소시효의 정지 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 249조  공소시효의 기간#KOBLEX-232273"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 80,
+        "first_stage_score": 12.47870552498075,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 249조  공소시효의 기간#KOBLEX-232273",
+        "provision_text": "제249조(공소시효의 기간)",
+        "rerank_rank": 8,
+        "rerank_score": 0.00114457868039608,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형사소송법 249조  공소시효의 기간",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공직선거법 268조  공소시효#KOBLEX-052727",
+          "공직선거법 268조  공소시효#KOBLEX-176013"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 28.722674823457716,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 268조  공소시효#KOBLEX-052727",
+        "provision_text": "제268조(공소시효)",
+        "rerank_rank": 9,
+        "rerank_score": 0.0005507730529643595,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "공직선거법 268조  공소시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 262조 4 공소시효의 정지 등#KOBLEX-232326"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 96,
+        "first_stage_score": 1.0,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 262조 4 공소시효의 정지 등#KOBLEX-232326",
+        "provision_text": "①제260조에 따른 재정신청이 있으면 제262조에 따른 재정결정이 확정될 때까지 공소시효의 진행이 정지된다. <개정 2007.12.21, 2016.1.6>",
+        "rerank_rank": 10,
+        "rerank_score": 0.00022475728474091738,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형사소송법 262조 4 공소시효의 정지 등 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 249조  공소시효의 기간#KOBLEX-232274"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 249조  공소시효의 기간#KOBLEX-232274",
+        "provision_text": "①공소시효는 다음 기간의 경과로 완성한다. <개정 1973.1.25, 2007.12.21> 1. 사형에 해당하는 범죄에는 25년 2. 무기징역 또는 무기금고에 해당하는 범죄에는 15년 3. 장기 10년 이상의 징역 또는 금고에 해당하는 범죄에는 10년 4. 장기 10년 미만의 징역 또는 금고에 해당하는 범죄에는 7년 5. 장기 5년 미만의 징역 또는 금고, 장기10년 이상의 자격정지 또는 벌금에 해당하는 범죄에는 5년 6. 장기 5년 이상의 자격정지에 해당하는 범죄에는 3년 7. 장기 5년 미만의 자격정지, 구류, 과료 또는 몰수에 해당하는 범죄에는 1년",
+        "rerank_rank": 1,
+        "rerank_score": 0.8965455293655396,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형사소송법 249조  공소시효의 기간 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국가정보원법 24조  공소시효에 관한 특례#KOBLEX-124044"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 20.79854297200088,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "국가정보원법 24조  공소시효에 관한 특례#KOBLEX-124044",
+        "provision_text": "제24조(공소시효에 관한 특례) 제21조와 제23조제2항의 죄에 대한 공소시효의 기간은 「형사소송법」 제249조제1항에도 불구하고 10년으로 한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.012226068414747715,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "국가정보원법 24조  공소시효에 관한 특례",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공직선거법 273조  재정신청#KOBLEX-052776",
+          "공직선거법 273조  재정신청#KOBLEX-176062"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 50,
+        "first_stage_score": 17.01491928652946,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "공직선거법 273조  재정신청#KOBLEX-052776",
+        "provision_text": "③제1항의 규정에 의한 재정신청서가 「형사소송법」 제260조제3항에 따른 지방검찰청검사장 또는 지청장에게 접수된 때에는 그때부터 「형사소송법」 제262조제2항의 결정이 있을 때까지 공소시효의 진행이 정지된다. <개정 2005.8.4, 2007.12.21>",
+        "rerank_rank": 10,
+        "rerank_score": 0.003264776198193431,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "공직선거법 273조  재정신청 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 328조  공소기각의 결정#KOBLEX-232633"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 76,
+        "first_stage_score": 13.337930033177773,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 328조  공소기각의 결정#KOBLEX-232633",
+        "provision_text": "제328조(공소기각의 결정)",
+        "rerank_rank": 1,
+        "rerank_score": 0.9561002850532532,
+        "retrieval_round": 3,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형사소송법 328조  공소기각의 결정",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 363조  공소기각의 결정#KOBLEX-232740"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 77,
+        "first_stage_score": 13.337930033177773,
+        "fusion_rank": 41,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 363조  공소기각의 결정#KOBLEX-232740",
+        "provision_text": "제363조(공소기각의 결정)",
+        "rerank_rank": 41,
+        "rerank_score": 0.9344796538352966,
+        "retrieval_round": 3,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 363조  공소기각의 결정",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 327조  공소기각의 판결#KOBLEX-232626"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 56,
+        "first_stage_score": 13.773414124190342,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 327조  공소기각의 판결#KOBLEX-232626",
+        "provision_text": "제327조(공소기각의 판결) 다음 각 호의 경우에는 판결로써 공소기각의 선고를 하여야 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.834722638130188,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형사소송법 327조  공소기각의 판결",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 327조  공소기각의 판결#KOBLEX-232630"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 94,
+        "first_stage_score": 1.0,
+        "fusion_rank": 46,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 327조  공소기각의 판결#KOBLEX-232630",
+        "provision_text": "4. 제329조를 위반하여 공소가 제기되었을 때",
+        "rerank_rank": 46,
+        "rerank_score": 0.7591243982315063,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 327조  공소기각의 판결 4호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 326조  면소의 판결#KOBLEX-232624"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 1.0,
+        "fusion_rank": 49,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 326조  면소의 판결#KOBLEX-232624",
+        "provision_text": "3. 공소의 시효가 완성되었을 때",
+        "rerank_rank": 49,
+        "rerank_score": 0.7020056247711182,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 326조  면소의 판결 3호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 253조  시효의 정지와 효력#KOBLEX-232282"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 21.03712703577248,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 253조  시효의 정지와 효력#KOBLEX-232282",
+        "provision_text": "①시효는 공소의 제기로 진행이 정지되고 공소기각 또는 관할위반의 재판이 확정된 때로부터 진행한다. <개정 1961.9.1>",
+        "rerank_rank": 5,
+        "rerank_score": 0.6415101885795593,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형사소송법 253조  시효의 정지와 효력 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 329조  공소취소와 재기소#KOBLEX-232636"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 99,
+        "first_stage_score": 1.0,
+        "fusion_rank": 51,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 329조  공소취소와 재기소#KOBLEX-232636",
+        "provision_text": "제329조(공소취소와 재기소) 공소취소에 의한 공소기각의 결정이 확정된 때에는 공소취소 후 그 범죄사실에 대한 다른 중요한 증거를 발견한 경우에 한하여 다시 공소를 제기할 수 있다.",
+        "rerank_rank": 51,
+        "rerank_score": 0.6277154088020325,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "형사소송법 329조  공소취소와 재기소",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 277조  경미사건 등과 피고인의 불출석#KOBLEX-232441"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 24.242189903531525,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 277조  경미사건 등과 피고인의 불출석#KOBLEX-232441",
+        "provision_text": "2. 공소기각 또는 면소의 재판을 할 것이 명백한 사건",
+        "rerank_rank": 8,
+        "rerank_score": 0.49677544832229614,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형사소송법 277조  경미사건 등과 피고인의 불출석 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공직선거법 268조  공소시효#KOBLEX-052727": "제268조(공소시효)",
+      "공직선거법 273조  재정신청#KOBLEX-052776": "③제1항의 규정에 의한 재정신청서가 「형사소송법」 제260조제3항에 따른 지방검찰청검사장 또는 지청장에게 접수된 때에는 그때부터 「형사소송법」 제262조제2항의 결정이 있을 때까지 공소시효의 진행이 정지된다. <개정 2005.8.4, 2007.12.21>",
+      "국가정보원법 24조  공소시효에 관한 특례#KOBLEX-124044": "제24조(공소시효에 관한 특례) 제21조와 제23조제2항의 죄에 대한 공소시효의 기간은 「형사소송법」 제249조제1항에도 불구하고 10년으로 한다.",
+      "군사법원법 291조  공소시효의 기간#KOBLEX-093073": "제291조(공소시효의 기간)",
+      "군사법원법 291조  공소시효의 기간#KOBLEX-093075": "② 공소가 제기된 범죄는 판결이 확정되지 아니하고 공소를 제기한 때부터 25년이 지나면 공소시효가 완성된 것으로 본다.",
+      "군사법원법 381조  면소의 판결#KOBLEX-093414": "3. 공소시효가 완성되었을 때",
+      "지방세기본법 122조  공소시효의 중단#KOBLEX-121066": "제122조(공소시효의 중단) 제121조제1항에 따른 통고처분이 있으면 공소시효는 중단된다.",
+      "형사소송법 249조  공소시효의 기간#KOBLEX-232273": "제249조(공소시효의 기간)",
+      "형사소송법 249조  공소시효의 기간#KOBLEX-232274": "①공소시효는 다음 기간의 경과로 완성한다. <개정 1973.1.25, 2007.12.21> 1. 사형에 해당하는 범죄에는 25년 2. 무기징역 또는 무기금고에 해당하는 범죄에는 15년 3. 장기 10년 이상의 징역 또는 금고에 해당하는 범죄에는 10년 4. 장기 10년 미만의 징역 또는 금고에 해당하는 범죄에는 7년 5. 장기 5년 미만의 징역 또는 금고, 장기10년 이상의 자격정지 또는 벌금에 해당하는 범죄에는 5년 6. 장기 5년 이상의 자격정지에 해당하는 범죄에는 3년 7. 장기 5년 미만의 자격정지, 구류, 과료 또는 몰수에 해당하는 범죄에는 1년",
+      "형사소송법 249조  공소시효의 기간#KOBLEX-232275": "②공소가 제기된 범죄는 판결의 확정이 없이 공소를 제기한 때로부터 25년을 경과하면 공소시효가 완성한 것으로 간주한다. <신설 1961.9.1, 2007.12.21>",
+      "형사소송법 253조  시효의 정지와 효력#KOBLEX-232282": "①시효는 공소의 제기로 진행이 정지되고 공소기각 또는 관할위반의 재판이 확정된 때로부터 진행한다. <개정 1961.9.1>",
+      "형사소송법 262조 4 공소시효의 정지 등#KOBLEX-232325": "제262조의4(공소시효의 정지 등)",
+      "형사소송법 262조 4 공소시효의 정지 등#KOBLEX-232326": "①제260조에 따른 재정신청이 있으면 제262조에 따른 재정결정이 확정될 때까지 공소시효의 진행이 정지된다. <개정 2007.12.21, 2016.1.6>",
+      "형사소송법 262조 4 공소시효의 정지 등#KOBLEX-232327": "②제262조제2항제2호의 결정이 있는 때에는 공소시효에 관하여 그 결정이 있는 날에 공소가 제기된 것으로 본다.",
+      "형사소송법 277조  경미사건 등과 피고인의 불출석#KOBLEX-232441": "2. 공소기각 또는 면소의 재판을 할 것이 명백한 사건",
+      "형사소송법 326조  면소의 판결#KOBLEX-232624": "3. 공소의 시효가 완성되었을 때",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232626": "제327조(공소기각의 판결) 다음 각 호의 경우에는 판결로써 공소기각의 선고를 하여야 한다.",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232630": "4. 제329조를 위반하여 공소가 제기되었을 때",
+      "형사소송법 328조  공소기각의 결정#KOBLEX-232633": "제328조(공소기각의 결정)",
+      "형사소송법 329조  공소취소와 재기소#KOBLEX-232636": "제329조(공소취소와 재기소) 공소취소에 의한 공소기각의 결정이 확정된 때에는 공소취소 후 그 범죄사실에 대한 다른 중요한 증거를 발견한 경우에 한하여 다시 공소를 제기할 수 있다.",
+      "형사소송법 363조  공소기각의 결정#KOBLEX-232740": "제363조(공소기각의 결정)"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형사소송법 326조  면소의 판결#KOBLEX-232624"
+            ],
+            "rationale": "C018은 형사소송법 제326조 제3호로서 공소시효 완성 시 면소 판결을 명하는 조항으로, 요구된 형사소송법상 근거를 정확히 제공한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형사소송법 326조  면소의 판결#KOBLEX-232624"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C018(형사소송법 제326조 제3호)은 공소시효가 완성된 경우 면소의 판결을 선고하도록 명시하고 있어, 질문에서 요구하는 '공소시효 완성 시 법원의 판결 유형'에 대한 법적 근거를 충족한다. 이전 평가에서 지적된 형사소송법 조항 부재 문제는 C018의 추가로 해결되었다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 326조  면소의 판결#KOBLEX-232624",
+        "support_spans": [
+          {
+            "end_char": 18,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 8,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "공소시효가 완성된 사건에 대해 공소가 제기된 경우, 법원은 어떤 판결을 선고해야 하는가?",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 2000년에 발생한 절도 혐의로 기소되었습니다. 하지만 검찰이 공소를 제기하는 과정에서 시효를 착오로 지나치게 되어, 기소가 이루어진 시점에는 이미 절도죄에 대한 공소시효가 만료된 상황입니다. [질문] 공소시효가 만료된 상황에서 갑의 절도 혐의에 대해 법원은 어떤 판결을 내려야 하는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형사소송법 공소시효 완성 기각",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "공소시효",
+          "완성",
+          "공소기각",
+          "형사소송법",
+          "판결"
+        ],
+        "query_text": "공소시효 완성 시 공소기각 판결 [원문 맥락] 하지만 검찰이 공소를 제기하는 과정에서 시효를 착오로 지나치게 되어, 기소가 이루어진 시점에는 이미 절도죄에 대한 공소시효가 만료된 상황입니다. 공소시효가 만료된 상황에서 갑의 절도 혐의에 대해 법원은 어떤 판결을 내려야 하는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "공소시효 만료 시 법원 판결 공소기각",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형사소송법 공소시효 완성 기각",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사소송법",
+          "공소시효",
+          "완성",
+          "공소기각",
+          "판결"
+        ],
+        "query_text": "형사소송법 공소시효 완성 공소기각 판결 [원문 맥락] 하지만 검찰이 공소를 제기하는 과정에서 시효를 착오로 지나치게 되어, 기소가 이루어진 시점에는 이미 절도죄에 대한 공소시효가 만료된 상황입니다. 공소시효가 만료된 상황에서 갑의 절도 혐의에 대해 법원은 어떤 판결을 내려야 하는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "형사소송법 공소시효 완성 시 공소기각을 명하는 조항",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형사소송법 공소기각 공소시효 완성 기각사유",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "형사소송법",
+          "공소기각",
+          "공소시효",
+          "완성",
+          "기각사유"
+        ],
+        "query_text": "형사소송법 공소기각 사유 공소시효 완성 [원문 맥락] 하지만 검찰이 공소를 제기하는 과정에서 시효를 착오로 지나치게 되어, 기소가 이루어진 시점에는 이미 절도죄에 대한 공소시효가 만료된 상황입니다. 공소시효가 만료된 상황에서 갑의 절도 혐의에 대해 법원은 어떤 판결을 내려야 하는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "형사소송법 공소시효 완성 시 공소기각을 명하는 조항",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "공소시효 완성 공소기각 규정",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "공소시효",
+          "완성",
+          "공소기각",
+          "형사소송법"
+        ],
+        "query_text": "공소시효가 완성된 때에는 공소를 기각한다 [원문 맥락] 하지만 검찰이 공소를 제기하는 과정에서 시효를 착오로 지나치게 되어, 기소가 이루어진 시점에는 이미 절도죄에 대한 공소시효가 만료된 상황입니다. 공소시효가 만료된 상황에서 갑의 절도 혐의에 대해 법원은 어떤 판결을 내려야 하는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "공소시효 완성 시 공소기각을 명하는 형사소송법 조항",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 2000년에 발생한 절도 혐의로 기소되었습니다. 하지만 검찰이 공소를 제기하는 과정에서 시효를 착오로 지나치게 되어, 기소가 이루어진 시점에는 이미 절도죄에 대한 공소시효가 만료된 상황입니다.\n\n[질문]\n공소시효가 만료된 상황에서 갑의 절도 혐의에 대해 법원은 어떤 판결을 내려야 하는가?",
+    "remaining_request_budget": 5,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "공소시효 완성 시 공소기각을 명하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "공소시효 완성 시 공소기각을 명하는 형사소송법 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공소시효가 완성된 경우 공소를 기각해야 한다는 형사소송법상 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 법원의 판결 유형(공소기각)을 직접적으로 뒷받침하는 핵심 법적 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "c189adc7-8585-47f5-95f0-ec911a7480fc",
+    "seen_provision_ids": [
+      "형사소송법 253조  시효의 정지와 효력#KOBLEX-232282",
+      "형사소송법 249조  공소시효의 기간#KOBLEX-232274",
+      "형사소송법 329조  공소취소와 재기소#KOBLEX-232636",
+      "형사소송법 328조  공소기각의 결정#KOBLEX-232633",
+      "형사소송법 326조  면소의 판결#KOBLEX-232624",
+      "형사소송법 262조 4 공소시효의 정지 등#KOBLEX-232327",
+      "형사소송법 363조  공소기각의 결정#KOBLEX-232740",
+      "공직선거법 273조  재정신청#KOBLEX-052776",
+      "공직선거법 268조  공소시효#KOBLEX-052727",
+      "군사법원법 291조  공소시효의 기간#KOBLEX-093073",
+      "형사소송법 277조  경미사건 등과 피고인의 불출석#KOBLEX-232441",
+      "형사소송법 249조  공소시효의 기간#KOBLEX-232273",
+      "형사소송법 262조 4 공소시효의 정지 등#KOBLEX-232325",
+      "군사법원법 381조  면소의 판결#KOBLEX-093414",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232630",
+      "군사법원법 291조  공소시효의 기간#KOBLEX-093075",
+      "지방세기본법 122조  공소시효의 중단#KOBLEX-121066",
+      "형사소송법 249조  공소시효의 기간#KOBLEX-232275",
+      "국가정보원법 24조  공소시효에 관한 특례#KOBLEX-124044",
+      "형사소송법 327조  공소기각의 판결#KOBLEX-232626",
+      "형사소송법 262조 4 공소시효의 정지 등#KOBLEX-232326"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

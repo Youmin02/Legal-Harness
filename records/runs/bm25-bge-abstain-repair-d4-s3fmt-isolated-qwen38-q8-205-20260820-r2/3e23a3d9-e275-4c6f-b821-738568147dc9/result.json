@@ -1,0 +1,1063 @@
+{
+  "abstention_reason": null,
+  "answer": "사업주는 근로자가 제17조에 따른 확인의 청구를 한 것을 이유로 그 근로자에게 해고나 그 밖의 불이익한 처우를 하여서는 아니 된다.[CT1]\n전제: 갑이 고용보험법 제17조에 따른 확인의 청구를 실제로 했다는 사실은 질문의 배경 시나리오에 근거하여 전제한다.\n한계: 고용보험 부정행위 신고자에 대한 보호 조치에 관한 법적 근거가 제공되지 않아, 해당 부분(T2)에 대한 답변은 보류한다.",
+  "answer_mode": "limited",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "사업주는 근로자가 제17조에 따른 확인의 청구를 한 것을 이유로 그 근로자에게 해고나 그 밖의 불이익한 처우를 하여서는 아니 된다.[CT1]\n전제: 갑이 고용보험법 제17조에 따른 확인의 청구를 실제로 했다는 사실은 질문의 배경 시나리오에 근거하여 전제한다.\n한계: 고용보험 부정행위 신고자에 대한 보호 조치에 관한 법적 근거가 제공되지 않아, 해당 부분(T2)에 대한 답변은 보류한다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T20:38:58.720623+00:00",
+  "deferred_target_ids": [
+    "T2"
+  ],
+  "end_to_end_latency_ms": 455948.284,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 372,
+      "dedup_collapse": 138,
+      "evidence_fusion": 372,
+      "first_stage": 700,
+      "request_rerank": 700,
+      "round_selected": 30,
+      "rrf": 400,
+      "selected": 372
+    }
+  },
+  "run_id": "3e23a3d9-e275-4c6f-b821-738568147dc9",
+  "state": {
+    "accepted_provision_ids": [
+      "고용보험법 105조  불이익 처우의 금지#KOBLEX-206951"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 8,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 2,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [
+            "T2"
+          ],
+          "explanation": "Only the citable answer targets will be answered; remaining targets are deferred.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 1,
+          "deferred_target_ids": [
+            "T2"
+          ]
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "limited",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "을 회사는 갑이 고용보험법 제17조에 따른 확인의 청구를 한 것을 이유로 해고하거나 불이익한 처우를 할 수 있는가?",
+        "requested_output": "고용보험법 제17조 확인의 청구와 관련하여 사용자의 해고 또는 불이익 처우 금지 여부"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "갑이 고용보험 관련 부정행위를 신고한 경우 어떤 조치를 받을 수 있는가?",
+        "requested_output": "고용보험 부정행위 신고자에 대한 보호 조치 또는 법적 효과"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "고용보험법 105조  불이익 처우의 금지#KOBLEX-206951"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 63.13762446166138,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "고용보험법 105조  불이익 처우의 금지#KOBLEX-206951",
+        "provision_text": "제105조(불이익 처우의 금지) 사업주는 근로자가 제17조에 따른 확인의 청구를 한 것을 이유로 그 근로자에게 해고나 그 밖의 불이익한 처우를 하여서는 아니 된다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999426603317261,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "고용보험법 105조  불이익 처우의 금지",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국가인권위원회법 55조  불이익 금지와 지원#KOBLEX-168522"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 28.270097686195026,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "국가인권위원회법 55조  불이익 금지와 지원#KOBLEX-168522",
+        "provision_text": "① 누구든지 이 법에 따라 위원회에 진정, 진술, 증언, 자료 등의 제출 또는 답변을 하였다는 이유만으로 해고, 전보, 징계, 부당한 대우, 그 밖에 신분이나 처우와 관련하여 불이익을 받지 아니한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.0421869195997715,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "국가인권위원회법 55조  불이익 금지와 지원 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률 29조 7 차별적 처우등의 시정신청 등으로 인한 불리한 처우의 금지#KOBLEX-157484"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 22,
+        "first_stage_score": 27.067000714194698,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률 29조 7 차별적 처우등의 시정신청 등으로 인한 불리한 처우의 금지#KOBLEX-157484",
+        "provision_text": "제29조의7(차별적 처우등의 시정신청 등으로 인한 불리한 처우의 금지) 사업주는 근로자가 다음 각 호의 어느 하나에 해당하는 행위를 한 것을 이유로 해고나 그 밖의 불리한 처우를 하지 못한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.010125961154699326,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률 29조 7 차별적 처우등의 시정신청 등으로 인한 불리한 처우의 금지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "고용보험법 시행령 11조  확인의 청구와 통지#KOBLEX-156569"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 39,
+        "first_stage_score": 24.520851363317032,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "고용보험법 시행령 11조  확인의 청구와 통지#KOBLEX-156569",
+        "provision_text": "제11조(확인의 청구와 통지)",
+        "rerank_rank": 4,
+        "rerank_score": 0.0054677315056324005,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "고용보험법 시행령 11조  확인의 청구와 통지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 55조#KOBLEX-118333"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 34.017646362986255,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 55조#KOBLEX-118333",
+        "provision_text": "제5장 부패행위 등의 신고 및 신고자 등 보호",
+        "rerank_rank": 1,
+        "rerank_score": 0.0054456680081784725,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 55조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산업재해보상보험법 111조 2 불이익 처우의 금지#KOBLEX-167108"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 48.50833846453071,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "산업재해보상보험법 111조 2 불이익 처우의 금지#KOBLEX-167108",
+        "provision_text": "제111조의2(불이익 처우의 금지) 사업주는 근로자가 보험급여를 신청한 것을 이유로 근로자를 해고하거나 그 밖에 근로자에게 불이익한 처우를 하여서는 아니 된다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.005180432461202145,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "산업재해보상보험법 111조 2 불이익 처우의 금지",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "해양사고의 조사 및 심판에 관한 법률 85조 2 불이익한 처우 등의 금지#KOBLEX-164734"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 46.30186830570855,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "해양사고의 조사 및 심판에 관한 법률 85조 2 불이익한 처우 등의 금지#KOBLEX-164734",
+        "provision_text": "제85조의2(불이익한 처우 등의 금지) 누구든지 해양사고의 조사 및 심판과 관련하여 이 법에 따른 증언ㆍ감정ㆍ진술을 하거나 자료ㆍ물건을 제출하였다는 이유로 해고, 전보, 징계, 부당한 대우, 그 밖에 신분ㆍ처우와 관련한 불이익을 받지 아니한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.0032746409997344017,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "해양사고의 조사 및 심판에 관한 법률 85조 2 불이익한 처우 등의 금지",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부정청탁 및 금품등 수수의 금지에 관한 법률 12조  공직자등의 부정청탁 등 방지에 관한 업무의 총괄#KOBLEX-124103"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 34.79172430593601,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "부정청탁 및 금품등 수수의 금지에 관한 법률 12조  공직자등의 부정청탁 등 방지에 관한 업무의 총괄#KOBLEX-124103",
+        "provision_text": "4. 신고자 등에 대한 보호 및 보상",
+        "rerank_rank": 2,
+        "rerank_score": 0.0023747605737298727,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "부정청탁 및 금품등 수수의 금지에 관한 법률 12조  공직자등의 부정청탁 등 방지에 관한 업무의 총괄 4호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국민의 형사재판 참여에 관한 법률 50조  불이익취급의 금지#KOBLEX-220033"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 37.28343883184338,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "국민의 형사재판 참여에 관한 법률 50조  불이익취급의 금지#KOBLEX-220033",
+        "provision_text": "제50조(불이익취급의 금지) 누구든지 배심원·예비배심원 또는 배심원후보자인 사실을 이유로 해고하거나 그 밖의 불이익한 처우를 하여서는 아니 된다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.001817183569073677,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "국민의 형사재판 참여에 관한 법률 50조  불이익취급의 금지",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "고용상 연령차별금지 및 고령자고용촉진에 관한 법률 4조 9 해고나 그 밖의 불리한 처우의 금지#KOBLEX-125090"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 36.76947007220187,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "고용상 연령차별금지 및 고령자고용촉진에 관한 법률 4조 9 해고나 그 밖의 불리한 처우의 금지#KOBLEX-125090",
+        "provision_text": "제4조의9(해고나 그 밖의 불리한 처우의 금지) 사업주는 근로자가 이 법이 금지하는 연령차별행위에 대한 진정, 자료제출, 답변ㆍ증언, 소송, 신고 등을 하였다는 이유로 근로자에게 해고, 전보, 징계, 그 밖의 불리한 처우를 하여서는 아니 된다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.0014921287074685097,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "고용상 연령차별금지 및 고령자고용촉진에 관한 법률 4조 9 해고나 그 밖의 불리한 처우의 금지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부패재산의 몰수 및 회복에 관한 특례법 19조  부패범죄 신고자의 보호#KOBLEX-073101"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 39,
+        "first_stage_score": 23.9395701957485,
+        "fusion_rank": 43,
+        "issue_id": "I2",
+        "provision_id": "부패재산의 몰수 및 회복에 관한 특례법 19조  부패범죄 신고자의 보호#KOBLEX-073101",
+        "provision_text": "제19조(부패범죄 신고자의 보호) 부패범죄 신고자의 보호에 관하여는 「특정범죄신고자 등 보호법」 제3조부터 제17조까지의 규정을 준용한다.",
+        "rerank_rank": 43,
+        "rerank_score": 0.0012702781241387129,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "부패재산의 몰수 및 회복에 관한 특례법 19조  부패범죄 신고자의 보호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "고용보험법 시행령 145조 2 고유식별정보의 처리#KOBLEX-157233"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 93,
+        "first_stage_score": 1.0,
+        "fusion_rank": 46,
+        "issue_id": "I2",
+        "provision_id": "고용보험법 시행령 145조 2 고유식별정보의 처리#KOBLEX-157233",
+        "provision_text": "① 고용노동부장관(제145조에 따라 고용노동부장관의 권한ㆍ업무를 위임ㆍ위탁받은 자를 포함한다)은 다음 각 호의 사무를 수행하기 위해 불가피한 경우 「개인정보 보호법 시행령」 제19조에 따른 주민등록번호 또는 외국인등록번호가 포함된 자료를 처리할 수 있다. <개정 2012.7.10, 2016.7.19, 2017.3.27, 2019.6.25, 2020.12.8, 2021.6.8, 2021.12.31, 2023.6.27, 2024.6.25> 1. 법 제10조제1항제3호 단서 및 이 영 제3조의2에 따른 별정직ㆍ임기제 공무원의 고용보험 가입 또는 탈퇴에 관한 사무 1의2. 다음 각 목에 해당하는 사람의 고용보험 가입에 관한 사무 2. 법 제15조에 따른 피보험자격의 취득ㆍ상실 등의 신고에 관한 사무 3. 삭제 <2020.8.27> 4. 법 제17조에 따른 피보험자격의 확인에 관한 사무 5. 법 제20조에 따른 고용기회 확대 사업주에 대한 지원에 관한 사무 6. 법 제21조에 따른 고용안정을 위한 조치를 한 사업주에 대한 지원에 관한 사무 7. 법 제22조에 따른 지역 고용촉진 사업주에 대한 지원에 관한 사무 8. 법 제23조에 따른 고령자등 고용촉진의 지원에 관한 사무 9. 법 제25조에 따른 고용안정 및 취업촉진 사업을 실시하는 자에 대한 지원 및 대부에 관한 사무 10. 법 제26조에 따른 고용촉진시설의 지원에 관한 사무 11. 법 제27조에 따른 사업주에 대한 직업능력개발 훈련비용의 지원에 관한 사무 12. 법 제29조에 따른 피보험자등에 대한 직업능력개발 지원 등에 관한 사무 13. 법 제30조에 따른 직업능력개발 훈련 시설의 설치, 장비구입 비용 등의 대부ㆍ지원에 관한 사무 14. 법 제31조에 따른 직업능력개발의 촉진 사업을 실시하는 자에 대한 지원에 관한 사무 15. 법 제35조에 따른 부정행위를 이유로 한 지원금의 반환명령 또는 추가징수에 관한 사무 15의2. 법 제55조의2에 따른 국민연금 보험료의 지원에 관한 사무 16. 법 제70조에 따른 육아휴직 급여의 지급에 관한 사무 17. 법 제73조의2에 따른 육아기 근로시간 단축 급여의 지급에 관한 사무 18. 법 제75조에 따른 출산전후휴가 급여등 및 법 제76조의2에 따른 출산전후휴가 급여등에 상당하는 금액의 지급에 관한 사무 19. 법 제75조의2에 따른 출산전후휴가 급여등의 대위 신청에 관한 사무 19의2. 법 제77조의2 및 제77조의5제1항에 따른 예술인인 피보험자의 피보험자격 신고에 관한 사무 19의3. 법 제77조의6, 제77조의7 및 제77조의10제1항에 따른 노무제공자인 피보험자의 피보험자격 신고에 관한 사무 20. 법 제108조에 따른 보고 등의 요구에 관한 사무 21. 법 제109조에 따른 조사 등에 관한 사무 22. 법 제110조에 따른 자료 제출의 요청에 관한 사무 23. 법 제112조에 따른 부정행위의 신고 및 신고포상금의 지급에 관한 사무 24. 제4조에 따른 대리인 선임 또는 해임 신고에 관한 사무 25. 제10조, 제104조의7 및 제104조의14에 따른 피보험자 이름 등의 변경 신고에 관한 사무",
+        "rerank_rank": 46,
+        "rerank_score": 0.0008703263592906296,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "고용보험법 시행령 145조 2 고유식별정보의 처리 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 12조  기능#KOBLEX-118183"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 36,
+        "first_stage_score": 24.189520712190678,
+        "fusion_rank": 48,
+        "issue_id": "I2",
+        "provision_id": "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 12조  기능#KOBLEX-118183",
+        "provision_text": "11. 신고자의 보호 및 보상",
+        "rerank_rank": 48,
+        "rerank_score": 0.0007156364154070616,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 12조  기능 11호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상호저축은행법 23조 3 위법행위의 신고 및 신고자 보호#KOBLEX-074132",
+          "상호저축은행법 23조 3 위법행위의 신고 및 신고자 보호#KOBLEX-181022"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 21.917226039650007,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "상호저축은행법 23조 3 위법행위의 신고 및 신고자 보호#KOBLEX-074132",
+        "provision_text": "제23조의3(위법행위의 신고 및 신고자 보호)",
+        "rerank_rank": 3,
+        "rerank_score": 0.0005680745234712958,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "상호저축은행법 23조 3 위법행위의 신고 및 신고자 보호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 435조  위법행위의 신고 및 신고자 보호#KOBLEX-137421"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 21.917226039650007,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 435조  위법행위의 신고 및 신고자 보호#KOBLEX-137421",
+        "provision_text": "제435조(위법행위의 신고 및 신고자 보호)",
+        "rerank_rank": 4,
+        "rerank_score": 0.0003818264522124082,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 435조  위법행위의 신고 및 신고자 보호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "정치자금법 53조  정치자금범죄 신고자의 보호 등#KOBLEX-149416"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 37,
+        "first_stage_score": 24.189520712190678,
+        "fusion_rank": 54,
+        "issue_id": "I2",
+        "provision_id": "정치자금법 53조  정치자금범죄 신고자의 보호 등#KOBLEX-149416",
+        "provision_text": "제53조(정치자금범죄 신고자의 보호 등)",
+        "rerank_rank": 54,
+        "rerank_score": 0.00028034724527969956,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "정치자금법 53조  정치자금범죄 신고자의 보호 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "영유아보육법 42조 2 위법행위의 신고 및 신고자 보호#KOBLEX-046783"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 21.917226039650007,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "영유아보육법 42조 2 위법행위의 신고 및 신고자 보호#KOBLEX-046783",
+        "provision_text": "제42조의2(위법행위의 신고 및 신고자 보호)",
+        "rerank_rank": 5,
+        "rerank_score": 0.0002798852219711989,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "영유아보육법 42조 2 위법행위의 신고 및 신고자 보호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국가공무원법 17조 3 공익신고 등 신고자 등에 대한 보호#KOBLEX-073365"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 21.418495437688165,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "국가공무원법 17조 3 공익신고 등 신고자 등에 대한 보호#KOBLEX-073365",
+        "provision_text": "제17조의3(공익신고 등 신고자 등에 대한 보호)",
+        "rerank_rank": 6,
+        "rerank_score": 0.00021868865587748587,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "국가공무원법 17조 3 공익신고 등 신고자 등에 대한 보호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 12조  기능#KOBLEX-118186"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 20.315014641712423,
+        "fusion_rank": 72,
+        "issue_id": "I2",
+        "provision_id": "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 12조  기능#KOBLEX-118186",
+        "provision_text": "14. 공직자 행동강령의 시행ㆍ운영 및 그 위반행위에 대한 신고의 접수ㆍ처리 및 신고자의 보호",
+        "rerank_rank": 72,
+        "rerank_score": 0.0005572362570092082,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 12조  기능 14호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 57조  신고자의 성실의무#KOBLEX-118336"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 34,
+        "first_stage_score": 16.94538386533361,
+        "fusion_rank": 75,
+        "issue_id": "I2",
+        "provision_id": "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 57조  신고자의 성실의무#KOBLEX-118336",
+        "provision_text": "제57조(신고자의 성실의무) 제55조 및 제56조에 따른 부패행위 신고(이하 이 장에서 \"신고\"라 한다)를 한 자(이하 이 장에서 \"신고자\"라 한다)가 신고의 내용이 허위라는 사실을 알았거나 알 수 있었음에도 불구하고 신고한 경우에는 이 법의 보호를 받지 못한다. <개정 2019.4.16>",
+        "rerank_rank": 75,
+        "rerank_score": 0.00048262468772009015,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 57조  신고자의 성실의무",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "고용보험법 105조  불이익 처우의 금지#KOBLEX-206951": "제105조(불이익 처우의 금지) 사업주는 근로자가 제17조에 따른 확인의 청구를 한 것을 이유로 그 근로자에게 해고나 그 밖의 불이익한 처우를 하여서는 아니 된다.",
+      "고용보험법 시행령 11조  확인의 청구와 통지#KOBLEX-156569": "제11조(확인의 청구와 통지)",
+      "고용보험법 시행령 145조 2 고유식별정보의 처리#KOBLEX-157233": "① 고용노동부장관(제145조에 따라 고용노동부장관의 권한ㆍ업무를 위임ㆍ위탁받은 자를 포함한다)은 다음 각 호의 사무를 수행하기 위해 불가피한 경우 「개인정보 보호법 시행령」 제19조에 따른 주민등록번호 또는 외국인등록번호가 포함된 자료를 처리할 수 있다. <개정 2012.7.10, 2016.7.19, 2017.3.27, 2019.6.25, 2020.12.8, 2021.6.8, 2021.12.31, 2023.6.27, 2024.6.25> 1. 법 제10조제1항제3호 단서 및 이 영 제3조의2에 따른 별정직ㆍ임기제 공무원의 고용보험 가입 또는 탈퇴에 관한 사무 1의2. 다음 각 목에 해당하는 사람의 고용보험 가입에 관한 사무 2. 법 제15조에 따른 피보험자격의 취득ㆍ상실 등의 신고에 관한 사무 3. 삭제 <2020.8.27> 4. 법 제17조에 따른 피보험자격의 확인에 관한 사무 5. 법 제20조에 따른 고용기회 확대 사업주에 대한 지원에 관한 사무 6. 법 제21조에 따른 고용안정을 위한 조치를 한 사업주에 대한 지원에 관한 사무 7. 법 제22조에 따른 지역 고용촉진 사업주에 대한 지원에 관한 사무 8. 법 제23조에 따른 고령자등 고용촉진의 지원에 관한 사무 9. 법 제25조에 따른 고용안정 및 취업촉진 사업을 실시하는 자에 대한 지원 및 대부에 관한 사무 10. 법 제26조에 따른 고용촉진시설의 지원에 관한 사무 11. 법 제27조에 따른 사업주에 대한 직업능력개발 훈련비용의 지원에 관한 사무 12. 법 제29조에 따른 피보험자등에 대한 직업능력개발 지원 등에 관한 사무 13. 법 제30조에 따른 직업능력개발 훈련 시설의 설치, 장비구입 비용 등의 대부ㆍ지원에 관한 사무 14. 법 제31조에 따른 직업능력개발의 촉진 사업을 실시하는 자에 대한 지원에 관한 사무 15. 법 제35조에 따른 부정행위를 이유로 한 지원금의 반환명령 또는 추가징수에 관한 사무 15의2. 법 제55조의2에 따른 국민연금 보험료의 지원에 관한 사무 16. 법 제70조에 따른 육아휴직 급여의 지급에 관한 사무 17. 법 제73조의2에 따른 육아기 근로시간 단축 급여의 지급에 관한 사무 18. 법 제75조에 따른 출산전후휴가 급여등 및 법 제76조의2에 따른 출산전후휴가 급여등에 상당하는 금액의 지급에 관한 사무 19. 법 제75조의2에 따른 출산전후휴가 급여등의 대위 신청에 관한 사무 19의2. 법 제77조의2 및 제77조의5제1항에 따른 예술인인 피보험자의 피보험자격 신고에 관한 사무 19의3. 법 제77조의6, 제77조의7 및 제77조의10제1항에 따른 노무제공자인 피보험자의 피보험자격 신고에 관한 사무 20. 법 제108조에 따른 보고 등의 요구에 관한 사무 21. 법 제109조에 따른 조사 등에 관한 사무 22. 법 제110조에 따른 자료 제출의 요청에 관한 사무 23. 법 제112조에 따른 부정행위의 신고 및 신고포상금의 지급에 관한 사무 24. 제4조에 따른 대리인 선임 또는 해임 신고에 관한 사무 25. 제10조, 제104조의7 및 제104조의14에 따른 피보험자 이름 등의 변경 신고에 관한 사무",
+      "고용상 연령차별금지 및 고령자고용촉진에 관한 법률 4조 9 해고나 그 밖의 불리한 처우의 금지#KOBLEX-125090": "제4조의9(해고나 그 밖의 불리한 처우의 금지) 사업주는 근로자가 이 법이 금지하는 연령차별행위에 대한 진정, 자료제출, 답변ㆍ증언, 소송, 신고 등을 하였다는 이유로 근로자에게 해고, 전보, 징계, 그 밖의 불리한 처우를 하여서는 아니 된다.",
+      "국가공무원법 17조 3 공익신고 등 신고자 등에 대한 보호#KOBLEX-073365": "제17조의3(공익신고 등 신고자 등에 대한 보호)",
+      "국가인권위원회법 55조  불이익 금지와 지원#KOBLEX-168522": "① 누구든지 이 법에 따라 위원회에 진정, 진술, 증언, 자료 등의 제출 또는 답변을 하였다는 이유만으로 해고, 전보, 징계, 부당한 대우, 그 밖에 신분이나 처우와 관련하여 불이익을 받지 아니한다.",
+      "국민의 형사재판 참여에 관한 법률 50조  불이익취급의 금지#KOBLEX-220033": "제50조(불이익취급의 금지) 누구든지 배심원·예비배심원 또는 배심원후보자인 사실을 이유로 해고하거나 그 밖의 불이익한 처우를 하여서는 아니 된다.",
+      "남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률 29조 7 차별적 처우등의 시정신청 등으로 인한 불리한 처우의 금지#KOBLEX-157484": "제29조의7(차별적 처우등의 시정신청 등으로 인한 불리한 처우의 금지) 사업주는 근로자가 다음 각 호의 어느 하나에 해당하는 행위를 한 것을 이유로 해고나 그 밖의 불리한 처우를 하지 못한다.",
+      "부정청탁 및 금품등 수수의 금지에 관한 법률 12조  공직자등의 부정청탁 등 방지에 관한 업무의 총괄#KOBLEX-124103": "4. 신고자 등에 대한 보호 및 보상",
+      "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 12조  기능#KOBLEX-118183": "11. 신고자의 보호 및 보상",
+      "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 12조  기능#KOBLEX-118186": "14. 공직자 행동강령의 시행ㆍ운영 및 그 위반행위에 대한 신고의 접수ㆍ처리 및 신고자의 보호",
+      "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 55조#KOBLEX-118333": "제5장 부패행위 등의 신고 및 신고자 등 보호",
+      "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 57조  신고자의 성실의무#KOBLEX-118336": "제57조(신고자의 성실의무) 제55조 및 제56조에 따른 부패행위 신고(이하 이 장에서 \"신고\"라 한다)를 한 자(이하 이 장에서 \"신고자\"라 한다)가 신고의 내용이 허위라는 사실을 알았거나 알 수 있었음에도 불구하고 신고한 경우에는 이 법의 보호를 받지 못한다. <개정 2019.4.16>",
+      "부패재산의 몰수 및 회복에 관한 특례법 19조  부패범죄 신고자의 보호#KOBLEX-073101": "제19조(부패범죄 신고자의 보호) 부패범죄 신고자의 보호에 관하여는 「특정범죄신고자 등 보호법」 제3조부터 제17조까지의 규정을 준용한다.",
+      "산업재해보상보험법 111조 2 불이익 처우의 금지#KOBLEX-167108": "제111조의2(불이익 처우의 금지) 사업주는 근로자가 보험급여를 신청한 것을 이유로 근로자를 해고하거나 그 밖에 근로자에게 불이익한 처우를 하여서는 아니 된다.",
+      "상호저축은행법 23조 3 위법행위의 신고 및 신고자 보호#KOBLEX-074132": "제23조의3(위법행위의 신고 및 신고자 보호)",
+      "영유아보육법 42조 2 위법행위의 신고 및 신고자 보호#KOBLEX-046783": "제42조의2(위법행위의 신고 및 신고자 보호)",
+      "자본시장과 금융투자업에 관한 법률 435조  위법행위의 신고 및 신고자 보호#KOBLEX-137421": "제435조(위법행위의 신고 및 신고자 보호)",
+      "정치자금법 53조  정치자금범죄 신고자의 보호 등#KOBLEX-149416": "제53조(정치자금범죄 신고자의 보호 등)",
+      "해양사고의 조사 및 심판에 관한 법률 85조 2 불이익한 처우 등의 금지#KOBLEX-164734": "제85조의2(불이익한 처우 등의 금지) 누구든지 해양사고의 조사 및 심판과 관련하여 이 법에 따른 증언ㆍ감정ㆍ진술을 하거나 자료ㆍ물건을 제출하였다는 이유로 해고, 전보, 징계, 부당한 대우, 그 밖에 신분ㆍ처우와 관련한 불이익을 받지 아니한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "고용보험법 105조  불이익 처우의 금지#KOBLEX-206951"
+            ],
+            "rationale": "C001 explicitly states that employers shall not dismiss or treat workers unfavorably for making a confirmation request under Article 17.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "고용보험법 105조  불이익 처우의 금지#KOBLEX-206951"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "The supplied provision C001 provides the specific legal basis prohibiting dismissal or unfavorable treatment based on a confirmation request under Article 17 of the Employment Insurance Act, fully satisfying the evidence item's completion criteria.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "No supplied provision specifically covers the protection of individuals who report employment insurance fraud.",
+            "requirement_id": "E2-R1",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "uncovered",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "E2-R1"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "None of the supplied candidate provisions specifically address the protection of whistleblowers who report fraudulent receipt of employment insurance benefits. C005, C008, C011, C013, C014, C015, C016, C017, C018, C019, and C020 relate to general anti-corruption, gift-ban, or other specific sector whistleblower protections, but none specifically cover employment insurance fraud reporting protections as required by the completion criteria.",
+        "status": "uncovered"
+      }
+    ],
+    "deferred_target_ids": [
+      "T2"
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "고용보험법 105조  불이익 처우의 금지#KOBLEX-206951",
+        "support_spans": [
+          {
+            "end_char": 91,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 2,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "고용보험법 제17조 확인의 청구 행위가 사용자의 해고 또는 불이익 처우를 금지하는 법적 근거가 되는지 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "고용보험 부정행위 신고자에 대한 법적 보호 조치의 내용과 범위",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "고용보험 부정행위 신고자에 대한 법적 보호 조치의 내용을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "고용보험 부정행위 신고자에 대한 보호 조치 또는 불이익 처우 금지 조항을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "고용보험 부정행위 신고자에 대한 보호 조치 또는 불이익 처우 금지 조항",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 고용보험 부정행위 신고 시 받을 수 있는 조치를 묻고 있으므로, 신고자 보호에 관한 법적 근거가 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 갑은 을 회사에서 일하는 근로자로, 최근 고용보험법 제17조에 따른 확인의 청구를 하였다. 이후, 을 회사의 대표는 갑에게 해고를 통보하며, 이를 확인의 청구와 관련된 이유라고 암시했다. 갑은 이에 대해 의문을 가지며, 을 회사에서 발생한 고용보험 부정수급 사례를 고용노동부에 신고하였다. [질문] 을 회사는 갑이 고용보험법 제17조에 따른 확인의 청구를 한 것을 이유로 해고하거나 불이익한 처우를 할 수 있는가? 그리고 갑이 고용보험 관련 부정행위를 신고한 경우 어떤 조치를 받을 수 있는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "고용보험법 확인의 청구 해고 불이익 처우 금지 사용자",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "고용보험법",
+          "확인의 청구",
+          "해고",
+          "불이익 처우",
+          "금지",
+          "사용자"
+        ],
+        "query_text": "고용보험법 제17조 확인의 청구와 관련하여 사용자의 해고 또는 불이익 처우 금지 [원문 맥락] 을 회사는 갑이 고용보험법 제17조에 따른 확인의 청구를 한 것을 이유로 해고하거나 불이익한 처우를 할 수 있는가? 그리고 갑이 고용보험 관련 부정행위를 신고한 경우 어떤 조치를 받을 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "확인의 청구 행위를 이유로 한 해고 또는 불이익 처우의 금지 여부",
+        "statute_hints": [
+          "고용보험법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "고용보험 부정수급 신고자 보호 불이익 처우 금지 고용노동부",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "고용보험",
+          "부정행위",
+          "신고자",
+          "보호",
+          "불이익 처우",
+          "금지"
+        ],
+        "query_text": "고용보험 부정행위 신고자 보호 조치 불이익 처우 금지 [원문 맥락] 을 회사는 갑이 고용보험법 제17조에 따른 확인의 청구를 한 것을 이유로 해고하거나 불이익한 처우를 할 수 있는가? 그리고 갑이 고용보험 관련 부정행위를 신고한 경우 어떤 조치를 받을 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "고용보험 부정행위 신고자에 대한 법적 보호 조치",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "고용보험법 부정수급 신고자 보호 불이익 처우 금지",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "고용보험법",
+          "부정수급",
+          "신고자",
+          "보호",
+          "불이익 처우",
+          "금지"
+        ],
+        "query_text": "고용보험법 부정수급 신고자 불이익 처우 금지 [원문 맥락] 을 회사는 갑이 고용보험법 제17조에 따른 확인의 청구를 한 것을 이유로 해고하거나 불이익한 처우를 할 수 있는가? 그리고 갑이 고용보험 관련 부정행위를 신고한 경우 어떤 조치를 받을 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "고용보험 부정행위 신고자에 대한 법적 보호 조치",
+        "statute_hints": [
+          "고용보험법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "고용보험 부정수급 신고자 해고 금지 불이익 처우 금지",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "부정수급",
+          "신고",
+          "해고",
+          "불이익 처우",
+          "금지",
+          "사용자"
+        ],
+        "query_text": "고용보험 부정수급 사실을 신고한 자에 대하여 사용자는 해고하거나 불이익한 처우를 하여서는 아니 된다 [원문 맥락] 을 회사는 갑이 고용보험법 제17조에 따른 확인의 청구를 한 것을 이유로 해고하거나 불이익한 처우를 할 수 있는가? 그리고 갑이 고용보험 관련 부정행위를 신고한 경우 어떤 조치를 받을 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "고용보험 부정행위 신고자에 대한 법적 보호 조치",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "고용보험법 부정수급 신고자 보호",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "고용보험법",
+          "부정수급",
+          "신고자",
+          "보호"
+        ],
+        "query_text": "고용보험법 부정수급 신고자 보호 조항 [원문 맥락] 을 회사는 갑이 고용보험법 제17조에 따른 확인의 청구를 한 것을 이유로 해고하거나 불이익한 처우를 할 수 있는가? 그리고 갑이 고용보험 관련 부정행위를 신고한 경우 어떤 조치를 받을 수 있는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "고용보험 부정행위 신고자에 대한 법적 보호 조치",
+        "statute_hints": [
+          "고용보험법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "고용보험 부정수급 신고자 신분비밀 보장",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "고용보험",
+          "부정수급",
+          "신고자",
+          "신분비밀",
+          "보장"
+        ],
+        "query_text": "고용보험 부정수급 신고자 신분비밀 보장 [원문 맥락] 을 회사는 갑이 고용보험법 제17조에 따른 확인의 청구를 한 것을 이유로 해고하거나 불이익한 처우를 할 수 있는가? 그리고 갑이 고용보험 관련 부정행위를 신고한 경우 어떤 조치를 받을 수 있는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "고용보험 부정행위 신고자에 대한 법적 보호 조치",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "고용보험 부정수급 신고자 신분 보장",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "부정수급",
+          "신고",
+          "신분",
+          "보장"
+        ],
+        "query_text": "고용보험 부정수급 사실을 신고한 자의 신분을 보장하여야 한다 [원문 맥락] 을 회사는 갑이 고용보험법 제17조에 따른 확인의 청구를 한 것을 이유로 해고하거나 불이익한 처우를 할 수 있는가? 그리고 갑이 고용보험 관련 부정행위를 신고한 경우 어떤 조치를 받을 수 있는가?",
+        "request_id": "GRQ-R3-3",
+        "rerank_query_text": "고용보험 부정행위 신고자에 대한 법적 보호 조치",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을 회사에서 일하는 근로자로, 최근 고용보험법 제17조에 따른 확인의 청구를 하였다. 이후, 을 회사의 대표는 갑에게 해고를 통보하며, 이를 확인의 청구와 관련된 이유라고 암시했다. 갑은 이에 대해 의문을 가지며, 을 회사에서 발생한 고용보험 부정수급 사례를 고용노동부에 신고하였다.\n\n[질문]\n을 회사는 갑이 고용보험법 제17조에 따른 확인의 청구를 한 것을 이유로 해고하거나 불이익한 처우를 할 수 있는가? 그리고 갑이 고용보험 관련 부정행위를 신고한 경우 어떤 조치를 받을 수 있는가?",
+    "remaining_request_budget": 2,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "확인의 청구 행위를 이유로 한 해고 또는 불이익 처우의 금지 여부를 명시하는 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "확인의 청구 행위를 이유로 한 해고 또는 불이익 처우의 금지 여부를 명시하는 조항을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "고용보험법 제17조 확인의 청구와 관련하여 사용자의 해고 또는 불이익 처우를 금지하는 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 직접적으로 확인의 청구와 관련된 해고 또는 불이익 처우의 허용 여부를 묻고 있으므로, 이를 판단하기 위한 핵심 법적 근거가 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "고용보험 부정행위 신고자에 대한 법적 보호 조치의 내용을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "고용보험 부정행위 신고자에 대한 보호 조치 또는 불이익 처우 금지 조항을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "고용보험 부정행위 신고자에 대한 보호 조치 또는 불이익 처우 금지 조항",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 고용보험 부정행위 신고 시 받을 수 있는 조치를 묻고 있으므로, 신고자 보호에 관한 법적 근거가 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "3e23a3d9-e275-4c6f-b821-738568147dc9",
+    "seen_provision_ids": [
+      "국민의 형사재판 참여에 관한 법률 50조  불이익취급의 금지#KOBLEX-220033",
+      "고용상 연령차별금지 및 고령자고용촉진에 관한 법률 4조 9 해고나 그 밖의 불리한 처우의 금지#KOBLEX-125090",
+      "고용보험법 시행령 11조  확인의 청구와 통지#KOBLEX-156569",
+      "남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률 29조 7 차별적 처우등의 시정신청 등으로 인한 불리한 처우의 금지#KOBLEX-157484",
+      "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 12조  기능#KOBLEX-118186",
+      "부정청탁 및 금품등 수수의 금지에 관한 법률 12조  공직자등의 부정청탁 등 방지에 관한 업무의 총괄#KOBLEX-124103",
+      "정치자금법 53조  정치자금범죄 신고자의 보호 등#KOBLEX-149416",
+      "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 12조  기능#KOBLEX-118183",
+      "부패재산의 몰수 및 회복에 관한 특례법 19조  부패범죄 신고자의 보호#KOBLEX-073101",
+      "영유아보육법 42조 2 위법행위의 신고 및 신고자 보호#KOBLEX-046783",
+      "해양사고의 조사 및 심판에 관한 법률 85조 2 불이익한 처우 등의 금지#KOBLEX-164734",
+      "국가공무원법 17조 3 공익신고 등 신고자 등에 대한 보호#KOBLEX-073365",
+      "국가인권위원회법 55조  불이익 금지와 지원#KOBLEX-168522",
+      "산업재해보상보험법 111조 2 불이익 처우의 금지#KOBLEX-167108",
+      "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 55조#KOBLEX-118333",
+      "상호저축은행법 23조 3 위법행위의 신고 및 신고자 보호#KOBLEX-074132",
+      "부패방지 및 국민권익위원회의 설치와 운영에 관한 법률 57조  신고자의 성실의무#KOBLEX-118336",
+      "자본시장과 금융투자업에 관한 법률 435조  위법행위의 신고 및 신고자 보호#KOBLEX-137421",
+      "고용보험법 105조  불이익 처우의 금지#KOBLEX-206951",
+      "고용보험법 시행령 145조 2 고유식별정보의 처리#KOBLEX-157233"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

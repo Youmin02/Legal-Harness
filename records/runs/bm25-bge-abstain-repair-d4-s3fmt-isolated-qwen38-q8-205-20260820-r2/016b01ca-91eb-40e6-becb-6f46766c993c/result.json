@@ -1,0 +1,496 @@
+{
+  "abstention_reason": null,
+  "answer": "경사진 곳에 정차하거나 주차하려는 자동차의 운전자는 대통령령으로 정하는 바에 따라 고임목을 설치하거나 조향장치를 도로의 가장자리 방향으로 돌려놓는 등 미끄럼 사고의 발생을 방지하기 위한 조치를 취하여야 한다.[CT1]\n경사진 주차장에 자동차를 정차한 갑은 도로교통법 제34조의3에 따라 미끄럼 사고 방지를 위한 안전조치를 이행할 의무가 있다.[CT2]\n전제: 질문에 제시된 '경사진 주차장'이 도로교통법 제34조의3에서 규정하는 '경사진 곳'에 해당한다고 가정합니다.\n한계: 본 답변은 도로교통법 제34조의3의 일반적 법적 의무만을 다루며, 대통령령으로 정하는 구체적 조치 사항의 세부 내용이나 위반 시 제재에 대해서는 다루지 않습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "경사진 곳에 정차하거나 주차하려는 자동차의 운전자는 대통령령으로 정하는 바에 따라 고임목을 설치하거나 조향장치를 도로의 가장자리 방향으로 돌려놓는 등 미끄럼 사고의 발생을 방지하기 위한 조치를 취하여야 한다.[CT1]\n경사진 주차장에 자동차를 정차한 갑은 도로교통법 제34조의3에 따라 미끄럼 사고 방지를 위한 안전조치를 이행할 의무가 있다.[CT2]\n전제: 질문에 제시된 '경사진 주차장'이 도로교통법 제34조의3에서 규정하는 '경사진 곳'에 해당한다고 가정합니다.\n한계: 본 답변은 도로교통법 제34조의3의 일반적 법적 의무만을 다루며, 대통령령으로 정하는 구체적 조치 사항의 세부 내용이나 위반 시 제재에 대해서는 다루지 않습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T23:33:40.688040+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 131223.723,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 97,
+      "dedup_collapse": 6,
+      "evidence_fusion": 97,
+      "first_stage": 100,
+      "request_rerank": 100,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 97
+    }
+  },
+  "run_id": "016b01ca-91eb-40e6-becb-6f46766c993c",
+  "state": {
+    "accepted_provision_ids": [
+      "도로교통법 34조 3 경사진 곳에서의 정차 또는 주차의 방법#KOBLEX-013974"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_obligation",
+        "question_anchor": "취해야 했던 조치는 무엇인가",
+        "requested_output": "경사진 주차장에서 자동차 정차 시 취해야 할 구체적 조치"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "도로교통법 34조 3 경사진 곳에서의 정차 또는 주차의 방법#KOBLEX-013974"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 41,
+        "first_stage_score": 18.17278821200839,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "도로교통법 34조 3 경사진 곳에서의 정차 또는 주차의 방법#KOBLEX-013974",
+        "provision_text": "제34조의3(경사진 곳에서의 정차 또는 주차의 방법) 경사진 곳에 정차하거나 주차(도로 외의 경사진 곳에서 정차하거나 주차하는 경우를 포함한다)하려는 자동차의 운전자는 대통령령으로 정하는 바에 따라 고임목을 설치하거나 조향장치(操向裝置)를 도로의 가장자리 방향으로 돌려놓는 등 미끄럼 사고의 발생을 방지하기 위한 조치를 취하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9792879223823547,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "도로교통법 34조 3 경사진 곳에서의 정차 또는 주차의 방법",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로교통법 시행령 87조 5 규제의 재검토#KOBLEX-131004"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 21.554261312149027,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "도로교통법 시행령 87조 5 규제의 재검토#KOBLEX-131004",
+        "provision_text": "1. 제11조제3항에 따른 경사진 곳에서의 정차 또는 주차 시의 조치의무: 2022년 1월 1일",
+        "rerank_rank": 2,
+        "rerank_score": 0.9286114573478699,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "도로교통법 시행령 87조 5 규제의 재검토 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로교통법 34조  정차 또는 주차의 방법 및 시간의 제한#KOBLEX-013970"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 24.90641066860141,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "도로교통법 34조  정차 또는 주차의 방법 및 시간의 제한#KOBLEX-013970",
+        "provision_text": "제34조(정차 또는 주차의 방법 및 시간의 제한) 도로 또는 노상주차장에 정차하거나 주차하려고 하는 차의 운전자는 차를 차도의 우측 가장자리에 정차하는 등 대통령령으로 정하는 정차 또는 주차의 방법ㆍ시간과 금지사항 등을 지켜야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.0001167525551863946,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "도로교통법 34조  정차 또는 주차의 방법 및 시간의 제한",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로교통법 37조  차와 노면전차의 등화#KOBLEX-013989"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 1.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "도로교통법 37조  차와 노면전차의 등화#KOBLEX-013989",
+        "provision_text": "① 모든 차 또는 노면전차의 운전자는 다음 각 호의 어느 하나에 해당하는 경우에는 대통령령으로 정하는 바에 따라 전조등(前照燈), 차폭등(車幅燈), 미등(尾燈)과 그 밖의 등화를 켜야 한다. <개정 2018.3.27> 1. 밤(해가 진 후부터 해가 뜨기 전까지를 말한다. 이하 같다)에 도로에서 차 또는 노면전차를 운행하거나 고장이나 그 밖의 부득이한 사유로 도로에서 차 또는 노면전차를 정차 또는 주차하는 경우 2. 안개가 끼거나 비 또는 눈이 올 때에 도로에서 차 또는 노면전차를 운행하거나 고장이나 그 밖의 부득이한 사유로 도로에서 차 또는 노면전차를 정차 또는 주차하는 경우 3. 터널 안을 운행하거나 고장 또는 그 밖의 부득이한 사유로 터널 안 도로에서 차 또는 노면전차를 정차 또는 주차하는 경우",
+        "rerank_rank": 4,
+        "rerank_score": 3.882977762259543e-05,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "도로교통법 37조  차와 노면전차의 등화 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014121"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 21.131180953028768,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014121",
+        "provision_text": "3. 고장이나 그 밖의 부득이한 사유로 길가장자리구역(갓길을 포함한다)에 정차 또는 주차시키는 경우",
+        "rerank_rank": 5,
+        "rerank_score": 1.965509363799356e-05,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지 3호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014120"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 27.128722162089872,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014120",
+        "provision_text": "2. 정차 또는 주차할 수 있도록 안전표지를 설치한 곳이나 정류장에서 정차 또는 주차시키는 경우",
+        "rerank_rank": 6,
+        "rerank_score": 1.82119201781461e-05,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014127"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 34,
+        "first_stage_score": 19.592858056641866,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014127",
+        "provision_text": "7. 교통이 밀리거나 그 밖의 부득이한 사유로 움직일 수 없을 때에 고속도로등의 차로에 일시 정차 또는 주차시키는 경우",
+        "rerank_rank": 7,
+        "rerank_score": 1.1031903341063298e-05,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지 9호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로교통법 시행령 11조  정차 또는 주차의 방법 등#KOBLEX-130651"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 25.067504726107458,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "도로교통법 시행령 11조  정차 또는 주차의 방법 등#KOBLEX-130651",
+        "provision_text": "제11조(정차 또는 주차의 방법 등)",
+        "rerank_rank": 8,
+        "rerank_score": 7.096487024682574e-06,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "도로교통법 시행령 11조  정차 또는 주차의 방법 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014123"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 21.994629301243997,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014123",
+        "provision_text": "5. 도로의 관리자가 고속도로등을 보수ㆍ유지 또는 순회하기 위하여 정차 또는 주차시키는 경우",
+        "rerank_rank": 9,
+        "rerank_score": 6.389879672497045e-06,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지 5호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014119"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 32,
+        "first_stage_score": 19.592858056641866,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014119",
+        "provision_text": "1. 법령의 규정 또는 경찰공무원(자치경찰공무원은 제외한다)의 지시에 따르거나 위험을 방지하기 위하여 일시 정차 또는 주차시키는 경우",
+        "rerank_rank": 10,
+        "rerank_score": 6.047995611879742e-06,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "도로교통법 34조  정차 또는 주차의 방법 및 시간의 제한#KOBLEX-013970": "제34조(정차 또는 주차의 방법 및 시간의 제한) 도로 또는 노상주차장에 정차하거나 주차하려고 하는 차의 운전자는 차를 차도의 우측 가장자리에 정차하는 등 대통령령으로 정하는 정차 또는 주차의 방법ㆍ시간과 금지사항 등을 지켜야 한다.",
+      "도로교통법 34조 3 경사진 곳에서의 정차 또는 주차의 방법#KOBLEX-013974": "제34조의3(경사진 곳에서의 정차 또는 주차의 방법) 경사진 곳에 정차하거나 주차(도로 외의 경사진 곳에서 정차하거나 주차하는 경우를 포함한다)하려는 자동차의 운전자는 대통령령으로 정하는 바에 따라 고임목을 설치하거나 조향장치(操向裝置)를 도로의 가장자리 방향으로 돌려놓는 등 미끄럼 사고의 발생을 방지하기 위한 조치를 취하여야 한다.",
+      "도로교통법 37조  차와 노면전차의 등화#KOBLEX-013989": "① 모든 차 또는 노면전차의 운전자는 다음 각 호의 어느 하나에 해당하는 경우에는 대통령령으로 정하는 바에 따라 전조등(前照燈), 차폭등(車幅燈), 미등(尾燈)과 그 밖의 등화를 켜야 한다. <개정 2018.3.27> 1. 밤(해가 진 후부터 해가 뜨기 전까지를 말한다. 이하 같다)에 도로에서 차 또는 노면전차를 운행하거나 고장이나 그 밖의 부득이한 사유로 도로에서 차 또는 노면전차를 정차 또는 주차하는 경우 2. 안개가 끼거나 비 또는 눈이 올 때에 도로에서 차 또는 노면전차를 운행하거나 고장이나 그 밖의 부득이한 사유로 도로에서 차 또는 노면전차를 정차 또는 주차하는 경우 3. 터널 안을 운행하거나 고장 또는 그 밖의 부득이한 사유로 터널 안 도로에서 차 또는 노면전차를 정차 또는 주차하는 경우",
+      "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014119": "1. 법령의 규정 또는 경찰공무원(자치경찰공무원은 제외한다)의 지시에 따르거나 위험을 방지하기 위하여 일시 정차 또는 주차시키는 경우",
+      "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014120": "2. 정차 또는 주차할 수 있도록 안전표지를 설치한 곳이나 정류장에서 정차 또는 주차시키는 경우",
+      "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014121": "3. 고장이나 그 밖의 부득이한 사유로 길가장자리구역(갓길을 포함한다)에 정차 또는 주차시키는 경우",
+      "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014123": "5. 도로의 관리자가 고속도로등을 보수ㆍ유지 또는 순회하기 위하여 정차 또는 주차시키는 경우",
+      "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014127": "7. 교통이 밀리거나 그 밖의 부득이한 사유로 움직일 수 없을 때에 고속도로등의 차로에 일시 정차 또는 주차시키는 경우",
+      "도로교통법 시행령 11조  정차 또는 주차의 방법 등#KOBLEX-130651": "제11조(정차 또는 주차의 방법 등)",
+      "도로교통법 시행령 87조 5 규제의 재검토#KOBLEX-131004": "1. 제11조제3항에 따른 경사진 곳에서의 정차 또는 주차 시의 조치의무: 2022년 1월 1일"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "도로교통법 34조 3 경사진 곳에서의 정차 또는 주차의 방법#KOBLEX-013974"
+            ],
+            "rationale": "C001은 경사진 곳에서의 정차 또는 주차 시 운전자가 취해야 할 구체적 안전조치(고임목 설치, 조향장치 조작 등)를 명시하고 있어 요구사항을 충족한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "도로교통법 34조 3 경사진 곳에서의 정차 또는 주차의 방법#KOBLEX-013974"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001(도로교통법 제34조의3)은 경사진 곳에서의 정차 또는 주차 시 운전자가 취해야 할 안전조치(고임목 설치, 조향장치 조작 등)를 명시적으로 규정하고 있어, E1의 완료 기준인 '경사지 정차 시 의무화된 구체적 조치 내용을 명시하는 조항 확인'을 충족한다. 다른 후보 조항들은 고속도로 정차 금지나 등화 의무 등 본 건의 핵심 쟁점과 무관하거나, C001의 구체적 내용을 대체하지 못한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "도로교통법 34조 3 경사진 곳에서의 정차 또는 주차의 방법#KOBLEX-013974",
+        "support_spans": [
+          {
+            "end_char": 187,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "경사진 도로 또는 주차장에서 자동차를 정차할 때 운전자가 취해야 할 안전조치 의무의 법적 근거와 구체적 내용",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 자신의 친구 을과 함께 산속의 오르막길에 위치한 작은 주차장에 도착했습니다. 주차장에는 경사가 있었고, 갑은 자신의 자동차를 잠시 세워두기로 했습니다. 갑은 자동차를 정차할 때 특별한 조치를 취하지 않았고, 잠시 후 자동차가 경사 때문에 미끄러져 내려가 다른 차량과 부딪히는 사고가 발생했습니다. 을은 갑에게 도로교통법을 따랐어야 한다고 주장했습니다. [질문] 갑이 오르막길의 경사진 주차장에 자동차를 정차할 때 취해야 했던 조치는 무엇인가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "도로교통법 경사지 정차 안전조치 의무",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "도로교통법",
+          "경사지",
+          "정차",
+          "안전조치",
+          "의무"
+        ],
+        "query_text": "도로교통법 경사지 정차 안전조치 의무 [원문 맥락] 을은 갑에게 도로교통법을 따랐어야 한다고 주장했습니다. 갑이 오르막길의 경사진 주차장에 자동차를 정차할 때 취해야 했던 조치는 무엇인가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "경사진 주차장에서 자동차 정차 시 취해야 할 구체적 조치",
+        "statute_hints": [
+          "도로교통법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 자신의 친구 을과 함께 산속의 오르막길에 위치한 작은 주차장에 도착했습니다. 주차장에는 경사가 있었고, 갑은 자신의 자동차를 잠시 세워두기로 했습니다. 갑은 자동차를 정차할 때 특별한 조치를 취하지 않았고, 잠시 후 자동차가 경사 때문에 미끄러져 내려가 다른 차량과 부딪히는 사고가 발생했습니다. 을은 갑에게 도로교통법을 따랐어야 한다고 주장했습니다.\n\n[질문]\n갑이 오르막길의 경사진 주차장에 자동차를 정차할 때 취해야 했던 조치는 무엇인가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "경사지 정차 시 의무화된 구체적 조치 내용을 명시하는 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "경사지 정차 시 의무화된 안전조치(예: 핸들 조작, 브레이크, 주차브레이크 등)를 명시하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "경사진 도로에서 자동차를 정차할 때 운전자가 취해야 할 안전조치(핸들 조작, 브레이크, 주차브레이크 등)에 관한 도로교통법 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 '취해야 했던 조치'를 직접적으로 규정하는 핵심 법적 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "016b01ca-91eb-40e6-becb-6f46766c993c",
+    "seen_provision_ids": [
+      "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014120",
+      "도로교통법 34조  정차 또는 주차의 방법 및 시간의 제한#KOBLEX-013970",
+      "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014121",
+      "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014123",
+      "도로교통법 34조 3 경사진 곳에서의 정차 또는 주차의 방법#KOBLEX-013974",
+      "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014119",
+      "도로교통법 64조  고속도로등에서의 정차 및 주차의 금지#KOBLEX-014127",
+      "도로교통법 37조  차와 노면전차의 등화#KOBLEX-013989",
+      "도로교통법 시행령 11조  정차 또는 주차의 방법 등#KOBLEX-130651",
+      "도로교통법 시행령 87조 5 규제의 재검토#KOBLEX-131004"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

@@ -1,0 +1,1144 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": "grounded_legal_answer_generation did not produce a valid GENERATE_BENCHMARK_CANDIDATE result after 2 attempts: claims must cover every answered target exactly within scope",
+  "candidate_answer_status": "EXECUTION_FAILURE",
+  "candidate_answer_termination_reason": "INVALID_SKILL_OUTPUT",
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T22:06:29.926473+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 577425.412,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 559,
+      "dedup_collapse": 76,
+      "evidence_fusion": 559,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "round_selected": 30,
+      "rrf": 600,
+      "selected": 559
+    }
+  },
+  "run_id": "76ae82b2-8cd2-4de4-9b45-317eb7896bae",
+  "state": {
+    "accepted_provision_ids": [
+      "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022827",
+      "질서위반행위규제법 54조  고액ㆍ상습체납자에 대한 제재#KOBLEX-022923",
+      "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022825",
+      "도로교통법 시행령 88조  과태료 부과 및 징수 절차 등#KOBLEX-131016",
+      "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022826"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 6,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 5,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 21
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "error": "grounded_legal_answer_generation did not produce a valid GENERATE_BENCHMARK_CANDIDATE result after 2 attempts: claims must cover every answered target exactly within scope",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "BENCHMARK_CANDIDATE_EXECUTION_FAILURE",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "statutory_deadline",
+        "question_anchor": "몇 일 이내에",
+        "requested_output": "과태료 납부고지서 수령일로부터 납부해야 하는 기한(일수)"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_consequence",
+        "question_anchor": "어떤 조치가",
+        "requested_output": "납부기한 내 미납 시 취해질 수 있는 법적 조치"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "도로교통법 시행령 88조  과태료 부과 및 징수 절차 등#KOBLEX-131016"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 51,
+        "first_stage_score": 19.413700970191076,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "도로교통법 시행령 88조  과태료 부과 및 징수 절차 등#KOBLEX-131016",
+        "provision_text": "⑦ 시장등은 과태료의 납부 고지를 받은 자가 납부기간 이내에 과태료를 내지 아니하면 「질서위반행위규제법」 제24조제3항에 따른 체납처분을 하기 전에 지방세 중 자동차세의 납부고지서와 함께 미납과태료(가산금을 포함한다)의 납부를 고지할 수 있다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.013408893719315529,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1",
+          "GRQ-R2-2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "도로교통법 시행령 88조  과태료 부과 및 징수 절차 등 7항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "출입국관리법 시행령 88조 5 관리비용의 부담 및 납부 절차#KOBLEX-195731"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 21.57482315185666,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "출입국관리법 시행령 88조 5 관리비용의 부담 및 납부 절차#KOBLEX-195731",
+        "provision_text": "③ 청장ㆍ사무소장 또는 출장소장은 법 제76조의3제2항에 따라 관리비용을 선박등의 장 또는 운수업자가 부담하게 하려는 경우에는 송환대상외국인이 출국대기실에서 퇴실하였을 때에 다음 각 호의 사항이 기재된 납부고지서를 발급하여야 한다. 다만, 관리 기간이 1개월을 초과하는 경우에는 1개월 단위로 발급할 수 있다. 1. 납부자 이름 2. 관리비용 청구사유 3. 납부금액 및 산출근거 4. 납부기한 5. 납부방법 6. 미납 시 조치 예정 사항",
+        "rerank_rank": 1,
+        "rerank_score": 0.4815993905067444,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "출입국관리법 시행령 88조 5 관리비용의 부담 및 납부 절차 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022826"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 44,
+        "first_stage_score": 19.977989221537566,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022826",
+        "provision_text": "② 체납된 과태료를 납부하지 아니한 때에는 납부기한이 경과한 날부터 매 1개월이 경과할 때마다 체납된 과태료의 1천분의 12에 상당하는 가산금(이하 이 조에서 \"중가산금\"이라 한다)을 제1항에 따른 가산금에 가산하여 징수한다. 이 경우 중가산금을 가산하여 징수하는 기간은 60개월을 초과하지 못한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.2123994678258896,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2",
+          "GRQ-R2-1",
+          "GRQ-R3-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "질서위반행위규제법 24조  가산금 징수 및 체납처분 등 2항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "한국주택금융공사법 41조  보증료 등#KOBLEX-183323"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 52,
+        "first_stage_score": 19.216536630090772,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "한국주택금융공사법 41조  보증료 등#KOBLEX-183323",
+        "provision_text": "③ 공사는 신용보증을 받은 자가 보증료의 납부기한까지 보증료를 내지 아니한 경우에는 미납 보증료에 대하여 대통령령으로 정하는 바에 따라 연체보증료를 받을 수 있다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.045242346823215485,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "한국주택금융공사법 41조  보증료 등 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "하도급거래 공정화에 관한 법률 15조  관세 등 환급액의 지급#KOBLEX-228323"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 42,
+        "first_stage_score": 18.256196435734307,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "하도급거래 공정화에 관한 법률 15조  관세 등 환급액의 지급#KOBLEX-228323",
+        "provision_text": "② 제1항에도 불구하고 수급사업자에게 책임을 돌릴 사유가 없으면 목적물등의 수령일부터 60일 이내에 수급사업자에게 관세 등 환급상당액을 지급하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.01019897498190403,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "하도급거래 공정화에 관한 법률 15조  관세 등 환급액의 지급 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "사회기반시설에 대한 민간투자법 36조  보증료#KOBLEX-095128"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 45,
+        "first_stage_score": 19.891440194285188,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "사회기반시설에 대한 민간투자법 36조  보증료#KOBLEX-095128",
+        "provision_text": "② 관리기관은 보증을 받은 사업시행자등이 보증료의 납부기한까지 보증료를 납부하지 아니하였을 때에는 미납 보증료에 대하여 연이율 100분의 10에 해당하는 연체보증료를 받는다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.004910288844257593,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "사회기반시설에 대한 민간투자법 36조  보증료 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "청원경찰법 시행규칙 24조  과태료 부과 고지서 등#KOBLEX-180855"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 44.40962241309026,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "청원경찰법 시행규칙 24조  과태료 부과 고지서 등#KOBLEX-180855",
+        "provision_text": "제24조(과태료 부과 고지서 등)",
+        "rerank_rank": 2,
+        "rerank_score": 0.0021859288681298494,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "청원경찰법 시행규칙 24조  과태료 부과 고지서 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "개별소비세법 29조  과태료#KOBLEX-184387"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 67,
+        "first_stage_score": 17.115839227744456,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "개별소비세법 29조  과태료#KOBLEX-184387",
+        "provision_text": "제29조(과태료)",
+        "rerank_rank": 3,
+        "rerank_score": 0.001146159484051168,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "개별소비세법 29조  과태료",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "경비업법 31조  과태료#KOBLEX-219835"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 76,
+        "first_stage_score": 17.115839227744456,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "경비업법 31조  과태료#KOBLEX-219835",
+        "provision_text": "제31조(과태료)",
+        "rerank_rank": 4,
+        "rerank_score": 0.0009610151755623519,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "경비업법 31조  과태료",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부담금관리 기본법 5조 3 가산금 등#KOBLEX-023821"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 30,
+        "first_stage_score": 21.005339242363256,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "부담금관리 기본법 5조 3 가산금 등#KOBLEX-023821",
+        "provision_text": "② 제1항에 따라 가산금 등을 부과하는 규정을 해당 법령에 정할 때에는 그 가산금 등이 다음 각 호의 구분에 따른 금액을 초과하지 아니하도록 하여야 한다. <개정 2015.12.29, 2021.6.15> 1. 부담금을 납부기한까지 완납하지 아니한 경우 부과하는 가산금 등: 체납된 부담금의 100분의 3에 상당하는 금액 2. 체납된 부담금을 납부하지 아니한 경우 제1호의 가산금 등에 더하여 부과하는 가산금 등: 체납기간 1일당 체납된 부담금의 10만분의 25에 상당하는 금액",
+        "rerank_rank": 6,
+        "rerank_score": 0.0008814603788778186,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "부담금관리 기본법 5조 3 가산금 등 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022825"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022825",
+        "provision_text": "① 행정청은 당사자가 납부기한까지 과태료를 납부하지 아니한 때에는 납부기한을 경과한 날부터 체납된 과태료에 대하여 100분의 3에 상당하는 가산금을 징수한다. <개정 2016.12.2>",
+        "rerank_rank": 1,
+        "rerank_score": 0.639197587966919,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R2-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "질서위반행위규제법 24조  가산금 징수 및 체납처분 등 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공공단체등 위탁선거에 관한 법률 68조  과태료의 부과ㆍ징수 등#KOBLEX-086692"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 27.093471729562076,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "공공단체등 위탁선거에 관한 법률 68조  과태료의 부과ㆍ징수 등#KOBLEX-086692",
+        "provision_text": "⑤ 이 법에 따른 과태료의 부과ㆍ징수 등의 절차에 관하여는 「질서위반행위규제법」 제5조(다른 법률과의 관계)에도 불구하고 다음 각 호에서 정하는 바에 따른다. 1. 당사자[「질서위반행위규제법」 제2조(정의)제3호에 따른 당사자를 말한다. 이하 이 항에서 같다]는 「질서위반행위규제법」 제16조(사전통지 및 의견 제출 등)제1항 전단에도 불구하고 부과권자로부터 사전통지를 받은 날부터 3일까지 의견을 제출하여야 한다. 2. 제4항 전단에 따른 과태료 처분에 불복이 있는 당사자는 「질서위반행위규제법」 제20조(이의제기)제1항 및 제2항에도 불구하고 그 처분의 고지를 받은 날부터 20일 이내에 부과권자에게 이의를 제기하여야 하며, 이 경우 그 이의제기는 과태료 처분의 효력이나 그 집행 또는 절차의 속행에 영향을 주지 아니한다. 3. 「질서위반행위규제법」 제24조(가산금 징수 및 체납처분 등)에도 불구하고 당사자가 납부기한까지 납부하지 아니한 경우 부과권자는 체납된 과태료에 대하여 100분의 5에 상당하는 가산금을 더하여 관할세무서장에게 징수를 위탁하고, 관할세무서장은 국세 체납처분의 예에 따라 이를 징수하여 국가에 납입하여야 한다. 4. 「질서위반행위규제법」 제21조(법원에의 통보)제1항 본문에도 불구하고 제4항에 따라 과태료 처분을 받은 당사자가 제2호에 따라 이의를 제기한 경우 부과권자는 지체 없이 관할법원에 그 사실을 통보하여야 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.0020973312202841043,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R2-1",
+          "GRQ-R3-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "공공단체등 위탁선거에 관한 법률 68조  과태료의 부과ㆍ징수 등 5항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "질서위반행위규제법 54조  고액ㆍ상습체납자에 대한 제재#KOBLEX-022923"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "질서위반행위규제법 54조  고액ㆍ상습체납자에 대한 제재#KOBLEX-022923",
+        "provision_text": "① 법원은 검사의 청구에 따라 결정으로 30일의 범위 이내에서 과태료의 납부가 있을 때까지 다음 각 호의 사유에 모두 해당하는 경우 체납자(법인인 경우에는 대표자를 말한다. 이하 이 조에서 같다)를 감치(監置)에 처할 수 있다. 1. 과태료를 3회 이상 체납하고 있고, 체납발생일부터 각 1년이 경과하였으며, 체납금액의 합계가 1천만원 이상인 체납자 중 대통령령으로 정하는 횟수와 금액 이상을 체납한 경우 2. 과태료 납부능력이 있음에도 불구하고 정당한 사유 없이 체납한 경우",
+        "rerank_rank": 1,
+        "rerank_score": 0.001455848105251789,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "질서위반행위규제법 54조  고액ㆍ상습체납자에 대한 제재 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방세징수법 14조  납부기한의 지정#KOBLEX-131129"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 19.690992945986252,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "지방세징수법 14조  납부기한의 지정#KOBLEX-131129",
+        "provision_text": "제14조(납부기한의 지정) 지방자치단체의 장은 지방자치단체의 징수금의 납부기한을 납세 또는 납부의 고지를 하는 날부터 30일 이내로 지정할 수 있다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.0006342233391478658,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "지방세징수법 14조  납부기한의 지정",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "간접투자자산 운용업법 187조  (과태료)#KOBLEX-082679"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 52,
+        "first_stage_score": 17.115839227744456,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "간접투자자산 운용업법 187조  (과태료)#KOBLEX-082679",
+        "provision_text": "제187조 (과태료)",
+        "rerank_rank": 5,
+        "rerank_score": 0.0005997266853228211,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "간접투자자산 운용업법 187조  (과태료)",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산업기술혁신 촉진법 시행령 14조 7 독촉#KOBLEX-006215"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 43,
+        "first_stage_score": 17.625748787313043,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "산업기술혁신 촉진법 시행령 14조 7 독촉#KOBLEX-006215",
+        "provision_text": "2. 납부기한(독촉장을 발부한 날부터 10일 이내로 한다)",
+        "rerank_rank": 7,
+        "rerank_score": 0.0005614204565063119,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "산업기술혁신 촉진법 시행령 14조 7 독촉 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022827"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 93,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022827",
+        "provision_text": "③ 행정청은 당사자가 제20조제1항에 따른 기한 이내에 이의를 제기하지 아니하고 제1항에 따른 가산금을 납부하지 아니한 때에는 국세 또는 지방세 체납처분의 예에 따라 징수한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.008326705545186996,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "질서위반행위규제법 24조  가산금 징수 및 체납처분 등 3항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부동산 실권리자명의 등기에 관한 법률 5조 2 과징금 납부기한의 연장 및 분할 납부#KOBLEX-200739",
+          "부동산 실권리자명의 등기에 관한 법률 5조 2 과징금 납부기한의 연장 및 분할 납부#KOBLEX-222799"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 24,
+        "first_stage_score": 21.25070660450005,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "부동산 실권리자명의 등기에 관한 법률 5조 2 과징금 납부기한의 연장 및 분할 납부#KOBLEX-200739",
+        "provision_text": "② 과징금 납부의무자가 제1항에 따른 과징금 납부기한의 연장 또는 분할 납부를 신청하려는 경우에는 과징금 납부를 통지받은 날부터 30일 이내에 특별자치도지사ㆍ특별자치시장ㆍ시장ㆍ군수 또는 구청장에게 신청하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.0015577785670757294,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "부동산 실권리자명의 등기에 관한 법률 5조 2 과징금 납부기한의 연장 및 분할 납부 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "질서위반행위규제법 19조  과태료 부과의 제척기간#KOBLEX-022808"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 1.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "질서위반행위규제법 19조  과태료 부과의 제척기간#KOBLEX-022808",
+        "provision_text": "② 제1항에도 불구하고 행정청은 제36조 또는 제44조에 따른 법원의 결정이 있는 경우에는 그 결정이 확정된 날부터 1년이 경과하기 전까지는 과태료를 정정부과 하는 등 해당 결정에 따라 필요한 처분을 할 수 있다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.0013417578302323818,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "질서위반행위규제법 19조  과태료 부과의 제척기간 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "재난 및 안전관리 기본법 66조 3 복구비등의 반환#KOBLEX-165649"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 20.926924791719017,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "재난 및 안전관리 기본법 66조 3 복구비등의 반환#KOBLEX-165649",
+        "provision_text": "③ 제2항에 따라 반환하여야 할 반환금을 지정된 기한까지 반환하지 아니하면 국세 체납처분 또는 지방세 체납처분의 예에 따라 징수한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0009843830484896898,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "재난 및 안전관리 기본법 66조 3 복구비등의 반환 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "석탄산업법 시행령 20조 2 지원의 취소 및 환수 등#KOBLEX-026639"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 28,
+        "first_stage_score": 21.193957428408183,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "석탄산업법 시행령 20조 2 지원의 취소 및 환수 등#KOBLEX-026639",
+        "provision_text": "② 제1항에 따른 통지를 받은 자는 납부기한까지 납부기관에 환수금액을 납부해야 한다. 다만, 천재지변이나 그 밖의 부득이한 사유로 그 기한까지 납부할 수 없는 경우에는 그 사유가 없어진 날부터 30일 이내에 납부해야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0005776764592155814,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "석탄산업법 시행령 20조 2 지원의 취소 및 환수 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "간접투자자산 운용업법 187조  (과태료)#KOBLEX-082679": "제187조 (과태료)",
+      "개별소비세법 29조  과태료#KOBLEX-184387": "제29조(과태료)",
+      "경비업법 31조  과태료#KOBLEX-219835": "제31조(과태료)",
+      "공공단체등 위탁선거에 관한 법률 68조  과태료의 부과ㆍ징수 등#KOBLEX-086692": "⑤ 이 법에 따른 과태료의 부과ㆍ징수 등의 절차에 관하여는 「질서위반행위규제법」 제5조(다른 법률과의 관계)에도 불구하고 다음 각 호에서 정하는 바에 따른다. 1. 당사자[「질서위반행위규제법」 제2조(정의)제3호에 따른 당사자를 말한다. 이하 이 항에서 같다]는 「질서위반행위규제법」 제16조(사전통지 및 의견 제출 등)제1항 전단에도 불구하고 부과권자로부터 사전통지를 받은 날부터 3일까지 의견을 제출하여야 한다. 2. 제4항 전단에 따른 과태료 처분에 불복이 있는 당사자는 「질서위반행위규제법」 제20조(이의제기)제1항 및 제2항에도 불구하고 그 처분의 고지를 받은 날부터 20일 이내에 부과권자에게 이의를 제기하여야 하며, 이 경우 그 이의제기는 과태료 처분의 효력이나 그 집행 또는 절차의 속행에 영향을 주지 아니한다. 3. 「질서위반행위규제법」 제24조(가산금 징수 및 체납처분 등)에도 불구하고 당사자가 납부기한까지 납부하지 아니한 경우 부과권자는 체납된 과태료에 대하여 100분의 5에 상당하는 가산금을 더하여 관할세무서장에게 징수를 위탁하고, 관할세무서장은 국세 체납처분의 예에 따라 이를 징수하여 국가에 납입하여야 한다. 4. 「질서위반행위규제법」 제21조(법원에의 통보)제1항 본문에도 불구하고 제4항에 따라 과태료 처분을 받은 당사자가 제2호에 따라 이의를 제기한 경우 부과권자는 지체 없이 관할법원에 그 사실을 통보하여야 한다.",
+      "도로교통법 시행령 88조  과태료 부과 및 징수 절차 등#KOBLEX-131016": "⑦ 시장등은 과태료의 납부 고지를 받은 자가 납부기간 이내에 과태료를 내지 아니하면 「질서위반행위규제법」 제24조제3항에 따른 체납처분을 하기 전에 지방세 중 자동차세의 납부고지서와 함께 미납과태료(가산금을 포함한다)의 납부를 고지할 수 있다.",
+      "부담금관리 기본법 5조 3 가산금 등#KOBLEX-023821": "② 제1항에 따라 가산금 등을 부과하는 규정을 해당 법령에 정할 때에는 그 가산금 등이 다음 각 호의 구분에 따른 금액을 초과하지 아니하도록 하여야 한다. <개정 2015.12.29, 2021.6.15> 1. 부담금을 납부기한까지 완납하지 아니한 경우 부과하는 가산금 등: 체납된 부담금의 100분의 3에 상당하는 금액 2. 체납된 부담금을 납부하지 아니한 경우 제1호의 가산금 등에 더하여 부과하는 가산금 등: 체납기간 1일당 체납된 부담금의 10만분의 25에 상당하는 금액",
+      "부동산 실권리자명의 등기에 관한 법률 5조 2 과징금 납부기한의 연장 및 분할 납부#KOBLEX-200739": "② 과징금 납부의무자가 제1항에 따른 과징금 납부기한의 연장 또는 분할 납부를 신청하려는 경우에는 과징금 납부를 통지받은 날부터 30일 이내에 특별자치도지사ㆍ특별자치시장ㆍ시장ㆍ군수 또는 구청장에게 신청하여야 한다.",
+      "사회기반시설에 대한 민간투자법 36조  보증료#KOBLEX-095128": "② 관리기관은 보증을 받은 사업시행자등이 보증료의 납부기한까지 보증료를 납부하지 아니하였을 때에는 미납 보증료에 대하여 연이율 100분의 10에 해당하는 연체보증료를 받는다.",
+      "산업기술혁신 촉진법 시행령 14조 7 독촉#KOBLEX-006215": "2. 납부기한(독촉장을 발부한 날부터 10일 이내로 한다)",
+      "석탄산업법 시행령 20조 2 지원의 취소 및 환수 등#KOBLEX-026639": "② 제1항에 따른 통지를 받은 자는 납부기한까지 납부기관에 환수금액을 납부해야 한다. 다만, 천재지변이나 그 밖의 부득이한 사유로 그 기한까지 납부할 수 없는 경우에는 그 사유가 없어진 날부터 30일 이내에 납부해야 한다.",
+      "재난 및 안전관리 기본법 66조 3 복구비등의 반환#KOBLEX-165649": "③ 제2항에 따라 반환하여야 할 반환금을 지정된 기한까지 반환하지 아니하면 국세 체납처분 또는 지방세 체납처분의 예에 따라 징수한다.",
+      "지방세징수법 14조  납부기한의 지정#KOBLEX-131129": "제14조(납부기한의 지정) 지방자치단체의 장은 지방자치단체의 징수금의 납부기한을 납세 또는 납부의 고지를 하는 날부터 30일 이내로 지정할 수 있다.",
+      "질서위반행위규제법 19조  과태료 부과의 제척기간#KOBLEX-022808": "② 제1항에도 불구하고 행정청은 제36조 또는 제44조에 따른 법원의 결정이 있는 경우에는 그 결정이 확정된 날부터 1년이 경과하기 전까지는 과태료를 정정부과 하는 등 해당 결정에 따라 필요한 처분을 할 수 있다.",
+      "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022825": "① 행정청은 당사자가 납부기한까지 과태료를 납부하지 아니한 때에는 납부기한을 경과한 날부터 체납된 과태료에 대하여 100분의 3에 상당하는 가산금을 징수한다. <개정 2016.12.2>",
+      "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022826": "② 체납된 과태료를 납부하지 아니한 때에는 납부기한이 경과한 날부터 매 1개월이 경과할 때마다 체납된 과태료의 1천분의 12에 상당하는 가산금(이하 이 조에서 \"중가산금\"이라 한다)을 제1항에 따른 가산금에 가산하여 징수한다. 이 경우 중가산금을 가산하여 징수하는 기간은 60개월을 초과하지 못한다.",
+      "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022827": "③ 행정청은 당사자가 제20조제1항에 따른 기한 이내에 이의를 제기하지 아니하고 제1항에 따른 가산금을 납부하지 아니한 때에는 국세 또는 지방세 체납처분의 예에 따라 징수한다.",
+      "질서위반행위규제법 54조  고액ㆍ상습체납자에 대한 제재#KOBLEX-022923": "① 법원은 검사의 청구에 따라 결정으로 30일의 범위 이내에서 과태료의 납부가 있을 때까지 다음 각 호의 사유에 모두 해당하는 경우 체납자(법인인 경우에는 대표자를 말한다. 이하 이 조에서 같다)를 감치(監置)에 처할 수 있다. 1. 과태료를 3회 이상 체납하고 있고, 체납발생일부터 각 1년이 경과하였으며, 체납금액의 합계가 1천만원 이상인 체납자 중 대통령령으로 정하는 횟수와 금액 이상을 체납한 경우 2. 과태료 납부능력이 있음에도 불구하고 정당한 사유 없이 체납한 경우",
+      "청원경찰법 시행규칙 24조  과태료 부과 고지서 등#KOBLEX-180855": "제24조(과태료 부과 고지서 등)",
+      "출입국관리법 시행령 88조 5 관리비용의 부담 및 납부 절차#KOBLEX-195731": "③ 청장ㆍ사무소장 또는 출장소장은 법 제76조의3제2항에 따라 관리비용을 선박등의 장 또는 운수업자가 부담하게 하려는 경우에는 송환대상외국인이 출국대기실에서 퇴실하였을 때에 다음 각 호의 사항이 기재된 납부고지서를 발급하여야 한다. 다만, 관리 기간이 1개월을 초과하는 경우에는 1개월 단위로 발급할 수 있다. 1. 납부자 이름 2. 관리비용 청구사유 3. 납부금액 및 산출근거 4. 납부기한 5. 납부방법 6. 미납 시 조치 예정 사항",
+      "하도급거래 공정화에 관한 법률 15조  관세 등 환급액의 지급#KOBLEX-228323": "② 제1항에도 불구하고 수급사업자에게 책임을 돌릴 사유가 없으면 목적물등의 수령일부터 60일 이내에 수급사업자에게 관세 등 환급상당액을 지급하여야 한다.",
+      "한국주택금융공사법 41조  보증료 등#KOBLEX-183323": "③ 공사는 신용보증을 받은 자가 보증료의 납부기한까지 보증료를 내지 아니한 경우에는 미납 보증료에 대하여 대통령령으로 정하는 바에 따라 연체보증료를 받을 수 있다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "후보 조항 중 납부기한 일수를 특정하는 규정이 부재함.",
+            "requirement_id": "E1-R1",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "uncovered",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "E1-R1"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "공급된 후보 조항(C001~C021) 중 도로교통법상 과태료의 법정 납부기한(고지서 수령일로부터 X일 이내)을 명시하는 조항이 포함되어 있지 않아 E1의 완료 기준을 충족할 수 없다.",
+        "status": "uncovered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "도로교통법 시행령 88조  과태료 부과 및 징수 절차 등#KOBLEX-131016",
+              "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022826",
+              "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022825",
+              "질서위반행위규제법 54조  고액ㆍ상습체납자에 대한 제재#KOBLEX-022923",
+              "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022827"
+            ],
+            "rationale": "가산금 부과, 고지 절차, 감치 제재, 강제징수 예규 적용은 확인되었으나, 요구된 '구체적 조치'의 전체 범위(압류 등)를 포괄하는 조항이 부족함.",
+            "requirement_id": "E2-R1",
+            "status": "partially_satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "도로교통법 시행령 88조  과태료 부과 및 징수 절차 등#KOBLEX-131016",
+          "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022826",
+          "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022825",
+          "질서위반행위규제법 54조  고액ㆍ상습체납자에 대한 제재#KOBLEX-022923",
+          "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022827"
+        ],
+        "missing_aspects": [
+          "E2-R1"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C001, C003, C011, C013, C017은 미납 시 가산금 부과, 체납처분 전 고지 절차, 감치 제재, 강제징수 예규 적용 등을 규정하여 일부 조치를 지원하지만, 압류 등 다른 구체적 조치에 대한 명시적 규정이 후보 조항에 포함되어 있지 않아 법적 지원이 불완전하다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "도로교통법 시행령 88조  과태료 부과 및 징수 절차 등#KOBLEX-131016",
+        "support_spans": [
+          {
+            "end_char": 136,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022826",
+        "support_spans": [
+          {
+            "end_char": 167,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022825",
+        "support_spans": [
+          {
+            "end_char": 103,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "질서위반행위규제법 54조  고액ㆍ상습체납자에 대한 제재#KOBLEX-022923",
+        "support_spans": [
+          {
+            "end_char": 266,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022827",
+        "support_spans": [
+          {
+            "end_char": 98,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 5,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "도로교통법상 과태료의 법정 납부기한은 납부고지서 수령일로부터 며칠 이내인가",
+        "issue_id": "I1"
+      },
+      {
+        "description": "도로교통법상 과태료 납부기한 내 미납 시 부과되는 법적 불이익은 무엇인가",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "과태료 납부고지서 수령일로부터 납부해야 하는 일수를 특정할 수 있는 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "과태료 납부기한을 '고지서 수령일로부터 X일 이내'로 명시한 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "도로교통법상 과태료 납부기한을 정한 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 명시적으로 납부기한(일수)을 묻고 있으므로, 기한을 정한 규정이 없으면 T1에 대한 답변이 불가능함",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "납부기한 내 미납 시 적용되는 법적 조치의 종류와 내용을 특정할 수 있는 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "과태료 미납 시 부과되는 가산금, 압류, 또는 형사처벌 등 구체적 조치 확인"
+          }
+        ],
+        "critical": true,
+        "description": "도로교통법상 과태료 미납 시 취해지는 조치(가산금, 압류, 형사처벌 등)를 정한 조항",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 명시적으로 미납 시 취해질 수 있는 조치를 묻고 있으므로, 불이익을 정한 규정이 없으면 T2에 대한 답변이 불가능함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 도로교통법을 위반하여 과태료 납부고지서를 받았습니다. 갑은 고지서를 받고 나서도 60일이 지나도록 과태료를 납부하지 않았습니다. 이제 과태료를 제때 납부하지 않음으로 인해 어떤 조치가 갑에게 취해질 수 있는지 궁금해졌습니다. [질문] 갑은 과태료 납부고지서를 받은 날부터 몇 일 이내에 과태료를 납부해야 하며, 납부기한 내에 과태료를 납부하지 않으면 어떤 조치가 갑에게 취해질 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "도로교통법 과태료 납부기한 고지서 수령일로부터 일수",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "도로교통법",
+          "과태료",
+          "납부기한",
+          "고지서",
+          "수령일",
+          "일수"
+        ],
+        "query_text": "도로교통법 과태료 납부기한 고지서 수령일로부터 일수 [원문 맥락] 이제 과태료를 제때 납부하지 않음으로 인해 어떤 조치가 갑에게 취해질 수 있는지 궁금해졌습니다. 갑은 과태료 납부고지서를 받은 날부터 몇 일 이내에 과태료를 납부해야 하며, 납부기한 내에 과태료를 납부하지 않으면 어떤 조치가 갑에게 취해질 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "과태료 납부고지서 수령일로부터 납부해야 하는 기한(일수)",
+        "statute_hints": [
+          "도로교통법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "도로교통법 과태료 미납 시 조치 가산금 압류 형사처벌",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "도로교통법",
+          "과태료",
+          "미납",
+          "조치",
+          "가산금",
+          "압류",
+          "형사처벌"
+        ],
+        "query_text": "도로교통법 과태료 미납 시 조치 가산금 압류 형사처벌 [원문 맥락] 이제 과태료를 제때 납부하지 않음으로 인해 어떤 조치가 갑에게 취해질 수 있는지 궁금해졌습니다. 갑은 과태료 납부고지서를 받은 날부터 몇 일 이내에 과태료를 납부해야 하며, 납부기한 내에 과태료를 납부하지 않으면 어떤 조치가 갑에게 취해질 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "납부기한 내 미납 시 취해질 수 있는 법적 조치",
+        "statute_hints": [
+          "도로교통법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "질서위반행위규제법 과태료 납부기한 30일",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "질서위반행위규제법",
+          "과태료",
+          "납부기한",
+          "30일"
+        ],
+        "query_text": "질서위반행위규제법 과태료 납부기한 30일 [원문 맥락] 이제 과태료를 제때 납부하지 않음으로 인해 어떤 조치가 갑에게 취해질 수 있는지 궁금해졌습니다. 갑은 과태료 납부고지서를 받은 날부터 몇 일 이내에 과태료를 납부해야 하며, 납부기한 내에 과태료를 납부하지 않으면 어떤 조치가 갑에게 취해질 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "과태료 납부고지서 수령일로부터 납부해야 하는 기한(일수)",
+        "statute_hints": [
+          "질서위반행위규제법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "질서위반행위규제법 과태료 체납 처분 압류",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "질서위반행위규제법",
+          "과태료",
+          "체납",
+          "처분",
+          "압류"
+        ],
+        "query_text": "질서위반행위규제법 과태료 체납 처분 압류 [원문 맥락] 이제 과태료를 제때 납부하지 않음으로 인해 어떤 조치가 갑에게 취해질 수 있는지 궁금해졌습니다. 갑은 과태료 납부고지서를 받은 날부터 몇 일 이내에 과태료를 납부해야 하며, 납부기한 내에 과태료를 납부하지 않으면 어떤 조치가 갑에게 취해질 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "납부기한 내 미납 시 취해질 수 있는 법적 조치",
+        "statute_hints": [
+          "질서위반행위규제법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "질서위반행위규제법 제24조 제1항 납부기한 30일 이내",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "질서위반행위규제법",
+          "제24조",
+          "제1항",
+          "납부기한",
+          "30일"
+        ],
+        "query_text": "질서위반행위규제법 제24조 제1항 납부기한 30일 이내 [원문 맥락] 이제 과태료를 제때 납부하지 않음으로 인해 어떤 조치가 갑에게 취해질 수 있는지 궁금해졌습니다. 갑은 과태료 납부고지서를 받은 날부터 몇 일 이내에 과태료를 납부해야 하며, 납부기한 내에 과태료를 납부하지 않으면 어떤 조치가 갑에게 취해질 수 있는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "과태료 납부고지서 수령일로부터 납부해야 하는 기한(일수)",
+        "statute_hints": [
+          "질서위반행위규제법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "질서위반행위규제법 제24조 제2항 체납처분 압류",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "질서위반행위규제법",
+          "제24조",
+          "제2항",
+          "체납처분",
+          "압류"
+        ],
+        "query_text": "질서위반행위규제법 제24조 제2항 체납처분 압류 [원문 맥락] 이제 과태료를 제때 납부하지 않음으로 인해 어떤 조치가 갑에게 취해질 수 있는지 궁금해졌습니다. 갑은 과태료 납부고지서를 받은 날부터 몇 일 이내에 과태료를 납부해야 하며, 납부기한 내에 과태료를 납부하지 않으면 어떤 조치가 갑에게 취해질 수 있는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "납부기한 내 미납 시 취해질 수 있는 법적 조치",
+        "statute_hints": [
+          "질서위반행위규제법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 도로교통법을 위반하여 과태료 납부고지서를 받았습니다. 갑은 고지서를 받고 나서도 60일이 지나도록 과태료를 납부하지 않았습니다. 이제 과태료를 제때 납부하지 않음으로 인해 어떤 조치가 갑에게 취해질 수 있는지 궁금해졌습니다.\n\n[질문]\n갑은 과태료 납부고지서를 받은 날부터 몇 일 이내에 과태료를 납부해야 하며, 납부기한 내에 과태료를 납부하지 않으면 어떤 조치가 갑에게 취해질 수 있는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "과태료 납부고지서 수령일로부터 납부해야 하는 일수를 특정할 수 있는 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "과태료 납부기한을 '고지서 수령일로부터 X일 이내'로 명시한 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "도로교통법상 과태료 납부기한을 정한 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 명시적으로 납부기한(일수)을 묻고 있으므로, 기한을 정한 규정이 없으면 T1에 대한 답변이 불가능함",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "납부기한 내 미납 시 적용되는 법적 조치의 종류와 내용을 특정할 수 있는 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "과태료 미납 시 부과되는 가산금, 압류, 또는 형사처벌 등 구체적 조치 확인"
+          }
+        ],
+        "critical": true,
+        "description": "도로교통법상 과태료 미납 시 취해지는 조치(가산금, 압류, 형사처벌 등)를 정한 조항",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 명시적으로 미납 시 취해질 수 있는 조치를 묻고 있으므로, 불이익을 정한 규정이 없으면 T2에 대한 답변이 불가능함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "76ae82b2-8cd2-4de4-9b45-317eb7896bae",
+    "seen_provision_ids": [
+      "한국주택금융공사법 41조  보증료 등#KOBLEX-183323",
+      "경비업법 31조  과태료#KOBLEX-219835",
+      "질서위반행위규제법 54조  고액ㆍ상습체납자에 대한 제재#KOBLEX-022923",
+      "석탄산업법 시행령 20조 2 지원의 취소 및 환수 등#KOBLEX-026639",
+      "개별소비세법 29조  과태료#KOBLEX-184387",
+      "지방세징수법 14조  납부기한의 지정#KOBLEX-131129",
+      "공공단체등 위탁선거에 관한 법률 68조  과태료의 부과ㆍ징수 등#KOBLEX-086692",
+      "질서위반행위규제법 19조  과태료 부과의 제척기간#KOBLEX-022808",
+      "도로교통법 시행령 88조  과태료 부과 및 징수 절차 등#KOBLEX-131016",
+      "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022826",
+      "간접투자자산 운용업법 187조  (과태료)#KOBLEX-082679",
+      "하도급거래 공정화에 관한 법률 15조  관세 등 환급액의 지급#KOBLEX-228323",
+      "부동산 실권리자명의 등기에 관한 법률 5조 2 과징금 납부기한의 연장 및 분할 납부#KOBLEX-200739",
+      "재난 및 안전관리 기본법 66조 3 복구비등의 반환#KOBLEX-165649",
+      "산업기술혁신 촉진법 시행령 14조 7 독촉#KOBLEX-006215",
+      "출입국관리법 시행령 88조 5 관리비용의 부담 및 납부 절차#KOBLEX-195731",
+      "사회기반시설에 대한 민간투자법 36조  보증료#KOBLEX-095128",
+      "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022827",
+      "질서위반행위규제법 24조  가산금 징수 및 체납처분 등#KOBLEX-022825",
+      "부담금관리 기본법 5조 3 가산금 등#KOBLEX-023821",
+      "청원경찰법 시행규칙 24조  과태료 부과 고지서 등#KOBLEX-180855"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

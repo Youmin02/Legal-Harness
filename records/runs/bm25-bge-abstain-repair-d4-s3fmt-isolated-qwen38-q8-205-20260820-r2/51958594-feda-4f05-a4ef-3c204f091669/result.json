@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T14:11:39.265882+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 207616.882,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Expecting ',' delimiter: line 153 column 54 (char 4230)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "51958594-feda-4f05-a4ef-3c204f091669",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Expecting ',' delimiter: line 153 column 54 (char 4230)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑, 을, 병 세 명의 법무사는 함께 법무사법인을 설립하기로 결정했습니다. 이들은 주사무소를 서울에 두기로 하였으며, 갑은 법무사로서 8년간 업무를 수행해 온 경험이 있습니다. 이들은 법무사법인을 설립하기 위한 절차를 알아보고, 설립 후 필요한 조치에 대해 고민하고 있습니다. [질문] 갑, 을, 병이 법무사법인을 설립하기 위해 어떤 절차를 거쳐야 하며, 설립인가 후 2주 이내에 어떤 조치를 해야 하고, 법무사법인의 구성원 자격 요건은 무엇인가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n갑, 을, 병 세 명의 법무사는 함께 법무사법인을 설립하기로 결정했습니다. 이들은 주사무소를 서울에 두기로 하였으며, 갑은 법무사로서 8년간 업무를 수행해 온 경험이 있습니다. 이들은 법무사법인을 설립하기 위한 절차를 알아보고, 설립 후 필요한 조치에 대해 고민하고 있습니다.\n\n[질문]\n갑, 을, 병이 법무사법인을 설립하기 위해 어떤 절차를 거쳐야 하며, 설립인가 후 2주 이내에 어떤 조치를 해야 하고, 법무사법인의 구성원 자격 요건은 무엇인가?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "51958594-feda-4f05-a4ef-3c204f091669",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

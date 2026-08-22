@@ -1,0 +1,498 @@
+{
+  "abstention_reason": null,
+  "answer": "「민사집행법」에 따라 법원에서 소형선박의 압류등록을 위촉받은 경우, 소형선박 등록관청은 해당 소형선박의 등록원부에 대통령령으로 정하는 바에 따라 압류등록을 하고 선박소유자에게 통지하여야 합니다.[CT1]\n전제: 질문 시나리오에서 '을'이 법원으로부터 압류등록을 위촉받았다고 명시되어 있으므로, 이는 「민사집행법」에 따른 법원의 위촉에 해당한다고 가정합니다.\n한계: 압류등록의 구체적 절차와 방법은 대통령령으로 정해지므로, 본 답변은 법률상 의무 사항만 명시합니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "「민사집행법」에 따라 법원에서 소형선박의 압류등록을 위촉받은 경우, 소형선박 등록관청은 해당 소형선박의 등록원부에 대통령령으로 정하는 바에 따라 압류등록을 하고 선박소유자에게 통지하여야 합니다.[CT1]\n전제: 질문 시나리오에서 '을'이 법원으로부터 압류등록을 위촉받았다고 명시되어 있으므로, 이는 「민사집행법」에 따른 법원의 위촉에 해당한다고 가정합니다.\n한계: 압류등록의 구체적 절차와 방법은 대통령령으로 정해지므로, 본 답변은 법률상 의무 사항만 명시합니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T05:52:30.022405+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 70303.198,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 95,
+      "dedup_collapse": 10,
+      "evidence_fusion": 95,
+      "first_stage": 100,
+      "request_rerank": 100,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 95
+    }
+  },
+  "run_id": "b22a4175-cffe-4249-b0ca-e92f11d3bde5",
+  "state": {
+    "accepted_provision_ids": [
+      "선박법 8조 3 압류등록#KOBLEX-122968"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 1,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_obligation",
+        "question_anchor": "소형선박 등록관청은 어떤 조치를 해야 하는가",
+        "requested_output": "소형선박 등록관청이 압류등록 위촉 시 취해야 할 법적 조치"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "선박법 8조 3 압류등록#KOBLEX-122968"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 40.68488663272841,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "선박법 8조 3 압류등록#KOBLEX-122968",
+        "provision_text": "제8조의3(압류등록) 소형선박 등록관청은 「민사집행법」에 따라 법원에서 압류등록을 위촉하거나 「국세징수법」 또는 「지방세징수법」에 따라 행정관청에서 압류등록을 위촉하는 경우에는 해당 소형선박의 등록원부에 대통령령으로 정하는 바에 따라 압류등록을 하고 선박소유자에게 통지하여야 한다. <개정 2010.3.31, 2016.12.27>",
+        "rerank_rank": 1,
+        "rerank_score": 0.999984622001648,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "선박법 8조 3 압류등록",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방세징수법 시행령 57조  자동차 등의 압류등록 등#KOBLEX-068601"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 17,
+        "first_stage_score": 21.714068006812177,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "지방세징수법 시행령 57조  자동차 등의 압류등록 등#KOBLEX-068601",
+        "provision_text": "② 법 제56조제1항제4호에 따른 선박의 압류등록 또는 그 변경등록의 촉탁에 관하여는 제54조제2항을 준용한다. <신설 2022.1.28>",
+        "rerank_rank": 2,
+        "rerank_score": 3.200508945155889e-05,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "지방세징수법 시행령 57조  자동차 등의 압류등록 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세징수법 시행령 35조  항공기 등의 압류등록#KOBLEX-000124"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 28.10227294769033,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "국세징수법 시행령 35조  항공기 등의 압류등록#KOBLEX-000124",
+        "provision_text": "제35조(항공기 등의 압류등록) 법 제45조제2항에 따른 자동차ㆍ선박ㆍ항공기 또는 건설기계의 압류등록 또는 그 변경등록의 촉탁에 관하여는 제34조제2항을 준용한다.",
+        "rerank_rank": 3,
+        "rerank_score": 1.0054573067463934e-05,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "국세징수법 시행령 35조  항공기 등의 압류등록",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자동차관리법 14조 2 압류의 해제에 필요한 사무의 처리#KOBLEX-112625",
+          "자동차관리법 14조 2 압류의 해제에 필요한 사무의 처리#KOBLEX-216097"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 22,
+        "first_stage_score": 19.664577765970755,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "자동차관리법 14조 2 압류의 해제에 필요한 사무의 처리#KOBLEX-112625",
+        "provision_text": "① 제14조제2호 또는 제3호에 따라 압류등록을 촉탁한 행정관청이나 공공기관(이하 \"압류등록 촉탁기관\"이라 한다)은 국세, 지방세 및 과태료 등의 체납금에 대한 수납ㆍ정산, 압류해제의 촉탁 등 압류의 해제에 필요한 사무를 국토교통부장관에게 대행하게 할 수 있다.",
+        "rerank_rank": 4,
+        "rerank_score": 8.77833372214809e-06,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "자동차관리법 14조 2 압류의 해제에 필요한 사무의 처리 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선박법 8조 2 소형선박 소유권 변동의 효력#KOBLEX-122967"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 28.546917437686602,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "선박법 8조 2 소형선박 소유권 변동의 효력#KOBLEX-122967",
+        "provision_text": "제8조의2(소형선박 소유권 변동의 효력) 소형선박 소유권의 득실변경(得失變更)은 등록을 하여야 그 효력이 생긴다.",
+        "rerank_rank": 5,
+        "rerank_score": 6.73813565299497e-06,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "선박법 8조 2 소형선박 소유권 변동의 효력",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선원법 시행령 49조 5 외국선박에 대한 조치#KOBLEX-122444"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 69,
+        "first_stage_score": 14.066626103322385,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "선원법 시행령 49조 5 외국선박에 대한 조치#KOBLEX-122444",
+        "provision_text": "제49조의5(외국선박에 대한 조치)",
+        "rerank_rank": 6,
+        "rerank_score": 6.443152869906044e-06,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "선원법 시행령 49조 5 외국선박에 대한 조치",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선박직원법 시행령 2조  정의#KOBLEX-112211"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 25.52175449358571,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "선박직원법 시행령 2조  정의#KOBLEX-112211",
+        "provision_text": "5. \"소형선박\"이라 함은 총톤수 25톤미만의 선박을 말한다.",
+        "rerank_rank": 7,
+        "rerank_score": 6.143963219074067e-06,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "선박직원법 시행령 2조  정의 7호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자동차관리법 14조 2 압류의 해제에 필요한 사무의 처리#KOBLEX-112626",
+          "자동차관리법 14조 2 압류의 해제에 필요한 사무의 처리#KOBLEX-216098"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 32.507069305741716,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "자동차관리법 14조 2 압류의 해제에 필요한 사무의 처리#KOBLEX-112626",
+        "provision_text": "② 국토교통부장관은 압류등록 해제 조치를 한 경우 대통령령으로 정하는 바에 따라 압류등록 촉탁기관 및 시ㆍ도지사에게 그 사실을 통지한다.",
+        "rerank_rank": 8,
+        "rerank_score": 4.331958734837826e-06,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "자동차관리법 14조 2 압류의 해제에 필요한 사무의 처리 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 53조  검사 및 조치#KOBLEX-135080"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 93,
+        "first_stage_score": 14.066626103322385,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 53조  검사 및 조치#KOBLEX-135080",
+        "provision_text": "제53조(검사 및 조치)",
+        "rerank_rank": 9,
+        "rerank_score": 2.6878788048634306e-06,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 53조  검사 및 조치",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "양성평등기본법 14조  성 주류화 조치#KOBLEX-121892"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 72,
+        "first_stage_score": 14.066626103322385,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "양성평등기본법 14조  성 주류화 조치#KOBLEX-121892",
+        "provision_text": "제14조(성 주류화 조치)",
+        "rerank_rank": 10,
+        "rerank_score": 2.682854301383486e-06,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "양성평등기본법 14조  성 주류화 조치",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "국세징수법 시행령 35조  항공기 등의 압류등록#KOBLEX-000124": "제35조(항공기 등의 압류등록) 법 제45조제2항에 따른 자동차ㆍ선박ㆍ항공기 또는 건설기계의 압류등록 또는 그 변경등록의 촉탁에 관하여는 제34조제2항을 준용한다.",
+      "선박법 8조 2 소형선박 소유권 변동의 효력#KOBLEX-122967": "제8조의2(소형선박 소유권 변동의 효력) 소형선박 소유권의 득실변경(得失變更)은 등록을 하여야 그 효력이 생긴다.",
+      "선박법 8조 3 압류등록#KOBLEX-122968": "제8조의3(압류등록) 소형선박 등록관청은 「민사집행법」에 따라 법원에서 압류등록을 위촉하거나 「국세징수법」 또는 「지방세징수법」에 따라 행정관청에서 압류등록을 위촉하는 경우에는 해당 소형선박의 등록원부에 대통령령으로 정하는 바에 따라 압류등록을 하고 선박소유자에게 통지하여야 한다. <개정 2010.3.31, 2016.12.27>",
+      "선박직원법 시행령 2조  정의#KOBLEX-112211": "5. \"소형선박\"이라 함은 총톤수 25톤미만의 선박을 말한다.",
+      "선원법 시행령 49조 5 외국선박에 대한 조치#KOBLEX-122444": "제49조의5(외국선박에 대한 조치)",
+      "양성평등기본법 14조  성 주류화 조치#KOBLEX-121892": "제14조(성 주류화 조치)",
+      "자동차관리법 14조 2 압류의 해제에 필요한 사무의 처리#KOBLEX-112625": "① 제14조제2호 또는 제3호에 따라 압류등록을 촉탁한 행정관청이나 공공기관(이하 \"압류등록 촉탁기관\"이라 한다)은 국세, 지방세 및 과태료 등의 체납금에 대한 수납ㆍ정산, 압류해제의 촉탁 등 압류의 해제에 필요한 사무를 국토교통부장관에게 대행하게 할 수 있다.",
+      "자동차관리법 14조 2 압류의 해제에 필요한 사무의 처리#KOBLEX-112626": "② 국토교통부장관은 압류등록 해제 조치를 한 경우 대통령령으로 정하는 바에 따라 압류등록 촉탁기관 및 시ㆍ도지사에게 그 사실을 통지한다.",
+      "자본시장과 금융투자업에 관한 법률 53조  검사 및 조치#KOBLEX-135080": "제53조(검사 및 조치)",
+      "지방세징수법 시행령 57조  자동차 등의 압류등록 등#KOBLEX-068601": "② 법 제56조제1항제4호에 따른 선박의 압류등록 또는 그 변경등록의 촉탁에 관하여는 제54조제2항을 준용한다. <신설 2022.1.28>"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "선박법 8조 3 압류등록#KOBLEX-122968"
+            ],
+            "rationale": "C001 explicitly states the duty to register the seizure and notify the owner, fulfilling the requirement to identify the provision governing the authority's action.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "선박법 8조 3 압류등록#KOBLEX-122968"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "The question asks for the action required of the small vessel registration authority when a seizure registration is commissioned. C001 provides the specific statutory obligation for this exact scenario (court commission under Civil Execution Act for small vessels), satisfying the completion criteria. Other provisions are either irrelevant (automobiles, foreign vessels, definitions) or address different contexts (tax seizures, ownership changes).",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "선박법 8조 3 압류등록#KOBLEX-122968",
+        "support_spans": [
+          {
+            "end_char": 184,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "소형선박에 대한 압류등록 위촉 시 등록관청의 법적 의무와 조치 절차",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 소형 요트를 소유하고 있으며, 이 요트는 '바다의 자유'라는 이름으로 등록되어 있다. 갑이 부채를 갚지 못하자 을은 법원에 압류신청을 하여, 법원으로부터 소형선박의 압류등록을 위촉받았다. 이에 따라 을은 압류 등록 절차를 진행하고자 한다. [질문] '바다의 자유'라는 소형 요트에 대한 압류등록이 위촉된 경우, 소형선박 등록관청은 어떤 조치를 해야 하는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "소형선박 압류등록 관청 조치",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "소형선박",
+          "압류등록",
+          "등록관청",
+          "조치",
+          "위촉"
+        ],
+        "query_text": "소형선박 압류등록 위촉 시 등록관청 조치 의무 [원문 맥락] 이에 따라 을은 압류 등록 절차를 진행하고자 한다. '바다의 자유'라는 소형 요트에 대한 압류등록이 위촉된 경우, 소형선박 등록관청은 어떤 조치를 해야 하는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "소형선박 등록관청 압류등록 위촉 조치",
+        "statute_hints": [
+          "소형선박법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 소형 요트를 소유하고 있으며, 이 요트는 '바다의 자유'라는 이름으로 등록되어 있다. 갑이 부채를 갚지 못하자 을은 법원에 압류신청을 하여, 법원으로부터 소형선박의 압류등록을 위촉받았다. 이에 따라 을은 압류 등록 절차를 진행하고자 한다.\n\n[질문]\n'바다의 자유'라는 소형 요트에 대한 압류등록이 위촉된 경우, 소형선박 등록관청은 어떤 조치를 해야 하는가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "압류등록 위촉 시 등록관청의 의무적 조치 내용을 명시하는 법령 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "소형선박 압류등록 위촉 시 등록관청의 조치 의무를 규정한 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "소형선박 등록관청이 압류등록 위촉을 수령한 후 취해야 할 구체적 조치 및 법적 근거",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 직접적으로 등록관청의 조치를 묻고 있으므로, 해당 조치가 명시된 법령 조항 없이는 답변이 불가능함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "b22a4175-cffe-4249-b0ca-e92f11d3bde5",
+    "seen_provision_ids": [
+      "선박직원법 시행령 2조  정의#KOBLEX-112211",
+      "자동차관리법 14조 2 압류의 해제에 필요한 사무의 처리#KOBLEX-112626",
+      "양성평등기본법 14조  성 주류화 조치#KOBLEX-121892",
+      "국세징수법 시행령 35조  항공기 등의 압류등록#KOBLEX-000124",
+      "자본시장과 금융투자업에 관한 법률 53조  검사 및 조치#KOBLEX-135080",
+      "선원법 시행령 49조 5 외국선박에 대한 조치#KOBLEX-122444",
+      "지방세징수법 시행령 57조  자동차 등의 압류등록 등#KOBLEX-068601",
+      "선박법 8조 2 소형선박 소유권 변동의 효력#KOBLEX-122967",
+      "자동차관리법 14조 2 압류의 해제에 필요한 사무의 처리#KOBLEX-112625",
+      "선박법 8조 3 압류등록#KOBLEX-122968"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

@@ -1,0 +1,602 @@
+{
+  "abstention_reason": null,
+  "answer": "국토교통부장관은 도로협회의 설립을 인가한 경우, 그 사실을 공고하여야 합니다.[CT1]\n국토교통부장관은 협회의 업무를 감독하여야 합니다.[CT2]\n국토교통부장관은 협회에 대하여 감독에 필요한 경우에는 그 업무에 관한 사항을 보고하게 하거나 자료의 제출, 그 밖에 필요한 사항을 명할 수 있습니다.[CT3]",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "국토교통부장관은 도로협회의 설립을 인가한 경우, 그 사실을 공고하여야 합니다.[CT1]\n국토교통부장관은 협회의 업무를 감독하여야 합니다.[CT2]\n국토교통부장관은 협회에 대하여 감독에 필요한 경우에는 그 업무에 관한 사항을 보고하게 하거나 자료의 제출, 그 밖에 필요한 사항을 명할 수 있습니다.[CT3]",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T13:52:51.287778+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 267951.642,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 184,
+      "dedup_collapse": 30,
+      "evidence_fusion": 184,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 184
+    }
+  },
+  "run_id": "4394f890-266b-4a97-8bc5-303eb14afb06",
+  "state": {
+    "accepted_provision_ids": [
+      "도로법 시행령 94조  협회 설립 인가의 공고#KOBLEX-179478",
+      "도로법 시행령 97조  협회의 감독#KOBLEX-179492",
+      "도로법 시행령 97조  협회의 감독#KOBLEX-179493"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 3,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "procedure",
+        "question_anchor": "인가한 후 어떤 절차를 진행해야 하며",
+        "requested_output": "도로관리 협회 설립 인가 후 국토교통부장관이 진행해야 할 법적 절차"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "rule",
+        "question_anchor": "협회 업무에 대한 감독은 어떻게 이루어지는가",
+        "requested_output": "도로관리 협회 업무에 대한 감독 방식 및 법적 근거"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "도로법 시행령 94조  협회 설립 인가의 공고#KOBLEX-179478"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 25.66103958729977,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "도로법 시행령 94조  협회 설립 인가의 공고#KOBLEX-179478",
+        "provision_text": "제94조(협회 설립 인가의 공고) 국토교통부장관은 법 제105조제1항에 따른 도로협회(이하 \"협회\"라 한다)의 설립을 인가하였을 때에는 그 사실을 공고하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.4193757474422455,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "도로법 시행령 94조  협회 설립 인가의 공고",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로법 시행령 97조  협회의 감독#KOBLEX-179492"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 62,
+        "first_stage_score": 20.727509350686912,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "도로법 시행령 97조  협회의 감독#KOBLEX-179492",
+        "provision_text": "① 국토교통부장관은 협회의 업무를 감독하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.5937116146087646,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "도로법 시행령 97조  협회의 감독 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로법 105조  도로협회#KOBLEX-211880"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "도로법 105조  도로협회#KOBLEX-211880",
+        "provision_text": "③ 협회는 국토교통부장관의 인가를 받아 주된 사무소의 소재지에서 설립등기를 함으로써 성립한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.2928066551685333,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "도로법 105조  도로협회 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로법 시행령 97조  협회의 감독#KOBLEX-179493"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 3.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "도로법 시행령 97조  협회의 감독#KOBLEX-179493",
+        "provision_text": "② 국토교통부장관은 협회에 대하여 감독에 필요한 경우에는 그 업무에 관한 사항을 보고하게 하거나 자료의 제출, 그 밖에 필요한 사항을 명할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.1972678303718567,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "도로법 시행령 97조  협회의 감독 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로법 시행령 97조  협회의 감독#KOBLEX-179491"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 27.309921110980508,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "도로법 시행령 97조  협회의 감독#KOBLEX-179491",
+        "provision_text": "제97조(협회의 감독)",
+        "rerank_rank": 3,
+        "rerank_score": 0.04016224294900894,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "도로법 시행령 97조  협회의 감독",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "건설기술 진흥법 70조  협회의 설립인가 등#KOBLEX-062858",
+          "건설기술 진흥법 70조  협회의 설립인가 등#KOBLEX-170652"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 53,
+        "first_stage_score": 19.74877869686363,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "건설기술 진흥법 70조  협회의 설립인가 등#KOBLEX-062858",
+        "provision_text": "① 협회를 설립하려면 협회 회원이 될 자격이 있는 자의 10분의 1 이상 또는 50명 이상이 발기인이 되어 정관을 작성하여 발기인총회의 의결을 마친 후 국토교통부장관의 인가를 받아야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.02022980898618698,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "건설기술 진흥법 70조  협회의 설립인가 등 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "수도법 시행령 61조  협회의 감독#KOBLEX-169356"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 49,
+        "first_stage_score": 21.73994026846537,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "수도법 시행령 61조  협회의 감독#KOBLEX-169356",
+        "provision_text": "①환경부장관은 협회의 업무를 감독한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.00797154102474451,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "수도법 시행령 61조  협회의 감독 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도시 및 주거환경정비법 110조  협회의 업무 및 감독#KOBLEX-148604",
+          "도시 및 주거환경정비법 110조  협회의 업무 및 감독#KOBLEX-229176"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 37.925071759230555,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "도시 및 주거환경정비법 110조  협회의 업무 및 감독#KOBLEX-148604",
+        "provision_text": "제110조(협회의 업무 및 감독)",
+        "rerank_rank": 5,
+        "rerank_score": 0.007606999948620796,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "도시 및 주거환경정비법 110조  협회의 업무 및 감독",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로법 105조  도로협회#KOBLEX-211883"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 2.0,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "도로법 105조  도로협회#KOBLEX-211883",
+        "provision_text": "⑥ 협회의 정관의 기재사항과 협회의 감독에 필요한 사항 등은 대통령령으로 정한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.0031239620875567198,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "도로법 105조  도로협회 6항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공동주택관리법 83조  협회에 대한 지도ㆍ감독#KOBLEX-086315"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 78,
+        "first_stage_score": 19.823582782809993,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "공동주택관리법 83조  협회에 대한 지도ㆍ감독#KOBLEX-086315",
+        "provision_text": "제83조(협회에 대한 지도ㆍ감독) 국토교통부장관은 협회를 지도ㆍ감독한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.00030815586796961725,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공동주택관리법 83조  협회에 대한 지도ㆍ감독",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "건설기술 진흥법 70조  협회의 설립인가 등#KOBLEX-062858": "① 협회를 설립하려면 협회 회원이 될 자격이 있는 자의 10분의 1 이상 또는 50명 이상이 발기인이 되어 정관을 작성하여 발기인총회의 의결을 마친 후 국토교통부장관의 인가를 받아야 한다.",
+      "공동주택관리법 83조  협회에 대한 지도ㆍ감독#KOBLEX-086315": "제83조(협회에 대한 지도ㆍ감독) 국토교통부장관은 협회를 지도ㆍ감독한다.",
+      "도로법 105조  도로협회#KOBLEX-211880": "③ 협회는 국토교통부장관의 인가를 받아 주된 사무소의 소재지에서 설립등기를 함으로써 성립한다.",
+      "도로법 105조  도로협회#KOBLEX-211883": "⑥ 협회의 정관의 기재사항과 협회의 감독에 필요한 사항 등은 대통령령으로 정한다.",
+      "도로법 시행령 94조  협회 설립 인가의 공고#KOBLEX-179478": "제94조(협회 설립 인가의 공고) 국토교통부장관은 법 제105조제1항에 따른 도로협회(이하 \"협회\"라 한다)의 설립을 인가하였을 때에는 그 사실을 공고하여야 한다.",
+      "도로법 시행령 97조  협회의 감독#KOBLEX-179491": "제97조(협회의 감독)",
+      "도로법 시행령 97조  협회의 감독#KOBLEX-179492": "① 국토교통부장관은 협회의 업무를 감독하여야 한다.",
+      "도로법 시행령 97조  협회의 감독#KOBLEX-179493": "② 국토교통부장관은 협회에 대하여 감독에 필요한 경우에는 그 업무에 관한 사항을 보고하게 하거나 자료의 제출, 그 밖에 필요한 사항을 명할 수 있다.",
+      "도시 및 주거환경정비법 110조  협회의 업무 및 감독#KOBLEX-148604": "제110조(협회의 업무 및 감독)",
+      "수도법 시행령 61조  협회의 감독#KOBLEX-169356": "①환경부장관은 협회의 업무를 감독한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "도로법 시행령 94조  협회 설립 인가의 공고#KOBLEX-179478"
+            ],
+            "rationale": "C001은 인가 후 장관의 의무적 절차인 공고를 명시하고 있어 기준을 충족한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "도로법 시행령 94조  협회 설립 인가의 공고#KOBLEX-179478"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "도로법 시행령 제94조(C001)는 인가 후 장관의 의무적 절차인 '공고'를 명시하고 있어, 질문에서 요구하는 인가 후 절차에 대한 법적 근거를 충족한다. 다른 절차(등록 등)는 협회 측의 의무이거나(C003) 본 조항의 범위 밖이므로, 장관의 의무적 절차로서는 공고 규정이 핵심 근거로 충분하다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "도로법 시행령 97조  협회의 감독#KOBLEX-179492",
+              "도로법 시행령 97조  협회의 감독#KOBLEX-179493"
+            ],
+            "rationale": "C002와 C004는 감독 주체와 방식을 명시하여 기준을 충족한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "도로법 시행령 97조  협회의 감독#KOBLEX-179492",
+          "도로법 시행령 97조  협회의 감독#KOBLEX-179493"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "도로법 시행령 제97조 제1항(C002)과 제2항(C004)은 각각 감독 주체(국토교통부장관)와 감독 방식(보고, 자료 제출 등)을 명시하고 있어, 협회 업무 감독 체계에 대한 법적 근거를 충분히 제공한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "도로법 시행령 94조  협회 설립 인가의 공고#KOBLEX-179478",
+        "support_spans": [
+          {
+            "end_char": 91,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "도로법 시행령 97조  협회의 감독#KOBLEX-179492",
+        "support_spans": [
+          {
+            "end_char": 28,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "도로법 시행령 97조  협회의 감독#KOBLEX-179493",
+        "support_spans": [
+          {
+            "end_char": 83,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "도로관리 협회 설립 인가 후 장관의 후속 절차",
+        "issue_id": "I1"
+      },
+      {
+        "description": "도로관리 협회 업무 감독 체계",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 도로관리 협회를 설립하고자 하여 국토교통부에 인가 신청을 제출하였다. 국토교통부장관인 을은 협회 설립 인가를 검토하고 최종적으로 이를 승인하였다. [질문] 을(국토교통부장관)은 갑의 도로관리 협회 설립을 인가한 후 어떤 절차를 진행해야 하며, 갑의 협회 업무에 대한 감독은 어떻게 이루어지는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "도로관리 협회 인가 후속 절차 등록 통보",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "도로관리 협회",
+          "설립 인가",
+          "장관 절차",
+          "등록",
+          "통보"
+        ],
+        "query_text": "도로관리 협회 설립 인가 후 장관 절차 [원문 맥락] 국토교통부장관인 을은 협회 설립 인가를 검토하고 최종적으로 이를 승인하였다. 을(국토교통부장관)은 갑의 도로관리 협회 설립을 인가한 후 어떤 절차를 진행해야 하며, 갑의 협회 업무에 대한 감독은 어떻게 이루어지는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "도로관리 협회 설립 인가 후 장관 의무 절차",
+        "statute_hints": [
+          "도로법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "도로관리 협회 업무 감독 지도 감독",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "도로관리 협회",
+          "업무 감독",
+          "지도",
+          "감독",
+          "장관"
+        ],
+        "query_text": "도로관리 협회 업무 감독 방식 [원문 맥락] 국토교통부장관인 을은 협회 설립 인가를 검토하고 최종적으로 이를 승인하였다. 을(국토교통부장관)은 갑의 도로관리 협회 설립을 인가한 후 어떤 절차를 진행해야 하며, 갑의 협회 업무에 대한 감독은 어떻게 이루어지는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "도로관리 협회 업무 감독 주체 및 방식",
+        "statute_hints": [
+          "도로법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 도로관리 협회를 설립하고자 하여 국토교통부에 인가 신청을 제출하였다. 국토교통부장관인 을은 협회 설립 인가를 검토하고 최종적으로 이를 승인하였다.\n\n[질문]\n을(국토교통부장관)은 갑의 도로관리 협회 설립을 인가한 후 어떤 절차를 진행해야 하며, 갑의 협회 업무에 대한 감독은 어떻게 이루어지는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "인가 후 장관의 의무적 절차가 명시된 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "인가 후 장관의 의무적 절차(예: 등록, 통보, 공고)를 명시하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "도로관리 협회 설립 인가 후 장관이 수행해야 할 등록, 통보, 또는 공고 등 후속 절차 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 인가 후 절차를 직접적으로 묻고 있어 해당 조항 없이는 답변 불가",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "협회 업무 감독 방식 및 법적 근거가 명시된 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "협회 업무 감독 주체 및 방식을 명시하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "도로관리 협회 업무에 대한 감독 주체, 방식, 및 범위 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 협회 업무 감독 방식을 직접적으로 묻고 있어 해당 조항 없이는 답변 불가",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "4394f890-266b-4a97-8bc5-303eb14afb06",
+    "seen_provision_ids": [
+      "도시 및 주거환경정비법 110조  협회의 업무 및 감독#KOBLEX-148604",
+      "도로법 시행령 97조  협회의 감독#KOBLEX-179493",
+      "도로법 105조  도로협회#KOBLEX-211880",
+      "수도법 시행령 61조  협회의 감독#KOBLEX-169356",
+      "도로법 시행령 97조  협회의 감독#KOBLEX-179491",
+      "공동주택관리법 83조  협회에 대한 지도ㆍ감독#KOBLEX-086315",
+      "도로법 시행령 97조  협회의 감독#KOBLEX-179492",
+      "건설기술 진흥법 70조  협회의 설립인가 등#KOBLEX-062858",
+      "도로법 105조  도로협회#KOBLEX-211883",
+      "도로법 시행령 94조  협회 설립 인가의 공고#KOBLEX-179478"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

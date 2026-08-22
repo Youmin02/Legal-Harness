@@ -1,0 +1,601 @@
+{
+  "abstention_reason": null,
+  "answer": "장내기능시험에 불합격한 사람은 불합격한 날부터 3일이 지난 후에 다시 장내기능시험에 응시할 수 있다.[CT1]\n도로주행시험에 불합격한 사람은 불합격한 날부터 3일이 지난 후에 다시 도로주행시험에 응시할 수 있다.[CT2]\n전제: 갑과 을이 각각 장내기능시험과 도로주행시험에 불합격했다는 사실은 질문의 전제로 가정합니다.\n한계: 본 답변은 도로교통법 시행령의 일반적 재응시 규정에 기반하며, 개별 행정기관의 시험 일정이나 추가적인 행정 절차에 따른 실제 응시 가능일은 다를 수 있습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "장내기능시험에 불합격한 사람은 불합격한 날부터 3일이 지난 후에 다시 장내기능시험에 응시할 수 있다.[CT1]\n도로주행시험에 불합격한 사람은 불합격한 날부터 3일이 지난 후에 다시 도로주행시험에 응시할 수 있다.[CT2]\n전제: 갑과 을이 각각 장내기능시험과 도로주행시험에 불합격했다는 사실은 질문의 전제로 가정합니다.\n한계: 본 답변은 도로교통법 시행령의 일반적 재응시 규정에 기반하며, 개별 행정기관의 시험 일정이나 추가적인 행정 절차에 따른 실제 응시 가능일은 다를 수 있습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T05:06:18.132938+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 173996.946,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 175,
+      "dedup_collapse": 46,
+      "evidence_fusion": 175,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 175
+    }
+  },
+  "run_id": "3a2d0df8-dbf6-407e-8bcc-8e5e24494d56",
+  "state": {
+    "accepted_provision_ids": [
+      "도로교통법 시행령 48조  자동차등의 운전에 필요한 기능에 관한 시험#KOBLEX-130823",
+      "도로교통법 시행령 49조  도로에서 자동차를 운전할 능력이 있는지에 대한 시험#KOBLEX-130828"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "temporal_rule",
+        "question_anchor": "갑은 장내기능시험에 불합격하였고",
+        "requested_output": "장내기능시험 불합격 후 재응시 가능 시점"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "temporal_rule",
+        "question_anchor": "을은 도로주행시험에 불합격하였다",
+        "requested_output": "도로주행시험 불합격 후 재응시 가능 시점"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "도로교통법 시행령 48조  자동차등의 운전에 필요한 기능에 관한 시험#KOBLEX-130823"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 40,
+        "first_stage_score": 12.910654513801692,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "도로교통법 시행령 48조  자동차등의 운전에 필요한 기능에 관한 시험#KOBLEX-130823",
+        "provision_text": "⑤ 장내기능시험에 불합격한 사람은 불합격한 날부터 3일이 지난 후에 다시 장내기능시험에 응시할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999822378158569,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "도로교통법 시행령 48조  자동차등의 운전에 필요한 기능에 관한 시험 5항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로교통법 시행령 49조  도로에서 자동차를 운전할 능력이 있는지에 대한 시험#KOBLEX-130828"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 43,
+        "first_stage_score": 12.910654513801692,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "도로교통법 시행령 49조  도로에서 자동차를 운전할 능력이 있는지에 대한 시험#KOBLEX-130828",
+        "provision_text": "④ 도로주행시험에 불합격한 사람은 불합격한 날부터 3일이 지난 후에 다시 도로주행시험에 응시할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999819993972778,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "도로교통법 시행령 49조  도로에서 자동차를 운전할 능력이 있는지에 대한 시험 4항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로교통법 시행령 69조  기능검정의 방법 등#KOBLEX-130928"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 1.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "도로교통법 시행령 69조  기능검정의 방법 등#KOBLEX-130928",
+        "provision_text": "④ 장내기능검정 또는 도로주행기능검정에 합격하지 못한 교육생에 대해서는 장내기능검정 또는 도로주행검정에 불합격한 날부터 3일이 지난 후에 다시 기능검정을 실시할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.998170018196106,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "도로교통법 시행령 69조  기능검정의 방법 등 4항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "수상레저안전법 시행령 8조  필기시험의 과목 및 방법 등#KOBLEX-104180"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 44,
+        "first_stage_score": 12.910654513801692,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "수상레저안전법 시행령 8조  필기시험의 과목 및 방법 등#KOBLEX-104180",
+        "provision_text": "⑤ 필기시험에 불합격한 사람은 그 불합격한 날의 다음 날부터 다시 필기시험에 응시할 수 있다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.2874869704246521,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "수상레저안전법 시행령 8조  필기시험의 과목 및 방법 등 5항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "수상레저안전법 시행령 9조  실기시험의 방법 등#KOBLEX-104186"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 45,
+        "first_stage_score": 12.910654513801692,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "수상레저안전법 시행령 9조  실기시험의 방법 등#KOBLEX-104186",
+        "provision_text": "⑤ 실기시험에 불합격한 사람은 그 불합격한 날의 다음다음 날부터 다시 실기시험에 응시할 수 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.2464219629764557,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "수상레저안전법 시행령 9조  실기시험의 방법 등 5항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로교통법 시행규칙 74조  기능시험 또는 도로주행시험의 판정#KOBLEX-161714"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 1.0,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "도로교통법 시행규칙 74조  기능시험 또는 도로주행시험의 판정#KOBLEX-161714",
+        "provision_text": "②제67조에 따른 도로주행시험에 있어서는 응시자 개인별로 도로주행시험이 끝난 후 현장에서 합격 또는 불합격의 판정을 하여야 한다. <개정 2011.12.9>",
+        "rerank_rank": 6,
+        "rerank_score": 0.014389009214937687,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "도로교통법 시행규칙 74조  기능시험 또는 도로주행시험의 판정 2항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로교통법 시행규칙 74조  기능시험 또는 도로주행시험의 판정#KOBLEX-161713"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 88,
+        "first_stage_score": 9.49715540587264,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "도로교통법 시행규칙 74조  기능시험 또는 도로주행시험의 판정#KOBLEX-161713",
+        "provision_text": "①제65조에 따른 기능시험에 있어서는 응시자 개인별로 그 기능시험이 끝난 후 현장에서 합격 또는 불합격의 판정을 하여야 한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.001921153860166669,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "도로교통법 시행규칙 74조  기능시험 또는 도로주행시험의 판정 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로교통법 시행규칙 74조  기능시험 또는 도로주행시험의 판정#KOBLEX-161715"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 61,
+        "first_stage_score": 11.398867609104268,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "도로교통법 시행규칙 74조  기능시험 또는 도로주행시험의 판정#KOBLEX-161715",
+        "provision_text": "③기능시험 또는 도로주행시험에 출석하지 아니한 사람은 불합격으로 한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.001445572474040091,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "도로교통법 시행규칙 74조  기능시험 또는 도로주행시험의 판정 3항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로교통법 시행규칙 67조  도로주행시험#KOBLEX-161687"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 16.839547483864273,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "도로교통법 시행규칙 67조  도로주행시험#KOBLEX-161687",
+        "provision_text": "제67조(도로주행시험)",
+        "rerank_rank": 9,
+        "rerank_score": 0.0005256542353890836,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "도로교통법 시행규칙 67조  도로주행시험",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "도로교통법 93조  운전면허의 취소ㆍ정지#KOBLEX-014255"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 1.0,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "도로교통법 93조  운전면허의 취소ㆍ정지#KOBLEX-014255",
+        "provision_text": "① 시ㆍ도경찰청장은 운전면허(조건부 운전면허는 포함하고, 연습운전면허는 제외한다. 이하 이 조에서 같다)를 받은 사람이 다음 각 호의 어느 하나에 해당하면 행정안전부령으로 정하는 기준에 따라 운전면허(운전자가 받은 모든 범위의 운전면허를 포함한다. 이하 이 조에서 같다)를 취소하거나 1년 이내의 범위에서 운전면허의 효력을 정지시킬 수 있다. 다만, 제2호, 제3호, 제7호, 제8호, 제8호의2, 제9호(정기 적성검사 기간이 지난 경우는 제외한다), 제14호, 제16호, 제17호, 제20호부터 제23호까지의 규정에 해당하는 경우에는 운전면허를 취소하여야 하고(제8호의2에 해당하는 경우 취소하여야 하는 운전면허의 범위는 운전자가 거짓이나 그 밖의 부정한 수단으로 받은 그 운전면허로 한정한다), 제18호의 규정에 해당하는 경우에는 정당한 사유가 없으면 관계 행정기관의 장의 요청에 따라 운전면허를 취소하거나 1년 이내의 범위에서 정지하여야 한다. <개정 2013.3.23, 2014.11.19, 2014.12.30, 2015.8.11, 2016.1.27, 2017.7.26, 2018.3.27, 2018.12.24, 2020.6.9, 2020.12.22, 2021.1.12, 2023.10.24> 1. 제44조제1항을 위반하여 술에 취한 상태에서 자동차등을 운전한 경우 2. 제44조제1항 또는 제2항 후단을 위반(자동차등을 운전한 경우로 한정한다. 이하 이 호 및 제3호에서 같다)한 사람이 다시 같은 조 제1항을 위반하여 운전면허 정지 사유에 해당된 경우 3. 제44조제2항 후단을 위반하여 술에 취한 상태에 있다고 인정할 만한 상당한 이유가 있음에도 불구하고 경찰공무원의 측정에 응하지 아니한 경우 4. 제45조를 위반하여 약물의 영향으로 인하여 정상적으로 운전하지 못할 우려가 있는 상태에서 자동차등을 운전한 경우 5. 제46조제1항을 위반하여 공동 위험행위를 한 경우 5의2. 제46조의3을 위반하여 난폭운전을 한 경우 5의3. 제17조제3항을 위반하여 제17조제1항 및 제2항에 따른 최고속도보다 시속 100킬로미터를 초과한 속도로 3회 이상 자동차등을 운전한 경우 6. 교통사고로 사람을 사상한 후 제54조제1항 또는 제2항에 따른 필요한 조치 또는 신고를 하지 아니한 경우 7. 제82조제1항제2호부터 제5호까지의 규정에 따른 운전면허를 받을 수 없는 사람에 해당된 경우 8. 제82조에 따라 운전면허를 받을 수 없는 사람이 운전면허를 받거나 운전면허효력의 정지기간 중 운전면허증 또는 운전면허증을 갈음하는 증명서를 발급받은 사실이 드러난 경우 8의2. 거짓이나 그 밖의 부정한 수단으로 운전면허를 받은 경우 9. 제87조제2항 또는 제88조제1항에 따른 적성검사를 받지 아니하거나 그 적성검사에 불합격한 경우 10. 운전 중 고의 또는 과실로 교통사고를 일으킨 경우 10의2. 운전면허를 받은 사람이 자동차등을 이용하여 「형법」 제258조의2(특수상해)ㆍ제261조(특수폭행)ㆍ제284조(특수협박) 또는 제369조(특수손괴)를 위반하는 행위를 한 경우 11. 운전면허를 받은 사람이 자동차등을 범죄의 도구나 장소로 이용하여 다음 각 목의 어느 하나의 죄를 범한 경우 12. 다른 사람의 자동차등을 훔치거나 빼앗은 경우 13. 다른 사람이 부정하게 운전면허를 받도록 하기 위하여 제83조에 따른 운전면허시험에 대신 응시한 경우 14. 이 법에 따른 교통단속 임무를 수행하는 경찰공무원등 및 시ㆍ군공무원을 폭행한 경우 15. 운전면허증을 다른 사람에게 빌려주어 운전하게 하거나 다른 사람의 운전면허증을 빌려서 사용한 경우 16. 「자동차관리법」에 따라 등록되지 아니하거나 임시운행허가를 받지 아니한 자동차(이륜자동차는 제외한다)를 운전한 경우 17. 제1종 보통면허 및 제2종 보통면허를 받기 전에 연습운전면허의 취소 사유가 있었던 경우 18. 다른 법률에 따라 관계 행정기관의 장이 운전면허의 취소처분 또는 정지처분을 요청한 경우 18의2. 제39조제1항 또는 제4항을 위반하여 화물자동차를 운전한 경우 19. 이 법이나 이 법에 따른 명령 또는 처분을 위반한 경우 20. 운전면허를 받은 사람이 자신의 운전면허를 실효(失效)시킬 목적으로 시ㆍ도경찰청장에게 자진하여 운전면허를 반납하는 경우. 다만, 실효시키려는 운전면허가 취소처분 또는 정지처분의 대상이거나 효력정지 기간 중인 경우는 제외한다. 21. 제50조의3제1항을 위반하여 음주운전 방지장치가 설치된 자동차등을 시ㆍ도경찰청에 등록하지 아니하고 운전한 경우 22. 제50조의3제3항을 위반하여 음주운전 방지장치가 설치되지 아니하거나 설치기준에 부합하지 아니한 음주운전 방지장치가 설치된 자동차등을 운전한 경우 23. 제50조의3제4항을 위반하여 음주운전 방지장치가 해체ㆍ조작 또는 그 밖의 방법으로 효용이 떨어진 것을 알면서 해당 장치가 설치된 자동차등을 운전한 경우",
+        "rerank_rank": 10,
+        "rerank_score": 0.00013756172847934067,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "도로교통법 93조  운전면허의 취소ㆍ정지 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "도로교통법 93조  운전면허의 취소ㆍ정지#KOBLEX-014255": "① 시ㆍ도경찰청장은 운전면허(조건부 운전면허는 포함하고, 연습운전면허는 제외한다. 이하 이 조에서 같다)를 받은 사람이 다음 각 호의 어느 하나에 해당하면 행정안전부령으로 정하는 기준에 따라 운전면허(운전자가 받은 모든 범위의 운전면허를 포함한다. 이하 이 조에서 같다)를 취소하거나 1년 이내의 범위에서 운전면허의 효력을 정지시킬 수 있다. 다만, 제2호, 제3호, 제7호, 제8호, 제8호의2, 제9호(정기 적성검사 기간이 지난 경우는 제외한다), 제14호, 제16호, 제17호, 제20호부터 제23호까지의 규정에 해당하는 경우에는 운전면허를 취소하여야 하고(제8호의2에 해당하는 경우 취소하여야 하는 운전면허의 범위는 운전자가 거짓이나 그 밖의 부정한 수단으로 받은 그 운전면허로 한정한다), 제18호의 규정에 해당하는 경우에는 정당한 사유가 없으면 관계 행정기관의 장의 요청에 따라 운전면허를 취소하거나 1년 이내의 범위에서 정지하여야 한다. <개정 2013.3.23, 2014.11.19, 2014.12.30, 2015.8.11, 2016.1.27, 2017.7.26, 2018.3.27, 2018.12.24, 2020.6.9, 2020.12.22, 2021.1.12, 2023.10.24> 1. 제44조제1항을 위반하여 술에 취한 상태에서 자동차등을 운전한 경우 2. 제44조제1항 또는 제2항 후단을 위반(자동차등을 운전한 경우로 한정한다. 이하 이 호 및 제3호에서 같다)한 사람이 다시 같은 조 제1항을 위반하여 운전면허 정지 사유에 해당된 경우 3. 제44조제2항 후단을 위반하여 술에 취한 상태에 있다고 인정할 만한 상당한 이유가 있음에도 불구하고 경찰공무원의 측정에 응하지 아니한 경우 4. 제45조를 위반하여 약물의 영향으로 인하여 정상적으로 운전하지 못할 우려가 있는 상태에서 자동차등을 운전한 경우 5. 제46조제1항을 위반하여 공동 위험행위를 한 경우 5의2. 제46조의3을 위반하여 난폭운전을 한 경우 5의3. 제17조제3항을 위반하여 제17조제1항 및 제2항에 따른 최고속도보다 시속 100킬로미터를 초과한 속도로 3회 이상 자동차등을 운전한 경우 6. 교통사고로 사람을 사상한 후 제54조제1항 또는 제2항에 따른 필요한 조치 또는 신고를 하지 아니한 경우 7. 제82조제1항제2호부터 제5호까지의 규정에 따른 운전면허를 받을 수 없는 사람에 해당된 경우 8. 제82조에 따라 운전면허를 받을 수 없는 사람이 운전면허를 받거나 운전면허효력의 정지기간 중 운전면허증 또는 운전면허증을 갈음하는 증명서를 발급받은 사실이 드러난 경우 8의2. 거짓이나 그 밖의 부정한 수단으로 운전면허를 받은 경우 9. 제87조제2항 또는 제88조제1항에 따른 적성검사를 받지 아니하거나 그 적성검사에 불합격한 경우 10. 운전 중 고의 또는 과실로 교통사고를 일으킨 경우 10의2. 운전면허를 받은 사람이 자동차등을 이용하여 「형법」 제258조의2(특수상해)ㆍ제261조(특수폭행)ㆍ제284조(특수협박) 또는 제369조(특수손괴)를 위반하는 행위를 한 경우 11. 운전면허를 받은 사람이 자동차등을 범죄의 도구나 장소로 이용하여 다음 각 목의 어느 하나의 죄를 범한 경우 12. 다른 사람의 자동차등을 훔치거나 빼앗은 경우 13. 다른 사람이 부정하게 운전면허를 받도록 하기 위하여 제83조에 따른 운전면허시험에 대신 응시한 경우 14. 이 법에 따른 교통단속 임무를 수행하는 경찰공무원등 및 시ㆍ군공무원을 폭행한 경우 15. 운전면허증을 다른 사람에게 빌려주어 운전하게 하거나 다른 사람의 운전면허증을 빌려서 사용한 경우 16. 「자동차관리법」에 따라 등록되지 아니하거나 임시운행허가를 받지 아니한 자동차(이륜자동차는 제외한다)를 운전한 경우 17. 제1종 보통면허 및 제2종 보통면허를 받기 전에 연습운전면허의 취소 사유가 있었던 경우 18. 다른 법률에 따라 관계 행정기관의 장이 운전면허의 취소처분 또는 정지처분을 요청한 경우 18의2. 제39조제1항 또는 제4항을 위반하여 화물자동차를 운전한 경우 19. 이 법이나 이 법에 따른 명령 또는 처분을 위반한 경우 20. 운전면허를 받은 사람이 자신의 운전면허를 실효(失效)시킬 목적으로 시ㆍ도경찰청장에게 자진하여 운전면허를 반납하는 경우. 다만, 실효시키려는 운전면허가 취소처분 또는 정지처분의 대상이거나 효력정지 기간 중인 경우는 제외한다. 21. 제50조의3제1항을 위반하여 음주운전 방지장치가 설치된 자동차등을 시ㆍ도경찰청에 등록하지 아니하고 운전한 경우 22. 제50조의3제3항을 위반하여 음주운전 방지장치가 설치되지 아니하거나 설치기준에 부합하지 아니한 음주운전 방지장치가 설치된 자동차등을 운전한 경우 23. 제50조의3제4항을 위반하여 음주운전 방지장치가 해체ㆍ조작 또는 그 밖의 방법으로 효용이 떨어진 것을 알면서 해당 장치가 설치된 자동차등을 운전한 경우",
+      "도로교통법 시행규칙 67조  도로주행시험#KOBLEX-161687": "제67조(도로주행시험)",
+      "도로교통법 시행규칙 74조  기능시험 또는 도로주행시험의 판정#KOBLEX-161713": "①제65조에 따른 기능시험에 있어서는 응시자 개인별로 그 기능시험이 끝난 후 현장에서 합격 또는 불합격의 판정을 하여야 한다.",
+      "도로교통법 시행규칙 74조  기능시험 또는 도로주행시험의 판정#KOBLEX-161714": "②제67조에 따른 도로주행시험에 있어서는 응시자 개인별로 도로주행시험이 끝난 후 현장에서 합격 또는 불합격의 판정을 하여야 한다. <개정 2011.12.9>",
+      "도로교통법 시행규칙 74조  기능시험 또는 도로주행시험의 판정#KOBLEX-161715": "③기능시험 또는 도로주행시험에 출석하지 아니한 사람은 불합격으로 한다.",
+      "도로교통법 시행령 48조  자동차등의 운전에 필요한 기능에 관한 시험#KOBLEX-130823": "⑤ 장내기능시험에 불합격한 사람은 불합격한 날부터 3일이 지난 후에 다시 장내기능시험에 응시할 수 있다.",
+      "도로교통법 시행령 49조  도로에서 자동차를 운전할 능력이 있는지에 대한 시험#KOBLEX-130828": "④ 도로주행시험에 불합격한 사람은 불합격한 날부터 3일이 지난 후에 다시 도로주행시험에 응시할 수 있다.",
+      "도로교통법 시행령 69조  기능검정의 방법 등#KOBLEX-130928": "④ 장내기능검정 또는 도로주행기능검정에 합격하지 못한 교육생에 대해서는 장내기능검정 또는 도로주행검정에 불합격한 날부터 3일이 지난 후에 다시 기능검정을 실시할 수 있다.",
+      "수상레저안전법 시행령 8조  필기시험의 과목 및 방법 등#KOBLEX-104180": "⑤ 필기시험에 불합격한 사람은 그 불합격한 날의 다음 날부터 다시 필기시험에 응시할 수 있다.",
+      "수상레저안전법 시행령 9조  실기시험의 방법 등#KOBLEX-104186": "⑤ 실기시험에 불합격한 사람은 그 불합격한 날의 다음다음 날부터 다시 실기시험에 응시할 수 있다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "도로교통법 시행령 48조  자동차등의 운전에 필요한 기능에 관한 시험#KOBLEX-130823"
+            ],
+            "rationale": "C001 specifies that the retake is possible after 3 days from the date of failure.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "도로교통법 시행령 48조  자동차등의 운전에 필요한 기능에 관한 시험#KOBLEX-130823"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "The supplied provision C001 directly provides the legal rule for the timing of retaking the indoor functional test after failure, satisfying the completion criteria.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "도로교통법 시행령 49조  도로에서 자동차를 운전할 능력이 있는지에 대한 시험#KOBLEX-130828"
+            ],
+            "rationale": "C002 specifies that the retake is possible after 3 days from the date of failure.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "도로교통법 시행령 49조  도로에서 자동차를 운전할 능력이 있는지에 대한 시험#KOBLEX-130828"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "The supplied provision C002 directly provides the legal rule for the timing of retaking the road driving test after failure, satisfying the completion criteria.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "도로교통법 시행령 48조  자동차등의 운전에 필요한 기능에 관한 시험#KOBLEX-130823",
+        "support_spans": [
+          {
+            "end_char": 58,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "도로교통법 시행령 49조  도로에서 자동차를 운전할 능력이 있는지에 대한 시험#KOBLEX-130828",
+        "support_spans": [
+          {
+            "end_char": 58,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "장내기능시험 불합격 시 재응시 가능 시점",
+        "issue_id": "I1"
+      },
+      {
+        "description": "도로주행시험 불합격 시 재응시 가능 시점",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑과 을은 모두 자동차 운전 면허를 취득하기 위해 각각 시험을 보았다. 갑은 장내기능시험에서 불합격했고, 을은 도로주행시험에서 불합격하였다. 두 사람 모두 언제 다시 시험에 응시할 수 있는지를 알고 싶어 한다. [질문] 갑은 장내기능시험에 불합격하였고 을은 도로주행시험에 불합격하였다. 갑과 을은 각각 언제 다시 시험에 응시할 수 있는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "장내기능시험 불합격 재응시 가능 시점",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "장내기능시험",
+          "불합격",
+          "재응시",
+          "가능 시점"
+        ],
+        "query_text": "장내기능시험 불합격 재응시 가능 시점 [원문 맥락] 갑은 장내기능시험에 불합격하였고 을은 도로주행시험에 불합격하였다. 갑과 을은 각각 언제 다시 시험에 응시할 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "장내기능시험 불합격 후 재응시 가능 시점",
+        "statute_hints": [
+          "도로교통법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "도로주행시험 불합격 재응시 가능 시점",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "도로주행시험",
+          "불합격",
+          "재응시",
+          "가능 시점"
+        ],
+        "query_text": "도로주행시험 불합격 재응시 가능 시점 [원문 맥락] 갑은 장내기능시험에 불합격하였고 을은 도로주행시험에 불합격하였다. 갑과 을은 각각 언제 다시 시험에 응시할 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "도로주행시험 불합격 후 재응시 가능 시점",
+        "statute_hints": [
+          "도로교통법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑과 을은 모두 자동차 운전 면허를 취득하기 위해 각각 시험을 보았다. 갑은 장내기능시험에서 불합격했고, 을은 도로주행시험에서 불합격하였다. 두 사람 모두 언제 다시 시험에 응시할 수 있는지를 알고 싶어 한다.\n\n[질문]\n갑은 장내기능시험에 불합격하였고 을은 도로주행시험에 불합격하였다. 갑과 을은 각각 언제 다시 시험에 응시할 수 있는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "장내기능시험 불합격 후 재응시 가능 시점을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "장내기능시험 불합격 후 재응시 가능 시점(예: 즉시, 일정 기간 후 등)을 명시하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "장내기능시험 불합격 후 재응시 가능 시점을 정하는 법령 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 갑의 재응시 시점을 직접적으로 묻고 있으므로, 이를 결정하는 법적 근거가 필수적이다.",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "도로주행시험 불합격 후 재응시 가능 시점을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "도로주행시험 불합격 후 재응시 가능 시점(예: 즉시, 일정 기간 후 등)을 명시하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "도로주행시험 불합격 후 재응시 가능 시점을 정하는 법령 조항",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 을의 재응시 시점을 직접적으로 묻고 있으므로, 이를 결정하는 법적 근거가 필수적이다.",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "3a2d0df8-dbf6-407e-8bcc-8e5e24494d56",
+    "seen_provision_ids": [
+      "도로교통법 93조  운전면허의 취소ㆍ정지#KOBLEX-014255",
+      "도로교통법 시행령 69조  기능검정의 방법 등#KOBLEX-130928",
+      "도로교통법 시행령 48조  자동차등의 운전에 필요한 기능에 관한 시험#KOBLEX-130823",
+      "수상레저안전법 시행령 9조  실기시험의 방법 등#KOBLEX-104186",
+      "도로교통법 시행규칙 74조  기능시험 또는 도로주행시험의 판정#KOBLEX-161715",
+      "도로교통법 시행규칙 74조  기능시험 또는 도로주행시험의 판정#KOBLEX-161714",
+      "도로교통법 시행규칙 67조  도로주행시험#KOBLEX-161687",
+      "수상레저안전법 시행령 8조  필기시험의 과목 및 방법 등#KOBLEX-104180",
+      "도로교통법 시행규칙 74조  기능시험 또는 도로주행시험의 판정#KOBLEX-161713",
+      "도로교통법 시행령 49조  도로에서 자동차를 운전할 능력이 있는지에 대한 시험#KOBLEX-130828"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

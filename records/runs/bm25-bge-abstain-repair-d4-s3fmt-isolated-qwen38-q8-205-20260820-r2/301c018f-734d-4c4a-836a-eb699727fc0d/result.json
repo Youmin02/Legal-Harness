@@ -1,0 +1,1199 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "형법 제298조에 따라, 폭행 또는 협박으로 사람에 대하여 추행을 한 자는 10년 이하의 징역 또는 1천500만원 이하의 벌금에 처합니다.[CT1]\n본 사안에서 갑이 을에게 폭언과 신체 접촉을 강행한 행위는 위 조항의 구성요건에 해당할 수 있으며, 이에 따라 기본형 범위 내에서 처벌됩니다.[CT2]\n친족관계, 특수강간 방법, 13세 미만 피해자, 장애인 피해자 등 특정 가중처벌 사유가 인정되는 경우 별도의 가중형이 적용될 수 있습니다.[CT3]\n전제: 갑과 을 사이에 친족관계, 피해자의 연령(13세 미만), 피해자의 장애 여부 등 가중처벌 사유가 존재하지 않는다고 가정합니다.\n한계: 본 답변은 비공개 벤치마크 후보용 진단 자료이며, 공식적인 법적 자문이 아닙니다.\n한계: 가중처벌에 대한 포괄적 법적 근거가 제한적으로 제공되어, 특정 가중 사유에 대한 상세한 형량 범위는 확인되지 않았습니다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T19:38:19.695867+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 798044.169,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 380,
+      "dedup_collapse": 108,
+      "evidence_fusion": 380,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "round_selected": 30,
+      "rrf": 400,
+      "selected": 380
+    }
+  },
+  "run_id": "301c018f-734d-4c4a-836a-eb699727fc0d",
+  "state": {
+    "accepted_provision_ids": [
+      "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등#KOBLEX-157529",
+      "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157548",
+      "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157540",
+      "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157533",
+      "형법 298조  강제추행#KOBLEX-193296"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 4,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 23
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 23,
+          "claim_count": 3
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "penalty",
+        "question_anchor": "갑은 어떤 처벌을 받게 되는가",
+        "requested_output": "폭행과 협박을 사용한 강제추행에 대한 형량 범위 및 법적 효과"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "군형법 92조 3 강제추행#KOBLEX-140850"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 33,
+        "first_stage_score": 27.928693068600545,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "군형법 92조 3 강제추행#KOBLEX-140850",
+        "provision_text": "제92조의3(강제추행) 폭행이나 협박으로 제1조제1항부터 제3항까지에 규정된 사람에 대하여 추행을 한 사람은 1년 이상의 유기징역에 처한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.14096176624298096,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "군형법 92조 3 강제추행",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 140조 2 부동산강제집행효용침해#KOBLEX-192976"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 96,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형법 140조 2 부동산강제집행효용침해#KOBLEX-192976",
+        "provision_text": "제140조의2(부동산강제집행효용침해) 강제집행으로 명도 또는 인도된 부동산에 침입하거나 기타 방법으로 강제집행의 효용을 해한 자는 5년 이하의 징역 또는 700만원 이하의 벌금에 처한다.",
+        "rerank_rank": 1,
+        "rerank_score": 7.048524275887758e-05,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 140조 2 부동산강제집행효용침해",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 298조  강제추행#KOBLEX-193296"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 15,
+        "first_stage_score": 33.30688488683099,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형법 298조  강제추행#KOBLEX-193296",
+        "provision_text": "제298조(강제추행) 폭행 또는 협박으로 사람에 대하여 추행을 한 자는 10년 이하의 징역 또는 1천500만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 2,
+        "rerank_score": 0.03690461069345474,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형법 298조  강제추행",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157533"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 31,
+        "first_stage_score": 28.15351733406974,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157533",
+        "provision_text": "② 친족관계인 사람이 폭행 또는 협박으로 사람을 강제추행한 경우에는 5년 이상의 유기징역에 처한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.002815871499478817,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 12조  강요된 행위#KOBLEX-192670"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형법 12조  강요된 행위#KOBLEX-192670",
+        "provision_text": "제12조(강요된 행위) 저항할 수 없는 폭력이나 자기 또는 친족의 생명, 신체에 대한 위해를 방어할 방법이 없는 협박에 의하여 강요된 행위는 벌하지 아니한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.00024247037072200328,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형법 12조  강요된 행위",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157547"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 60,
+        "first_stage_score": 22.75405942174138,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157547",
+        "provision_text": "② 13세 미만의 사람에 대하여 폭행이나 협박으로 다음 각 호의 어느 하나에 해당하는 행위를 한 사람은 7년 이상의 유기징역에 처한다. 1. 구강ㆍ항문 등 신체(성기는 제외한다)의 내부에 성기를 넣는 행위 2. 성기ㆍ항문에 손가락 등 신체(성기는 제외한다)의 일부나 도구를 넣는 행위",
+        "rerank_rank": 5,
+        "rerank_score": 0.0001827279629651457,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157539"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 68,
+        "first_stage_score": 22.06383529829599,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157539",
+        "provision_text": "② 신체적인 또는 정신적인 장애가 있는 사람에 대하여 폭행이나 협박으로 다음 각 호의 어느 하나에 해당하는 행위를 한 사람은 5년 이상의 유기징역에 처한다. 1. 구강ㆍ항문 등 신체(성기는 제외한다)의 내부에 성기를 넣는 행위 2. 성기ㆍ항문에 손가락 등 신체(성기는 제외한다)의 일부나 도구를 넣는 행위",
+        "rerank_rank": 6,
+        "rerank_score": 0.00014189720968715847,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 41조  형의 종류#KOBLEX-192738"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 53,
+        "first_stage_score": 18.38428164530616,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "형법 41조  형의 종류#KOBLEX-192738",
+        "provision_text": "6. 벌금",
+        "rerank_rank": 2,
+        "rerank_score": 6.524134369101375e-05,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 41조  형의 종류 6호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군형법 61조  특수소요#KOBLEX-140774"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 36.53390228972021,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "군형법 61조  특수소요#KOBLEX-140774",
+        "provision_text": "제61조(특수소요) 집단을 이루어 흉기나 그 밖의 위험한 물건을 휴대하고 폭행, 협박 또는 손괴의 행위를 한 사람은 다음 각 호의 구분에 따라 처벌한다.",
+        "rerank_rank": 7,
+        "rerank_score": 5.39151624252554e-05,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "군형법 61조  특수소요",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 333조  강도#KOBLEX-193374"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 50,
+        "first_stage_score": 23.854980348560556,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "형법 333조  강도#KOBLEX-193374",
+        "provision_text": "제333조(강도) 폭행 또는 협박으로 타인의 재물을 강취하거나 기타 재산상의 이익을 취득하거나 제삼자로 하여금 이를 취득하게 한 자는 3년 이상의 유기징역에 처한다.",
+        "rerank_rank": 8,
+        "rerank_score": 4.444839942152612e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형법 333조  강도",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등#KOBLEX-157529"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 45,
+        "first_stage_score": 6.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등#KOBLEX-157529",
+        "provision_text": "② 제1항의 방법으로 「형법」 제298조(강제추행)의 죄를 범한 사람은 5년 이상의 유기징역에 처한다. <개정 2020.5.19>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9972266554832458,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157544"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 6.0,
+        "fusion_rank": 12,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157544",
+        "provision_text": "⑦ 장애인의 보호, 교육 등을 목적으로 하는 시설의 장 또는 종사자가 보호, 감독의 대상인 장애인에 대하여 제1항부터 제6항까지의 죄를 범한 경우에는 그 죄에 정한 형의 2분의 1까지 가중한다.",
+        "rerank_rank": 12,
+        "rerank_score": 0.9968569278717041,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등 7항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157548"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 50,
+        "first_stage_score": 6.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157548",
+        "provision_text": "③ 13세 미만의 사람에 대하여 「형법」 제298조(강제추행)의 죄를 범한 사람은 5년 이상의 유기징역에 처한다. <개정 2020.5.19>",
+        "rerank_rank": 2,
+        "rerank_score": 0.9960273504257202,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157540"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 65,
+        "first_stage_score": 6.0,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157540",
+        "provision_text": "③ 신체적인 또는 정신적인 장애가 있는 사람에 대하여 「형법」 제298조(강제추행)의 죄를 범한 사람은 3년 이상의 유기징역 또는 3천만원 이상 5천만원 이하의 벌금에 처한다. <개정 2020.5.19>",
+        "rerank_rank": 3,
+        "rerank_score": 0.9955734014511108,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157545"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 27.25667541320776,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157545",
+        "provision_text": "제7조(13세 미만의 미성년자에 대한 강간, 강제추행 등)",
+        "rerank_rank": 4,
+        "rerank_score": 0.9936164617538452,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157546"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 96,
+        "first_stage_score": 6.0,
+        "fusion_rank": 18,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157546",
+        "provision_text": "① 13세 미만의 사람에 대하여 「형법」 제297조(강간)의 죄를 범한 사람은 무기징역 또는 10년 이상의 징역에 처한다.",
+        "rerank_rank": 18,
+        "rerank_score": 0.991786777973175,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157538"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 6.0,
+        "fusion_rank": 19,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157538",
+        "provision_text": "① 신체적인 또는 정신적인 장애가 있는 사람에 대하여 「형법」 제297조(강간)의 죄를 범한 사람은 무기징역 또는 7년 이상의 징역에 처한다.",
+        "rerank_rank": 19,
+        "rerank_score": 0.9861878156661987,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157543"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 94,
+        "first_stage_score": 6.0,
+        "fusion_rank": 20,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157543",
+        "provision_text": "⑥ 위계 또는 위력으로써 신체적인 또는 정신적인 장애가 있는 사람을 추행한 사람은 1년 이상의 유기징역 또는 1천만원 이상 3천만원 이하의 벌금에 처한다.",
+        "rerank_rank": 20,
+        "rerank_score": 0.9848535060882568,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등 6항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157542"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 93,
+        "first_stage_score": 6.0,
+        "fusion_rank": 22,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157542",
+        "provision_text": "⑤ 위계(僞計) 또는 위력(威力)으로써 신체적인 또는 정신적인 장애가 있는 사람을 간음한 사람은 5년 이상의 유기징역에 처한다.",
+        "rerank_rank": 22,
+        "rerank_score": 0.9757298231124878,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등 5항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 297조  강간#KOBLEX-193294"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 39,
+        "first_stage_score": 26.558297359012485,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "형법 297조  강간#KOBLEX-193294",
+        "provision_text": "제297조(강간) 폭행 또는 협박으로 사람을 강간한 자는 3년 이상의 유기징역에 처한다. <개정 2012.12.18>",
+        "rerank_rank": 8,
+        "rerank_score": 0.9989075660705566,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형법 297조  강간",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 136조  공무집행방해#KOBLEX-192967"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 44,
+        "first_stage_score": 24.692790593504537,
+        "fusion_rank": 13,
+        "issue_id": "I2",
+        "provision_id": "형법 136조  공무집행방해#KOBLEX-192967",
+        "provision_text": "①직무를 집행하는 공무원에 대하여 폭행 또는 협박한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 13,
+        "rerank_score": 0.9873417019844055,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "형법 136조  공무집행방해 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157532"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 30,
+        "first_stage_score": 28.15351733406974,
+        "fusion_rank": 15,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157532",
+        "provision_text": "① 친족관계인 사람이 폭행 또는 협박으로 사람을 강간한 경우에는 7년 이상의 유기징역에 처한다.",
+        "rerank_rank": 15,
+        "rerank_score": 0.9850203990936279,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "의무경찰대 설치 및 운영에 관한 법률 10조  벌칙#KOBLEX-171748"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 70,
+        "first_stage_score": 23.072157137488176,
+        "fusion_rank": 17,
+        "issue_id": "I2",
+        "provision_id": "의무경찰대 설치 및 운영에 관한 법률 10조  벌칙#KOBLEX-171748",
+        "provision_text": "③ 상관에게 폭행 또는 협박을 한 사람은 5년 이하의 징역에 처한다. 다만, 적전인 경우 본문의 죄를 저지른 사람은 1년 이상 10년 이하의 징역에 처한다.",
+        "rerank_rank": 17,
+        "rerank_score": 0.9843083024024963,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "의무경찰대 설치 및 운영에 관한 법률 10조  벌칙 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "군형법 61조  특수소요#KOBLEX-140774": "제61조(특수소요) 집단을 이루어 흉기나 그 밖의 위험한 물건을 휴대하고 폭행, 협박 또는 손괴의 행위를 한 사람은 다음 각 호의 구분에 따라 처벌한다.",
+      "군형법 92조 3 강제추행#KOBLEX-140850": "제92조의3(강제추행) 폭행이나 협박으로 제1조제1항부터 제3항까지에 규정된 사람에 대하여 추행을 한 사람은 1년 이상의 유기징역에 처한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등#KOBLEX-157529": "② 제1항의 방법으로 「형법」 제298조(강제추행)의 죄를 범한 사람은 5년 이상의 유기징역에 처한다. <개정 2020.5.19>",
+      "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157532": "① 친족관계인 사람이 폭행 또는 협박으로 사람을 강간한 경우에는 7년 이상의 유기징역에 처한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157533": "② 친족관계인 사람이 폭행 또는 협박으로 사람을 강제추행한 경우에는 5년 이상의 유기징역에 처한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157538": "① 신체적인 또는 정신적인 장애가 있는 사람에 대하여 「형법」 제297조(강간)의 죄를 범한 사람은 무기징역 또는 7년 이상의 징역에 처한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157539": "② 신체적인 또는 정신적인 장애가 있는 사람에 대하여 폭행이나 협박으로 다음 각 호의 어느 하나에 해당하는 행위를 한 사람은 5년 이상의 유기징역에 처한다. 1. 구강ㆍ항문 등 신체(성기는 제외한다)의 내부에 성기를 넣는 행위 2. 성기ㆍ항문에 손가락 등 신체(성기는 제외한다)의 일부나 도구를 넣는 행위",
+      "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157540": "③ 신체적인 또는 정신적인 장애가 있는 사람에 대하여 「형법」 제298조(강제추행)의 죄를 범한 사람은 3년 이상의 유기징역 또는 3천만원 이상 5천만원 이하의 벌금에 처한다. <개정 2020.5.19>",
+      "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157542": "⑤ 위계(僞計) 또는 위력(威力)으로써 신체적인 또는 정신적인 장애가 있는 사람을 간음한 사람은 5년 이상의 유기징역에 처한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157543": "⑥ 위계 또는 위력으로써 신체적인 또는 정신적인 장애가 있는 사람을 추행한 사람은 1년 이상의 유기징역 또는 1천만원 이상 3천만원 이하의 벌금에 처한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157544": "⑦ 장애인의 보호, 교육 등을 목적으로 하는 시설의 장 또는 종사자가 보호, 감독의 대상인 장애인에 대하여 제1항부터 제6항까지의 죄를 범한 경우에는 그 죄에 정한 형의 2분의 1까지 가중한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157545": "제7조(13세 미만의 미성년자에 대한 강간, 강제추행 등)",
+      "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157546": "① 13세 미만의 사람에 대하여 「형법」 제297조(강간)의 죄를 범한 사람은 무기징역 또는 10년 이상의 징역에 처한다.",
+      "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157547": "② 13세 미만의 사람에 대하여 폭행이나 협박으로 다음 각 호의 어느 하나에 해당하는 행위를 한 사람은 7년 이상의 유기징역에 처한다. 1. 구강ㆍ항문 등 신체(성기는 제외한다)의 내부에 성기를 넣는 행위 2. 성기ㆍ항문에 손가락 등 신체(성기는 제외한다)의 일부나 도구를 넣는 행위",
+      "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157548": "③ 13세 미만의 사람에 대하여 「형법」 제298조(강제추행)의 죄를 범한 사람은 5년 이상의 유기징역에 처한다. <개정 2020.5.19>",
+      "의무경찰대 설치 및 운영에 관한 법률 10조  벌칙#KOBLEX-171748": "③ 상관에게 폭행 또는 협박을 한 사람은 5년 이하의 징역에 처한다. 다만, 적전인 경우 본문의 죄를 저지른 사람은 1년 이상 10년 이하의 징역에 처한다.",
+      "형법 12조  강요된 행위#KOBLEX-192670": "제12조(강요된 행위) 저항할 수 없는 폭력이나 자기 또는 친족의 생명, 신체에 대한 위해를 방어할 방법이 없는 협박에 의하여 강요된 행위는 벌하지 아니한다.",
+      "형법 136조  공무집행방해#KOBLEX-192967": "①직무를 집행하는 공무원에 대하여 폭행 또는 협박한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 140조 2 부동산강제집행효용침해#KOBLEX-192976": "제140조의2(부동산강제집행효용침해) 강제집행으로 명도 또는 인도된 부동산에 침입하거나 기타 방법으로 강제집행의 효용을 해한 자는 5년 이하의 징역 또는 700만원 이하의 벌금에 처한다.",
+      "형법 297조  강간#KOBLEX-193294": "제297조(강간) 폭행 또는 협박으로 사람을 강간한 자는 3년 이상의 유기징역에 처한다. <개정 2012.12.18>",
+      "형법 298조  강제추행#KOBLEX-193296": "제298조(강제추행) 폭행 또는 협박으로 사람에 대하여 추행을 한 자는 10년 이하의 징역 또는 1천500만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 333조  강도#KOBLEX-193374": "제333조(강도) 폭행 또는 협박으로 타인의 재물을 강취하거나 기타 재산상의 이익을 취득하거나 제삼자로 하여금 이를 취득하게 한 자는 3년 이상의 유기징역에 처한다.",
+      "형법 41조  형의 종류#KOBLEX-192738": "6. 벌금"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형법 298조  강제추행#KOBLEX-193296"
+            ],
+            "rationale": "C003은 '추행을 한 자'를 처벌 대상으로 하여 추행 행위의 법적 요건을 명시한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형법 298조  강제추행#KOBLEX-193296"
+            ],
+            "rationale": "C003은 '폭행 또는 협박으로'라는 수단을 명시하여 해당 요건을 충족한다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형법 298조  강제추행#KOBLEX-193296"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "형법 제298조(C003)는 강제추행죄의 구성요건인 '추행' 행위와 '폭행 또는 협박' 수단을 명확히 규정하고 있어, E1의 완료 기준인 추행의 정의 및 수단 요건을 모두 충족한다. 이전 평가에서 covered로 판정된 C003이 여전히 후보에 포함되어 있으므로 해당 판정을 유지한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "conditional",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형법 298조  강제추행#KOBLEX-193296"
+            ],
+            "rationale": "C003은 10년 이하의 징역 또는 1천500만원 이하의 벌금이라는 기본형을 명시한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157533",
+              "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등#KOBLEX-157529",
+              "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157548",
+              "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157540"
+            ],
+            "rationale": "C004, C011, C013, C014는 각각 친족관계, 특수강간 방법, 13세 미만, 장애인에 대한 가중처벌을 규정하여 가중처벌의 존재를 확인하지만, 질문의 일반적 사실관계에 적용되는 포괄적 가중처벌 체계에 대한 법적 근거가 불완전하다.",
+            "requirement_id": "E2-R2",
+            "status": "partially_satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "형법 298조  강제추행#KOBLEX-193296",
+          "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157533",
+          "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등#KOBLEX-157529",
+          "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157548",
+          "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157540"
+        ],
+        "missing_aspects": [
+          "E2-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "형법 제298조(C003)는 기본형을 충족한다. 가중처벌에 대해서는 친족관계(C004), 특수강간 방법(C011), 13세 미만(C013), 장애인(C014)에 대한 조항이 제공되어 가중처벌의 존재와 일부 범위를 확인한다. 그러나 질문의 사실관계(일반적 강제추행)에 직접 적용되는 일반적인 가중처벌 체계나 모든 특수 가중 사유에 대한 포괄적 법적 근거가 부족하여 legal_support_gap으로 평가한다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형법 298조  강제추행#KOBLEX-193296",
+        "support_spans": [
+          {
+            "end_char": 90,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형법 298조  강제추행#KOBLEX-193296",
+        "support_spans": [
+          {
+            "end_char": 90,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157533",
+        "support_spans": [
+          {
+            "end_char": 55,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등#KOBLEX-157529",
+        "support_spans": [
+          {
+            "end_char": 72,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157548",
+        "support_spans": [
+          {
+            "end_char": 78,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157540",
+        "support_spans": [
+          {
+            "end_char": 113,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 4,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "폭행 또는 협박으로 사람을 추행한 행위의 성립 요건과 법적 성격",
+        "issue_id": "I1"
+      },
+      {
+        "description": "강제추행죄에 대한 법정형",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "기본형 및 가중형의 형량 범위가 확인되어야 함",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "강제추행죄의 기본형(징역 또는 벌금) 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "가중처벌 사유 및 형량 확인"
+          }
+        ],
+        "critical": true,
+        "description": "강제추행죄의 법정형",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 요구하는 '처벌' 내용을 직접적으로 규정하는 조항임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 1,
+    "normalized_question": "[배경 시나리오] 갑은 술집에서 을을 만나 대화를 나누던 중, 갑이 을에게 불쾌한 신체 접촉을 시도하였다. 을이 이를 거부하자 갑은 폭언을 하며 을을 겁에 질리게 만들고 신체 접촉을 강행하였다. 이에 을은 경찰에 신고하였고, 갑은 폭행과 협박을 사용한 강제추행 혐의로 기소되었다. [질문] 갑이 폭행과 협박으로 을을 추행한 경우, 갑은 어떤 처벌을 받게 되는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "강제추행죄 구성요건 폭행 협박 추행 행위",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "강제추행",
+          "추행",
+          "폭행",
+          "협박",
+          "구성요건"
+        ],
+        "query_text": "폭행 또는 협박으로 사람을 추행한 자의 죄 구성요건 [원문 맥락] 이에 을은 경찰에 신고하였고, 갑은 폭행과 협박을 사용한 강제추행 혐의로 기소되었다. 갑이 폭행과 협박으로 을을 추행한 경우, 갑은 어떤 처벌을 받게 되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "폭행 협박 수단 추행 행위 강제추행죄 성립 요건",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "강제추행죄 형량 징역 벌금 처벌",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "강제추행",
+          "법정형",
+          "징역",
+          "벌금",
+          "처벌"
+        ],
+        "query_text": "강제추행죄의 법정형 및 벌칙 [원문 맥락] 이에 을은 경찰에 신고하였고, 갑은 폭행과 협박을 사용한 강제추행 혐의로 기소되었다. 갑이 폭행과 협박으로 을을 추행한 경우, 갑은 어떤 처벌을 받게 되는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "강제추행죄 법정형 징역 벌금 가중처벌",
+        "statute_hints": [
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "성폭력범죄의 처벌 등에 관한 특례법 강제추행 가중처벌 형량",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "성폭력범죄의 처벌 등에 관한 특례법",
+          "강제추행",
+          "가중처벌",
+          "형량"
+        ],
+        "query_text": "성폭력범죄의 처벌 등에 관한 특례법 강제추행 가중처벌 형량 [원문 맥락] 이에 을은 경찰에 신고하였고, 갑은 폭행과 협박을 사용한 강제추행 혐의로 기소되었다. 갑이 폭행과 협박으로 을을 추행한 경우, 갑은 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "성폭력범죄의 처벌 등에 관한 특례법 강제추행 가중처벌 형량",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "강제추행 가중처벌 사유 형량 범위",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "강제추행",
+          "가중처벌",
+          "사유",
+          "형량",
+          "범위"
+        ],
+        "query_text": "강제추행 가중처벌 사유 형량 범위 [원문 맥락] 이에 을은 경찰에 신고하였고, 갑은 폭행과 협박을 사용한 강제추행 혐의로 기소되었다. 갑이 폭행과 협박으로 을을 추행한 경우, 갑은 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "강제추행 가중처벌 사유 형량 범위",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "성폭력범죄의 처벌 등에 관한 특례법 제7조 강제추행 가중처벌 형량",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "성폭력범죄의 처벌 등에 관한 특례법",
+          "제7조",
+          "강제추행",
+          "가중처벌",
+          "형량"
+        ],
+        "query_text": "성폭력범죄의 처벌 등에 관한 특례법 제7조 강제추행 가중처벌 형량 [원문 맥락] 이에 을은 경찰에 신고하였고, 갑은 폭행과 협박을 사용한 강제추행 혐의로 기소되었다. 갑이 폭행과 협박으로 을을 추행한 경우, 갑은 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "성폭력범죄의 처벌 등에 관한 특례법 제7조 강제추행 가중처벌 형량",
+        "statute_hints": [
+          "성폭력범죄의 처벌 등에 관한 특례법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "폭행 협박 추행 가중처벌 규정 형량",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "폭행",
+          "협박",
+          "추행",
+          "가중처벌",
+          "규정"
+        ],
+        "query_text": "폭행 또는 협박으로 추행한 자의 가중처벌 규정 [원문 맥락] 이에 을은 경찰에 신고하였고, 갑은 폭행과 협박을 사용한 강제추행 혐의로 기소되었다. 갑이 폭행과 협박으로 을을 추행한 경우, 갑은 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "폭행 또는 협박으로 추행한 자의 가중처벌 규정",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 술집에서 을을 만나 대화를 나누던 중, 갑이 을에게 불쾌한 신체 접촉을 시도하였다. 을이 이를 거부하자 갑은 폭언을 하며 을을 겁에 질리게 만들고 신체 접촉을 강행하였다. 이에 을은 경찰에 신고하였고, 갑은 폭행과 협박을 사용한 강제추행 혐의로 기소되었다.\n\n[질문]\n갑이 폭행과 협박으로 을을 추행한 경우, 갑은 어떤 처벌을 받게 되는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "추행의 정의, 폭행 또는 협박의 수단, 피해자의 의사에 반하는 요소가 확인되어야 함",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "추행의 법적 정의 및 유형 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "폭행 또는 협박의 수단으로서의 법적 요건 확인"
+          }
+        ],
+        "critical": true,
+        "description": "폭행 또는 협박으로 사람을 추행한 행위의 구성요건",
+        "evidence_item_id": "E1",
+        "evidence_type": "element",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 명시된 '폭행과 협박으로 추행' 행위가 강제추행죄에 해당하는지 판단하기 위해 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "기본형 및 가중형의 형량 범위가 확인되어야 함",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "강제추행죄의 기본형(징역 또는 벌금) 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "가중처벌 사유 및 형량 확인"
+          }
+        ],
+        "critical": true,
+        "description": "강제추행죄의 법정형",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 요구하는 '처벌' 내용을 직접적으로 규정하는 조항임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "301c018f-734d-4c4a-836a-eb699727fc0d",
+    "seen_provision_ids": [
+      "형법 41조  형의 종류#KOBLEX-192738",
+      "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157532",
+      "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157542",
+      "의무경찰대 설치 및 운영에 관한 법률 10조  벌칙#KOBLEX-171748",
+      "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157548",
+      "형법 12조  강요된 행위#KOBLEX-192670",
+      "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157543",
+      "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157539",
+      "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157538",
+      "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157547",
+      "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157540",
+      "군형법 61조  특수소요#KOBLEX-140774",
+      "성폭력범죄의 처벌 등에 관한 특례법 5조  친족관계에 의한 강간 등#KOBLEX-157533",
+      "형법 298조  강제추행#KOBLEX-193296",
+      "성폭력범죄의 처벌 등에 관한 특례법 6조  장애인에 대한 강간ㆍ강제추행 등#KOBLEX-157544",
+      "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157546",
+      "형법 297조  강간#KOBLEX-193294",
+      "형법 140조 2 부동산강제집행효용침해#KOBLEX-192976",
+      "성폭력범죄의 처벌 등에 관한 특례법 7조  13세 미만의 미성년자에 대한 강간, 강제추행 등#KOBLEX-157545",
+      "성폭력범죄의 처벌 등에 관한 특례법 4조  특수강간 등#KOBLEX-157529",
+      "형법 333조  강도#KOBLEX-193374",
+      "형법 136조  공무집행방해#KOBLEX-192967",
+      "군형법 92조 3 강제추행#KOBLEX-140850"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

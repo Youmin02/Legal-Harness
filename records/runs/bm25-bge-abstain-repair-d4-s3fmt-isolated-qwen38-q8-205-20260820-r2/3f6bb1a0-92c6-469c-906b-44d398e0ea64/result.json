@@ -1,0 +1,1026 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "화해, 청구의 포기ㆍ인낙을 변론조서ㆍ변론준비기일조서에 적은 때에는 그 조서는 확정판결과 같은 효력을 가진다.[CT1]\n소송상 화해는 확정판결과 같은 효력을 가지는 집행권원에 해당한다.[CT2]\n전제: 질문에서 제시된 '법정에서 화해하고 변론조서에 기록되었다'는 사실관계가 민사소송법 제220조의 적용 요건을 충족한다고 가정함.\n한계: 본 답변은 비공개 벤치마크 후보(benchmark candidate)이며, 공개 가능한 답변으로 승인되지 않았습니다.\n한계: 화해의 일반적 성립 요건 및 사법적 화해로서의 추상적 법적 성격에 대한 명시적 정의 조항이 후보 자료에 포함되어 있지 않아, 해당 측면은 답변에서 다루지 않았습니다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T13:12:50.402780+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 968636.683,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 381,
+      "dedup_collapse": 86,
+      "evidence_fusion": 381,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "round_selected": 30,
+      "rrf": 400,
+      "selected": 381
+    }
+  },
+  "run_id": "3f6bb1a0-92c6-469c-906b-44d398e0ea64",
+  "state": {
+    "accepted_provision_ids": [
+      "민사집행법 56조  그 밖의 집행권원#KOBLEX-128214",
+      "민사소송법 148조  한 쪽 당사자가 출석하지 아니한 경우#KOBLEX-063891",
+      "민사소송법 220조  화해, 청구의 포기ㆍ인낙조서의 효력#KOBLEX-064116",
+      "민사소송법 386조  화해가 성립된 경우#KOBLEX-064539"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 7,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 0,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "Two consecutive retrieval rounds did not improve critical evidence.",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 17
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 17,
+          "claim_count": 2
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_effect",
+        "question_anchor": "그 변론조서는 어떤 효력을 가지는가",
+        "requested_output": "민사소송 중 법정 화해 내용이 변론조서에 기록된 경우의 법적 효력"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민사소송법 220조  화해, 청구의 포기ㆍ인낙조서의 효력#KOBLEX-064116"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 70.12207306152668,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 220조  화해, 청구의 포기ㆍ인낙조서의 효력#KOBLEX-064116",
+        "provision_text": "제220조(화해, 청구의 포기ㆍ인낙조서의 효력) 화해, 청구의 포기ㆍ인낙을 변론조서ㆍ변론준비기일조서에 적은 때에는 그 조서는 확정판결과 같은 효력을 가진다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999734163284302,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 220조  화해, 청구의 포기ㆍ인낙조서의 효력",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 148조  한 쪽 당사자가 출석하지 아니한 경우#KOBLEX-063891"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 148조  한 쪽 당사자가 출석하지 아니한 경우#KOBLEX-063891",
+        "provision_text": "③제1항의 규정에 따라 당사자가 진술한 것으로 보는 답변서, 그 밖의 준비서면에 화해의 의사표시가 적혀 있고 공증사무소의 인증을 받은 경우에, 상대방 당사자가 변론기일에 출석하여 그 화해의 의사표시를 받아들인 때에는 화해가 성립된 것으로 본다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9831376075744629,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사소송법 148조  한 쪽 당사자가 출석하지 아니한 경우 3항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 387조  화해가 성립되지 아니한 경우#KOBLEX-064540"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 65,
+        "first_stage_score": 19.13521845813048,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 387조  화해가 성립되지 아니한 경우#KOBLEX-064540",
+        "provision_text": "제387조(화해가 성립되지 아니한 경우)",
+        "rerank_rank": 2,
+        "rerank_score": 0.9785394668579102,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 387조  화해가 성립되지 아니한 경우",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 387조  화해가 성립되지 아니한 경우#KOBLEX-064542"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 387조  화해가 성립되지 아니한 경우#KOBLEX-064542",
+        "provision_text": "②신청인 또는 상대방이 기일에 출석하지 아니한 때에는 법원은 이들의 화해가 성립되지 아니한 것으로 볼 수 있다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9757474064826965,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 387조  화해가 성립되지 아니한 경우 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 386조  화해가 성립된 경우#KOBLEX-064539"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 69,
+        "first_stage_score": 18.803942678689573,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 386조  화해가 성립된 경우#KOBLEX-064539",
+        "provision_text": "제386조(화해가 성립된 경우) 화해가 성립된 때에는 법원사무관등은 조서에 당사자, 법정대리인, 청구의 취지와 원인, 화해조항, 날짜와 법원을 표시하고 판사와 법원사무관등이 기명날인 또는 서명한다. <개정 2017.10.31>",
+        "rerank_rank": 4,
+        "rerank_score": 0.9722720980644226,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민사소송법 386조  화해가 성립된 경우",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사집행법 56조  그 밖의 집행권원#KOBLEX-128214"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 44.79188342335757,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "민사집행법 56조  그 밖의 집행권원#KOBLEX-128214",
+        "provision_text": "5. 소송상 화해, 청구의 인낙(認諾) 등 그 밖에 확정판결과 같은 효력을 가지는 것",
+        "rerank_rank": 2,
+        "rerank_score": 0.9278189539909363,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "민사집행법 56조  그 밖의 집행권원 5호",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 387조  화해가 성립되지 아니한 경우#KOBLEX-064541"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 387조  화해가 성립되지 아니한 경우#KOBLEX-064541",
+        "provision_text": "①화해가 성립되지 아니한 때에는 법원사무관등은 그 사유를 조서에 적어야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.9259725213050842,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 387조  화해가 성립되지 아니한 경우 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민주화운동 관련자 명예회복 및 보상 등에 관한 법률 18조  다른 법률에 따른 보상 등과의 관계 등#KOBLEX-227804"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 46,
+        "first_stage_score": 20.44375536925966,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "민주화운동 관련자 명예회복 및 보상 등에 관한 법률 18조  다른 법률에 따른 보상 등과의 관계 등#KOBLEX-227804",
+        "provision_text": "② 이 법에 따른 보상금등의 지급 결정은 신청인이 동의한 경우에는 민주화운동과 관련하여 입은 피해에 대하여 「민사소송법」에 따른 재판상 화해가 성립된 것으로 본다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.9081593751907349,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민주화운동 관련자 명예회복 및 보상 등에 관한 법률 18조  다른 법률에 따른 보상 등과의 관계 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 154조  실질적 기재사항#KOBLEX-063912"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 22.212687533558565,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 154조  실질적 기재사항#KOBLEX-063912",
+        "provision_text": "1. 화해, 청구의 포기ㆍ인낙, 소의 취하와 자백",
+        "rerank_rank": 7,
+        "rerank_score": 0.8794479370117188,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "민사소송법 154조  실질적 기재사항 1호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 387조  화해가 성립되지 아니한 경우#KOBLEX-064543"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 2.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 387조  화해가 성립되지 아니한 경우#KOBLEX-064543",
+        "provision_text": "③법원사무관등은 제1항의 조서등본을 당사자에게 송달하여야 한다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.8566582202911377,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민사소송법 387조  화해가 성립되지 아니한 경우 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 389조  화해비용#KOBLEX-064549"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 30.645994349676506,
+        "fusion_rank": 22,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 389조  화해비용#KOBLEX-064549",
+        "provision_text": "제389조(화해비용) 화해비용은 화해가 성립된 경우에는 특별한 합의가 없으면 당사자들이 각자 부담하고, 화해가 성립되지 아니한 경우에는 신청인이 부담한다. 다만, 소제기신청이 있는 경우에는 화해비용을 소송비용의 일부로 한다.",
+        "rerank_rank": 22,
+        "rerank_score": 0.9214200377464294,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민사소송법 389조  화해비용",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공익신고자 보호법 24조  화해의 권고 등#KOBLEX-007822"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 40.88044611780045,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "공익신고자 보호법 24조  화해의 권고 등#KOBLEX-007822",
+        "provision_text": "④ 제3항에 따라 화해조서가 작성된 경우에는 관계 당사자 간에 화해조서와 동일한 내용의 합의가 성립된 것으로 보며, 화해조서는 「민사소송법」에 따른 재판상 화해와 같은 효력을 갖는다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.8725822567939758,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "공익신고자 보호법 24조  화해의 권고 등 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 145조  화해의 권고#KOBLEX-063883"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 145조  화해의 권고#KOBLEX-063883",
+        "provision_text": "②제1항의 경우에 법원ㆍ수명법관 또는 수탁판사는 당사자 본인이나 그 법정대리인의 출석을 명할 수 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.7532667517662048,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사소송법 145조  화해의 권고 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "기간제 및 단시간근로자 보호 등에 관한 법률 11조  조정ㆍ중재#KOBLEX-217567"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 44,
+        "first_stage_score": 26.09289133215114,
+        "fusion_rank": 18,
+        "issue_id": "I1",
+        "provision_id": "기간제 및 단시간근로자 보호 등에 관한 법률 11조  조정ㆍ중재#KOBLEX-217567",
+        "provision_text": "⑦제5항 및 제6항의 규정에 따른 조정 또는 중재결정은 「민사소송법」의 규정에 따른 재판상 화해와 동일한 효력을 갖는다.",
+        "rerank_rank": 18,
+        "rerank_score": 0.22267059981822968,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "기간제 및 단시간근로자 보호 등에 관한 법률 11조  조정ㆍ중재 7항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률 28조  조정ㆍ중재#KOBLEX-157459"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 42,
+        "first_stage_score": 26.58571195045538,
+        "fusion_rank": 19,
+        "issue_id": "I1",
+        "provision_id": "남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률 28조  조정ㆍ중재#KOBLEX-157459",
+        "provision_text": "⑦ 제5항 및 제6항에 따른 조정 또는 중재결정은 「민사소송법」에 따른 재판상 화해와 동일한 효력을 갖는다.",
+        "rerank_rank": 19,
+        "rerank_score": 0.2113432139158249,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률 28조  조정ㆍ중재 7항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 145조  화해의 권고#KOBLEX-063881"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 1.0,
+        "fusion_rank": 21,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 145조  화해의 권고#KOBLEX-063881",
+        "provision_text": "제145조(화해의 권고)",
+        "rerank_rank": 21,
+        "rerank_score": 0.10028745979070663,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사소송법 145조  화해의 권고",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 731조#KOBLEX-059868"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 34,
+        "first_stage_score": 25.06441491857224,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민법 731조#KOBLEX-059868",
+        "provision_text": "제15절 화해",
+        "rerank_rank": 3,
+        "rerank_score": 0.0744381695985794,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 731조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공익신고자 보호법 24조  화해의 권고 등#KOBLEX-007822": "④ 제3항에 따라 화해조서가 작성된 경우에는 관계 당사자 간에 화해조서와 동일한 내용의 합의가 성립된 것으로 보며, 화해조서는 「민사소송법」에 따른 재판상 화해와 같은 효력을 갖는다.",
+      "기간제 및 단시간근로자 보호 등에 관한 법률 11조  조정ㆍ중재#KOBLEX-217567": "⑦제5항 및 제6항의 규정에 따른 조정 또는 중재결정은 「민사소송법」의 규정에 따른 재판상 화해와 동일한 효력을 갖는다.",
+      "남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률 28조  조정ㆍ중재#KOBLEX-157459": "⑦ 제5항 및 제6항에 따른 조정 또는 중재결정은 「민사소송법」에 따른 재판상 화해와 동일한 효력을 갖는다.",
+      "민법 731조#KOBLEX-059868": "제15절 화해",
+      "민사소송법 145조  화해의 권고#KOBLEX-063881": "제145조(화해의 권고)",
+      "민사소송법 145조  화해의 권고#KOBLEX-063883": "②제1항의 경우에 법원ㆍ수명법관 또는 수탁판사는 당사자 본인이나 그 법정대리인의 출석을 명할 수 있다.",
+      "민사소송법 148조  한 쪽 당사자가 출석하지 아니한 경우#KOBLEX-063891": "③제1항의 규정에 따라 당사자가 진술한 것으로 보는 답변서, 그 밖의 준비서면에 화해의 의사표시가 적혀 있고 공증사무소의 인증을 받은 경우에, 상대방 당사자가 변론기일에 출석하여 그 화해의 의사표시를 받아들인 때에는 화해가 성립된 것으로 본다.",
+      "민사소송법 154조  실질적 기재사항#KOBLEX-063912": "1. 화해, 청구의 포기ㆍ인낙, 소의 취하와 자백",
+      "민사소송법 220조  화해, 청구의 포기ㆍ인낙조서의 효력#KOBLEX-064116": "제220조(화해, 청구의 포기ㆍ인낙조서의 효력) 화해, 청구의 포기ㆍ인낙을 변론조서ㆍ변론준비기일조서에 적은 때에는 그 조서는 확정판결과 같은 효력을 가진다.",
+      "민사소송법 386조  화해가 성립된 경우#KOBLEX-064539": "제386조(화해가 성립된 경우) 화해가 성립된 때에는 법원사무관등은 조서에 당사자, 법정대리인, 청구의 취지와 원인, 화해조항, 날짜와 법원을 표시하고 판사와 법원사무관등이 기명날인 또는 서명한다. <개정 2017.10.31>",
+      "민사소송법 387조  화해가 성립되지 아니한 경우#KOBLEX-064540": "제387조(화해가 성립되지 아니한 경우)",
+      "민사소송법 387조  화해가 성립되지 아니한 경우#KOBLEX-064541": "①화해가 성립되지 아니한 때에는 법원사무관등은 그 사유를 조서에 적어야 한다.",
+      "민사소송법 387조  화해가 성립되지 아니한 경우#KOBLEX-064542": "②신청인 또는 상대방이 기일에 출석하지 아니한 때에는 법원은 이들의 화해가 성립되지 아니한 것으로 볼 수 있다.",
+      "민사소송법 387조  화해가 성립되지 아니한 경우#KOBLEX-064543": "③법원사무관등은 제1항의 조서등본을 당사자에게 송달하여야 한다.",
+      "민사소송법 389조  화해비용#KOBLEX-064549": "제389조(화해비용) 화해비용은 화해가 성립된 경우에는 특별한 합의가 없으면 당사자들이 각자 부담하고, 화해가 성립되지 아니한 경우에는 신청인이 부담한다. 다만, 소제기신청이 있는 경우에는 화해비용을 소송비용의 일부로 한다.",
+      "민사집행법 56조  그 밖의 집행권원#KOBLEX-128214": "5. 소송상 화해, 청구의 인낙(認諾) 등 그 밖에 확정판결과 같은 효력을 가지는 것",
+      "민주화운동 관련자 명예회복 및 보상 등에 관한 법률 18조  다른 법률에 따른 보상 등과의 관계 등#KOBLEX-227804": "② 이 법에 따른 보상금등의 지급 결정은 신청인이 동의한 경우에는 민주화운동과 관련하여 입은 피해에 대하여 「민사소송법」에 따른 재판상 화해가 성립된 것으로 본다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민사소송법 148조  한 쪽 당사자가 출석하지 아니한 경우#KOBLEX-063891"
+            ],
+            "rationale": "C002 addresses formation in a specific context (written statement + acceptance), but does not provide the general rule for formation requirements.",
+            "requirement_id": "E1-R1",
+            "status": "partially_satisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "No supplied provision explicitly defines the legal nature of the settlement as a judicial act or its status as '사법적 화해'.",
+            "requirement_id": "E1-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "민사소송법 148조  한 쪽 당사자가 출석하지 아니한 경우#KOBLEX-063891",
+          "민사소송법 386조  화해가 성립된 경우#KOBLEX-064539"
+        ],
+        "missing_aspects": [
+          "E1-R1",
+          "E1-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "The supplied provisions provide specific procedural rules for settlement formation (C002) and recording (C005), but lack a general definitional provision explicitly stating the general formation requirements (e.g., mutual agreement of parties) and the abstract legal nature of the settlement as a judicial act, which are required by the completion criteria.",
+        "status": "partially_covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민사소송법 220조  화해, 청구의 포기ㆍ인낙조서의 효력#KOBLEX-064116"
+            ],
+            "rationale": "C001 directly states that the minutes have the same effect as a final judgment.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "민사집행법 56조  그 밖의 집행권원#KOBLEX-128214"
+            ],
+            "rationale": "C006 confirms that such settlements are titles for compulsory execution, detailing the specific legal effect.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민사소송법 220조  화해, 청구의 포기ㆍ인낙조서의 효력#KOBLEX-064116",
+          "민사집행법 56조  그 밖의 집행권원#KOBLEX-128214"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001 explicitly provides that a settlement recorded in the minutes has the same effect as a final judgment. C006 supports the specific consequence of this effect (enforceability). Together, they satisfy the requirement to confirm the effect and its concrete content.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민사소송법 148조  한 쪽 당사자가 출석하지 아니한 경우#KOBLEX-063891",
+        "support_spans": [
+          {
+            "end_char": 136,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민사소송법 386조  화해가 성립된 경우#KOBLEX-064539",
+        "support_spans": [
+          {
+            "end_char": 126,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민사소송법 220조  화해, 청구의 포기ㆍ인낙조서의 효력#KOBLEX-064116",
+        "support_spans": [
+          {
+            "end_char": 87,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민사집행법 56조  그 밖의 집행권원#KOBLEX-128214",
+        "support_spans": [
+          {
+            "end_char": 47,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "민사소송 절차상 화해의 성립 요건과 법적 성격",
+        "issue_id": "I1"
+      },
+      {
+        "description": "화해 내용이 기록된 변론조서의 법적 효력",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "화해의 성립 요건과 법적 성격이 명시된 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "화해의 성립 요건(당사자 합의, 법정 내 진행 등)을 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "화해의 법적 성격(사법적 화해로서의 지위)을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "민사소송법상 화해의 성립 요건 및 법적 성격에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "화해의 법적 효력을 논하기 위해 화해의 성립 요건과 법적 성격을 먼저 확인해야 함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 갑과 을은 건설 계약과 관련된 분쟁으로 민사소송을 진행하던 중, 소송 과정에서 서로 양보하여 합의에 이르기로 하였고, 법정에서 이를 바탕으로 화해하였다. 해당 화해 내용은 법원의 변론조서에 기록되었다. 이후 갑은 이 변론조서가 가지는 법적 효력에 대해 궁금해졌다. [질문] 갑과 을이 민사소송 중 법정에서 화해하고, 그 화해 내용이 변론조서에 기록된 경우, 그 변론조서는 어떤 효력을 가지는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "민사소송법 화해 성립 요건 법적 성격",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민사소송법",
+          "화해",
+          "성립요건",
+          "법적성격",
+          "당사자합의",
+          "법정화해"
+        ],
+        "query_text": "민사소송법 화해 성립 요건 법적 성격 [원문 맥락] 이후 갑은 이 변론조서가 가지는 법적 효력에 대해 궁금해졌다. 갑과 을이 민사소송 중 법정에서 화해하고, 그 화해 내용이 변론조서에 기록된 경우, 그 변론조서는 어떤 효력을 가지는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "민사소송법상 화해의 성립 요건과 법적 성격",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "민사소송법 화해 변론조서 확정판결과 동일한 효력",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민사소송법",
+          "화해",
+          "변론조서",
+          "확정판결",
+          "동일한효력",
+          "법적효력"
+        ],
+        "query_text": "민사소송법 화해 변론조서 확정판결과 동일한 효력 [원문 맥락] 이후 갑은 이 변론조서가 가지는 법적 효력에 대해 궁금해졌다. 갑과 을이 민사소송 중 법정에서 화해하고, 그 화해 내용이 변론조서에 기록된 경우, 그 변론조서는 어떤 효력을 가지는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "화해 내용이 기록된 변론조서의 확정판결과 동일한 효력",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "민사소송법 화해 성립 요건 당사자 합의",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "민사소송법",
+          "화해",
+          "성립요건",
+          "당사자합의",
+          "합의"
+        ],
+        "query_text": "민사소송법 화해 성립 요건 당사자 합의 [원문 맥락] 이후 갑은 이 변론조서가 가지는 법적 효력에 대해 궁금해졌다. 갑과 을이 민사소송 중 법정에서 화해하고, 그 화해 내용이 변론조서에 기록된 경우, 그 변론조서는 어떤 효력을 가지는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "민사소송법상 화해의 성립 요건으로서의 당사자 합의",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "화해 사법적 화해 법적 성격 확정판결과 동일한 효력",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "화해",
+          "사법적화해",
+          "법적성격",
+          "확정판결",
+          "효력"
+        ],
+        "query_text": "화해는 사법적 화해로서 확정판결과 동일한 효력을 가진다 [원문 맥락] 이후 갑은 이 변론조서가 가지는 법적 효력에 대해 궁금해졌다. 갑과 을이 민사소송 중 법정에서 화해하고, 그 화해 내용이 변론조서에 기록된 경우, 그 변론조서는 어떤 효력을 가지는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "민사소송법상 화해의 법적 성격으로서의 사법적 화해 지위",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "민사소송법 화해 성립 요건 당사자 합의",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "민사소송법",
+          "화해",
+          "성립요건",
+          "당사자합의",
+          "합의"
+        ],
+        "query_text": "화해의 성립 요건과 법적 성격이 명시된 조항을 확인 법률 조문 [원문 맥락] 이후 갑은 이 변론조서가 가지는 법적 효력에 대해 궁금해졌다. 갑과 을이 민사소송 중 법정에서 화해하고, 그 화해 내용이 변론조서에 기록된 경우, 그 변론조서는 어떤 효력을 가지는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "민사소송법상 화해의 성립 요건으로서의 당사자 합의",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "화해 사법적 화해 법적 성격 확정판결과 동일한 효력",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "화해",
+          "사법적화해",
+          "법적성격",
+          "확정판결",
+          "효력"
+        ],
+        "query_text": "화해의 성립 요건과 법적 성격이 명시된 조항을 확인 적용 요건 조문 [원문 맥락] 이후 갑은 이 변론조서가 가지는 법적 효력에 대해 궁금해졌다. 갑과 을이 민사소송 중 법정에서 화해하고, 그 화해 내용이 변론조서에 기록된 경우, 그 변론조서는 어떤 효력을 가지는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "민사소송법상 화해의 법적 성격으로서의 사법적 화해 지위",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑과 을은 건설 계약과 관련된 분쟁으로 민사소송을 진행하던 중, 소송 과정에서 서로 양보하여 합의에 이르기로 하였고, 법정에서 이를 바탕으로 화해하였다. 해당 화해 내용은 법원의 변론조서에 기록되었다. 이후 갑은 이 변론조서가 가지는 법적 효력에 대해 궁금해졌다.\n\n[질문]\n갑과 을이 민사소송 중 법정에서 화해하고, 그 화해 내용이 변론조서에 기록된 경우, 그 변론조서는 어떤 효력을 가지는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "화해의 성립 요건과 법적 성격이 명시된 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "화해의 성립 요건(당사자 합의, 법정 내 진행 등)을 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "화해의 법적 성격(사법적 화해로서의 지위)을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "민사소송법상 화해의 성립 요건 및 법적 성격에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "화해의 법적 효력을 논하기 위해 화해의 성립 요건과 법적 성격을 먼저 확인해야 함",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "변론조서의 확정판결과 동일한 효력을 명시한 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "화해 내용이 기록된 변론조서가 확정판결과 동일한 효력을 가진다는 점을 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "해당 효력의 구체적 내용(확정력, 강제집행력 등)을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "화해 내용이 기록된 변론조서의 확정판결과 동일한 효력에 관한 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 직접적으로 변론조서의 효력을 묻고 있으므로, 해당 효력을 규정하는 조항이 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "3f6bb1a0-92c6-469c-906b-44d398e0ea64",
+    "seen_provision_ids": [
+      "민사소송법 387조  화해가 성립되지 아니한 경우#KOBLEX-064542",
+      "기간제 및 단시간근로자 보호 등에 관한 법률 11조  조정ㆍ중재#KOBLEX-217567",
+      "민사소송법 145조  화해의 권고#KOBLEX-063881",
+      "민법 731조#KOBLEX-059868",
+      "민사소송법 387조  화해가 성립되지 아니한 경우#KOBLEX-064541",
+      "민사소송법 387조  화해가 성립되지 아니한 경우#KOBLEX-064543",
+      "공익신고자 보호법 24조  화해의 권고 등#KOBLEX-007822",
+      "민사집행법 56조  그 밖의 집행권원#KOBLEX-128214",
+      "민사소송법 386조  화해가 성립된 경우#KOBLEX-064539",
+      "민사소송법 387조  화해가 성립되지 아니한 경우#KOBLEX-064540",
+      "민사소송법 220조  화해, 청구의 포기ㆍ인낙조서의 효력#KOBLEX-064116",
+      "민사소송법 154조  실질적 기재사항#KOBLEX-063912",
+      "민주화운동 관련자 명예회복 및 보상 등에 관한 법률 18조  다른 법률에 따른 보상 등과의 관계 등#KOBLEX-227804",
+      "민사소송법 148조  한 쪽 당사자가 출석하지 아니한 경우#KOBLEX-063891",
+      "남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률 28조  조정ㆍ중재#KOBLEX-157459",
+      "민사소송법 145조  화해의 권고#KOBLEX-063883",
+      "민사소송법 389조  화해비용#KOBLEX-064549"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "NO_RETRIEVAL_PROGRESS"
+}

@@ -1,0 +1,1060 @@
+{
+  "abstention_reason": null,
+  "answer": "공무원에 대하여 허위신고를 하여 공정증서원본 또는 이와 동일한 전자기록등 특수매체기록에 부실의 사실을 기재 또는 기록하게 한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.[CT1]\n갑과 을이 공무원에게 허위의 재무정보를 신고하여 공정증서원본에 부실한 사실을 기재하게 한 행위는 형법 제228조 제1항에 따라 5년 이하의 징역 또는 1천만원 이하의 벌금에 처해질 수 있다.[CT2]\n전제: 갑과 을이 공무원에게 허위의 재무정보를 신고하고, 이를 통해 공정증서원본에 부실한 사실이 기재되도록 한 사실이 인정된다고 가정한다.\n한계: 등기관이 허위 기재가 포함된 회사 설립 등기 신청에 대해 취해야 할 법적 조치(거절 또는 반려 등)에 관한 법적 근거가 제공된 조항에 포함되어 있지 않아, 해당 부분(T1)에 대한 답변은 제외한다.",
+  "answer_mode": "limited",
+  "answered_target_ids": [
+    "T2"
+  ],
+  "candidate_answer": "공무원에 대하여 허위신고를 하여 공정증서원본 또는 이와 동일한 전자기록등 특수매체기록에 부실의 사실을 기재 또는 기록하게 한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.[CT1]\n갑과 을이 공무원에게 허위의 재무정보를 신고하여 공정증서원본에 부실한 사실을 기재하게 한 행위는 형법 제228조 제1항에 따라 5년 이하의 징역 또는 1천만원 이하의 벌금에 처해질 수 있다.[CT2]\n전제: 갑과 을이 공무원에게 허위의 재무정보를 신고하고, 이를 통해 공정증서원본에 부실한 사실이 기재되도록 한 사실이 인정된다고 가정한다.\n한계: 등기관이 허위 기재가 포함된 회사 설립 등기 신청에 대해 취해야 할 법적 조치(거절 또는 반려 등)에 관한 법적 근거가 제공된 조항에 포함되어 있지 않아, 해당 부분(T1)에 대한 답변은 제외한다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T15:50:52.582455+00:00",
+  "deferred_target_ids": [
+    "T1"
+  ],
+  "end_to_end_latency_ms": 458151.553,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 383,
+      "dedup_collapse": 62,
+      "evidence_fusion": 383,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "round_selected": 30,
+      "rrf": 400,
+      "selected": 383
+    }
+  },
+  "run_id": "78eca3ce-227f-4046-88de-3cb0a6ca1d05",
+  "state": {
+    "accepted_provision_ids": [
+      "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193140"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 6,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 5,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T2"
+          ],
+          "deferred_target_ids": [
+            "T1"
+          ],
+          "explanation": "Only the citable answer targets will be answered; remaining targets are deferred.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T2"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": [
+            "T1"
+          ]
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "limited",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_consequence",
+        "question_anchor": "등기관은 이 신청을 어떻게 처리해야 하며",
+        "requested_output": "등기기관이 허위 기재가 포함된 회사 설립 등기 신청에 대해 취해야 할 법적 조치"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_consequence",
+        "question_anchor": "갑과 을은 어떤 형사처벌을 받을 수 있는가",
+        "requested_output": "허위 재무정보 신고 및 부실 공정증서 작성에 관여한 갑과 을에 대한 형사처벌 근거 및 내용"
+      }
+    ],
+    "answered_target_ids": [
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193140"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 31.536768095318777,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193140",
+        "provision_text": "①공무원에 대하여 허위신고를 하여 공정증서원본 또는 이와 동일한 전자기록등 특수매체기록에 부실의 사실을 기재 또는 기록하게 한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9959069490432739,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "형법 228조  공정증서원본 등의 부실기재 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193141"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 5.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193141",
+        "provision_text": "②공무원에 대하여 허위신고를 하여 면허증, 허가증, 등록증 또는 여권에 부실의 사실을 기재하게 한 자는 3년 이하의 징역 또는 700만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 2,
+        "rerank_score": 0.9643629789352417,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 228조  공정증서원본 등의 부실기재 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 156조  무고#KOBLEX-193009"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 3.0,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "형법 156조  무고#KOBLEX-193009",
+        "provision_text": "제156조(무고) 타인으로 하여금 형사처분 또는 징계처분을 받게 할 목적으로 공무소 또는 공무원에 대하여 허위의 사실을 신고한 자는 10년 이하의 징역 또는 1천500만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+        "rerank_rank": 3,
+        "rerank_score": 0.021640708670020103,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 156조  무고",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부동산등기 특별조치법 6조  등기원인 허위기재등의 금지#KOBLEX-138303"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 27.608827716566594,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "부동산등기 특별조치법 6조  등기원인 허위기재등의 금지#KOBLEX-138303",
+        "provision_text": "제6조(등기원인 허위기재등의 금지) 제2조의 규정에 의하여 소유권이전등기를 신청하여야 할 자는 그 등기를 신청함에 있어서 등기신청서에 등기원인을 허위로 기재하여 신청하거나 소유권이전등기외의 등기를 신청하여서는 아니된다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.007904785685241222,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "부동산등기 특별조치법 6조  등기원인 허위기재등의 금지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "증권거래법 20조  금융위원회의 처분권 <개정 2008.2.29>#KOBLEX-226719"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 73,
+        "first_stage_score": 24.897418412307484,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "증권거래법 20조  금융위원회의 처분권 <개정 2008.2.29>#KOBLEX-226719",
+        "provision_text": "1. 유가증권신고서 또는 유가증권발행실적보고서를 제출하지 아니하거나 당해 신고서 또는 보고서의 기재사항에 관하여 허위의 기재 또는 중요한 사항의 누락이 있는 때",
+        "rerank_rank": 2,
+        "rerank_score": 0.006405447609722614,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "증권거래법 20조  금융위원회의 처분권 <개정 2008.2.29> 1호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "기업구조조정 촉진법 19조  공동관리절차의 중단#KOBLEX-077107"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 41,
+        "first_stage_score": 23.47197110735374,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "기업구조조정 촉진법 19조  공동관리절차의 중단#KOBLEX-077107",
+        "provision_text": "1. 공동관리기업이 제출한 금융채권자의 목록이나 자구계획서에 중요한 사항에 관하여 고의적인 누락이나 허위 기재가 있는 경우",
+        "rerank_rank": 3,
+        "rerank_score": 0.00468392064794898,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "기업구조조정 촉진법 19조  공동관리절차의 중단 1호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 444조  벌칙#KOBLEX-137488"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 27,
+        "first_stage_score": 24.812963989261647,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 444조  벌칙#KOBLEX-137488",
+        "provision_text": "15. 다음 각 목의 어느 하나에 해당하는 공고 또는 서류 중 중요사항에 관하여 거짓의 기재 또는 표시를 하거나 중요사항을 기재 또는 표시하지 아니한 자",
+        "rerank_rank": 4,
+        "rerank_score": 0.0013556707417592406,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 444조  벌칙 24호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "선박법 34조  벌칙#KOBLEX-123030"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 51,
+        "first_stage_score": 20.874671039932323,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "선박법 34조  벌칙#KOBLEX-123030",
+        "provision_text": "① 공무원을 속여 선박원부에 부실(不實) 등록을 하게 한 사람은 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다. <개정 2015.3.27>",
+        "rerank_rank": 4,
+        "rerank_score": 0.00048428928130306304,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "선박법 34조  벌칙 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193139"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 23.34202058048157,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193139",
+        "provision_text": "제228조(공정증서원본 등의 부실기재)",
+        "rerank_rank": 5,
+        "rerank_score": 0.0003348581667523831,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 228조  공정증서원본 등의 부실기재",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "수산업협동조합법 96조  행정구역의 지명 변경과 등기#KOBLEX-024594"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 55,
+        "first_stage_score": 22.5838300619347,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "수산업협동조합법 96조  행정구역의 지명 변경과 등기#KOBLEX-024594",
+        "provision_text": "③ 등기소는 제2항에 따른 통지를 받으면 등기부의 기재 내용을 변경하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0002590527292340994,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "수산업협동조합법 96조  행정구역의 지명 변경과 등기 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소방법 58조  등록의 취소등<개정 1999.2.5>#KOBLEX-023264"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 29,
+        "first_stage_score": 20.892932004666733,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "소방법 58조  등록의 취소등<개정 1999.2.5>#KOBLEX-023264",
+        "provision_text": "3. 허위 그밖의 부정한 방법으로 등록을 한 때",
+        "rerank_rank": 10,
+        "rerank_score": 0.002997704315930605,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "소방법 58조  등록의 취소등<개정 1999.2.5> 3호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상업등기법 54조#KOBLEX-201233"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 22,
+        "first_stage_score": 25.87147358485272,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "상업등기법 54조#KOBLEX-201233",
+        "provision_text": "제6절 회사의 등기",
+        "rerank_rank": 4,
+        "rerank_score": 0.0015937278512865305,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상업등기법 54조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 317조  설립의 등기#KOBLEX-114436"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 46,
+        "first_stage_score": 24.050556821452833,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "상법 317조  설립의 등기#KOBLEX-114436",
+        "provision_text": "제317조(설립의 등기)",
+        "rerank_rank": 6,
+        "rerank_score": 0.0012851548381149769,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상법 317조  설립의 등기",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 549조  설립의 등기#KOBLEX-115666"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 47,
+        "first_stage_score": 24.050556821452833,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "상법 549조  설립의 등기#KOBLEX-115666",
+        "provision_text": "제549조(설립의 등기)",
+        "rerank_rank": 7,
+        "rerank_score": 0.001091793063096702,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상법 549조  설립의 등기",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 287조 5 설립의 등기 등#KOBLEX-114255"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 57,
+        "first_stage_score": 23.463184578510873,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "상법 287조 5 설립의 등기 등#KOBLEX-114255",
+        "provision_text": "제287조의5(설립의 등기 등)",
+        "rerank_rank": 9,
+        "rerank_score": 0.0008119545527733862,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상법 287조 5 설립의 등기 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상업등기법 42조  상호의 가등기의 말소신청#KOBLEX-201195"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 33.22134029395613,
+        "fusion_rank": 11,
+        "issue_id": "I1",
+        "provision_id": "상업등기법 42조  상호의 가등기의 말소신청#KOBLEX-201195",
+        "provision_text": "② 회사 또는 발기인등이 제1항에 따른 신청을 하지 아니하는 경우에는 제36조와 「상법」 제27조를 준용한다.",
+        "rerank_rank": 11,
+        "rerank_score": 0.0007630774052813649,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상업등기법 42조  상호의 가등기의 말소신청 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "직업안정법 시행규칙 4조  구인신청서ㆍ구직신청서의 사실조회#KOBLEX-025060"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 55,
+        "first_stage_score": 19.56462281852552,
+        "fusion_rank": 26,
+        "issue_id": "I1",
+        "provision_id": "직업안정법 시행규칙 4조  구인신청서ㆍ구직신청서의 사실조회#KOBLEX-025060",
+        "provision_text": "② 거짓 기재 사실이 발견된 구인ㆍ구직의 신청은 무효로 한다.",
+        "rerank_rank": 26,
+        "rerank_score": 0.00332766305655241,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "직업안정법 시행규칙 4조  구인신청서ㆍ구직신청서의 사실조회 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "법인세법 시행령 138조 5 조세조약상의 비과세ㆍ면제 또는 제한세율 적용을 위한 사전승인 절차#KOBLEX-018158"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 56,
+        "first_stage_score": 19.514059344451127,
+        "fusion_rank": 27,
+        "issue_id": "I1",
+        "provision_id": "법인세법 시행령 138조 5 조세조약상의 비과세ㆍ면제 또는 제한세율 적용을 위한 사전승인 절차#KOBLEX-018158",
+        "provision_text": "⑥국세청장은 제출된 서류가 허위로 기재된 것임이 확인되는 경우 사전승인을 취소하여야 한다.",
+        "rerank_rank": 27,
+        "rerank_score": 0.0013279414270073175,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "법인세법 시행령 138조 5 조세조약상의 비과세ㆍ면제 또는 제한세율 적용을 위한 사전승인 절차 6항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소득세법 시행령 207조 4 조세조약상의 비과세ㆍ면제 또는 제한세율 적용을 위한 사전승인 절차#KOBLEX-142750"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 57,
+        "first_stage_score": 19.514059344451127,
+        "fusion_rank": 31,
+        "issue_id": "I1",
+        "provision_id": "소득세법 시행령 207조 4 조세조약상의 비과세ㆍ면제 또는 제한세율 적용을 위한 사전승인 절차#KOBLEX-142750",
+        "provision_text": "⑥국세청장은 제출된 서류가 허위로 기재된 것임이 확인되는 경우에는 사전승인을 취소하여야 한다.",
+        "rerank_rank": 31,
+        "rerank_score": 0.0013108598068356514,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "소득세법 시행령 207조 4 조세조약상의 비과세ㆍ면제 또는 제한세율 적용을 위한 사전승인 절차 6항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 125조  등기의 신청#KOBLEX-107556"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 41,
+        "first_stage_score": 20.352079799236716,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "신탁법 125조  등기의 신청#KOBLEX-107556",
+        "provision_text": "제125조(등기의 신청)",
+        "rerank_rank": 1,
+        "rerank_score": 0.001190993469208479,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "신탁법 125조  등기의 신청",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "간접투자자산 운용업법 184조  (벌칙)#KOBLEX-082641"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 76,
+        "first_stage_score": 18.432335731587152,
+        "fusion_rank": 36,
+        "issue_id": "I1",
+        "provision_id": "간접투자자산 운용업법 184조  (벌칙)#KOBLEX-082641",
+        "provision_text": "6. 허위 그 밖의 부정한 방법으로 제29조제1항 본문 또는 제31조제1항 본문의 보고를 한 자",
+        "rerank_rank": 36,
+        "rerank_score": 0.0005713075515814126,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "간접투자자산 운용업법 184조  (벌칙) 6호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "간접투자자산 운용업법 184조  (벌칙)#KOBLEX-082641": "6. 허위 그 밖의 부정한 방법으로 제29조제1항 본문 또는 제31조제1항 본문의 보고를 한 자",
+      "기업구조조정 촉진법 19조  공동관리절차의 중단#KOBLEX-077107": "1. 공동관리기업이 제출한 금융채권자의 목록이나 자구계획서에 중요한 사항에 관하여 고의적인 누락이나 허위 기재가 있는 경우",
+      "법인세법 시행령 138조 5 조세조약상의 비과세ㆍ면제 또는 제한세율 적용을 위한 사전승인 절차#KOBLEX-018158": "⑥국세청장은 제출된 서류가 허위로 기재된 것임이 확인되는 경우 사전승인을 취소하여야 한다.",
+      "부동산등기 특별조치법 6조  등기원인 허위기재등의 금지#KOBLEX-138303": "제6조(등기원인 허위기재등의 금지) 제2조의 규정에 의하여 소유권이전등기를 신청하여야 할 자는 그 등기를 신청함에 있어서 등기신청서에 등기원인을 허위로 기재하여 신청하거나 소유권이전등기외의 등기를 신청하여서는 아니된다.",
+      "상법 287조 5 설립의 등기 등#KOBLEX-114255": "제287조의5(설립의 등기 등)",
+      "상법 317조  설립의 등기#KOBLEX-114436": "제317조(설립의 등기)",
+      "상법 549조  설립의 등기#KOBLEX-115666": "제549조(설립의 등기)",
+      "상업등기법 42조  상호의 가등기의 말소신청#KOBLEX-201195": "② 회사 또는 발기인등이 제1항에 따른 신청을 하지 아니하는 경우에는 제36조와 「상법」 제27조를 준용한다.",
+      "상업등기법 54조#KOBLEX-201233": "제6절 회사의 등기",
+      "선박법 34조  벌칙#KOBLEX-123030": "① 공무원을 속여 선박원부에 부실(不實) 등록을 하게 한 사람은 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다. <개정 2015.3.27>",
+      "소득세법 시행령 207조 4 조세조약상의 비과세ㆍ면제 또는 제한세율 적용을 위한 사전승인 절차#KOBLEX-142750": "⑥국세청장은 제출된 서류가 허위로 기재된 것임이 확인되는 경우에는 사전승인을 취소하여야 한다.",
+      "소방법 58조  등록의 취소등<개정 1999.2.5>#KOBLEX-023264": "3. 허위 그밖의 부정한 방법으로 등록을 한 때",
+      "수산업협동조합법 96조  행정구역의 지명 변경과 등기#KOBLEX-024594": "③ 등기소는 제2항에 따른 통지를 받으면 등기부의 기재 내용을 변경하여야 한다.",
+      "신탁법 125조  등기의 신청#KOBLEX-107556": "제125조(등기의 신청)",
+      "자본시장과 금융투자업에 관한 법률 444조  벌칙#KOBLEX-137488": "15. 다음 각 목의 어느 하나에 해당하는 공고 또는 서류 중 중요사항에 관하여 거짓의 기재 또는 표시를 하거나 중요사항을 기재 또는 표시하지 아니한 자",
+      "증권거래법 20조  금융위원회의 처분권 <개정 2008.2.29>#KOBLEX-226719": "1. 유가증권신고서 또는 유가증권발행실적보고서를 제출하지 아니하거나 당해 신고서 또는 보고서의 기재사항에 관하여 허위의 기재 또는 중요한 사항의 누락이 있는 때",
+      "직업안정법 시행규칙 4조  구인신청서ㆍ구직신청서의 사실조회#KOBLEX-025060": "② 거짓 기재 사실이 발견된 구인ㆍ구직의 신청은 무효로 한다.",
+      "형법 156조  무고#KOBLEX-193009": "제156조(무고) 타인으로 하여금 형사처분 또는 징계처분을 받게 할 목적으로 공무소 또는 공무원에 대하여 허위의 사실을 신고한 자는 10년 이하의 징역 또는 1천500만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193139": "제228조(공정증서원본 등의 부실기재)",
+      "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193140": "①공무원에 대하여 허위신고를 하여 공정증서원본 또는 이와 동일한 전자기록등 특수매체기록에 부실의 사실을 기재 또는 기록하게 한 자는 5년 이하의 징역 또는 1천만원 이하의 벌금에 처한다. <개정 1995.12.29>",
+      "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193141": "②공무원에 대하여 허위신고를 하여 면허증, 허가증, 등록증 또는 여권에 부실의 사실을 기재하게 한 자는 3년 이하의 징역 또는 700만원 이하의 벌금에 처한다. <개정 1995.12.29>"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "회사 설립 등기 신청의 거절/반려에 관한 법적 근거가 후보 조항에 존재하지 않는다.",
+            "requirement_id": "E1-R1",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "uncovered",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "E1-R1"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "제출된 후보 조항 중 회사 설립 등기 신청에 대한 등기기관의 거절 또는 반려 절차에 관한 구체적 규정이 포함되어 있지 않다. C004는 부동산등기 특별조치법에 관한 규정으로 회사 설립 등기와 무관하며, C012, C013, C014, C015, C016은 등기 관련 조항의 제목이나 부수적 규정일 뿐, 허위 기재가 발견되었을 때 등기기관이 취해야 할 구체적 조치(거절/반려)에 대한 법적 근거를 제공하지 않는다.",
+        "status": "uncovered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193140"
+            ],
+            "rationale": "C001은 질문에서 요구하는 허위신고 및 공정증서원본 부실 기재 행위의 형사처벌 조항을 정확히 제공한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193140"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "형법 제228조 제1항(C001)은 공무원에 대한 허위신고로 공정증서원본에 부실의 사실을 기재하게 한 자의 형사처벌을 규정하고 있어, 갑과 을의 행위에 대한 형사처벌 근거를 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [
+      "T1"
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193140",
+        "support_spans": [
+          {
+            "end_char": 120,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 5,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "허위 기재가 포함된 회사 설립 등기 신청에 대한 등기기관의 처리 절차",
+        "issue_id": "I1"
+      },
+      {
+        "description": "허위 재무정보 신고 및 부실 공정증서 작성에 대한 형사책임",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "등기기관이 허위 기재가 포함된 등기 신청을 거절하거나 반려할 수 있는 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "허위 기재가 포함된 등기 신청에 대한 등기기관의 거절 또는 반려 근거 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "허위 기재가 포함된 등기 신청에 대한 등기기관의 거절 또는 반려 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 등기기관의 처리 방식을 명시적으로 요구하므로, 등기 절차상 거절/반려 규정이 핵심 결론에 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 갑과 을은 공동으로 투자유치를 목적으로 회사를 설립하기로 하고, 법인 설립을 위한 등기절차를 준비하였다. 을은 재무 건전성을 과시하여 투자자의 신뢰를 얻자는 명목으로, 갑에게 회사의 자본금과 수익 전망 등을 실제보다 과장하여 공증을 받자고 제안하였다. 이에 따라 갑은 공무원에게 허위로 회사의 재무정보를 신고하고, 부실한 내용을 포함한 공정증서원본을 작성하게 하였다. 이후 갑과 을은 이 공정증서원본을 첨부해 회사 설립 등기를 신청하였다. 등기관은 서류 심사 중 신청에 문제가 있음을 발견하였다. [질문] 갑과 을이 허위의 재무정보를 공무원에게 신고하여 공정증서원본에 부실한 사실을 기재하게 하고, 이를 근거로 회사 설립 등기를 신청한 경우, 등기관은 이 신청을 어떻게 처리해야 하며, 갑과 을은 어떤 형사처벌을 받을 수 있는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "회사 설립 등기 신청 거절 반려 허위 기재 공정증서원본 등기기관 서류 심사",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "회사 설립 등기",
+          "등기 신청 거절",
+          "허위 기재",
+          "공정증서원본",
+          "등기기관",
+          "서류 심사"
+        ],
+        "query_text": "허위 기재가 포함된 회사 설립 등기 신청에 대한 등기기관의 거절 또는 반려 규정 [원문 맥락] 등기관은 서류 심사 중 신청에 문제가 있음을 발견하였다. 갑과 을이 허위의 재무정보를 공무원에게 신고하여 공정증서원본에 부실한 사실을 기재하게 하고, 이를 근거로 회사 설립 등기를 신청한 경우, 등기관은 이 신청을 어떻게 처리해야 하며, 갑과 을은 어떤 형사처벌을 받을 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "등기기관이 허위 기재가 포함된 회사 설립 등기 신청을 어떻게 처리해야 하는가",
+        "statute_hints": [
+          "상법",
+          "등기법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "허위 재무정보 신고 부실 공정증서 작성 형사처벌 공무원 신고 과장 기재",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "허위 재무정보",
+          "공정증서 작성",
+          "형사처벌",
+          "공무원 신고",
+          "부실 기재",
+          "과장 기재"
+        ],
+        "query_text": "허위 재무정보 신고 및 부실 공정증서 작성에 대한 형사처벌 규정 [원문 맥락] 등기관은 서류 심사 중 신청에 문제가 있음을 발견하였다. 갑과 을이 허위의 재무정보를 공무원에게 신고하여 공정증서원본에 부실한 사실을 기재하게 하고, 이를 근거로 회사 설립 등기를 신청한 경우, 등기관은 이 신청을 어떻게 처리해야 하며, 갑과 을은 어떤 형사처벌을 받을 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "허위 재무정보를 공무원에게 신고하고 부실한 공정증서원본 작성에 관여한 자의 형사처벌",
+        "statute_hints": [
+          "상법",
+          "형법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "상법 회사 설립 등기 신청 거절 반려 등기기관 서류 심사 문제 발견",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "상법",
+          "회사 설립 등기",
+          "등기 신청 거절",
+          "등기기관",
+          "서류 심사",
+          "반려"
+        ],
+        "query_text": "상법상 회사 설립 등기 신청의 거절 사유 및 등기기관의 처리 절차 [원문 맥락] 등기관은 서류 심사 중 신청에 문제가 있음을 발견하였다. 갑과 을이 허위의 재무정보를 공무원에게 신고하여 공정증서원본에 부실한 사실을 기재하게 하고, 이를 근거로 회사 설립 등기를 신청한 경우, 등기관은 이 신청을 어떻게 처리해야 하며, 갑과 을은 어떤 형사처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "상법상 회사 설립 등기 신청에 대한 등기기관의 거절 또는 반려 법적 근거",
+        "statute_hints": [
+          "상법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "등기 신청서 허위 기재 등기 거절 사유 등기기관 처분",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "등기 신청서",
+          "허위 기재",
+          "등기 거절",
+          "등기기관",
+          "처분"
+        ],
+        "query_text": "등기 신청서 허위 기재 등기 거절 사유 [원문 맥락] 등기관은 서류 심사 중 신청에 문제가 있음을 발견하였다. 갑과 을이 허위의 재무정보를 공무원에게 신고하여 공정증서원본에 부실한 사실을 기재하게 하고, 이를 근거로 회사 설립 등기를 신청한 경우, 등기관은 이 신청을 어떻게 처리해야 하며, 갑과 을은 어떤 형사처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "허위 기재가 포함된 등기 신청서에 대한 등기기관의 거절 사유",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "상법 549조 등기 신청 거절 등기기관 서류 심사 문제 발견",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "상법",
+          "등기 신청",
+          "거절",
+          "등기기관",
+          "서류 심사"
+        ],
+        "query_text": "상법 제549조 제2항 등기 신청의 거절 사유 및 절차 [원문 맥락] 등기관은 서류 심사 중 신청에 문제가 있음을 발견하였다. 갑과 을이 허위의 재무정보를 공무원에게 신고하여 공정증서원본에 부실한 사실을 기재하게 하고, 이를 근거로 회사 설립 등기를 신청한 경우, 등기관은 이 신청을 어떻게 처리해야 하며, 갑과 을은 어떤 형사처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "상법상 회사 설립 등기 신청에 대한 등기기관의 거절 법적 근거",
+        "statute_hints": [
+          "상법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "등기 신청 서류 허위 기재 등기 거절 처분 등기기관",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "등기 신청",
+          "서류",
+          "허위 기재",
+          "거절",
+          "처분"
+        ],
+        "query_text": "등기 신청에 필요한 서류에 허위 기재가 있는 경우 등기기관의 거절 처분 [원문 맥락] 등기관은 서류 심사 중 신청에 문제가 있음을 발견하였다. 갑과 을이 허위의 재무정보를 공무원에게 신고하여 공정증서원본에 부실한 사실을 기재하게 하고, 이를 근거로 회사 설립 등기를 신청한 경우, 등기관은 이 신청을 어떻게 처리해야 하며, 갑과 을은 어떤 형사처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "허위 기재가 포함된 등기 신청 서류에 대한 등기기관의 거절 처분 근거",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑과 을은 공동으로 투자유치를 목적으로 회사를 설립하기로 하고, 법인 설립을 위한 등기절차를 준비하였다. 을은 재무 건전성을 과시하여 투자자의 신뢰를 얻자는 명목으로, 갑에게 회사의 자본금과 수익 전망 등을 실제보다 과장하여 공증을 받자고 제안하였다. 이에 따라 갑은 공무원에게 허위로 회사의 재무정보를 신고하고, 부실한 내용을 포함한 공정증서원본을 작성하게 하였다. 이후 갑과 을은 이 공정증서원본을 첨부해 회사 설립 등기를 신청하였다. 등기관은 서류 심사 중 신청에 문제가 있음을 발견하였다.\n\n[질문]\n갑과 을이 허위의 재무정보를 공무원에게 신고하여 공정증서원본에 부실한 사실을 기재하게 하고, 이를 근거로 회사 설립 등기를 신청한 경우, 등기관은 이 신청을 어떻게 처리해야 하며, 갑과 을은 어떤 형사처벌을 받을 수 있는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "등기기관이 허위 기재가 포함된 등기 신청을 거절하거나 반려할 수 있는 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "허위 기재가 포함된 등기 신청에 대한 등기기관의 거절 또는 반려 근거 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "허위 기재가 포함된 등기 신청에 대한 등기기관의 거절 또는 반려 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 등기기관의 처리 방식을 명시적으로 요구하므로, 등기 절차상 거절/반려 규정이 핵심 결론에 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "허위 재무정보 신고 및 부실 공정증서 작성에 대한 형사처벌 근거 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "허위 재무정보 신고 및 부실 공정증서 작성에 대한 형사처벌 근거 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "허위 재무정보 신고 및 부실 공정증서 작성에 대한 형사처벌 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 갑과 을의 형사처벌을 명시적으로 요구하므로, 관련 형사처벌 규정이 핵심 결론에 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "78eca3ce-227f-4046-88de-3cb0a6ca1d05",
+    "seen_provision_ids": [
+      "간접투자자산 운용업법 184조  (벌칙)#KOBLEX-082641",
+      "법인세법 시행령 138조 5 조세조약상의 비과세ㆍ면제 또는 제한세율 적용을 위한 사전승인 절차#KOBLEX-018158",
+      "상법 549조  설립의 등기#KOBLEX-115666",
+      "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193141",
+      "직업안정법 시행규칙 4조  구인신청서ㆍ구직신청서의 사실조회#KOBLEX-025060",
+      "소득세법 시행령 207조 4 조세조약상의 비과세ㆍ면제 또는 제한세율 적용을 위한 사전승인 절차#KOBLEX-142750",
+      "형법 156조  무고#KOBLEX-193009",
+      "자본시장과 금융투자업에 관한 법률 444조  벌칙#KOBLEX-137488",
+      "수산업협동조합법 96조  행정구역의 지명 변경과 등기#KOBLEX-024594",
+      "부동산등기 특별조치법 6조  등기원인 허위기재등의 금지#KOBLEX-138303",
+      "상법 287조 5 설립의 등기 등#KOBLEX-114255",
+      "상법 317조  설립의 등기#KOBLEX-114436",
+      "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193140",
+      "형법 228조  공정증서원본 등의 부실기재#KOBLEX-193139",
+      "상업등기법 42조  상호의 가등기의 말소신청#KOBLEX-201195",
+      "신탁법 125조  등기의 신청#KOBLEX-107556",
+      "기업구조조정 촉진법 19조  공동관리절차의 중단#KOBLEX-077107",
+      "상업등기법 54조#KOBLEX-201233",
+      "소방법 58조  등록의 취소등<개정 1999.2.5>#KOBLEX-023264",
+      "선박법 34조  벌칙#KOBLEX-123030",
+      "증권거래법 20조  금융위원회의 처분권 <개정 2008.2.29>#KOBLEX-226719"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

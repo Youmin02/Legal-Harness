@@ -1,0 +1,629 @@
+{
+  "abstention_reason": null,
+  "answer": "검사는 법원의 허가를 얻어 공소장에 기재한 공소사실 또는 적용법조의 추가, 철회 또는 변경을 할 수 있으며, 법원은 공소사실의 동일성을 해하지 아니하는 한도에서 허가하여야 한다.[CT1]\n금고 이상의 형에 처한 판결이 확정된 죄와 그 판결확정 전에 범한 죄는 경합범으로 한다.[CT2]\n법원은 공소사실 또는 적용법조의 추가, 철회 또는 변경이 있을 때에는 그 사유를 신속히 피고인 또는 변호인에게 고지하여야 한다.[CT3]\n법원은 공소사실 또는 적용법조의 추가, 철회 또는 변경이 피고인의 불이익을 증가할 염려가 있다고 인정한 때에는 직권 또는 피고인이나 변호인의 청구에 의하여 피고인으로 하여금 필요한 방어의 준비를 하게 하기 위하여 결정으로 필요한 기간 공판절차를 정지할 수 있다.[CT4]\n전제: 사기죄 판결이 금고 이상의 형에 해당하는 것으로 가정함\n전제: 횡령행위가 사기죄 판결확정 전에 행해졌다는 사실관계가 인정된다고 가정함\n한계: 공소사실의 동일성 판단은 구체적 사실관계에 따라 달라질 수 있으며, 본 답변은 일반적 법적 요건만을 제시함",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "검사는 법원의 허가를 얻어 공소장에 기재한 공소사실 또는 적용법조의 추가, 철회 또는 변경을 할 수 있으며, 법원은 공소사실의 동일성을 해하지 아니하는 한도에서 허가하여야 한다.[CT1]\n금고 이상의 형에 처한 판결이 확정된 죄와 그 판결확정 전에 범한 죄는 경합범으로 한다.[CT2]\n법원은 공소사실 또는 적용법조의 추가, 철회 또는 변경이 있을 때에는 그 사유를 신속히 피고인 또는 변호인에게 고지하여야 한다.[CT3]\n법원은 공소사실 또는 적용법조의 추가, 철회 또는 변경이 피고인의 불이익을 증가할 염려가 있다고 인정한 때에는 직권 또는 피고인이나 변호인의 청구에 의하여 피고인으로 하여금 필요한 방어의 준비를 하게 하기 위하여 결정으로 필요한 기간 공판절차를 정지할 수 있다.[CT4]\n전제: 사기죄 판결이 금고 이상의 형에 해당하는 것으로 가정함\n전제: 횡령행위가 사기죄 판결확정 전에 행해졌다는 사실관계가 인정된다고 가정함\n한계: 공소사실의 동일성 판단은 구체적 사실관계에 따라 달라질 수 있으며, 본 답변은 일반적 법적 요건만을 제시함",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T18:27:36.100699+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 268355.867,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 100,
+      "dedup_collapse": 49,
+      "evidence_fusion": 167,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 100
+    }
+  },
+  "run_id": "a924b86a-cea8-4dd5-8037-11bcf7107aed",
+  "state": {
+    "accepted_provision_ids": [
+      "형사소송법 298조  공소장의 변경#KOBLEX-232546",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232543",
+      "형법 37조  경합범#KOBLEX-192720",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232545"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 4,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_rule",
+        "question_anchor": "검사가 공소장을 변경할 수 있는 경우는 어떤 경우인가",
+        "requested_output": "경합범 처리를 위해 검사가 공소장을 변경할 수 있는 법적 요건 및 허용 범위"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "형사소송법 298조  공소장의 변경#KOBLEX-232544"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 298조  공소장의 변경#KOBLEX-232544",
+        "provision_text": "②법원은 심리의 경과에 비추어 상당하다고 인정할 때에는 공소사실 또는 적용법조의 추가 또는 변경을 요구하여야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.49943843483924866,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 298조  공소장의 변경 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 298조  공소장의 변경#KOBLEX-232543"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 298조  공소장의 변경#KOBLEX-232543",
+        "provision_text": "①검사는 법원의 허가를 얻어 공소장에 기재한 공소사실 또는 적용법조의 추가, 철회 또는 변경을 할 수 있다. 이 경우에 법원은 공소사실의 동일성을 해하지 아니하는 한도에서 허가하여야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.48719125986099243,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 298조  공소장의 변경 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 298조  공소장의 변경#KOBLEX-232545"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 298조  공소장의 변경#KOBLEX-232545",
+        "provision_text": "③법원은 공소사실 또는 적용법조의 추가, 철회 또는 변경이 있을 때에는 그 사유를 신속히 피고인 또는 변호인에게 고지하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.1169646829366684,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 298조  공소장의 변경 3항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 298조  공소장의 변경#KOBLEX-232546"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 2.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 298조  공소장의 변경#KOBLEX-232546",
+        "provision_text": "④법원은 전3항의 규정에 의한 공소사실 또는 적용법조의 추가, 철회 또는 변경이 피고인의 불이익을 증가할 염려가 있다고 인정한 때에는 직권 또는 피고인이나 변호인의 청구에 의하여 피고인으로 하여금 필요한 방어의 준비를 하게 하기 위하여 결정으로 필요한 기간 공판절차를 정지할 수 있다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.019567327573895454,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 298조  공소장의 변경 4항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 355조  공소장의 변경#KOBLEX-093340",
+          "군사법원법 355조  공소장의 변경#KOBLEX-159305"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 26.23037242970508,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 355조  공소장의 변경#KOBLEX-093340",
+        "provision_text": "제355조(공소장의 변경)",
+        "rerank_rank": 1,
+        "rerank_score": 0.004257167689502239,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "군사법원법 355조  공소장의 변경",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 298조  공소장의 변경#KOBLEX-232542"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 26.23037242970508,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 298조  공소장의 변경#KOBLEX-232542",
+        "provision_text": "제298조(공소장의 변경)",
+        "rerank_rank": 4,
+        "rerank_score": 0.003208952723070979,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 298조  공소장의 변경",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 39조  판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범#KOBLEX-192727"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 28,
+        "first_stage_score": 23.979136608053118,
+        "fusion_rank": 11,
+        "issue_id": "I1",
+        "provision_id": "형법 39조  판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범#KOBLEX-192727",
+        "provision_text": "③경합범에 의한 판결의 선고를 받은 자가 경합범 중의 어떤 죄에 대하여 사면 또는 형의 집행이 면제된 때에는 다른 죄에 대하여 다시 형을 정한다.",
+        "rerank_rank": 11,
+        "rerank_score": 0.00014260676107369363,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 39조  판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 8조  사건의 직권이송#KOBLEX-231431"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 2.0,
+        "fusion_rank": 13,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 8조  사건의 직권이송#KOBLEX-231431",
+        "provision_text": "②단독판사의 관할사건이 공소장변경에 의하여 합의부 관할사건으로 변경된 경우에 법원은 결정으로 관할권이 있는 법원에 이송한다. <신설 1995.12.29>",
+        "rerank_rank": 13,
+        "rerank_score": 0.00012223588419146836,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 8조  사건의 직권이송 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 393조  경합범 중 다시 형을 정하는 절차#KOBLEX-093446",
+          "군사법원법 393조  경합범 중 다시 형을 정하는 절차#KOBLEX-159411"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 24,
+        "first_stage_score": 24.83541846118181,
+        "fusion_rank": 12,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 393조  경합범 중 다시 형을 정하는 절차#KOBLEX-093446",
+        "provision_text": "제393조(경합범 중 다시 형을 정하는 절차)",
+        "rerank_rank": 12,
+        "rerank_score": 7.238840771606192e-05,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "군사법원법 393조  경합범 중 다시 형을 정하는 절차",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 37조  경합범#KOBLEX-192720"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 35.94138029682628,
+        "fusion_rank": 14,
+        "issue_id": "I1",
+        "provision_id": "형법 37조  경합범#KOBLEX-192720",
+        "provision_text": "제37조(경합범) 판결이 확정되지 아니한 수개의 죄 또는 금고 이상의 형에 처한 판결이 확정된 죄와 그 판결확정전에 범한 죄를 경합범으로 한다. <개정 2004.1.20>",
+        "rerank_rank": 14,
+        "rerank_score": 3.057383946725167e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형법 37조  경합범",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "군사법원법 355조  공소장의 변경#KOBLEX-093340": "제355조(공소장의 변경)",
+      "군사법원법 393조  경합범 중 다시 형을 정하는 절차#KOBLEX-093446": "제393조(경합범 중 다시 형을 정하는 절차)",
+      "형법 37조  경합범#KOBLEX-192720": "제37조(경합범) 판결이 확정되지 아니한 수개의 죄 또는 금고 이상의 형에 처한 판결이 확정된 죄와 그 판결확정전에 범한 죄를 경합범으로 한다. <개정 2004.1.20>",
+      "형법 39조  판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범#KOBLEX-192727": "③경합범에 의한 판결의 선고를 받은 자가 경합범 중의 어떤 죄에 대하여 사면 또는 형의 집행이 면제된 때에는 다른 죄에 대하여 다시 형을 정한다.",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232542": "제298조(공소장의 변경)",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232543": "①검사는 법원의 허가를 얻어 공소장에 기재한 공소사실 또는 적용법조의 추가, 철회 또는 변경을 할 수 있다. 이 경우에 법원은 공소사실의 동일성을 해하지 아니하는 한도에서 허가하여야 한다.",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232544": "②법원은 심리의 경과에 비추어 상당하다고 인정할 때에는 공소사실 또는 적용법조의 추가 또는 변경을 요구하여야 한다.",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232545": "③법원은 공소사실 또는 적용법조의 추가, 철회 또는 변경이 있을 때에는 그 사유를 신속히 피고인 또는 변호인에게 고지하여야 한다.",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232546": "④법원은 전3항의 규정에 의한 공소사실 또는 적용법조의 추가, 철회 또는 변경이 피고인의 불이익을 증가할 염려가 있다고 인정한 때에는 직권 또는 피고인이나 변호인의 청구에 의하여 피고인으로 하여금 필요한 방어의 준비를 하게 하기 위하여 결정으로 필요한 기간 공판절차를 정지할 수 있다.",
+      "형사소송법 8조  사건의 직권이송#KOBLEX-231431": "②단독판사의 관할사건이 공소장변경에 의하여 합의부 관할사건으로 변경된 경우에 법원은 결정으로 관할권이 있는 법원에 이송한다. <신설 1995.12.29>"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형사소송법 298조  공소장의 변경#KOBLEX-232543"
+            ],
+            "rationale": "C002(형사소송법 298조 1항)가 공소사실의 동일성을 해하지 않는 한도에서 법원 허가를 받아 변경할 수 있음을 명시하여 요건을 충족합니다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형사소송법 298조  공소장의 변경#KOBLEX-232545",
+              "형사소송법 298조  공소장의 변경#KOBLEX-232546"
+            ],
+            "rationale": "C003(형사소송법 298조 3항)의 피고인 고지 의무와 C004(형사소송법 298조 4항)의 공판절차 정지 규정이 절차적 요건을 충족합니다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형사소송법 298조  공소장의 변경#KOBLEX-232543",
+          "형사소송법 298조  공소장의 변경#KOBLEX-232545",
+          "형사소송법 298조  공소장의 변경#KOBLEX-232546"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "공소장 변경의 실질적 요건(공소사실 동일성, 법원 허가)과 절차적 요건(피고인 고지, 방어 준비 기회 보장)을 규정한 형사소송법 제298조 제1항, 제3항, 제4항이 모두 후보 조항에 포함되어 있어 완료 기준을 충족합니다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형법 37조  경합범#KOBLEX-192720"
+            ],
+            "rationale": "C010(형법 37조)이 확정된 죄와 그 확정 전에 범한 죄를 경합범으로 정의하여 법적 근거를 제공합니다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형법 37조  경합범#KOBLEX-192720"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "형법 제37조(C010)가 확정된 판결과 그 확정 전에 범한 죄를 경합범으로 규정하여, 확정된 사기죄를 현재 진행 중인 횡령죄 사건과 경합범으로 처리할 수 있는 법적 근거를 제공합니다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 298조  공소장의 변경#KOBLEX-232543",
+        "support_spans": [
+          {
+            "end_char": 105,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 298조  공소장의 변경#KOBLEX-232545",
+        "support_spans": [
+          {
+            "end_char": 72,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 298조  공소장의 변경#KOBLEX-232546",
+        "support_spans": [
+          {
+            "end_char": 159,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I1",
+        "provision_id": "형법 37조  경합범#KOBLEX-192720",
+        "support_spans": [
+          {
+            "end_char": 95,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "검사가 공소장을 변경하여 확정된 사기죄를 현재 진행 중인 횡령죄 사건과 경합범으로 처리할 수 있는 법적 근거와 요건",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 2022년에 횡령죄로 기소되어 현재 재판 중에 있으며, 2021년에는 이미 사기죄로 징역형을 선고받고 그 판결이 확정된 상태입니다. 이때 갑의 횡령행위는 사기죄의 판결확정 전에 행해졌으나, 2022년에 비로소 드러난 것입니다. 이번 재판 과정에서 검사는 갑의 횡령죄와 확정된 사기죄를 경합범으로 처리하고자 합니다. 이를 위해 검사는 공소장의 일부 내용을 변경하려고 합니다. [질문] 갑의 횡령죄와 확정된 사기죄를 경합범으로 처리하고자 할 때, 검사가 공소장을 변경할 수 있는 경우는 어떤 경우인가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형사소송법 공소장 변경 요건 절차 한계",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사소송법",
+          "공소장",
+          "변경",
+          "요건",
+          "절차",
+          "한계"
+        ],
+        "query_text": "형사소송법 공소장 변경 요건 절차 한계 [원문 맥락] 이를 위해 검사는 공소장의 일부 내용을 변경하려고 합니다. 갑의 횡령죄와 확정된 사기죄를 경합범으로 처리하고자 할 때, 검사가 공소장을 변경할 수 있는 경우는 어떤 경우인가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "공소장 변경 요건 절차 한계",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "확정 판결 경합범 공소장 변경 허용",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "확정",
+          "판결",
+          "경합범",
+          "공소장",
+          "변경",
+          "허용"
+        ],
+        "query_text": "확정 판결 경합범 공소장 변경 허용 [원문 맥락] 이를 위해 검사는 공소장의 일부 내용을 변경하려고 합니다. 갑의 횡령죄와 확정된 사기죄를 경합범으로 처리하고자 할 때, 검사가 공소장을 변경할 수 있는 경우는 어떤 경우인가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "확정 판결 경합범 공소장 변경 허용",
+        "statute_hints": [
+          "형법",
+          "형사소송법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 2022년에 횡령죄로 기소되어 현재 재판 중에 있으며, 2021년에는 이미 사기죄로 징역형을 선고받고 그 판결이 확정된 상태입니다. 이때 갑의 횡령행위는 사기죄의 판결확정 전에 행해졌으나, 2022년에 비로소 드러난 것입니다. 이번 재판 과정에서 검사는 갑의 횡령죄와 확정된 사기죄를 경합범으로 처리하고자 합니다. 이를 위해 검사는 공소장의 일부 내용을 변경하려고 합니다.\n\n[질문]\n갑의 횡령죄와 확정된 사기죄를 경합범으로 처리하고자 할 때, 검사가 공소장을 변경할 수 있는 경우는 어떤 경우인가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "공소장 변경이 허용되는 구체적 법적 요건과 절차적 제한을 명시하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "공소장 변경의 요건(사실관계의 동일성, 공소사유의 변경 범위 등)을 명시하는 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "공소장 변경의 절차적 요건(피고인의 의견청취, 기일지정 등)을 명시하는 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "형사소송법상 공소장 변경의 요건, 절차, 및 한계에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문은 검사가 공소장을 변경할 수 있는 경우를 묻고 있으므로, 공소장 변경의 법적 근거와 요건을 규정한 조항이 없으면 결론을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "확정된 범죄를 새로운 사건에서 경합범으로 처리할 수 있는 법적 근거 또는 예외 규정을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "확정된 범죄를 경합범으로 처리할 수 있는 법적 근거(형법상 경합범 규정 또는 형사소송법상 예외 규정) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "확정된 판결의 기판력 또는一事不再理 원칙에 대한 예외로서 경합범 처리 시 공소장 변경의 허용 여부",
+        "evidence_item_id": "E2",
+        "evidence_type": "exception",
+        "issue_id": "I1",
+        "necessity_reason": "사기죄 판결이 이미 확정된 상태이므로, 확정된 범죄를 새로운 공소장에서 경합범으로 포함시킬 수 있는지에 대한 법적 근거가 없으면 공소장 변경의 적법성을 판단할 수 없음",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "a924b86a-cea8-4dd5-8037-11bcf7107aed",
+    "seen_provision_ids": [
+      "형법 39조  판결을 받지 아니한 경합범, 수개의 판결과 경합범, 형의 집행과 경합범#KOBLEX-192727",
+      "군사법원법 355조  공소장의 변경#KOBLEX-093340",
+      "형법 37조  경합범#KOBLEX-192720",
+      "형사소송법 8조  사건의 직권이송#KOBLEX-231431",
+      "군사법원법 393조  경합범 중 다시 형을 정하는 절차#KOBLEX-093446",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232546",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232545",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232542",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232543",
+      "형사소송법 298조  공소장의 변경#KOBLEX-232544"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

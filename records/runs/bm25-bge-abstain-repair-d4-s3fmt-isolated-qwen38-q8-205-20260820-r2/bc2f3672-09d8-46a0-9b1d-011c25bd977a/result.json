@@ -1,0 +1,1192 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "화물자동차 운송사업자가 허가사항을 변경하려면 국토교통부장관의 변경허가를 받아야 합니다.[CT1]\n대통령령으로 정하는 경미한 사항을 변경하려면 국토교통부장관에게 신고하여야 합니다.[CT2]\n허가의 신청방법 및 절차 등에 필요한 사항은 국토교통부령으로 정합니다.[CT3]\n후보 조문에는 화물자동차 운송사업자의 유류비 증가에 대한 재정 지원 제공 주체에 관한 법적 근거가 포함되어 있지 않습니다.[CT4]\n전제: 갑이 화물자동차 운송사업의 허가를 받은 운송사업자임을 전제로 합니다.\n한계: 후보 조문에는 화물자동차 운송사업자의 유류비 증가에 따른 재정 지원 제도 및 제공 주체에 관한 법적 근거가 포함되어 있지 않아, 해당 주체를 특정할 수 없습니다.\n한계: 구체적인 제출 서류 목록 및 처리 기한은 후보 조문에 명시되지 않아, 하위 법령(국토교통부령) 확인이 필요합니다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T16:44:25.017660+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 946647.262,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 569,
+      "dedup_collapse": 51,
+      "evidence_fusion": 569,
+      "first_stage": 700,
+      "request_rerank": 700,
+      "round_selected": 30,
+      "rrf": 600,
+      "selected": 569
+    }
+  },
+  "run_id": "bc2f3672-09d8-46a0-9b1d-011c25bd977a",
+  "state": {
+    "accepted_provision_ids": [
+      "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162377",
+      "화물자동차 운수사업법 시행령 3조  화물자동차 운송사업의 허가 및 신고 대상#KOBLEX-157794",
+      "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162374",
+      "화물자동차 운수사업법 시행령 14조  권한의 위임#KOBLEX-157983"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 6,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 5,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 21
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 21,
+          "claim_count": 4
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "procedure",
+        "question_anchor": "허가사항을 변경하려면 어떤 절차를 따라야 하며",
+        "requested_output": "화물자동차 운송사업 허가사항 변경 절차"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "entity",
+        "question_anchor": "재정 지원을 제공할 수 있는 주체는 누구인가",
+        "requested_output": "유류비 증가에 대한 재정 지원 제공 주체"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162374"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 29,
+        "first_stage_score": 24.04182690897188,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162374",
+        "provision_text": "③ 제1항에 따라 화물자동차 운송사업의 허가를 받은 자(이하 \"운송사업자\"라 한다)가 허가사항을 변경하려면 국토교통부령으로 정하는 바에 따라 국토교통부장관의 변경허가를 받아야 한다. 다만, 대통령령으로 정하는 경미한 사항을 변경하려면 국토교통부령으로 정하는 바에 따라 국토교통부장관에게 신고하여야 한다. <개정 2013.3.23>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9983963370323181,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "여객자동차 운수사업법 50조  재정 지원#KOBLEX-019050",
+          "여객자동차 운수사업법 50조  재정 지원#KOBLEX-088550",
+          "여객자동차 운수사업법 50조  재정 지원#KOBLEX-147062"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 33.44101483939876,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "여객자동차 운수사업법 50조  재정 지원#KOBLEX-019050",
+        "provision_text": "제50조(재정 지원)",
+        "rerank_rank": 1,
+        "rerank_score": 0.0001365677744615823,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "여객자동차 운수사업법 50조  재정 지원",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 시행령 14조  권한의 위임#KOBLEX-157983"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 45.89004485555058,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 시행령 14조  권한의 위임#KOBLEX-157983",
+        "provision_text": "2. 법 제3조제3항 본문에 따른 화물자동차 운송사업의 허가사항 변경허가",
+        "rerank_rank": 2,
+        "rerank_score": 0.9982265830039978,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "화물자동차 운수사업법 시행령 14조  권한의 위임 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 37조  책임보험계약등의 해제#KOBLEX-162626"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 37.352103619271226,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 37조  책임보험계약등의 해제#KOBLEX-162626",
+        "provision_text": "1. 제3조제3항 본문에 따라 화물자동차 운송사업의 허가사항이 변경(감차만을 말한다)된 경우",
+        "rerank_rank": 3,
+        "rerank_score": 0.9970616698265076,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "화물자동차 운수사업법 37조  책임보험계약등의 해제 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 24조  화물자동차 운송주선사업의 허가 등#KOBLEX-162565"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 92,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 24조  화물자동차 운송주선사업의 허가 등#KOBLEX-162565",
+        "provision_text": "② 제1항 본문에 따라 화물자동차 운송주선사업의 허가를 받은 자(이하 \"운송주선사업자\"라 한다)가 허가사항을 변경하려면 국토교통부령으로 정하는 바에 따라 국토교통부장관에게 신고하여야 한다. <개정 2013.3.23>",
+        "rerank_rank": 4,
+        "rerank_score": 0.9858508706092834,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "화물자동차 운수사업법 24조  화물자동차 운송주선사업의 허가 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 29조  화물자동차 운송가맹사업의 허가 등#KOBLEX-162589"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 93,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 29조  화물자동차 운송가맹사업의 허가 등#KOBLEX-162589",
+        "provision_text": "② 제1항에 따라 허가를 받은 운송가맹사업자는 허가사항을 변경하려면 국토교통부령으로 정하는 바에 따라 국토교통부장관의 변경허가를 받아야 한다. 다만, 대통령령으로 정하는 경미한 사항을 변경하려면 국토교통부령으로 정하는 바에 따라 국토교통부장관에게 신고하여야 한다. <개정 2013.3.23>",
+        "rerank_rank": 5,
+        "rerank_score": 0.9146447777748108,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "화물자동차 운수사업법 29조  화물자동차 운송가맹사업의 허가 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162377"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 3.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162377",
+        "provision_text": "⑥ 제1항에 따른 허가의 신청방법 및 절차 등에 필요한 사항은 국토교통부령으로 정한다. <개정 2018.4.17>",
+        "rerank_rank": 6,
+        "rerank_score": 0.9129449129104614,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등 6항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 37조  책임보험계약등의 해제#KOBLEX-162630"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 29.52983074028432,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 37조  책임보험계약등의 해제#KOBLEX-162630",
+        "provision_text": "5. 제29조제2항 본문에 따라 화물자동차 운송가맹사업의 허가사항이 변경(감차만을 말한다)된 경우",
+        "rerank_rank": 7,
+        "rerank_score": 0.8878609538078308,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1",
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "화물자동차 운수사업법 37조  책임보험계약등의 해제 5호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162379"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 3.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162379",
+        "provision_text": "⑧ 운송사업자는 다음 각 호의 어느 하나에 해당하면 증차를 수반하는 허가사항을 변경할 수 없다. <개정 2017.3.21> 1. 제13조에 따른 개선명령을 받고 이를 이행하지 아니한 경우 2. 제19조제1항에 따른 감차(減車) 조치 명령을 받은 후 1년이 지나지 아니한 경우",
+        "rerank_rank": 8,
+        "rerank_score": 0.8672555088996887,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등 8항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 시행령 5조  화물자동차 운송사업의 허가취소 등의 기준#KOBLEX-157838"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 67,
+        "first_stage_score": 20.483541962564846,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 시행령 5조  화물자동차 운송사업의 허가취소 등의 기준#KOBLEX-157838",
+        "provision_text": "① 법 제19조제1항에 따른 허가취소, 사업정지처분 또는 감차(減車) 조치 명령은 다음 각 호의 구분에 따라 별표 1의 기준에 따라 해야 한다. 이 경우 별표 1 제2호차목20)의 위반행위에 대한 처분의 세부 기준은 국토교통부령으로 정한다. <개정 2011.12.13, 2013.3.23, 2015.5.26, 2016.6.21, 2018.7.3, 2018.11.27, 2022.4.13> 1. 허가취소: 화물자동차 운송사업의 허가취소 2. 감차 조치: 화물자동차의 감차를 수반하는 허가사항의 변경 3. 위반차량 감차 조치: 위반행위와 직접 관련된 화물자동차(위반행위와 직접 관련된 화물자동차가 없는 경우에는 위반행위를 한 운송사업자의 다른 화물자동차를 말한다)에 대한 감차 조치 4. 사업 전부정지: 화물자동차 운송사업 전부의 정지 5. 사업 일부정지: 화물자동차의 5분의 1(이 경우 소수점 이하의 수는 버린다. 다만, 5분의 1에 해당하는 화물자동차의 대수가 1 미만인 경우에는 이를 1대로 본다)에 대한 사용정지 6. 위반차량 운행정지: 위반행위와 직접 관련된 화물자동차(위반행위와 직접 관련된 화물자동차가 없는 경우에는 위반행위를 한 운송사업자의 다른 화물자동차를 말한다)의 사용정지",
+        "rerank_rank": 9,
+        "rerank_score": 0.7594965696334839,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "화물자동차 운수사업법 시행령 5조  화물자동차 운송사업의 허가취소 등의 기준 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157863"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 3.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157863",
+        "provision_text": "1. 대표자의 변경(법인인 경우만 해당한다)",
+        "rerank_rank": 4,
+        "rerank_score": 0.0145700229331851,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157867"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 3.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157867",
+        "provision_text": "5. 화물자동차 운송가맹계약의 체결 또는 해제ㆍ해지",
+        "rerank_rank": 5,
+        "rerank_score": 0.007497870363295078,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상 5호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157866"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 88,
+        "first_stage_score": 3.0,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157866",
+        "provision_text": "4. 주사무소ㆍ영업소 및 화물취급소의 이전",
+        "rerank_rank": 6,
+        "rerank_score": 0.006157367490231991,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상 4호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157864"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 3.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157864",
+        "provision_text": "2. 화물취급소의 설치 및 폐지",
+        "rerank_rank": 7,
+        "rerank_score": 0.0020729287061840296,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157865"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 3.0,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157865",
+        "provision_text": "3. 화물자동차의 대폐차(화물자동차를 직접 소유한 운송가맹사업자만 해당한다)",
+        "rerank_rank": 8,
+        "rerank_score": 0.0015135060530155897,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상 3호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 시행령 14조  권한의 위임#KOBLEX-158003"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 96,
+        "first_stage_score": 2.0,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 시행령 14조  권한의 위임#KOBLEX-158003",
+        "provision_text": "17의3. 법 제29조제2항에 따른 화물자동차 운송가맹사업의 변경허가 및 변경신고",
+        "rerank_rank": 9,
+        "rerank_score": 0.0009749114979058504,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "화물자동차 운수사업법 시행령 14조  권한의 위임 22호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162381"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 23,
+        "first_stage_score": 26.25919592505914,
+        "fusion_rank": 11,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162381",
+        "provision_text": "⑩ 제9항에 따른 신고가 신고서의 기재사항 및 첨부서류에 흠이 없고, 법령 등에 규정된 형식상의 요건을 충족하는 경우에는 신고서가 접수기관에 도달된 때에 신고 의무가 이행된 것으로 본다. <신설 2017.3.21>",
+        "rerank_rank": 11,
+        "rerank_score": 0.9972891807556152,
+        "retrieval_round": 3,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등 10항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 2조  정의#KOBLEX-162357"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 32.230711135162835,
+        "fusion_rank": 61,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 2조  정의#KOBLEX-162357",
+        "provision_text": "2. \"화물자동차 운수사업\"이란 화물자동차 운송사업, 화물자동차 운송주선사업 및 화물자동차 운송가맹사업을 말한다.",
+        "rerank_rank": 61,
+        "rerank_score": 1.0624296919559129e-05,
+        "retrieval_round": 3,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2",
+          "GRQ-R3-3"
+        ],
+        "statute_name": "화물자동차 운수사업법 2조  정의 2호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 18조  화물자동차 운송사업의 휴업 및 폐업 신고#KOBLEX-162536"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 22,
+        "first_stage_score": 26.25919592505914,
+        "fusion_rank": 15,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 18조  화물자동차 운송사업의 휴업 및 폐업 신고#KOBLEX-162536",
+        "provision_text": "② 제1항에 따른 신고가 신고서의 기재사항 및 첨부서류에 흠이 없고, 법령 등에 규정된 형식상의 요건을 충족하는 경우에는 신고서가 접수기관에 도달된 때에 신고 의무가 이행된 것으로 본다. <신설 2017.3.21>",
+        "rerank_rank": 15,
+        "rerank_score": 0.5210034251213074,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "화물자동차 운수사업법 18조  화물자동차 운송사업의 휴업 및 폐업 신고 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 시행령 3조  화물자동차 운송사업의 허가 및 신고 대상#KOBLEX-157794"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 93,
+        "first_stage_score": 2.0,
+        "fusion_rank": 22,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 시행령 3조  화물자동차 운송사업의 허가 및 신고 대상#KOBLEX-157794",
+        "provision_text": "② 법 제3조제3항 단서에서 \"대통령령으로 정하는 경미한 사항\"이란 다음 각 호의 어느 하나에 해당하는 사항을 말한다. 1. 상호의 변경 2. 대표자의 변경(법인인 경우만 해당한다) 3. 화물취급소의 설치 또는 폐지 4. 화물자동차의 대폐차(代廢車) 5. 주사무소ㆍ영업소 및 화물취급소의 이전. 다만, 주사무소의 경우 관할 관청의 행정구역 내에서의 이전만 해당한다.",
+        "rerank_rank": 22,
+        "rerank_score": 0.24134039878845215,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "화물자동차 운수사업법 시행령 3조  화물자동차 운송사업의 허가 및 신고 대상 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157862"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 25.408728496058004,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157862",
+        "provision_text": "제9조의2(운송가맹사업자의 허가사항 변경신고의 대상) 법 제29조제2항 단서에 따라 변경신고를 하여야 하는 사항은 다음 각 호와 같다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.2170410454273224,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "여객자동차 운수사업법 50조  재정 지원#KOBLEX-019050": "제50조(재정 지원)",
+      "화물자동차 운수사업법 18조  화물자동차 운송사업의 휴업 및 폐업 신고#KOBLEX-162536": "② 제1항에 따른 신고가 신고서의 기재사항 및 첨부서류에 흠이 없고, 법령 등에 규정된 형식상의 요건을 충족하는 경우에는 신고서가 접수기관에 도달된 때에 신고 의무가 이행된 것으로 본다. <신설 2017.3.21>",
+      "화물자동차 운수사업법 24조  화물자동차 운송주선사업의 허가 등#KOBLEX-162565": "② 제1항 본문에 따라 화물자동차 운송주선사업의 허가를 받은 자(이하 \"운송주선사업자\"라 한다)가 허가사항을 변경하려면 국토교통부령으로 정하는 바에 따라 국토교통부장관에게 신고하여야 한다. <개정 2013.3.23>",
+      "화물자동차 운수사업법 29조  화물자동차 운송가맹사업의 허가 등#KOBLEX-162589": "② 제1항에 따라 허가를 받은 운송가맹사업자는 허가사항을 변경하려면 국토교통부령으로 정하는 바에 따라 국토교통부장관의 변경허가를 받아야 한다. 다만, 대통령령으로 정하는 경미한 사항을 변경하려면 국토교통부령으로 정하는 바에 따라 국토교통부장관에게 신고하여야 한다. <개정 2013.3.23>",
+      "화물자동차 운수사업법 2조  정의#KOBLEX-162357": "2. \"화물자동차 운수사업\"이란 화물자동차 운송사업, 화물자동차 운송주선사업 및 화물자동차 운송가맹사업을 말한다.",
+      "화물자동차 운수사업법 37조  책임보험계약등의 해제#KOBLEX-162626": "1. 제3조제3항 본문에 따라 화물자동차 운송사업의 허가사항이 변경(감차만을 말한다)된 경우",
+      "화물자동차 운수사업법 37조  책임보험계약등의 해제#KOBLEX-162630": "5. 제29조제2항 본문에 따라 화물자동차 운송가맹사업의 허가사항이 변경(감차만을 말한다)된 경우",
+      "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162374": "③ 제1항에 따라 화물자동차 운송사업의 허가를 받은 자(이하 \"운송사업자\"라 한다)가 허가사항을 변경하려면 국토교통부령으로 정하는 바에 따라 국토교통부장관의 변경허가를 받아야 한다. 다만, 대통령령으로 정하는 경미한 사항을 변경하려면 국토교통부령으로 정하는 바에 따라 국토교통부장관에게 신고하여야 한다. <개정 2013.3.23>",
+      "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162377": "⑥ 제1항에 따른 허가의 신청방법 및 절차 등에 필요한 사항은 국토교통부령으로 정한다. <개정 2018.4.17>",
+      "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162379": "⑧ 운송사업자는 다음 각 호의 어느 하나에 해당하면 증차를 수반하는 허가사항을 변경할 수 없다. <개정 2017.3.21> 1. 제13조에 따른 개선명령을 받고 이를 이행하지 아니한 경우 2. 제19조제1항에 따른 감차(減車) 조치 명령을 받은 후 1년이 지나지 아니한 경우",
+      "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162381": "⑩ 제9항에 따른 신고가 신고서의 기재사항 및 첨부서류에 흠이 없고, 법령 등에 규정된 형식상의 요건을 충족하는 경우에는 신고서가 접수기관에 도달된 때에 신고 의무가 이행된 것으로 본다. <신설 2017.3.21>",
+      "화물자동차 운수사업법 시행령 14조  권한의 위임#KOBLEX-157983": "2. 법 제3조제3항 본문에 따른 화물자동차 운송사업의 허가사항 변경허가",
+      "화물자동차 운수사업법 시행령 14조  권한의 위임#KOBLEX-158003": "17의3. 법 제29조제2항에 따른 화물자동차 운송가맹사업의 변경허가 및 변경신고",
+      "화물자동차 운수사업법 시행령 3조  화물자동차 운송사업의 허가 및 신고 대상#KOBLEX-157794": "② 법 제3조제3항 단서에서 \"대통령령으로 정하는 경미한 사항\"이란 다음 각 호의 어느 하나에 해당하는 사항을 말한다. 1. 상호의 변경 2. 대표자의 변경(법인인 경우만 해당한다) 3. 화물취급소의 설치 또는 폐지 4. 화물자동차의 대폐차(代廢車) 5. 주사무소ㆍ영업소 및 화물취급소의 이전. 다만, 주사무소의 경우 관할 관청의 행정구역 내에서의 이전만 해당한다.",
+      "화물자동차 운수사업법 시행령 5조  화물자동차 운송사업의 허가취소 등의 기준#KOBLEX-157838": "① 법 제19조제1항에 따른 허가취소, 사업정지처분 또는 감차(減車) 조치 명령은 다음 각 호의 구분에 따라 별표 1의 기준에 따라 해야 한다. 이 경우 별표 1 제2호차목20)의 위반행위에 대한 처분의 세부 기준은 국토교통부령으로 정한다. <개정 2011.12.13, 2013.3.23, 2015.5.26, 2016.6.21, 2018.7.3, 2018.11.27, 2022.4.13> 1. 허가취소: 화물자동차 운송사업의 허가취소 2. 감차 조치: 화물자동차의 감차를 수반하는 허가사항의 변경 3. 위반차량 감차 조치: 위반행위와 직접 관련된 화물자동차(위반행위와 직접 관련된 화물자동차가 없는 경우에는 위반행위를 한 운송사업자의 다른 화물자동차를 말한다)에 대한 감차 조치 4. 사업 전부정지: 화물자동차 운송사업 전부의 정지 5. 사업 일부정지: 화물자동차의 5분의 1(이 경우 소수점 이하의 수는 버린다. 다만, 5분의 1에 해당하는 화물자동차의 대수가 1 미만인 경우에는 이를 1대로 본다)에 대한 사용정지 6. 위반차량 운행정지: 위반행위와 직접 관련된 화물자동차(위반행위와 직접 관련된 화물자동차가 없는 경우에는 위반행위를 한 운송사업자의 다른 화물자동차를 말한다)의 사용정지",
+      "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157862": "제9조의2(운송가맹사업자의 허가사항 변경신고의 대상) 법 제29조제2항 단서에 따라 변경신고를 하여야 하는 사항은 다음 각 호와 같다.",
+      "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157863": "1. 대표자의 변경(법인인 경우만 해당한다)",
+      "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157864": "2. 화물취급소의 설치 및 폐지",
+      "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157865": "3. 화물자동차의 대폐차(화물자동차를 직접 소유한 운송가맹사업자만 해당한다)",
+      "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157866": "4. 주사무소ㆍ영업소 및 화물취급소의 이전",
+      "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157867": "5. 화물자동차 운송가맹계약의 체결 또는 해제ㆍ해지"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162374"
+            ],
+            "rationale": "C001 explicitly states the legal requirement for obtaining a change permit or reporting minor changes.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162374",
+              "화물자동차 운수사업법 시행령 14조  권한의 위임#KOBLEX-157983",
+              "화물자동차 운수사업법 시행령 3조  화물자동차 운송사업의 허가 및 신고 대상#KOBLEX-157794"
+            ],
+            "rationale": "The competent authority is identified, and the scope of minor changes is defined, but the specific documents to be submitted are not listed in the provided texts.",
+            "requirement_id": "E1-R2",
+            "status": "partially_satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162377"
+            ],
+            "rationale": "C007 delegates the procedure to the Enforcement Decree, but the specific steps and deadlines are not present in the candidate provisions.",
+            "requirement_id": "E1-R3",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162374",
+          "화물자동차 운수사업법 시행령 14조  권한의 위임#KOBLEX-157983",
+          "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162377",
+          "화물자동차 운수사업법 시행령 3조  화물자동차 운송사업의 허가 및 신고 대상#KOBLEX-157794"
+        ],
+        "missing_aspects": [
+          "E1-R2",
+          "E1-R3"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "The legal basis for the change procedure and the competent authority are established. However, the specific procedural requirements such as the list of submission documents and the exact processing deadlines are delegated to the Enforcement Decree and are not explicitly detailed in the supplied candidate provisions.",
+        "status": "partially_covered"
+      },
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "No provision in the candidate set establishes a financial support system for cargo transporters.",
+            "requirement_id": "E2-R1",
+            "status": "unsatisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "Without a legal basis for support, the providing entity cannot be identified from the supplied provisions.",
+            "requirement_id": "E2-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "uncovered",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "E2-R1",
+          "E2-R2"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The only candidate provision related to financial support (C002) is from the Passenger Automobile Transport Business Act, which applies to passenger transport, not the cargo transport business described in the question. No candidate provision provides a legal basis for financial support for cargo transporters due to fuel price increases.",
+        "status": "uncovered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162374",
+        "support_spans": [
+          {
+            "end_char": 184,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 시행령 14조  권한의 위임#KOBLEX-157983",
+        "support_spans": [
+          {
+            "end_char": 40,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162377",
+        "support_spans": [
+          {
+            "end_char": 63,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "화물자동차 운수사업법 시행령 3조  화물자동차 운송사업의 허가 및 신고 대상#KOBLEX-157794",
+        "support_spans": [
+          {
+            "end_char": 204,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 5,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "화물자동차 운송사업자의 허가사항 변경에 필요한 법적 절차",
+        "issue_id": "I1"
+      },
+      {
+        "description": "운송사업자의 유류비 증가에 대한 재정 지원 제공 주체",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "변경 신청 주체, 관할 기관, 제출 서류, 처리 기한 등 절차적 요건 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "허가사항 변경 신청의 법적 근거 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "신청 대상 기관 및 제출 서류 확인"
+          },
+          {
+            "requirement_id": "E1-R3",
+            "text": "허가사항 변경 처리 절차 및 기한 확인"
+          }
+        ],
+        "critical": true,
+        "description": "화물자동차 운송사업 허가사항 변경 신청 및 처리 절차",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 명시적으로 허가사항 변경 절차를 요구하고 있어, 해당 절차 없이는 답변 불가",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "유류비 지원 대상, 지원 주체(국가/지자체/기금 등), 지원 근거 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "유류비 증가에 따른 운송사업자 재정 지원 법적 근거 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "재정 지원 제공 주체(국가, 지방자치단체, 또는 특정 기금) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "운송사업자 유류비 증가에 대한 재정 지원 제도 및 제공 주체",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 명시적으로 재정 지원 제공 주체를 요구하고 있어, 해당 주체 확인 없이는 답변 불가",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 화물자동차 운송사업을 운영하는 사업자로, 최근 사업 확장을 위해 기존 허가사항을 변경하려고 한다. 동시에, 을이라는 다른 운송사업자는 최근 유류 가격이 급등하면서 사업 운영에 어려움을 겪고 있다. 이로 인해 을은 유류비 증가에 대한 재정 지원을 신청하고자 한다. [질문] 갑이 화물자동차 운송사업의 허가사항을 변경하려면 어떤 절차를 따라야 하며, 을에게 유류비 증가에 대한 재정 지원을 제공할 수 있는 주체는 누구인가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "화물자동차 운송사업 허가사항 변경 신청 절차 서류",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "화물자동차",
+          "운송사업",
+          "허가사항",
+          "변경",
+          "절차",
+          "신청"
+        ],
+        "query_text": "화물자동차 운송사업 허가사항 변경 절차 [원문 맥락] 이로 인해 을은 유류비 증가에 대한 재정 지원을 신청하고자 한다. 갑이 화물자동차 운송사업의 허가사항을 변경하려면 어떤 절차를 따라야 하며, 을에게 유류비 증가에 대한 재정 지원을 제공할 수 있는 주체는 누구인가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "화물자동차 운송사업 허가사항 변경 절차 및 제출 서류",
+        "statute_hints": [
+          "화물자동차 운수사업법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "운송사업자 유류비 지원 재정 지원 주체 국가 지방자치단체",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "운송사업자",
+          "유류비",
+          "재정지원",
+          "지원주체",
+          "유류가격",
+          "급등"
+        ],
+        "query_text": "운송사업자 유류비 증가 재정 지원 주체 [원문 맥락] 이로 인해 을은 유류비 증가에 대한 재정 지원을 신청하고자 한다. 갑이 화물자동차 운송사업의 허가사항을 변경하려면 어떤 절차를 따라야 하며, 을에게 유류비 증가에 대한 재정 지원을 제공할 수 있는 주체는 누구인가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "유류비 증가에 따른 운송사업자 재정 지원 제공 주체",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "화물자동차 운수사업법 시행령 허가사항 변경 신청 서류 기한",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "화물자동차",
+          "운송사업",
+          "허가사항",
+          "변경",
+          "신청서",
+          "제출서류",
+          "처리기한"
+        ],
+        "query_text": "화물자동차 운송사업 허가사항 변경 신청서 제출 서류 및 처리 기한 [원문 맥락] 이로 인해 을은 유류비 증가에 대한 재정 지원을 신청하고자 한다. 갑이 화물자동차 운송사업의 허가사항을 변경하려면 어떤 절차를 따라야 하며, 을에게 유류비 증가에 대한 재정 지원을 제공할 수 있는 주체는 누구인가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "화물자동차 운송사업 허가사항 변경 신청 시 제출해야 할 서류 목록 및 행정청 처리 기한",
+        "statute_hints": [
+          "화물자동차 운수사업법 시행령"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "화물 운송 유류비 지원 재정 지원 주체 국가 지방자치단체",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "화물운송",
+          "유류비",
+          "지원",
+          "재정지원",
+          "지원주체",
+          "유류가격"
+        ],
+        "query_text": "화물 운송사업자 유류비 지원 제도 및 지원 주체 [원문 맥락] 이로 인해 을은 유류비 증가에 대한 재정 지원을 신청하고자 한다. 갑이 화물자동차 운송사업의 허가사항을 변경하려면 어떤 절차를 따라야 하며, 을에게 유류비 증가에 대한 재정 지원을 제공할 수 있는 주체는 누구인가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "화물자동차 운송사업자에게 유류비 증가에 따른 재정 지원을 제공하는 법적 주체",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "화물자동차 운수사업법 시행령 허가사항 변경 신고서 기재사항 첨부서류",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "화물자동차",
+          "운송사업",
+          "허가사항",
+          "변경",
+          "신고서",
+          "기재사항",
+          "첨부서류"
+        ],
+        "query_text": "화물자동차 운송사업 허가사항 변경 신고서 기재사항 및 첨부서류 [원문 맥락] 이로 인해 을은 유류비 증가에 대한 재정 지원을 신청하고자 한다. 갑이 화물자동차 운송사업의 허가사항을 변경하려면 어떤 절차를 따라야 하며, 을에게 유류비 증가에 대한 재정 지원을 제공할 수 있는 주체는 누구인가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "화물자동차 운송사업 허가사항 변경 시 제출해야 할 신고서 기재사항 및 첨부서류 목록",
+        "statute_hints": [
+          "화물자동차 운수사업법 시행령"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "화물자동차 운송사업 허가사항 변경 신고 처리 기한 통지",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "화물자동차",
+          "운송사업",
+          "허가사항",
+          "변경",
+          "신고",
+          "처리",
+          "기한",
+          "통지"
+        ],
+        "query_text": "화물자동차 운송사업 허가사항 변경 신고 접수 후 처리 기한 및 통지 [원문 맥락] 이로 인해 을은 유류비 증가에 대한 재정 지원을 신청하고자 한다. 갑이 화물자동차 운송사업의 허가사항을 변경하려면 어떤 절차를 따라야 하며, 을에게 유류비 증가에 대한 재정 지원을 제공할 수 있는 주체는 누구인가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "화물자동차 운송사업 허가사항 변경 신고 접수 후 행정청의 처리 기한 및 결과 통지 절차",
+        "statute_hints": [
+          "화물자동차 운수사업법",
+          "행정절차법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "화물 운송 유류비 지원 기금 특별회계 재정 지원",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "화물자동차",
+          "운송사업자",
+          "유류비",
+          "지원",
+          "기금",
+          "특별회계",
+          "재정지원"
+        ],
+        "query_text": "화물자동차 운송사업자 유류비 지원 기금 또는 특별회계 [원문 맥락] 이로 인해 을은 유류비 증가에 대한 재정 지원을 신청하고자 한다. 갑이 화물자동차 운송사업의 허가사항을 변경하려면 어떤 절차를 따라야 하며, 을에게 유류비 증가에 대한 재정 지원을 제공할 수 있는 주체는 누구인가?",
+        "request_id": "GRQ-R3-3",
+        "rerank_query_text": "화물자동차 운송사업자에게 유류비 증가에 따른 재정 지원을 제공하는 기금 또는 특별회계 주체",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 화물자동차 운송사업을 운영하는 사업자로, 최근 사업 확장을 위해 기존 허가사항을 변경하려고 한다. 동시에, 을이라는 다른 운송사업자는 최근 유류 가격이 급등하면서 사업 운영에 어려움을 겪고 있다. 이로 인해 을은 유류비 증가에 대한 재정 지원을 신청하고자 한다.\n\n[질문]\n갑이 화물자동차 운송사업의 허가사항을 변경하려면 어떤 절차를 따라야 하며, 을에게 유류비 증가에 대한 재정 지원을 제공할 수 있는 주체는 누구인가?",
+    "remaining_request_budget": 2,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "변경 신청 주체, 관할 기관, 제출 서류, 처리 기한 등 절차적 요건 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "허가사항 변경 신청의 법적 근거 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "신청 대상 기관 및 제출 서류 확인"
+          },
+          {
+            "requirement_id": "E1-R3",
+            "text": "허가사항 변경 처리 절차 및 기한 확인"
+          }
+        ],
+        "critical": true,
+        "description": "화물자동차 운송사업 허가사항 변경 신청 및 처리 절차",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 명시적으로 허가사항 변경 절차를 요구하고 있어, 해당 절차 없이는 답변 불가",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "유류비 지원 대상, 지원 주체(국가/지자체/기금 등), 지원 근거 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "유류비 증가에 따른 운송사업자 재정 지원 법적 근거 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "재정 지원 제공 주체(국가, 지방자치단체, 또는 특정 기금) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "운송사업자 유류비 증가에 대한 재정 지원 제도 및 제공 주체",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 명시적으로 재정 지원 제공 주체를 요구하고 있어, 해당 주체 확인 없이는 답변 불가",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "bc2f3672-09d8-46a0-9b1d-011c25bd977a",
+    "seen_provision_ids": [
+      "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157865",
+      "화물자동차 운수사업법 시행령 14조  권한의 위임#KOBLEX-158003",
+      "화물자동차 운수사업법 24조  화물자동차 운송주선사업의 허가 등#KOBLEX-162565",
+      "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162381",
+      "화물자동차 운수사업법 시행령 14조  권한의 위임#KOBLEX-157983",
+      "화물자동차 운수사업법 29조  화물자동차 운송가맹사업의 허가 등#KOBLEX-162589",
+      "화물자동차 운수사업법 2조  정의#KOBLEX-162357",
+      "화물자동차 운수사업법 18조  화물자동차 운송사업의 휴업 및 폐업 신고#KOBLEX-162536",
+      "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162379",
+      "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162374",
+      "화물자동차 운수사업법 37조  책임보험계약등의 해제#KOBLEX-162630",
+      "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157867",
+      "화물자동차 운수사업법 3조  화물자동차 운송사업의 허가 등#KOBLEX-162377",
+      "화물자동차 운수사업법 시행령 3조  화물자동차 운송사업의 허가 및 신고 대상#KOBLEX-157794",
+      "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157863",
+      "화물자동차 운수사업법 37조  책임보험계약등의 해제#KOBLEX-162626",
+      "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157866",
+      "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157864",
+      "여객자동차 운수사업법 50조  재정 지원#KOBLEX-019050",
+      "화물자동차 운수사업법 시행령 9조 2 운송가맹사업자의 허가사항 변경신고의 대상#KOBLEX-157862",
+      "화물자동차 운수사업법 시행령 5조  화물자동차 운송사업의 허가취소 등의 기준#KOBLEX-157838"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

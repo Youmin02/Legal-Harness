@@ -1,0 +1,497 @@
+{
+  "abstention_reason": null,
+  "answer": "법원은 제척 또는 기피신청이 있는 경우에는 그 재판이 확정될 때까지 소송절차를 정지하여야 합니다.[CT1]\n제척 또는 기피신청이 각하된 경우 또는 종국판결을 선고하거나 긴급을 요하는 행위를 하는 경우에는 소송절차를 정지하지 아니할 수 있습니다.[CT2]",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "법원은 제척 또는 기피신청이 있는 경우에는 그 재판이 확정될 때까지 소송절차를 정지하여야 합니다.[CT1]\n제척 또는 기피신청이 각하된 경우 또는 종국판결을 선고하거나 긴급을 요하는 행위를 하는 경우에는 소송절차를 정지하지 아니할 수 있습니다.[CT2]",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T22:34:46.901650+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 98733.65,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 87,
+      "dedup_collapse": 26,
+      "evidence_fusion": 87,
+      "first_stage": 100,
+      "request_rerank": 100,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 87
+    }
+  },
+  "run_id": "b9b998d5-b96b-4c88-a26f-ae478c44e6ff",
+  "state": {
+    "accepted_provision_ids": [
+      "민사소송법 48조  소송절차의 정지#KOBLEX-063639"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "procedure",
+        "question_anchor": "법원은 소송 절차를 어떻게 처리해야 하는가",
+        "requested_output": "제척신청 접수 시 법원이 취해야 할 소송절차적 조치"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민사소송법 48조  소송절차의 정지#KOBLEX-063639"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 24.454064376130464,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 48조  소송절차의 정지#KOBLEX-063639",
+        "provision_text": "제48조(소송절차의 정지) 법원은 제척 또는 기피신청이 있는 경우에는 그 재판이 확정될 때까지 소송절차를 정지하여야 한다. 다만, 제척 또는 기피신청이 각하된 경우 또는 종국판결(終局判決)을 선고하거나 긴급을 요하는 행위를 하는 경우에는 그러하지 아니하다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.7727090716362,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 48조  소송절차의 정지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 243조  수계신청에 대한 재판#KOBLEX-064170"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 3.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 243조  수계신청에 대한 재판#KOBLEX-064170",
+        "provision_text": "①소송절차의 수계신청은 법원이 직권으로 조사하여 이유가 없다고 인정한 때에는 결정으로 기각하여야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.01825620047748089,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 243조  수계신청에 대한 재판 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 242조  수계신청의 통지#KOBLEX-064168"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 94,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 242조  수계신청의 통지#KOBLEX-064168",
+        "provision_text": "제242조(수계신청의 통지) 소송절차의 수계신청이 있는 때에는 법원은 상대방에게 이를 통지하여야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.010592648759484291,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 242조  수계신청의 통지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 244조  직권에 의한 속행명령#KOBLEX-064172"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 96,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 244조  직권에 의한 속행명령#KOBLEX-064172",
+        "provision_text": "제244조(직권에 의한 속행명령) 법원은 당사자가 소송절차를 수계하지 아니하는 경우에 직권으로 소송절차를 계속하여 진행하도록 명할 수 있다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.0048673455603420734,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 244조  직권에 의한 속행명령",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 243조  수계신청에 대한 재판#KOBLEX-064171"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 2.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 243조  수계신청에 대한 재판#KOBLEX-064171",
+        "provision_text": "②재판이 송달된 뒤에 중단된 소송절차의 수계에 대하여는 그 재판을 한 법원이 결정하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.002393976552411914,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 243조  수계신청에 대한 재판 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 134조#KOBLEX-063844"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 26.92873380660691,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 134조#KOBLEX-063844",
+        "provision_text": "제4장 소송절차",
+        "rerank_rank": 6,
+        "rerank_score": 0.00022341210569720715,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 134조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소액사건심판법 9조  심리절차상의 특칙#KOBLEX-163759"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 52,
+        "first_stage_score": 21.13206905585552,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "소액사건심판법 9조  심리절차상의 특칙#KOBLEX-163759",
+        "provision_text": "① 법원은 소장ㆍ준비서면, 그 밖의 소송기록에 의하여 청구가 이유 없음이 명백한 경우에는 변론 없이 청구를 기각(棄却)할 수 있다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.00015736017667222768,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "소액사건심판법 9조  심리절차상의 특칙 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 248조#KOBLEX-064180"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 26.254605760490783,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 248조#KOBLEX-064180",
+        "provision_text": "제2편 제1심의 소송절차",
+        "rerank_rank": 8,
+        "rerank_score": 0.00013602089893538505,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 248조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 198조  종국판결#KOBLEX-064054"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 2.0,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 198조  종국판결#KOBLEX-064054",
+        "provision_text": "제198조(종국판결) 법원은 소송의 심리를 마치고 나면 종국판결(終局判決)을 한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.00012740625243168324,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 198조  종국판결",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 246조  당사자의 장애로 말미암은 중지#KOBLEX-064175"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 98,
+        "first_stage_score": 2.0,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 246조  당사자의 장애로 말미암은 중지#KOBLEX-064175",
+        "provision_text": "①당사자가 일정하지 아니한 기간동안 소송행위를 할 수 없는 장애사유가 생긴 경우에는 법원은 결정으로 소송절차를 중지하도록 명할 수 있다.",
+        "rerank_rank": 10,
+        "rerank_score": 5.092055653221905e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 246조  당사자의 장애로 말미암은 중지 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "민사소송법 134조#KOBLEX-063844": "제4장 소송절차",
+      "민사소송법 198조  종국판결#KOBLEX-064054": "제198조(종국판결) 법원은 소송의 심리를 마치고 나면 종국판결(終局判決)을 한다.",
+      "민사소송법 242조  수계신청의 통지#KOBLEX-064168": "제242조(수계신청의 통지) 소송절차의 수계신청이 있는 때에는 법원은 상대방에게 이를 통지하여야 한다.",
+      "민사소송법 243조  수계신청에 대한 재판#KOBLEX-064170": "①소송절차의 수계신청은 법원이 직권으로 조사하여 이유가 없다고 인정한 때에는 결정으로 기각하여야 한다.",
+      "민사소송법 243조  수계신청에 대한 재판#KOBLEX-064171": "②재판이 송달된 뒤에 중단된 소송절차의 수계에 대하여는 그 재판을 한 법원이 결정하여야 한다.",
+      "민사소송법 244조  직권에 의한 속행명령#KOBLEX-064172": "제244조(직권에 의한 속행명령) 법원은 당사자가 소송절차를 수계하지 아니하는 경우에 직권으로 소송절차를 계속하여 진행하도록 명할 수 있다.",
+      "민사소송법 246조  당사자의 장애로 말미암은 중지#KOBLEX-064175": "①당사자가 일정하지 아니한 기간동안 소송행위를 할 수 없는 장애사유가 생긴 경우에는 법원은 결정으로 소송절차를 중지하도록 명할 수 있다.",
+      "민사소송법 248조#KOBLEX-064180": "제2편 제1심의 소송절차",
+      "민사소송법 48조  소송절차의 정지#KOBLEX-063639": "제48조(소송절차의 정지) 법원은 제척 또는 기피신청이 있는 경우에는 그 재판이 확정될 때까지 소송절차를 정지하여야 한다. 다만, 제척 또는 기피신청이 각하된 경우 또는 종국판결(終局判決)을 선고하거나 긴급을 요하는 행위를 하는 경우에는 그러하지 아니하다.",
+      "소액사건심판법 9조  심리절차상의 특칙#KOBLEX-163759": "① 법원은 소장ㆍ준비서면, 그 밖의 소송기록에 의하여 청구가 이유 없음이 명백한 경우에는 변론 없이 청구를 기각(棄却)할 수 있다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민사소송법 48조  소송절차의 정지#KOBLEX-063639"
+            ],
+            "rationale": "C001(민사소송법 제48조)은 제척신청이 있는 경우 소송절차를 정지하여야 한다고 규정하여 요구된 절차적 조치를 명시하고 있다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민사소송법 48조  소송절차의 정지#KOBLEX-063639"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "제척신청 접수 시 법원이 취해야 할 절차적 조치(소송절차 정지)를 명시한 민사소송법 제48조가 후보 조항에 포함되어 있어, 증거 항목의 완료 기준을 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민사소송법 48조  소송절차의 정지#KOBLEX-063639",
+        "support_spans": [
+          {
+            "end_char": 143,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "제척신청이 접수된 경우 법원이 취해야 할 소송절차적 조치",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑과 을은 부동산 계약 관련 소송에서 대립 중입니다. 갑은 사건을 담당하는 판사인 병이 을과 사적인 관계에 있다는 이유로 병에 대하여 제척신청을 했습니다. 이 상황에서 을은 갑의 제척신청이 받아들여질지 걱정하며, 현재 소송 절차가 어떻게 진행될지 궁금해 합니다. [질문] 갑이 담당 판사에 대한 제척신청을 한 경우, 법원은 소송 절차를 어떻게 처리해야 하는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "제척신청 접수 소송절차 처리 법원 심리 정지 기각 인용",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "제척신청",
+          "소송절차",
+          "법원",
+          "심리정지",
+          "기각",
+          "인용"
+        ],
+        "query_text": "제척신청이 접수된 경우 법원은 소송절차를 어떻게 처리하는가 [원문 맥락] 이 상황에서 을은 갑의 제척신청이 받아들여질지 걱정하며, 현재 소송 절차가 어떻게 진행될지 궁금해 합니다. 갑이 담당 판사에 대한 제척신청을 한 경우, 법원은 소송 절차를 어떻게 처리해야 하는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "제척신청 접수 시 법원의 소송절차 처리 방식",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑과 을은 부동산 계약 관련 소송에서 대립 중입니다. 갑은 사건을 담당하는 판사인 병이 을과 사적인 관계에 있다는 이유로 병에 대하여 제척신청을 했습니다. 이 상황에서 을은 갑의 제척신청이 받아들여질지 걱정하며, 현재 소송 절차가 어떻게 진행될지 궁금해 합니다.\n\n[질문]\n갑이 담당 판사에 대한 제척신청을 한 경우, 법원은 소송 절차를 어떻게 처리해야 하는가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "제척신청 접수 시 법원이 취해야 할 절차적 조치(예: 심리 정지, 기각, 인용 등)가 명시된 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "제척신청 접수 시 법원이 취해야 할 절차적 조치(예: 심리 정지, 기각, 인용 등)를 명시한 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "제척신청 접수 시 법원의 소송절차 처리 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문은 제척신청 시 법원의 소송절차 처리 방식을 묻고 있으므로, 해당 절차 규정이 없으면 답변이 불가능함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "b9b998d5-b96b-4c88-a26f-ae478c44e6ff",
+    "seen_provision_ids": [
+      "민사소송법 198조  종국판결#KOBLEX-064054",
+      "민사소송법 246조  당사자의 장애로 말미암은 중지#KOBLEX-064175",
+      "민사소송법 248조#KOBLEX-064180",
+      "민사소송법 243조  수계신청에 대한 재판#KOBLEX-064171",
+      "민사소송법 48조  소송절차의 정지#KOBLEX-063639",
+      "민사소송법 242조  수계신청의 통지#KOBLEX-064168",
+      "민사소송법 134조#KOBLEX-063844",
+      "민사소송법 243조  수계신청에 대한 재판#KOBLEX-064170",
+      "소액사건심판법 9조  심리절차상의 특칙#KOBLEX-163759",
+      "민사소송법 244조  직권에 의한 속행명령#KOBLEX-064172"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

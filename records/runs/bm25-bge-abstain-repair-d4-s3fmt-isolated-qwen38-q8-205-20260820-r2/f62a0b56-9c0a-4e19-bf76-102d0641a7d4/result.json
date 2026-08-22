@@ -1,0 +1,829 @@
+{
+  "abstention_reason": null,
+  "answer": "환어음의 점유를 잃은 자가 있는 경우에 그 어음의 소지인이 제1항에 따라 그 권리를 증명할 때에는 그 어음을 반환할 의무가 없다.[CT1]\n약속어음에 대하여는 약속어음의 성질에 상반되지 아니하는 한도에서 배서(제11조부터 제20조까지)에 관한 환어음에 대한 규정을 준용한다.[CT2]\n전제: 갑이 환어음의 소지인이며, 제3자인 병에게 권리를 증명하는 상황으로 가정한다.\n전제: 갑이 어음을 악의 또는 중대한 과실로 취득한 것이 아님을 가정한다.\n한계: 소지인이 악의 또는 중대한 과실로 인하여 어음을 취득한 경우에는 반환 의무가 발생할 수 있다.\n한계: 약속어음에 대한 준용은 약속어음의 성질에 상반되지 아니하는 한도에서 적용된다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "환어음의 점유를 잃은 자가 있는 경우에 그 어음의 소지인이 제1항에 따라 그 권리를 증명할 때에는 그 어음을 반환할 의무가 없다.[CT1]\n약속어음에 대하여는 약속어음의 성질에 상반되지 아니하는 한도에서 배서(제11조부터 제20조까지)에 관한 환어음에 대한 규정을 준용한다.[CT2]\n전제: 갑이 환어음의 소지인이며, 제3자인 병에게 권리를 증명하는 상황으로 가정한다.\n전제: 갑이 어음을 악의 또는 중대한 과실로 취득한 것이 아님을 가정한다.\n한계: 소지인이 악의 또는 중대한 과실로 인하여 어음을 취득한 경우에는 반환 의무가 발생할 수 있다.\n한계: 약속어음에 대한 준용은 약속어음의 성질에 상반되지 아니하는 한도에서 적용된다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T03:45:59.523877+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 414180.134,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 282,
+      "dedup_collapse": 59,
+      "evidence_fusion": 282,
+      "first_stage": 400,
+      "request_rerank": 400,
+      "round_selected": 20,
+      "rrf": 300,
+      "selected": 282
+    }
+  },
+  "run_id": "f62a0b56-9c0a-4e19-bf76-102d0641a7d4",
+  "state": {
+    "accepted_provision_ids": [
+      "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030617",
+      "어음법 16조  배서의 자격 수여적 효력 및 어음의 선의취득#KOBLEX-030387"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 5,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "환어음을 반환할 의무가 없으며",
+        "requested_output": "환어음 소지인이 제3자에게 권리를 주장할 때 원본 어음을 반환할 의무의 유무"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "을이 발행한 약속어음에 대해서도 동일한 규정이 적용되는가",
+        "requested_output": "약속어음에 대해 환어음과 동일한 반환 의무 규정이 적용되는지 여부"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "어음법 16조  배서의 자격 수여적 효력 및 어음의 선의취득#KOBLEX-030387"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 38.33383013115257,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "어음법 16조  배서의 자격 수여적 효력 및 어음의 선의취득#KOBLEX-030387",
+        "provision_text": "② 어떤 사유로든 환어음의 점유를 잃은 자가 있는 경우에 그 어음의 소지인이 제1항에 따라 그 권리를 증명할 때에는 그 어음을 반환할 의무가 없다. 그러나 소지인이 악의 또는 중대한 과실로 인하여 어음을 취득한 경우에는 그러하지 아니하다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.10609543323516846,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "어음법 16조  배서의 자격 수여적 효력 및 어음의 선의취득 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030619"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 67,
+        "first_stage_score": 18.787739364725706,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030619",
+        "provision_text": "③ 약속어음에 관하여는 보증에 관한 제30조부터 제32조까지의 규정을 준용한다. 제31조제4항의 경우에 누구를 위하여 보증한 것임을 표시하지 아니하였으면 약속어음의 발행인을 위하여 보증한 것으로 본다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.947226345539093,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "어음법 77조  환어음에 관한 규정의 준용 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "어음법 78조  발행인의 책임 및 일람 후 정기출급 어음의 특칙#KOBLEX-030621"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 29.488816912268547,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "어음법 78조  발행인의 책임 및 일람 후 정기출급 어음의 특칙#KOBLEX-030621",
+        "provision_text": "① 약속어음의 발행인은 환어음의 인수인과 같은 의무를 부담한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.863689661026001,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "어음법 78조  발행인의 책임 및 일람 후 정기출급 어음의 특칙 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국제사법 83조  효력#KOBLEX-127984",
+          "국제사법 83조  효력#KOBLEX-200665"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 45.117243635205526,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "국제사법 83조  효력#KOBLEX-127984",
+        "provision_text": "③ 환어음, 약속어음 및 수표의 상환청구권을 행사하는 기간은 모든 서명자에 대하여 발행지법에 따른다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.744407057762146,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "국제사법 83조  효력 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국제사법 87조  상실ㆍ도난#KOBLEX-127990",
+          "국제사법 87조  상실ㆍ도난#KOBLEX-200671"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 43.380161878438486,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "국제사법 87조  상실ㆍ도난#KOBLEX-127990",
+        "provision_text": "제87조(상실ㆍ도난) 환어음, 약속어음 및 수표의 상실 또는 도난의 경우에 수행하여야 하는 절차는 지급지법에 따른다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.6535786986351013,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "국제사법 87조  상실ㆍ도난",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030616"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 29.444496822450414,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030616",
+        "provision_text": "제77조(환어음에 관한 규정의 준용)",
+        "rerank_rank": 5,
+        "rerank_score": 0.08170737326145172,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "어음법 77조  환어음에 관한 규정의 준용",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국제사법 83조  효력#KOBLEX-127982",
+          "국제사법 83조  효력#KOBLEX-200663"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 34,
+        "first_stage_score": 20.765364954847566,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "국제사법 83조  효력#KOBLEX-127982",
+        "provision_text": "① 환어음의 인수인과 약속어음의 발행인의 채무는 지급지법에 따르고, 수표로부터 생긴 채무는 서명지법에 따른다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.07840127497911453,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "국제사법 83조  효력 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국제사법 80조  행위능력#KOBLEX-127972",
+          "국제사법 80조  행위능력#KOBLEX-200653"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 34.69691867946493,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "국제사법 80조  행위능력#KOBLEX-127972",
+        "provision_text": "① 환어음, 약속어음 및 수표에 의하여 채무를 부담하는 자의 능력은 그의 본국법에 따른다. 다만, 그 국가의 법이 다른 국가의 법에 따르도록 정한 경우에는 그 다른 국가의 법에 따른다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.057966213673353195,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "국제사법 80조  행위능력 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "어음법 75조#KOBLEX-030603"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 27.641712331264245,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "어음법 75조#KOBLEX-030603",
+        "provision_text": "제2편 약속어음 <개정 2010.3.31>",
+        "rerank_rank": 8,
+        "rerank_score": 0.031107695773243904,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "어음법 75조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "어음법 1조#KOBLEX-030330"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 18,
+        "first_stage_score": 24.829430227306432,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "어음법 1조#KOBLEX-030330",
+        "provision_text": "제1편 환어음 <개정 2010.3.31>",
+        "rerank_rank": 9,
+        "rerank_score": 0.006486324593424797,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "어음법 1조",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030617"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030617",
+        "provision_text": "① 약속어음에 대하여는 약속어음의 성질에 상반되지 아니하는 한도에서 다음 각 호의 사항에 관한 환어음에 대한 규정을 준용한다. 1. 배서(제11조부터 제20조까지) 2. 만기(제33조부터 제37조까지) 3. 지급(제38조부터 제42조까지) 4. 지급거절로 인한 상환청구(제43조부터 제50조까지, 제52조부터 제54조까지) 5. 참가지급(제55조, 제59조부터 제63조까지) 6. 등본(제67조와 제68조) 7. 변조(제69조) 8. 시효(제70조와 제71조) 9. 휴일, 기간의 계산과 은혜일의 인정 금지(제72조부터 제74조까지)",
+        "rerank_rank": 1,
+        "rerank_score": 0.00587316183373332,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "어음법 77조  환어음에 관한 규정의 준용 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030618"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 2.0,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030618",
+        "provision_text": "② 약속어음에 관하여는 제3자방에서 또는 지급인의 주소지가 아닌 지(地)에서 지급할 환어음에 관한 제4조 및 제27조, 이자의 약정에 관한 제5조, 어음금액의 기재의 차이에 관한 제6조, 어음채무를 부담하게 할 수 없는 기명날인 또는 서명의 효과에 관한 제7조, 대리권한 없는 자 또는 대리권한을 초과한 자의 기명날인 또는 서명의 효과에 관한 제8조, 백지환어음에 관한 제10조를 준용한다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.0012215088354423642,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "어음법 77조  환어음에 관한 규정의 준용 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "어음법 16조  배서의 자격 수여적 효력 및 어음의 선의취득#KOBLEX-030385"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 2.0,
+        "fusion_rank": 13,
+        "issue_id": "I2",
+        "provision_id": "어음법 16조  배서의 자격 수여적 효력 및 어음의 선의취득#KOBLEX-030385",
+        "provision_text": "제16조(배서의 자격 수여적 효력 및 어음의 선의취득)",
+        "rerank_rank": 13,
+        "rerank_score": 9.553569725540001e-06,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "어음법 16조  배서의 자격 수여적 효력 및 어음의 선의취득",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "어음법 63조  참가지급의 효력#KOBLEX-030566"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 17.67233580479236,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "어음법 63조  참가지급의 효력#KOBLEX-030566",
+        "provision_text": "② 피참가인보다 후의 배서인은 의무를 면한다.",
+        "rerank_rank": 10,
+        "rerank_score": 7.267517958098324e-06,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "어음법 63조  참가지급의 효력 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 65조  유가증권과 준용규정#KOBLEX-113695"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 12,
+        "first_stage_score": 22.676447479892847,
+        "fusion_rank": 14,
+        "issue_id": "I2",
+        "provision_id": "상법 65조  유가증권과 준용규정#KOBLEX-113695",
+        "provision_text": "① 금전의 지급청구권, 물건 또는 유가증권의 인도청구권이나 사원의 지위를 표시하는 유가증권에 대하여는 다른 법률에 특별한 규정이 없으면 「민법」 제508조부터 제525조까지의 규정을 적용하는 외에 「어음법」 제12조제1항 및 제2항을 준용한다.",
+        "rerank_rank": 14,
+        "rerank_score": 5.3798894441570155e-06,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상법 65조  유가증권과 준용규정 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "국제사법 80조  행위능력#KOBLEX-127972": "① 환어음, 약속어음 및 수표에 의하여 채무를 부담하는 자의 능력은 그의 본국법에 따른다. 다만, 그 국가의 법이 다른 국가의 법에 따르도록 정한 경우에는 그 다른 국가의 법에 따른다.",
+      "국제사법 83조  효력#KOBLEX-127982": "① 환어음의 인수인과 약속어음의 발행인의 채무는 지급지법에 따르고, 수표로부터 생긴 채무는 서명지법에 따른다.",
+      "국제사법 83조  효력#KOBLEX-127984": "③ 환어음, 약속어음 및 수표의 상환청구권을 행사하는 기간은 모든 서명자에 대하여 발행지법에 따른다.",
+      "국제사법 87조  상실ㆍ도난#KOBLEX-127990": "제87조(상실ㆍ도난) 환어음, 약속어음 및 수표의 상실 또는 도난의 경우에 수행하여야 하는 절차는 지급지법에 따른다.",
+      "상법 65조  유가증권과 준용규정#KOBLEX-113695": "① 금전의 지급청구권, 물건 또는 유가증권의 인도청구권이나 사원의 지위를 표시하는 유가증권에 대하여는 다른 법률에 특별한 규정이 없으면 「민법」 제508조부터 제525조까지의 규정을 적용하는 외에 「어음법」 제12조제1항 및 제2항을 준용한다.",
+      "어음법 16조  배서의 자격 수여적 효력 및 어음의 선의취득#KOBLEX-030385": "제16조(배서의 자격 수여적 효력 및 어음의 선의취득)",
+      "어음법 16조  배서의 자격 수여적 효력 및 어음의 선의취득#KOBLEX-030387": "② 어떤 사유로든 환어음의 점유를 잃은 자가 있는 경우에 그 어음의 소지인이 제1항에 따라 그 권리를 증명할 때에는 그 어음을 반환할 의무가 없다. 그러나 소지인이 악의 또는 중대한 과실로 인하여 어음을 취득한 경우에는 그러하지 아니하다.",
+      "어음법 1조#KOBLEX-030330": "제1편 환어음 <개정 2010.3.31>",
+      "어음법 63조  참가지급의 효력#KOBLEX-030566": "② 피참가인보다 후의 배서인은 의무를 면한다.",
+      "어음법 75조#KOBLEX-030603": "제2편 약속어음 <개정 2010.3.31>",
+      "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030616": "제77조(환어음에 관한 규정의 준용)",
+      "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030617": "① 약속어음에 대하여는 약속어음의 성질에 상반되지 아니하는 한도에서 다음 각 호의 사항에 관한 환어음에 대한 규정을 준용한다. 1. 배서(제11조부터 제20조까지) 2. 만기(제33조부터 제37조까지) 3. 지급(제38조부터 제42조까지) 4. 지급거절로 인한 상환청구(제43조부터 제50조까지, 제52조부터 제54조까지) 5. 참가지급(제55조, 제59조부터 제63조까지) 6. 등본(제67조와 제68조) 7. 변조(제69조) 8. 시효(제70조와 제71조) 9. 휴일, 기간의 계산과 은혜일의 인정 금지(제72조부터 제74조까지)",
+      "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030618": "② 약속어음에 관하여는 제3자방에서 또는 지급인의 주소지가 아닌 지(地)에서 지급할 환어음에 관한 제4조 및 제27조, 이자의 약정에 관한 제5조, 어음금액의 기재의 차이에 관한 제6조, 어음채무를 부담하게 할 수 없는 기명날인 또는 서명의 효과에 관한 제7조, 대리권한 없는 자 또는 대리권한을 초과한 자의 기명날인 또는 서명의 효과에 관한 제8조, 백지환어음에 관한 제10조를 준용한다.",
+      "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030619": "③ 약속어음에 관하여는 보증에 관한 제30조부터 제32조까지의 규정을 준용한다. 제31조제4항의 경우에 누구를 위하여 보증한 것임을 표시하지 아니하였으면 약속어음의 발행인을 위하여 보증한 것으로 본다.",
+      "어음법 78조  발행인의 책임 및 일람 후 정기출급 어음의 특칙#KOBLEX-030621": "① 약속어음의 발행인은 환어음의 인수인과 같은 의무를 부담한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "어음법 16조  배서의 자격 수여적 효력 및 어음의 선의취득#KOBLEX-030387"
+            ],
+            "rationale": "C001은 '그 어음을 반환할 의무가 없다'고 명시하여 반환 의무의 부재를 확인한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "어음법 16조  배서의 자격 수여적 효력 및 어음의 선의취득#KOBLEX-030387"
+            ],
+            "rationale": "C001은 어음법 제16조 제2항으로, 해당 의무 부재의 직접적인 법적 근거를 제공한다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "어음법 16조  배서의 자격 수여적 효력 및 어음의 선의취득#KOBLEX-030387"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C001(어음법 제16조 제2항)은 환어음 소지인이 제3자에게 권리를 주장할 때 원본 어음을 반환할 의무가 없음을 명확히 규정하고 있어, E1의 모든 완료 기준을 충족한다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030617"
+            ],
+            "rationale": "C011은 제16조가 포함된 제11조부터 제20조까지의 배서 규정을 약속어음에 준용한다고 명시하여 적용 여부를 확인한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030617"
+            ],
+            "rationale": "C011은 어음법 제77조 제1항으로, 해당 준용의 직접적인 법적 근거를 제공한다.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030617"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C011(어음법 제77조 제1항)은 약속어음에 배서에 관한 제11조부터 제20조까지의 규정을 준용한다고 명시하고, C001은 제16조 제2항으로 배서에 관한 규정임을 확인하므로, 환어음 반환 의무 규정이 약속어음에도 적용됨을 확정할 수 있다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "어음법 16조  배서의 자격 수여적 효력 및 어음의 선의취득#KOBLEX-030387",
+        "support_spans": [
+          {
+            "end_char": 133,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030617",
+        "support_spans": [
+          {
+            "end_char": 298,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 5,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "환어음 소지인이 제3자에게 권리를 주장하기 위해 원본 어음을 반환할 의무가 있는지 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "약속어음에 대해 환어음과 동일한 반환 의무 규정이 적용되는지 여부",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을에게 1억 원의 환어음을 배서받아 소지하고 있었다. 그런데 을의 불찰로 환어음을 잃어버리고 말았다. 이 상황에서, 갑은 제3자인 병에게 이 환어음에 대한 권리를 주장하기 위해, 어음을 반환해야 할 필요가 있는지 의문이 들었다. 또한 을이 갑에게 발행한 약속어음에 대해서도 동일한 법규가 적용되는지 알고 싶었다. [질문] 갑이 환어음에 대한 권리를 병에게 증명할 때, 환어음을 반환할 의무가 없으며, 을이 발행한 약속어음에 대해서도 동일한 규정이 적용되는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "환어음 소지인 제3자 권리 주장 원본 어음 반환 의무",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "환어음",
+          "소지인",
+          "제3자",
+          "권리 주장",
+          "원본 어음",
+          "반환 의무"
+        ],
+        "query_text": "환어음 소지인이 제3자에게 권리를 주장할 때 원본 어음을 반환할 의무가 있는가 [원문 맥락] 또한 을이 갑에게 발행한 약속어음에 대해서도 동일한 법규가 적용되는지 알고 싶었다. 갑이 환어음에 대한 권리를 병에게 증명할 때, 환어음을 반환할 의무가 없으며, 을이 발행한 약속어음에 대해서도 동일한 규정이 적용되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "환어음 소지인의 제3자 상대 권리 주장 시 원본 어음 반환 의무 유무",
+        "statute_hints": [
+          "상법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "약속어음 환어음 반환 의무 규정 적용 준용",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "약속어음",
+          "환어음",
+          "반환 의무",
+          "규정 적용",
+          "준용"
+        ],
+        "query_text": "약속어음에 환어음 반환 의무 규정이 적용되는지 여부 [원문 맥락] 또한 을이 갑에게 발행한 약속어음에 대해서도 동일한 법규가 적용되는지 알고 싶었다. 갑이 환어음에 대한 권리를 병에게 증명할 때, 환어음을 반환할 의무가 없으며, 을이 발행한 약속어음에 대해서도 동일한 규정이 적용되는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "약속어음에 환어음 반환 의무 규정이 적용되는지 여부",
+        "statute_hints": [
+          "상법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "어음법 제77조 제16조 준용",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "어음법",
+          "제77조",
+          "제16조",
+          "준용"
+        ],
+        "query_text": "어음법 제77조 제16조 준용 [원문 맥락] 또한 을이 갑에게 발행한 약속어음에 대해서도 동일한 법규가 적용되는지 알고 싶었다. 갑이 환어음에 대한 권리를 병에게 증명할 때, 환어음을 반환할 의무가 없으며, 을이 발행한 약속어음에 대해서도 동일한 규정이 적용되는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "약속어음에 환어음 제16조 반환 의무 규정이 준용되는지 여부 및 법적 근거 조항",
+        "statute_hints": [
+          "어음법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "약속어음 배서 반환 의무",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "약속어음",
+          "배서",
+          "반환",
+          "의무"
+        ],
+        "query_text": "약속어음 배서 반환 의무 [원문 맥락] 또한 을이 갑에게 발행한 약속어음에 대해서도 동일한 법규가 적용되는지 알고 싶었다. 갑이 환어음에 대한 권리를 병에게 증명할 때, 환어음을 반환할 의무가 없으며, 을이 발행한 약속어음에 대해서도 동일한 규정이 적용되는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "약속어음 소지인의 제3자 상대 권리 주장 시 원본 어음 반환 의무 유무",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을에게 1억 원의 환어음을 배서받아 소지하고 있었다. 그런데 을의 불찰로 환어음을 잃어버리고 말았다. 이 상황에서, 갑은 제3자인 병에게 이 환어음에 대한 권리를 주장하기 위해, 어음을 반환해야 할 필요가 있는지 의문이 들었다. 또한 을이 갑에게 발행한 약속어음에 대해서도 동일한 법규가 적용되는지 알고 싶었다.\n\n[질문]\n갑이 환어음에 대한 권리를 병에게 증명할 때, 환어음을 반환할 의무가 없으며, 을이 발행한 약속어음에 대해서도 동일한 규정이 적용되는가?",
+    "remaining_request_budget": 5,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "환어음 소지인의 제3자 상대 권리 주장 시 원본 어음 반환 의무의 유무와 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "환어음 소지인이 제3자에게 권리를 주장할 때 원본 어음을 반환할 의무가 있는지 여부"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "해당 의무의 법적 근거 조항"
+          }
+        ],
+        "critical": true,
+        "description": "환어음 소지인이 제3자에게 권리를 주장할 때 원본 어음을 반환할 의무에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 환어음 반환 의무의 유무를 직접 묻고 있으므로, 이를 판단하기 위한 핵심 법적 근거가 필요함",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "약속어음에 환어음 반환 의무 규정이 준용되는지 여부 및 법적 근거를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "약속어음에 환어음 반환 의무 규정이 적용되는지 여부"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "해당 적용의 법적 근거 조항"
+          }
+        ],
+        "critical": true,
+        "description": "약속어음에 대해 환어음과 동일한 반환 의무 규정이 적용되는지 여부",
+        "evidence_item_id": "E2",
+        "evidence_type": "relationship",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 약속어음에 동일한 규정이 적용되는지 직접 묻고 있으므로, 이를 판단하기 위한 핵심 법적 근거가 필요함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "f62a0b56-9c0a-4e19-bf76-102d0641a7d4",
+    "seen_provision_ids": [
+      "국제사법 83조  효력#KOBLEX-127982",
+      "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030618",
+      "어음법 16조  배서의 자격 수여적 효력 및 어음의 선의취득#KOBLEX-030385",
+      "국제사법 80조  행위능력#KOBLEX-127972",
+      "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030619",
+      "어음법 78조  발행인의 책임 및 일람 후 정기출급 어음의 특칙#KOBLEX-030621",
+      "국제사법 83조  효력#KOBLEX-127984",
+      "어음법 75조#KOBLEX-030603",
+      "국제사법 87조  상실ㆍ도난#KOBLEX-127990",
+      "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030617",
+      "어음법 16조  배서의 자격 수여적 효력 및 어음의 선의취득#KOBLEX-030387",
+      "어음법 63조  참가지급의 효력#KOBLEX-030566",
+      "어음법 1조#KOBLEX-030330",
+      "상법 65조  유가증권과 준용규정#KOBLEX-113695",
+      "어음법 77조  환어음에 관한 규정의 준용#KOBLEX-030616"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

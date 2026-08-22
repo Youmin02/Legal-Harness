@@ -1,0 +1,678 @@
+{
+  "abstention_reason": null,
+  "answer": "사용자가 근로자에게 부당해고등을 하면 근로자는 노동위원회에 구제를 신청할 수 있다.[CT1]\n부당해고등의 구제신청은 부당해고등이 있었던 날부터 3개월 이내에 하여야 한다.[CT2]\n근로자는 부당해고등의 구제를 신청하려면 관할 지방노동위원회에 부당해고등의 구제 신청서를 제출하여야 한다.[CT3]\n노동위원회는 부당해고등이 성립한다고 판정하면 사용자에게 구제명령을 하여야 한다.[CT4]\n노동위원회는 해고에 대한 구제명령을 할 때 근로자가 원직복직을 원하지 아니하면 원직복직을 명하는 대신 근로자가 해고기간 동안 근로를 제공하였더라면 받을 수 있었던 임금 상당액 이상의 금품을 근로자에게 지급하도록 명할 수 있다.[CT5]\n근로자가 원직복직이 불가능한 경우에도 노동위원회는 부당해고등이 성립한다고 판정하면 근로자가 해고기간 동안 근로를 제공하였더라면 받을 수 있었던 임금 상당액에 해당하는 금품을 사업주가 근로자에게 지급하도록 명할 수 있다.[CT6]\n전제: 질문 시나리오에서 갑의 해고가 부당해고에 해당한다고 가정합니다.\n한계: 본 답변은 제공된 근로기준법 및 시행규칙 조항에 근거하여 작성되었으며, 개별 사건의 구체적 사실관계에 따른 추가적인 법적 판단은 포함하지 않습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "사용자가 근로자에게 부당해고등을 하면 근로자는 노동위원회에 구제를 신청할 수 있다.[CT1]\n부당해고등의 구제신청은 부당해고등이 있었던 날부터 3개월 이내에 하여야 한다.[CT2]\n근로자는 부당해고등의 구제를 신청하려면 관할 지방노동위원회에 부당해고등의 구제 신청서를 제출하여야 한다.[CT3]\n노동위원회는 부당해고등이 성립한다고 판정하면 사용자에게 구제명령을 하여야 한다.[CT4]\n노동위원회는 해고에 대한 구제명령을 할 때 근로자가 원직복직을 원하지 아니하면 원직복직을 명하는 대신 근로자가 해고기간 동안 근로를 제공하였더라면 받을 수 있었던 임금 상당액 이상의 금품을 근로자에게 지급하도록 명할 수 있다.[CT5]\n근로자가 원직복직이 불가능한 경우에도 노동위원회는 부당해고등이 성립한다고 판정하면 근로자가 해고기간 동안 근로를 제공하였더라면 받을 수 있었던 임금 상당액에 해당하는 금품을 사업주가 근로자에게 지급하도록 명할 수 있다.[CT6]\n전제: 질문 시나리오에서 갑의 해고가 부당해고에 해당한다고 가정합니다.\n한계: 본 답변은 제공된 근로기준법 및 시행규칙 조항에 근거하여 작성되었으며, 개별 사건의 구체적 사실관계에 따른 추가적인 법적 판단은 포함하지 않습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T14:33:55.777955+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 286917.825,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 186,
+      "dedup_collapse": 26,
+      "evidence_fusion": 186,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 186
+    }
+  },
+  "run_id": "57971671-5161-47c7-b606-722b13fc58ad",
+  "state": {
+    "accepted_provision_ids": [
+      "근로기준법 30조  구제명령 등#KOBLEX-095890",
+      "근로기준법 30조  구제명령 등#KOBLEX-095888",
+      "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095880",
+      "근로기준법 30조  구제명령 등#KOBLEX-095891",
+      "근로기준법 시행규칙 5조  부당해고등의 구제신청#KOBLEX-011352",
+      "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095881"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 6,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "procedure",
+        "question_anchor": "을은 어떤 조치를 취할 수 있으며",
+        "requested_output": "부당해고 시 근로자가 취할 수 있는 법적 구제 조치"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "rule",
+        "question_anchor": "노동위원회가 부당해고라고 판정하면 어떤 결과가 발생하는가",
+        "requested_output": "부당해고 판정 시 발생하는 법적 효과 및 결과"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "근로기준법 시행규칙 5조  부당해고등의 구제신청#KOBLEX-011352"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 50.74959981271316,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "근로기준법 시행규칙 5조  부당해고등의 구제신청#KOBLEX-011352",
+        "provision_text": "제5조(부당해고등의 구제신청) 근로자는 법 제28조제1항에 따라 부당해고등의 구제를 신청하려면 별지 제3호서식의 부당해고등의 구제 신청서를 관할 지방노동위원회에 제출하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.8915562033653259,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "근로기준법 시행규칙 5조  부당해고등의 구제신청",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "근로기준법 30조  구제명령 등#KOBLEX-095891"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 40.72641955793825,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "근로기준법 30조  구제명령 등#KOBLEX-095891",
+        "provision_text": "④ 노동위원회는 근로계약기간의 만료, 정년의 도래 등으로 근로자가 원직복직(해고 이외의 경우는 원상회복을 말한다)이 불가능한 경우에도 제1항에 따른 구제명령이나 기각결정을 하여야 한다. 이 경우 노동위원회는 부당해고등이 성립한다고 판정하면 근로자가 해고기간 동안 근로를 제공하였더라면 받을 수 있었던 임금 상당액에 해당하는 금품(해고 이외의 경우에는 원상회복에 준하는 금품을 말한다)을 사업주가 근로자에게 지급하도록 명할 수 있다. <신설 2021.5.18>",
+        "rerank_rank": 1,
+        "rerank_score": 0.8860219717025757,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "근로기준법 30조  구제명령 등 4항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095880"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 26.028184934287648,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095880",
+        "provision_text": "① 사용자가 근로자에게 부당해고등을 하면 근로자는 노동위원회에 구제를 신청할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.8699246048927307,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "근로기준법 28조  부당해고등의 구제신청 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095881"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 47,
+        "first_stage_score": 22.0657792309239,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095881",
+        "provision_text": "② 제1항에 따른 구제신청은 부당해고등이 있었던 날부터 3개월 이내에 하여야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.5138232707977295,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "근로기준법 28조  부당해고등의 구제신청 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095879"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 26.48489845006013,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095879",
+        "provision_text": "제28조(부당해고등의 구제신청)",
+        "rerank_rank": 4,
+        "rerank_score": 0.47836834192276,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "근로기준법 28조  부당해고등의 구제신청",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "근로기준법 30조  구제명령 등#KOBLEX-095888"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 22,
+        "first_stage_score": 24.219166841887578,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "근로기준법 30조  구제명령 등#KOBLEX-095888",
+        "provision_text": "① 노동위원회는 제29조에 따른 심문을 끝내고 부당해고등이 성립한다고 판정하면 사용자에게 구제명령을 하여야 하며, 부당해고등이 성립하지 아니한다고 판정하면 구제신청을 기각하는 결정을 하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.3520262539386749,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "근로기준법 30조  구제명령 등 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "근로기준법 30조  구제명령 등#KOBLEX-095890"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 49.787987315090135,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "근로기준법 30조  구제명령 등#KOBLEX-095890",
+        "provision_text": "③ 노동위원회는 제1항에 따른 구제명령(해고에 대한 구제명령만을 말한다)을 할 때에 근로자가 원직복직(原職復職)을 원하지 아니하면 원직복직을 명하는 대신 근로자가 해고기간 동안 근로를 제공하였더라면 받을 수 있었던 임금 상당액 이상의 금품을 근로자에게 지급하도록 명할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.06770653277635574,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "근로기준법 30조  구제명령 등 3항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "근로기준법 시행령 59조 2 민감정보 및 고유식별정보의 처리#KOBLEX-011332"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 28,
+        "first_stage_score": 23.538597839722456,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "근로기준법 시행령 59조 2 민감정보 및 고유식별정보의 처리#KOBLEX-011332",
+        "provision_text": "2. 법 제28조제1항에 따른 부당해고등의 구제에 관한 사무",
+        "rerank_rank": 6,
+        "rerank_score": 0.0008234119741246104,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "근로기준법 시행령 59조 2 민감정보 및 고유식별정보의 처리 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "근로기준법 시행령 59조 2 민감정보 및 고유식별정보의 처리#KOBLEX-011334"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 35.439123700841805,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "근로기준법 시행령 59조 2 민감정보 및 고유식별정보의 처리#KOBLEX-011334",
+        "provision_text": "4. 법 제33조에 따른 부당해고 구제명령의 이행 확인 및 이행강제금 부과 등에 관한 사무",
+        "rerank_rank": 7,
+        "rerank_score": 0.0004359913873486221,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "근로기준법 시행령 59조 2 민감정보 및 고유식별정보의 처리 4호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "근로기준법 43조  임금 지급#KOBLEX-095925"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 34.490384222337156,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "근로기준법 43조  임금 지급#KOBLEX-095925",
+        "provision_text": "제43조(임금 지급)",
+        "rerank_rank": 3,
+        "rerank_score": 4.8887050070334226e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "근로기준법 43조  임금 지급",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095879": "제28조(부당해고등의 구제신청)",
+      "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095880": "① 사용자가 근로자에게 부당해고등을 하면 근로자는 노동위원회에 구제를 신청할 수 있다.",
+      "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095881": "② 제1항에 따른 구제신청은 부당해고등이 있었던 날부터 3개월 이내에 하여야 한다.",
+      "근로기준법 30조  구제명령 등#KOBLEX-095888": "① 노동위원회는 제29조에 따른 심문을 끝내고 부당해고등이 성립한다고 판정하면 사용자에게 구제명령을 하여야 하며, 부당해고등이 성립하지 아니한다고 판정하면 구제신청을 기각하는 결정을 하여야 한다.",
+      "근로기준법 30조  구제명령 등#KOBLEX-095890": "③ 노동위원회는 제1항에 따른 구제명령(해고에 대한 구제명령만을 말한다)을 할 때에 근로자가 원직복직(原職復職)을 원하지 아니하면 원직복직을 명하는 대신 근로자가 해고기간 동안 근로를 제공하였더라면 받을 수 있었던 임금 상당액 이상의 금품을 근로자에게 지급하도록 명할 수 있다.",
+      "근로기준법 30조  구제명령 등#KOBLEX-095891": "④ 노동위원회는 근로계약기간의 만료, 정년의 도래 등으로 근로자가 원직복직(해고 이외의 경우는 원상회복을 말한다)이 불가능한 경우에도 제1항에 따른 구제명령이나 기각결정을 하여야 한다. 이 경우 노동위원회는 부당해고등이 성립한다고 판정하면 근로자가 해고기간 동안 근로를 제공하였더라면 받을 수 있었던 임금 상당액에 해당하는 금품(해고 이외의 경우에는 원상회복에 준하는 금품을 말한다)을 사업주가 근로자에게 지급하도록 명할 수 있다. <신설 2021.5.18>",
+      "근로기준법 43조  임금 지급#KOBLEX-095925": "제43조(임금 지급)",
+      "근로기준법 시행규칙 5조  부당해고등의 구제신청#KOBLEX-011352": "제5조(부당해고등의 구제신청) 근로자는 법 제28조제1항에 따라 부당해고등의 구제를 신청하려면 별지 제3호서식의 부당해고등의 구제 신청서를 관할 지방노동위원회에 제출하여야 한다.",
+      "근로기준법 시행령 59조 2 민감정보 및 고유식별정보의 처리#KOBLEX-011332": "2. 법 제28조제1항에 따른 부당해고등의 구제에 관한 사무",
+      "근로기준법 시행령 59조 2 민감정보 및 고유식별정보의 처리#KOBLEX-011334": "4. 법 제33조에 따른 부당해고 구제명령의 이행 확인 및 이행강제금 부과 등에 관한 사무"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095880"
+            ],
+            "rationale": "근로기준법 제28조 제1항이 구제 신청의 법적 근거를 제공한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095881",
+              "근로기준법 시행규칙 5조  부당해고등의 구제신청#KOBLEX-011352"
+            ],
+            "rationale": "근로기준법 제28조 제2항이 기한을, 시행규칙 제5조가 관할 기관과 신청 방법을 제공한다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095880",
+          "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095881",
+          "근로기준법 시행규칙 5조  부당해고등의 구제신청#KOBLEX-011352"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "부당해고 구제 신청의 법적 근거(C003), 기한(C004), 관할 기관 및 신청 방법(C001)이 모두 제공된 조항에 의해 충족된다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "근로기준법 30조  구제명령 등#KOBLEX-095888",
+              "근로기준법 30조  구제명령 등#KOBLEX-095890"
+            ],
+            "rationale": "근로기준법 제30조 제1항과 제3항이 부당해고 판정 시의 구제명령 및 원직복직/금품 지급 효과를 명시한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "근로기준법 30조  구제명령 등#KOBLEX-095890",
+              "근로기준법 30조  구제명령 등#KOBLEX-095891"
+            ],
+            "rationale": "근로기준법 제30조 제3항과 제4항이 해고기간 중 임금 상당액 지급 의무를 명시한다.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "근로기준법 30조  구제명령 등#KOBLEX-095888",
+          "근로기준법 30조  구제명령 등#KOBLEX-095890",
+          "근로기준법 30조  구제명령 등#KOBLEX-095891"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "부당해고 판정 시 구제명령의 법적 효과(C006), 원직복직 또는 임금 상당액 지급(C007), 그리고 복직 불가 시의 임금 지급(C002)이 모두 제공된 조항에 의해 충족된다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095880",
+        "support_spans": [
+          {
+            "end_char": 48,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095881",
+        "support_spans": [
+          {
+            "end_char": 46,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "근로기준법 시행규칙 5조  부당해고등의 구제신청#KOBLEX-011352",
+        "support_spans": [
+          {
+            "end_char": 99,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "근로기준법 30조  구제명령 등#KOBLEX-095888",
+        "support_spans": [
+          {
+            "end_char": 109,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "근로기준법 30조  구제명령 등#KOBLEX-095890",
+        "support_spans": [
+          {
+            "end_char": 155,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "근로기준법 30조  구제명령 등#KOBLEX-095891",
+        "support_spans": [
+          {
+            "end_char": 256,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "부당해고로 인한 근로자의 구제 신청 절차 및 방법",
+        "issue_id": "I1"
+      },
+      {
+        "description": "노동위원회의 부당해고 판정 시 법적 효과",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을이라는 직원에게 성과가 좋지 않다는 이유로 해고 통보를 하였다. 을은 이 해고가 부당하다고 생각하여 노동위원회에 구제를 신청하였다. 노동위원회는 을의 주장을 받아들여 갑의 해고가 부당하다고 판정하였다. [질문] 갑이 을에게 부당하게 해고를 한 경우, 을은 어떤 조치를 취할 수 있으며, 노동위원회가 부당해고라고 판정하면 어떤 결과가 발생하는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "부당해고 구제 신청 절차 기한 관할 노동위원회 근로기준법",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "부당해고",
+          "구제신청",
+          "절차",
+          "기한",
+          "관할",
+          "노동위원회",
+          "근로기준법"
+        ],
+        "query_text": "부당해고 구제 신청 절차 기한 관할 노동위원회 근로기준법 [원문 맥락] 노동위원회는 을의 주장을 받아들여 갑의 해고가 부당하다고 판정하였다. 갑이 을에게 부당하게 해고를 한 경우, 을은 어떤 조치를 취할 수 있으며, 노동위원회가 부당해고라고 판정하면 어떤 결과가 발생하는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "부당해고 구제 신청 절차 기한 관할 노동위원회 근로기준법",
+        "statute_hints": [
+          "근로기준법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "부당해고 판정 효과 원직복직 임금 상당액 지급 근로기준법",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "부당해고",
+          "판정",
+          "효과",
+          "원직복직",
+          "임금",
+          "상당액",
+          "근로기준법"
+        ],
+        "query_text": "부당해고 판정 효과 원직복직 임금 상당액 지급 근로기준법 [원문 맥락] 노동위원회는 을의 주장을 받아들여 갑의 해고가 부당하다고 판정하였다. 갑이 을에게 부당하게 해고를 한 경우, 을은 어떤 조치를 취할 수 있으며, 노동위원회가 부당해고라고 판정하면 어떤 결과가 발생하는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "부당해고 판정 효과 원직복직 임금 상당액 지급 근로기준법",
+        "statute_hints": [
+          "근로기준법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을이라는 직원에게 성과가 좋지 않다는 이유로 해고 통보를 하였다. 을은 이 해고가 부당하다고 생각하여 노동위원회에 구제를 신청하였다. 노동위원회는 을의 주장을 받아들여 갑의 해고가 부당하다고 판정하였다.\n\n[질문]\n갑이 을에게 부당하게 해고를 한 경우, 을은 어떤 조치를 취할 수 있으며, 노동위원회가 부당해고라고 판정하면 어떤 결과가 발생하는가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "부당해고 구제 신청의 법적 근거, 신청 기한, 관할 노동위원회, 신청 방법 등 절차적 요건이 명확히 확인되어야 함",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "부당해고 구제 신청의 법적 근거 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "구제 신청 기한 및 관할 기관 확인"
+          }
+        ],
+        "critical": true,
+        "description": "부당해고 구제 신청의 주체, 기한, 관할 기관 및 절차",
+        "evidence_item_id": "E1",
+        "evidence_type": "procedure",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 근로자가 취할 수 있는 조치를 묻고 있으므로, 구제 신청 절차에 대한 법적 근거가 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "부당해고 판정 시 발생하는 원직복직, 해고기간 중 임금 상당액 지급 등 법적 결과가 명확히 확인되어야 함",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "부당해고 판정 시 원직복직 또는 손해배상 등 법적 효과 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "해고기간 중 임금 상당액 지급 의무 확인"
+          }
+        ],
+        "critical": true,
+        "description": "부당해고 판정 시 원직복직, 임금 상당액 지급 등 법적 효과",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 부당해고 판정 시 발생하는 결과를 묻고 있으므로, 판정의 법적 효과에 대한 근거가 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "57971671-5161-47c7-b606-722b13fc58ad",
+    "seen_provision_ids": [
+      "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095879",
+      "근로기준법 30조  구제명령 등#KOBLEX-095888",
+      "근로기준법 30조  구제명령 등#KOBLEX-095890",
+      "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095880",
+      "근로기준법 30조  구제명령 등#KOBLEX-095891",
+      "근로기준법 43조  임금 지급#KOBLEX-095925",
+      "근로기준법 시행령 59조 2 민감정보 및 고유식별정보의 처리#KOBLEX-011334",
+      "근로기준법 시행규칙 5조  부당해고등의 구제신청#KOBLEX-011352",
+      "근로기준법 시행령 59조 2 민감정보 및 고유식별정보의 처리#KOBLEX-011332",
+      "근로기준법 28조  부당해고등의 구제신청#KOBLEX-095881"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

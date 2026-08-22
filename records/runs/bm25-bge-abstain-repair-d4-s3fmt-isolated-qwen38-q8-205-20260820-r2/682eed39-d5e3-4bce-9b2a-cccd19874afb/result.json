@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T22:23:23.120353+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 142602.201,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 152 column 33 (char 4218)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "682eed39-d5e3-4bce-9b2a-cccd19874afb",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Unterminated string starting at: line 152 column 33 (char 4218)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을시 관할 구역 내 부동산 개발을 위한 허가를 신청하였으나, 을시는 해당 지역이 환경보호구역에 해당한다는 이유로 이를 거부하였다. 그러나 갑은 실제로 환경보호 목적이 아닌 정치적 또는 경제적 외부 압력에 의해 허가가 거부되었다고 판단하고, 을시의 처분이 재량권을 남용하거나 그 한계를 벗어난 것이라며 취소소송을 제기하였다. [질문] 을시의 부동산 개발 허가 거부가 행정청의 재량에 속하는 경우에도, 법원이 이를 취소할 수 있는 법적 근거는 무엇이며, 갑이 제기한 소송의 대상은 무엇인가? 또한, 법원은 재판 과정에서 어떤 사실에 대해 직권으로 판단할 수 있는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n갑은 을시 관할 구역 내 부동산 개발을 위한 허가를 신청하였으나, 을시는 해당 지역이 환경보호구역에 해당한다는 이유로 이를 거부하였다. 그러나 갑은 실제로 환경보호 목적이 아닌 정치적 또는 경제적 외부 압력에 의해 허가가 거부되었다고 판단하고, 을시의 처분이 재량권을 남용하거나 그 한계를 벗어난 것이라며 취소소송을 제기하였다.\n\n[질문]\n을시의 부동산 개발 허가 거부가 행정청의 재량에 속하는 경우에도, 법원이 이를 취소할 수 있는 법적 근거는 무엇이며, 갑이 제기한 소송의 대상은 무엇인가? 또한, 법원은 재판 과정에서 어떤 사실에 대해 직권으로 판단할 수 있는가?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "682eed39-d5e3-4bce-9b2a-cccd19874afb",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

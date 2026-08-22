@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T01:26:00.008473+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 137651.927,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Expecting value: line 135 column 14 (char 3960)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "51da5f63-cf21-420f-a796-8bbd73377e75",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Expecting value: line 135 column 14 (char 3960)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑과 을은 친구 병이 운영하는 전자제품 가게에서 물건을 훔치기로 공모하였습니다. 갑은 병의 가게 CCTV를 방해하여 을이 쉽게 물건을 훔칠 수 있도록 하였습니다. 병은 이후 가게 물건이 도난당한 사실을 알아채고, 손해를 본 것에 대해 갑과 을에게 책임을 묻고자 합니다. [질문] 갑과 을이 공모하여 병의 가게에서 물건을 훔친 경우, 갑과 을은 어떤 책임을 지게 되는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n갑과 을은 친구 병이 운영하는 전자제품 가게에서 물건을 훔치기로 공모하였습니다. 갑은 병의 가게 CCTV를 방해하여 을이 쉽게 물건을 훔칠 수 있도록 하였습니다. 병은 이후 가게 물건이 도난당한 사실을 알아채고, 손해를 본 것에 대해 갑과 을에게 책임을 묻고자 합니다.\n\n[질문]\n갑과 을이 공모하여 병의 가게에서 물건을 훔친 경우, 갑과 을은 어떤 책임을 지게 되는가?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "51da5f63-cf21-420f-a796-8bbd73377e75",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

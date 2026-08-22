@@ -1,0 +1,1223 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "갑은 을의 무단 토지 진입 및 꽃 꺾기 행위가 소유권을 방해하는 것으로 판단될 경우, 민법 제214조에 근거하여 방해의 제거를 청구할 수 있습니다.[CT1]\n갑의 이러한 권리 행사에 대해서는 민법 제2조의 신의성실 원칙이 적용되며, 이를 위반하는 권리남용이 인정될 수 있습니다.[CT2]\n전제: 갑이 해당 토지의 소유자임을 전제로 합니다.\n전제: 을의 행위가 갑의 소유권을 실제로 방해하고 있음을 전제로 합니다.\n한계: 후보 조항에 방해제거청구권의 구체적 행사 요건(소유권 존재, 침해행위, 현존성 등)에 대한 명시적 규정이 포함되어 있지 않아, 해당 요건 충족 여부에 대한 법적 지원이 불완전합니다.\n한계: 후보 조항에 권리남용의 구체적 개념, 판단 기준 및 법적 효과에 대한 명시적 규정이 포함되어 있지 않아, 갑의 권리남용 인정 여부에 대한 법적 지원이 불완전합니다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T17:07:02.314371+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 676597.045,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 539,
+      "dedup_collapse": 150,
+      "evidence_fusion": 539,
+      "first_stage": 800,
+      "request_rerank": 800,
+      "round_selected": 30,
+      "rrf": 600,
+      "selected": 539
+    }
+  },
+  "run_id": "7c47d037-dc25-4806-a84e-734318bd13f6",
+  "state": {
+    "accepted_provision_ids": [
+      "민법 214조  소유물방해제거, 방해예방청구권#KOBLEX-058825",
+      "민법 2조  신의성실#KOBLEX-058344"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 3,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 5,
+          "request_count": 3,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "The frozen maximum number of retrieval rounds was used.",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 24
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 24,
+          "claim_count": 2
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "방해의 제거를 청구할 수 있는가",
+        "requested_output": "갑이 을의 꽃 꺾기 행위에 대해 방해의 제거를 청구할 수 있는지의 여부"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "갑은 이를 남용할 수 있는가",
+        "requested_output": "갑에게 방해제거청구권이 인정되는 경우, 갑이 이를 남용할 수 있는지의 여부"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민법 214조  소유물방해제거, 방해예방청구권#KOBLEX-058825"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 93,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 214조  소유물방해제거, 방해예방청구권#KOBLEX-058825",
+        "provision_text": "제214조(소유물방해제거, 방해예방청구권) 소유자는 소유권을 방해하는 자에 대하여 방해의 제거를 청구할 수 있고 소유권을 방해할 염려있는 행위를 하는 자에 대하여 그 예방이나 손해배상의 담보를 청구할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.11488179117441177,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 214조  소유물방해제거, 방해예방청구권",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "가사소송법 58조  조정의 원칙#KOBLEX-064985"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 21.397440823203446,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "가사소송법 58조  조정의 원칙#KOBLEX-064985",
+        "provision_text": "제58조(조정의 원칙)",
+        "rerank_rank": 1,
+        "rerank_score": 9.978421985579189e-06,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "가사소송법 58조  조정의 원칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 211조#KOBLEX-058821"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 91,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 211조#KOBLEX-058821",
+        "provision_text": "제1절 소유권의 한계",
+        "rerank_rank": 2,
+        "rerank_score": 1.3783715075987857e-05,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 211조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 211조#KOBLEX-058820"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 20.157636204413983,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민법 211조#KOBLEX-058820",
+        "provision_text": "제3장 소유권",
+        "rerank_rank": 3,
+        "rerank_score": 1.3315261639945675e-05,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 211조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 1조  민사소송의 이상과 신의성실의 원칙#KOBLEX-063538"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 76,
+        "first_stage_score": 20.377203872549536,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 1조  민사소송의 이상과 신의성실의 원칙#KOBLEX-063538",
+        "provision_text": "제1조(민사소송의 이상과 신의성실의 원칙)",
+        "rerank_rank": 2,
+        "rerank_score": 9.428716111870017e-06,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사소송법 1조  민사소송의 이상과 신의성실의 원칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 492조  상계의 요건#KOBLEX-059395"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "민법 492조  상계의 요건#KOBLEX-059395",
+        "provision_text": "제492조(상계의 요건)",
+        "rerank_rank": 3,
+        "rerank_score": 8.169399734470062e-06,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "민법 492조  상계의 요건",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정기본법 8조#KOBLEX-201332"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 71,
+        "first_stage_score": 20.874864032036097,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "행정기본법 8조#KOBLEX-201332",
+        "provision_text": "제2장 행정의 법 원칙",
+        "rerank_rank": 4,
+        "rerank_score": 7.4182444222969934e-06,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "행정기본법 8조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 100조  주물, 종물#KOBLEX-058580"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 98,
+        "first_stage_score": 1.0,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "민법 100조  주물, 종물#KOBLEX-058580",
+        "provision_text": "제100조(주물, 종물)",
+        "rerank_rank": 5,
+        "rerank_score": 6.746597591700265e-06,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 100조  주물, 종물",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 178조  교부송달의 원칙#KOBLEX-064005"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 21.397440823203446,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 178조  교부송달의 원칙#KOBLEX-064005",
+        "provision_text": "제178조(교부송달의 원칙)",
+        "rerank_rank": 6,
+        "rerank_score": 5.958423116680933e-06,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민사소송법 178조  교부송달의 원칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "저작권법 39조  보호기간의 원칙#KOBLEX-084657"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 33,
+        "first_stage_score": 21.397440823203446,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "저작권법 39조  보호기간의 원칙#KOBLEX-084657",
+        "provision_text": "제39조(보호기간의 원칙)",
+        "rerank_rank": 7,
+        "rerank_score": 5.659471753460821e-06,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "저작권법 39조  보호기간의 원칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "부정경쟁방지 및 영업비밀보호에 관한 법률 14조  영업비밀 침해행위 금지청구권 등에 관한 시효#KOBLEX-033850",
+          "부정경쟁방지 및 영업비밀보호에 관한 법률 14조  영업비밀 침해행위 금지청구권 등에 관한 시효#KOBLEX-171302"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 41,
+        "first_stage_score": 17.284246739095444,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "부정경쟁방지 및 영업비밀보호에 관한 법률 14조  영업비밀 침해행위 금지청구권 등에 관한 시효#KOBLEX-033850",
+        "provision_text": "제14조(영업비밀 침해행위 금지청구권 등에 관한 시효) 제10조제1항에 따라 영업비밀 침해행위의 금지 또는 예방을 청구할 수 있는 권리는 영업비밀 침해행위가 계속되는 경우에 영업비밀 보유자가 그 침해행위에 의하여 영업상의 이익이 침해되거나 침해될 우려가 있다는 사실 및 침해행위자를 안 날부터 3년간 행사하지 아니하면 시효(時效)로 소멸한다. 그 침해행위가 시작된 날부터 10년이 지난 때에도 또한 같다.",
+        "rerank_rank": 1,
+        "rerank_score": 1.8171031115343794e-05,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "부정경쟁방지 및 영업비밀보호에 관한 법률 14조  영업비밀 침해행위 금지청구권 등에 관한 시효",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 13조  피한정후견인의 행위와 동의#KOBLEX-058371"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "민법 13조  피한정후견인의 행위와 동의#KOBLEX-058371",
+        "provision_text": "제13조(피한정후견인의 행위와 동의)",
+        "rerank_rank": 1,
+        "rerank_score": 0.0017613079398870468,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민법 13조  피한정후견인의 행위와 동의",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "사립학교법 13조  「민법」의 준용#KOBLEX-172164"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 28.615915468011075,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "사립학교법 13조  「민법」의 준용#KOBLEX-172164",
+        "provision_text": "제13조(「민법」의 준용) 학교법인의 설립에 관하여는 「민법」 제47조, 제48조, 제50조부터 제52조까지, 제52조의2, 제53조, 제54조 및 제55조제1항을 준용한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.00021924148313701153,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "사립학교법 13조  「민법」의 준용",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "수도법 13조  영리행위 금지 등#KOBLEX-015479"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 30.458770043046265,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "수도법 13조  영리행위 금지 등#KOBLEX-015479",
+        "provision_text": "제13조(영리행위 금지 등)",
+        "rerank_rank": 6,
+        "rerank_score": 1.3708063306694385e-05,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "수도법 13조  영리행위 금지 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정기본법 13조  부당결부금지의 원칙#KOBLEX-201345"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 27.58224268666078,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "행정기본법 13조  부당결부금지의 원칙#KOBLEX-201345",
+        "provision_text": "제13조(부당결부금지의 원칙) 행정청은 행정작용을 할 때 상대방에게 해당 행정작용과 실질적인 관련이 없는 의무를 부과해서는 아니 된다.",
+        "rerank_rank": 8,
+        "rerank_score": 1.2806255654140841e-05,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "행정기본법 13조  부당결부금지의 원칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "외무공무원법 13조  보직관리의 원칙#KOBLEX-193597"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 37.249072514142824,
+        "fusion_rank": 10,
+        "issue_id": "I2",
+        "provision_id": "외무공무원법 13조  보직관리의 원칙#KOBLEX-193597",
+        "provision_text": "제13조(보직관리의 원칙)",
+        "rerank_rank": 10,
+        "rerank_score": 1.2241283002367709e-05,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "외무공무원법 13조  보직관리의 원칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "독점규제 및 공정거래에 관한 법률 13조  탈법행위의 금지#KOBLEX-020547",
+          "독점규제 및 공정거래에 관한 법률 13조  탈법행위의 금지#KOBLEX-038975"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 2,
+        "first_stage_score": 31.22126824603201,
+        "fusion_rank": 11,
+        "issue_id": "I2",
+        "provision_id": "독점규제 및 공정거래에 관한 법률 13조  탈법행위의 금지#KOBLEX-020547",
+        "provision_text": "제13조(탈법행위의 금지)",
+        "rerank_rank": 11,
+        "rerank_score": 8.057339982769918e-06,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "독점규제 및 공정거래에 관한 법률 13조  탈법행위의 금지",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 85조  수익증권 발행 시 권리행사 등#KOBLEX-107427"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 58,
+        "first_stage_score": 26.70186316793086,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "신탁법 85조  수익증권 발행 시 권리행사 등#KOBLEX-107427",
+        "provision_text": "① 무기명수익증권을 가진 자는 그 수익증권을 제시하지 아니하면 수탁자 및 제3자에게 수익자의 권리를 행사하지 못한다.",
+        "rerank_rank": 2,
+        "rerank_score": 7.971546438056976e-06,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-3",
+        "source_request_ids": [
+          "GRQ-R2-3"
+        ],
+        "statute_name": "신탁법 85조  수익증권 발행 시 권리행사 등 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "상법 714조  위부권행사의 요건#KOBLEX-116096"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 77,
+        "first_stage_score": 16.465000322967974,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "상법 714조  위부권행사의 요건#KOBLEX-116096",
+        "provision_text": "제714조(위부권행사의 요건)",
+        "rerank_rank": 2,
+        "rerank_score": 6.420826139219571e-06,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "상법 714조  위부권행사의 요건",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 2조  신의성실#KOBLEX-058344"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "민법 2조  신의성실#KOBLEX-058344",
+        "provision_text": "제2조(신의성실)",
+        "rerank_rank": 1,
+        "rerank_score": 0.00034008079092018306,
+        "retrieval_round": 3,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "민법 2조  신의성실",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 205조  점유의 보유#KOBLEX-058806"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 28,
+        "first_stage_score": 20.57102726076489,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 205조  점유의 보유#KOBLEX-058806",
+        "provision_text": "③공사로 인하여 점유의 방해를 받은 경우에는 공사착수후 1년을 경과하거나 그 공사가 완성한 때에는 방해의 제거를 청구하지 못한다.",
+        "rerank_rank": 2,
+        "rerank_score": 1.243182396137854e-05,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 205조  점유의 보유 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "전자문서 및 전자거래 기본법 4조  전자문서의 효력#KOBLEX-165848"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 75,
+        "first_stage_score": 18.2456177714255,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "전자문서 및 전자거래 기본법 4조  전자문서의 효력#KOBLEX-165848",
+        "provision_text": "① 전자문서는 전자적 형태로 되어 있다는 이유만으로 법적 효력이 부인되지 아니한다. <개정 2020.6.9>",
+        "rerank_rank": 2,
+        "rerank_score": 1.1534160876180977e-05,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-3",
+        "source_request_ids": [
+          "GRQ-R3-3"
+        ],
+        "statute_name": "전자문서 및 전자거래 기본법 4조  전자문서의 효력 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "신탁법 85조  수익증권 발행 시 권리행사 등#KOBLEX-107426"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 7,
+        "first_stage_score": 25.535093575293082,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "신탁법 85조  수익증권 발행 시 권리행사 등#KOBLEX-107426",
+        "provision_text": "제85조(수익증권 발행 시 권리행사 등)",
+        "rerank_rank": 4,
+        "rerank_score": 7.997260581760202e-06,
+        "retrieval_round": 3,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-3",
+        "source_request_ids": [
+          "GRQ-R3-3"
+        ],
+        "statute_name": "신탁법 85조  수익증권 발행 시 권리행사 등",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공익사업을 위한 토지 등의 취득 및 보상에 관한 법률 40조#KOBLEX-026892",
+          "공익사업을 위한 토지 등의 취득 및 보상에 관한 법률 40조#KOBLEX-119859"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 60,
+        "first_stage_score": 19.86490378290521,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "공익사업을 위한 토지 등의 취득 및 보상에 관한 법률 40조#KOBLEX-026892",
+        "provision_text": "제2절 수용 또는 사용의 효과",
+        "rerank_rank": 5,
+        "rerank_score": 7.390247446892317e-06,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-3",
+        "source_request_ids": [
+          "GRQ-R3-3"
+        ],
+        "statute_name": "공익사업을 위한 토지 등의 취득 및 보상에 관한 법률 40조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "가사소송법 58조  조정의 원칙#KOBLEX-064985": "제58조(조정의 원칙)",
+      "공익사업을 위한 토지 등의 취득 및 보상에 관한 법률 40조#KOBLEX-026892": "제2절 수용 또는 사용의 효과",
+      "독점규제 및 공정거래에 관한 법률 13조  탈법행위의 금지#KOBLEX-020547": "제13조(탈법행위의 금지)",
+      "민법 100조  주물, 종물#KOBLEX-058580": "제100조(주물, 종물)",
+      "민법 13조  피한정후견인의 행위와 동의#KOBLEX-058371": "제13조(피한정후견인의 행위와 동의)",
+      "민법 205조  점유의 보유#KOBLEX-058806": "③공사로 인하여 점유의 방해를 받은 경우에는 공사착수후 1년을 경과하거나 그 공사가 완성한 때에는 방해의 제거를 청구하지 못한다.",
+      "민법 211조#KOBLEX-058820": "제3장 소유권",
+      "민법 211조#KOBLEX-058821": "제1절 소유권의 한계",
+      "민법 214조  소유물방해제거, 방해예방청구권#KOBLEX-058825": "제214조(소유물방해제거, 방해예방청구권) 소유자는 소유권을 방해하는 자에 대하여 방해의 제거를 청구할 수 있고 소유권을 방해할 염려있는 행위를 하는 자에 대하여 그 예방이나 손해배상의 담보를 청구할 수 있다.",
+      "민법 2조  신의성실#KOBLEX-058344": "제2조(신의성실)",
+      "민법 492조  상계의 요건#KOBLEX-059395": "제492조(상계의 요건)",
+      "민사소송법 178조  교부송달의 원칙#KOBLEX-064005": "제178조(교부송달의 원칙)",
+      "민사소송법 1조  민사소송의 이상과 신의성실의 원칙#KOBLEX-063538": "제1조(민사소송의 이상과 신의성실의 원칙)",
+      "부정경쟁방지 및 영업비밀보호에 관한 법률 14조  영업비밀 침해행위 금지청구권 등에 관한 시효#KOBLEX-033850": "제14조(영업비밀 침해행위 금지청구권 등에 관한 시효) 제10조제1항에 따라 영업비밀 침해행위의 금지 또는 예방을 청구할 수 있는 권리는 영업비밀 침해행위가 계속되는 경우에 영업비밀 보유자가 그 침해행위에 의하여 영업상의 이익이 침해되거나 침해될 우려가 있다는 사실 및 침해행위자를 안 날부터 3년간 행사하지 아니하면 시효(時效)로 소멸한다. 그 침해행위가 시작된 날부터 10년이 지난 때에도 또한 같다.",
+      "사립학교법 13조  「민법」의 준용#KOBLEX-172164": "제13조(「민법」의 준용) 학교법인의 설립에 관하여는 「민법」 제47조, 제48조, 제50조부터 제52조까지, 제52조의2, 제53조, 제54조 및 제55조제1항을 준용한다.",
+      "상법 714조  위부권행사의 요건#KOBLEX-116096": "제714조(위부권행사의 요건)",
+      "수도법 13조  영리행위 금지 등#KOBLEX-015479": "제13조(영리행위 금지 등)",
+      "신탁법 85조  수익증권 발행 시 권리행사 등#KOBLEX-107426": "제85조(수익증권 발행 시 권리행사 등)",
+      "신탁법 85조  수익증권 발행 시 권리행사 등#KOBLEX-107427": "① 무기명수익증권을 가진 자는 그 수익증권을 제시하지 아니하면 수탁자 및 제3자에게 수익자의 권리를 행사하지 못한다.",
+      "외무공무원법 13조  보직관리의 원칙#KOBLEX-193597": "제13조(보직관리의 원칙)",
+      "저작권법 39조  보호기간의 원칙#KOBLEX-084657": "제39조(보호기간의 원칙)",
+      "전자문서 및 전자거래 기본법 4조  전자문서의 효력#KOBLEX-165848": "① 전자문서는 전자적 형태로 되어 있다는 이유만으로 법적 효력이 부인되지 아니한다. <개정 2020.6.9>",
+      "행정기본법 13조  부당결부금지의 원칙#KOBLEX-201345": "제13조(부당결부금지의 원칙) 행정청은 행정작용을 할 때 상대방에게 해당 행정작용과 실질적인 관련이 없는 의무를 부과해서는 아니 된다.",
+      "행정기본법 8조#KOBLEX-201332": "제2장 행정의 법 원칙"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 214조  소유물방해제거, 방해예방청구권#KOBLEX-058825"
+            ],
+            "rationale": "C001은 소유자가 소유권을 방해하는 자에 대해 방해의 제거를 청구할 수 있음을 명시하여, 방해제거청구권을 인정하는 조항임을 확인한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "후보 조항 중 방해제거청구권의 구체적 행사 요건(소유권 존재, 침해행위, 현존성 등)을 명시적으로 규정하는 조항이 없다.",
+            "requirement_id": "E1-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "민법 214조  소유물방해제거, 방해예방청구권#KOBLEX-058825"
+        ],
+        "missing_aspects": [
+          "E1-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C001(민법 제214조)은 방해제거청구권의 존재를 확인하여 E1-R1을 충족한다. 그러나 E1-R2에서 요구하는 구체적 행사 요건(소유권 존재, 침해행위, 현존성 등)에 대한 명시적 법적 근거가 후보 조항에 포함되어 있지 않아 법적 지원이 불완전하다.",
+        "status": "partially_covered"
+      },
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 2조  신의성실#KOBLEX-058344"
+            ],
+            "rationale": "C020(민법 제2조)은 신의성실 원칙을 규정하여 권리남용 판단의 일반적 기준을 제공하지만, 권리남용의 구체적 개념이나 판단 요건을 명시적으로 정의하지는 않는다.",
+            "requirement_id": "E2-R1",
+            "status": "partially_satisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "후보 조항 중 권리남용이 인정될 경우의 법적 효과(청구권 부인 등)를 명시적으로 규정하는 조항이 없다.",
+            "requirement_id": "E2-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "민법 2조  신의성실#KOBLEX-058344"
+        ],
+        "missing_aspects": [
+          "E2-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "C020(민법 제2조)은 신의성실 원칙을 규정하여 권리남용 판단의 일반적 근거를 제공한다. 그러나 E2-R1(권리남용의 구체적 개념 및 판단 기준)과 E2-R2(권리남용 시 법적 효과)에 대한 명시적 규정이 후보 조항에 부재하여 법적 지원이 불완전하다.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 214조  소유물방해제거, 방해예방청구권#KOBLEX-058825",
+        "support_spans": [
+          {
+            "end_char": 117,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민법 2조  신의성실#KOBLEX-058344",
+        "support_spans": [
+          {
+            "end_char": 9,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 5,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "을의 무단 토지 진입 및 꽃 꺾기 행위가 갑의 소유권에 대한 방해에 해당하는지 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "갑의 방해제거청구권 행사에 권리남용의 원칙이 적용되는지 여부",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "소유권 침해 시 방해제거청구권을 인정하는 조항과 그 요건(소유권 존재, 침해행위, 현존성 등)을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "소유권 침해 시 방해제거청구권을 인정하는 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "방해제거청구권 행사 요건(소유권 존재, 침해행위, 현존성 등) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "소유권 침해에 기한 방해제거청구권의 법적 근거 및 요건",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "갑의 청구권 인정 여부에 대한 핵심 법적 근거",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "권리남용의 개념, 판단 기준, 및 법적 효과를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "권리남용의 개념 및 판단 기준 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "권리남용 시 법적 효과 확인"
+          }
+        ],
+        "critical": true,
+        "description": "권리남용의 원칙 및 그 적용 요건",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "갑의 청구권 행사에 권리남용이 적용되는지 판단하기 위한 핵심 법적 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 자신의 토지에 꽃밭을 가꾸고 있었는데, 인근에 사는 을이 자주 갑의 토지에 무단으로 들어와 꽃을 꺾어갔습니다. 갑은 을에게 토지에 무단으로 들어오지 말라고 경고했으나, 을은 계속해서 꽃을 꺾어갔습니다. 이에 갑은 법원에 을의 방해 행위를 제거해달라는 청구를 하게 되었습니다. 하지만, 을은 갑이 이 권리를 부당하게 사용하고 있다고 주장합니다. [질문] 갑이 을의 꽃 꺾기 행위에 대해 방해의 제거를 청구할 수 있는가? 또한, 갑에게 방해제거청구권이 인정되는 경우, 갑은 이를 남용할 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "소유권 침해 방해제거청구권 요건 민법",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "소유권",
+          "침해",
+          "방해제거청구권",
+          "요건",
+          "민법"
+        ],
+        "query_text": "소유권 침해 방해제거청구권 요건 민법 [원문 맥락] 갑이 을의 꽃 꺾기 행위에 대해 방해의 제거를 청구할 수 있는가? 또한, 갑에게 방해제거청구권이 인정되는 경우, 갑은 이를 남용할 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "소유권 침해 시 방해제거청구권 인정 요건",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "권리남용 원칙 요건 민법",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "권리남용",
+          "원칙",
+          "요건",
+          "민법"
+        ],
+        "query_text": "권리남용 원칙 요건 민법 [원문 맥락] 갑이 을의 꽃 꺾기 행위에 대해 방해의 제거를 청구할 수 있는가? 또한, 갑에게 방해제거청구권이 인정되는 경우, 갑은 이를 남용할 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "권리남용의 개념 및 판단 기준",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "소유권 방해제거청구권 현존성 침해행위 요건",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "소유권",
+          "방해제거청구권",
+          "현존성",
+          "침해행위",
+          "요건"
+        ],
+        "query_text": "소유권 방해제거청구권 현존성 침해행위 요건 [원문 맥락] 갑이 을의 꽃 꺾기 행위에 대해 방해의 제거를 청구할 수 있는가? 또한, 갑에게 방해제거청구권이 인정되는 경우, 갑은 이를 남용할 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "방해제거청구권 행사 요건 현존성 침해행위",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "민법 제13조 권리남용 금지 원칙",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민법",
+          "제13조",
+          "권리남용",
+          "금지",
+          "원칙"
+        ],
+        "query_text": "민법 제13조 권리남용 금지 원칙 [원문 맥락] 갑이 을의 꽃 꺾기 행위에 대해 방해의 제거를 청구할 수 있는가? 또한, 갑에게 방해제거청구권이 인정되는 경우, 갑은 이를 남용할 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "권리남용의 개념 및 판단 기준 민법 제13조",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "권리를 남용하는 자는 그 권리를 행사할 수 없다",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "권리남용",
+          "행사",
+          "금지",
+          "법적효과"
+        ],
+        "query_text": "권리를 남용하는 자는 그 권리를 행사할 수 없다 [원문 맥락] 갑이 을의 꽃 꺾기 행위에 대해 방해의 제거를 청구할 수 있는가? 또한, 갑에게 방해제거청구권이 인정되는 경우, 갑은 이를 남용할 수 있는가?",
+        "request_id": "GRQ-R2-3",
+        "rerank_query_text": "권리남용 시 법적 효과 및 행사 금지",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "소유권 방해 제거 청구 요건 현존성 침해행위",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "소유권",
+          "방해제거",
+          "청구요건",
+          "현존성",
+          "침해행위"
+        ],
+        "query_text": "소유자가 소유권을 방해하는 자에 대하여 방해의 제거를 청구할 수 있는 경우의 요건 [원문 맥락] 갑이 을의 꽃 꺾기 행위에 대해 방해의 제거를 청구할 수 있는가? 또한, 갑에게 방해제거청구권이 인정되는 경우, 갑은 이를 남용할 수 있는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "방해제거청구권 행사 요건 소유권 침해 현존성",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "민법 제2조 권리남용 금지 원칙",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민법",
+          "제2조",
+          "권리남용",
+          "금지",
+          "판단기준"
+        ],
+        "query_text": "민법 제2조 권리남용 금지 원칙 및 판단 기준 [원문 맥락] 갑이 을의 꽃 꺾기 행위에 대해 방해의 제거를 청구할 수 있는가? 또한, 갑에게 방해제거청구권이 인정되는 경우, 갑은 이를 남용할 수 있는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "권리남용의 개념 및 판단 기준 민법 제2조",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "권리남용 법적 효과 권리행사 금지",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "권리남용",
+          "법적효과",
+          "권리행사",
+          "금지",
+          "신의성실"
+        ],
+        "query_text": "권리남용 법적 효과 권리행사 금지 신의성실 [원문 맥락] 갑이 을의 꽃 꺾기 행위에 대해 방해의 제거를 청구할 수 있는가? 또한, 갑에게 방해제거청구권이 인정되는 경우, 갑은 이를 남용할 수 있는가?",
+        "request_id": "GRQ-R3-3",
+        "rerank_query_text": "권리남용 시 법적 효과 및 권리행사 금지",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 자신의 토지에 꽃밭을 가꾸고 있었는데, 인근에 사는 을이 자주 갑의 토지에 무단으로 들어와 꽃을 꺾어갔습니다. 갑은 을에게 토지에 무단으로 들어오지 말라고 경고했으나, 을은 계속해서 꽃을 꺾어갔습니다. 이에 갑은 법원에 을의 방해 행위를 제거해달라는 청구를 하게 되었습니다. 하지만, 을은 갑이 이 권리를 부당하게 사용하고 있다고 주장합니다.\n\n[질문]\n갑이 을의 꽃 꺾기 행위에 대해 방해의 제거를 청구할 수 있는가? 또한, 갑에게 방해제거청구권이 인정되는 경우, 갑은 이를 남용할 수 있는가?",
+    "remaining_request_budget": 1,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "소유권 침해 시 방해제거청구권을 인정하는 조항과 그 요건(소유권 존재, 침해행위, 현존성 등)을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "소유권 침해 시 방해제거청구권을 인정하는 조항 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "방해제거청구권 행사 요건(소유권 존재, 침해행위, 현존성 등) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "소유권 침해에 기한 방해제거청구권의 법적 근거 및 요건",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "갑의 청구권 인정 여부에 대한 핵심 법적 근거",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "권리남용의 개념, 판단 기준, 및 법적 효과를 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "권리남용의 개념 및 판단 기준 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "권리남용 시 법적 효과 확인"
+          }
+        ],
+        "critical": true,
+        "description": "권리남용의 원칙 및 그 적용 요건",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "갑의 청구권 행사에 권리남용이 적용되는지 판단하기 위한 핵심 법적 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "7c47d037-dc25-4806-a84e-734318bd13f6",
+    "seen_provision_ids": [
+      "수도법 13조  영리행위 금지 등#KOBLEX-015479",
+      "상법 714조  위부권행사의 요건#KOBLEX-116096",
+      "민법 492조  상계의 요건#KOBLEX-059395",
+      "신탁법 85조  수익증권 발행 시 권리행사 등#KOBLEX-107426",
+      "부정경쟁방지 및 영업비밀보호에 관한 법률 14조  영업비밀 침해행위 금지청구권 등에 관한 시효#KOBLEX-033850",
+      "민법 13조  피한정후견인의 행위와 동의#KOBLEX-058371",
+      "사립학교법 13조  「민법」의 준용#KOBLEX-172164",
+      "공익사업을 위한 토지 등의 취득 및 보상에 관한 법률 40조#KOBLEX-026892",
+      "민법 205조  점유의 보유#KOBLEX-058806",
+      "민사소송법 1조  민사소송의 이상과 신의성실의 원칙#KOBLEX-063538",
+      "독점규제 및 공정거래에 관한 법률 13조  탈법행위의 금지#KOBLEX-020547",
+      "민법 211조#KOBLEX-058820",
+      "행정기본법 13조  부당결부금지의 원칙#KOBLEX-201345",
+      "민법 211조#KOBLEX-058821",
+      "민사소송법 178조  교부송달의 원칙#KOBLEX-064005",
+      "민법 2조  신의성실#KOBLEX-058344",
+      "민법 100조  주물, 종물#KOBLEX-058580",
+      "가사소송법 58조  조정의 원칙#KOBLEX-064985",
+      "행정기본법 8조#KOBLEX-201332",
+      "신탁법 85조  수익증권 발행 시 권리행사 등#KOBLEX-107427",
+      "외무공무원법 13조  보직관리의 원칙#KOBLEX-193597",
+      "민법 214조  소유물방해제거, 방해예방청구권#KOBLEX-058825",
+      "전자문서 및 전자거래 기본법 4조  전자문서의 효력#KOBLEX-165848",
+      "저작권법 39조  보호기간의 원칙#KOBLEX-084657"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "MAX_RETRIEVAL_ROUNDS_REACHED"
+}

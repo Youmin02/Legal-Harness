@@ -1,0 +1,497 @@
+{
+  "abstention_reason": null,
+  "answer": "채권자는 어느 연대채무자에 대하여 또는 동시나 순차로 모든 연대채무자에 대하여 채무의 전부나 일부의 이행을 청구할 수 있다.[CT1]\nA 회사는 갑, 을, 병 중 한 명에게 채무의 전부 또는 일부의 이행을 청구할 수 있다.[CT2]\n전제: 갑, 을, 병이 부담하는 불가분채무가 민법상 연대채무의 성격을 가진다고 가정한다.\n한계: 본 답변은 제공된 민법 제414조 조문에 근거하여 작성되었으며, 다른 법적 쟁점이나 예외 사항은 다루지 않는다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "채권자는 어느 연대채무자에 대하여 또는 동시나 순차로 모든 연대채무자에 대하여 채무의 전부나 일부의 이행을 청구할 수 있다.[CT1]\nA 회사는 갑, 을, 병 중 한 명에게 채무의 전부 또는 일부의 이행을 청구할 수 있다.[CT2]\n전제: 갑, 을, 병이 부담하는 불가분채무가 민법상 연대채무의 성격을 가진다고 가정한다.\n한계: 본 답변은 제공된 민법 제414조 조문에 근거하여 작성되었으며, 다른 법적 쟁점이나 예외 사항은 다루지 않는다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T03:48:45.018327+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 164214.068,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 96,
+      "dedup_collapse": 8,
+      "evidence_fusion": 96,
+      "first_stage": 100,
+      "request_rerank": 100,
+      "round_selected": 10,
+      "rrf": 100,
+      "selected": 96
+    }
+  },
+  "run_id": "b5c904bd-9cbc-4e0a-b001-323fd0d9589e",
+  "state": {
+    "accepted_provision_ids": [
+      "민법 414조  각 연대채무자에 대한 이행청구#KOBLEX-059228"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 1,
+          "issue_count": 1
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 1,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "채무의 전부나 일부의 이행을 청구할 수 있는가",
+        "requested_output": "A 회사가 갑, 을, 병 중 한 명에게 채무의 전부 또는 일부 이행을 청구할 수 있는지의 여부"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민법 409조  불가분채권#KOBLEX-059220"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 56,
+        "first_stage_score": 27.26641008671183,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 409조  불가분채권#KOBLEX-059220",
+        "provision_text": "제409조(불가분채권) 채권의 목적이 그 성질 또는 당사자의 의사표시에 의하여 불가분인 경우에 채권자가 수인인 때에는 각 채권자는 모든 채권자를 위하여 이행을 청구할 수 있고 채무자는 모든 채권자를 위하여 각 채권자에게 이행할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9999260902404785,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 409조  불가분채권",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 414조  각 연대채무자에 대한 이행청구#KOBLEX-059228"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 27,
+        "first_stage_score": 29.987910453484826,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 414조  각 연대채무자에 대한 이행청구#KOBLEX-059228",
+        "provision_text": "제414조(각 연대채무자에 대한 이행청구) 채권자는 어느 연대채무자에 대하여 또는 동시나 순차로 모든 연대채무자에 대하여 채무의 전부나 일부의 이행을 청구할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9998743534088135,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 414조  각 연대채무자에 대한 이행청구",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 412조  가분채권, 가분채무에의 변경#KOBLEX-059225"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 79,
+        "first_stage_score": 25.79274914460457,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민법 412조  가분채권, 가분채무에의 변경#KOBLEX-059225",
+        "provision_text": "제412조(가분채권, 가분채무에의 변경) 불가분채권이나 불가분채무가 가분채권 또는 가분채무로 변경된 때에는 각 채권자는 자기부분만의 이행을 청구할 권리가 있고 각 채무자는 자기부담부분만을 이행할 의무가 있다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9997653365135193,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 412조  가분채권, 가분채무에의 변경",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 410조  1인의 채권자에 생긴 사항의 효력#KOBLEX-059223"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 5.0,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민법 410조  1인의 채권자에 생긴 사항의 효력#KOBLEX-059223",
+        "provision_text": "②불가분채권자 중의 1인과 채무자간에 경개나 면제있는 경우에 채무전부의 이행을 받은 다른 채권자는 그 1인이 권리를 잃지 아니하였으면 그에게 분급할 이익을 채무자에게 상환하여야 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.9834082126617432,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 410조  1인의 채권자에 생긴 사항의 효력 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "수표법 43조  수표상의 채무자의 합동책임#KOBLEX-130360"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 58,
+        "first_stage_score": 26.987519463087875,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "수표법 43조  수표상의 채무자의 합동책임#KOBLEX-130360",
+        "provision_text": "② 소지인은 제1항의 채무자에 대하여 그 채무부담의 순서에도 불구하고 그중 1명, 여러 명 또는 전원에 대하여 청구할 수 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.9763858318328857,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "수표법 43조  수표상의 채무자의 합동책임 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 538조  채권자귀책사유로 인한 이행불능#KOBLEX-059474"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 44,
+        "first_stage_score": 28.39018374733173,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "민법 538조  채권자귀책사유로 인한 이행불능#KOBLEX-059474",
+        "provision_text": "①쌍무계약의 당사자 일방의 채무가 채권자의 책임있는 사유로 이행할 수 없게 된 때에는 채무자는 상대방의 이행을 청구할 수 있다. 채권자의 수령지체 중에 당사자쌍방의 책임없는 사유로 이행할 수 없게 된 때에도 같다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.8656817078590393,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 538조  채권자귀책사유로 인한 이행불능 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 537조  채무자위험부담주의#KOBLEX-059472"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 76,
+        "first_stage_score": 26.078059549297432,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "민법 537조  채무자위험부담주의#KOBLEX-059472",
+        "provision_text": "제537조(채무자위험부담주의) 쌍무계약의 당사자 일방의 채무가 당사자쌍방의 책임없는 사유로 이행할 수 없게 된 때에는 채무자는 상대방의 이행을 청구하지 못한다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.7851994633674622,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 537조  채무자위험부담주의",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 145조  법정추인#KOBLEX-058666"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 41,
+        "first_stage_score": 28.949273363094534,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "민법 145조  법정추인#KOBLEX-058666",
+        "provision_text": "1. 전부나 일부의 이행",
+        "rerank_rank": 8,
+        "rerank_score": 0.71567302942276,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 145조  법정추인 1호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 539조  제삼자를 위한 계약#KOBLEX-059477"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 91,
+        "first_stage_score": 5.0,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "민법 539조  제삼자를 위한 계약#KOBLEX-059477",
+        "provision_text": "①계약에 의하여 당사자 일방이 제삼자에게 이행할 것을 약정한 때에는 그 제삼자는 채무자에게 직접 그 이행을 청구할 수 있다.",
+        "rerank_rank": 9,
+        "rerank_score": 0.19507887959480286,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 539조  제삼자를 위한 계약 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 437조  보증인의 최고, 검색의 항변#KOBLEX-059281"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 87,
+        "first_stage_score": 5.0,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "민법 437조  보증인의 최고, 검색의 항변#KOBLEX-059281",
+        "provision_text": "제437조(보증인의 최고, 검색의 항변) 채권자가 보증인에게 채무의 이행을 청구한 때에는 보증인은 주채무자의 변제자력이 있는 사실 및 그 집행이 용이할 것을 증명하여 먼저 주채무자에게 청구할 것과 그 재산에 대하여 집행할 것을 항변할 수 있다. 그러나 보증인이 주채무자와 연대하여 채무를 부담한 때에는 그러하지 아니하다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.13617470860481262,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 437조  보증인의 최고, 검색의 항변",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "민법 145조  법정추인#KOBLEX-058666": "1. 전부나 일부의 이행",
+      "민법 409조  불가분채권#KOBLEX-059220": "제409조(불가분채권) 채권의 목적이 그 성질 또는 당사자의 의사표시에 의하여 불가분인 경우에 채권자가 수인인 때에는 각 채권자는 모든 채권자를 위하여 이행을 청구할 수 있고 채무자는 모든 채권자를 위하여 각 채권자에게 이행할 수 있다.",
+      "민법 410조  1인의 채권자에 생긴 사항의 효력#KOBLEX-059223": "②불가분채권자 중의 1인과 채무자간에 경개나 면제있는 경우에 채무전부의 이행을 받은 다른 채권자는 그 1인이 권리를 잃지 아니하였으면 그에게 분급할 이익을 채무자에게 상환하여야 한다.",
+      "민법 412조  가분채권, 가분채무에의 변경#KOBLEX-059225": "제412조(가분채권, 가분채무에의 변경) 불가분채권이나 불가분채무가 가분채권 또는 가분채무로 변경된 때에는 각 채권자는 자기부분만의 이행을 청구할 권리가 있고 각 채무자는 자기부담부분만을 이행할 의무가 있다.",
+      "민법 414조  각 연대채무자에 대한 이행청구#KOBLEX-059228": "제414조(각 연대채무자에 대한 이행청구) 채권자는 어느 연대채무자에 대하여 또는 동시나 순차로 모든 연대채무자에 대하여 채무의 전부나 일부의 이행을 청구할 수 있다.",
+      "민법 437조  보증인의 최고, 검색의 항변#KOBLEX-059281": "제437조(보증인의 최고, 검색의 항변) 채권자가 보증인에게 채무의 이행을 청구한 때에는 보증인은 주채무자의 변제자력이 있는 사실 및 그 집행이 용이할 것을 증명하여 먼저 주채무자에게 청구할 것과 그 재산에 대하여 집행할 것을 항변할 수 있다. 그러나 보증인이 주채무자와 연대하여 채무를 부담한 때에는 그러하지 아니하다.",
+      "민법 537조  채무자위험부담주의#KOBLEX-059472": "제537조(채무자위험부담주의) 쌍무계약의 당사자 일방의 채무가 당사자쌍방의 책임없는 사유로 이행할 수 없게 된 때에는 채무자는 상대방의 이행을 청구하지 못한다.",
+      "민법 538조  채권자귀책사유로 인한 이행불능#KOBLEX-059474": "①쌍무계약의 당사자 일방의 채무가 채권자의 책임있는 사유로 이행할 수 없게 된 때에는 채무자는 상대방의 이행을 청구할 수 있다. 채권자의 수령지체 중에 당사자쌍방의 책임없는 사유로 이행할 수 없게 된 때에도 같다.",
+      "민법 539조  제삼자를 위한 계약#KOBLEX-059477": "①계약에 의하여 당사자 일방이 제삼자에게 이행할 것을 약정한 때에는 그 제삼자는 채무자에게 직접 그 이행을 청구할 수 있다.",
+      "수표법 43조  수표상의 채무자의 합동책임#KOBLEX-130360": "② 소지인은 제1항의 채무자에 대하여 그 채무부담의 순서에도 불구하고 그중 1명, 여러 명 또는 전원에 대하여 청구할 수 있다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 414조  각 연대채무자에 대한 이행청구#KOBLEX-059228"
+            ],
+            "rationale": "민법 제414조는 채권자가 연대채무자 중 한 명에게 채무의 전부 또는 일부 이행을 청구할 수 있음을 명시하여 요구사항을 충족한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민법 414조  각 연대채무자에 대한 이행청구#KOBLEX-059228"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "민법 제414조(각 연대채무자에 대한 이행청구)는 채권자가 채무자 중 한 명에게 채무의 전부 또는 일부의 이행을 청구할 수 있음을 규정하고 있어, 질문에서 요구하는 불가분채무의 채권자 청구 가능성에 대한 법적 근거를 충족한다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 414조  각 연대채무자에 대한 이행청구#KOBLEX-059228",
+        "support_spans": [
+          {
+            "end_char": 93,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "불가분채무의 채권자가 채무자 중 한 명에게 채무의 전부 또는 일부 이행을 청구할 수 있는 법적 근거와 한계",
+        "issue_id": "I1"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑, 을, 병은 공동으로 A 회사에 1억 원을 투자하여 사업을 시작하기로 하였다. 이들은 A 회사에 대해 불가분채무를 부담하고 있으며, 이 중 어느 한 명이 A 회사에 대한 전체 채무를 변제하지 않으면 사업이 시작될 수 없는 상황이다. A 회사는 사업의 진행을 위해 빠르게 자금을 확보해야 하는 상황에 놓여 있다. [질문] A 회사는 불가분채무를 부담한 갑, 을, 병 중 한 명에게 채무의 전부나 일부의 이행을 청구할 수 있는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "불가분채무 채권자 채무자 중 한 명 채무 전부 일부 이행 청구 민법",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "불가분채무",
+          "채권자",
+          "채무자",
+          "이행청구",
+          "전부",
+          "일부"
+        ],
+        "query_text": "불가분채무 채권자 채무자 중 한 명 채무 전부 일부 이행 청구 [원문 맥락] A 회사는 사업의 진행을 위해 빠르게 자금을 확보해야 하는 상황에 놓여 있다. A 회사는 불가분채무를 부담한 갑, 을, 병 중 한 명에게 채무의 전부나 일부의 이행을 청구할 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "불가분채무 채권자가 채무자 중 한 명에게 채무의 전부 또는 일부 이행을 청구할 수 있는가",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑, 을, 병은 공동으로 A 회사에 1억 원을 투자하여 사업을 시작하기로 하였다. 이들은 A 회사에 대해 불가분채무를 부담하고 있으며, 이 중 어느 한 명이 A 회사에 대한 전체 채무를 변제하지 않으면 사업이 시작될 수 없는 상황이다. A 회사는 사업의 진행을 위해 빠르게 자금을 확보해야 하는 상황에 놓여 있다.\n\n[질문]\nA 회사는 불가분채무를 부담한 갑, 을, 병 중 한 명에게 채무의 전부나 일부의 이행을 청구할 수 있는가?",
+    "remaining_request_budget": 8,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "채권자의 청구 범위(전부/일부)와 대상(채무자 중 한 명)을 명시하는 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "불가분채무의 채권자가 채무자 중 한 명에게 채무의 전부 또는 일부 이행을 청구할 수 있다는 규정을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "불가분채무의 채권자가 채무자 중 한 명에게 채무의 전부 또는 일부 이행을 청구할 수 있는지에 관한 민법상 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 요구하는 법적 결론(청구 가능 여부)을 직접적으로 뒷받침하는 핵심 근거",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "b5c904bd-9cbc-4e0a-b001-323fd0d9589e",
+    "seen_provision_ids": [
+      "민법 414조  각 연대채무자에 대한 이행청구#KOBLEX-059228",
+      "민법 412조  가분채권, 가분채무에의 변경#KOBLEX-059225",
+      "민법 409조  불가분채권#KOBLEX-059220",
+      "민법 538조  채권자귀책사유로 인한 이행불능#KOBLEX-059474",
+      "수표법 43조  수표상의 채무자의 합동책임#KOBLEX-130360",
+      "민법 437조  보증인의 최고, 검색의 항변#KOBLEX-059281",
+      "민법 410조  1인의 채권자에 생긴 사항의 효력#KOBLEX-059223",
+      "민법 537조  채무자위험부담주의#KOBLEX-059472",
+      "민법 539조  제삼자를 위한 계약#KOBLEX-059477",
+      "민법 145조  법정추인#KOBLEX-058666"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

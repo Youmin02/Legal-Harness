@@ -1,0 +1,787 @@
+{
+  "abstention_reason": null,
+  "answer": "세무사 자격이 없으면서 세무대리를 한 자는 3년 이하의 징역 또는 3천만원 이하의 벌금에 처합니다.[CT1]\n세무사 등록을 한 사람이 아니면 세무대리를 할 수 없습니다.[CT2]\n전제: 질문에서 제시된 '세금 신고서 대신 작성하고 제출하는 행위'가 세무사법상 '세무대리'에 해당한다고 가정합니다.\n한계: 본 답변은 제공된 법령 조항에 기반한 일반적 법적 해석이며, 구체적인 사건의 유죄 여부는 사법부의 판단에 따라 달라질 수 있습니다.",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "세무사 자격이 없으면서 세무대리를 한 자는 3년 이하의 징역 또는 3천만원 이하의 벌금에 처합니다.[CT1]\n세무사 등록을 한 사람이 아니면 세무대리를 할 수 없습니다.[CT2]\n전제: 질문에서 제시된 '세금 신고서 대신 작성하고 제출하는 행위'가 세무사법상 '세무대리'에 해당한다고 가정합니다.\n한계: 본 답변은 제공된 법령 조항에 기반한 일반적 법적 해석이며, 구체적인 사건의 유죄 여부는 사법부의 판단에 따라 달라질 수 있습니다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-20T22:33:06.868018+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 324567.432,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 273,
+      "dedup_collapse": 50,
+      "evidence_fusion": 273,
+      "first_stage": 300,
+      "request_rerank": 300,
+      "round_selected": 20,
+      "rrf": 300,
+      "selected": 273
+    }
+  },
+  "run_id": "5bc4de65-1303-444e-bbba-05ed21fe8e99",
+  "state": {
+    "accepted_provision_ids": [
+      "세무사법 22조  벌칙#KOBLEX-177512",
+      "세무사법 20조  업무의 제한 등#KOBLEX-177490"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 5,
+          "request_count": 1,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "penalty",
+        "question_anchor": "그는 어떤 처벌을 받게 되는가",
+        "requested_output": "무자격 세무대리 업무 수행에 대한 형사처벌 내용(죄명, 형량, 벌금 등)"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "세무사법 20조  업무의 제한 등#KOBLEX-177492"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 33.83459651468418,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "세무사법 20조  업무의 제한 등#KOBLEX-177492",
+        "provision_text": "③ 제1항에 따라 세무대리를 할 수 없는 자는 세무대리 업무를 취급한다는 뜻을 표시하거나 광고를 하여서는 아니 된다. 다만, 다른 법률에서 정한 자의 업무범위에 포함된 경우에는 그러하지 아니하다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9277555346488953,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "세무사법 20조  업무의 제한 등 3항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "세무사법 22조  벌칙#KOBLEX-177512"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 24,
+        "first_stage_score": 26.78655390158999,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "세무사법 22조  벌칙#KOBLEX-177512",
+        "provision_text": "① 다음 각 호의 어느 하나에 해당하는 자는 3년 이하의 징역 또는 3천만원 이하의 벌금에 처한다. <개정 2011.6.30> 1. 세무사 자격이 없으면서 세무대리를 한 자 2. 제11조(제16조의16제1항에서 준용하는 경우를 포함한다) 및 제19조의12제1항을 위반하여 직무상 알게 된 비밀을 누설한 자",
+        "rerank_rank": 2,
+        "rerank_score": 0.056908927857875824,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "세무사법 22조  벌칙 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "세무사법 22조 2 벌칙#KOBLEX-177516"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 74,
+        "first_stage_score": 20.987281384547476,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "세무사법 22조 2 벌칙#KOBLEX-177516",
+        "provision_text": "2. 이 법에 따라 세무대리를 할 수 있는 자로서 제6조 또는 제20조의2제1항을 위반하여 등록을 하지 아니하고 세무대리를 수행한 자",
+        "rerank_rank": 3,
+        "rerank_score": 0.049377843737602234,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "세무사법 22조 2 벌칙 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "세무사법 13조  사무소의 설치#KOBLEX-177328"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 25,
+        "first_stage_score": 26.713248457986403,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "세무사법 13조  사무소의 설치#KOBLEX-177328",
+        "provision_text": "② 세무사가 공인회계사ㆍ변호사ㆍ법무사ㆍ변리사ㆍ관세사ㆍ감정평가사ㆍ공인노무사ㆍ공인중개사ㆍ경영지도사ㆍ기술지도사ㆍ행정사, 그 밖에 이와 비슷한 자격자로서 대통령령으로 정하는 자격자의 업무에 동시에 종사하는 경우에는 세무대리만을 위하여 따로 사무소를 설치할 수 없다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.004508435260504484,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "세무사법 13조  사무소의 설치 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "세무사법 16조 15 등록취소 등#KOBLEX-177399"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 4.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "세무사법 16조 15 등록취소 등#KOBLEX-177399",
+        "provision_text": "① 기획재정부장관은 세무법인이 다음 각 호의 어느 하나에 해당하는 경우에는 그 등록을 취소하거나 1년 이내의 기간을 정하여 세무대리의 전부 또는 일부의 업무정지를 명할 수 있다. 다만, 제1호부터 제3호까지의 어느 하나에 해당하는 경우에는 그 등록을 취소하여야 한다. <개정 2015.12.29, 2016.3.2> 1. 거짓이나 그 밖의 부정한 방법으로 제16조의4제1항에 따른 등록을 한 경우 2. 제16조의5제1항부터 제3항까지 또는 제16조의6제1항에 따른 요건을 충족하지 못하게 된 세무법인이 6개월 이내에 이를 보완하지 아니한 경우 3. 업무정지 명령을 위반하여 업무를 수행한 경우 4. 제16조의6제4항에 따른 기획재정부장관의 보전명령 또는 증자명령을 이행하지 아니한 경우 5. 제16조의5제4항ㆍ제5항, 제16조의7, 제16조의8, 제16조의9제1항, 제16조의11 또는 제16조의14를 위반하거나 제16조의16제1항에 따라 준용되는 제11조, 제12조, 제12조의2부터 제12조의5까지, 제15조 및 제19조의14를 위반한 경우",
+        "rerank_rank": 5,
+        "rerank_score": 0.0015732783358544111,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "세무사법 16조 15 등록취소 등 1항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "세무사법 14조 3 수임제한 등#KOBLEX-177337"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 38.98523829984093,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "세무사법 14조 3 수임제한 등#KOBLEX-177337",
+        "provision_text": "② 제1항의 수임할 수 없는 경우에는 다음 각 호의 경우를 포함한다. 1. 수임제한대상 공직퇴임세무사가 세무법인 등의 담당 세무사로 지정되는 경우 2. 수임제한대상 공직퇴임세무사가 다른 세무사 또는 세무법인 등으로부터 명의를 빌려 세무대리를 실질적으로 수행하는 등 사실상 수임하는 경우 3. 세무법인 등의 경우 조세에 관한 신고서류 등에는 수임제한대상 공직퇴임세무사가 담당 세무사로 표시되어 있지 아니하나 실질적으로는 세무대리 수행에 관여하여 수임료를 받는 경우",
+        "rerank_rank": 6,
+        "rerank_score": 0.0007247442263178527,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "세무사법 14조 3 수임제한 등 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "세무사법 2조 2 세무대리의 소개ㆍ알선 금지#KOBLEX-177256"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 31.666763362179307,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "세무사법 2조 2 세무대리의 소개ㆍ알선 금지#KOBLEX-177256",
+        "provision_text": "제2조의2(세무대리의 소개ㆍ알선 금지) 누구든지 세무사나 그 사무직원, 세무법인이나 그 사원ㆍ직원에게 제2조의 세무대리를 소개ㆍ알선하고 그 대가를 받거나 요구하여서는 아니 된다.",
+        "rerank_rank": 7,
+        "rerank_score": 0.0005437302752397954,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "세무사법 2조 2 세무대리의 소개ㆍ알선 금지",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공인회계사법 2조  직무범위#KOBLEX-003928"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 30.39240978261013,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "공인회계사법 2조  직무범위#KOBLEX-003928",
+        "provision_text": "2. 세무대리",
+        "rerank_rank": 8,
+        "rerank_score": 0.0004478530026972294,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "공인회계사법 2조  직무범위 2호",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "세무사법 22조 2 벌칙#KOBLEX-177523"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 4.0,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "세무사법 22조 2 벌칙#KOBLEX-177523",
+        "provision_text": "9. 원자격국의 세무전문가로서 제19조의3에 따른 자격승인을 받지 아니하거나 제19조의5에 따른 등록을 하지 아니하고 제19조의7에 따른 업무를 수행한 자",
+        "rerank_rank": 9,
+        "rerank_score": 0.0003983155474998057,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "세무사법 22조 2 벌칙 9호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "세무사법 20조 2 세무대리업무 등록#KOBLEX-177495"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 30.18695009049712,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "세무사법 20조 2 세무대리업무 등록#KOBLEX-177495",
+        "provision_text": "② 제1항제2호에 해당하는 변호사의 직무는 세무대리 중 제2조제1호ㆍ제2호, 제4호부터 제7호까지의 행위 또는 업무와 이에 딸린 업무만을 수행하는 것으로 한다.",
+        "rerank_rank": 10,
+        "rerank_score": 0.0003699952212627977,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "RQ2"
+        ],
+        "statute_name": "세무사법 20조 2 세무대리업무 등록 2항",
+        "target_evidence_item_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "세무사법 20조  업무의 제한 등#KOBLEX-177490"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 6.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "세무사법 20조  업무의 제한 등#KOBLEX-177490",
+        "provision_text": "① 제6조에 따른 등록을 한 사람이 아니면 세무대리를 할 수 없다. 다만, 「변호사법」 제3조에 따라 변호사의 직무로서 행하는 경우와 제20조의2제1항에 따라 등록한 경우에는 그러하지 아니하다. <개정 2021.11.23>",
+        "rerank_rank": 3,
+        "rerank_score": 0.9650478363037109,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "세무사법 20조  업무의 제한 등 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "세무사법 20조 2 세무대리업무 등록#KOBLEX-177498"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 99,
+        "first_stage_score": 4.0,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "세무사법 20조 2 세무대리업무 등록#KOBLEX-177498",
+        "provision_text": "⑤ 제1항에 따라 세무대리를 하는 사람에 대해서는 제1조의2, 제2조의2, 제4조, 제9조부터 제12조까지, 제12조의2부터 제12조의5까지, 제13조, 제14조(변호사는 준용대상에서 제외한다), 제14조의2, 제14조의3, 제15조, 제16조, 제16조의2, 제17조(같은 조 제1항제2호는 제외한다) 및 제8장을 준용한다. 이 경우 \"세무사\"는 \"공인회계사 또는 변호사\"로, \"한국세무사회\"는 \"한국공인회계사회\"로, \"제6조\"는 \"제20조의2제1항\"으로 각각 본다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.65801602602005,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "세무사법 20조 2 세무대리업무 등록 5항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "세무사법 6조  등록#KOBLEX-177290"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 21,
+        "first_stage_score": 32.32002962641589,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "세무사법 6조  등록#KOBLEX-177290",
+        "provision_text": "① 제5조의 세무사 자격시험에 합격하여 세무사 자격이 있는 사람이 세무대리를 시작하려면 기획재정부에 비치하는 세무사등록부에 성명, 사무소명 및 해당 사무소 소재지, 「국세기본법」 제2조제17호에 따른 세무공무원으로 근무하다가 퇴직한 사람(이하 \"공직퇴임세무사\"라 한다)인지 여부, 자격증번호 등 대통령령으로 정하는 사항을 등록하여야 한다. <개정 2021.11.23>",
+        "rerank_rank": 6,
+        "rerank_score": 0.6090966463088989,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "세무사법 6조  등록 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "세무사법 12조 6 세무사의 교육#KOBLEX-177323"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 37,
+        "first_stage_score": 28.627734261530875,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "세무사법 12조 6 세무사의 교육#KOBLEX-177323",
+        "provision_text": "① 세무사 자격이 있는 사람이 세무대리를 시작하려면 제6조에 따른 등록을 하기 전에 기획재정부령으로 정하는 바에 따라 6개월 이상의 실무교육을 받아야 한다. 다만, 제5조의2제1항 또는 같은 조 제2항에 따라 시험의 일부를 면제받는 사람이 세무사 자격시험에 합격한 경우에는 1개월 이상의 실무교육을 받아야 한다. <개정 2013.1.1, 2020.6.9>",
+        "rerank_rank": 7,
+        "rerank_score": 0.4488796889781952,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "세무사법 12조 6 세무사의 교육 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "세무사법 20조 2 세무대리업무 등록#KOBLEX-177494"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 39.12247801128298,
+        "fusion_rank": 10,
+        "issue_id": "I1",
+        "provision_id": "세무사법 20조 2 세무대리업무 등록#KOBLEX-177494",
+        "provision_text": "① 다음 각 호의 어느 하나에 해당하는 사람이 세무대리를 시작하려면 기획재정부에 비치하는 다음 각 호의 구분에 따른 세무대리업무등록부에 등록하여야 한다. 1. 「공인회계사법」에 따라 등록한 공인회계사(법률 제7032호 세무사법중개정법률 부칙 제2조제1항에 따라 세무사등록부에 등록을 할 수 있는 공인회계사는 제외한다): 공인회계사 세무대리업무등록부 2. 법률 제15288호 세무사법 일부개정법률 부칙 제2조에 따라 세무사의 자격이 있는 것으로 보는 변호사로서 「변호사법」에 따라 등록한 변호사(법률 제7032호 세무사법중개정법률 부칙 제2조제1항에 따라 세무사등록부에 등록을 할 수 있는 변호사는 제외한다): 변호사 세무대리업무등록부",
+        "rerank_rank": 10,
+        "rerank_score": 0.29585134983062744,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "세무사법 20조 2 세무대리업무 등록 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "공인회계사법 2조  직무범위#KOBLEX-003928": "2. 세무대리",
+      "세무사법 12조 6 세무사의 교육#KOBLEX-177323": "① 세무사 자격이 있는 사람이 세무대리를 시작하려면 제6조에 따른 등록을 하기 전에 기획재정부령으로 정하는 바에 따라 6개월 이상의 실무교육을 받아야 한다. 다만, 제5조의2제1항 또는 같은 조 제2항에 따라 시험의 일부를 면제받는 사람이 세무사 자격시험에 합격한 경우에는 1개월 이상의 실무교육을 받아야 한다. <개정 2013.1.1, 2020.6.9>",
+      "세무사법 13조  사무소의 설치#KOBLEX-177328": "② 세무사가 공인회계사ㆍ변호사ㆍ법무사ㆍ변리사ㆍ관세사ㆍ감정평가사ㆍ공인노무사ㆍ공인중개사ㆍ경영지도사ㆍ기술지도사ㆍ행정사, 그 밖에 이와 비슷한 자격자로서 대통령령으로 정하는 자격자의 업무에 동시에 종사하는 경우에는 세무대리만을 위하여 따로 사무소를 설치할 수 없다.",
+      "세무사법 14조 3 수임제한 등#KOBLEX-177337": "② 제1항의 수임할 수 없는 경우에는 다음 각 호의 경우를 포함한다. 1. 수임제한대상 공직퇴임세무사가 세무법인 등의 담당 세무사로 지정되는 경우 2. 수임제한대상 공직퇴임세무사가 다른 세무사 또는 세무법인 등으로부터 명의를 빌려 세무대리를 실질적으로 수행하는 등 사실상 수임하는 경우 3. 세무법인 등의 경우 조세에 관한 신고서류 등에는 수임제한대상 공직퇴임세무사가 담당 세무사로 표시되어 있지 아니하나 실질적으로는 세무대리 수행에 관여하여 수임료를 받는 경우",
+      "세무사법 16조 15 등록취소 등#KOBLEX-177399": "① 기획재정부장관은 세무법인이 다음 각 호의 어느 하나에 해당하는 경우에는 그 등록을 취소하거나 1년 이내의 기간을 정하여 세무대리의 전부 또는 일부의 업무정지를 명할 수 있다. 다만, 제1호부터 제3호까지의 어느 하나에 해당하는 경우에는 그 등록을 취소하여야 한다. <개정 2015.12.29, 2016.3.2> 1. 거짓이나 그 밖의 부정한 방법으로 제16조의4제1항에 따른 등록을 한 경우 2. 제16조의5제1항부터 제3항까지 또는 제16조의6제1항에 따른 요건을 충족하지 못하게 된 세무법인이 6개월 이내에 이를 보완하지 아니한 경우 3. 업무정지 명령을 위반하여 업무를 수행한 경우 4. 제16조의6제4항에 따른 기획재정부장관의 보전명령 또는 증자명령을 이행하지 아니한 경우 5. 제16조의5제4항ㆍ제5항, 제16조의7, 제16조의8, 제16조의9제1항, 제16조의11 또는 제16조의14를 위반하거나 제16조의16제1항에 따라 준용되는 제11조, 제12조, 제12조의2부터 제12조의5까지, 제15조 및 제19조의14를 위반한 경우",
+      "세무사법 20조  업무의 제한 등#KOBLEX-177490": "① 제6조에 따른 등록을 한 사람이 아니면 세무대리를 할 수 없다. 다만, 「변호사법」 제3조에 따라 변호사의 직무로서 행하는 경우와 제20조의2제1항에 따라 등록한 경우에는 그러하지 아니하다. <개정 2021.11.23>",
+      "세무사법 20조  업무의 제한 등#KOBLEX-177492": "③ 제1항에 따라 세무대리를 할 수 없는 자는 세무대리 업무를 취급한다는 뜻을 표시하거나 광고를 하여서는 아니 된다. 다만, 다른 법률에서 정한 자의 업무범위에 포함된 경우에는 그러하지 아니하다.",
+      "세무사법 20조 2 세무대리업무 등록#KOBLEX-177494": "① 다음 각 호의 어느 하나에 해당하는 사람이 세무대리를 시작하려면 기획재정부에 비치하는 다음 각 호의 구분에 따른 세무대리업무등록부에 등록하여야 한다. 1. 「공인회계사법」에 따라 등록한 공인회계사(법률 제7032호 세무사법중개정법률 부칙 제2조제1항에 따라 세무사등록부에 등록을 할 수 있는 공인회계사는 제외한다): 공인회계사 세무대리업무등록부 2. 법률 제15288호 세무사법 일부개정법률 부칙 제2조에 따라 세무사의 자격이 있는 것으로 보는 변호사로서 「변호사법」에 따라 등록한 변호사(법률 제7032호 세무사법중개정법률 부칙 제2조제1항에 따라 세무사등록부에 등록을 할 수 있는 변호사는 제외한다): 변호사 세무대리업무등록부",
+      "세무사법 20조 2 세무대리업무 등록#KOBLEX-177495": "② 제1항제2호에 해당하는 변호사의 직무는 세무대리 중 제2조제1호ㆍ제2호, 제4호부터 제7호까지의 행위 또는 업무와 이에 딸린 업무만을 수행하는 것으로 한다.",
+      "세무사법 20조 2 세무대리업무 등록#KOBLEX-177498": "⑤ 제1항에 따라 세무대리를 하는 사람에 대해서는 제1조의2, 제2조의2, 제4조, 제9조부터 제12조까지, 제12조의2부터 제12조의5까지, 제13조, 제14조(변호사는 준용대상에서 제외한다), 제14조의2, 제14조의3, 제15조, 제16조, 제16조의2, 제17조(같은 조 제1항제2호는 제외한다) 및 제8장을 준용한다. 이 경우 \"세무사\"는 \"공인회계사 또는 변호사\"로, \"한국세무사회\"는 \"한국공인회계사회\"로, \"제6조\"는 \"제20조의2제1항\"으로 각각 본다.",
+      "세무사법 22조  벌칙#KOBLEX-177512": "① 다음 각 호의 어느 하나에 해당하는 자는 3년 이하의 징역 또는 3천만원 이하의 벌금에 처한다. <개정 2011.6.30> 1. 세무사 자격이 없으면서 세무대리를 한 자 2. 제11조(제16조의16제1항에서 준용하는 경우를 포함한다) 및 제19조의12제1항을 위반하여 직무상 알게 된 비밀을 누설한 자",
+      "세무사법 22조 2 벌칙#KOBLEX-177516": "2. 이 법에 따라 세무대리를 할 수 있는 자로서 제6조 또는 제20조의2제1항을 위반하여 등록을 하지 아니하고 세무대리를 수행한 자",
+      "세무사법 22조 2 벌칙#KOBLEX-177523": "9. 원자격국의 세무전문가로서 제19조의3에 따른 자격승인을 받지 아니하거나 제19조의5에 따른 등록을 하지 아니하고 제19조의7에 따른 업무를 수행한 자",
+      "세무사법 2조 2 세무대리의 소개ㆍ알선 금지#KOBLEX-177256": "제2조의2(세무대리의 소개ㆍ알선 금지) 누구든지 세무사나 그 사무직원, 세무법인이나 그 사원ㆍ직원에게 제2조의 세무대리를 소개ㆍ알선하고 그 대가를 받거나 요구하여서는 아니 된다.",
+      "세무사법 6조  등록#KOBLEX-177290": "① 제5조의 세무사 자격시험에 합격하여 세무사 자격이 있는 사람이 세무대리를 시작하려면 기획재정부에 비치하는 세무사등록부에 성명, 사무소명 및 해당 사무소 소재지, 「국세기본법」 제2조제17호에 따른 세무공무원으로 근무하다가 퇴직한 사람(이하 \"공직퇴임세무사\"라 한다)인지 여부, 자격증번호 등 대통령령으로 정하는 사항을 등록하여야 한다. <개정 2021.11.23>"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "세무사법 20조  업무의 제한 등#KOBLEX-177490"
+            ],
+            "rationale": "C011은 세무사 등록을 하지 않은 자(무자격자)의 세무대리 행위를 금지하는 명시적 규정을 포함하고 있어 요구사항을 충족합니다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "세무사법 20조  업무의 제한 등#KOBLEX-177490"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C011(세무사법 제20조 제1항)은 무자격자의 세무대리 업무 수행을 명시적으로 금지하는 조항으로, E1의 완료 기준인 '무자격자의 세무대리 업무 수행 금지 조항 확인'을 충족합니다. 이전 평가에서 부족했던 명시적 금지 조항이 이번 후보군에 포함되어 커버리지가 완성되었습니다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "세무사법 22조  벌칙#KOBLEX-177512"
+            ],
+            "rationale": "C002 제1항 제1호는 해당 행위에 대한 구체적인 형량과 벌금 범위를 규정하고 있어 요구사항을 충족합니다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "세무사법 22조  벌칙#KOBLEX-177512"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "C002(세무사법 제22조 제1항)는 무자격 세무대리 업무 수행에 대한 형사처벌(3년 이하 징역 또는 3천만원 이하 벌금)을 명시하고 있어, E2의 완료 기준인 '형사처벌 내용 확인'을 충족합니다. 이전 평가에서 커버된 상태가 유지됩니다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "세무사법 20조  업무의 제한 등#KOBLEX-177490",
+        "support_spans": [
+          {
+            "end_char": 124,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "세무사법 22조  벌칙#KOBLEX-177512",
+        "support_spans": [
+          {
+            "end_char": 170,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 5,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "세무사 자격 없이 세무대리 업무를 수행하는 행위의 위법성 및 구성요건",
+        "issue_id": "I1"
+      },
+      {
+        "description": "무자격 세무대리 업무 수행에 대한 형사처벌 규정",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 세무사 자격증이 없는 일반인입니다. 그러나 그는 친구 을의 요청을 받고 을의 세금 신고서를 대신 작성하고 제출하는 등 세무대리 업무를 수행하였습니다. 이후 이를 알게 된 세무 당국은 갑에 대한 법적 조치를 검토하고 있습니다. [질문] 갑이 세무사 자격 없이 세무대리 업무를 수행한 경우, 그는 어떤 처벌을 받게 되는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "세무사 자격 없는 자 세무대리 업무 수행 금지",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "세무사",
+          "자격",
+          "세무대리",
+          "업무",
+          "금지"
+        ],
+        "query_text": "세무사 자격이 없는 자는 세무대리 업무를 수행할 수 없다 [원문 맥락] 이후 이를 알게 된 세무 당국은 갑에 대한 법적 조치를 검토하고 있습니다. 갑이 세무사 자격 없이 세무대리 업무를 수행한 경우, 그는 어떤 처벌을 받게 되는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "무자격 세무대리 업무 수행 금지 조항",
+        "statute_hints": [
+          "세무사법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "무자격 세무대리 업무 수행 처벌 징역 벌금",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "무자격",
+          "세무대리",
+          "업무",
+          "처벌",
+          "징역",
+          "벌금"
+        ],
+        "query_text": "세무사 자격 없이 세무대리 업무를 수행한 자는 징역 또는 벌금에 처한다 [원문 맥락] 이후 이를 알게 된 세무 당국은 갑에 대한 법적 조치를 검토하고 있습니다. 갑이 세무사 자격 없이 세무대리 업무를 수행한 경우, 그는 어떤 처벌을 받게 되는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "무자격 세무대리 업무 수행 형사처벌 내용",
+        "statute_hints": [
+          "세무사법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "세무사법 20조 업무 제한 세무사 자격 없는 자 세무대리 업무 금지",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "세무사법",
+          "제20조",
+          "업무제한",
+          "무자격",
+          "세무대리",
+          "금지"
+        ],
+        "query_text": "세무사법 제20조 제1항 세무사 자격 없는 자의 세무대리 업무 수행 금지 [원문 맥락] 이후 이를 알게 된 세무 당국은 갑에 대한 법적 조치를 검토하고 있습니다. 갑이 세무사 자격 없이 세무대리 업무를 수행한 경우, 그는 어떤 처벌을 받게 되는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "세무사 자격 없는 자의 세무대리 업무 수행 금지 조항",
+        "statute_hints": [
+          "세무사법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 세무사 자격증이 없는 일반인입니다. 그러나 그는 친구 을의 요청을 받고 을의 세금 신고서를 대신 작성하고 제출하는 등 세무대리 업무를 수행하였습니다. 이후 이를 알게 된 세무 당국은 갑에 대한 법적 조치를 검토하고 있습니다.\n\n[질문]\n갑이 세무사 자격 없이 세무대리 업무를 수행한 경우, 그는 어떤 처벌을 받게 되는가?",
+    "remaining_request_budget": 6,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "무자격자의 세무대리 업무 수행 금지 조항 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "세무사 자격이 없는 자의 세무대리 업무 수행 금지 조항 확인"
+          }
+        ],
+        "critical": true,
+        "description": "세무사 자격 없이 세무대리 업무를 수행할 수 없음을 규정한 금지 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 묻는 처벌의 전제인 위법성(무자격 세무대리 금지)을 입증하기 위해 필수적임",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "무자격 세무대리 업무 수행에 대한 형사처벌 내용(형량, 벌금 등) 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "무자격 세무대리 업무 수행에 대한 형사처벌(징역, 벌금 등) 내용 확인"
+          }
+        ],
+        "critical": true,
+        "description": "무자격 세무대리 업무 수행에 대한 형사처벌(징역, 벌금 등) 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 직접 묻는 처벌 내용을 확인하기 위해 필수적임",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "5bc4de65-1303-444e-bbba-05ed21fe8e99",
+    "seen_provision_ids": [
+      "세무사법 22조 2 벌칙#KOBLEX-177523",
+      "세무사법 20조 2 세무대리업무 등록#KOBLEX-177498",
+      "세무사법 20조  업무의 제한 등#KOBLEX-177492",
+      "세무사법 20조 2 세무대리업무 등록#KOBLEX-177494",
+      "세무사법 2조 2 세무대리의 소개ㆍ알선 금지#KOBLEX-177256",
+      "세무사법 13조  사무소의 설치#KOBLEX-177328",
+      "세무사법 22조  벌칙#KOBLEX-177512",
+      "공인회계사법 2조  직무범위#KOBLEX-003928",
+      "세무사법 14조 3 수임제한 등#KOBLEX-177337",
+      "세무사법 20조 2 세무대리업무 등록#KOBLEX-177495",
+      "세무사법 16조 15 등록취소 등#KOBLEX-177399",
+      "세무사법 12조 6 세무사의 교육#KOBLEX-177323",
+      "세무사법 20조  업무의 제한 등#KOBLEX-177490",
+      "세무사법 22조 2 벌칙#KOBLEX-177516",
+      "세무사법 6조  등록#KOBLEX-177290"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

@@ -1,0 +1,626 @@
+{
+  "abstention_reason": null,
+  "answer": "법원은 필요하다고 인정한 때에는 직권 또는 검사, 피고인이나 변호인의 신청에 의하여 결정으로 변론을 분리하거나 병합할 수 있다.[CT1]\n피고인을 위하여 원심판결을 파기하는 경우에 파기의 이유가 항소한 공동피고인에게 공통되는 때에는 그 공동피고인에 대해서도 원심판결을 파기하여야 한다.[CT2]",
+  "answer_mode": "full",
+  "answered_target_ids": [
+    "T1",
+    "T2"
+  ],
+  "candidate_answer": "법원은 필요하다고 인정한 때에는 직권 또는 검사, 피고인이나 변호인의 신청에 의하여 결정으로 변론을 분리하거나 병합할 수 있다.[CT1]\n피고인을 위하여 원심판결을 파기하는 경우에 파기의 이유가 항소한 공동피고인에게 공통되는 때에는 그 공동피고인에 대해서도 원심판결을 파기하여야 한다.[CT2]",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": true,
+  "completed_at_utc": "2026-08-21T00:29:11.354912+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 200892.361,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 157,
+      "dedup_collapse": 84,
+      "evidence_fusion": 157,
+      "first_stage": 200,
+      "request_rerank": 200,
+      "round_selected": 10,
+      "rrf": 200,
+      "selected": 157
+    }
+  },
+  "run_id": "2799246e-08df-4b62-bd95-0ceb282a0267",
+  "state": {
+    "accepted_provision_ids": [
+      "형사소송법 300조  변론의 분리와 병합#KOBLEX-232548",
+      "형사소송법 364조 2 공동피고인을 위한 파기#KOBLEX-232750"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 0,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "deferred_target_ids": [],
+          "explanation": "Every answer target has citable legal support.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "full",
+          "answered_target_ids": [
+            "T1",
+            "T2"
+          ],
+          "claim_count": 2,
+          "deferred_target_ids": []
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "full",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_rule",
+        "question_anchor": "변론을 분리하거나 병합할 수 있는 경우는 언제이며",
+        "requested_output": "공동피고인 사건에서 법원이 변론을 분리하거나 병합할 수 있는 법적 요건과 허용 범위"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_rule",
+        "question_anchor": "을이 항소한 경우에도 갑을 위한 원심판결의 파기가 가능한 경우는 어떤 때인가",
+        "requested_output": "공동피고인 중 한 명이 항소한 경우, 다른 공동피고인을 위한 원심판결 파기가 허용되는 법적 요건"
+      }
+    ],
+    "answered_target_ids": [
+      "T1",
+      "T2"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "형사소송법 300조  변론의 분리와 병합#KOBLEX-232548"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 39.511444736683444,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 300조  변론의 분리와 병합#KOBLEX-232548",
+        "provision_text": "제300조(변론의 분리와 병합) 법원은 필요하다고 인정한 때에는 직권 또는 검사, 피고인이나 변호인의 신청에 의하여 결정으로 변론을 분리하거나 병합할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.7347207069396973,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "형사소송법 300조  변론의 분리와 병합",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 364조 2 공동피고인을 위한 파기#KOBLEX-232750"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 39.956956733903574,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 364조 2 공동피고인을 위한 파기#KOBLEX-232750",
+        "provision_text": "제364조의2(공동피고인을 위한 파기) 피고인을 위하여 원심판결을 파기하는 경우에 파기의 이유가 항소한 공동피고인에게 공통되는 때에는 그 공동피고인에게 대하여도 원심판결을 파기하여야 한다. <개정 1963.12.13>",
+        "rerank_rank": 1,
+        "rerank_score": 0.9998732805252075,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 364조 2 공동피고인을 위한 파기",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 432조  공동피고인을 위한 파기#KOBLEX-093543",
+          "군사법원법 432조  공동피고인을 위한 파기#KOBLEX-159508"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 41.93885829014554,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 432조  공동피고인을 위한 파기#KOBLEX-093543",
+        "provision_text": "제432조(공동피고인을 위한 파기) 피고인의 이익을 위하여 원심판결을 파기하는 경우에 파기의 사유가 항소한 공동피고인에게 공통될 때에는 공동피고인에 대하여도 원심판결을 파기하여야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.9997679591178894,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "군사법원법 432조  공동피고인을 위한 파기",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 392조  공동피고인을 위한 파기#KOBLEX-232803"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 5,
+        "first_stage_score": 33.908247297347906,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 392조  공동피고인을 위한 파기#KOBLEX-232803",
+        "provision_text": "제392조(공동피고인을 위한 파기) 피고인의 이익을 위하여 원심판결을 파기하는 경우에 파기의 이유가 상고한 공동피고인에 공통되는 때에는 그 공동피고인에 대하여도 원심판결을 파기하여야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.9950544834136963,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 392조  공동피고인을 위한 파기",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 356조  변론의 분리ㆍ병합ㆍ재개#KOBLEX-093345",
+          "군사법원법 356조  변론의 분리ㆍ병합ㆍ재개#KOBLEX-159310"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 34.225450494717805,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 356조  변론의 분리ㆍ병합ㆍ재개#KOBLEX-093345",
+        "provision_text": "제356조(변론의 분리ㆍ병합ㆍ재개) 군사법원은 필요하다고 인정하면 직권으로 또는 군검사, 피고인이나 변호인의 신청에 따라 결정으로 변론을 분리 또는 병합하거나 종결한 변론을 재개할 수 있다. <개정 2016.1.6>",
+        "rerank_rank": 2,
+        "rerank_score": 0.05474924296140671,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "군사법원법 356조  변론의 분리ㆍ병합ㆍ재개",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 141조  변론의 제한ㆍ분리ㆍ병합#KOBLEX-063866"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 63,
+        "first_stage_score": 20.013508296000026,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 141조  변론의 제한ㆍ분리ㆍ병합#KOBLEX-063866",
+        "provision_text": "제141조(변론의 제한ㆍ분리ㆍ병합) 법원은 변론의 제한ㆍ분리 또는 병합을 명하거나, 그 명령을 취소할 수 있다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.033460844308137894,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 141조  변론의 제한ㆍ분리ㆍ병합",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 364조  항소법원의 심판#KOBLEX-232749"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 61,
+        "first_stage_score": 19.366646562167332,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 364조  항소법원의 심판#KOBLEX-232749",
+        "provision_text": "⑥항소이유가 있다고 인정한 때에는 원심판결을 파기하고 다시 판결을 하여야 한다. <개정 1963.12.13>",
+        "rerank_rank": 4,
+        "rerank_score": 0.002663426799699664,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 364조  항소법원의 심판 6항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 368조  불이익변경의 금지#KOBLEX-232756"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 53,
+        "first_stage_score": 20.275824815166878,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 368조  불이익변경의 금지#KOBLEX-232756",
+        "provision_text": "제368조(불이익변경의 금지) 피고인이 항소한 사건과 피고인을 위하여 항소한 사건에 대해서는 원심판결의 형보다 무거운 형을 선고할 수 없다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0012114564888179302,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "형사소송법 368조  불이익변경의 금지",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 437조  불이익변경의 금지#KOBLEX-093548",
+          "군사법원법 437조  불이익변경의 금지#KOBLEX-159513"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 49,
+        "first_stage_score": 20.583707072149085,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "군사법원법 437조  불이익변경의 금지#KOBLEX-093548",
+        "provision_text": "제437조(불이익변경의 금지) 피고인이 항소한 사건과 피고인을 위하여 항소한 사건에 대하여는 원심판결의 형보다 무거운 형을 선고하지 못한다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.0011147663462907076,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "군사법원법 437조  불이익변경의 금지",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 463조  채권조사확정재판에 대한 이의의 소#KOBLEX-032954"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 14,
+        "first_stage_score": 28.583254744607345,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 463조  채권조사확정재판에 대한 이의의 소#KOBLEX-032954",
+        "provision_text": "④동일한 채권에 관하여 여러 개의 소가 계속되어 있는 때에는 법원은 변론을 병합 하여야 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.0007087262347340584,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 463조  채권조사확정재판에 대한 이의의 소 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "군사법원법 356조  변론의 분리ㆍ병합ㆍ재개#KOBLEX-093345": "제356조(변론의 분리ㆍ병합ㆍ재개) 군사법원은 필요하다고 인정하면 직권으로 또는 군검사, 피고인이나 변호인의 신청에 따라 결정으로 변론을 분리 또는 병합하거나 종결한 변론을 재개할 수 있다. <개정 2016.1.6>",
+      "군사법원법 432조  공동피고인을 위한 파기#KOBLEX-093543": "제432조(공동피고인을 위한 파기) 피고인의 이익을 위하여 원심판결을 파기하는 경우에 파기의 사유가 항소한 공동피고인에게 공통될 때에는 공동피고인에 대하여도 원심판결을 파기하여야 한다.",
+      "군사법원법 437조  불이익변경의 금지#KOBLEX-093548": "제437조(불이익변경의 금지) 피고인이 항소한 사건과 피고인을 위하여 항소한 사건에 대하여는 원심판결의 형보다 무거운 형을 선고하지 못한다.",
+      "민사소송법 141조  변론의 제한ㆍ분리ㆍ병합#KOBLEX-063866": "제141조(변론의 제한ㆍ분리ㆍ병합) 법원은 변론의 제한ㆍ분리 또는 병합을 명하거나, 그 명령을 취소할 수 있다.",
+      "채무자 회생 및 파산에 관한 법률 463조  채권조사확정재판에 대한 이의의 소#KOBLEX-032954": "④동일한 채권에 관하여 여러 개의 소가 계속되어 있는 때에는 법원은 변론을 병합 하여야 한다.",
+      "형사소송법 300조  변론의 분리와 병합#KOBLEX-232548": "제300조(변론의 분리와 병합) 법원은 필요하다고 인정한 때에는 직권 또는 검사, 피고인이나 변호인의 신청에 의하여 결정으로 변론을 분리하거나 병합할 수 있다.",
+      "형사소송법 364조  항소법원의 심판#KOBLEX-232749": "⑥항소이유가 있다고 인정한 때에는 원심판결을 파기하고 다시 판결을 하여야 한다. <개정 1963.12.13>",
+      "형사소송법 364조 2 공동피고인을 위한 파기#KOBLEX-232750": "제364조의2(공동피고인을 위한 파기) 피고인을 위하여 원심판결을 파기하는 경우에 파기의 이유가 항소한 공동피고인에게 공통되는 때에는 그 공동피고인에게 대하여도 원심판결을 파기하여야 한다. <개정 1963.12.13>",
+      "형사소송법 368조  불이익변경의 금지#KOBLEX-232756": "제368조(불이익변경의 금지) 피고인이 항소한 사건과 피고인을 위하여 항소한 사건에 대해서는 원심판결의 형보다 무거운 형을 선고할 수 없다.",
+      "형사소송법 392조  공동피고인을 위한 파기#KOBLEX-232803": "제392조(공동피고인을 위한 파기) 피고인의 이익을 위하여 원심판결을 파기하는 경우에 파기의 이유가 상고한 공동피고인에 공통되는 때에는 그 공동피고인에 대하여도 원심판결을 파기하여야 한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형사소송법 300조  변론의 분리와 병합#KOBLEX-232548"
+            ],
+            "rationale": "C001(형사소송법 제300조)은 '변론을 분리하거나 병합할 수 있다'고 명시하여 분리 규정을 포함한다.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형사소송법 300조  변론의 분리와 병합#KOBLEX-232548"
+            ],
+            "rationale": "C001(형사소송법 제300조)은 '변론을 분리하거나 병합할 수 있다'고 명시하여 병합 규정을 포함한다.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형사소송법 300조  변론의 분리와 병합#KOBLEX-232548"
+            ],
+            "rationale": "C001(형사소송법 제300조)은 '직권 또는 검사, 피고인이나 변호인의 신청에 의하여'라고 하여 신청 주체를 명시하고, '필요하다고 인정한 때에는'라는 표현으로 재판 진행 중의 시점을 시사한다.",
+            "requirement_id": "E1-R3",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형사소송법 300조  변론의 분리와 병합#KOBLEX-232548"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "형사소송법 제300조(C001)는 변론의 분리 및 병합에 관한 법적 근거, 요건(필요성 인정), 그리고 신청 주체(검사, 피고인, 변호인) 및 시점(재판 중)을 포괄적으로 규정하고 있어, 질문에서 요구하는 형사사건에서의 변론 분리/병합 요건을 충족한다. 군사법원법(C005)이나 민사소송법(C006)은 본 사건의 일반 형사소송 절차에 직접 적용되지 않거나 보조적 성격이므로, 핵심 조항 C001만으로 증거 요건이 충족된다.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "형사소송법 364조 2 공동피고인을 위한 파기#KOBLEX-232750"
+            ],
+            "rationale": "C002(형사소송법 제364조의2)는 항소한 공동피고인의 파기 이유가 공통될 때 다른 공동피고인의 원심판결에도 파기가 적용됨을 규정한다.",
+            "requirement_id": "E2-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "형사소송법 364조 2 공동피고인을 위한 파기#KOBLEX-232750"
+            ],
+            "rationale": "C002(형사소송법 제364조의2)는 '파기의 이유가 항소한 공동피고인에게 공통되는 때'를 파기 요건으로 제시하고, '파기하여야 한다'고 하여 그 법적 효과(한계/범위)를 명확히 한다.",
+            "requirement_id": "E2-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "형사소송법 364조 2 공동피고인을 위한 파기#KOBLEX-232750"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "형사소송법 제364조의2(C002)는 항소심에서 공동피고인을 위한 파기의 요건(파기 이유가 항소한 공동피고인에게 공통되는 경우)과 한계(그 공동피고인에 대해서도 파기하여야 함)를 명확히 규정하고 있어, 을의 항소가 갑의 원심판결에 미치는 영향을 규율하는 핵심 조항을 제공한다. 상고심에 해당하는 C004나 군사법원법에 해당하는 C003은 본 사건의 항소심 일반 형사소송 절차에 직접 적용되지 않는다.",
+        "status": "covered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "형사소송법 300조  변론의 분리와 병합#KOBLEX-232548",
+        "support_spans": [
+          {
+            "end_char": 89,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "형사소송법 364조 2 공동피고인을 위한 파기#KOBLEX-232750",
+        "support_spans": [
+          {
+            "end_char": 121,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 10,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "공동피고인 사건에서 법원이 변론을 분리하거나 병합할 수 있는 법적 근거와 요건",
+        "issue_id": "I1"
+      },
+      {
+        "description": "공동피고인 중 한 명의 항소가 다른 공동피고인의 원심판결에 미치는 영향",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑과 을은 공모하여 한 회사에 허위 계약서와 허위 자료를 제출하는 방식으로 수천만 원의 부당한 이익을 취한 혐의로 기소되었고, 공동피고인으로 함께 재판을 받게 되었다. 갑은 자신에 대한 불리한 진술이 을에게서 나올 것을 우려하여, 자신의 변호인을 통해 변론의 분리를 신청하였다. 한편, 을은 1심 판결에서 사실인정을 잘못했다고 주장하며 항소하였고, 그 항소 이유는 갑에게도 동일하게 적용될 수 있는 논점이었다. [질문] 갑과 을이 공동으로 저지른 범죄에 대해 법원이 변론을 분리하거나 병합할 수 있는 경우는 언제이며, 을이 항소한 경우에도 갑을 위한 원심판결의 파기가 가능한 경우는 어떤 때인가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "공동피고인 변론 분리 병합 형사소송법 조항",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "공동피고인",
+          "변론분리",
+          "변론병합",
+          "형사소송법",
+          "분리신청",
+          "병합신청"
+        ],
+        "query_text": "공동피고인 변론 분리 병합 형사소송법 [원문 맥락] 한편, 을은 1심 판결에서 사실인정을 잘못했다고 주장하며 항소하였고, 그 항소 이유는 갑에게도 동일하게 적용될 수 있는 논점이었다. 갑과 을이 공동으로 저지른 범죄에 대해 법원이 변론을 분리하거나 병합할 수 있는 경우는 언제이며, 을이 항소한 경우에도 갑을 위한 원심판결의 파기가 가능한 경우는 어떤 때인가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "공동피고인 변론 분리 또는 병합의 법적 요건과 허용 범위",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "공동피고인 항소 원심판결 파기 형사소송법 조항",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "공동피고인",
+          "항소",
+          "원심판결파기",
+          "형사소송법",
+          "항소효력",
+          "판결파기"
+        ],
+        "query_text": "공동피고인 항소 원심판결 파기 형사소송법 [원문 맥락] 한편, 을은 1심 판결에서 사실인정을 잘못했다고 주장하며 항소하였고, 그 항소 이유는 갑에게도 동일하게 적용될 수 있는 논점이었다. 갑과 을이 공동으로 저지른 범죄에 대해 법원이 변론을 분리하거나 병합할 수 있는 경우는 언제이며, 을이 항소한 경우에도 갑을 위한 원심판결의 파기가 가능한 경우는 어떤 때인가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "공동피고인 중 한 명의 항소가 다른 피고인의 원심판결 파기에 미치는 영향",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑과 을은 공모하여 한 회사에 허위 계약서와 허위 자료를 제출하는 방식으로 수천만 원의 부당한 이익을 취한 혐의로 기소되었고, 공동피고인으로 함께 재판을 받게 되었다. 갑은 자신에 대한 불리한 진술이 을에게서 나올 것을 우려하여, 자신의 변호인을 통해 변론의 분리를 신청하였다. 한편, 을은 1심 판결에서 사실인정을 잘못했다고 주장하며 항소하였고, 그 항소 이유는 갑에게도 동일하게 적용될 수 있는 논점이었다.\n\n[질문]\n갑과 을이 공동으로 저지른 범죄에 대해 법원이 변론을 분리하거나 병합할 수 있는 경우는 언제이며, 을이 항소한 경우에도 갑을 위한 원심판결의 파기가 가능한 경우는 어떤 때인가?",
+    "remaining_request_budget": 7,
+    "remaining_round_budget": 2,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "변론 분리 또는 병합의 법적 근거, 요건, 그리고 법원의 재량 범위를 명확히 하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "변론의 분리를 규정하는 조항의 번호와 내용을 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "변론의 병합을 규정하는 조항의 번호와 내용을 확인"
+          },
+          {
+            "requirement_id": "E1-R3",
+            "text": "분리 또는 병합 신청의 주체와 시점에 대한 규정을 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공동피고인 사건에서 변론의 분리 또는 병합을 규정하는 형사소송법 조항",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 직접적으로 변론 분리 또는 병합의 허용 시점을 묻고 있으므로, 이를 규정하는 핵심 조항이 없으면 결론을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "공동피고인 항소 시 다른 피고인의 원심판결 파기 가능성을 규정하는 조항을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "공동피고인 중 한 명의 항소가 다른 피고인의 원심판결에 미치는 영향을 규정하는 조항을 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "원심판결 파기의 요건과 한계를 확인"
+          }
+        ],
+        "critical": true,
+        "description": "공동피고인 중 한 명의 항소가 다른 공동피고인의 원심판결에 미치는 영향을 규정하는 조항",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 을의 항소가 갑의 원심판결 파기에 미치는 영향을 묻고 있으므로, 이를 규정하는 핵심 조항이 없으면 결론을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 1,
+    "run_id": "2799246e-08df-4b62-bd95-0ceb282a0267",
+    "seen_provision_ids": [
+      "형사소송법 392조  공동피고인을 위한 파기#KOBLEX-232803",
+      "민사소송법 141조  변론의 제한ㆍ분리ㆍ병합#KOBLEX-063866",
+      "형사소송법 368조  불이익변경의 금지#KOBLEX-232756",
+      "형사소송법 300조  변론의 분리와 병합#KOBLEX-232548",
+      "형사소송법 364조  항소법원의 심판#KOBLEX-232749",
+      "형사소송법 364조 2 공동피고인을 위한 파기#KOBLEX-232750",
+      "군사법원법 356조  변론의 분리ㆍ병합ㆍ재개#KOBLEX-093345",
+      "채무자 회생 및 파산에 관한 법률 463조  채권조사확정재판에 대한 이의의 소#KOBLEX-032954",
+      "군사법원법 437조  불이익변경의 금지#KOBLEX-093548",
+      "군사법원법 432조  공동피고인을 위한 파기#KOBLEX-093543"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}

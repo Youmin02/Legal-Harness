@@ -1,0 +1,65 @@
+{
+  "abstention_reason": null,
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": null,
+  "candidate_answer_basis": null,
+  "candidate_answer_error": null,
+  "candidate_answer_status": null,
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T05:44:12.690163+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 102397.741,
+  "errors": [
+    "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Expecting property name enclosed in double quotes: line 157 column 27 (char 4264)"
+  ],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": null,
+    "stage_record_counts": {}
+  },
+  "run_id": "0d79fcb6-1b3b-425c-ad11-593127abc6ec",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "error": "legal_issue_and_query_planning did not produce a valid INITIAL_PLAN result after 2 attempts: model response is not valid JSON: Expecting property name enclosed in double quotes: line 157 column 27 (char 4264)",
+          "termination_reason": "INVALID_SKILL_OUTPUT"
+        },
+        "event": "EXECUTION_FAILURE",
+        "phase": "EXECUTION_FAILURE"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [],
+    "answered_target_ids": [],
+    "candidate_provisions": [],
+    "corpus_text_snapshots": {},
+    "coverage_assessments": [],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 0,
+    "last_validated_event": null,
+    "legal_issues": [],
+    "missing_critical_items": [],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 대한민국의 국회의원 선거에 출마하려고 준비 중인 정치인이다. 그는 자신이 출마할 지역구가 정확히 어떻게 구성되어 있는지 궁금해졌다. 또한, 그 지역구에서 몇 명의 의원이 선출되는지와 전체 국회의원의 정수가 어떻게 이루어지는지에 대해 알고 싶었다. 이에 더해, 국회의원 선거구는 어떻게 결정되는지도 이해하고자 했다. [질문] 갑이 출마하려는 국회의원 지역구에서 선출할 국회의원의 수는 몇 명이며, 전체 국회의원 정수는 어떻게 구성되는가? 또한, 국회의원 선거구는 어떤 절차로 획정되는가?",
+    "phase": "EXECUTION_FAILURE",
+    "query_history": [],
+    "question": "[배경 시나리오]\n갑은 대한민국의 국회의원 선거에 출마하려고 준비 중인 정치인이다. 그는 자신이 출마할 지역구가 정확히 어떻게 구성되어 있는지 궁금해졌다. 또한, 그 지역구에서 몇 명의 의원이 선출되는지와 전체 국회의원의 정수가 어떻게 이루어지는지에 대해 알고 싶었다. 이에 더해, 국회의원 선거구는 어떻게 결정되는지도 이해하고자 했다.\n\n[질문]\n갑이 출마하려는 국회의원 지역구에서 선출할 국회의원의 수는 몇 명이며, 전체 국회의원 정수는 어떻게 구성되는가? 또한, 국회의원 선거구는 어떤 절차로 획정되는가?",
+    "remaining_request_budget": 9,
+    "remaining_round_budget": 3,
+    "required_evidence_items": [],
+    "retrieval_rounds_used": 0,
+    "run_id": "0d79fcb6-1b3b-425c-ad11-593127abc6ec",
+    "seen_provision_ids": [],
+    "total_round_budget": 3
+  },
+  "status": "EXECUTION_FAILURE",
+  "termination_reason": "INVALID_SKILL_OUTPUT"
+}

@@ -1,0 +1,922 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "공공장소에서 음란한 행위를 한 자는 1년 이하의 징역 또는 300만원 이하의 벌금에 처한다.[CT1]\n전제: 질문에서 언급된 '음란한 행위'가 형법 제243조 제1항의 구성요건에 해당하는 것으로 가정합니다.\n한계: 본 답변은 후보 조문 기반의 벤치마크 진단용이며, 실제 법적 효력이 있는 공식 답변이 아닙니다.\n한계: 형법 제243조 제1항의 조문이 후보 목록에 포함되어 있지 않아, 정확한 법정형을 확인하지 못했습니다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T14:26:19.081565+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 344804.898,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 275,
+      "dedup_collapse": 64,
+      "evidence_fusion": 275,
+      "first_stage": 316,
+      "request_rerank": 316,
+      "round_selected": 20,
+      "rrf": 316,
+      "selected": 275
+    }
+  },
+  "run_id": "26cf6188-0299-40c6-87b0-3900d214cada",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "Two consecutive retrieval rounds did not improve critical evidence.",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 19
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 19,
+          "claim_count": 1
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "penalty",
+        "question_anchor": "그는 어떤 처벌을 받을 수 있는가",
+        "requested_output": "공공장소 음란행위에 대한 형사처벌 내용"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조 2 성적 목적을 위한 공공장소 침입행위#KOBLEX-107705"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 24.100451616088623,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조 2 성적 목적을 위한 공공장소 침입행위#KOBLEX-107705",
+        "provision_text": "제1조의2(성적 목적을 위한 공공장소 침입행위) 「성폭력범죄의 처벌 등에 관한 특례법」(이하 \"법\"이라 한다) 제12조에서 \"「공중화장실 등에 관한 법률」 제2조제1호부터 제5호까지에 따른 공중화장실 등 및 「공중위생관리법」 제2조제1항제3호에 따른 목욕장업의 목욕장 등 대통령령으로 정하는 공공장소\"란 다음 각 호의 어느 하나에 해당하는 장소를 말한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.00023704103659838438,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조 2 성적 목적을 위한 공공장소 침입행위",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공공주택 특별법 58조  벌칙#KOBLEX-058332",
+          "공공주택 특별법 58조  벌칙#KOBLEX-140363",
+          "공공주택 특별법 58조  벌칙#KOBLEX-221688"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 49,
+        "first_stage_score": 16.358199883223534,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "공공주택 특별법 58조  벌칙#KOBLEX-058332",
+        "provision_text": "제58조(벌칙)",
+        "rerank_rank": 1,
+        "rerank_score": 0.00035871885484084487,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공공주택 특별법 58조  벌칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공공주택 특별법 57조  벌칙#KOBLEX-058313",
+          "공공주택 특별법 57조  벌칙#KOBLEX-140344",
+          "공공주택 특별법 57조  벌칙#KOBLEX-221669"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 46,
+        "first_stage_score": 16.358199883223534,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "공공주택 특별법 57조  벌칙#KOBLEX-058313",
+        "provision_text": "제57조(벌칙)",
+        "rerank_rank": 2,
+        "rerank_score": 0.00035143629065714777,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공공주택 특별법 57조  벌칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공공기관의 운영에 관한 법률 55조  벌칙#KOBLEX-042029"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 43,
+        "first_stage_score": 16.358199883223534,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "공공기관의 운영에 관한 법률 55조  벌칙#KOBLEX-042029",
+        "provision_text": "제55조(벌칙)",
+        "rerank_rank": 4,
+        "rerank_score": 0.00020822964143007994,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공공기관의 운영에 관한 법률 55조  벌칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공공기관의 운영에 관한 법률 56조  벌칙#KOBLEX-042033"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 44,
+        "first_stage_score": 16.358199883223534,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "공공기관의 운영에 관한 법률 56조  벌칙#KOBLEX-042033",
+        "provision_text": "제56조(벌칙)",
+        "rerank_rank": 5,
+        "rerank_score": 0.00019820197485387325,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공공기관의 운영에 관한 법률 56조  벌칙",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "경범죄 처벌법 3조  경범죄의 종류#KOBLEX-049499"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 16,
+        "first_stage_score": 2.0711611097446725,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "경범죄 처벌법 3조  경범죄의 종류#KOBLEX-049499",
+        "provision_text": "① 다음 각 호의 어느 하나에 해당하는 사람은 10만원 이하의 벌금, 구류 또는 과료(科料)의 형으로 처벌한다. <개정 2014.11.19, 2017.7.26, 2017.10.24> 1. (빈집 등에의 침입) 다른 사람이 살지 아니하고 관리하지 아니하는 집 또는 그 울타리·건조물(建造物)·배·자동차 안에 정당한 이유 없이 들어간 사람 2. (흉기의 은닉휴대) 칼·쇠몽둥이·쇠톱 등 사람의 생명 또는 신체에 중대한 위해를 끼치거나 집이나 그 밖의 건조물에 침입하는 데에 사용될 수 있는 연장이나 기구를 정당한 이유 없이 숨겨서 지니고 다니는 사람 3. (폭행 등 예비) 다른 사람의 신체에 위해를 끼칠 것을 공모(共謀)하여 예비행위를 한 사람이 있는 경우 그 공모를 한 사람 4. 삭제 <2013.5.22> 5. (시체 현장변경 등) 사산아(死産兒)를 감추거나 정당한 이유 없이 변사체 또는 사산아가 있는 현장을 바꾸어 놓은 사람 6. (도움이 필요한 사람 등의 신고불이행) 자기가 관리하고 있는 곳에 도움을 받아야 할 노인, 어린이, 장애인, 다친 사람 또는 병든 사람이 있거나 시체 또는 사산아가 있는 것을 알면서 이를 관계 공무원에게 지체 없이 신고하지 아니한 사람 7. (관명사칭 등) 국내외의 공직(公職), 계급, 훈장, 학위 또는 그 밖에 법령에 따라 정하여진 명칭이나 칭호 등을 거짓으로 꾸며 대거나 자격이 없으면서 법령에 따라 정하여진 제복, 훈장, 기장 또는 기념장(記念章), 그 밖의 표장(標章) 또는 이와 비슷한 것을 사용한 사람 8. (물품강매·호객행위) 요청하지 아니한 물품을 억지로 사라고 한 사람, 요청하지 아니한 일을 해주거나 재주 등을 부리고 그 대가로 돈을 달라고 한 사람 또는 여러 사람이 모이거나 다니는 곳에서 영업을 목적으로 떠들썩하게 손님을 부른 사람 9. (광고물 무단부착 등) 다른 사람 또는 단체의 집이나 그 밖의 인공구조물과 자동차 등에 함부로 광고물 등을 붙이거나 내걸거나 끼우거나 글씨 또는 그림을 쓰거나 그리거나 새기는 행위 등을 한 사람 또는 다른 사람이나 단체의 간판, 그 밖의 표시물 또는 인공구조물을 함부로 옮기거나 더럽히거나 훼손한 사람 또는 공공장소에서 광고물 등을 함부로 뿌린 사람 10. (마시는 물 사용방해) 사람이 마시는 물을 더럽히거나 사용하는 것을 방해한 사람 11. (쓰레기 등 투기) 담배꽁초, 껌, 휴지, 쓰레기, 죽은 짐승, 그 밖의 더러운 물건이나 못쓰게 된 물건을 함부로 아무 곳에나 버린 사람 12. (노상방뇨 등) 길, 공원, 그 밖에 여러 사람이 모이거나 다니는 곳에서 함부로 침을 뱉거나 대소변을 보거나 또는 그렇게 하도록 시키거나 개 등 짐승을 끌고 와서 대변을 보게 하고 이를 치우지 아니한 사람 13. (의식방해) 공공기관이나 그 밖의 단체 또는 개인이 하는 행사나 의식을 못된 장난 등으로 방해하거나 행사나 의식을 하는 자 또는 그 밖에 관계 있는 사람이 말려도 듣지 아니하고 행사나 의식을 방해할 우려가 뚜렷한 물건을 가지고 행사장 등에 들어간 사람 14. (단체가입 강요) 싫다고 하는데도 되풀이하여 단체 가입을 억지로 강요한 사람 15. (자연훼손) 공원·명승지·유원지나 그 밖의 녹지구역 등에서 풀·꽃·나무·돌 등을 함부로 꺾거나 캔 사람 또는 바위·나무 등에 글씨를 새기거나 하여 자연을 훼손한 사람 16. (타인의 가축·기계 등 무단조작) 다른 사람 또는 단체의 소나 말, 그 밖의 짐승 또는 매어 놓은 배·뗏목 등을 함부로 풀어 놓거나 자동차 등의 기계를 조작한 사람 17. (물길의 흐름 방해) 개천· 도랑이나 그 밖의 물길의 흐름에 방해될 행위를 한 사람 18. (구걸행위 등) 다른 사람에게 구걸하도록 시켜 올바르지 아니한 이익을 얻은 사람 또는 공공장소에서 구걸을 하여 다른 사람의 통행을 방해하거나 귀찮게 한 사람 19. (불안감조성) 정당한 이유 없이 길을 막거나 시비를 걸거나 주위에 모여들거나 뒤따르거나 몹시 거칠게 겁을 주는 말이나 행동으로 다른 사람을 불안하게 하거나 귀찮고 불쾌하게 한 사람 또는 여러 사람이 이용하거나 다니는 도로·공원 등 공공장소에서 고의로 험악한 문신(文身)을 드러내어 다른 사람에게 혐오감을 준 사람 20. (음주소란 등) 공회당·극장·음식점 등 여러 사람이 모이거나 다니는 곳 또는 여러 사람이 타는 기차·자동차·배 등에서 몹시 거친 말이나 행동으로 주위를 시끄럽게 하거나 술에 취하여 이유 없이 다른 사람에게 주정한 사람 21. (인근소란 등) 악기·라디오·텔레비전·전축·종·확성기·전동기(電動機) 등의 소리를 지나치게 크게 내거나 큰소리로 떠들거나 노래를 불러 이웃을 시끄럽게 한 사람 22. (위험한 불씨 사용) 충분한 주의를 하지 아니하고 건조물, 수풀, 그 밖에 불붙기 쉬운 물건 가까이에서 불을 피우거나 휘발유 또는 그 밖에 불이 옮아붙기 쉬운 물건 가까이에서 불씨를 사용한 사람 23. (물건 던지기 등 위험행위) 다른 사람의 신체나 다른 사람 또는 단체의 물건에 해를 끼칠 우려가 있는 곳에 충분한 주의를 하지 아니하고 물건을 던지거나 붓거나 또는 쏜 사람 24. (인공구조물 등의 관리소홀) 무너지거나 넘어지거나 떨어질 우려가 있는 인공구조물이나 그 밖의 물건에 대하여 관계 공무원으로부터 고칠 것을 요구받고도 필요한 조치를 게을리하여 여러 사람을 위험에 빠트릴 우려가 있게 한 사람 25. (위험한 동물의 관리 소홀) 사람이나 가축에 해를 끼치는 버릇이 있는 개나 그 밖의 동물을 함부로 풀어놓거나 제대로 살피지 아니하여 나다니게 한 사람 26. (동물 등에 의한 행패 등) 소나 말을 놀라게 하여 달아나게 하거나 개나 그 밖의 동물을 시켜 사람이나 가축에게 달려들게 한 사람 27. (무단소등) 여러 사람이 다니거나 모이는 곳에 켜 놓은 등불이나 다른 사람 또는 단체가 표시를 하기 위하여 켜 놓은 등불을 함부로 끈 사람 28. (공중통로 안전관리소홀) 여러 사람이 다니는 곳에서 위험한 사고가 발생하는 것을 막을 의무가 있으면서도 등불을 켜 놓지 아니하거나 그 밖의 예방조치를 게을리한 사람 29. (공무원 원조불응) 눈·비·바람·해일·지진 등으로 인한 재해, 화재·교통사고·범죄, 그 밖의 급작스러운 사고가 발생하였을 때에 현장에 있으면서도 정당한 이유 없이 관계 공무원 또는 이를 돕는 사람의 현장출입에 관한 지시에 따르지 아니하거나 공무원이 도움을 요청하여도 도움을 주지 아니한 사람 30. (거짓 인적사항 사용) 성명, 주민등록번호, 등록기준지, 주소, 직업 등을 거짓으로 꾸며대고 배나 비행기를 타거나 인적사항을 물을 권한이 있는 공무원이 적법한 절차를 거쳐 묻는 경우 정당한 이유 없이 다른 사람의 인적사항을 자기의 것으로 거짓으로 꾸며댄 사람 31. (미신요법) 근거 없이 신기하고 용한 약방문인 것처럼 내세우거나 그 밖의 미신적인 방법으로 병을 진찰·치료·예방한다고 하여 사람들의 마음을 홀리게 한 사람 32. (야간통행제한 위반) 전시·사변·천재지변, 그 밖에 사회에 위험이 생길 우려가 있을 경우에 경찰청장이나 해양경찰청장이 정하는 야간통행제한을 위반한 사람 33. (과다노출) 공개된 장소에서 공공연하게 성기·엉덩이 등 신체의 주요한 부위를 노출하여 다른 사람에게 부끄러운 느낌이나 불쾌감을 준 사람 34. (지문채취 불응) 범죄 피의자로 입건된 사람의 신원을 지문조사 외의 다른 방법으로는 확인할 수 없어 경찰공무원이나 검사가 지문을 채취하려고 할 때에 정당한 이유 없이 이를 거부한 사람 35. (자릿세 징수 등) 여러 사람이 모이거나 쓸 수 있도록 개방된 시설 또는 장소에서 좌석이나 주차할 자리를 잡아 주기로 하거나 잡아주면서, 돈을 받거나 요구하거나 돈을 받으려고 다른 사람을 귀찮게 따라다니는 사람 36. (행렬방해) 공공장소에서 승차·승선, 입장·매표 등을 위한 행렬에 끼어들거나 떠밀거나 하여 그 행렬의 질서를 어지럽힌 사람 37. (무단 출입) 출입이 금지된 구역이나 시설 또는 장소에 정당한 이유 없이 들어간 사람 38. (총포 등 조작장난) 여러 사람이 모이거나 다니는 곳에서 충분한 주의를 하지 아니하고 총포, 화약류, 그 밖에 폭발의 우려가 있는 물건을 다루거나 이를 가지고 장난한 사람 39. (무임승차 및 무전취식) 영업용 차 또는 배 등을 타거나 다른 사람이 파는 음식을 먹고 정당한 이유 없이 제 값을 치르지 아니한 사람 40. (장난전화 등) 정당한 이유 없이 다른 사람에게 전화·문자메시지·편지·전자우편·전자문서 등을 여러 차례 되풀이하여 괴롭힌 사람 41. (지속적 괴롭힘) 상대방의 명시적 의사에 반하여 지속적으로 접근을 시도하여 면회 또는 교제를 요구하거나 지켜보기, 따라다니기, 잠복하여 기다리기 등의 행위를 반복하여 하는 사람",
+        "rerank_rank": 1,
+        "rerank_score": 0.00017921873950399458,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "경범죄 처벌법 3조  경범죄의 종류 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공공단체등 위탁선거에 관한 법률 57조#KOBLEX-086656"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 45,
+        "first_stage_score": 16.358199883223534,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "공공단체등 위탁선거에 관한 법률 57조#KOBLEX-086656",
+        "provision_text": "제10장 벌칙",
+        "rerank_rank": 6,
+        "rerank_score": 0.00010582117829471827,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공공단체등 위탁선거에 관한 법률 57조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공장 및 광업재단 저당법 60조#KOBLEX-044449"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 70,
+        "first_stage_score": 16.358199883223534,
+        "fusion_rank": 7,
+        "issue_id": "I2",
+        "provision_id": "공장 및 광업재단 저당법 60조#KOBLEX-044449",
+        "provision_text": "제4장 벌칙",
+        "rerank_rank": 7,
+        "rerank_score": 0.00010420110629638657,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공장 및 광업재단 저당법 60조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공직선거법 230조#KOBLEX-052565",
+          "공직선거법 230조#KOBLEX-175851"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 73,
+        "first_stage_score": 16.358199883223534,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "공직선거법 230조#KOBLEX-052565",
+        "provision_text": "제16장 벌칙",
+        "rerank_rank": 8,
+        "rerank_score": 7.11830725776963e-05,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공직선거법 230조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "공동주택관리법 97조#KOBLEX-086386"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 52,
+        "first_stage_score": 16.358199883223534,
+        "fusion_rank": 9,
+        "issue_id": "I2",
+        "provision_id": "공동주택관리법 97조#KOBLEX-086386",
+        "provision_text": "제11장 벌칙",
+        "rerank_rank": 9,
+        "rerank_score": 4.623599670594558e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "공동주택관리법 97조",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "관세법 243조  신고의 요건#KOBLEX-105705"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 41,
+        "first_stage_score": 14.62005677310203,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "관세법 243조  신고의 요건#KOBLEX-105705",
+        "provision_text": "제243조(신고의 요건)",
+        "rerank_rank": 1,
+        "rerank_score": 1.9512854123604484e-05,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "관세법 243조  신고의 요건",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192893"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 1.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192893",
+        "provision_text": "제101조(예비, 음모, 선동, 선전)",
+        "rerank_rank": 1,
+        "rerank_score": 1.614737084310036e-05,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 101조  예비, 음모, 선동, 선전",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192895"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 1.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192895",
+        "provision_text": "②제92조 내지 제99조의 죄를 선동 또는 선전한 자도 전항의 형과 같다.",
+        "rerank_rank": 2,
+        "rerank_score": 1.340090784651693e-05,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 101조  예비, 음모, 선동, 선전 2항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 243조  수계신청에 대한 재판#KOBLEX-064169"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 54,
+        "first_stage_score": 14.262999944750522,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 243조  수계신청에 대한 재판#KOBLEX-064169",
+        "provision_text": "제243조(수계신청에 대한 재판)",
+        "rerank_rank": 2,
+        "rerank_score": 8.92133448360255e-06,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민사소송법 243조  수계신청에 대한 재판",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 100조  미수범#KOBLEX-192892"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 1.0,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "형법 100조  미수범#KOBLEX-192892",
+        "provision_text": "제100조(미수범) 전8조의 미수범은 처벌한다.",
+        "rerank_rank": 3,
+        "rerank_score": 6.973885774641531e-06,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 100조  미수범",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 243조  회생계획인가의 요건#KOBLEX-032286"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 43,
+        "first_stage_score": 14.62005677310203,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 243조  회생계획인가의 요건#KOBLEX-032286",
+        "provision_text": "제243조(회생계획인가의 요건)",
+        "rerank_rank": 3,
+        "rerank_score": 6.546190888911951e-06,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 243조  회생계획인가의 요건",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192894"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 1.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192894",
+        "provision_text": "①제92조 내지 제99조의 죄를 범할 목적으로 예비 또는 음모한 자는 2년 이상의 유기징역에 처한다. 단 그 목적한 죄의 실행에 이르기 전에 자수한 때에는 그 형을 감경 또는 면제한다.",
+        "rerank_rank": 4,
+        "rerank_score": 5.551236426981632e-06,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 101조  예비, 음모, 선동, 선전 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "산업안전보건법 시행규칙 243조  규제의 재검토#KOBLEX-224675"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 42,
+        "first_stage_score": 14.62005677310203,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "산업안전보건법 시행규칙 243조  규제의 재검토#KOBLEX-224675",
+        "provision_text": "제243조(규제의 재검토)",
+        "rerank_rank": 6,
+        "rerank_score": 4.916372290608706e-06,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "산업안전보건법 시행규칙 243조  규제의 재검토",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형법 104조 2#KOBLEX-192901"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 90,
+        "first_stage_score": 1.0,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "형법 104조 2#KOBLEX-192901",
+        "provision_text": "제104조의2 삭제 <1988.12.31>",
+        "rerank_rank": 5,
+        "rerank_score": 2.784569915093016e-06,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형법 104조 2",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "경범죄 처벌법 3조  경범죄의 종류#KOBLEX-049499": "① 다음 각 호의 어느 하나에 해당하는 사람은 10만원 이하의 벌금, 구류 또는 과료(科料)의 형으로 처벌한다. <개정 2014.11.19, 2017.7.26, 2017.10.24> 1. (빈집 등에의 침입) 다른 사람이 살지 아니하고 관리하지 아니하는 집 또는 그 울타리·건조물(建造物)·배·자동차 안에 정당한 이유 없이 들어간 사람 2. (흉기의 은닉휴대) 칼·쇠몽둥이·쇠톱 등 사람의 생명 또는 신체에 중대한 위해를 끼치거나 집이나 그 밖의 건조물에 침입하는 데에 사용될 수 있는 연장이나 기구를 정당한 이유 없이 숨겨서 지니고 다니는 사람 3. (폭행 등 예비) 다른 사람의 신체에 위해를 끼칠 것을 공모(共謀)하여 예비행위를 한 사람이 있는 경우 그 공모를 한 사람 4. 삭제 <2013.5.22> 5. (시체 현장변경 등) 사산아(死産兒)를 감추거나 정당한 이유 없이 변사체 또는 사산아가 있는 현장을 바꾸어 놓은 사람 6. (도움이 필요한 사람 등의 신고불이행) 자기가 관리하고 있는 곳에 도움을 받아야 할 노인, 어린이, 장애인, 다친 사람 또는 병든 사람이 있거나 시체 또는 사산아가 있는 것을 알면서 이를 관계 공무원에게 지체 없이 신고하지 아니한 사람 7. (관명사칭 등) 국내외의 공직(公職), 계급, 훈장, 학위 또는 그 밖에 법령에 따라 정하여진 명칭이나 칭호 등을 거짓으로 꾸며 대거나 자격이 없으면서 법령에 따라 정하여진 제복, 훈장, 기장 또는 기념장(記念章), 그 밖의 표장(標章) 또는 이와 비슷한 것을 사용한 사람 8. (물품강매·호객행위) 요청하지 아니한 물품을 억지로 사라고 한 사람, 요청하지 아니한 일을 해주거나 재주 등을 부리고 그 대가로 돈을 달라고 한 사람 또는 여러 사람이 모이거나 다니는 곳에서 영업을 목적으로 떠들썩하게 손님을 부른 사람 9. (광고물 무단부착 등) 다른 사람 또는 단체의 집이나 그 밖의 인공구조물과 자동차 등에 함부로 광고물 등을 붙이거나 내걸거나 끼우거나 글씨 또는 그림을 쓰거나 그리거나 새기는 행위 등을 한 사람 또는 다른 사람이나 단체의 간판, 그 밖의 표시물 또는 인공구조물을 함부로 옮기거나 더럽히거나 훼손한 사람 또는 공공장소에서 광고물 등을 함부로 뿌린 사람 10. (마시는 물 사용방해) 사람이 마시는 물을 더럽히거나 사용하는 것을 방해한 사람 11. (쓰레기 등 투기) 담배꽁초, 껌, 휴지, 쓰레기, 죽은 짐승, 그 밖의 더러운 물건이나 못쓰게 된 물건을 함부로 아무 곳에나 버린 사람 12. (노상방뇨 등) 길, 공원, 그 밖에 여러 사람이 모이거나 다니는 곳에서 함부로 침을 뱉거나 대소변을 보거나 또는 그렇게 하도록 시키거나 개 등 짐승을 끌고 와서 대변을 보게 하고 이를 치우지 아니한 사람 13. (의식방해) 공공기관이나 그 밖의 단체 또는 개인이 하는 행사나 의식을 못된 장난 등으로 방해하거나 행사나 의식을 하는 자 또는 그 밖에 관계 있는 사람이 말려도 듣지 아니하고 행사나 의식을 방해할 우려가 뚜렷한 물건을 가지고 행사장 등에 들어간 사람 14. (단체가입 강요) 싫다고 하는데도 되풀이하여 단체 가입을 억지로 강요한 사람 15. (자연훼손) 공원·명승지·유원지나 그 밖의 녹지구역 등에서 풀·꽃·나무·돌 등을 함부로 꺾거나 캔 사람 또는 바위·나무 등에 글씨를 새기거나 하여 자연을 훼손한 사람 16. (타인의 가축·기계 등 무단조작) 다른 사람 또는 단체의 소나 말, 그 밖의 짐승 또는 매어 놓은 배·뗏목 등을 함부로 풀어 놓거나 자동차 등의 기계를 조작한 사람 17. (물길의 흐름 방해) 개천· 도랑이나 그 밖의 물길의 흐름에 방해될 행위를 한 사람 18. (구걸행위 등) 다른 사람에게 구걸하도록 시켜 올바르지 아니한 이익을 얻은 사람 또는 공공장소에서 구걸을 하여 다른 사람의 통행을 방해하거나 귀찮게 한 사람 19. (불안감조성) 정당한 이유 없이 길을 막거나 시비를 걸거나 주위에 모여들거나 뒤따르거나 몹시 거칠게 겁을 주는 말이나 행동으로 다른 사람을 불안하게 하거나 귀찮고 불쾌하게 한 사람 또는 여러 사람이 이용하거나 다니는 도로·공원 등 공공장소에서 고의로 험악한 문신(文身)을 드러내어 다른 사람에게 혐오감을 준 사람 20. (음주소란 등) 공회당·극장·음식점 등 여러 사람이 모이거나 다니는 곳 또는 여러 사람이 타는 기차·자동차·배 등에서 몹시 거친 말이나 행동으로 주위를 시끄럽게 하거나 술에 취하여 이유 없이 다른 사람에게 주정한 사람 21. (인근소란 등) 악기·라디오·텔레비전·전축·종·확성기·전동기(電動機) 등의 소리를 지나치게 크게 내거나 큰소리로 떠들거나 노래를 불러 이웃을 시끄럽게 한 사람 22. (위험한 불씨 사용) 충분한 주의를 하지 아니하고 건조물, 수풀, 그 밖에 불붙기 쉬운 물건 가까이에서 불을 피우거나 휘발유 또는 그 밖에 불이 옮아붙기 쉬운 물건 가까이에서 불씨를 사용한 사람 23. (물건 던지기 등 위험행위) 다른 사람의 신체나 다른 사람 또는 단체의 물건에 해를 끼칠 우려가 있는 곳에 충분한 주의를 하지 아니하고 물건을 던지거나 붓거나 또는 쏜 사람 24. (인공구조물 등의 관리소홀) 무너지거나 넘어지거나 떨어질 우려가 있는 인공구조물이나 그 밖의 물건에 대하여 관계 공무원으로부터 고칠 것을 요구받고도 필요한 조치를 게을리하여 여러 사람을 위험에 빠트릴 우려가 있게 한 사람 25. (위험한 동물의 관리 소홀) 사람이나 가축에 해를 끼치는 버릇이 있는 개나 그 밖의 동물을 함부로 풀어놓거나 제대로 살피지 아니하여 나다니게 한 사람 26. (동물 등에 의한 행패 등) 소나 말을 놀라게 하여 달아나게 하거나 개나 그 밖의 동물을 시켜 사람이나 가축에게 달려들게 한 사람 27. (무단소등) 여러 사람이 다니거나 모이는 곳에 켜 놓은 등불이나 다른 사람 또는 단체가 표시를 하기 위하여 켜 놓은 등불을 함부로 끈 사람 28. (공중통로 안전관리소홀) 여러 사람이 다니는 곳에서 위험한 사고가 발생하는 것을 막을 의무가 있으면서도 등불을 켜 놓지 아니하거나 그 밖의 예방조치를 게을리한 사람 29. (공무원 원조불응) 눈·비·바람·해일·지진 등으로 인한 재해, 화재·교통사고·범죄, 그 밖의 급작스러운 사고가 발생하였을 때에 현장에 있으면서도 정당한 이유 없이 관계 공무원 또는 이를 돕는 사람의 현장출입에 관한 지시에 따르지 아니하거나 공무원이 도움을 요청하여도 도움을 주지 아니한 사람 30. (거짓 인적사항 사용) 성명, 주민등록번호, 등록기준지, 주소, 직업 등을 거짓으로 꾸며대고 배나 비행기를 타거나 인적사항을 물을 권한이 있는 공무원이 적법한 절차를 거쳐 묻는 경우 정당한 이유 없이 다른 사람의 인적사항을 자기의 것으로 거짓으로 꾸며댄 사람 31. (미신요법) 근거 없이 신기하고 용한 약방문인 것처럼 내세우거나 그 밖의 미신적인 방법으로 병을 진찰·치료·예방한다고 하여 사람들의 마음을 홀리게 한 사람 32. (야간통행제한 위반) 전시·사변·천재지변, 그 밖에 사회에 위험이 생길 우려가 있을 경우에 경찰청장이나 해양경찰청장이 정하는 야간통행제한을 위반한 사람 33. (과다노출) 공개된 장소에서 공공연하게 성기·엉덩이 등 신체의 주요한 부위를 노출하여 다른 사람에게 부끄러운 느낌이나 불쾌감을 준 사람 34. (지문채취 불응) 범죄 피의자로 입건된 사람의 신원을 지문조사 외의 다른 방법으로는 확인할 수 없어 경찰공무원이나 검사가 지문을 채취하려고 할 때에 정당한 이유 없이 이를 거부한 사람 35. (자릿세 징수 등) 여러 사람이 모이거나 쓸 수 있도록 개방된 시설 또는 장소에서 좌석이나 주차할 자리를 잡아 주기로 하거나 잡아주면서, 돈을 받거나 요구하거나 돈을 받으려고 다른 사람을 귀찮게 따라다니는 사람 36. (행렬방해) 공공장소에서 승차·승선, 입장·매표 등을 위한 행렬에 끼어들거나 떠밀거나 하여 그 행렬의 질서를 어지럽힌 사람 37. (무단 출입) 출입이 금지된 구역이나 시설 또는 장소에 정당한 이유 없이 들어간 사람 38. (총포 등 조작장난) 여러 사람이 모이거나 다니는 곳에서 충분한 주의를 하지 아니하고 총포, 화약류, 그 밖에 폭발의 우려가 있는 물건을 다루거나 이를 가지고 장난한 사람 39. (무임승차 및 무전취식) 영업용 차 또는 배 등을 타거나 다른 사람이 파는 음식을 먹고 정당한 이유 없이 제 값을 치르지 아니한 사람 40. (장난전화 등) 정당한 이유 없이 다른 사람에게 전화·문자메시지·편지·전자우편·전자문서 등을 여러 차례 되풀이하여 괴롭힌 사람 41. (지속적 괴롭힘) 상대방의 명시적 의사에 반하여 지속적으로 접근을 시도하여 면회 또는 교제를 요구하거나 지켜보기, 따라다니기, 잠복하여 기다리기 등의 행위를 반복하여 하는 사람",
+      "공공기관의 운영에 관한 법률 55조  벌칙#KOBLEX-042029": "제55조(벌칙)",
+      "공공기관의 운영에 관한 법률 56조  벌칙#KOBLEX-042033": "제56조(벌칙)",
+      "공공단체등 위탁선거에 관한 법률 57조#KOBLEX-086656": "제10장 벌칙",
+      "공공주택 특별법 57조  벌칙#KOBLEX-058313": "제57조(벌칙)",
+      "공공주택 특별법 58조  벌칙#KOBLEX-058332": "제58조(벌칙)",
+      "공동주택관리법 97조#KOBLEX-086386": "제11장 벌칙",
+      "공장 및 광업재단 저당법 60조#KOBLEX-044449": "제4장 벌칙",
+      "공직선거법 230조#KOBLEX-052565": "제16장 벌칙",
+      "관세법 243조  신고의 요건#KOBLEX-105705": "제243조(신고의 요건)",
+      "민사소송법 243조  수계신청에 대한 재판#KOBLEX-064169": "제243조(수계신청에 대한 재판)",
+      "산업안전보건법 시행규칙 243조  규제의 재검토#KOBLEX-224675": "제243조(규제의 재검토)",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조 2 성적 목적을 위한 공공장소 침입행위#KOBLEX-107705": "제1조의2(성적 목적을 위한 공공장소 침입행위) 「성폭력범죄의 처벌 등에 관한 특례법」(이하 \"법\"이라 한다) 제12조에서 \"「공중화장실 등에 관한 법률」 제2조제1호부터 제5호까지에 따른 공중화장실 등 및 「공중위생관리법」 제2조제1항제3호에 따른 목욕장업의 목욕장 등 대통령령으로 정하는 공공장소\"란 다음 각 호의 어느 하나에 해당하는 장소를 말한다.",
+      "채무자 회생 및 파산에 관한 법률 243조  회생계획인가의 요건#KOBLEX-032286": "제243조(회생계획인가의 요건)",
+      "형법 100조  미수범#KOBLEX-192892": "제100조(미수범) 전8조의 미수범은 처벌한다.",
+      "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192893": "제101조(예비, 음모, 선동, 선전)",
+      "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192894": "①제92조 내지 제99조의 죄를 범할 목적으로 예비 또는 음모한 자는 2년 이상의 유기징역에 처한다. 단 그 목적한 죄의 실행에 이르기 전에 자수한 때에는 그 형을 감경 또는 면제한다.",
+      "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192895": "②제92조 내지 제99조의 죄를 선동 또는 선전한 자도 전항의 형과 같다.",
+      "형법 104조 2#KOBLEX-192901": "제104조의2 삭제 <1988.12.31>"
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "형법상 음란행위죄의 구성요건을 확인하는 조문이 후보 목록에 포함되어 있지 않습니다.",
+            "requirement_id": "E1-R1",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "uncovered",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "E1-R1"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "공급된 후보 조문 중 형법상 음란행위죄(형법 제243조)의 구성요건을 명시하는 조문이 없습니다. C006은 경범죄처벌법상 과다노출죄를 규정하고 있어 형법상 음란행위죄와 구별되며, 나머지 조문들은 공공주택, 선거, 공장저당 등 무관한 법률의 벌칙 조항이거나 성폭력특례법 시행령의 정의 조항에 불과합니다.",
+        "status": "uncovered"
+      },
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "형법 제243조 제1항의 벌칙 내용을 확인하는 조문이 후보 목록에 포함되어 있지 않습니다.",
+            "requirement_id": "E2-R1",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "uncovered",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "E2-R1"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "공급된 후보 조문 중 형법 제243조 제1항의 법정형(1년 이하의 징역 또는 300만원 이하의 벌금)을 명시하는 조문이 없습니다. C006은 경범죄처벌법상 벌금형(10만원 이하)을 규정하고 있어 질문에서 요구하는 형법상 음란행위죄의 법정형과 다릅니다.",
+        "status": "uncovered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 9,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "공공장소에서의 음란행위가 형법상 음란행위죄에 해당하는지 여부",
+        "issue_id": "I1"
+      },
+      {
+        "description": "형법상 음란행위죄의 법정형",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "공공장소에서의 음란행위죄 성립 요건 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "공공장소에서의 음란행위죄 구성요건 확인"
+          }
+        ],
+        "critical": true,
+        "description": "형법상 음란행위죄의 구성요건(공공장소, 음란한 행위)",
+        "evidence_item_id": "E1",
+        "evidence_type": "element",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 묻는 처벌의 전제인 범죄 성립 여부를 판단하기 위해 필요함",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "형법 제243조 제1항의 벌칙 내용 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "형법 제243조 제1항 벌칙 내용 확인"
+          }
+        ],
+        "critical": true,
+        "description": "형법상 음란행위죄의 법정형(벌금)",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 직접 묻는 처벌 내용을 확인하기 위해 필요함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 갑은 어느 날 저녁 공원에서 많은 사람이 오가는 곳에서 옷을 벗고 춤을 추며 음란한 행위를 하였습니다. 이 행위로 인해 주변 사람들은 불쾌감을 느꼈고, 결국 경찰에 의해 체포되었습니다. [질문] 갑이 공공장소에서 음란한 행위를 한 경우, 그는 어떤 처벌을 받을 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "공공장소 음란행위죄 구성요건",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "공공장소",
+          "음란행위",
+          "형법",
+          "음란행위죄",
+          "구성요건"
+        ],
+        "query_text": "공공장소 음란행위죄 구성요건 [원문 맥락] 이 행위로 인해 주변 사람들은 불쾌감을 느꼈고, 결국 경찰에 의해 체포되었습니다. 갑이 공공장소에서 음란한 행위를 한 경우, 그는 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "공공장소 음란행위죄 구성요건",
+        "statute_hints": [
+          "형법 제243조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "공공장소 음란행위 벌칙",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "공공장소",
+          "음란행위",
+          "형법",
+          "벌칙",
+          "벌금"
+        ],
+        "query_text": "공공장소 음란행위 벌칙 [원문 맥락] 이 행위로 인해 주변 사람들은 불쾌감을 느꼈고, 결국 경찰에 의해 체포되었습니다. 갑이 공공장소에서 음란한 행위를 한 경우, 그는 어떤 처벌을 받을 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "공공장소 음란행위 벌칙",
+        "statute_hints": [
+          "형법 제243조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형법 제243조 음란행위 공공장소",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형법",
+          "제243조",
+          "음란행위",
+          "공공장소",
+          "구성요건"
+        ],
+        "query_text": "형법 제243조 음란행위죄 공공장소 구성요건 [원문 맥락] 이 행위로 인해 주변 사람들은 불쾌감을 느꼈고, 결국 경찰에 의해 체포되었습니다. 갑이 공공장소에서 음란한 행위를 한 경우, 그는 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "형법 제243조 음란행위죄 공공장소 구성요건",
+        "statute_hints": [
+          "형법 제243조"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "형법 제243조 음란행위 벌칙",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형법",
+          "제243조",
+          "음란행위",
+          "벌칙",
+          "징역",
+          "벌금"
+        ],
+        "query_text": "형법 제243조 음란행위 벌칙 징역 벌금 [원문 맥락] 이 행위로 인해 주변 사람들은 불쾌감을 느꼈고, 결국 경찰에 의해 체포되었습니다. 갑이 공공장소에서 음란한 행위를 한 경우, 그는 어떤 처벌을 받을 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "형법 제243조 음란행위 벌칙 징역 벌금",
+        "statute_hints": [
+          "형법 제243조"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 어느 날 저녁 공원에서 많은 사람이 오가는 곳에서 옷을 벗고 춤을 추며 음란한 행위를 하였습니다. 이 행위로 인해 주변 사람들은 불쾌감을 느꼈고, 결국 경찰에 의해 체포되었습니다.\n\n[질문]\n갑이 공공장소에서 음란한 행위를 한 경우, 그는 어떤 처벌을 받을 수 있는가?",
+    "remaining_request_budget": 5,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "공공장소에서의 음란행위죄 성립 요건 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "공공장소에서의 음란행위죄 구성요건 확인"
+          }
+        ],
+        "critical": true,
+        "description": "형법상 음란행위죄의 구성요건(공공장소, 음란한 행위)",
+        "evidence_item_id": "E1",
+        "evidence_type": "element",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 묻는 처벌의 전제인 범죄 성립 여부를 판단하기 위해 필요함",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "형법 제243조 제1항의 벌칙 내용 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "형법 제243조 제1항 벌칙 내용 확인"
+          }
+        ],
+        "critical": true,
+        "description": "형법상 음란행위죄의 법정형(벌금)",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 직접 묻는 처벌 내용을 확인하기 위해 필요함",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "26cf6188-0299-40c6-87b0-3900d214cada",
+    "seen_provision_ids": [
+      "산업안전보건법 시행규칙 243조  규제의 재검토#KOBLEX-224675",
+      "관세법 243조  신고의 요건#KOBLEX-105705",
+      "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192893",
+      "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192894",
+      "공공기관의 운영에 관한 법률 55조  벌칙#KOBLEX-042029",
+      "공동주택관리법 97조#KOBLEX-086386",
+      "경범죄 처벌법 3조  경범죄의 종류#KOBLEX-049499",
+      "형법 100조  미수범#KOBLEX-192892",
+      "채무자 회생 및 파산에 관한 법률 243조  회생계획인가의 요건#KOBLEX-032286",
+      "형법 104조 2#KOBLEX-192901",
+      "공직선거법 230조#KOBLEX-052565",
+      "민사소송법 243조  수계신청에 대한 재판#KOBLEX-064169",
+      "공공기관의 운영에 관한 법률 56조  벌칙#KOBLEX-042033",
+      "공장 및 광업재단 저당법 60조#KOBLEX-044449",
+      "공공단체등 위탁선거에 관한 법률 57조#KOBLEX-086656",
+      "공공주택 특별법 58조  벌칙#KOBLEX-058332",
+      "공공주택 특별법 57조  벌칙#KOBLEX-058313",
+      "형법 101조  예비, 음모, 선동, 선전#KOBLEX-192895",
+      "성폭력범죄의 처벌 등에 관한 특례법 시행령 1조 2 성적 목적을 위한 공공장소 침입행위#KOBLEX-107705"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "NO_RETRIEVAL_PROGRESS"
+}

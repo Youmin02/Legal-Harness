@@ -1,0 +1,950 @@
+{
+  "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+  "answer": null,
+  "answer_mode": null,
+  "answered_target_ids": [],
+  "candidate_answer": "형사사건에서 상고이유서를 상고법원에 제출해야 하는 법정 기한은 상고장을 제출한 날부터 14일 이내입니다.[CT1]\n상고이유서 제출 기한은 교통이나 통신의 불편 등 부득이한 사유로 기한 내에 제출할 수 없는 경우, 그 사유가 소멸한 날부터 14일 이내에 제출할 수 있도록 연장될 수 있습니다.[CT2]\n기한 연장을 신청하는 경우, 사유가 발생한 날과 소멸한 날 등을 적은 문서를 함께 제출해야 합니다.[CT3]\n전제: 질문에서 언급된 '교통과 통신이 매우 불편하다'는 상황이 형사소송법상 기한 연장의 정당한 사유에 해당하는 것으로 가정합니다.\n한계: 본 답변은 벤치마크 진단용 후보이며, 공개 가능한 공식 답변이 아닙니다.\n한계: 형사소송법 제377조는 소송기록 송부 기한을 규정하고 있어, 상고이유서 제출 기한과 직접적으로 동일하지 않을 수 있습니다.",
+  "candidate_answer_basis": "retrieved_candidates",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "GENERATED",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-20T21:44:39.249235+00:00",
+  "deferred_target_ids": [],
+  "end_to_end_latency_ms": 320591.578,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 362,
+      "dedup_collapse": 66,
+      "evidence_fusion": 362,
+      "first_stage": 400,
+      "request_rerank": 400,
+      "round_selected": 20,
+      "rrf": 400,
+      "selected": 362
+    }
+  },
+  "run_id": "6b6947c2-5c81-4f43-aa68-f1bfd0256910",
+  "state": {
+    "accepted_provision_ids": [],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 2,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "ABSTAIN",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "Two consecutive retrieval rounds did not improve critical evidence.",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "abstention_reason": "INSUFFICIENT_CRITICAL_EVIDENCE",
+          "termination_reason": "NO_RETRIEVAL_PROGRESS"
+        },
+        "event": "ABSTAIN",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 19
+        },
+        "event": "BENCHMARK_CANDIDATE_GENERATION_STARTED",
+        "phase": "ABSTAINED"
+      },
+      {
+        "details": {
+          "candidate_answer_basis": "retrieved_candidates",
+          "candidate_provision_count": 19,
+          "claim_count": 3
+        },
+        "event": "BENCHMARK_CANDIDATE_VALIDATED",
+        "phase": "ABSTAINED"
+      }
+    ],
+    "answer_mode": null,
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "deadline",
+        "question_anchor": "상고이유서를 상고법원에 제출해야 하는 기한은 언제까지이며",
+        "requested_output": "상고이유서 제출 기한의 법정 기준"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "exception",
+        "question_anchor": "이 기한은 어떤 경우에 연장될 수 있는가",
+        "requested_output": "상고이유서 제출 기한 연장의 법적 요건 및 사유"
+      }
+    ],
+    "answered_target_ids": [],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민사소송법 427조  상고이유서 제출#KOBLEX-064621"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 22.16378981771237,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 427조  상고이유서 제출#KOBLEX-064621",
+        "provision_text": "제427조(상고이유서 제출) 상고장에 상고이유를 적지 아니한 때에 상고인은 제426조의 통지를 받은 날부터 20일 이내에 상고이유서를 제출하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9783201217651367,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민사소송법 427조  상고이유서 제출",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "자본시장과 금융투자업에 관한 법률 165조  사업보고서등의 제출에 관한 특례#KOBLEX-135699"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 24.570946438577035,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "자본시장과 금융투자업에 관한 법률 165조  사업보고서등의 제출에 관한 특례#KOBLEX-135699",
+        "provision_text": "④ 사업보고서 제출대상법인이 제3항에 따라 금융위원회와 거래소에 신고하는 경우에는 금융위원회가 정하여 고시하는 기재방법 및 서식에 따라야 하고, 회계감사인이 기재하여 서명날인한 기한 연장 사유서를 첨부하여야 한다. <신설 2017.10.31>",
+        "rerank_rank": 1,
+        "rerank_score": 0.00033865595469251275,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E1,E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "자본시장과 금융투자업에 관한 법률 165조  사업보고서등의 제출에 관한 특례 4항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 428조  상고이유서, 답변서의 송달 등#KOBLEX-064622"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 41,
+        "first_stage_score": 15.635174817248528,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 428조  상고이유서, 답변서의 송달 등#KOBLEX-064622",
+        "provision_text": "제428조(상고이유서, 답변서의 송달 등)",
+        "rerank_rank": 2,
+        "rerank_score": 0.01470098178833723,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민사소송법 428조  상고이유서, 답변서의 송달 등",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "관세법 121조  심사청구기간#KOBLEX-105075"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 22,
+        "first_stage_score": 22.89441487085883,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "관세법 121조  심사청구기간#KOBLEX-105075",
+        "provision_text": "④ 심사청구인이 제10조에서 규정하는 사유(신고, 신청, 청구, 그 밖의 서류의 제출 및 통지에 관한 기한 연장 사유로 한정한다)로 제1항에서 정한 기간 내에 심사청구를 할 수 없을 때에는 그 사유가 소멸한 날부터 14일 이내에 심사청구를 할 수 있다. 이 경우 심사청구인은 그 기간 내에 심사청구를 할 수 없었던 사유, 그 사유가 발생한 날과 소멸한 날, 그 밖에 필요한 사항을 적은 문서를 함께 제출하여야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 7.791173993609846e-05,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "관세법 121조  심사청구기간 4항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 147조#KOBLEX-058673"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 9,
+        "first_stage_score": 18.736908466915178,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민법 147조#KOBLEX-058673",
+        "provision_text": "제5절 조건과 기한",
+        "rerank_rank": 3,
+        "rerank_score": 6.307094008661807e-05,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 147조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "지방세기본법 23조#KOBLEX-120654"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 18.736908466915178,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "지방세기본법 23조#KOBLEX-120654",
+        "provision_text": "제4절 기간과 기한",
+        "rerank_rank": 4,
+        "rerank_score": 4.088159403181635e-05,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "지방세기본법 23조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국세기본법 시행령 3조  기한연장의 신청#KOBLEX-029548"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 6,
+        "first_stage_score": 25.56570054947072,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "국세기본법 시행령 3조  기한연장의 신청#KOBLEX-029548",
+        "provision_text": "2. 연장을 받으려는 기한",
+        "rerank_rank": 3,
+        "rerank_score": 4.0078521124087274e-05,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "국세기본법 시행령 3조  기한연장의 신청 2호",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "개발제한구역의 지정 및 관리에 관한 특별조치법 시행령 36조 2 부담금의 납부기한 연장 등#KOBLEX-043380"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 30.36134835765767,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "개발제한구역의 지정 및 관리에 관한 특별조치법 시행령 36조 2 부담금의 납부기한 연장 등#KOBLEX-043380",
+        "provision_text": "① 납부 의무자가 법 제25조제2항 단서에 따라 부담금의 납부 기한의 연장 또는 분할 납부의 허가를 신청하려는 때에는 그 사유 등을 적은 납부 기한 연장신청서 또는 분할 납부 신청서를 국토교통부장관에게 제출하여야 한다. <개정 2013.3.23>",
+        "rerank_rank": 4,
+        "rerank_score": 3.580153497750871e-05,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "RQ1"
+        ],
+        "statute_name": "개발제한구역의 지정 및 관리에 관한 특별조치법 시행령 36조 2 부담금의 납부기한 연장 등 1항",
+        "target_evidence_item_ids": [
+          "E2",
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "관세법 8조#KOBLEX-104397"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 8,
+        "first_stage_score": 18.736908466915178,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "관세법 8조#KOBLEX-104397",
+        "provision_text": "제3절 기간과 기한",
+        "rerank_rank": 5,
+        "rerank_score": 2.7375712306820787e-05,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "관세법 8조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "여신전문금융업법 49조 2 대주주에 대한 신용공여한도 등#KOBLEX-042341"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 58,
+        "first_stage_score": 21.413603401825846,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "여신전문금융업법 49조 2 대주주에 대한 신용공여한도 등#KOBLEX-042341",
+        "provision_text": "⑥ 제5항에도 불구하고 여신전문금융회사는 신용공여의 기한 및 규모 등에 따른 부득이한 사유가 있으면 금융위원회의 승인을 받아 그 기간을 연장할 수 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 1.7192047380376607e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "여신전문금융업법 49조 2 대주주에 대한 신용공여한도 등 6항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 318조 4 판결선고기일#KOBLEX-232607"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 19,
+        "first_stage_score": 17.2020964338049,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 318조 4 판결선고기일#KOBLEX-232607",
+        "provision_text": "③제1항 단서의 선고기일은 변론종결 후 14일 이내로 지정되어야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.0010347673669457436,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형사소송법 318조 4 판결선고기일 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 365조  피고인의 출정#KOBLEX-232753"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "형사소송법 365조  피고인의 출정#KOBLEX-232753",
+        "provision_text": "②피고인이 정당한 사유없이 다시 정한 기일에 출정하지 아니한 때에는 피고인의 진술없이 판결을 할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 2.990807843161747e-06,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "형사소송법 365조  피고인의 출정 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 377조  소송기록과 증거물의 송부#KOBLEX-232770"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 1.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 377조  소송기록과 증거물의 송부#KOBLEX-232770",
+        "provision_text": "제377조(소송기록과 증거물의 송부) 제376조의 경우를 제외하고는 원심법원은 상고장을 받은 날부터 14일이내에 소송기록과 증거물을 상고법원에 송부하여야 한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.0004523606621660292,
+        "retrieval_round": 2,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형사소송법 377조  소송기록과 증거물의 송부",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국민의 형사재판 참여에 관한 법률 48조  판결선고기일#KOBLEX-220027"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 20,
+        "first_stage_score": 16.83567355757058,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "국민의 형사재판 참여에 관한 법률 48조  판결선고기일#KOBLEX-220027",
+        "provision_text": "③ 제1항 단서의 선고기일은 변론종결 후 14일 이내로 정하여야 한다.",
+        "rerank_rank": 4,
+        "rerank_score": 9.229342686012387e-05,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "국민의 형사재판 참여에 관한 법률 48조  판결선고기일 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "소송촉진 등에 관한 특례법 22조  약식명령기간#KOBLEX-085226",
+          "소송촉진 등에 관한 특례법 22조  약식명령기간#KOBLEX-194131",
+          "소송촉진 등에 관한 특례법 22조  약식명령기간#KOBLEX-203622"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 3,
+        "first_stage_score": 22.73334490870369,
+        "fusion_rank": 5,
+        "issue_id": "I1",
+        "provision_id": "소송촉진 등에 관한 특례법 22조  약식명령기간#KOBLEX-085226",
+        "provision_text": "제22조(약식명령기간) 약식명령(略式命令)은 「형사소송법」 제450조의 경우를 제외하고는 그 청구가 있은 날부터 14일 이내에 하여야 한다.",
+        "rerank_rank": 5,
+        "rerank_score": 3.2206615287577733e-05,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "소송촉진 등에 관한 특례법 22조  약식명령기간",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "군사법원법 372조 2 판결선고기일#KOBLEX-093396",
+          "군사법원법 372조 2 판결선고기일#KOBLEX-159361"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 16.484535489561512,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "군사법원법 372조 2 판결선고기일#KOBLEX-093396",
+        "provision_text": "③ 제1항 단서의 선고기일은 변론 종결 후 14일 이내로 지정되어야 한다.",
+        "rerank_rank": 6,
+        "rerank_score": 3.114744686172344e-05,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "군사법원법 372조 2 판결선고기일 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 267조 2 집중심리#KOBLEX-232411"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 81,
+        "first_stage_score": 1.0,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 267조 2 집중심리#KOBLEX-232411",
+        "provision_text": "④재판장은 부득이한 사정으로 매일 계속 개정하지 못하는 경우에도 특별한 사정이 없는 한 전회의 공판기일부터 14일 이내로 다음 공판기일을 지정하여야 한다.",
+        "rerank_rank": 7,
+        "rerank_score": 2.9605218514916487e-05,
+        "retrieval_round": 2,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형사소송법 267조 2 집중심리 4항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "국가인권위원회법 36조  조사의 방법#KOBLEX-168424"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 35,
+        "first_stage_score": 16.14774539318223,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "국가인권위원회법 36조  조사의 방법#KOBLEX-168424",
+        "provision_text": "③ 제1항제1호에 따라 진술서 제출을 요구받은 사람은 14일 이내에 진술서를 제출하여야 한다.",
+        "rerank_rank": 8,
+        "rerank_score": 1.0774194379337132e-05,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "국가인권위원회법 36조  조사의 방법 3항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "형사소송법 361조  소송기록과 증거물의 송부#KOBLEX-232708"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 82,
+        "first_stage_score": 1.0,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "형사소송법 361조  소송기록과 증거물의 송부#KOBLEX-232708",
+        "provision_text": "제361조(소송기록과 증거물의 송부) 제360조의 경우를 제외하고는 원심법원은 항소장을 받은 날부터 14일이내에 소송기록과 증거물을 항소법원에 송부하여야 한다.",
+        "rerank_rank": 9,
+        "rerank_score": 8.243222509918269e-06,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "형사소송법 361조  소송기록과 증거물의 송부",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "개발제한구역의 지정 및 관리에 관한 특별조치법 시행령 36조 2 부담금의 납부기한 연장 등#KOBLEX-043380": "① 납부 의무자가 법 제25조제2항 단서에 따라 부담금의 납부 기한의 연장 또는 분할 납부의 허가를 신청하려는 때에는 그 사유 등을 적은 납부 기한 연장신청서 또는 분할 납부 신청서를 국토교통부장관에게 제출하여야 한다. <개정 2013.3.23>",
+      "관세법 121조  심사청구기간#KOBLEX-105075": "④ 심사청구인이 제10조에서 규정하는 사유(신고, 신청, 청구, 그 밖의 서류의 제출 및 통지에 관한 기한 연장 사유로 한정한다)로 제1항에서 정한 기간 내에 심사청구를 할 수 없을 때에는 그 사유가 소멸한 날부터 14일 이내에 심사청구를 할 수 있다. 이 경우 심사청구인은 그 기간 내에 심사청구를 할 수 없었던 사유, 그 사유가 발생한 날과 소멸한 날, 그 밖에 필요한 사항을 적은 문서를 함께 제출하여야 한다.",
+      "관세법 8조#KOBLEX-104397": "제3절 기간과 기한",
+      "국가인권위원회법 36조  조사의 방법#KOBLEX-168424": "③ 제1항제1호에 따라 진술서 제출을 요구받은 사람은 14일 이내에 진술서를 제출하여야 한다.",
+      "국민의 형사재판 참여에 관한 법률 48조  판결선고기일#KOBLEX-220027": "③ 제1항 단서의 선고기일은 변론종결 후 14일 이내로 정하여야 한다.",
+      "국세기본법 시행령 3조  기한연장의 신청#KOBLEX-029548": "2. 연장을 받으려는 기한",
+      "군사법원법 372조 2 판결선고기일#KOBLEX-093396": "③ 제1항 단서의 선고기일은 변론 종결 후 14일 이내로 지정되어야 한다.",
+      "민법 147조#KOBLEX-058673": "제5절 조건과 기한",
+      "민사소송법 427조  상고이유서 제출#KOBLEX-064621": "제427조(상고이유서 제출) 상고장에 상고이유를 적지 아니한 때에 상고인은 제426조의 통지를 받은 날부터 20일 이내에 상고이유서를 제출하여야 한다.",
+      "민사소송법 428조  상고이유서, 답변서의 송달 등#KOBLEX-064622": "제428조(상고이유서, 답변서의 송달 등)",
+      "소송촉진 등에 관한 특례법 22조  약식명령기간#KOBLEX-085226": "제22조(약식명령기간) 약식명령(略式命令)은 「형사소송법」 제450조의 경우를 제외하고는 그 청구가 있은 날부터 14일 이내에 하여야 한다.",
+      "여신전문금융업법 49조 2 대주주에 대한 신용공여한도 등#KOBLEX-042341": "⑥ 제5항에도 불구하고 여신전문금융회사는 신용공여의 기한 및 규모 등에 따른 부득이한 사유가 있으면 금융위원회의 승인을 받아 그 기간을 연장할 수 있다.",
+      "자본시장과 금융투자업에 관한 법률 165조  사업보고서등의 제출에 관한 특례#KOBLEX-135699": "④ 사업보고서 제출대상법인이 제3항에 따라 금융위원회와 거래소에 신고하는 경우에는 금융위원회가 정하여 고시하는 기재방법 및 서식에 따라야 하고, 회계감사인이 기재하여 서명날인한 기한 연장 사유서를 첨부하여야 한다. <신설 2017.10.31>",
+      "지방세기본법 23조#KOBLEX-120654": "제4절 기간과 기한",
+      "형사소송법 267조 2 집중심리#KOBLEX-232411": "④재판장은 부득이한 사정으로 매일 계속 개정하지 못하는 경우에도 특별한 사정이 없는 한 전회의 공판기일부터 14일 이내로 다음 공판기일을 지정하여야 한다.",
+      "형사소송법 318조 4 판결선고기일#KOBLEX-232607": "③제1항 단서의 선고기일은 변론종결 후 14일 이내로 지정되어야 한다.",
+      "형사소송법 361조  소송기록과 증거물의 송부#KOBLEX-232708": "제361조(소송기록과 증거물의 송부) 제360조의 경우를 제외하고는 원심법원은 항소장을 받은 날부터 14일이내에 소송기록과 증거물을 항소법원에 송부하여야 한다.",
+      "형사소송법 365조  피고인의 출정#KOBLEX-232753": "②피고인이 정당한 사유없이 다시 정한 기일에 출정하지 아니한 때에는 피고인의 진술없이 판결을 할 수 있다.",
+      "형사소송법 377조  소송기록과 증거물의 송부#KOBLEX-232770": "제377조(소송기록과 증거물의 송부) 제376조의 경우를 제외하고는 원심법원은 상고장을 받은 날부터 14일이내에 소송기록과 증거물을 상고법원에 송부하여야 한다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "No criminal procedure provision specifying the number of days for submitting the statement of reasons for appeal is present in the candidate set.",
+            "requirement_id": "E1-R1",
+            "status": "unsatisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "No criminal procedure provision specifying the starting point (e.g., service of judgment) for the deadline is present in the candidate set.",
+            "requirement_id": "E1-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "missing_statute",
+        "legal_status": "uncovered",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "E1-R1",
+          "E1-R2"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The question concerns a criminal case (형사사건). Candidate C001 is from the Civil Procedure Act (민사소송법) and therefore does not apply to criminal appeals. No other candidate provision addresses the deadline for submitting a statement of reasons for appeal in criminal proceedings under the Criminal Procedure Act.",
+        "status": "uncovered"
+      },
+      {
+        "applicability_status": "not_assessed",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [],
+            "rationale": "No provision in the candidate set defines justifiable reasons (such as transportation/communication difficulties) for extending the criminal appeal document deadline.",
+            "requirement_id": "E2-R1",
+            "status": "unsatisfied"
+          },
+          {
+            "linked_provision_ids": [],
+            "rationale": "No provision in the candidate set outlines the procedure or timing for applying to extend the criminal appeal document deadline.",
+            "requirement_id": "E2-R2",
+            "status": "unsatisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "uncovered",
+        "linked_provision_ids": [],
+        "missing_aspects": [
+          "E2-R1",
+          "E2-R2"
+        ],
+        "partial_kind": "not_applicable",
+        "rationale": "The question asks about extending the deadline for submitting a statement of reasons for appeal in a criminal case. The candidate provisions relate to civil procedure, customs, tax, or financial regulations, none of which provide for extending the deadline for criminal appeal documents due to transportation or communication difficulties.",
+        "status": "uncovered"
+      }
+    ],
+    "deferred_target_ids": [],
+    "evidence_conflicts": [],
+    "evidence_links": [],
+    "last_retrieval_new_provision_count": 9,
+    "last_validated_event": "RESPONSE_ASSEMBLY.ABSTAIN",
+    "legal_issues": [
+      {
+        "description": "형사사건에서 상고이유서를 상고법원에 제출해야 하는 법정 기한은 무엇인가",
+        "issue_id": "I1"
+      },
+      {
+        "description": "상고이유서 제출 기한이 연장될 수 있는 법적 사유와 절차는 무엇인가",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "상고이유서 제출 기한의 일수 및 기산점을 명확히 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "상고이유서 제출 기한의 일수 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "기한 기산점(판결서 송달일 등) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "형사소송법상 상고이유서 제출 기한에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 상고이유서 제출 기한을 직접 묻고 있으므로, 기한을 결정하는 핵심 규정 없이는 답변 불가",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "기한 연장이 허용되는 정당한 사유 및 신청 절차 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "기한 연장의 정당한 사유(교통·통신 불편 등) 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "기한 연장 신청의 절차 및 시점 확인"
+          }
+        ],
+        "critical": true,
+        "description": "상고이유서 제출 기한 연장에 관한 규정 및 요건",
+        "evidence_item_id": "E2",
+        "evidence_type": "exception",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 기한 연장의 경우를 묻고 있으므로, 연장 요건을 규정한 규정 없이는 답변 불가",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 2,
+    "normalized_question": "[배경 시나리오] 갑은 자신의 형사사건의 상고를 준비 중이다. 갑의 법률대리인 을 변호사는 재판 결과에 불복하여 상고를 제기하려고 한다. 을 변호사는 상고이유서를 상고법원에 제출해야 하지만, 갑과 을 변호사의 사무소는 법원에서 상당히 먼 거리에 위치해 있고, 이 지역은 교통과 통신이 매우 불편하다. [질문] 을 변호사가 상고이유서를 상고법원에 제출해야 하는 기한은 언제까지이며, 이 기한은 어떤 경우에 연장될 수 있는가?",
+    "phase": "ABSTAINED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형사소송법 상고이유서 제출 기한",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사소송법",
+          "상고이유서",
+          "제출기한",
+          "판결서송달",
+          "상고법원"
+        ],
+        "query_text": "형사사건 상고이유서 제출 기한 판결서 송달일로부터 일수 [원문 맥락] 을 변호사는 상고이유서를 상고법원에 제출해야 하지만, 갑과 을 변호사의 사무소는 법원에서 상당히 먼 거리에 위치해 있고, 이 지역은 교통과 통신이 매우 불편하다. 을 변호사가 상고이유서를 상고법원에 제출해야 하는 기한은 언제까지이며, 이 기한은 어떤 경우에 연장될 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "상고이유서 제출 기한 일수 및 기산점",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "형사소송법 기한 연장 정당한 사유",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "형사소송법",
+          "기한연장",
+          "정당 사유",
+          "교통불편",
+          "통신불편",
+          "상고이유서"
+        ],
+        "query_text": "상고이유서 제출 기한 연장 정당한 사유 교통 통신 불편 [원문 맥락] 을 변호사는 상고이유서를 상고법원에 제출해야 하지만, 갑과 을 변호사의 사무소는 법원에서 상당히 먼 거리에 위치해 있고, 이 지역은 교통과 통신이 매우 불편하다. 을 변호사가 상고이유서를 상고법원에 제출해야 하는 기한은 언제까지이며, 이 기한은 어떤 경우에 연장될 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "상고이유서 제출 기한 연장 요건 및 절차",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "형사소송법 상고이유서 제출기한 14일",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "형사소송법",
+          "상고이유서",
+          "제출기한",
+          "14일",
+          "상고법원"
+        ],
+        "query_text": "형사소송법 상고이유서 제출기한 14일 [원문 맥락] 을 변호사는 상고이유서를 상고법원에 제출해야 하지만, 갑과 을 변호사의 사무소는 법원에서 상당히 먼 거리에 위치해 있고, 이 지역은 교통과 통신이 매우 불편하다. 을 변호사가 상고이유서를 상고법원에 제출해야 하는 기한은 언제까지이며, 이 기한은 어떤 경우에 연장될 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "형사사건 상고이유서 제출 기한 일수 및 기산점",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "형사소송법 기한연장 정당한 사유 교통 통신",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "형사소송법",
+          "기한연장",
+          "정당한사유",
+          "교통불편",
+          "통신불편"
+        ],
+        "query_text": "형사소송법 기한연장 정당한 사유 교통 통신 [원문 맥락] 을 변호사는 상고이유서를 상고법원에 제출해야 하지만, 갑과 을 변호사의 사무소는 법원에서 상당히 먼 거리에 위치해 있고, 이 지역은 교통과 통신이 매우 불편하다. 을 변호사가 상고이유서를 상고법원에 제출해야 하는 기한은 언제까지이며, 이 기한은 어떤 경우에 연장될 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "형사사건 상고이유서 제출 기한 연장 요건 및 절차",
+        "statute_hints": [
+          "형사소송법"
+        ],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 자신의 형사사건의 상고를 준비 중이다. 갑의 법률대리인 을 변호사는 재판 결과에 불복하여 상고를 제기하려고 한다. 을 변호사는 상고이유서를 상고법원에 제출해야 하지만, 갑과 을 변호사의 사무소는 법원에서 상당히 먼 거리에 위치해 있고, 이 지역은 교통과 통신이 매우 불편하다.\n\n[질문]\n을 변호사가 상고이유서를 상고법원에 제출해야 하는 기한은 언제까지이며, 이 기한은 어떤 경우에 연장될 수 있는가?",
+    "remaining_request_budget": 5,
+    "remaining_round_budget": 1,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "상고이유서 제출 기한의 일수 및 기산점을 명확히 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "상고이유서 제출 기한의 일수 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "기한 기산점(판결서 송달일 등) 확인"
+          }
+        ],
+        "critical": true,
+        "description": "형사소송법상 상고이유서 제출 기한에 관한 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 상고이유서 제출 기한을 직접 묻고 있으므로, 기한을 결정하는 핵심 규정 없이는 답변 불가",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "기한 연장이 허용되는 정당한 사유 및 신청 절차 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "기한 연장의 정당한 사유(교통·통신 불편 등) 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "기한 연장 신청의 절차 및 시점 확인"
+          }
+        ],
+        "critical": true,
+        "description": "상고이유서 제출 기한 연장에 관한 규정 및 요건",
+        "evidence_item_id": "E2",
+        "evidence_type": "exception",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 기한 연장의 경우를 묻고 있으므로, 연장 요건을 규정한 규정 없이는 답변 불가",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 2,
+    "run_id": "6b6947c2-5c81-4f43-aa68-f1bfd0256910",
+    "seen_provision_ids": [
+      "여신전문금융업법 49조 2 대주주에 대한 신용공여한도 등#KOBLEX-042341",
+      "형사소송법 318조 4 판결선고기일#KOBLEX-232607",
+      "민사소송법 428조  상고이유서, 답변서의 송달 등#KOBLEX-064622",
+      "형사소송법 267조 2 집중심리#KOBLEX-232411",
+      "국민의 형사재판 참여에 관한 법률 48조  판결선고기일#KOBLEX-220027",
+      "소송촉진 등에 관한 특례법 22조  약식명령기간#KOBLEX-085226",
+      "형사소송법 377조  소송기록과 증거물의 송부#KOBLEX-232770",
+      "국가인권위원회법 36조  조사의 방법#KOBLEX-168424",
+      "자본시장과 금융투자업에 관한 법률 165조  사업보고서등의 제출에 관한 특례#KOBLEX-135699",
+      "군사법원법 372조 2 판결선고기일#KOBLEX-093396",
+      "민사소송법 427조  상고이유서 제출#KOBLEX-064621",
+      "개발제한구역의 지정 및 관리에 관한 특별조치법 시행령 36조 2 부담금의 납부기한 연장 등#KOBLEX-043380",
+      "관세법 121조  심사청구기간#KOBLEX-105075",
+      "형사소송법 365조  피고인의 출정#KOBLEX-232753",
+      "관세법 8조#KOBLEX-104397",
+      "형사소송법 361조  소송기록과 증거물의 송부#KOBLEX-232708",
+      "민법 147조#KOBLEX-058673",
+      "국세기본법 시행령 3조  기한연장의 신청#KOBLEX-029548",
+      "지방세기본법 23조#KOBLEX-120654"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ABSTAIN",
+  "termination_reason": "NO_RETRIEVAL_PROGRESS"
+}

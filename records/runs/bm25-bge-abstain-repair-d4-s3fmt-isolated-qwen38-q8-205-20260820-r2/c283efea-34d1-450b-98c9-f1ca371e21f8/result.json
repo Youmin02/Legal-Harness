@@ -1,0 +1,1264 @@
+{
+  "abstention_reason": null,
+  "answer": "채무이행의 기한이 없는 경우에는 채무자는 이행청구를 받은 때로부터 지체책임이 있다.[CT1]\n장래에 이행할 것을 청구하는 소는 미리 청구할 필요가 있어야 제기할 수 있다.[CT2]\n변제 기일이 없는 대출금에 대해 채권자가 장래 변제를 청구하기 위해서는 미리 청구할 필요가 있는 사정이 존재해야 하며, 이 조건이 충족될 경우에만 소의 제기가 허용된다.[CT3]\n전제: 갑과 을 사이의 대출 계약이 유효하게 성립되어 있고, 갑이 을에게 변제 기일이 없는 채권을 보유하고 있다는 사실은 질문의 배경 시나리오에 따라 전제한다.\n한계: T2(신청하지 않은 손해배상 청구에 대한 법원의 판결 가능성)에 대한 판단은 보류한다. 이는 민사소송법 제459조가 재심 절차의 범위에만 한정되어 있어, 원심 일반 소송에서의 청구 범위 제한에 대한 직접적인 법적 근거가 부족하기 때문이다.\n한계: T1에 대한 결론은 '미리 청구할 필요'가 존재하는지 여부에 따라 달라질 수 있으며, 본 답변은 해당 사건의 구체적 사실관계(예: 을의 신용 상태, 장래 불이행의 위험성 등)를 확인하지 않았으므로 조건부 판단에 그친다.",
+  "answer_mode": "limited",
+  "answered_target_ids": [
+    "T1"
+  ],
+  "candidate_answer": "채무이행의 기한이 없는 경우에는 채무자는 이행청구를 받은 때로부터 지체책임이 있다.[CT1]\n장래에 이행할 것을 청구하는 소는 미리 청구할 필요가 있어야 제기할 수 있다.[CT2]\n변제 기일이 없는 대출금에 대해 채권자가 장래 변제를 청구하기 위해서는 미리 청구할 필요가 있는 사정이 존재해야 하며, 이 조건이 충족될 경우에만 소의 제기가 허용된다.[CT3]\n전제: 갑과 을 사이의 대출 계약이 유효하게 성립되어 있고, 갑이 을에게 변제 기일이 없는 채권을 보유하고 있다는 사실은 질문의 배경 시나리오에 따라 전제한다.\n한계: T2(신청하지 않은 손해배상 청구에 대한 법원의 판결 가능성)에 대한 판단은 보류한다. 이는 민사소송법 제459조가 재심 절차의 범위에만 한정되어 있어, 원심 일반 소송에서의 청구 범위 제한에 대한 직접적인 법적 근거가 부족하기 때문이다.\n한계: T1에 대한 결론은 '미리 청구할 필요'가 존재하는지 여부에 따라 달라질 수 있으며, 본 답변은 해당 사건의 구체적 사실관계(예: 을의 신용 상태, 장래 불이행의 위험성 등)를 확인하지 않았으므로 조건부 판단에 그친다.",
+  "candidate_answer_basis": "published_answer",
+  "candidate_answer_error": null,
+  "candidate_answer_status": "PUBLISHED_ANSWER",
+  "candidate_answer_termination_reason": null,
+  "complete_answer": false,
+  "completed_at_utc": "2026-08-21T07:28:35.350308+00:00",
+  "deferred_target_ids": [
+    "T2"
+  ],
+  "end_to_end_latency_ms": 524866.476,
+  "errors": [],
+  "record_schema_version": "1.2",
+  "retrieval_provenance": {
+    "schema_version": "1.0",
+    "stage_file": "retrieval_stages.jsonl",
+    "stage_record_counts": {
+      "bge_rerank": 559,
+      "dedup_collapse": 78,
+      "evidence_fusion": 559,
+      "first_stage": 600,
+      "request_rerank": 600,
+      "round_selected": 30,
+      "rrf": 600,
+      "selected": 559
+    }
+  },
+  "run_id": "c283efea-34d1-450b-98c9-f1ca371e21f8",
+  "state": {
+    "accepted_provision_ids": [
+      "민사소송법 251조  장래의 이행을 청구하는 소#KOBLEX-064190",
+      "민법 387조  이행기와 이행지체#KOBLEX-059174",
+      "민사소송법 459조  변론과 재판의 범위#KOBLEX-064690"
+    ],
+    "action_trace": [
+      {
+        "details": {
+          "evidence_count": 2,
+          "issue_count": 2
+        },
+        "event": "INITIAL_PLAN_VALIDATED",
+        "phase": "PLANNING_INITIAL"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 10,
+          "request_count": 2,
+          "retrieval_round": 1
+        },
+        "event": "INITIAL_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_INITIAL"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": false,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 1,
+          "progress": false,
+          "resolved_critical_conflict": false,
+          "status_improved": false,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 8,
+          "request_count": 2,
+          "retrieval_round": 2
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 2,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": true,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "RETRIEVE_GAP",
+          "answer_mode": null,
+          "answered_target_ids": [],
+          "deferred_target_ids": [],
+          "explanation": "A critical statute gap remains and bounded retrieval is allowed.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "candidate_count": 10,
+          "new_provision_count": 9,
+          "request_count": 2,
+          "retrieval_round": 3
+        },
+        "event": "GAP_RETRIEVAL_VALIDATED",
+        "phase": "RETRIEVING_GAP"
+      },
+      {
+        "details": {
+          "missing_critical_count": 1,
+          "new_accepted_critical_link": true,
+          "newly_partially_citable_target": false,
+          "no_progress_rounds": 0,
+          "progress": true,
+          "resolved_critical_conflict": false,
+          "status_improved": true,
+          "unresolved_conflict_count": 0
+        },
+        "event": "COVERAGE_ASSESSMENT_VALIDATED",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "action": "GENERATE",
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "deferred_target_ids": [
+            "T2"
+          ],
+          "explanation": "Only the citable answer targets will be answered; remaining targets are deferred.",
+          "termination_reason": null
+        },
+        "event": "POLICY_DECISION",
+        "phase": "ASSESSING_COVERAGE"
+      },
+      {
+        "details": {
+          "answer_mode": "limited",
+          "answered_target_ids": [
+            "T1"
+          ],
+          "claim_count": 3,
+          "deferred_target_ids": [
+            "T2"
+          ]
+        },
+        "event": "ANSWER_DRAFT_VALIDATED",
+        "phase": "GENERATING"
+      },
+      {
+        "details": {},
+        "event": "CITATION_INTEGRITY_PASS",
+        "phase": "COMPLETED"
+      }
+    ],
+    "answer_mode": "limited",
+    "answer_targets": [
+      {
+        "answer_target_id": "T1",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "변제 기일이 없는 대출금의 장래 변제에 대해 청구할 수 있는지",
+        "requested_output": "변제 기일이 없는 채무에 대해 채권자가 장래 변제에 대해 청구할 수 있는지의 법적 판단"
+      },
+      {
+        "answer_target_id": "T2",
+        "answer_type": "legal_conclusion",
+        "question_anchor": "신청하지 않은 손해배상 청구에 대해 법원이 판결할 수 있는가",
+        "requested_output": "당사자가 신청하지 않은 손해배상 청구에 대해 법원이 판결할 수 있는지의 법적 판단"
+      }
+    ],
+    "answered_target_ids": [
+      "T1"
+    ],
+    "candidate_provisions": [
+      {
+        "alias_provision_ids": [
+          "민법 743조  기한전의 변제#KOBLEX-059889"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 11,
+        "first_stage_score": 28.211708779873348,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 743조  기한전의 변제#KOBLEX-059889",
+        "provision_text": "제743조(기한전의 변제) 변제기에 있지 아니한 채무를 변제한 때에는 그 반환을 청구하지 못한다. 그러나 채무자가 착오로 인하여 변제한 때에는 채권자는 이로 인하여 얻은 이익을 반환하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.016169240698218346,
+        "retrieval_round": 1,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1",
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민법 743조  기한전의 변제",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 194조  공시송달의 요건#KOBLEX-064045"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 83,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 194조  공시송달의 요건#KOBLEX-064045",
+        "provision_text": "④ 원고가 소권(항소권을 포함한다)을 남용하여 청구가 이유 없음이 명백한 소를 반복적으로 제기한 것에 대하여 법원이 변론 없이 판결로 소를 각하하는 경우에는 재판장은 직권으로 피고에 대하여 공시송달을 명할 수 있다. <신설 2023.4.18>",
+        "rerank_rank": 1,
+        "rerank_score": 0.09298700094223022,
+        "retrieval_round": 1,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "민사소송법 194조  공시송달의 요건 4항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 212조  재판의 누락#KOBLEX-064088"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 84,
+        "first_stage_score": 2.0,
+        "fusion_rank": 2,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 212조  재판의 누락#KOBLEX-064088",
+        "provision_text": "①법원이 청구의 일부에 대하여 재판을 누락한 경우에 그 청구부분에 대하여는 그 법원이 계속하여 재판한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.05826485902070999,
+        "retrieval_round": 1,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민사소송법 212조  재판의 누락 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 485조  신고가 있는 경우#KOBLEX-064748"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 94,
+        "first_stage_score": 2.0,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 485조  신고가 있는 경우#KOBLEX-064748",
+        "provision_text": "제485조(신고가 있는 경우) 신청이유로 내세운 권리 또는 청구를 다투는 신고가 있는 때에는 법원은 그 권리에 대한 재판이 확정될 때까지 공시최고절차를 중지하거나, 신고한 권리를 유보하고 제권판결을 하여야 한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.011877181939780712,
+        "retrieval_round": 1,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "민사소송법 485조  신고가 있는 경우",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 110조  소송비용액의 확정결정#KOBLEX-063787"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 100,
+        "first_stage_score": 1.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 110조  소송비용액의 확정결정#KOBLEX-063787",
+        "provision_text": "①소송비용의 부담을 정하는 재판에서 그 액수가 정하여지지 아니한 경우에 제1심 법원은 그 재판이 확정되거나, 소송비용부담의 재판이 집행력을 갖게된 후에 당사자의 신청을 받아 결정으로 그 소송비용액을 확정한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.0020667463541030884,
+        "retrieval_round": 1,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "민사소송법 110조  소송비용액의 확정결정 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 104조  각 심급의 소송비용의 재판#KOBLEX-063775"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 1.0,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 104조  각 심급의 소송비용의 재판#KOBLEX-063775",
+        "provision_text": "제104조(각 심급의 소송비용의 재판) 법원은 사건을 완결하는 재판에서 직권으로 그 심급의 소송비용 전부에 대하여 재판하여야 한다. 다만, 사정에 따라 사건의 일부나 중간의 다툼에 관한 재판에서 그 비용에 대한 재판을 할 수 있다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.0003865941253025085,
+        "retrieval_round": 1,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2"
+        ],
+        "statute_name": "민사소송법 104조  각 심급의 소송비용의 재판",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 463조  변제로서의 타인의 물건의 인도#KOBLEX-059336"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 94,
+        "first_stage_score": 4.0,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 463조  변제로서의 타인의 물건의 인도#KOBLEX-059336",
+        "provision_text": "제463조(변제로서의 타인의 물건의 인도) 채무의 변제로 타인의 물건을 인도한 채무자는 다시 유효한 변제를 하지 아니하면 그 물건의 반환을 청구하지 못한다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.0002264622162329033,
+        "retrieval_round": 1,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 463조  변제로서의 타인의 물건의 인도",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 216조  기판력의 객관적 범위#KOBLEX-064102"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 85,
+        "first_stage_score": 2.0,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 216조  기판력의 객관적 범위#KOBLEX-064102",
+        "provision_text": "②상계를 주장한 청구가 성립되는지 아닌지의 판단은 상계하자고 대항한 액수에 한하여 기판력을 가진다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.00013160354865249246,
+        "retrieval_round": 1,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ2",
+        "source_request_ids": [
+          "RQ2",
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민사소송법 216조  기판력의 객관적 범위 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 464조  양도능력없는 소유자의 물건인도#KOBLEX-059337"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 95,
+        "first_stage_score": 4.0,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "민법 464조  양도능력없는 소유자의 물건인도#KOBLEX-059337",
+        "provision_text": "제464조(양도능력없는 소유자의 물건인도) 양도할 능력없는 소유자가 채무의 변제로 물건을 인도한 경우에는 그 변제가 취소된 때에도 다시 유효한 변제를 하지 아니하면 그 물건의 반환을 청구하지 못한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.00012651208089664578,
+        "retrieval_round": 1,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 464조  양도능력없는 소유자의 물건인도",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 1035조  변제기전의 채무 등의 변제#KOBLEX-060646"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 1,
+        "first_stage_score": 41.22180102642815,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "민법 1035조  변제기전의 채무 등의 변제#KOBLEX-060646",
+        "provision_text": "제1035조(변제기전의 채무 등의 변제)",
+        "rerank_rank": 4,
+        "rerank_score": 9.185443195747212e-05,
+        "retrieval_round": 1,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "RQ1",
+        "source_request_ids": [
+          "RQ1"
+        ],
+        "statute_name": "민법 1035조  변제기전의 채무 등의 변제",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 387조  이행기와 이행지체#KOBLEX-059174"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 4,
+        "first_stage_score": 29.57554323009534,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "민법 387조  이행기와 이행지체#KOBLEX-059174",
+        "provision_text": "②채무이행의 기한이 없는 경우에는 채무자는 이행청구를 받은 때로부터 지체책임이 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.7443752884864807,
+        "retrieval_round": 2,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 387조  이행기와 이행지체 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 459조  변론과 재판의 범위#KOBLEX-064690"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 92,
+        "first_stage_score": 2.0,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 459조  변론과 재판의 범위#KOBLEX-064690",
+        "provision_text": "①본안의 변론과 재판은 재심청구이유의 범위안에서 하여야 한다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.9985597729682922,
+        "retrieval_round": 2,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민사소송법 459조  변론과 재판의 범위 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 459조  변론과 재판의 범위#KOBLEX-064689"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 37,
+        "first_stage_score": 19.58363594075627,
+        "fusion_rank": 3,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 459조  변론과 재판의 범위#KOBLEX-064689",
+        "provision_text": "제459조(변론과 재판의 범위)",
+        "rerank_rank": 3,
+        "rerank_score": 0.9809370636940002,
+        "retrieval_round": 2,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민사소송법 459조  변론과 재판의 범위",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 459조  변론과 재판의 범위#KOBLEX-064691"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 93,
+        "first_stage_score": 2.0,
+        "fusion_rank": 4,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 459조  변론과 재판의 범위#KOBLEX-064691",
+        "provision_text": "②재심의 이유는 바꿀 수 있다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.9090341329574585,
+        "retrieval_round": 2,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민사소송법 459조  변론과 재판의 범위 2항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "언론중재 및 피해구제 등에 관한 법률 26조  정정보도청구등의 소#KOBLEX-180750"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 10,
+        "first_stage_score": 23.076232152113622,
+        "fusion_rank": 5,
+        "issue_id": "I2",
+        "provision_id": "언론중재 및 피해구제 등에 관한 법률 26조  정정보도청구등의 소#KOBLEX-180750",
+        "provision_text": "⑥ 정정보도 청구의 소에 대하여는 「민사소송법」의 소송절차에 관한 규정에 따라 재판하고, 반론보도 청구 및 추후보도 청구의 소에 대하여는 「민사집행법」의 가처분절차에 관한 규정에 따라 재판한다. 다만, 「민사집행법」 제277조 및 제287조는 적용하지 아니한다.",
+        "rerank_rank": 5,
+        "rerank_score": 0.8356500864028931,
+        "retrieval_round": 2,
+        "selection_rank": 6,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "언론중재 및 피해구제 등에 관한 법률 26조  정정보도청구등의 소 6항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 218조  기판력의 주관적 범위#KOBLEX-064110"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 86,
+        "first_stage_score": 2.0,
+        "fusion_rank": 6,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 218조  기판력의 주관적 범위#KOBLEX-064110",
+        "provision_text": "①확정판결은 당사자, 변론을 종결한 뒤의 승계인(변론 없이 한 판결의 경우에는 판결을 선고한 뒤의 승계인) 또는 그를 위하여 청구의 목적물을 소지한 사람에 대하여 효력이 미친다.",
+        "rerank_rank": 6,
+        "rerank_score": 0.7863789796829224,
+        "retrieval_round": 2,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민사소송법 218조  기판력의 주관적 범위 1항",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민법 517조  증서의 제시와 이행지체#KOBLEX-059438"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 30,
+        "first_stage_score": 21.086353006970743,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민법 517조  증서의 제시와 이행지체#KOBLEX-059438",
+        "provision_text": "제517조(증서의 제시와 이행지체) 증서에 변제기한이 있는 경우에도 그 기한이 도래한 후에 소지인이 증서를 제시하여 이행을 청구한 때로부터 채무자는 지체책임이 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.5487583875656128,
+        "retrieval_round": 2,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-1",
+        "source_request_ids": [
+          "GRQ-R2-1"
+        ],
+        "statute_name": "민법 517조  증서의 제시와 이행지체",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 265조  소제기에 따른 시효중단의 시기#KOBLEX-064235"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 2.0,
+        "fusion_rank": 8,
+        "issue_id": "I2",
+        "provision_id": "민사소송법 265조  소제기에 따른 시효중단의 시기#KOBLEX-064235",
+        "provision_text": "제265조(소제기에 따른 시효중단의 시기) 시효의 중단 또는 법률상 기간을 지킴에 필요한 재판상 청구는 소를 제기한 때 또는 제260조제2항ㆍ제262조제2항 또는 제264조제2항의 규정에 따라 서면을 법원에 제출한 때에 그 효력이 생긴다.",
+        "rerank_rank": 8,
+        "rerank_score": 0.4450245499610901,
+        "retrieval_round": 2,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R2-2",
+        "source_request_ids": [
+          "GRQ-R2-2"
+        ],
+        "statute_name": "민사소송법 265조  소제기에 따른 시효중단의 시기",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 418조  정지조건부채권 및 장래의 청구권과의 상계#KOBLEX-032862"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 97,
+        "first_stage_score": 20.268278937683462,
+        "fusion_rank": 1,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 418조  정지조건부채권 및 장래의 청구권과의 상계#KOBLEX-032862",
+        "provision_text": "제418조(정지조건부채권 및 장래의 청구권과의 상계) 정지조건부채권 또는 장래의 청구권을 가진 자가 그 채무를 변제하는 때에는 후일 상계를 하기 위하여 그 채권액의 한도 안에서 변제액의 임치를 청구할 수 있다.",
+        "rerank_rank": 1,
+        "rerank_score": 0.21058858931064606,
+        "retrieval_round": 3,
+        "selection_rank": 1,
+        "selection_reason": "critical_quota:E1",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 418조  정지조건부채권 및 장래의 청구권과의 상계",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "항만법 시행령 91조  권리ㆍ의무의 이전#KOBLEX-050623"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 79,
+        "first_stage_score": 18.149851169771733,
+        "fusion_rank": 1,
+        "issue_id": "I2",
+        "provision_id": "항만법 시행령 91조  권리ㆍ의무의 이전#KOBLEX-050623",
+        "provision_text": "3. 법원의 재판",
+        "rerank_rank": 1,
+        "rerank_score": 3.546857260516845e-05,
+        "retrieval_round": 3,
+        "selection_rank": 2,
+        "selection_reason": "critical_quota:E2",
+        "source_request_id": "GRQ-R3-2",
+        "source_request_ids": [
+          "GRQ-R3-2"
+        ],
+        "statute_name": "항만법 시행령 91조  권리ㆍ의무의 이전 3호",
+        "target_evidence_item_ids": [
+          "E2"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 251조  장래의 이행을 청구하는 소#KOBLEX-064190"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 27,
+        "first_stage_score": 24.282376423553227,
+        "fusion_rank": 2,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 251조  장래의 이행을 청구하는 소#KOBLEX-064190",
+        "provision_text": "제251조(장래의 이행을 청구하는 소) 장래에 이행할 것을 청구하는 소는 미리 청구할 필요가 있어야 제기할 수 있다.",
+        "rerank_rank": 2,
+        "rerank_score": 0.0536089763045311,
+        "retrieval_round": 3,
+        "selection_rank": 3,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민사소송법 251조  장래의 이행을 청구하는 소",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 427조  조건부채권 등의 파산채권액#KOBLEX-032885"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 63,
+        "first_stage_score": 22.317779784159796,
+        "fusion_rank": 3,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 427조  조건부채권 등의 파산채권액#KOBLEX-032885",
+        "provision_text": "②제1항의 규정은 채무자에 대한 장래의 청구권에 관하여 준용한다.",
+        "rerank_rank": 3,
+        "rerank_score": 0.009857737459242344,
+        "retrieval_round": 3,
+        "selection_rank": 4,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 427조  조건부채권 등의 파산채권액 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "채무자 회생 및 파산에 관한 법률 138조  조건부채권과 장래의 청구권#KOBLEX-031889"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 89,
+        "first_stage_score": 20.921348204122815,
+        "fusion_rank": 4,
+        "issue_id": "I1",
+        "provision_id": "채무자 회생 및 파산에 관한 법률 138조  조건부채권과 장래의 청구권#KOBLEX-031889",
+        "provision_text": "②제1항의 규정은 채무자에 대하여 행사할 수 있는 장래의 청구권에 관하여 준용한다.",
+        "rerank_rank": 4,
+        "rerank_score": 0.008264489471912384,
+        "retrieval_round": 3,
+        "selection_rank": 5,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "채무자 회생 및 파산에 관한 법률 138조  조건부채권과 장래의 청구권 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "보험업법 143조  계약조건의 변경#KOBLEX-022398"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 26,
+        "first_stage_score": 24.470657301827245,
+        "fusion_rank": 6,
+        "issue_id": "I1",
+        "provision_id": "보험업법 143조  계약조건의 변경#KOBLEX-022398",
+        "provision_text": "2. 보험금액의 삭감과 장래 보험료의 감액",
+        "rerank_rank": 6,
+        "rerank_score": 6.326532457023859e-05,
+        "retrieval_round": 3,
+        "selection_rank": 7,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "보험업법 143조  계약조건의 변경 2호",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "행정소송법 21조  소의 변경#KOBLEX-011470"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 43,
+        "first_stage_score": 23.324769556086153,
+        "fusion_rank": 7,
+        "issue_id": "I1",
+        "provision_id": "행정소송법 21조  소의 변경#KOBLEX-011470",
+        "provision_text": "①법원은 취소소송을 당해 처분등에 관계되는 사무가 귀속하는 국가 또는 공공단체에 대한 당사자소송 또는 취소소송외의 항고소송으로 변경하는 것이 상당하다고 인정할 때에는 청구의 기초에 변경이 없는 한 사실심의 변론종결시까지 원고의 신청에 의하여 결정으로써 소의 변경을 허가할 수 있다.",
+        "rerank_rank": 7,
+        "rerank_score": 6.0589893109863624e-05,
+        "retrieval_round": 3,
+        "selection_rank": 8,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "행정소송법 21조  소의 변경 1항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 155조  조서기재의 생략 등#KOBLEX-063920"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 50,
+        "first_stage_score": 22.802108716573823,
+        "fusion_rank": 8,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 155조  조서기재의 생략 등#KOBLEX-063920",
+        "provision_text": "②변론방식에 관한 규정의 준수, 화해, 청구의 포기ㆍ인낙, 소의 취하와 자백에 대하여는 제1항 본문의 규정을 적용하지 아니한다.",
+        "rerank_rank": 8,
+        "rerank_score": 4.8227302613668144e-05,
+        "retrieval_round": 3,
+        "selection_rank": 9,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민사소송법 155조  조서기재의 생략 등 2항",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      },
+      {
+        "alias_provision_ids": [
+          "민사소송법 248조#KOBLEX-064181"
+        ],
+        "candidate_stage": "selected",
+        "first_stage_rank": 30,
+        "first_stage_score": 24.26249958967561,
+        "fusion_rank": 9,
+        "issue_id": "I1",
+        "provision_id": "민사소송법 248조#KOBLEX-064181",
+        "provision_text": "제1장 소의 제기",
+        "rerank_rank": 9,
+        "rerank_score": 3.986996307503432e-05,
+        "retrieval_round": 3,
+        "selection_rank": 10,
+        "selection_reason": "round_global_score_fill",
+        "source_request_id": "GRQ-R3-1",
+        "source_request_ids": [
+          "GRQ-R3-1"
+        ],
+        "statute_name": "민사소송법 248조",
+        "target_evidence_item_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "corpus_text_snapshots": {
+      "민법 1035조  변제기전의 채무 등의 변제#KOBLEX-060646": "제1035조(변제기전의 채무 등의 변제)",
+      "민법 387조  이행기와 이행지체#KOBLEX-059174": "②채무이행의 기한이 없는 경우에는 채무자는 이행청구를 받은 때로부터 지체책임이 있다.",
+      "민법 463조  변제로서의 타인의 물건의 인도#KOBLEX-059336": "제463조(변제로서의 타인의 물건의 인도) 채무의 변제로 타인의 물건을 인도한 채무자는 다시 유효한 변제를 하지 아니하면 그 물건의 반환을 청구하지 못한다.",
+      "민법 464조  양도능력없는 소유자의 물건인도#KOBLEX-059337": "제464조(양도능력없는 소유자의 물건인도) 양도할 능력없는 소유자가 채무의 변제로 물건을 인도한 경우에는 그 변제가 취소된 때에도 다시 유효한 변제를 하지 아니하면 그 물건의 반환을 청구하지 못한다.",
+      "민법 517조  증서의 제시와 이행지체#KOBLEX-059438": "제517조(증서의 제시와 이행지체) 증서에 변제기한이 있는 경우에도 그 기한이 도래한 후에 소지인이 증서를 제시하여 이행을 청구한 때로부터 채무자는 지체책임이 있다.",
+      "민법 743조  기한전의 변제#KOBLEX-059889": "제743조(기한전의 변제) 변제기에 있지 아니한 채무를 변제한 때에는 그 반환을 청구하지 못한다. 그러나 채무자가 착오로 인하여 변제한 때에는 채권자는 이로 인하여 얻은 이익을 반환하여야 한다.",
+      "민사소송법 104조  각 심급의 소송비용의 재판#KOBLEX-063775": "제104조(각 심급의 소송비용의 재판) 법원은 사건을 완결하는 재판에서 직권으로 그 심급의 소송비용 전부에 대하여 재판하여야 한다. 다만, 사정에 따라 사건의 일부나 중간의 다툼에 관한 재판에서 그 비용에 대한 재판을 할 수 있다.",
+      "민사소송법 110조  소송비용액의 확정결정#KOBLEX-063787": "①소송비용의 부담을 정하는 재판에서 그 액수가 정하여지지 아니한 경우에 제1심 법원은 그 재판이 확정되거나, 소송비용부담의 재판이 집행력을 갖게된 후에 당사자의 신청을 받아 결정으로 그 소송비용액을 확정한다.",
+      "민사소송법 155조  조서기재의 생략 등#KOBLEX-063920": "②변론방식에 관한 규정의 준수, 화해, 청구의 포기ㆍ인낙, 소의 취하와 자백에 대하여는 제1항 본문의 규정을 적용하지 아니한다.",
+      "민사소송법 194조  공시송달의 요건#KOBLEX-064045": "④ 원고가 소권(항소권을 포함한다)을 남용하여 청구가 이유 없음이 명백한 소를 반복적으로 제기한 것에 대하여 법원이 변론 없이 판결로 소를 각하하는 경우에는 재판장은 직권으로 피고에 대하여 공시송달을 명할 수 있다. <신설 2023.4.18>",
+      "민사소송법 212조  재판의 누락#KOBLEX-064088": "①법원이 청구의 일부에 대하여 재판을 누락한 경우에 그 청구부분에 대하여는 그 법원이 계속하여 재판한다.",
+      "민사소송법 216조  기판력의 객관적 범위#KOBLEX-064102": "②상계를 주장한 청구가 성립되는지 아닌지의 판단은 상계하자고 대항한 액수에 한하여 기판력을 가진다.",
+      "민사소송법 218조  기판력의 주관적 범위#KOBLEX-064110": "①확정판결은 당사자, 변론을 종결한 뒤의 승계인(변론 없이 한 판결의 경우에는 판결을 선고한 뒤의 승계인) 또는 그를 위하여 청구의 목적물을 소지한 사람에 대하여 효력이 미친다.",
+      "민사소송법 248조#KOBLEX-064181": "제1장 소의 제기",
+      "민사소송법 251조  장래의 이행을 청구하는 소#KOBLEX-064190": "제251조(장래의 이행을 청구하는 소) 장래에 이행할 것을 청구하는 소는 미리 청구할 필요가 있어야 제기할 수 있다.",
+      "민사소송법 265조  소제기에 따른 시효중단의 시기#KOBLEX-064235": "제265조(소제기에 따른 시효중단의 시기) 시효의 중단 또는 법률상 기간을 지킴에 필요한 재판상 청구는 소를 제기한 때 또는 제260조제2항ㆍ제262조제2항 또는 제264조제2항의 규정에 따라 서면을 법원에 제출한 때에 그 효력이 생긴다.",
+      "민사소송법 459조  변론과 재판의 범위#KOBLEX-064689": "제459조(변론과 재판의 범위)",
+      "민사소송법 459조  변론과 재판의 범위#KOBLEX-064690": "①본안의 변론과 재판은 재심청구이유의 범위안에서 하여야 한다.",
+      "민사소송법 459조  변론과 재판의 범위#KOBLEX-064691": "②재심의 이유는 바꿀 수 있다.",
+      "민사소송법 485조  신고가 있는 경우#KOBLEX-064748": "제485조(신고가 있는 경우) 신청이유로 내세운 권리 또는 청구를 다투는 신고가 있는 때에는 법원은 그 권리에 대한 재판이 확정될 때까지 공시최고절차를 중지하거나, 신고한 권리를 유보하고 제권판결을 하여야 한다.",
+      "보험업법 143조  계약조건의 변경#KOBLEX-022398": "2. 보험금액의 삭감과 장래 보험료의 감액",
+      "언론중재 및 피해구제 등에 관한 법률 26조  정정보도청구등의 소#KOBLEX-180750": "⑥ 정정보도 청구의 소에 대하여는 「민사소송법」의 소송절차에 관한 규정에 따라 재판하고, 반론보도 청구 및 추후보도 청구의 소에 대하여는 「민사집행법」의 가처분절차에 관한 규정에 따라 재판한다. 다만, 「민사집행법」 제277조 및 제287조는 적용하지 아니한다.",
+      "채무자 회생 및 파산에 관한 법률 138조  조건부채권과 장래의 청구권#KOBLEX-031889": "②제1항의 규정은 채무자에 대하여 행사할 수 있는 장래의 청구권에 관하여 준용한다.",
+      "채무자 회생 및 파산에 관한 법률 418조  정지조건부채권 및 장래의 청구권과의 상계#KOBLEX-032862": "제418조(정지조건부채권 및 장래의 청구권과의 상계) 정지조건부채권 또는 장래의 청구권을 가진 자가 그 채무를 변제하는 때에는 후일 상계를 하기 위하여 그 채권액의 한도 안에서 변제액의 임치를 청구할 수 있다.",
+      "채무자 회생 및 파산에 관한 법률 427조  조건부채권 등의 파산채권액#KOBLEX-032885": "②제1항의 규정은 채무자에 대한 장래의 청구권에 관하여 준용한다.",
+      "항만법 시행령 91조  권리ㆍ의무의 이전#KOBLEX-050623": "3. 법원의 재판",
+      "행정소송법 21조  소의 변경#KOBLEX-011470": "①법원은 취소소송을 당해 처분등에 관계되는 사무가 귀속하는 국가 또는 공공단체에 대한 당사자소송 또는 취소소송외의 항고소송으로 변경하는 것이 상당하다고 인정할 때에는 청구의 기초에 변경이 없는 한 사실심의 변론종결시까지 원고의 신청에 의하여 결정으로써 소의 변경을 허가할 수 있다."
+    },
+    "coverage_assessments": [
+      {
+        "applicability_status": "direct",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민법 387조  이행기와 이행지체#KOBLEX-059174"
+            ],
+            "rationale": "C011 explicitly states that for debts without a fixed due date, the debtor is liable for delay from the time of receiving a claim for performance, confirming the creditor's right to claim performance.",
+            "requirement_id": "E1-R1",
+            "status": "satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "민사소송법 251조  장래의 이행을 청구하는 소#KOBLEX-064190"
+            ],
+            "rationale": "C021 provides the specific procedural rule for suits claiming future performance, confirming that such claims are admissible if there is a need to claim in advance.",
+            "requirement_id": "E1-R2",
+            "status": "satisfied"
+          }
+        ],
+        "evidence_item_id": "E1",
+        "gap_type": "none",
+        "legal_status": "covered",
+        "linked_provision_ids": [
+          "민법 387조  이행기와 이행지체#KOBLEX-059174",
+          "민사소송법 251조  장래의 이행을 청구하는 소#KOBLEX-064190"
+        ],
+        "missing_aspects": [],
+        "partial_kind": "not_applicable",
+        "rationale": "The supplied provisions fully satisfy the evidence item. C011 addresses the substantive right to claim performance for debts without a fixed due date, and C021 addresses the procedural admissibility of claims for future performance. Together, they provide the complete legal basis to determine whether the creditor can claim future performance.",
+        "status": "covered"
+      },
+      {
+        "applicability_status": "conditional",
+        "criterion_results": [
+          {
+            "linked_provision_ids": [
+              "민사소송법 459조  변론과 재판의 범위#KOBLEX-064690"
+            ],
+            "rationale": "C012 addresses the scope of judgment in retrial, which is a specific instance of the general principle, but it is not the general provision for the original instance.",
+            "requirement_id": "E2-R1",
+            "status": "partially_satisfied"
+          },
+          {
+            "linked_provision_ids": [
+              "민사소송법 459조  변론과 재판의 범위#KOBLEX-064690"
+            ],
+            "rationale": "C012 supports the idea that the court cannot rule beyond the scope of the request, but it is not the direct legal basis for the specific question about unrequested damages claims in a standard lawsuit.",
+            "requirement_id": "E2-R2",
+            "status": "partially_satisfied"
+          }
+        ],
+        "evidence_item_id": "E2",
+        "gap_type": "missing_statute",
+        "legal_status": "partially_covered",
+        "linked_provision_ids": [
+          "민사소송법 459조  변론과 재판의 범위#KOBLEX-064690"
+        ],
+        "missing_aspects": [
+          "E2-R1",
+          "E2-R2"
+        ],
+        "partial_kind": "legal_support_gap",
+        "rationale": "The supplied provisions partially support the evidence item. C012 supports the principle that courts are limited by the scope of the party's request, but it is specific to retrial proceedings. The general provision for original instance proceedings (e.g., Civil Procedure Code Art. 2) which directly addresses whether a court can rule on unrequested claims in a standard lawsuit is missing from the candidate set.",
+        "status": "partially_covered"
+      }
+    ],
+    "deferred_target_ids": [
+      "T2"
+    ],
+    "evidence_conflicts": [],
+    "evidence_links": [
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민법 387조  이행기와 이행지체#KOBLEX-059174",
+        "support_spans": [
+          {
+            "end_char": 47,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E1",
+        "issue_id": "I1",
+        "provision_id": "민사소송법 251조  장래의 이행을 청구하는 소#KOBLEX-064190",
+        "support_spans": [
+          {
+            "end_char": 65,
+            "start_char": 0
+          }
+        ]
+      },
+      {
+        "assessment": "accepted",
+        "evidence_item_id": "E2",
+        "issue_id": "I2",
+        "provision_id": "민사소송법 459조  변론과 재판의 범위#KOBLEX-064690",
+        "support_spans": [
+          {
+            "end_char": 34,
+            "start_char": 0
+          }
+        ]
+      }
+    ],
+    "last_retrieval_new_provision_count": 9,
+    "last_validated_event": "D4.CITATION_INTEGRITY_PASS",
+    "legal_issues": [
+      {
+        "description": "변제 기일이 없는 채무에 대해 채권자가 장래 변제에 대해 청구할 수 있는가",
+        "issue_id": "I1"
+      },
+      {
+        "description": "당사자가 신청하지 않은 손해배상 청구에 대해 법원이 판결할 수 있는가",
+        "issue_id": "I2"
+      }
+    ],
+    "missing_critical_items": [
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "법원이 당사자의 청구 범위 내에서만 판결할 수 있는지, 신청하지 않은 손해배상 청구에 대해 판결할 수 있는지 여부를 판단할 수 있는 규정을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "재판의 대상이 되는 청구의 범위에 관한 민사소송법 조항을 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "신청하지 않은 손해배상 청구에 대해 법원이 판결할 수 있는지 여부에 관한 법적 근거를 확인"
+          }
+        ],
+        "critical": true,
+        "description": "재판의 대상이 되는 청구의 범위에 관한 민사소송법 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 신청하지 않은 손해배상 청구에 대해 법원이 판결할 수 있는지를 묻고 있으므로, 재판의 대상이 되는 청구의 범위에 관한 규정이 없으면 결론을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "no_progress_rounds": 0,
+    "normalized_question": "[배경 시나리오] 갑은 을에게 일정 금액을 빌려주었고, 이에 대한 변제 기일을 특정하지 않았습니다. 이후 을은 갑에게 일부 금액만 변제하고, 나머지 금액은 몇 년 후에 변제하겠다고 약속하였습니다. 하지만 갑은 을이 약속을 지키지 않을까 염려되어, 법원에 을이 장래에 변제할 금액에 대한 청구를 제기하려고 합니다. 동시에 갑은 법원에 을의 계약 위반으로 인한 손해배상 청구도 하고 싶지만, 이를 공식적으로 신청하지는 않았습니다. [질문] 갑이 을에게 변제 기일이 없는 대출금의 장래 변제에 대해 청구할 수 있는지, 그리고 갑이 법원에 을의 계약 위반에 대해 신청하지 않은 손해배상 청구에 대해 법원이 판결할 수 있는가?",
+    "phase": "COMPLETED",
+    "query_history": [
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "변제 기일 없는 채무 이행 청구 시점 민법",
+        "issue_id": "I1",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "변제 기일",
+          "채무",
+          "이행 청구",
+          "민법",
+          "장래 변제"
+        ],
+        "query_text": "변제 기일이 없는 채무에 대하여 채권자는 언제든지 이행의 청구를 할 수 있다 [원문 맥락] 동시에 갑은 법원에 을의 계약 위반으로 인한 손해배상 청구도 하고 싶지만, 이를 공식적으로 신청하지는 않았습니다. 갑이 을에게 변제 기일이 없는 대출금의 장래 변제에 대해 청구할 수 있는지, 그리고 갑이 법원에 을의 계약 위반에 대해 신청하지 않은 손해배상 청구에 대해 법원이 판결할 수 있는가?",
+        "request_id": "RQ1",
+        "rerank_query_text": "변제 기일이 없는 대출금의 장래 변제에 대해 청구할 수 있는지",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "재판 대상 청구 범위 민사소송법",
+        "issue_id": "I2",
+        "query_channel": "provision_style",
+        "query_terms": [
+          "재판 대상",
+          "청구 범위",
+          "민사소송법",
+          "손해배상",
+          "신청"
+        ],
+        "query_text": "재판의 대상이 되는 청구의 범위는 당사자의 청구에 한한다 [원문 맥락] 동시에 갑은 법원에 을의 계약 위반으로 인한 손해배상 청구도 하고 싶지만, 이를 공식적으로 신청하지는 않았습니다. 갑이 을에게 변제 기일이 없는 대출금의 장래 변제에 대해 청구할 수 있는지, 그리고 갑이 법원에 을의 계약 위반에 대해 신청하지 않은 손해배상 청구에 대해 법원이 판결할 수 있는가?",
+        "request_id": "RQ2",
+        "rerank_query_text": "신청하지 않은 손해배상 청구에 대해 법원이 판결할 수 있는가",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "민법 536조 기한 없는 채무 이행 청구",
+        "issue_id": "I1",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민법",
+          "536조",
+          "기한 없는 채무",
+          "이행 청구",
+          "채권자"
+        ],
+        "query_text": "민법 제536조 기한 없는 채무의 이행청구 시점 [원문 맥락] 동시에 갑은 법원에 을의 계약 위반으로 인한 손해배상 청구도 하고 싶지만, 이를 공식적으로 신청하지는 않았습니다. 갑이 을에게 변제 기일이 없는 대출금의 장래 변제에 대해 청구할 수 있는지, 그리고 갑이 법원에 을의 계약 위반에 대해 신청하지 않은 손해배상 청구에 대해 법원이 판결할 수 있는가?",
+        "request_id": "GRQ-R2-1",
+        "rerank_query_text": "변제 기일이 없는 채무의 이행청구 시점에 관한 민법 조항",
+        "statute_hints": [
+          "민법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "민사소송법 2조 재판 대상 청구 범위",
+        "issue_id": "I2",
+        "query_channel": "statute_aware",
+        "query_terms": [
+          "민사소송법",
+          "2조",
+          "재판의 대상",
+          "청구의 범위",
+          "당사자"
+        ],
+        "query_text": "민사소송법 제2조 재판의 대상 청구의 범위 [원문 맥락] 동시에 갑은 법원에 을의 계약 위반으로 인한 손해배상 청구도 하고 싶지만, 이를 공식적으로 신청하지는 않았습니다. 갑이 을에게 변제 기일이 없는 대출금의 장래 변제에 대해 청구할 수 있는지, 그리고 갑이 법원에 을의 계약 위반에 대해 신청하지 않은 손해배상 청구에 대해 법원이 판결할 수 있는가?",
+        "request_id": "GRQ-R2-2",
+        "rerank_query_text": "재판의 대상이 되는 청구의 범위에 관한 민사소송법 조항",
+        "statute_hints": [
+          "민사소송법"
+        ],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E1",
+        "first_stage_query_text": "장래 이행 청구 소의 이익 기한 없는 채무 민법",
+        "issue_id": "I1",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "장래 이행",
+          "청구",
+          "소의 이익",
+          "기한 없는 채무",
+          "민법"
+        ],
+        "query_text": "장래 이행 청구 소의 이익 기한 없는 채무 [원문 맥락] 동시에 갑은 법원에 을의 계약 위반으로 인한 손해배상 청구도 하고 싶지만, 이를 공식적으로 신청하지는 않았습니다. 갑이 을에게 변제 기일이 없는 대출금의 장래 변제에 대해 청구할 수 있는지, 그리고 갑이 법원에 을의 계약 위반에 대해 신청하지 않은 손해배상 청구에 대해 법원이 판결할 수 있는가?",
+        "request_id": "GRQ-R3-1",
+        "rerank_query_text": "장래 변제에 대한 청구가 허용되는지 여부에 관한 법적 근거",
+        "statute_hints": [],
+        "top_k": 100
+      },
+      {
+        "evidence_item_id": "E2",
+        "first_stage_query_text": "청구 변경 추가 청구 금지 재판 범위 민사소송법",
+        "issue_id": "I2",
+        "query_channel": "sparse_keyword",
+        "query_terms": [
+          "청구 변경",
+          "추가 청구",
+          "금지",
+          "재판 범위",
+          "민사소송법"
+        ],
+        "query_text": "청구 변경 추가 청구 금지 재판 범위 민사소송법 [원문 맥락] 동시에 갑은 법원에 을의 계약 위반으로 인한 손해배상 청구도 하고 싶지만, 이를 공식적으로 신청하지는 않았습니다. 갑이 을에게 변제 기일이 없는 대출금의 장래 변제에 대해 청구할 수 있는지, 그리고 갑이 법원에 을의 계약 위반에 대해 신청하지 않은 손해배상 청구에 대해 법원이 판결할 수 있는가?",
+        "request_id": "GRQ-R3-2",
+        "rerank_query_text": "신청하지 않은 손해배상 청구에 대해 법원이 판결할 수 있는지 여부에 관한 법적 근거",
+        "statute_hints": [],
+        "top_k": 100
+      }
+    ],
+    "question": "[배경 시나리오]\n갑은 을에게 일정 금액을 빌려주었고, 이에 대한 변제 기일을 특정하지 않았습니다. 이후 을은 갑에게 일부 금액만 변제하고, 나머지 금액은 몇 년 후에 변제하겠다고 약속하였습니다. 하지만 갑은 을이 약속을 지키지 않을까 염려되어, 법원에 을이 장래에 변제할 금액에 대한 청구를 제기하려고 합니다. 동시에 갑은 법원에 을의 계약 위반으로 인한 손해배상 청구도 하고 싶지만, 이를 공식적으로 신청하지는 않았습니다.\n\n[질문]\n갑이 을에게 변제 기일이 없는 대출금의 장래 변제에 대해 청구할 수 있는지, 그리고 갑이 법원에 을의 계약 위반에 대해 신청하지 않은 손해배상 청구에 대해 법원이 판결할 수 있는가?",
+    "remaining_request_budget": 3,
+    "remaining_round_budget": 0,
+    "required_evidence_items": [
+      {
+        "answer_target_ids": [
+          "T1"
+        ],
+        "completion_criteria": "변제 기일이 없는 채무에 대해 채권자가 언제부터 이행청구를 할 수 있는지, 그리고 장래 변제에 대한 청구가 허용되는지 여부를 판단할 수 있는 규정을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E1-R1",
+            "text": "변제 기일이 없는 채무의 이행청구 시점에 관한 민법 조항을 확인"
+          },
+          {
+            "requirement_id": "E1-R2",
+            "text": "장래 변제에 대한 청구가 허용되는지 여부에 관한 법적 근거를 확인"
+          }
+        ],
+        "critical": true,
+        "description": "변제 기일이 없는 채무의 이행청구 시점에 관한 민법 규정",
+        "evidence_item_id": "E1",
+        "evidence_type": "rule",
+        "issue_id": "I1",
+        "necessity_reason": "질문에서 변제 기일이 없는 대출금의 장래 변제에 대한 청구 가능성을 묻고 있으므로, 채무의 이행 시점에 관한 규정이 없으면 결론을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      },
+      {
+        "answer_target_ids": [
+          "T2"
+        ],
+        "completion_criteria": "법원이 당사자의 청구 범위 내에서만 판결할 수 있는지, 신청하지 않은 손해배상 청구에 대해 판결할 수 있는지 여부를 판단할 수 있는 규정을 확인",
+        "completion_requirements": [
+          {
+            "requirement_id": "E2-R1",
+            "text": "재판의 대상이 되는 청구의 범위에 관한 민사소송법 조항을 확인"
+          },
+          {
+            "requirement_id": "E2-R2",
+            "text": "신청하지 않은 손해배상 청구에 대해 법원이 판결할 수 있는지 여부에 관한 법적 근거를 확인"
+          }
+        ],
+        "critical": true,
+        "description": "재판의 대상이 되는 청구의 범위에 관한 민사소송법 규정",
+        "evidence_item_id": "E2",
+        "evidence_type": "rule",
+        "issue_id": "I2",
+        "necessity_reason": "질문에서 신청하지 않은 손해배상 청구에 대해 법원이 판결할 수 있는지를 묻고 있으므로, 재판의 대상이 되는 청구의 범위에 관한 규정이 없으면 결론을 도출할 수 없음",
+        "scope_source": "explicit_question"
+      }
+    ],
+    "retrieval_rounds_used": 3,
+    "run_id": "c283efea-34d1-450b-98c9-f1ca371e21f8",
+    "seen_provision_ids": [
+      "언론중재 및 피해구제 등에 관한 법률 26조  정정보도청구등의 소#KOBLEX-180750",
+      "민법 1035조  변제기전의 채무 등의 변제#KOBLEX-060646",
+      "민사소송법 110조  소송비용액의 확정결정#KOBLEX-063787",
+      "민사소송법 218조  기판력의 주관적 범위#KOBLEX-064110",
+      "민법 387조  이행기와 이행지체#KOBLEX-059174",
+      "민사소송법 248조#KOBLEX-064181",
+      "채무자 회생 및 파산에 관한 법률 418조  정지조건부채권 및 장래의 청구권과의 상계#KOBLEX-032862",
+      "민법 464조  양도능력없는 소유자의 물건인도#KOBLEX-059337",
+      "민법 463조  변제로서의 타인의 물건의 인도#KOBLEX-059336",
+      "민법 517조  증서의 제시와 이행지체#KOBLEX-059438",
+      "민사소송법 485조  신고가 있는 경우#KOBLEX-064748",
+      "민법 743조  기한전의 변제#KOBLEX-059889",
+      "민사소송법 459조  변론과 재판의 범위#KOBLEX-064689",
+      "민사소송법 194조  공시송달의 요건#KOBLEX-064045",
+      "항만법 시행령 91조  권리ㆍ의무의 이전#KOBLEX-050623",
+      "민사소송법 459조  변론과 재판의 범위#KOBLEX-064691",
+      "민사소송법 212조  재판의 누락#KOBLEX-064088",
+      "민사소송법 216조  기판력의 객관적 범위#KOBLEX-064102",
+      "민사소송법 155조  조서기재의 생략 등#KOBLEX-063920",
+      "민사소송법 459조  변론과 재판의 범위#KOBLEX-064690",
+      "민사소송법 251조  장래의 이행을 청구하는 소#KOBLEX-064190",
+      "채무자 회생 및 파산에 관한 법률 427조  조건부채권 등의 파산채권액#KOBLEX-032885",
+      "보험업법 143조  계약조건의 변경#KOBLEX-022398",
+      "채무자 회생 및 파산에 관한 법률 138조  조건부채권과 장래의 청구권#KOBLEX-031889",
+      "민사소송법 265조  소제기에 따른 시효중단의 시기#KOBLEX-064235",
+      "민사소송법 104조  각 심급의 소송비용의 재판#KOBLEX-063775",
+      "행정소송법 21조  소의 변경#KOBLEX-011470"
+    ],
+    "total_round_budget": 3
+  },
+  "status": "ANSWER",
+  "termination_reason": "COMPLETED"
+}
